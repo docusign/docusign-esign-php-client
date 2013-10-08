@@ -39,28 +39,29 @@ This client library was tested with PHP 5.3.15.
 Important Terms
 -------------------------
 
-Integrator Key: Identifies a single integration. Every API 
+`Integrator Key`: Identifies a single integration. Every API 
 request includes the Integrator Key and a 
 username/password combination
 
-Envelope: Just like a normal Postal Envelope.It contains 
+`Envelope`: Just like a normal Postal Envelope.It contains 
 things like Documents, Recipients, and Tabs
 
-Document: The PDF, Doc, Image, or other item you want 
+`Document`: The PDF, Doc, Image, or other item you want 
 signed. If it is not a PDF, you must include the File 
 Extension in the API call
 
-Tab: Tied to a position on a Document and defines what 
+`Tab`: Tied to a position on a Document and defines what 
 happens there. For example, you have a SignHere Tab 
 wherever you want a Recipient to sign
 
-Recipient: The person you want to send the Envelope 
+`Recipient`: The person you want to send the Envelope 
 to. Requires a UserName and Email
 
-Captive Recipient: Recipient signs in an iframe on your 
-website instead of receving an email 
+`Captive Recipient`: Recipient signs in an iframe on your 
+website instead of receving an email.  Captive recipients have the
+clientUserId property set.
 
-PowerForm: A pre-created Envelope that you can launch
+`PowerForm`: A pre-created Envelope that you can launch
 instead of writing server-side code
 
 Rate Limits
