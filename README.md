@@ -7,7 +7,7 @@ a free development account.  After you get an account and generate an Integrator
 you will be able to make test web service calls.  To generate your Integrator Key login to your developer 
 account and go to Preferences -> API page.
 
-The JSON parsing is done through PHP's native json_encode() and json_decode() functions, available with 
+The JSON parsing is done through PHP's native `json_encode()` and `json_decode()` functions, available with 
 PHP 5.2.x and higher.  To see examples of how the library can be used for most frequently used scenarios 
 look in the test directory.  The sub folders contain unit tests, as well as /examples folders which 
 showcase the most frequent usage scenarios.
@@ -21,8 +21,8 @@ For full functionality and documentation visit www.docusign.com/devcenter and io
 Library Configuration
 -------------------------
 
-To use this library you need to enter your account specific info in the config.php configuration file.
-Test data can also be entered into the testConfig.php file for unit testing and examples.
+To use this library you need to enter your account specific info in the `config.php` configuration file.
+Test data can also be entered into the `testConfig.php` file for unit testing and examples.
 Do a search for the string "TODO" to locate places that require specific info to be entered.
 
 
