@@ -82,5 +82,5 @@ More Information
 Professional Services is also available to help define and implement your
 project fast. 
 
-You can also find a lot of answered questions on StackOverflow by going here:
+You can also find a lot of answered questions on StackOverflow, search for tag `DocuSignApi`:
 http://stackoverflow.com/questions/tagged/docusignapi
