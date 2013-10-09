@@ -1,4 +1,4 @@
-DocuSign eSign Java Client Library
+DocuSign eSign PHP Client Library
 ================================
 
 This is a client library to help you get started with DocuSign eSignature API.
