@@ -107,14 +107,15 @@ class DocuSign_RequestSignatureResource extends DocuSign_Resource {
 		if( isset($recipients) && sizeof($recipients) > 0 ) {
 			$recipientsList = array();
 			foreach( $recipients as $recipient ) {
-				array_push($recipientsList, array (
+				$recipientsList[$recipient->getType()][] = array (
 					"routingOrder" => $recipient->getRoutingOrder(),
-        			"recipientId" => $recipient->getId(),
-        			"name" => $recipient->getName(),
-        			"email" => $recipient->getEmail()
-				));
+					"recipientId" => $recipient->getId(),
+					"name" => $recipient->getName(),
+					"email" => $recipient->getEmail(),
+					"clientUserId" => $recipient->getClientId(),
+				);
 			}
-			$data['recipients'] = array( "signers" => $recipientsList);
+			$data['recipients'] = $recipientsList;
 		}
 		if( isset($eventNotifications) && sizeof($eventNotifications) > 0 ){
 			$data['eventNotification'] = $eventNotifications->toArray();
@@ -161,12 +162,28 @@ class DocuSign_Recipient extends DocuSign_Model {
 	private $id;
 	private $name;
 	private $email;
+	private $clientId;
+	private $type;
 
-	public function __construct($routingOrder, $id, $name, $email) {
+	public function __construct($routingOrder, $id, $name, $email, $clientId = NULL, $type = 'signers') {
 		if( isset($routingOrder) ) $this->routingOrder = $routingOrder;
 		if( isset($id) ) $this->id = $id;
 		if( isset($name) ) $this->name = $name;
 		if( isset($email) ) $this->email = $email;
+		if( isset($type) ) $this->type = $type;
+		// Ensure that a client id only gets assigned to allowed recipient types.
+		if (isset($clientId)) {
+			switch ($type) {
+				case 'signers':
+				case 'agents':
+				case 'intermediaries':
+				case 'editors':
+				case 'certifiedDeliveries':
+					$this->clientId = $clientId;
+					break;
+			}
+		}
+
 	}
 
   	public function setRoutingOrder($routingOrder) { $this->routingOrder = $routingOrder; }
@@ -177,6 +194,10 @@ class DocuSign_Recipient extends DocuSign_Model {
 	public function getName() { return $this->name; }
 	public function setEmail($email) { $this->email = $email; }
 	public function getEmail() { return $this->email; }
+	public function setClientId($clientId) { $this->clientId = $clientId; }
+	public function getClientId() { return $this->clientId; }
+	public function setType($type) { $this->type = $type; }
+	public function getType() { return $this->type; }
 }
 
 

@@ -55,7 +55,7 @@ class DocuSign_ViewsResource extends DocuSign_Resource {
 	}
 
 
-	public function getRecipientView($returnUrl, $envelopeId, $userName, $email) {
+	public function getRecipientView($returnUrl, $envelopeId, $userName, $email, $clientUserId = NULL) {
 		$url = $this->client->getBaseURL() . '/envelopes/' . $envelopeId . '/views/recipient';
 		$data = array (
 			'returnUrl' => $returnUrl,
@@ -63,6 +63,10 @@ class DocuSign_ViewsResource extends DocuSign_Resource {
 			'userName' => $userName,
 			'email' => $email
 		);
+		// Append the client user id if present.
+		if ($clientUserId) {
+			$data['clientUserId'] = $clientUserId;
+		}
 		return $this->curl->makeRequest($url, 'POST', $this->client->getHeaders(), array(), json_encode($data));
 	}
 
