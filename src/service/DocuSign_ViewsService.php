@@ -61,12 +61,9 @@ class DocuSign_ViewsResource extends DocuSign_Resource {
 			'returnUrl' => $returnUrl,
 			'authenticationMethod' => 'email',
 			'userName' => $userName,
-			'email' => $email
+			'email' => $email,
+            'clientUserId' => $clientUserId,
 		);
-		// Append the client user id if present.
-		if ($clientUserId) {
-			$data['clientUserId'] = $clientUserId;
-		}
 		return $this->curl->makeRequest($url, 'POST', $this->client->getHeaders(), array(), json_encode($data));
 	}
 
