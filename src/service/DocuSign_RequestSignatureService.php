@@ -76,7 +76,8 @@ class DocuSign_RequestSignatureResource extends DocuSign_Resource {
 												, $status = "created"
 												, $documents = array()
 												, $recipients = array()
-												, $eventNotifications = array() ) {
+												, $eventNotifications = array()
+                        , $options = array() ) {
 		$url = $this->client->getBaseURL() . '/envelopes';
 		$headers = $this->client->getHeaders('Accept: application/json', 'Content-Type: multipart/form-data;boundary=myboundary');
 		$doc = array();
@@ -104,6 +105,9 @@ class DocuSign_RequestSignatureResource extends DocuSign_Resource {
 		  "documents" => $doc,
 		  "status" => $status
 		);
+    if(!empty($options)) {
+      $data = array_merge($data, $options);
+    }
 		if( isset($recipients) && sizeof($recipients) > 0 ) {
 			$recipientsList = array();
 			foreach( $recipients as $recipient ) {
