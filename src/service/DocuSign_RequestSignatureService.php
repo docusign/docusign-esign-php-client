@@ -226,7 +226,7 @@ class DocuSign_Recipient extends DocuSign_Model {
 		switch ($tabType) {
 			case 'textTabs':
 			case 'approveTabs':
-			case 'checkboxTab':
+			case 'checkboxTabs':
 			case 'companyTabs':
 			case 'dateSignedTabs':
 			case 'dateTabs':
