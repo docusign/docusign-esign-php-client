@@ -20,24 +20,24 @@ require_once 'DocuSign_Resource.php';
 
 class DocuSign_UserService extends DocuSign_Service {
 
-	public $user;
+  public $user;
 
-	/**
-	* Constructs the internal representation of the DocuSign User service.
-	*
-	* @param DocuSign_Client $client
-	*/
-	public function __construct(DocuSign_Client $client) {
-		parent::__construct($client);
-		$this->user = new DocuSign_UserResource($this);
-	}
+  /**
+  * Constructs the internal representation of the DocuSign User service.
+  *
+  * @param DocuSign_Client $client
+  */
+  public function __construct(DocuSign_Client $client) {
+    parent::__construct($client);
+    $this->user = new DocuSign_UserResource($this);
+  }
 }
 
 class DocuSign_UserResource extends DocuSign_Resource {
 
-	public function __construct(DocuSign_Service $service) {
-		parent::__construct($service);
-	}
+  public function __construct(DocuSign_Service $service) {
+    parent::__construct($service);
+  }
 
   public function getPermissionProfileList() {
     $url = $this->client->getBaseURL() . '/permission_profiles';

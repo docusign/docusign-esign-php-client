@@ -1,15 +1,15 @@
 <?php
-	
-	require_once '../../../src/DocuSign_Client.php';
-	require_once '../../../src/service/DocuSign_UserService.php';
 
-	$client = new DocuSign_Client();
-	if( $client->hasError() )
-	{
-		echo "\nError encountered in client, error is: " . $client->getErrorMessage() . "\n";
-		return;
-	}
-	$service = new DocuSign_UserService($client);
+  require_once '../../../src/DocuSign_Client.php';
+  require_once '../../../src/service/DocuSign_UserService.php';
+
+  $client = new DocuSign_Client();
+  if( $client->hasError() )
+  {
+    echo "\nError encountered in client, error is: " . $client->getErrorMessage() . "\n";
+    return;
+  }
+  $service = new DocuSign_UserService($client);
 
   $user = new DocuSign_AddUser();
   $user->setEmail("bob.testname@example.com");
@@ -19,9 +19,9 @@
   //$user->setPassword("PasswordNotKnown");
   //$user->setForgottenPasswordInfo("Q1", "A1", "Q2", "A2", "Q3", "A3", "Q4", "A4");
   $user->setCanSendEnvelope(true);
-  
+
   $response = $service->user->addUser($user);
   echo "\n-- Add User --\n\n";
   print_r($response);
-  
+
 ?>

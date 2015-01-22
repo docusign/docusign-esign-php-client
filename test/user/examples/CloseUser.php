@@ -1,7 +1,7 @@
 <?php
-	
-	require_once '../../../src/DocuSign_Client.php';
-	require_once '../../../src/service/DocuSign_UserService.php';
+
+  require_once '../../../src/DocuSign_Client.php';
+  require_once '../../../src/service/DocuSign_UserService.php';
 
   if ( sizeof($argv) != 2 ) 
   {
@@ -10,16 +10,16 @@
     return;
   }
 
-	$client = new DocuSign_Client();
-	if( $client->hasError() )
-	{
-		echo "\nError encountered in client, error is: " . $client->getErrorMessage() . "\n";
-		return;
-	}
-	$service = new DocuSign_UserService($client);
+  $client = new DocuSign_Client();
+  if( $client->hasError() )
+  {
+    echo "\nError encountered in client, error is: " . $client->getErrorMessage() . "\n";
+    return;
+  }
+  $service = new DocuSign_UserService($client);
 
   $response = $service->user->closeUser($argv[1]);
   echo "\n-- Close User --\n\n";
   print_r($response);
-  
+
 ?>

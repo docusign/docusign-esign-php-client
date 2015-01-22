@@ -1,7 +1,7 @@
 <?php
-	
-	require_once '../../../src/DocuSign_Client.php';
-	require_once '../../../src/service/DocuSign_UserService.php';
+
+  require_once '../../../src/DocuSign_Client.php';
+  require_once '../../../src/service/DocuSign_UserService.php';
 
   if ( sizeof($argv) != 2 ) 
   {
@@ -10,13 +10,13 @@
     return;
   }
 
-	$client = new DocuSign_Client();
-	if( $client->hasError() )
-	{
-		echo "\nError encountered in client, error is: " . $client->getErrorMessage() . "\n";
-		return;
-	}
-	$service = new DocuSign_UserService($client);
+  $client = new DocuSign_Client();
+  if( $client->hasError() )
+  {
+    echo "\nError encountered in client, error is: " . $client->getErrorMessage() . "\n";
+    return;
+  }
+  $service = new DocuSign_UserService($client);
 
   $userProfile = new DocuSign_UserProfile();
   $userProfile->setCompanyName("ACME Inc.");
@@ -24,5 +24,5 @@
   $response = $service->user->modifyUserProfile($argv[1], $userProfile);
   echo "\n-- Modify User Profile --\n\n";
   print_r($response);
-  
+
 ?>
