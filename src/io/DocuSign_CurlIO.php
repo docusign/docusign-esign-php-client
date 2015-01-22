@@ -21,13 +21,17 @@ class DocuSign_CurlIO extends DocuSign_IO {
 
 	public function makeRequest($url, $method = 'GET', $headers = array(), $params = array(), $data = NULL) {
 		$response;
-		$curl = curl_init($url . '?' . http_build_query($params, NULL, '&'));
+    if ( sizeof($params) > 0 ) {
+		  $curl = curl_init($url . '?' . http_build_query($params, NULL, '&'));
+    } else {
+      $curl = curl_init($url);
+    }
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 		//return the transfer as a string
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
-		switch (strtoupper($method)) {
+		switch (strtoupper($method)) { 
 
 			case 'POST':
 				curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
@@ -42,6 +46,7 @@ class DocuSign_CurlIO extends DocuSign_IO {
 
 			case 'DELETE':
 				curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'DELETE');
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 				break;
 
 			default:
