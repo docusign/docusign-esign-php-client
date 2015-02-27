@@ -45,8 +45,8 @@ class DocuSign_Client {
     // The DocuSign Credentials
     public $creds;
 
-	// The version of DocuSign API
-	public $version;
+    // The version of DocuSign API
+    public $version;
 
     // The DocuSign Environment
     public $environment;
@@ -138,6 +138,13 @@ class DocuSign_Client {
 	public function getHeaders($accept = 'Accept: application/json', $contentType = 'Content-Type: application/json') { 
 		return array(
 			'X-DocuSign-Authentication: <DocuSignCredentials><Username>' . $this->creds->getEmail() . '</Username><Password>' . $this->creds->getPassword() . '</Password><IntegratorKey>' . $this->creds->getIntegratorKey() . '</IntegratorKey></DocuSignCredentials>',
+			$accept,
+			$contentType
+		);
+	}
+	public function getSoboHeaders($soboUser, $accept = 'Accept: application/json', $contentType = 'Content-Type: application/json') { 
+		return array(
+			'X-DocuSign-Authentication: <DocuSignCredentials><SendOnBehalfOf>' . $soboUser . '</SendOnBehalfOf><Username>' . $this->creds->getEmail() . '</Username><Password>' . $this->creds->getPassword() . '</Password><IntegratorKey>' . $this->creds->getIntegratorKey() . '</IntegratorKey></DocuSignCredentials>',
 			$accept,
 			$contentType
 		);

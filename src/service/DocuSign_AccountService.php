@@ -48,6 +48,48 @@ class DocuSign_AccountResource extends DocuSign_Resource {
 	}
 
 
+	public function getInfo() {
+		$url = $this->client->getBaseURL();
+		return $this->curl->makeRequest($url, 'GET', $this->client->getHeaders());
+	}
+
+
+	public function getBillingPlan() {
+		$url = $this->client->getBaseURL() . '/billing_plan';
+		return $this->curl->makeRequest($url, 'GET', $this->client->getHeaders());
+	}
+
+
+	public function getBillingChargeList() {
+		$url = $this->client->getBaseURL() . '/billing_charges';
+		return $this->curl->makeRequest($url, 'GET', $this->client->getHeaders());
+	}
+
+
+	public function getBillingInvoiceList() {
+		$url = $this->client->getBaseURL() . '/billing_invoices';
+		return $this->curl->makeRequest($url, 'GET', $this->client->getHeaders());
+	}
+
+
+	public function getSettingList() {
+		$url = $this->client->getBaseURL() . '/settings';
+		return $this->curl->makeRequest($url, 'GET', $this->client->getHeaders());
+	}
+
+
+	public function getBrandList() {
+		$url = $this->client->getBaseURL() . '/brands';
+		return $this->curl->makeRequest($url, 'GET', $this->client->getHeaders());
+	}
+
+
+	public function getCustomFieldList() {
+		$url = $this->client->getBaseURL() . '/custom_fields';
+		return $this->curl->makeRequest($url, 'GET', $this->client->getHeaders());
+	}
+
+
 	public function createAccount(  $accountName,
 									$distributorCode,
 									$distributorPassword,
@@ -93,7 +135,7 @@ class DocuSign_InitialUser extends DocuSign_Model {
 		if( isset($password) ) $this->password = $password;
 	}
 
-  	public function setEmail($email) { $this->email = $email; }
+	public function setEmail($email) { $this->email = $email; }
 	public function getEmail() { return $this->email; }
 	public function setFirstName($firstName) { $this->firstName = $firstName; }
 	public function getFirstName() { return $this->firstName; }
@@ -115,7 +157,7 @@ class DocuSign_ReferralInformation extends DocuSign_Model {
 		if( isset($referrerName) ) $this->referrerName = $referrerName;
 	}
 
-  	public function setReferralCode($referralCode) { $this->referralCode = $referralCode; }
+	public function setReferralCode($referralCode) { $this->referralCode = $referralCode; }
 	public function getReferralCode() { return $this->referralCode; }
 	public function setReferrerName($referrerName) { $this->referrerName = $referrerName; }
 	public function getReferrerName() { return $this->referrerName; }
