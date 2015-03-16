@@ -84,11 +84,3 @@ project fast.
 
 You can also find a lot of answered questions on StackOverflow, search for tag `DocuSignApi`:
 http://stackoverflow.com/questions/tagged/docusignapi
-
-
-DocuSign DevCon 2015
-----------
-
-![Alt text](DevCon.jpg "DocuSign DevCon 2015")
-
-Looking to fast-track your integration?  Join us at DocuSign DevCon 2015 to learn from the leading business platforms, attend hands-on coding sessions, and network directly with DocuSign engineers and architects.  We'll be taking over Union Square in San Francisco for this 2-day developer conference starting with an opening keynote from the legendary Geoffrey Moore.  [LEARN MORE](http://momentum.docusign.com/san-francisco/dev-con/?mc=devcon-github-php)
