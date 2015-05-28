@@ -67,8 +67,11 @@ class DocuSign_CurlIO extends DocuSign_IO {
 		curl_close($curl);
 
 		if (is_array($response) && array_key_exists('errorCode', $response)) {
+			throw new DocuSign_IOException($response['errorCode'] . ': ' . $response['message']);
+		} elseif (get_class($response) === 'stdClass' && property_exists($response, 'errorCode')) {
 			throw new DocuSign_IOException($response->errorCode . ': ' . $response->message);
 		}
+
 
 		return $response;
 	}
