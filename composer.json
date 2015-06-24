@@ -1,0 +1,14 @@
+{
+    "name": "larrykluger/docusign-lib",
+    "description": "DocuSign eSign PHP Client Library",
+    "authors": [
+        {
+            "name": "DocuSign"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/DocuSign_Client.php"
+        ]
+    }
+}
