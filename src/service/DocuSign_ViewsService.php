@@ -55,11 +55,11 @@ class DocuSign_ViewsResource extends DocuSign_Resource {
 	}
 
 
-	public function getRecipientView($returnUrl, $envelopeId, $userName, $email, $clientUserId = NULL) {
+	public function getRecipientView($returnUrl, $envelopeId, $userName, $email, $clientUserId = NULL, $authMethod = "email") {
 		$url = $this->client->getBaseURL() . '/envelopes/' . $envelopeId . '/views/recipient';
 		$data = array (
 			'returnUrl' => $returnUrl,
-			'authenticationMethod' => 'email',
+			'authenticationMethod' => $authMethod,
 			'userName' => $userName,
 			'email' => $email,
             'clientUserId' => $clientUserId,
