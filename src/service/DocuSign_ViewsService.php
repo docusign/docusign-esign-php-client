@@ -62,7 +62,7 @@ class DocuSign_ViewsResource extends DocuSign_Resource {
 			'authenticationMethod' => $authMethod,
 			'userName' => $userName,
 			'email' => $email,
-            'clientUserId' => $clientUserId,
+			'clientUserId' => $clientUserId,
 		);
 		return $this->curl->makeRequest($url, 'POST', $this->client->getHeaders(), array(), json_encode($data));
 	}
