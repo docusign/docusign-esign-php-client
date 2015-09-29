@@ -55,6 +55,7 @@ class DocuSign_RequestSignatureResource extends DocuSign_Resource {
 		);
 		if( isset($templateRoles) && sizeof($templateRoles) > 0 ) {
 			$templateRolesList = array();
+			$templateRole = new DocuSign_TemplateRole($templateRole['roleName'],$templateRole['name'],$templateRole['email'],$templateRole['tabs']);
 			foreach( $templateRoles as $templateRole ) {
 				$templateRole = new DocuSign_TemplateRole($templateRole['roleName'],$templateRole['name'],$templateRole['email']);
 				array_push($templateRolesList, array (
@@ -225,7 +226,6 @@ class DocuSign_Recipient extends DocuSign_Model {
 	{
 		//.. construct tab array
 		switch ($tabType) {
-			case 'textTabs':
 			case 'approveTabs':
 			case 'checkboxTabs':
 			case 'companyTabs':
@@ -270,11 +270,19 @@ class DocuSign_TemplateRole extends DocuSign_Model {
 	private $roleName;
 	private $name;
 	private $email;
+	private $tabs;
 
-	public function __construct($roleName, $name, $email) {
+	public function __construct($roleName, $name, $email, $tabs = NULL) {
 		if( isset($roleName) ) $this->roleName = $roleName;
 		if( isset($name) ) $this->name = $name;
 		if( isset($email) ) $this->email = $email;
+                if( isset($tabs) && is_array($tabs)) {
+                    foreach ($tabs as $tabType => $tab) {
+                        foreach ($tab as $singleTab) {
+                            $this->setTab($tabType, $singleTab);
+                        }
+                    }
+                }
 	}
 
   	public function setRoleName($roleName) { $this->roleName = $roleName; }
@@ -283,6 +291,39 @@ class DocuSign_TemplateRole extends DocuSign_Model {
 	public function getName() { return $this->name; }
 	public function setEmail($email) { $this->email = $email; }
 	public function getEmail() { return $this->email; }
+        public function getTabs() { return $this->tabs; }
+        public function getTab($tabType, $tabLabel) {
+            foreach ($this->tabs[$tabType] as $tab) {
+                if ($tab['tabLabel'] == $tabLabel) {
+                    return array($tabType => $tab);
+                }
+            }
+        }
+
+        public function setTab($tabType, $tab)
+        {
+            //.. construct tab array
+            switch ($tabType) {
+                case 'signHereTabs':
+                case 'initialHereTabs':
+                case 'fullNameTabs':
+                case 'emailTabs':
+                case 'textTabs':
+                case 'titleTabs':
+                case 'companyTabs':
+                    $this->tabs[$tabType][] = $tab;
+                    break;
+            };
+        }
+
+        public function unsetTab($tabType, $tabLabel)
+        {
+            foreach ($this->tabs[$tabType] as &$tab) {
+                if ($tab['tabLabel'] == $tabLabel) {
+                    unset($tab);
+                }
+            }
+        }
 }
 
 
