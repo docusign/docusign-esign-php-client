@@ -1,6 +1,6 @@
 {
-    "name": "docusign/DocuSign-PHP-Client",
-    "description": "DocuSign eSign PHP Client Library",
+    "name": "docusign/docusign-php-client",
+    "description": "DocuSign eSignignature PHP Client Library",
     "authors": [
         {
             "name": "DocuSign"
