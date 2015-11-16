@@ -55,7 +55,6 @@ class DocuSign_RequestSignatureResource extends DocuSign_Resource {
 		);
 		if( isset($templateRoles) && sizeof($templateRoles) > 0 ) {
 			$templateRolesList = array();
-			$templateRole = new DocuSign_TemplateRole($templateRole['roleName'],$templateRole['name'],$templateRole['email'],$templateRole['tabs']);
 			foreach( $templateRoles as $templateRole ) {
 				$templateRole = new DocuSign_TemplateRole($templateRole['roleName'],$templateRole['name'],$templateRole['email']);
 				array_push($templateRolesList, array (
