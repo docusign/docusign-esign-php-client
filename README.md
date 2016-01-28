@@ -76,6 +76,11 @@ If you need immediate notification of envelope events we encourage you to
 review envelope events or use our Connect Publisher technology, DocuSign 
 Connect as an alternative.
 
+License
+-------------------------
+
+The DocuSign Java Client is licensed under the following [License](LICENSE).
+
 More Information
 -------------------------
 
