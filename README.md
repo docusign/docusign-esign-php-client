@@ -1,6 +1,6 @@
-DocuSign eSign PHP Client Library
+DocuSign PHP Client
 ================================
-
+e
 This is a client library to help you get started with DocuSign eSignature API.
 To get started with using this library go to <a href="http://www.docusign.com/devcenter">http://www.docusign.com/devcenter</a> and get
 a free development account.  After you get an account and generate an Integrator Key (App Key) 
@@ -79,7 +79,7 @@ Connect as an alternative.
 License
 -------------------------
 
-The DocuSign Java Client is licensed under the following [License](LICENSE).
+The DocuSign PHP Client is licensed under the following [License](LICENSE).
 
 More Information
 -------------------------
