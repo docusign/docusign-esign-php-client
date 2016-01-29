@@ -61,7 +61,7 @@ class DocuSign_CurlIO extends DocuSign_IO {
 			$jsonResult = json_decode($result);
 			$response = (!is_null($jsonResult)) ? $jsonResult : $result;
 		} catch(Exception $e) {
-			throw new DocuSign_IOException($e);
+			throw new DocuSign_IOException($e->getMessage());
 		}
 		
 		curl_close($curl);
