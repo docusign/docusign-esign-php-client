@@ -29,7 +29,6 @@ class DocuSign_CurlIO extends DocuSign_IO {
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 		//return the transfer as a string
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 		switch (strtoupper($method)) {
 
