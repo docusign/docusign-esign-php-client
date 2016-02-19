@@ -1,61 +1,388 @@
 <?php
 
-global $testConfig;
-global $testData;
-
-$testConfig = array(
-
-    // The DocuSign Integrator's Key
-    'integrator_key' => '',
-
-    // The Docusign Account Email
-    'email' => '',
-
-    // The Docusign Account password or API password
-    'password' => '',
- 
-    // The version of DocuSign API (Ex: v1, v2)
-    'version' => 'v2',
-
-    // The DocuSign Environment (Ex: demo, test, www)
-    'environment' => 'demo',
+class TestConfig
+{
+    /**
+      * $username Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+      * @var string
+      */
+    protected $username;
     
-    // The DocuSign Account Id (Optional)
-    // For multiple accounts user:
-    //   - if it's empty, the default account will be used
-    //   - otherwise, the DocuSign account with this account id will be used
-    'account_id' => ''
-);
-
-$testData = array(
+    /**
+      * $password
+      * @var string
+      */
+    protected $password;
     
-	// AccountName of above referenced account
-    'account_name' => '',
-
-    // A valid envelopeId from the account specified above
-    'envelope_id' => '',
-
-    // A valid templateId from the account specified above
-    'template_id' => '',
-
-    // A valid template role name from the template specified above
-    'template_role' => '',
+    /**
+      * $integratorKey
+      * @var string
+      */
+    protected $integratorKey;
     
-    // userId for account member
-    'user_id' => '',
+    /**
+      * $host
+      * @var string
+      */
+    protected $host;
+    
+    /**
+      * $apiClient
+      * @var DocuSign\eSign\ApiClient
+      */
+    protected $apiClient;
 
-	// Member Email Address
-    'user_email' => '',
+    /**
+      * $accountId
+      * @var string
+      */
+    protected $accountId;
 
-    // Member User Name
-    'user_name' => '',
+    /**
+      * $recipientEmail
+      * @var string
+      */
+    protected $recipientEmail;
 
-    // Recipient Email Address
-    'recipient_email' => '',
+    /**
+      * $recipientName
+      * @var string
+      */
+    protected $recipientName;
 
-    // Recipient Name
-    'recipient_name' => '',
+    /**
+      * $templateRoleName
+      * @var string
+      */
+    protected $templateRoleName;
 
-    // Test RecipientId (user configured or a system-generated GUID)
-    'recipient_id' => ''
-);
+    /**
+      * $templateId
+      * @var string
+      */
+    protected $templateId;
+
+    /**
+      * $envelopId
+      * @var string
+      */
+    protected $envelopeId;
+
+    /**
+     * $createdEnvelopId
+     * @var string
+     */
+    protected $createdEnvelopId;
+
+    /**
+     * $returnUrl
+     * @var string
+     */
+    protected $returnUrl;
+
+    /**
+     * $clientUserId
+     * @var string
+     */
+    protected $clientUserId;
+
+    public function __construct($username = null, $password = null, $integratorKey = null, $host = null, $returnUrl = null)
+    {
+        $this->host = !empty($host) ? $host : "https://demo.docusign.net/restapi";
+        $this->username = !empty($username) ? $username : 'naveen.gopala@docusign.com';
+        $this->password = !empty($password) ? $password : 'gopala';
+        $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'TEST-5913deaf-c9d9-4d6b-a8a0-2d7ca76db2f5';
+
+        $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'naveen.gopala@docusign.com';
+        $this->recipientName = !empty($recipientName) ? $recipientName : 'Naveen Gopala';
+
+        $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'Manager';
+        $this->templateId = !empty($templateId) ? $templateId : 'ae0e3ee4-f705-467c-8028-d53992078267';
+
+        $this->returnUrl = !empty($returnUrl) ? $returnUrl : 'https://www.docusign.com/devcenter';
+
+        $this->clientUserId = "1234";
+    }
+
+    /**
+     * Gets username
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+  
+    /**
+     * Sets username
+     * @param string $username
+     * @return $this
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+        return $this;
+    } 
+
+    /**
+     * Gets password
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+  
+    /**
+     * Sets password
+     * @param string $password
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+        return $this;
+    } 
+
+    /**
+     * Gets integratorKey
+     * @return string
+     */
+    public function getIntegratorKey()
+    {
+        return $this->integratorKey;
+    }
+  
+    /**
+     * Sets integratorKey
+     * @param string $integratorKey
+     * @return $this
+     */
+    public function setIntegratorKey($integratorKey)
+    {
+        $this->integratorKey = $integratorKey;
+        return $this;
+    } 
+
+    /**
+     * Gets host
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+  
+    /**
+     * Sets host
+     * @param string $host
+     * @return $this
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+        return $this;
+    } 
+
+    /**
+     * Gets apiClient
+     * @return DocuSign\eSign\ApiClient
+     */
+    public function getApiClient()
+    {
+        return $this->apiClient;
+    }
+  
+    /**
+     * Sets apiClient
+     * @param DocuSign\eSign\ApiClient $apiClient
+     * @return $this
+     */
+    public function setApiClient($apiClient)
+    {
+        $this->apiClient = $apiClient;
+        return $this;
+    }
+  
+    /**
+     * Gets accountId
+     * @return string
+     */
+    public function getAccountId()
+    {
+        return $this->accountId;
+    }
+
+    /**
+     * Sets accountId
+     * @param string $accountId
+     * @return $this
+     */
+    public function setAccountId($accountId)
+    {
+        $this->accountId = $accountId;
+        return $this;
+    }
+
+    /**
+     * Gets recipientEmail
+     * @return string
+     */
+    public function getRecipientEmail()
+    {
+        return $this->recipientEmail;
+    }
+  
+    /**
+     * Sets recipientEmail
+     * @param string $recipientEmail
+     * @return $this
+     */
+    public function setRecipientEmail($recipientEmail)
+    {
+        $this->recipientEmail = $recipientEmail;
+        return $this;
+    } 
+
+    /**
+     * Gets recipientName
+     * @return string
+     */
+    public function getRecipientName()
+    {
+        return $this->recipientName;
+    }
+  
+    /**
+     * Sets recipientName
+     * @param string $recipientName
+     * @return $this
+     */
+    public function setRecipientName($recipientName)
+    {
+        $this->recipientName = $recipientName;
+        return $this;
+    } 
+
+    /**
+     * Gets templateRoleName
+     * @return string
+     */
+    public function getTemplateRoleName()
+    {
+        return $this->templateRoleName;
+    }
+  
+    /**
+     * Sets templateRoleName
+     * @param string $templateRoleName
+     * @return $this
+     */
+    public function setTemplateRoleName($templateRoleName)
+    {
+        $this->templateRoleName = $templateRoleName;
+        return $this;
+    } 
+
+    /**
+     * Gets templateId
+     * @return string
+     */
+    public function getTemplateId()
+    {
+        return $this->templateId;
+    }
+  
+    /**
+     * Sets templateId
+     * @param string $templateId
+     * @return $this
+     */
+    public function setTemplateId($templateId)
+    {
+        $this->templateId = $templateId;
+        return $this;
+    }
+
+    /**
+     * Gets envelopeId
+     * @return string
+     */
+    public function getEnvelopeId()
+    {
+        return $this->envelopeId;
+    }
+
+    /**
+     * Sets envelopeId
+     * @param string $envelopeId
+     * @return $this
+     */
+    public function setEnvelopeId($envelopeId)
+    {
+        $this->envelopeId = $envelopeId;
+        return $this;
+    }
+
+    /**
+     * Gets createdEnvelopeId
+     * @return string
+     */
+    public function getCreatedEnvelopeId()
+    {
+        return $this->createdEnvelopId;
+    }
+
+    /**
+     * Sets createdEnvelopeId
+     * @param string $createdEnvelopeId
+     * @return $this
+     */
+    public function setCreatedEnvelopeId($envelopeId)
+    {
+        $this->createdEnvelopId = $envelopeId;
+        return $this;
+    }
+
+    /**
+     * Gets returnUrl
+     * @return string
+     */
+    public function getReturnUrl()
+    {
+        return $this->returnUrl;
+    }
+
+    /**
+     * Sets returnUrl
+     * @param string $returnUrl
+     * @return $this
+     */
+    public function setReturnUrl($returnUrl)
+    {
+        $this->returnUrl = $returnUrl;
+        return $this;
+    }
+
+    /**
+     * Gets clientUserId
+     * @return string
+     */
+    public function getClientUserId()
+    {
+        return $this->clientUserId;
+    }
+
+    /**
+     * Sets clientUserId
+     * @param string $clientUserId
+     * @return $this
+     */
+    public function setClientUserId($clientUserId)
+    {
+        $this->clientUserId = $clientUserId;
+        return $this;
+    }
+}
+
+?>

@@ -1,91 +1,104 @@
-DocuSign PHP Client
-================================
-e
-This is a client library to help you get started with DocuSign eSignature API.
-To get started with using this library go to <a href="http://www.docusign.com/devcenter">http://www.docusign.com/devcenter</a> and get
-a free development account.  After you get an account and generate an Integrator Key (App Key) 
-you will be able to make test web service calls.  To generate your Integrator Key login to your developer 
-account and go to Preferences -> API page.
+# DocuSign PHP Client
 
-The JSON parsing is done through PHP's native `json_encode()` and `json_decode()` functions, available with 
-PHP 5.2.x and higher.  To see examples of how the library can be used for most frequently used scenarios 
-look in the test directory.  The sub folders contain unit tests, as well as /examples folders which 
-showcase the most frequent usage scenarios.
+You can sign up for a free [developer sandbox](https://www.docusign.com/developer-center).
 
-NOTE: it does not and will not have the full functionality of the DocuSign service.
-Feel free to update the proxy classes yourself and contribute functions.
-Alternatively you can get the raw HTTP connection and send over your own JSON.
-For full functionality and documentation visit www.docusign.com/devcenter and iodocs.docusign.com
+Requirements
+============
 
+PHP 5.3.3 or higher [http://www.php.net/].
 
-Library Configuration
--------------------------
+Installation
+============
 
-To use this library you need to enter your account specific info in the `config.php` configuration file.
-Test data can also be entered into the `testConfig.php` file for unit testing and examples.
-Do a search for the string "TODO" to locate places that require specific info to be entered.
+### Composer
 
+You can install the bindings via Composer. Run the following command:  
 
-System Requirements
--------------------------
+	composer require docusign/docusign-esign  
 
-- PHP 5.2.x or higher [http://www.php.net/]
-- PHP Curl extension [http://www.php.net/manual/en/intro.curl.php]
-- PHP JSON extension [http://php.net/manual/en/book.json.php]
+### Manual Install 
 
-This client library was tested with PHP 5.3.15.
+If you do not wish to use Composer, you can download the latest release. Then, to use the bindings, include the init.php file.
 
+	require_once('/path/to/docusign-esign/autoload.php');
 
-Important Terms
--------------------------
+#### Dependencies
 
-`Integrator Key`: Identifies a single integration. Every API 
-request includes the Integrator Key and a 
-username/password combination
+This client has the following external dependencies: 
 
-`Envelope`: Just like a normal Postal Envelope.It contains 
-things like Documents, Recipients, and Tabs
+* PHP Curl extension [http://www.php.net/manual/en/intro.curl.php]
+* PHP JSON extension [http://php.net/manual/en/book.json.php]
 
-`Document`: The PDF, Doc, Image, or other item you want 
-signed. If it is not a PDF, you must include the File 
-Extension in the API call
+Usage
+=====
 
-`Tab`: Tied to a position on a Document and defines what 
-happens there. For example, you have a SignHere Tab 
-wherever you want a Recipient to sign
+To initialize the client and make the Login API Call:
 
-`Recipient`: The person you want to send the Envelope 
-to. Requires a UserName and Email
+```php
+	<?php
+	class DocuSignSample
+	{
+		public function login()
+		{
+			$username = "[EMAIL]";
+			$password = "[PASSWORD]";
+			$integrator_key = "[INTEGRATOR_KEY]";
+			$host = "https://demo.docusign.net/restapi";
 
-`Captive Recipient`: Recipient signs in an iframe on your 
-website instead of receving an email.  Captive recipients have the
-clientUserId property set.
+		 	$config = new DocuSign\eSign\Configuration();
+		 	$config->setHost($host);
+		 	$config->addDefaultHeader("X-DocuSign-Authentication", "{\"Username\":\"" . $username . "\",\"Password\":\"" . $password . "\",\"IntegratorKey\":\"" . $integrator_key . "\"}");
 
-`PowerForm`: A pre-created Envelope that you can launch
-instead of writing server-side code
+		 	$apiClient = new DocuSign\eSign\ApiClient($config);
 
-Rate Limits
--------------------------
+		 	$authenticationApi = new DocuSign\eSign\Api\AuthenticationApi($apiClient);
 
-Please note: Applications are not allowed to poll for envelope status more
-than once every 15 minutes and we discourage integrators from continuously
-retrieving status on envelopes that are in a terminal state (Completed, 
-Declined, and Voided).  Excessive polling will result in your API access 
-being revoked.  
-If you need immediate notification of envelope events we encourage you to 
-review envelope events or use our Connect Publisher technology, DocuSign 
-Connect as an alternative.
+			$options = new \DocuSign\eSign\Api\AuthenticationApi\LoginOptions();
+
+		 	$loginInformation = $authenticationApi->login($options);
+		 	if(isset($loginInformation) && count($loginInformation) > 0)
+		 	{
+		 		$loginAccount = $loginInformation->getLoginAccounts()[0];
+		 		if(isset($loginInformation))
+		 		{
+		 			$accountId = $loginAccount->getAccountId();
+		 			if(!empty($accountId))
+		 			{
+		 				echo $accountId;
+		 			}
+		 		}
+		 	}
+		}
+	}
+	?>
+```
+
+See [UnitTests.php](https://github.com/docusign/docusign-php-client/blob/master/test/UnitTests.php) for more examples.
+
+Testing
+=======
+
+Unit tests are available in the [test](/test) folder. 
+
+Follow the steps below to run the test cases
+
+* Rename the "TestConfig.php-sample" to "TestConfig.php"
+* Populate all the required values like the login credentials, integrator key, host, etc in TestConfig.php
+* Run the following command from the [test](/test) folder 
+
+        phpunit.phar UnitTests.php
+
+Support
+=======
+
+Feel free to log issues against this client through GitHub.  We also have an active developer community on Stack Overflow, search the [DocuSignAPI](http://stackoverflow.com/questions/tagged/docusignapi) tag.
 
 License
--------------------------
+=======
 
 The DocuSign PHP Client is licensed under the following [License](LICENSE).
 
-More Information
--------------------------
+Notes
+=======
 
-Professional Services is also available to help define and implement your
-project fast. 
-
-You can also find a lot of answered questions on StackOverflow, search for tag `DocuSignApi`:
-http://stackoverflow.com/questions/tagged/docusignapi
+This version of the client library does not implement all of the DocuSign REST API methods. The current client omits methods in the Accounts, Billing, Cloud Storage, Connect, Groups (Branding), and Templates (Bulk Recipients) categories. The client's methods support the core set of use cases that most integrations will encounter. For a complete list of omitted endpoints, see [Omitted Endpoints](./omitted_endpoints.md).

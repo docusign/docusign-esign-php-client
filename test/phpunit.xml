@@ -1,7 +1,8 @@
-<phpunit colors="true">
-	<testsuites>
-		<testsuite name="All Tests">
-      <directory suffix="Test.php">.</directory>
-		</testsuite>
-	</testsuites>
+<phpunit bootstrap="./bootstrap.php">
+  <testsuites>
+    <testsuite name="DocuSign eSign Test Suite">
+      <directory>./</directory>
+      <exclude></exclude>
+    </testsuite>
+  </testsuites>
 </phpunit>
