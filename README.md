@@ -14,13 +14,17 @@ Installation
 
 You can install the bindings via Composer. Run the following command:  
 
-	composer require docusign/docusign-esign  
+	composer require docusign/docusign-esign
+
+To use the bindings, use Composer's autoload:
+
+	require_once('vendor/autoload.php');
 
 ### Manual Install 
 
 If you do not wish to use Composer, you can download the latest release. Then, to use the bindings, include the init.php file.
 
-	require_once('/path/to/docusign-esign/autoload.php');
+	require_once('/path/to/docusign-esign-client/autoload.php');
 
 #### Dependencies
 
