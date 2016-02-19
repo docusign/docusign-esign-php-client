@@ -1,17 +1,33 @@
 {
-    "name": "docusign/docusign-php-client",
-    "description": "DocuSign eSignignature PHP Client Library",
+    "name": "DocuSign/DocuSign-eSign",
+    "version": "2.0.0",
+    "description": "The DocuSign PHP library makes integrating DocuSign into your websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-php-client repository. Join the eSign revolution!",
+    "keywords": [
+        "swagger",
+        "php",
+        "sdk",
+        "api"
+    ],
+    "homepage": "https://www.docusign.com/developer-center",
+    "license": "MIT",
     "authors": [
         {
-            "name": "DocuSign"
+            "name": "DocuSign",
+            "homepage": "https://www.docusign.com/developer-center"
         }
     ],
-	"require": {
-	        "php": ">=5.3.0"
-	},
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "satooshi/php-coveralls": "~0.6.1",
+        "squizlabs/php_codesniffer": "~2.0"
+    },
     "autoload": {
-        "files": [
-            "src/DocuSign_Client.php"
-        ]
+        "files": [ "autoload.php" ]
     }
 }
