@@ -14,7 +14,7 @@ Installation
 
 You can install the bindings via Composer. Run the following command:  
 
-	composer require docusign/docusign-esign
+	composer require docusign/esign-client
 
 To use the bindings, use Composer's autoload:
 
