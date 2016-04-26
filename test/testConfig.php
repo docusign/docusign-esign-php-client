@@ -89,15 +89,15 @@ class TestConfig
     public function __construct($username = null, $password = null, $integratorKey = null, $host = null, $returnUrl = null)
     {
         $this->host = !empty($host) ? $host : "https://demo.docusign.net/restapi";
-        $this->username = !empty($username) ? $username : 'naveen.gopala@docusign.com';
-        $this->password = !empty($password) ? $password : 'gopala';
-        $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'TEST-5913deaf-c9d9-4d6b-a8a0-2d7ca76db2f5';
+        $this->username = !empty($username) ? $username : 'REQUIRED';
+        $this->password = !empty($password) ? $password : 'REQUIRED';
+        $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'REQUIRED';
 
-        $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'naveen.gopala@docusign.com';
-        $this->recipientName = !empty($recipientName) ? $recipientName : 'Naveen Gopala';
+        $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'REQUIRED';
+        $this->recipientName = !empty($recipientName) ? $recipientName : 'REQUIRED';
 
-        $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'Manager';
-        $this->templateId = !empty($templateId) ? $templateId : 'ae0e3ee4-f705-467c-8028-d53992078267';
+        $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'REQUIRED';
+        $this->templateId = !empty($templateId) ? $templateId : 'REQUIRED';
 
         $this->returnUrl = !empty($returnUrl) ? $returnUrl : 'https://www.docusign.com/devcenter';
 
