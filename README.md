@@ -72,15 +72,15 @@ class DocuSignSample
             if(isset($loginInformation) && count($loginInformation) > 0)
             {
                 $loginAccount = $loginInformation->getLoginAccounts()[0];
-		$host = loginAccount->getBaseUrl();
-        	$host = explode("/v2",$host);
-		$host = $host[0];
+                $host = loginAccount->getBaseUrl();
+                $host = explode("/v2",$host);
+                $host = $host[0];
 	
-		// UPDATE configuration object
-		$config->setHost($host);
+                // UPDATE configuration object
+                $config->setHost($host);
 		
-		// instantiate a NEW docusign api client (that has the correct baseUrl/host)
-		$apiClient = new DocuSign\eSign\ApiClient($config);
+                // instantiate a NEW docusign api client (that has the correct baseUrl/host)
+                $apiClient = new DocuSign\eSign\ApiClient($config);
 	
                 if(isset($loginInformation))
                 {
