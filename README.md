@@ -51,7 +51,7 @@ class DocuSignSample
         $password = "[PASSWORD]";
         $integrator_key = "[INTEGRATOR_KEY]";     
 
-        // change to production before going live
+        // change to production (www.docusign.net) before going live
         $host = "https://demo.docusign.net/restapi";
 
         // create configuration object and configure custom auth header
@@ -65,13 +65,23 @@ class DocuSignSample
         
         try 
         {
-            //*** STEP 1 - Login API
+            //*** STEP 1 - Login API: get first Account ID and baseURL
             $authenticationApi = new DocuSign\eSign\Api\AuthenticationApi($apiClient);
             $options = new \DocuSign\eSign\Api\AuthenticationApi\LoginOptions();
             $loginInformation = $authenticationApi->login($options);
             if(isset($loginInformation) && count($loginInformation) > 0)
             {
                 $loginAccount = $loginInformation->getLoginAccounts()[0];
+		$host = loginAccount->getBaseUrl();
+        	$host = explode("/v2",$host);
+		$host = $host[0];
+	
+		// UPDATE configuration object
+		$config->setHost($host);
+		
+		// instantiate a NEW docusign api client (that has the correct baseUrl/host)
+		$apiClient = new DocuSign\eSign\ApiClient($config);
+	
                 if(isset($loginInformation))
                 {
                     $accountId = $loginAccount->getAccountId();
