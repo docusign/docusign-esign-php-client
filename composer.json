@@ -1,6 +1,6 @@
 {
     "name": "docusign/esign-client",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "description": "The DocuSign PHP library makes integrating DocuSign into your websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-php-client repository. Join the eSign revolution!",
     "keywords": [
         "swagger",
@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.5.36",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*"
