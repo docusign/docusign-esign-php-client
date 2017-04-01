@@ -14,17 +14,17 @@ Installation
 
 You can install the bindings via Composer. Run the following command:  
 
-	composer require docusign/esign-client
+    composer require docusign/esign-client
 
 To use the bindings, use Composer's autoload:
 
-	require_once('vendor/autoload.php');
+    require_once('vendor/autoload.php');
 
 ### Manual Install 
 
 If you do not wish to use Composer, you can download the latest release. Then, to use the bindings, include the init.php file.
 
-	require_once('/path/to/docusign-esign-client/autoload.php');
+    require_once('/path/to/docusign-esign-client/autoload.php');
 
 #### Dependencies
 
@@ -75,13 +75,13 @@ class DocuSignSample
                 $host = $loginAccount->getBaseUrl();
                 $host = explode("/v2",$host);
                 $host = $host[0];
-	
+  
                 // UPDATE configuration object
                 $config->setHost($host);
-		
+    
                 // instantiate a NEW docusign api client (that has the correct baseUrl/host)
                 $apiClient = new DocuSign\eSign\ApiClient($config);
-	
+  
                 if(isset($loginInformation))
                 {
                     $accountId = $loginAccount->getAccountId();
@@ -98,13 +98,13 @@ class DocuSignSample
                         $templateRole->setRoleName("[ROLE_NAME]");             
 
                         // instantiate a new envelope object and configure settings
-                        $envelop_definition = new DocuSign\eSign\Model\EnvelopeDefinition();
-                        $envelop_definition->setEmailSubject("[DocuSign PHP SDK] - Signature Request Sample");
-                        $envelop_definition->setTemplateId("[TEMPLATE_ID]");
-                        $envelop_definition->setTemplateRoles(array($templateRole));
+                        $envelope_definition = new DocuSign\eSign\Model\EnvelopeDefinition();
+                        $envelope_definition->setEmailSubject("[DocuSign PHP SDK] - Signature Request Sample");
+                        $envelope_definition->setTemplateId("[TEMPLATE_ID]");
+                        $envelope_definition->setTemplateRoles(array($templateRole));
                         
                         // set envelope status to "sent" to immediately send the signature request
-                        $envelop_definition->setStatus("sent");
+                        $envelope_definition->setStatus("sent");
 
                         // optional envelope parameters
                         $options = new \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions();
@@ -112,10 +112,10 @@ class DocuSignSample
                         $options->setMergeRolesOnDraft(null);
 
                         // create and send the envelope (aka signature request)
-                        $envelop_summary = $envelopeApi->createEnvelope($accountId, $envelop_definition, $options);
-                        if(!empty($envelop_summary))
+                        $envelope_summary = $envelopeApi->createEnvelope($accountId, $envelope_definition, $options);
+                        if(!empty($envelope_summary))
                         {
-                            echo "$envelop_summary";
+                            echo "$envelope_summary";
                         }
                     }
                 }
