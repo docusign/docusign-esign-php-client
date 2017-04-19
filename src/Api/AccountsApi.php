@@ -768,9 +768,9 @@ class AccountsApi
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NewAccountSummary
      */
-    public function create($new_account_definition = nullAccountsApi\CreateOptions $options = null)
+    public function create($new_account_definition = null, AccountsApi\CreateOptions $options = null)
     {
-        list($response) = $this->createWithHttpInfo($new_account_definition$options);
+        list($response) = $this->createWithHttpInfo($new_account_definition, $options);
         return $response;
     }
 
@@ -784,7 +784,7 @@ class AccountsApi
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NewAccountSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWithHttpInfo($new_account_definition = nullAccountsApi\CreateOptions $options = null)
+    public function createWithHttpInfo($new_account_definition = null, AccountsApi\CreateOptions $options = null)
     {
         // parse inputs
         $resourcePath = "/v2/accounts";
