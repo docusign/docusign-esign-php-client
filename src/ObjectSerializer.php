@@ -252,6 +252,9 @@ class ObjectSerializer
                 return null;
             }
         } elseif ($class === 'DateTime' || in_array(strtolower($class), ['bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+            if ($class !== 'DateTime') {
+                $class = strtolower($class);
+            }
             settype($data, $class);
             return $data;
         } elseif ($class === '\SplFileObject') {
