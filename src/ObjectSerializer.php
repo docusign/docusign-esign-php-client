@@ -277,6 +277,9 @@ class ObjectSerializer
             return $deserialized;
         } else {
             // If a discriminator is defined and points to a valid subclass, use it.
+            if (in_array($class, ['Number', 'Date'])) {
+                $class = '\DocuSign\eSign\Model\\' . $class;
+            }
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
                 $subclass = '\DocuSign\eSign\Model\\' . $data->{$discriminator};
