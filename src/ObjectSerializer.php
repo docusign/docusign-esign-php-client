@@ -251,9 +251,12 @@ class ObjectSerializer
             } else {
                 return null;
             }
-        } elseif ($class === 'DateTime' || in_array(strtolower($class), ['bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+        } elseif ($class === 'DateTime' || in_array(strtolower($class), ['bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'object', 'string', 'void'], true)) {
             if ($class !== 'DateTime') {
                 $class = strtolower($class);
+            }
+            if ($class === 'void') {
+                $class = 'null';
             }
             settype($data, $class);
             return $data;
