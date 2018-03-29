@@ -142,6 +142,13 @@ class Configuration
     protected $sslVerification = true;
 
     /**
+     * SSL Version. Must be one, or a combination, of the acceptable CURLOPT_SSLVERSION values
+     *
+     * @var int
+     */
+    protected $sslVersion = CURL_SSLVERSION_DEFAULT;
+
+    /**
      * Curl proxy host
      *
      * @var string
@@ -656,6 +663,24 @@ class Configuration
     public function getSSLVerification()
     {
         return $this->sslVerification;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSslVersion()
+    {
+        return $this->sslVersion;
+    }
+
+    /**
+     * @param int $sslVersion
+     * @return $this
+     */
+    public function setSslVersion($sslVersion)
+    {
+        $this->sslVersion = $sslVersion;
+        return $this;
     }
 
     /**
