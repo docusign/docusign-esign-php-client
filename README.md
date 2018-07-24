@@ -71,7 +71,7 @@ class DocuSignSample
             $authenticationApi = new DocuSign\eSign\Api\AuthenticationApi($apiClient);
             $options = new \DocuSign\eSign\Api\AuthenticationApi\LoginOptions();
             $loginInformation = $authenticationApi->login($options);
-            if(isset($loginInformation) && count($loginInformation) > 0)
+            if(isset($loginInformation) && count($loginInformation->getLoginAccounts()) > 0)
             {
                 $loginAccount = $loginInformation->getLoginAccounts()[0];
                 $host = $loginAccount->getBaseUrl();
