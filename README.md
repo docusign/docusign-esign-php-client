@@ -29,7 +29,7 @@ require_once('vendor/autoload.php');
 <ol>
    <li>Download or clone this repository.</li>
    <li>Bind the PHP SDK to your server or place it in a static location.
-       <ol style="list-style-type: lower-alpha">
+       <ol style="list-style-type: lower-alpha simple">
            <li>To bind to your server, edit the <em>init.php</em> file. Add:<br>
                <code>require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
            <li>To bind to single pages: In your PHP file that will utilize the PHP SDK, add:<br>
