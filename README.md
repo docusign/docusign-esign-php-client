@@ -21,8 +21,8 @@ This open-source SDK is provided for cases where you would like to make addition
 
 1. In your **PHP console** , type:
 **Composer require docusign/esign-client**
-2. To use the package automatically, add to Composer&#39;s **Autoload** file:
-require\_once(&#39;vendor/autoload.php&#39;);
+2. To use the package automatically, add to Composer's **Autoload** file:
+require\_once('vendor/autoload.php');
 
 ### Manual install:
 
@@ -30,10 +30,10 @@ require\_once(&#39;vendor/autoload.php&#39;);
 2. Bind the PHP SDK to your server or place it in a static location.
 
 1.
-  1. a)To bind to your server, edit the _init.php_ file. Add:
-require\_once(&#39;/path/to/docusign-esign-client/autoload.php&#39;);
-  2. b)To bind to single pages: In your PHP file that will utilize the PHP SDK, add:
-require\_once(&#39;/path/to/docusign-esign-client/autoload.php&#39;);
+  a)To bind to your server, edit the _init.php_ file. Add:
+require\_once('/path/to/docusign-esign-client/autoload.php');
+  b)To bind to single pages: In your PHP file that will utilize the PHP SDK, add:
+require\_once('/path/to/docusign-esign-client/autoload.php');
 
 ## Dependencies
 
@@ -46,11 +46,11 @@ This client has the following external dependencies:
 
 ### Launchers
 
-DocuSign provides a sample application referred to as a [Launcher](https://github.com/docusign/eg-03-php-auth-code-grant). The Launcher contains a set of 18 common use cases and associated source files. These examples use DocuSign&#39;s [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
+DocuSign provides a sample application referred to as a [Launcher](https://github.com/docusign/eg-03-php-auth-code-grant). The Launcher contains a set of 18 common use cases and associated source files. These examples use DocuSign's [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
 
 ## Proof-of-concept applications
 
-If your goal is to create a proof-of-concept application, DocuSign provides a set of [Quick Start](https://github.com/docusign/qs-php) examples. The Quick Startexamples are meant to be used with DocuSign&#39;s [OAuth Token Generator](https://developers.docusign.com/oauth-token-generator), which will allow you to generate tokens for the Demo/Sandbox environment only. These tokens last for eight hours and will enable you to build your proof-of-concept application without the need to fully implement an OAuth solution.
+If your goal is to create a proof-of-concept application, DocuSign provides a set of [Quick Start](https://github.com/docusign/qs-php) examples. The Quick Startexamples are meant to be used with DocuSign's [OAuth Token Generator](https://developers.docusign.com/oauth-token-generator), which will allow you to generate tokens for the Demo/Sandbox environment only. These tokens last for eight hours and will enable you to build your proof-of-concept application without the need to fully implement an OAuth solution.
 
 ## OAuth Implementations
 
