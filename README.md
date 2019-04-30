@@ -19,10 +19,10 @@ This open-source SDK is provided for cases where you would like to make addition
 
 ### Composer:
 
-1. In your **PHP console** , type:
-**Composer require docusign/esign-client**
-2. To use the package automatically, add to Composer's **Autoload** file:
-require_once('vendor/autoload.php');
+1. In your **PHP console** , type:  
+   **Composer require docusign/esign-client**
+2. To use the package automatically, add to Composer's **Autoload** file:  
+   require_once('vendor/autoload.php');
 
 ### Manual install:
 
