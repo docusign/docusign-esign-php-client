@@ -22,17 +22,21 @@ This open-source SDK is provided for cases where you would like to make addition
 1. In your **PHP console** , type:
 **Composer require docusign/esign-client**
 2. To use the package automatically, add to Composer's **Autoload** file:
-require\_once('vendor/autoload.php');
+require_once('vendor/autoload.php');
 
 ### Manual install:
 
-1. Download or clone this repository.
-2. Bind the PHP SDK to your server or place it in a static location.
-
-2a.To bind to your server, edit the _init.php_ file. Add:
-	require\_once('/path/to/docusign-esign-client/autoload.php');
-2b.To bind to single pages: In your PHP file that will utilize the PHP SDK, add:
-	require\_once('/path/to/docusign-esign-client/autoload.php');
+<ol>
+   <li>Download or clone this repository.</li>
+   <li>Bind the PHP SDK to your server or place it in a static location.
+       <ol style="list-style-type: lower-alpha">
+           <li>To bind to your server, edit the <em>init.php</em> file. Add:<br>
+               <code>require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
+           <li>To bind to single pages: In your PHP file that will utilize the PHP SDK, add:<br>
+                <code>`require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
+       </ol>
+   </li>
+</ol>
 
 ## Dependencies
 
