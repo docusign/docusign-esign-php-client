@@ -68,7 +68,7 @@ There are other use-case scenarios, such as **single-page applications** (SPA) t
 
 ## Support
 
-Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](http://stackoverflow.com/questions/tagged/docusignapi).
+Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
 
 ## License
 
