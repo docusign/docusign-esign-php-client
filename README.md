@@ -42,8 +42,8 @@ This open-source SDK is provided for cases where you would like to make addition
 
 This client has the following external dependencies:
 
-- [PHP cURL extension](http://www.php.net/manual/en/intro.curl.php)
-- [PHP JSON extension](http://php.net/manual/en/book.json.php)
+- [PHP cURL extension](https://www.php.net/manual/en/intro.curl.php)
+- [PHP JSON extension](https://php.net/manual/en/book.json.php)
 
 ## Code Examples
 
