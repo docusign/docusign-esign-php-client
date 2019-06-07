@@ -60,6 +60,8 @@ class ChunkedUploadResponse implements ArrayAccess
         'chunked_upload_uri' => 'string',
         'committed' => 'string',
         'expiration_date_time' => 'string',
+        'max_chunked_upload_parts' => 'string',
+        'max_total_size' => 'string',
         'total_size' => 'string'
     ];
 
@@ -79,6 +81,8 @@ class ChunkedUploadResponse implements ArrayAccess
         'chunked_upload_uri' => 'chunkedUploadUri',
         'committed' => 'committed',
         'expiration_date_time' => 'expirationDateTime',
+        'max_chunked_upload_parts' => 'maxChunkedUploadParts',
+        'max_total_size' => 'maxTotalSize',
         'total_size' => 'totalSize'
     ];
 
@@ -94,6 +98,8 @@ class ChunkedUploadResponse implements ArrayAccess
         'chunked_upload_uri' => 'setChunkedUploadUri',
         'committed' => 'setCommitted',
         'expiration_date_time' => 'setExpirationDateTime',
+        'max_chunked_upload_parts' => 'setMaxChunkedUploadParts',
+        'max_total_size' => 'setMaxTotalSize',
         'total_size' => 'setTotalSize'
     ];
 
@@ -109,6 +115,8 @@ class ChunkedUploadResponse implements ArrayAccess
         'chunked_upload_uri' => 'getChunkedUploadUri',
         'committed' => 'getCommitted',
         'expiration_date_time' => 'getExpirationDateTime',
+        'max_chunked_upload_parts' => 'getMaxChunkedUploadParts',
+        'max_total_size' => 'getMaxTotalSize',
         'total_size' => 'getTotalSize'
     ];
 
@@ -149,6 +157,8 @@ class ChunkedUploadResponse implements ArrayAccess
         $this->container['chunked_upload_uri'] = isset($data['chunked_upload_uri']) ? $data['chunked_upload_uri'] : null;
         $this->container['committed'] = isset($data['committed']) ? $data['committed'] : null;
         $this->container['expiration_date_time'] = isset($data['expiration_date_time']) ? $data['expiration_date_time'] : null;
+        $this->container['max_chunked_upload_parts'] = isset($data['max_chunked_upload_parts']) ? $data['max_chunked_upload_parts'] : null;
+        $this->container['max_total_size'] = isset($data['max_total_size']) ? $data['max_total_size'] : null;
         $this->container['total_size'] = isset($data['total_size']) ? $data['total_size'] : null;
     }
 
@@ -297,6 +307,48 @@ class ChunkedUploadResponse implements ArrayAccess
     public function setExpirationDateTime($expiration_date_time)
     {
         $this->container['expiration_date_time'] = $expiration_date_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_chunked_upload_parts
+     * @return string
+     */
+    public function getMaxChunkedUploadParts()
+    {
+        return $this->container['max_chunked_upload_parts'];
+    }
+
+    /**
+     * Sets max_chunked_upload_parts
+     * @param string $max_chunked_upload_parts 
+     * @return $this
+     */
+    public function setMaxChunkedUploadParts($max_chunked_upload_parts)
+    {
+        $this->container['max_chunked_upload_parts'] = $max_chunked_upload_parts;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_total_size
+     * @return string
+     */
+    public function getMaxTotalSize()
+    {
+        return $this->container['max_total_size'];
+    }
+
+    /**
+     * Sets max_total_size
+     * @param string $max_total_size 
+     * @return $this
+     */
+    public function setMaxTotalSize($max_total_size)
+    {
+        $this->container['max_total_size'] = $max_total_size;
 
         return $this;
     }

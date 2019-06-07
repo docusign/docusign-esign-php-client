@@ -55,6 +55,8 @@ class SenderEmailNotifications implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'changed_signer' => 'string',
+        'comments_only_private_and_mention' => 'string',
+        'comments_receive_all' => 'string',
         'delivery_failed' => 'string',
         'envelope_complete' => 'string',
         'offline_signing_failed' => 'string',
@@ -74,6 +76,8 @@ class SenderEmailNotifications implements ArrayAccess
      */
     protected static $attributeMap = [
         'changed_signer' => 'changedSigner',
+        'comments_only_private_and_mention' => 'commentsOnlyPrivateAndMention',
+        'comments_receive_all' => 'commentsReceiveAll',
         'delivery_failed' => 'deliveryFailed',
         'envelope_complete' => 'envelopeComplete',
         'offline_signing_failed' => 'offlineSigningFailed',
@@ -89,6 +93,8 @@ class SenderEmailNotifications implements ArrayAccess
      */
     protected static $setters = [
         'changed_signer' => 'setChangedSigner',
+        'comments_only_private_and_mention' => 'setCommentsOnlyPrivateAndMention',
+        'comments_receive_all' => 'setCommentsReceiveAll',
         'delivery_failed' => 'setDeliveryFailed',
         'envelope_complete' => 'setEnvelopeComplete',
         'offline_signing_failed' => 'setOfflineSigningFailed',
@@ -104,6 +110,8 @@ class SenderEmailNotifications implements ArrayAccess
      */
     protected static $getters = [
         'changed_signer' => 'getChangedSigner',
+        'comments_only_private_and_mention' => 'getCommentsOnlyPrivateAndMention',
+        'comments_receive_all' => 'getCommentsReceiveAll',
         'delivery_failed' => 'getDeliveryFailed',
         'envelope_complete' => 'getEnvelopeComplete',
         'offline_signing_failed' => 'getOfflineSigningFailed',
@@ -144,6 +152,8 @@ class SenderEmailNotifications implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['changed_signer'] = isset($data['changed_signer']) ? $data['changed_signer'] : null;
+        $this->container['comments_only_private_and_mention'] = isset($data['comments_only_private_and_mention']) ? $data['comments_only_private_and_mention'] : null;
+        $this->container['comments_receive_all'] = isset($data['comments_receive_all']) ? $data['comments_receive_all'] : null;
         $this->container['delivery_failed'] = isset($data['delivery_failed']) ? $data['delivery_failed'] : null;
         $this->container['envelope_complete'] = isset($data['envelope_complete']) ? $data['envelope_complete'] : null;
         $this->container['offline_signing_failed'] = isset($data['offline_signing_failed']) ? $data['offline_signing_failed'] : null;
@@ -192,6 +202,48 @@ class SenderEmailNotifications implements ArrayAccess
     public function setChangedSigner($changed_signer)
     {
         $this->container['changed_signer'] = $changed_signer;
+
+        return $this;
+    }
+
+    /**
+     * Gets comments_only_private_and_mention
+     * @return string
+     */
+    public function getCommentsOnlyPrivateAndMention()
+    {
+        return $this->container['comments_only_private_and_mention'];
+    }
+
+    /**
+     * Sets comments_only_private_and_mention
+     * @param string $comments_only_private_and_mention 
+     * @return $this
+     */
+    public function setCommentsOnlyPrivateAndMention($comments_only_private_and_mention)
+    {
+        $this->container['comments_only_private_and_mention'] = $comments_only_private_and_mention;
+
+        return $this;
+    }
+
+    /**
+     * Gets comments_receive_all
+     * @return string
+     */
+    public function getCommentsReceiveAll()
+    {
+        return $this->container['comments_receive_all'];
+    }
+
+    /**
+     * Sets comments_receive_all
+     * @param string $comments_receive_all 
+     * @return $this
+     */
+    public function setCommentsReceiveAll($comments_receive_all)
+    {
+        $this->container['comments_receive_all'] = $comments_receive_all;
 
         return $this;
     }

@@ -54,12 +54,20 @@ class UserAccountManagementGranularInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'can_manage_account_security_settings' => 'string',
+        'can_manage_account_security_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_account_settings' => 'string',
+        'can_manage_account_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_admins' => 'string',
         'can_manage_admins_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_groups' => 'string',
         'can_manage_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_reporting' => 'string',
+        'can_manage_reporting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_sharing' => 'string',
         'can_manage_sharing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_signing_groups' => 'string',
+        'can_manage_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_users' => 'string',
         'can_manage_users_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
@@ -74,12 +82,20 @@ class UserAccountManagementGranularInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'can_manage_account_security_settings' => 'canManageAccountSecuritySettings',
+        'can_manage_account_security_settings_metadata' => 'canManageAccountSecuritySettingsMetadata',
+        'can_manage_account_settings' => 'canManageAccountSettings',
+        'can_manage_account_settings_metadata' => 'canManageAccountSettingsMetadata',
         'can_manage_admins' => 'canManageAdmins',
         'can_manage_admins_metadata' => 'canManageAdminsMetadata',
         'can_manage_groups' => 'canManageGroups',
         'can_manage_groups_metadata' => 'canManageGroupsMetadata',
+        'can_manage_reporting' => 'canManageReporting',
+        'can_manage_reporting_metadata' => 'canManageReportingMetadata',
         'can_manage_sharing' => 'canManageSharing',
         'can_manage_sharing_metadata' => 'canManageSharingMetadata',
+        'can_manage_signing_groups' => 'canManageSigningGroups',
+        'can_manage_signing_groups_metadata' => 'canManageSigningGroupsMetadata',
         'can_manage_users' => 'canManageUsers',
         'can_manage_users_metadata' => 'canManageUsersMetadata'
     ];
@@ -90,12 +106,20 @@ class UserAccountManagementGranularInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'can_manage_account_security_settings' => 'setCanManageAccountSecuritySettings',
+        'can_manage_account_security_settings_metadata' => 'setCanManageAccountSecuritySettingsMetadata',
+        'can_manage_account_settings' => 'setCanManageAccountSettings',
+        'can_manage_account_settings_metadata' => 'setCanManageAccountSettingsMetadata',
         'can_manage_admins' => 'setCanManageAdmins',
         'can_manage_admins_metadata' => 'setCanManageAdminsMetadata',
         'can_manage_groups' => 'setCanManageGroups',
         'can_manage_groups_metadata' => 'setCanManageGroupsMetadata',
+        'can_manage_reporting' => 'setCanManageReporting',
+        'can_manage_reporting_metadata' => 'setCanManageReportingMetadata',
         'can_manage_sharing' => 'setCanManageSharing',
         'can_manage_sharing_metadata' => 'setCanManageSharingMetadata',
+        'can_manage_signing_groups' => 'setCanManageSigningGroups',
+        'can_manage_signing_groups_metadata' => 'setCanManageSigningGroupsMetadata',
         'can_manage_users' => 'setCanManageUsers',
         'can_manage_users_metadata' => 'setCanManageUsersMetadata'
     ];
@@ -106,12 +130,20 @@ class UserAccountManagementGranularInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'can_manage_account_security_settings' => 'getCanManageAccountSecuritySettings',
+        'can_manage_account_security_settings_metadata' => 'getCanManageAccountSecuritySettingsMetadata',
+        'can_manage_account_settings' => 'getCanManageAccountSettings',
+        'can_manage_account_settings_metadata' => 'getCanManageAccountSettingsMetadata',
         'can_manage_admins' => 'getCanManageAdmins',
         'can_manage_admins_metadata' => 'getCanManageAdminsMetadata',
         'can_manage_groups' => 'getCanManageGroups',
         'can_manage_groups_metadata' => 'getCanManageGroupsMetadata',
+        'can_manage_reporting' => 'getCanManageReporting',
+        'can_manage_reporting_metadata' => 'getCanManageReportingMetadata',
         'can_manage_sharing' => 'getCanManageSharing',
         'can_manage_sharing_metadata' => 'getCanManageSharingMetadata',
+        'can_manage_signing_groups' => 'getCanManageSigningGroups',
+        'can_manage_signing_groups_metadata' => 'getCanManageSigningGroupsMetadata',
         'can_manage_users' => 'getCanManageUsers',
         'can_manage_users_metadata' => 'getCanManageUsersMetadata'
     ];
@@ -147,12 +179,20 @@ class UserAccountManagementGranularInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['can_manage_account_security_settings'] = isset($data['can_manage_account_security_settings']) ? $data['can_manage_account_security_settings'] : null;
+        $this->container['can_manage_account_security_settings_metadata'] = isset($data['can_manage_account_security_settings_metadata']) ? $data['can_manage_account_security_settings_metadata'] : null;
+        $this->container['can_manage_account_settings'] = isset($data['can_manage_account_settings']) ? $data['can_manage_account_settings'] : null;
+        $this->container['can_manage_account_settings_metadata'] = isset($data['can_manage_account_settings_metadata']) ? $data['can_manage_account_settings_metadata'] : null;
         $this->container['can_manage_admins'] = isset($data['can_manage_admins']) ? $data['can_manage_admins'] : null;
         $this->container['can_manage_admins_metadata'] = isset($data['can_manage_admins_metadata']) ? $data['can_manage_admins_metadata'] : null;
         $this->container['can_manage_groups'] = isset($data['can_manage_groups']) ? $data['can_manage_groups'] : null;
         $this->container['can_manage_groups_metadata'] = isset($data['can_manage_groups_metadata']) ? $data['can_manage_groups_metadata'] : null;
+        $this->container['can_manage_reporting'] = isset($data['can_manage_reporting']) ? $data['can_manage_reporting'] : null;
+        $this->container['can_manage_reporting_metadata'] = isset($data['can_manage_reporting_metadata']) ? $data['can_manage_reporting_metadata'] : null;
         $this->container['can_manage_sharing'] = isset($data['can_manage_sharing']) ? $data['can_manage_sharing'] : null;
         $this->container['can_manage_sharing_metadata'] = isset($data['can_manage_sharing_metadata']) ? $data['can_manage_sharing_metadata'] : null;
+        $this->container['can_manage_signing_groups'] = isset($data['can_manage_signing_groups']) ? $data['can_manage_signing_groups'] : null;
+        $this->container['can_manage_signing_groups_metadata'] = isset($data['can_manage_signing_groups_metadata']) ? $data['can_manage_signing_groups_metadata'] : null;
         $this->container['can_manage_users'] = isset($data['can_manage_users']) ? $data['can_manage_users'] : null;
         $this->container['can_manage_users_metadata'] = isset($data['can_manage_users_metadata']) ? $data['can_manage_users_metadata'] : null;
     }
@@ -179,6 +219,90 @@ class UserAccountManagementGranularInformation implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets can_manage_account_security_settings
+     * @return string
+     */
+    public function getCanManageAccountSecuritySettings()
+    {
+        return $this->container['can_manage_account_security_settings'];
+    }
+
+    /**
+     * Sets can_manage_account_security_settings
+     * @param string $can_manage_account_security_settings 
+     * @return $this
+     */
+    public function setCanManageAccountSecuritySettings($can_manage_account_security_settings)
+    {
+        $this->container['can_manage_account_security_settings'] = $can_manage_account_security_settings;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_account_security_settings_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageAccountSecuritySettingsMetadata()
+    {
+        return $this->container['can_manage_account_security_settings_metadata'];
+    }
+
+    /**
+     * Sets can_manage_account_security_settings_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_security_settings_metadata
+     * @return $this
+     */
+    public function setCanManageAccountSecuritySettingsMetadata($can_manage_account_security_settings_metadata)
+    {
+        $this->container['can_manage_account_security_settings_metadata'] = $can_manage_account_security_settings_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_account_settings
+     * @return string
+     */
+    public function getCanManageAccountSettings()
+    {
+        return $this->container['can_manage_account_settings'];
+    }
+
+    /**
+     * Sets can_manage_account_settings
+     * @param string $can_manage_account_settings 
+     * @return $this
+     */
+    public function setCanManageAccountSettings($can_manage_account_settings)
+    {
+        $this->container['can_manage_account_settings'] = $can_manage_account_settings;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_account_settings_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageAccountSettingsMetadata()
+    {
+        return $this->container['can_manage_account_settings_metadata'];
+    }
+
+    /**
+     * Sets can_manage_account_settings_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_settings_metadata
+     * @return $this
+     */
+    public function setCanManageAccountSettingsMetadata($can_manage_account_settings_metadata)
+    {
+        $this->container['can_manage_account_settings_metadata'] = $can_manage_account_settings_metadata;
+
+        return $this;
+    }
 
     /**
      * Gets can_manage_admins
@@ -265,6 +389,48 @@ class UserAccountManagementGranularInformation implements ArrayAccess
     }
 
     /**
+     * Gets can_manage_reporting
+     * @return string
+     */
+    public function getCanManageReporting()
+    {
+        return $this->container['can_manage_reporting'];
+    }
+
+    /**
+     * Sets can_manage_reporting
+     * @param string $can_manage_reporting 
+     * @return $this
+     */
+    public function setCanManageReporting($can_manage_reporting)
+    {
+        $this->container['can_manage_reporting'] = $can_manage_reporting;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_reporting_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageReportingMetadata()
+    {
+        return $this->container['can_manage_reporting_metadata'];
+    }
+
+    /**
+     * Sets can_manage_reporting_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_reporting_metadata
+     * @return $this
+     */
+    public function setCanManageReportingMetadata($can_manage_reporting_metadata)
+    {
+        $this->container['can_manage_reporting_metadata'] = $can_manage_reporting_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets can_manage_sharing
      * @return string
      */
@@ -302,6 +468,48 @@ class UserAccountManagementGranularInformation implements ArrayAccess
     public function setCanManageSharingMetadata($can_manage_sharing_metadata)
     {
         $this->container['can_manage_sharing_metadata'] = $can_manage_sharing_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_signing_groups
+     * @return string
+     */
+    public function getCanManageSigningGroups()
+    {
+        return $this->container['can_manage_signing_groups'];
+    }
+
+    /**
+     * Sets can_manage_signing_groups
+     * @param string $can_manage_signing_groups 
+     * @return $this
+     */
+    public function setCanManageSigningGroups($can_manage_signing_groups)
+    {
+        $this->container['can_manage_signing_groups'] = $can_manage_signing_groups;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_signing_groups_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageSigningGroupsMetadata()
+    {
+        return $this->container['can_manage_signing_groups_metadata'];
+    }
+
+    /**
+     * Sets can_manage_signing_groups_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_signing_groups_metadata
+     * @return $this
+     */
+    public function setCanManageSigningGroupsMetadata($can_manage_signing_groups_metadata)
+    {
+        $this->container['can_manage_signing_groups_metadata'] = $can_manage_signing_groups_metadata;
 
         return $this;
     }

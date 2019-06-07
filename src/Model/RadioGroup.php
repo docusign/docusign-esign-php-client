@@ -62,7 +62,10 @@ class RadioGroup implements ArrayAccess
         'recipient_id' => 'string',
         'require_all' => 'string',
         'require_initial_on_shared_change' => 'string',
-        'shared' => 'string'
+        'shared' => 'string',
+        'template_locked' => 'string',
+        'template_required' => 'string',
+        'tooltip' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +86,10 @@ class RadioGroup implements ArrayAccess
         'recipient_id' => 'recipientId',
         'require_all' => 'requireAll',
         'require_initial_on_shared_change' => 'requireInitialOnSharedChange',
-        'shared' => 'shared'
+        'shared' => 'shared',
+        'template_locked' => 'templateLocked',
+        'template_required' => 'templateRequired',
+        'tooltip' => 'tooltip'
     ];
 
 
@@ -100,7 +106,10 @@ class RadioGroup implements ArrayAccess
         'recipient_id' => 'setRecipientId',
         'require_all' => 'setRequireAll',
         'require_initial_on_shared_change' => 'setRequireInitialOnSharedChange',
-        'shared' => 'setShared'
+        'shared' => 'setShared',
+        'template_locked' => 'setTemplateLocked',
+        'template_required' => 'setTemplateRequired',
+        'tooltip' => 'setTooltip'
     ];
 
 
@@ -117,7 +126,10 @@ class RadioGroup implements ArrayAccess
         'recipient_id' => 'getRecipientId',
         'require_all' => 'getRequireAll',
         'require_initial_on_shared_change' => 'getRequireInitialOnSharedChange',
-        'shared' => 'getShared'
+        'shared' => 'getShared',
+        'template_locked' => 'getTemplateLocked',
+        'template_required' => 'getTemplateRequired',
+        'tooltip' => 'getTooltip'
     ];
 
     public static function attributeMap()
@@ -160,6 +172,9 @@ class RadioGroup implements ArrayAccess
         $this->container['require_all'] = isset($data['require_all']) ? $data['require_all'] : null;
         $this->container['require_initial_on_shared_change'] = isset($data['require_initial_on_shared_change']) ? $data['require_initial_on_shared_change'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
+        $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
+        $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
+        $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
     }
 
     /**
@@ -370,6 +385,69 @@ class RadioGroup implements ArrayAccess
     public function setShared($shared)
     {
         $this->container['shared'] = $shared;
+
+        return $this;
+    }
+
+    /**
+     * Gets template_locked
+     * @return string
+     */
+    public function getTemplateLocked()
+    {
+        return $this->container['template_locked'];
+    }
+
+    /**
+     * Sets template_locked
+     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @return $this
+     */
+    public function setTemplateLocked($template_locked)
+    {
+        $this->container['template_locked'] = $template_locked;
+
+        return $this;
+    }
+
+    /**
+     * Gets template_required
+     * @return string
+     */
+    public function getTemplateRequired()
+    {
+        return $this->container['template_required'];
+    }
+
+    /**
+     * Sets template_required
+     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @return $this
+     */
+    public function setTemplateRequired($template_required)
+    {
+        $this->container['template_required'] = $template_required;
+
+        return $this;
+    }
+
+    /**
+     * Gets tooltip
+     * @return string
+     */
+    public function getTooltip()
+    {
+        return $this->container['tooltip'];
+    }
+
+    /**
+     * Sets tooltip
+     * @param string $tooltip 
+     * @return $this
+     */
+    public function setTooltip($tooltip)
+    {
+        $this->container['tooltip'] = $tooltip;
 
         return $this;
     }

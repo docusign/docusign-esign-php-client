@@ -56,17 +56,25 @@ class UserSignature implements ArrayAccess
     protected static $swaggerTypes = [
         'adopted_date_time' => 'string',
         'created_date_time' => 'string',
+        'date_stamp_properties' => '\DocuSign\eSign\Model\DateStampProperties',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'external_id' => 'string',
+        'image_type' => 'string',
         'initials150_image_id' => 'string',
         'initials_image_uri' => 'string',
         'is_default' => 'string',
+        'phonetic_name' => 'string',
         'signature150_image_id' => 'string',
         'signature_font' => 'string',
         'signature_id' => 'string',
         'signature_image_uri' => 'string',
         'signature_initials' => 'string',
         'signature_name' => 'string',
-        'signature_type' => 'string'
+        'signature_type' => 'string',
+        'stamp_format' => 'string',
+        'stamp_image_uri' => 'string',
+        'stamp_size_mm' => 'string',
+        'stamp_type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -81,17 +89,25 @@ class UserSignature implements ArrayAccess
     protected static $attributeMap = [
         'adopted_date_time' => 'adoptedDateTime',
         'created_date_time' => 'createdDateTime',
+        'date_stamp_properties' => 'dateStampProperties',
         'error_details' => 'errorDetails',
+        'external_id' => 'externalID',
+        'image_type' => 'imageType',
         'initials150_image_id' => 'initials150ImageId',
         'initials_image_uri' => 'initialsImageUri',
         'is_default' => 'isDefault',
+        'phonetic_name' => 'phoneticName',
         'signature150_image_id' => 'signature150ImageId',
         'signature_font' => 'signatureFont',
         'signature_id' => 'signatureId',
         'signature_image_uri' => 'signatureImageUri',
         'signature_initials' => 'signatureInitials',
         'signature_name' => 'signatureName',
-        'signature_type' => 'signatureType'
+        'signature_type' => 'signatureType',
+        'stamp_format' => 'stampFormat',
+        'stamp_image_uri' => 'stampImageUri',
+        'stamp_size_mm' => 'stampSizeMM',
+        'stamp_type' => 'stampType'
     ];
 
 
@@ -102,17 +118,25 @@ class UserSignature implements ArrayAccess
     protected static $setters = [
         'adopted_date_time' => 'setAdoptedDateTime',
         'created_date_time' => 'setCreatedDateTime',
+        'date_stamp_properties' => 'setDateStampProperties',
         'error_details' => 'setErrorDetails',
+        'external_id' => 'setExternalId',
+        'image_type' => 'setImageType',
         'initials150_image_id' => 'setInitials150ImageId',
         'initials_image_uri' => 'setInitialsImageUri',
         'is_default' => 'setIsDefault',
+        'phonetic_name' => 'setPhoneticName',
         'signature150_image_id' => 'setSignature150ImageId',
         'signature_font' => 'setSignatureFont',
         'signature_id' => 'setSignatureId',
         'signature_image_uri' => 'setSignatureImageUri',
         'signature_initials' => 'setSignatureInitials',
         'signature_name' => 'setSignatureName',
-        'signature_type' => 'setSignatureType'
+        'signature_type' => 'setSignatureType',
+        'stamp_format' => 'setStampFormat',
+        'stamp_image_uri' => 'setStampImageUri',
+        'stamp_size_mm' => 'setStampSizeMm',
+        'stamp_type' => 'setStampType'
     ];
 
 
@@ -123,17 +147,25 @@ class UserSignature implements ArrayAccess
     protected static $getters = [
         'adopted_date_time' => 'getAdoptedDateTime',
         'created_date_time' => 'getCreatedDateTime',
+        'date_stamp_properties' => 'getDateStampProperties',
         'error_details' => 'getErrorDetails',
+        'external_id' => 'getExternalId',
+        'image_type' => 'getImageType',
         'initials150_image_id' => 'getInitials150ImageId',
         'initials_image_uri' => 'getInitialsImageUri',
         'is_default' => 'getIsDefault',
+        'phonetic_name' => 'getPhoneticName',
         'signature150_image_id' => 'getSignature150ImageId',
         'signature_font' => 'getSignatureFont',
         'signature_id' => 'getSignatureId',
         'signature_image_uri' => 'getSignatureImageUri',
         'signature_initials' => 'getSignatureInitials',
         'signature_name' => 'getSignatureName',
-        'signature_type' => 'getSignatureType'
+        'signature_type' => 'getSignatureType',
+        'stamp_format' => 'getStampFormat',
+        'stamp_image_uri' => 'getStampImageUri',
+        'stamp_size_mm' => 'getStampSizeMm',
+        'stamp_type' => 'getStampType'
     ];
 
     public static function attributeMap()
@@ -169,10 +201,14 @@ class UserSignature implements ArrayAccess
     {
         $this->container['adopted_date_time'] = isset($data['adopted_date_time']) ? $data['adopted_date_time'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
+        $this->container['date_stamp_properties'] = isset($data['date_stamp_properties']) ? $data['date_stamp_properties'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
+        $this->container['image_type'] = isset($data['image_type']) ? $data['image_type'] : null;
         $this->container['initials150_image_id'] = isset($data['initials150_image_id']) ? $data['initials150_image_id'] : null;
         $this->container['initials_image_uri'] = isset($data['initials_image_uri']) ? $data['initials_image_uri'] : null;
         $this->container['is_default'] = isset($data['is_default']) ? $data['is_default'] : null;
+        $this->container['phonetic_name'] = isset($data['phonetic_name']) ? $data['phonetic_name'] : null;
         $this->container['signature150_image_id'] = isset($data['signature150_image_id']) ? $data['signature150_image_id'] : null;
         $this->container['signature_font'] = isset($data['signature_font']) ? $data['signature_font'] : null;
         $this->container['signature_id'] = isset($data['signature_id']) ? $data['signature_id'] : null;
@@ -180,6 +216,10 @@ class UserSignature implements ArrayAccess
         $this->container['signature_initials'] = isset($data['signature_initials']) ? $data['signature_initials'] : null;
         $this->container['signature_name'] = isset($data['signature_name']) ? $data['signature_name'] : null;
         $this->container['signature_type'] = isset($data['signature_type']) ? $data['signature_type'] : null;
+        $this->container['stamp_format'] = isset($data['stamp_format']) ? $data['stamp_format'] : null;
+        $this->container['stamp_image_uri'] = isset($data['stamp_image_uri']) ? $data['stamp_image_uri'] : null;
+        $this->container['stamp_size_mm'] = isset($data['stamp_size_mm']) ? $data['stamp_size_mm'] : null;
+        $this->container['stamp_type'] = isset($data['stamp_type']) ? $data['stamp_type'] : null;
     }
 
     /**
@@ -248,6 +288,27 @@ class UserSignature implements ArrayAccess
     }
 
     /**
+     * Gets date_stamp_properties
+     * @return \DocuSign\eSign\Model\DateStampProperties
+     */
+    public function getDateStampProperties()
+    {
+        return $this->container['date_stamp_properties'];
+    }
+
+    /**
+     * Sets date_stamp_properties
+     * @param \DocuSign\eSign\Model\DateStampProperties $date_stamp_properties
+     * @return $this
+     */
+    public function setDateStampProperties($date_stamp_properties)
+    {
+        $this->container['date_stamp_properties'] = $date_stamp_properties;
+
+        return $this;
+    }
+
+    /**
      * Gets error_details
      * @return \DocuSign\eSign\Model\ErrorDetails
      */
@@ -264,6 +325,48 @@ class UserSignature implements ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_id
+     * @return string
+     */
+    public function getExternalId()
+    {
+        return $this->container['external_id'];
+    }
+
+    /**
+     * Sets external_id
+     * @param string $external_id 
+     * @return $this
+     */
+    public function setExternalId($external_id)
+    {
+        $this->container['external_id'] = $external_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_type
+     * @return string
+     */
+    public function getImageType()
+    {
+        return $this->container['image_type'];
+    }
+
+    /**
+     * Sets image_type
+     * @param string $image_type 
+     * @return $this
+     */
+    public function setImageType($image_type)
+    {
+        $this->container['image_type'] = $image_type;
 
         return $this;
     }
@@ -327,6 +430,27 @@ class UserSignature implements ArrayAccess
     public function setIsDefault($is_default)
     {
         $this->container['is_default'] = $is_default;
+
+        return $this;
+    }
+
+    /**
+     * Gets phonetic_name
+     * @return string
+     */
+    public function getPhoneticName()
+    {
+        return $this->container['phonetic_name'];
+    }
+
+    /**
+     * Sets phonetic_name
+     * @param string $phonetic_name 
+     * @return $this
+     */
+    public function setPhoneticName($phonetic_name)
+    {
+        $this->container['phonetic_name'] = $phonetic_name;
 
         return $this;
     }
@@ -474,6 +598,90 @@ class UserSignature implements ArrayAccess
     public function setSignatureType($signature_type)
     {
         $this->container['signature_type'] = $signature_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_format
+     * @return string
+     */
+    public function getStampFormat()
+    {
+        return $this->container['stamp_format'];
+    }
+
+    /**
+     * Sets stamp_format
+     * @param string $stamp_format 
+     * @return $this
+     */
+    public function setStampFormat($stamp_format)
+    {
+        $this->container['stamp_format'] = $stamp_format;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_image_uri
+     * @return string
+     */
+    public function getStampImageUri()
+    {
+        return $this->container['stamp_image_uri'];
+    }
+
+    /**
+     * Sets stamp_image_uri
+     * @param string $stamp_image_uri 
+     * @return $this
+     */
+    public function setStampImageUri($stamp_image_uri)
+    {
+        $this->container['stamp_image_uri'] = $stamp_image_uri;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_size_mm
+     * @return string
+     */
+    public function getStampSizeMm()
+    {
+        return $this->container['stamp_size_mm'];
+    }
+
+    /**
+     * Sets stamp_size_mm
+     * @param string $stamp_size_mm 
+     * @return $this
+     */
+    public function setStampSizeMm($stamp_size_mm)
+    {
+        $this->container['stamp_size_mm'] = $stamp_size_mm;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_type
+     * @return string
+     */
+    public function getStampType()
+    {
+        return $this->container['stamp_type'];
+    }
+
+    /**
+     * Sets stamp_type
+     * @param string $stamp_type 
+     * @return $this
+     */
+    public function setStampType($stamp_type)
+    {
+        $this->container['stamp_type'] = $stamp_type;
 
         return $this;
     }

@@ -54,9 +54,14 @@ class PaymentDetails implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'allowed_payment_methods' => 'string[]',
+        'charge_id' => 'string',
         'currency_code' => 'string',
         'gateway_account_id' => 'string',
+        'gateway_display_name' => 'string',
+        'gateway_name' => 'string',
         'line_items' => '\DocuSign\eSign\Model\PaymentLineItem[]',
+        'payment_option' => 'string',
         'status' => 'string',
         'total' => '\DocuSign\eSign\Model\Money'
     ];
@@ -71,9 +76,14 @@ class PaymentDetails implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'allowed_payment_methods' => 'allowedPaymentMethods',
+        'charge_id' => 'chargeId',
         'currency_code' => 'currencyCode',
         'gateway_account_id' => 'gatewayAccountId',
+        'gateway_display_name' => 'gatewayDisplayName',
+        'gateway_name' => 'gatewayName',
         'line_items' => 'lineItems',
+        'payment_option' => 'paymentOption',
         'status' => 'status',
         'total' => 'total'
     ];
@@ -84,9 +94,14 @@ class PaymentDetails implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'allowed_payment_methods' => 'setAllowedPaymentMethods',
+        'charge_id' => 'setChargeId',
         'currency_code' => 'setCurrencyCode',
         'gateway_account_id' => 'setGatewayAccountId',
+        'gateway_display_name' => 'setGatewayDisplayName',
+        'gateway_name' => 'setGatewayName',
         'line_items' => 'setLineItems',
+        'payment_option' => 'setPaymentOption',
         'status' => 'setStatus',
         'total' => 'setTotal'
     ];
@@ -97,9 +112,14 @@ class PaymentDetails implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'allowed_payment_methods' => 'getAllowedPaymentMethods',
+        'charge_id' => 'getChargeId',
         'currency_code' => 'getCurrencyCode',
         'gateway_account_id' => 'getGatewayAccountId',
+        'gateway_display_name' => 'getGatewayDisplayName',
+        'gateway_name' => 'getGatewayName',
         'line_items' => 'getLineItems',
+        'payment_option' => 'getPaymentOption',
         'status' => 'getStatus',
         'total' => 'getTotal'
     ];
@@ -135,9 +155,14 @@ class PaymentDetails implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['allowed_payment_methods'] = isset($data['allowed_payment_methods']) ? $data['allowed_payment_methods'] : null;
+        $this->container['charge_id'] = isset($data['charge_id']) ? $data['charge_id'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['gateway_account_id'] = isset($data['gateway_account_id']) ? $data['gateway_account_id'] : null;
+        $this->container['gateway_display_name'] = isset($data['gateway_display_name']) ? $data['gateway_display_name'] : null;
+        $this->container['gateway_name'] = isset($data['gateway_name']) ? $data['gateway_name'] : null;
         $this->container['line_items'] = isset($data['line_items']) ? $data['line_items'] : null;
+        $this->container['payment_option'] = isset($data['payment_option']) ? $data['payment_option'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
@@ -164,6 +189,48 @@ class PaymentDetails implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets allowed_payment_methods
+     * @return string[]
+     */
+    public function getAllowedPaymentMethods()
+    {
+        return $this->container['allowed_payment_methods'];
+    }
+
+    /**
+     * Sets allowed_payment_methods
+     * @param string[] $allowed_payment_methods 
+     * @return $this
+     */
+    public function setAllowedPaymentMethods($allowed_payment_methods)
+    {
+        $this->container['allowed_payment_methods'] = $allowed_payment_methods;
+
+        return $this;
+    }
+
+    /**
+     * Gets charge_id
+     * @return string
+     */
+    public function getChargeId()
+    {
+        return $this->container['charge_id'];
+    }
+
+    /**
+     * Sets charge_id
+     * @param string $charge_id 
+     * @return $this
+     */
+    public function setChargeId($charge_id)
+    {
+        $this->container['charge_id'] = $charge_id;
+
+        return $this;
+    }
 
     /**
      * Gets currency_code
@@ -208,6 +275,48 @@ class PaymentDetails implements ArrayAccess
     }
 
     /**
+     * Gets gateway_display_name
+     * @return string
+     */
+    public function getGatewayDisplayName()
+    {
+        return $this->container['gateway_display_name'];
+    }
+
+    /**
+     * Sets gateway_display_name
+     * @param string $gateway_display_name 
+     * @return $this
+     */
+    public function setGatewayDisplayName($gateway_display_name)
+    {
+        $this->container['gateway_display_name'] = $gateway_display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets gateway_name
+     * @return string
+     */
+    public function getGatewayName()
+    {
+        return $this->container['gateway_name'];
+    }
+
+    /**
+     * Sets gateway_name
+     * @param string $gateway_name 
+     * @return $this
+     */
+    public function setGatewayName($gateway_name)
+    {
+        $this->container['gateway_name'] = $gateway_name;
+
+        return $this;
+    }
+
+    /**
      * Gets line_items
      * @return \DocuSign\eSign\Model\PaymentLineItem[]
      */
@@ -224,6 +333,27 @@ class PaymentDetails implements ArrayAccess
     public function setLineItems($line_items)
     {
         $this->container['line_items'] = $line_items;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_option
+     * @return string
+     */
+    public function getPaymentOption()
+    {
+        return $this->container['payment_option'];
+    }
+
+    /**
+     * Sets payment_option
+     * @param string $payment_option 
+     * @return $this
+     */
+    public function setPaymentOption($payment_option)
+    {
+        $this->container['payment_option'] = $payment_option;
 
         return $this;
     }

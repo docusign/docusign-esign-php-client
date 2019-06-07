@@ -54,6 +54,7 @@ class PowerForm implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'created_by' => 'string',
         'created_date_time' => 'string',
         'email_body' => 'string',
         'email_subject' => 'string',
@@ -90,6 +91,7 @@ class PowerForm implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'created_by' => 'createdBy',
         'created_date_time' => 'createdDateTime',
         'email_body' => 'emailBody',
         'email_subject' => 'emailSubject',
@@ -122,6 +124,7 @@ class PowerForm implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'created_by' => 'setCreatedBy',
         'created_date_time' => 'setCreatedDateTime',
         'email_body' => 'setEmailBody',
         'email_subject' => 'setEmailSubject',
@@ -154,6 +157,7 @@ class PowerForm implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'created_by' => 'getCreatedBy',
         'created_date_time' => 'getCreatedDateTime',
         'email_body' => 'getEmailBody',
         'email_subject' => 'getEmailSubject',
@@ -211,6 +215,7 @@ class PowerForm implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['email_body'] = isset($data['email_body']) ? $data['email_body'] : null;
         $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
@@ -259,6 +264,27 @@ class PowerForm implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets created_by
+     * @return string
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['created_by'];
+    }
+
+    /**
+     * Sets created_by
+     * @param string $created_by 
+     * @return $this
+     */
+    public function setCreatedBy($created_by)
+    {
+        $this->container['created_by'] = $created_by;
+
+        return $this;
+    }
 
     /**
      * Gets created_date_time

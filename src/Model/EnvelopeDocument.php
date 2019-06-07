@@ -55,6 +55,7 @@ class EnvelopeDocument implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'attachment_tab_id' => 'string',
+        'authoritative_copy' => 'string',
         'available_document_types' => '\DocuSign\eSign\Model\SignatureType[]',
         'contains_pdf_form_fields' => 'string',
         'display' => 'string',
@@ -67,8 +68,6 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'string',
         'pages' => 'string',
         'signer_must_acknowledge' => 'string',
-        'template_locked' => 'string',
-        'template_required' => 'string',
         'type' => 'string',
         'uri' => 'string'
     ];
@@ -84,6 +83,7 @@ class EnvelopeDocument implements ArrayAccess
      */
     protected static $attributeMap = [
         'attachment_tab_id' => 'attachmentTabId',
+        'authoritative_copy' => 'authoritativeCopy',
         'available_document_types' => 'availableDocumentTypes',
         'contains_pdf_form_fields' => 'containsPdfFormFields',
         'display' => 'display',
@@ -96,8 +96,6 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'order',
         'pages' => 'pages',
         'signer_must_acknowledge' => 'signerMustAcknowledge',
-        'template_locked' => 'templateLocked',
-        'template_required' => 'templateRequired',
         'type' => 'type',
         'uri' => 'uri'
     ];
@@ -109,6 +107,7 @@ class EnvelopeDocument implements ArrayAccess
      */
     protected static $setters = [
         'attachment_tab_id' => 'setAttachmentTabId',
+        'authoritative_copy' => 'setAuthoritativeCopy',
         'available_document_types' => 'setAvailableDocumentTypes',
         'contains_pdf_form_fields' => 'setContainsPdfFormFields',
         'display' => 'setDisplay',
@@ -121,8 +120,6 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'setOrder',
         'pages' => 'setPages',
         'signer_must_acknowledge' => 'setSignerMustAcknowledge',
-        'template_locked' => 'setTemplateLocked',
-        'template_required' => 'setTemplateRequired',
         'type' => 'setType',
         'uri' => 'setUri'
     ];
@@ -134,6 +131,7 @@ class EnvelopeDocument implements ArrayAccess
      */
     protected static $getters = [
         'attachment_tab_id' => 'getAttachmentTabId',
+        'authoritative_copy' => 'getAuthoritativeCopy',
         'available_document_types' => 'getAvailableDocumentTypes',
         'contains_pdf_form_fields' => 'getContainsPdfFormFields',
         'display' => 'getDisplay',
@@ -146,8 +144,6 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'getOrder',
         'pages' => 'getPages',
         'signer_must_acknowledge' => 'getSignerMustAcknowledge',
-        'template_locked' => 'getTemplateLocked',
-        'template_required' => 'getTemplateRequired',
         'type' => 'getType',
         'uri' => 'getUri'
     ];
@@ -184,6 +180,7 @@ class EnvelopeDocument implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['attachment_tab_id'] = isset($data['attachment_tab_id']) ? $data['attachment_tab_id'] : null;
+        $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['available_document_types'] = isset($data['available_document_types']) ? $data['available_document_types'] : null;
         $this->container['contains_pdf_form_fields'] = isset($data['contains_pdf_form_fields']) ? $data['contains_pdf_form_fields'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
@@ -196,8 +193,6 @@ class EnvelopeDocument implements ArrayAccess
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
         $this->container['signer_must_acknowledge'] = isset($data['signer_must_acknowledge']) ? $data['signer_must_acknowledge'] : null;
-        $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
-        $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
     }
@@ -242,6 +237,27 @@ class EnvelopeDocument implements ArrayAccess
     public function setAttachmentTabId($attachment_tab_id)
     {
         $this->container['attachment_tab_id'] = $attachment_tab_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets authoritative_copy
+     * @return string
+     */
+    public function getAuthoritativeCopy()
+    {
+        return $this->container['authoritative_copy'];
+    }
+
+    /**
+     * Sets authoritative_copy
+     * @param string $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+     * @return $this
+     */
+    public function setAuthoritativeCopy($authoritative_copy)
+    {
+        $this->container['authoritative_copy'] = $authoritative_copy;
 
         return $this;
     }
@@ -494,48 +510,6 @@ class EnvelopeDocument implements ArrayAccess
     public function setSignerMustAcknowledge($signer_must_acknowledge)
     {
         $this->container['signer_must_acknowledge'] = $signer_must_acknowledge;
-
-        return $this;
-    }
-
-    /**
-     * Gets template_locked
-     * @return string
-     */
-    public function getTemplateLocked()
-    {
-        return $this->container['template_locked'];
-    }
-
-    /**
-     * Sets template_locked
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
-     * @return $this
-     */
-    public function setTemplateLocked($template_locked)
-    {
-        $this->container['template_locked'] = $template_locked;
-
-        return $this;
-    }
-
-    /**
-     * Gets template_required
-     * @return string
-     */
-    public function getTemplateRequired()
-    {
-        return $this->container['template_required'];
-    }
-
-    /**
-     * Sets template_required
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
-     * @return $this
-     */
-    public function setTemplateRequired($template_required)
-    {
-        $this->container['template_required'] = $template_required;
 
         return $this;
     }

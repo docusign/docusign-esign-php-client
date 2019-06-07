@@ -56,6 +56,7 @@ class ConsumerDisclosure implements ArrayAccess
     protected static $swaggerTypes = [
         'account_esign_id' => 'string',
         'allow_cd_withdraw' => 'string',
+        'allow_cd_withdraw_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'change_email' => 'string',
         'change_email_other' => 'string',
         'company_name' => 'string',
@@ -72,6 +73,7 @@ class ConsumerDisclosure implements ArrayAccess
         'pdf_id' => 'string',
         'use_brand' => 'string',
         'use_consumer_disclosure_within_account' => 'string',
+        'use_consumer_disclosure_within_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'withdraw_address_line1' => 'string',
         'withdraw_address_line2' => 'string',
         'withdraw_by_email' => 'string',
@@ -98,6 +100,7 @@ class ConsumerDisclosure implements ArrayAccess
     protected static $attributeMap = [
         'account_esign_id' => 'accountEsignId',
         'allow_cd_withdraw' => 'allowCDWithdraw',
+        'allow_cd_withdraw_metadata' => 'allowCDWithdrawMetadata',
         'change_email' => 'changeEmail',
         'change_email_other' => 'changeEmailOther',
         'company_name' => 'companyName',
@@ -114,6 +117,7 @@ class ConsumerDisclosure implements ArrayAccess
         'pdf_id' => 'pdfId',
         'use_brand' => 'useBrand',
         'use_consumer_disclosure_within_account' => 'useConsumerDisclosureWithinAccount',
+        'use_consumer_disclosure_within_account_metadata' => 'useConsumerDisclosureWithinAccountMetadata',
         'withdraw_address_line1' => 'withdrawAddressLine1',
         'withdraw_address_line2' => 'withdrawAddressLine2',
         'withdraw_by_email' => 'withdrawByEmail',
@@ -136,6 +140,7 @@ class ConsumerDisclosure implements ArrayAccess
     protected static $setters = [
         'account_esign_id' => 'setAccountEsignId',
         'allow_cd_withdraw' => 'setAllowCdWithdraw',
+        'allow_cd_withdraw_metadata' => 'setAllowCdWithdrawMetadata',
         'change_email' => 'setChangeEmail',
         'change_email_other' => 'setChangeEmailOther',
         'company_name' => 'setCompanyName',
@@ -152,6 +157,7 @@ class ConsumerDisclosure implements ArrayAccess
         'pdf_id' => 'setPdfId',
         'use_brand' => 'setUseBrand',
         'use_consumer_disclosure_within_account' => 'setUseConsumerDisclosureWithinAccount',
+        'use_consumer_disclosure_within_account_metadata' => 'setUseConsumerDisclosureWithinAccountMetadata',
         'withdraw_address_line1' => 'setWithdrawAddressLine1',
         'withdraw_address_line2' => 'setWithdrawAddressLine2',
         'withdraw_by_email' => 'setWithdrawByEmail',
@@ -174,6 +180,7 @@ class ConsumerDisclosure implements ArrayAccess
     protected static $getters = [
         'account_esign_id' => 'getAccountEsignId',
         'allow_cd_withdraw' => 'getAllowCdWithdraw',
+        'allow_cd_withdraw_metadata' => 'getAllowCdWithdrawMetadata',
         'change_email' => 'getChangeEmail',
         'change_email_other' => 'getChangeEmailOther',
         'company_name' => 'getCompanyName',
@@ -190,6 +197,7 @@ class ConsumerDisclosure implements ArrayAccess
         'pdf_id' => 'getPdfId',
         'use_brand' => 'getUseBrand',
         'use_consumer_disclosure_within_account' => 'getUseConsumerDisclosureWithinAccount',
+        'use_consumer_disclosure_within_account_metadata' => 'getUseConsumerDisclosureWithinAccountMetadata',
         'withdraw_address_line1' => 'getWithdrawAddressLine1',
         'withdraw_address_line2' => 'getWithdrawAddressLine2',
         'withdraw_by_email' => 'getWithdrawByEmail',
@@ -237,6 +245,7 @@ class ConsumerDisclosure implements ArrayAccess
     {
         $this->container['account_esign_id'] = isset($data['account_esign_id']) ? $data['account_esign_id'] : null;
         $this->container['allow_cd_withdraw'] = isset($data['allow_cd_withdraw']) ? $data['allow_cd_withdraw'] : null;
+        $this->container['allow_cd_withdraw_metadata'] = isset($data['allow_cd_withdraw_metadata']) ? $data['allow_cd_withdraw_metadata'] : null;
         $this->container['change_email'] = isset($data['change_email']) ? $data['change_email'] : null;
         $this->container['change_email_other'] = isset($data['change_email_other']) ? $data['change_email_other'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
@@ -253,6 +262,7 @@ class ConsumerDisclosure implements ArrayAccess
         $this->container['pdf_id'] = isset($data['pdf_id']) ? $data['pdf_id'] : null;
         $this->container['use_brand'] = isset($data['use_brand']) ? $data['use_brand'] : null;
         $this->container['use_consumer_disclosure_within_account'] = isset($data['use_consumer_disclosure_within_account']) ? $data['use_consumer_disclosure_within_account'] : null;
+        $this->container['use_consumer_disclosure_within_account_metadata'] = isset($data['use_consumer_disclosure_within_account_metadata']) ? $data['use_consumer_disclosure_within_account_metadata'] : null;
         $this->container['withdraw_address_line1'] = isset($data['withdraw_address_line1']) ? $data['withdraw_address_line1'] : null;
         $this->container['withdraw_address_line2'] = isset($data['withdraw_address_line2']) ? $data['withdraw_address_line2'] : null;
         $this->container['withdraw_by_email'] = isset($data['withdraw_by_email']) ? $data['withdraw_by_email'] : null;
@@ -328,6 +338,27 @@ class ConsumerDisclosure implements ArrayAccess
     public function setAllowCdWithdraw($allow_cd_withdraw)
     {
         $this->container['allow_cd_withdraw'] = $allow_cd_withdraw;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_cd_withdraw_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowCdWithdrawMetadata()
+    {
+        return $this->container['allow_cd_withdraw_metadata'];
+    }
+
+    /**
+     * Sets allow_cd_withdraw_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_cd_withdraw_metadata
+     * @return $this
+     */
+    public function setAllowCdWithdrawMetadata($allow_cd_withdraw_metadata)
+    {
+        $this->container['allow_cd_withdraw_metadata'] = $allow_cd_withdraw_metadata;
 
         return $this;
     }
@@ -664,6 +695,27 @@ class ConsumerDisclosure implements ArrayAccess
     public function setUseConsumerDisclosureWithinAccount($use_consumer_disclosure_within_account)
     {
         $this->container['use_consumer_disclosure_within_account'] = $use_consumer_disclosure_within_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_consumer_disclosure_within_account_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUseConsumerDisclosureWithinAccountMetadata()
+    {
+        return $this->container['use_consumer_disclosure_within_account_metadata'];
+    }
+
+    /**
+     * Sets use_consumer_disclosure_within_account_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_consumer_disclosure_within_account_metadata
+     * @return $this
+     */
+    public function setUseConsumerDisclosureWithinAccountMetadata($use_consumer_disclosure_within_account_metadata)
+    {
+        $this->container['use_consumer_disclosure_within_account_metadata'] = $use_consumer_disclosure_within_account_metadata;
 
         return $this;
     }

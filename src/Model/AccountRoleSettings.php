@@ -76,6 +76,10 @@ class AccountRoleSettings implements ArrayAccess
         'allowed_to_be_envelope_transfer_recipient_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_envelope_sending' => 'string',
         'allow_envelope_sending_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_e_seal_recipients' => 'string',
+        'allow_e_seal_recipients_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes' => 'string',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_senders_to_set_recipient_email_language' => 'string',
         'allow_senders_to_set_recipient_email_language_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_signer_attachments' => 'string',
@@ -152,6 +156,10 @@ class AccountRoleSettings implements ArrayAccess
         'allowed_to_be_envelope_transfer_recipient_metadata' => 'allowedToBeEnvelopeTransferRecipientMetadata',
         'allow_envelope_sending' => 'allowEnvelopeSending',
         'allow_envelope_sending_metadata' => 'allowEnvelopeSendingMetadata',
+        'allow_e_seal_recipients' => 'allowESealRecipients',
+        'allow_e_seal_recipients_metadata' => 'allowESealRecipientsMetadata',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes' => 'allowPowerFormsAdminToAccessAllPowerFormEnvelopes',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes_metadata' => 'allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata',
         'allow_senders_to_set_recipient_email_language' => 'allowSendersToSetRecipientEmailLanguage',
         'allow_senders_to_set_recipient_email_language_metadata' => 'allowSendersToSetRecipientEmailLanguageMetadata',
         'allow_signer_attachments' => 'allowSignerAttachments',
@@ -224,6 +232,10 @@ class AccountRoleSettings implements ArrayAccess
         'allowed_to_be_envelope_transfer_recipient_metadata' => 'setAllowedToBeEnvelopeTransferRecipientMetadata',
         'allow_envelope_sending' => 'setAllowEnvelopeSending',
         'allow_envelope_sending_metadata' => 'setAllowEnvelopeSendingMetadata',
+        'allow_e_seal_recipients' => 'setAllowESealRecipients',
+        'allow_e_seal_recipients_metadata' => 'setAllowESealRecipientsMetadata',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes' => 'setAllowPowerFormsAdminToAccessAllPowerFormEnvelopes',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes_metadata' => 'setAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata',
         'allow_senders_to_set_recipient_email_language' => 'setAllowSendersToSetRecipientEmailLanguage',
         'allow_senders_to_set_recipient_email_language_metadata' => 'setAllowSendersToSetRecipientEmailLanguageMetadata',
         'allow_signer_attachments' => 'setAllowSignerAttachments',
@@ -296,6 +308,10 @@ class AccountRoleSettings implements ArrayAccess
         'allowed_to_be_envelope_transfer_recipient_metadata' => 'getAllowedToBeEnvelopeTransferRecipientMetadata',
         'allow_envelope_sending' => 'getAllowEnvelopeSending',
         'allow_envelope_sending_metadata' => 'getAllowEnvelopeSendingMetadata',
+        'allow_e_seal_recipients' => 'getAllowESealRecipients',
+        'allow_e_seal_recipients_metadata' => 'getAllowESealRecipientsMetadata',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes' => 'getAllowPowerFormsAdminToAccessAllPowerFormEnvelopes',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes_metadata' => 'getAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata',
         'allow_senders_to_set_recipient_email_language' => 'getAllowSendersToSetRecipientEmailLanguage',
         'allow_senders_to_set_recipient_email_language_metadata' => 'getAllowSendersToSetRecipientEmailLanguageMetadata',
         'allow_signer_attachments' => 'getAllowSignerAttachments',
@@ -393,6 +409,10 @@ class AccountRoleSettings implements ArrayAccess
         $this->container['allowed_to_be_envelope_transfer_recipient_metadata'] = isset($data['allowed_to_be_envelope_transfer_recipient_metadata']) ? $data['allowed_to_be_envelope_transfer_recipient_metadata'] : null;
         $this->container['allow_envelope_sending'] = isset($data['allow_envelope_sending']) ? $data['allow_envelope_sending'] : null;
         $this->container['allow_envelope_sending_metadata'] = isset($data['allow_envelope_sending_metadata']) ? $data['allow_envelope_sending_metadata'] : null;
+        $this->container['allow_e_seal_recipients'] = isset($data['allow_e_seal_recipients']) ? $data['allow_e_seal_recipients'] : null;
+        $this->container['allow_e_seal_recipients_metadata'] = isset($data['allow_e_seal_recipients_metadata']) ? $data['allow_e_seal_recipients_metadata'] : null;
+        $this->container['allow_power_forms_admin_to_access_all_power_form_envelopes'] = isset($data['allow_power_forms_admin_to_access_all_power_form_envelopes']) ? $data['allow_power_forms_admin_to_access_all_power_form_envelopes'] : null;
+        $this->container['allow_power_forms_admin_to_access_all_power_form_envelopes_metadata'] = isset($data['allow_power_forms_admin_to_access_all_power_form_envelopes_metadata']) ? $data['allow_power_forms_admin_to_access_all_power_form_envelopes_metadata'] : null;
         $this->container['allow_senders_to_set_recipient_email_language'] = isset($data['allow_senders_to_set_recipient_email_language']) ? $data['allow_senders_to_set_recipient_email_language'] : null;
         $this->container['allow_senders_to_set_recipient_email_language_metadata'] = isset($data['allow_senders_to_set_recipient_email_language_metadata']) ? $data['allow_senders_to_set_recipient_email_language_metadata'] : null;
         $this->container['allow_signer_attachments'] = isset($data['allow_signer_attachments']) ? $data['allow_signer_attachments'] : null;
@@ -918,6 +938,90 @@ class AccountRoleSettings implements ArrayAccess
     public function setAllowEnvelopeSendingMetadata($allow_envelope_sending_metadata)
     {
         $this->container['allow_envelope_sending_metadata'] = $allow_envelope_sending_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_e_seal_recipients
+     * @return string
+     */
+    public function getAllowESealRecipients()
+    {
+        return $this->container['allow_e_seal_recipients'];
+    }
+
+    /**
+     * Sets allow_e_seal_recipients
+     * @param string $allow_e_seal_recipients 
+     * @return $this
+     */
+    public function setAllowESealRecipients($allow_e_seal_recipients)
+    {
+        $this->container['allow_e_seal_recipients'] = $allow_e_seal_recipients;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_e_seal_recipients_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowESealRecipientsMetadata()
+    {
+        return $this->container['allow_e_seal_recipients_metadata'];
+    }
+
+    /**
+     * Sets allow_e_seal_recipients_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_e_seal_recipients_metadata
+     * @return $this
+     */
+    public function setAllowESealRecipientsMetadata($allow_e_seal_recipients_metadata)
+    {
+        $this->container['allow_e_seal_recipients_metadata'] = $allow_e_seal_recipients_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_power_forms_admin_to_access_all_power_form_envelopes
+     * @return string
+     */
+    public function getAllowPowerFormsAdminToAccessAllPowerFormEnvelopes()
+    {
+        return $this->container['allow_power_forms_admin_to_access_all_power_form_envelopes'];
+    }
+
+    /**
+     * Sets allow_power_forms_admin_to_access_all_power_form_envelopes
+     * @param string $allow_power_forms_admin_to_access_all_power_form_envelopes 
+     * @return $this
+     */
+    public function setAllowPowerFormsAdminToAccessAllPowerFormEnvelopes($allow_power_forms_admin_to_access_all_power_form_envelopes)
+    {
+        $this->container['allow_power_forms_admin_to_access_all_power_form_envelopes'] = $allow_power_forms_admin_to_access_all_power_form_envelopes;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_power_forms_admin_to_access_all_power_form_envelopes_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata()
+    {
+        return $this->container['allow_power_forms_admin_to_access_all_power_form_envelopes_metadata'];
+    }
+
+    /**
+     * Sets allow_power_forms_admin_to_access_all_power_form_envelopes_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_power_forms_admin_to_access_all_power_form_envelopes_metadata
+     * @return $this
+     */
+    public function setAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata($allow_power_forms_admin_to_access_all_power_form_envelopes_metadata)
+    {
+        $this->container['allow_power_forms_admin_to_access_all_power_form_envelopes_metadata'] = $allow_power_forms_admin_to_access_all_power_form_envelopes_metadata;
 
         return $this;
     }

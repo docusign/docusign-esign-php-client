@@ -54,9 +54,11 @@ class EnvelopesInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'continuation_token' => 'string',
         'end_position' => 'string',
         'envelopes' => '\DocuSign\eSign\Model\Envelope[]',
         'envelope_transaction_statuses' => '\DocuSign\eSign\Model\EnvelopeTransactionStatus[]',
+        'last_queried_date_time' => 'string',
         'next_uri' => 'string',
         'previous_uri' => 'string',
         'result_set_size' => 'string',
@@ -74,9 +76,11 @@ class EnvelopesInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'continuation_token' => 'continuationToken',
         'end_position' => 'endPosition',
         'envelopes' => 'envelopes',
         'envelope_transaction_statuses' => 'envelopeTransactionStatuses',
+        'last_queried_date_time' => 'lastQueriedDateTime',
         'next_uri' => 'nextUri',
         'previous_uri' => 'previousUri',
         'result_set_size' => 'resultSetSize',
@@ -90,9 +94,11 @@ class EnvelopesInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'continuation_token' => 'setContinuationToken',
         'end_position' => 'setEndPosition',
         'envelopes' => 'setEnvelopes',
         'envelope_transaction_statuses' => 'setEnvelopeTransactionStatuses',
+        'last_queried_date_time' => 'setLastQueriedDateTime',
         'next_uri' => 'setNextUri',
         'previous_uri' => 'setPreviousUri',
         'result_set_size' => 'setResultSetSize',
@@ -106,9 +112,11 @@ class EnvelopesInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'continuation_token' => 'getContinuationToken',
         'end_position' => 'getEndPosition',
         'envelopes' => 'getEnvelopes',
         'envelope_transaction_statuses' => 'getEnvelopeTransactionStatuses',
+        'last_queried_date_time' => 'getLastQueriedDateTime',
         'next_uri' => 'getNextUri',
         'previous_uri' => 'getPreviousUri',
         'result_set_size' => 'getResultSetSize',
@@ -147,9 +155,11 @@ class EnvelopesInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['continuation_token'] = isset($data['continuation_token']) ? $data['continuation_token'] : null;
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['envelopes'] = isset($data['envelopes']) ? $data['envelopes'] : null;
         $this->container['envelope_transaction_statuses'] = isset($data['envelope_transaction_statuses']) ? $data['envelope_transaction_statuses'] : null;
+        $this->container['last_queried_date_time'] = isset($data['last_queried_date_time']) ? $data['last_queried_date_time'] : null;
         $this->container['next_uri'] = isset($data['next_uri']) ? $data['next_uri'] : null;
         $this->container['previous_uri'] = isset($data['previous_uri']) ? $data['previous_uri'] : null;
         $this->container['result_set_size'] = isset($data['result_set_size']) ? $data['result_set_size'] : null;
@@ -179,6 +189,27 @@ class EnvelopesInformation implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets continuation_token
+     * @return string
+     */
+    public function getContinuationToken()
+    {
+        return $this->container['continuation_token'];
+    }
+
+    /**
+     * Sets continuation_token
+     * @param string $continuation_token 
+     * @return $this
+     */
+    public function setContinuationToken($continuation_token)
+    {
+        $this->container['continuation_token'] = $continuation_token;
+
+        return $this;
+    }
 
     /**
      * Gets end_position
@@ -239,6 +270,27 @@ class EnvelopesInformation implements ArrayAccess
     public function setEnvelopeTransactionStatuses($envelope_transaction_statuses)
     {
         $this->container['envelope_transaction_statuses'] = $envelope_transaction_statuses;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_queried_date_time
+     * @return string
+     */
+    public function getLastQueriedDateTime()
+    {
+        return $this->container['last_queried_date_time'];
+    }
+
+    /**
+     * Sets last_queried_date_time
+     * @param string $last_queried_date_time 
+     * @return $this
+     */
+    public function setLastQueriedDateTime($last_queried_date_time)
+    {
+        $this->container['last_queried_date_time'] = $last_queried_date_time;
 
         return $this;
     }
