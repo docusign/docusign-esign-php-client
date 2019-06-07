@@ -338,7 +338,7 @@ class AccountAddress implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name The user’s first name.  Maximum Length: 50 characters.
+     * @param string $first_name The user's first name.  Maximum Length: 50 characters.
      * @return $this
      */
     public function setFirstName($first_name)

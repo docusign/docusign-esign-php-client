@@ -319,7 +319,7 @@ class ListUsersOptions
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\ApiClient;
+use \DocuSign\eSign\Client\ApiClient;
 use \DocuSign\eSign\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
@@ -337,16 +337,16 @@ class ConnectApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\ApiClient instance of the ApiClient
+     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\ApiClient|null $apiClient The api client to use
+     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\DocuSign\eSign\ApiClient $apiClient = null)
+    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -358,7 +358,7 @@ class ConnectApi
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\ApiClient get the API client
+     * @return \DocuSign\eSign\Client\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -368,11 +368,11 @@ class ConnectApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\ApiClient $apiClient set the API client
+     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
      *
      * @return ConnectApi
      */
-    public function setApiClient(\DocuSign\eSign\ApiClient $apiClient)
+    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -851,103 +851,6 @@ class ConnectApi
             return [null, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation deleteMobileNotifiers
-     *
-     * Reserved
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\MobileNotifierConfigurationInformation
-     */
-    public function deleteMobileNotifiers($account_id, $mobile_notifier_configuration_information = null)
-    {
-        list($response) = $this->deleteMobileNotifiersWithHttpInfo($account_id, $mobile_notifier_configuration_information);
-        return $response;
-    }
-
-    /**
-     * Operation deleteMobileNotifiersWithHttpInfo
-     *
-     * Reserved
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\MobileNotifierConfigurationInformation, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteMobileNotifiersWithHttpInfo($account_id, $mobile_notifier_configuration_information = null)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteMobileNotifiers');
-        }
-        // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/connect/mobile_notifiers";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($mobile_notifier_configuration_information)) {
-            $_tempBody = $mobile_notifier_configuration_information;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'DELETE',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation',
-                '/v2/accounts/{accountId}/connect/mobile_notifiers'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -1475,96 +1378,6 @@ class ConnectApi
     }
 
     /**
-     * Operation listMobileNotifiers
-     *
-     * Reserved
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\MobileNotifierConfigurationInformation
-     */
-    public function listMobileNotifiers($account_id)
-    {
-        list($response) = $this->listMobileNotifiersWithHttpInfo($account_id);
-        return $response;
-    }
-
-    /**
-     * Operation listMobileNotifiersWithHttpInfo
-     *
-     * Reserved
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\MobileNotifierConfigurationInformation, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function listMobileNotifiersWithHttpInfo($account_id)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling listMobileNotifiers');
-        }
-        // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/connect/mobile_notifiers";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation',
-                '/v2/accounts/{accountId}/connect/mobile_notifiers'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation listUsers
      *
      * Returns users from the configured Connect service.
@@ -1984,103 +1797,6 @@ class ConnectApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ConnectCustomConfiguration', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateMobileNotifiers
-     *
-     * Reserved
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\MobileNotifierConfigurationInformation
-     */
-    public function updateMobileNotifiers($account_id, $mobile_notifier_configuration_information = null)
-    {
-        list($response) = $this->updateMobileNotifiersWithHttpInfo($account_id, $mobile_notifier_configuration_information);
-        return $response;
-    }
-
-    /**
-     * Operation updateMobileNotifiersWithHttpInfo
-     *
-     * Reserved
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\MobileNotifierConfigurationInformation, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateMobileNotifiersWithHttpInfo($account_id, $mobile_notifier_configuration_information = null)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateMobileNotifiers');
-        }
-        // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/connect/mobile_notifiers";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($mobile_notifier_configuration_information)) {
-            $_tempBody = $mobile_notifier_configuration_information;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation',
-                '/v2/accounts/{accountId}/connect/mobile_notifiers'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\MobileNotifierConfigurationInformation', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

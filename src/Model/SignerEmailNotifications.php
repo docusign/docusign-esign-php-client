@@ -58,6 +58,8 @@ class SignerEmailNotifications implements ArrayAccess
         'agent_notification' => 'string',
         'carbon_copy_notification' => 'string',
         'certified_delivery_notification' => 'string',
+        'comments_only_private_and_mention' => 'string',
+        'comments_receive_all' => 'string',
         'document_markup_activation' => 'string',
         'envelope_activation' => 'string',
         'envelope_complete' => 'string',
@@ -84,6 +86,8 @@ class SignerEmailNotifications implements ArrayAccess
         'agent_notification' => 'agentNotification',
         'carbon_copy_notification' => 'carbonCopyNotification',
         'certified_delivery_notification' => 'certifiedDeliveryNotification',
+        'comments_only_private_and_mention' => 'commentsOnlyPrivateAndMention',
+        'comments_receive_all' => 'commentsReceiveAll',
         'document_markup_activation' => 'documentMarkupActivation',
         'envelope_activation' => 'envelopeActivation',
         'envelope_complete' => 'envelopeComplete',
@@ -106,6 +110,8 @@ class SignerEmailNotifications implements ArrayAccess
         'agent_notification' => 'setAgentNotification',
         'carbon_copy_notification' => 'setCarbonCopyNotification',
         'certified_delivery_notification' => 'setCertifiedDeliveryNotification',
+        'comments_only_private_and_mention' => 'setCommentsOnlyPrivateAndMention',
+        'comments_receive_all' => 'setCommentsReceiveAll',
         'document_markup_activation' => 'setDocumentMarkupActivation',
         'envelope_activation' => 'setEnvelopeActivation',
         'envelope_complete' => 'setEnvelopeComplete',
@@ -128,6 +134,8 @@ class SignerEmailNotifications implements ArrayAccess
         'agent_notification' => 'getAgentNotification',
         'carbon_copy_notification' => 'getCarbonCopyNotification',
         'certified_delivery_notification' => 'getCertifiedDeliveryNotification',
+        'comments_only_private_and_mention' => 'getCommentsOnlyPrivateAndMention',
+        'comments_receive_all' => 'getCommentsReceiveAll',
         'document_markup_activation' => 'getDocumentMarkupActivation',
         'envelope_activation' => 'getEnvelopeActivation',
         'envelope_complete' => 'getEnvelopeComplete',
@@ -175,6 +183,8 @@ class SignerEmailNotifications implements ArrayAccess
         $this->container['agent_notification'] = isset($data['agent_notification']) ? $data['agent_notification'] : null;
         $this->container['carbon_copy_notification'] = isset($data['carbon_copy_notification']) ? $data['carbon_copy_notification'] : null;
         $this->container['certified_delivery_notification'] = isset($data['certified_delivery_notification']) ? $data['certified_delivery_notification'] : null;
+        $this->container['comments_only_private_and_mention'] = isset($data['comments_only_private_and_mention']) ? $data['comments_only_private_and_mention'] : null;
+        $this->container['comments_receive_all'] = isset($data['comments_receive_all']) ? $data['comments_receive_all'] : null;
         $this->container['document_markup_activation'] = isset($data['document_markup_activation']) ? $data['document_markup_activation'] : null;
         $this->container['envelope_activation'] = isset($data['envelope_activation']) ? $data['envelope_activation'] : null;
         $this->container['envelope_complete'] = isset($data['envelope_complete']) ? $data['envelope_complete'] : null;
@@ -270,6 +280,48 @@ class SignerEmailNotifications implements ArrayAccess
     public function setCertifiedDeliveryNotification($certified_delivery_notification)
     {
         $this->container['certified_delivery_notification'] = $certified_delivery_notification;
+
+        return $this;
+    }
+
+    /**
+     * Gets comments_only_private_and_mention
+     * @return string
+     */
+    public function getCommentsOnlyPrivateAndMention()
+    {
+        return $this->container['comments_only_private_and_mention'];
+    }
+
+    /**
+     * Sets comments_only_private_and_mention
+     * @param string $comments_only_private_and_mention 
+     * @return $this
+     */
+    public function setCommentsOnlyPrivateAndMention($comments_only_private_and_mention)
+    {
+        $this->container['comments_only_private_and_mention'] = $comments_only_private_and_mention;
+
+        return $this;
+    }
+
+    /**
+     * Gets comments_receive_all
+     * @return string
+     */
+    public function getCommentsReceiveAll()
+    {
+        return $this->container['comments_receive_all'];
+    }
+
+    /**
+     * Sets comments_receive_all
+     * @param string $comments_receive_all 
+     * @return $this
+     */
+    public function setCommentsReceiveAll($comments_receive_all)
+    {
+        $this->container['comments_receive_all'] = $comments_receive_all;
 
         return $this;
     }

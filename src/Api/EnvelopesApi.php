@@ -56,6 +56,31 @@ class CreateEnvelopeOptions
         return $this;
     }
     /**
+      * $change_routing_order 
+      * @var string
+      */
+    protected $change_routing_order;
+
+    /**
+     * Gets change_routing_order
+     * @return string
+     */
+    public function getChangeRoutingOrder()
+    {
+        return $this->change_routing_order;
+    }
+  
+    /**
+     * Sets change_routing_order
+     * @param string $change_routing_order 
+     * @return $this
+     */
+    public function setChangeRoutingOrder($change_routing_order)
+    {
+        $this->change_routing_order = $change_routing_order;
+        return $this;
+    }
+    /**
       * $completed_documents_only If set to true then we want to set the sourceEnvelopeId to indicate that this is a\"forward\" envelope action
       * @var string
       */
@@ -109,7 +134,7 @@ class CreateEnvelopeOptions
 class CreateRecipientOptions
 {
     /**
-      * $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope’s next recipient.
+      * $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope's next recipient.
       * @var string
       */
     protected $resend_envelope;
@@ -125,7 +150,7 @@ class CreateRecipientOptions
   
     /**
      * Sets resend_envelope
-     * @param string $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope’s next recipient.
+     * @param string $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope's next recipient.
      * @return $this
      */
     public function setResendEnvelope($resend_envelope)
@@ -499,6 +524,34 @@ class GetDocumentPageImageOptions
         return $this;
     }
 }
+class GetDocumentTabsOptions
+{
+    /**
+      * $page_numbers 
+      * @var string
+      */
+    protected $page_numbers;
+
+    /**
+     * Gets page_numbers
+     * @return string
+     */
+    public function getPageNumbers()
+    {
+        return $this->page_numbers;
+    }
+  
+    /**
+     * Sets page_numbers
+     * @param string $page_numbers 
+     * @return $this
+     */
+    public function setPageNumbers($page_numbers)
+    {
+        $this->page_numbers = $page_numbers;
+        return $this;
+    }
+}
 class GetEnvelopeOptions
 {
     /**
@@ -549,6 +602,184 @@ class GetEnvelopeOptions
     public function setInclude($include)
     {
         $this->include = $include;
+        return $this;
+    }
+}
+class GetPagesOptions
+{
+    /**
+      * $count 
+      * @var string
+      */
+    protected $count;
+
+    /**
+     * Gets count
+     * @return string
+     */
+    public function getCount()
+    {
+        return $this->count;
+    }
+  
+    /**
+     * Sets count
+     * @param string $count 
+     * @return $this
+     */
+    public function setCount($count)
+    {
+        $this->count = $count;
+        return $this;
+    }
+    /**
+      * $dpi 
+      * @var string
+      */
+    protected $dpi;
+
+    /**
+     * Gets dpi
+     * @return string
+     */
+    public function getDpi()
+    {
+        return $this->dpi;
+    }
+  
+    /**
+     * Sets dpi
+     * @param string $dpi 
+     * @return $this
+     */
+    public function setDpi($dpi)
+    {
+        $this->dpi = $dpi;
+        return $this;
+    }
+    /**
+      * $max_height 
+      * @var string
+      */
+    protected $max_height;
+
+    /**
+     * Gets max_height
+     * @return string
+     */
+    public function getMaxHeight()
+    {
+        return $this->max_height;
+    }
+  
+    /**
+     * Sets max_height
+     * @param string $max_height 
+     * @return $this
+     */
+    public function setMaxHeight($max_height)
+    {
+        $this->max_height = $max_height;
+        return $this;
+    }
+    /**
+      * $max_width 
+      * @var string
+      */
+    protected $max_width;
+
+    /**
+     * Gets max_width
+     * @return string
+     */
+    public function getMaxWidth()
+    {
+        return $this->max_width;
+    }
+  
+    /**
+     * Sets max_width
+     * @param string $max_width 
+     * @return $this
+     */
+    public function setMaxWidth($max_width)
+    {
+        $this->max_width = $max_width;
+        return $this;
+    }
+    /**
+      * $nocache 
+      * @var string
+      */
+    protected $nocache;
+
+    /**
+     * Gets nocache
+     * @return string
+     */
+    public function getNocache()
+    {
+        return $this->nocache;
+    }
+  
+    /**
+     * Sets nocache
+     * @param string $nocache 
+     * @return $this
+     */
+    public function setNocache($nocache)
+    {
+        $this->nocache = $nocache;
+        return $this;
+    }
+    /**
+      * $show_changes 
+      * @var string
+      */
+    protected $show_changes;
+
+    /**
+     * Gets show_changes
+     * @return string
+     */
+    public function getShowChanges()
+    {
+        return $this->show_changes;
+    }
+  
+    /**
+     * Sets show_changes
+     * @param string $show_changes 
+     * @return $this
+     */
+    public function setShowChanges($show_changes)
+    {
+        $this->show_changes = $show_changes;
+        return $this;
+    }
+    /**
+      * $start_position 
+      * @var string
+      */
+    protected $start_position;
+
+    /**
+     * Gets start_position
+     * @return string
+     */
+    public function getStartPosition()
+    {
+        return $this->start_position;
+    }
+  
+    /**
+     * Sets start_position
+     * @param string $start_position 
+     * @return $this
+     */
+    public function setStartPosition($start_position)
+    {
+        $this->start_position = $start_position;
         return $this;
     }
 }
@@ -608,34 +839,6 @@ class GetRecipientSignatureImageOptions
         return $this;
     }
 }
-class ListDocumentsOptions
-{
-    /**
-      * $include_metadata 
-      * @var string
-      */
-    protected $include_metadata;
-
-    /**
-     * Gets include_metadata
-     * @return string
-     */
-    public function getIncludeMetadata()
-    {
-        return $this->include_metadata;
-    }
-  
-    /**
-     * Sets include_metadata
-     * @param string $include_metadata 
-     * @return $this
-     */
-    public function setIncludeMetadata($include_metadata)
-    {
-        $this->include_metadata = $include_metadata;
-        return $this;
-    }
-}
 class ListRecipientsOptions
 {
     /**
@@ -689,31 +892,6 @@ class ListRecipientsOptions
         return $this;
     }
     /**
-      * $include_metadata 
-      * @var string
-      */
-    protected $include_metadata;
-
-    /**
-     * Gets include_metadata
-     * @return string
-     */
-    public function getIncludeMetadata()
-    {
-        return $this->include_metadata;
-    }
-  
-    /**
-     * Sets include_metadata
-     * @param string $include_metadata 
-     * @return $this
-     */
-    public function setIncludeMetadata($include_metadata)
-    {
-        $this->include_metadata = $include_metadata;
-        return $this;
-    }
-    /**
       * $include_tabs When set to **true**, the tab information associated with the recipient is included in the response.
       * @var string
       */
@@ -742,6 +920,81 @@ class ListRecipientsOptions
 class ListStatusOptions
 {
     /**
+      * $ac_status 
+      * @var string
+      */
+    protected $ac_status;
+
+    /**
+     * Gets ac_status
+     * @return string
+     */
+    public function getAcStatus()
+    {
+        return $this->ac_status;
+    }
+  
+    /**
+     * Sets ac_status
+     * @param string $ac_status 
+     * @return $this
+     */
+    public function setAcStatus($ac_status)
+    {
+        $this->ac_status = $ac_status;
+        return $this;
+    }
+    /**
+      * $block 
+      * @var string
+      */
+    protected $block;
+
+    /**
+     * Gets block
+     * @return string
+     */
+    public function getBlock()
+    {
+        return $this->block;
+    }
+  
+    /**
+     * Sets block
+     * @param string $block 
+     * @return $this
+     */
+    public function setBlock($block)
+    {
+        $this->block = $block;
+        return $this;
+    }
+    /**
+      * $count 
+      * @var string
+      */
+    protected $count;
+
+    /**
+     * Gets count
+     * @return string
+     */
+    public function getCount()
+    {
+        return $this->count;
+    }
+  
+    /**
+     * Sets count
+     * @param string $count 
+     * @return $this
+     */
+    public function setCount($count)
+    {
+        $this->count = $count;
+        return $this;
+    }
+    /**
       * $email 
       * @var string
       */
@@ -764,6 +1017,31 @@ class ListStatusOptions
     public function setEmail($email)
     {
         $this->email = $email;
+        return $this;
+    }
+    /**
+      * $envelope_ids 
+      * @var string
+      */
+    protected $envelope_ids;
+
+    /**
+     * Gets envelope_ids
+     * @return string
+     */
+    public function getEnvelopeIds()
+    {
+        return $this->envelope_ids;
+    }
+  
+    /**
+     * Sets envelope_ids
+     * @param string $envelope_ids 
+     * @return $this
+     */
+    public function setEnvelopeIds($envelope_ids)
+    {
+        $this->envelope_ids = $envelope_ids;
         return $this;
     }
     /**
@@ -792,6 +1070,31 @@ class ListStatusOptions
         return $this;
     }
     /**
+      * $from_to_status 
+      * @var string
+      */
+    protected $from_to_status;
+
+    /**
+     * Gets from_to_status
+     * @return string
+     */
+    public function getFromToStatus()
+    {
+        return $this->from_to_status;
+    }
+  
+    /**
+     * Sets from_to_status
+     * @param string $from_to_status 
+     * @return $this
+     */
+    public function setFromToStatus($from_to_status)
+    {
+        $this->from_to_status = $from_to_status;
+        return $this;
+    }
+    /**
       * $start_position 
       * @var string
       */
@@ -817,6 +1120,31 @@ class ListStatusOptions
         return $this;
     }
     /**
+      * $status 
+      * @var string
+      */
+    protected $status;
+
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param string $status 
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+        return $this;
+    }
+    /**
       * $to_date 
       * @var string
       */
@@ -839,6 +1167,56 @@ class ListStatusOptions
     public function setToDate($to_date)
     {
         $this->to_date = $to_date;
+        return $this;
+    }
+    /**
+      * $transaction_ids 
+      * @var string
+      */
+    protected $transaction_ids;
+
+    /**
+     * Gets transaction_ids
+     * @return string
+     */
+    public function getTransactionIds()
+    {
+        return $this->transaction_ids;
+    }
+  
+    /**
+     * Sets transaction_ids
+     * @param string $transaction_ids 
+     * @return $this
+     */
+    public function setTransactionIds($transaction_ids)
+    {
+        $this->transaction_ids = $transaction_ids;
+        return $this;
+    }
+    /**
+      * $user_name 
+      * @var string
+      */
+    protected $user_name;
+
+    /**
+     * Gets user_name
+     * @return string
+     */
+    public function getUserName()
+    {
+        return $this->user_name;
+    }
+  
+    /**
+     * Sets user_name
+     * @param string $user_name 
+     * @return $this
+     */
+    public function setUserName($user_name)
+    {
+        $this->user_name = $user_name;
         return $this;
     }
 }
@@ -995,81 +1373,6 @@ class ListStatusChangesOptions
         return $this;
     }
     /**
-      * $exclude 
-      * @var string
-      */
-    protected $exclude;
-
-    /**
-     * Gets exclude
-     * @return string
-     */
-    public function getExclude()
-    {
-        return $this->exclude;
-    }
-  
-    /**
-     * Sets exclude
-     * @param string $exclude 
-     * @return $this
-     */
-    public function setExclude($exclude)
-    {
-        $this->exclude = $exclude;
-        return $this;
-    }
-    /**
-      * $folder_ids 
-      * @var string
-      */
-    protected $folder_ids;
-
-    /**
-     * Gets folder_ids
-     * @return string
-     */
-    public function getFolderIds()
-    {
-        return $this->folder_ids;
-    }
-  
-    /**
-     * Sets folder_ids
-     * @param string $folder_ids 
-     * @return $this
-     */
-    public function setFolderIds($folder_ids)
-    {
-        $this->folder_ids = $folder_ids;
-        return $this;
-    }
-    /**
-      * $folder_types 
-      * @var string
-      */
-    protected $folder_types;
-
-    /**
-     * Gets folder_types
-     * @return string
-     */
-    public function getFolderTypes()
-    {
-        return $this->folder_types;
-    }
-  
-    /**
-     * Sets folder_types
-     * @param string $folder_types 
-     * @return $this
-     */
-    public function setFolderTypes($folder_types)
-    {
-        $this->folder_types = $folder_types;
-        return $this;
-    }
-    /**
       * $from_date The date/time setting that specifies the date/time when the request begins checking for status changes for envelopes in the account.  This is required unless 'envelopeId's are used.
       * @var string
       */
@@ -1117,156 +1420,6 @@ class ListStatusChangesOptions
     public function setFromToStatus($from_to_status)
     {
         $this->from_to_status = $from_to_status;
-        return $this;
-    }
-    /**
-      * $include 
-      * @var string
-      */
-    protected $include;
-
-    /**
-     * Gets include
-     * @return string
-     */
-    public function getInclude()
-    {
-        return $this->include;
-    }
-  
-    /**
-     * Sets include
-     * @param string $include 
-     * @return $this
-     */
-    public function setInclude($include)
-    {
-        $this->include = $include;
-        return $this;
-    }
-    /**
-      * $intersecting_folder_ids 
-      * @var string
-      */
-    protected $intersecting_folder_ids;
-
-    /**
-     * Gets intersecting_folder_ids
-     * @return string
-     */
-    public function getIntersectingFolderIds()
-    {
-        return $this->intersecting_folder_ids;
-    }
-  
-    /**
-     * Sets intersecting_folder_ids
-     * @param string $intersecting_folder_ids 
-     * @return $this
-     */
-    public function setIntersectingFolderIds($intersecting_folder_ids)
-    {
-        $this->intersecting_folder_ids = $intersecting_folder_ids;
-        return $this;
-    }
-    /**
-      * $order 
-      * @var string
-      */
-    protected $order;
-
-    /**
-     * Gets order
-     * @return string
-     */
-    public function getOrder()
-    {
-        return $this->order;
-    }
-  
-    /**
-     * Sets order
-     * @param string $order 
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        $this->order = $order;
-        return $this;
-    }
-    /**
-      * $order_by 
-      * @var string
-      */
-    protected $order_by;
-
-    /**
-     * Gets order_by
-     * @return string
-     */
-    public function getOrderBy()
-    {
-        return $this->order_by;
-    }
-  
-    /**
-     * Sets order_by
-     * @param string $order_by 
-     * @return $this
-     */
-    public function setOrderBy($order_by)
-    {
-        $this->order_by = $order_by;
-        return $this;
-    }
-    /**
-      * $powerformids 
-      * @var string
-      */
-    protected $powerformids;
-
-    /**
-     * Gets powerformids
-     * @return string
-     */
-    public function getPowerformids()
-    {
-        return $this->powerformids;
-    }
-  
-    /**
-     * Sets powerformids
-     * @param string $powerformids 
-     * @return $this
-     */
-    public function setPowerformids($powerformids)
-    {
-        $this->powerformids = $powerformids;
-        return $this;
-    }
-    /**
-      * $search_text 
-      * @var string
-      */
-    protected $search_text;
-
-    /**
-     * Gets search_text
-     * @return string
-     */
-    public function getSearchText()
-    {
-        return $this->search_text;
-    }
-  
-    /**
-     * Sets search_text
-     * @param string $search_text 
-     * @return $this
-     */
-    public function setSearchText($search_text)
-    {
-        $this->search_text = $search_text;
         return $this;
     }
     /**
@@ -1370,56 +1523,6 @@ class ListStatusChangesOptions
         return $this;
     }
     /**
-      * $user_filter 
-      * @var string
-      */
-    protected $user_filter;
-
-    /**
-     * Gets user_filter
-     * @return string
-     */
-    public function getUserFilter()
-    {
-        return $this->user_filter;
-    }
-  
-    /**
-     * Sets user_filter
-     * @param string $user_filter 
-     * @return $this
-     */
-    public function setUserFilter($user_filter)
-    {
-        $this->user_filter = $user_filter;
-        return $this;
-    }
-    /**
-      * $user_id 
-      * @var string
-      */
-    protected $user_id;
-
-    /**
-     * Gets user_id
-     * @return string
-     */
-    public function getUserId()
-    {
-        return $this->user_id;
-    }
-  
-    /**
-     * Sets user_id
-     * @param string $user_id 
-     * @return $this
-     */
-    public function setUserId($user_id)
-    {
-        $this->user_id = $user_id;
-        return $this;
-    }
-    /**
       * $user_name 
       * @var string
       */
@@ -1501,7 +1604,7 @@ class ListTabsOptions
 class ListTemplatesOptions
 {
     /**
-      * $include The possible values are:  matching_applied – This returns template matching information for the template.
+      * $include The possible values are:  matching_applied - This returns template matching information for the template.
       * @var string
       */
     protected $include;
@@ -1517,7 +1620,7 @@ class ListTemplatesOptions
   
     /**
      * Sets include
-     * @param string $include The possible values are:  matching_applied – This returns template matching information for the template.
+     * @param string $include The possible values are:  matching_applied - This returns template matching information for the template.
      * @return $this
      */
     public function setInclude($include)
@@ -1690,11 +1793,61 @@ class UpdateDocumentsOptions
         $this->apply_document_fields = $apply_document_fields;
         return $this;
     }
+    /**
+      * $persist_tabs 
+      * @var string
+      */
+    protected $persist_tabs;
+
+    /**
+     * Gets persist_tabs
+     * @return string
+     */
+    public function getPersistTabs()
+    {
+        return $this->persist_tabs;
+    }
+  
+    /**
+     * Sets persist_tabs
+     * @param string $persist_tabs 
+     * @return $this
+     */
+    public function setPersistTabs($persist_tabs)
+    {
+        $this->persist_tabs = $persist_tabs;
+        return $this;
+    }
 }
 class UpdateRecipientsOptions
 {
     /**
-      * $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope’s next recipient.
+      * $offline_signing 
+      * @var string
+      */
+    protected $offline_signing;
+
+    /**
+     * Gets offline_signing
+     * @return string
+     */
+    public function getOfflineSigning()
+    {
+        return $this->offline_signing;
+    }
+  
+    /**
+     * Sets offline_signing
+     * @param string $offline_signing 
+     * @return $this
+     */
+    public function setOfflineSigning($offline_signing)
+    {
+        $this->offline_signing = $offline_signing;
+        return $this;
+    }
+    /**
+      * $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope's next recipient.
       * @var string
       */
     protected $resend_envelope;
@@ -1710,7 +1863,7 @@ class UpdateRecipientsOptions
   
     /**
      * Sets resend_envelope
-     * @param string $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope’s next recipient.
+     * @param string $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope's next recipient.
      * @return $this
      */
     public function setResendEnvelope($resend_envelope)
@@ -1723,7 +1876,7 @@ class UpdateRecipientsOptions
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\ApiClient;
+use \DocuSign\eSign\Client\ApiClient;
 use \DocuSign\eSign\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
@@ -1741,16 +1894,16 @@ class EnvelopesApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\ApiClient instance of the ApiClient
+     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\ApiClient|null $apiClient The api client to use
+     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\DocuSign\eSign\ApiClient $apiClient = null)
+    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -1762,7 +1915,7 @@ class EnvelopesApi
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\ApiClient get the API client
+     * @return \DocuSign\eSign\Client\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -1772,11 +1925,11 @@ class EnvelopesApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\ApiClient $apiClient set the API client
+     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
      *
      * @return EnvelopesApi
      */
-    public function setApiClient(\DocuSign\eSign\ApiClient $apiClient)
+    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -2560,6 +2713,131 @@ class EnvelopesApi
     }
 
     /**
+     * Operation createDocumentResponsiveHtmlPreview
+     *
+     * Get Responsive HTML Preview for a document in an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
+     */
+    public function createDocumentResponsiveHtmlPreview($account_id, $document_id, $envelope_id, $document_html_definition = null)
+    {
+        list($response) = $this->createDocumentResponsiveHtmlPreviewWithHttpInfo($account_id, $document_id, $envelope_id, $document_html_definition);
+        return $response;
+    }
+
+    /**
+     * Operation createDocumentResponsiveHtmlPreviewWithHttpInfo
+     *
+     * Get Responsive HTML Preview for a document in an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createDocumentResponsiveHtmlPreviewWithHttpInfo($account_id, $document_id, $envelope_id, $document_html_definition = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createDocumentResponsiveHtmlPreview');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling createDocumentResponsiveHtmlPreview');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling createDocumentResponsiveHtmlPreview');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html_preview";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($document_html_definition)) {
+            $_tempBody = $document_html_definition;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitions',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html_preview'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation createEditView
      *
      * Returns a URL to the edit view UI.
@@ -2835,6 +3113,10 @@ class EnvelopesApi
             $queryParams['cdse_mode'] = $this->apiClient->getSerializer()->toQueryValue($options->getCdseMode());
         }
         // query params
+        if ($options->getChangeRoutingOrder() !== null) {
+            $queryParams['change_routing_order'] = $this->apiClient->getSerializer()->toQueryValue($options->getChangeRoutingOrder());
+        }
+        // query params
         if ($options->getCompletedDocumentsOnly() !== null) {
             $queryParams['completed_documents_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getCompletedDocumentsOnly());
         }
@@ -2884,6 +3166,117 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 201:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\EnvelopeSummary', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createEnvelopeRecipientSharedView
+     *
+     * Provides a URL to start a shared recipient view of the Envelope UI
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ViewUrl
+     */
+    public function createEnvelopeRecipientSharedView($account_id, $envelope_id, $recipient_view_request = null)
+    {
+        list($response) = $this->createEnvelopeRecipientSharedViewWithHttpInfo($account_id, $envelope_id, $recipient_view_request);
+        return $response;
+    }
+
+    /**
+     * Operation createEnvelopeRecipientSharedViewWithHttpInfo
+     *
+     * Provides a URL to start a shared recipient view of the Envelope UI
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createEnvelopeRecipientSharedViewWithHttpInfo($account_id, $envelope_id, $recipient_view_request = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createEnvelopeRecipientSharedView');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling createEnvelopeRecipientSharedView');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/shared";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($recipient_view_request)) {
+            $_tempBody = $recipient_view_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ViewUrl',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/views/shared'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ViewUrl', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ViewUrl', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -3240,6 +3633,117 @@ class EnvelopesApi
     }
 
     /**
+     * Operation createResponsiveHtmlPreview
+     *
+     * Get Responsive HTML Preview for all documents in an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
+     */
+    public function createResponsiveHtmlPreview($account_id, $envelope_id, $document_html_definition = null)
+    {
+        list($response) = $this->createResponsiveHtmlPreviewWithHttpInfo($account_id, $envelope_id, $document_html_definition);
+        return $response;
+    }
+
+    /**
+     * Operation createResponsiveHtmlPreviewWithHttpInfo
+     *
+     * Get Responsive HTML Preview for all documents in an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createResponsiveHtmlPreviewWithHttpInfo($account_id, $envelope_id, $document_html_definition = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createResponsiveHtmlPreview');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling createResponsiveHtmlPreview');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/responsive_html_preview";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($document_html_definition)) {
+            $_tempBody = $document_html_definition;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitions',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/responsive_html_preview'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation createSenderView
      *
      * Returns a URL to the sender view UI.
@@ -3463,117 +3967,6 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 201:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Tabs', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation createViewLink
-     *
-     * Reserved: Returns a URL to the secure link view UI.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\ViewLinkRequest $view_link_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ViewUrl
-     */
-    public function createViewLink($account_id, $envelope_id, $view_link_request = null)
-    {
-        list($response) = $this->createViewLinkWithHttpInfo($account_id, $envelope_id, $view_link_request);
-        return $response;
-    }
-
-    /**
-     * Operation createViewLinkWithHttpInfo
-     *
-     * Reserved: Returns a URL to the secure link view UI.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\ViewLinkRequest $view_link_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function createViewLinkWithHttpInfo($account_id, $envelope_id, $view_link_request = null)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createViewLink');
-        }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling createViewLink');
-        }
-        // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($envelope_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "envelopeId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($envelope_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($view_link_request)) {
-            $_tempBody = $view_link_request;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\ViewUrl',
-                '/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ViewUrl', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ViewUrl', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -4967,106 +5360,6 @@ class EnvelopesApi
     }
 
     /**
-     * Operation deleteViewLink
-     *
-     * Reserved: Expires a secure view link.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return void
-     */
-    public function deleteViewLink($account_id, $envelope_id)
-    {
-        list($response) = $this->deleteViewLinkWithHttpInfo($account_id, $envelope_id);
-        return $response;
-    }
-
-    /**
-     * Operation deleteViewLinkWithHttpInfo
-     *
-     * Reserved: Expires a secure view link.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteViewLinkWithHttpInfo($account_id, $envelope_id)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteViewLink');
-        }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling deleteViewLink');
-        }
-        // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($envelope_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "envelopeId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($envelope_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'DELETE',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                null,
-                '/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink'
-            );
-
-            return [null, $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation getAttachment
      *
      * Retrieves an attachment from the envelope.
@@ -5405,7 +5698,7 @@ class EnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to �browser� to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
     * @param string $recipient_id The ID of the recipient being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
@@ -5424,7 +5717,7 @@ class EnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to �browser� to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
     * @param string $recipient_id The ID of the recipient being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
@@ -5975,6 +6268,134 @@ class EnvelopesApi
     }
 
     /**
+     * Operation getDocumentTabs
+     *
+     * Returns tabs on the document.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Tabs
+     */
+    public function getDocumentTabs($account_id, $document_id, $envelope_id, EnvelopesApi\GetDocumentTabsOptions $options = null)
+    {
+        list($response) = $this->getDocumentTabsWithHttpInfo($account_id, $document_id, $envelope_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getDocumentTabsWithHttpInfo
+     *
+     * Returns tabs on the document.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $envelope_id, EnvelopesApi\GetDocumentTabsOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getDocumentTabs');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getDocumentTabs');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getDocumentTabs');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getPageNumbers() !== null) {
+            $queryParams['page_numbers'] = $this->apiClient->getSerializer()->toQueryValue($options->getPageNumbers());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Tabs',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Tabs', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Tabs', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getEmailSettings
      *
      * Gets the email setting overrides for an envelope.
@@ -6184,6 +6605,228 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Envelope', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getEnvelopeDocumentHtmlDefinitions
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for a given document.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
+     */
+    public function getEnvelopeDocumentHtmlDefinitions($account_id, $document_id, $envelope_id)
+    {
+        list($response) = $this->getEnvelopeDocumentHtmlDefinitionsWithHttpInfo($account_id, $document_id, $envelope_id);
+        return $response;
+    }
+
+    /**
+     * Operation getEnvelopeDocumentHtmlDefinitionsWithHttpInfo
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for a given document.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getEnvelopeDocumentHtmlDefinitionsWithHttpInfo($account_id, $document_id, $envelope_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getEnvelopeDocumentHtmlDefinitions');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getEnvelopeDocumentHtmlDefinitions');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getEnvelopeDocumentHtmlDefinitions');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/html_definitions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/html_definitions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getEnvelopeHtmlDefinitions
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for the envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
+     */
+    public function getEnvelopeHtmlDefinitions($account_id, $envelope_id)
+    {
+        list($response) = $this->getEnvelopeHtmlDefinitionsWithHttpInfo($account_id, $envelope_id);
+        return $response;
+    }
+
+    /**
+     * Operation getEnvelopeHtmlDefinitionsWithHttpInfo
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for the envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getEnvelopeHtmlDefinitionsWithHttpInfo($account_id, $envelope_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getEnvelopeHtmlDefinitions');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getEnvelopeHtmlDefinitions');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/html_definitions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/html_definitions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -6496,6 +7139,290 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Notification', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getPageTabs
+     *
+     * Returns tabs on the specified page.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+    * @param string $page_number The page number being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Tabs
+     */
+    public function getPageTabs($account_id, $document_id, $envelope_id, $page_number)
+    {
+        list($response) = $this->getPageTabsWithHttpInfo($account_id, $document_id, $envelope_id, $page_number);
+        return $response;
+    }
+
+    /**
+     * Operation getPageTabsWithHttpInfo
+     *
+     * Returns tabs on the specified page.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+    * @param string $page_number The page number being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getPageTabsWithHttpInfo($account_id, $document_id, $envelope_id, $page_number)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getPageTabs');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getPageTabs');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getPageTabs');
+        }
+        // verify the required parameter 'page_number' is set
+        if ($page_number === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $page_number when calling getPageTabs');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/tabs";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($page_number !== null) {
+            $resourcePath = str_replace(
+                "{" . "pageNumber" . "}",
+                $this->apiClient->getSerializer()->toPathValue($page_number),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Tabs',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/tabs'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Tabs', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Tabs', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getPages
+     *
+     * Returns document page image(s) based on input.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\PageImages
+     */
+    public function getPages($account_id, $document_id, $envelope_id, EnvelopesApi\GetPagesOptions $options = null)
+    {
+        list($response) = $this->getPagesWithHttpInfo($account_id, $document_id, $envelope_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getPagesWithHttpInfo
+     *
+     * Returns document page image(s) based on input.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getPagesWithHttpInfo($account_id, $document_id, $envelope_id, EnvelopesApi\GetPagesOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getPages');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getPages');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getPages');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getCount() !== null) {
+            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+        }
+        // query params
+        if ($options->getDpi() !== null) {
+            $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
+        }
+        // query params
+        if ($options->getMaxHeight() !== null) {
+            $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
+        }
+        // query params
+        if ($options->getMaxWidth() !== null) {
+            $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
+        }
+        // query params
+        if ($options->getNocache() !== null) {
+            $queryParams['nocache'] = $this->apiClient->getSerializer()->toQueryValue($options->getNocache());
+        }
+        // query params
+        if ($options->getShowChanges() !== null) {
+            $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
+        }
+        // query params
+        if ($options->getStartPosition() !== null) {
+            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\PageImages',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\PageImages', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PageImages', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -7451,13 +8378,12 @@ class EnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocumentsResult
      */
-    public function listDocuments($account_id, $envelope_id, EnvelopesApi\ListDocumentsOptions $options = null)
+    public function listDocuments($account_id, $envelope_id)
     {
-        list($response) = $this->listDocumentsWithHttpInfo($account_id, $envelope_id, $options);
+        list($response) = $this->listDocumentsWithHttpInfo($account_id, $envelope_id);
         return $response;
     }
 
@@ -7468,11 +8394,10 @@ class EnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listDocumentsWithHttpInfo($account_id, $envelope_id, EnvelopesApi\ListDocumentsOptions $options = null)
+    public function listDocumentsWithHttpInfo($account_id, $envelope_id)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7494,14 +8419,6 @@ class EnvelopesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
-        if ($options != null)
-        {
-        // query params
-        // query params
-        if ($options->getIncludeMetadata() !== null) {
-            $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
-        }
-        }
 
         // path params
         if ($account_id !== null) {
@@ -7620,10 +8537,6 @@ class EnvelopesApi
             $queryParams['include_extended'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeExtended());
         }
         // query params
-        if ($options->getIncludeMetadata() !== null) {
-            $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
-        }
-        // query params
         if ($options->getIncludeTabs() !== null) {
             $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
         }
@@ -7734,20 +8647,52 @@ class EnvelopesApi
         {
         // query params
         // query params
+        if ($options->getAcStatus() !== null) {
+            $queryParams['ac_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getAcStatus());
+        }
+        // query params
+        if ($options->getBlock() !== null) {
+            $queryParams['block'] = $this->apiClient->getSerializer()->toQueryValue($options->getBlock());
+        }
+        // query params
+        if ($options->getCount() !== null) {
+            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+        }
+        // query params
         if ($options->getEmail() !== null) {
             $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
+        }
+        // query params
+        if ($options->getEnvelopeIds() !== null) {
+            $queryParams['envelope_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getEnvelopeIds());
         }
         // query params
         if ($options->getFromDate() !== null) {
             $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
         }
         // query params
+        if ($options->getFromToStatus() !== null) {
+            $queryParams['from_to_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromToStatus());
+        }
+        // query params
         if ($options->getStartPosition() !== null) {
             $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
         }
         // query params
+        if ($options->getStatus() !== null) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
+        }
+        // query params
         if ($options->getToDate() !== null) {
             $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+        }
+        // query params
+        if ($options->getTransactionIds() !== null) {
+            $queryParams['transaction_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getTransactionIds());
+        }
+        // query params
+        if ($options->getUserName() !== null) {
+            $queryParams['user_name'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserName());
         }
         }
 
@@ -7875,48 +8820,12 @@ class EnvelopesApi
             $queryParams['envelope_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getEnvelopeIds());
         }
         // query params
-        if ($options->getExclude() !== null) {
-            $queryParams['exclude'] = $this->apiClient->getSerializer()->toQueryValue($options->getExclude());
-        }
-        // query params
-        if ($options->getFolderIds() !== null) {
-            $queryParams['folder_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolderIds());
-        }
-        // query params
-        if ($options->getFolderTypes() !== null) {
-            $queryParams['folder_types'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolderTypes());
-        }
-        // query params
         if ($options->getFromDate() !== null) {
             $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
         }
         // query params
         if ($options->getFromToStatus() !== null) {
             $queryParams['from_to_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromToStatus());
-        }
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
-        // query params
-        if ($options->getIntersectingFolderIds() !== null) {
-            $queryParams['intersecting_folder_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getIntersectingFolderIds());
-        }
-        // query params
-        if ($options->getOrder() !== null) {
-            $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
-        }
-        // query params
-        if ($options->getOrderBy() !== null) {
-            $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
-        }
-        // query params
-        if ($options->getPowerformids() !== null) {
-            $queryParams['powerformids'] = $this->apiClient->getSerializer()->toQueryValue($options->getPowerformids());
-        }
-        // query params
-        if ($options->getSearchText() !== null) {
-            $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
         }
         // query params
         if ($options->getStartPosition() !== null) {
@@ -7933,14 +8842,6 @@ class EnvelopesApi
         // query params
         if ($options->getTransactionIds() !== null) {
             $queryParams['transaction_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getTransactionIds());
-        }
-        // query params
-        if ($options->getUserFilter() !== null) {
-            $queryParams['user_filter'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserFilter());
-        }
-        // query params
-        if ($options->getUserId() !== null) {
-            $queryParams['user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserId());
         }
         // query params
         if ($options->getUserName() !== null) {
@@ -9523,6 +10424,10 @@ class EnvelopesApi
         if ($options->getApplyDocumentFields() !== null) {
             $queryParams['apply_document_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyDocumentFields());
         }
+        // query params
+        if ($options->getPersistTabs() !== null) {
+            $queryParams['persist_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getPersistTabs());
+        }
         }
 
         // path params
@@ -10095,7 +11000,7 @@ class EnvelopesApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/gif']);
 
 
         // path params
@@ -10209,7 +11114,7 @@ class EnvelopesApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/gif']);
 
 
         // path params
@@ -10326,6 +11231,10 @@ class EnvelopesApi
         if ($options != null)
         {
         // query params
+        // query params
+        if ($options->getOfflineSigning() !== null) {
+            $queryParams['offline_signing'] = $this->apiClient->getSerializer()->toQueryValue($options->getOfflineSigning());
+        }
         // query params
         if ($options->getResendEnvelope() !== null) {
             $queryParams['resend_envelope'] = $this->apiClient->getSerializer()->toQueryValue($options->getResendEnvelope());

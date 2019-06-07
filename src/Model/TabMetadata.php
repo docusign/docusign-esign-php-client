@@ -84,9 +84,15 @@ class TabMetadata implements ArrayAccess
         'maximum_length' => 'string',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
         'name' => 'string',
+        'payment_item_code' => 'string',
+        'payment_item_description' => 'string',
+        'payment_item_name' => 'string',
         'required' => 'string',
         'scale_value' => 'string',
+        'selected' => 'string',
         'shared' => 'string',
+        'stamp_type' => 'string',
+        'stamp_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_label' => 'string',
         'type' => 'string',
         'underline' => 'string',
@@ -135,9 +141,15 @@ class TabMetadata implements ArrayAccess
         'maximum_length' => 'maximumLength',
         'merge_field' => 'mergeField',
         'name' => 'name',
+        'payment_item_code' => 'paymentItemCode',
+        'payment_item_description' => 'paymentItemDescription',
+        'payment_item_name' => 'paymentItemName',
         'required' => 'required',
         'scale_value' => 'scaleValue',
+        'selected' => 'selected',
         'shared' => 'shared',
+        'stamp_type' => 'stampType',
+        'stamp_type_metadata' => 'stampTypeMetadata',
         'tab_label' => 'tabLabel',
         'type' => 'type',
         'underline' => 'underline',
@@ -182,9 +194,15 @@ class TabMetadata implements ArrayAccess
         'maximum_length' => 'setMaximumLength',
         'merge_field' => 'setMergeField',
         'name' => 'setName',
+        'payment_item_code' => 'setPaymentItemCode',
+        'payment_item_description' => 'setPaymentItemDescription',
+        'payment_item_name' => 'setPaymentItemName',
         'required' => 'setRequired',
         'scale_value' => 'setScaleValue',
+        'selected' => 'setSelected',
         'shared' => 'setShared',
+        'stamp_type' => 'setStampType',
+        'stamp_type_metadata' => 'setStampTypeMetadata',
         'tab_label' => 'setTabLabel',
         'type' => 'setType',
         'underline' => 'setUnderline',
@@ -229,9 +247,15 @@ class TabMetadata implements ArrayAccess
         'maximum_length' => 'getMaximumLength',
         'merge_field' => 'getMergeField',
         'name' => 'getName',
+        'payment_item_code' => 'getPaymentItemCode',
+        'payment_item_description' => 'getPaymentItemDescription',
+        'payment_item_name' => 'getPaymentItemName',
         'required' => 'getRequired',
         'scale_value' => 'getScaleValue',
+        'selected' => 'getSelected',
         'shared' => 'getShared',
+        'stamp_type' => 'getStampType',
+        'stamp_type_metadata' => 'getStampTypeMetadata',
         'tab_label' => 'getTabLabel',
         'type' => 'getType',
         'underline' => 'getUnderline',
@@ -301,9 +325,15 @@ class TabMetadata implements ArrayAccess
         $this->container['maximum_length'] = isset($data['maximum_length']) ? $data['maximum_length'] : null;
         $this->container['merge_field'] = isset($data['merge_field']) ? $data['merge_field'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['payment_item_code'] = isset($data['payment_item_code']) ? $data['payment_item_code'] : null;
+        $this->container['payment_item_description'] = isset($data['payment_item_description']) ? $data['payment_item_description'] : null;
+        $this->container['payment_item_name'] = isset($data['payment_item_name']) ? $data['payment_item_name'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['scale_value'] = isset($data['scale_value']) ? $data['scale_value'] : null;
+        $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
+        $this->container['stamp_type'] = isset($data['stamp_type']) ? $data['stamp_type'] : null;
+        $this->container['stamp_type_metadata'] = isset($data['stamp_type_metadata']) ? $data['stamp_type_metadata'] : null;
         $this->container['tab_label'] = isset($data['tab_label']) ? $data['tab_label'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
@@ -472,7 +502,7 @@ class TabMetadata implements ArrayAccess
 
     /**
      * Sets anchor_x_offset
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorXOffset($anchor_x_offset)
@@ -493,7 +523,7 @@ class TabMetadata implements ArrayAccess
 
     /**
      * Sets anchor_y_offset
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorYOffset($anchor_y_offset)
@@ -966,6 +996,69 @@ class TabMetadata implements ArrayAccess
     }
 
     /**
+     * Gets payment_item_code
+     * @return string
+     */
+    public function getPaymentItemCode()
+    {
+        return $this->container['payment_item_code'];
+    }
+
+    /**
+     * Sets payment_item_code
+     * @param string $payment_item_code 
+     * @return $this
+     */
+    public function setPaymentItemCode($payment_item_code)
+    {
+        $this->container['payment_item_code'] = $payment_item_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_item_description
+     * @return string
+     */
+    public function getPaymentItemDescription()
+    {
+        return $this->container['payment_item_description'];
+    }
+
+    /**
+     * Sets payment_item_description
+     * @param string $payment_item_description 
+     * @return $this
+     */
+    public function setPaymentItemDescription($payment_item_description)
+    {
+        $this->container['payment_item_description'] = $payment_item_description;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_item_name
+     * @return string
+     */
+    public function getPaymentItemName()
+    {
+        return $this->container['payment_item_name'];
+    }
+
+    /**
+     * Sets payment_item_name
+     * @param string $payment_item_name 
+     * @return $this
+     */
+    public function setPaymentItemName($payment_item_name)
+    {
+        $this->container['payment_item_name'] = $payment_item_name;
+
+        return $this;
+    }
+
+    /**
      * Gets required
      * @return string
      */
@@ -1008,6 +1101,27 @@ class TabMetadata implements ArrayAccess
     }
 
     /**
+     * Gets selected
+     * @return string
+     */
+    public function getSelected()
+    {
+        return $this->container['selected'];
+    }
+
+    /**
+     * Sets selected
+     * @param string $selected 
+     * @return $this
+     */
+    public function setSelected($selected)
+    {
+        $this->container['selected'] = $selected;
+
+        return $this;
+    }
+
+    /**
      * Gets shared
      * @return string
      */
@@ -1024,6 +1138,48 @@ class TabMetadata implements ArrayAccess
     public function setShared($shared)
     {
         $this->container['shared'] = $shared;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_type
+     * @return string
+     */
+    public function getStampType()
+    {
+        return $this->container['stamp_type'];
+    }
+
+    /**
+     * Sets stamp_type
+     * @param string $stamp_type 
+     * @return $this
+     */
+    public function setStampType($stamp_type)
+    {
+        $this->container['stamp_type'] = $stamp_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_type_metadata
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getStampTypeMetadata()
+    {
+        return $this->container['stamp_type_metadata'];
+    }
+
+    /**
+     * Sets stamp_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $stamp_type_metadata
+     * @return $this
+     */
+    public function setStampTypeMetadata($stamp_type_metadata)
+    {
+        $this->container['stamp_type_metadata'] = $stamp_type_metadata;
 
         return $this;
     }
@@ -1123,7 +1279,7 @@ class TabMetadata implements ArrayAccess
 
     /**
      * Sets validation_pattern
-     * @param string $validation_pattern A regular expressionn used to validate input for the tab.
+     * @param string $validation_pattern A regular expression used to validate input for the tab.
      * @return $this
      */
     public function setValidationPattern($validation_pattern)

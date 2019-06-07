@@ -59,6 +59,7 @@ class InPersonSigner implements ArrayAccess
         'auto_navigation' => 'string',
         'can_sign_offline' => 'string',
         'client_user_id' => 'string',
+        'creation_reason' => 'string',
         'custom_fields' => 'string[]',
         'declined_date_time' => 'string',
         'declined_reason' => 'string',
@@ -66,9 +67,11 @@ class InPersonSigner implements ArrayAccess
         'delivered_date_time' => 'string',
         'delivery_method' => 'string',
         'document_visibility' => '\DocuSign\eSign\Model\DocumentVisibility[]',
+        'email' => 'string',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
         'embedded_recipient_start_url' => 'string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'excluded_documents' => 'string[]',
         'fax_number' => 'string',
         'host_email' => 'string',
         'host_name' => 'string',
@@ -76,6 +79,7 @@ class InPersonSigner implements ArrayAccess
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
         'inherit_email_notification_configuration' => 'string',
         'in_person_signing_type' => 'string',
+        'name' => 'string',
         'notary_host' => '\DocuSign\eSign\Model\NotaryHost',
         'note' => 'string',
         'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
@@ -126,6 +130,7 @@ class InPersonSigner implements ArrayAccess
         'auto_navigation' => 'autoNavigation',
         'can_sign_offline' => 'canSignOffline',
         'client_user_id' => 'clientUserId',
+        'creation_reason' => 'creationReason',
         'custom_fields' => 'customFields',
         'declined_date_time' => 'declinedDateTime',
         'declined_reason' => 'declinedReason',
@@ -133,9 +138,11 @@ class InPersonSigner implements ArrayAccess
         'delivered_date_time' => 'deliveredDateTime',
         'delivery_method' => 'deliveryMethod',
         'document_visibility' => 'documentVisibility',
+        'email' => 'email',
         'email_notification' => 'emailNotification',
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
         'error_details' => 'errorDetails',
+        'excluded_documents' => 'excludedDocuments',
         'fax_number' => 'faxNumber',
         'host_email' => 'hostEmail',
         'host_name' => 'hostName',
@@ -143,6 +150,7 @@ class InPersonSigner implements ArrayAccess
         'id_check_information_input' => 'idCheckInformationInput',
         'inherit_email_notification_configuration' => 'inheritEmailNotificationConfiguration',
         'in_person_signing_type' => 'inPersonSigningType',
+        'name' => 'name',
         'notary_host' => 'notaryHost',
         'note' => 'note',
         'offline_attributes' => 'offlineAttributes',
@@ -189,6 +197,7 @@ class InPersonSigner implements ArrayAccess
         'auto_navigation' => 'setAutoNavigation',
         'can_sign_offline' => 'setCanSignOffline',
         'client_user_id' => 'setClientUserId',
+        'creation_reason' => 'setCreationReason',
         'custom_fields' => 'setCustomFields',
         'declined_date_time' => 'setDeclinedDateTime',
         'declined_reason' => 'setDeclinedReason',
@@ -196,9 +205,11 @@ class InPersonSigner implements ArrayAccess
         'delivered_date_time' => 'setDeliveredDateTime',
         'delivery_method' => 'setDeliveryMethod',
         'document_visibility' => 'setDocumentVisibility',
+        'email' => 'setEmail',
         'email_notification' => 'setEmailNotification',
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
         'error_details' => 'setErrorDetails',
+        'excluded_documents' => 'setExcludedDocuments',
         'fax_number' => 'setFaxNumber',
         'host_email' => 'setHostEmail',
         'host_name' => 'setHostName',
@@ -206,6 +217,7 @@ class InPersonSigner implements ArrayAccess
         'id_check_information_input' => 'setIdCheckInformationInput',
         'inherit_email_notification_configuration' => 'setInheritEmailNotificationConfiguration',
         'in_person_signing_type' => 'setInPersonSigningType',
+        'name' => 'setName',
         'notary_host' => 'setNotaryHost',
         'note' => 'setNote',
         'offline_attributes' => 'setOfflineAttributes',
@@ -252,6 +264,7 @@ class InPersonSigner implements ArrayAccess
         'auto_navigation' => 'getAutoNavigation',
         'can_sign_offline' => 'getCanSignOffline',
         'client_user_id' => 'getClientUserId',
+        'creation_reason' => 'getCreationReason',
         'custom_fields' => 'getCustomFields',
         'declined_date_time' => 'getDeclinedDateTime',
         'declined_reason' => 'getDeclinedReason',
@@ -259,9 +272,11 @@ class InPersonSigner implements ArrayAccess
         'delivered_date_time' => 'getDeliveredDateTime',
         'delivery_method' => 'getDeliveryMethod',
         'document_visibility' => 'getDocumentVisibility',
+        'email' => 'getEmail',
         'email_notification' => 'getEmailNotification',
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
         'error_details' => 'getErrorDetails',
+        'excluded_documents' => 'getExcludedDocuments',
         'fax_number' => 'getFaxNumber',
         'host_email' => 'getHostEmail',
         'host_name' => 'getHostName',
@@ -269,6 +284,7 @@ class InPersonSigner implements ArrayAccess
         'id_check_information_input' => 'getIdCheckInformationInput',
         'inherit_email_notification_configuration' => 'getInheritEmailNotificationConfiguration',
         'in_person_signing_type' => 'getInPersonSigningType',
+        'name' => 'getName',
         'notary_host' => 'getNotaryHost',
         'note' => 'getNote',
         'offline_attributes' => 'getOfflineAttributes',
@@ -340,6 +356,7 @@ class InPersonSigner implements ArrayAccess
         $this->container['auto_navigation'] = isset($data['auto_navigation']) ? $data['auto_navigation'] : null;
         $this->container['can_sign_offline'] = isset($data['can_sign_offline']) ? $data['can_sign_offline'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
+        $this->container['creation_reason'] = isset($data['creation_reason']) ? $data['creation_reason'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
         $this->container['declined_reason'] = isset($data['declined_reason']) ? $data['declined_reason'] : null;
@@ -347,9 +364,11 @@ class InPersonSigner implements ArrayAccess
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_notification'] = isset($data['email_notification']) ? $data['email_notification'] : null;
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['excluded_documents'] = isset($data['excluded_documents']) ? $data['excluded_documents'] : null;
         $this->container['fax_number'] = isset($data['fax_number']) ? $data['fax_number'] : null;
         $this->container['host_email'] = isset($data['host_email']) ? $data['host_email'] : null;
         $this->container['host_name'] = isset($data['host_name']) ? $data['host_name'] : null;
@@ -357,6 +376,7 @@ class InPersonSigner implements ArrayAccess
         $this->container['id_check_information_input'] = isset($data['id_check_information_input']) ? $data['id_check_information_input'] : null;
         $this->container['inherit_email_notification_configuration'] = isset($data['inherit_email_notification_configuration']) ? $data['inherit_email_notification_configuration'] : null;
         $this->container['in_person_signing_type'] = isset($data['in_person_signing_type']) ? $data['in_person_signing_type'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['notary_host'] = isset($data['notary_host']) ? $data['notary_host'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['offline_attributes'] = isset($data['offline_attributes']) ? $data['offline_attributes'] : null;
@@ -426,7 +446,7 @@ class InPersonSigner implements ArrayAccess
 
     /**
      * Sets access_code
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account’s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      * @return $this
      */
     public function setAccessCode($access_code)
@@ -516,6 +536,27 @@ class InPersonSigner implements ArrayAccess
     public function setClientUserId($client_user_id)
     {
         $this->container['client_user_id'] = $client_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets creation_reason
+     * @return string
+     */
+    public function getCreationReason()
+    {
+        return $this->container['creation_reason'];
+    }
+
+    /**
+     * Sets creation_reason
+     * @param string $creation_reason 
+     * @return $this
+     */
+    public function setCreationReason($creation_reason)
+    {
+        $this->container['creation_reason'] = $creation_reason;
 
         return $this;
     }
@@ -668,6 +709,27 @@ class InPersonSigner implements ArrayAccess
     }
 
     /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email 
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
      * Gets email_notification
      * @return \DocuSign\eSign\Model\RecipientEmailNotification
      */
@@ -699,7 +761,7 @@ class InPersonSigner implements ArrayAccess
 
     /**
      * Sets embedded_recipient_start_url
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      * @return $this
      */
     public function setEmbeddedRecipientStartUrl($embedded_recipient_start_url)
@@ -726,6 +788,27 @@ class InPersonSigner implements ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets excluded_documents
+     * @return string[]
+     */
+    public function getExcludedDocuments()
+    {
+        return $this->container['excluded_documents'];
+    }
+
+    /**
+     * Sets excluded_documents
+     * @param string[] $excluded_documents Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.
+     * @return $this
+     */
+    public function setExcludedDocuments($excluded_documents)
+    {
+        $this->container['excluded_documents'] = $excluded_documents;
 
         return $this;
     }
@@ -873,6 +956,27 @@ class InPersonSigner implements ArrayAccess
     public function setInPersonSigningType($in_person_signing_type)
     {
         $this->container['in_person_signing_type'] = $in_person_signing_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name 
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }

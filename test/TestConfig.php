@@ -3,18 +3,6 @@
 class TestConfig
 {
     /**
-      * $username Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
-      * @var string
-      */
-    protected $username;
-    
-    /**
-      * $password
-      * @var string
-      */
-    protected $password;
-    
-    /**
       * $integratorKey
       * @var string
       */
@@ -28,7 +16,7 @@ class TestConfig
     
     /**
       * $apiClient
-      * @var DocuSign\eSign\ApiClient
+      * @var DocuSign\eSign\Client\ApiClient
       */
     protected $apiClient;
 
@@ -86,63 +74,40 @@ class TestConfig
      */
     protected $clientUserId;
 
-    public function __construct($username = null, $password = null, $integratorKey = null, $host = null, $returnUrl = null)
+    /**
+     * $clientSecret
+     * @var string
+     */
+    protected $clientSecret;
+
+    /**
+     * $clientKey
+     * @var string
+     */
+    protected $clientKey;
+
+    protected $userId;
+
+    public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null)
     {
         $this->host = !empty($host) ? $host : "https://demo.docusign.net/restapi";
-        $this->username = !empty($username) ? $username : 'node_sdk@mailinator.com';
-        $this->password = !empty($password) ? $password : 'qweqweasd';
         $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'ae30ea4e-3959-4d1c-b867-fcb57d2dc4df';
+        $this->clientSecret = !empty($secret) ? $secret : 'b4dccdbe-232f-46cc-96c5-b2f0f7448f8f';
+        $this->clientKey = !empty($key) ? $key : 'Docs/private.pem';
 
         $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'node_sdk@mailinator.com';
-        $this->recipientName = !empty($recipientName) ? $recipientName : 'Pat Developer';
+        $this->recipientName = !empty($recipientName) ? $recipientName : 'PHP SDK';
 
-        $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'Needs to sign';
+        $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'Manager';
         $this->templateId = !empty($templateId) ? $templateId : 'cf2a46c2-8d6e-4258-9d62-752547b1a419';
 
-        $this->returnUrl = !empty($returnUrl) ? $returnUrl : 'https://www.docusign.com/devcenter';
+        $this->returnUrl = !empty($returnUrl) ? $returnUrl : 'https://www.docusign.com/api';
+
+        $this->envelopeId = !empty($envelopeId) ? $envelopeId : '';
+        $this->userId = !empty($userId) ? $userId : 'fcc5726c-cd73-4844-b580-40bbbe6ca126'; //can be taken from generateAccessToken returned result
 
         $this->clientUserId = "1234";
     }
-
-    /**
-     * Gets username
-     * @return string
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-  
-    /**
-     * Sets username
-     * @param string $username
-     * @return $this
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-        return $this;
-    } 
-
-    /**
-     * Gets password
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-  
-    /**
-     * Sets password
-     * @param string $password
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-        return $this;
-    } 
 
     /**
      * Gets integratorKey
@@ -186,7 +151,7 @@ class TestConfig
 
     /**
      * Gets apiClient
-     * @return DocuSign\eSign\ApiClient
+     * @return DocuSign\eSign\Client\ApiClient
      */
     public function getApiClient()
     {
@@ -195,7 +160,7 @@ class TestConfig
   
     /**
      * Sets apiClient
-     * @param DocuSign\eSign\ApiClient $apiClient
+     * @param DocuSign\eSign\Client\ApiClient $apiClient
      * @return $this
      */
     public function setApiClient($apiClient)
@@ -381,6 +346,66 @@ class TestConfig
     public function setClientUserId($clientUserId)
     {
         $this->clientUserId = $clientUserId;
+        return $this;
+    }
+
+    /**
+     * Gets client secret
+     * @return string
+     */
+    public function getClientSecret()
+    {
+        return $this->clientSecret;
+    }
+
+    /**
+     * Sets client secret
+     * @param string $clientSecret
+     * @return $this
+     */
+    public function setClientSecret($clientSecret)
+    {
+        $this->clientSecret = $clientSecret;
+        return $this;
+    }
+
+    /**
+     * Gets client key
+     * @return string
+     */
+    public function getClientKey()
+    {
+        return file_get_contents($this->clientKey);
+    }
+
+    /**
+     * Sets client key
+     * @param string $clientKey
+     * @return $this
+     */
+    public function setClientKey($clientKey)
+    {
+        $this->clientKey = $clientKey;
+        return $this;
+    }
+
+    /**
+     * Gets client key
+     * @return string
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
+     * UserId
+     * @param string $userId
+     * @return $this
+     */
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
         return $this;
     }
 }

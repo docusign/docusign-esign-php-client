@@ -64,7 +64,9 @@ class Recipients implements ArrayAccess
         'in_person_signers' => '\DocuSign\eSign\Model\InPersonSigner[]',
         'intermediaries' => '\DocuSign\eSign\Model\Intermediary[]',
         'recipient_count' => 'string',
-        'signers' => '\DocuSign\eSign\Model\Signer[]'
+        'seals' => '\DocuSign\eSign\Model\SealSign[]',
+        'signers' => '\DocuSign\eSign\Model\Signer[]',
+        'witnesses' => '\DocuSign\eSign\Model\Witness[]'
     ];
 
     public static function swaggerTypes()
@@ -86,7 +88,9 @@ class Recipients implements ArrayAccess
         'in_person_signers' => 'inPersonSigners',
         'intermediaries' => 'intermediaries',
         'recipient_count' => 'recipientCount',
-        'signers' => 'signers'
+        'seals' => 'seals',
+        'signers' => 'signers',
+        'witnesses' => 'witnesses'
     ];
 
 
@@ -104,7 +108,9 @@ class Recipients implements ArrayAccess
         'in_person_signers' => 'setInPersonSigners',
         'intermediaries' => 'setIntermediaries',
         'recipient_count' => 'setRecipientCount',
-        'signers' => 'setSigners'
+        'seals' => 'setSeals',
+        'signers' => 'setSigners',
+        'witnesses' => 'setWitnesses'
     ];
 
 
@@ -122,7 +128,9 @@ class Recipients implements ArrayAccess
         'in_person_signers' => 'getInPersonSigners',
         'intermediaries' => 'getIntermediaries',
         'recipient_count' => 'getRecipientCount',
-        'signers' => 'getSigners'
+        'seals' => 'getSeals',
+        'signers' => 'getSigners',
+        'witnesses' => 'getWitnesses'
     ];
 
     public static function attributeMap()
@@ -165,7 +173,9 @@ class Recipients implements ArrayAccess
         $this->container['in_person_signers'] = isset($data['in_person_signers']) ? $data['in_person_signers'] : null;
         $this->container['intermediaries'] = isset($data['intermediaries']) ? $data['intermediaries'] : null;
         $this->container['recipient_count'] = isset($data['recipient_count']) ? $data['recipient_count'] : null;
+        $this->container['seals'] = isset($data['seals']) ? $data['seals'] : null;
         $this->container['signers'] = isset($data['signers']) ? $data['signers'] : null;
+        $this->container['witnesses'] = isset($data['witnesses']) ? $data['witnesses'] : null;
     }
 
     /**
@@ -381,6 +391,27 @@ class Recipients implements ArrayAccess
     }
 
     /**
+     * Gets seals
+     * @return \DocuSign\eSign\Model\SealSign[]
+     */
+    public function getSeals()
+    {
+        return $this->container['seals'];
+    }
+
+    /**
+     * Sets seals
+     * @param \DocuSign\eSign\Model\SealSign[] $seals 
+     * @return $this
+     */
+    public function setSeals($seals)
+    {
+        $this->container['seals'] = $seals;
+
+        return $this;
+    }
+
+    /**
      * Gets signers
      * @return \DocuSign\eSign\Model\Signer[]
      */
@@ -397,6 +428,27 @@ class Recipients implements ArrayAccess
     public function setSigners($signers)
     {
         $this->container['signers'] = $signers;
+
+        return $this;
+    }
+
+    /**
+     * Gets witnesses
+     * @return \DocuSign\eSign\Model\Witness[]
+     */
+    public function getWitnesses()
+    {
+        return $this->container['witnesses'];
+    }
+
+    /**
+     * Sets witnesses
+     * @param \DocuSign\eSign\Model\Witness[] $witnesses 
+     * @return $this
+     */
+    public function setWitnesses($witnesses)
+    {
+        $this->container['witnesses'] = $witnesses;
 
         return $this;
     }

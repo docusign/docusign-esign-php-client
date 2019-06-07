@@ -109,31 +109,6 @@ class ListGroupsOptions
         return $this;
     }
     /**
-      * $group_name Filters the groups returned by the group name or a sub-string of group name.
-      * @var string
-      */
-    protected $group_name;
-
-    /**
-     * Gets group_name
-     * @return string
-     */
-    public function getGroupName()
-    {
-        return $this->group_name;
-    }
-  
-    /**
-     * Sets group_name
-     * @param string $group_name Filters the groups returned by the group name or a sub-string of group name.
-     * @return $this
-     */
-    public function setGroupName($group_name)
-    {
-        $this->group_name = $group_name;
-        return $this;
-    }
-    /**
       * $group_type 
       * @var string
       */
@@ -213,7 +188,7 @@ class ListGroupsOptions
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\ApiClient;
+use \DocuSign\eSign\Client\ApiClient;
 use \DocuSign\eSign\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
@@ -231,16 +206,16 @@ class GroupsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\ApiClient instance of the ApiClient
+     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\ApiClient|null $apiClient The api client to use
+     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\DocuSign\eSign\ApiClient $apiClient = null)
+    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -252,7 +227,7 @@ class GroupsApi
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\ApiClient get the API client
+     * @return \DocuSign\eSign\Client\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -262,11 +237,11 @@ class GroupsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\ApiClient $apiClient set the API client
+     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
      *
      * @return GroupsApi
      */
-    public function setApiClient(\DocuSign\eSign\ApiClient $apiClient)
+    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -960,10 +935,6 @@ class GroupsApi
         // query params
         if ($options->getCount() !== null) {
             $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getGroupName() !== null) {
-            $queryParams['group_name'] = $this->apiClient->getSerializer()->toQueryValue($options->getGroupName());
         }
         // query params
         if ($options->getGroupType() !== null) {

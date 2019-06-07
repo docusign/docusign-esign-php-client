@@ -167,7 +167,7 @@ class DobInformationInput implements ArrayAccess
 
     /**
      * Sets date_of_birth
-     * @param string $date_of_birth Specifies the recipient’s date, month, and year of birth.
+     * @param string $date_of_birth Specifies the recipient's date, month, and year of birth.
      * @return $this
      */
     public function setDateOfBirth($date_of_birth)
