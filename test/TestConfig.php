@@ -93,7 +93,7 @@ class TestConfig
         $this->host = !empty($host) ? $host : "https://demo.docusign.net/restapi";
         $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df';
         $this->clientSecret = !empty($secret) ? $secret : 'b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f';
-        $this->clientKey = !empty($key) ? $key : 'docs/private.pem';
+        $this->clientKey = !empty($key) ? $key : 'Docs/private.pem';
 
         $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'node_sdk@mailinator.com';
         $this->recipientName = !empty($recipientName) ? $recipientName : 'PHP SDK';
