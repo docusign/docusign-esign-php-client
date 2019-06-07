@@ -1,4 +1,7 @@
 <?php
+
+use DocuSign\eSign\Client\ApiClient;
+
 /**
  * User: Naveen Gopala
  * Date: 1/25/16
@@ -26,8 +29,8 @@ class OAuthTests extends PHPUnit_Framework_TestCase
         $oAuth = $this->config->getApiClient()->getOAuth();
         $oAuth->setBasePath($testConfig->getHost());
         $this->scope = [
-            $this->config->getApiClient()->$SCOPE_SIGNATURE,
-            $this->config->getApiClient()->$SCOPE_IMPERSONATION
+            DocuSign\eSign\Client\ApiClient::$SCOPE_SIGNATURE,
+            DocuSign\eSign\Client\ApiClient::$SCOPE_IMPERSONATION
         ];
     }
 
