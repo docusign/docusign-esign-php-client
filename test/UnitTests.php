@@ -103,7 +103,7 @@ class UnitTests extends TestCase
 
     function signatureRequestOnDocument($testConfig, $status = "sent", $embeddedSigning = false)
 	{
-		$documentFileName = "/docs/SignTest1.pdf";
+		$documentFileName = "/Docs/SignTest1.pdf";
 		$documentName = "SignTest1.docx";
 
 		$envelop_summary = null;
