@@ -80,11 +80,13 @@ class View implements ArrayAccess
         'required' => 'string',
         'required_read' => 'string',
         'status' => 'string',
+        'tab_group_labels' => 'string[]',
         'tab_id' => 'string',
         'tab_label' => 'string',
         'tab_order' => 'string',
         'template_locked' => 'string',
         'template_required' => 'string',
+        'tooltip' => 'string',
         'underline' => 'string',
         'width' => 'int',
         'x_position' => 'string',
@@ -127,11 +129,13 @@ class View implements ArrayAccess
         'required' => 'required',
         'required_read' => 'requiredRead',
         'status' => 'status',
+        'tab_group_labels' => 'tabGroupLabels',
         'tab_id' => 'tabId',
         'tab_label' => 'tabLabel',
         'tab_order' => 'tabOrder',
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
+        'tooltip' => 'tooltip',
         'underline' => 'underline',
         'width' => 'width',
         'x_position' => 'xPosition',
@@ -170,11 +174,13 @@ class View implements ArrayAccess
         'required' => 'setRequired',
         'required_read' => 'setRequiredRead',
         'status' => 'setStatus',
+        'tab_group_labels' => 'setTabGroupLabels',
         'tab_id' => 'setTabId',
         'tab_label' => 'setTabLabel',
         'tab_order' => 'setTabOrder',
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
+        'tooltip' => 'setTooltip',
         'underline' => 'setUnderline',
         'width' => 'setWidth',
         'x_position' => 'setXPosition',
@@ -213,11 +219,13 @@ class View implements ArrayAccess
         'required' => 'getRequired',
         'required_read' => 'getRequiredRead',
         'status' => 'getStatus',
+        'tab_group_labels' => 'getTabGroupLabels',
         'tab_id' => 'getTabId',
         'tab_label' => 'getTabLabel',
         'tab_order' => 'getTabOrder',
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
+        'tooltip' => 'getTooltip',
         'underline' => 'getUnderline',
         'width' => 'getWidth',
         'x_position' => 'getXPosition',
@@ -281,11 +289,13 @@ class View implements ArrayAccess
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['required_read'] = isset($data['required_read']) ? $data['required_read'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
         $this->container['tab_id'] = isset($data['tab_id']) ? $data['tab_id'] : null;
         $this->container['tab_label'] = isset($data['tab_label']) ? $data['tab_label'] : null;
         $this->container['tab_order'] = isset($data['tab_order']) ? $data['tab_order'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
+        $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
         $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['x_position'] = isset($data['x_position']) ? $data['x_position'] : null;
@@ -452,7 +462,7 @@ class View implements ArrayAccess
 
     /**
      * Sets anchor_x_offset
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorXOffset($anchor_x_offset)
@@ -473,7 +483,7 @@ class View implements ArrayAccess
 
     /**
      * Sets anchor_y_offset
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorYOffset($anchor_y_offset)
@@ -862,6 +872,27 @@ class View implements ArrayAccess
     }
 
     /**
+     * Gets tab_group_labels
+     * @return string[]
+     */
+    public function getTabGroupLabels()
+    {
+        return $this->container['tab_group_labels'];
+    }
+
+    /**
+     * Sets tab_group_labels
+     * @param string[] $tab_group_labels 
+     * @return $this
+     */
+    public function setTabGroupLabels($tab_group_labels)
+    {
+        $this->container['tab_group_labels'] = $tab_group_labels;
+
+        return $this;
+    }
+
+    /**
      * Gets tab_id
      * @return string
      */
@@ -962,6 +993,27 @@ class View implements ArrayAccess
     public function setTemplateRequired($template_required)
     {
         $this->container['template_required'] = $template_required;
+
+        return $this;
+    }
+
+    /**
+     * Gets tooltip
+     * @return string
+     */
+    public function getTooltip()
+    {
+        return $this->container['tooltip'];
+    }
+
+    /**
+     * Sets tooltip
+     * @param string $tooltip 
+     * @return $this
+     */
+    public function setTooltip($tooltip)
+    {
+        $this->container['tooltip'] = $tooltip;
 
         return $this;
     }

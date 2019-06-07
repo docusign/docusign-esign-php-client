@@ -58,7 +58,7 @@ class Tabs implements ArrayAccess
         'checkbox_tabs' => '\DocuSign\eSign\Model\Checkbox[]',
         'company_tabs' => '\DocuSign\eSign\Model\Company[]',
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
-        'date_tabs' => '\DocuSign\eSign\Model\\Date[]',
+        'date_tabs' => '\DocuSign\eSign\Model\\DateTime[]',
         'decline_tabs' => '\DocuSign\eSign\Model\Decline[]',
         'email_address_tabs' => '\DocuSign\eSign\Model\EmailAddress[]',
         'email_tabs' => '\DocuSign\eSign\Model\Email[]',
@@ -69,11 +69,13 @@ class Tabs implements ArrayAccess
         'initial_here_tabs' => '\DocuSign\eSign\Model\InitialHere[]',
         'last_name_tabs' => '\DocuSign\eSign\Model\LastName[]',
         'list_tabs' => '\DocuSign\eSign\Model\array[]',
+        'notarize_tabs' => '\DocuSign\eSign\Model\Notarize[]',
         'note_tabs' => '\DocuSign\eSign\Model\Note[]',
         'number_tabs' => '\DocuSign\eSign\Model\Number[]',
         'radio_group_tabs' => '\DocuSign\eSign\Model\RadioGroup[]',
         'signer_attachment_tabs' => '\DocuSign\eSign\Model\SignerAttachment[]',
         'sign_here_tabs' => '\DocuSign\eSign\Model\SignHere[]',
+        'smart_section_tabs' => '\DocuSign\eSign\Model\SmartSection[]',
         'ssn_tabs' => '\DocuSign\eSign\Model\Ssn[]',
         'text_tabs' => '\DocuSign\eSign\Model\Text[]',
         'title_tabs' => '\DocuSign\eSign\Model\Title[]',
@@ -106,11 +108,13 @@ class Tabs implements ArrayAccess
         'initial_here_tabs' => 'initialHereTabs',
         'last_name_tabs' => 'lastNameTabs',
         'list_tabs' => 'listTabs',
+        'notarize_tabs' => 'notarizeTabs',
         'note_tabs' => 'noteTabs',
         'number_tabs' => 'numberTabs',
         'radio_group_tabs' => 'radioGroupTabs',
         'signer_attachment_tabs' => 'signerAttachmentTabs',
         'sign_here_tabs' => 'signHereTabs',
+        'smart_section_tabs' => 'smartSectionTabs',
         'ssn_tabs' => 'ssnTabs',
         'text_tabs' => 'textTabs',
         'title_tabs' => 'titleTabs',
@@ -139,11 +143,13 @@ class Tabs implements ArrayAccess
         'initial_here_tabs' => 'setInitialHereTabs',
         'last_name_tabs' => 'setLastNameTabs',
         'list_tabs' => 'setListTabs',
+        'notarize_tabs' => 'setNotarizeTabs',
         'note_tabs' => 'setNoteTabs',
         'number_tabs' => 'setNumberTabs',
         'radio_group_tabs' => 'setRadioGroupTabs',
         'signer_attachment_tabs' => 'setSignerAttachmentTabs',
         'sign_here_tabs' => 'setSignHereTabs',
+        'smart_section_tabs' => 'setSmartSectionTabs',
         'ssn_tabs' => 'setSsnTabs',
         'text_tabs' => 'setTextTabs',
         'title_tabs' => 'setTitleTabs',
@@ -172,11 +178,13 @@ class Tabs implements ArrayAccess
         'initial_here_tabs' => 'getInitialHereTabs',
         'last_name_tabs' => 'getLastNameTabs',
         'list_tabs' => 'getListTabs',
+        'notarize_tabs' => 'getNotarizeTabs',
         'note_tabs' => 'getNoteTabs',
         'number_tabs' => 'getNumberTabs',
         'radio_group_tabs' => 'getRadioGroupTabs',
         'signer_attachment_tabs' => 'getSignerAttachmentTabs',
         'sign_here_tabs' => 'getSignHereTabs',
+        'smart_section_tabs' => 'getSmartSectionTabs',
         'ssn_tabs' => 'getSsnTabs',
         'text_tabs' => 'getTextTabs',
         'title_tabs' => 'getTitleTabs',
@@ -230,11 +238,13 @@ class Tabs implements ArrayAccess
         $this->container['initial_here_tabs'] = isset($data['initial_here_tabs']) ? $data['initial_here_tabs'] : null;
         $this->container['last_name_tabs'] = isset($data['last_name_tabs']) ? $data['last_name_tabs'] : null;
         $this->container['list_tabs'] = isset($data['list_tabs']) ? $data['list_tabs'] : null;
+        $this->container['notarize_tabs'] = isset($data['notarize_tabs']) ? $data['notarize_tabs'] : null;
         $this->container['note_tabs'] = isset($data['note_tabs']) ? $data['note_tabs'] : null;
         $this->container['number_tabs'] = isset($data['number_tabs']) ? $data['number_tabs'] : null;
         $this->container['radio_group_tabs'] = isset($data['radio_group_tabs']) ? $data['radio_group_tabs'] : null;
         $this->container['signer_attachment_tabs'] = isset($data['signer_attachment_tabs']) ? $data['signer_attachment_tabs'] : null;
         $this->container['sign_here_tabs'] = isset($data['sign_here_tabs']) ? $data['sign_here_tabs'] : null;
+        $this->container['smart_section_tabs'] = isset($data['smart_section_tabs']) ? $data['smart_section_tabs'] : null;
         $this->container['ssn_tabs'] = isset($data['ssn_tabs']) ? $data['ssn_tabs'] : null;
         $this->container['text_tabs'] = isset($data['text_tabs']) ? $data['text_tabs'] : null;
         $this->container['title_tabs'] = isset($data['title_tabs']) ? $data['title_tabs'] : null;
@@ -402,7 +412,7 @@ class Tabs implements ArrayAccess
 
     /**
      * Sets email_address_tabs
-     * @param \DocuSign\eSign\Model\EmailAddress[] $email_address_tabs Specifies a location on the document where you want where you want the recipient’s email, as entered in the recipient information, to display.
+     * @param \DocuSign\eSign\Model\EmailAddress[] $email_address_tabs Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display.
      * @return $this
      */
     public function setEmailAddressTabs($email_address_tabs)
@@ -549,7 +559,7 @@ class Tabs implements ArrayAccess
 
     /**
      * Sets last_name_tabs
-     * @param \DocuSign\eSign\Model\LastName[] $last_name_tabs Specifies a tag on a document where you want the recipient’s last name to appear. This tag takes the recipient’s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.
+     * @param \DocuSign\eSign\Model\LastName[] $last_name_tabs Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.
      * @return $this
      */
     public function setLastNameTabs($last_name_tabs)
@@ -576,6 +586,27 @@ class Tabs implements ArrayAccess
     public function setListTabs($list_tabs)
     {
         $this->container['list_tabs'] = $list_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets notarize_tabs
+     * @return \DocuSign\eSign\Model\Notarize[]
+     */
+    public function getNotarizeTabs()
+    {
+        return $this->container['notarize_tabs'];
+    }
+
+    /**
+     * Sets notarize_tabs
+     * @param \DocuSign\eSign\Model\Notarize[] $notarize_tabs 
+     * @return $this
+     */
+    public function setNotarizeTabs($notarize_tabs)
+    {
+        $this->container['notarize_tabs'] = $notarize_tabs;
 
         return $this;
     }
@@ -681,6 +712,27 @@ class Tabs implements ArrayAccess
     public function setSignHereTabs($sign_here_tabs)
     {
         $this->container['sign_here_tabs'] = $sign_here_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets smart_section_tabs
+     * @return \DocuSign\eSign\Model\SmartSection[]
+     */
+    public function getSmartSectionTabs()
+    {
+        return $this->container['smart_section_tabs'];
+    }
+
+    /**
+     * Sets smart_section_tabs
+     * @param \DocuSign\eSign\Model\SmartSection[] $smart_section_tabs 
+     * @return $this
+     */
+    public function setSmartSectionTabs($smart_section_tabs)
+    {
+        $this->container['smart_section_tabs'] = $smart_section_tabs;
 
         return $this;
     }

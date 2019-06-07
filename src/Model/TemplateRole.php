@@ -62,6 +62,7 @@ class TemplateRole implements ArrayAccess
         'embedded_recipient_start_url' => 'string',
         'in_person_signer_name' => 'string',
         'name' => 'string',
+        'recipient_signature_providers' => '\DocuSign\eSign\Model\RecipientSignatureProvider[]',
         'role_name' => 'string',
         'routing_order' => 'string',
         'signing_group_id' => 'string',
@@ -86,6 +87,7 @@ class TemplateRole implements ArrayAccess
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
         'in_person_signer_name' => 'inPersonSignerName',
         'name' => 'name',
+        'recipient_signature_providers' => 'recipientSignatureProviders',
         'role_name' => 'roleName',
         'routing_order' => 'routingOrder',
         'signing_group_id' => 'signingGroupId',
@@ -106,6 +108,7 @@ class TemplateRole implements ArrayAccess
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
         'in_person_signer_name' => 'setInPersonSignerName',
         'name' => 'setName',
+        'recipient_signature_providers' => 'setRecipientSignatureProviders',
         'role_name' => 'setRoleName',
         'routing_order' => 'setRoutingOrder',
         'signing_group_id' => 'setSigningGroupId',
@@ -126,6 +129,7 @@ class TemplateRole implements ArrayAccess
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
         'in_person_signer_name' => 'getInPersonSignerName',
         'name' => 'getName',
+        'recipient_signature_providers' => 'getRecipientSignatureProviders',
         'role_name' => 'getRoleName',
         'routing_order' => 'getRoutingOrder',
         'signing_group_id' => 'getSigningGroupId',
@@ -171,6 +175,7 @@ class TemplateRole implements ArrayAccess
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
         $this->container['in_person_signer_name'] = isset($data['in_person_signer_name']) ? $data['in_person_signer_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['recipient_signature_providers'] = isset($data['recipient_signature_providers']) ? $data['recipient_signature_providers'] : null;
         $this->container['role_name'] = isset($data['role_name']) ? $data['role_name'] : null;
         $this->container['routing_order'] = isset($data['routing_order']) ? $data['routing_order'] : null;
         $this->container['signing_group_id'] = isset($data['signing_group_id']) ? $data['signing_group_id'] : null;
@@ -211,7 +216,7 @@ class TemplateRole implements ArrayAccess
 
     /**
      * Sets access_code
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account’s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      * @return $this
      */
     public function setAccessCode($access_code)
@@ -316,7 +321,7 @@ class TemplateRole implements ArrayAccess
 
     /**
      * Sets embedded_recipient_start_url
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      * @return $this
      */
     public function setEmbeddedRecipientStartUrl($embedded_recipient_start_url)
@@ -364,6 +369,27 @@ class TemplateRole implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_signature_providers
+     * @return \DocuSign\eSign\Model\RecipientSignatureProvider[]
+     */
+    public function getRecipientSignatureProviders()
+    {
+        return $this->container['recipient_signature_providers'];
+    }
+
+    /**
+     * Sets recipient_signature_providers
+     * @param \DocuSign\eSign\Model\RecipientSignatureProvider[] $recipient_signature_providers 
+     * @return $this
+     */
+    public function setRecipientSignatureProviders($recipient_signature_providers)
+    {
+        $this->container['recipient_signature_providers'] = $recipient_signature_providers;
 
         return $this;
     }

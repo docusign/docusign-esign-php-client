@@ -65,6 +65,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'include_document_fields' => 'string',
         'include_documents' => 'string',
         'include_envelope_void_reason' => 'string',
+        'include_hmac' => 'string',
         'include_sender_accountas_custom_field' => 'string',
         'include_time_zone_information' => 'string',
         'name' => 'string',
@@ -98,6 +99,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'include_document_fields' => 'includeDocumentFields',
         'include_documents' => 'includeDocuments',
         'include_envelope_void_reason' => 'includeEnvelopeVoidReason',
+        'include_hmac' => 'includeHMAC',
         'include_sender_accountas_custom_field' => 'includeSenderAccountasCustomField',
         'include_time_zone_information' => 'includeTimeZoneInformation',
         'name' => 'name',
@@ -127,6 +129,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'include_document_fields' => 'setIncludeDocumentFields',
         'include_documents' => 'setIncludeDocuments',
         'include_envelope_void_reason' => 'setIncludeEnvelopeVoidReason',
+        'include_hmac' => 'setIncludeHmac',
         'include_sender_accountas_custom_field' => 'setIncludeSenderAccountasCustomField',
         'include_time_zone_information' => 'setIncludeTimeZoneInformation',
         'name' => 'setName',
@@ -156,6 +159,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'include_document_fields' => 'getIncludeDocumentFields',
         'include_documents' => 'getIncludeDocuments',
         'include_envelope_void_reason' => 'getIncludeEnvelopeVoidReason',
+        'include_hmac' => 'getIncludeHmac',
         'include_sender_accountas_custom_field' => 'getIncludeSenderAccountasCustomField',
         'include_time_zone_information' => 'getIncludeTimeZoneInformation',
         'name' => 'getName',
@@ -210,6 +214,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         $this->container['include_document_fields'] = isset($data['include_document_fields']) ? $data['include_document_fields'] : null;
         $this->container['include_documents'] = isset($data['include_documents']) ? $data['include_documents'] : null;
         $this->container['include_envelope_void_reason'] = isset($data['include_envelope_void_reason']) ? $data['include_envelope_void_reason'] : null;
+        $this->container['include_hmac'] = isset($data['include_hmac']) ? $data['include_hmac'] : null;
         $this->container['include_sender_accountas_custom_field'] = isset($data['include_sender_accountas_custom_field']) ? $data['include_sender_accountas_custom_field'] : null;
         $this->container['include_time_zone_information'] = isset($data['include_time_zone_information']) ? $data['include_time_zone_information'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -361,7 +366,7 @@ class ConnectCustomConfiguration implements ArrayAccess
 
     /**
      * Sets envelope_events
-     * @param string $envelope_events A comma separated list of �Envelope� related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
+     * @param string $envelope_events A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
      * @return $this
      */
     public function setEnvelopeEvents($envelope_events)
@@ -477,6 +482,27 @@ class ConnectCustomConfiguration implements ArrayAccess
     }
 
     /**
+     * Gets include_hmac
+     * @return string
+     */
+    public function getIncludeHmac()
+    {
+        return $this->container['include_hmac'];
+    }
+
+    /**
+     * Sets include_hmac
+     * @param string $include_hmac 
+     * @return $this
+     */
+    public function setIncludeHmac($include_hmac)
+    {
+        $this->container['include_hmac'] = $include_hmac;
+
+        return $this;
+    }
+
+    /**
      * Gets include_sender_accountas_custom_field
      * @return string
      */
@@ -550,7 +576,7 @@ class ConnectCustomConfiguration implements ArrayAccess
 
     /**
      * Sets recipient_events
-     * @param string $recipient_events A comma separated list of �Recipient� related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
+     * @param string $recipient_events A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
      * @return $this
      */
     public function setRecipientEvents($recipient_events)
@@ -655,7 +681,7 @@ class ConnectCustomConfiguration implements ArrayAccess
 
     /**
      * Sets user_ids
-     * @param string $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to �false� then you must provide a list of user id�s.
+     * @param string $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.
      * @return $this
      */
     public function setUserIds($user_ids)

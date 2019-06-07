@@ -35,7 +35,7 @@ use \ArrayAccess;
  * UsageHistory Class Doc Comment
  *
  * @category    Class
- * @description A complex element consisting of:   * lastSentDateTime – the date and time the user last sent an envelope.  * lastSignedDateTime – the date and time the user last signed an envelope. * sentCount – the number of envelopes the user has sent. * signedCount – the number of envelopes the user has signed.
+ * @description A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

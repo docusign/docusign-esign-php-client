@@ -54,6 +54,8 @@ class RecipientSignatureProvider implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'seal_documents_with_tabs_only' => 'string',
+        'seal_name' => 'string',
         'signature_provider_name' => 'string',
         'signature_provider_options' => '\DocuSign\eSign\Model\RecipientSignatureProviderOptions'
     ];
@@ -68,6 +70,8 @@ class RecipientSignatureProvider implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'seal_documents_with_tabs_only' => 'sealDocumentsWithTabsOnly',
+        'seal_name' => 'sealName',
         'signature_provider_name' => 'signatureProviderName',
         'signature_provider_options' => 'signatureProviderOptions'
     ];
@@ -78,6 +82,8 @@ class RecipientSignatureProvider implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'seal_documents_with_tabs_only' => 'setSealDocumentsWithTabsOnly',
+        'seal_name' => 'setSealName',
         'signature_provider_name' => 'setSignatureProviderName',
         'signature_provider_options' => 'setSignatureProviderOptions'
     ];
@@ -88,6 +94,8 @@ class RecipientSignatureProvider implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'seal_documents_with_tabs_only' => 'getSealDocumentsWithTabsOnly',
+        'seal_name' => 'getSealName',
         'signature_provider_name' => 'getSignatureProviderName',
         'signature_provider_options' => 'getSignatureProviderOptions'
     ];
@@ -123,6 +131,8 @@ class RecipientSignatureProvider implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['seal_documents_with_tabs_only'] = isset($data['seal_documents_with_tabs_only']) ? $data['seal_documents_with_tabs_only'] : null;
+        $this->container['seal_name'] = isset($data['seal_name']) ? $data['seal_name'] : null;
         $this->container['signature_provider_name'] = isset($data['signature_provider_name']) ? $data['signature_provider_name'] : null;
         $this->container['signature_provider_options'] = isset($data['signature_provider_options']) ? $data['signature_provider_options'] : null;
     }
@@ -149,6 +159,48 @@ class RecipientSignatureProvider implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets seal_documents_with_tabs_only
+     * @return string
+     */
+    public function getSealDocumentsWithTabsOnly()
+    {
+        return $this->container['seal_documents_with_tabs_only'];
+    }
+
+    /**
+     * Sets seal_documents_with_tabs_only
+     * @param string $seal_documents_with_tabs_only 
+     * @return $this
+     */
+    public function setSealDocumentsWithTabsOnly($seal_documents_with_tabs_only)
+    {
+        $this->container['seal_documents_with_tabs_only'] = $seal_documents_with_tabs_only;
+
+        return $this;
+    }
+
+    /**
+     * Gets seal_name
+     * @return string
+     */
+    public function getSealName()
+    {
+        return $this->container['seal_name'];
+    }
+
+    /**
+     * Sets seal_name
+     * @param string $seal_name 
+     * @return $this
+     */
+    public function setSealName($seal_name)
+    {
+        $this->container['seal_name'] = $seal_name;
+
+        return $this;
+    }
 
     /**
      * Gets signature_provider_name

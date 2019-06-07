@@ -58,10 +58,12 @@ class EnvelopeDefinition implements ArrayAccess
         'allow_markup' => 'string',
         'allow_reassign' => 'string',
         'allow_recipient_recursion' => 'string',
+        'allow_view_history' => 'string',
         'asynchronous' => 'string',
         'attachments' => '\DocuSign\eSign\Model\Attachment[]',
         'attachments_uri' => 'string',
         'authoritative_copy' => 'string',
+        'authoritative_copy_default' => 'string',
         'auto_navigation' => 'string',
         'brand_id' => 'string',
         'brand_lock' => 'string',
@@ -100,6 +102,7 @@ class EnvelopeDefinition implements ArrayAccess
         'recipients_lock' => 'string',
         'recipients_uri' => 'string',
         'sent_date_time' => 'string',
+        'signer_can_sign_on_mobile' => 'string',
         'signing_location' => 'string',
         'status' => 'string',
         'status_changed_date_time' => 'string',
@@ -126,10 +129,12 @@ class EnvelopeDefinition implements ArrayAccess
         'allow_markup' => 'allowMarkup',
         'allow_reassign' => 'allowReassign',
         'allow_recipient_recursion' => 'allowRecipientRecursion',
+        'allow_view_history' => 'allowViewHistory',
         'asynchronous' => 'asynchronous',
         'attachments' => 'attachments',
         'attachments_uri' => 'attachmentsUri',
         'authoritative_copy' => 'authoritativeCopy',
+        'authoritative_copy_default' => 'authoritativeCopyDefault',
         'auto_navigation' => 'autoNavigation',
         'brand_id' => 'brandId',
         'brand_lock' => 'brandLock',
@@ -168,6 +173,7 @@ class EnvelopeDefinition implements ArrayAccess
         'recipients_lock' => 'recipientsLock',
         'recipients_uri' => 'recipientsUri',
         'sent_date_time' => 'sentDateTime',
+        'signer_can_sign_on_mobile' => 'signerCanSignOnMobile',
         'signing_location' => 'signingLocation',
         'status' => 'status',
         'status_changed_date_time' => 'statusChangedDateTime',
@@ -190,10 +196,12 @@ class EnvelopeDefinition implements ArrayAccess
         'allow_markup' => 'setAllowMarkup',
         'allow_reassign' => 'setAllowReassign',
         'allow_recipient_recursion' => 'setAllowRecipientRecursion',
+        'allow_view_history' => 'setAllowViewHistory',
         'asynchronous' => 'setAsynchronous',
         'attachments' => 'setAttachments',
         'attachments_uri' => 'setAttachmentsUri',
         'authoritative_copy' => 'setAuthoritativeCopy',
+        'authoritative_copy_default' => 'setAuthoritativeCopyDefault',
         'auto_navigation' => 'setAutoNavigation',
         'brand_id' => 'setBrandId',
         'brand_lock' => 'setBrandLock',
@@ -232,6 +240,7 @@ class EnvelopeDefinition implements ArrayAccess
         'recipients_lock' => 'setRecipientsLock',
         'recipients_uri' => 'setRecipientsUri',
         'sent_date_time' => 'setSentDateTime',
+        'signer_can_sign_on_mobile' => 'setSignerCanSignOnMobile',
         'signing_location' => 'setSigningLocation',
         'status' => 'setStatus',
         'status_changed_date_time' => 'setStatusChangedDateTime',
@@ -254,10 +263,12 @@ class EnvelopeDefinition implements ArrayAccess
         'allow_markup' => 'getAllowMarkup',
         'allow_reassign' => 'getAllowReassign',
         'allow_recipient_recursion' => 'getAllowRecipientRecursion',
+        'allow_view_history' => 'getAllowViewHistory',
         'asynchronous' => 'getAsynchronous',
         'attachments' => 'getAttachments',
         'attachments_uri' => 'getAttachmentsUri',
         'authoritative_copy' => 'getAuthoritativeCopy',
+        'authoritative_copy_default' => 'getAuthoritativeCopyDefault',
         'auto_navigation' => 'getAutoNavigation',
         'brand_id' => 'getBrandId',
         'brand_lock' => 'getBrandLock',
@@ -296,6 +307,7 @@ class EnvelopeDefinition implements ArrayAccess
         'recipients_lock' => 'getRecipientsLock',
         'recipients_uri' => 'getRecipientsUri',
         'sent_date_time' => 'getSentDateTime',
+        'signer_can_sign_on_mobile' => 'getSignerCanSignOnMobile',
         'signing_location' => 'getSigningLocation',
         'status' => 'getStatus',
         'status_changed_date_time' => 'getStatusChangedDateTime',
@@ -343,10 +355,12 @@ class EnvelopeDefinition implements ArrayAccess
         $this->container['allow_markup'] = isset($data['allow_markup']) ? $data['allow_markup'] : null;
         $this->container['allow_reassign'] = isset($data['allow_reassign']) ? $data['allow_reassign'] : null;
         $this->container['allow_recipient_recursion'] = isset($data['allow_recipient_recursion']) ? $data['allow_recipient_recursion'] : null;
+        $this->container['allow_view_history'] = isset($data['allow_view_history']) ? $data['allow_view_history'] : null;
         $this->container['asynchronous'] = isset($data['asynchronous']) ? $data['asynchronous'] : null;
         $this->container['attachments'] = isset($data['attachments']) ? $data['attachments'] : null;
         $this->container['attachments_uri'] = isset($data['attachments_uri']) ? $data['attachments_uri'] : null;
         $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
+        $this->container['authoritative_copy_default'] = isset($data['authoritative_copy_default']) ? $data['authoritative_copy_default'] : null;
         $this->container['auto_navigation'] = isset($data['auto_navigation']) ? $data['auto_navigation'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
         $this->container['brand_lock'] = isset($data['brand_lock']) ? $data['brand_lock'] : null;
@@ -385,6 +399,7 @@ class EnvelopeDefinition implements ArrayAccess
         $this->container['recipients_lock'] = isset($data['recipients_lock']) ? $data['recipients_lock'] : null;
         $this->container['recipients_uri'] = isset($data['recipients_uri']) ? $data['recipients_uri'] : null;
         $this->container['sent_date_time'] = isset($data['sent_date_time']) ? $data['sent_date_time'] : null;
+        $this->container['signer_can_sign_on_mobile'] = isset($data['signer_can_sign_on_mobile']) ? $data['signer_can_sign_on_mobile'] : null;
         $this->container['signing_location'] = isset($data['signing_location']) ? $data['signing_location'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_changed_date_time'] = isset($data['status_changed_date_time']) ? $data['status_changed_date_time'] : null;
@@ -505,6 +520,27 @@ class EnvelopeDefinition implements ArrayAccess
     }
 
     /**
+     * Gets allow_view_history
+     * @return string
+     */
+    public function getAllowViewHistory()
+    {
+        return $this->container['allow_view_history'];
+    }
+
+    /**
+     * Sets allow_view_history
+     * @param string $allow_view_history 
+     * @return $this
+     */
+    public function setAllowViewHistory($allow_view_history)
+    {
+        $this->container['allow_view_history'] = $allow_view_history;
+
+        return $this;
+    }
+
+    /**
      * Gets asynchronous
      * @return string
      */
@@ -584,6 +620,27 @@ class EnvelopeDefinition implements ArrayAccess
     public function setAuthoritativeCopy($authoritative_copy)
     {
         $this->container['authoritative_copy'] = $authoritative_copy;
+
+        return $this;
+    }
+
+    /**
+     * Gets authoritative_copy_default
+     * @return string
+     */
+    public function getAuthoritativeCopyDefault()
+    {
+        return $this->container['authoritative_copy_default'];
+    }
+
+    /**
+     * Sets authoritative_copy_default
+     * @param string $authoritative_copy_default 
+     * @return $this
+     */
+    public function setAuthoritativeCopyDefault($authoritative_copy_default)
+    {
+        $this->container['authoritative_copy_default'] = $authoritative_copy_default;
 
         return $this;
     }
@@ -1387,6 +1444,27 @@ class EnvelopeDefinition implements ArrayAccess
     }
 
     /**
+     * Gets signer_can_sign_on_mobile
+     * @return string
+     */
+    public function getSignerCanSignOnMobile()
+    {
+        return $this->container['signer_can_sign_on_mobile'];
+    }
+
+    /**
+     * Sets signer_can_sign_on_mobile
+     * @param string $signer_can_sign_on_mobile 
+     * @return $this
+     */
+    public function setSignerCanSignOnMobile($signer_can_sign_on_mobile)
+    {
+        $this->container['signer_can_sign_on_mobile'] = $signer_can_sign_on_mobile;
+
+        return $this;
+    }
+
+    /**
      * Gets signing_location
      * @return string
      */
@@ -1481,7 +1559,7 @@ class EnvelopeDefinition implements ArrayAccess
 
     /**
      * Sets template_roles
-     * @param \DocuSign\eSign\Model\TemplateRole[] $template_roles Specifies the template recipients. Each roleName in the template must have a recipient assigned to it. This is made up elements:  * email - The recipient’s email address. * name - The recipient’s name. * roleName - The template roleName associated with the recipient. * clientUserId - Optional, this sets if the signer is This specifies if the recipient is embedded or remote. If the clientUserId is not null then the recipient is embedded. Note that if a ClientUserId is used and the account settings SignerMustHaveAccount or SignerMustLoginToSign are true, an error is generated on sending. * defaultRecipient - Optional, When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient. * routingOrder - This specifies the routing order of the recipient in the envelope. * accessCode - This optional element specifies the access code a recipient has to enter to validate the identity. This can be a maximum of 50 characters. * inPersonSignerName - Optional, if the template role is an in person signer, this is the full legal name of the signer. This can be a maximum of 100 characters. * emailNotification - This is an optional complex element that has a role specific emailSubject, emailBody, and language. It follows the same format as the emailNotification node for Recipients. * tabs - This allows the tab values to be specified for matching to tabs in the template.
+     * @param \DocuSign\eSign\Model\TemplateRole[] $template_roles Specifies the template recipients. Each roleName in the template must have a recipient assigned to it. This is made up elements:  * email - The recipient's email address. * name - The recipient's name. * roleName - The template roleName associated with the recipient. * clientUserId - Optional, this sets if the signer is This specifies if the recipient is embedded or remote. If the clientUserId is not null then the recipient is embedded. Note that if a ClientUserId is used and the account settings SignerMustHaveAccount or SignerMustLoginToSign are true, an error is generated on sending. * defaultRecipient - Optional, When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient. * routingOrder - This specifies the routing order of the recipient in the envelope. * accessCode - This optional element specifies the access code a recipient has to enter to validate the identity. This can be a maximum of 50 characters. * inPersonSignerName - Optional, if the template role is an in person signer, this is the full legal name of the signer. This can be a maximum of 100 characters. * emailNotification - This is an optional complex element that has a role specific emailSubject, emailBody, and language. It follows the same format as the emailNotification node for Recipients. * tabs - This allows the tab values to be specified for matching to tabs in the template.
      * @return $this
      */
     public function setTemplateRoles($template_roles)
@@ -1544,7 +1622,7 @@ class EnvelopeDefinition implements ArrayAccess
 
     /**
      * Sets use_disclosure
-     * @param string $use_disclosure When set to **true**, the disclosure is shown to recipients in accordance with the account’s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
+     * @param string $use_disclosure When set to **true**, the disclosure is shown to recipients in accordance with the account's Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
      * @return $this
      */
     public function setUseDisclosure($use_disclosure)

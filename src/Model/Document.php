@@ -55,6 +55,7 @@ class Document implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'apply_anchor_tabs' => 'string',
+        'authoritative_copy' => 'bool',
         'display' => 'string',
         'document_base64' => 'string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
@@ -62,6 +63,8 @@ class Document implements ArrayAccess
         'document_id' => 'string',
         'encrypted_with_key_manager' => 'string',
         'file_extension' => 'string',
+        'file_format_hint' => 'string',
+        'html_definition' => '\DocuSign\eSign\Model\DocumentHtmlDefinition',
         'include_in_download' => 'string',
         'match_boxes' => '\DocuSign\eSign\Model\MatchBox[]',
         'name' => 'string',
@@ -87,6 +90,7 @@ class Document implements ArrayAccess
      */
     protected static $attributeMap = [
         'apply_anchor_tabs' => 'applyAnchorTabs',
+        'authoritative_copy' => 'authoritativeCopy',
         'display' => 'display',
         'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
@@ -94,6 +98,8 @@ class Document implements ArrayAccess
         'document_id' => 'documentId',
         'encrypted_with_key_manager' => 'encryptedWithKeyManager',
         'file_extension' => 'fileExtension',
+        'file_format_hint' => 'fileFormatHint',
+        'html_definition' => 'htmlDefinition',
         'include_in_download' => 'includeInDownload',
         'match_boxes' => 'matchBoxes',
         'name' => 'name',
@@ -115,6 +121,7 @@ class Document implements ArrayAccess
      */
     protected static $setters = [
         'apply_anchor_tabs' => 'setApplyAnchorTabs',
+        'authoritative_copy' => 'setAuthoritativeCopy',
         'display' => 'setDisplay',
         'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
@@ -122,6 +129,8 @@ class Document implements ArrayAccess
         'document_id' => 'setDocumentId',
         'encrypted_with_key_manager' => 'setEncryptedWithKeyManager',
         'file_extension' => 'setFileExtension',
+        'file_format_hint' => 'setFileFormatHint',
+        'html_definition' => 'setHtmlDefinition',
         'include_in_download' => 'setIncludeInDownload',
         'match_boxes' => 'setMatchBoxes',
         'name' => 'setName',
@@ -143,6 +152,7 @@ class Document implements ArrayAccess
      */
     protected static $getters = [
         'apply_anchor_tabs' => 'getApplyAnchorTabs',
+        'authoritative_copy' => 'getAuthoritativeCopy',
         'display' => 'getDisplay',
         'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
@@ -150,6 +160,8 @@ class Document implements ArrayAccess
         'document_id' => 'getDocumentId',
         'encrypted_with_key_manager' => 'getEncryptedWithKeyManager',
         'file_extension' => 'getFileExtension',
+        'file_format_hint' => 'getFileFormatHint',
+        'html_definition' => 'getHtmlDefinition',
         'include_in_download' => 'getIncludeInDownload',
         'match_boxes' => 'getMatchBoxes',
         'name' => 'getName',
@@ -196,6 +208,7 @@ class Document implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['apply_anchor_tabs'] = isset($data['apply_anchor_tabs']) ? $data['apply_anchor_tabs'] : null;
+        $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
@@ -203,6 +216,8 @@ class Document implements ArrayAccess
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['encrypted_with_key_manager'] = isset($data['encrypted_with_key_manager']) ? $data['encrypted_with_key_manager'] : null;
         $this->container['file_extension'] = isset($data['file_extension']) ? $data['file_extension'] : null;
+        $this->container['file_format_hint'] = isset($data['file_format_hint']) ? $data['file_format_hint'] : null;
+        $this->container['html_definition'] = isset($data['html_definition']) ? $data['html_definition'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
         $this->container['match_boxes'] = isset($data['match_boxes']) ? $data['match_boxes'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -262,6 +277,27 @@ class Document implements ArrayAccess
     }
 
     /**
+     * Gets authoritative_copy
+     * @return bool
+     */
+    public function getAuthoritativeCopy()
+    {
+        return $this->container['authoritative_copy'];
+    }
+
+    /**
+     * Sets authoritative_copy
+     * @param bool $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+     * @return $this
+     */
+    public function setAuthoritativeCopy($authoritative_copy)
+    {
+        $this->container['authoritative_copy'] = $authoritative_copy;
+
+        return $this;
+    }
+
+    /**
      * Gets display
      * @return string
      */
@@ -293,7 +329,7 @@ class Document implements ArrayAccess
 
     /**
      * Sets document_base64
-     * @param string $document_base64 The document’s bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
+     * @param string $document_base64 The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
      * @return $this
      */
     public function setDocumentBase64($document_base64)
@@ -404,6 +440,48 @@ class Document implements ArrayAccess
     public function setFileExtension($file_extension)
     {
         $this->container['file_extension'] = $file_extension;
+
+        return $this;
+    }
+
+    /**
+     * Gets file_format_hint
+     * @return string
+     */
+    public function getFileFormatHint()
+    {
+        return $this->container['file_format_hint'];
+    }
+
+    /**
+     * Sets file_format_hint
+     * @param string $file_format_hint 
+     * @return $this
+     */
+    public function setFileFormatHint($file_format_hint)
+    {
+        $this->container['file_format_hint'] = $file_format_hint;
+
+        return $this;
+    }
+
+    /**
+     * Gets html_definition
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinition
+     */
+    public function getHtmlDefinition()
+    {
+        return $this->container['html_definition'];
+    }
+
+    /**
+     * Sets html_definition
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $html_definition
+     * @return $this
+     */
+    public function setHtmlDefinition($html_definition)
+    {
+        $this->container['html_definition'] = $html_definition;
 
         return $this;
     }

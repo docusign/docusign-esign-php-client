@@ -240,6 +240,212 @@ class GetDocumentPageImageOptions
         return $this;
     }
 }
+class GetDocumentTabsOptions
+{
+    /**
+      * $page_numbers 
+      * @var string
+      */
+    protected $page_numbers;
+
+    /**
+     * Gets page_numbers
+     * @return string
+     */
+    public function getPageNumbers()
+    {
+        return $this->page_numbers;
+    }
+  
+    /**
+     * Sets page_numbers
+     * @param string $page_numbers 
+     * @return $this
+     */
+    public function setPageNumbers($page_numbers)
+    {
+        $this->page_numbers = $page_numbers;
+        return $this;
+    }
+}
+class GetPagesOptions
+{
+    /**
+      * $count 
+      * @var string
+      */
+    protected $count;
+
+    /**
+     * Gets count
+     * @return string
+     */
+    public function getCount()
+    {
+        return $this->count;
+    }
+  
+    /**
+     * Sets count
+     * @param string $count 
+     * @return $this
+     */
+    public function setCount($count)
+    {
+        $this->count = $count;
+        return $this;
+    }
+    /**
+      * $dpi 
+      * @var string
+      */
+    protected $dpi;
+
+    /**
+     * Gets dpi
+     * @return string
+     */
+    public function getDpi()
+    {
+        return $this->dpi;
+    }
+  
+    /**
+     * Sets dpi
+     * @param string $dpi 
+     * @return $this
+     */
+    public function setDpi($dpi)
+    {
+        $this->dpi = $dpi;
+        return $this;
+    }
+    /**
+      * $max_height 
+      * @var string
+      */
+    protected $max_height;
+
+    /**
+     * Gets max_height
+     * @return string
+     */
+    public function getMaxHeight()
+    {
+        return $this->max_height;
+    }
+  
+    /**
+     * Sets max_height
+     * @param string $max_height 
+     * @return $this
+     */
+    public function setMaxHeight($max_height)
+    {
+        $this->max_height = $max_height;
+        return $this;
+    }
+    /**
+      * $max_width 
+      * @var string
+      */
+    protected $max_width;
+
+    /**
+     * Gets max_width
+     * @return string
+     */
+    public function getMaxWidth()
+    {
+        return $this->max_width;
+    }
+  
+    /**
+     * Sets max_width
+     * @param string $max_width 
+     * @return $this
+     */
+    public function setMaxWidth($max_width)
+    {
+        $this->max_width = $max_width;
+        return $this;
+    }
+    /**
+      * $nocache 
+      * @var string
+      */
+    protected $nocache;
+
+    /**
+     * Gets nocache
+     * @return string
+     */
+    public function getNocache()
+    {
+        return $this->nocache;
+    }
+  
+    /**
+     * Sets nocache
+     * @param string $nocache 
+     * @return $this
+     */
+    public function setNocache($nocache)
+    {
+        $this->nocache = $nocache;
+        return $this;
+    }
+    /**
+      * $show_changes 
+      * @var string
+      */
+    protected $show_changes;
+
+    /**
+     * Gets show_changes
+     * @return string
+     */
+    public function getShowChanges()
+    {
+        return $this->show_changes;
+    }
+  
+    /**
+     * Sets show_changes
+     * @param string $show_changes 
+     * @return $this
+     */
+    public function setShowChanges($show_changes)
+    {
+        $this->show_changes = $show_changes;
+        return $this;
+    }
+    /**
+      * $start_position 
+      * @var string
+      */
+    protected $start_position;
+
+    /**
+     * Gets start_position
+     * @return string
+     */
+    public function getStartPosition()
+    {
+        return $this->start_position;
+    }
+  
+    /**
+     * Sets start_position
+     * @param string $start_position 
+     * @return $this
+     */
+    public function setStartPosition($start_position)
+    {
+        $this->start_position = $start_position;
+        return $this;
+    }
+}
 class ListBulkRecipientsOptions
 {
     /**
@@ -552,6 +758,56 @@ class ListTemplatesOptions
         return $this;
     }
     /**
+      * $modified_from_date 
+      * @var string
+      */
+    protected $modified_from_date;
+
+    /**
+     * Gets modified_from_date
+     * @return string
+     */
+    public function getModifiedFromDate()
+    {
+        return $this->modified_from_date;
+    }
+  
+    /**
+     * Sets modified_from_date
+     * @param string $modified_from_date 
+     * @return $this
+     */
+    public function setModifiedFromDate($modified_from_date)
+    {
+        $this->modified_from_date = $modified_from_date;
+        return $this;
+    }
+    /**
+      * $modified_to_date 
+      * @var string
+      */
+    protected $modified_to_date;
+
+    /**
+     * Gets modified_to_date
+     * @return string
+     */
+    public function getModifiedToDate()
+    {
+        return $this->modified_to_date;
+    }
+  
+    /**
+     * Sets modified_to_date
+     * @param string $modified_to_date 
+     * @return $this
+     */
+    public function setModifiedToDate($modified_to_date)
+    {
+        $this->modified_to_date = $modified_to_date;
+        return $this;
+    }
+    /**
       * $order Sets the direction order used to sort the list. Valid values are: -asc = ascending sort order (a to z)  -desc = descending sort order (z to a)
       * @var string
       */
@@ -624,31 +880,6 @@ class ListTemplatesOptions
     public function setSearchText($search_text)
     {
         $this->search_text = $search_text;
-        return $this;
-    }
-    /**
-      * $shared 
-      * @var string
-      */
-    protected $shared;
-
-    /**
-     * Gets shared
-     * @return string
-     */
-    public function getShared()
-    {
-        return $this->shared;
-    }
-  
-    /**
-     * Sets shared
-     * @param string $shared 
-     * @return $this
-     */
-    public function setShared($shared)
-    {
-        $this->shared = $shared;
         return $this;
     }
     /**
@@ -801,6 +1032,31 @@ class ListTemplatesOptions
         $this->user_filter = $user_filter;
         return $this;
     }
+    /**
+      * $user_id 
+      * @var string
+      */
+    protected $user_id;
+
+    /**
+     * Gets user_id
+     * @return string
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
+  
+    /**
+     * Sets user_id
+     * @param string $user_id 
+     * @return $this
+     */
+    public function setUserId($user_id)
+    {
+        $this->user_id = $user_id;
+        return $this;
+    }
 }
 class UpdateDocumentOptions
 {
@@ -882,6 +1138,31 @@ class UpdateDocumentsOptions
         $this->apply_document_fields = $apply_document_fields;
         return $this;
     }
+    /**
+      * $persist_tabs 
+      * @var string
+      */
+    protected $persist_tabs;
+
+    /**
+     * Gets persist_tabs
+     * @return string
+     */
+    public function getPersistTabs()
+    {
+        return $this->persist_tabs;
+    }
+  
+    /**
+     * Sets persist_tabs
+     * @param string $persist_tabs 
+     * @return $this
+     */
+    public function setPersistTabs($persist_tabs)
+    {
+        $this->persist_tabs = $persist_tabs;
+        return $this;
+    }
 }
 class UpdateRecipientsOptions
 {
@@ -915,7 +1196,7 @@ class UpdateRecipientsOptions
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\ApiClient;
+use \DocuSign\eSign\Client\ApiClient;
 use \DocuSign\eSign\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
@@ -933,16 +1214,16 @@ class TemplatesApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\ApiClient instance of the ApiClient
+     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\ApiClient|null $apiClient The api client to use
+     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\DocuSign\eSign\ApiClient $apiClient = null)
+    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -954,7 +1235,7 @@ class TemplatesApi
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\ApiClient get the API client
+     * @return \DocuSign\eSign\Client\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -964,11 +1245,11 @@ class TemplatesApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\ApiClient $apiClient set the API client
+     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
      *
      * @return TemplatesApi
      */
-    public function setApiClient(\DocuSign\eSign\ApiClient $apiClient)
+    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -1763,6 +2044,242 @@ class TemplatesApi
             switch ($e->getCode()) {
                 case 201:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TemplateSummary', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createTemplateDocumentResponsiveHtmlPreview
+     *
+     * Post Responsive HTML Preview for a document in a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
+     */
+    public function createTemplateDocumentResponsiveHtmlPreview($account_id, $document_id, $template_id, $document_html_definition = null)
+    {
+        list($response) = $this->createTemplateDocumentResponsiveHtmlPreviewWithHttpInfo($account_id, $document_id, $template_id, $document_html_definition);
+        return $response;
+    }
+
+    /**
+     * Operation createTemplateDocumentResponsiveHtmlPreviewWithHttpInfo
+     *
+     * Post Responsive HTML Preview for a document in a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createTemplateDocumentResponsiveHtmlPreviewWithHttpInfo($account_id, $document_id, $template_id, $document_html_definition = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createTemplateDocumentResponsiveHtmlPreview');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling createTemplateDocumentResponsiveHtmlPreview');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling createTemplateDocumentResponsiveHtmlPreview');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($document_html_definition)) {
+            $_tempBody = $document_html_definition;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitions',
+                '/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createTemplateResponsiveHtmlPreview
+     *
+     * Get Responsive HTML Preview for all documents in a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
+     */
+    public function createTemplateResponsiveHtmlPreview($account_id, $template_id, $document_html_definition = null)
+    {
+        list($response) = $this->createTemplateResponsiveHtmlPreviewWithHttpInfo($account_id, $template_id, $document_html_definition);
+        return $response;
+    }
+
+    /**
+     * Operation createTemplateResponsiveHtmlPreviewWithHttpInfo
+     *
+     * Get Responsive HTML Preview for all documents in a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createTemplateResponsiveHtmlPreviewWithHttpInfo($account_id, $template_id, $document_html_definition = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createTemplateResponsiveHtmlPreview');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling createTemplateResponsiveHtmlPreview');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/responsive_html_preview";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($document_html_definition)) {
+            $_tempBody = $document_html_definition;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitions',
+                '/v2/accounts/{accountId}/templates/{templateId}/responsive_html_preview'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitions', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -3373,6 +3890,134 @@ class TemplatesApi
     }
 
     /**
+     * Operation getDocumentTabs
+     *
+     * Returns tabs on the document.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Tabs
+     */
+    public function getDocumentTabs($account_id, $document_id, $template_id, TemplatesApi\GetDocumentTabsOptions $options = null)
+    {
+        list($response) = $this->getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getDocumentTabsWithHttpInfo
+     *
+     * Returns tabs on the document.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, TemplatesApi\GetDocumentTabsOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getDocumentTabs');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getDocumentTabs');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling getDocumentTabs');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getPageNumbers() !== null) {
+            $queryParams['page_numbers'] = $this->apiClient->getSerializer()->toQueryValue($options->getPageNumbers());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Tabs',
+                '/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Tabs', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Tabs', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getLock
      *
      * Gets template lock information.
@@ -3568,6 +4213,512 @@ class TemplatesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Notification', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getPageTabs
+     *
+     * Returns tabs on the specified page.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $page_number The page number being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Tabs
+     */
+    public function getPageTabs($account_id, $document_id, $page_number, $template_id)
+    {
+        list($response) = $this->getPageTabsWithHttpInfo($account_id, $document_id, $page_number, $template_id);
+        return $response;
+    }
+
+    /**
+     * Operation getPageTabsWithHttpInfo
+     *
+     * Returns tabs on the specified page.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $page_number The page number being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getPageTabsWithHttpInfo($account_id, $document_id, $page_number, $template_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getPageTabs');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getPageTabs');
+        }
+        // verify the required parameter 'page_number' is set
+        if ($page_number === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $page_number when calling getPageTabs');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling getPageTabs');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/tabs";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($page_number !== null) {
+            $resourcePath = str_replace(
+                "{" . "pageNumber" . "}",
+                $this->apiClient->getSerializer()->toPathValue($page_number),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Tabs',
+                '/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/tabs'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Tabs', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Tabs', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getPages
+     *
+     * Returns document page image(s) based on input.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\PageImages
+     */
+    public function getPages($account_id, $document_id, $template_id, TemplatesApi\GetPagesOptions $options = null)
+    {
+        list($response) = $this->getPagesWithHttpInfo($account_id, $document_id, $template_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getPagesWithHttpInfo
+     *
+     * Returns document page image(s) based on input.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getPagesWithHttpInfo($account_id, $document_id, $template_id, TemplatesApi\GetPagesOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getPages');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getPages');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling getPages');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getCount() !== null) {
+            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+        }
+        // query params
+        if ($options->getDpi() !== null) {
+            $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
+        }
+        // query params
+        if ($options->getMaxHeight() !== null) {
+            $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
+        }
+        // query params
+        if ($options->getMaxWidth() !== null) {
+            $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
+        }
+        // query params
+        if ($options->getNocache() !== null) {
+            $queryParams['nocache'] = $this->apiClient->getSerializer()->toQueryValue($options->getNocache());
+        }
+        // query params
+        if ($options->getShowChanges() !== null) {
+            $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
+        }
+        // query params
+        if ($options->getStartPosition() !== null) {
+            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\PageImages',
+                '/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\PageImages', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PageImages', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getTemplateDocumentHtmlDefinitions
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
+     */
+    public function getTemplateDocumentHtmlDefinitions($account_id, $document_id, $template_id)
+    {
+        list($response) = $this->getTemplateDocumentHtmlDefinitionsWithHttpInfo($account_id, $document_id, $template_id);
+        return $response;
+    }
+
+    /**
+     * Operation getTemplateDocumentHtmlDefinitionsWithHttpInfo
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $document_id The ID of the document being accessed.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getTemplateDocumentHtmlDefinitionsWithHttpInfo($account_id, $document_id, $template_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getTemplateDocumentHtmlDefinitions');
+        }
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getTemplateDocumentHtmlDefinitions');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling getTemplateDocumentHtmlDefinitions');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "documentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($document_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals',
+                '/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getTemplateHtmlDefinitions
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for the template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
+     */
+    public function getTemplateHtmlDefinitions($account_id, $template_id)
+    {
+        list($response) = $this->getTemplateHtmlDefinitionsWithHttpInfo($account_id, $template_id);
+        return $response;
+    }
+
+    /**
+     * Operation getTemplateHtmlDefinitionsWithHttpInfo
+     *
+     * Get the Original HTML Definition used to generate the Responsive HTML for the template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getTemplateHtmlDefinitionsWithHttpInfo($account_id, $template_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getTemplateHtmlDefinitions');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling getTemplateHtmlDefinitions');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/html_definitions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals',
+                '/v2/accounts/{accountId}/templates/{templateId}/html_definitions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -4360,6 +5511,14 @@ class TemplatesApi
             $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
         }
         // query params
+        if ($options->getModifiedFromDate() !== null) {
+            $queryParams['modified_from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getModifiedFromDate());
+        }
+        // query params
+        if ($options->getModifiedToDate() !== null) {
+            $queryParams['modified_to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getModifiedToDate());
+        }
+        // query params
         if ($options->getOrder() !== null) {
             $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
         }
@@ -4370,10 +5529,6 @@ class TemplatesApi
         // query params
         if ($options->getSearchText() !== null) {
             $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
-        }
-        // query params
-        if ($options->getShared() !== null) {
-            $queryParams['shared'] = $this->apiClient->getSerializer()->toQueryValue($options->getShared());
         }
         // query params
         if ($options->getSharedByMe() !== null) {
@@ -4398,6 +5553,10 @@ class TemplatesApi
         // query params
         if ($options->getUserFilter() !== null) {
             $queryParams['user_filter'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserFilter());
+        }
+        // query params
+        if ($options->getUserId() !== null) {
+            $queryParams['user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserId());
         }
         }
 
@@ -5252,6 +6411,10 @@ class TemplatesApi
         // query params
         if ($options->getApplyDocumentFields() !== null) {
             $queryParams['apply_document_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyDocumentFields());
+        }
+        // query params
+        if ($options->getPersistTabs() !== null) {
+            $queryParams['persist_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getPersistTabs());
         }
         }
 

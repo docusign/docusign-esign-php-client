@@ -59,6 +59,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_address_is_credit_card_address' => 'string',
         'billing_plan' => '\DocuSign\eSign\Model\AccountBillingPlan',
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
+        'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
         'successor_plans' => '\DocuSign\eSign\Model\BillingPlan[]'
     ];
@@ -77,6 +78,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_address_is_credit_card_address' => 'billingAddressIsCreditCardAddress',
         'billing_plan' => 'billingPlan',
         'credit_card_information' => 'creditCardInformation',
+        'payment_processor_information' => 'paymentProcessorInformation',
         'referral_information' => 'referralInformation',
         'successor_plans' => 'successorPlans'
     ];
@@ -91,6 +93,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_address_is_credit_card_address' => 'setBillingAddressIsCreditCardAddress',
         'billing_plan' => 'setBillingPlan',
         'credit_card_information' => 'setCreditCardInformation',
+        'payment_processor_information' => 'setPaymentProcessorInformation',
         'referral_information' => 'setReferralInformation',
         'successor_plans' => 'setSuccessorPlans'
     ];
@@ -105,6 +108,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_address_is_credit_card_address' => 'getBillingAddressIsCreditCardAddress',
         'billing_plan' => 'getBillingPlan',
         'credit_card_information' => 'getCreditCardInformation',
+        'payment_processor_information' => 'getPaymentProcessorInformation',
         'referral_information' => 'getReferralInformation',
         'successor_plans' => 'getSuccessorPlans'
     ];
@@ -144,6 +148,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         $this->container['billing_address_is_credit_card_address'] = isset($data['billing_address_is_credit_card_address']) ? $data['billing_address_is_credit_card_address'] : null;
         $this->container['billing_plan'] = isset($data['billing_plan']) ? $data['billing_plan'] : null;
         $this->container['credit_card_information'] = isset($data['credit_card_information']) ? $data['credit_card_information'] : null;
+        $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['successor_plans'] = isset($data['successor_plans']) ? $data['successor_plans'] : null;
     }
@@ -251,6 +256,27 @@ class AccountBillingPlanResponse implements ArrayAccess
     public function setCreditCardInformation($credit_card_information)
     {
         $this->container['credit_card_information'] = $credit_card_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_processor_information
+     * @return \DocuSign\eSign\Model\PaymentProcessorInformation
+     */
+    public function getPaymentProcessorInformation()
+    {
+        return $this->container['payment_processor_information'];
+    }
+
+    /**
+     * Sets payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information
+     * @return $this
+     */
+    public function setPaymentProcessorInformation($payment_processor_information)
+    {
+        $this->container['payment_processor_information'] = $payment_processor_information;
 
         return $this;
     }
