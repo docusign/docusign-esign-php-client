@@ -26,8 +26,8 @@ class OAuthTests extends PHPUnit_Framework_TestCase
         $oAuth = $this->config->getApiClient()->getOAuth();
         $oAuth->setBasePath($testConfig->getHost());
         $this->scope = [
-            $this->config->getApiClient()::$SCOPE_SIGNATURE,
-            $this->config->getApiClient()::$SCOPE_IMPERSONATION
+            $this->config->getApiClient()->$SCOPE_SIGNATURE,
+            $this->config->getApiClient()->$SCOPE_IMPERSONATION
         ];
     }
 
