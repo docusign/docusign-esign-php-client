@@ -74,6 +74,7 @@ class AccountInformation implements ArrayAccess
         'docu_sign_landing_url' => 'string',
         'envelope_sending_blocked' => 'string',
         'envelope_unit_price' => 'string',
+        'external_account_id' => 'string',
         'forgotten_password_questions_count' => 'string',
         'is_downgrade' => 'string',
         'payment_method' => 'string',
@@ -117,6 +118,7 @@ class AccountInformation implements ArrayAccess
         'docu_sign_landing_url' => 'docuSignLandingUrl',
         'envelope_sending_blocked' => 'envelopeSendingBlocked',
         'envelope_unit_price' => 'envelopeUnitPrice',
+        'external_account_id' => 'externalAccountId',
         'forgotten_password_questions_count' => 'forgottenPasswordQuestionsCount',
         'is_downgrade' => 'isDowngrade',
         'payment_method' => 'paymentMethod',
@@ -156,6 +158,7 @@ class AccountInformation implements ArrayAccess
         'docu_sign_landing_url' => 'setDocuSignLandingUrl',
         'envelope_sending_blocked' => 'setEnvelopeSendingBlocked',
         'envelope_unit_price' => 'setEnvelopeUnitPrice',
+        'external_account_id' => 'setExternalAccountId',
         'forgotten_password_questions_count' => 'setForgottenPasswordQuestionsCount',
         'is_downgrade' => 'setIsDowngrade',
         'payment_method' => 'setPaymentMethod',
@@ -195,6 +198,7 @@ class AccountInformation implements ArrayAccess
         'docu_sign_landing_url' => 'getDocuSignLandingUrl',
         'envelope_sending_blocked' => 'getEnvelopeSendingBlocked',
         'envelope_unit_price' => 'getEnvelopeUnitPrice',
+        'external_account_id' => 'getExternalAccountId',
         'forgotten_password_questions_count' => 'getForgottenPasswordQuestionsCount',
         'is_downgrade' => 'getIsDowngrade',
         'payment_method' => 'getPaymentMethod',
@@ -259,6 +263,7 @@ class AccountInformation implements ArrayAccess
         $this->container['docu_sign_landing_url'] = isset($data['docu_sign_landing_url']) ? $data['docu_sign_landing_url'] : null;
         $this->container['envelope_sending_blocked'] = isset($data['envelope_sending_blocked']) ? $data['envelope_sending_blocked'] : null;
         $this->container['envelope_unit_price'] = isset($data['envelope_unit_price']) ? $data['envelope_unit_price'] : null;
+        $this->container['external_account_id'] = isset($data['external_account_id']) ? $data['external_account_id'] : null;
         $this->container['forgotten_password_questions_count'] = isset($data['forgotten_password_questions_count']) ? $data['forgotten_password_questions_count'] : null;
         $this->container['is_downgrade'] = isset($data['is_downgrade']) ? $data['is_downgrade'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
@@ -691,6 +696,27 @@ class AccountInformation implements ArrayAccess
     public function setEnvelopeUnitPrice($envelope_unit_price)
     {
         $this->container['envelope_unit_price'] = $envelope_unit_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_account_id
+     * @return string
+     */
+    public function getExternalAccountId()
+    {
+        return $this->container['external_account_id'];
+    }
+
+    /**
+     * Sets external_account_id
+     * @param string $external_account_id 
+     * @return $this
+     */
+    public function setExternalAccountId($external_account_id)
+    {
+        $this->container['external_account_id'] = $external_account_id;
 
         return $this;
     }

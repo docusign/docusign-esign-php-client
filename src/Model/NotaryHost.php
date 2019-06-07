@@ -73,8 +73,6 @@ class NotaryHost implements ArrayAccess
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
         'inherit_email_notification_configuration' => 'string',
         'name' => 'string',
-        'notary_email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'notary_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'note' => 'string',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
@@ -90,6 +88,7 @@ class NotaryHost implements ArrayAccess
         'sms_authentication' => '\DocuSign\eSign\Model\RecipientSMSAuthentication',
         'social_authentications' => '\DocuSign\eSign\Model\SocialAuthentication[]',
         'status' => 'string',
+        'tabs' => '\DocuSign\eSign\Model\Tabs',
         'template_locked' => 'string',
         'template_required' => 'string',
         'total_tab_count' => 'string',
@@ -125,8 +124,6 @@ class NotaryHost implements ArrayAccess
         'id_check_information_input' => 'idCheckInformationInput',
         'inherit_email_notification_configuration' => 'inheritEmailNotificationConfiguration',
         'name' => 'name',
-        'notary_email_metadata' => 'notaryEmailMetadata',
-        'notary_name_metadata' => 'notaryNameMetadata',
         'note' => 'note',
         'phone_authentication' => 'phoneAuthentication',
         'recipient_attachments' => 'recipientAttachments',
@@ -142,6 +139,7 @@ class NotaryHost implements ArrayAccess
         'sms_authentication' => 'smsAuthentication',
         'social_authentications' => 'socialAuthentications',
         'status' => 'status',
+        'tabs' => 'tabs',
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
         'total_tab_count' => 'totalTabCount',
@@ -173,8 +171,6 @@ class NotaryHost implements ArrayAccess
         'id_check_information_input' => 'setIdCheckInformationInput',
         'inherit_email_notification_configuration' => 'setInheritEmailNotificationConfiguration',
         'name' => 'setName',
-        'notary_email_metadata' => 'setNotaryEmailMetadata',
-        'notary_name_metadata' => 'setNotaryNameMetadata',
         'note' => 'setNote',
         'phone_authentication' => 'setPhoneAuthentication',
         'recipient_attachments' => 'setRecipientAttachments',
@@ -190,6 +186,7 @@ class NotaryHost implements ArrayAccess
         'sms_authentication' => 'setSmsAuthentication',
         'social_authentications' => 'setSocialAuthentications',
         'status' => 'setStatus',
+        'tabs' => 'setTabs',
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
         'total_tab_count' => 'setTotalTabCount',
@@ -221,8 +218,6 @@ class NotaryHost implements ArrayAccess
         'id_check_information_input' => 'getIdCheckInformationInput',
         'inherit_email_notification_configuration' => 'getInheritEmailNotificationConfiguration',
         'name' => 'getName',
-        'notary_email_metadata' => 'getNotaryEmailMetadata',
-        'notary_name_metadata' => 'getNotaryNameMetadata',
         'note' => 'getNote',
         'phone_authentication' => 'getPhoneAuthentication',
         'recipient_attachments' => 'getRecipientAttachments',
@@ -238,6 +233,7 @@ class NotaryHost implements ArrayAccess
         'sms_authentication' => 'getSmsAuthentication',
         'social_authentications' => 'getSocialAuthentications',
         'status' => 'getStatus',
+        'tabs' => 'getTabs',
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
         'total_tab_count' => 'getTotalTabCount',
@@ -294,8 +290,6 @@ class NotaryHost implements ArrayAccess
         $this->container['id_check_information_input'] = isset($data['id_check_information_input']) ? $data['id_check_information_input'] : null;
         $this->container['inherit_email_notification_configuration'] = isset($data['inherit_email_notification_configuration']) ? $data['inherit_email_notification_configuration'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['notary_email_metadata'] = isset($data['notary_email_metadata']) ? $data['notary_email_metadata'] : null;
-        $this->container['notary_name_metadata'] = isset($data['notary_name_metadata']) ? $data['notary_name_metadata'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
@@ -311,6 +305,7 @@ class NotaryHost implements ArrayAccess
         $this->container['sms_authentication'] = isset($data['sms_authentication']) ? $data['sms_authentication'] : null;
         $this->container['social_authentications'] = isset($data['social_authentications']) ? $data['social_authentications'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['tabs'] = isset($data['tabs']) ? $data['tabs'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
         $this->container['total_tab_count'] = isset($data['total_tab_count']) ? $data['total_tab_count'] : null;
@@ -351,7 +346,7 @@ class NotaryHost implements ArrayAccess
 
     /**
      * Sets access_code
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account’s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      * @return $this
      */
     public function setAccessCode($access_code)
@@ -582,7 +577,7 @@ class NotaryHost implements ArrayAccess
 
     /**
      * Sets embedded_recipient_start_url
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      * @return $this
      */
     public function setEmbeddedRecipientStartUrl($embedded_recipient_start_url)
@@ -735,48 +730,6 @@ class NotaryHost implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets notary_email_metadata
-     * @return \DocuSign\eSign\Model\PropertyMetadata
-     */
-    public function getNotaryEmailMetadata()
-    {
-        return $this->container['notary_email_metadata'];
-    }
-
-    /**
-     * Sets notary_email_metadata
-     * @param \DocuSign\eSign\Model\PropertyMetadata $notary_email_metadata
-     * @return $this
-     */
-    public function setNotaryEmailMetadata($notary_email_metadata)
-    {
-        $this->container['notary_email_metadata'] = $notary_email_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets notary_name_metadata
-     * @return \DocuSign\eSign\Model\PropertyMetadata
-     */
-    public function getNotaryNameMetadata()
-    {
-        return $this->container['notary_name_metadata'];
-    }
-
-    /**
-     * Sets notary_name_metadata
-     * @param \DocuSign\eSign\Model\PropertyMetadata $notary_name_metadata
-     * @return $this
-     */
-    public function setNotaryNameMetadata($notary_name_metadata)
-    {
-        $this->container['notary_name_metadata'] = $notary_name_metadata;
 
         return $this;
     }
@@ -1092,6 +1045,27 @@ class NotaryHost implements ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets tabs
+     * @return \DocuSign\eSign\Model\Tabs
+     */
+    public function getTabs()
+    {
+        return $this->container['tabs'];
+    }
+
+    /**
+     * Sets tabs
+     * @param \DocuSign\eSign\Model\Tabs $tabs
+     * @return $this
+     */
+    public function setTabs($tabs)
+    {
+        $this->container['tabs'] = $tabs;
 
         return $this;
     }

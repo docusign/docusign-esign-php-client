@@ -28,7 +28,7 @@ class TestConfig
     
     /**
       * $apiClient
-      * @var DocuSign\eSign\ApiClient
+      * @var DocuSign\eSign\Client\ApiClient
       */
     protected $apiClient;
 
@@ -186,7 +186,7 @@ class TestConfig
 
     /**
      * Gets apiClient
-     * @return DocuSign\eSign\ApiClient
+     * @return DocuSign\eSign\Client\ApiClient
      */
     public function getApiClient()
     {
@@ -195,7 +195,7 @@ class TestConfig
   
     /**
      * Sets apiClient
-     * @param DocuSign\eSign\ApiClient $apiClient
+     * @param DocuSign\eSign\Client\ApiClient $apiClient
      * @return $this
      */
     public function setApiClient($apiClient)

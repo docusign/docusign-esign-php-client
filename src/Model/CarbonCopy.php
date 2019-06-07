@@ -56,6 +56,8 @@ class CarbonCopy implements ArrayAccess
     protected static $swaggerTypes = [
         'access_code' => 'string',
         'add_access_code_to_email' => 'string',
+        'agent_can_edit_email' => 'string',
+        'agent_can_edit_name' => 'string',
         'client_user_id' => 'string',
         'custom_fields' => 'string[]',
         'declined_date_time' => 'string',
@@ -70,9 +72,12 @@ class CarbonCopy implements ArrayAccess
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'excluded_documents' => 'string[]',
         'fax_number' => 'string',
+        'first_name' => 'string',
+        'full_name' => 'string',
         'id_check_configuration_name' => 'string',
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
         'inherit_email_notification_configuration' => 'string',
+        'last_name' => 'string',
         'name' => 'string',
         'note' => 'string',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
@@ -110,6 +115,8 @@ class CarbonCopy implements ArrayAccess
     protected static $attributeMap = [
         'access_code' => 'accessCode',
         'add_access_code_to_email' => 'addAccessCodeToEmail',
+        'agent_can_edit_email' => 'agentCanEditEmail',
+        'agent_can_edit_name' => 'agentCanEditName',
         'client_user_id' => 'clientUserId',
         'custom_fields' => 'customFields',
         'declined_date_time' => 'declinedDateTime',
@@ -124,9 +131,12 @@ class CarbonCopy implements ArrayAccess
         'error_details' => 'errorDetails',
         'excluded_documents' => 'excludedDocuments',
         'fax_number' => 'faxNumber',
+        'first_name' => 'firstName',
+        'full_name' => 'fullName',
         'id_check_configuration_name' => 'idCheckConfigurationName',
         'id_check_information_input' => 'idCheckInformationInput',
         'inherit_email_notification_configuration' => 'inheritEmailNotificationConfiguration',
+        'last_name' => 'lastName',
         'name' => 'name',
         'note' => 'note',
         'phone_authentication' => 'phoneAuthentication',
@@ -160,6 +170,8 @@ class CarbonCopy implements ArrayAccess
     protected static $setters = [
         'access_code' => 'setAccessCode',
         'add_access_code_to_email' => 'setAddAccessCodeToEmail',
+        'agent_can_edit_email' => 'setAgentCanEditEmail',
+        'agent_can_edit_name' => 'setAgentCanEditName',
         'client_user_id' => 'setClientUserId',
         'custom_fields' => 'setCustomFields',
         'declined_date_time' => 'setDeclinedDateTime',
@@ -174,9 +186,12 @@ class CarbonCopy implements ArrayAccess
         'error_details' => 'setErrorDetails',
         'excluded_documents' => 'setExcludedDocuments',
         'fax_number' => 'setFaxNumber',
+        'first_name' => 'setFirstName',
+        'full_name' => 'setFullName',
         'id_check_configuration_name' => 'setIdCheckConfigurationName',
         'id_check_information_input' => 'setIdCheckInformationInput',
         'inherit_email_notification_configuration' => 'setInheritEmailNotificationConfiguration',
+        'last_name' => 'setLastName',
         'name' => 'setName',
         'note' => 'setNote',
         'phone_authentication' => 'setPhoneAuthentication',
@@ -210,6 +225,8 @@ class CarbonCopy implements ArrayAccess
     protected static $getters = [
         'access_code' => 'getAccessCode',
         'add_access_code_to_email' => 'getAddAccessCodeToEmail',
+        'agent_can_edit_email' => 'getAgentCanEditEmail',
+        'agent_can_edit_name' => 'getAgentCanEditName',
         'client_user_id' => 'getClientUserId',
         'custom_fields' => 'getCustomFields',
         'declined_date_time' => 'getDeclinedDateTime',
@@ -224,9 +241,12 @@ class CarbonCopy implements ArrayAccess
         'error_details' => 'getErrorDetails',
         'excluded_documents' => 'getExcludedDocuments',
         'fax_number' => 'getFaxNumber',
+        'first_name' => 'getFirstName',
+        'full_name' => 'getFullName',
         'id_check_configuration_name' => 'getIdCheckConfigurationName',
         'id_check_information_input' => 'getIdCheckInformationInput',
         'inherit_email_notification_configuration' => 'getInheritEmailNotificationConfiguration',
+        'last_name' => 'getLastName',
         'name' => 'getName',
         'note' => 'getNote',
         'phone_authentication' => 'getPhoneAuthentication',
@@ -285,6 +305,8 @@ class CarbonCopy implements ArrayAccess
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['add_access_code_to_email'] = isset($data['add_access_code_to_email']) ? $data['add_access_code_to_email'] : null;
+        $this->container['agent_can_edit_email'] = isset($data['agent_can_edit_email']) ? $data['agent_can_edit_email'] : null;
+        $this->container['agent_can_edit_name'] = isset($data['agent_can_edit_name']) ? $data['agent_can_edit_name'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
@@ -299,9 +321,12 @@ class CarbonCopy implements ArrayAccess
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['excluded_documents'] = isset($data['excluded_documents']) ? $data['excluded_documents'] : null;
         $this->container['fax_number'] = isset($data['fax_number']) ? $data['fax_number'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['id_check_configuration_name'] = isset($data['id_check_configuration_name']) ? $data['id_check_configuration_name'] : null;
         $this->container['id_check_information_input'] = isset($data['id_check_information_input']) ? $data['id_check_information_input'] : null;
         $this->container['inherit_email_notification_configuration'] = isset($data['inherit_email_notification_configuration']) ? $data['inherit_email_notification_configuration'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
@@ -361,7 +386,7 @@ class CarbonCopy implements ArrayAccess
 
     /**
      * Sets access_code
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account’s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      * @return $this
      */
     public function setAccessCode($access_code)
@@ -388,6 +413,48 @@ class CarbonCopy implements ArrayAccess
     public function setAddAccessCodeToEmail($add_access_code_to_email)
     {
         $this->container['add_access_code_to_email'] = $add_access_code_to_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets agent_can_edit_email
+     * @return string
+     */
+    public function getAgentCanEditEmail()
+    {
+        return $this->container['agent_can_edit_email'];
+    }
+
+    /**
+     * Sets agent_can_edit_email
+     * @param string $agent_can_edit_email 
+     * @return $this
+     */
+    public function setAgentCanEditEmail($agent_can_edit_email)
+    {
+        $this->container['agent_can_edit_email'] = $agent_can_edit_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets agent_can_edit_name
+     * @return string
+     */
+    public function getAgentCanEditName()
+    {
+        return $this->container['agent_can_edit_name'];
+    }
+
+    /**
+     * Sets agent_can_edit_name
+     * @param string $agent_can_edit_name 
+     * @return $this
+     */
+    public function setAgentCanEditName($agent_can_edit_name)
+    {
+        $this->container['agent_can_edit_name'] = $agent_can_edit_name;
 
         return $this;
     }
@@ -613,7 +680,7 @@ class CarbonCopy implements ArrayAccess
 
     /**
      * Sets embedded_recipient_start_url
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      * @return $this
      */
     public function setEmbeddedRecipientStartUrl($embedded_recipient_start_url)
@@ -687,6 +754,48 @@ class CarbonCopy implements ArrayAccess
     }
 
     /**
+     * Gets first_name
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     * @param string $first_name The user's first name.  Maximum Length: 50 characters.
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     * @param string $full_name 
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
+
+        return $this;
+    }
+
+    /**
      * Gets id_check_configuration_name
      * @return string
      */
@@ -745,6 +854,27 @@ class CarbonCopy implements ArrayAccess
     public function setInheritEmailNotificationConfiguration($inherit_email_notification_configuration)
     {
         $this->container['inherit_email_notification_configuration'] = $inherit_email_notification_configuration;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     * @param string $last_name 
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }

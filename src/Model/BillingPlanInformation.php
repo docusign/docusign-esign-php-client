@@ -61,6 +61,7 @@ class BillingPlanInformation implements ArrayAccess
         'enable_support' => 'string',
         'included_seats' => 'string',
         'incremental_seats' => 'string',
+        'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
         'renewal_status' => 'string',
@@ -88,6 +89,7 @@ class BillingPlanInformation implements ArrayAccess
         'enable_support' => 'enableSupport',
         'included_seats' => 'includedSeats',
         'incremental_seats' => 'incrementalSeats',
+        'payment_processor_information' => 'paymentProcessorInformation',
         'plan_information' => 'planInformation',
         'referral_information' => 'referralInformation',
         'renewal_status' => 'renewalStatus',
@@ -111,6 +113,7 @@ class BillingPlanInformation implements ArrayAccess
         'enable_support' => 'setEnableSupport',
         'included_seats' => 'setIncludedSeats',
         'incremental_seats' => 'setIncrementalSeats',
+        'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
         'referral_information' => 'setReferralInformation',
         'renewal_status' => 'setRenewalStatus',
@@ -134,6 +137,7 @@ class BillingPlanInformation implements ArrayAccess
         'enable_support' => 'getEnableSupport',
         'included_seats' => 'getIncludedSeats',
         'incremental_seats' => 'getIncrementalSeats',
+        'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
         'referral_information' => 'getReferralInformation',
         'renewal_status' => 'getRenewalStatus',
@@ -182,6 +186,7 @@ class BillingPlanInformation implements ArrayAccess
         $this->container['enable_support'] = isset($data['enable_support']) ? $data['enable_support'] : null;
         $this->container['included_seats'] = isset($data['included_seats']) ? $data['included_seats'] : null;
         $this->container['incremental_seats'] = isset($data['incremental_seats']) ? $data['incremental_seats'] : null;
+        $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['renewal_status'] = isset($data['renewal_status']) ? $data['renewal_status'] : null;
@@ -358,6 +363,27 @@ class BillingPlanInformation implements ArrayAccess
     public function setIncrementalSeats($incremental_seats)
     {
         $this->container['incremental_seats'] = $incremental_seats;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_processor_information
+     * @return \DocuSign\eSign\Model\PaymentProcessorInformation
+     */
+    public function getPaymentProcessorInformation()
+    {
+        return $this->container['payment_processor_information'];
+    }
+
+    /**
+     * Sets payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information
+     * @return $this
+     */
+    public function setPaymentProcessorInformation($payment_processor_information)
+    {
+        $this->container['payment_processor_information'] = $payment_processor_information;
 
         return $this;
     }

@@ -55,6 +55,7 @@ class BillingPlanUpdateResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'account_payment_method' => 'string',
         'billing_plan_preview' => '\DocuSign\eSign\Model\BillingPlanPreview',
         'currency_code' => 'string',
         'included_seats' => 'string',
@@ -74,6 +75,7 @@ class BillingPlanUpdateResponse implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'account_payment_method' => 'accountPaymentMethod',
         'billing_plan_preview' => 'billingPlanPreview',
         'currency_code' => 'currencyCode',
         'included_seats' => 'includedSeats',
@@ -89,6 +91,7 @@ class BillingPlanUpdateResponse implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'account_payment_method' => 'setAccountPaymentMethod',
         'billing_plan_preview' => 'setBillingPlanPreview',
         'currency_code' => 'setCurrencyCode',
         'included_seats' => 'setIncludedSeats',
@@ -104,6 +107,7 @@ class BillingPlanUpdateResponse implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'account_payment_method' => 'getAccountPaymentMethod',
         'billing_plan_preview' => 'getBillingPlanPreview',
         'currency_code' => 'getCurrencyCode',
         'included_seats' => 'getIncludedSeats',
@@ -144,6 +148,7 @@ class BillingPlanUpdateResponse implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['account_payment_method'] = isset($data['account_payment_method']) ? $data['account_payment_method'] : null;
         $this->container['billing_plan_preview'] = isset($data['billing_plan_preview']) ? $data['billing_plan_preview'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['included_seats'] = isset($data['included_seats']) ? $data['included_seats'] : null;
@@ -175,6 +180,27 @@ class BillingPlanUpdateResponse implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets account_payment_method
+     * @return string
+     */
+    public function getAccountPaymentMethod()
+    {
+        return $this->container['account_payment_method'];
+    }
+
+    /**
+     * Sets account_payment_method
+     * @param string $account_payment_method 
+     * @return $this
+     */
+    public function setAccountPaymentMethod($account_payment_method)
+    {
+        $this->container['account_payment_method'] = $account_payment_method;
+
+        return $this;
+    }
 
     /**
      * Gets billing_plan_preview

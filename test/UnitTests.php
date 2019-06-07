@@ -4,136 +4,166 @@
  * Date: 1/25/16
  * Time: 4:58 PM
  */
+ 
+use PHPUnit\Framework\TestCase;
 
-class UnitTests extends PHPUnit_Framework_TestCase
+class UnitTests extends TestCase
 {
-	/*
+
+    /*
 	 * Test 0 - login
 	 */
-	public function testLogin()
-	{
-	 	$username = null;
-	 	$password = null;
-	 	$integratorKey = null;
-	 	$host = null;
+    public function testLogin()
+    {
+        $testConfig = new TestConfig();
 
-	 	$testConfig = new TestConfig($username, $password, $integratorKey, $host);
+        $config = new DocuSign\eSign\Configuration();
+        $config->setHost($testConfig->getHost());
 
-	 	$config = new DocuSign\eSign\Configuration();
-	 	$config->setHost($testConfig->getHost());
-	 	$config->addDefaultHeader("X-DocuSign-Authentication", "{\"Username\":\"" . $testConfig->getUsername() . "\",\"Password\":\"" . $testConfig->getPassword() . "\",\"IntegratorKey\":\"" . $testConfig->getIntegratorKey() . "\"}");
+        $testConfig->setApiClient(new DocuSign\eSign\Client\ApiClient($config));
+        $testConfig->getApiClient()->getOAuth()->setBasePath($testConfig->getHost());
 
-	 	$testConfig->setApiClient(new DocuSign\eSign\ApiClient($config));
+        $token = $testConfig->getApiClient()->requestJWTUserToken($testConfig->getIntegratorKey(),$testConfig->getUserId(), $testConfig->getClientKey());
+
+        $this->assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $token[0]);
+        $this->assertArrayHasKey('access_token', $token[0]);
+
+        $user = $testConfig->getApiClient()->getUserInfo($token[0]['access_token']);
+
+        $this->assertNotEmpty($user);
+        $this->assertEquals($user[1], 200);
+
+        $this->assertInstanceOf('DocuSign\eSign\Client\Auth\UserInfo', $user[0]);
+        $this->assertNotEmpty($user[0]);
+
+        $this->assertArrayHasKey('accounts', $user[0]);
+        $loginAccount = $user[0]['accounts'][0];
+        $accountId = $loginAccount->getAccountId();
+
+        $this->assertNotEmpty($accountId);
+
+        $testConfig->setAccountId($accountId);
+
+        return $testConfig;
+    }
+
+    /**
+     *
+     * Test creating envelop process
+     *
+     * @param $testConfig
+     * @return mixed
+     * @throws \DocuSign\eSign\Client\ApiException
+     * @depends testLogin
+     */
+    function testCreateEnvelope($testConfig)
+    {
+        $templateRole = new  DocuSign\eSign\Model\TemplateRole();
+	    $templateRole->setEmail($testConfig->getRecipientEmail());
+	    $templateRole->setName($testConfig->getRecipientName());
+	    $templateRole->setRoleName($testConfig->getTemplateRoleName());
+
+        $definitionData = [
+            'email_subject' => 'Please Sign my PHP SDK Envelope',
+            'email_blurb'   => 'Hello, Please sign my PHP SDK Envelope.',
+            'template_id'   => $testConfig->getTemplateId(),
+            'status'        => 'sent' //send the envelope by setting |status| to "sent". To save as a draft set to "created"
+        ];
+        $envelopeDefinition = new DocuSign\eSign\Model\EnvelopeDefinition($definitionData);
+        $envelopeDefinition->setTemplateRoles(array($templateRole));
+
+        $envelopeApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
+        $envelopeSummary = $envelopeApi->createEnvelope($testConfig->getAccountId(), $envelopeDefinition);
+
+        $this->assertNotEmpty($envelopeSummary);
+        $this->assertInstanceOf('DocuSign\eSign\Model\EnvelopeSummary', $envelopeSummary);
+        $this->assertNotEmpty($envelopeSummary->getEnvelopeId());
+
+        $testConfig->setEnvelopeId($envelopeSummary->getEnvelopeId());
+
+        return $testConfig;
+    }
 
 
-	 	$authenticationApi = new DocuSign\eSign\Api\AuthenticationApi($testConfig->getApiClient());
-
-		$options = new \DocuSign\eSign\Api\AuthenticationApi\LoginOptions();
-
-	 	$loginInformation = $authenticationApi->login($options);
-	 	if(isset($loginInformation) && count($loginInformation) > 0)
-	 	{
-	 		$loginAccount = $loginInformation->getLoginAccounts()[0];
-	 		if(isset($loginInformation))
-	 		{
-	 			$accountId = $loginAccount->getAccountId();
-	 			if(!empty($accountId))
-	 			{
-	 				$testConfig->setAccountId($accountId);
-	 			}
-	 		}
-	 	}
-
-	 	return $testConfig;
-	}
-
-	function signatureRequestOnDocument($testConfig, $status = "sent", $embeddedSigning = false)
-	{
-		$documentFileName = "/Docs/SignTest1.pdf";
-		$documentName = "SignTest1.docx";
-
-		$envelop_summary = null;
-
-		if(!empty($testConfig->getAccountId()))
-		{
-			$envelopeApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
-
-			// Add a document to the envelope
-			$document = new DocuSign\eSign\Model\Document();
-			$document->setDocumentBase64(base64_encode(file_get_contents(__DIR__ . $documentFileName)));
-			$document->setName($documentName);
-			$document->setDocumentId("1");
-
-			// Create a |SignHere| tab somewhere on the document for the recipient to sign
-			$signHere = new \DocuSign\eSign\Model\SignHere();
-			$signHere->setXPosition("100");
-			$signHere->setYPosition("100");
-			$signHere->setDocumentId("1");
-			$signHere->setPageNumber("1");
-			$signHere->setRecipientId("1");
-
-			$tabs = new DocuSign\eSign\Model\Tabs();
-			$tabs->setSignHereTabs(array($signHere));
-
-			$signer = new \DocuSign\eSign\Model\Signer();
-			$signer->setEmail($testConfig->getRecipientEmail());
-			$signer->setName($testConfig->getRecipientName());
-			$signer->setRecipientId("1");
-			if($embeddedSigning) {
-				$signer->setClientUserId($testConfig->getClientUserId());
-			}
-			
-			$signer->setTabs($tabs);
-
-			// Add a recipient to sign the document
-			$recipients = new DocuSign\eSign\Model\Recipients();
-			$recipients->setSigners(array($signer));
-
-			$envelop_definition = new DocuSign\eSign\Model\EnvelopeDefinition();
-			$envelop_definition->setEmailSubject("[DocuSign PHP SDK] - Please sign this doc");
-
-			// set envelope status to "sent" to immediately send the signature request
-			$envelop_definition->setStatus($status);
-			$envelop_definition->setRecipients($recipients);
-			$envelop_definition->setDocuments(array($document));
-
-			$options = new \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions();
-			$options->setCdseMode(null);
-			$options->setMergeRolesOnDraft(null);
-
-			$envelop_summary = $envelopeApi->createEnvelope($testConfig->getAccountId(), $envelop_definition, $options);
-			if(!empty($envelop_summary))
-			{
-				if($status == "created")
-				{
-					$testConfig->setCreatedEnvelopeId($envelop_summary->getEnvelopeId());
-				}
-				else
-				{
-					$testConfig->setEnvelopeId($envelop_summary->getEnvelopeId());
-				}
-			}
-		}
-
-//		$this->assertNotEmpty($envelop_summary);
-		return $testConfig;
-	}
-
-	
-	/**
+    /**
      * @depends testLogin
      */
     public function testSignatureRequestOnDocument($testConfig, $embeddedSigning = false)
     {
-		return $this->signatureRequestOnDocument($testConfig, "sent", $embeddedSigning);
+        return $this->signatureRequestOnDocument($testConfig, "sent", $embeddedSigning);
     }
 
-	/**
-	 * @depends testLogin
-	 */
-	public function testSignatureRequestOnDocumentCreated($testConfig, $embeddedSigning = false)
+    /**
+     * @depends testLogin
+     */
+    public function testSignatureRequestOnDocumentCreated($testConfig, $embeddedSigning = false)
+    {
+        return $this->signatureRequestOnDocument($testConfig, "created", $embeddedSigning);
+    }
+
+    function signatureRequestOnDocument($testConfig, $status = "sent", $embeddedSigning = false)
 	{
-		return $this->signatureRequestOnDocument($testConfig, "created", $embeddedSigning);
+		$documentFileName = "/docs/SignTest1.pdf";
+		$documentName = "SignTest1.docx";
+
+		$envelop_summary = null;
+
+        $envelopeApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
+
+        // Add a document to the envelope
+        $document = new DocuSign\eSign\Model\Document();
+        $document->setDocumentBase64(base64_encode(file_get_contents(__DIR__ . $documentFileName)));
+        $document->setName($documentName);
+        $document->setDocumentId("1");
+
+        // Create a |SignHere| tab somewhere on the document for the recipient to sign
+        $signHere = new \DocuSign\eSign\Model\SignHere();
+        $signHere->setXPosition("100");
+        $signHere->setYPosition("100");
+        $signHere->setDocumentId("1");
+        $signHere->setPageNumber("1");
+        $signHere->setRecipientId("1");
+
+        $tabs = new DocuSign\eSign\Model\Tabs();
+        $tabs->setSignHereTabs(array($signHere));
+
+        $signer = new \DocuSign\eSign\Model\Signer();
+        $signer->setEmail($testConfig->getRecipientEmail());
+        $signer->setName($testConfig->getRecipientName());
+        $signer->setRecipientId("1");
+        if ($embeddedSigning) {
+            $signer->setClientUserId($testConfig->getClientUserId());
+        }
+
+        $signer->setTabs($tabs);
+
+        // Add a recipient to sign the document
+        $recipients = new DocuSign\eSign\Model\Recipients();
+        $recipients->setSigners(array($signer));
+
+        $envelop_definition = new DocuSign\eSign\Model\EnvelopeDefinition();
+        $envelop_definition->setEmailSubject("[DocuSign PHP SDK] - Please sign this doc");
+
+        // set envelope status to "sent" to immediately send the signature request
+        $envelop_definition->setStatus($status);
+        $envelop_definition->setRecipients($recipients);
+        $envelop_definition->setDocuments(array($document));
+
+        $options = new \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions();
+        $options->setCdseMode(null);
+        $options->setMergeRolesOnDraft(null);
+
+        $envelop_summary = $envelopeApi->createEnvelope($testConfig->getAccountId(), $envelop_definition, $options);
+
+        $this->assertNotEmpty($envelop_summary);
+
+        if ($status == "created") {
+            $testConfig->setCreatedEnvelopeId($envelop_summary->getEnvelopeId());
+        } else {
+            $testConfig->setEnvelopeId($envelop_summary->getEnvelopeId());
+        }
+
+		return $testConfig;
 	}
 
 	/**
@@ -143,37 +173,35 @@ class UnitTests extends PHPUnit_Framework_TestCase
     {
 		$envelop_summary = null;
 
-		if(!empty($testConfig->getAccountId()))
-		{
-			$envelopeApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
 
-			// assign recipient to template role by setting name, email, and role name.  Note that the
-		    // template role name must match the placeholder role name saved in your account template.
-		    $templateRole = new  DocuSign\eSign\Model\TemplateRole();
-		    $templateRole->setEmail($testConfig->getRecipientEmail());
-		    $templateRole->setName($testConfig->getRecipientName());
-		    $templateRole->setRoleName($testConfig->getTemplateRoleName());
+        $envelopeApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
 
-			$envelop_definition = new DocuSign\eSign\Model\EnvelopeDefinition();
-			$envelop_definition->setEmailSubject("[DocuSign PHP SDK] - Please sign this template doc");
+        // assign recipient to template role by setting name, email, and role name.  Note that the
+        // template role name must match the placeholder role name saved in your account template.
+        $templateRole = new  DocuSign\eSign\Model\TemplateRole();
+        $templateRole->setEmail($testConfig->getRecipientEmail());
+        $templateRole->setName($testConfig->getRecipientName());
+        $templateRole->setRoleName($testConfig->getTemplateRoleName());
 
-		    // add the role to the envelope and assign valid templateId from your account
-		    $envelop_definition->setTemplateRoles(array($templateRole));
-		    $envelop_definition->setTemplateId($testConfig->getTemplateId());
+        $envelop_definition = new DocuSign\eSign\Model\EnvelopeDefinition();
+        $envelop_definition->setEmailSubject("[DocuSign PHP SDK] - Please sign this template doc");
 
-		    // set envelope status to "sent" to immediately send the signature request
-		    $envelop_definition->setStatus("sent");
+        // add the role to the envelope and assign valid templateId from your account
+        $envelop_definition->setTemplateRoles(array($templateRole));
+        $envelop_definition->setTemplateId($testConfig->getTemplateId());
 
-			$options = new \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions();
-			$options->setCdseMode(null);
-			$options->setMergeRolesOnDraft(null);
+        // set envelope status to "sent" to immediately send the signature request
+        $envelop_definition->setStatus("sent");
 
-			$envelop_summary = $envelopeApi->createEnvelope($testConfig->getAccountId(), $envelop_definition, $options);
-			if(!empty($envelop_summary))
-			{
+        $options = new \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions();
+        $options->setCdseMode(null);
+        $options->setMergeRolesOnDraft(null);
+
+        $envelop_summary = $envelopeApi->createEnvelope($testConfig->getAccountId(), $envelop_definition, $options);
+        if(!empty($envelop_summary))
+        {
 //				$testConfig->setEnvelopeId($envelop_summary->getEnvelopeId());
-			}
-		}
+        }
 
 		$this->assertNotEmpty($envelop_summary);
 
@@ -220,29 +248,29 @@ class UnitTests extends PHPUnit_Framework_TestCase
 		$envelopeApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
 
 		$options = new \DocuSign\eSign\Api\EnvelopesApi\ListStatusChangesOptions();
-		$options->setInclude(null);
-		$options->setPowerformids(null);
+//		$options->setInclude(null);
+//		$options->setPowerformids(null);
 		$options->setAcStatus(null);
 		$options->setBlock(null);
-		$options->setSearchText(null);
+//		$options->setSearchText(null);
 		$options->setStartPosition(null);
 		$options->setStatus(null);
 		$options->setToDate(null);
 		$options->setTransactionIds(null);
-		$options->setUserFilter(null);
-		$options->setFolderTypes(null);
-		$options->setUserId(null);
+//		$options->setUserFilter(null);
+//		$options->setFolderTypes(null);
+//		$options->setUserId(null);
 		$options->setCount(10);
 		$options->setEmail(null);
 		$options->setEnvelopeIds(null);
-		$options->setExclude(null);
-		$options->setFolderIds(null);
+//		$options->setExclude(null);
+//		$options->setFolderIds(null);
 		$options->setFromDate(date("Y-m-d", strtotime("-30 days")));
 		$options->setCustomField(null);
 		$options->setFromToStatus(null);
-		$options->setIntersectingFolderIds(null);
-		$options->setOrder(null);
-		$options->setOrderBy(null);
+//		$options->setIntersectingFolderIds(null);
+//		$options->setOrder(null);
+//		$options->setOrderBy(null);
 		$options->setUserName(null);
 
 		$envelopesInformation = $envelopeApi->listStatusChanges($testConfig->getAccountId(), $options);

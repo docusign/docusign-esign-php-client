@@ -55,6 +55,7 @@ class Contact implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'contact_id' => 'string',
+        'contact_phone_numbers' => '\DocuSign\eSign\Model\ContactPhoneNumber[]',
         'contact_uri' => 'string',
         'emails' => 'string[]',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
@@ -76,6 +77,7 @@ class Contact implements ArrayAccess
      */
     protected static $attributeMap = [
         'contact_id' => 'contactId',
+        'contact_phone_numbers' => 'contactPhoneNumbers',
         'contact_uri' => 'contactUri',
         'emails' => 'emails',
         'error_details' => 'errorDetails',
@@ -93,6 +95,7 @@ class Contact implements ArrayAccess
      */
     protected static $setters = [
         'contact_id' => 'setContactId',
+        'contact_phone_numbers' => 'setContactPhoneNumbers',
         'contact_uri' => 'setContactUri',
         'emails' => 'setEmails',
         'error_details' => 'setErrorDetails',
@@ -110,6 +113,7 @@ class Contact implements ArrayAccess
      */
     protected static $getters = [
         'contact_id' => 'getContactId',
+        'contact_phone_numbers' => 'getContactPhoneNumbers',
         'contact_uri' => 'getContactUri',
         'emails' => 'getEmails',
         'error_details' => 'getErrorDetails',
@@ -152,6 +156,7 @@ class Contact implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['contact_id'] = isset($data['contact_id']) ? $data['contact_id'] : null;
+        $this->container['contact_phone_numbers'] = isset($data['contact_phone_numbers']) ? $data['contact_phone_numbers'] : null;
         $this->container['contact_uri'] = isset($data['contact_uri']) ? $data['contact_uri'] : null;
         $this->container['emails'] = isset($data['emails']) ? $data['emails'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -202,6 +207,27 @@ class Contact implements ArrayAccess
     public function setContactId($contact_id)
     {
         $this->container['contact_id'] = $contact_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets contact_phone_numbers
+     * @return \DocuSign\eSign\Model\ContactPhoneNumber[]
+     */
+    public function getContactPhoneNumbers()
+    {
+        return $this->container['contact_phone_numbers'];
+    }
+
+    /**
+     * Sets contact_phone_numbers
+     * @param \DocuSign\eSign\Model\ContactPhoneNumber[] $contact_phone_numbers 
+     * @return $this
+     */
+    public function setContactPhoneNumbers($contact_phone_numbers)
+    {
+        $this->container['contact_phone_numbers'] = $contact_phone_numbers;
 
         return $this;
     }

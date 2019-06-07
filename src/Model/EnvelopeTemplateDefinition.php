@@ -55,6 +55,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'created' => 'string',
         'description' => 'string',
         'folder_id' => 'string',
         'folder_name' => 'string',
@@ -82,6 +83,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'created' => 'created',
         'description' => 'description',
         'folder_id' => 'folderId',
         'folder_name' => 'folderName',
@@ -105,6 +107,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'created' => 'setCreated',
         'description' => 'setDescription',
         'folder_id' => 'setFolderId',
         'folder_name' => 'setFolderName',
@@ -128,6 +131,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'created' => 'getCreated',
         'description' => 'getDescription',
         'folder_id' => 'getFolderId',
         'folder_name' => 'getFolderName',
@@ -176,6 +180,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['folder_id'] = isset($data['folder_id']) ? $data['folder_id'] : null;
         $this->container['folder_name'] = isset($data['folder_name']) ? $data['folder_name'] : null;
@@ -215,6 +220,27 @@ class EnvelopeTemplateDefinition implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets created
+     * @return string
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param string $created 
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
 
     /**
      * Gets description

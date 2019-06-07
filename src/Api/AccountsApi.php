@@ -56,6 +56,34 @@ class CreateOptions
         return $this;
     }
 }
+class CreateCustomFieldOptions
+{
+    /**
+      * $apply_to_templates 
+      * @var string
+      */
+    protected $apply_to_templates;
+
+    /**
+     * Gets apply_to_templates
+     * @return string
+     */
+    public function getApplyToTemplates()
+    {
+        return $this->apply_to_templates;
+    }
+  
+    /**
+     * Sets apply_to_templates
+     * @param string $apply_to_templates 
+     * @return $this
+     */
+    public function setApplyToTemplates($apply_to_templates)
+    {
+        $this->apply_to_templates = $apply_to_templates;
+        return $this;
+    }
+}
 class CreatePermissionProfileOptions
 {
     /**
@@ -81,6 +109,34 @@ class CreatePermissionProfileOptions
     public function setInclude($include)
     {
         $this->include = $include;
+        return $this;
+    }
+}
+class DeleteCustomFieldOptions
+{
+    /**
+      * $apply_to_templates 
+      * @var string
+      */
+    protected $apply_to_templates;
+
+    /**
+     * Gets apply_to_templates
+     * @return string
+     */
+    public function getApplyToTemplates()
+    {
+        return $this->apply_to_templates;
+    }
+  
+    /**
+     * Sets apply_to_templates
+     * @param string $apply_to_templates 
+     * @return $this
+     */
+    public function setApplyToTemplates($apply_to_templates)
+    {
+        $this->apply_to_templates = $apply_to_templates;
         return $this;
     }
 }
@@ -514,7 +570,7 @@ class ListSharedAccessOptions
         return $this;
     }
     /**
-      * $search_text This can be used to filter user names in the response. The wild-card ‘*’ (asterisk) can be used around the string.
+      * $search_text This can be used to filter user names in the response. The wild-card '*' (asterisk) can be used around the string.
       * @var string
       */
     protected $search_text;
@@ -530,7 +586,7 @@ class ListSharedAccessOptions
   
     /**
      * Sets search_text
-     * @param string $search_text This can be used to filter user names in the response. The wild-card ‘*’ (asterisk) can be used around the string.
+     * @param string $search_text This can be used to filter user names in the response. The wild-card '*' (asterisk) can be used around the string.
      * @return $this
      */
     public function setSearchText($search_text)
@@ -611,6 +667,62 @@ class ListSharedAccessOptions
     public function setUserIds($user_ids)
     {
         $this->user_ids = $user_ids;
+        return $this;
+    }
+}
+class UpdateConsumerDisclosureOptions
+{
+    /**
+      * $include_metadata 
+      * @var string
+      */
+    protected $include_metadata;
+
+    /**
+     * Gets include_metadata
+     * @return string
+     */
+    public function getIncludeMetadata()
+    {
+        return $this->include_metadata;
+    }
+  
+    /**
+     * Sets include_metadata
+     * @param string $include_metadata 
+     * @return $this
+     */
+    public function setIncludeMetadata($include_metadata)
+    {
+        $this->include_metadata = $include_metadata;
+        return $this;
+    }
+}
+class UpdateCustomFieldOptions
+{
+    /**
+      * $apply_to_templates 
+      * @var string
+      */
+    protected $apply_to_templates;
+
+    /**
+     * Gets apply_to_templates
+     * @return string
+     */
+    public function getApplyToTemplates()
+    {
+        return $this->apply_to_templates;
+    }
+  
+    /**
+     * Sets apply_to_templates
+     * @param string $apply_to_templates 
+     * @return $this
+     */
+    public function setApplyToTemplates($apply_to_templates)
+    {
+        $this->apply_to_templates = $apply_to_templates;
         return $this;
     }
 }
@@ -699,7 +811,7 @@ class UpdateSharedAccessOptions
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\ApiClient;
+use \DocuSign\eSign\Client\ApiClient;
 use \DocuSign\eSign\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
@@ -717,16 +829,16 @@ class AccountsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\ApiClient instance of the ApiClient
+     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\ApiClient|null $apiClient The api client to use
+     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\DocuSign\eSign\ApiClient $apiClient = null)
+    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -738,7 +850,7 @@ class AccountsApi
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\ApiClient get the API client
+     * @return \DocuSign\eSign\Client\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -748,11 +860,11 @@ class AccountsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\ApiClient $apiClient set the API client
+     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
      *
      * @return AccountsApi
      */
-    public function setApiClient(\DocuSign\eSign\ApiClient $apiClient)
+    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -949,39 +1061,41 @@ class AccountsApi
     }
 
     /**
-     * Operation createEMortgageTransaction
+     * Operation createCustomField
      *
-     * Starts a new eMortgage Transaction
+     * Creates an acount custom field.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\PostTransactionsRequest $post_transactions_request  (optional)
+     * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\PostTransactionsResponse
+     * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function createEMortgageTransaction($account_id, $post_transactions_request = null)
+    public function createCustomField($account_id, $custom_field = null, AccountsApi\CreateCustomFieldOptions $options = null)
     {
-        list($response) = $this->createEMortgageTransactionWithHttpInfo($account_id, $post_transactions_request);
+        list($response) = $this->createCustomFieldWithHttpInfo($account_id, $custom_field, $options);
         return $response;
     }
 
     /**
-     * Operation createEMortgageTransactionWithHttpInfo
+     * Operation createCustomFieldWithHttpInfo
      *
-     * Starts a new eMortgage Transaction
+     * Creates an acount custom field.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\PostTransactionsRequest $post_transactions_request  (optional)
+     * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\PostTransactionsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createEMortgageTransactionWithHttpInfo($account_id, $post_transactions_request = null)
+    public function createCustomFieldWithHttpInfo($account_id, $custom_field = null, AccountsApi\CreateCustomFieldOptions $options = null)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createEMortgageTransaction');
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createCustomField');
         }
         // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/eMortgage/transactions";
+        $resourcePath = "/v2/accounts/{accountId}/custom_fields";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -992,6 +1106,14 @@ class AccountsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getApplyToTemplates() !== null) {
+            $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
+        }
+        }
 
         // path params
         if ($account_id !== null) {
@@ -1006,8 +1128,8 @@ class AccountsApi
 
         // body params
         $_tempBody = null;
-        if (isset($post_transactions_request)) {
-            $_tempBody = $post_transactions_request;
+        if (isset($custom_field)) {
+            $_tempBody = $custom_field;
         }
 
         // for model (json/xml)
@@ -1024,15 +1146,15 @@ class AccountsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\PostTransactionsResponse',
-                '/v2/accounts/{accountId}/eMortgage/transactions'
+                '\DocuSign\eSign\Model\CustomFields',
+                '/v2/accounts/{accountId}/custom_fields'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\PostTransactionsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\CustomFields', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PostTransactionsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\CustomFields', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -1661,6 +1783,116 @@ class AccountsApi
     }
 
     /**
+     * Operation deleteCustomField
+     *
+     * Delete an existing account custom field.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $custom_field_id 
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return void
+     */
+    public function deleteCustomField($account_id, $custom_field_id, AccountsApi\DeleteCustomFieldOptions $options = null)
+    {
+        list($response) = $this->deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation deleteCustomFieldWithHttpInfo
+     *
+     * Delete an existing account custom field.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $custom_field_id 
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, AccountsApi\DeleteCustomFieldOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteCustomField');
+        }
+        // verify the required parameter 'custom_field_id' is set
+        if ($custom_field_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $custom_field_id when calling deleteCustomField');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/custom_fields/{customFieldId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getApplyToTemplates() !== null) {
+            $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($custom_field_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "customFieldId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($custom_field_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2/accounts/{accountId}/custom_fields/{customFieldId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteENoteConfiguration
      *
      * Deletes configuration information for the eNote eOriginal integration.
@@ -1836,6 +2068,96 @@ class AccountsApi
             return [null, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAccountIdentityVerification
+     *
+     * Get the list of identity verification options for an account
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountIdentityVerificationResponse
+     */
+    public function getAccountIdentityVerification($account_id)
+    {
+        list($response) = $this->getAccountIdentityVerificationWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getAccountIdentityVerificationWithHttpInfo
+     *
+     * Get the list of identity verification options for an account
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountIdentityVerificationResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAccountIdentityVerificationWithHttpInfo($account_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getAccountIdentityVerification');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/identity_verification";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountIdentityVerificationResponse',
+                '/v2/accounts/{accountId}/identity_verification'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountIdentityVerificationResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountIdentityVerificationResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -2024,6 +2346,96 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TabAccountSettings', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAllPaymentGatewayAccounts
+     *
+     * Get all payment gateway account for the provided accountId
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\PaymentGatewayAccountsInfo
+     */
+    public function getAllPaymentGatewayAccounts($account_id)
+    {
+        list($response) = $this->getAllPaymentGatewayAccountsWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getAllPaymentGatewayAccountsWithHttpInfo
+     *
+     * Get all payment gateway account for the provided accountId
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\PaymentGatewayAccountsInfo, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAllPaymentGatewayAccountsWithHttpInfo($account_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getAllPaymentGatewayAccounts');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/payment_gateway_accounts";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\PaymentGatewayAccountsInfo',
+                '/v2/accounts/{accountId}/payment_gateway_accounts'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\PaymentGatewayAccountsInfo', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PaymentGatewayAccountsInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -2255,6 +2667,106 @@ class AccountsApi
     }
 
     /**
+     * Operation getBrandExportFile
+     *
+     * Export a specific brand.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $brand_id The unique identifier of a brand.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return void
+     */
+    public function getBrandExportFile($account_id, $brand_id)
+    {
+        list($response) = $this->getBrandExportFileWithHttpInfo($account_id, $brand_id);
+        return $response;
+    }
+
+    /**
+     * Operation getBrandExportFileWithHttpInfo
+     *
+     * Export a specific brand.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $brand_id The unique identifier of a brand.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getBrandExportFileWithHttpInfo($account_id, $brand_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getBrandExportFile');
+        }
+        // verify the required parameter 'brand_id' is set
+        if ($brand_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $brand_id when calling getBrandExportFile');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/brands/{brandId}/file";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($brand_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "brandId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($brand_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2/accounts/{accountId}/brands/{brandId}/file'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getBrandLogoByType
      *
      * Obtains the specified image for a brand.
@@ -2263,7 +2775,7 @@ class AccountsApi
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
      * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return void
+     * @return \SplFileObject
      */
     public function getBrandLogoByType($account_id, $brand_id, $logo_type)
     {
@@ -2280,7 +2792,7 @@ class AccountsApi
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
      * @throws \DocuSign\eSign\ApiException on non-2xx response
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type)
     {
@@ -2302,7 +2814,7 @@ class AccountsApi
         $queryParams = [];
         $headerParams = [];
         $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['image/png']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -2351,13 +2863,17 @@ class AccountsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                null,
+                '\SplFileObject',
                 '/v2/accounts/{accountId}/brands/{brandId}/logos/{logoType}'
             );
 
-            return [null, $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -2606,7 +3122,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to �browser� to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
@@ -2622,7 +3138,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to �browser� to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2895,6 +3411,172 @@ class AccountsApi
     }
 
     /**
+     * Operation getPasswordRules
+     *
+     * Get the password rules
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountPasswordRules
+     */
+    public function getPasswordRules($account_id)
+    {
+        list($response) = $this->getPasswordRulesWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getPasswordRulesWithHttpInfo
+     *
+     * Get the password rules
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getPasswordRulesWithHttpInfo($account_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getPasswordRules');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/settings/password_rules";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountPasswordRules',
+                '/v2/accounts/{accountId}/settings/password_rules'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountPasswordRules', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountPasswordRules', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getPasswordRules_0
+     *
+     * Get membership account password rules
+     *
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\UserPasswordRules
+     */
+    public function getPasswordRules_0()
+    {
+        list($response) = $this->getPasswordRules_0WithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation getPasswordRules_0WithHttpInfo
+     *
+     * Get membership account password rules
+     *
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\UserPasswordRules, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getPasswordRules_0WithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/v2/current_user/password_rules";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\UserPasswordRules',
+                '/v2/current_user/password_rules'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\UserPasswordRules', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\UserPasswordRules', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getPermissionProfile
      *
      * Returns a permissions profile in the specified account.
@@ -3072,6 +3754,283 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ProvisioningInformation', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getSupportedLanguages
+     *
+     * Gets list of supported languages for recipient language setting.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\SupportedLanguages
+     */
+    public function getSupportedLanguages($account_id)
+    {
+        list($response) = $this->getSupportedLanguagesWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getSupportedLanguagesWithHttpInfo
+     *
+     * Gets list of supported languages for recipient language setting.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\SupportedLanguages, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getSupportedLanguagesWithHttpInfo($account_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getSupportedLanguages');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/supported_languages";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\SupportedLanguages',
+                '/v2/accounts/{accountId}/supported_languages'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\SupportedLanguages', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\SupportedLanguages', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getWatermark
+     *
+     * Get watermark information.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Watermark
+     */
+    public function getWatermark($account_id)
+    {
+        list($response) = $this->getWatermarkWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getWatermarkWithHttpInfo
+     *
+     * Get watermark information.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getWatermarkWithHttpInfo($account_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getWatermark');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/watermark";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Watermark',
+                '/v2/accounts/{accountId}/watermark'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Watermark', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Watermark', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getWatermarkPreview
+     *
+     * Get watermark preview.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Watermark
+     */
+    public function getWatermarkPreview($account_id, $watermark = null)
+    {
+        list($response) = $this->getWatermarkPreviewWithHttpInfo($account_id, $watermark);
+        return $response;
+    }
+
+    /**
+     * Operation getWatermarkPreviewWithHttpInfo
+     *
+     * Get watermark preview.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getWatermarkPreviewWithHttpInfo($account_id, $watermark = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getWatermarkPreview');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/watermark/preview";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($watermark)) {
+            $_tempBody = $watermark;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Watermark',
+                '/v2/accounts/{accountId}/watermark/preview'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Watermark', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Watermark', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -4092,12 +5051,13 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
+     * @param string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return void
      */
-    public function updateBrandLogoByType($account_id, $brand_id, $logo_type)
+    public function updateBrandLogoByType($account_id, $brand_id, $logo_type, $logo_file_bytes)
     {
-        list($response) = $this->updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type);
+        list($response) = $this->updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type, $logo_file_bytes);
         return $response;
     }
 
@@ -4109,10 +5069,11 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
+     * @param string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
      * @throws \DocuSign\eSign\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type)
+    public function updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type, $logo_file_bytes)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4126,6 +5087,10 @@ class AccountsApi
         if ($logo_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $logo_type when calling updateBrandLogoByType');
         }
+        // verify the required parameter 'logo_file_bytes' is set
+        if ($logo_file_bytes === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $logo_file_bytes when calling updateBrandLogoByType');
+        }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/brands/{brandId}/logos/{logoType}";
         $httpBody = '';
@@ -4136,7 +5101,7 @@ class AccountsApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/png']);
 
 
         // path params
@@ -4166,7 +5131,12 @@ class AccountsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
+        // body params
+        $_tempBody = null;
+        if (isset($logo_file_bytes)) {
+            $_tempBody = $logo_file_bytes;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
@@ -4317,6 +5287,248 @@ class AccountsApi
     }
 
     /**
+     * Operation updateConsumerDisclosure
+     *
+     * Update Consumer Disclosure.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ConsumerDisclosure
+     */
+    public function updateConsumerDisclosure($account_id, $lang_code, $consumer_disclosure = null, AccountsApi\UpdateConsumerDisclosureOptions $options = null)
+    {
+        list($response) = $this->updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure, $options);
+        return $response;
+    }
+
+    /**
+     * Operation updateConsumerDisclosureWithHttpInfo
+     *
+     * Update Consumer Disclosure.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure = null, AccountsApi\UpdateConsumerDisclosureOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateConsumerDisclosure');
+        }
+        // verify the required parameter 'lang_code' is set
+        if ($lang_code === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lang_code when calling updateConsumerDisclosure');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/consumer_disclosure/{langCode}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getIncludeMetadata() !== null) {
+            $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($lang_code !== null) {
+            $resourcePath = str_replace(
+                "{" . "langCode" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lang_code),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($consumer_disclosure)) {
+            $_tempBody = $consumer_disclosure;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ConsumerDisclosure',
+                '/v2/accounts/{accountId}/consumer_disclosure/{langCode}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ConsumerDisclosure', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ConsumerDisclosure', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateCustomField
+     *
+     * Updates an existing account custom field.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $custom_field_id 
+     * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\CustomFields
+     */
+    public function updateCustomField($account_id, $custom_field_id, $custom_field = null, AccountsApi\UpdateCustomFieldOptions $options = null)
+    {
+        list($response) = $this->updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field, $options);
+        return $response;
+    }
+
+    /**
+     * Operation updateCustomFieldWithHttpInfo
+     *
+     * Updates an existing account custom field.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $custom_field_id 
+     * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field = null, AccountsApi\UpdateCustomFieldOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateCustomField');
+        }
+        // verify the required parameter 'custom_field_id' is set
+        if ($custom_field_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $custom_field_id when calling updateCustomField');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/custom_fields/{customFieldId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getApplyToTemplates() !== null) {
+            $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($custom_field_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "customFieldId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($custom_field_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($custom_field)) {
+            $_tempBody = $custom_field;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\CustomFields',
+                '/v2/accounts/{accountId}/custom_fields/{customFieldId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\CustomFields', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\CustomFields', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation updateENoteConfiguration
      *
      * Updates configuration information for the eNote eOriginal integration.
@@ -4401,6 +5613,103 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ENoteConfiguration', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updatePasswordRules
+     *
+     * Update the password rules
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountPasswordRules
+     */
+    public function updatePasswordRules($account_id, $account_password_rules = null)
+    {
+        list($response) = $this->updatePasswordRulesWithHttpInfo($account_id, $account_password_rules);
+        return $response;
+    }
+
+    /**
+     * Operation updatePasswordRulesWithHttpInfo
+     *
+     * Update the password rules
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updatePasswordRulesWithHttpInfo($account_id, $account_password_rules = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updatePasswordRules');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/settings/password_rules";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($account_password_rules)) {
+            $_tempBody = $account_password_rules;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountPasswordRules',
+                '/v2/accounts/{accountId}/settings/password_rules'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountPasswordRules', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountPasswordRules', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -4726,6 +6035,103 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSharedAccess', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateWatermark
+     *
+     * Update watermark information.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Watermark
+     */
+    public function updateWatermark($account_id, $watermark = null)
+    {
+        list($response) = $this->updateWatermarkWithHttpInfo($account_id, $watermark);
+        return $response;
+    }
+
+    /**
+     * Operation updateWatermarkWithHttpInfo
+     *
+     * Update watermark information.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateWatermarkWithHttpInfo($account_id, $watermark = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateWatermark');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/watermark";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($watermark)) {
+            $_tempBody = $watermark;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Watermark',
+                '/v2/accounts/{accountId}/watermark'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Watermark', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Watermark', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
