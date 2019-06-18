@@ -91,20 +91,20 @@ class TestConfig
     public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null)
     {
         $this->host = !empty($host) ? $host : "https://demo.docusign.net/restapi";
-        $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'ae30ea4e-3959-4d1c-b867-fcb57d2dc4df';
-        $this->clientSecret = !empty($secret) ? $secret : 'b4dccdbe-232f-46cc-96c5-b2f0f7448f8f';
+        $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df';
+        $this->clientSecret = !empty($secret) ? $secret : 'b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f';
         $this->clientKey = !empty($key) ? $key : 'Docs/private.pem';
 
         $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'node_sdk@mailinator.com';
         $this->recipientName = !empty($recipientName) ? $recipientName : 'PHP SDK';
 
         $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'Manager';
-        $this->templateId = !empty($templateId) ? $templateId : 'cf2a46c2-8d6e-4258-9d62-752547b1a419';
+        $this->templateId = !empty($templateId) ? $templateId : 'cf2a46c2-xxxx-xxxx-xxxx-752547b1a419';
 
         $this->returnUrl = !empty($returnUrl) ? $returnUrl : 'https://www.docusign.com/api';
 
         $this->envelopeId = !empty($envelopeId) ? $envelopeId : '';
-        $this->userId = !empty($userId) ? $userId : 'fcc5726c-cd73-4844-b580-40bbbe6ca126'; //can be taken from generateAccessToken returned result
+        $this->userId = !empty($userId) ? $userId : 'fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126'; //can be taken from generateAccessToken returned result
 
         $this->clientUserId = "1234";
     }
