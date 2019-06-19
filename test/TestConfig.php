@@ -97,7 +97,7 @@ class TestConfig
     public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null, $privateKey = null)
     {
         $this->host = !empty($host) ? $host : getenv('REDIRECT_URI');
-        $this->integratorKey = !empty($integratorKey) ? $integratorKey : getenv('INTEGRATOR_KEY_AUTH_CODE');
+        $this->integratorKey = !empty($integratorKey) ? $integratorKey : getenv('INTEGRATOR_KEY_JWT');
         $this->clientSecret = !empty($secret) ? $secret : getenv('CLIENT_SECRET');
         $this->clientKey = !empty($key) ? $key : 'Docs/private.pem';
         $this->privateKeyB64 = !empty($privateKey) ? $privateKey : getenv('PRIVATE_KEY');
