@@ -86,27 +86,37 @@ class TestConfig
      */
     protected $clientKey;
 
+    /**
+     * $privateKey
+     * @var string
+     */
+    protected $privateKeyB64;
+
     protected $userId;
 
-    public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null)
+    public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null, $privateKey = null)
     {
-        $this->host = !empty($host) ? $host : "https://demo.docusign.net/restapi";
-        $this->integratorKey = !empty($integratorKey) ? $integratorKey : 'ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df';
-        $this->clientSecret = !empty($secret) ? $secret : 'b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f';
+        $this->host = !empty($host) ? $host : $_ENV['REDIRECT_URI'];
+        $this->integratorKey = !empty($integratorKey) ? $integratorKey : $_ENV['INTEGRATOR_KEY_AUTH_CODE'];
+        $this->clientSecret = !empty($secret) ? $secret : $_ENV['CLIENT_SECRET'];
         $this->clientKey = !empty($key) ? $key : 'Docs/private.pem';
+        $this->privateKeyB64 = !empty($privateKey) ? $privateKey : $_ENV['PRIVATE_KEY'];
 
         $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'node_sdk@mailinator.com';
         $this->recipientName = !empty($recipientName) ? $recipientName : 'PHP SDK';
 
         $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'Manager';
-        $this->templateId = !empty($templateId) ? $templateId : 'cf2a46c2-xxxx-xxxx-xxxx-752547b1a419';
+        $this->templateId = !empty($templateId) ? $templateId : $_ENV['TEMPLATE_ID'];
 
         $this->returnUrl = !empty($returnUrl) ? $returnUrl : 'https://www.docusign.com/api';
 
         $this->envelopeId = !empty($envelopeId) ? $envelopeId : '';
-        $this->userId = !empty($userId) ? $userId : 'fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126'; //can be taken from generateAccessToken returned result
+        $this->userId = !empty($userId) ? $userId : $_ENV['USER_ID']; //can be taken from generateAccessToken returned result
 
         $this->clientUserId = "1234";
+
+        $decodedKey = base64_decode($this->privateKeyB64);
+        file_put_contents($this->clientKey, $decodedKey);
     }
 
     /**
@@ -389,6 +399,21 @@ class TestConfig
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getPrivateKeyB64()
+    {
+        return $this->privateKeyB64;
+    }
+
+    /**
+     * @param string $privateKeyB64
+     */
+    public function setPrivateKeyB64($privateKeyB64)
+    {
+        $this->privateKeyB64 = $privateKeyB64;
+    }
     /**
      * Gets client key
      * @return string
