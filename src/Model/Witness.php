@@ -86,7 +86,6 @@ class Witness implements ArrayAccess
         'last_name' => 'string',
         'name' => 'string',
         'note' => 'string',
-        'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
@@ -161,7 +160,6 @@ class Witness implements ArrayAccess
         'last_name' => 'lastName',
         'name' => 'name',
         'note' => 'note',
-        'offline_attributes' => 'offlineAttributes',
         'phone_authentication' => 'phoneAuthentication',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
@@ -232,7 +230,6 @@ class Witness implements ArrayAccess
         'last_name' => 'setLastName',
         'name' => 'setName',
         'note' => 'setNote',
-        'offline_attributes' => 'setOfflineAttributes',
         'phone_authentication' => 'setPhoneAuthentication',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
@@ -303,7 +300,6 @@ class Witness implements ArrayAccess
         'last_name' => 'getLastName',
         'name' => 'getName',
         'note' => 'getNote',
-        'offline_attributes' => 'getOfflineAttributes',
         'phone_authentication' => 'getPhoneAuthentication',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
@@ -399,7 +395,6 @@ class Witness implements ArrayAccess
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['offline_attributes'] = isset($data['offline_attributes']) ? $data['offline_attributes'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
@@ -1123,27 +1118,6 @@ class Witness implements ArrayAccess
     public function setNote($note)
     {
         $this->container['note'] = $note;
-
-        return $this;
-    }
-
-    /**
-     * Gets offline_attributes
-     * @return \DocuSign\eSign\Model\OfflineAttributes
-     */
-    public function getOfflineAttributes()
-    {
-        return $this->container['offline_attributes'];
-    }
-
-    /**
-     * Sets offline_attributes
-     * @param \DocuSign\eSign\Model\OfflineAttributes $offline_attributes
-     * @return $this
-     */
-    public function setOfflineAttributes($offline_attributes)
-    {
-        $this->container['offline_attributes'] = $offline_attributes;
 
         return $this;
     }
