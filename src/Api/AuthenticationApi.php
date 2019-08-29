@@ -136,7 +136,7 @@ class LoginOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -202,7 +202,7 @@ class AuthenticationApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteSocialLogin($account_id, $user_id, $social_account_information = null)
@@ -219,7 +219,7 @@ class AuthenticationApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information = null)
@@ -306,7 +306,7 @@ class AuthenticationApi
      *
      * Creates an authorization token.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\OauthAccess
      */
     public function getOAuthToken()
@@ -320,7 +320,7 @@ class AuthenticationApi
      *
      * Creates an authorization token.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\OauthAccess, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOAuthTokenWithHttpInfo()
@@ -384,7 +384,7 @@ class AuthenticationApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSocialIdResult
      */
     public function listSocialLogins($account_id, $user_id)
@@ -400,7 +400,7 @@ class AuthenticationApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSocialIdResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSocialLoginsWithHttpInfo($account_id, $user_id)
@@ -487,7 +487,7 @@ class AuthenticationApi
      * Gets login information for a specified user.
      *
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LoginInformation
      */
     public function login(AuthenticationApi\LoginOptions $options = null)
@@ -502,7 +502,7 @@ class AuthenticationApi
      * Gets login information for a specified user.
      *
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LoginInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function loginWithHttpInfo(AuthenticationApi\LoginOptions $options = null)
@@ -584,7 +584,7 @@ class AuthenticationApi
      *
      * Revokes an authorization token.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function revokeOAuthToken()
@@ -598,7 +598,7 @@ class AuthenticationApi
      *
      * Revokes an authorization token.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function revokeOAuthTokenWithHttpInfo()
@@ -658,7 +658,7 @@ class AuthenticationApi
      *
     * @param string $login_part Currently, only the value **password** is supported.
      * @param \DocuSign\eSign\Model\UserPasswordInformation $user_password_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function updatePassword($login_part, $user_password_information = null)
@@ -674,7 +674,7 @@ class AuthenticationApi
      *
     * @param string $login_part Currently, only the value **password** is supported.
      * @param \DocuSign\eSign\Model\UserPasswordInformation $user_password_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePasswordWithHttpInfo($login_part, $user_password_information = null)
@@ -752,7 +752,7 @@ class AuthenticationApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function updateSocialLogin($account_id, $user_id, $social_account_information = null)
@@ -769,7 +769,7 @@ class AuthenticationApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information = null)

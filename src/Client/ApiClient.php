@@ -70,7 +70,7 @@ class ApiClient
 
     /**
      * oAuth
-     *
+     *\DocuSign\eSign\Client\ApiException
      * @var OAuth
      */
     protected $oAuth;
