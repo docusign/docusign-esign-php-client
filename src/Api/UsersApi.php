@@ -479,7 +479,7 @@ class UpdateSignatureOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -544,7 +544,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformationList
      */
     public function callList($account_id, UsersApi\ListOptions $options = null)
@@ -560,7 +560,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformationList, HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($account_id, UsersApi\ListOptions $options = null)
@@ -680,7 +680,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\NewUsersDefinition $new_users_definition  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NewUsersSummary
      */
     public function create($account_id, $new_users_definition = null)
@@ -696,7 +696,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\NewUsersDefinition $new_users_definition  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NewUsersSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($account_id, $new_users_definition = null)
@@ -778,7 +778,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignaturesInformation
      */
     public function createSignatures($account_id, $user_id, $user_signatures_information = null)
@@ -795,7 +795,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information = null)
@@ -889,7 +889,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UsersResponse
      */
     public function delete($account_id, $user_info_list = null, UsersApi\DeleteOptions $options = null)
@@ -906,7 +906,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWithHttpInfo($account_id, $user_info_list = null, UsersApi\DeleteOptions $options = null)
@@ -995,7 +995,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
     public function deleteContactWithId($account_id, $contact_id)
@@ -1011,7 +1011,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteContactWithIdWithHttpInfo($account_id, $contact_id)
@@ -1099,7 +1099,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
     public function deleteContacts($account_id, $contact_mod_request = null)
@@ -1115,7 +1115,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteContactsWithHttpInfo($account_id, $contact_mod_request = null)
@@ -1197,7 +1197,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomSettingsInformation
      */
     public function deleteCustomSettings($account_id, $user_id, $custom_settings_information = null)
@@ -1214,7 +1214,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information = null)
@@ -1307,7 +1307,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteProfileImage($account_id, $user_id)
@@ -1323,7 +1323,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProfileImageWithHttpInfo($account_id, $user_id)
@@ -1408,7 +1408,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteSignature($account_id, $signature_id, $user_id)
@@ -1425,7 +1425,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteSignatureWithHttpInfo($account_id, $signature_id, $user_id)
@@ -1523,7 +1523,7 @@ class UsersApi
     * @param string $image_type One of **signature_image** or **initials_image**.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
     public function deleteSignatureImage($account_id, $image_type, $signature_id, $user_id)
@@ -1541,7 +1541,7 @@ class UsersApi
     * @param string $image_type One of **signature_image** or **initials_image**.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id)
@@ -1653,7 +1653,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactGetResponse
      */
     public function getContactById($account_id, $contact_id)
@@ -1669,7 +1669,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContactByIdWithHttpInfo($account_id, $contact_id)
@@ -1758,7 +1758,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformation
      */
     public function getInformation($account_id, $user_id, UsersApi\GetInformationOptions $options = null)
@@ -1775,7 +1775,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInformationWithHttpInfo($account_id, $user_id, UsersApi\GetInformationOptions $options = null)
@@ -1875,7 +1875,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserProfile
      */
     public function getProfile($account_id, $user_id)
@@ -1891,7 +1891,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProfileWithHttpInfo($account_id, $user_id)
@@ -1980,7 +1980,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \SplFileObject
      */
     public function getProfileImage($account_id, $user_id, UsersApi\GetProfileImageOptions $options = null)
@@ -1997,7 +1997,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProfileImageWithHttpInfo($account_id, $user_id, UsersApi\GetProfileImageOptions $options = null)
@@ -2093,7 +2093,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSettingsInformation
      */
     public function getSettings($account_id, $user_id)
@@ -2109,7 +2109,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSettingsWithHttpInfo($account_id, $user_id)
@@ -2198,7 +2198,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
     public function getSignature($account_id, $signature_id, $user_id)
@@ -2215,7 +2215,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureWithHttpInfo($account_id, $signature_id, $user_id)
@@ -2318,7 +2318,7 @@ class UsersApi
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \SplFileObject
      */
     public function getSignatureImage($account_id, $image_type, $signature_id, $user_id, UsersApi\GetSignatureImageOptions $options = null)
@@ -2337,7 +2337,7 @@ class UsersApi
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, UsersApi\GetSignatureImageOptions $options = null)
@@ -2457,7 +2457,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomSettingsInformation
      */
     public function listCustomSettings($account_id, $user_id)
@@ -2473,7 +2473,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCustomSettingsWithHttpInfo($account_id, $user_id)
@@ -2562,7 +2562,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignaturesInformation
      */
     public function listSignatures($account_id, $user_id, UsersApi\ListSignaturesOptions $options = null)
@@ -2579,7 +2579,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSignaturesWithHttpInfo($account_id, $user_id, UsersApi\ListSignaturesOptions $options = null)
@@ -2675,7 +2675,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
     public function postContacts($account_id, $contact_mod_request = null)
@@ -2691,7 +2691,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function postContactsWithHttpInfo($account_id, $contact_mod_request = null)
@@ -2772,7 +2772,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
     public function putContacts($account_id, $contact_mod_request = null)
@@ -2788,7 +2788,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function putContactsWithHttpInfo($account_id, $contact_mod_request = null)
@@ -2870,7 +2870,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomSettingsInformation
      */
     public function updateCustomSettings($account_id, $user_id, $custom_settings_information = null)
@@ -2887,7 +2887,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information = null)
@@ -2981,7 +2981,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserProfile $user_profile  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function updateProfile($account_id, $user_id, $user_profile = null)
@@ -2998,7 +2998,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserProfile $user_profile  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProfileWithHttpInfo($account_id, $user_id, $user_profile = null)
@@ -3087,7 +3087,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function updateProfileImage($account_id, $user_id)
@@ -3103,7 +3103,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProfileImageWithHttpInfo($account_id, $user_id)
@@ -3188,7 +3188,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function updateSettings($account_id, $user_id, $user_settings_information = null)
@@ -3205,7 +3205,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSettingsWithHttpInfo($account_id, $user_id, $user_settings_information = null)
@@ -3297,7 +3297,7 @@ class UsersApi
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignatureDefinition $user_signature_definition  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
     public function updateSignature($account_id, $signature_id, $user_id, $user_signature_definition = null, UsersApi\UpdateSignatureOptions $options = null)
@@ -3316,7 +3316,7 @@ class UsersApi
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignatureDefinition $user_signature_definition  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSignatureWithHttpInfo($account_id, $signature_id, $user_id, $user_signature_definition = null, UsersApi\UpdateSignatureOptions $options = null)
@@ -3431,7 +3431,7 @@ class UsersApi
     * @param string $image_type One of **signature_image** or **initials_image**.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
     public function updateSignatureImage($account_id, $image_type, $signature_id, $user_id)
@@ -3449,7 +3449,7 @@ class UsersApi
     * @param string $image_type One of **signature_image** or **initials_image**.
     * @param string $signature_id The ID of the signature being accessed.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id)
@@ -3562,7 +3562,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignaturesInformation
      */
     public function updateSignatures($account_id, $user_id, $user_signatures_information = null)
@@ -3579,7 +3579,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information = null)
@@ -3673,7 +3673,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserInformation $user_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformation
      */
     public function updateUser($account_id, $user_id, $user_information = null)
@@ -3690,7 +3690,7 @@ class UsersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserInformation $user_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateUserWithHttpInfo($account_id, $user_id, $user_information = null)
@@ -3783,7 +3783,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInformationList $user_information_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformationList
      */
     public function updateUsers($account_id, $user_information_list = null)
@@ -3799,7 +3799,7 @@ class UsersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInformationList $user_information_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformationList, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateUsersWithHttpInfo($account_id, $user_information_list = null)

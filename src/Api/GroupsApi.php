@@ -189,7 +189,7 @@ class ListGroupsOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -254,7 +254,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
     public function createGroups($account_id, $group_information = null)
@@ -270,7 +270,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function createGroupsWithHttpInfo($account_id, $group_information = null)
@@ -352,7 +352,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
     public function deleteBrands($account_id, $group_id, $brands_request = null)
@@ -369,7 +369,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteBrandsWithHttpInfo($account_id, $group_id, $brands_request = null)
@@ -463,7 +463,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UsersResponse
      */
     public function deleteGroupUsers($account_id, $group_id, $user_info_list = null)
@@ -480,7 +480,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteGroupUsersWithHttpInfo($account_id, $group_id, $user_info_list = null)
@@ -573,7 +573,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
     public function deleteGroups($account_id, $group_information = null)
@@ -589,7 +589,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteGroupsWithHttpInfo($account_id, $group_information = null)
@@ -670,7 +670,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
     public function getBrands($account_id, $group_id)
@@ -686,7 +686,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBrandsWithHttpInfo($account_id, $group_id)
@@ -775,7 +775,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UsersResponse
      */
     public function listGroupUsers($account_id, $group_id, GroupsApi\ListGroupUsersOptions $options = null)
@@ -792,7 +792,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listGroupUsersWithHttpInfo($account_id, $group_id, GroupsApi\ListGroupUsersOptions $options = null)
@@ -892,7 +892,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
     public function listGroups($account_id, GroupsApi\ListGroupsOptions $options = null)
@@ -908,7 +908,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function listGroupsWithHttpInfo($account_id, GroupsApi\ListGroupsOptions $options = null)
@@ -1005,7 +1005,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
     public function updateBrands($account_id, $group_id, $brands_request = null)
@@ -1022,7 +1022,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateBrandsWithHttpInfo($account_id, $group_id, $brands_request = null)
@@ -1116,7 +1116,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UsersResponse
      */
     public function updateGroupUsers($account_id, $group_id, $user_info_list = null)
@@ -1133,7 +1133,7 @@ class GroupsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $group_id The ID of the group being accessed.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateGroupUsersWithHttpInfo($account_id, $group_id, $user_info_list = null)
@@ -1226,7 +1226,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
     public function updateGroups($account_id, $group_information = null)
@@ -1242,7 +1242,7 @@ class GroupsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateGroupsWithHttpInfo($account_id, $group_information = null)

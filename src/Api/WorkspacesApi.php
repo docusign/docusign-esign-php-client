@@ -392,7 +392,7 @@ class ListWorkspaceFolderItemsOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -457,7 +457,7 @@ class WorkspacesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
     public function createWorkspace($account_id, $workspace = null)
@@ -473,7 +473,7 @@ class WorkspacesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWorkspaceWithHttpInfo($account_id, $workspace = null)
@@ -555,7 +555,7 @@ class WorkspacesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
     public function createWorkspaceFile($account_id, $folder_id, $workspace_id)
@@ -572,7 +572,7 @@ class WorkspacesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWorkspaceFileWithHttpInfo($account_id, $folder_id, $workspace_id)
@@ -672,7 +672,7 @@ class WorkspacesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
     public function deleteWorkspace($account_id, $workspace_id)
@@ -688,7 +688,7 @@ class WorkspacesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWorkspaceWithHttpInfo($account_id, $workspace_id)
@@ -778,7 +778,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteWorkspaceFolderItems($account_id, $folder_id, $workspace_id, $workspace_item_list = null)
@@ -796,7 +796,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, $workspace_item_list = null)
@@ -897,7 +897,7 @@ class WorkspacesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
     public function getWorkspace($account_id, $workspace_id)
@@ -913,7 +913,7 @@ class WorkspacesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWorkspaceWithHttpInfo($account_id, $workspace_id)
@@ -1004,7 +1004,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function getWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\GetWorkspaceFileOptions $options = null)
@@ -1023,7 +1023,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\GetWorkspaceFileOptions $options = null)
@@ -1146,7 +1146,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
     public function listWorkspaceFilePages($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFilePagesOptions $options = null)
@@ -1165,7 +1165,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
     public function listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFilePagesOptions $options = null)
@@ -1303,7 +1303,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceFolderContents
      */
     public function listWorkspaceFolderItems($account_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null)
@@ -1321,7 +1321,7 @@ class WorkspacesApi
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceFolderContents, HTTP status code, HTTP response headers (array of strings)
      */
     public function listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null)
@@ -1452,7 +1452,7 @@ class WorkspacesApi
      * List Workspaces
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceList
      */
     public function listWorkspaces($account_id)
@@ -1467,7 +1467,7 @@ class WorkspacesApi
      * List Workspaces
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listWorkspacesWithHttpInfo($account_id)
@@ -1544,7 +1544,7 @@ class WorkspacesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
     public function updateWorkspace($account_id, $workspace_id, $workspace = null)
@@ -1561,7 +1561,7 @@ class WorkspacesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWorkspaceWithHttpInfo($account_id, $workspace_id, $workspace = null)
@@ -1656,7 +1656,7 @@ class WorkspacesApi
     * @param string $file_id Specifies the room file ID GUID.
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
     public function updateWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id)
@@ -1674,7 +1674,7 @@ class WorkspacesApi
     * @param string $file_id Specifies the room file ID GUID.
     * @param string $folder_id The ID of the folder being accessed.
     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id)

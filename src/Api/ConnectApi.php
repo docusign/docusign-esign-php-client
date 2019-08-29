@@ -320,7 +320,7 @@ class ListUsersOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -385,7 +385,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectCustomConfiguration
      */
     public function createConfiguration($account_id, $connect_custom_configuration = null)
@@ -401,7 +401,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectCustomConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function createConfigurationWithHttpInfo($account_id, $connect_custom_configuration = null)
@@ -482,7 +482,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $connect_id The ID of the custom Connect configuration being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteConfiguration($account_id, $connect_id)
@@ -498,7 +498,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $connect_id The ID of the custom Connect configuration being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteConfigurationWithHttpInfo($account_id, $connect_id)
@@ -582,7 +582,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $failure_id The ID of the failed connect log entry.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteEventFailureLog($account_id, $failure_id)
@@ -598,7 +598,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $failure_id The ID of the failed connect log entry.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEventFailureLogWithHttpInfo($account_id, $failure_id)
@@ -682,7 +682,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $log_id The ID of the connect log entry
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteEventLog($account_id, $log_id)
@@ -698,7 +698,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $log_id The ID of the connect log entry
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEventLogWithHttpInfo($account_id, $log_id)
@@ -781,7 +781,7 @@ class ConnectApi
      * Gets a list of Connect log entries.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteEventLogs($account_id)
@@ -796,7 +796,7 @@ class ConnectApi
      * Gets a list of Connect log entries.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEventLogsWithHttpInfo($account_id)
@@ -868,7 +868,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $connect_id The ID of the custom Connect configuration being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectConfigResults
      */
     public function getConfiguration($account_id, $connect_id)
@@ -884,7 +884,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $connect_id The ID of the custom Connect configuration being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectConfigResults, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConfigurationWithHttpInfo($account_id, $connect_id)
@@ -973,7 +973,7 @@ class ConnectApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $log_id The ID of the connect log entry
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLog
      */
     public function getEventLog($account_id, $log_id, ConnectApi\GetEventLogOptions $options = null)
@@ -990,7 +990,7 @@ class ConnectApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $log_id The ID of the connect log entry
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLog, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventLogWithHttpInfo($account_id, $log_id, ConnectApi\GetEventLogOptions $options = null)
@@ -1085,7 +1085,7 @@ class ConnectApi
      * Get Connect Configuration Information
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectConfigResults
      */
     public function listConfigurations($account_id)
@@ -1100,7 +1100,7 @@ class ConnectApi
      * Get Connect Configuration Information
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectConfigResults, HTTP status code, HTTP response headers (array of strings)
      */
     public function listConfigurationsWithHttpInfo($account_id)
@@ -1176,7 +1176,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLogs
      */
     public function listEventFailureLogs($account_id, ConnectApi\ListEventFailureLogsOptions $options = null)
@@ -1192,7 +1192,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLogs, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEventFailureLogsWithHttpInfo($account_id, ConnectApi\ListEventFailureLogsOptions $options = null)
@@ -1280,7 +1280,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLogs
      */
     public function listEventLogs($account_id, ConnectApi\ListEventLogsOptions $options = null)
@@ -1296,7 +1296,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLogs, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEventLogsWithHttpInfo($account_id, ConnectApi\ListEventLogsOptions $options = null)
@@ -1385,7 +1385,7 @@ class ConnectApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $connect_id The ID of the custom Connect configuration being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\IntegratedUserInfoList
      */
     public function listUsers($account_id, $connect_id, ConnectApi\ListUsersOptions $options = null)
@@ -1402,7 +1402,7 @@ class ConnectApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $connect_id The ID of the custom Connect configuration being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\IntegratedUserInfoList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listUsersWithHttpInfo($account_id, $connect_id, ConnectApi\ListUsersOptions $options = null)
@@ -1518,7 +1518,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectFailureResults
      */
     public function retryEventForEnvelope($account_id, $envelope_id)
@@ -1534,7 +1534,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectFailureResults, HTTP status code, HTTP response headers (array of strings)
      */
     public function retryEventForEnvelopeWithHttpInfo($account_id, $envelope_id)
@@ -1622,7 +1622,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectFailureFilter $connect_failure_filter  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectFailureResults
      */
     public function retryEventForEnvelopes($account_id, $connect_failure_filter = null)
@@ -1638,7 +1638,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectFailureFilter $connect_failure_filter  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectFailureResults, HTTP status code, HTTP response headers (array of strings)
      */
     public function retryEventForEnvelopesWithHttpInfo($account_id, $connect_failure_filter = null)
@@ -1719,7 +1719,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectCustomConfiguration
      */
     public function updateConfiguration($account_id, $connect_custom_configuration = null)
@@ -1735,7 +1735,7 @@ class ConnectApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectCustomConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateConfigurationWithHttpInfo($account_id, $connect_custom_configuration = null)

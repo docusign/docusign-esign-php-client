@@ -242,7 +242,7 @@ class ListPowerFormsOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -307,7 +307,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
     public function createPowerForm($account_id, $power_form = null)
@@ -323,7 +323,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPowerFormWithHttpInfo($account_id, $power_form = null)
@@ -404,7 +404,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deletePowerForm($account_id, $power_form_id)
@@ -420,7 +420,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePowerFormWithHttpInfo($account_id, $power_form_id)
@@ -504,7 +504,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
     public function deletePowerForms($account_id, $power_forms_request = null)
@@ -520,7 +520,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePowerFormsWithHttpInfo($account_id, $power_forms_request = null)
@@ -601,7 +601,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
     public function getPowerForm($account_id, $power_form_id)
@@ -617,7 +617,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPowerFormWithHttpInfo($account_id, $power_form_id)
@@ -706,7 +706,7 @@ class PowerFormsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsFormDataResponse
      */
     public function getPowerFormData($account_id, $power_form_id, PowerFormsApi\GetPowerFormDataOptions $options = null)
@@ -723,7 +723,7 @@ class PowerFormsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsFormDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPowerFormDataWithHttpInfo($account_id, $power_form_id, PowerFormsApi\GetPowerFormDataOptions $options = null)
@@ -827,7 +827,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormSendersResponse
      */
     public function listPowerFormSenders($account_id, PowerFormsApi\ListPowerFormSendersOptions $options = null)
@@ -843,7 +843,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormSendersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPowerFormSendersWithHttpInfo($account_id, PowerFormsApi\ListPowerFormSendersOptions $options = null)
@@ -927,7 +927,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
     public function listPowerForms($account_id, PowerFormsApi\ListPowerFormsOptions $options = null)
@@ -943,7 +943,7 @@ class PowerFormsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPowerFormsWithHttpInfo($account_id, PowerFormsApi\ListPowerFormsOptions $options = null)
@@ -1040,7 +1040,7 @@ class PowerFormsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
     public function updatePowerForm($account_id, $power_form_id, $power_form = null)
@@ -1057,7 +1057,7 @@ class PowerFormsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePowerFormWithHttpInfo($account_id, $power_form_id, $power_form = null)

@@ -61,7 +61,7 @@ class ListOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -126,7 +126,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadataList
      */
     public function callList($account_id, CustomTabsApi\ListOptions $options = null)
@@ -142,7 +142,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadataList, HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($account_id, CustomTabsApi\ListOptions $options = null)
@@ -226,7 +226,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
      */
     public function create($account_id, $tab_metadata = null)
@@ -242,7 +242,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($account_id, $tab_metadata = null)
@@ -323,7 +323,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function delete($account_id, $custom_tab_id)
@@ -339,7 +339,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWithHttpInfo($account_id, $custom_tab_id)
@@ -423,7 +423,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
      */
     public function get($account_id, $custom_tab_id)
@@ -439,7 +439,7 @@ class CustomTabsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($account_id, $custom_tab_id)
@@ -528,7 +528,7 @@ class CustomTabsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_tab_id 
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
      */
     public function update($account_id, $custom_tab_id, $tab_metadata = null)
@@ -545,7 +545,7 @@ class CustomTabsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_tab_id 
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWithHttpInfo($account_id, $custom_tab_id, $tab_metadata = null)

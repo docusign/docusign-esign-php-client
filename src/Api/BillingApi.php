@@ -245,7 +245,7 @@ class UpdatePlanOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -309,7 +309,7 @@ class BillingApi
      * Get the billing plan details.
      *
     * @param string $billing_plan_id The ID of the billing plan being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlanResponse
      */
     public function getBillingPlan($billing_plan_id)
@@ -324,7 +324,7 @@ class BillingApi
      * Get the billing plan details.
      *
     * @param string $billing_plan_id The ID of the billing plan being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlanResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBillingPlanWithHttpInfo($billing_plan_id)
@@ -399,7 +399,7 @@ class BillingApi
      * Get metadata for a given credit card.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CreditCardInformation
      */
     public function getCreditCardInfo($account_id)
@@ -414,7 +414,7 @@ class BillingApi
      * Get metadata for a given credit card.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CreditCardInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditCardInfoWithHttpInfo($account_id)
@@ -490,7 +490,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $invoice_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoice
      */
     public function getInvoice($account_id, $invoice_id)
@@ -506,7 +506,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $invoice_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoiceWithHttpInfo($account_id, $invoice_id)
@@ -594,7 +594,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $payment_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentItem
      */
     public function getPayment($account_id, $payment_id)
@@ -610,7 +610,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $payment_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPaymentWithHttpInfo($account_id, $payment_id)
@@ -698,7 +698,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountBillingPlanResponse
      */
     public function getPlan($account_id, BillingApi\GetPlanOptions $options = null)
@@ -714,7 +714,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountBillingPlanResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlanWithHttpInfo($account_id, BillingApi\GetPlanOptions $options = null)
@@ -804,7 +804,7 @@ class BillingApi
      *
      * Gets the list of available billing plans.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlansResponse
      */
     public function listBillingPlans()
@@ -818,7 +818,7 @@ class BillingApi
      *
      * Gets the list of available billing plans.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlansResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listBillingPlansWithHttpInfo()
@@ -882,7 +882,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoicesResponse
      */
     public function listInvoices($account_id, BillingApi\ListInvoicesOptions $options = null)
@@ -898,7 +898,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoicesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInvoicesWithHttpInfo($account_id, BillingApi\ListInvoicesOptions $options = null)
@@ -985,7 +985,7 @@ class BillingApi
      * Get a list of past due invoices.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoicesSummary
      */
     public function listInvoicesPastDue($account_id)
@@ -1000,7 +1000,7 @@ class BillingApi
      * Get a list of past due invoices.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoicesSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInvoicesPastDueWithHttpInfo($account_id)
@@ -1076,7 +1076,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentsResponse
      */
     public function listPayments($account_id, BillingApi\ListPaymentsOptions $options = null)
@@ -1092,7 +1092,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPaymentsWithHttpInfo($account_id, BillingApi\ListPaymentsOptions $options = null)
@@ -1180,7 +1180,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPaymentRequest $billing_payment_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentResponse
      */
     public function makePayment($account_id, $billing_payment_request = null)
@@ -1196,7 +1196,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPaymentRequest $billing_payment_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function makePaymentWithHttpInfo($account_id, $billing_payment_request = null)
@@ -1277,7 +1277,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PurchasedEnvelopesInformation $purchased_envelopes_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function purchaseEnvelopes($account_id, $purchased_envelopes_information = null)
@@ -1293,7 +1293,7 @@ class BillingApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PurchasedEnvelopesInformation $purchased_envelopes_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function purchaseEnvelopesWithHttpInfo($account_id, $purchased_envelopes_information = null)
@@ -1371,7 +1371,7 @@ class BillingApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPlanInformation $billing_plan_information  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlanUpdateResponse
      */
     public function updatePlan($account_id, $billing_plan_information = null, BillingApi\UpdatePlanOptions $options = null)
@@ -1388,7 +1388,7 @@ class BillingApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPlanInformation $billing_plan_information  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlanUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePlanWithHttpInfo($account_id, $billing_plan_information = null, BillingApi\UpdatePlanOptions $options = null)

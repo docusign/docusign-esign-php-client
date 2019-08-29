@@ -812,7 +812,7 @@ class UpdateSharedAccessOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -877,7 +877,7 @@ class AccountsApi
      *
      * @param \DocuSign\eSign\Model\NewAccountDefinition $new_account_definition  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NewAccountSummary
      */
     public function create($new_account_definition = null, AccountsApi\CreateOptions $options = null)
@@ -893,7 +893,7 @@ class AccountsApi
      *
      * @param \DocuSign\eSign\Model\NewAccountDefinition $new_account_definition  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NewAccountSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($new_account_definition = null, AccountsApi\CreateOptions $options = null)
@@ -970,7 +970,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
     public function createBrand($account_id, $brand = null)
@@ -986,7 +986,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createBrandWithHttpInfo($account_id, $brand = null)
@@ -1068,7 +1068,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
     public function createCustomField($account_id, $custom_field = null, AccountsApi\CreateCustomFieldOptions $options = null)
@@ -1085,7 +1085,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomFieldWithHttpInfo($account_id, $custom_field = null, AccountsApi\CreateCustomFieldOptions $options = null)
@@ -1175,7 +1175,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
     public function createPermissionProfile($account_id, $permission_profile = null, AccountsApi\CreatePermissionProfileOptions $options = null)
@@ -1192,7 +1192,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPermissionProfileWithHttpInfo($account_id, $permission_profile = null, AccountsApi\CreatePermissionProfileOptions $options = null)
@@ -1280,7 +1280,7 @@ class AccountsApi
      * Deletes the specified account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function delete($account_id)
@@ -1295,7 +1295,7 @@ class AccountsApi
      * Deletes the specified account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWithHttpInfo($account_id)
@@ -1367,7 +1367,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteBrand($account_id, $brand_id)
@@ -1383,7 +1383,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteBrandWithHttpInfo($account_id, $brand_id)
@@ -1468,7 +1468,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteBrandLogoByType($account_id, $brand_id, $logo_type)
@@ -1485,7 +1485,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type)
@@ -1581,7 +1581,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
     public function deleteBrands($account_id, $brands_request = null)
@@ -1597,7 +1597,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteBrandsWithHttpInfo($account_id, $brands_request = null)
@@ -1679,7 +1679,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $recipient_part 
      * @param \DocuSign\eSign\Model\CaptiveRecipientInformation $captive_recipient_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CaptiveRecipientInformation
      */
     public function deleteCaptiveRecipient($account_id, $recipient_part, $captive_recipient_information = null)
@@ -1696,7 +1696,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $recipient_part 
      * @param \DocuSign\eSign\Model\CaptiveRecipientInformation $captive_recipient_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CaptiveRecipientInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCaptiveRecipientWithHttpInfo($account_id, $recipient_part, $captive_recipient_information = null)
@@ -1790,7 +1790,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_field_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteCustomField($account_id, $custom_field_id, AccountsApi\DeleteCustomFieldOptions $options = null)
@@ -1807,7 +1807,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $custom_field_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, AccountsApi\DeleteCustomFieldOptions $options = null)
@@ -1898,7 +1898,7 @@ class AccountsApi
      * Deletes configuration information for the eNote eOriginal integration.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteENoteConfiguration($account_id)
@@ -1913,7 +1913,7 @@ class AccountsApi
      * Deletes configuration information for the eNote eOriginal integration.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteENoteConfigurationWithHttpInfo($account_id)
@@ -1985,7 +1985,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $permission_profile_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deletePermissionProfile($account_id, $permission_profile_id)
@@ -2001,7 +2001,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $permission_profile_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePermissionProfileWithHttpInfo($account_id, $permission_profile_id)
@@ -2084,7 +2084,7 @@ class AccountsApi
      * Get the list of identity verification options for an account
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountIdentityVerificationResponse
      */
     public function getAccountIdentityVerification($account_id)
@@ -2099,7 +2099,7 @@ class AccountsApi
      * Get the list of identity verification options for an account
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountIdentityVerificationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountIdentityVerificationWithHttpInfo($account_id)
@@ -2175,7 +2175,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountInformation
      */
     public function getAccountInformation($account_id, AccountsApi\GetAccountInformationOptions $options = null)
@@ -2191,7 +2191,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountInformationWithHttpInfo($account_id, AccountsApi\GetAccountInformationOptions $options = null)
@@ -2274,7 +2274,7 @@ class AccountsApi
      * Returns tab settings list for specified account
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabAccountSettings
      */
     public function getAccountTabSettings($account_id)
@@ -2289,7 +2289,7 @@ class AccountsApi
      * Returns tab settings list for specified account
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabAccountSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountTabSettingsWithHttpInfo($account_id)
@@ -2364,7 +2364,7 @@ class AccountsApi
      * Get all payment gateway account for the provided accountId
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PaymentGatewayAccountsInfo
      */
     public function getAllPaymentGatewayAccounts($account_id)
@@ -2379,7 +2379,7 @@ class AccountsApi
      * Get all payment gateway account for the provided accountId
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PaymentGatewayAccountsInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllPaymentGatewayAccountsWithHttpInfo($account_id)
@@ -2455,7 +2455,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingChargeResponse
      */
     public function getBillingCharges($account_id, AccountsApi\GetBillingChargesOptions $options = null)
@@ -2471,7 +2471,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingChargeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBillingChargesWithHttpInfo($account_id, AccountsApi\GetBillingChargesOptions $options = null)
@@ -2556,7 +2556,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
     public function getBrand($account_id, $brand_id, AccountsApi\GetBrandOptions $options = null)
@@ -2573,7 +2573,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBrandWithHttpInfo($account_id, $brand_id, AccountsApi\GetBrandOptions $options = null)
@@ -2673,7 +2673,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function getBrandExportFile($account_id, $brand_id)
@@ -2689,7 +2689,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBrandExportFileWithHttpInfo($account_id, $brand_id)
@@ -2774,7 +2774,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \SplFileObject
      */
     public function getBrandLogoByType($account_id, $brand_id, $logo_type)
@@ -2791,7 +2791,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type)
@@ -2891,7 +2891,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandResourcesList
      */
     public function getBrandResources($account_id, $brand_id)
@@ -2907,7 +2907,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandResourcesList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBrandResourcesWithHttpInfo($account_id, $brand_id)
@@ -2997,7 +2997,7 @@ class AccountsApi
     * @param string $brand_id The unique identifier of a brand.
     * @param string $resource_content_type 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function getBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, AccountsApi\GetBrandResourcesByContentTypeOptions $options = null)
@@ -3015,7 +3015,7 @@ class AccountsApi
     * @param string $brand_id The unique identifier of a brand.
     * @param string $resource_content_type 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, AccountsApi\GetBrandResourcesByContentTypeOptions $options = null)
@@ -3123,7 +3123,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
     public function getConsumerDisclosure($account_id, $lang_code)
@@ -3139,7 +3139,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsumerDisclosureWithHttpInfo($account_id, $lang_code)
@@ -3227,7 +3227,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
     public function getConsumerDisclosureDefault($account_id, AccountsApi\GetConsumerDisclosureDefaultOptions $options = null)
@@ -3243,7 +3243,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsumerDisclosureDefaultWithHttpInfo($account_id, AccountsApi\GetConsumerDisclosureDefaultOptions $options = null)
@@ -3326,7 +3326,7 @@ class AccountsApi
      * Returns the configuration information for the eNote eOriginal integration.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ENoteConfiguration
      */
     public function getENoteConfiguration($account_id)
@@ -3341,7 +3341,7 @@ class AccountsApi
      * Returns the configuration information for the eNote eOriginal integration.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ENoteConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function getENoteConfigurationWithHttpInfo($account_id)
@@ -3416,7 +3416,7 @@ class AccountsApi
      * Get the password rules
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountPasswordRules
      */
     public function getPasswordRules($account_id)
@@ -3431,7 +3431,7 @@ class AccountsApi
      * Get the password rules
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPasswordRulesWithHttpInfo($account_id)
@@ -3505,7 +3505,7 @@ class AccountsApi
      *
      * Get membership account password rules
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserPasswordRules
      */
     public function getPasswordRules_0()
@@ -3519,7 +3519,7 @@ class AccountsApi
      *
      * Get membership account password rules
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPasswordRules_0WithHttpInfo()
@@ -3584,7 +3584,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $permission_profile_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
     public function getPermissionProfile($account_id, $permission_profile_id, AccountsApi\GetPermissionProfileOptions $options = null)
@@ -3601,7 +3601,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $permission_profile_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPermissionProfileWithHttpInfo($account_id, $permission_profile_id, AccountsApi\GetPermissionProfileOptions $options = null)
@@ -3695,7 +3695,7 @@ class AccountsApi
      *
      * Retrieves the account provisioning information for the account.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ProvisioningInformation
      */
     public function getProvisioning()
@@ -3709,7 +3709,7 @@ class AccountsApi
      *
      * Retrieves the account provisioning information for the account.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ProvisioningInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProvisioningWithHttpInfo()
@@ -3772,7 +3772,7 @@ class AccountsApi
      * Gets list of supported languages for recipient language setting.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SupportedLanguages
      */
     public function getSupportedLanguages($account_id)
@@ -3787,7 +3787,7 @@ class AccountsApi
      * Gets list of supported languages for recipient language setting.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SupportedLanguages, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSupportedLanguagesWithHttpInfo($account_id)
@@ -3862,7 +3862,7 @@ class AccountsApi
      * Get watermark information.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
     public function getWatermark($account_id)
@@ -3877,7 +3877,7 @@ class AccountsApi
      * Get watermark information.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWatermarkWithHttpInfo($account_id)
@@ -3953,7 +3953,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
     public function getWatermarkPreview($account_id, $watermark = null)
@@ -3969,7 +3969,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWatermarkPreviewWithHttpInfo($account_id, $watermark = null)
@@ -4050,7 +4050,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
     public function listBrands($account_id, AccountsApi\ListBrandsOptions $options = null)
@@ -4066,7 +4066,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listBrandsWithHttpInfo($account_id, AccountsApi\ListBrandsOptions $options = null)
@@ -4153,7 +4153,7 @@ class AccountsApi
      * Gets a list of custom fields associated with the account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
     public function listCustomFields($account_id)
@@ -4168,7 +4168,7 @@ class AccountsApi
      * Gets a list of custom fields associated with the account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCustomFieldsWithHttpInfo($account_id)
@@ -4244,7 +4244,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfileInformation
      */
     public function listPermissions($account_id, AccountsApi\ListPermissionsOptions $options = null)
@@ -4260,7 +4260,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfileInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPermissionsWithHttpInfo($account_id, AccountsApi\ListPermissionsOptions $options = null)
@@ -4344,7 +4344,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientNamesResponse
      */
     public function listRecipientNamesByEmail($account_id, AccountsApi\ListRecipientNamesByEmailOptions $options = null)
@@ -4360,7 +4360,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientNamesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listRecipientNamesByEmailWithHttpInfo($account_id, AccountsApi\ListRecipientNamesByEmailOptions $options = null)
@@ -4443,7 +4443,7 @@ class AccountsApi
      * Gets account settings information.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSettingsInformation
      */
     public function listSettings($account_id)
@@ -4458,7 +4458,7 @@ class AccountsApi
      * Gets account settings information.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSettingsWithHttpInfo($account_id)
@@ -4534,7 +4534,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
     public function listSharedAccess($account_id, AccountsApi\ListSharedAccessOptions $options = null)
@@ -4550,7 +4550,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSharedAccessWithHttpInfo($account_id, AccountsApi\ListSharedAccessOptions $options = null)
@@ -4661,7 +4661,7 @@ class AccountsApi
      * Returns Account available signature providers for specified account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignatureProviders
      */
     public function listSignatureProviders($account_id)
@@ -4676,7 +4676,7 @@ class AccountsApi
      * Returns Account available signature providers for specified account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignatureProviders, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSignatureProvidersWithHttpInfo($account_id)
@@ -4751,7 +4751,7 @@ class AccountsApi
      * Gets a list of unsupported file types.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FileTypeList
      */
     public function listUnsupportedFileTypes($account_id)
@@ -4766,7 +4766,7 @@ class AccountsApi
      * Gets a list of unsupported file types.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FileTypeList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listUnsupportedFileTypesWithHttpInfo($account_id)
@@ -4842,7 +4842,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabAccountSettings $tab_account_settings  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabAccountSettings
      */
     public function updateAccountTabSettings($account_id, $tab_account_settings = null)
@@ -4858,7 +4858,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabAccountSettings $tab_account_settings  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabAccountSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountTabSettingsWithHttpInfo($account_id, $tab_account_settings = null)
@@ -4940,7 +4940,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
     public function updateBrand($account_id, $brand_id, $brand = null)
@@ -4957,7 +4957,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateBrandWithHttpInfo($account_id, $brand_id, $brand = null)
@@ -5052,7 +5052,7 @@ class AccountsApi
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
      * @param string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function updateBrandLogoByType($account_id, $brand_id, $logo_type, $logo_file_bytes)
@@ -5070,7 +5070,7 @@ class AccountsApi
     * @param string $brand_id The unique identifier of a brand.
     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
      * @param string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type, $logo_file_bytes)
@@ -5176,7 +5176,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $resource_content_type 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandResources
      */
     public function updateBrandResourcesByContentType($account_id, $brand_id, $resource_content_type)
@@ -5193,7 +5193,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $resource_content_type 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandResources, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type)
@@ -5295,7 +5295,7 @@ class AccountsApi
     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
     public function updateConsumerDisclosure($account_id, $lang_code, $consumer_disclosure = null, AccountsApi\UpdateConsumerDisclosureOptions $options = null)
@@ -5313,7 +5313,7 @@ class AccountsApi
     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure = null, AccountsApi\UpdateConsumerDisclosureOptions $options = null)
@@ -5416,7 +5416,7 @@ class AccountsApi
     * @param string $custom_field_id 
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
     public function updateCustomField($account_id, $custom_field_id, $custom_field = null, AccountsApi\UpdateCustomFieldOptions $options = null)
@@ -5434,7 +5434,7 @@ class AccountsApi
     * @param string $custom_field_id 
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field = null, AccountsApi\UpdateCustomFieldOptions $options = null)
@@ -5535,7 +5535,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ENoteConfiguration $e_note_configuration  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ENoteConfiguration
      */
     public function updateENoteConfiguration($account_id, $e_note_configuration = null)
@@ -5551,7 +5551,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ENoteConfiguration $e_note_configuration  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ENoteConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateENoteConfigurationWithHttpInfo($account_id, $e_note_configuration = null)
@@ -5632,7 +5632,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountPasswordRules
      */
     public function updatePasswordRules($account_id, $account_password_rules = null)
@@ -5648,7 +5648,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePasswordRulesWithHttpInfo($account_id, $account_password_rules = null)
@@ -5731,7 +5731,7 @@ class AccountsApi
     * @param string $permission_profile_id 
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
     public function updatePermissionProfile($account_id, $permission_profile_id, $permission_profile = null, AccountsApi\UpdatePermissionProfileOptions $options = null)
@@ -5749,7 +5749,7 @@ class AccountsApi
     * @param string $permission_profile_id 
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $permission_profile = null, AccountsApi\UpdatePermissionProfileOptions $options = null)
@@ -5850,7 +5850,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function updateSettings($account_id, $account_settings_information = null)
@@ -5866,7 +5866,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSettingsWithHttpInfo($account_id, $account_settings_information = null)
@@ -5944,7 +5944,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSharedAccess $account_shared_access  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
     public function updateSharedAccess($account_id, $account_shared_access = null, AccountsApi\UpdateSharedAccessOptions $options = null)
@@ -5961,7 +5961,7 @@ class AccountsApi
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSharedAccess $account_shared_access  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSharedAccessWithHttpInfo($account_id, $account_shared_access = null, AccountsApi\UpdateSharedAccessOptions $options = null)
@@ -6054,7 +6054,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
     public function updateWatermark($account_id, $watermark = null)
@@ -6070,7 +6070,7 @@ class AccountsApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWatermarkWithHttpInfo($account_id, $watermark = null)

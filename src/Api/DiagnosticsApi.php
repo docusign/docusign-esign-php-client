@@ -61,7 +61,7 @@ class ListRequestLogsOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -124,7 +124,7 @@ class DiagnosticsApi
      *
      * Deletes the request log files.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function deleteRequestLogs()
@@ -138,7 +138,7 @@ class DiagnosticsApi
      *
      * Deletes the request log files.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteRequestLogsWithHttpInfo()
@@ -197,7 +197,7 @@ class DiagnosticsApi
      * Gets a request logging log file.
      *
     * @param string $request_log_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \SplFileObject
      */
     public function getRequestLog($request_log_id)
@@ -212,7 +212,7 @@ class DiagnosticsApi
      * Gets a request logging log file.
      *
     * @param string $request_log_id 
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRequestLogWithHttpInfo($request_log_id)
@@ -286,7 +286,7 @@ class DiagnosticsApi
      *
      * Gets the API request logging settings.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DiagnosticsSettingsInformation
      */
     public function getRequestLogSettings()
@@ -300,7 +300,7 @@ class DiagnosticsApi
      *
      * Gets the API request logging settings.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DiagnosticsSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRequestLogSettingsWithHttpInfo()
@@ -362,7 +362,7 @@ class DiagnosticsApi
      *
      * Lists resources for REST version specified
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ResourceInformation
      */
     public function getResources()
@@ -376,7 +376,7 @@ class DiagnosticsApi
      *
      * Lists resources for REST version specified
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ResourceInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getResourcesWithHttpInfo()
@@ -438,7 +438,7 @@ class DiagnosticsApi
      *
      * Retrieves the available REST API versions.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ServiceInformation
      */
     public function getService()
@@ -452,7 +452,7 @@ class DiagnosticsApi
      *
      * Retrieves the available REST API versions.
      *
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ServiceInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function getServiceWithHttpInfo()
@@ -515,7 +515,7 @@ class DiagnosticsApi
      * Gets the API request logging log files.
      *
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ApiRequestLogsResult
      */
     public function listRequestLogs(DiagnosticsApi\ListRequestLogsOptions $options = null)
@@ -530,7 +530,7 @@ class DiagnosticsApi
      * Gets the API request logging log files.
      *
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ApiRequestLogsResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function listRequestLogsWithHttpInfo(DiagnosticsApi\ListRequestLogsOptions $options = null)
@@ -601,7 +601,7 @@ class DiagnosticsApi
      * Enables or disables API request logging for troubleshooting.
      *
      * @param \DocuSign\eSign\Model\DiagnosticsSettingsInformation $diagnostics_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DiagnosticsSettingsInformation
      */
     public function updateRequestLogSettings($diagnostics_settings_information = null)
@@ -616,7 +616,7 @@ class DiagnosticsApi
      * Enables or disables API request logging for troubleshooting.
      *
      * @param \DocuSign\eSign\Model\DiagnosticsSettingsInformation $diagnostics_settings_information  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DiagnosticsSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateRequestLogSettingsWithHttpInfo($diagnostics_settings_information = null)

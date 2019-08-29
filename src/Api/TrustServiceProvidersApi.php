@@ -33,7 +33,7 @@ namespace DocuSign\eSign\Api\TrustServiceProvidersApi;
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -97,7 +97,7 @@ class TrustServiceProvidersApi
      * Returns Account available seals for specified account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSeals
      */
     public function getSealProviders($account_id)
@@ -112,7 +112,7 @@ class TrustServiceProvidersApi
      * Returns Account available seals for specified account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSeals, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSealProvidersWithHttpInfo($account_id)

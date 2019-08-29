@@ -111,7 +111,7 @@ class ListNotaryJournalsOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -175,7 +175,7 @@ class NotaryApi
      * Get notary jurisdictions for a user
      *
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJournalList
      */
     public function listNotaryJournals(NotaryApi\ListNotaryJournalsOptions $options = null)
@@ -190,7 +190,7 @@ class NotaryApi
      * Get notary jurisdictions for a user
      *
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJournalList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNotaryJournalsWithHttpInfo(NotaryApi\ListNotaryJournalsOptions $options = null)

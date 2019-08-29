@@ -395,7 +395,7 @@ class ListProvidersOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -463,7 +463,7 @@ class CloudStorageApi
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ExternalFolder
      */
     public function callList($account_id, $folder_id, $service_id, $user_id, CloudStorageApi\ListOptions $options = null)
@@ -482,7 +482,7 @@ class CloudStorageApi
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ExternalFolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($account_id, $folder_id, $service_id, $user_id, CloudStorageApi\ListOptions $options = null)
@@ -623,7 +623,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
     public function createProvider($account_id, $user_id, $cloud_storage_providers = null)
@@ -640,7 +640,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProviderWithHttpInfo($account_id, $user_id, $cloud_storage_providers = null)
@@ -734,7 +734,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
     public function deleteProvider($account_id, $service_id, $user_id)
@@ -751,7 +751,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProviderWithHttpInfo($account_id, $service_id, $user_id)
@@ -852,7 +852,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
     public function deleteProviders($account_id, $user_id, $cloud_storage_providers = null)
@@ -869,7 +869,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProvidersWithHttpInfo($account_id, $user_id, $cloud_storage_providers = null)
@@ -964,7 +964,7 @@ class CloudStorageApi
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
     public function getProvider($account_id, $service_id, $user_id, CloudStorageApi\GetProviderOptions $options = null)
@@ -982,7 +982,7 @@ class CloudStorageApi
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProviderWithHttpInfo($account_id, $service_id, $user_id, CloudStorageApi\GetProviderOptions $options = null)
@@ -1092,7 +1092,7 @@ class CloudStorageApi
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ExternalFolder
      */
     public function listFolders($account_id, $service_id, $user_id, CloudStorageApi\ListFoldersOptions $options = null)
@@ -1110,7 +1110,7 @@ class CloudStorageApi
     * @param string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ExternalFolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFoldersWithHttpInfo($account_id, $service_id, $user_id, CloudStorageApi\ListFoldersOptions $options = null)
@@ -1239,7 +1239,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
     public function listProviders($account_id, $user_id, CloudStorageApi\ListProvidersOptions $options = null)
@@ -1256,7 +1256,7 @@ class CloudStorageApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
     public function listProvidersWithHttpInfo($account_id, $user_id, CloudStorageApi\ListProvidersOptions $options = null)

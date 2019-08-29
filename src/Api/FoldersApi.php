@@ -517,7 +517,7 @@ class SearchOptions
 namespace DocuSign\eSign\Api;
 
 use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -582,7 +582,7 @@ class FoldersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FoldersResponse
      */
     public function callList($account_id, FoldersApi\ListOptions $options = null)
@@ -598,7 +598,7 @@ class FoldersApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FoldersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($account_id, FoldersApi\ListOptions $options = null)
@@ -695,7 +695,7 @@ class FoldersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $folder_id The ID of the folder being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemsResponse
      */
     public function listItems($account_id, $folder_id, FoldersApi\ListItemsOptions $options = null)
@@ -712,7 +712,7 @@ class FoldersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $folder_id The ID of the folder being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listItemsWithHttpInfo($account_id, $folder_id, FoldersApi\ListItemsOptions $options = null)
@@ -833,7 +833,7 @@ class FoldersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return void
      */
     public function moveEnvelopes($account_id, $folder_id, $folders_request = null)
@@ -850,7 +850,7 @@ class FoldersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function moveEnvelopesWithHttpInfo($account_id, $folder_id, $folders_request = null)
@@ -940,7 +940,7 @@ class FoldersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemResponse
      */
     public function search($account_id, $search_folder_id, FoldersApi\SearchOptions $options = null)
@@ -957,7 +957,7 @@ class FoldersApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchWithHttpInfo($account_id, $search_folder_id, FoldersApi\SearchOptions $options = null)
