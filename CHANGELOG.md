@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
+## [5.0.0] - eSignature API v2.1-19.2.02 - 2019-09-28
+### BREAKING
+* The SDK now supports version v2.1-19.2.02 of the DocuSign eSignature API.
+* SDK Release Version updated.
+### Fixed
+* Number and Date serialization issues DCM-3210
+* Updated phpdocs to point to new location of ApiException DCM-3372
 
 ## [4.0.0] - eSignature API v19.1.02 - 2019-06-07
 ### BREAKING
