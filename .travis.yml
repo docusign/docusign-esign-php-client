@@ -2,6 +2,7 @@ branches:
   only: 
     - master
 language: php
+dist: trusty
 sudo: false
 php:
     - 5.4
