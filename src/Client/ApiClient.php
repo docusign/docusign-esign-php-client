@@ -476,9 +476,15 @@ class ApiClient
             "Content-Type" => "application/x-www-form-urlencoded",
         ];
         $postData = [
-            "grant_type" => $grant_type,
-            "code" => $code
+            "grant_type" => $grant_type
         ];
+
+        if ($grant_type === 'authorization_code') {
+            $postData['code'] = $code;
+        } elseif ($grant_type === 'refresh_token') {
+            $postData['refresh_token'] = $code;
+        }
+
         list($response, $statusCode, $httpHeader) = $this->callApi($resourcePath, self::$POST, $queryParams, $postData, $headers, null, null, true);
         if(isset($response->access_token))
             $this->config->addDefaultHeader("Authorization", "{$response->token_type} {$response->access_token}");
