@@ -23,9 +23,8 @@
 namespace DocuSign\eSign\Client;
 
 use DocuSign\eSign\Client\Auth\OAuth;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
-use SebastianBergmann\RecursionContext\InvalidArgumentException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 use Firebase\JWT\JWT;
 
 
