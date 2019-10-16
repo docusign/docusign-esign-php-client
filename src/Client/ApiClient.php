@@ -27,7 +27,6 @@ use DocuSign\eSign\Configuration;
 use DocuSign\eSign\ObjectSerializer;
 use Firebase\JWT\JWT;
 
-
 /**
  * ApiClient Class Doc Comment
  *
