@@ -124,8 +124,16 @@ class UnitTests extends TestCase
         $signHere->setPageNumber("1");
         $signHere->setRecipientId("1");
 
+        $numberTab = new \DocuSign\eSign\Model\Number();
+        $numberTab->setXPosition("100");
+        $numberTab->setYPosition("100");
+        $numberTab->setDocumentId("1");
+        $numberTab->setPageNumber("1");
+        $numberTab->setRecipientId("1");
+
         $tabs = new DocuSign\eSign\Model\Tabs();
         $tabs->setSignHereTabs(array($signHere));
+        $tabs->setNumberTabs(array($numberTab));
 
         $signer = new \DocuSign\eSign\Model\Signer();
         $signer->setEmail($testConfig->getRecipientEmail());
@@ -364,6 +372,28 @@ class UnitTests extends TestCase
 		$this->assertNotEmpty($view_url->getUrl());
 
     	return $testConfig;
+    }
+
+    /**
+     * @depends testSignatureRequestOnDocument
+     */
+    public function testNumberTabs($testConfig)
+    {
+        $testConfig = $this->testSignatureRequestOnDocument($testConfig, "created", true);
+        $envelopesApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
+
+        $options = new \DocuSign\eSign\Api\EnvelopesApi\GetEnvelopeOptions();
+        $options->setInclude("tabs,recipients");
+
+        $createdEnvelope = $envelopesApi->getEnvelope($testConfig->getAccountId(), $testConfig->getEnvelopeId());
+        $recipients = $envelopesApi->listRecipients($testConfig->getAccountId(), $createdEnvelope->getEnvelopeId());
+        $tabs = $envelopesApi->listTabs($testConfig->getAccountId(), $testConfig->getEnvelopeId(), $recipients->getSigners()[0]->getRecipientId());
+        $numberTabs = $tabs->getNumberTabs();
+
+        $this->assertNotNull($numberTabs);
+        $this->assertEquals(count($numberTabs), 1);
+
+        return $testConfig;
     }
 }
 

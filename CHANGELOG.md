@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
+## [4.2.0] - eSignature API v2-20.1.00 - 2020-03-13
+### Changed
+* The SDK now supports version 20.1.00 of the DocuSign eSignature API.
+* SDK Release Version updated.git chec
+
 ## [4.1.0] - eSignature API v2-19.2.02 - 2019-09-28
 ### Changed
 * The SDK now supports version 19.2.02 of the DocuSign eSignature API.

@@ -60,7 +60,6 @@ class EnvelopeDocument implements ArrayAccess
         'contains_pdf_form_fields' => 'string',
         'display' => 'string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
-        'document_group' => 'string',
         'document_id' => 'string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'include_in_download' => 'string',
@@ -68,6 +67,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'string',
         'pages' => 'string',
         'signer_must_acknowledge' => 'string',
+        'size_bytes' => 'string',
         'type' => 'string',
         'uri' => 'string'
     ];
@@ -88,7 +88,6 @@ class EnvelopeDocument implements ArrayAccess
         'contains_pdf_form_fields' => 'containsPdfFormFields',
         'display' => 'display',
         'document_fields' => 'documentFields',
-        'document_group' => 'documentGroup',
         'document_id' => 'documentId',
         'error_details' => 'errorDetails',
         'include_in_download' => 'includeInDownload',
@@ -96,6 +95,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'order',
         'pages' => 'pages',
         'signer_must_acknowledge' => 'signerMustAcknowledge',
+        'size_bytes' => 'sizeBytes',
         'type' => 'type',
         'uri' => 'uri'
     ];
@@ -112,7 +112,6 @@ class EnvelopeDocument implements ArrayAccess
         'contains_pdf_form_fields' => 'setContainsPdfFormFields',
         'display' => 'setDisplay',
         'document_fields' => 'setDocumentFields',
-        'document_group' => 'setDocumentGroup',
         'document_id' => 'setDocumentId',
         'error_details' => 'setErrorDetails',
         'include_in_download' => 'setIncludeInDownload',
@@ -120,6 +119,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'setOrder',
         'pages' => 'setPages',
         'signer_must_acknowledge' => 'setSignerMustAcknowledge',
+        'size_bytes' => 'setSizeBytes',
         'type' => 'setType',
         'uri' => 'setUri'
     ];
@@ -136,7 +136,6 @@ class EnvelopeDocument implements ArrayAccess
         'contains_pdf_form_fields' => 'getContainsPdfFormFields',
         'display' => 'getDisplay',
         'document_fields' => 'getDocumentFields',
-        'document_group' => 'getDocumentGroup',
         'document_id' => 'getDocumentId',
         'error_details' => 'getErrorDetails',
         'include_in_download' => 'getIncludeInDownload',
@@ -144,6 +143,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'getOrder',
         'pages' => 'getPages',
         'signer_must_acknowledge' => 'getSignerMustAcknowledge',
+        'size_bytes' => 'getSizeBytes',
         'type' => 'getType',
         'uri' => 'getUri'
     ];
@@ -185,7 +185,6 @@ class EnvelopeDocument implements ArrayAccess
         $this->container['contains_pdf_form_fields'] = isset($data['contains_pdf_form_fields']) ? $data['contains_pdf_form_fields'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
-        $this->container['document_group'] = isset($data['document_group']) ? $data['document_group'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
@@ -193,6 +192,7 @@ class EnvelopeDocument implements ArrayAccess
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
         $this->container['signer_must_acknowledge'] = isset($data['signer_must_acknowledge']) ? $data['signer_must_acknowledge'] : null;
+        $this->container['size_bytes'] = isset($data['size_bytes']) ? $data['size_bytes'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
     }
@@ -347,27 +347,6 @@ class EnvelopeDocument implements ArrayAccess
     }
 
     /**
-     * Gets document_group
-     * @return string
-     */
-    public function getDocumentGroup()
-    {
-        return $this->container['document_group'];
-    }
-
-    /**
-     * Sets document_group
-     * @param string $document_group 
-     * @return $this
-     */
-    public function setDocumentGroup($document_group)
-    {
-        $this->container['document_group'] = $document_group;
-
-        return $this;
-    }
-
-    /**
      * Gets document_id
      * @return string
      */
@@ -510,6 +489,27 @@ class EnvelopeDocument implements ArrayAccess
     public function setSignerMustAcknowledge($signer_must_acknowledge)
     {
         $this->container['signer_must_acknowledge'] = $signer_must_acknowledge;
+
+        return $this;
+    }
+
+    /**
+     * Gets size_bytes
+     * @return string
+     */
+    public function getSizeBytes()
+    {
+        return $this->container['size_bytes'];
+    }
+
+    /**
+     * Sets size_bytes
+     * @param string $size_bytes 
+     * @return $this
+     */
+    public function setSizeBytes($size_bytes)
+    {
+        $this->container['size_bytes'] = $size_bytes;
 
         return $this;
     }
