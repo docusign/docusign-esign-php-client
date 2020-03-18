@@ -54,10 +54,16 @@ class AccountUISettings implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'admin_message' => '\DocuSign\eSign\Model\AdminMessage',
+        'ask_an_admin' => '\DocuSign\eSign\Model\AskAnAdmin',
+        'enable_admin_message' => 'string',
+        'enable_admin_message_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'string',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_easy_sign_template_upload' => 'string',
         'enable_easy_sign_template_upload_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_envelope_copy_with_data' => 'string',
+        'enable_envelope_copy_with_data_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'hide_send_an_envelope' => 'string',
         'hide_send_an_envelope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'hide_use_a_template' => 'string',
@@ -69,7 +75,9 @@ class AccountUISettings implements ArrayAccess
         'remove_envelope_forwarding' => 'string',
         'remove_envelope_forwarding_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'should_redact_access_code' => 'string',
-        'should_redact_access_code_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
+        'should_redact_access_code_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'upload_new_image_to_sign_or_initial' => 'string',
+        'upload_new_image_to_sign_or_initial_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
     public static function swaggerTypes()
@@ -82,10 +90,16 @@ class AccountUISettings implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'admin_message' => 'adminMessage',
+        'ask_an_admin' => 'askAnAdmin',
+        'enable_admin_message' => 'enableAdminMessage',
+        'enable_admin_message_metadata' => 'enableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'enableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'enableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'enableEasySignTemplateUpload',
         'enable_easy_sign_template_upload_metadata' => 'enableEasySignTemplateUploadMetadata',
+        'enable_envelope_copy_with_data' => 'enableEnvelopeCopyWithData',
+        'enable_envelope_copy_with_data_metadata' => 'enableEnvelopeCopyWithDataMetadata',
         'hide_send_an_envelope' => 'hideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'hideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'hideUseATemplate',
@@ -97,7 +111,9 @@ class AccountUISettings implements ArrayAccess
         'remove_envelope_forwarding' => 'removeEnvelopeForwarding',
         'remove_envelope_forwarding_metadata' => 'removeEnvelopeForwardingMetadata',
         'should_redact_access_code' => 'shouldRedactAccessCode',
-        'should_redact_access_code_metadata' => 'shouldRedactAccessCodeMetadata'
+        'should_redact_access_code_metadata' => 'shouldRedactAccessCodeMetadata',
+        'upload_new_image_to_sign_or_initial' => 'uploadNewImageToSignOrInitial',
+        'upload_new_image_to_sign_or_initial_metadata' => 'uploadNewImageToSignOrInitialMetadata'
     ];
 
 
@@ -106,10 +122,16 @@ class AccountUISettings implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'admin_message' => 'setAdminMessage',
+        'ask_an_admin' => 'setAskAnAdmin',
+        'enable_admin_message' => 'setEnableAdminMessage',
+        'enable_admin_message_metadata' => 'setEnableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'setEnableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'setEnableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'setEnableEasySignTemplateUpload',
         'enable_easy_sign_template_upload_metadata' => 'setEnableEasySignTemplateUploadMetadata',
+        'enable_envelope_copy_with_data' => 'setEnableEnvelopeCopyWithData',
+        'enable_envelope_copy_with_data_metadata' => 'setEnableEnvelopeCopyWithDataMetadata',
         'hide_send_an_envelope' => 'setHideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'setHideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'setHideUseATemplate',
@@ -121,7 +143,9 @@ class AccountUISettings implements ArrayAccess
         'remove_envelope_forwarding' => 'setRemoveEnvelopeForwarding',
         'remove_envelope_forwarding_metadata' => 'setRemoveEnvelopeForwardingMetadata',
         'should_redact_access_code' => 'setShouldRedactAccessCode',
-        'should_redact_access_code_metadata' => 'setShouldRedactAccessCodeMetadata'
+        'should_redact_access_code_metadata' => 'setShouldRedactAccessCodeMetadata',
+        'upload_new_image_to_sign_or_initial' => 'setUploadNewImageToSignOrInitial',
+        'upload_new_image_to_sign_or_initial_metadata' => 'setUploadNewImageToSignOrInitialMetadata'
     ];
 
 
@@ -130,10 +154,16 @@ class AccountUISettings implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'admin_message' => 'getAdminMessage',
+        'ask_an_admin' => 'getAskAnAdmin',
+        'enable_admin_message' => 'getEnableAdminMessage',
+        'enable_admin_message_metadata' => 'getEnableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'getEnableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'getEnableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'getEnableEasySignTemplateUpload',
         'enable_easy_sign_template_upload_metadata' => 'getEnableEasySignTemplateUploadMetadata',
+        'enable_envelope_copy_with_data' => 'getEnableEnvelopeCopyWithData',
+        'enable_envelope_copy_with_data_metadata' => 'getEnableEnvelopeCopyWithDataMetadata',
         'hide_send_an_envelope' => 'getHideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'getHideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'getHideUseATemplate',
@@ -145,7 +175,9 @@ class AccountUISettings implements ArrayAccess
         'remove_envelope_forwarding' => 'getRemoveEnvelopeForwarding',
         'remove_envelope_forwarding_metadata' => 'getRemoveEnvelopeForwardingMetadata',
         'should_redact_access_code' => 'getShouldRedactAccessCode',
-        'should_redact_access_code_metadata' => 'getShouldRedactAccessCodeMetadata'
+        'should_redact_access_code_metadata' => 'getShouldRedactAccessCodeMetadata',
+        'upload_new_image_to_sign_or_initial' => 'getUploadNewImageToSignOrInitial',
+        'upload_new_image_to_sign_or_initial_metadata' => 'getUploadNewImageToSignOrInitialMetadata'
     ];
 
     public static function attributeMap()
@@ -179,10 +211,16 @@ class AccountUISettings implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['admin_message'] = isset($data['admin_message']) ? $data['admin_message'] : null;
+        $this->container['ask_an_admin'] = isset($data['ask_an_admin']) ? $data['ask_an_admin'] : null;
+        $this->container['enable_admin_message'] = isset($data['enable_admin_message']) ? $data['enable_admin_message'] : null;
+        $this->container['enable_admin_message_metadata'] = isset($data['enable_admin_message_metadata']) ? $data['enable_admin_message_metadata'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply'] = isset($data['enable_easy_sign_can_use_multi_template_apply']) ? $data['enable_easy_sign_can_use_multi_template_apply'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply_metadata'] = isset($data['enable_easy_sign_can_use_multi_template_apply_metadata']) ? $data['enable_easy_sign_can_use_multi_template_apply_metadata'] : null;
         $this->container['enable_easy_sign_template_upload'] = isset($data['enable_easy_sign_template_upload']) ? $data['enable_easy_sign_template_upload'] : null;
         $this->container['enable_easy_sign_template_upload_metadata'] = isset($data['enable_easy_sign_template_upload_metadata']) ? $data['enable_easy_sign_template_upload_metadata'] : null;
+        $this->container['enable_envelope_copy_with_data'] = isset($data['enable_envelope_copy_with_data']) ? $data['enable_envelope_copy_with_data'] : null;
+        $this->container['enable_envelope_copy_with_data_metadata'] = isset($data['enable_envelope_copy_with_data_metadata']) ? $data['enable_envelope_copy_with_data_metadata'] : null;
         $this->container['hide_send_an_envelope'] = isset($data['hide_send_an_envelope']) ? $data['hide_send_an_envelope'] : null;
         $this->container['hide_send_an_envelope_metadata'] = isset($data['hide_send_an_envelope_metadata']) ? $data['hide_send_an_envelope_metadata'] : null;
         $this->container['hide_use_a_template'] = isset($data['hide_use_a_template']) ? $data['hide_use_a_template'] : null;
@@ -195,6 +233,8 @@ class AccountUISettings implements ArrayAccess
         $this->container['remove_envelope_forwarding_metadata'] = isset($data['remove_envelope_forwarding_metadata']) ? $data['remove_envelope_forwarding_metadata'] : null;
         $this->container['should_redact_access_code'] = isset($data['should_redact_access_code']) ? $data['should_redact_access_code'] : null;
         $this->container['should_redact_access_code_metadata'] = isset($data['should_redact_access_code_metadata']) ? $data['should_redact_access_code_metadata'] : null;
+        $this->container['upload_new_image_to_sign_or_initial'] = isset($data['upload_new_image_to_sign_or_initial']) ? $data['upload_new_image_to_sign_or_initial'] : null;
+        $this->container['upload_new_image_to_sign_or_initial_metadata'] = isset($data['upload_new_image_to_sign_or_initial_metadata']) ? $data['upload_new_image_to_sign_or_initial_metadata'] : null;
     }
 
     /**
@@ -219,6 +259,90 @@ class AccountUISettings implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets admin_message
+     * @return \DocuSign\eSign\Model\AdminMessage
+     */
+    public function getAdminMessage()
+    {
+        return $this->container['admin_message'];
+    }
+
+    /**
+     * Sets admin_message
+     * @param \DocuSign\eSign\Model\AdminMessage $admin_message
+     * @return $this
+     */
+    public function setAdminMessage($admin_message)
+    {
+        $this->container['admin_message'] = $admin_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets ask_an_admin
+     * @return \DocuSign\eSign\Model\AskAnAdmin
+     */
+    public function getAskAnAdmin()
+    {
+        return $this->container['ask_an_admin'];
+    }
+
+    /**
+     * Sets ask_an_admin
+     * @param \DocuSign\eSign\Model\AskAnAdmin $ask_an_admin
+     * @return $this
+     */
+    public function setAskAnAdmin($ask_an_admin)
+    {
+        $this->container['ask_an_admin'] = $ask_an_admin;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_admin_message
+     * @return string
+     */
+    public function getEnableAdminMessage()
+    {
+        return $this->container['enable_admin_message'];
+    }
+
+    /**
+     * Sets enable_admin_message
+     * @param string $enable_admin_message 
+     * @return $this
+     */
+    public function setEnableAdminMessage($enable_admin_message)
+    {
+        $this->container['enable_admin_message'] = $enable_admin_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_admin_message_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAdminMessageMetadata()
+    {
+        return $this->container['enable_admin_message_metadata'];
+    }
+
+    /**
+     * Sets enable_admin_message_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_admin_message_metadata
+     * @return $this
+     */
+    public function setEnableAdminMessageMetadata($enable_admin_message_metadata)
+    {
+        $this->container['enable_admin_message_metadata'] = $enable_admin_message_metadata;
+
+        return $this;
+    }
 
     /**
      * Gets enable_easy_sign_can_use_multi_template_apply
@@ -300,6 +424,48 @@ class AccountUISettings implements ArrayAccess
     public function setEnableEasySignTemplateUploadMetadata($enable_easy_sign_template_upload_metadata)
     {
         $this->container['enable_easy_sign_template_upload_metadata'] = $enable_easy_sign_template_upload_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_envelope_copy_with_data
+     * @return string
+     */
+    public function getEnableEnvelopeCopyWithData()
+    {
+        return $this->container['enable_envelope_copy_with_data'];
+    }
+
+    /**
+     * Sets enable_envelope_copy_with_data
+     * @param string $enable_envelope_copy_with_data 
+     * @return $this
+     */
+    public function setEnableEnvelopeCopyWithData($enable_envelope_copy_with_data)
+    {
+        $this->container['enable_envelope_copy_with_data'] = $enable_envelope_copy_with_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_envelope_copy_with_data_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableEnvelopeCopyWithDataMetadata()
+    {
+        return $this->container['enable_envelope_copy_with_data_metadata'];
+    }
+
+    /**
+     * Sets enable_envelope_copy_with_data_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_envelope_copy_with_data_metadata
+     * @return $this
+     */
+    public function setEnableEnvelopeCopyWithDataMetadata($enable_envelope_copy_with_data_metadata)
+    {
+        $this->container['enable_envelope_copy_with_data_metadata'] = $enable_envelope_copy_with_data_metadata;
 
         return $this;
     }
@@ -552,6 +718,48 @@ class AccountUISettings implements ArrayAccess
     public function setShouldRedactAccessCodeMetadata($should_redact_access_code_metadata)
     {
         $this->container['should_redact_access_code_metadata'] = $should_redact_access_code_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets upload_new_image_to_sign_or_initial
+     * @return string
+     */
+    public function getUploadNewImageToSignOrInitial()
+    {
+        return $this->container['upload_new_image_to_sign_or_initial'];
+    }
+
+    /**
+     * Sets upload_new_image_to_sign_or_initial
+     * @param string $upload_new_image_to_sign_or_initial 
+     * @return $this
+     */
+    public function setUploadNewImageToSignOrInitial($upload_new_image_to_sign_or_initial)
+    {
+        $this->container['upload_new_image_to_sign_or_initial'] = $upload_new_image_to_sign_or_initial;
+
+        return $this;
+    }
+
+    /**
+     * Gets upload_new_image_to_sign_or_initial_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUploadNewImageToSignOrInitialMetadata()
+    {
+        return $this->container['upload_new_image_to_sign_or_initial_metadata'];
+    }
+
+    /**
+     * Sets upload_new_image_to_sign_or_initial_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $upload_new_image_to_sign_or_initial_metadata
+     * @return $this
+     */
+    public function setUploadNewImageToSignOrInitialMetadata($upload_new_image_to_sign_or_initial_metadata)
+    {
+        $this->container['upload_new_image_to_sign_or_initial_metadata'] = $upload_new_image_to_sign_or_initial_metadata;
 
         return $this;
     }

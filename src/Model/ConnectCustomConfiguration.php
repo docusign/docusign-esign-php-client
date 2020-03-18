@@ -61,6 +61,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'connect_id' => 'string',
         'enable_log' => 'string',
         'envelope_events' => 'string[]',
+        'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
         'external_folder_id' => 'string',
         'external_folder_label' => 'string',
         'include_certificate_of_completion' => 'string',
@@ -76,10 +77,10 @@ class ConnectCustomConfiguration implements ArrayAccess
         'recipient_events' => 'string[]',
         'require_mutual_tls' => 'string',
         'requires_acknowledgement' => 'string',
-        'salesforce_access_token' => 'string',
         'salesforce_api_version' => 'string',
+        'salesforce_authcode' => 'string',
+        'salesforce_call_back_url' => 'string',
         'salesforce_documents_as_content_files' => 'string',
-        'salesforce_refresh_token' => 'string',
         'sender_override' => 'string',
         'sender_selectable_items' => 'string[]',
         'sf_objects' => '\DocuSign\eSign\Model\ConnectSalesforceObject[]',
@@ -108,6 +109,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'connect_id' => 'connectId',
         'enable_log' => 'enableLog',
         'envelope_events' => 'envelopeEvents',
+        'event_data' => 'eventData',
         'external_folder_id' => 'externalFolderId',
         'external_folder_label' => 'externalFolderLabel',
         'include_certificate_of_completion' => 'includeCertificateOfCompletion',
@@ -123,10 +125,10 @@ class ConnectCustomConfiguration implements ArrayAccess
         'recipient_events' => 'recipientEvents',
         'require_mutual_tls' => 'requireMutualTls',
         'requires_acknowledgement' => 'requiresAcknowledgement',
-        'salesforce_access_token' => 'salesforceAccessToken',
         'salesforce_api_version' => 'salesforceApiVersion',
+        'salesforce_authcode' => 'salesforceAuthcode',
+        'salesforce_call_back_url' => 'salesforceCallBackUrl',
         'salesforce_documents_as_content_files' => 'salesforceDocumentsAsContentFiles',
-        'salesforce_refresh_token' => 'salesforceRefreshToken',
         'sender_override' => 'senderOverride',
         'sender_selectable_items' => 'senderSelectableItems',
         'sf_objects' => 'sfObjects',
@@ -151,6 +153,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'connect_id' => 'setConnectId',
         'enable_log' => 'setEnableLog',
         'envelope_events' => 'setEnvelopeEvents',
+        'event_data' => 'setEventData',
         'external_folder_id' => 'setExternalFolderId',
         'external_folder_label' => 'setExternalFolderLabel',
         'include_certificate_of_completion' => 'setIncludeCertificateOfCompletion',
@@ -166,10 +169,10 @@ class ConnectCustomConfiguration implements ArrayAccess
         'recipient_events' => 'setRecipientEvents',
         'require_mutual_tls' => 'setRequireMutualTls',
         'requires_acknowledgement' => 'setRequiresAcknowledgement',
-        'salesforce_access_token' => 'setSalesforceAccessToken',
         'salesforce_api_version' => 'setSalesforceApiVersion',
+        'salesforce_authcode' => 'setSalesforceAuthcode',
+        'salesforce_call_back_url' => 'setSalesforceCallBackUrl',
         'salesforce_documents_as_content_files' => 'setSalesforceDocumentsAsContentFiles',
-        'salesforce_refresh_token' => 'setSalesforceRefreshToken',
         'sender_override' => 'setSenderOverride',
         'sender_selectable_items' => 'setSenderSelectableItems',
         'sf_objects' => 'setSfObjects',
@@ -194,6 +197,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         'connect_id' => 'getConnectId',
         'enable_log' => 'getEnableLog',
         'envelope_events' => 'getEnvelopeEvents',
+        'event_data' => 'getEventData',
         'external_folder_id' => 'getExternalFolderId',
         'external_folder_label' => 'getExternalFolderLabel',
         'include_certificate_of_completion' => 'getIncludeCertificateOfCompletion',
@@ -209,10 +213,10 @@ class ConnectCustomConfiguration implements ArrayAccess
         'recipient_events' => 'getRecipientEvents',
         'require_mutual_tls' => 'getRequireMutualTls',
         'requires_acknowledgement' => 'getRequiresAcknowledgement',
-        'salesforce_access_token' => 'getSalesforceAccessToken',
         'salesforce_api_version' => 'getSalesforceApiVersion',
+        'salesforce_authcode' => 'getSalesforceAuthcode',
+        'salesforce_call_back_url' => 'getSalesforceCallBackUrl',
         'salesforce_documents_as_content_files' => 'getSalesforceDocumentsAsContentFiles',
-        'salesforce_refresh_token' => 'getSalesforceRefreshToken',
         'sender_override' => 'getSenderOverride',
         'sender_selectable_items' => 'getSenderSelectableItems',
         'sf_objects' => 'getSfObjects',
@@ -262,6 +266,7 @@ class ConnectCustomConfiguration implements ArrayAccess
         $this->container['connect_id'] = isset($data['connect_id']) ? $data['connect_id'] : null;
         $this->container['enable_log'] = isset($data['enable_log']) ? $data['enable_log'] : null;
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
+        $this->container['event_data'] = isset($data['event_data']) ? $data['event_data'] : null;
         $this->container['external_folder_id'] = isset($data['external_folder_id']) ? $data['external_folder_id'] : null;
         $this->container['external_folder_label'] = isset($data['external_folder_label']) ? $data['external_folder_label'] : null;
         $this->container['include_certificate_of_completion'] = isset($data['include_certificate_of_completion']) ? $data['include_certificate_of_completion'] : null;
@@ -277,10 +282,10 @@ class ConnectCustomConfiguration implements ArrayAccess
         $this->container['recipient_events'] = isset($data['recipient_events']) ? $data['recipient_events'] : null;
         $this->container['require_mutual_tls'] = isset($data['require_mutual_tls']) ? $data['require_mutual_tls'] : null;
         $this->container['requires_acknowledgement'] = isset($data['requires_acknowledgement']) ? $data['requires_acknowledgement'] : null;
-        $this->container['salesforce_access_token'] = isset($data['salesforce_access_token']) ? $data['salesforce_access_token'] : null;
         $this->container['salesforce_api_version'] = isset($data['salesforce_api_version']) ? $data['salesforce_api_version'] : null;
+        $this->container['salesforce_authcode'] = isset($data['salesforce_authcode']) ? $data['salesforce_authcode'] : null;
+        $this->container['salesforce_call_back_url'] = isset($data['salesforce_call_back_url']) ? $data['salesforce_call_back_url'] : null;
         $this->container['salesforce_documents_as_content_files'] = isset($data['salesforce_documents_as_content_files']) ? $data['salesforce_documents_as_content_files'] : null;
-        $this->container['salesforce_refresh_token'] = isset($data['salesforce_refresh_token']) ? $data['salesforce_refresh_token'] : null;
         $this->container['sender_override'] = isset($data['sender_override']) ? $data['sender_override'] : null;
         $this->container['sender_selectable_items'] = isset($data['sender_selectable_items']) ? $data['sender_selectable_items'] : null;
         $this->container['sf_objects'] = isset($data['sf_objects']) ? $data['sf_objects'] : null;
@@ -458,6 +463,27 @@ class ConnectCustomConfiguration implements ArrayAccess
     public function setEnvelopeEvents($envelope_events)
     {
         $this->container['envelope_events'] = $envelope_events;
+
+        return $this;
+    }
+
+    /**
+     * Gets event_data
+     * @return \DocuSign\eSign\Model\ConnectEventData
+     */
+    public function getEventData()
+    {
+        return $this->container['event_data'];
+    }
+
+    /**
+     * Sets event_data
+     * @param \DocuSign\eSign\Model\ConnectEventData $event_data
+     * @return $this
+     */
+    public function setEventData($event_data)
+    {
+        $this->container['event_data'] = $event_data;
 
         return $this;
     }
@@ -778,27 +804,6 @@ class ConnectCustomConfiguration implements ArrayAccess
     }
 
     /**
-     * Gets salesforce_access_token
-     * @return string
-     */
-    public function getSalesforceAccessToken()
-    {
-        return $this->container['salesforce_access_token'];
-    }
-
-    /**
-     * Sets salesforce_access_token
-     * @param string $salesforce_access_token 
-     * @return $this
-     */
-    public function setSalesforceAccessToken($salesforce_access_token)
-    {
-        $this->container['salesforce_access_token'] = $salesforce_access_token;
-
-        return $this;
-    }
-
-    /**
      * Gets salesforce_api_version
      * @return string
      */
@@ -820,6 +825,48 @@ class ConnectCustomConfiguration implements ArrayAccess
     }
 
     /**
+     * Gets salesforce_authcode
+     * @return string
+     */
+    public function getSalesforceAuthcode()
+    {
+        return $this->container['salesforce_authcode'];
+    }
+
+    /**
+     * Sets salesforce_authcode
+     * @param string $salesforce_authcode 
+     * @return $this
+     */
+    public function setSalesforceAuthcode($salesforce_authcode)
+    {
+        $this->container['salesforce_authcode'] = $salesforce_authcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets salesforce_call_back_url
+     * @return string
+     */
+    public function getSalesforceCallBackUrl()
+    {
+        return $this->container['salesforce_call_back_url'];
+    }
+
+    /**
+     * Sets salesforce_call_back_url
+     * @param string $salesforce_call_back_url 
+     * @return $this
+     */
+    public function setSalesforceCallBackUrl($salesforce_call_back_url)
+    {
+        $this->container['salesforce_call_back_url'] = $salesforce_call_back_url;
+
+        return $this;
+    }
+
+    /**
      * Gets salesforce_documents_as_content_files
      * @return string
      */
@@ -836,27 +883,6 @@ class ConnectCustomConfiguration implements ArrayAccess
     public function setSalesforceDocumentsAsContentFiles($salesforce_documents_as_content_files)
     {
         $this->container['salesforce_documents_as_content_files'] = $salesforce_documents_as_content_files;
-
-        return $this;
-    }
-
-    /**
-     * Gets salesforce_refresh_token
-     * @return string
-     */
-    public function getSalesforceRefreshToken()
-    {
-        return $this->container['salesforce_refresh_token'];
-    }
-
-    /**
-     * Sets salesforce_refresh_token
-     * @param string $salesforce_refresh_token 
-     * @return $this
-     */
-    public function setSalesforceRefreshToken($salesforce_refresh_token)
-    {
-        $this->container['salesforce_refresh_token'] = $salesforce_refresh_token;
 
         return $this;
     }

@@ -96,7 +96,7 @@ class TestConfig
 
     public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null, $privateKey = null)
     {
-        $this->host = !empty($host) ? $host : getenv('REDIRECT_URI');
+        $this->host = !empty($host) ? $host : 'https://demo.docusign.net/restapi';
         $this->integratorKey = !empty($integratorKey) ? $integratorKey : getenv('INTEGRATOR_KEY_JWT');
         $this->clientSecret = !empty($secret) ? $secret : getenv('CLIENT_SECRET');
         $this->clientKey = !empty($key) ? $key : 'Docs/private.pem';
@@ -108,7 +108,7 @@ class TestConfig
         $this->templateRoleName = !empty($templateRoleName) ? $templateRoleName : 'Manager';
         $this->templateId = !empty($templateId) ? $templateId : getenv('TEMPLATE_ID');
 
-        $this->returnUrl = !empty($returnUrl) ? $returnUrl : 'https://www.docusign.com/api';
+        $this->returnUrl = !empty($returnUrl) ? $returnUrl : getenv('REDIRECT_URI');
 
         $this->envelopeId = !empty($envelopeId) ? $envelopeId : '';
         $this->userId = !empty($userId) ? $userId : getenv('USER_ID'); //can be taken from generateAccessToken returned result

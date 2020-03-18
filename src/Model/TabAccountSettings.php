@@ -66,6 +66,8 @@ class TabAccountSettings implements ArrayAccess
         'data_field_regex_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_field_size_enabled' => 'string',
         'data_field_size_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'draw_tabs_enabled' => 'string',
+        'draw_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'first_last_email_tabs_enabled' => 'string',
         'first_last_email_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'list_tabs_enabled' => 'string',
@@ -116,6 +118,8 @@ class TabAccountSettings implements ArrayAccess
         'data_field_regex_metadata' => 'dataFieldRegexMetadata',
         'data_field_size_enabled' => 'dataFieldSizeEnabled',
         'data_field_size_metadata' => 'dataFieldSizeMetadata',
+        'draw_tabs_enabled' => 'drawTabsEnabled',
+        'draw_tabs_metadata' => 'drawTabsMetadata',
         'first_last_email_tabs_enabled' => 'firstLastEmailTabsEnabled',
         'first_last_email_tabs_metadata' => 'firstLastEmailTabsMetadata',
         'list_tabs_enabled' => 'listTabsEnabled',
@@ -162,6 +166,8 @@ class TabAccountSettings implements ArrayAccess
         'data_field_regex_metadata' => 'setDataFieldRegexMetadata',
         'data_field_size_enabled' => 'setDataFieldSizeEnabled',
         'data_field_size_metadata' => 'setDataFieldSizeMetadata',
+        'draw_tabs_enabled' => 'setDrawTabsEnabled',
+        'draw_tabs_metadata' => 'setDrawTabsMetadata',
         'first_last_email_tabs_enabled' => 'setFirstLastEmailTabsEnabled',
         'first_last_email_tabs_metadata' => 'setFirstLastEmailTabsMetadata',
         'list_tabs_enabled' => 'setListTabsEnabled',
@@ -208,6 +214,8 @@ class TabAccountSettings implements ArrayAccess
         'data_field_regex_metadata' => 'getDataFieldRegexMetadata',
         'data_field_size_enabled' => 'getDataFieldSizeEnabled',
         'data_field_size_metadata' => 'getDataFieldSizeMetadata',
+        'draw_tabs_enabled' => 'getDrawTabsEnabled',
+        'draw_tabs_metadata' => 'getDrawTabsMetadata',
         'first_last_email_tabs_enabled' => 'getFirstLastEmailTabsEnabled',
         'first_last_email_tabs_metadata' => 'getFirstLastEmailTabsMetadata',
         'list_tabs_enabled' => 'getListTabsEnabled',
@@ -279,6 +287,8 @@ class TabAccountSettings implements ArrayAccess
         $this->container['data_field_regex_metadata'] = isset($data['data_field_regex_metadata']) ? $data['data_field_regex_metadata'] : null;
         $this->container['data_field_size_enabled'] = isset($data['data_field_size_enabled']) ? $data['data_field_size_enabled'] : null;
         $this->container['data_field_size_metadata'] = isset($data['data_field_size_metadata']) ? $data['data_field_size_metadata'] : null;
+        $this->container['draw_tabs_enabled'] = isset($data['draw_tabs_enabled']) ? $data['draw_tabs_enabled'] : null;
+        $this->container['draw_tabs_metadata'] = isset($data['draw_tabs_metadata']) ? $data['draw_tabs_metadata'] : null;
         $this->container['first_last_email_tabs_enabled'] = isset($data['first_last_email_tabs_enabled']) ? $data['first_last_email_tabs_enabled'] : null;
         $this->container['first_last_email_tabs_metadata'] = isset($data['first_last_email_tabs_metadata']) ? $data['first_last_email_tabs_metadata'] : null;
         $this->container['list_tabs_enabled'] = isset($data['list_tabs_enabled']) ? $data['list_tabs_enabled'] : null;
@@ -578,6 +588,48 @@ class TabAccountSettings implements ArrayAccess
     public function setDataFieldSizeMetadata($data_field_size_metadata)
     {
         $this->container['data_field_size_metadata'] = $data_field_size_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets draw_tabs_enabled
+     * @return string
+     */
+    public function getDrawTabsEnabled()
+    {
+        return $this->container['draw_tabs_enabled'];
+    }
+
+    /**
+     * Sets draw_tabs_enabled
+     * @param string $draw_tabs_enabled 
+     * @return $this
+     */
+    public function setDrawTabsEnabled($draw_tabs_enabled)
+    {
+        $this->container['draw_tabs_enabled'] = $draw_tabs_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets draw_tabs_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDrawTabsMetadata()
+    {
+        return $this->container['draw_tabs_metadata'];
+    }
+
+    /**
+     * Sets draw_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $draw_tabs_metadata
+     * @return $this
+     */
+    public function setDrawTabsMetadata($draw_tabs_metadata)
+    {
+        $this->container['draw_tabs_metadata'] = $draw_tabs_metadata;
 
         return $this;
     }

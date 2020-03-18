@@ -58,23 +58,28 @@ class Document implements ArrayAccess
         'display' => 'string',
         'document_base64' => 'string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
-        'document_group' => 'string',
         'document_id' => 'string',
         'encrypted_with_key_manager' => 'string',
         'file_extension' => 'string',
         'file_format_hint' => 'string',
         'html_definition' => '\DocuSign\eSign\Model\DocumentHtmlDefinition',
         'include_in_download' => 'string',
+        'is_dynamic_xfa' => 'bool',
+        'is_static_xfa' => 'bool',
         'match_boxes' => '\DocuSign\eSign\Model\MatchBox[]',
         'name' => 'string',
+        'ocr_requests' => '\DocuSign\eSign\Model\OcrRequest[]',
         'order' => 'string',
         'page_count' => 'string',
         'pages' => 'string',
         'page_sizes' => '\DocuSign\eSign\Model\PageSize[]',
         'password' => 'string',
+        'pdf_fields_data' => 'string',
         'pdf_form_field_option' => 'string',
+        'pdf_widgets_base64' => 'string',
         'remote_url' => 'string',
         'signer_must_acknowledge' => 'string',
+        'signer_must_acknowledge_use_account_default' => 'bool',
         'tabs' => '\DocuSign\eSign\Model\Tabs',
         'template_locked' => 'string',
         'template_required' => 'string',
@@ -96,23 +101,28 @@ class Document implements ArrayAccess
         'display' => 'display',
         'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
-        'document_group' => 'documentGroup',
         'document_id' => 'documentId',
         'encrypted_with_key_manager' => 'encryptedWithKeyManager',
         'file_extension' => 'fileExtension',
         'file_format_hint' => 'fileFormatHint',
         'html_definition' => 'htmlDefinition',
         'include_in_download' => 'includeInDownload',
+        'is_dynamic_xfa' => 'isDynamicXfa',
+        'is_static_xfa' => 'isStaticXfa',
         'match_boxes' => 'matchBoxes',
         'name' => 'name',
+        'ocr_requests' => 'ocrRequests',
         'order' => 'order',
         'page_count' => 'pageCount',
         'pages' => 'pages',
         'page_sizes' => 'pageSizes',
         'password' => 'password',
+        'pdf_fields_data' => 'pdfFieldsData',
         'pdf_form_field_option' => 'pdfFormFieldOption',
+        'pdf_widgets_base64' => 'pdfWidgetsBase64',
         'remote_url' => 'remoteUrl',
         'signer_must_acknowledge' => 'signerMustAcknowledge',
+        'signer_must_acknowledge_use_account_default' => 'signerMustAcknowledgeUseAccountDefault',
         'tabs' => 'tabs',
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
@@ -130,23 +140,28 @@ class Document implements ArrayAccess
         'display' => 'setDisplay',
         'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
-        'document_group' => 'setDocumentGroup',
         'document_id' => 'setDocumentId',
         'encrypted_with_key_manager' => 'setEncryptedWithKeyManager',
         'file_extension' => 'setFileExtension',
         'file_format_hint' => 'setFileFormatHint',
         'html_definition' => 'setHtmlDefinition',
         'include_in_download' => 'setIncludeInDownload',
+        'is_dynamic_xfa' => 'setIsDynamicXfa',
+        'is_static_xfa' => 'setIsStaticXfa',
         'match_boxes' => 'setMatchBoxes',
         'name' => 'setName',
+        'ocr_requests' => 'setOcrRequests',
         'order' => 'setOrder',
         'page_count' => 'setPageCount',
         'pages' => 'setPages',
         'page_sizes' => 'setPageSizes',
         'password' => 'setPassword',
+        'pdf_fields_data' => 'setPdfFieldsData',
         'pdf_form_field_option' => 'setPdfFormFieldOption',
+        'pdf_widgets_base64' => 'setPdfWidgetsBase64',
         'remote_url' => 'setRemoteUrl',
         'signer_must_acknowledge' => 'setSignerMustAcknowledge',
+        'signer_must_acknowledge_use_account_default' => 'setSignerMustAcknowledgeUseAccountDefault',
         'tabs' => 'setTabs',
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
@@ -164,23 +179,28 @@ class Document implements ArrayAccess
         'display' => 'getDisplay',
         'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
-        'document_group' => 'getDocumentGroup',
         'document_id' => 'getDocumentId',
         'encrypted_with_key_manager' => 'getEncryptedWithKeyManager',
         'file_extension' => 'getFileExtension',
         'file_format_hint' => 'getFileFormatHint',
         'html_definition' => 'getHtmlDefinition',
         'include_in_download' => 'getIncludeInDownload',
+        'is_dynamic_xfa' => 'getIsDynamicXfa',
+        'is_static_xfa' => 'getIsStaticXfa',
         'match_boxes' => 'getMatchBoxes',
         'name' => 'getName',
+        'ocr_requests' => 'getOcrRequests',
         'order' => 'getOrder',
         'page_count' => 'getPageCount',
         'pages' => 'getPages',
         'page_sizes' => 'getPageSizes',
         'password' => 'getPassword',
+        'pdf_fields_data' => 'getPdfFieldsData',
         'pdf_form_field_option' => 'getPdfFormFieldOption',
+        'pdf_widgets_base64' => 'getPdfWidgetsBase64',
         'remote_url' => 'getRemoteUrl',
         'signer_must_acknowledge' => 'getSignerMustAcknowledge',
+        'signer_must_acknowledge_use_account_default' => 'getSignerMustAcknowledgeUseAccountDefault',
         'tabs' => 'getTabs',
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
@@ -223,23 +243,28 @@ class Document implements ArrayAccess
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
-        $this->container['document_group'] = isset($data['document_group']) ? $data['document_group'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['encrypted_with_key_manager'] = isset($data['encrypted_with_key_manager']) ? $data['encrypted_with_key_manager'] : null;
         $this->container['file_extension'] = isset($data['file_extension']) ? $data['file_extension'] : null;
         $this->container['file_format_hint'] = isset($data['file_format_hint']) ? $data['file_format_hint'] : null;
         $this->container['html_definition'] = isset($data['html_definition']) ? $data['html_definition'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
+        $this->container['is_dynamic_xfa'] = isset($data['is_dynamic_xfa']) ? $data['is_dynamic_xfa'] : null;
+        $this->container['is_static_xfa'] = isset($data['is_static_xfa']) ? $data['is_static_xfa'] : null;
         $this->container['match_boxes'] = isset($data['match_boxes']) ? $data['match_boxes'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['ocr_requests'] = isset($data['ocr_requests']) ? $data['ocr_requests'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['page_count'] = isset($data['page_count']) ? $data['page_count'] : null;
         $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
         $this->container['page_sizes'] = isset($data['page_sizes']) ? $data['page_sizes'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['pdf_fields_data'] = isset($data['pdf_fields_data']) ? $data['pdf_fields_data'] : null;
         $this->container['pdf_form_field_option'] = isset($data['pdf_form_field_option']) ? $data['pdf_form_field_option'] : null;
+        $this->container['pdf_widgets_base64'] = isset($data['pdf_widgets_base64']) ? $data['pdf_widgets_base64'] : null;
         $this->container['remote_url'] = isset($data['remote_url']) ? $data['remote_url'] : null;
         $this->container['signer_must_acknowledge'] = isset($data['signer_must_acknowledge']) ? $data['signer_must_acknowledge'] : null;
+        $this->container['signer_must_acknowledge_use_account_default'] = isset($data['signer_must_acknowledge_use_account_default']) ? $data['signer_must_acknowledge_use_account_default'] : null;
         $this->container['tabs'] = isset($data['tabs']) ? $data['tabs'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
@@ -350,27 +375,6 @@ class Document implements ArrayAccess
     public function setDocumentFields($document_fields)
     {
         $this->container['document_fields'] = $document_fields;
-
-        return $this;
-    }
-
-    /**
-     * Gets document_group
-     * @return string
-     */
-    public function getDocumentGroup()
-    {
-        return $this->container['document_group'];
-    }
-
-    /**
-     * Sets document_group
-     * @param string $document_group 
-     * @return $this
-     */
-    public function setDocumentGroup($document_group)
-    {
-        $this->container['document_group'] = $document_group;
 
         return $this;
     }
@@ -502,6 +506,48 @@ class Document implements ArrayAccess
     }
 
     /**
+     * Gets is_dynamic_xfa
+     * @return bool
+     */
+    public function getIsDynamicXfa()
+    {
+        return $this->container['is_dynamic_xfa'];
+    }
+
+    /**
+     * Sets is_dynamic_xfa
+     * @param bool $is_dynamic_xfa 
+     * @return $this
+     */
+    public function setIsDynamicXfa($is_dynamic_xfa)
+    {
+        $this->container['is_dynamic_xfa'] = $is_dynamic_xfa;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_static_xfa
+     * @return bool
+     */
+    public function getIsStaticXfa()
+    {
+        return $this->container['is_static_xfa'];
+    }
+
+    /**
+     * Sets is_static_xfa
+     * @param bool $is_static_xfa 
+     * @return $this
+     */
+    public function setIsStaticXfa($is_static_xfa)
+    {
+        $this->container['is_static_xfa'] = $is_static_xfa;
+
+        return $this;
+    }
+
+    /**
      * Gets match_boxes
      * @return \DocuSign\eSign\Model\MatchBox[]
      */
@@ -539,6 +585,27 @@ class Document implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets ocr_requests
+     * @return \DocuSign\eSign\Model\OcrRequest[]
+     */
+    public function getOcrRequests()
+    {
+        return $this->container['ocr_requests'];
+    }
+
+    /**
+     * Sets ocr_requests
+     * @param \DocuSign\eSign\Model\OcrRequest[] $ocr_requests 
+     * @return $this
+     */
+    public function setOcrRequests($ocr_requests)
+    {
+        $this->container['ocr_requests'] = $ocr_requests;
 
         return $this;
     }
@@ -649,6 +716,27 @@ class Document implements ArrayAccess
     }
 
     /**
+     * Gets pdf_fields_data
+     * @return string
+     */
+    public function getPdfFieldsData()
+    {
+        return $this->container['pdf_fields_data'];
+    }
+
+    /**
+     * Sets pdf_fields_data
+     * @param string $pdf_fields_data 
+     * @return $this
+     */
+    public function setPdfFieldsData($pdf_fields_data)
+    {
+        $this->container['pdf_fields_data'] = $pdf_fields_data;
+
+        return $this;
+    }
+
+    /**
      * Gets pdf_form_field_option
      * @return string
      */
@@ -665,6 +753,27 @@ class Document implements ArrayAccess
     public function setPdfFormFieldOption($pdf_form_field_option)
     {
         $this->container['pdf_form_field_option'] = $pdf_form_field_option;
+
+        return $this;
+    }
+
+    /**
+     * Gets pdf_widgets_base64
+     * @return string
+     */
+    public function getPdfWidgetsBase64()
+    {
+        return $this->container['pdf_widgets_base64'];
+    }
+
+    /**
+     * Sets pdf_widgets_base64
+     * @param string $pdf_widgets_base64 
+     * @return $this
+     */
+    public function setPdfWidgetsBase64($pdf_widgets_base64)
+    {
+        $this->container['pdf_widgets_base64'] = $pdf_widgets_base64;
 
         return $this;
     }
@@ -707,6 +816,27 @@ class Document implements ArrayAccess
     public function setSignerMustAcknowledge($signer_must_acknowledge)
     {
         $this->container['signer_must_acknowledge'] = $signer_must_acknowledge;
+
+        return $this;
+    }
+
+    /**
+     * Gets signer_must_acknowledge_use_account_default
+     * @return bool
+     */
+    public function getSignerMustAcknowledgeUseAccountDefault()
+    {
+        return $this->container['signer_must_acknowledge_use_account_default'];
+    }
+
+    /**
+     * Sets signer_must_acknowledge_use_account_default
+     * @param bool $signer_must_acknowledge_use_account_default 
+     * @return $this
+     */
+    public function setSignerMustAcknowledgeUseAccountDefault($signer_must_acknowledge_use_account_default)
+    {
+        $this->container['signer_must_acknowledge_use_account_default'] = $signer_must_acknowledge_use_account_default;
 
         return $this;
     }
