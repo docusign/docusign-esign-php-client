@@ -1,6 +1,6 @@
 <?php
 /**
- * RecipientEmailNotification
+ * RecipientIdentityInputOption
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace DocuSign\eSign\Model;
 use \ArrayAccess;
 
 /**
- * RecipientEmailNotification Class Doc Comment
+ * RecipientIdentityInputOption Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecipientEmailNotification implements ArrayAccess
+class RecipientIdentityInputOption implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,16 @@ class RecipientEmailNotification implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'recipientEmailNotification';
+    protected static $swaggerModelName = 'recipientIdentityInputOption';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_body' => 'string',
-        'email_subject' => 'string',
-        'supported_language' => 'string'
+        'name' => 'string',
+        'phone_number_list' => '\DocuSign\eSign\Model\RecipientIdentityPhoneNumber[]',
+        'value_type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +69,9 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email_body' => 'emailBody',
-        'email_subject' => 'emailSubject',
-        'supported_language' => 'supportedLanguage'
+        'name' => 'name',
+        'phone_number_list' => 'phoneNumberList',
+        'value_type' => 'valueType'
     ];
 
 
@@ -80,9 +80,9 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email_body' => 'setEmailBody',
-        'email_subject' => 'setEmailSubject',
-        'supported_language' => 'setSupportedLanguage'
+        'name' => 'setName',
+        'phone_number_list' => 'setPhoneNumberList',
+        'value_type' => 'setValueType'
     ];
 
 
@@ -91,9 +91,9 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email_body' => 'getEmailBody',
-        'email_subject' => 'getEmailSubject',
-        'supported_language' => 'getSupportedLanguage'
+        'name' => 'getName',
+        'phone_number_list' => 'getPhoneNumberList',
+        'value_type' => 'getValueType'
     ];
 
     public static function attributeMap()
@@ -127,9 +127,9 @@ class RecipientEmailNotification implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email_body'] = isset($data['email_body']) ? $data['email_body'] : null;
-        $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
-        $this->container['supported_language'] = isset($data['supported_language']) ? $data['supported_language'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['phone_number_list'] = isset($data['phone_number_list']) ? $data['phone_number_list'] : null;
+        $this->container['value_type'] = isset($data['value_type']) ? $data['value_type'] : null;
     }
 
     /**
@@ -156,64 +156,64 @@ class RecipientEmailNotification implements ArrayAccess
 
 
     /**
-     * Gets email_body
+     * Gets name
      * @return string
      */
-    public function getEmailBody()
+    public function getName()
     {
-        return $this->container['email_body'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets email_body
-     * @param string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
+     * Sets name
+     * @param string $name 
      * @return $this
      */
-    public function setEmailBody($email_body)
+    public function setName($name)
     {
-        $this->container['email_body'] = $email_body;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets email_subject
-     * @return string
+     * Gets phone_number_list
+     * @return \DocuSign\eSign\Model\RecipientIdentityPhoneNumber[]
      */
-    public function getEmailSubject()
+    public function getPhoneNumberList()
     {
-        return $this->container['email_subject'];
+        return $this->container['phone_number_list'];
     }
 
     /**
-     * Sets email_subject
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * Sets phone_number_list
+     * @param \DocuSign\eSign\Model\RecipientIdentityPhoneNumber[] $phone_number_list 
      * @return $this
      */
-    public function setEmailSubject($email_subject)
+    public function setPhoneNumberList($phone_number_list)
     {
-        $this->container['email_subject'] = $email_subject;
+        $this->container['phone_number_list'] = $phone_number_list;
 
         return $this;
     }
 
     /**
-     * Gets supported_language
+     * Gets value_type
      * @return string
      */
-    public function getSupportedLanguage()
+    public function getValueType()
     {
-        return $this->container['supported_language'];
+        return $this->container['value_type'];
     }
 
     /**
-     * Sets supported_language
-     * @param string $supported_language A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).
+     * Sets value_type
+     * @param string $value_type 
      * @return $this
      */
-    public function setSupportedLanguage($supported_language)
+    public function setValueType($value_type)
     {
-        $this->container['supported_language'] = $supported_language;
+        $this->container['value_type'] = $value_type;
 
         return $this;
     }

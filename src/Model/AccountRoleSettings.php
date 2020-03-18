@@ -64,6 +64,8 @@ class AccountRoleSettings implements ArrayAccess
         'allow_api_sending_on_behalf_of_others_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_api_sequential_signing' => 'string',
         'allow_api_sequential_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_auto_tagging' => 'string',
+        'allow_auto_tagging_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_bulk_sending' => 'string',
         'allow_bulk_sending_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_docu_sign_desktop_client' => 'string',
@@ -144,6 +146,8 @@ class AccountRoleSettings implements ArrayAccess
         'allow_api_sending_on_behalf_of_others_metadata' => 'allowApiSendingOnBehalfOfOthersMetadata',
         'allow_api_sequential_signing' => 'allowApiSequentialSigning',
         'allow_api_sequential_signing_metadata' => 'allowApiSequentialSigningMetadata',
+        'allow_auto_tagging' => 'allowAutoTagging',
+        'allow_auto_tagging_metadata' => 'allowAutoTaggingMetadata',
         'allow_bulk_sending' => 'allowBulkSending',
         'allow_bulk_sending_metadata' => 'allowBulkSendingMetadata',
         'allow_docu_sign_desktop_client' => 'allowDocuSignDesktopClient',
@@ -220,6 +224,8 @@ class AccountRoleSettings implements ArrayAccess
         'allow_api_sending_on_behalf_of_others_metadata' => 'setAllowApiSendingOnBehalfOfOthersMetadata',
         'allow_api_sequential_signing' => 'setAllowApiSequentialSigning',
         'allow_api_sequential_signing_metadata' => 'setAllowApiSequentialSigningMetadata',
+        'allow_auto_tagging' => 'setAllowAutoTagging',
+        'allow_auto_tagging_metadata' => 'setAllowAutoTaggingMetadata',
         'allow_bulk_sending' => 'setAllowBulkSending',
         'allow_bulk_sending_metadata' => 'setAllowBulkSendingMetadata',
         'allow_docu_sign_desktop_client' => 'setAllowDocuSignDesktopClient',
@@ -296,6 +302,8 @@ class AccountRoleSettings implements ArrayAccess
         'allow_api_sending_on_behalf_of_others_metadata' => 'getAllowApiSendingOnBehalfOfOthersMetadata',
         'allow_api_sequential_signing' => 'getAllowApiSequentialSigning',
         'allow_api_sequential_signing_metadata' => 'getAllowApiSequentialSigningMetadata',
+        'allow_auto_tagging' => 'getAllowAutoTagging',
+        'allow_auto_tagging_metadata' => 'getAllowAutoTaggingMetadata',
         'allow_bulk_sending' => 'getAllowBulkSending',
         'allow_bulk_sending_metadata' => 'getAllowBulkSendingMetadata',
         'allow_docu_sign_desktop_client' => 'getAllowDocuSignDesktopClient',
@@ -397,6 +405,8 @@ class AccountRoleSettings implements ArrayAccess
         $this->container['allow_api_sending_on_behalf_of_others_metadata'] = isset($data['allow_api_sending_on_behalf_of_others_metadata']) ? $data['allow_api_sending_on_behalf_of_others_metadata'] : null;
         $this->container['allow_api_sequential_signing'] = isset($data['allow_api_sequential_signing']) ? $data['allow_api_sequential_signing'] : null;
         $this->container['allow_api_sequential_signing_metadata'] = isset($data['allow_api_sequential_signing_metadata']) ? $data['allow_api_sequential_signing_metadata'] : null;
+        $this->container['allow_auto_tagging'] = isset($data['allow_auto_tagging']) ? $data['allow_auto_tagging'] : null;
+        $this->container['allow_auto_tagging_metadata'] = isset($data['allow_auto_tagging_metadata']) ? $data['allow_auto_tagging_metadata'] : null;
         $this->container['allow_bulk_sending'] = isset($data['allow_bulk_sending']) ? $data['allow_bulk_sending'] : null;
         $this->container['allow_bulk_sending_metadata'] = isset($data['allow_bulk_sending_metadata']) ? $data['allow_bulk_sending_metadata'] : null;
         $this->container['allow_docu_sign_desktop_client'] = isset($data['allow_docu_sign_desktop_client']) ? $data['allow_docu_sign_desktop_client'] : null;
@@ -686,6 +696,48 @@ class AccountRoleSettings implements ArrayAccess
     public function setAllowApiSequentialSigningMetadata($allow_api_sequential_signing_metadata)
     {
         $this->container['allow_api_sequential_signing_metadata'] = $allow_api_sequential_signing_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_auto_tagging
+     * @return string
+     */
+    public function getAllowAutoTagging()
+    {
+        return $this->container['allow_auto_tagging'];
+    }
+
+    /**
+     * Sets allow_auto_tagging
+     * @param string $allow_auto_tagging 
+     * @return $this
+     */
+    public function setAllowAutoTagging($allow_auto_tagging)
+    {
+        $this->container['allow_auto_tagging'] = $allow_auto_tagging;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_auto_tagging_metadata
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowAutoTaggingMetadata()
+    {
+        return $this->container['allow_auto_tagging_metadata'];
+    }
+
+    /**
+     * Sets allow_auto_tagging_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_auto_tagging_metadata
+     * @return $this
+     */
+    public function setAllowAutoTaggingMetadata($allow_auto_tagging_metadata)
+    {
+        $this->container['allow_auto_tagging_metadata'] = $allow_auto_tagging_metadata;
 
         return $this;
     }

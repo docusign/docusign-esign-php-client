@@ -130,6 +130,31 @@ class CreateEnvelopeOptions
         $this->merge_roles_on_draft = $merge_roles_on_draft;
         return $this;
     }
+    /**
+      * $tab_label_exact_matches 
+      * @var string
+      */
+    protected $tab_label_exact_matches;
+
+    /**
+     * Gets tab_label_exact_matches
+     * @return string
+     */
+    public function getTabLabelExactMatches()
+    {
+        return $this->tab_label_exact_matches;
+    }
+  
+    /**
+     * Sets tab_label_exact_matches
+     * @param string $tab_label_exact_matches 
+     * @return $this
+     */
+    public function setTabLabelExactMatches($tab_label_exact_matches)
+    {
+        $this->tab_label_exact_matches = $tab_label_exact_matches;
+        return $this;
+    }
 }
 class CreateRecipientOptions
 {
@@ -184,6 +209,34 @@ class GetChunkedUploadOptions
     public function setInclude($include)
     {
         $this->include = $include;
+        return $this;
+    }
+}
+class GetCommentsTranscriptOptions
+{
+    /**
+      * $encoding 
+      * @var string
+      */
+    protected $encoding;
+
+    /**
+     * Gets encoding
+     * @return string
+     */
+    public function getEncoding()
+    {
+        return $this->encoding;
+    }
+  
+    /**
+     * Sets encoding
+     * @param string $encoding 
+     * @return $this
+     */
+    public function setEncoding($encoding)
+    {
+        $this->encoding = $encoding;
         return $this;
     }
 }
@@ -836,6 +889,34 @@ class GetRecipientSignatureImageOptions
     public function setIncludeChrome($include_chrome)
     {
         $this->include_chrome = $include_chrome;
+        return $this;
+    }
+}
+class ListDocumentsOptions
+{
+    /**
+      * $include_document_size 
+      * @var string
+      */
+    protected $include_document_size;
+
+    /**
+     * Gets include_document_size
+     * @return string
+     */
+    public function getIncludeDocumentSize()
+    {
+        return $this->include_document_size;
+    }
+  
+    /**
+     * Sets include_document_size
+     * @param string $include_document_size 
+     * @return $this
+     */
+    public function setIncludeDocumentSize($include_document_size)
+    {
+        $this->include_document_size = $include_document_size;
         return $this;
     }
 }
@@ -3123,6 +3204,10 @@ class EnvelopesApi
         // query params
         if ($options->getMergeRolesOnDraft() !== null) {
             $queryParams['merge_roles_on_draft'] = $this->apiClient->getSerializer()->toQueryValue($options->getMergeRolesOnDraft());
+        }
+        // query params
+        if ($options->getTabLabelExactMatches() !== null) {
+            $queryParams['tab_label_exact_matches'] = $this->apiClient->getSerializer()->toQueryValue($options->getTabLabelExactMatches());
         }
         }
 
@@ -5692,13 +5777,127 @@ class EnvelopesApi
     }
 
     /**
+     * Operation getCommentsTranscript
+     *
+     * Gets comment transcript for envelope and user
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \SplFileObject
+     */
+    public function getCommentsTranscript($account_id, $envelope_id, EnvelopesApi\GetCommentsTranscriptOptions $options = null)
+    {
+        list($response) = $this->getCommentsTranscriptWithHttpInfo($account_id, $envelope_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getCommentsTranscriptWithHttpInfo
+     *
+     * Gets comment transcript for envelope and user
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCommentsTranscriptWithHttpInfo($account_id, $envelope_id, EnvelopesApi\GetCommentsTranscriptOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getCommentsTranscript');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getCommentsTranscript');
+        }
+        // parse inputs
+        $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/comments/transcript";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/pdf']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getEncoding() !== null) {
+            $queryParams['encoding'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncoding());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\SplFileObject',
+                '/v2/accounts/{accountId}/envelopes/{envelopeId}/comments/transcript'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getConsumerDisclosure
      *
      * Reserved: Gets the Electronic Record and Signature Disclosure associated with the account.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
     * @param string $recipient_id The ID of the recipient being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
@@ -5717,7 +5916,7 @@ class EnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
     * @param string $recipient_id The ID of the recipient being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
@@ -8378,12 +8577,13 @@ class EnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocumentsResult
      */
-    public function listDocuments($account_id, $envelope_id)
+    public function listDocuments($account_id, $envelope_id, EnvelopesApi\ListDocumentsOptions $options = null)
     {
-        list($response) = $this->listDocumentsWithHttpInfo($account_id, $envelope_id);
+        list($response) = $this->listDocumentsWithHttpInfo($account_id, $envelope_id, $options);
         return $response;
     }
 
@@ -8394,10 +8594,11 @@ class EnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listDocumentsWithHttpInfo($account_id, $envelope_id)
+    public function listDocumentsWithHttpInfo($account_id, $envelope_id, EnvelopesApi\ListDocumentsOptions $options = null)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8419,6 +8620,14 @@ class EnvelopesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getIncludeDocumentSize() !== null) {
+            $queryParams['include_document_size'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeDocumentSize());
+        }
+        }
 
         // path params
         if ($account_id !== null) {

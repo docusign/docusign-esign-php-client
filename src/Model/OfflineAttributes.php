@@ -1,6 +1,6 @@
 <?php
 /**
- * RecipientEmailNotification
+ * OfflineAttributes
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace DocuSign\eSign\Model;
 use \ArrayAccess;
 
 /**
- * RecipientEmailNotification Class Doc Comment
+ * OfflineAttributes Class Doc Comment
  *
  * @category    Class
+ * @description Reserved for DocuSign use.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecipientEmailNotification implements ArrayAccess
+class OfflineAttributes implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +48,19 @@ class RecipientEmailNotification implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'recipientEmailNotification';
+    protected static $swaggerModelName = 'offlineAttributes';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_body' => 'string',
-        'email_subject' => 'string',
-        'supported_language' => 'string'
+        'account_esign_id' => 'string',
+        'device_model' => 'string',
+        'device_name' => 'string',
+        'gps_latitude' => 'string',
+        'gps_longitude' => 'string',
+        'offline_signing_hash' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +73,12 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email_body' => 'emailBody',
-        'email_subject' => 'emailSubject',
-        'supported_language' => 'supportedLanguage'
+        'account_esign_id' => 'accountEsignId',
+        'device_model' => 'deviceModel',
+        'device_name' => 'deviceName',
+        'gps_latitude' => 'gpsLatitude',
+        'gps_longitude' => 'gpsLongitude',
+        'offline_signing_hash' => 'offlineSigningHash'
     ];
 
 
@@ -80,9 +87,12 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email_body' => 'setEmailBody',
-        'email_subject' => 'setEmailSubject',
-        'supported_language' => 'setSupportedLanguage'
+        'account_esign_id' => 'setAccountEsignId',
+        'device_model' => 'setDeviceModel',
+        'device_name' => 'setDeviceName',
+        'gps_latitude' => 'setGpsLatitude',
+        'gps_longitude' => 'setGpsLongitude',
+        'offline_signing_hash' => 'setOfflineSigningHash'
     ];
 
 
@@ -91,9 +101,12 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email_body' => 'getEmailBody',
-        'email_subject' => 'getEmailSubject',
-        'supported_language' => 'getSupportedLanguage'
+        'account_esign_id' => 'getAccountEsignId',
+        'device_model' => 'getDeviceModel',
+        'device_name' => 'getDeviceName',
+        'gps_latitude' => 'getGpsLatitude',
+        'gps_longitude' => 'getGpsLongitude',
+        'offline_signing_hash' => 'getOfflineSigningHash'
     ];
 
     public static function attributeMap()
@@ -127,9 +140,12 @@ class RecipientEmailNotification implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email_body'] = isset($data['email_body']) ? $data['email_body'] : null;
-        $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
-        $this->container['supported_language'] = isset($data['supported_language']) ? $data['supported_language'] : null;
+        $this->container['account_esign_id'] = isset($data['account_esign_id']) ? $data['account_esign_id'] : null;
+        $this->container['device_model'] = isset($data['device_model']) ? $data['device_model'] : null;
+        $this->container['device_name'] = isset($data['device_name']) ? $data['device_name'] : null;
+        $this->container['gps_latitude'] = isset($data['gps_latitude']) ? $data['gps_latitude'] : null;
+        $this->container['gps_longitude'] = isset($data['gps_longitude']) ? $data['gps_longitude'] : null;
+        $this->container['offline_signing_hash'] = isset($data['offline_signing_hash']) ? $data['offline_signing_hash'] : null;
     }
 
     /**
@@ -156,64 +172,127 @@ class RecipientEmailNotification implements ArrayAccess
 
 
     /**
-     * Gets email_body
+     * Gets account_esign_id
      * @return string
      */
-    public function getEmailBody()
+    public function getAccountEsignId()
     {
-        return $this->container['email_body'];
+        return $this->container['account_esign_id'];
     }
 
     /**
-     * Sets email_body
-     * @param string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
+     * Sets account_esign_id
+     * @param string $account_esign_id A GUID identifying the account associated with the consumer disclosure
      * @return $this
      */
-    public function setEmailBody($email_body)
+    public function setAccountEsignId($account_esign_id)
     {
-        $this->container['email_body'] = $email_body;
+        $this->container['account_esign_id'] = $account_esign_id;
 
         return $this;
     }
 
     /**
-     * Gets email_subject
+     * Gets device_model
      * @return string
      */
-    public function getEmailSubject()
+    public function getDeviceModel()
     {
-        return $this->container['email_subject'];
+        return $this->container['device_model'];
     }
 
     /**
-     * Sets email_subject
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * Sets device_model
+     * @param string $device_model A string containing information about the model of the device used for offline signing.
      * @return $this
      */
-    public function setEmailSubject($email_subject)
+    public function setDeviceModel($device_model)
     {
-        $this->container['email_subject'] = $email_subject;
+        $this->container['device_model'] = $device_model;
 
         return $this;
     }
 
     /**
-     * Gets supported_language
+     * Gets device_name
      * @return string
      */
-    public function getSupportedLanguage()
+    public function getDeviceName()
     {
-        return $this->container['supported_language'];
+        return $this->container['device_name'];
     }
 
     /**
-     * Sets supported_language
-     * @param string $supported_language A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).
+     * Sets device_name
+     * @param string $device_name A string containing information about the type of device used for offline signing.
      * @return $this
      */
-    public function setSupportedLanguage($supported_language)
+    public function setDeviceName($device_name)
     {
-        $this->container['supported_language'] = $supported_language;
+        $this->container['device_name'] = $device_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets gps_latitude
+     * @return string
+     */
+    public function getGpsLatitude()
+    {
+        return $this->container['gps_latitude'];
+    }
+
+    /**
+     * Sets gps_latitude
+     * @param string $gps_latitude A string containing the latitude of the device location at the time of signing.
+     * @return $this
+     */
+    public function setGpsLatitude($gps_latitude)
+    {
+        $this->container['gps_latitude'] = $gps_latitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets gps_longitude
+     * @return string
+     */
+    public function getGpsLongitude()
+    {
+        return $this->container['gps_longitude'];
+    }
+
+    /**
+     * Sets gps_longitude
+     * @param string $gps_longitude A string containing the longitude of the device location at the time of signing.
+     * @return $this
+     */
+    public function setGpsLongitude($gps_longitude)
+    {
+        $this->container['gps_longitude'] = $gps_longitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets offline_signing_hash
+     * @return string
+     */
+    public function getOfflineSigningHash()
+    {
+        return $this->container['offline_signing_hash'];
+    }
+
+    /**
+     * Sets offline_signing_hash
+     * @param string $offline_signing_hash 
+     * @return $this
+     */
+    public function setOfflineSigningHash($offline_signing_hash)
+    {
+        $this->container['offline_signing_hash'] = $offline_signing_hash;
 
         return $this;
     }

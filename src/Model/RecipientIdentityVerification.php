@@ -1,6 +1,6 @@
 <?php
 /**
- * RecipientEmailNotification
+ * RecipientIdentityVerification
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace DocuSign\eSign\Model;
 use \ArrayAccess;
 
 /**
- * RecipientEmailNotification Class Doc Comment
+ * RecipientIdentityVerification Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecipientEmailNotification implements ArrayAccess
+class RecipientIdentityVerification implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,15 @@ class RecipientEmailNotification implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'recipientEmailNotification';
+    protected static $swaggerModelName = 'recipientIdentityVerification';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_body' => 'string',
-        'email_subject' => 'string',
-        'supported_language' => 'string'
+        'input_options' => '\DocuSign\eSign\Model\RecipientIdentityInputOption[]',
+        'workflow_id' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +68,8 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email_body' => 'emailBody',
-        'email_subject' => 'emailSubject',
-        'supported_language' => 'supportedLanguage'
+        'input_options' => 'inputOptions',
+        'workflow_id' => 'workflowId'
     ];
 
 
@@ -80,9 +78,8 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email_body' => 'setEmailBody',
-        'email_subject' => 'setEmailSubject',
-        'supported_language' => 'setSupportedLanguage'
+        'input_options' => 'setInputOptions',
+        'workflow_id' => 'setWorkflowId'
     ];
 
 
@@ -91,9 +88,8 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email_body' => 'getEmailBody',
-        'email_subject' => 'getEmailSubject',
-        'supported_language' => 'getSupportedLanguage'
+        'input_options' => 'getInputOptions',
+        'workflow_id' => 'getWorkflowId'
     ];
 
     public static function attributeMap()
@@ -127,9 +123,8 @@ class RecipientEmailNotification implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email_body'] = isset($data['email_body']) ? $data['email_body'] : null;
-        $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
-        $this->container['supported_language'] = isset($data['supported_language']) ? $data['supported_language'] : null;
+        $this->container['input_options'] = isset($data['input_options']) ? $data['input_options'] : null;
+        $this->container['workflow_id'] = isset($data['workflow_id']) ? $data['workflow_id'] : null;
     }
 
     /**
@@ -156,64 +151,43 @@ class RecipientEmailNotification implements ArrayAccess
 
 
     /**
-     * Gets email_body
-     * @return string
+     * Gets input_options
+     * @return \DocuSign\eSign\Model\RecipientIdentityInputOption[]
      */
-    public function getEmailBody()
+    public function getInputOptions()
     {
-        return $this->container['email_body'];
+        return $this->container['input_options'];
     }
 
     /**
-     * Sets email_body
-     * @param string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
+     * Sets input_options
+     * @param \DocuSign\eSign\Model\RecipientIdentityInputOption[] $input_options 
      * @return $this
      */
-    public function setEmailBody($email_body)
+    public function setInputOptions($input_options)
     {
-        $this->container['email_body'] = $email_body;
+        $this->container['input_options'] = $input_options;
 
         return $this;
     }
 
     /**
-     * Gets email_subject
+     * Gets workflow_id
      * @return string
      */
-    public function getEmailSubject()
+    public function getWorkflowId()
     {
-        return $this->container['email_subject'];
+        return $this->container['workflow_id'];
     }
 
     /**
-     * Sets email_subject
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * Sets workflow_id
+     * @param string $workflow_id 
      * @return $this
      */
-    public function setEmailSubject($email_subject)
+    public function setWorkflowId($workflow_id)
     {
-        $this->container['email_subject'] = $email_subject;
-
-        return $this;
-    }
-
-    /**
-     * Gets supported_language
-     * @return string
-     */
-    public function getSupportedLanguage()
-    {
-        return $this->container['supported_language'];
-    }
-
-    /**
-     * Sets supported_language
-     * @param string $supported_language A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).
-     * @return $this
-     */
-    public function setSupportedLanguage($supported_language)
-    {
-        $this->container['supported_language'] = $supported_language;
+        $this->container['workflow_id'] = $workflow_id;
 
         return $this;
     }

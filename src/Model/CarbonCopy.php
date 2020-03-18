@@ -76,11 +76,13 @@ class CarbonCopy implements ArrayAccess
         'full_name' => 'string',
         'id_check_configuration_name' => 'string',
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
+        'identity_verification' => '\DocuSign\eSign\Model\RecipientIdentityVerification',
         'inherit_email_notification_configuration' => 'string',
         'last_name' => 'string',
         'name' => 'string',
         'note' => 'string',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
+        'proof_file' => '\DocuSign\eSign\Model\RecipientProofFile',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_id' => 'string',
@@ -135,11 +137,13 @@ class CarbonCopy implements ArrayAccess
         'full_name' => 'fullName',
         'id_check_configuration_name' => 'idCheckConfigurationName',
         'id_check_information_input' => 'idCheckInformationInput',
+        'identity_verification' => 'identityVerification',
         'inherit_email_notification_configuration' => 'inheritEmailNotificationConfiguration',
         'last_name' => 'lastName',
         'name' => 'name',
         'note' => 'note',
         'phone_authentication' => 'phoneAuthentication',
+        'proof_file' => 'proofFile',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
         'recipient_id' => 'recipientId',
@@ -190,11 +194,13 @@ class CarbonCopy implements ArrayAccess
         'full_name' => 'setFullName',
         'id_check_configuration_name' => 'setIdCheckConfigurationName',
         'id_check_information_input' => 'setIdCheckInformationInput',
+        'identity_verification' => 'setIdentityVerification',
         'inherit_email_notification_configuration' => 'setInheritEmailNotificationConfiguration',
         'last_name' => 'setLastName',
         'name' => 'setName',
         'note' => 'setNote',
         'phone_authentication' => 'setPhoneAuthentication',
+        'proof_file' => 'setProofFile',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
         'recipient_id' => 'setRecipientId',
@@ -245,11 +251,13 @@ class CarbonCopy implements ArrayAccess
         'full_name' => 'getFullName',
         'id_check_configuration_name' => 'getIdCheckConfigurationName',
         'id_check_information_input' => 'getIdCheckInformationInput',
+        'identity_verification' => 'getIdentityVerification',
         'inherit_email_notification_configuration' => 'getInheritEmailNotificationConfiguration',
         'last_name' => 'getLastName',
         'name' => 'getName',
         'note' => 'getNote',
         'phone_authentication' => 'getPhoneAuthentication',
+        'proof_file' => 'getProofFile',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
         'recipient_id' => 'getRecipientId',
@@ -325,11 +333,13 @@ class CarbonCopy implements ArrayAccess
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['id_check_configuration_name'] = isset($data['id_check_configuration_name']) ? $data['id_check_configuration_name'] : null;
         $this->container['id_check_information_input'] = isset($data['id_check_information_input']) ? $data['id_check_information_input'] : null;
+        $this->container['identity_verification'] = isset($data['identity_verification']) ? $data['identity_verification'] : null;
         $this->container['inherit_email_notification_configuration'] = isset($data['inherit_email_notification_configuration']) ? $data['inherit_email_notification_configuration'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
+        $this->container['proof_file'] = isset($data['proof_file']) ? $data['proof_file'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
@@ -838,6 +848,27 @@ class CarbonCopy implements ArrayAccess
     }
 
     /**
+     * Gets identity_verification
+     * @return \DocuSign\eSign\Model\RecipientIdentityVerification
+     */
+    public function getIdentityVerification()
+    {
+        return $this->container['identity_verification'];
+    }
+
+    /**
+     * Sets identity_verification
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification
+     * @return $this
+     */
+    public function setIdentityVerification($identity_verification)
+    {
+        $this->container['identity_verification'] = $identity_verification;
+
+        return $this;
+    }
+
+    /**
      * Gets inherit_email_notification_configuration
      * @return string
      */
@@ -938,6 +969,27 @@ class CarbonCopy implements ArrayAccess
     public function setPhoneAuthentication($phone_authentication)
     {
         $this->container['phone_authentication'] = $phone_authentication;
+
+        return $this;
+    }
+
+    /**
+     * Gets proof_file
+     * @return \DocuSign\eSign\Model\RecipientProofFile
+     */
+    public function getProofFile()
+    {
+        return $this->container['proof_file'];
+    }
+
+    /**
+     * Sets proof_file
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file
+     * @return $this
+     */
+    public function setProofFile($proof_file)
+    {
+        $this->container['proof_file'] = $proof_file;
 
         return $this;
     }

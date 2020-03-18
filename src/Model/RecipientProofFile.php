@@ -1,6 +1,6 @@
 <?php
 /**
- * RecipientEmailNotification
+ * RecipientProofFile
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace DocuSign\eSign\Model;
 use \ArrayAccess;
 
 /**
- * RecipientEmailNotification Class Doc Comment
+ * RecipientProofFile Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecipientEmailNotification implements ArrayAccess
+class RecipientProofFile implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,14 @@ class RecipientEmailNotification implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'recipientEmailNotification';
+    protected static $swaggerModelName = 'recipientProofFile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_body' => 'string',
-        'email_subject' => 'string',
-        'supported_language' => 'string'
+        'is_in_proof_file' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +67,7 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email_body' => 'emailBody',
-        'email_subject' => 'emailSubject',
-        'supported_language' => 'supportedLanguage'
+        'is_in_proof_file' => 'isInProofFile'
     ];
 
 
@@ -80,9 +76,7 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email_body' => 'setEmailBody',
-        'email_subject' => 'setEmailSubject',
-        'supported_language' => 'setSupportedLanguage'
+        'is_in_proof_file' => 'setIsInProofFile'
     ];
 
 
@@ -91,9 +85,7 @@ class RecipientEmailNotification implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email_body' => 'getEmailBody',
-        'email_subject' => 'getEmailSubject',
-        'supported_language' => 'getSupportedLanguage'
+        'is_in_proof_file' => 'getIsInProofFile'
     ];
 
     public static function attributeMap()
@@ -127,9 +119,7 @@ class RecipientEmailNotification implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email_body'] = isset($data['email_body']) ? $data['email_body'] : null;
-        $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
-        $this->container['supported_language'] = isset($data['supported_language']) ? $data['supported_language'] : null;
+        $this->container['is_in_proof_file'] = isset($data['is_in_proof_file']) ? $data['is_in_proof_file'] : null;
     }
 
     /**
@@ -156,64 +146,22 @@ class RecipientEmailNotification implements ArrayAccess
 
 
     /**
-     * Gets email_body
+     * Gets is_in_proof_file
      * @return string
      */
-    public function getEmailBody()
+    public function getIsInProofFile()
     {
-        return $this->container['email_body'];
+        return $this->container['is_in_proof_file'];
     }
 
     /**
-     * Sets email_body
-     * @param string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
+     * Sets is_in_proof_file
+     * @param string $is_in_proof_file 
      * @return $this
      */
-    public function setEmailBody($email_body)
+    public function setIsInProofFile($is_in_proof_file)
     {
-        $this->container['email_body'] = $email_body;
-
-        return $this;
-    }
-
-    /**
-     * Gets email_subject
-     * @return string
-     */
-    public function getEmailSubject()
-    {
-        return $this->container['email_subject'];
-    }
-
-    /**
-     * Sets email_subject
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
-     * @return $this
-     */
-    public function setEmailSubject($email_subject)
-    {
-        $this->container['email_subject'] = $email_subject;
-
-        return $this;
-    }
-
-    /**
-     * Gets supported_language
-     * @return string
-     */
-    public function getSupportedLanguage()
-    {
-        return $this->container['supported_language'];
-    }
-
-    /**
-     * Sets supported_language
-     * @param string $supported_language A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).
-     * @return $this
-     */
-    public function setSupportedLanguage($supported_language)
-    {
-        $this->container['supported_language'] = $supported_language;
+        $this->container['is_in_proof_file'] = $is_in_proof_file;
 
         return $this;
     }

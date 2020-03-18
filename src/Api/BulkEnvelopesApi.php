@@ -134,7 +134,7 @@ class GetOptions
         return $this;
     }
     /**
-      * $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=Ã¢â¬Âfailed,queuedÃ¢â¬Â)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent Ã¢â¬â This only returns entries with a sent status.
+      * $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.
       * @var string
       */
     protected $include;
@@ -150,7 +150,7 @@ class GetOptions
   
     /**
      * Sets include
-     * @param string $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=Ã¢â¬Âfailed,queuedÃ¢â¬Â)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent Ã¢â¬â This only returns entries with a sent status.
+     * @param string $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.
      * @return $this
      */
     public function setInclude($include)
@@ -785,14 +785,14 @@ class BulkEnvelopesApi
      *
      * Adds or replaces envelope bulk recipients.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
+    * @param string $account_id The external account number (int) or account id GUID.
+    * @param string $envelope_id The envelope&#39;s GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec
+    * @param string $recipient_id The &#x60;recipientId&#x60; used when the envelope or template was created.
+     * @param string $bulk_recipients_request  (required)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsSummaryResponse
      */
-    public function updateRecipients($account_id, $envelope_id, $recipient_id, $bulk_recipients_request = null)
+    public function updateRecipients($account_id, $envelope_id, $recipient_id, $bulk_recipients_request)
     {
         list($response) = $this->updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request);
         return $response;
@@ -803,14 +803,14 @@ class BulkEnvelopesApi
      *
      * Adds or replaces envelope bulk recipients.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
+    * @param string $account_id The external account number (int) or account id GUID.
+    * @param string $envelope_id The envelope&#39;s GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec
+    * @param string $recipient_id The &#x60;recipientId&#x60; used when the envelope or template was created.
+     * @param string $bulk_recipients_request  (required)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsSummaryResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request = null)
+    public function updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -823,6 +823,10 @@ class BulkEnvelopesApi
         // verify the required parameter 'recipient_id' is set
         if ($recipient_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling updateRecipients');
+        }
+        // verify the required parameter 'bulk_recipients_request' is set
+        if ($bulk_recipients_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $bulk_recipients_request when calling updateRecipients');
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients";

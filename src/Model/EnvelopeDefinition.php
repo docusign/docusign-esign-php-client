@@ -70,12 +70,14 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'string',
         'completed_date_time' => 'string',
         'composite_templates' => '\DocuSign\eSign\Model\CompositeTemplate[]',
+        'copy_recipient_data' => 'string',
         'created_date_time' => 'string',
         'custom_fields' => '\DocuSign\eSign\Model\CustomFields',
         'custom_fields_uri' => 'string',
         'declined_date_time' => 'string',
         'deleted_date_time' => 'string',
         'delivered_date_time' => 'string',
+        'disable_responsive_document' => 'string',
         'documents' => '\DocuSign\eSign\Model\Document[]',
         'documents_combined_uri' => 'string',
         'documents_uri' => 'string',
@@ -141,12 +143,14 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'certificateUri',
         'completed_date_time' => 'completedDateTime',
         'composite_templates' => 'compositeTemplates',
+        'copy_recipient_data' => 'copyRecipientData',
         'created_date_time' => 'createdDateTime',
         'custom_fields' => 'customFields',
         'custom_fields_uri' => 'customFieldsUri',
         'declined_date_time' => 'declinedDateTime',
         'deleted_date_time' => 'deletedDateTime',
         'delivered_date_time' => 'deliveredDateTime',
+        'disable_responsive_document' => 'disableResponsiveDocument',
         'documents' => 'documents',
         'documents_combined_uri' => 'documentsCombinedUri',
         'documents_uri' => 'documentsUri',
@@ -208,12 +212,14 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'setCertificateUri',
         'completed_date_time' => 'setCompletedDateTime',
         'composite_templates' => 'setCompositeTemplates',
+        'copy_recipient_data' => 'setCopyRecipientData',
         'created_date_time' => 'setCreatedDateTime',
         'custom_fields' => 'setCustomFields',
         'custom_fields_uri' => 'setCustomFieldsUri',
         'declined_date_time' => 'setDeclinedDateTime',
         'deleted_date_time' => 'setDeletedDateTime',
         'delivered_date_time' => 'setDeliveredDateTime',
+        'disable_responsive_document' => 'setDisableResponsiveDocument',
         'documents' => 'setDocuments',
         'documents_combined_uri' => 'setDocumentsCombinedUri',
         'documents_uri' => 'setDocumentsUri',
@@ -275,12 +281,14 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'getCertificateUri',
         'completed_date_time' => 'getCompletedDateTime',
         'composite_templates' => 'getCompositeTemplates',
+        'copy_recipient_data' => 'getCopyRecipientData',
         'created_date_time' => 'getCreatedDateTime',
         'custom_fields' => 'getCustomFields',
         'custom_fields_uri' => 'getCustomFieldsUri',
         'declined_date_time' => 'getDeclinedDateTime',
         'deleted_date_time' => 'getDeletedDateTime',
         'delivered_date_time' => 'getDeliveredDateTime',
+        'disable_responsive_document' => 'getDisableResponsiveDocument',
         'documents' => 'getDocuments',
         'documents_combined_uri' => 'getDocumentsCombinedUri',
         'documents_uri' => 'getDocumentsUri',
@@ -367,12 +375,14 @@ class EnvelopeDefinition implements ArrayAccess
         $this->container['certificate_uri'] = isset($data['certificate_uri']) ? $data['certificate_uri'] : null;
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
         $this->container['composite_templates'] = isset($data['composite_templates']) ? $data['composite_templates'] : null;
+        $this->container['copy_recipient_data'] = isset($data['copy_recipient_data']) ? $data['copy_recipient_data'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['custom_fields_uri'] = isset($data['custom_fields_uri']) ? $data['custom_fields_uri'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
         $this->container['deleted_date_time'] = isset($data['deleted_date_time']) ? $data['deleted_date_time'] : null;
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
+        $this->container['disable_responsive_document'] = isset($data['disable_responsive_document']) ? $data['disable_responsive_document'] : null;
         $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
         $this->container['documents_combined_uri'] = isset($data['documents_combined_uri']) ? $data['documents_combined_uri'] : null;
         $this->container['documents_uri'] = isset($data['documents_uri']) ? $data['documents_uri'] : null;
@@ -772,6 +782,27 @@ class EnvelopeDefinition implements ArrayAccess
     }
 
     /**
+     * Gets copy_recipient_data
+     * @return string
+     */
+    public function getCopyRecipientData()
+    {
+        return $this->container['copy_recipient_data'];
+    }
+
+    /**
+     * Sets copy_recipient_data
+     * @param string $copy_recipient_data 
+     * @return $this
+     */
+    public function setCopyRecipientData($copy_recipient_data)
+    {
+        $this->container['copy_recipient_data'] = $copy_recipient_data;
+
+        return $this;
+    }
+
+    /**
      * Gets created_date_time
      * @return string
      */
@@ -893,6 +924,27 @@ class EnvelopeDefinition implements ArrayAccess
     public function setDeliveredDateTime($delivered_date_time)
     {
         $this->container['delivered_date_time'] = $delivered_date_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets disable_responsive_document
+     * @return string
+     */
+    public function getDisableResponsiveDocument()
+    {
+        return $this->container['disable_responsive_document'];
+    }
+
+    /**
+     * Sets disable_responsive_document
+     * @param string $disable_responsive_document 
+     * @return $this
+     */
+    public function setDisableResponsiveDocument($disable_responsive_document)
+    {
+        $this->container['disable_responsive_document'] = $disable_responsive_document;
 
         return $this;
     }
