@@ -63,7 +63,6 @@ class EnvelopeDocument implements ArrayAccess
         'display' => 'string',
         'display_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
-        'document_group' => 'string',
         'document_id' => 'string',
         'document_id_guid' => 'string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
@@ -75,6 +74,7 @@ class EnvelopeDocument implements ArrayAccess
         'pages' => '\DocuSign\eSign\Model\Page[]',
         'signer_must_acknowledge' => 'string',
         'signer_must_acknowledge_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'size_bytes' => 'string',
         'template_locked' => 'string',
         'template_required' => 'string',
         'type' => 'string',
@@ -100,7 +100,6 @@ class EnvelopeDocument implements ArrayAccess
         'display' => 'display',
         'display_metadata' => 'displayMetadata',
         'document_fields' => 'documentFields',
-        'document_group' => 'documentGroup',
         'document_id' => 'documentId',
         'document_id_guid' => 'documentIdGuid',
         'error_details' => 'errorDetails',
@@ -112,6 +111,7 @@ class EnvelopeDocument implements ArrayAccess
         'pages' => 'pages',
         'signer_must_acknowledge' => 'signerMustAcknowledge',
         'signer_must_acknowledge_metadata' => 'signerMustAcknowledgeMetadata',
+        'size_bytes' => 'sizeBytes',
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
         'type' => 'type',
@@ -133,7 +133,6 @@ class EnvelopeDocument implements ArrayAccess
         'display' => 'setDisplay',
         'display_metadata' => 'setDisplayMetadata',
         'document_fields' => 'setDocumentFields',
-        'document_group' => 'setDocumentGroup',
         'document_id' => 'setDocumentId',
         'document_id_guid' => 'setDocumentIdGuid',
         'error_details' => 'setErrorDetails',
@@ -145,6 +144,7 @@ class EnvelopeDocument implements ArrayAccess
         'pages' => 'setPages',
         'signer_must_acknowledge' => 'setSignerMustAcknowledge',
         'signer_must_acknowledge_metadata' => 'setSignerMustAcknowledgeMetadata',
+        'size_bytes' => 'setSizeBytes',
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
         'type' => 'setType',
@@ -166,7 +166,6 @@ class EnvelopeDocument implements ArrayAccess
         'display' => 'getDisplay',
         'display_metadata' => 'getDisplayMetadata',
         'document_fields' => 'getDocumentFields',
-        'document_group' => 'getDocumentGroup',
         'document_id' => 'getDocumentId',
         'document_id_guid' => 'getDocumentIdGuid',
         'error_details' => 'getErrorDetails',
@@ -178,6 +177,7 @@ class EnvelopeDocument implements ArrayAccess
         'pages' => 'getPages',
         'signer_must_acknowledge' => 'getSignerMustAcknowledge',
         'signer_must_acknowledge_metadata' => 'getSignerMustAcknowledgeMetadata',
+        'size_bytes' => 'getSizeBytes',
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
         'type' => 'getType',
@@ -224,7 +224,6 @@ class EnvelopeDocument implements ArrayAccess
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['display_metadata'] = isset($data['display_metadata']) ? $data['display_metadata'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
-        $this->container['document_group'] = isset($data['document_group']) ? $data['document_group'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_id_guid'] = isset($data['document_id_guid']) ? $data['document_id_guid'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -236,6 +235,7 @@ class EnvelopeDocument implements ArrayAccess
         $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
         $this->container['signer_must_acknowledge'] = isset($data['signer_must_acknowledge']) ? $data['signer_must_acknowledge'] : null;
         $this->container['signer_must_acknowledge_metadata'] = isset($data['signer_must_acknowledge_metadata']) ? $data['signer_must_acknowledge_metadata'] : null;
+        $this->container['size_bytes'] = isset($data['size_bytes']) ? $data['size_bytes'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -450,27 +450,6 @@ class EnvelopeDocument implements ArrayAccess
     public function setDocumentFields($document_fields)
     {
         $this->container['document_fields'] = $document_fields;
-
-        return $this;
-    }
-
-    /**
-     * Gets document_group
-     * @return string
-     */
-    public function getDocumentGroup()
-    {
-        return $this->container['document_group'];
-    }
-
-    /**
-     * Sets document_group
-     * @param string $document_group 
-     * @return $this
-     */
-    public function setDocumentGroup($document_group)
-    {
-        $this->container['document_group'] = $document_group;
 
         return $this;
     }
@@ -702,6 +681,27 @@ class EnvelopeDocument implements ArrayAccess
     public function setSignerMustAcknowledgeMetadata($signer_must_acknowledge_metadata)
     {
         $this->container['signer_must_acknowledge_metadata'] = $signer_must_acknowledge_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets size_bytes
+     * @return string
+     */
+    public function getSizeBytes()
+    {
+        return $this->container['size_bytes'];
+    }
+
+    /**
+     * Sets size_bytes
+     * @param string $size_bytes 
+     * @return $this
+     */
+    public function setSizeBytes($size_bytes)
+    {
+        $this->container['size_bytes'] = $size_bytes;
 
         return $this;
     }

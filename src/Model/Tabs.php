@@ -61,6 +61,7 @@ class Tabs implements ArrayAccess
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
         'date_tabs' => '\DocuSign\eSign\Model\\DateTime[]',
         'decline_tabs' => '\DocuSign\eSign\Model\Decline[]',
+        'draw_tabs' => '\DocuSign\eSign\Model\Draw[]',
         'email_address_tabs' => '\DocuSign\eSign\Model\EmailAddress[]',
         'email_tabs' => '\DocuSign\eSign\Model\Email[]',
         'envelope_id_tabs' => '\DocuSign\eSign\Model\EnvelopeId[]',
@@ -103,6 +104,7 @@ class Tabs implements ArrayAccess
         'date_signed_tabs' => 'dateSignedTabs',
         'date_tabs' => 'dateTabs',
         'decline_tabs' => 'declineTabs',
+        'draw_tabs' => 'drawTabs',
         'email_address_tabs' => 'emailAddressTabs',
         'email_tabs' => 'emailTabs',
         'envelope_id_tabs' => 'envelopeIdTabs',
@@ -141,6 +143,7 @@ class Tabs implements ArrayAccess
         'date_signed_tabs' => 'setDateSignedTabs',
         'date_tabs' => 'setDateTabs',
         'decline_tabs' => 'setDeclineTabs',
+        'draw_tabs' => 'setDrawTabs',
         'email_address_tabs' => 'setEmailAddressTabs',
         'email_tabs' => 'setEmailTabs',
         'envelope_id_tabs' => 'setEnvelopeIdTabs',
@@ -179,6 +182,7 @@ class Tabs implements ArrayAccess
         'date_signed_tabs' => 'getDateSignedTabs',
         'date_tabs' => 'getDateTabs',
         'decline_tabs' => 'getDeclineTabs',
+        'draw_tabs' => 'getDrawTabs',
         'email_address_tabs' => 'getEmailAddressTabs',
         'email_tabs' => 'getEmailTabs',
         'envelope_id_tabs' => 'getEnvelopeIdTabs',
@@ -242,6 +246,7 @@ class Tabs implements ArrayAccess
         $this->container['date_signed_tabs'] = isset($data['date_signed_tabs']) ? $data['date_signed_tabs'] : null;
         $this->container['date_tabs'] = isset($data['date_tabs']) ? $data['date_tabs'] : null;
         $this->container['decline_tabs'] = isset($data['decline_tabs']) ? $data['decline_tabs'] : null;
+        $this->container['draw_tabs'] = isset($data['draw_tabs']) ? $data['draw_tabs'] : null;
         $this->container['email_address_tabs'] = isset($data['email_address_tabs']) ? $data['email_address_tabs'] : null;
         $this->container['email_tabs'] = isset($data['email_tabs']) ? $data['email_tabs'] : null;
         $this->container['envelope_id_tabs'] = isset($data['envelope_id_tabs']) ? $data['envelope_id_tabs'] : null;
@@ -433,6 +438,27 @@ class Tabs implements ArrayAccess
     public function setDeclineTabs($decline_tabs)
     {
         $this->container['decline_tabs'] = $decline_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets draw_tabs
+     * @return \DocuSign\eSign\Model\Draw[]
+     */
+    public function getDrawTabs()
+    {
+        return $this->container['draw_tabs'];
+    }
+
+    /**
+     * Sets draw_tabs
+     * @param \DocuSign\eSign\Model\Draw[] $draw_tabs 
+     * @return $this
+     */
+    public function setDrawTabs($draw_tabs)
+    {
+        $this->container['draw_tabs'] = $draw_tabs;
 
         return $this;
     }

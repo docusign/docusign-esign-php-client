@@ -57,6 +57,7 @@ class Intermediary implements ArrayAccess
         'access_code' => 'string',
         'access_code_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'add_access_code_to_email' => 'string',
+        'allow_system_override_for_locked_recipient' => 'string',
         'client_user_id' => 'string',
         'completed_count' => 'string',
         'custom_fields' => 'string[]',
@@ -65,6 +66,8 @@ class Intermediary implements ArrayAccess
         'delivered_date_time' => 'string',
         'delivery_method' => 'string',
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'designator_id' => 'string',
+        'designator_id_guid' => 'string',
         'document_visibility' => '\DocuSign\eSign\Model\DocumentVisibility[]',
         'email' => 'string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -133,6 +136,7 @@ class Intermediary implements ArrayAccess
         'access_code' => 'accessCode',
         'access_code_metadata' => 'accessCodeMetadata',
         'add_access_code_to_email' => 'addAccessCodeToEmail',
+        'allow_system_override_for_locked_recipient' => 'allowSystemOverrideForLockedRecipient',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
         'custom_fields' => 'customFields',
@@ -141,6 +145,8 @@ class Intermediary implements ArrayAccess
         'delivered_date_time' => 'deliveredDateTime',
         'delivery_method' => 'deliveryMethod',
         'delivery_method_metadata' => 'deliveryMethodMetadata',
+        'designator_id' => 'designatorId',
+        'designator_id_guid' => 'designatorIdGuid',
         'document_visibility' => 'documentVisibility',
         'email' => 'email',
         'email_metadata' => 'emailMetadata',
@@ -205,6 +211,7 @@ class Intermediary implements ArrayAccess
         'access_code' => 'setAccessCode',
         'access_code_metadata' => 'setAccessCodeMetadata',
         'add_access_code_to_email' => 'setAddAccessCodeToEmail',
+        'allow_system_override_for_locked_recipient' => 'setAllowSystemOverrideForLockedRecipient',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
         'custom_fields' => 'setCustomFields',
@@ -213,6 +220,8 @@ class Intermediary implements ArrayAccess
         'delivered_date_time' => 'setDeliveredDateTime',
         'delivery_method' => 'setDeliveryMethod',
         'delivery_method_metadata' => 'setDeliveryMethodMetadata',
+        'designator_id' => 'setDesignatorId',
+        'designator_id_guid' => 'setDesignatorIdGuid',
         'document_visibility' => 'setDocumentVisibility',
         'email' => 'setEmail',
         'email_metadata' => 'setEmailMetadata',
@@ -277,6 +286,7 @@ class Intermediary implements ArrayAccess
         'access_code' => 'getAccessCode',
         'access_code_metadata' => 'getAccessCodeMetadata',
         'add_access_code_to_email' => 'getAddAccessCodeToEmail',
+        'allow_system_override_for_locked_recipient' => 'getAllowSystemOverrideForLockedRecipient',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
         'custom_fields' => 'getCustomFields',
@@ -285,6 +295,8 @@ class Intermediary implements ArrayAccess
         'delivered_date_time' => 'getDeliveredDateTime',
         'delivery_method' => 'getDeliveryMethod',
         'delivery_method_metadata' => 'getDeliveryMethodMetadata',
+        'designator_id' => 'getDesignatorId',
+        'designator_id_guid' => 'getDesignatorIdGuid',
         'document_visibility' => 'getDocumentVisibility',
         'email' => 'getEmail',
         'email_metadata' => 'getEmailMetadata',
@@ -374,6 +386,7 @@ class Intermediary implements ArrayAccess
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['access_code_metadata'] = isset($data['access_code_metadata']) ? $data['access_code_metadata'] : null;
         $this->container['add_access_code_to_email'] = isset($data['add_access_code_to_email']) ? $data['add_access_code_to_email'] : null;
+        $this->container['allow_system_override_for_locked_recipient'] = isset($data['allow_system_override_for_locked_recipient']) ? $data['allow_system_override_for_locked_recipient'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
@@ -382,6 +395,8 @@ class Intermediary implements ArrayAccess
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
         $this->container['delivery_method_metadata'] = isset($data['delivery_method_metadata']) ? $data['delivery_method_metadata'] : null;
+        $this->container['designator_id'] = isset($data['designator_id']) ? $data['designator_id'] : null;
+        $this->container['designator_id_guid'] = isset($data['designator_id_guid']) ? $data['designator_id_guid'] : null;
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_metadata'] = isset($data['email_metadata']) ? $data['email_metadata'] : null;
@@ -519,6 +534,27 @@ class Intermediary implements ArrayAccess
     public function setAddAccessCodeToEmail($add_access_code_to_email)
     {
         $this->container['add_access_code_to_email'] = $add_access_code_to_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_system_override_for_locked_recipient
+     * @return string
+     */
+    public function getAllowSystemOverrideForLockedRecipient()
+    {
+        return $this->container['allow_system_override_for_locked_recipient'];
+    }
+
+    /**
+     * Sets allow_system_override_for_locked_recipient
+     * @param string $allow_system_override_for_locked_recipient 
+     * @return $this
+     */
+    public function setAllowSystemOverrideForLockedRecipient($allow_system_override_for_locked_recipient)
+    {
+        $this->container['allow_system_override_for_locked_recipient'] = $allow_system_override_for_locked_recipient;
 
         return $this;
     }
@@ -687,6 +723,48 @@ class Intermediary implements ArrayAccess
     public function setDeliveryMethodMetadata($delivery_method_metadata)
     {
         $this->container['delivery_method_metadata'] = $delivery_method_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets designator_id
+     * @return string
+     */
+    public function getDesignatorId()
+    {
+        return $this->container['designator_id'];
+    }
+
+    /**
+     * Sets designator_id
+     * @param string $designator_id 
+     * @return $this
+     */
+    public function setDesignatorId($designator_id)
+    {
+        $this->container['designator_id'] = $designator_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets designator_id_guid
+     * @return string
+     */
+    public function getDesignatorIdGuid()
+    {
+        return $this->container['designator_id_guid'];
+    }
+
+    /**
+     * Sets designator_id_guid
+     * @param string $designator_id_guid 
+     * @return $this
+     */
+    public function setDesignatorIdGuid($designator_id_guid)
+    {
+        $this->container['designator_id_guid'] = $designator_id_guid;
 
         return $this;
     }

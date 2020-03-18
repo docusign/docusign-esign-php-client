@@ -56,6 +56,7 @@ class AccountIdentityVerificationWorkflow implements ArrayAccess
     protected static $swaggerTypes = [
         'default_description' => 'string',
         'default_name' => 'string',
+        'input_options' => '\DocuSign\eSign\Model\AccountIdentityInputOption[]',
         'signature_provider' => '\DocuSign\eSign\Model\AccountSignatureProvider',
         'steps' => '\DocuSign\eSign\Model\AccountIdentityVerificationStep[]',
         'workflow_id' => 'string',
@@ -74,6 +75,7 @@ class AccountIdentityVerificationWorkflow implements ArrayAccess
     protected static $attributeMap = [
         'default_description' => 'defaultDescription',
         'default_name' => 'defaultName',
+        'input_options' => 'inputOptions',
         'signature_provider' => 'signatureProvider',
         'steps' => 'steps',
         'workflow_id' => 'workflowId',
@@ -88,6 +90,7 @@ class AccountIdentityVerificationWorkflow implements ArrayAccess
     protected static $setters = [
         'default_description' => 'setDefaultDescription',
         'default_name' => 'setDefaultName',
+        'input_options' => 'setInputOptions',
         'signature_provider' => 'setSignatureProvider',
         'steps' => 'setSteps',
         'workflow_id' => 'setWorkflowId',
@@ -102,6 +105,7 @@ class AccountIdentityVerificationWorkflow implements ArrayAccess
     protected static $getters = [
         'default_description' => 'getDefaultDescription',
         'default_name' => 'getDefaultName',
+        'input_options' => 'getInputOptions',
         'signature_provider' => 'getSignatureProvider',
         'steps' => 'getSteps',
         'workflow_id' => 'getWorkflowId',
@@ -141,6 +145,7 @@ class AccountIdentityVerificationWorkflow implements ArrayAccess
     {
         $this->container['default_description'] = isset($data['default_description']) ? $data['default_description'] : null;
         $this->container['default_name'] = isset($data['default_name']) ? $data['default_name'] : null;
+        $this->container['input_options'] = isset($data['input_options']) ? $data['input_options'] : null;
         $this->container['signature_provider'] = isset($data['signature_provider']) ? $data['signature_provider'] : null;
         $this->container['steps'] = isset($data['steps']) ? $data['steps'] : null;
         $this->container['workflow_id'] = isset($data['workflow_id']) ? $data['workflow_id'] : null;
@@ -208,6 +213,27 @@ class AccountIdentityVerificationWorkflow implements ArrayAccess
     public function setDefaultName($default_name)
     {
         $this->container['default_name'] = $default_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets input_options
+     * @return \DocuSign\eSign\Model\AccountIdentityInputOption[]
+     */
+    public function getInputOptions()
+    {
+        return $this->container['input_options'];
+    }
+
+    /**
+     * Sets input_options
+     * @param \DocuSign\eSign\Model\AccountIdentityInputOption[] $input_options 
+     * @return $this
+     */
+    public function setInputOptions($input_options)
+    {
+        $this->container['input_options'] = $input_options;
 
         return $this;
     }

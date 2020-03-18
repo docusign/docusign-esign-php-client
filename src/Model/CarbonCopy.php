@@ -59,6 +59,7 @@ class CarbonCopy implements ArrayAccess
         'add_access_code_to_email' => 'string',
         'agent_can_edit_email' => 'string',
         'agent_can_edit_name' => 'string',
+        'allow_system_override_for_locked_recipient' => 'string',
         'client_user_id' => 'string',
         'completed_count' => 'string',
         'custom_fields' => 'string[]',
@@ -67,6 +68,8 @@ class CarbonCopy implements ArrayAccess
         'delivered_date_time' => 'string',
         'delivery_method' => 'string',
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'designator_id' => 'string',
+        'designator_id_guid' => 'string',
         'document_visibility' => '\DocuSign\eSign\Model\DocumentVisibility[]',
         'email' => 'string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -83,6 +86,7 @@ class CarbonCopy implements ArrayAccess
         'id_check_configuration_name' => 'string',
         'id_check_configuration_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
+        'identity_verification' => '\DocuSign\eSign\Model\RecipientIdentityVerification',
         'inherit_email_notification_configuration' => 'string',
         'last_name' => 'string',
         'last_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -93,6 +97,7 @@ class CarbonCopy implements ArrayAccess
         'note' => 'string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
+        'proof_file' => '\DocuSign\eSign\Model\RecipientProofFile',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_feature_metadata' => '\DocuSign\eSign\Model\FeatureAvailableMetadata[]',
@@ -138,6 +143,7 @@ class CarbonCopy implements ArrayAccess
         'add_access_code_to_email' => 'addAccessCodeToEmail',
         'agent_can_edit_email' => 'agentCanEditEmail',
         'agent_can_edit_name' => 'agentCanEditName',
+        'allow_system_override_for_locked_recipient' => 'allowSystemOverrideForLockedRecipient',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
         'custom_fields' => 'customFields',
@@ -146,6 +152,8 @@ class CarbonCopy implements ArrayAccess
         'delivered_date_time' => 'deliveredDateTime',
         'delivery_method' => 'deliveryMethod',
         'delivery_method_metadata' => 'deliveryMethodMetadata',
+        'designator_id' => 'designatorId',
+        'designator_id_guid' => 'designatorIdGuid',
         'document_visibility' => 'documentVisibility',
         'email' => 'email',
         'email_metadata' => 'emailMetadata',
@@ -162,6 +170,7 @@ class CarbonCopy implements ArrayAccess
         'id_check_configuration_name' => 'idCheckConfigurationName',
         'id_check_configuration_name_metadata' => 'idCheckConfigurationNameMetadata',
         'id_check_information_input' => 'idCheckInformationInput',
+        'identity_verification' => 'identityVerification',
         'inherit_email_notification_configuration' => 'inheritEmailNotificationConfiguration',
         'last_name' => 'lastName',
         'last_name_metadata' => 'lastNameMetadata',
@@ -172,6 +181,7 @@ class CarbonCopy implements ArrayAccess
         'note' => 'note',
         'note_metadata' => 'noteMetadata',
         'phone_authentication' => 'phoneAuthentication',
+        'proof_file' => 'proofFile',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
         'recipient_feature_metadata' => 'recipientFeatureMetadata',
@@ -213,6 +223,7 @@ class CarbonCopy implements ArrayAccess
         'add_access_code_to_email' => 'setAddAccessCodeToEmail',
         'agent_can_edit_email' => 'setAgentCanEditEmail',
         'agent_can_edit_name' => 'setAgentCanEditName',
+        'allow_system_override_for_locked_recipient' => 'setAllowSystemOverrideForLockedRecipient',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
         'custom_fields' => 'setCustomFields',
@@ -221,6 +232,8 @@ class CarbonCopy implements ArrayAccess
         'delivered_date_time' => 'setDeliveredDateTime',
         'delivery_method' => 'setDeliveryMethod',
         'delivery_method_metadata' => 'setDeliveryMethodMetadata',
+        'designator_id' => 'setDesignatorId',
+        'designator_id_guid' => 'setDesignatorIdGuid',
         'document_visibility' => 'setDocumentVisibility',
         'email' => 'setEmail',
         'email_metadata' => 'setEmailMetadata',
@@ -237,6 +250,7 @@ class CarbonCopy implements ArrayAccess
         'id_check_configuration_name' => 'setIdCheckConfigurationName',
         'id_check_configuration_name_metadata' => 'setIdCheckConfigurationNameMetadata',
         'id_check_information_input' => 'setIdCheckInformationInput',
+        'identity_verification' => 'setIdentityVerification',
         'inherit_email_notification_configuration' => 'setInheritEmailNotificationConfiguration',
         'last_name' => 'setLastName',
         'last_name_metadata' => 'setLastNameMetadata',
@@ -247,6 +261,7 @@ class CarbonCopy implements ArrayAccess
         'note' => 'setNote',
         'note_metadata' => 'setNoteMetadata',
         'phone_authentication' => 'setPhoneAuthentication',
+        'proof_file' => 'setProofFile',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'setRecipientFeatureMetadata',
@@ -288,6 +303,7 @@ class CarbonCopy implements ArrayAccess
         'add_access_code_to_email' => 'getAddAccessCodeToEmail',
         'agent_can_edit_email' => 'getAgentCanEditEmail',
         'agent_can_edit_name' => 'getAgentCanEditName',
+        'allow_system_override_for_locked_recipient' => 'getAllowSystemOverrideForLockedRecipient',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
         'custom_fields' => 'getCustomFields',
@@ -296,6 +312,8 @@ class CarbonCopy implements ArrayAccess
         'delivered_date_time' => 'getDeliveredDateTime',
         'delivery_method' => 'getDeliveryMethod',
         'delivery_method_metadata' => 'getDeliveryMethodMetadata',
+        'designator_id' => 'getDesignatorId',
+        'designator_id_guid' => 'getDesignatorIdGuid',
         'document_visibility' => 'getDocumentVisibility',
         'email' => 'getEmail',
         'email_metadata' => 'getEmailMetadata',
@@ -312,6 +330,7 @@ class CarbonCopy implements ArrayAccess
         'id_check_configuration_name' => 'getIdCheckConfigurationName',
         'id_check_configuration_name_metadata' => 'getIdCheckConfigurationNameMetadata',
         'id_check_information_input' => 'getIdCheckInformationInput',
+        'identity_verification' => 'getIdentityVerification',
         'inherit_email_notification_configuration' => 'getInheritEmailNotificationConfiguration',
         'last_name' => 'getLastName',
         'last_name_metadata' => 'getLastNameMetadata',
@@ -322,6 +341,7 @@ class CarbonCopy implements ArrayAccess
         'note' => 'getNote',
         'note_metadata' => 'getNoteMetadata',
         'phone_authentication' => 'getPhoneAuthentication',
+        'proof_file' => 'getProofFile',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'getRecipientFeatureMetadata',
@@ -388,6 +408,7 @@ class CarbonCopy implements ArrayAccess
         $this->container['add_access_code_to_email'] = isset($data['add_access_code_to_email']) ? $data['add_access_code_to_email'] : null;
         $this->container['agent_can_edit_email'] = isset($data['agent_can_edit_email']) ? $data['agent_can_edit_email'] : null;
         $this->container['agent_can_edit_name'] = isset($data['agent_can_edit_name']) ? $data['agent_can_edit_name'] : null;
+        $this->container['allow_system_override_for_locked_recipient'] = isset($data['allow_system_override_for_locked_recipient']) ? $data['allow_system_override_for_locked_recipient'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
@@ -396,6 +417,8 @@ class CarbonCopy implements ArrayAccess
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
         $this->container['delivery_method_metadata'] = isset($data['delivery_method_metadata']) ? $data['delivery_method_metadata'] : null;
+        $this->container['designator_id'] = isset($data['designator_id']) ? $data['designator_id'] : null;
+        $this->container['designator_id_guid'] = isset($data['designator_id_guid']) ? $data['designator_id_guid'] : null;
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_metadata'] = isset($data['email_metadata']) ? $data['email_metadata'] : null;
@@ -412,6 +435,7 @@ class CarbonCopy implements ArrayAccess
         $this->container['id_check_configuration_name'] = isset($data['id_check_configuration_name']) ? $data['id_check_configuration_name'] : null;
         $this->container['id_check_configuration_name_metadata'] = isset($data['id_check_configuration_name_metadata']) ? $data['id_check_configuration_name_metadata'] : null;
         $this->container['id_check_information_input'] = isset($data['id_check_information_input']) ? $data['id_check_information_input'] : null;
+        $this->container['identity_verification'] = isset($data['identity_verification']) ? $data['identity_verification'] : null;
         $this->container['inherit_email_notification_configuration'] = isset($data['inherit_email_notification_configuration']) ? $data['inherit_email_notification_configuration'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['last_name_metadata'] = isset($data['last_name_metadata']) ? $data['last_name_metadata'] : null;
@@ -422,6 +446,7 @@ class CarbonCopy implements ArrayAccess
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
+        $this->container['proof_file'] = isset($data['proof_file']) ? $data['proof_file'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
         $this->container['recipient_feature_metadata'] = isset($data['recipient_feature_metadata']) ? $data['recipient_feature_metadata'] : null;
@@ -576,6 +601,27 @@ class CarbonCopy implements ArrayAccess
     public function setAgentCanEditName($agent_can_edit_name)
     {
         $this->container['agent_can_edit_name'] = $agent_can_edit_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_system_override_for_locked_recipient
+     * @return string
+     */
+    public function getAllowSystemOverrideForLockedRecipient()
+    {
+        return $this->container['allow_system_override_for_locked_recipient'];
+    }
+
+    /**
+     * Sets allow_system_override_for_locked_recipient
+     * @param string $allow_system_override_for_locked_recipient 
+     * @return $this
+     */
+    public function setAllowSystemOverrideForLockedRecipient($allow_system_override_for_locked_recipient)
+    {
+        $this->container['allow_system_override_for_locked_recipient'] = $allow_system_override_for_locked_recipient;
 
         return $this;
     }
@@ -744,6 +790,48 @@ class CarbonCopy implements ArrayAccess
     public function setDeliveryMethodMetadata($delivery_method_metadata)
     {
         $this->container['delivery_method_metadata'] = $delivery_method_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets designator_id
+     * @return string
+     */
+    public function getDesignatorId()
+    {
+        return $this->container['designator_id'];
+    }
+
+    /**
+     * Sets designator_id
+     * @param string $designator_id 
+     * @return $this
+     */
+    public function setDesignatorId($designator_id)
+    {
+        $this->container['designator_id'] = $designator_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets designator_id_guid
+     * @return string
+     */
+    public function getDesignatorIdGuid()
+    {
+        return $this->container['designator_id_guid'];
+    }
+
+    /**
+     * Sets designator_id_guid
+     * @param string $designator_id_guid 
+     * @return $this
+     */
+    public function setDesignatorIdGuid($designator_id_guid)
+    {
+        $this->container['designator_id_guid'] = $designator_id_guid;
 
         return $this;
     }
@@ -1085,6 +1173,27 @@ class CarbonCopy implements ArrayAccess
     }
 
     /**
+     * Gets identity_verification
+     * @return \DocuSign\eSign\Model\RecipientIdentityVerification
+     */
+    public function getIdentityVerification()
+    {
+        return $this->container['identity_verification'];
+    }
+
+    /**
+     * Sets identity_verification
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification
+     * @return $this
+     */
+    public function setIdentityVerification($identity_verification)
+    {
+        $this->container['identity_verification'] = $identity_verification;
+
+        return $this;
+    }
+
+    /**
      * Gets inherit_email_notification_configuration
      * @return string
      */
@@ -1290,6 +1399,27 @@ class CarbonCopy implements ArrayAccess
     public function setPhoneAuthentication($phone_authentication)
     {
         $this->container['phone_authentication'] = $phone_authentication;
+
+        return $this;
+    }
+
+    /**
+     * Gets proof_file
+     * @return \DocuSign\eSign\Model\RecipientProofFile
+     */
+    public function getProofFile()
+    {
+        return $this->container['proof_file'];
+    }
+
+    /**
+     * Sets proof_file
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file
+     * @return $this
+     */
+    public function setProofFile($proof_file)
+    {
+        $this->container['proof_file'] = $proof_file;
 
         return $this;
     }

@@ -54,6 +54,7 @@ class RecipientIdentityVerification implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'input_options' => '\DocuSign\eSign\Model\RecipientIdentityInputOption[]',
         'workflow_id' => 'string'
     ];
 
@@ -67,6 +68,7 @@ class RecipientIdentityVerification implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'input_options' => 'inputOptions',
         'workflow_id' => 'workflowId'
     ];
 
@@ -76,6 +78,7 @@ class RecipientIdentityVerification implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'input_options' => 'setInputOptions',
         'workflow_id' => 'setWorkflowId'
     ];
 
@@ -85,6 +88,7 @@ class RecipientIdentityVerification implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'input_options' => 'getInputOptions',
         'workflow_id' => 'getWorkflowId'
     ];
 
@@ -119,6 +123,7 @@ class RecipientIdentityVerification implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['input_options'] = isset($data['input_options']) ? $data['input_options'] : null;
         $this->container['workflow_id'] = isset($data['workflow_id']) ? $data['workflow_id'] : null;
     }
 
@@ -144,6 +149,27 @@ class RecipientIdentityVerification implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets input_options
+     * @return \DocuSign\eSign\Model\RecipientIdentityInputOption[]
+     */
+    public function getInputOptions()
+    {
+        return $this->container['input_options'];
+    }
+
+    /**
+     * Sets input_options
+     * @param \DocuSign\eSign\Model\RecipientIdentityInputOption[] $input_options 
+     * @return $this
+     */
+    public function setInputOptions($input_options)
+    {
+        $this->container['input_options'] = $input_options;
+
+        return $this;
+    }
 
     /**
      * Gets workflow_id

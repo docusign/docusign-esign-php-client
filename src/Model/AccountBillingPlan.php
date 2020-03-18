@@ -59,6 +59,7 @@ class AccountBillingPlan implements ArrayAccess
         'can_cancel_renewal' => 'string',
         'can_upgrade' => 'string',
         'currency_code' => 'string',
+        'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
         'enable_support' => 'string',
         'included_seats' => 'string',
         'incremental_seats' => 'string',
@@ -91,6 +92,7 @@ class AccountBillingPlan implements ArrayAccess
         'can_cancel_renewal' => 'canCancelRenewal',
         'can_upgrade' => 'canUpgrade',
         'currency_code' => 'currencyCode',
+        'downgrade_plan_information' => 'downgradePlanInformation',
         'enable_support' => 'enableSupport',
         'included_seats' => 'includedSeats',
         'incremental_seats' => 'incrementalSeats',
@@ -119,6 +121,7 @@ class AccountBillingPlan implements ArrayAccess
         'can_cancel_renewal' => 'setCanCancelRenewal',
         'can_upgrade' => 'setCanUpgrade',
         'currency_code' => 'setCurrencyCode',
+        'downgrade_plan_information' => 'setDowngradePlanInformation',
         'enable_support' => 'setEnableSupport',
         'included_seats' => 'setIncludedSeats',
         'incremental_seats' => 'setIncrementalSeats',
@@ -147,6 +150,7 @@ class AccountBillingPlan implements ArrayAccess
         'can_cancel_renewal' => 'getCanCancelRenewal',
         'can_upgrade' => 'getCanUpgrade',
         'currency_code' => 'getCurrencyCode',
+        'downgrade_plan_information' => 'getDowngradePlanInformation',
         'enable_support' => 'getEnableSupport',
         'included_seats' => 'getIncludedSeats',
         'incremental_seats' => 'getIncrementalSeats',
@@ -200,6 +204,7 @@ class AccountBillingPlan implements ArrayAccess
         $this->container['can_cancel_renewal'] = isset($data['can_cancel_renewal']) ? $data['can_cancel_renewal'] : null;
         $this->container['can_upgrade'] = isset($data['can_upgrade']) ? $data['can_upgrade'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
+        $this->container['downgrade_plan_information'] = isset($data['downgrade_plan_information']) ? $data['downgrade_plan_information'] : null;
         $this->container['enable_support'] = isset($data['enable_support']) ? $data['enable_support'] : null;
         $this->container['included_seats'] = isset($data['included_seats']) ? $data['included_seats'] : null;
         $this->container['incremental_seats'] = isset($data['incremental_seats']) ? $data['incremental_seats'] : null;
@@ -321,6 +326,27 @@ class AccountBillingPlan implements ArrayAccess
     public function setCurrencyCode($currency_code)
     {
         $this->container['currency_code'] = $currency_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets downgrade_plan_information
+     * @return \DocuSign\eSign\Model\DowngradePlanUpdateResponse
+     */
+    public function getDowngradePlanInformation()
+    {
+        return $this->container['downgrade_plan_information'];
+    }
+
+    /**
+     * Sets downgrade_plan_information
+     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information
+     * @return $this
+     */
+    public function setDowngradePlanInformation($downgrade_plan_information)
+    {
+        $this->container['downgrade_plan_information'] = $downgrade_plan_information;
 
         return $this;
     }
