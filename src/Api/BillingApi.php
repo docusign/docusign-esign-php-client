@@ -1364,6 +1364,103 @@ class BillingApi
     }
 
     /**
+     * Operation updateDowngradeAccountBillingPlan
+     *
+     * Queues downgrade billing plan request for an account.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\DowngradeBillingPlanInformation $downgrade_billing_plan_information  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\DowngradePlanUpdateResponse
+     */
+    public function updateDowngradeAccountBillingPlan($account_id, $downgrade_billing_plan_information = null)
+    {
+        list($response) = $this->updateDowngradeAccountBillingPlanWithHttpInfo($account_id, $downgrade_billing_plan_information);
+        return $response;
+    }
+
+    /**
+     * Operation updateDowngradeAccountBillingPlanWithHttpInfo
+     *
+     * Queues downgrade billing plan request for an account.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\DowngradeBillingPlanInformation $downgrade_billing_plan_information  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\DowngradePlanUpdateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateDowngradeAccountBillingPlanWithHttpInfo($account_id, $downgrade_billing_plan_information = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateDowngradeAccountBillingPlan');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/billing_plan/downgrade";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($downgrade_billing_plan_information)) {
+            $_tempBody = $downgrade_billing_plan_information;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
+                '/v2.1/accounts/{accountId}/billing_plan/downgrade'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DowngradePlanUpdateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DowngradePlanUpdateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation updatePlan
      *
      * Updates the account billing plan.

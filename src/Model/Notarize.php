@@ -54,6 +54,8 @@ class Notarize implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'anchor_allow_white_space_in_characters' => 'string',
+        'anchor_allow_white_space_in_characters_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_case_sensitive' => 'string',
         'anchor_case_sensitive_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_horizontal_alignment' => 'string',
@@ -101,6 +103,7 @@ class Notarize implements ArrayAccess
         'recipient_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'required' => 'string',
         'required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
         'status' => 'string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_group_labels' => 'string[]',
@@ -135,6 +138,8 @@ class Notarize implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'anchor_allow_white_space_in_characters' => 'anchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'anchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'anchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'anchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'anchorHorizontalAlignment',
@@ -182,6 +187,7 @@ class Notarize implements ArrayAccess
         'recipient_id_metadata' => 'recipientIdMetadata',
         'required' => 'required',
         'required_metadata' => 'requiredMetadata',
+        'smart_contract_information' => 'smartContractInformation',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
         'tab_group_labels' => 'tabGroupLabels',
@@ -212,6 +218,8 @@ class Notarize implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'anchor_allow_white_space_in_characters' => 'setAnchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'setAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'setAnchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'setAnchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'setAnchorHorizontalAlignment',
@@ -259,6 +267,7 @@ class Notarize implements ArrayAccess
         'recipient_id_metadata' => 'setRecipientIdMetadata',
         'required' => 'setRequired',
         'required_metadata' => 'setRequiredMetadata',
+        'smart_contract_information' => 'setSmartContractInformation',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
         'tab_group_labels' => 'setTabGroupLabels',
@@ -289,6 +298,8 @@ class Notarize implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'anchor_allow_white_space_in_characters' => 'getAnchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'getAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'getAnchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'getAnchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'getAnchorHorizontalAlignment',
@@ -336,6 +347,7 @@ class Notarize implements ArrayAccess
         'recipient_id_metadata' => 'getRecipientIdMetadata',
         'required' => 'getRequired',
         'required_metadata' => 'getRequiredMetadata',
+        'smart_contract_information' => 'getSmartContractInformation',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
         'tab_group_labels' => 'getTabGroupLabels',
@@ -391,6 +403,8 @@ class Notarize implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['anchor_allow_white_space_in_characters'] = isset($data['anchor_allow_white_space_in_characters']) ? $data['anchor_allow_white_space_in_characters'] : null;
+        $this->container['anchor_allow_white_space_in_characters_metadata'] = isset($data['anchor_allow_white_space_in_characters_metadata']) ? $data['anchor_allow_white_space_in_characters_metadata'] : null;
         $this->container['anchor_case_sensitive'] = isset($data['anchor_case_sensitive']) ? $data['anchor_case_sensitive'] : null;
         $this->container['anchor_case_sensitive_metadata'] = isset($data['anchor_case_sensitive_metadata']) ? $data['anchor_case_sensitive_metadata'] : null;
         $this->container['anchor_horizontal_alignment'] = isset($data['anchor_horizontal_alignment']) ? $data['anchor_horizontal_alignment'] : null;
@@ -438,6 +452,7 @@ class Notarize implements ArrayAccess
         $this->container['recipient_id_metadata'] = isset($data['recipient_id_metadata']) ? $data['recipient_id_metadata'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['required_metadata'] = isset($data['required_metadata']) ? $data['required_metadata'] : null;
+        $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
         $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
@@ -484,6 +499,48 @@ class Notarize implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets anchor_allow_white_space_in_characters
+     * @return string
+     */
+    public function getAnchorAllowWhiteSpaceInCharacters()
+    {
+        return $this->container['anchor_allow_white_space_in_characters'];
+    }
+
+    /**
+     * Sets anchor_allow_white_space_in_characters
+     * @param string $anchor_allow_white_space_in_characters 
+     * @return $this
+     */
+    public function setAnchorAllowWhiteSpaceInCharacters($anchor_allow_white_space_in_characters)
+    {
+        $this->container['anchor_allow_white_space_in_characters'] = $anchor_allow_white_space_in_characters;
+
+        return $this;
+    }
+
+    /**
+     * Gets anchor_allow_white_space_in_characters_metadata
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getAnchorAllowWhiteSpaceInCharactersMetadata()
+    {
+        return $this->container['anchor_allow_white_space_in_characters_metadata'];
+    }
+
+    /**
+     * Sets anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata
+     * @return $this
+     */
+    public function setAnchorAllowWhiteSpaceInCharactersMetadata($anchor_allow_white_space_in_characters_metadata)
+    {
+        $this->container['anchor_allow_white_space_in_characters_metadata'] = $anchor_allow_white_space_in_characters_metadata;
+
+        return $this;
+    }
 
     /**
      * Gets anchor_case_sensitive
@@ -1468,6 +1525,27 @@ class Notarize implements ArrayAccess
     public function setRequiredMetadata($required_metadata)
     {
         $this->container['required_metadata'] = $required_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets smart_contract_information
+     * @return \DocuSign\eSign\Model\SmartContractInformation
+     */
+    public function getSmartContractInformation()
+    {
+        return $this->container['smart_contract_information'];
+    }
+
+    /**
+     * Sets smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information
+     * @return $this
+     */
+    public function setSmartContractInformation($smart_contract_information)
+    {
+        $this->container['smart_contract_information'] = $smart_contract_information;
 
         return $this;
     }

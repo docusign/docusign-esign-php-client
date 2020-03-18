@@ -60,6 +60,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_plan' => '\DocuSign\eSign\Model\AccountBillingPlan',
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
+        'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
         'payment_method' => 'string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
@@ -81,6 +82,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_plan' => 'billingPlan',
         'credit_card_information' => 'creditCardInformation',
         'direct_debit_processor_information' => 'directDebitProcessorInformation',
+        'downgrade_plan_information' => 'downgradePlanInformation',
         'payment_method' => 'paymentMethod',
         'payment_processor_information' => 'paymentProcessorInformation',
         'referral_information' => 'referralInformation',
@@ -98,6 +100,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_plan' => 'setBillingPlan',
         'credit_card_information' => 'setCreditCardInformation',
         'direct_debit_processor_information' => 'setDirectDebitProcessorInformation',
+        'downgrade_plan_information' => 'setDowngradePlanInformation',
         'payment_method' => 'setPaymentMethod',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'referral_information' => 'setReferralInformation',
@@ -115,6 +118,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         'billing_plan' => 'getBillingPlan',
         'credit_card_information' => 'getCreditCardInformation',
         'direct_debit_processor_information' => 'getDirectDebitProcessorInformation',
+        'downgrade_plan_information' => 'getDowngradePlanInformation',
         'payment_method' => 'getPaymentMethod',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'referral_information' => 'getReferralInformation',
@@ -157,6 +161,7 @@ class AccountBillingPlanResponse implements ArrayAccess
         $this->container['billing_plan'] = isset($data['billing_plan']) ? $data['billing_plan'] : null;
         $this->container['credit_card_information'] = isset($data['credit_card_information']) ? $data['credit_card_information'] : null;
         $this->container['direct_debit_processor_information'] = isset($data['direct_debit_processor_information']) ? $data['direct_debit_processor_information'] : null;
+        $this->container['downgrade_plan_information'] = isset($data['downgrade_plan_information']) ? $data['downgrade_plan_information'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
@@ -287,6 +292,27 @@ class AccountBillingPlanResponse implements ArrayAccess
     public function setDirectDebitProcessorInformation($direct_debit_processor_information)
     {
         $this->container['direct_debit_processor_information'] = $direct_debit_processor_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets downgrade_plan_information
+     * @return \DocuSign\eSign\Model\DowngradePlanUpdateResponse
+     */
+    public function getDowngradePlanInformation()
+    {
+        return $this->container['downgrade_plan_information'];
+    }
+
+    /**
+     * Sets downgrade_plan_information
+     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information
+     * @return $this
+     */
+    public function setDowngradePlanInformation($downgrade_plan_information)
+    {
+        $this->container['downgrade_plan_information'] = $downgrade_plan_information;
 
         return $this;
     }

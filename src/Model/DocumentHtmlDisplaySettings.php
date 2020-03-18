@@ -63,6 +63,7 @@ class DocumentHtmlDisplaySettings implements ArrayAccess
         'hide_label_when_opened' => 'bool',
         'inline_outer_style' => 'string',
         'label_when_opened' => 'string',
+        'pre_label' => 'string',
         'scroll_to_top_when_opened' => 'bool',
         'table_style' => 'string'
     ];
@@ -86,6 +87,7 @@ class DocumentHtmlDisplaySettings implements ArrayAccess
         'hide_label_when_opened' => 'hideLabelWhenOpened',
         'inline_outer_style' => 'inlineOuterStyle',
         'label_when_opened' => 'labelWhenOpened',
+        'pre_label' => 'preLabel',
         'scroll_to_top_when_opened' => 'scrollToTopWhenOpened',
         'table_style' => 'tableStyle'
     ];
@@ -105,6 +107,7 @@ class DocumentHtmlDisplaySettings implements ArrayAccess
         'hide_label_when_opened' => 'setHideLabelWhenOpened',
         'inline_outer_style' => 'setInlineOuterStyle',
         'label_when_opened' => 'setLabelWhenOpened',
+        'pre_label' => 'setPreLabel',
         'scroll_to_top_when_opened' => 'setScrollToTopWhenOpened',
         'table_style' => 'setTableStyle'
     ];
@@ -124,6 +127,7 @@ class DocumentHtmlDisplaySettings implements ArrayAccess
         'hide_label_when_opened' => 'getHideLabelWhenOpened',
         'inline_outer_style' => 'getInlineOuterStyle',
         'label_when_opened' => 'getLabelWhenOpened',
+        'pre_label' => 'getPreLabel',
         'scroll_to_top_when_opened' => 'getScrollToTopWhenOpened',
         'table_style' => 'getTableStyle'
     ];
@@ -168,6 +172,7 @@ class DocumentHtmlDisplaySettings implements ArrayAccess
         $this->container['hide_label_when_opened'] = isset($data['hide_label_when_opened']) ? $data['hide_label_when_opened'] : null;
         $this->container['inline_outer_style'] = isset($data['inline_outer_style']) ? $data['inline_outer_style'] : null;
         $this->container['label_when_opened'] = isset($data['label_when_opened']) ? $data['label_when_opened'] : null;
+        $this->container['pre_label'] = isset($data['pre_label']) ? $data['pre_label'] : null;
         $this->container['scroll_to_top_when_opened'] = isset($data['scroll_to_top_when_opened']) ? $data['scroll_to_top_when_opened'] : null;
         $this->container['table_style'] = isset($data['table_style']) ? $data['table_style'] : null;
     }
@@ -380,6 +385,27 @@ class DocumentHtmlDisplaySettings implements ArrayAccess
     public function setLabelWhenOpened($label_when_opened)
     {
         $this->container['label_when_opened'] = $label_when_opened;
+
+        return $this;
+    }
+
+    /**
+     * Gets pre_label
+     * @return string
+     */
+    public function getPreLabel()
+    {
+        return $this->container['pre_label'];
+    }
+
+    /**
+     * Sets pre_label
+     * @param string $pre_label 
+     * @return $this
+     */
+    public function setPreLabel($pre_label)
+    {
+        $this->container['pre_label'] = $pre_label;
 
         return $this;
     }

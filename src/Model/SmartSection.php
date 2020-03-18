@@ -54,6 +54,8 @@ class SmartSection implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'anchor_allow_white_space_in_characters' => 'string',
+        'anchor_allow_white_space_in_characters_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_case_sensitive' => 'string',
         'anchor_case_sensitive_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_horizontal_alignment' => 'string',
@@ -109,6 +111,7 @@ class SmartSection implements ArrayAccess
         'remove_start_anchor' => 'bool',
         'shared' => 'string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
         'start_anchor' => 'string',
         'start_position' => '\DocuSign\eSign\Model\SmartSectionAnchorPosition',
         'status' => 'string',
@@ -146,6 +149,8 @@ class SmartSection implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'anchor_allow_white_space_in_characters' => 'anchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'anchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'anchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'anchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'anchorHorizontalAlignment',
@@ -201,6 +206,7 @@ class SmartSection implements ArrayAccess
         'remove_start_anchor' => 'removeStartAnchor',
         'shared' => 'shared',
         'shared_metadata' => 'sharedMetadata',
+        'smart_contract_information' => 'smartContractInformation',
         'start_anchor' => 'startAnchor',
         'start_position' => 'startPosition',
         'status' => 'status',
@@ -234,6 +240,8 @@ class SmartSection implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'anchor_allow_white_space_in_characters' => 'setAnchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'setAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'setAnchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'setAnchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'setAnchorHorizontalAlignment',
@@ -289,6 +297,7 @@ class SmartSection implements ArrayAccess
         'remove_start_anchor' => 'setRemoveStartAnchor',
         'shared' => 'setShared',
         'shared_metadata' => 'setSharedMetadata',
+        'smart_contract_information' => 'setSmartContractInformation',
         'start_anchor' => 'setStartAnchor',
         'start_position' => 'setStartPosition',
         'status' => 'setStatus',
@@ -322,6 +331,8 @@ class SmartSection implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'anchor_allow_white_space_in_characters' => 'getAnchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'getAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'getAnchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'getAnchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'getAnchorHorizontalAlignment',
@@ -377,6 +388,7 @@ class SmartSection implements ArrayAccess
         'remove_start_anchor' => 'getRemoveStartAnchor',
         'shared' => 'getShared',
         'shared_metadata' => 'getSharedMetadata',
+        'smart_contract_information' => 'getSmartContractInformation',
         'start_anchor' => 'getStartAnchor',
         'start_position' => 'getStartPosition',
         'status' => 'getStatus',
@@ -435,6 +447,8 @@ class SmartSection implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['anchor_allow_white_space_in_characters'] = isset($data['anchor_allow_white_space_in_characters']) ? $data['anchor_allow_white_space_in_characters'] : null;
+        $this->container['anchor_allow_white_space_in_characters_metadata'] = isset($data['anchor_allow_white_space_in_characters_metadata']) ? $data['anchor_allow_white_space_in_characters_metadata'] : null;
         $this->container['anchor_case_sensitive'] = isset($data['anchor_case_sensitive']) ? $data['anchor_case_sensitive'] : null;
         $this->container['anchor_case_sensitive_metadata'] = isset($data['anchor_case_sensitive_metadata']) ? $data['anchor_case_sensitive_metadata'] : null;
         $this->container['anchor_horizontal_alignment'] = isset($data['anchor_horizontal_alignment']) ? $data['anchor_horizontal_alignment'] : null;
@@ -490,6 +504,7 @@ class SmartSection implements ArrayAccess
         $this->container['remove_start_anchor'] = isset($data['remove_start_anchor']) ? $data['remove_start_anchor'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['shared_metadata'] = isset($data['shared_metadata']) ? $data['shared_metadata'] : null;
+        $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
         $this->container['start_anchor'] = isset($data['start_anchor']) ? $data['start_anchor'] : null;
         $this->container['start_position'] = isset($data['start_position']) ? $data['start_position'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -539,6 +554,48 @@ class SmartSection implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets anchor_allow_white_space_in_characters
+     * @return string
+     */
+    public function getAnchorAllowWhiteSpaceInCharacters()
+    {
+        return $this->container['anchor_allow_white_space_in_characters'];
+    }
+
+    /**
+     * Sets anchor_allow_white_space_in_characters
+     * @param string $anchor_allow_white_space_in_characters 
+     * @return $this
+     */
+    public function setAnchorAllowWhiteSpaceInCharacters($anchor_allow_white_space_in_characters)
+    {
+        $this->container['anchor_allow_white_space_in_characters'] = $anchor_allow_white_space_in_characters;
+
+        return $this;
+    }
+
+    /**
+     * Gets anchor_allow_white_space_in_characters_metadata
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getAnchorAllowWhiteSpaceInCharactersMetadata()
+    {
+        return $this->container['anchor_allow_white_space_in_characters_metadata'];
+    }
+
+    /**
+     * Sets anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata
+     * @return $this
+     */
+    public function setAnchorAllowWhiteSpaceInCharactersMetadata($anchor_allow_white_space_in_characters_metadata)
+    {
+        $this->container['anchor_allow_white_space_in_characters_metadata'] = $anchor_allow_white_space_in_characters_metadata;
+
+        return $this;
+    }
 
     /**
      * Gets anchor_case_sensitive
@@ -1691,6 +1748,27 @@ class SmartSection implements ArrayAccess
     public function setSharedMetadata($shared_metadata)
     {
         $this->container['shared_metadata'] = $shared_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets smart_contract_information
+     * @return \DocuSign\eSign\Model\SmartContractInformation
+     */
+    public function getSmartContractInformation()
+    {
+        return $this->container['smart_contract_information'];
+    }
+
+    /**
+     * Sets smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information
+     * @return $this
+     */
+    public function setSmartContractInformation($smart_contract_information)
+    {
+        $this->container['smart_contract_information'] = $smart_contract_information;
 
         return $this;
     }

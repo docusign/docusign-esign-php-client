@@ -71,6 +71,7 @@ class EnvelopeTemplate implements ArrayAccess
         'brand_lock' => 'string',
         'certificate_uri' => 'string',
         'completed_date_time' => 'string',
+        'copy_recipient_data' => 'string',
         'created' => 'string',
         'created_date_time' => 'string',
         'custom_fields' => '\DocuSign\eSign\Model\CustomFields',
@@ -138,7 +139,6 @@ class EnvelopeTemplate implements ArrayAccess
         'sender' => '\DocuSign\eSign\Model\UserInfo',
         'sent_date_time' => 'string',
         'shared' => 'string',
-        'shared_with_me' => 'string',
         'signer_can_sign_on_mobile' => 'string',
         'signing_location' => 'string',
         'status' => 'string',
@@ -180,6 +180,7 @@ class EnvelopeTemplate implements ArrayAccess
         'brand_lock' => 'brandLock',
         'certificate_uri' => 'certificateUri',
         'completed_date_time' => 'completedDateTime',
+        'copy_recipient_data' => 'copyRecipientData',
         'created' => 'created',
         'created_date_time' => 'createdDateTime',
         'custom_fields' => 'customFields',
@@ -247,7 +248,6 @@ class EnvelopeTemplate implements ArrayAccess
         'sender' => 'sender',
         'sent_date_time' => 'sentDateTime',
         'shared' => 'shared',
-        'shared_with_me' => 'sharedWithMe',
         'signer_can_sign_on_mobile' => 'signerCanSignOnMobile',
         'signing_location' => 'signingLocation',
         'status' => 'status',
@@ -285,6 +285,7 @@ class EnvelopeTemplate implements ArrayAccess
         'brand_lock' => 'setBrandLock',
         'certificate_uri' => 'setCertificateUri',
         'completed_date_time' => 'setCompletedDateTime',
+        'copy_recipient_data' => 'setCopyRecipientData',
         'created' => 'setCreated',
         'created_date_time' => 'setCreatedDateTime',
         'custom_fields' => 'setCustomFields',
@@ -352,7 +353,6 @@ class EnvelopeTemplate implements ArrayAccess
         'sender' => 'setSender',
         'sent_date_time' => 'setSentDateTime',
         'shared' => 'setShared',
-        'shared_with_me' => 'setSharedWithMe',
         'signer_can_sign_on_mobile' => 'setSignerCanSignOnMobile',
         'signing_location' => 'setSigningLocation',
         'status' => 'setStatus',
@@ -390,6 +390,7 @@ class EnvelopeTemplate implements ArrayAccess
         'brand_lock' => 'getBrandLock',
         'certificate_uri' => 'getCertificateUri',
         'completed_date_time' => 'getCompletedDateTime',
+        'copy_recipient_data' => 'getCopyRecipientData',
         'created' => 'getCreated',
         'created_date_time' => 'getCreatedDateTime',
         'custom_fields' => 'getCustomFields',
@@ -457,7 +458,6 @@ class EnvelopeTemplate implements ArrayAccess
         'sender' => 'getSender',
         'sent_date_time' => 'getSentDateTime',
         'shared' => 'getShared',
-        'shared_with_me' => 'getSharedWithMe',
         'signer_can_sign_on_mobile' => 'getSignerCanSignOnMobile',
         'signing_location' => 'getSigningLocation',
         'status' => 'getStatus',
@@ -520,6 +520,7 @@ class EnvelopeTemplate implements ArrayAccess
         $this->container['brand_lock'] = isset($data['brand_lock']) ? $data['brand_lock'] : null;
         $this->container['certificate_uri'] = isset($data['certificate_uri']) ? $data['certificate_uri'] : null;
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
+        $this->container['copy_recipient_data'] = isset($data['copy_recipient_data']) ? $data['copy_recipient_data'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
@@ -587,7 +588,6 @@ class EnvelopeTemplate implements ArrayAccess
         $this->container['sender'] = isset($data['sender']) ? $data['sender'] : null;
         $this->container['sent_date_time'] = isset($data['sent_date_time']) ? $data['sent_date_time'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
-        $this->container['shared_with_me'] = isset($data['shared_with_me']) ? $data['shared_with_me'] : null;
         $this->container['signer_can_sign_on_mobile'] = isset($data['signer_can_sign_on_mobile']) ? $data['signer_can_sign_on_mobile'] : null;
         $this->container['signing_location'] = isset($data['signing_location']) ? $data['signing_location'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -978,6 +978,27 @@ class EnvelopeTemplate implements ArrayAccess
     public function setCompletedDateTime($completed_date_time)
     {
         $this->container['completed_date_time'] = $completed_date_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets copy_recipient_data
+     * @return string
+     */
+    public function getCopyRecipientData()
+    {
+        return $this->container['copy_recipient_data'];
+    }
+
+    /**
+     * Sets copy_recipient_data
+     * @param string $copy_recipient_data 
+     * @return $this
+     */
+    public function setCopyRecipientData($copy_recipient_data)
+    {
+        $this->container['copy_recipient_data'] = $copy_recipient_data;
 
         return $this;
     }
@@ -2385,27 +2406,6 @@ class EnvelopeTemplate implements ArrayAccess
     public function setShared($shared)
     {
         $this->container['shared'] = $shared;
-
-        return $this;
-    }
-
-    /**
-     * Gets shared_with_me
-     * @return string
-     */
-    public function getSharedWithMe()
-    {
-        return $this->container['shared_with_me'];
-    }
-
-    /**
-     * Sets shared_with_me
-     * @param string $shared_with_me 
-     * @return $this
-     */
-    public function setSharedWithMe($shared_with_me)
-    {
-        $this->container['shared_with_me'] = $shared_with_me;
 
         return $this;
     }

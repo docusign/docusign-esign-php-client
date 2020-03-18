@@ -73,6 +73,7 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'string',
         'completed_date_time' => 'string',
         'composite_templates' => '\DocuSign\eSign\Model\CompositeTemplate[]',
+        'copy_recipient_data' => 'string',
         'created_date_time' => 'string',
         'custom_fields' => '\DocuSign\eSign\Model\CustomFields',
         'custom_fields_uri' => 'string',
@@ -169,6 +170,7 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'certificateUri',
         'completed_date_time' => 'completedDateTime',
         'composite_templates' => 'compositeTemplates',
+        'copy_recipient_data' => 'copyRecipientData',
         'created_date_time' => 'createdDateTime',
         'custom_fields' => 'customFields',
         'custom_fields_uri' => 'customFieldsUri',
@@ -261,6 +263,7 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'setCertificateUri',
         'completed_date_time' => 'setCompletedDateTime',
         'composite_templates' => 'setCompositeTemplates',
+        'copy_recipient_data' => 'setCopyRecipientData',
         'created_date_time' => 'setCreatedDateTime',
         'custom_fields' => 'setCustomFields',
         'custom_fields_uri' => 'setCustomFieldsUri',
@@ -353,6 +356,7 @@ class EnvelopeDefinition implements ArrayAccess
         'certificate_uri' => 'getCertificateUri',
         'completed_date_time' => 'getCompletedDateTime',
         'composite_templates' => 'getCompositeTemplates',
+        'copy_recipient_data' => 'getCopyRecipientData',
         'created_date_time' => 'getCreatedDateTime',
         'custom_fields' => 'getCustomFields',
         'custom_fields_uri' => 'getCustomFieldsUri',
@@ -470,6 +474,7 @@ class EnvelopeDefinition implements ArrayAccess
         $this->container['certificate_uri'] = isset($data['certificate_uri']) ? $data['certificate_uri'] : null;
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
         $this->container['composite_templates'] = isset($data['composite_templates']) ? $data['composite_templates'] : null;
+        $this->container['copy_recipient_data'] = isset($data['copy_recipient_data']) ? $data['copy_recipient_data'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['custom_fields_uri'] = isset($data['custom_fields_uri']) ? $data['custom_fields_uri'] : null;
@@ -955,6 +960,27 @@ class EnvelopeDefinition implements ArrayAccess
     public function setCompositeTemplates($composite_templates)
     {
         $this->container['composite_templates'] = $composite_templates;
+
+        return $this;
+    }
+
+    /**
+     * Gets copy_recipient_data
+     * @return string
+     */
+    public function getCopyRecipientData()
+    {
+        return $this->container['copy_recipient_data'];
+    }
+
+    /**
+     * Sets copy_recipient_data
+     * @param string $copy_recipient_data 
+     * @return $this
+     */
+    public function setCopyRecipientData($copy_recipient_data)
+    {
+        $this->container['copy_recipient_data'] = $copy_recipient_data;
 
         return $this;
     }

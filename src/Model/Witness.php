@@ -59,6 +59,7 @@ class Witness implements ArrayAccess
         'add_access_code_to_email' => 'string',
         'agent_can_edit_email' => 'string',
         'agent_can_edit_name' => 'string',
+        'allow_system_override_for_locked_recipient' => 'string',
         'auto_navigation' => 'string',
         'bulk_recipients_uri' => 'string',
         'can_sign_offline' => 'string',
@@ -72,6 +73,8 @@ class Witness implements ArrayAccess
         'delivered_date_time' => 'string',
         'delivery_method' => 'string',
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'designator_id' => 'string',
+        'designator_id_guid' => 'string',
         'document_visibility' => '\DocuSign\eSign\Model\DocumentVisibility[]',
         'email' => 'string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -102,6 +105,7 @@ class Witness implements ArrayAccess
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
+        'proof_file' => '\DocuSign\eSign\Model\RecipientProofFile',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_feature_metadata' => '\DocuSign\eSign\Model\FeatureAvailableMetadata[]',
@@ -157,6 +161,7 @@ class Witness implements ArrayAccess
         'add_access_code_to_email' => 'addAccessCodeToEmail',
         'agent_can_edit_email' => 'agentCanEditEmail',
         'agent_can_edit_name' => 'agentCanEditName',
+        'allow_system_override_for_locked_recipient' => 'allowSystemOverrideForLockedRecipient',
         'auto_navigation' => 'autoNavigation',
         'bulk_recipients_uri' => 'bulkRecipientsUri',
         'can_sign_offline' => 'canSignOffline',
@@ -170,6 +175,8 @@ class Witness implements ArrayAccess
         'delivered_date_time' => 'deliveredDateTime',
         'delivery_method' => 'deliveryMethod',
         'delivery_method_metadata' => 'deliveryMethodMetadata',
+        'designator_id' => 'designatorId',
+        'designator_id_guid' => 'designatorIdGuid',
         'document_visibility' => 'documentVisibility',
         'email' => 'email',
         'email_metadata' => 'emailMetadata',
@@ -200,6 +207,7 @@ class Witness implements ArrayAccess
         'note_metadata' => 'noteMetadata',
         'offline_attributes' => 'offlineAttributes',
         'phone_authentication' => 'phoneAuthentication',
+        'proof_file' => 'proofFile',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
         'recipient_feature_metadata' => 'recipientFeatureMetadata',
@@ -251,6 +259,7 @@ class Witness implements ArrayAccess
         'add_access_code_to_email' => 'setAddAccessCodeToEmail',
         'agent_can_edit_email' => 'setAgentCanEditEmail',
         'agent_can_edit_name' => 'setAgentCanEditName',
+        'allow_system_override_for_locked_recipient' => 'setAllowSystemOverrideForLockedRecipient',
         'auto_navigation' => 'setAutoNavigation',
         'bulk_recipients_uri' => 'setBulkRecipientsUri',
         'can_sign_offline' => 'setCanSignOffline',
@@ -264,6 +273,8 @@ class Witness implements ArrayAccess
         'delivered_date_time' => 'setDeliveredDateTime',
         'delivery_method' => 'setDeliveryMethod',
         'delivery_method_metadata' => 'setDeliveryMethodMetadata',
+        'designator_id' => 'setDesignatorId',
+        'designator_id_guid' => 'setDesignatorIdGuid',
         'document_visibility' => 'setDocumentVisibility',
         'email' => 'setEmail',
         'email_metadata' => 'setEmailMetadata',
@@ -294,6 +305,7 @@ class Witness implements ArrayAccess
         'note_metadata' => 'setNoteMetadata',
         'offline_attributes' => 'setOfflineAttributes',
         'phone_authentication' => 'setPhoneAuthentication',
+        'proof_file' => 'setProofFile',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'setRecipientFeatureMetadata',
@@ -345,6 +357,7 @@ class Witness implements ArrayAccess
         'add_access_code_to_email' => 'getAddAccessCodeToEmail',
         'agent_can_edit_email' => 'getAgentCanEditEmail',
         'agent_can_edit_name' => 'getAgentCanEditName',
+        'allow_system_override_for_locked_recipient' => 'getAllowSystemOverrideForLockedRecipient',
         'auto_navigation' => 'getAutoNavigation',
         'bulk_recipients_uri' => 'getBulkRecipientsUri',
         'can_sign_offline' => 'getCanSignOffline',
@@ -358,6 +371,8 @@ class Witness implements ArrayAccess
         'delivered_date_time' => 'getDeliveredDateTime',
         'delivery_method' => 'getDeliveryMethod',
         'delivery_method_metadata' => 'getDeliveryMethodMetadata',
+        'designator_id' => 'getDesignatorId',
+        'designator_id_guid' => 'getDesignatorIdGuid',
         'document_visibility' => 'getDocumentVisibility',
         'email' => 'getEmail',
         'email_metadata' => 'getEmailMetadata',
@@ -388,6 +403,7 @@ class Witness implements ArrayAccess
         'note_metadata' => 'getNoteMetadata',
         'offline_attributes' => 'getOfflineAttributes',
         'phone_authentication' => 'getPhoneAuthentication',
+        'proof_file' => 'getProofFile',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'getRecipientFeatureMetadata',
@@ -464,6 +480,7 @@ class Witness implements ArrayAccess
         $this->container['add_access_code_to_email'] = isset($data['add_access_code_to_email']) ? $data['add_access_code_to_email'] : null;
         $this->container['agent_can_edit_email'] = isset($data['agent_can_edit_email']) ? $data['agent_can_edit_email'] : null;
         $this->container['agent_can_edit_name'] = isset($data['agent_can_edit_name']) ? $data['agent_can_edit_name'] : null;
+        $this->container['allow_system_override_for_locked_recipient'] = isset($data['allow_system_override_for_locked_recipient']) ? $data['allow_system_override_for_locked_recipient'] : null;
         $this->container['auto_navigation'] = isset($data['auto_navigation']) ? $data['auto_navigation'] : null;
         $this->container['bulk_recipients_uri'] = isset($data['bulk_recipients_uri']) ? $data['bulk_recipients_uri'] : null;
         $this->container['can_sign_offline'] = isset($data['can_sign_offline']) ? $data['can_sign_offline'] : null;
@@ -477,6 +494,8 @@ class Witness implements ArrayAccess
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
         $this->container['delivery_method_metadata'] = isset($data['delivery_method_metadata']) ? $data['delivery_method_metadata'] : null;
+        $this->container['designator_id'] = isset($data['designator_id']) ? $data['designator_id'] : null;
+        $this->container['designator_id_guid'] = isset($data['designator_id_guid']) ? $data['designator_id_guid'] : null;
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_metadata'] = isset($data['email_metadata']) ? $data['email_metadata'] : null;
@@ -507,6 +526,7 @@ class Witness implements ArrayAccess
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
         $this->container['offline_attributes'] = isset($data['offline_attributes']) ? $data['offline_attributes'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
+        $this->container['proof_file'] = isset($data['proof_file']) ? $data['proof_file'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
         $this->container['recipient_feature_metadata'] = isset($data['recipient_feature_metadata']) ? $data['recipient_feature_metadata'] : null;
@@ -671,6 +691,27 @@ class Witness implements ArrayAccess
     public function setAgentCanEditName($agent_can_edit_name)
     {
         $this->container['agent_can_edit_name'] = $agent_can_edit_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_system_override_for_locked_recipient
+     * @return string
+     */
+    public function getAllowSystemOverrideForLockedRecipient()
+    {
+        return $this->container['allow_system_override_for_locked_recipient'];
+    }
+
+    /**
+     * Sets allow_system_override_for_locked_recipient
+     * @param string $allow_system_override_for_locked_recipient 
+     * @return $this
+     */
+    public function setAllowSystemOverrideForLockedRecipient($allow_system_override_for_locked_recipient)
+    {
+        $this->container['allow_system_override_for_locked_recipient'] = $allow_system_override_for_locked_recipient;
 
         return $this;
     }
@@ -944,6 +985,48 @@ class Witness implements ArrayAccess
     public function setDeliveryMethodMetadata($delivery_method_metadata)
     {
         $this->container['delivery_method_metadata'] = $delivery_method_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets designator_id
+     * @return string
+     */
+    public function getDesignatorId()
+    {
+        return $this->container['designator_id'];
+    }
+
+    /**
+     * Sets designator_id
+     * @param string $designator_id 
+     * @return $this
+     */
+    public function setDesignatorId($designator_id)
+    {
+        $this->container['designator_id'] = $designator_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets designator_id_guid
+     * @return string
+     */
+    public function getDesignatorIdGuid()
+    {
+        return $this->container['designator_id_guid'];
+    }
+
+    /**
+     * Sets designator_id_guid
+     * @param string $designator_id_guid 
+     * @return $this
+     */
+    public function setDesignatorIdGuid($designator_id_guid)
+    {
+        $this->container['designator_id_guid'] = $designator_id_guid;
 
         return $this;
     }
@@ -1574,6 +1657,27 @@ class Witness implements ArrayAccess
     public function setPhoneAuthentication($phone_authentication)
     {
         $this->container['phone_authentication'] = $phone_authentication;
+
+        return $this;
+    }
+
+    /**
+     * Gets proof_file
+     * @return \DocuSign\eSign\Model\RecipientProofFile
+     */
+    public function getProofFile()
+    {
+        return $this->container['proof_file'];
+    }
+
+    /**
+     * Sets proof_file
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file
+     * @return $this
+     */
+    public function setProofFile($proof_file)
+    {
+        $this->container['proof_file'] = $proof_file;
 
         return $this;
     }

@@ -82,7 +82,8 @@ class UserSignature implements ArrayAccess
         'stamp_format' => 'string',
         'stamp_image_uri' => 'string',
         'stamp_size_mm' => 'string',
-        'stamp_type' => 'string'
+        'stamp_type' => 'string',
+        'status' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -123,7 +124,8 @@ class UserSignature implements ArrayAccess
         'stamp_format' => 'stampFormat',
         'stamp_image_uri' => 'stampImageUri',
         'stamp_size_mm' => 'stampSizeMM',
-        'stamp_type' => 'stampType'
+        'stamp_type' => 'stampType',
+        'status' => 'status'
     ];
 
 
@@ -160,7 +162,8 @@ class UserSignature implements ArrayAccess
         'stamp_format' => 'setStampFormat',
         'stamp_image_uri' => 'setStampImageUri',
         'stamp_size_mm' => 'setStampSizeMm',
-        'stamp_type' => 'setStampType'
+        'stamp_type' => 'setStampType',
+        'status' => 'setStatus'
     ];
 
 
@@ -197,7 +200,8 @@ class UserSignature implements ArrayAccess
         'stamp_format' => 'getStampFormat',
         'stamp_image_uri' => 'getStampImageUri',
         'stamp_size_mm' => 'getStampSizeMm',
-        'stamp_type' => 'getStampType'
+        'stamp_type' => 'getStampType',
+        'status' => 'getStatus'
     ];
 
     public static function attributeMap()
@@ -260,6 +264,7 @@ class UserSignature implements ArrayAccess
         $this->container['stamp_image_uri'] = isset($data['stamp_image_uri']) ? $data['stamp_image_uri'] : null;
         $this->container['stamp_size_mm'] = isset($data['stamp_size_mm']) ? $data['stamp_size_mm'] : null;
         $this->container['stamp_type'] = isset($data['stamp_type']) ? $data['stamp_type'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -890,6 +895,27 @@ class UserSignature implements ArrayAccess
     public function setStampType($stamp_type)
     {
         $this->container['stamp_type'] = $stamp_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
 
         return $this;
     }

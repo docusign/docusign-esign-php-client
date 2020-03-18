@@ -56,6 +56,7 @@ class EventNotification implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'envelope_events' => '\DocuSign\eSign\Model\EnvelopeEvent[]',
+        'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
         'include_certificate_of_completion' => 'string',
         'include_certificate_with_soap' => 'string',
         'include_document_fields' => 'string',
@@ -84,6 +85,7 @@ class EventNotification implements ArrayAccess
      */
     protected static $attributeMap = [
         'envelope_events' => 'envelopeEvents',
+        'event_data' => 'eventData',
         'include_certificate_of_completion' => 'includeCertificateOfCompletion',
         'include_certificate_with_soap' => 'includeCertificateWithSoap',
         'include_document_fields' => 'includeDocumentFields',
@@ -108,6 +110,7 @@ class EventNotification implements ArrayAccess
      */
     protected static $setters = [
         'envelope_events' => 'setEnvelopeEvents',
+        'event_data' => 'setEventData',
         'include_certificate_of_completion' => 'setIncludeCertificateOfCompletion',
         'include_certificate_with_soap' => 'setIncludeCertificateWithSoap',
         'include_document_fields' => 'setIncludeDocumentFields',
@@ -132,6 +135,7 @@ class EventNotification implements ArrayAccess
      */
     protected static $getters = [
         'envelope_events' => 'getEnvelopeEvents',
+        'event_data' => 'getEventData',
         'include_certificate_of_completion' => 'getIncludeCertificateOfCompletion',
         'include_certificate_with_soap' => 'getIncludeCertificateWithSoap',
         'include_document_fields' => 'getIncludeDocumentFields',
@@ -181,6 +185,7 @@ class EventNotification implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
+        $this->container['event_data'] = isset($data['event_data']) ? $data['event_data'] : null;
         $this->container['include_certificate_of_completion'] = isset($data['include_certificate_of_completion']) ? $data['include_certificate_of_completion'] : null;
         $this->container['include_certificate_with_soap'] = isset($data['include_certificate_with_soap']) ? $data['include_certificate_with_soap'] : null;
         $this->container['include_document_fields'] = isset($data['include_document_fields']) ? $data['include_document_fields'] : null;
@@ -238,6 +243,27 @@ class EventNotification implements ArrayAccess
     public function setEnvelopeEvents($envelope_events)
     {
         $this->container['envelope_events'] = $envelope_events;
+
+        return $this;
+    }
+
+    /**
+     * Gets event_data
+     * @return \DocuSign\eSign\Model\ConnectEventData
+     */
+    public function getEventData()
+    {
+        return $this->container['event_data'];
+    }
+
+    /**
+     * Sets event_data
+     * @param \DocuSign\eSign\Model\ConnectEventData $event_data
+     * @return $this
+     */
+    public function setEventData($event_data)
+    {
+        $this->container['event_data'] = $event_data;
 
         return $this;
     }

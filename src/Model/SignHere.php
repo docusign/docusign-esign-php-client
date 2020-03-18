@@ -54,6 +54,8 @@ class SignHere implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'anchor_allow_white_space_in_characters' => 'string',
+        'anchor_allow_white_space_in_characters_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_case_sensitive' => 'string',
         'anchor_case_sensitive_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_horizontal_alignment' => 'string',
@@ -104,6 +106,8 @@ class SignHere implements ArrayAccess
         'recipient_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'scale_value' => 'string',
         'scale_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
+        'stamp' => '\DocuSign\eSign\Model\Stamp',
         'stamp_type' => 'string',
         'stamp_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'status' => 'string',
@@ -142,6 +146,8 @@ class SignHere implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'anchor_allow_white_space_in_characters' => 'anchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'anchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'anchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'anchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'anchorHorizontalAlignment',
@@ -192,6 +198,8 @@ class SignHere implements ArrayAccess
         'recipient_id_metadata' => 'recipientIdMetadata',
         'scale_value' => 'scaleValue',
         'scale_value_metadata' => 'scaleValueMetadata',
+        'smart_contract_information' => 'smartContractInformation',
+        'stamp' => 'stamp',
         'stamp_type' => 'stampType',
         'stamp_type_metadata' => 'stampTypeMetadata',
         'status' => 'status',
@@ -226,6 +234,8 @@ class SignHere implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'anchor_allow_white_space_in_characters' => 'setAnchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'setAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'setAnchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'setAnchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'setAnchorHorizontalAlignment',
@@ -276,6 +286,8 @@ class SignHere implements ArrayAccess
         'recipient_id_metadata' => 'setRecipientIdMetadata',
         'scale_value' => 'setScaleValue',
         'scale_value_metadata' => 'setScaleValueMetadata',
+        'smart_contract_information' => 'setSmartContractInformation',
+        'stamp' => 'setStamp',
         'stamp_type' => 'setStampType',
         'stamp_type_metadata' => 'setStampTypeMetadata',
         'status' => 'setStatus',
@@ -310,6 +322,8 @@ class SignHere implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'anchor_allow_white_space_in_characters' => 'getAnchorAllowWhiteSpaceInCharacters',
+        'anchor_allow_white_space_in_characters_metadata' => 'getAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'getAnchorCaseSensitive',
         'anchor_case_sensitive_metadata' => 'getAnchorCaseSensitiveMetadata',
         'anchor_horizontal_alignment' => 'getAnchorHorizontalAlignment',
@@ -360,6 +374,8 @@ class SignHere implements ArrayAccess
         'recipient_id_metadata' => 'getRecipientIdMetadata',
         'scale_value' => 'getScaleValue',
         'scale_value_metadata' => 'getScaleValueMetadata',
+        'smart_contract_information' => 'getSmartContractInformation',
+        'stamp' => 'getStamp',
         'stamp_type' => 'getStampType',
         'stamp_type_metadata' => 'getStampTypeMetadata',
         'status' => 'getStatus',
@@ -419,6 +435,8 @@ class SignHere implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['anchor_allow_white_space_in_characters'] = isset($data['anchor_allow_white_space_in_characters']) ? $data['anchor_allow_white_space_in_characters'] : null;
+        $this->container['anchor_allow_white_space_in_characters_metadata'] = isset($data['anchor_allow_white_space_in_characters_metadata']) ? $data['anchor_allow_white_space_in_characters_metadata'] : null;
         $this->container['anchor_case_sensitive'] = isset($data['anchor_case_sensitive']) ? $data['anchor_case_sensitive'] : null;
         $this->container['anchor_case_sensitive_metadata'] = isset($data['anchor_case_sensitive_metadata']) ? $data['anchor_case_sensitive_metadata'] : null;
         $this->container['anchor_horizontal_alignment'] = isset($data['anchor_horizontal_alignment']) ? $data['anchor_horizontal_alignment'] : null;
@@ -469,6 +487,8 @@ class SignHere implements ArrayAccess
         $this->container['recipient_id_metadata'] = isset($data['recipient_id_metadata']) ? $data['recipient_id_metadata'] : null;
         $this->container['scale_value'] = isset($data['scale_value']) ? $data['scale_value'] : null;
         $this->container['scale_value_metadata'] = isset($data['scale_value_metadata']) ? $data['scale_value_metadata'] : null;
+        $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
+        $this->container['stamp'] = isset($data['stamp']) ? $data['stamp'] : null;
         $this->container['stamp_type'] = isset($data['stamp_type']) ? $data['stamp_type'] : null;
         $this->container['stamp_type_metadata'] = isset($data['stamp_type_metadata']) ? $data['stamp_type_metadata'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -519,6 +539,48 @@ class SignHere implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets anchor_allow_white_space_in_characters
+     * @return string
+     */
+    public function getAnchorAllowWhiteSpaceInCharacters()
+    {
+        return $this->container['anchor_allow_white_space_in_characters'];
+    }
+
+    /**
+     * Sets anchor_allow_white_space_in_characters
+     * @param string $anchor_allow_white_space_in_characters 
+     * @return $this
+     */
+    public function setAnchorAllowWhiteSpaceInCharacters($anchor_allow_white_space_in_characters)
+    {
+        $this->container['anchor_allow_white_space_in_characters'] = $anchor_allow_white_space_in_characters;
+
+        return $this;
+    }
+
+    /**
+     * Gets anchor_allow_white_space_in_characters_metadata
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getAnchorAllowWhiteSpaceInCharactersMetadata()
+    {
+        return $this->container['anchor_allow_white_space_in_characters_metadata'];
+    }
+
+    /**
+     * Sets anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata
+     * @return $this
+     */
+    public function setAnchorAllowWhiteSpaceInCharactersMetadata($anchor_allow_white_space_in_characters_metadata)
+    {
+        $this->container['anchor_allow_white_space_in_characters_metadata'] = $anchor_allow_white_space_in_characters_metadata;
+
+        return $this;
+    }
 
     /**
      * Gets anchor_case_sensitive
@@ -1566,6 +1628,48 @@ class SignHere implements ArrayAccess
     public function setScaleValueMetadata($scale_value_metadata)
     {
         $this->container['scale_value_metadata'] = $scale_value_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets smart_contract_information
+     * @return \DocuSign\eSign\Model\SmartContractInformation
+     */
+    public function getSmartContractInformation()
+    {
+        return $this->container['smart_contract_information'];
+    }
+
+    /**
+     * Sets smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information
+     * @return $this
+     */
+    public function setSmartContractInformation($smart_contract_information)
+    {
+        $this->container['smart_contract_information'] = $smart_contract_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp
+     * @return \DocuSign\eSign\Model\Stamp
+     */
+    public function getStamp()
+    {
+        return $this->container['stamp'];
+    }
+
+    /**
+     * Sets stamp
+     * @param \DocuSign\eSign\Model\Stamp $stamp
+     * @return $this
+     */
+    public function setStamp($stamp)
+    {
+        $this->container['stamp'] = $stamp;
 
         return $this;
     }
