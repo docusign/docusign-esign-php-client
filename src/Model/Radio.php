@@ -367,7 +367,7 @@ class Radio implements ArrayAccess
 
     /**
      * Sets anchor_x_offset
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorXOffset($anchor_x_offset)
@@ -388,7 +388,7 @@ class Radio implements ArrayAccess
 
     /**
      * Sets anchor_y_offset
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorYOffset($anchor_y_offset)

@@ -56,6 +56,7 @@ class UserInformation implements ArrayAccess
     protected static $swaggerTypes = [
         'account_management_granular' => '\DocuSign\eSign\Model\UserAccountManagementGranularInformation',
         'activation_access_code' => 'string',
+        'country_code' => 'string',
         'created_date_time' => 'string',
         'custom_settings' => '\DocuSign\eSign\Model\NameValue[]',
         'email' => 'string',
@@ -67,6 +68,7 @@ class UserInformation implements ArrayAccess
         'home_address' => '\DocuSign\eSign\Model\AddressInformationV2',
         'initials_image_uri' => 'string',
         'is_admin' => 'string',
+        'job_title' => 'string',
         'last_login' => 'string',
         'last_name' => 'string',
         'login_status' => 'string',
@@ -76,8 +78,10 @@ class UserInformation implements ArrayAccess
         'permission_profile_id' => 'string',
         'permission_profile_name' => 'string',
         'profile_image_uri' => 'string',
+        'send_activation_email' => 'string',
         'send_activation_on_invalid_login' => 'string',
         'signature_image_uri' => 'string',
+        'subscribe' => 'string',
         'suffix_name' => 'string',
         'title' => 'string',
         'uri' => 'string',
@@ -102,6 +106,7 @@ class UserInformation implements ArrayAccess
     protected static $attributeMap = [
         'account_management_granular' => 'accountManagementGranular',
         'activation_access_code' => 'activationAccessCode',
+        'country_code' => 'countryCode',
         'created_date_time' => 'createdDateTime',
         'custom_settings' => 'customSettings',
         'email' => 'email',
@@ -113,6 +118,7 @@ class UserInformation implements ArrayAccess
         'home_address' => 'homeAddress',
         'initials_image_uri' => 'initialsImageUri',
         'is_admin' => 'isAdmin',
+        'job_title' => 'jobTitle',
         'last_login' => 'lastLogin',
         'last_name' => 'lastName',
         'login_status' => 'loginStatus',
@@ -122,8 +128,10 @@ class UserInformation implements ArrayAccess
         'permission_profile_id' => 'permissionProfileId',
         'permission_profile_name' => 'permissionProfileName',
         'profile_image_uri' => 'profileImageUri',
+        'send_activation_email' => 'sendActivationEmail',
         'send_activation_on_invalid_login' => 'sendActivationOnInvalidLogin',
         'signature_image_uri' => 'signatureImageUri',
+        'subscribe' => 'subscribe',
         'suffix_name' => 'suffixName',
         'title' => 'title',
         'uri' => 'uri',
@@ -144,6 +152,7 @@ class UserInformation implements ArrayAccess
     protected static $setters = [
         'account_management_granular' => 'setAccountManagementGranular',
         'activation_access_code' => 'setActivationAccessCode',
+        'country_code' => 'setCountryCode',
         'created_date_time' => 'setCreatedDateTime',
         'custom_settings' => 'setCustomSettings',
         'email' => 'setEmail',
@@ -155,6 +164,7 @@ class UserInformation implements ArrayAccess
         'home_address' => 'setHomeAddress',
         'initials_image_uri' => 'setInitialsImageUri',
         'is_admin' => 'setIsAdmin',
+        'job_title' => 'setJobTitle',
         'last_login' => 'setLastLogin',
         'last_name' => 'setLastName',
         'login_status' => 'setLoginStatus',
@@ -164,8 +174,10 @@ class UserInformation implements ArrayAccess
         'permission_profile_id' => 'setPermissionProfileId',
         'permission_profile_name' => 'setPermissionProfileName',
         'profile_image_uri' => 'setProfileImageUri',
+        'send_activation_email' => 'setSendActivationEmail',
         'send_activation_on_invalid_login' => 'setSendActivationOnInvalidLogin',
         'signature_image_uri' => 'setSignatureImageUri',
+        'subscribe' => 'setSubscribe',
         'suffix_name' => 'setSuffixName',
         'title' => 'setTitle',
         'uri' => 'setUri',
@@ -186,6 +198,7 @@ class UserInformation implements ArrayAccess
     protected static $getters = [
         'account_management_granular' => 'getAccountManagementGranular',
         'activation_access_code' => 'getActivationAccessCode',
+        'country_code' => 'getCountryCode',
         'created_date_time' => 'getCreatedDateTime',
         'custom_settings' => 'getCustomSettings',
         'email' => 'getEmail',
@@ -197,6 +210,7 @@ class UserInformation implements ArrayAccess
         'home_address' => 'getHomeAddress',
         'initials_image_uri' => 'getInitialsImageUri',
         'is_admin' => 'getIsAdmin',
+        'job_title' => 'getJobTitle',
         'last_login' => 'getLastLogin',
         'last_name' => 'getLastName',
         'login_status' => 'getLoginStatus',
@@ -206,8 +220,10 @@ class UserInformation implements ArrayAccess
         'permission_profile_id' => 'getPermissionProfileId',
         'permission_profile_name' => 'getPermissionProfileName',
         'profile_image_uri' => 'getProfileImageUri',
+        'send_activation_email' => 'getSendActivationEmail',
         'send_activation_on_invalid_login' => 'getSendActivationOnInvalidLogin',
         'signature_image_uri' => 'getSignatureImageUri',
+        'subscribe' => 'getSubscribe',
         'suffix_name' => 'getSuffixName',
         'title' => 'getTitle',
         'uri' => 'getUri',
@@ -253,6 +269,7 @@ class UserInformation implements ArrayAccess
     {
         $this->container['account_management_granular'] = isset($data['account_management_granular']) ? $data['account_management_granular'] : null;
         $this->container['activation_access_code'] = isset($data['activation_access_code']) ? $data['activation_access_code'] : null;
+        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['custom_settings'] = isset($data['custom_settings']) ? $data['custom_settings'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -264,6 +281,7 @@ class UserInformation implements ArrayAccess
         $this->container['home_address'] = isset($data['home_address']) ? $data['home_address'] : null;
         $this->container['initials_image_uri'] = isset($data['initials_image_uri']) ? $data['initials_image_uri'] : null;
         $this->container['is_admin'] = isset($data['is_admin']) ? $data['is_admin'] : null;
+        $this->container['job_title'] = isset($data['job_title']) ? $data['job_title'] : null;
         $this->container['last_login'] = isset($data['last_login']) ? $data['last_login'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['login_status'] = isset($data['login_status']) ? $data['login_status'] : null;
@@ -273,8 +291,10 @@ class UserInformation implements ArrayAccess
         $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
         $this->container['permission_profile_name'] = isset($data['permission_profile_name']) ? $data['permission_profile_name'] : null;
         $this->container['profile_image_uri'] = isset($data['profile_image_uri']) ? $data['profile_image_uri'] : null;
+        $this->container['send_activation_email'] = isset($data['send_activation_email']) ? $data['send_activation_email'] : null;
         $this->container['send_activation_on_invalid_login'] = isset($data['send_activation_on_invalid_login']) ? $data['send_activation_on_invalid_login'] : null;
         $this->container['signature_image_uri'] = isset($data['signature_image_uri']) ? $data['signature_image_uri'] : null;
+        $this->container['subscribe'] = isset($data['subscribe']) ? $data['subscribe'] : null;
         $this->container['suffix_name'] = isset($data['suffix_name']) ? $data['suffix_name'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
@@ -348,6 +368,27 @@ class UserInformation implements ArrayAccess
     public function setActivationAccessCode($activation_access_code)
     {
         $this->container['activation_access_code'] = $activation_access_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_code
+     * @return string
+     */
+    public function getCountryCode()
+    {
+        return $this->container['country_code'];
+    }
+
+    /**
+     * Sets country_code
+     * @param string $country_code 
+     * @return $this
+     */
+    public function setCountryCode($country_code)
+    {
+        $this->container['country_code'] = $country_code;
 
         return $this;
     }
@@ -468,7 +509,7 @@ class UserInformation implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name The user’s first name.  Maximum Length: 50 characters.
+     * @param string $first_name The user's first name.  Maximum Length: 50 characters.
      * @return $this
      */
     public function setFirstName($first_name)
@@ -510,7 +551,7 @@ class UserInformation implements ArrayAccess
 
     /**
      * Sets group_list
-     * @param \DocuSign\eSign\Model\Group[] $group_list A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId – The DocuSign group ID for the group. * groupName – The name of the group * permissionProfileId – The ID of the permission profile associated with the group. * groupType – The group type.
+     * @param \DocuSign\eSign\Model\Group[] $group_list A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type.
      * @return $this
      */
     public function setGroupList($group_list)
@@ -584,6 +625,27 @@ class UserInformation implements ArrayAccess
     }
 
     /**
+     * Gets job_title
+     * @return string
+     */
+    public function getJobTitle()
+    {
+        return $this->container['job_title'];
+    }
+
+    /**
+     * Sets job_title
+     * @param string $job_title 
+     * @return $this
+     */
+    public function setJobTitle($job_title)
+    {
+        $this->container['job_title'] = $job_title;
+
+        return $this;
+    }
+
+    /**
      * Gets last_login
      * @return string
      */
@@ -615,7 +677,7 @@ class UserInformation implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name The user’s last name.  Maximum Length: 50 characters.
+     * @param string $last_name The user's last name.  Maximum Length: 50 characters.
      * @return $this
      */
     public function setLastName($last_name)
@@ -636,7 +698,7 @@ class UserInformation implements ArrayAccess
 
     /**
      * Sets login_status
-     * @param string $login_status Shows the current status of the user’s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed
+     * @param string $login_status Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed
      * @return $this
      */
     public function setLoginStatus($login_status)
@@ -657,7 +719,7 @@ class UserInformation implements ArrayAccess
 
     /**
      * Sets middle_name
-     * @param string $middle_name The user’s middle name.  Maximum Length: 50 characters.
+     * @param string $middle_name The user's middle name.  Maximum Length: 50 characters.
      * @return $this
      */
     public function setMiddleName($middle_name)
@@ -773,6 +835,27 @@ class UserInformation implements ArrayAccess
     }
 
     /**
+     * Gets send_activation_email
+     * @return string
+     */
+    public function getSendActivationEmail()
+    {
+        return $this->container['send_activation_email'];
+    }
+
+    /**
+     * Sets send_activation_email
+     * @param string $send_activation_email 
+     * @return $this
+     */
+    public function setSendActivationEmail($send_activation_email)
+    {
+        $this->container['send_activation_email'] = $send_activation_email;
+
+        return $this;
+    }
+
+    /**
      * Gets send_activation_on_invalid_login
      * @return string
      */
@@ -810,6 +893,27 @@ class UserInformation implements ArrayAccess
     public function setSignatureImageUri($signature_image_uri)
     {
         $this->container['signature_image_uri'] = $signature_image_uri;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscribe
+     * @return string
+     */
+    public function getSubscribe()
+    {
+        return $this->container['subscribe'];
+    }
+
+    /**
+     * Sets subscribe
+     * @param string $subscribe 
+     * @return $this
+     */
+    public function setSubscribe($subscribe)
+    {
+        $this->container['subscribe'] = $subscribe;
 
         return $this;
     }

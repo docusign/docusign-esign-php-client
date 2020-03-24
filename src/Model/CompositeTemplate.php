@@ -176,7 +176,7 @@ class CompositeTemplate implements ArrayAccess
 
     /**
      * Sets composite_template_id
-     * @param string $composite_template_id The identify of this composite template. It is used as a reference when adding document object information. If used, the document’s `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
+     * @param string $composite_template_id The identify of this composite template. It is used as a reference when adding document object information. If used, the document's `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
      * @return $this
      */
     public function setCompositeTemplateId($composite_template_id)

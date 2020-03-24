@@ -72,13 +72,17 @@ class SignHere implements ArrayAccess
         'optional' => 'string',
         'page_number' => 'string',
         'recipient_id' => 'string',
-        'scale_value' => 'Number',
+        'scale_value' => 'float',
+        'stamp_type' => 'string',
+        'stamp_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'status' => 'string',
+        'tab_group_labels' => 'string[]',
         'tab_id' => 'string',
         'tab_label' => 'string',
         'tab_order' => 'string',
         'template_locked' => 'string',
         'template_required' => 'string',
+        'tooltip' => 'string',
         'x_position' => 'string',
         'y_position' => 'string'
     ];
@@ -112,12 +116,16 @@ class SignHere implements ArrayAccess
         'page_number' => 'pageNumber',
         'recipient_id' => 'recipientId',
         'scale_value' => 'scaleValue',
+        'stamp_type' => 'stampType',
+        'stamp_type_metadata' => 'stampTypeMetadata',
         'status' => 'status',
+        'tab_group_labels' => 'tabGroupLabels',
         'tab_id' => 'tabId',
         'tab_label' => 'tabLabel',
         'tab_order' => 'tabOrder',
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
+        'tooltip' => 'tooltip',
         'x_position' => 'xPosition',
         'y_position' => 'yPosition'
     ];
@@ -147,12 +155,16 @@ class SignHere implements ArrayAccess
         'page_number' => 'setPageNumber',
         'recipient_id' => 'setRecipientId',
         'scale_value' => 'setScaleValue',
+        'stamp_type' => 'setStampType',
+        'stamp_type_metadata' => 'setStampTypeMetadata',
         'status' => 'setStatus',
+        'tab_group_labels' => 'setTabGroupLabels',
         'tab_id' => 'setTabId',
         'tab_label' => 'setTabLabel',
         'tab_order' => 'setTabOrder',
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
+        'tooltip' => 'setTooltip',
         'x_position' => 'setXPosition',
         'y_position' => 'setYPosition'
     ];
@@ -182,12 +194,16 @@ class SignHere implements ArrayAccess
         'page_number' => 'getPageNumber',
         'recipient_id' => 'getRecipientId',
         'scale_value' => 'getScaleValue',
+        'stamp_type' => 'getStampType',
+        'stamp_type_metadata' => 'getStampTypeMetadata',
         'status' => 'getStatus',
+        'tab_group_labels' => 'getTabGroupLabels',
         'tab_id' => 'getTabId',
         'tab_label' => 'getTabLabel',
         'tab_order' => 'getTabOrder',
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
+        'tooltip' => 'getTooltip',
         'x_position' => 'getXPosition',
         'y_position' => 'getYPosition'
     ];
@@ -242,12 +258,16 @@ class SignHere implements ArrayAccess
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
         $this->container['scale_value'] = isset($data['scale_value']) ? $data['scale_value'] : null;
+        $this->container['stamp_type'] = isset($data['stamp_type']) ? $data['stamp_type'] : null;
+        $this->container['stamp_type_metadata'] = isset($data['stamp_type_metadata']) ? $data['stamp_type_metadata'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
         $this->container['tab_id'] = isset($data['tab_id']) ? $data['tab_id'] : null;
         $this->container['tab_label'] = isset($data['tab_label']) ? $data['tab_label'] : null;
         $this->container['tab_order'] = isset($data['tab_order']) ? $data['tab_order'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
+        $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
         $this->container['x_position'] = isset($data['x_position']) ? $data['x_position'] : null;
         $this->container['y_position'] = isset($data['y_position']) ? $data['y_position'] : null;
     }
@@ -412,7 +432,7 @@ class SignHere implements ArrayAccess
 
     /**
      * Sets anchor_x_offset
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorXOffset($anchor_x_offset)
@@ -433,7 +453,7 @@ class SignHere implements ArrayAccess
 
     /**
      * Sets anchor_y_offset
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorYOffset($anchor_y_offset)
@@ -655,7 +675,7 @@ class SignHere implements ArrayAccess
 
     /**
      * Gets scale_value
-     * @return Number
+     * @return float
      */
     public function getScaleValue()
     {
@@ -664,12 +684,54 @@ class SignHere implements ArrayAccess
 
     /**
      * Sets scale_value
-     * @param Number $scale_value 
+     * @param float $scale_value 
      * @return $this
      */
     public function setScaleValue($scale_value)
     {
         $this->container['scale_value'] = $scale_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_type
+     * @return string
+     */
+    public function getStampType()
+    {
+        return $this->container['stamp_type'];
+    }
+
+    /**
+     * Sets stamp_type
+     * @param string $stamp_type 
+     * @return $this
+     */
+    public function setStampType($stamp_type)
+    {
+        $this->container['stamp_type'] = $stamp_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets stamp_type_metadata
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getStampTypeMetadata()
+    {
+        return $this->container['stamp_type_metadata'];
+    }
+
+    /**
+     * Sets stamp_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $stamp_type_metadata
+     * @return $this
+     */
+    public function setStampTypeMetadata($stamp_type_metadata)
+    {
+        $this->container['stamp_type_metadata'] = $stamp_type_metadata;
 
         return $this;
     }
@@ -691,6 +753,27 @@ class SignHere implements ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets tab_group_labels
+     * @return string[]
+     */
+    public function getTabGroupLabels()
+    {
+        return $this->container['tab_group_labels'];
+    }
+
+    /**
+     * Sets tab_group_labels
+     * @param string[] $tab_group_labels 
+     * @return $this
+     */
+    public function setTabGroupLabels($tab_group_labels)
+    {
+        $this->container['tab_group_labels'] = $tab_group_labels;
 
         return $this;
     }
@@ -796,6 +879,27 @@ class SignHere implements ArrayAccess
     public function setTemplateRequired($template_required)
     {
         $this->container['template_required'] = $template_required;
+
+        return $this;
+    }
+
+    /**
+     * Gets tooltip
+     * @return string
+     */
+    public function getTooltip()
+    {
+        return $this->container['tooltip'];
+    }
+
+    /**
+     * Sets tooltip
+     * @param string $tooltip 
+     * @return $this
+     */
+    public function setTooltip($tooltip)
+    {
+        $this->container['tooltip'] = $tooltip;
 
         return $this;
     }

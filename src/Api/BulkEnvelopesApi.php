@@ -134,7 +134,7 @@ class GetOptions
         return $this;
     }
     /**
-      * $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=”failed,queued”)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent – This only returns entries with a sent status.
+      * $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.
       * @var string
       */
     protected $include;
@@ -150,7 +150,7 @@ class GetOptions
   
     /**
      * Sets include
-     * @param string $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=”failed,queued”)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent – This only returns entries with a sent status.
+     * @param string $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.
      * @return $this
      */
     public function setInclude($include)
@@ -241,8 +241,8 @@ class GetRecipientsOptions
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\ApiClient;
-use \DocuSign\eSign\ApiException;
+use \DocuSign\eSign\Client\ApiClient;
+use \DocuSign\eSign\Client\ApiException;
 use \DocuSign\eSign\Configuration;
 use \DocuSign\eSign\ObjectSerializer;
 
@@ -259,16 +259,16 @@ class BulkEnvelopesApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\ApiClient instance of the ApiClient
+     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\ApiClient|null $apiClient The api client to use
+     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\DocuSign\eSign\ApiClient $apiClient = null)
+    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -280,7 +280,7 @@ class BulkEnvelopesApi
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\ApiClient get the API client
+     * @return \DocuSign\eSign\Client\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -290,11 +290,11 @@ class BulkEnvelopesApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\ApiClient $apiClient set the API client
+     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
      *
      * @return BulkEnvelopesApi
      */
-    public function setApiClient(\DocuSign\eSign\ApiClient $apiClient)
+    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -307,7 +307,7 @@ class BulkEnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkEnvelopesResponse
      */
     public function callList($account_id, BulkEnvelopesApi\ListOptions $options = null)
@@ -323,7 +323,7 @@ class BulkEnvelopesApi
      *
     * @param string $account_id The external account number (int) or account ID Guid.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkEnvelopesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($account_id, BulkEnvelopesApi\ListOptions $options = null)
@@ -416,7 +416,7 @@ class BulkEnvelopesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
     * @param string $recipient_id The ID of the recipient being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsUpdateResponse
      */
     public function deleteRecipients($account_id, $envelope_id, $recipient_id)
@@ -433,7 +433,7 @@ class BulkEnvelopesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
     * @param string $recipient_id The ID of the recipient being accessed.
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id)
@@ -534,7 +534,7 @@ class BulkEnvelopesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $batch_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkEnvelopeStatus
      */
     public function get($account_id, $batch_id, BulkEnvelopesApi\GetOptions $options = null)
@@ -551,7 +551,7 @@ class BulkEnvelopesApi
     * @param string $account_id The external account number (int) or account ID Guid.
     * @param string $batch_id 
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkEnvelopeStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($account_id, $batch_id, BulkEnvelopesApi\GetOptions $options = null)
@@ -657,7 +657,7 @@ class BulkEnvelopesApi
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
     * @param string $recipient_id The ID of the recipient being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsResponse
      */
     public function getRecipients($account_id, $envelope_id, $recipient_id, BulkEnvelopesApi\GetRecipientsOptions $options = null)
@@ -675,7 +675,7 @@ class BulkEnvelopesApi
     * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
     * @param string $recipient_id The ID of the recipient being accessed.
      * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, BulkEnvelopesApi\GetRecipientsOptions $options = null)
@@ -785,14 +785,14 @@ class BulkEnvelopesApi
      *
      * Adds or replaces envelope bulk recipients.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+    * @param string $account_id The external account number (int) or account id GUID.
+    * @param string $envelope_id The envelope&#39;s GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec
+    * @param string $recipient_id The &#x60;recipientId&#x60; used when the envelope or template was created.
+     * @param string $bulk_recipients_request  (required)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsSummaryResponse
      */
-    public function updateRecipients($account_id, $envelope_id, $recipient_id, $bulk_recipients_request = null)
+    public function updateRecipients($account_id, $envelope_id, $recipient_id, $bulk_recipients_request)
     {
         list($response) = $this->updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request);
         return $response;
@@ -803,14 +803,14 @@ class BulkEnvelopesApi
      *
      * Adds or replaces envelope bulk recipients.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
-     * @throws \DocuSign\eSign\ApiException on non-2xx response
+    * @param string $account_id The external account number (int) or account id GUID.
+    * @param string $envelope_id The envelope&#39;s GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec
+    * @param string $recipient_id The &#x60;recipientId&#x60; used when the envelope or template was created.
+     * @param string $bulk_recipients_request  (required)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsSummaryResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request = null)
+    public function updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -824,6 +824,10 @@ class BulkEnvelopesApi
         if ($recipient_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling updateRecipients');
         }
+        // verify the required parameter 'bulk_recipients_request' is set
+        if ($bulk_recipients_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $bulk_recipients_request when calling updateRecipients');
+        }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients";
         $httpBody = '';
@@ -834,7 +838,7 @@ class BulkEnvelopesApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['text/csv']);
 
 
         // path params

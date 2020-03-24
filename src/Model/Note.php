@@ -79,11 +79,13 @@ class Note implements ArrayAccess
         'recipient_id' => 'string',
         'shared' => 'string',
         'status' => 'string',
+        'tab_group_labels' => 'string[]',
         'tab_id' => 'string',
         'tab_label' => 'string',
         'tab_order' => 'string',
         'template_locked' => 'string',
         'template_required' => 'string',
+        'tooltip' => 'string',
         'underline' => 'string',
         'value' => 'string',
         'width' => 'int',
@@ -126,11 +128,13 @@ class Note implements ArrayAccess
         'recipient_id' => 'recipientId',
         'shared' => 'shared',
         'status' => 'status',
+        'tab_group_labels' => 'tabGroupLabels',
         'tab_id' => 'tabId',
         'tab_label' => 'tabLabel',
         'tab_order' => 'tabOrder',
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
+        'tooltip' => 'tooltip',
         'underline' => 'underline',
         'value' => 'value',
         'width' => 'width',
@@ -169,11 +173,13 @@ class Note implements ArrayAccess
         'recipient_id' => 'setRecipientId',
         'shared' => 'setShared',
         'status' => 'setStatus',
+        'tab_group_labels' => 'setTabGroupLabels',
         'tab_id' => 'setTabId',
         'tab_label' => 'setTabLabel',
         'tab_order' => 'setTabOrder',
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
+        'tooltip' => 'setTooltip',
         'underline' => 'setUnderline',
         'value' => 'setValue',
         'width' => 'setWidth',
@@ -212,11 +218,13 @@ class Note implements ArrayAccess
         'recipient_id' => 'getRecipientId',
         'shared' => 'getShared',
         'status' => 'getStatus',
+        'tab_group_labels' => 'getTabGroupLabels',
         'tab_id' => 'getTabId',
         'tab_label' => 'getTabLabel',
         'tab_order' => 'getTabOrder',
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
+        'tooltip' => 'getTooltip',
         'underline' => 'getUnderline',
         'value' => 'getValue',
         'width' => 'getWidth',
@@ -280,11 +288,13 @@ class Note implements ArrayAccess
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
         $this->container['tab_id'] = isset($data['tab_id']) ? $data['tab_id'] : null;
         $this->container['tab_label'] = isset($data['tab_label']) ? $data['tab_label'] : null;
         $this->container['tab_order'] = isset($data['tab_order']) ? $data['tab_order'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
+        $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
         $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
@@ -452,7 +462,7 @@ class Note implements ArrayAccess
 
     /**
      * Sets anchor_x_offset
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorXOffset($anchor_x_offset)
@@ -473,7 +483,7 @@ class Note implements ArrayAccess
 
     /**
      * Sets anchor_y_offset
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
+     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      * @return $this
      */
     public function setAnchorYOffset($anchor_y_offset)
@@ -841,6 +851,27 @@ class Note implements ArrayAccess
     }
 
     /**
+     * Gets tab_group_labels
+     * @return string[]
+     */
+    public function getTabGroupLabels()
+    {
+        return $this->container['tab_group_labels'];
+    }
+
+    /**
+     * Sets tab_group_labels
+     * @param string[] $tab_group_labels 
+     * @return $this
+     */
+    public function setTabGroupLabels($tab_group_labels)
+    {
+        $this->container['tab_group_labels'] = $tab_group_labels;
+
+        return $this;
+    }
+
+    /**
      * Gets tab_id
      * @return string
      */
@@ -941,6 +972,27 @@ class Note implements ArrayAccess
     public function setTemplateRequired($template_required)
     {
         $this->container['template_required'] = $template_required;
+
+        return $this;
+    }
+
+    /**
+     * Gets tooltip
+     * @return string
+     */
+    public function getTooltip()
+    {
+        return $this->container['tooltip'];
+    }
+
+    /**
+     * Sets tooltip
+     * @param string $tooltip 
+     * @return $this
+     */
+    public function setTooltip($tooltip)
+    {
+        $this->container['tooltip'] = $tooltip;
 
         return $this;
     }

@@ -60,6 +60,7 @@ class AuthenticationStatus implements ArrayAccess
         'any_social_id_result' => '\DocuSign\eSign\Model\EventResult',
         'facebook_result' => '\DocuSign\eSign\Model\EventResult',
         'google_result' => '\DocuSign\eSign\Model\EventResult',
+        'identity_verification_result' => '\DocuSign\eSign\Model\EventResult',
         'id_lookup_result' => '\DocuSign\eSign\Model\EventResult',
         'id_questions_result' => '\DocuSign\eSign\Model\EventResult',
         'linkedin_result' => '\DocuSign\eSign\Model\EventResult',
@@ -68,6 +69,7 @@ class AuthenticationStatus implements ArrayAccess
         'open_id_result' => '\DocuSign\eSign\Model\EventResult',
         'phone_auth_result' => '\DocuSign\eSign\Model\EventResult',
         'salesforce_result' => '\DocuSign\eSign\Model\EventResult',
+        'signature_provider_result' => '\DocuSign\eSign\Model\EventResult',
         'sms_auth_result' => '\DocuSign\eSign\Model\EventResult',
         's_tan_pin_result' => '\DocuSign\eSign\Model\EventResult',
         'twitter_result' => '\DocuSign\eSign\Model\EventResult',
@@ -89,6 +91,7 @@ class AuthenticationStatus implements ArrayAccess
         'any_social_id_result' => 'anySocialIDResult',
         'facebook_result' => 'facebookResult',
         'google_result' => 'googleResult',
+        'identity_verification_result' => 'identityVerificationResult',
         'id_lookup_result' => 'idLookupResult',
         'id_questions_result' => 'idQuestionsResult',
         'linkedin_result' => 'linkedinResult',
@@ -97,6 +100,7 @@ class AuthenticationStatus implements ArrayAccess
         'open_id_result' => 'openIDResult',
         'phone_auth_result' => 'phoneAuthResult',
         'salesforce_result' => 'salesforceResult',
+        'signature_provider_result' => 'signatureProviderResult',
         'sms_auth_result' => 'smsAuthResult',
         's_tan_pin_result' => 'sTANPinResult',
         'twitter_result' => 'twitterResult',
@@ -114,6 +118,7 @@ class AuthenticationStatus implements ArrayAccess
         'any_social_id_result' => 'setAnySocialIdResult',
         'facebook_result' => 'setFacebookResult',
         'google_result' => 'setGoogleResult',
+        'identity_verification_result' => 'setIdentityVerificationResult',
         'id_lookup_result' => 'setIdLookupResult',
         'id_questions_result' => 'setIdQuestionsResult',
         'linkedin_result' => 'setLinkedinResult',
@@ -122,6 +127,7 @@ class AuthenticationStatus implements ArrayAccess
         'open_id_result' => 'setOpenIdResult',
         'phone_auth_result' => 'setPhoneAuthResult',
         'salesforce_result' => 'setSalesforceResult',
+        'signature_provider_result' => 'setSignatureProviderResult',
         'sms_auth_result' => 'setSmsAuthResult',
         's_tan_pin_result' => 'setSTanPinResult',
         'twitter_result' => 'setTwitterResult',
@@ -139,6 +145,7 @@ class AuthenticationStatus implements ArrayAccess
         'any_social_id_result' => 'getAnySocialIdResult',
         'facebook_result' => 'getFacebookResult',
         'google_result' => 'getGoogleResult',
+        'identity_verification_result' => 'getIdentityVerificationResult',
         'id_lookup_result' => 'getIdLookupResult',
         'id_questions_result' => 'getIdQuestionsResult',
         'linkedin_result' => 'getLinkedinResult',
@@ -147,6 +154,7 @@ class AuthenticationStatus implements ArrayAccess
         'open_id_result' => 'getOpenIdResult',
         'phone_auth_result' => 'getPhoneAuthResult',
         'salesforce_result' => 'getSalesforceResult',
+        'signature_provider_result' => 'getSignatureProviderResult',
         'sms_auth_result' => 'getSmsAuthResult',
         's_tan_pin_result' => 'getSTanPinResult',
         'twitter_result' => 'getTwitterResult',
@@ -189,6 +197,7 @@ class AuthenticationStatus implements ArrayAccess
         $this->container['any_social_id_result'] = isset($data['any_social_id_result']) ? $data['any_social_id_result'] : null;
         $this->container['facebook_result'] = isset($data['facebook_result']) ? $data['facebook_result'] : null;
         $this->container['google_result'] = isset($data['google_result']) ? $data['google_result'] : null;
+        $this->container['identity_verification_result'] = isset($data['identity_verification_result']) ? $data['identity_verification_result'] : null;
         $this->container['id_lookup_result'] = isset($data['id_lookup_result']) ? $data['id_lookup_result'] : null;
         $this->container['id_questions_result'] = isset($data['id_questions_result']) ? $data['id_questions_result'] : null;
         $this->container['linkedin_result'] = isset($data['linkedin_result']) ? $data['linkedin_result'] : null;
@@ -197,6 +206,7 @@ class AuthenticationStatus implements ArrayAccess
         $this->container['open_id_result'] = isset($data['open_id_result']) ? $data['open_id_result'] : null;
         $this->container['phone_auth_result'] = isset($data['phone_auth_result']) ? $data['phone_auth_result'] : null;
         $this->container['salesforce_result'] = isset($data['salesforce_result']) ? $data['salesforce_result'] : null;
+        $this->container['signature_provider_result'] = isset($data['signature_provider_result']) ? $data['signature_provider_result'] : null;
         $this->container['sms_auth_result'] = isset($data['sms_auth_result']) ? $data['sms_auth_result'] : null;
         $this->container['s_tan_pin_result'] = isset($data['s_tan_pin_result']) ? $data['s_tan_pin_result'] : null;
         $this->container['twitter_result'] = isset($data['twitter_result']) ? $data['twitter_result'] : null;
@@ -327,6 +337,27 @@ class AuthenticationStatus implements ArrayAccess
     public function setGoogleResult($google_result)
     {
         $this->container['google_result'] = $google_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets identity_verification_result
+     * @return \DocuSign\eSign\Model\EventResult
+     */
+    public function getIdentityVerificationResult()
+    {
+        return $this->container['identity_verification_result'];
+    }
+
+    /**
+     * Sets identity_verification_result
+     * @param \DocuSign\eSign\Model\EventResult $identity_verification_result
+     * @return $this
+     */
+    public function setIdentityVerificationResult($identity_verification_result)
+    {
+        $this->container['identity_verification_result'] = $identity_verification_result;
 
         return $this;
     }
@@ -495,6 +526,27 @@ class AuthenticationStatus implements ArrayAccess
     public function setSalesforceResult($salesforce_result)
     {
         $this->container['salesforce_result'] = $salesforce_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets signature_provider_result
+     * @return \DocuSign\eSign\Model\EventResult
+     */
+    public function getSignatureProviderResult()
+    {
+        return $this->container['signature_provider_result'];
+    }
+
+    /**
+     * Sets signature_provider_result
+     * @param \DocuSign\eSign\Model\EventResult $signature_provider_result
+     * @return $this
+     */
+    public function setSignatureProviderResult($signature_provider_result)
+    {
+        $this->container['signature_provider_result'] = $signature_provider_result;
 
         return $this;
     }

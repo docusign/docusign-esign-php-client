@@ -60,7 +60,9 @@ class NewAccountDefinition implements ArrayAccess
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
         'distributor_code' => 'string',
         'distributor_password' => 'string',
+        'envelope_partition_id' => 'string',
         'initial_user' => '\DocuSign\eSign\Model\UserInformation',
+        'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
         'social_account_information' => '\DocuSign\eSign\Model\SocialAccountInformation'
@@ -82,7 +84,9 @@ class NewAccountDefinition implements ArrayAccess
         'credit_card_information' => 'creditCardInformation',
         'distributor_code' => 'distributorCode',
         'distributor_password' => 'distributorPassword',
+        'envelope_partition_id' => 'envelopePartitionId',
         'initial_user' => 'initialUser',
+        'payment_processor_information' => 'PaymentProcessorInformation',
         'plan_information' => 'planInformation',
         'referral_information' => 'referralInformation',
         'social_account_information' => 'socialAccountInformation'
@@ -100,7 +104,9 @@ class NewAccountDefinition implements ArrayAccess
         'credit_card_information' => 'setCreditCardInformation',
         'distributor_code' => 'setDistributorCode',
         'distributor_password' => 'setDistributorPassword',
+        'envelope_partition_id' => 'setEnvelopePartitionId',
         'initial_user' => 'setInitialUser',
+        'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
         'referral_information' => 'setReferralInformation',
         'social_account_information' => 'setSocialAccountInformation'
@@ -118,7 +124,9 @@ class NewAccountDefinition implements ArrayAccess
         'credit_card_information' => 'getCreditCardInformation',
         'distributor_code' => 'getDistributorCode',
         'distributor_password' => 'getDistributorPassword',
+        'envelope_partition_id' => 'getEnvelopePartitionId',
         'initial_user' => 'getInitialUser',
+        'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
         'referral_information' => 'getReferralInformation',
         'social_account_information' => 'getSocialAccountInformation'
@@ -161,7 +169,9 @@ class NewAccountDefinition implements ArrayAccess
         $this->container['credit_card_information'] = isset($data['credit_card_information']) ? $data['credit_card_information'] : null;
         $this->container['distributor_code'] = isset($data['distributor_code']) ? $data['distributor_code'] : null;
         $this->container['distributor_password'] = isset($data['distributor_password']) ? $data['distributor_password'] : null;
+        $this->container['envelope_partition_id'] = isset($data['envelope_partition_id']) ? $data['envelope_partition_id'] : null;
         $this->container['initial_user'] = isset($data['initial_user']) ? $data['initial_user'] : null;
+        $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['social_account_information'] = isset($data['social_account_information']) ? $data['social_account_information'] : null;
@@ -317,6 +327,27 @@ class NewAccountDefinition implements ArrayAccess
     }
 
     /**
+     * Gets envelope_partition_id
+     * @return string
+     */
+    public function getEnvelopePartitionId()
+    {
+        return $this->container['envelope_partition_id'];
+    }
+
+    /**
+     * Sets envelope_partition_id
+     * @param string $envelope_partition_id 
+     * @return $this
+     */
+    public function setEnvelopePartitionId($envelope_partition_id)
+    {
+        $this->container['envelope_partition_id'] = $envelope_partition_id;
+
+        return $this;
+    }
+
+    /**
      * Gets initial_user
      * @return \DocuSign\eSign\Model\UserInformation
      */
@@ -333,6 +364,27 @@ class NewAccountDefinition implements ArrayAccess
     public function setInitialUser($initial_user)
     {
         $this->container['initial_user'] = $initial_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_processor_information
+     * @return \DocuSign\eSign\Model\PaymentProcessorInformation
+     */
+    public function getPaymentProcessorInformation()
+    {
+        return $this->container['payment_processor_information'];
+    }
+
+    /**
+     * Sets payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information
+     * @return $this
+     */
+    public function setPaymentProcessorInformation($payment_processor_information)
+    {
+        $this->container['payment_processor_information'] = $payment_processor_information;
 
         return $this;
     }

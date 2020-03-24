@@ -55,11 +55,11 @@ class EnvelopeDocument implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'attachment_tab_id' => 'string',
+        'authoritative_copy' => 'string',
         'available_document_types' => '\DocuSign\eSign\Model\SignatureType[]',
         'contains_pdf_form_fields' => 'string',
         'display' => 'string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
-        'document_group' => 'string',
         'document_id' => 'string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'include_in_download' => 'string',
@@ -67,8 +67,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'string',
         'pages' => 'string',
         'signer_must_acknowledge' => 'string',
-        'template_locked' => 'string',
-        'template_required' => 'string',
+        'size_bytes' => 'string',
         'type' => 'string',
         'uri' => 'string'
     ];
@@ -84,11 +83,11 @@ class EnvelopeDocument implements ArrayAccess
      */
     protected static $attributeMap = [
         'attachment_tab_id' => 'attachmentTabId',
+        'authoritative_copy' => 'authoritativeCopy',
         'available_document_types' => 'availableDocumentTypes',
         'contains_pdf_form_fields' => 'containsPdfFormFields',
         'display' => 'display',
         'document_fields' => 'documentFields',
-        'document_group' => 'documentGroup',
         'document_id' => 'documentId',
         'error_details' => 'errorDetails',
         'include_in_download' => 'includeInDownload',
@@ -96,8 +95,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'order',
         'pages' => 'pages',
         'signer_must_acknowledge' => 'signerMustAcknowledge',
-        'template_locked' => 'templateLocked',
-        'template_required' => 'templateRequired',
+        'size_bytes' => 'sizeBytes',
         'type' => 'type',
         'uri' => 'uri'
     ];
@@ -109,11 +107,11 @@ class EnvelopeDocument implements ArrayAccess
      */
     protected static $setters = [
         'attachment_tab_id' => 'setAttachmentTabId',
+        'authoritative_copy' => 'setAuthoritativeCopy',
         'available_document_types' => 'setAvailableDocumentTypes',
         'contains_pdf_form_fields' => 'setContainsPdfFormFields',
         'display' => 'setDisplay',
         'document_fields' => 'setDocumentFields',
-        'document_group' => 'setDocumentGroup',
         'document_id' => 'setDocumentId',
         'error_details' => 'setErrorDetails',
         'include_in_download' => 'setIncludeInDownload',
@@ -121,8 +119,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'setOrder',
         'pages' => 'setPages',
         'signer_must_acknowledge' => 'setSignerMustAcknowledge',
-        'template_locked' => 'setTemplateLocked',
-        'template_required' => 'setTemplateRequired',
+        'size_bytes' => 'setSizeBytes',
         'type' => 'setType',
         'uri' => 'setUri'
     ];
@@ -134,11 +131,11 @@ class EnvelopeDocument implements ArrayAccess
      */
     protected static $getters = [
         'attachment_tab_id' => 'getAttachmentTabId',
+        'authoritative_copy' => 'getAuthoritativeCopy',
         'available_document_types' => 'getAvailableDocumentTypes',
         'contains_pdf_form_fields' => 'getContainsPdfFormFields',
         'display' => 'getDisplay',
         'document_fields' => 'getDocumentFields',
-        'document_group' => 'getDocumentGroup',
         'document_id' => 'getDocumentId',
         'error_details' => 'getErrorDetails',
         'include_in_download' => 'getIncludeInDownload',
@@ -146,8 +143,7 @@ class EnvelopeDocument implements ArrayAccess
         'order' => 'getOrder',
         'pages' => 'getPages',
         'signer_must_acknowledge' => 'getSignerMustAcknowledge',
-        'template_locked' => 'getTemplateLocked',
-        'template_required' => 'getTemplateRequired',
+        'size_bytes' => 'getSizeBytes',
         'type' => 'getType',
         'uri' => 'getUri'
     ];
@@ -184,11 +180,11 @@ class EnvelopeDocument implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['attachment_tab_id'] = isset($data['attachment_tab_id']) ? $data['attachment_tab_id'] : null;
+        $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['available_document_types'] = isset($data['available_document_types']) ? $data['available_document_types'] : null;
         $this->container['contains_pdf_form_fields'] = isset($data['contains_pdf_form_fields']) ? $data['contains_pdf_form_fields'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
-        $this->container['document_group'] = isset($data['document_group']) ? $data['document_group'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
@@ -196,8 +192,7 @@ class EnvelopeDocument implements ArrayAccess
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
         $this->container['signer_must_acknowledge'] = isset($data['signer_must_acknowledge']) ? $data['signer_must_acknowledge'] : null;
-        $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
-        $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
+        $this->container['size_bytes'] = isset($data['size_bytes']) ? $data['size_bytes'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
     }
@@ -242,6 +237,27 @@ class EnvelopeDocument implements ArrayAccess
     public function setAttachmentTabId($attachment_tab_id)
     {
         $this->container['attachment_tab_id'] = $attachment_tab_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets authoritative_copy
+     * @return string
+     */
+    public function getAuthoritativeCopy()
+    {
+        return $this->container['authoritative_copy'];
+    }
+
+    /**
+     * Sets authoritative_copy
+     * @param string $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+     * @return $this
+     */
+    public function setAuthoritativeCopy($authoritative_copy)
+    {
+        $this->container['authoritative_copy'] = $authoritative_copy;
 
         return $this;
     }
@@ -326,27 +342,6 @@ class EnvelopeDocument implements ArrayAccess
     public function setDocumentFields($document_fields)
     {
         $this->container['document_fields'] = $document_fields;
-
-        return $this;
-    }
-
-    /**
-     * Gets document_group
-     * @return string
-     */
-    public function getDocumentGroup()
-    {
-        return $this->container['document_group'];
-    }
-
-    /**
-     * Sets document_group
-     * @param string $document_group 
-     * @return $this
-     */
-    public function setDocumentGroup($document_group)
-    {
-        $this->container['document_group'] = $document_group;
 
         return $this;
     }
@@ -499,43 +494,22 @@ class EnvelopeDocument implements ArrayAccess
     }
 
     /**
-     * Gets template_locked
+     * Gets size_bytes
      * @return string
      */
-    public function getTemplateLocked()
+    public function getSizeBytes()
     {
-        return $this->container['template_locked'];
+        return $this->container['size_bytes'];
     }
 
     /**
-     * Sets template_locked
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * Sets size_bytes
+     * @param string $size_bytes 
      * @return $this
      */
-    public function setTemplateLocked($template_locked)
+    public function setSizeBytes($size_bytes)
     {
-        $this->container['template_locked'] = $template_locked;
-
-        return $this;
-    }
-
-    /**
-     * Gets template_required
-     * @return string
-     */
-    public function getTemplateRequired()
-    {
-        return $this->container['template_required'];
-    }
-
-    /**
-     * Sets template_required
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
-     * @return $this
-     */
-    public function setTemplateRequired($template_required)
-    {
-        $this->container['template_required'] = $template_required;
+        $this->container['size_bytes'] = $size_bytes;
 
         return $this;
     }
