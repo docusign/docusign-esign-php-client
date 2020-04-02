@@ -1,11 +1,17 @@
-# Change Log
+# DocuSign PHP Client Change Log
 All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
-## [4.2.0] - eSignature API v2-20.1.00 - 2020-03-13
+## [4.2.0] - eSignature API v2-20.1.00 - 2020-03-30
 ### Changed
-* The SDK now supports version 20.1.00 of the DocuSign eSignature API.
-* SDK Release Version updated.git chec
+
+*   Added support for version v2-20.1.00 of the DocuSign eSignature API.
+*   Updated the SDK release version.
+
+### Added
+
+*   Added the new property `copy_recipient_data` to envelopes. When set to **true**, the information that recipients enter is retained when you clone an envelope. For example, if you resend an envelope that was declined or voided after one or more recipients entered data, that data is retained. Note that the new account UI setting `enable_envelope_copy_with_data` must be enabled for the account.
+*   Added `input_options` and `RecipientIdentityInputOption` to `RecipientIdentityVerification` to support Identity Verification: Reserved for DocuSign.
 
 ## [4.1.0] - eSignature API v2-19.2.02 - 2019-09-28
 ### Changed
