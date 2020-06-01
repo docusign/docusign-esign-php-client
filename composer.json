@@ -30,6 +30,9 @@
         "squizlabs/php_codesniffer": "~2.6",
         "friendsofphp/php-cs-fixer": "*"
     },
+    "replace": {
+        "symfony/polyfill-php80": "*"
+    },
     "autoload": {
         "psr-4": { "DocuSign\\eSign\\" : "src/" }
     },
