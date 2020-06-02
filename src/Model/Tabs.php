@@ -62,7 +62,7 @@ class Tabs implements ModelInterface, ArrayAccess
         'comment_thread_tabs' => '\DocuSign\eSign\Model\CommentThread[]',
         'company_tabs' => '\DocuSign\eSign\Model\Company[]',
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
-        'date_tabs' => '\DocuSign\eSign\Model\\DateTime[]',
+        'date_tabs' => '\DocuSign\eSign\Model\\Date[]',
         'decline_tabs' => '\DocuSign\eSign\Model\Decline[]',
         'draw_tabs' => '\DocuSign\eSign\Model\Draw[]',
         'email_address_tabs' => '\DocuSign\eSign\Model\EmailAddress[]',
