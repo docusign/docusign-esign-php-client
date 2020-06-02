@@ -31,7 +31,17 @@
         "friendsofphp/php-cs-fixer": "*"
     },
     "replace": {
-        "symfony/polyfill-php80": "*"
+        "symfony/polyfill-php80": "*",
+        "symfony/filesystem": "~5.1",
+        "symfony/service-contracts": "~2.0",
+        "symfony/stopwatch": "~4.4",
+        "symfony/console": "~4.4",
+        "symfony/config": "~4.4",        
+        "symfony/event-dispatcher": "~4.4",        
+        "symfony/process": "~5.1",
+        "symfony/deprecation-contracts": "~2.1",
+        "symfony/options-resolver": "~5.1",
+        "symfony/finder": "~5.1"
     },
     "autoload": {
         "psr-4": { "DocuSign\\eSign\\" : "src/" }
