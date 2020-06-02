@@ -61,7 +61,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'checkbox_tabs' => '\DocuSign\eSign\Model\Checkbox[]',
         'company_tabs' => '\DocuSign\eSign\Model\Company[]',
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
-        'date_tabs' => '\DocuSign\eSign\Model\\DateTime[]',
+        'date_tabs' => '\DocuSign\eSign\Model\\Date[]',
         'decline_tabs' => '\DocuSign\eSign\Model\Decline[]',
         'email_address_tabs' => '\DocuSign\eSign\Model\EmailAddress[]',
         'email_tabs' => '\DocuSign\eSign\Model\Email[]',

@@ -131,9 +131,17 @@ class UnitTests extends TestCase
         $numberTab->setPageNumber("1");
         $numberTab->setRecipientId("1");
 
+        $dateTab = new \DocuSign\eSign\Model\Date();
+        $dateTab->setXPosition("100");
+        $dateTab->setYPosition("100");
+        $dateTab->setDocumentId("1");
+        $dateTab->setPageNumber("1");
+        $dateTab->setRecipientId("1");
+
         $tabs = new DocuSign\eSign\Model\Tabs();
         $tabs->setSignHereTabs(array($signHere));
         $tabs->setNumberTabs(array($numberTab));
+        $tabs->setDateTabs(array($dateTab));        
 
         $signer = new \DocuSign\eSign\Model\Signer();
         $signer->setEmail($testConfig->getRecipientEmail());
