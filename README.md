@@ -49,7 +49,7 @@ This client has the following external dependencies:
 
 ### Launchers
 
-DocuSign provides a sample application referred to as a [Launcher](https://github.com/docusign/eg-03-php-auth-code-grant). The Launcher contains a set of 18 common use cases and associated source files. These examples use DocuSign's [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
+DocuSign provides a sample application code referred to as a [Launcher](https://github.com/docusign/code-examples-php). The Launcher contains a set of 31 common use cases and associated source files. These examples use either DocuSign&#39;s [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Tokens (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) flows.
 
 ## Proof-of-concept applications
 
@@ -76,3 +76,9 @@ The DocuSign PHP Client is licensed under the [MIT License](https://github.com/d
 
 [travis-image]: https://img.shields.io/travis/docusign/docusign-php-client.svg?style=flat
 [travis-url]: https://travis-ci.org/docusign/docusign-php-client
+
+### Additional Resources
+* [DocuSign Developer Center](https://developers.docusign.com)
+* [DocuSign API on Twitter](https://twitter.com/docusignapi)
+* [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
+* [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2NQ)
