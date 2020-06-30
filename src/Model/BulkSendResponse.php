@@ -58,9 +58,12 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'batch_id' => 'string',
+        'batch_size' => 'string',
         'envelope_or_template_id' => 'string',
         'error_details' => 'string[]',
-        'errors' => 'string[]'
+        'errors' => 'string[]',
+        'queue_limit' => 'string',
+        'total_queued' => 'string'
     ];
 
     /**
@@ -70,9 +73,12 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'batch_id' => null,
+        'batch_size' => null,
         'envelope_or_template_id' => null,
         'error_details' => null,
-        'errors' => null
+        'errors' => null,
+        'queue_limit' => null,
+        'total_queued' => null
     ];
 
     /**
@@ -103,9 +109,12 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'batch_id' => 'batchId',
+        'batch_size' => 'batchSize',
         'envelope_or_template_id' => 'envelopeOrTemplateId',
         'error_details' => 'errorDetails',
-        'errors' => 'errors'
+        'errors' => 'errors',
+        'queue_limit' => 'queueLimit',
+        'total_queued' => 'totalQueued'
     ];
 
     /**
@@ -115,9 +124,12 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'batch_id' => 'setBatchId',
+        'batch_size' => 'setBatchSize',
         'envelope_or_template_id' => 'setEnvelopeOrTemplateId',
         'error_details' => 'setErrorDetails',
-        'errors' => 'setErrors'
+        'errors' => 'setErrors',
+        'queue_limit' => 'setQueueLimit',
+        'total_queued' => 'setTotalQueued'
     ];
 
     /**
@@ -127,9 +139,12 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'batch_id' => 'getBatchId',
+        'batch_size' => 'getBatchSize',
         'envelope_or_template_id' => 'getEnvelopeOrTemplateId',
         'error_details' => 'getErrorDetails',
-        'errors' => 'getErrors'
+        'errors' => 'getErrors',
+        'queue_limit' => 'getQueueLimit',
+        'total_queued' => 'getTotalQueued'
     ];
 
     /**
@@ -193,9 +208,12 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
+        $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;
         $this->container['envelope_or_template_id'] = isset($data['envelope_or_template_id']) ? $data['envelope_or_template_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['queue_limit'] = isset($data['queue_limit']) ? $data['queue_limit'] : null;
+        $this->container['total_queued'] = isset($data['total_queued']) ? $data['total_queued'] : null;
     }
 
     /**
@@ -242,6 +260,30 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     public function setBatchId($batch_id)
     {
         $this->container['batch_id'] = $batch_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets batch_size
+     *
+     * @return string
+     */
+    public function getBatchSize()
+    {
+        return $this->container['batch_size'];
+    }
+
+    /**
+     * Sets batch_size
+     *
+     * @param string $batch_size 
+     *
+     * @return $this
+     */
+    public function setBatchSize($batch_size)
+    {
+        $this->container['batch_size'] = $batch_size;
 
         return $this;
     }
@@ -314,6 +356,54 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     public function setErrors($errors)
     {
         $this->container['errors'] = $errors;
+
+        return $this;
+    }
+
+    /**
+     * Gets queue_limit
+     *
+     * @return string
+     */
+    public function getQueueLimit()
+    {
+        return $this->container['queue_limit'];
+    }
+
+    /**
+     * Sets queue_limit
+     *
+     * @param string $queue_limit 
+     *
+     * @return $this
+     */
+    public function setQueueLimit($queue_limit)
+    {
+        $this->container['queue_limit'] = $queue_limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_queued
+     *
+     * @return string
+     */
+    public function getTotalQueued()
+    {
+        return $this->container['total_queued'];
+    }
+
+    /**
+     * Sets total_queued
+     *
+     * @param string $total_queued 
+     *
+     * @return $this
+     */
+    public function setTotalQueued($total_queued)
+    {
+        $this->container['total_queued'] = $total_queued;
 
         return $this;
     }

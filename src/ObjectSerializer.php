@@ -282,8 +282,13 @@ class ObjectSerializer
             }
 
             $file = fopen($filename, 'w');
-            while ($chunk = $data->read(200)) {
-                fwrite($file, $chunk);
+            if(is_string($data)){
+                fwrite($file, $data);
+            }
+            else{
+                while ($chunk = $data->read(200)) {
+                    fwrite($file, $chunk);
+                } 
             }
             fclose($file);
 
