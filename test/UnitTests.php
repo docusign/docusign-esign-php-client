@@ -313,8 +313,8 @@ class UnitTests extends TestCase
 			foreach($docsList->getEnvelopeDocuments() as $document)
 			{
 				$this->assertNotEmpty($document->getDocumentId());
-				//$file = $envelopeApi->getDocument($testConfig->getAccountId(), $testConfig->getEnvelopeId(), $document->getDocumentId());
-				//$this->assertNotEmpty($file);
+				$file = $envelopeApi->getDocument($testConfig->getAccountId(), $document->getDocumentId(), $testConfig->getEnvelopeId());
+				$this->assertNotEmpty($file);
 			}
 		}
 
