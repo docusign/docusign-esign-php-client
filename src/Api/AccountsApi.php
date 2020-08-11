@@ -1344,6 +1344,107 @@ class AccountsApi
     }
 
     /**
+     * Operation createReportInProductCreate
+     *
+     * Creates a customized report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
+     */
+    public function createReportInProductCreate($account_id, $report_in_product_run_request = null)
+    {
+        list($response) = $this->createReportInProductCreateWithHttpInfo($account_id, $report_in_product_run_request);
+        return $response;
+    }
+
+    /**
+     * Operation createReportInProductCreateWithHttpInfo
+     *
+     * Creates a customized report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createReportInProductCreateWithHttpInfo($account_id, $report_in_product_run_request = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createReportInProductCreate');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/reports";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($report_in_product_run_request)) {
+            $_tempBody = $report_in_product_run_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ReportInProductSaveResponse',
+                '/v2.1/accounts/{accountId}/reports'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductSaveResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductSaveResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation delete
      *
      * Deletes the specified account.
@@ -2179,6 +2280,114 @@ class AccountsApi
             return [null, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteReportInProduct
+     *
+     * Removes a customized report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $id 
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
+     */
+    public function deleteReportInProduct($account_id, $id)
+    {
+        list($response) = $this->deleteReportInProductWithHttpInfo($account_id, $id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteReportInProductWithHttpInfo
+     *
+     * Removes a customized report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $id 
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteReportInProductWithHttpInfo($account_id, $id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteReportInProduct');
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling deleteReportInProduct');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ReportInProductSaveResponse',
+                '/v2.1/accounts/{accountId}/reports/{id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductSaveResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductSaveResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -4215,6 +4424,208 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ProvisioningInformation', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getReportInProduct
+     *
+     * Gets the specified report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $id 
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ReportInProductGet
+     */
+    public function getReportInProduct($account_id, $id)
+    {
+        list($response) = $this->getReportInProductWithHttpInfo($account_id, $id);
+        return $response;
+    }
+
+    /**
+     * Operation getReportInProductWithHttpInfo
+     *
+     * Gets the specified report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $id 
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ReportInProductGet, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getReportInProductWithHttpInfo($account_id, $id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getReportInProduct');
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling getReportInProduct');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ReportInProductGet',
+                '/v2.1/accounts/{accountId}/reports/{id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductGet', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductGet', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getReportInProductList
+     *
+     * Gets the descriptors for all of an account's active reports (for listings)
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ReportInProductList
+     */
+    public function getReportInProductList($account_id)
+    {
+        list($response) = $this->getReportInProductListWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getReportInProductListWithHttpInfo
+     *
+     * Gets the descriptors for all of an account's active reports (for listings)
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ReportInProductList, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getReportInProductListWithHttpInfo($account_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getReportInProductList');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/reports";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ReportInProductList',
+                '/v2.1/accounts/{accountId}/reports'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductList', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductList', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -6778,6 +7189,319 @@ class AccountsApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PermissionProfile', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateReportInProductRunResults
+     *
+     * Returns the result set from running the specified report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ReportInProductRunResponse
+     */
+    public function updateReportInProductRunResults($account_id, $report_in_product_run_request = null)
+    {
+        list($response) = $this->updateReportInProductRunResultsWithHttpInfo($account_id, $report_in_product_run_request);
+        return $response;
+    }
+
+    /**
+     * Operation updateReportInProductRunResultsWithHttpInfo
+     *
+     * Returns the result set from running the specified report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ReportInProductRunResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateReportInProductRunResultsWithHttpInfo($account_id, $report_in_product_run_request = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateReportInProductRunResults');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/reports/report_results";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($report_in_product_run_request)) {
+            $_tempBody = $report_in_product_run_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ReportInProductRunResponse',
+                '/v2.1/accounts/{accountId}/reports/report_results'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductRunResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductRunResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateReportInProductSave
+     *
+     * Saves a customized report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $id 
+     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
+     */
+    public function updateReportInProductSave($account_id, $id, $report_in_product_run_request = null)
+    {
+        list($response) = $this->updateReportInProductSaveWithHttpInfo($account_id, $id, $report_in_product_run_request);
+        return $response;
+    }
+
+    /**
+     * Operation updateReportInProductSaveWithHttpInfo
+     *
+     * Saves a customized report
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $id 
+     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateReportInProductSaveWithHttpInfo($account_id, $id, $report_in_product_run_request = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateReportInProductSave');
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling updateReportInProductSave');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($report_in_product_run_request)) {
+            $_tempBody = $report_in_product_run_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\ReportInProductSaveResponse',
+                '/v2.1/accounts/{accountId}/reports/{id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductSaveResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductSaveResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateReportResultsCsv
+     *
+     * Returns the specified report as a CSV string
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ReportInProductCsvRunRequest $report_in_product_csv_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return void
+     */
+    public function updateReportResultsCsv($account_id, $report_in_product_csv_run_request = null)
+    {
+        list($response) = $this->updateReportResultsCsvWithHttpInfo($account_id, $report_in_product_csv_run_request);
+        return $response;
+    }
+
+    /**
+     * Operation updateReportResultsCsvWithHttpInfo
+     *
+     * Returns the specified report as a CSV string
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ReportInProductCsvRunRequest $report_in_product_csv_run_request  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateReportResultsCsvWithHttpInfo($account_id, $report_in_product_csv_run_request = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateReportResultsCsv');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/reports/report_results_csv";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($report_in_product_csv_run_request)) {
+            $_tempBody = $report_in_product_csv_run_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/reports/report_results_csv'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);

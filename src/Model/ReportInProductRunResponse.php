@@ -1,6 +1,6 @@
 <?php
 /**
- * ENoteConfiguration
+ * ReportInProductRunResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ENoteConfiguration Class Doc Comment
+ * ReportInProductRunResponse Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ENoteConfiguration implements ModelInterface, ArrayAccess
+class ReportInProductRunResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'eNoteConfiguration';
+    protected static $swaggerModelName = 'reportInProductRunResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,13 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_key' => 'string',
-        'connect_configured' => 'string',
-        'e_note_configured' => 'string',
-        'organization' => 'string',
-        'password' => 'string',
-        'user_name' => 'string'
+        'end_position' => 'string',
+        'exceeded_max_results' => 'string',
+        'last_warehouse_refresh_date_time' => 'string',
+        'result_set_size' => 'string',
+        'rows' => '\DocuSign\eSign\Model\ReportInProductRunResponseRow[]',
+        'start_position' => 'string',
+        'total_set_size' => 'string'
     ];
 
     /**
@@ -71,12 +72,13 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'api_key' => null,
-        'connect_configured' => null,
-        'e_note_configured' => null,
-        'organization' => null,
-        'password' => null,
-        'user_name' => null
+        'end_position' => null,
+        'exceeded_max_results' => null,
+        'last_warehouse_refresh_date_time' => null,
+        'result_set_size' => null,
+        'rows' => null,
+        'start_position' => null,
+        'total_set_size' => null
     ];
 
     /**
@@ -106,12 +108,13 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'api_key' => 'apiKey',
-        'connect_configured' => 'connectConfigured',
-        'e_note_configured' => 'eNoteConfigured',
-        'organization' => 'organization',
-        'password' => 'password',
-        'user_name' => 'userName'
+        'end_position' => 'endPosition',
+        'exceeded_max_results' => 'exceededMaxResults',
+        'last_warehouse_refresh_date_time' => 'lastWarehouseRefreshDateTime',
+        'result_set_size' => 'resultSetSize',
+        'rows' => 'rows',
+        'start_position' => 'startPosition',
+        'total_set_size' => 'totalSetSize'
     ];
 
     /**
@@ -120,12 +123,13 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'api_key' => 'setApiKey',
-        'connect_configured' => 'setConnectConfigured',
-        'e_note_configured' => 'setENoteConfigured',
-        'organization' => 'setOrganization',
-        'password' => 'setPassword',
-        'user_name' => 'setUserName'
+        'end_position' => 'setEndPosition',
+        'exceeded_max_results' => 'setExceededMaxResults',
+        'last_warehouse_refresh_date_time' => 'setLastWarehouseRefreshDateTime',
+        'result_set_size' => 'setResultSetSize',
+        'rows' => 'setRows',
+        'start_position' => 'setStartPosition',
+        'total_set_size' => 'setTotalSetSize'
     ];
 
     /**
@@ -134,12 +138,13 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'api_key' => 'getApiKey',
-        'connect_configured' => 'getConnectConfigured',
-        'e_note_configured' => 'getENoteConfigured',
-        'organization' => 'getOrganization',
-        'password' => 'getPassword',
-        'user_name' => 'getUserName'
+        'end_position' => 'getEndPosition',
+        'exceeded_max_results' => 'getExceededMaxResults',
+        'last_warehouse_refresh_date_time' => 'getLastWarehouseRefreshDateTime',
+        'result_set_size' => 'getResultSetSize',
+        'rows' => 'getRows',
+        'start_position' => 'getStartPosition',
+        'total_set_size' => 'getTotalSetSize'
     ];
 
     /**
@@ -202,12 +207,13 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['api_key'] = isset($data['api_key']) ? $data['api_key'] : null;
-        $this->container['connect_configured'] = isset($data['connect_configured']) ? $data['connect_configured'] : null;
-        $this->container['e_note_configured'] = isset($data['e_note_configured']) ? $data['e_note_configured'] : null;
-        $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
+        $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
+        $this->container['exceeded_max_results'] = isset($data['exceeded_max_results']) ? $data['exceeded_max_results'] : null;
+        $this->container['last_warehouse_refresh_date_time'] = isset($data['last_warehouse_refresh_date_time']) ? $data['last_warehouse_refresh_date_time'] : null;
+        $this->container['result_set_size'] = isset($data['result_set_size']) ? $data['result_set_size'] : null;
+        $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
+        $this->container['start_position'] = isset($data['start_position']) ? $data['start_position'] : null;
+        $this->container['total_set_size'] = isset($data['total_set_size']) ? $data['total_set_size'] : null;
     }
 
     /**
@@ -235,145 +241,169 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets api_key
+     * Gets end_position
      *
      * @return string
      */
-    public function getApiKey()
+    public function getEndPosition()
     {
-        return $this->container['api_key'];
+        return $this->container['end_position'];
     }
 
     /**
-     * Sets api_key
+     * Sets end_position
      *
-     * @param string $api_key 
+     * @param string $end_position The last position in the result set.
      *
      * @return $this
      */
-    public function setApiKey($api_key)
+    public function setEndPosition($end_position)
     {
-        $this->container['api_key'] = $api_key;
+        $this->container['end_position'] = $end_position;
 
         return $this;
     }
 
     /**
-     * Gets connect_configured
+     * Gets exceeded_max_results
      *
      * @return string
      */
-    public function getConnectConfigured()
+    public function getExceededMaxResults()
     {
-        return $this->container['connect_configured'];
+        return $this->container['exceeded_max_results'];
     }
 
     /**
-     * Sets connect_configured
+     * Sets exceeded_max_results
      *
-     * @param string $connect_configured 
+     * @param string $exceeded_max_results 
      *
      * @return $this
      */
-    public function setConnectConfigured($connect_configured)
+    public function setExceededMaxResults($exceeded_max_results)
     {
-        $this->container['connect_configured'] = $connect_configured;
+        $this->container['exceeded_max_results'] = $exceeded_max_results;
 
         return $this;
     }
 
     /**
-     * Gets e_note_configured
+     * Gets last_warehouse_refresh_date_time
      *
      * @return string
      */
-    public function getENoteConfigured()
+    public function getLastWarehouseRefreshDateTime()
     {
-        return $this->container['e_note_configured'];
+        return $this->container['last_warehouse_refresh_date_time'];
     }
 
     /**
-     * Sets e_note_configured
+     * Sets last_warehouse_refresh_date_time
      *
-     * @param string $e_note_configured 
+     * @param string $last_warehouse_refresh_date_time 
      *
      * @return $this
      */
-    public function setENoteConfigured($e_note_configured)
+    public function setLastWarehouseRefreshDateTime($last_warehouse_refresh_date_time)
     {
-        $this->container['e_note_configured'] = $e_note_configured;
+        $this->container['last_warehouse_refresh_date_time'] = $last_warehouse_refresh_date_time;
 
         return $this;
     }
 
     /**
-     * Gets organization
+     * Gets result_set_size
      *
      * @return string
      */
-    public function getOrganization()
+    public function getResultSetSize()
     {
-        return $this->container['organization'];
+        return $this->container['result_set_size'];
     }
 
     /**
-     * Sets organization
+     * Sets result_set_size
      *
-     * @param string $organization 
+     * @param string $result_set_size The number of results returned in this response.
      *
      * @return $this
      */
-    public function setOrganization($organization)
+    public function setResultSetSize($result_set_size)
     {
-        $this->container['organization'] = $organization;
+        $this->container['result_set_size'] = $result_set_size;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets rows
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\ReportInProductRunResponseRow[]
      */
-    public function getPassword()
+    public function getRows()
     {
-        return $this->container['password'];
+        return $this->container['rows'];
     }
 
     /**
-     * Sets password
+     * Sets rows
      *
-     * @param string $password 
+     * @param \DocuSign\eSign\Model\ReportInProductRunResponseRow[] $rows 
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setRows($rows)
     {
-        $this->container['password'] = $password;
+        $this->container['rows'] = $rows;
 
         return $this;
     }
 
     /**
-     * Gets user_name
+     * Gets start_position
      *
      * @return string
      */
-    public function getUserName()
+    public function getStartPosition()
     {
-        return $this->container['user_name'];
+        return $this->container['start_position'];
     }
 
     /**
-     * Sets user_name
+     * Sets start_position
      *
-     * @param string $user_name 
+     * @param string $start_position Starting position of the current result set.
      *
      * @return $this
      */
-    public function setUserName($user_name)
+    public function setStartPosition($start_position)
     {
-        $this->container['user_name'] = $user_name;
+        $this->container['start_position'] = $start_position;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_set_size
+     *
+     * @return string
+     */
+    public function getTotalSetSize()
+    {
+        return $this->container['total_set_size'];
+    }
+
+    /**
+     * Sets total_set_size
+     *
+     * @param string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+     *
+     * @return $this
+     */
+    public function setTotalSetSize($total_set_size)
+    {
+        $this->container['total_set_size'] = $total_set_size;
 
         return $this;
     }

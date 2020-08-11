@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * ConditionalRecipientRuleCondition
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * ConditionalRecipientRuleCondition Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'conditionalRecipientRuleCondition';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'filters' => '\DocuSign\eSign\Model\ConditionalRecipientRuleFilter[]',
+        'order' => 'string',
+        'recipient_label' => 'string'
     ];
 
     /**
@@ -67,8 +68,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'filters' => null,
+        'order' => null,
+        'recipient_label' => null
     ];
 
     /**
@@ -98,8 +100,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'filters' => 'filters',
+        'order' => 'order',
+        'recipient_label' => 'recipientLabel'
     ];
 
     /**
@@ -108,8 +111,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'filters' => 'setFilters',
+        'order' => 'setOrder',
+        'recipient_label' => 'setRecipientLabel'
     ];
 
     /**
@@ -118,8 +122,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'filters' => 'getFilters',
+        'order' => 'getOrder',
+        'recipient_label' => 'getRecipientLabel'
     ];
 
     /**
@@ -182,8 +187,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['recipient_label'] = isset($data['recipient_label']) ? $data['recipient_label'] : null;
     }
 
     /**
@@ -211,49 +217,73 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets filters
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\ConditionalRecipientRuleFilter[]
      */
-    public function getProofBaseUri()
+    public function getFilters()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['filters'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets filters
      *
-     * @param string $proof_base_uri 
+     * @param \DocuSign\eSign\Model\ConditionalRecipientRuleFilter[] $filters 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setFilters($filters)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['filters'] = $filters;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets order
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getOrder()
     {
-        return $this->container['resource_token'];
+        return $this->container['order'];
     }
 
     /**
-     * Sets resource_token
+     * Sets order
      *
-     * @param string $resource_token 
+     * @param string $order 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setOrder($order)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['order'] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_label
+     *
+     * @return string
+     */
+    public function getRecipientLabel()
+    {
+        return $this->container['recipient_label'];
+    }
+
+    /**
+     * Sets recipient_label
+     *
+     * @param string $recipient_label 
+     *
+     * @return $this
+     */
+    public function setRecipientLabel($recipient_label)
+    {
+        $this->container['recipient_label'] = $recipient_label;
 
         return $this;
     }

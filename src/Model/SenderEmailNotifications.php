@@ -63,6 +63,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
         'delivery_failed' => 'string',
         'envelope_complete' => 'string',
         'offline_signing_failed' => 'string',
+        'powerform_responses_limit_notification_email' => 'string',
         'purge_documents' => 'string',
         'recipient_viewed' => 'string',
         'sender_envelope_declined' => 'string',
@@ -81,6 +82,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
         'delivery_failed' => null,
         'envelope_complete' => null,
         'offline_signing_failed' => null,
+        'powerform_responses_limit_notification_email' => null,
         'purge_documents' => null,
         'recipient_viewed' => null,
         'sender_envelope_declined' => null,
@@ -120,6 +122,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
         'delivery_failed' => 'deliveryFailed',
         'envelope_complete' => 'envelopeComplete',
         'offline_signing_failed' => 'offlineSigningFailed',
+        'powerform_responses_limit_notification_email' => 'powerformResponsesLimitNotificationEmail',
         'purge_documents' => 'purgeDocuments',
         'recipient_viewed' => 'recipientViewed',
         'sender_envelope_declined' => 'senderEnvelopeDeclined',
@@ -138,6 +141,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
         'delivery_failed' => 'setDeliveryFailed',
         'envelope_complete' => 'setEnvelopeComplete',
         'offline_signing_failed' => 'setOfflineSigningFailed',
+        'powerform_responses_limit_notification_email' => 'setPowerformResponsesLimitNotificationEmail',
         'purge_documents' => 'setPurgeDocuments',
         'recipient_viewed' => 'setRecipientViewed',
         'sender_envelope_declined' => 'setSenderEnvelopeDeclined',
@@ -156,6 +160,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
         'delivery_failed' => 'getDeliveryFailed',
         'envelope_complete' => 'getEnvelopeComplete',
         'offline_signing_failed' => 'getOfflineSigningFailed',
+        'powerform_responses_limit_notification_email' => 'getPowerformResponsesLimitNotificationEmail',
         'purge_documents' => 'getPurgeDocuments',
         'recipient_viewed' => 'getRecipientViewed',
         'sender_envelope_declined' => 'getSenderEnvelopeDeclined',
@@ -228,6 +233,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
         $this->container['delivery_failed'] = isset($data['delivery_failed']) ? $data['delivery_failed'] : null;
         $this->container['envelope_complete'] = isset($data['envelope_complete']) ? $data['envelope_complete'] : null;
         $this->container['offline_signing_failed'] = isset($data['offline_signing_failed']) ? $data['offline_signing_failed'] : null;
+        $this->container['powerform_responses_limit_notification_email'] = isset($data['powerform_responses_limit_notification_email']) ? $data['powerform_responses_limit_notification_email'] : null;
         $this->container['purge_documents'] = isset($data['purge_documents']) ? $data['purge_documents'] : null;
         $this->container['recipient_viewed'] = isset($data['recipient_viewed']) ? $data['recipient_viewed'] : null;
         $this->container['sender_envelope_declined'] = isset($data['sender_envelope_declined']) ? $data['sender_envelope_declined'] : null;
@@ -398,6 +404,30 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     public function setOfflineSigningFailed($offline_signing_failed)
     {
         $this->container['offline_signing_failed'] = $offline_signing_failed;
+
+        return $this;
+    }
+
+    /**
+     * Gets powerform_responses_limit_notification_email
+     *
+     * @return string
+     */
+    public function getPowerformResponsesLimitNotificationEmail()
+    {
+        return $this->container['powerform_responses_limit_notification_email'];
+    }
+
+    /**
+     * Sets powerform_responses_limit_notification_email
+     *
+     * @param string $powerform_responses_limit_notification_email 
+     *
+     * @return $this
+     */
+    public function setPowerformResponsesLimitNotificationEmail($powerform_responses_limit_notification_email)
+    {
+        $this->container['powerform_responses_limit_notification_email'] = $powerform_responses_limit_notification_email;
 
         return $this;
     }

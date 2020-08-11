@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * ReportInProductField
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * ReportInProductField Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class ReportInProductField implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'reportInProductField';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'display_order' => 'string',
+        'field_version' => 'string',
+        'name' => 'string',
+        'selected' => 'string'
     ];
 
     /**
@@ -67,8 +69,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'display_order' => null,
+        'field_version' => null,
+        'name' => null,
+        'selected' => null
     ];
 
     /**
@@ -98,8 +102,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'display_order' => 'displayOrder',
+        'field_version' => 'fieldVersion',
+        'name' => 'name',
+        'selected' => 'selected'
     ];
 
     /**
@@ -108,8 +114,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'display_order' => 'setDisplayOrder',
+        'field_version' => 'setFieldVersion',
+        'name' => 'setName',
+        'selected' => 'setSelected'
     ];
 
     /**
@@ -118,8 +126,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'display_order' => 'getDisplayOrder',
+        'field_version' => 'getFieldVersion',
+        'name' => 'getName',
+        'selected' => 'getSelected'
     ];
 
     /**
@@ -182,8 +192,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
+        $this->container['field_version'] = isset($data['field_version']) ? $data['field_version'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
     }
 
     /**
@@ -211,49 +223,97 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets display_order
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getDisplayOrder()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['display_order'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets display_order
      *
-     * @param string $proof_base_uri 
+     * @param string $display_order 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setDisplayOrder($display_order)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['display_order'] = $display_order;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets field_version
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getFieldVersion()
     {
-        return $this->container['resource_token'];
+        return $this->container['field_version'];
     }
 
     /**
-     * Sets resource_token
+     * Sets field_version
      *
-     * @param string $resource_token 
+     * @param string $field_version 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setFieldVersion($field_version)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['field_version'] = $field_version;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name 
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets selected
+     *
+     * @return string
+     */
+    public function getSelected()
+    {
+        return $this->container['selected'];
+    }
+
+    /**
+     * Sets selected
+     *
+     * @param string $selected 
+     *
+     * @return $this
+     */
+    public function setSelected($selected)
+    {
+        $this->container['selected'] = $selected;
 
         return $this;
     }

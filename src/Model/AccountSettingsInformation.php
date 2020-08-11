@@ -92,6 +92,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_http_listener_configs' => 'string',
         'allow_connect_send_finish_later' => 'string',
         'allow_connect_send_finish_later_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_connect_unified_payload_ui' => 'string',
         'allow_consumer_disclosure_override' => 'string',
         'allow_consumer_disclosure_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_data_download' => 'string',
@@ -614,6 +615,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_http_listener_configs' => null,
         'allow_connect_send_finish_later' => null,
         'allow_connect_send_finish_later_metadata' => null,
+        'allow_connect_unified_payload_ui' => null,
         'allow_consumer_disclosure_override' => null,
         'allow_consumer_disclosure_override_metadata' => null,
         'allow_data_download' => null,
@@ -1157,6 +1159,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_http_listener_configs' => 'allowConnectHttpListenerConfigs',
         'allow_connect_send_finish_later' => 'allowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata' => 'allowConnectSendFinishLaterMetadata',
+        'allow_connect_unified_payload_ui' => 'allowConnectUnifiedPayloadUI',
         'allow_consumer_disclosure_override' => 'allowConsumerDisclosureOverride',
         'allow_consumer_disclosure_override_metadata' => 'allowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'allowDataDownload',
@@ -1679,6 +1682,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_http_listener_configs' => 'setAllowConnectHttpListenerConfigs',
         'allow_connect_send_finish_later' => 'setAllowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata' => 'setAllowConnectSendFinishLaterMetadata',
+        'allow_connect_unified_payload_ui' => 'setAllowConnectUnifiedPayloadUi',
         'allow_consumer_disclosure_override' => 'setAllowConsumerDisclosureOverride',
         'allow_consumer_disclosure_override_metadata' => 'setAllowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'setAllowDataDownload',
@@ -2201,6 +2205,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_http_listener_configs' => 'getAllowConnectHttpListenerConfigs',
         'allow_connect_send_finish_later' => 'getAllowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata' => 'getAllowConnectSendFinishLaterMetadata',
+        'allow_connect_unified_payload_ui' => 'getAllowConnectUnifiedPayloadUi',
         'allow_consumer_disclosure_override' => 'getAllowConsumerDisclosureOverride',
         'allow_consumer_disclosure_override_metadata' => 'getAllowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'getAllowDataDownload',
@@ -2777,6 +2782,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_connect_http_listener_configs'] = isset($data['allow_connect_http_listener_configs']) ? $data['allow_connect_http_listener_configs'] : null;
         $this->container['allow_connect_send_finish_later'] = isset($data['allow_connect_send_finish_later']) ? $data['allow_connect_send_finish_later'] : null;
         $this->container['allow_connect_send_finish_later_metadata'] = isset($data['allow_connect_send_finish_later_metadata']) ? $data['allow_connect_send_finish_later_metadata'] : null;
+        $this->container['allow_connect_unified_payload_ui'] = isset($data['allow_connect_unified_payload_ui']) ? $data['allow_connect_unified_payload_ui'] : null;
         $this->container['allow_consumer_disclosure_override'] = isset($data['allow_consumer_disclosure_override']) ? $data['allow_consumer_disclosure_override'] : null;
         $this->container['allow_consumer_disclosure_override_metadata'] = isset($data['allow_consumer_disclosure_override_metadata']) ? $data['allow_consumer_disclosure_override_metadata'] : null;
         $this->container['allow_data_download'] = isset($data['allow_data_download']) ? $data['allow_data_download'] : null;
@@ -4095,6 +4101,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowConnectSendFinishLaterMetadata($allow_connect_send_finish_later_metadata)
     {
         $this->container['allow_connect_send_finish_later_metadata'] = $allow_connect_send_finish_later_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_connect_unified_payload_ui
+     *
+     * @return string
+     */
+    public function getAllowConnectUnifiedPayloadUi()
+    {
+        return $this->container['allow_connect_unified_payload_ui'];
+    }
+
+    /**
+     * Sets allow_connect_unified_payload_ui
+     *
+     * @param string $allow_connect_unified_payload_ui 
+     *
+     * @return $this
+     */
+    public function setAllowConnectUnifiedPayloadUi($allow_connect_unified_payload_ui)
+    {
+        $this->container['allow_connect_unified_payload_ui'] = $allow_connect_unified_payload_ui;
 
         return $this;
     }
