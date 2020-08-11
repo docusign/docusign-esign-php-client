@@ -61,6 +61,7 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => 'string',
         'email' => 'string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'membership_id' => 'string',
         'permission_profile_id' => 'string',
         'permission_profile_name' => 'string',
         'uri' => 'string',
@@ -79,6 +80,7 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => null,
         'email' => null,
         'error_details' => null,
+        'membership_id' => null,
         'permission_profile_id' => null,
         'permission_profile_name' => null,
         'uri' => null,
@@ -118,6 +120,7 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => 'createdDateTime',
         'email' => 'email',
         'error_details' => 'errorDetails',
+        'membership_id' => 'membershipId',
         'permission_profile_id' => 'permissionProfileId',
         'permission_profile_name' => 'permissionProfileName',
         'uri' => 'uri',
@@ -136,6 +139,7 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => 'setCreatedDateTime',
         'email' => 'setEmail',
         'error_details' => 'setErrorDetails',
+        'membership_id' => 'setMembershipId',
         'permission_profile_id' => 'setPermissionProfileId',
         'permission_profile_name' => 'setPermissionProfileName',
         'uri' => 'setUri',
@@ -154,6 +158,7 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => 'getCreatedDateTime',
         'email' => 'getEmail',
         'error_details' => 'getErrorDetails',
+        'membership_id' => 'getMembershipId',
         'permission_profile_id' => 'getPermissionProfileId',
         'permission_profile_name' => 'getPermissionProfileName',
         'uri' => 'getUri',
@@ -226,6 +231,7 @@ class NewUser implements ModelInterface, ArrayAccess
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['membership_id'] = isset($data['membership_id']) ? $data['membership_id'] : null;
         $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
         $this->container['permission_profile_name'] = isset($data['permission_profile_name']) ? $data['permission_profile_name'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
@@ -350,6 +356,30 @@ class NewUser implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets membership_id
+     *
+     * @return string
+     */
+    public function getMembershipId()
+    {
+        return $this->container['membership_id'];
+    }
+
+    /**
+     * Sets membership_id
+     *
+     * @param string $membership_id 
+     *
+     * @return $this
+     */
+    public function setMembershipId($membership_id)
+    {
+        $this->container['membership_id'] = $membership_id;
 
         return $this;
     }
