@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * Workflow
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * Workflow Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class Workflow implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'workflow';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'current_workflow_step_id' => 'string',
+        'workflow_status' => 'string',
+        'workflow_steps' => '\DocuSign\eSign\Model\WorkflowStep[]'
     ];
 
     /**
@@ -67,8 +68,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'current_workflow_step_id' => null,
+        'workflow_status' => null,
+        'workflow_steps' => null
     ];
 
     /**
@@ -98,8 +100,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'current_workflow_step_id' => 'currentWorkflowStepId',
+        'workflow_status' => 'workflowStatus',
+        'workflow_steps' => 'workflowSteps'
     ];
 
     /**
@@ -108,8 +111,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'current_workflow_step_id' => 'setCurrentWorkflowStepId',
+        'workflow_status' => 'setWorkflowStatus',
+        'workflow_steps' => 'setWorkflowSteps'
     ];
 
     /**
@@ -118,8 +122,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'current_workflow_step_id' => 'getCurrentWorkflowStepId',
+        'workflow_status' => 'getWorkflowStatus',
+        'workflow_steps' => 'getWorkflowSteps'
     ];
 
     /**
@@ -182,8 +187,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['current_workflow_step_id'] = isset($data['current_workflow_step_id']) ? $data['current_workflow_step_id'] : null;
+        $this->container['workflow_status'] = isset($data['workflow_status']) ? $data['workflow_status'] : null;
+        $this->container['workflow_steps'] = isset($data['workflow_steps']) ? $data['workflow_steps'] : null;
     }
 
     /**
@@ -211,49 +217,73 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets current_workflow_step_id
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getCurrentWorkflowStepId()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['current_workflow_step_id'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets current_workflow_step_id
      *
-     * @param string $proof_base_uri 
+     * @param string $current_workflow_step_id 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setCurrentWorkflowStepId($current_workflow_step_id)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['current_workflow_step_id'] = $current_workflow_step_id;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets workflow_status
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getWorkflowStatus()
     {
-        return $this->container['resource_token'];
+        return $this->container['workflow_status'];
     }
 
     /**
-     * Sets resource_token
+     * Sets workflow_status
      *
-     * @param string $resource_token 
+     * @param string $workflow_status 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setWorkflowStatus($workflow_status)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['workflow_status'] = $workflow_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflow_steps
+     *
+     * @return \DocuSign\eSign\Model\WorkflowStep[]
+     */
+    public function getWorkflowSteps()
+    {
+        return $this->container['workflow_steps'];
+    }
+
+    /**
+     * Sets workflow_steps
+     *
+     * @param \DocuSign\eSign\Model\WorkflowStep[] $workflow_steps 
+     *
+     * @return $this
+     */
+    public function setWorkflowSteps($workflow_steps)
+    {
+        $this->container['workflow_steps'] = $workflow_steps;
 
         return $this;
     }

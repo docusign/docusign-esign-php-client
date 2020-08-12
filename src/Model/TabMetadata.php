@@ -91,7 +91,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'payment_item_code' => 'string',
         'payment_item_description' => 'string',
         'payment_item_name' => 'string',
+        'require_all' => 'string',
         'required' => 'string',
+        'require_initial_on_shared_change' => 'string',
         'scale_value' => 'string',
         'selected' => 'string',
         'shared' => 'string',
@@ -145,7 +147,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'payment_item_code' => null,
         'payment_item_description' => null,
         'payment_item_name' => null,
+        'require_all' => null,
         'required' => null,
+        'require_initial_on_shared_change' => null,
         'scale_value' => null,
         'selected' => null,
         'shared' => null,
@@ -220,7 +224,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'payment_item_code' => 'paymentItemCode',
         'payment_item_description' => 'paymentItemDescription',
         'payment_item_name' => 'paymentItemName',
+        'require_all' => 'requireAll',
         'required' => 'required',
+        'require_initial_on_shared_change' => 'requireInitialOnSharedChange',
         'scale_value' => 'scaleValue',
         'selected' => 'selected',
         'shared' => 'shared',
@@ -274,7 +280,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'payment_item_code' => 'setPaymentItemCode',
         'payment_item_description' => 'setPaymentItemDescription',
         'payment_item_name' => 'setPaymentItemName',
+        'require_all' => 'setRequireAll',
         'required' => 'setRequired',
+        'require_initial_on_shared_change' => 'setRequireInitialOnSharedChange',
         'scale_value' => 'setScaleValue',
         'selected' => 'setSelected',
         'shared' => 'setShared',
@@ -328,7 +336,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'payment_item_code' => 'getPaymentItemCode',
         'payment_item_description' => 'getPaymentItemDescription',
         'payment_item_name' => 'getPaymentItemName',
+        'require_all' => 'getRequireAll',
         'required' => 'getRequired',
+        'require_initial_on_shared_change' => 'getRequireInitialOnSharedChange',
         'scale_value' => 'getScaleValue',
         'selected' => 'getSelected',
         'shared' => 'getShared',
@@ -436,7 +446,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         $this->container['payment_item_code'] = isset($data['payment_item_code']) ? $data['payment_item_code'] : null;
         $this->container['payment_item_description'] = isset($data['payment_item_description']) ? $data['payment_item_description'] : null;
         $this->container['payment_item_name'] = isset($data['payment_item_name']) ? $data['payment_item_name'] : null;
+        $this->container['require_all'] = isset($data['require_all']) ? $data['require_all'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['require_initial_on_shared_change'] = isset($data['require_initial_on_shared_change']) ? $data['require_initial_on_shared_change'] : null;
         $this->container['scale_value'] = isset($data['scale_value']) ? $data['scale_value'] : null;
         $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
@@ -1291,6 +1303,30 @@ class TabMetadata implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets require_all
+     *
+     * @return string
+     */
+    public function getRequireAll()
+    {
+        return $this->container['require_all'];
+    }
+
+    /**
+     * Sets require_all
+     *
+     * @param string $require_all When set to **true** and shared is true, information must be entered in this field to complete the envelope.
+     *
+     * @return $this
+     */
+    public function setRequireAll($require_all)
+    {
+        $this->container['require_all'] = $require_all;
+
+        return $this;
+    }
+
+    /**
      * Gets required
      *
      * @return string
@@ -1310,6 +1346,30 @@ class TabMetadata implements ModelInterface, ArrayAccess
     public function setRequired($required)
     {
         $this->container['required'] = $required;
+
+        return $this;
+    }
+
+    /**
+     * Gets require_initial_on_shared_change
+     *
+     * @return string
+     */
+    public function getRequireInitialOnSharedChange()
+    {
+        return $this->container['require_initial_on_shared_change'];
+    }
+
+    /**
+     * Sets require_initial_on_shared_change
+     *
+     * @param string $require_initial_on_shared_change Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
+     *
+     * @return $this
+     */
+    public function setRequireInitialOnSharedChange($require_initial_on_shared_change)
+    {
+        $this->container['require_initial_on_shared_change'] = $require_initial_on_shared_change;
 
         return $this;
     }

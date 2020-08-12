@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * ReportInProductSaveResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * ReportInProductSaveResponse Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class ReportInProductSaveResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'reportInProductSaveResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'report_customized_id' => 'string'
     ];
 
     /**
@@ -67,8 +66,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'report_customized_id' => null
     ];
 
     /**
@@ -98,8 +96,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'report_customized_id' => 'reportCustomizedId'
     ];
 
     /**
@@ -108,8 +105,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'report_customized_id' => 'setReportCustomizedId'
     ];
 
     /**
@@ -118,8 +114,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'report_customized_id' => 'getReportCustomizedId'
     ];
 
     /**
@@ -182,8 +177,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['report_customized_id'] = isset($data['report_customized_id']) ? $data['report_customized_id'] : null;
     }
 
     /**
@@ -211,49 +205,25 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets report_customized_id
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getReportCustomizedId()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['report_customized_id'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets report_customized_id
      *
-     * @param string $proof_base_uri 
+     * @param string $report_customized_id 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setReportCustomizedId($report_customized_id)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
-
-        return $this;
-    }
-
-    /**
-     * Gets resource_token
-     *
-     * @return string
-     */
-    public function getResourceToken()
-    {
-        return $this->container['resource_token'];
-    }
-
-    /**
-     * Sets resource_token
-     *
-     * @param string $resource_token 
-     *
-     * @return $this
-     */
-    public function setResourceToken($resource_token)
-    {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['report_customized_id'] = $report_customized_id;
 
         return $this;
     }

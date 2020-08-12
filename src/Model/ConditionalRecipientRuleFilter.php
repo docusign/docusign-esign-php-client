@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * ConditionalRecipientRuleFilter
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * ConditionalRecipientRuleFilter Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'conditionalRecipientRuleFilter';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,12 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'operator' => 'string',
+        'recipient_id' => 'string',
+        'scope' => 'string',
+        'tab_id' => 'string',
+        'tab_label' => 'string',
+        'value' => 'string'
     ];
 
     /**
@@ -67,8 +71,12 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'operator' => null,
+        'recipient_id' => null,
+        'scope' => null,
+        'tab_id' => null,
+        'tab_label' => null,
+        'value' => null
     ];
 
     /**
@@ -98,8 +106,12 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'operator' => 'operator',
+        'recipient_id' => 'recipientId',
+        'scope' => 'scope',
+        'tab_id' => 'tabId',
+        'tab_label' => 'tabLabel',
+        'value' => 'value'
     ];
 
     /**
@@ -108,8 +120,12 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'operator' => 'setOperator',
+        'recipient_id' => 'setRecipientId',
+        'scope' => 'setScope',
+        'tab_id' => 'setTabId',
+        'tab_label' => 'setTabLabel',
+        'value' => 'setValue'
     ];
 
     /**
@@ -118,8 +134,12 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'operator' => 'getOperator',
+        'recipient_id' => 'getRecipientId',
+        'scope' => 'getScope',
+        'tab_id' => 'getTabId',
+        'tab_label' => 'getTabLabel',
+        'value' => 'getValue'
     ];
 
     /**
@@ -182,8 +202,12 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['operator'] = isset($data['operator']) ? $data['operator'] : null;
+        $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['tab_id'] = isset($data['tab_id']) ? $data['tab_id'] : null;
+        $this->container['tab_label'] = isset($data['tab_label']) ? $data['tab_label'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -211,49 +235,145 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets operator
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getOperator()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['operator'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets operator
      *
-     * @param string $proof_base_uri 
+     * @param string $operator 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setOperator($operator)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['operator'] = $operator;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets recipient_id
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getRecipientId()
     {
-        return $this->container['resource_token'];
+        return $this->container['recipient_id'];
     }
 
     /**
-     * Sets resource_token
+     * Sets recipient_id
      *
-     * @param string $resource_token 
+     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setRecipientId($recipient_id)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['recipient_id'] = $recipient_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets scope
+     *
+     * @return string
+     */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+     * Sets scope
+     *
+     * @param string $scope 
+     *
+     * @return $this
+     */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
+
+        return $this;
+    }
+
+    /**
+     * Gets tab_id
+     *
+     * @return string
+     */
+    public function getTabId()
+    {
+        return $this->container['tab_id'];
+    }
+
+    /**
+     * Sets tab_id
+     *
+     * @param string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+     *
+     * @return $this
+     */
+    public function setTabId($tab_id)
+    {
+        $this->container['tab_id'] = $tab_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tab_label
+     *
+     * @return string
+     */
+    public function getTabLabel()
+    {
+        return $this->container['tab_label'];
+    }
+
+    /**
+     * Sets tab_label
+     *
+     * @param string $tab_label The label string associated with the tab.
+     *
+     * @return $this
+     */
+    public function setTabLabel($tab_label)
+    {
+        $this->container['tab_label'] = $tab_label;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param string $value Specifies the value of the tab.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
 
         return $this;
     }

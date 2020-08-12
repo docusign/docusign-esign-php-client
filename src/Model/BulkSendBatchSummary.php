@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * BulkSendBatchSummary
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * BulkSendBatchSummary Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class BulkSendBatchSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'bulkSendBatchSummary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,14 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'batch_id' => 'string',
+        'batch_name' => 'string',
+        'batch_size' => 'string',
+        'batch_uri' => 'string',
+        'failed' => 'string',
+        'queued' => 'string',
+        'sent' => 'string',
+        'submitted_date' => 'string'
     ];
 
     /**
@@ -67,8 +73,14 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'batch_id' => null,
+        'batch_name' => null,
+        'batch_size' => null,
+        'batch_uri' => null,
+        'failed' => null,
+        'queued' => null,
+        'sent' => null,
+        'submitted_date' => null
     ];
 
     /**
@@ -98,8 +110,14 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'batch_id' => 'batchId',
+        'batch_name' => 'batchName',
+        'batch_size' => 'batchSize',
+        'batch_uri' => 'batchUri',
+        'failed' => 'failed',
+        'queued' => 'queued',
+        'sent' => 'sent',
+        'submitted_date' => 'submittedDate'
     ];
 
     /**
@@ -108,8 +126,14 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'batch_id' => 'setBatchId',
+        'batch_name' => 'setBatchName',
+        'batch_size' => 'setBatchSize',
+        'batch_uri' => 'setBatchUri',
+        'failed' => 'setFailed',
+        'queued' => 'setQueued',
+        'sent' => 'setSent',
+        'submitted_date' => 'setSubmittedDate'
     ];
 
     /**
@@ -118,8 +142,14 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'batch_id' => 'getBatchId',
+        'batch_name' => 'getBatchName',
+        'batch_size' => 'getBatchSize',
+        'batch_uri' => 'getBatchUri',
+        'failed' => 'getFailed',
+        'queued' => 'getQueued',
+        'sent' => 'getSent',
+        'submitted_date' => 'getSubmittedDate'
     ];
 
     /**
@@ -182,8 +212,14 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
+        $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
+        $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;
+        $this->container['batch_uri'] = isset($data['batch_uri']) ? $data['batch_uri'] : null;
+        $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
+        $this->container['queued'] = isset($data['queued']) ? $data['queued'] : null;
+        $this->container['sent'] = isset($data['sent']) ? $data['sent'] : null;
+        $this->container['submitted_date'] = isset($data['submitted_date']) ? $data['submitted_date'] : null;
     }
 
     /**
@@ -211,49 +247,193 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets batch_id
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getBatchId()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['batch_id'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets batch_id
      *
-     * @param string $proof_base_uri 
+     * @param string $batch_id 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setBatchId($batch_id)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['batch_id'] = $batch_id;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets batch_name
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getBatchName()
     {
-        return $this->container['resource_token'];
+        return $this->container['batch_name'];
     }
 
     /**
-     * Sets resource_token
+     * Sets batch_name
      *
-     * @param string $resource_token 
+     * @param string $batch_name 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setBatchName($batch_name)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['batch_name'] = $batch_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets batch_size
+     *
+     * @return string
+     */
+    public function getBatchSize()
+    {
+        return $this->container['batch_size'];
+    }
+
+    /**
+     * Sets batch_size
+     *
+     * @param string $batch_size 
+     *
+     * @return $this
+     */
+    public function setBatchSize($batch_size)
+    {
+        $this->container['batch_size'] = $batch_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets batch_uri
+     *
+     * @return string
+     */
+    public function getBatchUri()
+    {
+        return $this->container['batch_uri'];
+    }
+
+    /**
+     * Sets batch_uri
+     *
+     * @param string $batch_uri 
+     *
+     * @return $this
+     */
+    public function setBatchUri($batch_uri)
+    {
+        $this->container['batch_uri'] = $batch_uri;
+
+        return $this;
+    }
+
+    /**
+     * Gets failed
+     *
+     * @return string
+     */
+    public function getFailed()
+    {
+        return $this->container['failed'];
+    }
+
+    /**
+     * Sets failed
+     *
+     * @param string $failed 
+     *
+     * @return $this
+     */
+    public function setFailed($failed)
+    {
+        $this->container['failed'] = $failed;
+
+        return $this;
+    }
+
+    /**
+     * Gets queued
+     *
+     * @return string
+     */
+    public function getQueued()
+    {
+        return $this->container['queued'];
+    }
+
+    /**
+     * Sets queued
+     *
+     * @param string $queued 
+     *
+     * @return $this
+     */
+    public function setQueued($queued)
+    {
+        $this->container['queued'] = $queued;
+
+        return $this;
+    }
+
+    /**
+     * Gets sent
+     *
+     * @return string
+     */
+    public function getSent()
+    {
+        return $this->container['sent'];
+    }
+
+    /**
+     * Sets sent
+     *
+     * @param string $sent 
+     *
+     * @return $this
+     */
+    public function setSent($sent)
+    {
+        $this->container['sent'] = $sent;
+
+        return $this;
+    }
+
+    /**
+     * Gets submitted_date
+     *
+     * @return string
+     */
+    public function getSubmittedDate()
+    {
+        return $this->container['submitted_date'];
+    }
+
+    /**
+     * Sets submitted_date
+     *
+     * @param string $submitted_date 
+     *
+     * @return $this
+     */
+    public function setSubmittedDate($submitted_date)
+    {
+        $this->container['submitted_date'] = $submitted_date;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * ReportInProductRunResponseRow
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * ReportInProductRunResponseRow Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class ReportInProductRunResponseRow implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'reportInProductRunResponseRow';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'envelope_id' => 'string',
+        'fields' => '\DocuSign\eSign\Model\ReportInProductRunResponseRowFields'
     ];
 
     /**
@@ -67,8 +67,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'envelope_id' => null,
+        'fields' => null
     ];
 
     /**
@@ -98,8 +98,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'envelope_id' => 'envelopeId',
+        'fields' => 'fields'
     ];
 
     /**
@@ -108,8 +108,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'envelope_id' => 'setEnvelopeId',
+        'fields' => 'setFields'
     ];
 
     /**
@@ -118,8 +118,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'envelope_id' => 'getEnvelopeId',
+        'fields' => 'getFields'
     ];
 
     /**
@@ -182,8 +182,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
+        $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
     }
 
     /**
@@ -211,49 +211,49 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets envelope_id
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getEnvelopeId()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['envelope_id'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets envelope_id
      *
-     * @param string $proof_base_uri 
+     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setEnvelopeId($envelope_id)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['envelope_id'] = $envelope_id;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets fields
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\ReportInProductRunResponseRowFields
      */
-    public function getResourceToken()
+    public function getFields()
     {
-        return $this->container['resource_token'];
+        return $this->container['fields'];
     }
 
     /**
-     * Sets resource_token
+     * Sets fields
      *
-     * @param string $resource_token 
+     * @param \DocuSign\eSign\Model\ReportInProductRunResponseRowFields $fields fields
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setFields($fields)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['fields'] = $fields;
 
         return $this;
     }

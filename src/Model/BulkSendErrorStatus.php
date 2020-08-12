@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * BulkSendErrorStatus
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * BulkSendErrorStatus Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class BulkSendErrorStatus implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'bulkSendErrorStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'created' => 'string',
+        'error_message' => 'string',
+        'recipient_emails' => 'string[]'
     ];
 
     /**
@@ -67,8 +68,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'created' => null,
+        'error_message' => null,
+        'recipient_emails' => null
     ];
 
     /**
@@ -98,8 +100,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'created' => 'created',
+        'error_message' => 'errorMessage',
+        'recipient_emails' => 'recipientEmails'
     ];
 
     /**
@@ -108,8 +111,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'created' => 'setCreated',
+        'error_message' => 'setErrorMessage',
+        'recipient_emails' => 'setRecipientEmails'
     ];
 
     /**
@@ -118,8 +122,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'created' => 'getCreated',
+        'error_message' => 'getErrorMessage',
+        'recipient_emails' => 'getRecipientEmails'
     ];
 
     /**
@@ -182,8 +187,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['error_message'] = isset($data['error_message']) ? $data['error_message'] : null;
+        $this->container['recipient_emails'] = isset($data['recipient_emails']) ? $data['recipient_emails'] : null;
     }
 
     /**
@@ -211,49 +217,73 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets created
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getCreated()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['created'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets created
      *
-     * @param string $proof_base_uri 
+     * @param string $created 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setCreated($created)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['created'] = $created;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets error_message
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getErrorMessage()
     {
-        return $this->container['resource_token'];
+        return $this->container['error_message'];
     }
 
     /**
-     * Sets resource_token
+     * Sets error_message
      *
-     * @param string $resource_token 
+     * @param string $error_message 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setErrorMessage($error_message)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['error_message'] = $error_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_emails
+     *
+     * @return string[]
+     */
+    public function getRecipientEmails()
+    {
+        return $this->container['recipient_emails'];
+    }
+
+    /**
+     * Sets recipient_emails
+     *
+     * @param string[] $recipient_emails 
+     *
+     * @return $this
+     */
+    public function setRecipientEmails($recipient_emails)
+    {
+        $this->container['recipient_emails'] = $recipient_emails;
 
         return $this;
     }

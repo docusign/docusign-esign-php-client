@@ -1,6 +1,6 @@
 <?php
 /**
- * NewUser
+ * BulkSendBatchStatus
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * NewUser Class Doc Comment
+ * BulkSendBatchStatus Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NewUser implements ModelInterface, ArrayAccess
+class BulkSendBatchStatus implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class NewUser implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'newUser';
+    protected static $swaggerModelName = 'bulkSendBatchStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,17 +57,17 @@ class NewUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_password' => 'string',
-        'created_date_time' => 'string',
-        'email' => 'string',
-        'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'membership_id' => 'string',
-        'permission_profile_id' => 'string',
-        'permission_profile_name' => 'string',
-        'uri' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string',
-        'user_status' => 'string'
+        'batch_id' => 'string',
+        'batch_name' => 'string',
+        'batch_size' => 'string',
+        'bulk_errors' => '\DocuSign\eSign\Model\BulkSendErrorStatus[]',
+        'envelope_id_or_template_id' => 'string',
+        'envelopes_uri' => 'string',
+        'failed' => 'string',
+        'mailing_list_id' => 'string',
+        'queued' => 'string',
+        'sent' => 'string',
+        'submitted_date' => 'string'
     ];
 
     /**
@@ -76,17 +76,17 @@ class NewUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'api_password' => null,
-        'created_date_time' => null,
-        'email' => null,
-        'error_details' => null,
-        'membership_id' => null,
-        'permission_profile_id' => null,
-        'permission_profile_name' => null,
-        'uri' => null,
-        'user_id' => null,
-        'user_name' => null,
-        'user_status' => null
+        'batch_id' => null,
+        'batch_name' => null,
+        'batch_size' => null,
+        'bulk_errors' => null,
+        'envelope_id_or_template_id' => null,
+        'envelopes_uri' => null,
+        'failed' => null,
+        'mailing_list_id' => null,
+        'queued' => null,
+        'sent' => null,
+        'submitted_date' => null
     ];
 
     /**
@@ -116,17 +116,17 @@ class NewUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'api_password' => 'apiPassword',
-        'created_date_time' => 'createdDateTime',
-        'email' => 'email',
-        'error_details' => 'errorDetails',
-        'membership_id' => 'membershipId',
-        'permission_profile_id' => 'permissionProfileId',
-        'permission_profile_name' => 'permissionProfileName',
-        'uri' => 'uri',
-        'user_id' => 'userId',
-        'user_name' => 'userName',
-        'user_status' => 'userStatus'
+        'batch_id' => 'batchId',
+        'batch_name' => 'batchName',
+        'batch_size' => 'batchSize',
+        'bulk_errors' => 'bulkErrors',
+        'envelope_id_or_template_id' => 'envelopeIdOrTemplateId',
+        'envelopes_uri' => 'envelopesUri',
+        'failed' => 'failed',
+        'mailing_list_id' => 'mailingListId',
+        'queued' => 'queued',
+        'sent' => 'sent',
+        'submitted_date' => 'submittedDate'
     ];
 
     /**
@@ -135,17 +135,17 @@ class NewUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'api_password' => 'setApiPassword',
-        'created_date_time' => 'setCreatedDateTime',
-        'email' => 'setEmail',
-        'error_details' => 'setErrorDetails',
-        'membership_id' => 'setMembershipId',
-        'permission_profile_id' => 'setPermissionProfileId',
-        'permission_profile_name' => 'setPermissionProfileName',
-        'uri' => 'setUri',
-        'user_id' => 'setUserId',
-        'user_name' => 'setUserName',
-        'user_status' => 'setUserStatus'
+        'batch_id' => 'setBatchId',
+        'batch_name' => 'setBatchName',
+        'batch_size' => 'setBatchSize',
+        'bulk_errors' => 'setBulkErrors',
+        'envelope_id_or_template_id' => 'setEnvelopeIdOrTemplateId',
+        'envelopes_uri' => 'setEnvelopesUri',
+        'failed' => 'setFailed',
+        'mailing_list_id' => 'setMailingListId',
+        'queued' => 'setQueued',
+        'sent' => 'setSent',
+        'submitted_date' => 'setSubmittedDate'
     ];
 
     /**
@@ -154,17 +154,17 @@ class NewUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'api_password' => 'getApiPassword',
-        'created_date_time' => 'getCreatedDateTime',
-        'email' => 'getEmail',
-        'error_details' => 'getErrorDetails',
-        'membership_id' => 'getMembershipId',
-        'permission_profile_id' => 'getPermissionProfileId',
-        'permission_profile_name' => 'getPermissionProfileName',
-        'uri' => 'getUri',
-        'user_id' => 'getUserId',
-        'user_name' => 'getUserName',
-        'user_status' => 'getUserStatus'
+        'batch_id' => 'getBatchId',
+        'batch_name' => 'getBatchName',
+        'batch_size' => 'getBatchSize',
+        'bulk_errors' => 'getBulkErrors',
+        'envelope_id_or_template_id' => 'getEnvelopeIdOrTemplateId',
+        'envelopes_uri' => 'getEnvelopesUri',
+        'failed' => 'getFailed',
+        'mailing_list_id' => 'getMailingListId',
+        'queued' => 'getQueued',
+        'sent' => 'getSent',
+        'submitted_date' => 'getSubmittedDate'
     ];
 
     /**
@@ -227,17 +227,17 @@ class NewUser implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['api_password'] = isset($data['api_password']) ? $data['api_password'] : null;
-        $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
-        $this->container['membership_id'] = isset($data['membership_id']) ? $data['membership_id'] : null;
-        $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
-        $this->container['permission_profile_name'] = isset($data['permission_profile_name']) ? $data['permission_profile_name'] : null;
-        $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
-        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
-        $this->container['user_status'] = isset($data['user_status']) ? $data['user_status'] : null;
+        $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
+        $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
+        $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;
+        $this->container['bulk_errors'] = isset($data['bulk_errors']) ? $data['bulk_errors'] : null;
+        $this->container['envelope_id_or_template_id'] = isset($data['envelope_id_or_template_id']) ? $data['envelope_id_or_template_id'] : null;
+        $this->container['envelopes_uri'] = isset($data['envelopes_uri']) ? $data['envelopes_uri'] : null;
+        $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
+        $this->container['mailing_list_id'] = isset($data['mailing_list_id']) ? $data['mailing_list_id'] : null;
+        $this->container['queued'] = isset($data['queued']) ? $data['queued'] : null;
+        $this->container['sent'] = isset($data['sent']) ? $data['sent'] : null;
+        $this->container['submitted_date'] = isset($data['submitted_date']) ? $data['submitted_date'] : null;
     }
 
     /**
@@ -265,265 +265,265 @@ class NewUser implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets api_password
+     * Gets batch_id
      *
      * @return string
      */
-    public function getApiPassword()
+    public function getBatchId()
     {
-        return $this->container['api_password'];
+        return $this->container['batch_id'];
     }
 
     /**
-     * Sets api_password
+     * Sets batch_id
      *
-     * @param string $api_password Contains a token that can be used for authentication in API calls instead of using the user name and password.
+     * @param string $batch_id 
      *
      * @return $this
      */
-    public function setApiPassword($api_password)
+    public function setBatchId($batch_id)
     {
-        $this->container['api_password'] = $api_password;
+        $this->container['batch_id'] = $batch_id;
 
         return $this;
     }
 
     /**
-     * Gets created_date_time
+     * Gets batch_name
      *
      * @return string
      */
-    public function getCreatedDateTime()
+    public function getBatchName()
     {
-        return $this->container['created_date_time'];
+        return $this->container['batch_name'];
     }
 
     /**
-     * Sets created_date_time
+     * Sets batch_name
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param string $batch_name 
      *
      * @return $this
      */
-    public function setCreatedDateTime($created_date_time)
+    public function setBatchName($batch_name)
     {
-        $this->container['created_date_time'] = $created_date_time;
+        $this->container['batch_name'] = $batch_name;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets batch_size
      *
      * @return string
      */
-    public function getEmail()
+    public function getBatchSize()
     {
-        return $this->container['email'];
+        return $this->container['batch_size'];
     }
 
     /**
-     * Sets email
+     * Sets batch_size
      *
-     * @param string $email 
+     * @param string $batch_size 
      *
      * @return $this
      */
-    public function setEmail($email)
+    public function setBatchSize($batch_size)
     {
-        $this->container['email'] = $email;
+        $this->container['batch_size'] = $batch_size;
 
         return $this;
     }
 
     /**
-     * Gets error_details
+     * Gets bulk_errors
      *
-     * @return \DocuSign\eSign\Model\ErrorDetails
+     * @return \DocuSign\eSign\Model\BulkSendErrorStatus[]
      */
-    public function getErrorDetails()
+    public function getBulkErrors()
     {
-        return $this->container['error_details'];
+        return $this->container['bulk_errors'];
     }
 
     /**
-     * Sets error_details
+     * Sets bulk_errors
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\BulkSendErrorStatus[] $bulk_errors 
      *
      * @return $this
      */
-    public function setErrorDetails($error_details)
+    public function setBulkErrors($bulk_errors)
     {
-        $this->container['error_details'] = $error_details;
+        $this->container['bulk_errors'] = $bulk_errors;
 
         return $this;
     }
 
     /**
-     * Gets membership_id
+     * Gets envelope_id_or_template_id
      *
      * @return string
      */
-    public function getMembershipId()
+    public function getEnvelopeIdOrTemplateId()
     {
-        return $this->container['membership_id'];
+        return $this->container['envelope_id_or_template_id'];
     }
 
     /**
-     * Sets membership_id
+     * Sets envelope_id_or_template_id
      *
-     * @param string $membership_id 
+     * @param string $envelope_id_or_template_id 
      *
      * @return $this
      */
-    public function setMembershipId($membership_id)
+    public function setEnvelopeIdOrTemplateId($envelope_id_or_template_id)
     {
-        $this->container['membership_id'] = $membership_id;
+        $this->container['envelope_id_or_template_id'] = $envelope_id_or_template_id;
 
         return $this;
     }
 
     /**
-     * Gets permission_profile_id
+     * Gets envelopes_uri
      *
      * @return string
      */
-    public function getPermissionProfileId()
+    public function getEnvelopesUri()
     {
-        return $this->container['permission_profile_id'];
+        return $this->container['envelopes_uri'];
     }
 
     /**
-     * Sets permission_profile_id
+     * Sets envelopes_uri
      *
-     * @param string $permission_profile_id 
+     * @param string $envelopes_uri 
      *
      * @return $this
      */
-    public function setPermissionProfileId($permission_profile_id)
+    public function setEnvelopesUri($envelopes_uri)
     {
-        $this->container['permission_profile_id'] = $permission_profile_id;
+        $this->container['envelopes_uri'] = $envelopes_uri;
 
         return $this;
     }
 
     /**
-     * Gets permission_profile_name
+     * Gets failed
      *
      * @return string
      */
-    public function getPermissionProfileName()
+    public function getFailed()
     {
-        return $this->container['permission_profile_name'];
+        return $this->container['failed'];
     }
 
     /**
-     * Sets permission_profile_name
+     * Sets failed
      *
-     * @param string $permission_profile_name 
+     * @param string $failed 
      *
      * @return $this
      */
-    public function setPermissionProfileName($permission_profile_name)
+    public function setFailed($failed)
     {
-        $this->container['permission_profile_name'] = $permission_profile_name;
+        $this->container['failed'] = $failed;
 
         return $this;
     }
 
     /**
-     * Gets uri
+     * Gets mailing_list_id
      *
      * @return string
      */
-    public function getUri()
+    public function getMailingListId()
     {
-        return $this->container['uri'];
+        return $this->container['mailing_list_id'];
     }
 
     /**
-     * Sets uri
+     * Sets mailing_list_id
      *
-     * @param string $uri 
+     * @param string $mailing_list_id 
      *
      * @return $this
      */
-    public function setUri($uri)
+    public function setMailingListId($mailing_list_id)
     {
-        $this->container['uri'] = $uri;
+        $this->container['mailing_list_id'] = $mailing_list_id;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets queued
      *
      * @return string
      */
-    public function getUserId()
+    public function getQueued()
     {
-        return $this->container['user_id'];
+        return $this->container['queued'];
     }
 
     /**
-     * Sets user_id
+     * Sets queued
      *
-     * @param string $user_id Specifies the user ID for the new user.
+     * @param string $queued 
      *
      * @return $this
      */
-    public function setUserId($user_id)
+    public function setQueued($queued)
     {
-        $this->container['user_id'] = $user_id;
+        $this->container['queued'] = $queued;
 
         return $this;
     }
 
     /**
-     * Gets user_name
+     * Gets sent
      *
      * @return string
      */
-    public function getUserName()
+    public function getSent()
     {
-        return $this->container['user_name'];
+        return $this->container['sent'];
     }
 
     /**
-     * Sets user_name
+     * Sets sent
      *
-     * @param string $user_name 
+     * @param string $sent 
      *
      * @return $this
      */
-    public function setUserName($user_name)
+    public function setSent($sent)
     {
-        $this->container['user_name'] = $user_name;
+        $this->container['sent'] = $sent;
 
         return $this;
     }
 
     /**
-     * Gets user_status
+     * Gets submitted_date
      *
      * @return string
      */
-    public function getUserStatus()
+    public function getSubmittedDate()
     {
-        return $this->container['user_status'];
+        return $this->container['submitted_date'];
     }
 
     /**
-     * Sets user_status
+     * Sets submitted_date
      *
-     * @param string $user_status 
+     * @param string $submitted_date 
      *
      * @return $this
      */
-    public function setUserStatus($user_status)
+    public function setSubmittedDate($submitted_date)
     {
-        $this->container['user_status'] = $user_status;
+        $this->container['submitted_date'] = $submitted_date;
 
         return $this;
     }

@@ -141,7 +141,8 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'transaction_id' => 'string',
         'use_disclosure' => 'string',
         'voided_date_time' => 'string',
-        'voided_reason' => 'string'
+        'voided_reason' => 'string',
+        'workflow' => '\DocuSign\eSign\Model\Workflow'
     ];
 
     /**
@@ -234,7 +235,8 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'transaction_id' => null,
         'use_disclosure' => null,
         'voided_date_time' => null,
-        'voided_reason' => null
+        'voided_reason' => null,
+        'workflow' => null
     ];
 
     /**
@@ -348,7 +350,8 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'transaction_id' => 'transactionId',
         'use_disclosure' => 'useDisclosure',
         'voided_date_time' => 'voidedDateTime',
-        'voided_reason' => 'voidedReason'
+        'voided_reason' => 'voidedReason',
+        'workflow' => 'workflow'
     ];
 
     /**
@@ -441,7 +444,8 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'transaction_id' => 'setTransactionId',
         'use_disclosure' => 'setUseDisclosure',
         'voided_date_time' => 'setVoidedDateTime',
-        'voided_reason' => 'setVoidedReason'
+        'voided_reason' => 'setVoidedReason',
+        'workflow' => 'setWorkflow'
     ];
 
     /**
@@ -534,7 +538,8 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'transaction_id' => 'getTransactionId',
         'use_disclosure' => 'getUseDisclosure',
         'voided_date_time' => 'getVoidedDateTime',
-        'voided_reason' => 'getVoidedReason'
+        'voided_reason' => 'getVoidedReason',
+        'workflow' => 'getWorkflow'
     ];
 
     /**
@@ -682,6 +687,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         $this->container['use_disclosure'] = isset($data['use_disclosure']) ? $data['use_disclosure'] : null;
         $this->container['voided_date_time'] = isset($data['voided_date_time']) ? $data['voided_date_time'] : null;
         $this->container['voided_reason'] = isset($data['voided_reason']) ? $data['voided_reason'] : null;
+        $this->container['workflow'] = isset($data['workflow']) ? $data['workflow'] : null;
     }
 
     /**
@@ -2744,6 +2750,30 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     public function setVoidedReason($voided_reason)
     {
         $this->container['voided_reason'] = $voided_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflow
+     *
+     * @return \DocuSign\eSign\Model\Workflow
+     */
+    public function getWorkflow()
+    {
+        return $this->container['workflow'];
+    }
+
+    /**
+     * Sets workflow
+     *
+     * @param \DocuSign\eSign\Model\Workflow $workflow workflow
+     *
+     * @return $this
+     */
+    public function setWorkflow($workflow)
+    {
+        $this->container['workflow'] = $workflow;
 
         return $this;
     }

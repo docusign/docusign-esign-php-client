@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * RecipientOption
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * RecipientOption Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class RecipientOption implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'recipientOption';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,11 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'email' => 'string',
+        'name' => 'string',
+        'recipient_label' => 'string',
+        'role_name' => 'string',
+        'signing_group_id' => 'string'
     ];
 
     /**
@@ -67,8 +70,11 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'email' => null,
+        'name' => null,
+        'recipient_label' => null,
+        'role_name' => null,
+        'signing_group_id' => null
     ];
 
     /**
@@ -98,8 +104,11 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'email' => 'email',
+        'name' => 'name',
+        'recipient_label' => 'recipientLabel',
+        'role_name' => 'roleName',
+        'signing_group_id' => 'signingGroupId'
     ];
 
     /**
@@ -108,8 +117,11 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'email' => 'setEmail',
+        'name' => 'setName',
+        'recipient_label' => 'setRecipientLabel',
+        'role_name' => 'setRoleName',
+        'signing_group_id' => 'setSigningGroupId'
     ];
 
     /**
@@ -118,8 +130,11 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'email' => 'getEmail',
+        'name' => 'getName',
+        'recipient_label' => 'getRecipientLabel',
+        'role_name' => 'getRoleName',
+        'signing_group_id' => 'getSigningGroupId'
     ];
 
     /**
@@ -182,8 +197,11 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['recipient_label'] = isset($data['recipient_label']) ? $data['recipient_label'] : null;
+        $this->container['role_name'] = isset($data['role_name']) ? $data['role_name'] : null;
+        $this->container['signing_group_id'] = isset($data['signing_group_id']) ? $data['signing_group_id'] : null;
     }
 
     /**
@@ -211,49 +229,121 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets email
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getEmail()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets email
      *
-     * @param string $proof_base_uri 
+     * @param string $email 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setEmail($email)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['email'] = $email;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets name
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getName()
     {
-        return $this->container['resource_token'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets resource_token
+     * Sets name
      *
-     * @param string $resource_token 
+     * @param string $name 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setName($name)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_label
+     *
+     * @return string
+     */
+    public function getRecipientLabel()
+    {
+        return $this->container['recipient_label'];
+    }
+
+    /**
+     * Sets recipient_label
+     *
+     * @param string $recipient_label 
+     *
+     * @return $this
+     */
+    public function setRecipientLabel($recipient_label)
+    {
+        $this->container['recipient_label'] = $recipient_label;
+
+        return $this;
+    }
+
+    /**
+     * Gets role_name
+     *
+     * @return string
+     */
+    public function getRoleName()
+    {
+        return $this->container['role_name'];
+    }
+
+    /**
+     * Sets role_name
+     *
+     * @param string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+     *
+     * @return $this
+     */
+    public function setRoleName($role_name)
+    {
+        $this->container['role_name'] = $role_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets signing_group_id
+     *
+     * @return string
+     */
+    public function getSigningGroupId()
+    {
+        return $this->container['signing_group_id'];
+    }
+
+    /**
+     * Sets signing_group_id
+     *
+     * @param string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     *
+     * @return $this
+     */
+    public function setSigningGroupId($signing_group_id)
+    {
+        $this->container['signing_group_id'] = $signing_group_id;
 
         return $this;
     }

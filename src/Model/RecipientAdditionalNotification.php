@@ -59,7 +59,8 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'phone_number' => '\DocuSign\eSign\Model\RecipientPhoneNumber',
         'secondary_delivery_method' => 'string',
-        'secondary_delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
+        'secondary_delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'secondary_delivery_status' => 'string'
     ];
 
     /**
@@ -70,7 +71,8 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'phone_number' => null,
         'secondary_delivery_method' => null,
-        'secondary_delivery_method_metadata' => null
+        'secondary_delivery_method_metadata' => null,
+        'secondary_delivery_status' => null
     ];
 
     /**
@@ -102,7 +104,8 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'phone_number' => 'phoneNumber',
         'secondary_delivery_method' => 'secondaryDeliveryMethod',
-        'secondary_delivery_method_metadata' => 'secondaryDeliveryMethodMetadata'
+        'secondary_delivery_method_metadata' => 'secondaryDeliveryMethodMetadata',
+        'secondary_delivery_status' => 'secondaryDeliveryStatus'
     ];
 
     /**
@@ -113,7 +116,8 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     protected static $setters = [
         'phone_number' => 'setPhoneNumber',
         'secondary_delivery_method' => 'setSecondaryDeliveryMethod',
-        'secondary_delivery_method_metadata' => 'setSecondaryDeliveryMethodMetadata'
+        'secondary_delivery_method_metadata' => 'setSecondaryDeliveryMethodMetadata',
+        'secondary_delivery_status' => 'setSecondaryDeliveryStatus'
     ];
 
     /**
@@ -124,7 +128,8 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     protected static $getters = [
         'phone_number' => 'getPhoneNumber',
         'secondary_delivery_method' => 'getSecondaryDeliveryMethod',
-        'secondary_delivery_method_metadata' => 'getSecondaryDeliveryMethodMetadata'
+        'secondary_delivery_method_metadata' => 'getSecondaryDeliveryMethodMetadata',
+        'secondary_delivery_status' => 'getSecondaryDeliveryStatus'
     ];
 
     /**
@@ -190,6 +195,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['secondary_delivery_method'] = isset($data['secondary_delivery_method']) ? $data['secondary_delivery_method'] : null;
         $this->container['secondary_delivery_method_metadata'] = isset($data['secondary_delivery_method_metadata']) ? $data['secondary_delivery_method_metadata'] : null;
+        $this->container['secondary_delivery_status'] = isset($data['secondary_delivery_status']) ? $data['secondary_delivery_status'] : null;
     }
 
     /**
@@ -284,6 +290,30 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     public function setSecondaryDeliveryMethodMetadata($secondary_delivery_method_metadata)
     {
         $this->container['secondary_delivery_method_metadata'] = $secondary_delivery_method_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets secondary_delivery_status
+     *
+     * @return string
+     */
+    public function getSecondaryDeliveryStatus()
+    {
+        return $this->container['secondary_delivery_status'];
+    }
+
+    /**
+     * Sets secondary_delivery_status
+     *
+     * @param string $secondary_delivery_status 
+     *
+     * @return $this
+     */
+    public function setSecondaryDeliveryStatus($secondary_delivery_status)
+    {
+        $this->container['secondary_delivery_status'] = $secondary_delivery_status;
 
         return $this;
     }

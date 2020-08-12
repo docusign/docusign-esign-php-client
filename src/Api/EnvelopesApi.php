@@ -6608,6 +6608,110 @@ class EnvelopesApi
     }
 
     /**
+     * Operation deleteEnvelopeWorkflowDefinition
+     *
+     * Delete the workflow definition for an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return void
+     */
+    public function deleteEnvelopeWorkflowDefinition($account_id, $envelope_id)
+    {
+        list($response) = $this->deleteEnvelopeWorkflowDefinitionWithHttpInfo($account_id, $envelope_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteEnvelopeWorkflowDefinitionWithHttpInfo
+     *
+     * Delete the workflow definition for an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteEnvelopeWorkflowDefinitionWithHttpInfo($account_id, $envelope_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteEnvelopeWorkflowDefinition');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling deleteEnvelopeWorkflowDefinition');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteLock
      *
      * Deletes an envelope lock.
@@ -7071,6 +7175,110 @@ class EnvelopesApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Tabs', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteTemplateWorkflowDefinition
+     *
+     * Delete the workflow definition for a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return void
+     */
+    public function deleteTemplateWorkflowDefinition($account_id, $template_id)
+    {
+        list($response) = $this->deleteTemplateWorkflowDefinitionWithHttpInfo($account_id, $template_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteTemplateWorkflowDefinitionWithHttpInfo
+     *
+     * Delete the workflow definition for a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteTemplateWorkflowDefinitionWithHttpInfo($account_id, $template_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteTemplateWorkflowDefinition');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling deleteTemplateWorkflowDefinition');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/templates/{templateId}/workflow";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/templates/{templateId}/workflow'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -8976,6 +9184,114 @@ class EnvelopesApi
     }
 
     /**
+     * Operation getEnvelopeWorkflowDefinition
+     *
+     * Returns the workflow definition for an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Workflow
+     */
+    public function getEnvelopeWorkflowDefinition($account_id, $envelope_id)
+    {
+        list($response) = $this->getEnvelopeWorkflowDefinitionWithHttpInfo($account_id, $envelope_id);
+        return $response;
+    }
+
+    /**
+     * Operation getEnvelopeWorkflowDefinitionWithHttpInfo
+     *
+     * Returns the workflow definition for an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Workflow, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getEnvelopeWorkflowDefinitionWithHttpInfo($account_id, $envelope_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getEnvelopeWorkflowDefinition');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getEnvelopeWorkflowDefinition');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Workflow',
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Workflow', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Workflow', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getFormData
      *
      * Returns envelope form data for an existing envelope.
@@ -10313,6 +10629,114 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentVisibilityList', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getTemplateWorkflowDefinition
+     *
+     * Returns the workflow definition for a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Workflow
+     */
+    public function getTemplateWorkflowDefinition($account_id, $template_id)
+    {
+        list($response) = $this->getTemplateWorkflowDefinitionWithHttpInfo($account_id, $template_id);
+        return $response;
+    }
+
+    /**
+     * Operation getTemplateWorkflowDefinitionWithHttpInfo
+     *
+     * Returns the workflow definition for a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Workflow, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getTemplateWorkflowDefinitionWithHttpInfo($account_id, $template_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getTemplateWorkflowDefinition');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling getTemplateWorkflowDefinition');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/templates/{templateId}/workflow";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Workflow',
+                '/v2.1/accounts/{accountId}/templates/{templateId}/workflow'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Workflow', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Workflow', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -13393,6 +13817,121 @@ class EnvelopesApi
     }
 
     /**
+     * Operation updateEnvelopeWorkflowDefinition
+     *
+     * Updates the envelope workflow definition for an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\Workflow $workflow  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Workflow
+     */
+    public function updateEnvelopeWorkflowDefinition($account_id, $envelope_id, $workflow = null)
+    {
+        list($response) = $this->updateEnvelopeWorkflowDefinitionWithHttpInfo($account_id, $envelope_id, $workflow);
+        return $response;
+    }
+
+    /**
+     * Operation updateEnvelopeWorkflowDefinitionWithHttpInfo
+     *
+     * Updates the envelope workflow definition for an envelope.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\Workflow $workflow  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Workflow, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateEnvelopeWorkflowDefinitionWithHttpInfo($account_id, $envelope_id, $workflow = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateEnvelopeWorkflowDefinition');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling updateEnvelopeWorkflowDefinition');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "envelopeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($envelope_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($workflow)) {
+            $_tempBody = $workflow;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Workflow',
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Workflow', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Workflow', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation updateLock
      *
      * Updates an envelope lock.
@@ -14700,6 +15239,121 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TemplateDocumentVisibilityList', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateTemplateWorkflowDefinition
+     *
+     * Updates the workflow definition for a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @param \DocuSign\eSign\Model\Workflow $workflow  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\Workflow
+     */
+    public function updateTemplateWorkflowDefinition($account_id, $template_id, $workflow = null)
+    {
+        list($response) = $this->updateTemplateWorkflowDefinitionWithHttpInfo($account_id, $template_id, $workflow);
+        return $response;
+    }
+
+    /**
+     * Operation updateTemplateWorkflowDefinitionWithHttpInfo
+     *
+     * Updates the workflow definition for a template.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $template_id The ID of the template being accessed.
+     * @param \DocuSign\eSign\Model\Workflow $workflow  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\Workflow, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateTemplateWorkflowDefinitionWithHttpInfo($account_id, $template_id, $workflow = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateTemplateWorkflowDefinition');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling updateTemplateWorkflowDefinition');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/templates/{templateId}/workflow";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($template_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($workflow)) {
+            $_tempBody = $workflow;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\Workflow',
+                '/v2.1/accounts/{accountId}/templates/{templateId}/workflow'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\Workflow', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\Workflow', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

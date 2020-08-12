@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * RecipientGroup
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * RecipientGroup Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class RecipientGroup implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'recipientGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'group_message' => 'string',
+        'group_name' => 'string',
+        'recipients' => '\DocuSign\eSign\Model\RecipientOption[]'
     ];
 
     /**
@@ -67,8 +68,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'group_message' => null,
+        'group_name' => null,
+        'recipients' => null
     ];
 
     /**
@@ -98,8 +100,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'group_message' => 'groupMessage',
+        'group_name' => 'groupName',
+        'recipients' => 'recipients'
     ];
 
     /**
@@ -108,8 +111,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'group_message' => 'setGroupMessage',
+        'group_name' => 'setGroupName',
+        'recipients' => 'setRecipients'
     ];
 
     /**
@@ -118,8 +122,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'group_message' => 'getGroupMessage',
+        'group_name' => 'getGroupName',
+        'recipients' => 'getRecipients'
     ];
 
     /**
@@ -182,8 +187,9 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['group_message'] = isset($data['group_message']) ? $data['group_message'] : null;
+        $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
+        $this->container['recipients'] = isset($data['recipients']) ? $data['recipients'] : null;
     }
 
     /**
@@ -211,49 +217,73 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets group_message
      *
      * @return string
      */
-    public function getProofBaseUri()
+    public function getGroupMessage()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['group_message'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets group_message
      *
-     * @param string $proof_base_uri 
+     * @param string $group_message 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setGroupMessage($group_message)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['group_message'] = $group_message;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets group_name
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getGroupName()
     {
-        return $this->container['resource_token'];
+        return $this->container['group_name'];
     }
 
     /**
-     * Sets resource_token
+     * Sets group_name
      *
-     * @param string $resource_token 
+     * @param string $group_name The name of the group.
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setGroupName($group_name)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['group_name'] = $group_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipients
+     *
+     * @return \DocuSign\eSign\Model\RecipientOption[]
+     */
+    public function getRecipients()
+    {
+        return $this->container['recipients'];
+    }
+
+    /**
+     * Sets recipients
+     *
+     * @param \DocuSign\eSign\Model\RecipientOption[] $recipients An array of powerform recipients.
+     *
+     * @return $this
+     */
+    public function setRecipients($recipients)
+    {
+        $this->container['recipients'] = $recipients;
 
         return $this;
     }

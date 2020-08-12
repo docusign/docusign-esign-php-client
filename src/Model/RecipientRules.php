@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * RecipientRules
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * RecipientRules Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class RecipientRules implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'recipientRules';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'conditional_recipients' => '\DocuSign\eSign\Model\ConditionalRecipientRule[]'
     ];
 
     /**
@@ -67,8 +66,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'conditional_recipients' => null
     ];
 
     /**
@@ -98,8 +96,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'conditional_recipients' => 'conditionalRecipients'
     ];
 
     /**
@@ -108,8 +105,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'conditional_recipients' => 'setConditionalRecipients'
     ];
 
     /**
@@ -118,8 +114,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'conditional_recipients' => 'getConditionalRecipients'
     ];
 
     /**
@@ -182,8 +177,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['conditional_recipients'] = isset($data['conditional_recipients']) ? $data['conditional_recipients'] : null;
     }
 
     /**
@@ -211,49 +205,25 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets conditional_recipients
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\ConditionalRecipientRule[]
      */
-    public function getProofBaseUri()
+    public function getConditionalRecipients()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['conditional_recipients'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets conditional_recipients
      *
-     * @param string $proof_base_uri 
+     * @param \DocuSign\eSign\Model\ConditionalRecipientRule[] $conditional_recipients 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setConditionalRecipients($conditional_recipients)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
-
-        return $this;
-    }
-
-    /**
-     * Gets resource_token
-     *
-     * @return string
-     */
-    public function getResourceToken()
-    {
-        return $this->container['resource_token'];
-    }
-
-    /**
-     * Sets resource_token
-     *
-     * @param string $resource_token 
-     *
-     * @return $this
-     */
-    public function setResourceToken($resource_token)
-    {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['conditional_recipients'] = $conditional_recipients;
 
         return $this;
     }

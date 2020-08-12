@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * ConditionalRecipientRule
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * ConditionalRecipientRule Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class ConditionalRecipientRule implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'conditionalRecipientRule';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'conditions' => '\DocuSign\eSign\Model\ConditionalRecipientRuleCondition[]',
+        'order' => 'string',
+        'recipient_group' => '\DocuSign\eSign\Model\RecipientGroup',
+        'recipient_id' => 'string'
     ];
 
     /**
@@ -67,8 +69,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'conditions' => null,
+        'order' => null,
+        'recipient_group' => null,
+        'recipient_id' => null
     ];
 
     /**
@@ -98,8 +102,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'conditions' => 'conditions',
+        'order' => 'order',
+        'recipient_group' => 'recipientGroup',
+        'recipient_id' => 'recipientId'
     ];
 
     /**
@@ -108,8 +114,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'conditions' => 'setConditions',
+        'order' => 'setOrder',
+        'recipient_group' => 'setRecipientGroup',
+        'recipient_id' => 'setRecipientId'
     ];
 
     /**
@@ -118,8 +126,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'conditions' => 'getConditions',
+        'order' => 'getOrder',
+        'recipient_group' => 'getRecipientGroup',
+        'recipient_id' => 'getRecipientId'
     ];
 
     /**
@@ -182,8 +192,10 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['recipient_group'] = isset($data['recipient_group']) ? $data['recipient_group'] : null;
+        $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
     }
 
     /**
@@ -211,49 +223,97 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets conditions
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\ConditionalRecipientRuleCondition[]
      */
-    public function getProofBaseUri()
+    public function getConditions()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['conditions'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets conditions
      *
-     * @param string $proof_base_uri 
+     * @param \DocuSign\eSign\Model\ConditionalRecipientRuleCondition[] $conditions 
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setConditions($conditions)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['conditions'] = $conditions;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets order
      *
      * @return string
      */
-    public function getResourceToken()
+    public function getOrder()
     {
-        return $this->container['resource_token'];
+        return $this->container['order'];
     }
 
     /**
-     * Sets resource_token
+     * Sets order
      *
-     * @param string $resource_token 
+     * @param string $order 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setOrder($order)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['order'] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_group
+     *
+     * @return \DocuSign\eSign\Model\RecipientGroup
+     */
+    public function getRecipientGroup()
+    {
+        return $this->container['recipient_group'];
+    }
+
+    /**
+     * Sets recipient_group
+     *
+     * @param \DocuSign\eSign\Model\RecipientGroup $recipient_group recipient_group
+     *
+     * @return $this
+     */
+    public function setRecipientGroup($recipient_group)
+    {
+        $this->container['recipient_group'] = $recipient_group;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_id
+     *
+     * @return string
+     */
+    public function getRecipientId()
+    {
+        return $this->container['recipient_id'];
+    }
+
+    /**
+     * Sets recipient_id
+     *
+     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     *
+     * @return $this
+     */
+    public function setRecipientId($recipient_id)
+    {
+        $this->container['recipient_id'] = $recipient_id;
 
         return $this;
     }

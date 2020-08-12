@@ -1,6 +1,6 @@
 <?php
 /**
- * ProofServiceResourceToken
+ * ReportInProductSentByDetails
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ProofServiceResourceToken Class Doc Comment
+ * ReportInProductSentByDetails Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProofServiceResourceToken implements ModelInterface, ArrayAccess
+class ReportInProductSentByDetails implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'proofServiceResourceToken';
+    protected static $swaggerModelName = 'reportInProductSentByDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'groups' => '\DocuSign\eSign\Model\Group[]',
+        'users' => '\DocuSign\eSign\Model\UserInfo[]'
     ];
 
     /**
@@ -67,8 +67,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'proof_base_uri' => null,
-        'resource_token' => null
+        'groups' => null,
+        'users' => null
     ];
 
     /**
@@ -98,8 +98,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'proof_base_uri' => 'proofBaseURI',
-        'resource_token' => 'resourceToken'
+        'groups' => 'groups',
+        'users' => 'users'
     ];
 
     /**
@@ -108,8 +108,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'proof_base_uri' => 'setProofBaseUri',
-        'resource_token' => 'setResourceToken'
+        'groups' => 'setGroups',
+        'users' => 'setUsers'
     ];
 
     /**
@@ -118,8 +118,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'proof_base_uri' => 'getProofBaseUri',
-        'resource_token' => 'getResourceToken'
+        'groups' => 'getGroups',
+        'users' => 'getUsers'
     ];
 
     /**
@@ -182,8 +182,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
-        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
+        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
     }
 
     /**
@@ -211,49 +211,49 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets proof_base_uri
+     * Gets groups
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\Group[]
      */
-    public function getProofBaseUri()
+    public function getGroups()
     {
-        return $this->container['proof_base_uri'];
+        return $this->container['groups'];
     }
 
     /**
-     * Sets proof_base_uri
+     * Sets groups
      *
-     * @param string $proof_base_uri 
+     * @param \DocuSign\eSign\Model\Group[] $groups A collection group objects containing information about the groups returned.
      *
      * @return $this
      */
-    public function setProofBaseUri($proof_base_uri)
+    public function setGroups($groups)
     {
-        $this->container['proof_base_uri'] = $proof_base_uri;
+        $this->container['groups'] = $groups;
 
         return $this;
     }
 
     /**
-     * Gets resource_token
+     * Gets users
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\UserInfo[]
      */
-    public function getResourceToken()
+    public function getUsers()
     {
-        return $this->container['resource_token'];
+        return $this->container['users'];
     }
 
     /**
-     * Sets resource_token
+     * Sets users
      *
-     * @param string $resource_token 
+     * @param \DocuSign\eSign\Model\UserInfo[] $users 
      *
      * @return $this
      */
-    public function setResourceToken($resource_token)
+    public function setUsers($users)
     {
-        $this->container['resource_token'] = $resource_token;
+        $this->container['users'] = $users;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ENoteConfiguration
+ * WorkflowStep
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * ENoteConfiguration Class Doc Comment
+ * WorkflowStep Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ENoteConfiguration implements ModelInterface, ArrayAccess
+class WorkflowStep implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'eNoteConfiguration';
+    protected static $swaggerModelName = 'workflowStep';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,14 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_key' => 'string',
-        'connect_configured' => 'string',
-        'e_note_configured' => 'string',
-        'organization' => 'string',
-        'password' => 'string',
-        'user_name' => 'string'
+        'action' => 'string',
+        'completed_date' => 'string',
+        'item_id' => 'string',
+        'recipient_routing' => '\DocuSign\eSign\Model\RecipientRouting',
+        'status' => 'string',
+        'triggered_date' => 'string',
+        'trigger_on_item' => 'string',
+        'workflow_step_id' => 'string'
     ];
 
     /**
@@ -71,12 +73,14 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'api_key' => null,
-        'connect_configured' => null,
-        'e_note_configured' => null,
-        'organization' => null,
-        'password' => null,
-        'user_name' => null
+        'action' => null,
+        'completed_date' => null,
+        'item_id' => null,
+        'recipient_routing' => null,
+        'status' => null,
+        'triggered_date' => null,
+        'trigger_on_item' => null,
+        'workflow_step_id' => null
     ];
 
     /**
@@ -106,12 +110,14 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'api_key' => 'apiKey',
-        'connect_configured' => 'connectConfigured',
-        'e_note_configured' => 'eNoteConfigured',
-        'organization' => 'organization',
-        'password' => 'password',
-        'user_name' => 'userName'
+        'action' => 'action',
+        'completed_date' => 'completedDate',
+        'item_id' => 'itemId',
+        'recipient_routing' => 'recipientRouting',
+        'status' => 'status',
+        'triggered_date' => 'triggeredDate',
+        'trigger_on_item' => 'triggerOnItem',
+        'workflow_step_id' => 'workflowStepId'
     ];
 
     /**
@@ -120,12 +126,14 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'api_key' => 'setApiKey',
-        'connect_configured' => 'setConnectConfigured',
-        'e_note_configured' => 'setENoteConfigured',
-        'organization' => 'setOrganization',
-        'password' => 'setPassword',
-        'user_name' => 'setUserName'
+        'action' => 'setAction',
+        'completed_date' => 'setCompletedDate',
+        'item_id' => 'setItemId',
+        'recipient_routing' => 'setRecipientRouting',
+        'status' => 'setStatus',
+        'triggered_date' => 'setTriggeredDate',
+        'trigger_on_item' => 'setTriggerOnItem',
+        'workflow_step_id' => 'setWorkflowStepId'
     ];
 
     /**
@@ -134,12 +142,14 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'api_key' => 'getApiKey',
-        'connect_configured' => 'getConnectConfigured',
-        'e_note_configured' => 'getENoteConfigured',
-        'organization' => 'getOrganization',
-        'password' => 'getPassword',
-        'user_name' => 'getUserName'
+        'action' => 'getAction',
+        'completed_date' => 'getCompletedDate',
+        'item_id' => 'getItemId',
+        'recipient_routing' => 'getRecipientRouting',
+        'status' => 'getStatus',
+        'triggered_date' => 'getTriggeredDate',
+        'trigger_on_item' => 'getTriggerOnItem',
+        'workflow_step_id' => 'getWorkflowStepId'
     ];
 
     /**
@@ -202,12 +212,14 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['api_key'] = isset($data['api_key']) ? $data['api_key'] : null;
-        $this->container['connect_configured'] = isset($data['connect_configured']) ? $data['connect_configured'] : null;
-        $this->container['e_note_configured'] = isset($data['e_note_configured']) ? $data['e_note_configured'] : null;
-        $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['completed_date'] = isset($data['completed_date']) ? $data['completed_date'] : null;
+        $this->container['item_id'] = isset($data['item_id']) ? $data['item_id'] : null;
+        $this->container['recipient_routing'] = isset($data['recipient_routing']) ? $data['recipient_routing'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['triggered_date'] = isset($data['triggered_date']) ? $data['triggered_date'] : null;
+        $this->container['trigger_on_item'] = isset($data['trigger_on_item']) ? $data['trigger_on_item'] : null;
+        $this->container['workflow_step_id'] = isset($data['workflow_step_id']) ? $data['workflow_step_id'] : null;
     }
 
     /**
@@ -235,145 +247,193 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets api_key
+     * Gets action
      *
      * @return string
      */
-    public function getApiKey()
+    public function getAction()
     {
-        return $this->container['api_key'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets api_key
+     * Sets action
      *
-     * @param string $api_key 
+     * @param string $action 
      *
      * @return $this
      */
-    public function setApiKey($api_key)
+    public function setAction($action)
     {
-        $this->container['api_key'] = $api_key;
+        $this->container['action'] = $action;
 
         return $this;
     }
 
     /**
-     * Gets connect_configured
+     * Gets completed_date
      *
      * @return string
      */
-    public function getConnectConfigured()
+    public function getCompletedDate()
     {
-        return $this->container['connect_configured'];
+        return $this->container['completed_date'];
     }
 
     /**
-     * Sets connect_configured
+     * Sets completed_date
      *
-     * @param string $connect_configured 
+     * @param string $completed_date 
      *
      * @return $this
      */
-    public function setConnectConfigured($connect_configured)
+    public function setCompletedDate($completed_date)
     {
-        $this->container['connect_configured'] = $connect_configured;
+        $this->container['completed_date'] = $completed_date;
 
         return $this;
     }
 
     /**
-     * Gets e_note_configured
+     * Gets item_id
      *
      * @return string
      */
-    public function getENoteConfigured()
+    public function getItemId()
     {
-        return $this->container['e_note_configured'];
+        return $this->container['item_id'];
     }
 
     /**
-     * Sets e_note_configured
+     * Sets item_id
      *
-     * @param string $e_note_configured 
+     * @param string $item_id 
      *
      * @return $this
      */
-    public function setENoteConfigured($e_note_configured)
+    public function setItemId($item_id)
     {
-        $this->container['e_note_configured'] = $e_note_configured;
+        $this->container['item_id'] = $item_id;
 
         return $this;
     }
 
     /**
-     * Gets organization
+     * Gets recipient_routing
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\RecipientRouting
      */
-    public function getOrganization()
+    public function getRecipientRouting()
     {
-        return $this->container['organization'];
+        return $this->container['recipient_routing'];
     }
 
     /**
-     * Sets organization
+     * Sets recipient_routing
      *
-     * @param string $organization 
+     * @param \DocuSign\eSign\Model\RecipientRouting $recipient_routing recipient_routing
      *
      * @return $this
      */
-    public function setOrganization($organization)
+    public function setRecipientRouting($recipient_routing)
     {
-        $this->container['organization'] = $organization;
+        $this->container['recipient_routing'] = $recipient_routing;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets status
      *
      * @return string
      */
-    public function getPassword()
+    public function getStatus()
     {
-        return $this->container['password'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets password
+     * Sets status
      *
-     * @param string $password 
+     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setStatus($status)
     {
-        $this->container['password'] = $password;
+        $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets user_name
+     * Gets triggered_date
      *
      * @return string
      */
-    public function getUserName()
+    public function getTriggeredDate()
     {
-        return $this->container['user_name'];
+        return $this->container['triggered_date'];
     }
 
     /**
-     * Sets user_name
+     * Sets triggered_date
      *
-     * @param string $user_name 
+     * @param string $triggered_date 
      *
      * @return $this
      */
-    public function setUserName($user_name)
+    public function setTriggeredDate($triggered_date)
     {
-        $this->container['user_name'] = $user_name;
+        $this->container['triggered_date'] = $triggered_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets trigger_on_item
+     *
+     * @return string
+     */
+    public function getTriggerOnItem()
+    {
+        return $this->container['trigger_on_item'];
+    }
+
+    /**
+     * Sets trigger_on_item
+     *
+     * @param string $trigger_on_item 
+     *
+     * @return $this
+     */
+    public function setTriggerOnItem($trigger_on_item)
+    {
+        $this->container['trigger_on_item'] = $trigger_on_item;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflow_step_id
+     *
+     * @return string
+     */
+    public function getWorkflowStepId()
+    {
+        return $this->container['workflow_step_id'];
+    }
+
+    /**
+     * Sets workflow_step_id
+     *
+     * @param string $workflow_step_id 
+     *
+     * @return $this
+     */
+    public function setWorkflowStepId($workflow_step_id)
+    {
+        $this->container['workflow_step_id'] = $workflow_step_id;
 
         return $this;
     }
