@@ -56,31 +56,6 @@ class ListOptions
         return $this;
     }
     /**
-      * $include 
-      * @var string
-      */
-    protected $include;
-
-    /**
-     * Gets include
-     * @return string
-     */
-    public function getInclude()
-    {
-        return $this->include;
-    }
-  
-    /**
-     * Sets include
-     * @param string $include 
-     * @return $this
-     */
-    public function setInclude($include)
-    {
-        $this->include = $include;
-        return $this;
-    }
-    /**
       * $start_position The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0.
       * @var string
       */
@@ -350,10 +325,6 @@ class BulkEnvelopesApi
         // query params
         if ($options->getCount() !== null) {
             $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
         }
         // query params
         if ($options->getStartPosition() !== null) {
