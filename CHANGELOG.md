@@ -11,7 +11,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ### Fixed
 
-* Fixed read member function issue in object serializer #102
+* Fixed read member function issue in object serializer [#102](https://github.com/docusign/docusign-php-client/issues/102)
 
 ## [5.2.0] - eSignature API v2.1-20.1.02 - 2020-05-15
 ### Changed
@@ -21,7 +21,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ### Fixed
 
-* Date serialization issues #97
+* Date serialization issues [#97](https://github.com/docusign/docusign-php-client/issues/97)
 
 ## [5.1.0] - eSignature API v2.1-20.1.00 - 2020-03-30
 ### Changed
