@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [4.5.0] - eSignature API v2-20.2.02 - 2020-08-21
+### Changed
+
+*   Added support for version v2-20.2.02 of the DocuSign eSignature API.
+*   Updated the SDK release version.
+
 ## [4.4.0] - eSignature API v2-20.2.00 - 2020-06-02
 ### Changed
 
@@ -23,7 +29,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 * Date serialization issues [#97](https://github.com/docusign/docusign-php-client/issues/97)
 
-## [4.2.0] - eSignature API v2-20.1.00 - 2020-03-30
+## [4.2.0] - eSignature API v2-20.1.00 - 2020-03-13
 ### Changed
 
 *   Added support for version v2-20.1.00 of the DocuSign eSignature API.
