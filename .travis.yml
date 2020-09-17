@@ -1,5 +1,6 @@
 branches:
   only: 
+    - master
     - v2-master
 language: php
 dist: trusty
