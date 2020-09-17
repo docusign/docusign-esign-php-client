@@ -320,15 +320,16 @@ class ApiClient
             }
         } else {
             $data = json_decode($http_body);
+            $serializedData = $data;
             if (json_last_error() > 0) { // if response is a string
                 $data = $http_body;
             }
-            if(is_object($data)){
-                $data = serialize($data);
+            if(is_object($serializedData)){
+                $serializedData = serialize($serializedData);
             }
 
             throw new ApiException(
-                "Error while requesting server, received a non successful HTTP code [".$response_info['http_code']."] with response Body:  $data",
+                "Error while requesting server, received a non successful HTTP code [".$response_info['http_code']."] with response Body:  $serializedData",
                 $response_info['http_code'],
                 $http_header,
                 $data
