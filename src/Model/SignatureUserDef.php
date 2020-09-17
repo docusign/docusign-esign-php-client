@@ -1,6 +1,6 @@
 <?php
 /**
- * CorrectViewRequest
+ * SignatureUserDef
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * CorrectViewRequest Class Doc Comment
+ * SignatureUserDef Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CorrectViewRequest implements ModelInterface, ArrayAccess
+class SignatureUserDef implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'correctViewRequest';
+    protected static $swaggerModelName = 'signatureUserDef';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'return_url' => 'string',
-        'suppress_navigation' => 'string',
-        'view_url' => 'string'
+        'is_default' => 'string',
+        'rights' => 'string',
+        'user_id' => 'string'
     ];
 
     /**
@@ -68,9 +68,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'return_url' => null,
-        'suppress_navigation' => null,
-        'view_url' => null
+        'is_default' => null,
+        'rights' => null,
+        'user_id' => null
     ];
 
     /**
@@ -100,9 +100,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'return_url' => 'returnUrl',
-        'suppress_navigation' => 'suppressNavigation',
-        'view_url' => 'viewUrl'
+        'is_default' => 'isDefault',
+        'rights' => 'rights',
+        'user_id' => 'userId'
     ];
 
     /**
@@ -111,9 +111,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'return_url' => 'setReturnUrl',
-        'suppress_navigation' => 'setSuppressNavigation',
-        'view_url' => 'setViewUrl'
+        'is_default' => 'setIsDefault',
+        'rights' => 'setRights',
+        'user_id' => 'setUserId'
     ];
 
     /**
@@ -122,9 +122,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'return_url' => 'getReturnUrl',
-        'suppress_navigation' => 'getSuppressNavigation',
-        'view_url' => 'getViewUrl'
+        'is_default' => 'getIsDefault',
+        'rights' => 'getRights',
+        'user_id' => 'getUserId'
     ];
 
     /**
@@ -187,9 +187,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
-        $this->container['suppress_navigation'] = isset($data['suppress_navigation']) ? $data['suppress_navigation'] : null;
-        $this->container['view_url'] = isset($data['view_url']) ? $data['view_url'] : null;
+        $this->container['is_default'] = isset($data['is_default']) ? $data['is_default'] : null;
+        $this->container['rights'] = isset($data['rights']) ? $data['rights'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
     }
 
     /**
@@ -217,73 +217,73 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets return_url
+     * Gets is_default
      *
      * @return string
      */
-    public function getReturnUrl()
+    public function getIsDefault()
     {
-        return $this->container['return_url'];
+        return $this->container['is_default'];
     }
 
     /**
-     * Sets return_url
+     * Sets is_default
      *
-     * @param string $return_url The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
+     * @param string $is_default 
      *
      * @return $this
      */
-    public function setReturnUrl($return_url)
+    public function setIsDefault($is_default)
     {
-        $this->container['return_url'] = $return_url;
+        $this->container['is_default'] = $is_default;
 
         return $this;
     }
 
     /**
-     * Gets suppress_navigation
+     * Gets rights
      *
      * @return string
      */
-    public function getSuppressNavigation()
+    public function getRights()
     {
-        return $this->container['suppress_navigation'];
+        return $this->container['rights'];
     }
 
     /**
-     * Sets suppress_navigation
+     * Sets rights
      *
-     * @param string $suppress_navigation Specifies whether the window is displayed with or without dressing.
+     * @param string $rights 
      *
      * @return $this
      */
-    public function setSuppressNavigation($suppress_navigation)
+    public function setRights($rights)
     {
-        $this->container['suppress_navigation'] = $suppress_navigation;
+        $this->container['rights'] = $rights;
 
         return $this;
     }
 
     /**
-     * Gets view_url
+     * Gets user_id
      *
      * @return string
      */
-    public function getViewUrl()
+    public function getUserId()
     {
-        return $this->container['view_url'];
+        return $this->container['user_id'];
     }
 
     /**
-     * Sets view_url
+     * Sets user_id
      *
-     * @param string $view_url 
+     * @param string $user_id 
      *
      * @return $this
      */
-    public function setViewUrl($view_url)
+    public function setUserId($user_id)
     {
-        $this->container['view_url'] = $view_url;
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

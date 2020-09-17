@@ -1,6 +1,6 @@
 <?php
 /**
- * CorrectViewRequest
+ * AccountSignaturesInformation
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * CorrectViewRequest Class Doc Comment
+ * AccountSignaturesInformation Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CorrectViewRequest implements ModelInterface, ArrayAccess
+class AccountSignaturesInformation implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'correctViewRequest';
+    protected static $swaggerModelName = 'accountSignaturesInformation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'return_url' => 'string',
-        'suppress_navigation' => 'string',
-        'view_url' => 'string'
+        'account_signatures' => '\DocuSign\eSign\Model\AccountSignature[]'
     ];
 
     /**
@@ -68,9 +66,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'return_url' => null,
-        'suppress_navigation' => null,
-        'view_url' => null
+        'account_signatures' => null
     ];
 
     /**
@@ -100,9 +96,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'return_url' => 'returnUrl',
-        'suppress_navigation' => 'suppressNavigation',
-        'view_url' => 'viewUrl'
+        'account_signatures' => 'accountSignatures'
     ];
 
     /**
@@ -111,9 +105,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'return_url' => 'setReturnUrl',
-        'suppress_navigation' => 'setSuppressNavigation',
-        'view_url' => 'setViewUrl'
+        'account_signatures' => 'setAccountSignatures'
     ];
 
     /**
@@ -122,9 +114,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'return_url' => 'getReturnUrl',
-        'suppress_navigation' => 'getSuppressNavigation',
-        'view_url' => 'getViewUrl'
+        'account_signatures' => 'getAccountSignatures'
     ];
 
     /**
@@ -187,9 +177,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
-        $this->container['suppress_navigation'] = isset($data['suppress_navigation']) ? $data['suppress_navigation'] : null;
-        $this->container['view_url'] = isset($data['view_url']) ? $data['view_url'] : null;
+        $this->container['account_signatures'] = isset($data['account_signatures']) ? $data['account_signatures'] : null;
     }
 
     /**
@@ -217,73 +205,25 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets return_url
+     * Gets account_signatures
      *
-     * @return string
+     * @return \DocuSign\eSign\Model\AccountSignature[]
      */
-    public function getReturnUrl()
+    public function getAccountSignatures()
     {
-        return $this->container['return_url'];
+        return $this->container['account_signatures'];
     }
 
     /**
-     * Sets return_url
+     * Sets account_signatures
      *
-     * @param string $return_url The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
+     * @param \DocuSign\eSign\Model\AccountSignature[] $account_signatures 
      *
      * @return $this
      */
-    public function setReturnUrl($return_url)
+    public function setAccountSignatures($account_signatures)
     {
-        $this->container['return_url'] = $return_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets suppress_navigation
-     *
-     * @return string
-     */
-    public function getSuppressNavigation()
-    {
-        return $this->container['suppress_navigation'];
-    }
-
-    /**
-     * Sets suppress_navigation
-     *
-     * @param string $suppress_navigation Specifies whether the window is displayed with or without dressing.
-     *
-     * @return $this
-     */
-    public function setSuppressNavigation($suppress_navigation)
-    {
-        $this->container['suppress_navigation'] = $suppress_navigation;
-
-        return $this;
-    }
-
-    /**
-     * Gets view_url
-     *
-     * @return string
-     */
-    public function getViewUrl()
-    {
-        return $this->container['view_url'];
-    }
-
-    /**
-     * Sets view_url
-     *
-     * @param string $view_url 
-     *
-     * @return $this
-     */
-    public function setViewUrl($view_url)
-    {
-        $this->container['view_url'] = $view_url;
+        $this->container['account_signatures'] = $account_signatures;
 
         return $this;
     }

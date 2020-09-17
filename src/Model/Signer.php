@@ -106,6 +106,7 @@ class Signer implements ModelInterface, ArrayAccess
         'locked_recipient_sms_editable' => 'string',
         'name' => 'string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'notary_id' => 'string',
         'note' => 'string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
@@ -204,6 +205,7 @@ class Signer implements ModelInterface, ArrayAccess
         'locked_recipient_sms_editable' => null,
         'name' => null,
         'name_metadata' => null,
+        'notary_id' => null,
         'note' => null,
         'note_metadata' => null,
         'offline_attributes' => null,
@@ -323,6 +325,7 @@ class Signer implements ModelInterface, ArrayAccess
         'locked_recipient_sms_editable' => 'lockedRecipientSmsEditable',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
+        'notary_id' => 'notaryId',
         'note' => 'note',
         'note_metadata' => 'noteMetadata',
         'offline_attributes' => 'offlineAttributes',
@@ -421,6 +424,7 @@ class Signer implements ModelInterface, ArrayAccess
         'locked_recipient_sms_editable' => 'setLockedRecipientSmsEditable',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
+        'notary_id' => 'setNotaryId',
         'note' => 'setNote',
         'note_metadata' => 'setNoteMetadata',
         'offline_attributes' => 'setOfflineAttributes',
@@ -519,6 +523,7 @@ class Signer implements ModelInterface, ArrayAccess
         'locked_recipient_sms_editable' => 'getLockedRecipientSmsEditable',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
+        'notary_id' => 'getNotaryId',
         'note' => 'getNote',
         'note_metadata' => 'getNoteMetadata',
         'offline_attributes' => 'getOfflineAttributes',
@@ -671,6 +676,7 @@ class Signer implements ModelInterface, ArrayAccess
         $this->container['locked_recipient_sms_editable'] = isset($data['locked_recipient_sms_editable']) ? $data['locked_recipient_sms_editable'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
+        $this->container['notary_id'] = isset($data['notary_id']) ? $data['notary_id'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
         $this->container['offline_attributes'] = isset($data['offline_attributes']) ? $data['offline_attributes'] : null;
@@ -1910,6 +1916,30 @@ class Signer implements ModelInterface, ArrayAccess
     public function setNameMetadata($name_metadata)
     {
         $this->container['name_metadata'] = $name_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_id
+     *
+     * @return string
+     */
+    public function getNotaryId()
+    {
+        return $this->container['notary_id'];
+    }
+
+    /**
+     * Sets notary_id
+     *
+     * @param string $notary_id 
+     *
+     * @return $this
+     */
+    public function setNotaryId($notary_id)
+    {
+        $this->container['notary_id'] = $notary_id;
 
         return $this;
     }

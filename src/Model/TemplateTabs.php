@@ -75,6 +75,8 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => '\DocuSign\eSign\Model\LastName[]',
         'list_tabs' => '\DocuSign\eSign\Model\array[]',
         'notarize_tabs' => '\DocuSign\eSign\Model\Notarize[]',
+        'notary_certificate_tabs' => '\DocuSign\eSign\Model\NotaryCertificate[]',
+        'notary_seal_tabs' => '\DocuSign\eSign\Model\NotarySeal[]',
         'note_tabs' => '\DocuSign\eSign\Model\Note[]',
         'number_tabs' => '\DocuSign\eSign\Model\Number[]',
         'poly_line_overlay_tabs' => '\DocuSign\eSign\Model\PolyLineOverlay[]',
@@ -114,6 +116,8 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => null,
         'list_tabs' => null,
         'notarize_tabs' => null,
+        'notary_certificate_tabs' => null,
+        'notary_seal_tabs' => null,
         'note_tabs' => null,
         'number_tabs' => null,
         'poly_line_overlay_tabs' => null,
@@ -174,6 +178,8 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => 'lastNameTabs',
         'list_tabs' => 'listTabs',
         'notarize_tabs' => 'notarizeTabs',
+        'notary_certificate_tabs' => 'notaryCertificateTabs',
+        'notary_seal_tabs' => 'notarySealTabs',
         'note_tabs' => 'noteTabs',
         'number_tabs' => 'numberTabs',
         'poly_line_overlay_tabs' => 'polyLineOverlayTabs',
@@ -213,6 +219,8 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => 'setLastNameTabs',
         'list_tabs' => 'setListTabs',
         'notarize_tabs' => 'setNotarizeTabs',
+        'notary_certificate_tabs' => 'setNotaryCertificateTabs',
+        'notary_seal_tabs' => 'setNotarySealTabs',
         'note_tabs' => 'setNoteTabs',
         'number_tabs' => 'setNumberTabs',
         'poly_line_overlay_tabs' => 'setPolyLineOverlayTabs',
@@ -252,6 +260,8 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => 'getLastNameTabs',
         'list_tabs' => 'getListTabs',
         'notarize_tabs' => 'getNotarizeTabs',
+        'notary_certificate_tabs' => 'getNotaryCertificateTabs',
+        'notary_seal_tabs' => 'getNotarySealTabs',
         'note_tabs' => 'getNoteTabs',
         'number_tabs' => 'getNumberTabs',
         'poly_line_overlay_tabs' => 'getPolyLineOverlayTabs',
@@ -345,6 +355,8 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         $this->container['last_name_tabs'] = isset($data['last_name_tabs']) ? $data['last_name_tabs'] : null;
         $this->container['list_tabs'] = isset($data['list_tabs']) ? $data['list_tabs'] : null;
         $this->container['notarize_tabs'] = isset($data['notarize_tabs']) ? $data['notarize_tabs'] : null;
+        $this->container['notary_certificate_tabs'] = isset($data['notary_certificate_tabs']) ? $data['notary_certificate_tabs'] : null;
+        $this->container['notary_seal_tabs'] = isset($data['notary_seal_tabs']) ? $data['notary_seal_tabs'] : null;
         $this->container['note_tabs'] = isset($data['note_tabs']) ? $data['note_tabs'] : null;
         $this->container['number_tabs'] = isset($data['number_tabs']) ? $data['number_tabs'] : null;
         $this->container['poly_line_overlay_tabs'] = isset($data['poly_line_overlay_tabs']) ? $data['poly_line_overlay_tabs'] : null;
@@ -812,6 +824,54 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     public function setNotarizeTabs($notarize_tabs)
     {
         $this->container['notarize_tabs'] = $notarize_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_certificate_tabs
+     *
+     * @return \DocuSign\eSign\Model\NotaryCertificate[]
+     */
+    public function getNotaryCertificateTabs()
+    {
+        return $this->container['notary_certificate_tabs'];
+    }
+
+    /**
+     * Sets notary_certificate_tabs
+     *
+     * @param \DocuSign\eSign\Model\NotaryCertificate[] $notary_certificate_tabs 
+     *
+     * @return $this
+     */
+    public function setNotaryCertificateTabs($notary_certificate_tabs)
+    {
+        $this->container['notary_certificate_tabs'] = $notary_certificate_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_seal_tabs
+     *
+     * @return \DocuSign\eSign\Model\NotarySeal[]
+     */
+    public function getNotarySealTabs()
+    {
+        return $this->container['notary_seal_tabs'];
+    }
+
+    /**
+     * Sets notary_seal_tabs
+     *
+     * @param \DocuSign\eSign\Model\NotarySeal[] $notary_seal_tabs 
+     *
+     * @return $this
+     */
+    public function setNotarySealTabs($notary_seal_tabs)
+    {
+        $this->container['notary_seal_tabs'] = $notary_seal_tabs;
 
         return $this;
     }

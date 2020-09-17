@@ -1,6 +1,6 @@
 <?php
 /**
- * Witness
+ * NotaryRecipient
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * Witness Class Doc Comment
+ * NotaryRecipient Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Witness implements ModelInterface, ArrayAccess
+class NotaryRecipient implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Witness implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'witness';
+    protected static $swaggerModelName = 'notaryRecipient';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -107,6 +107,8 @@ class Witness implements ModelInterface, ArrayAccess
         'name' => 'string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'notary_id' => 'string',
+        'notary_signers' => 'string[]',
+        'notary_type' => 'string',
         'note' => 'string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
@@ -147,9 +149,7 @@ class Witness implements ModelInterface, ArrayAccess
         'template_locked' => 'string',
         'template_required' => 'string',
         'total_tab_count' => 'string',
-        'user_id' => 'string',
-        'witness_for' => 'string',
-        'witness_for_guid' => 'string'
+        'user_id' => 'string'
     ];
 
     /**
@@ -208,6 +208,8 @@ class Witness implements ModelInterface, ArrayAccess
         'name' => null,
         'name_metadata' => null,
         'notary_id' => null,
+        'notary_signers' => null,
+        'notary_type' => null,
         'note' => null,
         'note_metadata' => null,
         'offline_attributes' => null,
@@ -248,9 +250,7 @@ class Witness implements ModelInterface, ArrayAccess
         'template_locked' => null,
         'template_required' => null,
         'total_tab_count' => null,
-        'user_id' => null,
-        'witness_for' => null,
-        'witness_for_guid' => null
+        'user_id' => null
     ];
 
     /**
@@ -330,6 +330,8 @@ class Witness implements ModelInterface, ArrayAccess
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'notary_id' => 'notaryId',
+        'notary_signers' => 'notarySigners',
+        'notary_type' => 'notaryType',
         'note' => 'note',
         'note_metadata' => 'noteMetadata',
         'offline_attributes' => 'offlineAttributes',
@@ -370,9 +372,7 @@ class Witness implements ModelInterface, ArrayAccess
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
         'total_tab_count' => 'totalTabCount',
-        'user_id' => 'userId',
-        'witness_for' => 'witnessFor',
-        'witness_for_guid' => 'witnessForGuid'
+        'user_id' => 'userId'
     ];
 
     /**
@@ -431,6 +431,8 @@ class Witness implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'notary_id' => 'setNotaryId',
+        'notary_signers' => 'setNotarySigners',
+        'notary_type' => 'setNotaryType',
         'note' => 'setNote',
         'note_metadata' => 'setNoteMetadata',
         'offline_attributes' => 'setOfflineAttributes',
@@ -471,9 +473,7 @@ class Witness implements ModelInterface, ArrayAccess
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
         'total_tab_count' => 'setTotalTabCount',
-        'user_id' => 'setUserId',
-        'witness_for' => 'setWitnessFor',
-        'witness_for_guid' => 'setWitnessForGuid'
+        'user_id' => 'setUserId'
     ];
 
     /**
@@ -532,6 +532,8 @@ class Witness implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'notary_id' => 'getNotaryId',
+        'notary_signers' => 'getNotarySigners',
+        'notary_type' => 'getNotaryType',
         'note' => 'getNote',
         'note_metadata' => 'getNoteMetadata',
         'offline_attributes' => 'getOfflineAttributes',
@@ -572,9 +574,7 @@ class Witness implements ModelInterface, ArrayAccess
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
         'total_tab_count' => 'getTotalTabCount',
-        'user_id' => 'getUserId',
-        'witness_for' => 'getWitnessFor',
-        'witness_for_guid' => 'getWitnessForGuid'
+        'user_id' => 'getUserId'
     ];
 
     /**
@@ -687,6 +687,8 @@ class Witness implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['notary_id'] = isset($data['notary_id']) ? $data['notary_id'] : null;
+        $this->container['notary_signers'] = isset($data['notary_signers']) ? $data['notary_signers'] : null;
+        $this->container['notary_type'] = isset($data['notary_type']) ? $data['notary_type'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
         $this->container['offline_attributes'] = isset($data['offline_attributes']) ? $data['offline_attributes'] : null;
@@ -728,8 +730,6 @@ class Witness implements ModelInterface, ArrayAccess
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
         $this->container['total_tab_count'] = isset($data['total_tab_count']) ? $data['total_tab_count'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['witness_for'] = isset($data['witness_for']) ? $data['witness_for'] : null;
-        $this->container['witness_for_guid'] = isset($data['witness_for_guid']) ? $data['witness_for_guid'] : null;
     }
 
     /**
@@ -1957,6 +1957,54 @@ class Witness implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets notary_signers
+     *
+     * @return string[]
+     */
+    public function getNotarySigners()
+    {
+        return $this->container['notary_signers'];
+    }
+
+    /**
+     * Sets notary_signers
+     *
+     * @param string[] $notary_signers 
+     *
+     * @return $this
+     */
+    public function setNotarySigners($notary_signers)
+    {
+        $this->container['notary_signers'] = $notary_signers;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_type
+     *
+     * @return string
+     */
+    public function getNotaryType()
+    {
+        return $this->container['notary_type'];
+    }
+
+    /**
+     * Sets notary_type
+     *
+     * @param string $notary_type 
+     *
+     * @return $this
+     */
+    public function setNotaryType($notary_type)
+    {
+        $this->container['notary_type'] = $notary_type;
+
+        return $this;
+    }
+
+    /**
      * Gets note
      *
      * @return string
@@ -2936,54 +2984,6 @@ class Witness implements ModelInterface, ArrayAccess
     public function setUserId($user_id)
     {
         $this->container['user_id'] = $user_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets witness_for
-     *
-     * @return string
-     */
-    public function getWitnessFor()
-    {
-        return $this->container['witness_for'];
-    }
-
-    /**
-     * Sets witness_for
-     *
-     * @param string $witness_for 
-     *
-     * @return $this
-     */
-    public function setWitnessFor($witness_for)
-    {
-        $this->container['witness_for'] = $witness_for;
-
-        return $this;
-    }
-
-    /**
-     * Gets witness_for_guid
-     *
-     * @return string
-     */
-    public function getWitnessForGuid()
-    {
-        return $this->container['witness_for_guid'];
-    }
-
-    /**
-     * Sets witness_for_guid
-     *
-     * @param string $witness_for_guid 
-     *
-     * @return $this
-     */
-    public function setWitnessForGuid($witness_for_guid)
-    {
-        $this->container['witness_for_guid'] = $witness_for_guid;
 
         return $this;
     }
