@@ -1,6 +1,6 @@
 <?php
 /**
- * CorrectViewRequest
+ * SignatureGroup
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * CorrectViewRequest Class Doc Comment
+ * SignatureGroup Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CorrectViewRequest implements ModelInterface, ArrayAccess
+class SignatureGroup implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'correctViewRequest';
+    protected static $swaggerModelName = 'signatureGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'return_url' => 'string',
-        'suppress_navigation' => 'string',
-        'view_url' => 'string'
+        'group_id' => 'string',
+        'group_name' => 'string',
+        'rights' => 'string'
     ];
 
     /**
@@ -68,9 +68,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'return_url' => null,
-        'suppress_navigation' => null,
-        'view_url' => null
+        'group_id' => null,
+        'group_name' => null,
+        'rights' => null
     ];
 
     /**
@@ -100,9 +100,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'return_url' => 'returnUrl',
-        'suppress_navigation' => 'suppressNavigation',
-        'view_url' => 'viewUrl'
+        'group_id' => 'groupId',
+        'group_name' => 'groupName',
+        'rights' => 'rights'
     ];
 
     /**
@@ -111,9 +111,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'return_url' => 'setReturnUrl',
-        'suppress_navigation' => 'setSuppressNavigation',
-        'view_url' => 'setViewUrl'
+        'group_id' => 'setGroupId',
+        'group_name' => 'setGroupName',
+        'rights' => 'setRights'
     ];
 
     /**
@@ -122,9 +122,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'return_url' => 'getReturnUrl',
-        'suppress_navigation' => 'getSuppressNavigation',
-        'view_url' => 'getViewUrl'
+        'group_id' => 'getGroupId',
+        'group_name' => 'getGroupName',
+        'rights' => 'getRights'
     ];
 
     /**
@@ -187,9 +187,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
-        $this->container['suppress_navigation'] = isset($data['suppress_navigation']) ? $data['suppress_navigation'] : null;
-        $this->container['view_url'] = isset($data['view_url']) ? $data['view_url'] : null;
+        $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
+        $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
+        $this->container['rights'] = isset($data['rights']) ? $data['rights'] : null;
     }
 
     /**
@@ -217,73 +217,73 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets return_url
+     * Gets group_id
      *
      * @return string
      */
-    public function getReturnUrl()
+    public function getGroupId()
     {
-        return $this->container['return_url'];
+        return $this->container['group_id'];
     }
 
     /**
-     * Sets return_url
+     * Sets group_id
      *
-     * @param string $return_url The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
+     * @param string $group_id 
      *
      * @return $this
      */
-    public function setReturnUrl($return_url)
+    public function setGroupId($group_id)
     {
-        $this->container['return_url'] = $return_url;
+        $this->container['group_id'] = $group_id;
 
         return $this;
     }
 
     /**
-     * Gets suppress_navigation
+     * Gets group_name
      *
      * @return string
      */
-    public function getSuppressNavigation()
+    public function getGroupName()
     {
-        return $this->container['suppress_navigation'];
+        return $this->container['group_name'];
     }
 
     /**
-     * Sets suppress_navigation
+     * Sets group_name
      *
-     * @param string $suppress_navigation Specifies whether the window is displayed with or without dressing.
+     * @param string $group_name The name of the group.
      *
      * @return $this
      */
-    public function setSuppressNavigation($suppress_navigation)
+    public function setGroupName($group_name)
     {
-        $this->container['suppress_navigation'] = $suppress_navigation;
+        $this->container['group_name'] = $group_name;
 
         return $this;
     }
 
     /**
-     * Gets view_url
+     * Gets rights
      *
      * @return string
      */
-    public function getViewUrl()
+    public function getRights()
     {
-        return $this->container['view_url'];
+        return $this->container['rights'];
     }
 
     /**
-     * Sets view_url
+     * Sets rights
      *
-     * @param string $view_url 
+     * @param string $rights 
      *
      * @return $this
      */
-    public function setViewUrl($view_url)
+    public function setRights($rights)
     {
-        $this->container['view_url'] = $view_url;
+        $this->container['rights'] = $rights;
 
         return $this;
     }

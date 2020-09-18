@@ -61,6 +61,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'access_code_format' => '\DocuSign\eSign\Model\AccessCodeFormat',
         'account_date_time_format' => 'string',
         'account_date_time_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'account_default_language' => 'string',
+        'account_default_language_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'account_name' => 'string',
         'account_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'account_notification' => '\DocuSign\eSign\Model\AccountNotification',
@@ -584,6 +586,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'access_code_format' => null,
         'account_date_time_format' => null,
         'account_date_time_format_metadata' => null,
+        'account_default_language' => null,
+        'account_default_language_metadata' => null,
         'account_name' => null,
         'account_name_metadata' => null,
         'account_notification' => null,
@@ -1128,6 +1132,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'access_code_format' => 'accessCodeFormat',
         'account_date_time_format' => 'accountDateTimeFormat',
         'account_date_time_format_metadata' => 'accountDateTimeFormatMetadata',
+        'account_default_language' => 'accountDefaultLanguage',
+        'account_default_language_metadata' => 'accountDefaultLanguageMetadata',
         'account_name' => 'accountName',
         'account_name_metadata' => 'accountNameMetadata',
         'account_notification' => 'accountNotification',
@@ -1651,6 +1657,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'access_code_format' => 'setAccessCodeFormat',
         'account_date_time_format' => 'setAccountDateTimeFormat',
         'account_date_time_format_metadata' => 'setAccountDateTimeFormatMetadata',
+        'account_default_language' => 'setAccountDefaultLanguage',
+        'account_default_language_metadata' => 'setAccountDefaultLanguageMetadata',
         'account_name' => 'setAccountName',
         'account_name_metadata' => 'setAccountNameMetadata',
         'account_notification' => 'setAccountNotification',
@@ -2174,6 +2182,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'access_code_format' => 'getAccessCodeFormat',
         'account_date_time_format' => 'getAccountDateTimeFormat',
         'account_date_time_format_metadata' => 'getAccountDateTimeFormatMetadata',
+        'account_default_language' => 'getAccountDefaultLanguage',
+        'account_default_language_metadata' => 'getAccountDefaultLanguageMetadata',
         'account_name' => 'getAccountName',
         'account_name_metadata' => 'getAccountNameMetadata',
         'account_notification' => 'getAccountNotification',
@@ -2751,6 +2761,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['access_code_format'] = isset($data['access_code_format']) ? $data['access_code_format'] : null;
         $this->container['account_date_time_format'] = isset($data['account_date_time_format']) ? $data['account_date_time_format'] : null;
         $this->container['account_date_time_format_metadata'] = isset($data['account_date_time_format_metadata']) ? $data['account_date_time_format_metadata'] : null;
+        $this->container['account_default_language'] = isset($data['account_default_language']) ? $data['account_default_language'] : null;
+        $this->container['account_default_language_metadata'] = isset($data['account_default_language_metadata']) ? $data['account_default_language_metadata'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
         $this->container['account_name_metadata'] = isset($data['account_name_metadata']) ? $data['account_name_metadata'] : null;
         $this->container['account_notification'] = isset($data['account_notification']) ? $data['account_notification'] : null;
@@ -3357,6 +3369,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAccountDateTimeFormatMetadata($account_date_time_format_metadata)
     {
         $this->container['account_date_time_format_metadata'] = $account_date_time_format_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_default_language
+     *
+     * @return string
+     */
+    public function getAccountDefaultLanguage()
+    {
+        return $this->container['account_default_language'];
+    }
+
+    /**
+     * Sets account_default_language
+     *
+     * @param string $account_default_language 
+     *
+     * @return $this
+     */
+    public function setAccountDefaultLanguage($account_default_language)
+    {
+        $this->container['account_default_language'] = $account_default_language;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_default_language_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAccountDefaultLanguageMetadata()
+    {
+        return $this->container['account_default_language_metadata'];
+    }
+
+    /**
+     * Sets account_default_language_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $account_default_language_metadata account_default_language_metadata
+     *
+     * @return $this
+     */
+    public function setAccountDefaultLanguageMetadata($account_default_language_metadata)
+    {
+        $this->container['account_default_language_metadata'] = $account_default_language_metadata;
 
         return $this;
     }

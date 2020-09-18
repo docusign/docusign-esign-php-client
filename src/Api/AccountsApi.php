@@ -56,6 +56,34 @@ class CreateOptions
         return $this;
     }
 }
+class CreateAccountSignaturesOptions
+{
+    /**
+      * $decode_only 
+      * @var string
+      */
+    protected $decode_only;
+
+    /**
+     * Gets decode_only
+     * @return string
+     */
+    public function getDecodeOnly()
+    {
+        return $this->decode_only;
+    }
+  
+    /**
+     * Sets decode_only
+     * @param string $decode_only 
+     * @return $this
+     */
+    public function setDecodeOnly($decode_only)
+    {
+        $this->decode_only = $decode_only;
+        return $this;
+    }
+}
 class CreateCustomFieldOptions
 {
     /**
@@ -193,6 +221,112 @@ class GetAccountInformationOptions
     public function setIncludeAccountSettings($include_account_settings)
     {
         $this->include_account_settings = $include_account_settings;
+        return $this;
+    }
+}
+class GetAccountSignatureImageOptions
+{
+    /**
+      * $include_chrome 
+      * @var string
+      */
+    protected $include_chrome;
+
+    /**
+     * Gets include_chrome
+     * @return string
+     */
+    public function getIncludeChrome()
+    {
+        return $this->include_chrome;
+    }
+  
+    /**
+     * Sets include_chrome
+     * @param string $include_chrome 
+     * @return $this
+     */
+    public function setIncludeChrome($include_chrome)
+    {
+        $this->include_chrome = $include_chrome;
+        return $this;
+    }
+}
+class GetAccountSignaturesOptions
+{
+    /**
+      * $stamp_format 
+      * @var string
+      */
+    protected $stamp_format;
+
+    /**
+     * Gets stamp_format
+     * @return string
+     */
+    public function getStampFormat()
+    {
+        return $this->stamp_format;
+    }
+  
+    /**
+     * Sets stamp_format
+     * @param string $stamp_format 
+     * @return $this
+     */
+    public function setStampFormat($stamp_format)
+    {
+        $this->stamp_format = $stamp_format;
+        return $this;
+    }
+    /**
+      * $stamp_name 
+      * @var string
+      */
+    protected $stamp_name;
+
+    /**
+     * Gets stamp_name
+     * @return string
+     */
+    public function getStampName()
+    {
+        return $this->stamp_name;
+    }
+  
+    /**
+     * Sets stamp_name
+     * @param string $stamp_name 
+     * @return $this
+     */
+    public function setStampName($stamp_name)
+    {
+        $this->stamp_name = $stamp_name;
+        return $this;
+    }
+    /**
+      * $stamp_type 
+      * @var string
+      */
+    protected $stamp_type;
+
+    /**
+     * Gets stamp_type
+     * @return string
+     */
+    public function getStampType()
+    {
+        return $this->stamp_type;
+    }
+  
+    /**
+     * Sets stamp_type
+     * @param string $stamp_type 
+     * @return $this
+     */
+    public function setStampType($stamp_type)
+    {
+        $this->stamp_type = $stamp_type;
         return $this;
     }
 }
@@ -698,6 +832,62 @@ class ListSharedAccessOptions
         return $this;
     }
 }
+class UpdateAccountSignatureByIdOptions
+{
+    /**
+      * $close_existing_signature 
+      * @var string
+      */
+    protected $close_existing_signature;
+
+    /**
+     * Gets close_existing_signature
+     * @return string
+     */
+    public function getCloseExistingSignature()
+    {
+        return $this->close_existing_signature;
+    }
+  
+    /**
+     * Sets close_existing_signature
+     * @param string $close_existing_signature 
+     * @return $this
+     */
+    public function setCloseExistingSignature($close_existing_signature)
+    {
+        $this->close_existing_signature = $close_existing_signature;
+        return $this;
+    }
+}
+class UpdateAccountSignatureImageOptions
+{
+    /**
+      * $transparent_png 
+      * @var string
+      */
+    protected $transparent_png;
+
+    /**
+     * Gets transparent_png
+     * @return string
+     */
+    public function getTransparentPng()
+    {
+        return $this->transparent_png;
+    }
+  
+    /**
+     * Sets transparent_png
+     * @param string $transparent_png 
+     * @return $this
+     */
+    public function setTransparentPng($transparent_png)
+    {
+        $this->transparent_png = $transparent_png;
+        return $this;
+    }
+}
 class UpdateConsumerDisclosureOptions
 {
     /**
@@ -1008,6 +1198,117 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 201:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\NewAccountSummary', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createAccountSignatures
+     *
+     * Adds/updates one or more account signatures. This request may include images in multi-part format.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountSignaturesInformation
+     */
+    public function createAccountSignatures($account_id, $account_signatures_information = null, AccountsApi\CreateAccountSignaturesOptions $options = null)
+    {
+        list($response) = $this->createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information, $options);
+        return $response;
+    }
+
+    /**
+     * Operation createAccountSignaturesWithHttpInfo
+     *
+     * Adds/updates one or more account signatures. This request may include images in multi-part format.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information = null, AccountsApi\CreateAccountSignaturesOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createAccountSignatures');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getDecodeOnly() !== null) {
+            $queryParams['decode_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getDecodeOnly());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($account_signatures_information)) {
+            $_tempBody = $account_signatures_information;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountSignaturesInformation',
+                '/v2.1/accounts/{accountId}/signatures'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountSignaturesInformation', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSignaturesInformation', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -1524,6 +1825,232 @@ class AccountsApi
             return [null, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteAccountSignature
+     *
+     * Close the specified signature by Id.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return void
+     */
+    public function deleteAccountSignature($account_id, $signature_id)
+    {
+        list($response) = $this->deleteAccountSignatureWithHttpInfo($account_id, $signature_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteAccountSignatureWithHttpInfo
+     *
+     * Close the specified signature by Id.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteAccountSignatureWithHttpInfo($account_id, $signature_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteAccountSignature');
+        }
+        // verify the required parameter 'signature_id' is set
+        if ($signature_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $signature_id when calling deleteAccountSignature');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($signature_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "signatureId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($signature_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/signatures/{signatureId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteAccountSignatureImage
+     *
+     * Deletes a signature, initials, or stamps image.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $image_type One of **signature_image** or **initials_image**.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountSignature
+     */
+    public function deleteAccountSignatureImage($account_id, $image_type, $signature_id)
+    {
+        list($response) = $this->deleteAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteAccountSignatureImageWithHttpInfo
+     *
+     * Deletes a signature, initials, or stamps image.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $image_type One of **signature_image** or **initials_image**.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteAccountSignatureImage');
+        }
+        // verify the required parameter 'image_type' is set
+        if ($image_type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $image_type when calling deleteAccountSignatureImage');
+        }
+        // verify the required parameter 'signature_id' is set
+        if ($signature_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $signature_id when calling deleteAccountSignatureImage');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($image_type !== null) {
+            $resourcePath = str_replace(
+                "{" . "imageType" . "}",
+                $this->apiClient->getSerializer()->toPathValue($image_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($signature_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "signatureId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($signature_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountSignature',
+                '/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountSignature', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSignature', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -2597,6 +3124,358 @@ class AccountsApi
     }
 
     /**
+     * Operation getAccountSignature
+     *
+     * Returns information about a single signature by specifed signatureId.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountSignature
+     */
+    public function getAccountSignature($account_id, $signature_id)
+    {
+        list($response) = $this->getAccountSignatureWithHttpInfo($account_id, $signature_id);
+        return $response;
+    }
+
+    /**
+     * Operation getAccountSignatureWithHttpInfo
+     *
+     * Returns information about a single signature by specifed signatureId.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAccountSignatureWithHttpInfo($account_id, $signature_id)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getAccountSignature');
+        }
+        // verify the required parameter 'signature_id' is set
+        if ($signature_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $signature_id when calling getAccountSignature');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($signature_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "signatureId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($signature_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountSignature',
+                '/v2.1/accounts/{accountId}/signatures/{signatureId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountSignature', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSignature', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAccountSignatureImage
+     *
+     * Returns a signature, initials, or stamps image.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $image_type One of **signature_image** or **initials_image**.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \SplFileObject
+     */
+    public function getAccountSignatureImage($account_id, $image_type, $signature_id, AccountsApi\GetAccountSignatureImageOptions $options = null)
+    {
+        list($response) = $this->getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getAccountSignatureImageWithHttpInfo
+     *
+     * Returns a signature, initials, or stamps image.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $image_type One of **signature_image** or **initials_image**.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, AccountsApi\GetAccountSignatureImageOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getAccountSignatureImage');
+        }
+        // verify the required parameter 'image_type' is set
+        if ($image_type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $image_type when calling getAccountSignatureImage');
+        }
+        // verify the required parameter 'signature_id' is set
+        if ($signature_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $signature_id when calling getAccountSignatureImage');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['image/gif']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getIncludeChrome() !== null) {
+            $queryParams['include_chrome'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeChrome());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($image_type !== null) {
+            $resourcePath = str_replace(
+                "{" . "imageType" . "}",
+                $this->apiClient->getSerializer()->toPathValue($image_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($signature_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "signatureId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($signature_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\SplFileObject',
+                '/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAccountSignatures
+     *
+     * Returns the managed signature definitions for the account
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountSignaturesInformation
+     */
+    public function getAccountSignatures($account_id, AccountsApi\GetAccountSignaturesOptions $options = null)
+    {
+        list($response) = $this->getAccountSignaturesWithHttpInfo($account_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getAccountSignaturesWithHttpInfo
+     *
+     * Returns the managed signature definitions for the account
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAccountSignaturesWithHttpInfo($account_id, AccountsApi\GetAccountSignaturesOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getAccountSignatures');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getStampFormat() !== null) {
+            $queryParams['stamp_format'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampFormat());
+        }
+        // query params
+        if ($options->getStampName() !== null) {
+            $queryParams['stamp_name'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampName());
+        }
+        // query params
+        if ($options->getStampType() !== null) {
+            $queryParams['stamp_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampType());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountSignaturesInformation',
+                '/v2.1/accounts/{accountId}/signatures'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountSignaturesInformation', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSignaturesInformation', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getAccountTabSettings
      *
      * Returns tab settings list for specified account
@@ -3482,7 +4361,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
@@ -3498,7 +4377,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5853,6 +6732,364 @@ class AccountsApi
     }
 
     /**
+     * Operation updateAccountSignature
+     *
+     * Updates a account signature.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountSignaturesInformation
+     */
+    public function updateAccountSignature($account_id, $account_signatures_information = null)
+    {
+        list($response) = $this->updateAccountSignatureWithHttpInfo($account_id, $account_signatures_information);
+        return $response;
+    }
+
+    /**
+     * Operation updateAccountSignatureWithHttpInfo
+     *
+     * Updates a account signature.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateAccountSignatureWithHttpInfo($account_id, $account_signatures_information = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateAccountSignature');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($account_signatures_information)) {
+            $_tempBody = $account_signatures_information;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountSignaturesInformation',
+                '/v2.1/accounts/{accountId}/signatures'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountSignaturesInformation', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSignaturesInformation', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateAccountSignatureById
+     *
+     * Updates a account signature.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @param \DocuSign\eSign\Model\AccountSignatureDefinition $account_signature_definition  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountSignature
+     */
+    public function updateAccountSignatureById($account_id, $signature_id, $account_signature_definition = null, AccountsApi\UpdateAccountSignatureByIdOptions $options = null)
+    {
+        list($response) = $this->updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition, $options);
+        return $response;
+    }
+
+    /**
+     * Operation updateAccountSignatureByIdWithHttpInfo
+     *
+     * Updates a account signature.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @param \DocuSign\eSign\Model\AccountSignatureDefinition $account_signature_definition  (optional)
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition = null, AccountsApi\UpdateAccountSignatureByIdOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateAccountSignatureById');
+        }
+        // verify the required parameter 'signature_id' is set
+        if ($signature_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $signature_id when calling updateAccountSignatureById');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getCloseExistingSignature() !== null) {
+            $queryParams['close_existing_signature'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloseExistingSignature());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($signature_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "signatureId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($signature_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($account_signature_definition)) {
+            $_tempBody = $account_signature_definition;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountSignature',
+                '/v2.1/accounts/{accountId}/signatures/{signatureId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountSignature', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSignature', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateAccountSignatureImage
+     *
+     * Sets a signature, initials, or stamps image.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $image_type One of **signature_image** or **initials_image**.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\AccountSignature
+     */
+    public function updateAccountSignatureImage($account_id, $image_type, $signature_id, AccountsApi\UpdateAccountSignatureImageOptions $options = null)
+    {
+        list($response) = $this->updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation updateAccountSignatureImageWithHttpInfo
+     *
+     * Sets a signature, initials, or stamps image.
+     *
+    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $image_type One of **signature_image** or **initials_image**.
+    * @param string $signature_id The ID of the signature being accessed.
+     * @param  $options Options for modifying the behavior of the function. (optional)
+     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, AccountsApi\UpdateAccountSignatureImageOptions $options = null)
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateAccountSignatureImage');
+        }
+        // verify the required parameter 'image_type' is set
+        if ($image_type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $image_type when calling updateAccountSignatureImage');
+        }
+        // verify the required parameter 'signature_id' is set
+        if ($signature_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $signature_id when calling updateAccountSignatureImage');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/gif']);
+
+        if ($options != null)
+        {
+        // query params
+        // query params
+        if ($options->getTransparentPng() !== null) {
+            $queryParams['transparent_png'] = $this->apiClient->getSerializer()->toQueryValue($options->getTransparentPng());
+        }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "accountId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($account_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($image_type !== null) {
+            $resourcePath = str_replace(
+                "{" . "imageType" . "}",
+                $this->apiClient->getSerializer()->toPathValue($image_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($signature_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "signatureId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($signature_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\AccountSignature',
+                '/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\AccountSignature', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\AccountSignature', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation updateAccountTabSettings
      *
      * Modifies tab settings for specified account
@@ -6325,7 +7562,7 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
@@ -6343,7 +7580,7 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
     * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  $options Options for modifying the behavior of the function. (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
