@@ -58,7 +58,8 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'return_url' => 'string',
-        'suppress_navigation' => 'string'
+        'suppress_navigation' => 'string',
+        'view_url' => 'string'
     ];
 
     /**
@@ -68,7 +69,8 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'return_url' => null,
-        'suppress_navigation' => null
+        'suppress_navigation' => null,
+        'view_url' => null
     ];
 
     /**
@@ -99,7 +101,8 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'return_url' => 'returnUrl',
-        'suppress_navigation' => 'suppressNavigation'
+        'suppress_navigation' => 'suppressNavigation',
+        'view_url' => 'viewUrl'
     ];
 
     /**
@@ -109,7 +112,8 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'return_url' => 'setReturnUrl',
-        'suppress_navigation' => 'setSuppressNavigation'
+        'suppress_navigation' => 'setSuppressNavigation',
+        'view_url' => 'setViewUrl'
     ];
 
     /**
@@ -119,7 +123,8 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'return_url' => 'getReturnUrl',
-        'suppress_navigation' => 'getSuppressNavigation'
+        'suppress_navigation' => 'getSuppressNavigation',
+        'view_url' => 'getViewUrl'
     ];
 
     /**
@@ -184,6 +189,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     {
         $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
         $this->container['suppress_navigation'] = isset($data['suppress_navigation']) ? $data['suppress_navigation'] : null;
+        $this->container['view_url'] = isset($data['view_url']) ? $data['view_url'] : null;
     }
 
     /**
@@ -254,6 +260,30 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     public function setSuppressNavigation($suppress_navigation)
     {
         $this->container['suppress_navigation'] = $suppress_navigation;
+
+        return $this;
+    }
+
+    /**
+     * Gets view_url
+     *
+     * @return string
+     */
+    public function getViewUrl()
+    {
+        return $this->container['view_url'];
+    }
+
+    /**
+     * Sets view_url
+     *
+     * @param string $view_url 
+     *
+     * @return $this
+     */
+    public function setViewUrl($view_url)
+    {
+        $this->container['view_url'] = $view_url;
 
         return $this;
     }
