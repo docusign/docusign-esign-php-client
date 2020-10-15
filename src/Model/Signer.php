@@ -61,7 +61,6 @@ class Signer implements ModelInterface, ArrayAccess
         'access_code_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'add_access_code_to_email' => 'string',
         'additional_notifications' => '\DocuSign\eSign\Model\RecipientAdditionalNotification[]',
-        'additional_notifications_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'agent_can_edit_email' => 'string',
         'agent_can_edit_name' => 'string',
         'allow_system_override_for_locked_recipient' => 'string',
@@ -160,7 +159,6 @@ class Signer implements ModelInterface, ArrayAccess
         'access_code_metadata' => null,
         'add_access_code_to_email' => null,
         'additional_notifications' => null,
-        'additional_notifications_metadata' => null,
         'agent_can_edit_email' => null,
         'agent_can_edit_name' => null,
         'allow_system_override_for_locked_recipient' => null,
@@ -280,7 +278,6 @@ class Signer implements ModelInterface, ArrayAccess
         'access_code_metadata' => 'accessCodeMetadata',
         'add_access_code_to_email' => 'addAccessCodeToEmail',
         'additional_notifications' => 'additionalNotifications',
-        'additional_notifications_metadata' => 'additionalNotificationsMetadata',
         'agent_can_edit_email' => 'agentCanEditEmail',
         'agent_can_edit_name' => 'agentCanEditName',
         'allow_system_override_for_locked_recipient' => 'allowSystemOverrideForLockedRecipient',
@@ -379,7 +376,6 @@ class Signer implements ModelInterface, ArrayAccess
         'access_code_metadata' => 'setAccessCodeMetadata',
         'add_access_code_to_email' => 'setAddAccessCodeToEmail',
         'additional_notifications' => 'setAdditionalNotifications',
-        'additional_notifications_metadata' => 'setAdditionalNotificationsMetadata',
         'agent_can_edit_email' => 'setAgentCanEditEmail',
         'agent_can_edit_name' => 'setAgentCanEditName',
         'allow_system_override_for_locked_recipient' => 'setAllowSystemOverrideForLockedRecipient',
@@ -478,7 +474,6 @@ class Signer implements ModelInterface, ArrayAccess
         'access_code_metadata' => 'getAccessCodeMetadata',
         'add_access_code_to_email' => 'getAddAccessCodeToEmail',
         'additional_notifications' => 'getAdditionalNotifications',
-        'additional_notifications_metadata' => 'getAdditionalNotificationsMetadata',
         'agent_can_edit_email' => 'getAgentCanEditEmail',
         'agent_can_edit_name' => 'getAgentCanEditName',
         'allow_system_override_for_locked_recipient' => 'getAllowSystemOverrideForLockedRecipient',
@@ -631,7 +626,6 @@ class Signer implements ModelInterface, ArrayAccess
         $this->container['access_code_metadata'] = isset($data['access_code_metadata']) ? $data['access_code_metadata'] : null;
         $this->container['add_access_code_to_email'] = isset($data['add_access_code_to_email']) ? $data['add_access_code_to_email'] : null;
         $this->container['additional_notifications'] = isset($data['additional_notifications']) ? $data['additional_notifications'] : null;
-        $this->container['additional_notifications_metadata'] = isset($data['additional_notifications_metadata']) ? $data['additional_notifications_metadata'] : null;
         $this->container['agent_can_edit_email'] = isset($data['agent_can_edit_email']) ? $data['agent_can_edit_email'] : null;
         $this->container['agent_can_edit_name'] = isset($data['agent_can_edit_name']) ? $data['agent_can_edit_name'] : null;
         $this->container['allow_system_override_for_locked_recipient'] = isset($data['allow_system_override_for_locked_recipient']) ? $data['allow_system_override_for_locked_recipient'] : null;
@@ -836,30 +830,6 @@ class Signer implements ModelInterface, ArrayAccess
     public function setAdditionalNotifications($additional_notifications)
     {
         $this->container['additional_notifications'] = $additional_notifications;
-
-        return $this;
-    }
-
-    /**
-     * Gets additional_notifications_metadata
-     *
-     * @return \DocuSign\eSign\Model\PropertyMetadata
-     */
-    public function getAdditionalNotificationsMetadata()
-    {
-        return $this->container['additional_notifications_metadata'];
-    }
-
-    /**
-     * Sets additional_notifications_metadata
-     *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $additional_notifications_metadata additional_notifications_metadata
-     *
-     * @return $this
-     */
-    public function setAdditionalNotificationsMetadata($additional_notifications_metadata)
-    {
-        $this->container['additional_notifications_metadata'] = $additional_notifications_metadata;
 
         return $this;
     }

@@ -57,6 +57,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'batch_name' => 'string',
         'envelope_or_template_id' => 'string'
     ];
 
@@ -66,6 +67,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'batch_name' => null,
         'envelope_or_template_id' => null
     ];
 
@@ -96,6 +98,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'batch_name' => 'batchName',
         'envelope_or_template_id' => 'envelopeOrTemplateId'
     ];
 
@@ -105,6 +108,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'batch_name' => 'setBatchName',
         'envelope_or_template_id' => 'setEnvelopeOrTemplateId'
     ];
 
@@ -114,6 +118,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'batch_name' => 'getBatchName',
         'envelope_or_template_id' => 'getEnvelopeOrTemplateId'
     ];
 
@@ -177,6 +182,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
         $this->container['envelope_or_template_id'] = isset($data['envelope_or_template_id']) ? $data['envelope_or_template_id'] : null;
     }
 
@@ -203,6 +209,30 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets batch_name
+     *
+     * @return string
+     */
+    public function getBatchName()
+    {
+        return $this->container['batch_name'];
+    }
+
+    /**
+     * Sets batch_name
+     *
+     * @param string $batch_name 
+     *
+     * @return $this
+     */
+    public function setBatchName($batch_name)
+    {
+        $this->container['batch_name'] = $batch_name;
+
+        return $this;
+    }
 
     /**
      * Gets envelope_or_template_id
