@@ -58,6 +58,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'batch_id' => 'string',
+        'batch_name' => 'string',
         'batch_size' => 'string',
         'envelope_or_template_id' => 'string',
         'error_details' => 'string[]',
@@ -73,6 +74,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'batch_id' => null,
+        'batch_name' => null,
         'batch_size' => null,
         'envelope_or_template_id' => null,
         'error_details' => null,
@@ -109,6 +111,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'batch_id' => 'batchId',
+        'batch_name' => 'batchName',
         'batch_size' => 'batchSize',
         'envelope_or_template_id' => 'envelopeOrTemplateId',
         'error_details' => 'errorDetails',
@@ -124,6 +127,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'batch_id' => 'setBatchId',
+        'batch_name' => 'setBatchName',
         'batch_size' => 'setBatchSize',
         'envelope_or_template_id' => 'setEnvelopeOrTemplateId',
         'error_details' => 'setErrorDetails',
@@ -139,6 +143,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'batch_id' => 'getBatchId',
+        'batch_name' => 'getBatchName',
         'batch_size' => 'getBatchSize',
         'envelope_or_template_id' => 'getEnvelopeOrTemplateId',
         'error_details' => 'getErrorDetails',
@@ -208,6 +213,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
+        $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
         $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;
         $this->container['envelope_or_template_id'] = isset($data['envelope_or_template_id']) ? $data['envelope_or_template_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -260,6 +266,30 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     public function setBatchId($batch_id)
     {
         $this->container['batch_id'] = $batch_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets batch_name
+     *
+     * @return string
+     */
+    public function getBatchName()
+    {
+        return $this->container['batch_name'];
+    }
+
+    /**
+     * Sets batch_name
+     *
+     * @param string $batch_name 
+     *
+     * @return $this
+     */
+    public function setBatchName($batch_name)
+    {
+        $this->container['batch_name'] = $batch_name;
 
         return $this;
     }

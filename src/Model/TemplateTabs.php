@@ -60,6 +60,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'approve_tabs' => '\DocuSign\eSign\Model\Approve[]',
         'checkbox_tabs' => '\DocuSign\eSign\Model\Checkbox[]',
         'comment_thread_tabs' => '\DocuSign\eSign\Model\CommentThread[]',
+        'commission_county_tabs' => '\DocuSign\eSign\Model\CommissionCounty[]',
+        'commission_expiration_tabs' => '\DocuSign\eSign\Model\CommissionExpiration[]',
+        'commission_number_tabs' => '\DocuSign\eSign\Model\CommissionNumber[]',
+        'commission_state_tabs' => '\DocuSign\eSign\Model\CommissionState[]',
         'company_tabs' => '\DocuSign\eSign\Model\Company[]',
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
         'date_tabs' => '\DocuSign\eSign\Model\\Date[]',
@@ -75,10 +79,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => '\DocuSign\eSign\Model\LastName[]',
         'list_tabs' => '\DocuSign\eSign\Model\array[]',
         'notarize_tabs' => '\DocuSign\eSign\Model\Notarize[]',
-        'notary_certificate_tabs' => '\DocuSign\eSign\Model\NotaryCertificate[]',
         'notary_seal_tabs' => '\DocuSign\eSign\Model\NotarySeal[]',
         'note_tabs' => '\DocuSign\eSign\Model\Note[]',
         'number_tabs' => '\DocuSign\eSign\Model\Number[]',
+        'phone_number_tabs' => '\DocuSign\eSign\Model\PhoneNumber[]',
         'poly_line_overlay_tabs' => '\DocuSign\eSign\Model\PolyLineOverlay[]',
         'radio_group_tabs' => '\DocuSign\eSign\Model\RadioGroup[]',
         'signer_attachment_tabs' => '\DocuSign\eSign\Model\SignerAttachment[]',
@@ -101,6 +105,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'approve_tabs' => null,
         'checkbox_tabs' => null,
         'comment_thread_tabs' => null,
+        'commission_county_tabs' => null,
+        'commission_expiration_tabs' => null,
+        'commission_number_tabs' => null,
+        'commission_state_tabs' => null,
         'company_tabs' => null,
         'date_signed_tabs' => null,
         'date_tabs' => null,
@@ -116,10 +124,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => null,
         'list_tabs' => null,
         'notarize_tabs' => null,
-        'notary_certificate_tabs' => null,
         'notary_seal_tabs' => null,
         'note_tabs' => null,
         'number_tabs' => null,
+        'phone_number_tabs' => null,
         'poly_line_overlay_tabs' => null,
         'radio_group_tabs' => null,
         'signer_attachment_tabs' => null,
@@ -163,6 +171,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'approve_tabs' => 'approveTabs',
         'checkbox_tabs' => 'checkboxTabs',
         'comment_thread_tabs' => 'commentThreadTabs',
+        'commission_county_tabs' => 'commissionCountyTabs',
+        'commission_expiration_tabs' => 'commissionExpirationTabs',
+        'commission_number_tabs' => 'commissionNumberTabs',
+        'commission_state_tabs' => 'commissionStateTabs',
         'company_tabs' => 'companyTabs',
         'date_signed_tabs' => 'dateSignedTabs',
         'date_tabs' => 'dateTabs',
@@ -178,10 +190,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => 'lastNameTabs',
         'list_tabs' => 'listTabs',
         'notarize_tabs' => 'notarizeTabs',
-        'notary_certificate_tabs' => 'notaryCertificateTabs',
         'notary_seal_tabs' => 'notarySealTabs',
         'note_tabs' => 'noteTabs',
         'number_tabs' => 'numberTabs',
+        'phone_number_tabs' => 'phoneNumberTabs',
         'poly_line_overlay_tabs' => 'polyLineOverlayTabs',
         'radio_group_tabs' => 'radioGroupTabs',
         'signer_attachment_tabs' => 'signerAttachmentTabs',
@@ -204,6 +216,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'approve_tabs' => 'setApproveTabs',
         'checkbox_tabs' => 'setCheckboxTabs',
         'comment_thread_tabs' => 'setCommentThreadTabs',
+        'commission_county_tabs' => 'setCommissionCountyTabs',
+        'commission_expiration_tabs' => 'setCommissionExpirationTabs',
+        'commission_number_tabs' => 'setCommissionNumberTabs',
+        'commission_state_tabs' => 'setCommissionStateTabs',
         'company_tabs' => 'setCompanyTabs',
         'date_signed_tabs' => 'setDateSignedTabs',
         'date_tabs' => 'setDateTabs',
@@ -219,10 +235,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => 'setLastNameTabs',
         'list_tabs' => 'setListTabs',
         'notarize_tabs' => 'setNotarizeTabs',
-        'notary_certificate_tabs' => 'setNotaryCertificateTabs',
         'notary_seal_tabs' => 'setNotarySealTabs',
         'note_tabs' => 'setNoteTabs',
         'number_tabs' => 'setNumberTabs',
+        'phone_number_tabs' => 'setPhoneNumberTabs',
         'poly_line_overlay_tabs' => 'setPolyLineOverlayTabs',
         'radio_group_tabs' => 'setRadioGroupTabs',
         'signer_attachment_tabs' => 'setSignerAttachmentTabs',
@@ -245,6 +261,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'approve_tabs' => 'getApproveTabs',
         'checkbox_tabs' => 'getCheckboxTabs',
         'comment_thread_tabs' => 'getCommentThreadTabs',
+        'commission_county_tabs' => 'getCommissionCountyTabs',
+        'commission_expiration_tabs' => 'getCommissionExpirationTabs',
+        'commission_number_tabs' => 'getCommissionNumberTabs',
+        'commission_state_tabs' => 'getCommissionStateTabs',
         'company_tabs' => 'getCompanyTabs',
         'date_signed_tabs' => 'getDateSignedTabs',
         'date_tabs' => 'getDateTabs',
@@ -260,10 +280,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'last_name_tabs' => 'getLastNameTabs',
         'list_tabs' => 'getListTabs',
         'notarize_tabs' => 'getNotarizeTabs',
-        'notary_certificate_tabs' => 'getNotaryCertificateTabs',
         'notary_seal_tabs' => 'getNotarySealTabs',
         'note_tabs' => 'getNoteTabs',
         'number_tabs' => 'getNumberTabs',
+        'phone_number_tabs' => 'getPhoneNumberTabs',
         'poly_line_overlay_tabs' => 'getPolyLineOverlayTabs',
         'radio_group_tabs' => 'getRadioGroupTabs',
         'signer_attachment_tabs' => 'getSignerAttachmentTabs',
@@ -340,6 +360,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         $this->container['approve_tabs'] = isset($data['approve_tabs']) ? $data['approve_tabs'] : null;
         $this->container['checkbox_tabs'] = isset($data['checkbox_tabs']) ? $data['checkbox_tabs'] : null;
         $this->container['comment_thread_tabs'] = isset($data['comment_thread_tabs']) ? $data['comment_thread_tabs'] : null;
+        $this->container['commission_county_tabs'] = isset($data['commission_county_tabs']) ? $data['commission_county_tabs'] : null;
+        $this->container['commission_expiration_tabs'] = isset($data['commission_expiration_tabs']) ? $data['commission_expiration_tabs'] : null;
+        $this->container['commission_number_tabs'] = isset($data['commission_number_tabs']) ? $data['commission_number_tabs'] : null;
+        $this->container['commission_state_tabs'] = isset($data['commission_state_tabs']) ? $data['commission_state_tabs'] : null;
         $this->container['company_tabs'] = isset($data['company_tabs']) ? $data['company_tabs'] : null;
         $this->container['date_signed_tabs'] = isset($data['date_signed_tabs']) ? $data['date_signed_tabs'] : null;
         $this->container['date_tabs'] = isset($data['date_tabs']) ? $data['date_tabs'] : null;
@@ -355,10 +379,10 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         $this->container['last_name_tabs'] = isset($data['last_name_tabs']) ? $data['last_name_tabs'] : null;
         $this->container['list_tabs'] = isset($data['list_tabs']) ? $data['list_tabs'] : null;
         $this->container['notarize_tabs'] = isset($data['notarize_tabs']) ? $data['notarize_tabs'] : null;
-        $this->container['notary_certificate_tabs'] = isset($data['notary_certificate_tabs']) ? $data['notary_certificate_tabs'] : null;
         $this->container['notary_seal_tabs'] = isset($data['notary_seal_tabs']) ? $data['notary_seal_tabs'] : null;
         $this->container['note_tabs'] = isset($data['note_tabs']) ? $data['note_tabs'] : null;
         $this->container['number_tabs'] = isset($data['number_tabs']) ? $data['number_tabs'] : null;
+        $this->container['phone_number_tabs'] = isset($data['phone_number_tabs']) ? $data['phone_number_tabs'] : null;
         $this->container['poly_line_overlay_tabs'] = isset($data['poly_line_overlay_tabs']) ? $data['poly_line_overlay_tabs'] : null;
         $this->container['radio_group_tabs'] = isset($data['radio_group_tabs']) ? $data['radio_group_tabs'] : null;
         $this->container['signer_attachment_tabs'] = isset($data['signer_attachment_tabs']) ? $data['signer_attachment_tabs'] : null;
@@ -464,6 +488,102 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     public function setCommentThreadTabs($comment_thread_tabs)
     {
         $this->container['comment_thread_tabs'] = $comment_thread_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets commission_county_tabs
+     *
+     * @return \DocuSign\eSign\Model\CommissionCounty[]
+     */
+    public function getCommissionCountyTabs()
+    {
+        return $this->container['commission_county_tabs'];
+    }
+
+    /**
+     * Sets commission_county_tabs
+     *
+     * @param \DocuSign\eSign\Model\CommissionCounty[] $commission_county_tabs 
+     *
+     * @return $this
+     */
+    public function setCommissionCountyTabs($commission_county_tabs)
+    {
+        $this->container['commission_county_tabs'] = $commission_county_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets commission_expiration_tabs
+     *
+     * @return \DocuSign\eSign\Model\CommissionExpiration[]
+     */
+    public function getCommissionExpirationTabs()
+    {
+        return $this->container['commission_expiration_tabs'];
+    }
+
+    /**
+     * Sets commission_expiration_tabs
+     *
+     * @param \DocuSign\eSign\Model\CommissionExpiration[] $commission_expiration_tabs 
+     *
+     * @return $this
+     */
+    public function setCommissionExpirationTabs($commission_expiration_tabs)
+    {
+        $this->container['commission_expiration_tabs'] = $commission_expiration_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets commission_number_tabs
+     *
+     * @return \DocuSign\eSign\Model\CommissionNumber[]
+     */
+    public function getCommissionNumberTabs()
+    {
+        return $this->container['commission_number_tabs'];
+    }
+
+    /**
+     * Sets commission_number_tabs
+     *
+     * @param \DocuSign\eSign\Model\CommissionNumber[] $commission_number_tabs 
+     *
+     * @return $this
+     */
+    public function setCommissionNumberTabs($commission_number_tabs)
+    {
+        $this->container['commission_number_tabs'] = $commission_number_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets commission_state_tabs
+     *
+     * @return \DocuSign\eSign\Model\CommissionState[]
+     */
+    public function getCommissionStateTabs()
+    {
+        return $this->container['commission_state_tabs'];
+    }
+
+    /**
+     * Sets commission_state_tabs
+     *
+     * @param \DocuSign\eSign\Model\CommissionState[] $commission_state_tabs 
+     *
+     * @return $this
+     */
+    public function setCommissionStateTabs($commission_state_tabs)
+    {
+        $this->container['commission_state_tabs'] = $commission_state_tabs;
 
         return $this;
     }
@@ -829,30 +949,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets notary_certificate_tabs
-     *
-     * @return \DocuSign\eSign\Model\NotaryCertificate[]
-     */
-    public function getNotaryCertificateTabs()
-    {
-        return $this->container['notary_certificate_tabs'];
-    }
-
-    /**
-     * Sets notary_certificate_tabs
-     *
-     * @param \DocuSign\eSign\Model\NotaryCertificate[] $notary_certificate_tabs 
-     *
-     * @return $this
-     */
-    public function setNotaryCertificateTabs($notary_certificate_tabs)
-    {
-        $this->container['notary_certificate_tabs'] = $notary_certificate_tabs;
-
-        return $this;
-    }
-
-    /**
      * Gets notary_seal_tabs
      *
      * @return \DocuSign\eSign\Model\NotarySeal[]
@@ -920,6 +1016,30 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     public function setNumberTabs($number_tabs)
     {
         $this->container['number_tabs'] = $number_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number_tabs
+     *
+     * @return \DocuSign\eSign\Model\PhoneNumber[]
+     */
+    public function getPhoneNumberTabs()
+    {
+        return $this->container['phone_number_tabs'];
+    }
+
+    /**
+     * Sets phone_number_tabs
+     *
+     * @param \DocuSign\eSign\Model\PhoneNumber[] $phone_number_tabs 
+     *
+     * @return $this
+     */
+    public function setPhoneNumberTabs($phone_number_tabs)
+    {
+        $this->container['phone_number_tabs'] = $phone_number_tabs;
 
         return $this;
     }

@@ -167,6 +167,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_private_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_reminders' => 'string',
         'allow_reminders_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_remote_notary' => 'string',
+        'allow_remote_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_resource_file_branding' => 'string',
         'allow_resource_file_branding_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_safe_bio_pharma_signer_certificate' => 'string',
@@ -293,6 +295,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_advanced_payments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_advanced_power_forms' => 'string',
         'enable_advanced_power_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_agreement_actions_for_clm' => 'string',
+        'enable_agreement_actions_for_clm_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_agreement_actions_for_e_sign' => 'string',
+        'enable_agreement_actions_for_e_sign_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_auto_nav' => 'string',
         'enable_auto_nav_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_calculated_fields' => 'string',
@@ -692,6 +698,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_private_signing_groups_metadata' => null,
         'allow_reminders' => null,
         'allow_reminders_metadata' => null,
+        'allow_remote_notary' => null,
+        'allow_remote_notary_metadata' => null,
         'allow_resource_file_branding' => null,
         'allow_resource_file_branding_metadata' => null,
         'allow_safe_bio_pharma_signer_certificate' => null,
@@ -818,6 +826,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_advanced_payments_metadata' => null,
         'enable_advanced_power_forms' => null,
         'enable_advanced_power_forms_metadata' => null,
+        'enable_agreement_actions_for_clm' => null,
+        'enable_agreement_actions_for_clm_metadata' => null,
+        'enable_agreement_actions_for_e_sign' => null,
+        'enable_agreement_actions_for_e_sign_metadata' => null,
         'enable_auto_nav' => null,
         'enable_auto_nav_metadata' => null,
         'enable_calculated_fields' => null,
@@ -1238,6 +1250,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_private_signing_groups_metadata' => 'allowPrivateSigningGroupsMetadata',
         'allow_reminders' => 'allowReminders',
         'allow_reminders_metadata' => 'allowRemindersMetadata',
+        'allow_remote_notary' => 'allowRemoteNotary',
+        'allow_remote_notary_metadata' => 'allowRemoteNotaryMetadata',
         'allow_resource_file_branding' => 'allowResourceFileBranding',
         'allow_resource_file_branding_metadata' => 'allowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate' => 'allowSafeBioPharmaSignerCertificate',
@@ -1364,6 +1378,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_advanced_payments_metadata' => 'enableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'enableAdvancedPowerForms',
         'enable_advanced_power_forms_metadata' => 'enableAdvancedPowerFormsMetadata',
+        'enable_agreement_actions_for_clm' => 'enableAgreementActionsForCLM',
+        'enable_agreement_actions_for_clm_metadata' => 'enableAgreementActionsForCLMMetadata',
+        'enable_agreement_actions_for_e_sign' => 'enableAgreementActionsForESign',
+        'enable_agreement_actions_for_e_sign_metadata' => 'enableAgreementActionsForESignMetadata',
         'enable_auto_nav' => 'enableAutoNav',
         'enable_auto_nav_metadata' => 'enableAutoNavMetadata',
         'enable_calculated_fields' => 'enableCalculatedFields',
@@ -1763,6 +1781,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_private_signing_groups_metadata' => 'setAllowPrivateSigningGroupsMetadata',
         'allow_reminders' => 'setAllowReminders',
         'allow_reminders_metadata' => 'setAllowRemindersMetadata',
+        'allow_remote_notary' => 'setAllowRemoteNotary',
+        'allow_remote_notary_metadata' => 'setAllowRemoteNotaryMetadata',
         'allow_resource_file_branding' => 'setAllowResourceFileBranding',
         'allow_resource_file_branding_metadata' => 'setAllowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate' => 'setAllowSafeBioPharmaSignerCertificate',
@@ -1889,6 +1909,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_advanced_payments_metadata' => 'setEnableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'setEnableAdvancedPowerForms',
         'enable_advanced_power_forms_metadata' => 'setEnableAdvancedPowerFormsMetadata',
+        'enable_agreement_actions_for_clm' => 'setEnableAgreementActionsForClm',
+        'enable_agreement_actions_for_clm_metadata' => 'setEnableAgreementActionsForClmMetadata',
+        'enable_agreement_actions_for_e_sign' => 'setEnableAgreementActionsForESign',
+        'enable_agreement_actions_for_e_sign_metadata' => 'setEnableAgreementActionsForESignMetadata',
         'enable_auto_nav' => 'setEnableAutoNav',
         'enable_auto_nav_metadata' => 'setEnableAutoNavMetadata',
         'enable_calculated_fields' => 'setEnableCalculatedFields',
@@ -2288,6 +2312,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_private_signing_groups_metadata' => 'getAllowPrivateSigningGroupsMetadata',
         'allow_reminders' => 'getAllowReminders',
         'allow_reminders_metadata' => 'getAllowRemindersMetadata',
+        'allow_remote_notary' => 'getAllowRemoteNotary',
+        'allow_remote_notary_metadata' => 'getAllowRemoteNotaryMetadata',
         'allow_resource_file_branding' => 'getAllowResourceFileBranding',
         'allow_resource_file_branding_metadata' => 'getAllowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate' => 'getAllowSafeBioPharmaSignerCertificate',
@@ -2414,6 +2440,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_advanced_payments_metadata' => 'getEnableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'getEnableAdvancedPowerForms',
         'enable_advanced_power_forms_metadata' => 'getEnableAdvancedPowerFormsMetadata',
+        'enable_agreement_actions_for_clm' => 'getEnableAgreementActionsForClm',
+        'enable_agreement_actions_for_clm_metadata' => 'getEnableAgreementActionsForClmMetadata',
+        'enable_agreement_actions_for_e_sign' => 'getEnableAgreementActionsForESign',
+        'enable_agreement_actions_for_e_sign_metadata' => 'getEnableAgreementActionsForESignMetadata',
         'enable_auto_nav' => 'getEnableAutoNav',
         'enable_auto_nav_metadata' => 'getEnableAutoNavMetadata',
         'enable_calculated_fields' => 'getEnableCalculatedFields',
@@ -2867,6 +2897,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_private_signing_groups_metadata'] = isset($data['allow_private_signing_groups_metadata']) ? $data['allow_private_signing_groups_metadata'] : null;
         $this->container['allow_reminders'] = isset($data['allow_reminders']) ? $data['allow_reminders'] : null;
         $this->container['allow_reminders_metadata'] = isset($data['allow_reminders_metadata']) ? $data['allow_reminders_metadata'] : null;
+        $this->container['allow_remote_notary'] = isset($data['allow_remote_notary']) ? $data['allow_remote_notary'] : null;
+        $this->container['allow_remote_notary_metadata'] = isset($data['allow_remote_notary_metadata']) ? $data['allow_remote_notary_metadata'] : null;
         $this->container['allow_resource_file_branding'] = isset($data['allow_resource_file_branding']) ? $data['allow_resource_file_branding'] : null;
         $this->container['allow_resource_file_branding_metadata'] = isset($data['allow_resource_file_branding_metadata']) ? $data['allow_resource_file_branding_metadata'] : null;
         $this->container['allow_safe_bio_pharma_signer_certificate'] = isset($data['allow_safe_bio_pharma_signer_certificate']) ? $data['allow_safe_bio_pharma_signer_certificate'] : null;
@@ -2993,6 +3025,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_advanced_payments_metadata'] = isset($data['enable_advanced_payments_metadata']) ? $data['enable_advanced_payments_metadata'] : null;
         $this->container['enable_advanced_power_forms'] = isset($data['enable_advanced_power_forms']) ? $data['enable_advanced_power_forms'] : null;
         $this->container['enable_advanced_power_forms_metadata'] = isset($data['enable_advanced_power_forms_metadata']) ? $data['enable_advanced_power_forms_metadata'] : null;
+        $this->container['enable_agreement_actions_for_clm'] = isset($data['enable_agreement_actions_for_clm']) ? $data['enable_agreement_actions_for_clm'] : null;
+        $this->container['enable_agreement_actions_for_clm_metadata'] = isset($data['enable_agreement_actions_for_clm_metadata']) ? $data['enable_agreement_actions_for_clm_metadata'] : null;
+        $this->container['enable_agreement_actions_for_e_sign'] = isset($data['enable_agreement_actions_for_e_sign']) ? $data['enable_agreement_actions_for_e_sign'] : null;
+        $this->container['enable_agreement_actions_for_e_sign_metadata'] = isset($data['enable_agreement_actions_for_e_sign_metadata']) ? $data['enable_agreement_actions_for_e_sign_metadata'] : null;
         $this->container['enable_auto_nav'] = isset($data['enable_auto_nav']) ? $data['enable_auto_nav'] : null;
         $this->container['enable_auto_nav_metadata'] = isset($data['enable_auto_nav_metadata']) ? $data['enable_auto_nav_metadata'] : null;
         $this->container['enable_calculated_fields'] = isset($data['enable_calculated_fields']) ? $data['enable_calculated_fields'] : null;
@@ -5913,6 +5949,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowRemindersMetadata($allow_reminders_metadata)
     {
         $this->container['allow_reminders_metadata'] = $allow_reminders_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_remote_notary
+     *
+     * @return string
+     */
+    public function getAllowRemoteNotary()
+    {
+        return $this->container['allow_remote_notary'];
+    }
+
+    /**
+     * Sets allow_remote_notary
+     *
+     * @param string $allow_remote_notary 
+     *
+     * @return $this
+     */
+    public function setAllowRemoteNotary($allow_remote_notary)
+    {
+        $this->container['allow_remote_notary'] = $allow_remote_notary;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_remote_notary_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowRemoteNotaryMetadata()
+    {
+        return $this->container['allow_remote_notary_metadata'];
+    }
+
+    /**
+     * Sets allow_remote_notary_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_remote_notary_metadata allow_remote_notary_metadata
+     *
+     * @return $this
+     */
+    public function setAllowRemoteNotaryMetadata($allow_remote_notary_metadata)
+    {
+        $this->container['allow_remote_notary_metadata'] = $allow_remote_notary_metadata;
 
         return $this;
     }
@@ -8937,6 +9021,102 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableAdvancedPowerFormsMetadata($enable_advanced_power_forms_metadata)
     {
         $this->container['enable_advanced_power_forms_metadata'] = $enable_advanced_power_forms_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_agreement_actions_for_clm
+     *
+     * @return string
+     */
+    public function getEnableAgreementActionsForClm()
+    {
+        return $this->container['enable_agreement_actions_for_clm'];
+    }
+
+    /**
+     * Sets enable_agreement_actions_for_clm
+     *
+     * @param string $enable_agreement_actions_for_clm 
+     *
+     * @return $this
+     */
+    public function setEnableAgreementActionsForClm($enable_agreement_actions_for_clm)
+    {
+        $this->container['enable_agreement_actions_for_clm'] = $enable_agreement_actions_for_clm;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_agreement_actions_for_clm_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAgreementActionsForClmMetadata()
+    {
+        return $this->container['enable_agreement_actions_for_clm_metadata'];
+    }
+
+    /**
+     * Sets enable_agreement_actions_for_clm_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_actions_for_clm_metadata enable_agreement_actions_for_clm_metadata
+     *
+     * @return $this
+     */
+    public function setEnableAgreementActionsForClmMetadata($enable_agreement_actions_for_clm_metadata)
+    {
+        $this->container['enable_agreement_actions_for_clm_metadata'] = $enable_agreement_actions_for_clm_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_agreement_actions_for_e_sign
+     *
+     * @return string
+     */
+    public function getEnableAgreementActionsForESign()
+    {
+        return $this->container['enable_agreement_actions_for_e_sign'];
+    }
+
+    /**
+     * Sets enable_agreement_actions_for_e_sign
+     *
+     * @param string $enable_agreement_actions_for_e_sign 
+     *
+     * @return $this
+     */
+    public function setEnableAgreementActionsForESign($enable_agreement_actions_for_e_sign)
+    {
+        $this->container['enable_agreement_actions_for_e_sign'] = $enable_agreement_actions_for_e_sign;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_agreement_actions_for_e_sign_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAgreementActionsForESignMetadata()
+    {
+        return $this->container['enable_agreement_actions_for_e_sign_metadata'];
+    }
+
+    /**
+     * Sets enable_agreement_actions_for_e_sign_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_actions_for_e_sign_metadata enable_agreement_actions_for_e_sign_metadata
+     *
+     * @return $this
+     */
+    public function setEnableAgreementActionsForESignMetadata($enable_agreement_actions_for_e_sign_metadata)
+    {
+        $this->container['enable_agreement_actions_for_e_sign_metadata'] = $enable_agreement_actions_for_e_sign_metadata;
 
         return $this;
     }

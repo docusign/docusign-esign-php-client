@@ -1,6 +1,6 @@
 <?php
 /**
- * NotarySeal
+ * CommissionExpiration
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocuSign\eSign\ObjectSerializer;
 
 /**
- * NotarySeal Class Doc Comment
+ * CommissionExpiration Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NotarySeal implements ModelInterface, ArrayAccess
+class CommissionExpiration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class NotarySeal implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'notarySeal';
+    protected static $swaggerModelName = 'commissionExpiration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -77,15 +77,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_y_offset' => 'string',
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'bold' => 'string',
+        'bold_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'conceal_value_on_document' => 'string',
+        'conceal_value_on_document_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_label' => 'string',
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_value' => 'string',
         'conditional_parent_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'custom_tab_id' => 'string',
         'custom_tab_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'disable_auto_size' => 'string',
+        'disable_auto_size_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'document_id' => 'string',
         'document_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'font' => 'string',
+        'font_color' => 'string',
+        'font_color_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'font_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'font_size' => 'string',
+        'font_size_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'form_order' => 'string',
         'form_order_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'form_page_label' => 'string',
@@ -94,18 +106,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'form_page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'height' => 'string',
         'height_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'italic' => 'string',
+        'italic_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'locale_policy' => '\DocuSign\eSign\Model\LocalePolicyTab',
+        'locked' => 'string',
+        'locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'max_length' => 'string',
+        'max_length_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
         'merge_field_xml' => 'string',
         'name' => 'string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'original_value' => 'string',
+        'original_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'page_number' => 'string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id' => 'string',
         'recipient_id_guid' => 'string',
         'recipient_id_guid_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'scale_value' => 'string',
-        'scale_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'required' => 'string',
+        'required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
         'status' => 'string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -125,6 +146,10 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'template_required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tooltip' => 'string',
         'tool_tip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'underline' => 'string',
+        'underline_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'value' => 'string',
+        'value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'width' => 'string',
         'width_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'x_position' => 'string',
@@ -159,15 +184,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => null,
         'anchor_y_offset' => null,
         'anchor_y_offset_metadata' => null,
+        'bold' => null,
+        'bold_metadata' => null,
+        'conceal_value_on_document' => null,
+        'conceal_value_on_document_metadata' => null,
         'conditional_parent_label' => null,
         'conditional_parent_label_metadata' => null,
         'conditional_parent_value' => null,
         'conditional_parent_value_metadata' => null,
         'custom_tab_id' => null,
         'custom_tab_id_metadata' => null,
+        'disable_auto_size' => null,
+        'disable_auto_size_metadata' => null,
         'document_id' => null,
         'document_id_metadata' => null,
         'error_details' => null,
+        'font' => null,
+        'font_color' => null,
+        'font_color_metadata' => null,
+        'font_metadata' => null,
+        'font_size' => null,
+        'font_size_metadata' => null,
         'form_order' => null,
         'form_order_metadata' => null,
         'form_page_label' => null,
@@ -176,18 +213,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'form_page_number_metadata' => null,
         'height' => null,
         'height_metadata' => null,
+        'italic' => null,
+        'italic_metadata' => null,
+        'locale_policy' => null,
+        'locked' => null,
+        'locked_metadata' => null,
+        'max_length' => null,
+        'max_length_metadata' => null,
         'merge_field' => null,
         'merge_field_xml' => null,
         'name' => null,
         'name_metadata' => null,
+        'original_value' => null,
+        'original_value_metadata' => null,
         'page_number' => null,
         'page_number_metadata' => null,
         'recipient_id' => null,
         'recipient_id_guid' => null,
         'recipient_id_guid_metadata' => null,
         'recipient_id_metadata' => null,
-        'scale_value' => null,
-        'scale_value_metadata' => null,
+        'required' => null,
+        'required_metadata' => null,
         'smart_contract_information' => null,
         'status' => null,
         'status_metadata' => null,
@@ -207,6 +253,10 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'template_required_metadata' => null,
         'tooltip' => null,
         'tool_tip_metadata' => null,
+        'underline' => null,
+        'underline_metadata' => null,
+        'value' => null,
+        'value_metadata' => null,
         'width' => null,
         'width_metadata' => null,
         'x_position' => null,
@@ -262,15 +312,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'anchorXOffsetMetadata',
         'anchor_y_offset' => 'anchorYOffset',
         'anchor_y_offset_metadata' => 'anchorYOffsetMetadata',
+        'bold' => 'bold',
+        'bold_metadata' => 'boldMetadata',
+        'conceal_value_on_document' => 'concealValueOnDocument',
+        'conceal_value_on_document_metadata' => 'concealValueOnDocumentMetadata',
         'conditional_parent_label' => 'conditionalParentLabel',
         'conditional_parent_label_metadata' => 'conditionalParentLabelMetadata',
         'conditional_parent_value' => 'conditionalParentValue',
         'conditional_parent_value_metadata' => 'conditionalParentValueMetadata',
         'custom_tab_id' => 'customTabId',
         'custom_tab_id_metadata' => 'customTabIdMetadata',
+        'disable_auto_size' => 'disableAutoSize',
+        'disable_auto_size_metadata' => 'disableAutoSizeMetadata',
         'document_id' => 'documentId',
         'document_id_metadata' => 'documentIdMetadata',
         'error_details' => 'errorDetails',
+        'font' => 'font',
+        'font_color' => 'fontColor',
+        'font_color_metadata' => 'fontColorMetadata',
+        'font_metadata' => 'fontMetadata',
+        'font_size' => 'fontSize',
+        'font_size_metadata' => 'fontSizeMetadata',
         'form_order' => 'formOrder',
         'form_order_metadata' => 'formOrderMetadata',
         'form_page_label' => 'formPageLabel',
@@ -279,18 +341,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'form_page_number_metadata' => 'formPageNumberMetadata',
         'height' => 'height',
         'height_metadata' => 'heightMetadata',
+        'italic' => 'italic',
+        'italic_metadata' => 'italicMetadata',
+        'locale_policy' => 'localePolicy',
+        'locked' => 'locked',
+        'locked_metadata' => 'lockedMetadata',
+        'max_length' => 'maxLength',
+        'max_length_metadata' => 'maxLengthMetadata',
         'merge_field' => 'mergeField',
         'merge_field_xml' => 'mergeFieldXml',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
+        'original_value' => 'originalValue',
+        'original_value_metadata' => 'originalValueMetadata',
         'page_number' => 'pageNumber',
         'page_number_metadata' => 'pageNumberMetadata',
         'recipient_id' => 'recipientId',
         'recipient_id_guid' => 'recipientIdGuid',
         'recipient_id_guid_metadata' => 'recipientIdGuidMetadata',
         'recipient_id_metadata' => 'recipientIdMetadata',
-        'scale_value' => 'scaleValue',
-        'scale_value_metadata' => 'scaleValueMetadata',
+        'required' => 'required',
+        'required_metadata' => 'requiredMetadata',
         'smart_contract_information' => 'smartContractInformation',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
@@ -310,6 +381,10 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'template_required_metadata' => 'templateRequiredMetadata',
         'tooltip' => 'tooltip',
         'tool_tip_metadata' => 'toolTipMetadata',
+        'underline' => 'underline',
+        'underline_metadata' => 'underlineMetadata',
+        'value' => 'value',
+        'value_metadata' => 'valueMetadata',
         'width' => 'width',
         'width_metadata' => 'widthMetadata',
         'x_position' => 'xPosition',
@@ -344,15 +419,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'setAnchorXOffsetMetadata',
         'anchor_y_offset' => 'setAnchorYOffset',
         'anchor_y_offset_metadata' => 'setAnchorYOffsetMetadata',
+        'bold' => 'setBold',
+        'bold_metadata' => 'setBoldMetadata',
+        'conceal_value_on_document' => 'setConcealValueOnDocument',
+        'conceal_value_on_document_metadata' => 'setConcealValueOnDocumentMetadata',
         'conditional_parent_label' => 'setConditionalParentLabel',
         'conditional_parent_label_metadata' => 'setConditionalParentLabelMetadata',
         'conditional_parent_value' => 'setConditionalParentValue',
         'conditional_parent_value_metadata' => 'setConditionalParentValueMetadata',
         'custom_tab_id' => 'setCustomTabId',
         'custom_tab_id_metadata' => 'setCustomTabIdMetadata',
+        'disable_auto_size' => 'setDisableAutoSize',
+        'disable_auto_size_metadata' => 'setDisableAutoSizeMetadata',
         'document_id' => 'setDocumentId',
         'document_id_metadata' => 'setDocumentIdMetadata',
         'error_details' => 'setErrorDetails',
+        'font' => 'setFont',
+        'font_color' => 'setFontColor',
+        'font_color_metadata' => 'setFontColorMetadata',
+        'font_metadata' => 'setFontMetadata',
+        'font_size' => 'setFontSize',
+        'font_size_metadata' => 'setFontSizeMetadata',
         'form_order' => 'setFormOrder',
         'form_order_metadata' => 'setFormOrderMetadata',
         'form_page_label' => 'setFormPageLabel',
@@ -361,18 +448,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'form_page_number_metadata' => 'setFormPageNumberMetadata',
         'height' => 'setHeight',
         'height_metadata' => 'setHeightMetadata',
+        'italic' => 'setItalic',
+        'italic_metadata' => 'setItalicMetadata',
+        'locale_policy' => 'setLocalePolicy',
+        'locked' => 'setLocked',
+        'locked_metadata' => 'setLockedMetadata',
+        'max_length' => 'setMaxLength',
+        'max_length_metadata' => 'setMaxLengthMetadata',
         'merge_field' => 'setMergeField',
         'merge_field_xml' => 'setMergeFieldXml',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
+        'original_value' => 'setOriginalValue',
+        'original_value_metadata' => 'setOriginalValueMetadata',
         'page_number' => 'setPageNumber',
         'page_number_metadata' => 'setPageNumberMetadata',
         'recipient_id' => 'setRecipientId',
         'recipient_id_guid' => 'setRecipientIdGuid',
         'recipient_id_guid_metadata' => 'setRecipientIdGuidMetadata',
         'recipient_id_metadata' => 'setRecipientIdMetadata',
-        'scale_value' => 'setScaleValue',
-        'scale_value_metadata' => 'setScaleValueMetadata',
+        'required' => 'setRequired',
+        'required_metadata' => 'setRequiredMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
@@ -392,6 +488,10 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'template_required_metadata' => 'setTemplateRequiredMetadata',
         'tooltip' => 'setTooltip',
         'tool_tip_metadata' => 'setToolTipMetadata',
+        'underline' => 'setUnderline',
+        'underline_metadata' => 'setUnderlineMetadata',
+        'value' => 'setValue',
+        'value_metadata' => 'setValueMetadata',
         'width' => 'setWidth',
         'width_metadata' => 'setWidthMetadata',
         'x_position' => 'setXPosition',
@@ -426,15 +526,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'getAnchorXOffsetMetadata',
         'anchor_y_offset' => 'getAnchorYOffset',
         'anchor_y_offset_metadata' => 'getAnchorYOffsetMetadata',
+        'bold' => 'getBold',
+        'bold_metadata' => 'getBoldMetadata',
+        'conceal_value_on_document' => 'getConcealValueOnDocument',
+        'conceal_value_on_document_metadata' => 'getConcealValueOnDocumentMetadata',
         'conditional_parent_label' => 'getConditionalParentLabel',
         'conditional_parent_label_metadata' => 'getConditionalParentLabelMetadata',
         'conditional_parent_value' => 'getConditionalParentValue',
         'conditional_parent_value_metadata' => 'getConditionalParentValueMetadata',
         'custom_tab_id' => 'getCustomTabId',
         'custom_tab_id_metadata' => 'getCustomTabIdMetadata',
+        'disable_auto_size' => 'getDisableAutoSize',
+        'disable_auto_size_metadata' => 'getDisableAutoSizeMetadata',
         'document_id' => 'getDocumentId',
         'document_id_metadata' => 'getDocumentIdMetadata',
         'error_details' => 'getErrorDetails',
+        'font' => 'getFont',
+        'font_color' => 'getFontColor',
+        'font_color_metadata' => 'getFontColorMetadata',
+        'font_metadata' => 'getFontMetadata',
+        'font_size' => 'getFontSize',
+        'font_size_metadata' => 'getFontSizeMetadata',
         'form_order' => 'getFormOrder',
         'form_order_metadata' => 'getFormOrderMetadata',
         'form_page_label' => 'getFormPageLabel',
@@ -443,18 +555,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'form_page_number_metadata' => 'getFormPageNumberMetadata',
         'height' => 'getHeight',
         'height_metadata' => 'getHeightMetadata',
+        'italic' => 'getItalic',
+        'italic_metadata' => 'getItalicMetadata',
+        'locale_policy' => 'getLocalePolicy',
+        'locked' => 'getLocked',
+        'locked_metadata' => 'getLockedMetadata',
+        'max_length' => 'getMaxLength',
+        'max_length_metadata' => 'getMaxLengthMetadata',
         'merge_field' => 'getMergeField',
         'merge_field_xml' => 'getMergeFieldXml',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
+        'original_value' => 'getOriginalValue',
+        'original_value_metadata' => 'getOriginalValueMetadata',
         'page_number' => 'getPageNumber',
         'page_number_metadata' => 'getPageNumberMetadata',
         'recipient_id' => 'getRecipientId',
         'recipient_id_guid' => 'getRecipientIdGuid',
         'recipient_id_guid_metadata' => 'getRecipientIdGuidMetadata',
         'recipient_id_metadata' => 'getRecipientIdMetadata',
-        'scale_value' => 'getScaleValue',
-        'scale_value_metadata' => 'getScaleValueMetadata',
+        'required' => 'getRequired',
+        'required_metadata' => 'getRequiredMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
@@ -474,6 +595,10 @@ class NotarySeal implements ModelInterface, ArrayAccess
         'template_required_metadata' => 'getTemplateRequiredMetadata',
         'tooltip' => 'getTooltip',
         'tool_tip_metadata' => 'getToolTipMetadata',
+        'underline' => 'getUnderline',
+        'underline_metadata' => 'getUnderlineMetadata',
+        'value' => 'getValue',
+        'value_metadata' => 'getValueMetadata',
         'width' => 'getWidth',
         'width_metadata' => 'getWidthMetadata',
         'x_position' => 'getXPosition',
@@ -562,15 +687,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         $this->container['anchor_x_offset_metadata'] = isset($data['anchor_x_offset_metadata']) ? $data['anchor_x_offset_metadata'] : null;
         $this->container['anchor_y_offset'] = isset($data['anchor_y_offset']) ? $data['anchor_y_offset'] : null;
         $this->container['anchor_y_offset_metadata'] = isset($data['anchor_y_offset_metadata']) ? $data['anchor_y_offset_metadata'] : null;
+        $this->container['bold'] = isset($data['bold']) ? $data['bold'] : null;
+        $this->container['bold_metadata'] = isset($data['bold_metadata']) ? $data['bold_metadata'] : null;
+        $this->container['conceal_value_on_document'] = isset($data['conceal_value_on_document']) ? $data['conceal_value_on_document'] : null;
+        $this->container['conceal_value_on_document_metadata'] = isset($data['conceal_value_on_document_metadata']) ? $data['conceal_value_on_document_metadata'] : null;
         $this->container['conditional_parent_label'] = isset($data['conditional_parent_label']) ? $data['conditional_parent_label'] : null;
         $this->container['conditional_parent_label_metadata'] = isset($data['conditional_parent_label_metadata']) ? $data['conditional_parent_label_metadata'] : null;
         $this->container['conditional_parent_value'] = isset($data['conditional_parent_value']) ? $data['conditional_parent_value'] : null;
         $this->container['conditional_parent_value_metadata'] = isset($data['conditional_parent_value_metadata']) ? $data['conditional_parent_value_metadata'] : null;
         $this->container['custom_tab_id'] = isset($data['custom_tab_id']) ? $data['custom_tab_id'] : null;
         $this->container['custom_tab_id_metadata'] = isset($data['custom_tab_id_metadata']) ? $data['custom_tab_id_metadata'] : null;
+        $this->container['disable_auto_size'] = isset($data['disable_auto_size']) ? $data['disable_auto_size'] : null;
+        $this->container['disable_auto_size_metadata'] = isset($data['disable_auto_size_metadata']) ? $data['disable_auto_size_metadata'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_id_metadata'] = isset($data['document_id_metadata']) ? $data['document_id_metadata'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['font'] = isset($data['font']) ? $data['font'] : null;
+        $this->container['font_color'] = isset($data['font_color']) ? $data['font_color'] : null;
+        $this->container['font_color_metadata'] = isset($data['font_color_metadata']) ? $data['font_color_metadata'] : null;
+        $this->container['font_metadata'] = isset($data['font_metadata']) ? $data['font_metadata'] : null;
+        $this->container['font_size'] = isset($data['font_size']) ? $data['font_size'] : null;
+        $this->container['font_size_metadata'] = isset($data['font_size_metadata']) ? $data['font_size_metadata'] : null;
         $this->container['form_order'] = isset($data['form_order']) ? $data['form_order'] : null;
         $this->container['form_order_metadata'] = isset($data['form_order_metadata']) ? $data['form_order_metadata'] : null;
         $this->container['form_page_label'] = isset($data['form_page_label']) ? $data['form_page_label'] : null;
@@ -579,18 +716,27 @@ class NotarySeal implements ModelInterface, ArrayAccess
         $this->container['form_page_number_metadata'] = isset($data['form_page_number_metadata']) ? $data['form_page_number_metadata'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['height_metadata'] = isset($data['height_metadata']) ? $data['height_metadata'] : null;
+        $this->container['italic'] = isset($data['italic']) ? $data['italic'] : null;
+        $this->container['italic_metadata'] = isset($data['italic_metadata']) ? $data['italic_metadata'] : null;
+        $this->container['locale_policy'] = isset($data['locale_policy']) ? $data['locale_policy'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['locked_metadata'] = isset($data['locked_metadata']) ? $data['locked_metadata'] : null;
+        $this->container['max_length'] = isset($data['max_length']) ? $data['max_length'] : null;
+        $this->container['max_length_metadata'] = isset($data['max_length_metadata']) ? $data['max_length_metadata'] : null;
         $this->container['merge_field'] = isset($data['merge_field']) ? $data['merge_field'] : null;
         $this->container['merge_field_xml'] = isset($data['merge_field_xml']) ? $data['merge_field_xml'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
+        $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
+        $this->container['original_value_metadata'] = isset($data['original_value_metadata']) ? $data['original_value_metadata'] : null;
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
         $this->container['page_number_metadata'] = isset($data['page_number_metadata']) ? $data['page_number_metadata'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
         $this->container['recipient_id_guid'] = isset($data['recipient_id_guid']) ? $data['recipient_id_guid'] : null;
         $this->container['recipient_id_guid_metadata'] = isset($data['recipient_id_guid_metadata']) ? $data['recipient_id_guid_metadata'] : null;
         $this->container['recipient_id_metadata'] = isset($data['recipient_id_metadata']) ? $data['recipient_id_metadata'] : null;
-        $this->container['scale_value'] = isset($data['scale_value']) ? $data['scale_value'] : null;
-        $this->container['scale_value_metadata'] = isset($data['scale_value_metadata']) ? $data['scale_value_metadata'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['required_metadata'] = isset($data['required_metadata']) ? $data['required_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
@@ -610,6 +756,10 @@ class NotarySeal implements ModelInterface, ArrayAccess
         $this->container['template_required_metadata'] = isset($data['template_required_metadata']) ? $data['template_required_metadata'] : null;
         $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
         $this->container['tool_tip_metadata'] = isset($data['tool_tip_metadata']) ? $data['tool_tip_metadata'] : null;
+        $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
+        $this->container['underline_metadata'] = isset($data['underline_metadata']) ? $data['underline_metadata'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['value_metadata'] = isset($data['value_metadata']) ? $data['value_metadata'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['width_metadata'] = isset($data['width_metadata']) ? $data['width_metadata'] : null;
         $this->container['x_position'] = isset($data['x_position']) ? $data['x_position'] : null;
@@ -1123,6 +1273,102 @@ class NotarySeal implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets bold
+     *
+     * @return string
+     */
+    public function getBold()
+    {
+        return $this->container['bold'];
+    }
+
+    /**
+     * Sets bold
+     *
+     * @param string $bold When set to **true**, the information in the tab is bold.
+     *
+     * @return $this
+     */
+    public function setBold($bold)
+    {
+        $this->container['bold'] = $bold;
+
+        return $this;
+    }
+
+    /**
+     * Gets bold_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getBoldMetadata()
+    {
+        return $this->container['bold_metadata'];
+    }
+
+    /**
+     * Sets bold_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata bold_metadata
+     *
+     * @return $this
+     */
+    public function setBoldMetadata($bold_metadata)
+    {
+        $this->container['bold_metadata'] = $bold_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets conceal_value_on_document
+     *
+     * @return string
+     */
+    public function getConcealValueOnDocument()
+    {
+        return $this->container['conceal_value_on_document'];
+    }
+
+    /**
+     * Sets conceal_value_on_document
+     *
+     * @param string $conceal_value_on_document When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
+     *
+     * @return $this
+     */
+    public function setConcealValueOnDocument($conceal_value_on_document)
+    {
+        $this->container['conceal_value_on_document'] = $conceal_value_on_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets conceal_value_on_document_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getConcealValueOnDocumentMetadata()
+    {
+        return $this->container['conceal_value_on_document_metadata'];
+    }
+
+    /**
+     * Sets conceal_value_on_document_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conceal_value_on_document_metadata conceal_value_on_document_metadata
+     *
+     * @return $this
+     */
+    public function setConcealValueOnDocumentMetadata($conceal_value_on_document_metadata)
+    {
+        $this->container['conceal_value_on_document_metadata'] = $conceal_value_on_document_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets conditional_parent_label
      *
      * @return string
@@ -1267,6 +1513,54 @@ class NotarySeal implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets disable_auto_size
+     *
+     * @return string
+     */
+    public function getDisableAutoSize()
+    {
+        return $this->container['disable_auto_size'];
+    }
+
+    /**
+     * Sets disable_auto_size
+     *
+     * @param string $disable_auto_size When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
+     *
+     * @return $this
+     */
+    public function setDisableAutoSize($disable_auto_size)
+    {
+        $this->container['disable_auto_size'] = $disable_auto_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets disable_auto_size_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getDisableAutoSizeMetadata()
+    {
+        return $this->container['disable_auto_size_metadata'];
+    }
+
+    /**
+     * Sets disable_auto_size_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $disable_auto_size_metadata disable_auto_size_metadata
+     *
+     * @return $this
+     */
+    public function setDisableAutoSizeMetadata($disable_auto_size_metadata)
+    {
+        $this->container['disable_auto_size_metadata'] = $disable_auto_size_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets document_id
      *
      * @return string
@@ -1334,6 +1628,150 @@ class NotarySeal implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets font
+     *
+     * @return string
+     */
+    public function getFont()
+    {
+        return $this->container['font'];
+    }
+
+    /**
+     * Sets font
+     *
+     * @param string $font The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+     *
+     * @return $this
+     */
+    public function setFont($font)
+    {
+        $this->container['font'] = $font;
+
+        return $this;
+    }
+
+    /**
+     * Gets font_color
+     *
+     * @return string
+     */
+    public function getFontColor()
+    {
+        return $this->container['font_color'];
+    }
+
+    /**
+     * Sets font_color
+     *
+     * @param string $font_color The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+     *
+     * @return $this
+     */
+    public function setFontColor($font_color)
+    {
+        $this->container['font_color'] = $font_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets font_color_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getFontColorMetadata()
+    {
+        return $this->container['font_color_metadata'];
+    }
+
+    /**
+     * Sets font_color_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata font_color_metadata
+     *
+     * @return $this
+     */
+    public function setFontColorMetadata($font_color_metadata)
+    {
+        $this->container['font_color_metadata'] = $font_color_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets font_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getFontMetadata()
+    {
+        return $this->container['font_metadata'];
+    }
+
+    /**
+     * Sets font_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata font_metadata
+     *
+     * @return $this
+     */
+    public function setFontMetadata($font_metadata)
+    {
+        $this->container['font_metadata'] = $font_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets font_size
+     *
+     * @return string
+     */
+    public function getFontSize()
+    {
+        return $this->container['font_size'];
+    }
+
+    /**
+     * Sets font_size
+     *
+     * @param string $font_size The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+     *
+     * @return $this
+     */
+    public function setFontSize($font_size)
+    {
+        $this->container['font_size'] = $font_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets font_size_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getFontSizeMetadata()
+    {
+        return $this->container['font_size_metadata'];
+    }
+
+    /**
+     * Sets font_size_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata font_size_metadata
+     *
+     * @return $this
+     */
+    public function setFontSizeMetadata($font_size_metadata)
+    {
+        $this->container['font_size_metadata'] = $font_size_metadata;
 
         return $this;
     }
@@ -1531,6 +1969,174 @@ class NotarySeal implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets italic
+     *
+     * @return string
+     */
+    public function getItalic()
+    {
+        return $this->container['italic'];
+    }
+
+    /**
+     * Sets italic
+     *
+     * @param string $italic When set to **true**, the information in the tab is italic.
+     *
+     * @return $this
+     */
+    public function setItalic($italic)
+    {
+        $this->container['italic'] = $italic;
+
+        return $this;
+    }
+
+    /**
+     * Gets italic_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getItalicMetadata()
+    {
+        return $this->container['italic_metadata'];
+    }
+
+    /**
+     * Sets italic_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata italic_metadata
+     *
+     * @return $this
+     */
+    public function setItalicMetadata($italic_metadata)
+    {
+        $this->container['italic_metadata'] = $italic_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets locale_policy
+     *
+     * @return \DocuSign\eSign\Model\LocalePolicyTab
+     */
+    public function getLocalePolicy()
+    {
+        return $this->container['locale_policy'];
+    }
+
+    /**
+     * Sets locale_policy
+     *
+     * @param \DocuSign\eSign\Model\LocalePolicyTab $locale_policy locale_policy
+     *
+     * @return $this
+     */
+    public function setLocalePolicy($locale_policy)
+    {
+        $this->container['locale_policy'] = $locale_policy;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked
+     *
+     * @return string
+     */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+     * Sets locked
+     *
+     * @param string $locked When set to **true**, the signer cannot change the data of the custom tab.
+     *
+     * @return $this
+     */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getLockedMetadata()
+    {
+        return $this->container['locked_metadata'];
+    }
+
+    /**
+     * Sets locked_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata locked_metadata
+     *
+     * @return $this
+     */
+    public function setLockedMetadata($locked_metadata)
+    {
+        $this->container['locked_metadata'] = $locked_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_length
+     *
+     * @return string
+     */
+    public function getMaxLength()
+    {
+        return $this->container['max_length'];
+    }
+
+    /**
+     * Sets max_length
+     *
+     * @param string $max_length An optional value that describes the maximum length of the property when the property is a string.
+     *
+     * @return $this
+     */
+    public function setMaxLength($max_length)
+    {
+        $this->container['max_length'] = $max_length;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_length_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getMaxLengthMetadata()
+    {
+        return $this->container['max_length_metadata'];
+    }
+
+    /**
+     * Sets max_length_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $max_length_metadata max_length_metadata
+     *
+     * @return $this
+     */
+    public function setMaxLengthMetadata($max_length_metadata)
+    {
+        $this->container['max_length_metadata'] = $max_length_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets merge_field
      *
      * @return \DocuSign\eSign\Model\MergeField
@@ -1622,6 +2228,54 @@ class NotarySeal implements ModelInterface, ArrayAccess
     public function setNameMetadata($name_metadata)
     {
         $this->container['name_metadata'] = $name_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value
+     *
+     * @return string
+     */
+    public function getOriginalValue()
+    {
+        return $this->container['original_value'];
+    }
+
+    /**
+     * Sets original_value
+     *
+     * @param string $original_value The initial value of the tab when it was sent to the recipient.
+     *
+     * @return $this
+     */
+    public function setOriginalValue($original_value)
+    {
+        $this->container['original_value'] = $original_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getOriginalValueMetadata()
+    {
+        return $this->container['original_value_metadata'];
+    }
+
+    /**
+     * Sets original_value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     *
+     * @return $this
+     */
+    public function setOriginalValueMetadata($original_value_metadata)
+    {
+        $this->container['original_value_metadata'] = $original_value_metadata;
 
         return $this;
     }
@@ -1771,49 +2425,49 @@ class NotarySeal implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets scale_value
+     * Gets required
      *
      * @return string
      */
-    public function getScaleValue()
+    public function getRequired()
     {
-        return $this->container['scale_value'];
+        return $this->container['required'];
     }
 
     /**
-     * Sets scale_value
+     * Sets required
      *
-     * @param string $scale_value 
+     * @param string $required When set to **true**, the signer is required to fill out this tab
      *
      * @return $this
      */
-    public function setScaleValue($scale_value)
+    public function setRequired($required)
     {
-        $this->container['scale_value'] = $scale_value;
+        $this->container['required'] = $required;
 
         return $this;
     }
 
     /**
-     * Gets scale_value_metadata
+     * Gets required_metadata
      *
      * @return \DocuSign\eSign\Model\PropertyMetadata
      */
-    public function getScaleValueMetadata()
+    public function getRequiredMetadata()
     {
-        return $this->container['scale_value_metadata'];
+        return $this->container['required_metadata'];
     }
 
     /**
-     * Sets scale_value_metadata
+     * Sets required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $scale_value_metadata scale_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata required_metadata
      *
      * @return $this
      */
-    public function setScaleValueMetadata($scale_value_metadata)
+    public function setRequiredMetadata($required_metadata)
     {
-        $this->container['scale_value_metadata'] = $scale_value_metadata;
+        $this->container['required_metadata'] = $required_metadata;
 
         return $this;
     }
@@ -2270,6 +2924,102 @@ class NotarySeal implements ModelInterface, ArrayAccess
     public function setToolTipMetadata($tool_tip_metadata)
     {
         $this->container['tool_tip_metadata'] = $tool_tip_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets underline
+     *
+     * @return string
+     */
+    public function getUnderline()
+    {
+        return $this->container['underline'];
+    }
+
+    /**
+     * Sets underline
+     *
+     * @param string $underline When set to **true**, the information in the tab is underlined.
+     *
+     * @return $this
+     */
+    public function setUnderline($underline)
+    {
+        $this->container['underline'] = $underline;
+
+        return $this;
+    }
+
+    /**
+     * Gets underline_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getUnderlineMetadata()
+    {
+        return $this->container['underline_metadata'];
+    }
+
+    /**
+     * Sets underline_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata underline_metadata
+     *
+     * @return $this
+     */
+    public function setUnderlineMetadata($underline_metadata)
+    {
+        $this->container['underline_metadata'] = $underline_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param string $value Specifies the value of the tab.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getValueMetadata()
+    {
+        return $this->container['value_metadata'];
+    }
+
+    /**
+     * Sets value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     *
+     * @return $this
+     */
+    public function setValueMetadata($value_metadata)
+    {
+        $this->container['value_metadata'] = $value_metadata;
 
         return $this;
     }
