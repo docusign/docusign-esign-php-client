@@ -47,6 +47,55 @@ class UnitTests extends TestCase
         return $testConfig;
     }
 
+    public function testRefreshToken()
+    {        
+        $testConfig = new TestConfig();
+
+        $testConfig->setApiClient(new DocuSign\eSign\Client\ApiClient());
+
+        $this->config = $testConfig;
+
+        $oAuth = $this->config->getApiClient()->getOAuth();
+        $oAuth->setBasePath($testConfig->getHost());
+        $this->scope = [
+            DocuSign\eSign\Client\ApiClient::$SCOPE_SIGNATURE,
+            DocuSign\eSign\Client\ApiClient::$SCOPE_IMPERSONATION
+        ];
+
+        $uri = $this->config->getApiClient()->getAuthorizationURI($this->config->getIntegratorKey(), $this->scope, $this->config->getReturnUrl(), 'code');
+        $this->assertStringEndsWith($this->config->getReturnUrl(), $uri);
+        $this->markTestSkipped(); 
+        
+        echo $uri; 
+
+         # Use printed URL to navigate through browser for authentication
+         # IMPORTANT: after the login, DocuSign will send back a fresh
+         # authorization code as a query param of the redirect URI.
+         # You should set up a route that handles the redirect call to get
+         # that code and pass it to token endpoint as shown in the next lines         
+        
+        $code = '';
+        $initialOAuthToken = $this->config->getApiClient()->generateAccessToken($this->config->getIntegratorKey(), $this->config->getClientSecret(), $code);
+
+        $this->assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $initialOAuthToken[0]);
+        $this->assertArrayHasKey('access_token', $initialOAuthToken[0]);
+        $this->assertArrayHasKey('refresh_token', $initialOAuthToken[0]);
+
+        $refreshToken = $initialOAuthToken[0]['refresh_token'];
+
+        $refreshedOAuthToken = $this->config->getApiClient()->refreshAccessToken($this->config->getIntegratorKey(), $this->config->getClientSecret(), $refreshToken);
+        $this->assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $refreshedOAuthToken[0]);
+        $this->assertArrayHasKey('access_token', $refreshedOAuthToken[0]);
+
+        $user = $this->config->getApiClient()->getUserInfo($refreshedOAuthToken[0]['access_token']);
+        $this->assertNotEmpty($user);
+        $this->assertNotEmpty($user[0]);
+        $this->assertInstanceOf('DocuSign\eSign\Client\Auth\UserInfo', $user[0]);
+        $this->assertSame(200, $user[1]); 
+        
+        return;
+    }
+
     /**
      *
      * Test creating envelop process
@@ -401,6 +450,44 @@ class UnitTests extends TestCase
         $this->assertNotNull($numberTabs);
         $this->assertEquals(count($numberTabs), 1);
 
+        return $testConfig;
+    }
+
+    /**
+     * @depends testLogin
+     */
+    public function testApiException($testConfig)
+    {       
+        $envelopesApi = new DocuSign\eSign\Api\EnvelopesApi($testConfig->getApiClient());
+        $options = new \DocuSign\eSign\Api\EnvelopesApi\GetEnvelopeOptions();        
+        $envelopId = uniqid();
+        try
+        {
+            $createdEnvelope = $envelopesApi->getEnvelope($testConfig->getAccountId(), $envelopId);
+        }
+        catch (\Exception $e)
+        {
+            $this->assertInstanceOf(\DocuSign\eSign\Client\ApiException::class, $e); 
+            $responseObject = $e->getResponseObject();      
+            $this->assertNotNull($responseObject);
+            $this->assertInstanceOf(\DocuSign\eSign\Model\ErrorDetails::class, $responseObject); 
+            $this->assertNotEmpty($responseObject->getErrorCode()); 
+            $this->assertNotEmpty($responseObject->getMessage()); 
+        }
+        return $testConfig;
+    }
+
+    /**
+     * @depends testLogin
+     */
+    public function testUpdateBrandResourcesByContentTypeTest($testConfig)
+    {       
+        $accountsApi = new DocuSign\eSign\Api\AccountsApi($testConfig->getApiClient());
+        $brandFile = "/Docs/brand.xml";
+        $brandResources = $accountsApi->updateBrandResourcesByContentType($testConfig->getAccountId(),$testConfig->getBrandId(),'email',new SplFileObject(__DIR__ . $brandFile));
+
+        $this->assertNotEmpty($brandResources);
+        $this->assertInstanceOf('DocuSign\eSign\Model\BrandResources', $brandResources);
         return $testConfig;
     }
 }
