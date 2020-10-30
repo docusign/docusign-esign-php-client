@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [4.8.0] - eSignature API v2-20.3.01 - 2020-10-30
+## [4.7.0] - eSignature API v2-20.3.01 - 2020-10-30
 ### Changed
 
 *   Added support for version v2-20.3.01 of the DocuSign eSignature API.
