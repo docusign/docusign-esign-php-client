@@ -1,0 +1,2936 @@
+<root version="1.1" processingVersion="1">
+    <language twoletterisoname="en">
+        <data name="AccountActivationFailed_PlainTextBody">
+Hello [[Data:SenderName]],     
+
+[[Data:RecipientName]] was unable to pass the security check, and was therefore unable to activate their account.
+
+To unlock the activation, go to preferences screen, select the 'Manage Users' option, select the user, and click 'Send Activation'. You will have the opportunity to re-enter the same or new code, or send without an access code.
+
+Be sure to communicate the access code to the user.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="AccountActivationFailed_Subject">
+Account Activation Failed
+</data>
+        <data name="AccountPaymentFailed_PlainTextBody">
+Dear [[Data:UserName]],
+
+Thank you for being a DocuSign subscriber. We are unable to process your payment of [[Data:PaymentCurrency]] [[Data:PaymentAmount]] on [[Data:PaymentDate]] for your DocuSign subscription because the payment information we have on file is incorrect or outdated.
+
+To continue enjoying full access to your account, please update your payment information by logging in to your DocuSign account (https://admin.docusign.com/authenticate?goTo=billing) and following these instructions (https://support.docusign.com/articles/How-do-I-update-my-credit-card-information).
+
+UPDATE PAYMENT INFORMATION,
+[[Data:QuickURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="AccountPaymentFailed_Subject">
+Your payment to DocuSign was declined
+</data>
+        <data name="AdminPaymentGatewayAccountDisconnected_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+A payment gateway account that you connected to your DocuSign account has become disconnected. DocuSign can no longer process payment transactions using that payment gateway account. If you intended to disconnect that payment gateway account, no action is necessary. Any envelopes or templates with payment requests using that payment gateway account cannot be completed unless you remove the payment request or edit it to use a different payment gateway account.
+
+For instructions on how to reconnect your disconnected payment gateway account, see Reconnecting a disconnected payment gateway account.
+
+    Account change made on [[Data:PaymentGatewayAccountModifiedTime]] [[Data:TimeZone]].
+    
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+About DocuSign
+
+If you have questions about your account, payment gateway account configurations, or audit logs, here is some documentation you may find useful:
+
+No Content, No Content
+
+No Content, No Content
+
+No Content, No Content
+
+Sign documents electronically in just minutes.  It's safe, secure, and legally binding.  Whether you're in an office, at home, on-the-go -- or even across the globe -- DocuSign provides a professional trusted solution for Digital Transaction Management™.
+</data>
+        <data name="AdminPaymentGatewayAccountDisconnected_Subject">
+Notice of Payment Gateway Account Configuration Change in DocuSign
+</data>
+        <data name="AdminPaymentGatewayAccountModified_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Someone with access to your DocuSign account has modified the following payment gateway account configuration: [[Data:PaymentGatewayAccountDisplayName]].
+
+If you did not modify this payment gateway account configuration, for security purposes, please review your account settings and audit logs.
+
+    Account change made on [[Data:PaymentGatewayAccountModifiedTime]] [[Data:TimeZone]].
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+About DocuSign
+
+If you have questions about your account, payment gateway account configurations, or audit logs, here is some documentation you may find useful:
+
+No Content, No Content
+
+No Content, No Content
+
+No Content, No Content
+
+Sign documents electronically in just minutes.  It's safe, secure, and legally binding.  Whether you're in an office, at home, on-the-go -- or even across the globe -- DocuSign provides a professional trusted solution for Digital Transaction Management™.
+</data>
+        <data name="AdminPaymentGatewayAccountModified_Subject">
+Notice of Payment Gateway Account Configuration Change in DocuSign
+</data>
+        <data name="AgentNotification_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:EmailBlurb]]
+
+[[Data:RecipientNote]]
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="AgentNotification_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="BCCEmailActivation_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+This email message has been sent because you have activated the email BCC archiving feature for your account.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="BCCEmailActivation_Subject">
+DocuSign Account BCC Activation Confirmation
+</data>
+        <data name="CarbonCopyNotification_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+No Content
+
+No Content
+
+[[Data:EmailBlurb]]
+
+[[Conditional:RecipientNote]]Notes
+
+[[Conditional:RecipientNote]][[Data:RecipientNote]]
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="CarbonCopyNotification_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="CertifiedDeliveryNotification_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:EmailBlurb]] 
+
+[[Conditional:RecipientNote]]Notes
+
+[[Conditional:RecipientNote]][[Data:RecipientNote]]
+
+No Content
+ 
+[[Data:QuickURL]] 
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="CertifiedDeliveryNotification_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="ChangeEmailConfirm_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+DocuSign Support has received your request to change the Email Address that you use with [[Data:ProductName]].
+
+To confirm that you have access to your new email address, please click the button.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ChangeEmailConfirm_Subject">
+Confirm your Email Address Change
+</data>
+        <data name="ChangeEmailNotice_PlainTextBody">
+Hello [[Data:RecipientName]],  
+
+DocuSign Support has received a request to change the Email Address that you use with [[Data:ProductName]]. A confirmation email was sent to the new email address, '[[Data:NewEmail]]'.
+
+If you did not request to change your email address, you should immediately notify DocuSign Support at Support Center.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ChangeEmailNotice_Subject">
+Notice of Email Address Change
+</data>
+        <data name="ChangePasswordRequest_PlainTextBody">
+Hello [[Data:RecipientName]],  
+
+DocuSign Support has received your request to change the password you use with [[Data:ProductName]].
+
+To change your password, please click the button.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ChangePasswordRequest_Subject">
+Changing your Password
+</data>
+        <data name="ChangeSigner_PlainTextBody">
+Hello [[Data:SenderName]],  
+
+[[Data:OriginalRecipientName]] will be sent a copy of the document when all parties have completed signing.
+
+[[Conditional:ShowDigitalCertSafe]]Step 1: Confirm you have a valid digital certificate with [[Data:DigitalCertificateIssuer]] and log in to your account. If you don't have one, please sign up for one now using this link: [[Data:DigitalCertificateIssuerLink]]
+[[Conditional:ShowDigitalCertSafe]]Step 2: Review and sign your documents. You will be asked to log in to your digital certificate account during the signing process.
+[[Conditional:ShowDigitalCertExpress]]The Sender has requested that this document be digitally signed via the application of a DocuSign Express Digital Certificate. This digital certificate will be automatically issued and applied for you during the signing process.
+[[Conditional:ShowDigitalCertOpenTrust]]The Sender has required this document to be digitally signed via the application of an OpenTrust Protect  &amp; Sign digital signature. A digital certificate will be automatically issued and applied for the Signer during the signing process.
+[[Conditional:ShowDigitalCertICPBrazil]]The Sender has required this document to be digitally signed via a ICP-Brazil Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+[[Conditional:ShowDigitalCertNovartis]]The Sender has required this document to be digitally signed via a Novartis Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ChangeSigner_Subject">
+Change in Signers
+</data>
+        <data name="ClickwrapRecipientCopy_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Your copy of [[Data:Subject]] is attached
+
+This message was sent to you by [[Data:SenderName]] who is using DocuSign Click. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure completed document from DocuSign.
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+</data>
+        <data name="ClickwrapRecipientCopy_Subject">
+Your requested copy of [[Data:Subject]]
+</data>
+        <data name="CommentReceivedMentionSender_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    [[Data:CommentSentBy]] 
+
+ commented on
+
+[[Data:CommentSubject]]
+
+[[Conditional:QuickURL]][[Data:QuickUrl]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="CommentReceivedMentionSender_Subject">
+New comment on [[Data:SubjectInput]]
+</data>
+        <data name="CommentReceivedMentionSigner_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    [[Data:CommentSentBy]] 
+
+ commented on
+
+[[Data:CommentSubject]]
+
+[[Conditional:QuickURL]][[Data:QuickUrl]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="CommentReceivedMentionSigner_Subject">
+New comment on [[Data:SubjectInput]]
+</data>
+        <data name="CommentReceivedSender_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    [[Data:CommentSentBy]] 
+
+ commented on
+
+[[Data:CommentSubject]]
+
+[[Conditional:QuickURL]][[Data:QuickUrl]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="CommentReceivedSender_Subject">
+New comment on [[Data:SubjectInput]]
+</data>
+        <data name="CommentReceivedSigner_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    [[Data:CommentSentBy]] 
+
+ commented on
+
+[[Data:CommentSubject]]
+
+[[Conditional:QuickURL]][[Data:QuickUrl]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="CommentReceivedSigner_Subject">
+New comment on [[Data:SubjectInput]]
+</data>
+        <data name="DeviceVerificationSecurityCode_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    Your DocuSign verification code is:
+    [[Data:LoginSecurityCode]]
+
+    We noticed a login from a new device or browser. You can verify the device with this code.
+     please change your password immediately to secure your account. For added security, we recommend enabling Two-Step Verification.
+    We didn't recognize this device or browser. You might receive this email again if you sign in from a new device or browser, you clear your cookies, or you use your browser's private mode.
+    No Content
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+</data>
+        <data name="DeviceVerificationSecurityCode_Subject">
+Verify a New Device
+</data>
+        <data name="DigitalSignaturesPending_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has sent you a new DocuSign document to view and sign. Please click on the link below to begin signing.
+
+    [[Conditional:DigitalSignatureNeeded]]Your documents have been electronically signed by all the signing parties, and are ready for you to apply a digital signature to seal the documents. Please click on the link below to begin a digital signing session.
+
+    [[Conditional:NoDigitalSignatureNeeded]]Your documents have been electronically signed by all the signing parties, and are ready for digital signing to seal the documents. You do not have to digitally sign the documents, but other signers do. When the other signers have completed digitally signing, you will be notified that the envelope is complete.
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+[[Conditional:IsEnvelopeContainingMultipleDocuments]]REVIEW DOCUMENTS
+[[Conditional:IsEnvelopeContainingSingleDocument]]REVIEW DOCUMENT
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="DigitalSignaturesPending_Subject">
+Your document is ready to be digitally signed
+</data>
+        <data name="DocumentMarkupActivation_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+The documents you recently signed, [[Data:Subject]], have some recommended changes.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="DocumentMarkupActivation_Subject">
+Suggested changes to '[[Data:SubjectInput]]'
+</data>
+        <data name="DowngradeToPaidConfirmation_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Hi [[Data:UserFirstName]],
+
+Plan Changed
+
+We've processed your request to change plans from [[Data:EffectiveDate]]. You're now on a [[Data:RequestedPlan]] plan.
+
+Number of Users
+
+[[Data:Seats]]
+
+[[Conditional:IsMultiSeats]]users
+
+[[Conditional:IsSingleSeat]]user
+
+Date Effective
+
+[[Data:EffectiveDate]]
+
+Payment Method on File
+
+[[Conditional:IsCreditCard]]Card
+
+[[Conditional:IsDirectDebitSepa]]Account
+
+[[Conditional:IsDirectDebitIban]]IBAN
+
+[[Conditional:IsPaypal]]PayPal
+
+ ending in 
+
+[[Data:PaymentMethod]]
+
+Thank you for your business.
+
+If you have questions or need help, visit our Support Center.
+
+Best Regards,
+
+DocuSign Customer Support
+
+For the latest support related information and resources, please visit our Support Center.
+
+DocuSign.com
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="DowngradeToPaidConfirmation_Subject">
+DocuSign Plan Change: You're now on [[Data:RequestedPlan]]
+</data>
+        <data name="DowngradeToPaidRequestSubmission_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Hi [[Data:UserFirstName]],
+
+Plan Change Request
+
+Your DocuSign plan change request, submitted on [[Data:CreatedDate]], has been received.
+
+Number of Users
+
+[[Data:Seats]]
+
+[[Conditional:IsMultiSeats]] users
+
+[[Conditional:IsSingleSeat]] user
+
+Date Effective
+
+[[Data:EffectiveDate]]
+
+Payment Method on File
+
+[[Conditional:IsCreditCard]]Card
+
+[[Conditional:IsDirectDebitSepa]]Account
+
+[[Conditional:IsDirectDebitIban]]IBAN
+
+[[Conditional:IsPaypal]]PayPal
+
+ ending in 
+
+[[Data:PaymentMethod]]
+
+We'll email you once we've processed your request.
+
+If you have questions or need help, visit our Support Center.
+
+Best Regards,
+
+DocuSign Customer Support
+
+For the latest support related information and resources, please visit our Support Center.
+
+DocuSign.com
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="DowngradeToPaidRequestSubmission_Subject">
+We've received your request to change plans
+</data>
+        <data name="DraftEnvelopeCompleted_PlainTextBody">
+Hello [[Data:RecipientName]],  
+
+Your DocuSign draft, [[Data:Subject]], has been created on your default account [[Data:AccountName]].
+
+This draft contains the following document(s): [[Data:DocumentNames]]
+
+[[Data:EmailBlurb]]
+
+No Content
+
+[[Data:QuickURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="DraftEnvelopeCompleted_Subject">
+DocuSign Draft Created: [[Data:FromSubject]]
+</data>
+        <data name="DraftEnvelopeFailed_PlainTextBody">
+Hello [[Data:RecipientName]],  
+
+Your DocuSign draft, [[Data:Subject]], has been attempted and failed for email address [[Data:SenderEmail]]'.
+
+Please make sure the user name and email address used are correct.
+
+The application encountered issues while trying to generate your draft:
+
+[[Data:Error]]
+
+No Content
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="DraftEnvelopeFailed_Subject">
+DocuSign Draft Failed: [[Data:FromSubject]]
+</data>
+        <data name="EnvelopeActivationFailed_PlainTextBody">
+Hello [[Data:SenderName]],
+
+[[Data:RecipientName]] was unable to pass authentication for [[Data:Subject]].
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopeActivationFailed_Subject">
+Failed Access: [[Data:SubjectInput]]
+</data>
+        <data name="EnvelopeActivationWithNoNotarySelected_PlainTextBody">
+From: [[Data:SenderName]] ([[Data:SenderEmail]])[[Data:SenderCompany]]
+
+Hello [[Data:RecipientName]],
+
+[[Data:EmailBlurb]]
+
+[[Data:SenderName]] has requested their documents to be signed and notarized.
+
+In order to sign and notarize the documents, you must first select a notary public. Please locate a notary public and request that they witness your signing using the 'Assign a Notary' link below.
+
+[[Data:AssignNotaryURL]]
+
+In the meantime, you can review the documents which you will be asked to sign.
+
+[[Data:PreviewURL]]
+
+No Content
+  
+[[Data:SenderName]]
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+Visit DocuSign.com, click 'Access Documents', and enter the security code:
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopeActivationWithNoNotarySelected_Subject">
+[[Conditional:IsExpirationMail]]Expiration Pending: 
+[[Conditional:IsExpirationMail]]Reminder: 
+[[Data:SubjectInput]]
+</data>
+        <data name="EnvelopeActivationWithNotarySelected_PlainTextBody">
+From: [[Data:SenderName]] ([[Data:SenderEmail]])[[Data:SenderCompany]]
+
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has requested that you electronically sign these documents while witnessed by a notary public.
+
+[[Data:EmailBlurb]]
+
+[[Data:RecipientNote]]
+
+The following notary public will contact you to schedule a time and location to sign these documents.
+
+[[Data:NotaryName]]
+[[Data:NotaryEmail]]
+[[Data:NotaryPhone]]
+[[Data:NotaryAddress]]
+
+By proceeding with an in-person signing session, you agree to the DocuSign notary public
+    [[Data:NotarySignerTermsUrl]]
+
+Thank you!
+[[Data:SenderName]]
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+[[Conditional:IsEnvelopeContainingMultipleDocuments]]REVIEW DOCUMENTS
+[[Conditional:IsEnvelopeContainingSingleDocument]]REVIEW DOCUMENT
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopeActivationWithNotarySelected_Subject">
+[[Conditional:IsExpirationMail]]Expiration Pending: 
+[[Conditional:IsExpirationMail]]Reminder: 
+[[Data:SubjectInput]]
+</data>
+        <data name="EnvelopeActivation_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has sent you a new DocuSign document to view and sign. Please click on the link below to begin signing.
+
+[[Conditional:RequireAccountActivation]]Please check your email for an Account Activation message. Once you activate your free account, you can review and sign your documents.
+
+[[Data:EmailBlurb]]
+
+[[Conditional:RecipientNote]]Notes
+
+[[Conditional:RecipientNote]][[Data:RecipientNote]]
+
+[[Conditional:ShowDigitalCertSafe]]Step 1: Confirm you have a valid digital certificate with [[Data:DigitalCertificateIssuer]] and log in to your account. If you don't have one, please sign up for one now using this link: [[Data:DigitalCertificateIssuerLink]]
+[[Conditional:ShowDigitalCertSafe]]Step 2: Review and sign your documents. You will be asked to log in to your digital certificate account during the signing process.
+[[Conditional:ShowDigitalCertExpress]]The Sender has requested that this document be digitally signed via the application of a DocuSign Express Digital Certificate. This digital certificate will be automatically issued and applied for you during the signing process.
+[[Conditional:ShowDigitalCertOpenTrust]]The Sender has required this document to be digitally signed via the application of an OpenTrust Protect  &amp; Sign digital signature. A digital certificate will be automatically issued and applied for the Signer during the signing process.
+[[Conditional:ShowDigitalCertICPBrazil]]The Sender has required this document to be digitally signed via a ICP-Brazil Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+[[Conditional:ShowDigitalCertNovartis]]The Sender has required this document to be digitally signed via a Novartis Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+    [[Conditional:IsCFRPart11Compliant]]Part 11 Module Enabled
+
+[[Conditional:IsEnvelopeContainingMultipleDocuments]]REVIEW DOCUMENTS
+[[Conditional:IsEnvelopeContainingSingleDocument]]REVIEW DOCUMENT
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopeActivation_Subject">
+[[Conditional:IsExpirationMail]]Expiration Pending: 
+[[Conditional:IsReminderMail]]Reminder: 
+[[Data:SubjectInput]]
+</data>
+        <data name="EnvelopeCorrected_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has corrected [[Data:DocumentNames]]
+
+As a result, you no longer have access.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopeCorrected_Subject">
+Corrected: [[Data:SubjectInput]]
+</data>
+        <data name="EnvelopeDeclined_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:DeclinerName]] declined [[Data:DocumentNames]]. As a result, the documents cannot be completed.
+  
+No Content
+  
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopeDeclined_Subject">
+Declined: [[Data:SubjectInput]]
+</data>
+        <data name="EnvelopePaymentFailedSender_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:Information]] has failed for [[Data:RecipientName]] because: [[Data:Error]]
+  
+Please check your account and resolve this problem directly with [[Data:RecipientName]].
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopePaymentFailedSender_Subject">
+Payment Resolution Issue: [[Data:Subject]]
+</data>
+        <data name="EnvelopePaymentFailedSigner_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:Information]] has failed for [[Data:RecipientName]] because: [[Data:Error]]
+  
+Please check your account and resolve this problem directly with [[Data:RecipientName]].
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopePaymentFailedSigner_Subject">
+Payment Resolution Issue: [[Data:Subject]]
+</data>
+        <data name="EnvelopeVoided_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:Subject]] has been voided for the following reason: 
+[[Data:VoidReason]]
+[[Conditional:UseVoidReasonExpiredMessage]]Envelope has expired.
+
+Envelope ID
+[[Data:EnvelopeID]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="EnvelopeVoided_Subject">
+Voided: [[Data:SubjectInput]]
+</data>
+        <data name="FailedEnvelopeVaulting_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+The attempt to vault the [[Data:Subject]], to eOriginal On Demand, failed due to the following error:
+
+[[Data:Error]]
+
+As a result, you cannot access the envelope, [[Data:EnvelopeID]] in eOriginal On Demand.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="FailedEnvelopeVaulting_Subject">
+Failed Envelope Vaulting: [[Data:SubjectInput]]
+</data>
+        <data name="FaxReceivedWetSign_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Fax has been received and added to [[Data:DocumentNames]].
+
+No Content
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="FaxReceivedWetSign_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="FaxReceived_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Fax has been received and added to [[Data:DocumentNames]].
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="FaxReceived_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="ForgottenPassword_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+DocuSign Support received your request to change your password. [[Conditional:ForgotPasswordQuestion1]]When you originally created your password, you entered the following forgot password questions:
+
+[[Conditional:ForgotPasswordQuestion1]][[Data:ForgotPasswordQuestion1]]
+  
+[[Conditional:ForgotPasswordQuestion2]][[Data:ForgotPasswordQuestion2]]
+  
+[[Conditional:ForgotPasswordQuestion3]][[Data:ForgotPasswordQuestion3]]
+  
+[[Conditional:ForgotPasswordQuestion4]][[Data:ForgotPasswordQuestion4]]
+
+Please contact DocuSign Support if you did not initiate this request.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ForgottenPassword_Subject">
+Create a New Password
+</data>
+        <data name="IdentifyManualReviewAcceptedNotify_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Please review and sign [[Data:DocumentNames]]
+
+Thanks.
+
+[[Data:EmailBlurb]]
+
+[[Data:QuickURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="IdentifyManualReviewAcceptedNotify_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="IdentifyManualReviewNeededReviewerNotify_PlainTextBody">
+Hello [[Data:SenderName]],
+
+Recipient's ID couldn't be automatically verified for [[Data:DocumentNames]]
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="IdentifyManualReviewNeededReviewerNotify_Subject">
+ID Review Required: [[Data:SubjectInput]]
+</data>
+        <data name="IncorrectGatewayAccountNotification_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    Due to a payment gateway configuration issue, payments for the following envelope may not be completed: [[Data:EnvelopeID]].
+
+    Payment Gateway: [[Data:PaymentGatewayAccountDisplayName]]
+
+    Gateway Error: [[Data:Error]]
+
+    You may need to change a setting with the payment gateway, check the status of the envelope, or help recipients with their payment.
+
+    For more information about payment gateway configuration errors, see "Why am I getting an error for a payment gateway configuration issue?".
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="IncorrectGatewayAccountNotification_Subject">
+Error with payment configuration
+</data>
+        <data name="InSessionRecipientEnvelopeSigned_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Thank you for signing your documents.
+
+If you did not DocuSign with [[Data:SenderName]], please contact support.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="InSessionRecipientEnvelopeSigned_Subject">
+Signed: [[Data:SubjectInput]]
+</data>
+        <data name="InSessionRecipientEnvelopeViewed_PlainTextBody">
+Hello [[Data:RecipientName]],          
+
+Thank you for viewing your documents.
+
+If you did not view documents from [[Data:SenderName]], please contact support.
+  
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="InSessionRecipientEnvelopeViewed_Subject">
+Viewed: [[Data:SubjectInput]]
+</data>
+        <data name="InstantAccountActivationPersonal_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Thank you for choosing DocuSign. 
+
+You're just one step away from experiencing the benefits of DocuSign's electronic signature solution. 
+ 
+Please click the 'Activate' button above to verify your email address and complete your account registration process. 
+
+[[Data:QuickURL]] 
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="InstantAccountActivationPersonal_Subject">
+Action Required - Activate Your DocuSign Account
+</data>
+        <data name="InstantAccountActivation_PlainTextBody">
+Hello [[Data:RecipientName]],          
+
+Please click the 'Activate' button to finish your account activation.
+
+Thank you for choosing DocuSign.
+
+[[Data:QuickURL]] 
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="InstantAccountActivation_Subject">
+Account Activation
+</data>
+        <data name="LoginSecurityCode_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    Your DocuSign verification code is:
+    [[Data:LoginSecurityCode]]
+
+[[Conditional:LoginSecurityCodeIsForLogin]]Please enter this code to access your DocuSign account. For security reasons, do not use this code outside of DocuSign. Never share this code.
+    [[Conditional:LoginSecurityCodeIsForNewEmail]]Enter this code to confirm your email address. For security reasons, do not use this code outside of DocuSign. Never share this code.
+
+    Didn’t request this code? Log into your DocuSign profile and update your password. For an extra layer of security, you can enable two-step verification.   
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+</data>
+        <data name="LoginSecurityCode_Subject">
+Verify your identity to log in to DocuSign
+</data>
+        <data name="Login_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+We were unable to process your request for a free trial at this time, as our records indicate you already have a DocuSign account associated with this email address [[Data:ToEmail]].
+
+To access your account, simply click the LOG IN button above. If you have forgotten your password, you can reset it during log in.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="Login_Subject">
+Your DocuSign Account
+</data>
+        <data name="NewDeviceLogin_PlainTextBody">
+New Device Login
+We noticed a login from a new device or browser.
+If this was you, you can safely disregard this email.
+If this wasn't you, please change your password imediately to secure your account. For added security, we recommend enabling Two-Step Verification.
+Why did we send this?
+We didn't recognize this device or browser. You might receive this email again if you sign in from a new device or browser, you clear your cookies, or you use your browser's private mode.
+</data>
+        <data name="NewDeviceLogin_Subject">
+New Device Login
+</data>
+        <data name="NotaryRequestForExistingNotary_PlainTextBody">
+Notary Service Requested
+From: [[Data:SenderName]] ([[Data:SenderEmail]])[[Data:SenderCompany]]
+
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has requested you act as notary public for an electronic signature ceremony.
+
+[[Data:EmailBlurb]]
+
+[[Data:RecipientNote]]
+
+Step 1: Sign into your DocuSign account and verify that your commission information is current.
+
+Sign In
+    [[Data:NotaryLoginURL]]
+
+    Step 2: Contact the signer to set up a time and location to sign.
+
+[[Data:SignerName]]
+[[Data:SignerEmail]]
+
+Step 3: Conduct the electronic signing ceremony with the signer.
+
+    When you are in the presence of the signer, begin the electronic signing ceremony:
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+BEGIN SIGNING
+    [[Data:QuickURL]]
+
+Visit DocuSign.com, click 'Access Documents', and enter the security code:
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="NotaryRequestForExistingNotary_Subject">
+[[Conditional:IsExpirationMail]]Expiration Pending: 
+[[Conditional:IsExpirationMail]]Reminder: 
+Notary Service Requested
+</data>
+        <data name="NotaryRequestForUnregisteredNotary_PlainTextBody">
+Notary Service Requested
+From: [[Data:SenderName]] ([[Data:SenderEmail]])[[Data:SenderCompany]]
+
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has requested you act as notary public for an electronic signature ceremony.
+
+[[Conditional:EmailBlurb]][[Data:EmailBlurb]]
+
+    [[Conditional:EmailBlurbUseDefault]][[Conditional:NotInPersonSigningSession]][[Data:RecipientName]],
+[[Conditional:NotInPersonSigningSession]][[Conditional:EmailBlurbUseDefault]]    [[Conditional:DocumentNames]]Please DocuSign [[Data:DocumentNames]]
+[[Conditional:InPersonSignerName]]You are the host for an in-person signing session: Signer: [[Data:InPersonSignerName]]Document: [[Data:Subject]]
+[[Conditional:EmailBlurbUseDefault]]    Thank You, [[Data:SenderName]]
+
+[[Data:RecipientNote]]
+
+    To complete this process, please follow these steps:
+
+Step 1: Register with DocuSign as an electronic notary public.
+
+To notarize documents and conduct an electronic signature ceremony with a client, register with DocuSign as an electronic notary public. Please check for an activation email to activate your DocuSign account. For more information, see https://support.docusign.com[[Data:NotaryDocumentationUri]]
+
+Step 2: Contact the signer to set up a time and location to sign.
+
+[[Data:SignerName]]
+[[Data:SignerEmail]]
+
+Step 3: Conduct the electronic signing ceremony with the signer.
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+    When you are in the presence of the signer, begin the electronic signing ceremony:
+
+    [[Data:QuickURL]]
+
+Visit DocuSign.com, click 'Access Documents', and enter the security code:
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="NotaryRequestForUnregisteredNotary_Subject">
+[[Conditional:IsExpirationMail]]Expiration Pending: 
+[[Conditional:IsExpirationMail]]Reminder: 
+Notary Service Requested
+</data>
+        <data name="OFACFailed_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:RecipientName]] was unable to pass authentication for [[Data:Subject]].
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="OFACFailed_Subject">
+OFAC Match: [[Data:SubjectInput]]
+</data>
+        <data name="OrganizationAccountActivation_PlainTextBody">
+[[Data:OriginalRecipientName]] is requesting that this account ([[Data:AccountName]]) be linked to the [[Data:OrganizationName]] organization.
+
+Linking this account will allow you to use Single Sign-On (SSO) authentication through the organization. This will not grant the organization administrative access to your account and will not impact business operations.
+
+Click the link below to review and accept or decline this request.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This invitation to link comes from [[Data:SenderName]]. If you have any questions, please contact [[Data:SenderEmail]].
+
+Thank you for choosing DocuSign.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="OrganizationAccountActivation_Subject">
+Request to link to [[Data:OrganizationName]]
+</data>
+        <data name="OrganizationAdminActivation_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+From: [[Data:SenderName]] via DocuSign.
+
+To activate your [[Data:OrganizationName]] administrator membership, click the link below.
+
+Once activated, your membership grants administration access to the [[Data:OrganizationName]] organization, providing centralized management of all linked accounts and users.
+
+This membership invitation comes from [[Data:SenderName]]. If you have any questions, please contact [[Data:SenderName]].
+
+Thank you for choosing DocuSign.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="OrganizationAdminActivation_Subject">
+[[Data:OrganizationName]] Organization Admin membership activation
+</data>
+        <data name="PasswordChanged_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    Password changed
+
+Your DocuSign password has recently changed.    
+
+If you did not intend to do this, please visit DocuSign and click on Forgot Password to reset your password.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+</data>
+        <data name="PasswordChanged_Subject">
+Your DocuSign password has been changed
+</data>
+        <data name="PasswordResetUserNotFound_PlainTextBody">
+You do not have a DocuSign account
+We received a request to reset the DocuSign password for this email, but no account exists.
+If you are trying to access a document, please use the link you received in email.
+If you would like to sign up, for a free trial account, click link below.
+If you did not initiate this request, you may disregard this email. Any documents you may have previously signed are secure.
+[[Data:QuickURL]]
+</data>
+        <data name="PasswordResetUserNotFound_Subject">
+DocuSign password reset attempt
+</data>
+        <data name="PowerFormFinishLater_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Please click on the link below to finish signing.
+
+[[Data:EmailBlurb]]
+
+[[Conditional:RecipientNote]]Notes
+
+[[Conditional:RecipientNote]][[Data:RecipientNote]]
+
+[[Conditional:ShowDigitalCertSafe]]Step 1: Confirm you have a valid digital certificate with [[Data:DigitalCertificateIssuer]] and log in to your account. If you don't have one, please sign up for one now using this link: [[Data:DigitalCertificateIssuerLink]]
+[[Conditional:ShowDigitalCertSafe]]Step 2: Review and sign your documents. You will be asked to log in to your digital certificate account during the signing process.
+[[Conditional:ShowDigitalCertExpress]]The Sender has requested that this document be digitally signed via the application of a DocuSign Express Digital Certificate. This digital certificate will be automatically issued and applied for you during the signing process.
+[[Conditional:ShowDigitalCertOpenTrust]]The Sender has required this document to be digitally signed via the application of an OpenTrust Protect  &amp; Sign digital signature. A digital certificate will be automatically issued and applied for the Signer during the signing process.
+[[Conditional:ShowDigitalCertICPBrazil]]The Sender has required this document to be digitally signed via a ICP-Brazil Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+[[Conditional:ShowDigitalCertNovartis]]The Sender has required this document to be digitally signed via a Novartis Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+    [[Conditional:IsCFRPart11Compliant]]Part 11 Module Enabled
+
+[[Conditional:IsEnvelopeContainingMultipleDocuments]]REVIEW DOCUMENTS
+[[Conditional:IsEnvelopeContainingSingleDocument]]REVIEW DOCUMENT
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="PowerFormFinishLater_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="PowerformResponsesLimitNotificationEmail_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Conditional:SeventyPercentNotification]]Once [[Data:PowerformName]] limit reaches 100 percent, no one else will be able to respond.
+
+You can review your response limits or update your PowerForm by logging in.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="PowerformResponsesLimitNotificationEmail_Subject">
+You've reached the [[Data:PowerformResponsesUsagePercent]] percent limit for [[Data:PowerformName]] responses.
+</data>
+        <data name="PurgeDocuments_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+You are receiving this notification because [[Data:SenderCompany]] has a document retention policy. Your signed documents for '[[Data:Subject]]' will be removed from DocuSign.
+
+To retain a copy, follow the link above or download it from your DocuSign account before [[Data:PurgeDate]] at Midnight ET.
+
+Reference: [[Data:EnvelopeID]]
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="PurgeDocuments_Subject">
+Documents to be removed: [[Data:SubjectInput]]
+</data>
+        <data name="ReassignSigner_PlainTextBody">
+No Content
+
+[[Data:OriginalRecipientName]] received documents to electronically sign from [[Data:SenderName]], but determined that you should sign in their place.
+
+[[Conditional:RecipientNote]]
+[[Conditional:RecipientNote]]    PRIVATE MESSAGE
+[[Conditional:RecipientNote]][[Data:RecipientNote]]
+
+[[Data:EmailBlurb]]
+
+No Content
+
+[[Conditional:ShowDigitalCertSafe]]Step 1: Confirm you have a valid digital certificate with [[Data:DigitalCertificateIssuer]] and log in to your account. If you don't have one, please sign up for one now using this link: [[Data:DigitalCertificateIssuerLink]]
+[[Conditional:ShowDigitalCertSafe]]Step 2: Review and sign your documents. You will be asked to log in to your digital certificate account during the signing process.
+[[Conditional:ShowDigitalCertExpress]]The Sender has requested that this document be digitally signed via the application of a DocuSign Express Digital Certificate. This digital certificate will be automatically issued and applied for you during the signing process.
+[[Conditional:ShowDigitalCertOpenTrust]]The Sender has required this document to be digitally signed via the application of an OpenTrust Protect  &amp; Sign digital signature. A digital certificate will be automatically issued and applied for the Signer during the signing process.
+[[Conditional:ShowDigitalCertICPBrazil]]The Sender has required this document to be digitally signed via a ICP-Brazil Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+[[Conditional:ShowDigitalCertNovartis]]The Sender has required this document to be digitally signed via a Novartis Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ReassignSigner_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="RecipientAddAccessCodeNoLink_PlainTextBody">
+Hello [[Data:RecipientName]],    
+
+Copy and enter the access code into the access page to continue signing.
+
+[[Data:RecipientAccessCode]]
+
+If you did not start signing [[Data:SubjectInput]], please contact support.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientAddAccessCodeNoLink_Subject">
+Access code for: [[Data:SubjectInput]]
+</data>
+        <data name="RecipientAddAccessCode_PlainTextBody">
+Hello [[Data:RecipientName]],    
+
+Copy and enter the validation code into the access page to continue signing.
+
+No Content
+
+[[Data:RecipientAccessCode]]
+
+No Content
+
+If you did not start signing [[Data:SubjectInput]], please contact support.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientAddAccessCode_Subject">
+Email Validation: [[Data:SubjectInput]]
+</data>
+        <data name="RecipientAdvancedPaymentFailure_PlainTextBody">
+Hello [[Data:RecipientName]],    
+
+There was a problem processing your payment for [[Data:DocumentNames]].
+
+    Your payment was not processed.
+
+[[Data:PromoContent]]
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientAdvancedPaymentFailure_Subject">
+Action required: Update your payment information.
+</data>
+        <data name="RecipientEnvelopeCompleteInPerson_PlainTextBody">
+Hello [[Data:RecipientName]], 
+
+All parties have completed [[Data:Subject]].
+
+[[Conditional:IncludeInPersonEmailBlurb]][[Data:EmailBlurb]]
+
+[[Data:Information]]
+
+[[Data:PromoContent]]
+
+No Content
+
+[[Data:QuickURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientEnvelopeCompleteInPerson_Subject">
+Completed: [[Data:SubjectInput]]
+</data>
+        <data name="RecipientEnvelopeComplete_PlainTextBody">
+Hello [[Data:RecipientName]],    
+
+All parties have completed [[Data:Subject]].
+    
+    [[Data:EmailBlurb]]
+
+[[Data:Information]]
+
+[[Data:PromoContent]]
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientEnvelopeComplete_Subject">
+Completed: [[Data:SubjectInput]]
+</data>
+        <data name="RecipientPaymentBankAccountVerificationReminder_PlainTextBody">
+Hello [[Data:RecipientName]], 
+
+You recently started signing a document that requires bank account verification for  [[Data:DocumentNames]].
+
+[[Data:Information]]
+
+No Content
+
+[[Data:QuickURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientPaymentBankAccountVerificationReminder_Subject">
+Verify your bank account information
+</data>
+        <data name="RecipientUndeliverable_PlainTextBody">
+Hello [[Data:SenderName]],     
+
+Documents you sent for electronic signature could not be delivered to this email address: [[Data:RecipientEmail]]
+
+The destination email system provided this error message:
+
+[[Data:RecipientDeliveryFailedReason]]
+
+For more information about the failure, please see the attached email message or reference DocuSign's knowledge base to interpret this error code.
+
+If the email address is incorrect, follow these steps to correct it and resend the notification.
+
+NOTE: If you cannot correct the envelope, you can void it and create a new one.  If you are not the sender of the envelope, contact the sender and ask them to correct it. 
+
+1. Log in to your DocuSign account.
+2. Locate the sent envelope.
+3. Click the drop-down menu for the envelope and select Correct.
+4. Correct the email address.
+5. Finish correcting the envelope as usual to resend it.
+
+If you need further assistance, please visit Support Center.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientUndeliverable_Subject">
+Documents sent for signature could not be delivered
+</data>
+        <data name="RecipientViewed_PlainTextBody">
+Hello [[Data:RecipientName]],   
+
+At [[Data:RecipientDeliveredDateTime]], [[Data:RecipientName]] opened and viewed your documents[[Conditional:DocumentNames]], [[Data:DocumentNames]].
+   
+
+No Content  
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="RecipientViewed_Subject">
+[[Data:RecipientName]] viewed [[Data:Subject]]
+</data>
+        <data name="RecoveryInfoChanged_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    Security information has changed
+
+[[Conditional:RecoveryInformationAdded]]A new email address, authenticator app, or phone number has been added to your account. This information will be used to provide additional security when accessing DocuSign.
+    [[Conditional:RecoveryInformationRemoved]]An email address, authenticator app, or phone number has been removed from your account.   
+
+Please log in to your DocuSign account to change your settings.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+</data>
+        <data name="RecoveryInfoChanged_Subject">
+Your security information has been updated in DocuSign
+</data>
+        <data name="ReportSendNowResults_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] ([[Data:SenderEmail]]) has sent you a copy of a report.
+
+[[Conditional:DownloadURL]]Download your report results.
+[[Conditional:DownloadURL]][[Data:DownloadURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ReportSendNowResults_Subject">
+DocuSign Report: [[Data:SubjectInput]]
+</data>
+        <data name="ReportSubscriptionExtend_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Your scheduled report '[[SubjectInput]]' is attached.
+
+Alert: The schedule for this report will expire soon.
+
+To extend the schedule, copy the following line and paste it into a browser:
+
+[[Conditional:DownloadURL]]Download your report results.
+[[Conditional:DownloadURL]][[Data:DownloadURL]]
+
+[[Data:QuickURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ReportSubscriptionExtend_Subject">
+DocuSign Report: [[Data:SubjectInput]]
+</data>
+        <data name="ReportSubscriptionResults_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] ([[Data:SenderEmail]]) has sent you a copy of a scheduled report.
+
+[[Data:EmailBlurb]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+[[Conditional:DownloadURL]]Download your report results.
+[[Conditional:DownloadURL]][[Data:DownloadURL]]
+
+[[Data:QuickURL]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ReportSubscriptionResults_Subject">
+DocuSign Report: [[Data:SubjectInput]]
+</data>
+        <data name="ReservedDomainAccountCreationAttempt_PlainTextBody">
+Account Creation Blocked
+
+A visitor to DocuSign.com attempted to create a DocuSign account using this email address: [[Data:ReservedDomainEmail]]. We did not create the account for the visitor because your DocuSign account reserves use of that email domain in the DocuSign system.
+</data>
+        <data name="ReservedDomainAccountCreationAttempt_Subject">
+Account creation using reserved domain [[Data:ReservedDomain]] was blocked
+</data>
+        <data name="ResetPasswordRequest_PlainTextBody">
+Hello [[Data:RecipientName]],         
+
+DocuSign has received your password reset request.   
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="ResetPasswordRequest_Subject">
+Reset Password Requested
+</data>
+        <data name="SenderAdvancedPaymentFailure_PlainTextBody">
+Hello [[Data:RecipientName]],    
+
+    A payment charge failure occurred with recipient [[Data:RecipientName]] in envelope (ID:[[Data:EnvelopeID]]).
+
+    For more information on resolving the payment failure, see Support Center.
+
+    [[Data:PromoContent]]
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SenderAdvancedPaymentFailure_Subject">
+Error with payment capture: [[Data:Subject]]
+</data>
+        <data name="SenderDeliveryFailed_PlainTextBody">
+Hello [[Data:RecipientName]], 
+
+Delivery failed to [[Data:RecipientName]] at [[Data:RecipientDeliveryFailedDateTime]] for [[Data:Subject]].
+
+Delivery failed to [[Data:RecipientName]] at [[Data:RecipientDeliveryFailedDateTime]] for [[Data:Subject]].
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SenderDeliveryFailed_Subject">
+Delivery Failed for [[Data:RecipientName]]
+</data>
+        <data name="SenderEnvelopeComplete_PlainTextBody">
+Hello [[Data:RecipientName]], 
+
+All signers completed [[Data:SubjectInput]]
+
+[[Data:Information]]
+
+Review the document your recipients have signed, and the following payment(s)
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SenderEnvelopeComplete_Subject">
+Completed: [[Data:SubjectInput]]
+</data>
+        <data name="SenderEnvelopeDeclined_PlainTextBody">
+Hello [[Data:RecipientName]], 
+
+[[Data:DeclinerName]] gave the following reasons:
+
+[[Data:DeclineReason]]
+
+As a result, [[Data:Subject]] cannot be completed.
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SenderEnvelopeDeclined_Subject">
+Declined: [[Data:SubjectInput]]
+</data>
+        <data name="SenderOfflineSigningFailed_PlainTextBody">
+Hello [[Data:SenderName]], 
+
+[[Data:FailedRecipientName]] has attempted to offline sign the envelope '[[Data:Subject]]' (ID:[[Data:EnvelopeID]]), but the envelope has failed to synchronize.
+
+As a result, the envelope is still awaiting signature.
+
+To view the document, click the link below:
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SenderOfflineSigningFailed_Subject">
+Offline signing failed: [[Data:SubjectInput]]
+</data>
+        <data name="SenderRecipientLockoutNotification_PlainTextBody">
+Hello [[Data:SenderName]],     
+
+[[Data:RecipientName]] is temporarily locked out of their account
+
+[[Data:RecipientName]] is temporarily locked out of "[[Data:Subject]]" because they failed too many login attempts. After a short period of time, they can try to login again. They cannot sign "[[Data:Subject]]" until they securely login.
+
+We'll let you know when [[Data:RecipientName]] successfully signs "[[Data:Subject]]". Or you may review and correct the envelope.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SenderRecipientLockoutNotification_Subject">
+[[Data:RecipientName]] failed too many login attempts
+</data>
+        <data name="SendViaLink_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has signed a document using DocuSign.
+
+Select VIEW DOCUMENT to securely view and download your documents.[[Conditional:EmailBlurb]] Here is the message:
+
+[[Conditional:EmailBlurb]][[Data:EmailBlurb]]
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SendViaLink_Subject">
+Here is your signed [[Data:Subject]]
+</data>
+        <data name="SharedViewLink_PlainTextBody">
+Your Signed Document
+
+No Content
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SharedViewLink_Subject">
+[[Data:Subject]]
+</data>
+        <data name="SignerOfflineSigningFailed_PlainTextBody">
+Hello [[Data:RecipientName]], 
+
+You have attempted to offline sign the envelope '[[Data:Subject]]' (ID:[[Data:EnvelopeID]]), but the envelope has failed to synchronize.
+
+As a result, the envelope is still awaiting signature.
+
+To view the document, click the link below:
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="SignerOfflineSigningFailed_Subject">
+Offline signing failed: [[Data:SubjectInput]]
+</data>
+        <data name="SignUpInvitationCustom_PlainTextBody">
+[[Data:SignUpInvitationCustomPlainBodyStart]]
+[[Data:QuickURL]]
+[[Data:SignUpInvitationCustomPlainBodyEnd]]
+</data>
+        <data name="SignUpInvitationCustom_Subject">
+[[Data:Subject]]
+</data>
+        <data name="TwoFactorAuthSettingChanged_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+    Two-step verification settings have changed
+
+[[Conditional:TwoFactorAuthEnabled]]Two-step verification has been enabled on your account. When logging in to DocuSign, you will now be prompted for additional verification.
+    [[Conditional:TwoFactorAuthDisabled]]Two-step verification has been disabled on your DocuSign account.   
+
+Please log in to your DocuSign account to change your settings.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+</data>
+        <data name="TwoFactorAuthSettingChanged_Subject">
+Your DocuSign login settings have been updated
+</data>
+        <data name="UnlockFreeTrial_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Thank you for choosing DocuSign.
+
+Thank you for signing up for a DocuSign eSignature trial. It appears that you already have a free DocuSign account associated with your email address [[Data:ToEmail]].
+
+In order to help you experience the full power of DocuSign eSignature, we’re offering you a free 30-day trial with access to advanced features and functionality. To update your account, simply click the FREE TRIAL button above.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="UnlockFreeTrial_Subject">
+Unlock Your Free Trial Account
+</data>
+        <data name="UserAccountActivation_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+Please select the ACTIVATE button above to finish your account activation.
+
+Thank you for choosing DocuSign.
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="UserAccountActivation_Subject">
+Account Activation
+</data>
+        <data name="UserToAccountInviteCustom_PlainTextBody">
+[[Data:UserToAccountInviteCustomPlainBodyStart]]
+[[Data:QuickURL]]
+[[Data:UserToAccountInviteCustomPlainBodyEnd]]
+</data>
+        <data name="UserToAccountInviteCustom_Subject">
+[[Data:Subject]]
+</data>
+        <data name="VoidedFaxReceived_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+We received a FAX from you of FaxId [[Data:FaxId]] for envelope [[Data:EnvelopeID]], but our records indicate you canceled the FAX transaction.
+
+If it was not your intention to cancel this FAX transaction, please contact the sender, [[Data:SenderName]].
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="VoidedFaxReceived_Subject">
+[[Data:SubjectInput]]
+</data>
+        <data name="WithdrawnConsent_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:RecipientName]] elected to withdraw their consent to sign online with your company using [[Data:ProductName]]. As a result, you should contact them to determine how they wish to receive documents from you in the future. 
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="WithdrawnConsent_Subject">
+Withdrawn Consent to Sign Online
+</data>
+        <data name="WitnessInvitation_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderName]] has sent you a new DocuSign document to view and sign. Please click on the link below to begin signing.
+
+[[Conditional:RequireAccountActivation]]Please check your email for an Account Activation message. Once you activate your free account, you can review and sign your documents.
+
+    [[Data:RecipientNote]]
+
+[[Conditional:ShowDigitalCertSafe]]Step 1: Confirm you have a valid digital certificate with [[Data:DigitalCertificateIssuer]] and log in to your account. If you don't have one, please sign up for one now using this link: [[Data:DigitalCertificateIssuerLink]]
+[[Conditional:ShowDigitalCertSafe]]Step 2: Review and sign your documents. You will be asked to log in to your digital certificate account during the signing process.
+[[Conditional:ShowDigitalCertExpress]]The Sender has requested that this document be digitally signed via the application of a DocuSign Express Digital Certificate. This digital certificate will be automatically issued and applied for you during the signing process.
+[[Conditional:ShowDigitalCertOpenTrust]]The Sender has required this document to be digitally signed via the application of an OpenTrust Protect  &amp; Sign digital signature. A digital certificate will be automatically issued and applied for the Signer during the signing process.
+[[Conditional:ShowDigitalCertICPBrazil]]The Sender has required this document to be digitally signed via a ICP-Brazil Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+[[Conditional:ShowDigitalCertNovartis]]The Sender has required this document to be digitally signed via a Novartis Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+    [[Conditional:IsCFRPart11Compliant]]Part 11 Module Enabled
+
+[[Conditional:IsEnvelopeContainingMultipleDocuments]]REVIEW DOCUMENTS
+[[Conditional:IsEnvelopeContainingSingleDocument]]REVIEW DOCUMENT
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="WitnessInvitation_Subject">
+Invitation to witness: [[Data:SubjectInput]]
+</data>
+        <data name="WorkspaceEnvelope_PlainTextBody">
+Hello [[Data:RecipientName]],
+
+[[Data:SenderCompany]] sent you documents to view and sign. Please click on the 'REVIEW DOCUMENTS' link below to begin signing.
+
+[[Conditional:ShowDigitalCertSafe]]Step 1: Confirm you have a valid digital certificate with [[Data:DigitalCertificateIssuer]] and log in to your account. If you don't have one, please sign up for one now using this link: [[Data:DigitalCertificateIssuerLink]]
+[[Conditional:ShowDigitalCertSafe]]Step 2: Review and sign your documents. You will be asked to log in to your digital certificate account during the signing process.
+[[Conditional:ShowDigitalCertExpress]]The Sender has requested that this document be digitally signed via the application of a DocuSign Express Digital Certificate. This digital certificate will be automatically issued and applied for you during the signing process.
+[[Conditional:ShowDigitalCertOpenTrust]]The Sender has required this document to be digitally signed via the application of an OpenTrust Protect  &amp; Sign digital signature. A digital certificate will be automatically issued and applied for the Signer during the signing process.
+[[Conditional:ShowDigitalCertICPBrazil]]The Sender has required this document to be digitally signed via a ICP-Brazil Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+[[Conditional:ShowDigitalCertNovartis]]The Sender has required this document to be digitally signed via a Novartis Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+
+[[Conditional:IsExpirationMail]]Expiration Pending:  This document will expire on [[Data:EnvelopeExpirationDate]].
+
+REVIEW DOCUMENTS
+
+[[Data:QuickURL]]
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="WorkspaceEnvelope_Subject">
+[[Conditional:IsExpirationMail]]Expiration Pending: 
+[[Conditional:IsReminderMail]]Reminder: 
+You have documents to review and sign.
+</data>
+        <data name="WorkspaceUserActivation_PlainTextBody">
+Hello [[Data:RecipientName]],          
+
+[[Data:SenderName]] invited you to join the room, [[Data:WorkspaceName]]. Please click on the 'JOIN ROOM' link below to join this room.
+
+[[Conditional:ShowDigitalCertSafe]]Step 1: Confirm you have a valid digital certificate with [[Data:DigitalCertificateIssuer]] and log in to your account. If you don't have one, please sign up for one now using this link: [[Data:DigitalCertificateIssuerLink]]
+[[Conditional:ShowDigitalCertSafe]]Step 2: Review and sign your documents. You will be asked to log in to your digital certificate account during the signing process.
+[[Conditional:ShowDigitalCertExpress]]The Sender has requested that this document be digitally signed via the application of a DocuSign Express Digital Certificate. This digital certificate will be automatically issued and applied for you during the signing process.
+[[Conditional:ShowDigitalCertOpenTrust]]The Sender has required this document to be digitally signed via the application of an OpenTrust Protect  &amp; Sign digital signature. A digital certificate will be automatically issued and applied for the Signer during the signing process.
+[[Conditional:ShowDigitalCertICPBrazil]]The Sender has required this document to be digitally signed via a ICP-Brazil Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+[[Conditional:ShowDigitalCertNovartis]]The Sender has required this document to be digitally signed via a Novartis Digital Signature. The Signer will be asked to select their digital certificate during the signing process.
+
+JOIN ROOM
+
+[[Data:QuickURL]] 
+
+If clicking the link does not work, you can highlight and copy the entire line above and paste it into your browser to get started.
+
+This message was sent to you by [[Data:SenderName]] who is using the DocuSign Electronic Signature Service. If you would rather not receive email from this sender you may contact the sender with your request.
+
+Do Not Share This Email
+This email contains a secure link to DocuSign. Please do not share this email, link, or access code with others.
+[[Conditional:ExpirationUrl]]Click here to expire the above link to the document
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in the document, please reach out to the sender by emailing them directly.
+
+[[Conditional:ReportAbuseUrl]]Stop receiving this email
+[[Conditional:ReportAbuseUrl]]Report this email [[Data:ReportAbuseUrl]]
+[[Conditional:ReportAbuseUrl]]Declining to sign [[Support.DecliningToSignUrl]]
+[[Conditional:ReportAbuseUrl]]Managing notifications [[Support.ManagingNotificationsUrl]]
+
+If you are having trouble signing the document, please visit the Help with Signing page on our Support Center.
+https://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing
+</data>
+        <data name="WorkspaceUserActivation_Subject">
+[[Conditional:Subject]][[Data:Subject]]
+[[Conditional:SubjectInput]]Invitation to join [[Data:WorkspaceName]]
+
+</data>
+    </language>
+</root>
