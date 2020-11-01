@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [4.7.0] - eSignature API v2-20.3.01 - 2020-10-30
+### Changed
+
+*   Added support for version v2-20.3.01 of the DocuSign eSignature API.
+*   Updated the SDK release version.
+
+### Fixed
+
+* Added Refresh Token
+    * [#121](https://github.com/docusign/docusign-php-client/issues/121) - DCM-4819    
+* Resolved Update Brand Resource issue
+    * [#52](https://github.com/docusign/docusign-python-client/issues/52) - DCM-3869    
+
 ## [4.6.0] - eSignature API v2-20.3.00 - 2020-09-24
 ### Changed
 

@@ -202,6 +202,19 @@ class ApiClient
             $postData = json_encode(ObjectSerializer::sanitizeForSerialization($postData));
         }
 
+        if (in_array('Content-Type: multipart/form-data', $headers, true))
+        {            
+            foreach($postData as $property => $value)
+            {
+                if($postData[$property] instanceof \CURLFile)
+                {
+                    $headers[] = 'Content-Disposition: form-data; name="file"; filename="' . $postData[$property]->getFileName() . '"';
+                    $postData = file_get_contents($postData[$property]->getFileName());
+                    break;
+                }
+            }            
+        }
+
         $curl = curl_init();
         // set timeout, if needed
         if ($this->config->getCurlTimeout() !== 0) {
@@ -465,7 +478,7 @@ class ApiClient
         if (!$client_id) {
             throw new \InvalidArgumentException('Missing the required parameter $client_id when calling generateAccessToken');
         }
-        if (!$client_secret || !$code) {
+        if (!$client_secret) {
             throw new \InvalidArgumentException('Missing the required parameter $client_secret when calling generateAccessToken');
         }
         if (!$code) {
@@ -487,6 +500,45 @@ class ApiClient
         if(isset($response->access_token))
             $this->config->addDefaultHeader("Authorization", "{$response->token_type} {$response->access_token}");
         return [$this->getSerializer()->deserialize($response, '\DocuSign\eSign\Client\Auth\OAuthToken', $httpHeader), $statusCode, $httpHeader];
+    }
+
+    /**
+     * Refresh Access Token
+     *
+     * @param string $client_id DocuSign OAuth Client Id(AKA Integrator Key)
+     * @param string $client_secret The secret key you generated when you set up the integration in DocuSign Admin console.
+     * @param string $code The authorization code
+     *
+     * @return array
+     * @throws ApiException
+     * @throws InvalidArgumentException
+     */
+    public function refreshAccessToken($client_id = null, $client_secret = null, $refresh_token = null)
+    { 
+        if (!$client_id) { 
+            throw new \InvalidArgumentException('Missing the required parameter $client_id when calling refreshAccessToken'); 
+        } 
+        if (!$client_secret) { 
+            throw new \InvalidArgumentException('Missing the required parameter $client_secret when calling refreshAccessToken'); 
+        } 
+        if (!$refresh_token) { 
+            throw new \InvalidArgumentException('Missing the required parameter $refresh_token when calling refreshAccessToken'); 
+        }
+        $resourcePath = "/oauth/token"; 
+        $queryParams = []; 
+        $integrator_and_secret_key = "Basic " . utf8_decode(base64_encode("{$client_id}:{$client_secret}")); 
+        $headers = [ 
+            "Authorization" => $integrator_and_secret_key, 
+            "Content-Type" => "application/x-www-form-urlencoded", 
+        ];
+        $postData = [ 
+            "grant_type" => "refresh_token", 
+            "refresh_token" => $refresh_token, 
+        ];
+        list($response, $statusCode, $httpHeader) = $this->callApi($resourcePath, self::$POST, $queryParams, $postData, $headers, null, null, true);
+        if (isset($response->access_token))  
+            $this->config->addDefaultHeader("Authorization", "{$response->token_type} {$response->access_token}");  
+        return [$this->getSerializer()->deserialize($response, '\DocuSign\eSign\Client\Auth\OAuthToken', $httpHeader), $statusCode, $httpHeader]; 
     }
 
     /**

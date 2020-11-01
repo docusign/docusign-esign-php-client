@@ -1000,7 +1000,7 @@ class AccountsApi
      *
      * Creates one or more brand profile files for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $account_id The external account number (int) or account id GUID.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
@@ -1016,7 +1016,7 @@ class AccountsApi
      *
      * Creates one or more brand profile files for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $account_id The external account number (int) or account id GUID.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
@@ -5383,15 +5383,16 @@ class AccountsApi
      *
      * Uploads a branding resource file.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $account_id The external account number (int) or account id GUID.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $resource_content_type 
+    * @param \SplFileObject $file_xml Brand resource XML file. (required)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandResources
      */
-    public function updateBrandResourcesByContentType($account_id, $brand_id, $resource_content_type)
+    public function updateBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, $file_xml)
     {
-        list($response) = $this->updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type);
+        list($response) = $this->updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, $file_xml);
         return $response;
     }
 
@@ -5400,13 +5401,14 @@ class AccountsApi
      *
      * Uploads a branding resource file.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+    * @param string $account_id The external account number (int) or account id GUID.
     * @param string $brand_id The unique identifier of a brand.
     * @param string $resource_content_type 
+    * @param \SplFileObject $file_xml Brand resource XML file. (required)
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandResources, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type)
+    public function updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, $file_xml)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5420,6 +5422,10 @@ class AccountsApi
         if ($resource_content_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $resource_content_type when calling updateBrandResourcesByContentType');
         }
+        // verify the required parameter 'file_xml' is set
+        if ($file_xml === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $file_xml when calling updateBrandResourcesByContentType');
+        }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}";
         $httpBody = '';
@@ -5430,7 +5436,7 @@ class AccountsApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['multipart/form-data']);
 
 
         // path params
@@ -5460,6 +5466,16 @@ class AccountsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
+        // form params
+        if ($file_xml !== null) {
+            // PHP 5.5 introduced a CurlFile object that deprecates the old @filename syntax
+            // See: https://wiki.php.net/rfc/curl-file-upload
+            if (function_exists('curl_file_create')) {
+                $formParams['file.xml'] = curl_file_create($this->apiClient->getSerializer()->toFormValue($file_xml));
+            } else {
+                $formParams['file.xml'] = '@' . $this->apiClient->getSerializer()->toFormValue($file_xml);
+            }
+        }
         
         // for model (json/xml)
         if (isset($_tempBody)) {
