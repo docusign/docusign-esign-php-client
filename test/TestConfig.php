@@ -94,6 +94,8 @@ class TestConfig
 
     protected $userId;
 
+    protected $brandId;
+
     public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null, $privateKey = null)
     {
         $this->host = !empty($host) ? $host : 'https://demo.docusign.net/restapi';
@@ -112,6 +114,8 @@ class TestConfig
 
         $this->envelopeId = !empty($envelopeId) ? $envelopeId : '';
         $this->userId = !empty($userId) ? $userId : getenv('USER_ID'); //can be taken from generateAccessToken returned result
+
+        $this->brandId = !empty($brandId) ? $brandId : getenv('BRAND_ID');
 
         $this->clientUserId = "1234";
 
@@ -431,6 +435,26 @@ class TestConfig
     public function setUserId($userId)
     {
         $this->userId = $userId;
+        return $this;
+    }
+
+    /**
+     * Gets BrandId
+     * @return string
+     */
+    public function getBrandId()
+    {
+        return $this->brandId;
+    }
+
+    /**
+     * BrandId
+     * @param string $brandId
+     * @return $this
+     */
+    public function setBrandId($brandId)
+    {
+        $this->brandId = $brandId;
         return $this;
     }
 }
