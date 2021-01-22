@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * TemplatesApi
- * PHP version 5
+ * TemplatesApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\TemplatesApi;
+namespace DocuSign\eSign\ApiTemplatesApi;
+
 
 class CreateRecipientsOptions
 {
@@ -34,79 +38,83 @@ class CreateRecipientsOptions
       * $resend_envelope 
       * @var string
       */
-    protected $resend_envelope;
+    protected string $resend_envelope;
 
     /**
      * Gets resend_envelope
      * @return string
      */
-    public function getResendEnvelope()
+    public function getResendEnvelope(): string
     {
         return $this->resend_envelope;
     }
-  
+
     /**
      * Sets resend_envelope
      * @param string $resend_envelope 
-     * @return $this
+     * @return self
      */
-    public function setResendEnvelope($resend_envelope)
+    public function setResendEnvelope(string $resend_envelope): self
     {
         $this->resend_envelope = $resend_envelope;
         return $this;
     }
 }
+
+
 class GetOptions
 {
     /**
       * $include 
       * @var string
       */
-    protected $include;
+    protected string $include;
 
     /**
      * Gets include
      * @return string
      */
-    public function getInclude()
+    public function getInclude(): string
     {
         return $this->include;
     }
-  
+
     /**
      * Sets include
      * @param string $include 
-     * @return $this
+     * @return self
      */
-    public function setInclude($include)
+    public function setInclude(string $include): self
     {
         $this->include = $include;
         return $this;
     }
 }
+
+
 class GetDocumentOptions
 {
     /**
       * $encrypt 
       * @var string
       */
-    protected $encrypt;
+    protected string $encrypt;
 
     /**
      * Gets encrypt
      * @return string
      */
-    public function getEncrypt()
+    public function getEncrypt(): string
     {
         return $this->encrypt;
     }
-  
+
     /**
      * Sets encrypt
      * @param string $encrypt 
-     * @return $this
+     * @return self
      */
-    public function setEncrypt($encrypt)
+    public function setEncrypt(string $encrypt): self
     {
         $this->encrypt = $encrypt;
         return $this;
@@ -115,51 +123,53 @@ class GetDocumentOptions
       * $show_changes 
       * @var string
       */
-    protected $show_changes;
+    protected string $show_changes;
 
     /**
      * Gets show_changes
      * @return string
      */
-    public function getShowChanges()
+    public function getShowChanges(): string
     {
         return $this->show_changes;
     }
-  
+
     /**
      * Sets show_changes
      * @param string $show_changes 
-     * @return $this
+     * @return self
      */
-    public function setShowChanges($show_changes)
+    public function setShowChanges(string $show_changes): self
     {
         $this->show_changes = $show_changes;
         return $this;
     }
 }
+
+
 class GetDocumentPageImageOptions
 {
     /**
       * $dpi 
       * @var string
       */
-    protected $dpi;
+    protected string $dpi;
 
     /**
      * Gets dpi
      * @return string
      */
-    public function getDpi()
+    public function getDpi(): string
     {
         return $this->dpi;
     }
-  
+
     /**
      * Sets dpi
      * @param string $dpi 
-     * @return $this
+     * @return self
      */
-    public function setDpi($dpi)
+    public function setDpi(string $dpi): self
     {
         $this->dpi = $dpi;
         return $this;
@@ -168,23 +178,23 @@ class GetDocumentPageImageOptions
       * $max_height 
       * @var string
       */
-    protected $max_height;
+    protected string $max_height;
 
     /**
      * Gets max_height
      * @return string
      */
-    public function getMaxHeight()
+    public function getMaxHeight(): string
     {
         return $this->max_height;
     }
-  
+
     /**
      * Sets max_height
      * @param string $max_height 
-     * @return $this
+     * @return self
      */
-    public function setMaxHeight($max_height)
+    public function setMaxHeight(string $max_height): self
     {
         $this->max_height = $max_height;
         return $this;
@@ -193,23 +203,23 @@ class GetDocumentPageImageOptions
       * $max_width 
       * @var string
       */
-    protected $max_width;
+    protected string $max_width;
 
     /**
      * Gets max_width
      * @return string
      */
-    public function getMaxWidth()
+    public function getMaxWidth(): string
     {
         return $this->max_width;
     }
-  
+
     /**
      * Sets max_width
      * @param string $max_width 
-     * @return $this
+     * @return self
      */
-    public function setMaxWidth($max_width)
+    public function setMaxWidth(string $max_width): self
     {
         $this->max_width = $max_width;
         return $this;
@@ -218,79 +228,83 @@ class GetDocumentPageImageOptions
       * $show_changes 
       * @var string
       */
-    protected $show_changes;
+    protected string $show_changes;
 
     /**
      * Gets show_changes
      * @return string
      */
-    public function getShowChanges()
+    public function getShowChanges(): string
     {
         return $this->show_changes;
     }
-  
+
     /**
      * Sets show_changes
      * @param string $show_changes 
-     * @return $this
+     * @return self
      */
-    public function setShowChanges($show_changes)
+    public function setShowChanges(string $show_changes): self
     {
         $this->show_changes = $show_changes;
         return $this;
     }
 }
+
+
 class GetDocumentTabsOptions
 {
     /**
       * $page_numbers 
       * @var string
       */
-    protected $page_numbers;
+    protected string $page_numbers;
 
     /**
      * Gets page_numbers
      * @return string
      */
-    public function getPageNumbers()
+    public function getPageNumbers(): string
     {
         return $this->page_numbers;
     }
-  
+
     /**
      * Sets page_numbers
      * @param string $page_numbers 
-     * @return $this
+     * @return self
      */
-    public function setPageNumbers($page_numbers)
+    public function setPageNumbers(string $page_numbers): self
     {
         $this->page_numbers = $page_numbers;
         return $this;
     }
 }
+
+
 class GetPagesOptions
 {
     /**
       * $count 
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count 
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -299,23 +313,23 @@ class GetPagesOptions
       * $dpi 
       * @var string
       */
-    protected $dpi;
+    protected string $dpi;
 
     /**
      * Gets dpi
      * @return string
      */
-    public function getDpi()
+    public function getDpi(): string
     {
         return $this->dpi;
     }
-  
+
     /**
      * Sets dpi
      * @param string $dpi 
-     * @return $this
+     * @return self
      */
-    public function setDpi($dpi)
+    public function setDpi(string $dpi): self
     {
         $this->dpi = $dpi;
         return $this;
@@ -324,23 +338,23 @@ class GetPagesOptions
       * $max_height 
       * @var string
       */
-    protected $max_height;
+    protected string $max_height;
 
     /**
      * Gets max_height
      * @return string
      */
-    public function getMaxHeight()
+    public function getMaxHeight(): string
     {
         return $this->max_height;
     }
-  
+
     /**
      * Sets max_height
      * @param string $max_height 
-     * @return $this
+     * @return self
      */
-    public function setMaxHeight($max_height)
+    public function setMaxHeight(string $max_height): self
     {
         $this->max_height = $max_height;
         return $this;
@@ -349,23 +363,23 @@ class GetPagesOptions
       * $max_width 
       * @var string
       */
-    protected $max_width;
+    protected string $max_width;
 
     /**
      * Gets max_width
      * @return string
      */
-    public function getMaxWidth()
+    public function getMaxWidth(): string
     {
         return $this->max_width;
     }
-  
+
     /**
      * Sets max_width
      * @param string $max_width 
-     * @return $this
+     * @return self
      */
-    public function setMaxWidth($max_width)
+    public function setMaxWidth(string $max_width): self
     {
         $this->max_width = $max_width;
         return $this;
@@ -374,23 +388,23 @@ class GetPagesOptions
       * $nocache 
       * @var string
       */
-    protected $nocache;
+    protected string $nocache;
 
     /**
      * Gets nocache
      * @return string
      */
-    public function getNocache()
+    public function getNocache(): string
     {
         return $this->nocache;
     }
-  
+
     /**
      * Sets nocache
      * @param string $nocache 
-     * @return $this
+     * @return self
      */
-    public function setNocache($nocache)
+    public function setNocache(string $nocache): self
     {
         $this->nocache = $nocache;
         return $this;
@@ -399,23 +413,23 @@ class GetPagesOptions
       * $show_changes 
       * @var string
       */
-    protected $show_changes;
+    protected string $show_changes;
 
     /**
      * Gets show_changes
      * @return string
      */
-    public function getShowChanges()
+    public function getShowChanges(): string
     {
         return $this->show_changes;
     }
-  
+
     /**
      * Sets show_changes
      * @param string $show_changes 
-     * @return $this
+     * @return self
      */
-    public function setShowChanges($show_changes)
+    public function setShowChanges(string $show_changes): self
     {
         $this->show_changes = $show_changes;
         return $this;
@@ -424,51 +438,53 @@ class GetPagesOptions
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
 }
+
+
 class ListBulkRecipientsOptions
 {
     /**
       * $include_tabs 
       * @var string
       */
-    protected $include_tabs;
+    protected string $include_tabs;
 
     /**
      * Gets include_tabs
      * @return string
      */
-    public function getIncludeTabs()
+    public function getIncludeTabs(): string
     {
         return $this->include_tabs;
     }
-  
+
     /**
      * Sets include_tabs
      * @param string $include_tabs 
-     * @return $this
+     * @return self
      */
-    public function setIncludeTabs($include_tabs)
+    public function setIncludeTabs(string $include_tabs): self
     {
         $this->include_tabs = $include_tabs;
         return $this;
@@ -477,51 +493,53 @@ class ListBulkRecipientsOptions
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
 }
+
+
 class ListRecipientsOptions
 {
     /**
       * $include_anchor_tab_locations When set to **true** and `include_tabs` is set to **true**, all tabs with anchor tab properties are included in the response.
       * @var string
       */
-    protected $include_anchor_tab_locations;
+    protected string $include_anchor_tab_locations;
 
     /**
      * Gets include_anchor_tab_locations
      * @return string
      */
-    public function getIncludeAnchorTabLocations()
+    public function getIncludeAnchorTabLocations(): string
     {
         return $this->include_anchor_tab_locations;
     }
-  
+
     /**
      * Sets include_anchor_tab_locations
      * @param string $include_anchor_tab_locations When set to **true** and `include_tabs` is set to **true**, all tabs with anchor tab properties are included in the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeAnchorTabLocations($include_anchor_tab_locations)
+    public function setIncludeAnchorTabLocations(string $include_anchor_tab_locations): self
     {
         $this->include_anchor_tab_locations = $include_anchor_tab_locations;
         return $this;
@@ -530,23 +548,23 @@ class ListRecipientsOptions
       * $include_extended When set to **true**, the extended properties are included in the response.
       * @var string
       */
-    protected $include_extended;
+    protected string $include_extended;
 
     /**
      * Gets include_extended
      * @return string
      */
-    public function getIncludeExtended()
+    public function getIncludeExtended(): string
     {
         return $this->include_extended;
     }
-  
+
     /**
      * Sets include_extended
      * @param string $include_extended When set to **true**, the extended properties are included in the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeExtended($include_extended)
+    public function setIncludeExtended(string $include_extended): self
     {
         $this->include_extended = $include_extended;
         return $this;
@@ -555,51 +573,53 @@ class ListRecipientsOptions
       * $include_tabs When set to **true**, the tab information associated with the recipient is included in the response.
       * @var string
       */
-    protected $include_tabs;
+    protected string $include_tabs;
 
     /**
      * Gets include_tabs
      * @return string
      */
-    public function getIncludeTabs()
+    public function getIncludeTabs(): string
     {
         return $this->include_tabs;
     }
-  
+
     /**
      * Sets include_tabs
      * @param string $include_tabs When set to **true**, the tab information associated with the recipient is included in the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeTabs($include_tabs)
+    public function setIncludeTabs(string $include_tabs): self
     {
         $this->include_tabs = $include_tabs;
         return $this;
     }
 }
+
+
 class ListTabsOptions
 {
     /**
       * $include_anchor_tab_locations When set to **true**, all tabs with anchor tab properties are included in the response.
       * @var string
       */
-    protected $include_anchor_tab_locations;
+    protected string $include_anchor_tab_locations;
 
     /**
      * Gets include_anchor_tab_locations
      * @return string
      */
-    public function getIncludeAnchorTabLocations()
+    public function getIncludeAnchorTabLocations(): string
     {
         return $this->include_anchor_tab_locations;
     }
-  
+
     /**
      * Sets include_anchor_tab_locations
      * @param string $include_anchor_tab_locations When set to **true**, all tabs with anchor tab properties are included in the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeAnchorTabLocations($include_anchor_tab_locations)
+    public function setIncludeAnchorTabLocations(string $include_anchor_tab_locations): self
     {
         $this->include_anchor_tab_locations = $include_anchor_tab_locations;
         return $this;
@@ -608,51 +628,53 @@ class ListTabsOptions
       * $include_metadata 
       * @var string
       */
-    protected $include_metadata;
+    protected string $include_metadata;
 
     /**
      * Gets include_metadata
      * @return string
      */
-    public function getIncludeMetadata()
+    public function getIncludeMetadata(): string
     {
         return $this->include_metadata;
     }
-  
+
     /**
      * Sets include_metadata
      * @param string $include_metadata 
-     * @return $this
+     * @return self
      */
-    public function setIncludeMetadata($include_metadata)
+    public function setIncludeMetadata(string $include_metadata): self
     {
         $this->include_metadata = $include_metadata;
         return $this;
     }
 }
+
+
 class ListTemplatesOptions
 {
     /**
       * $count Number of records to return in the cache.
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count Number of records to return in the cache.
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -661,23 +683,23 @@ class ListTemplatesOptions
       * $folder The query value can be a folder name or folder ID. The response will only return templates in the specified folder.
       * @var string
       */
-    protected $folder;
+    protected string $folder;
 
     /**
      * Gets folder
      * @return string
      */
-    public function getFolder()
+    public function getFolder(): string
     {
         return $this->folder;
     }
-  
+
     /**
      * Sets folder
      * @param string $folder The query value can be a folder name or folder ID. The response will only return templates in the specified folder.
-     * @return $this
+     * @return self
      */
-    public function setFolder($folder)
+    public function setFolder(string $folder): self
     {
         $this->folder = $folder;
         return $this;
@@ -686,23 +708,23 @@ class ListTemplatesOptions
       * $folder_ids A comma separated list of folder ID GUIDs.
       * @var string
       */
-    protected $folder_ids;
+    protected string $folder_ids;
 
     /**
      * Gets folder_ids
      * @return string
      */
-    public function getFolderIds()
+    public function getFolderIds(): string
     {
         return $this->folder_ids;
     }
-  
+
     /**
      * Sets folder_ids
      * @param string $folder_ids A comma separated list of folder ID GUIDs.
-     * @return $this
+     * @return self
      */
-    public function setFolderIds($folder_ids)
+    public function setFolderIds(string $folder_ids): self
     {
         $this->folder_ids = $folder_ids;
         return $this;
@@ -711,23 +733,23 @@ class ListTemplatesOptions
       * $from_date Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created.
       * @var string
       */
-    protected $from_date;
+    protected string $from_date;
 
     /**
      * Gets from_date
      * @return string
      */
-    public function getFromDate()
+    public function getFromDate(): string
     {
         return $this->from_date;
     }
-  
+
     /**
      * Sets from_date
      * @param string $from_date Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created.
-     * @return $this
+     * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate(string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
@@ -736,23 +758,23 @@ class ListTemplatesOptions
       * $include A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
       * @var string
       */
-    protected $include;
+    protected string $include;
 
     /**
      * Gets include
      * @return string
      */
-    public function getInclude()
+    public function getInclude(): string
     {
         return $this->include;
     }
-  
+
     /**
      * Sets include
      * @param string $include A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
-     * @return $this
+     * @return self
      */
-    public function setInclude($include)
+    public function setInclude(string $include): self
     {
         $this->include = $include;
         return $this;
@@ -761,23 +783,23 @@ class ListTemplatesOptions
       * $modified_from_date 
       * @var string
       */
-    protected $modified_from_date;
+    protected string $modified_from_date;
 
     /**
      * Gets modified_from_date
      * @return string
      */
-    public function getModifiedFromDate()
+    public function getModifiedFromDate(): string
     {
         return $this->modified_from_date;
     }
-  
+
     /**
      * Sets modified_from_date
      * @param string $modified_from_date 
-     * @return $this
+     * @return self
      */
-    public function setModifiedFromDate($modified_from_date)
+    public function setModifiedFromDate(string $modified_from_date): self
     {
         $this->modified_from_date = $modified_from_date;
         return $this;
@@ -786,23 +808,23 @@ class ListTemplatesOptions
       * $modified_to_date 
       * @var string
       */
-    protected $modified_to_date;
+    protected string $modified_to_date;
 
     /**
      * Gets modified_to_date
      * @return string
      */
-    public function getModifiedToDate()
+    public function getModifiedToDate(): string
     {
         return $this->modified_to_date;
     }
-  
+
     /**
      * Sets modified_to_date
      * @param string $modified_to_date 
-     * @return $this
+     * @return self
      */
-    public function setModifiedToDate($modified_to_date)
+    public function setModifiedToDate(string $modified_to_date): self
     {
         $this->modified_to_date = $modified_to_date;
         return $this;
@@ -811,23 +833,23 @@ class ListTemplatesOptions
       * $order Sets the direction order used to sort the list. Valid values are: -asc = ascending sort order (a to z)  -desc = descending sort order (z to a)
       * @var string
       */
-    protected $order;
+    protected string $order;
 
     /**
      * Gets order
      * @return string
      */
-    public function getOrder()
+    public function getOrder(): string
     {
         return $this->order;
     }
-  
+
     /**
      * Sets order
      * @param string $order Sets the direction order used to sort the list. Valid values are: -asc = ascending sort order (a to z)  -desc = descending sort order (z to a)
-     * @return $this
+     * @return self
      */
-    public function setOrder($order)
+    public function setOrder(string $order): self
     {
         $this->order = $order;
         return $this;
@@ -836,23 +858,23 @@ class ListTemplatesOptions
       * $order_by Sets the file attribute used to sort the list. Valid values are:  -name: template name  -modified: date/time template was last modified.  -used: date/time the template was last used.
       * @var string
       */
-    protected $order_by;
+    protected string $order_by;
 
     /**
      * Gets order_by
      * @return string
      */
-    public function getOrderBy()
+    public function getOrderBy(): string
     {
         return $this->order_by;
     }
-  
+
     /**
      * Sets order_by
      * @param string $order_by Sets the file attribute used to sort the list. Valid values are:  -name: template name  -modified: date/time template was last modified.  -used: date/time the template was last used.
-     * @return $this
+     * @return self
      */
-    public function setOrderBy($order_by)
+    public function setOrderBy(string $order_by): self
     {
         $this->order_by = $order_by;
         return $this;
@@ -861,23 +883,23 @@ class ListTemplatesOptions
       * $search_text The search text used to search the names of templates.
       * @var string
       */
-    protected $search_text;
+    protected string $search_text;
 
     /**
      * Gets search_text
      * @return string
      */
-    public function getSearchText()
+    public function getSearchText(): string
     {
         return $this->search_text;
     }
-  
+
     /**
      * Sets search_text
      * @param string $search_text The search text used to search the names of templates.
-     * @return $this
+     * @return self
      */
-    public function setSearchText($search_text)
+    public function setSearchText(string $search_text): self
     {
         $this->search_text = $search_text;
         return $this;
@@ -886,23 +908,23 @@ class ListTemplatesOptions
       * $shared_by_me If true, the response only includes templates shared by the user. If false, the response only returns template not shared by the user. If not specified, the response is not affected.
       * @var string
       */
-    protected $shared_by_me;
+    protected string $shared_by_me;
 
     /**
      * Gets shared_by_me
      * @return string
      */
-    public function getSharedByMe()
+    public function getSharedByMe(): string
     {
         return $this->shared_by_me;
     }
-  
+
     /**
      * Sets shared_by_me
      * @param string $shared_by_me If true, the response only includes templates shared by the user. If false, the response only returns template not shared by the user. If not specified, the response is not affected.
-     * @return $this
+     * @return self
      */
-    public function setSharedByMe($shared_by_me)
+    public function setSharedByMe(string $shared_by_me): self
     {
         $this->shared_by_me = $shared_by_me;
         return $this;
@@ -911,23 +933,23 @@ class ListTemplatesOptions
       * $start_position The starting index for the first template shown in the response. This must be greater than or equal to 0 (zero).
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position The starting index for the first template shown in the response. This must be greater than or equal to 0 (zero).
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -936,23 +958,23 @@ class ListTemplatesOptions
       * $to_date End of the search date range. Only returns templates created up to this date/time. If no value is provided, this defaults to the current date.
       * @var string
       */
-    protected $to_date;
+    protected string $to_date;
 
     /**
      * Gets to_date
      * @return string
      */
-    public function getToDate()
+    public function getToDate(): string
     {
         return $this->to_date;
     }
-  
+
     /**
      * Sets to_date
      * @param string $to_date End of the search date range. Only returns templates created up to this date/time. If no value is provided, this defaults to the current date.
-     * @return $this
+     * @return self
      */
-    public function setToDate($to_date)
+    public function setToDate(string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
@@ -961,23 +983,23 @@ class ListTemplatesOptions
       * $used_from_date Start of the search date range. Only returns templates used or edited on or after this date/time. If no value is specified, there is no limit on the earliest date used.
       * @var string
       */
-    protected $used_from_date;
+    protected string $used_from_date;
 
     /**
      * Gets used_from_date
      * @return string
      */
-    public function getUsedFromDate()
+    public function getUsedFromDate(): string
     {
         return $this->used_from_date;
     }
-  
+
     /**
      * Sets used_from_date
      * @param string $used_from_date Start of the search date range. Only returns templates used or edited on or after this date/time. If no value is specified, there is no limit on the earliest date used.
-     * @return $this
+     * @return self
      */
-    public function setUsedFromDate($used_from_date)
+    public function setUsedFromDate(string $used_from_date): self
     {
         $this->used_from_date = $used_from_date;
         return $this;
@@ -986,23 +1008,23 @@ class ListTemplatesOptions
       * $used_to_date End of the search date range. Only returns templates used or edited up to this date/time. If no value is provided, this defaults to the current date.
       * @var string
       */
-    protected $used_to_date;
+    protected string $used_to_date;
 
     /**
      * Gets used_to_date
      * @return string
      */
-    public function getUsedToDate()
+    public function getUsedToDate(): string
     {
         return $this->used_to_date;
     }
-  
+
     /**
      * Sets used_to_date
      * @param string $used_to_date End of the search date range. Only returns templates used or edited up to this date/time. If no value is provided, this defaults to the current date.
-     * @return $this
+     * @return self
      */
-    public function setUsedToDate($used_to_date)
+    public function setUsedToDate(string $used_to_date): self
     {
         $this->used_to_date = $used_to_date;
         return $this;
@@ -1011,23 +1033,23 @@ class ListTemplatesOptions
       * $user_filter Sets if the templates shown in the response Valid values are:  -owned_by_me: only shows templates the user owns.  -shared_with_me: only shows templates that are shared with the user.  -all: shows all templates owned or shared with the user.
       * @var string
       */
-    protected $user_filter;
+    protected string $user_filter;
 
     /**
      * Gets user_filter
      * @return string
      */
-    public function getUserFilter()
+    public function getUserFilter(): string
     {
         return $this->user_filter;
     }
-  
+
     /**
      * Sets user_filter
      * @param string $user_filter Sets if the templates shown in the response Valid values are:  -owned_by_me: only shows templates the user owns.  -shared_with_me: only shows templates that are shared with the user.  -all: shows all templates owned or shared with the user.
-     * @return $this
+     * @return self
      */
-    public function setUserFilter($user_filter)
+    public function setUserFilter(string $user_filter): self
     {
         $this->user_filter = $user_filter;
         return $this;
@@ -1036,51 +1058,53 @@ class ListTemplatesOptions
       * $user_id 
       * @var string
       */
-    protected $user_id;
+    protected string $user_id;
 
     /**
      * Gets user_id
      * @return string
      */
-    public function getUserId()
+    public function getUserId(): string
     {
         return $this->user_id;
     }
-  
+
     /**
      * Sets user_id
      * @param string $user_id 
-     * @return $this
+     * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId(string $user_id): self
     {
         $this->user_id = $user_id;
         return $this;
     }
 }
+
+
 class UpdateDocumentOptions
 {
     /**
       * $apply_document_fields 
       * @var string
       */
-    protected $apply_document_fields;
+    protected string $apply_document_fields;
 
     /**
      * Gets apply_document_fields
      * @return string
      */
-    public function getApplyDocumentFields()
+    public function getApplyDocumentFields(): string
     {
         return $this->apply_document_fields;
     }
-  
+
     /**
      * Sets apply_document_fields
      * @param string $apply_document_fields 
-     * @return $this
+     * @return self
      */
-    public function setApplyDocumentFields($apply_document_fields)
+    public function setApplyDocumentFields(string $apply_document_fields): self
     {
         $this->apply_document_fields = $apply_document_fields;
         return $this;
@@ -1089,51 +1113,53 @@ class UpdateDocumentOptions
       * $is_envelope_definition 
       * @var string
       */
-    protected $is_envelope_definition;
+    protected string $is_envelope_definition;
 
     /**
      * Gets is_envelope_definition
      * @return string
      */
-    public function getIsEnvelopeDefinition()
+    public function getIsEnvelopeDefinition(): string
     {
         return $this->is_envelope_definition;
     }
-  
+
     /**
      * Sets is_envelope_definition
      * @param string $is_envelope_definition 
-     * @return $this
+     * @return self
      */
-    public function setIsEnvelopeDefinition($is_envelope_definition)
+    public function setIsEnvelopeDefinition(string $is_envelope_definition): self
     {
         $this->is_envelope_definition = $is_envelope_definition;
         return $this;
     }
 }
+
+
 class UpdateDocumentsOptions
 {
     /**
       * $apply_document_fields 
       * @var string
       */
-    protected $apply_document_fields;
+    protected string $apply_document_fields;
 
     /**
      * Gets apply_document_fields
      * @return string
      */
-    public function getApplyDocumentFields()
+    public function getApplyDocumentFields(): string
     {
         return $this->apply_document_fields;
     }
-  
+
     /**
      * Sets apply_document_fields
      * @param string $apply_document_fields 
-     * @return $this
+     * @return self
      */
-    public function setApplyDocumentFields($apply_document_fields)
+    public function setApplyDocumentFields(string $apply_document_fields): self
     {
         $this->apply_document_fields = $apply_document_fields;
         return $this;
@@ -1142,51 +1168,53 @@ class UpdateDocumentsOptions
       * $persist_tabs 
       * @var string
       */
-    protected $persist_tabs;
+    protected string $persist_tabs;
 
     /**
      * Gets persist_tabs
      * @return string
      */
-    public function getPersistTabs()
+    public function getPersistTabs(): string
     {
         return $this->persist_tabs;
     }
-  
+
     /**
      * Sets persist_tabs
      * @param string $persist_tabs 
-     * @return $this
+     * @return self
      */
-    public function setPersistTabs($persist_tabs)
+    public function setPersistTabs(string $persist_tabs): self
     {
         $this->persist_tabs = $persist_tabs;
         return $this;
     }
 }
+
+
 class UpdateRecipientsOptions
 {
     /**
       * $resend_envelope 
       * @var string
       */
-    protected $resend_envelope;
+    protected string $resend_envelope;
 
     /**
      * Gets resend_envelope
      * @return string
      */
-    public function getResendEnvelope()
+    public function getResendEnvelope(): string
     {
         return $this->resend_envelope;
     }
-  
+
     /**
      * Sets resend_envelope
      * @param string $resend_envelope 
-     * @return $this
+     * @return self
      */
-    public function setResendEnvelope($resend_envelope)
+    public function setResendEnvelope(string $resend_envelope): self
     {
         $this->resend_envelope = $resend_envelope;
         return $this;
@@ -1194,12 +1222,13 @@ class UpdateRecipientsOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * TemplatesApi Class Doc Comment
@@ -1214,30 +1243,27 @@ class TemplatesApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -1245,28 +1271,47 @@ class TemplatesApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return TemplatesApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation createCustomFields
      *
      * Creates custom document fields in an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function createCustomFields($account_id, $template_id, $template_custom_fields = null)
+    public function createCustomFields($account_id, $template_id, $template_custom_fields = null): \DocuSign\eSign\Model\CustomFields
     {
         list($response) = $this->createCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields);
         return $response;
@@ -1277,13 +1322,13 @@ class TemplatesApi
      *
      * Creates custom document fields in an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields = null)
+    public function createCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1295,36 +1340,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_custom_fields)) {
@@ -1375,14 +1407,14 @@ class TemplatesApi
      *
      * Creates custom document fields in an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
-    public function createDocumentFields($account_id, $document_id, $template_id, $document_fields_information = null)
+    public function createDocumentFields($account_id, $document_id, $template_id, $document_fields_information = null): \DocuSign\eSign\Model\DocumentFieldsInformation
     {
         list($response) = $this->createDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information);
         return $response;
@@ -1393,14 +1425,14 @@ class TemplatesApi
      *
      * Creates custom document fields in an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information = null)
+    public function createDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1416,44 +1448,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($document_fields_information)) {
@@ -1504,13 +1519,13 @@ class TemplatesApi
      *
      * Provides a URL to start an edit view of the Template UI
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
-    public function createEditView($account_id, $template_id, $return_url_request = null)
+    public function createEditView($account_id, $template_id, $return_url_request = null): \DocuSign\eSign\Model\ViewUrl
     {
         list($response) = $this->createEditViewWithHttpInfo($account_id, $template_id, $return_url_request);
         return $response;
@@ -1521,13 +1536,13 @@ class TemplatesApi
      *
      * Provides a URL to start an edit view of the Template UI
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createEditViewWithHttpInfo($account_id, $template_id, $return_url_request = null)
+    public function createEditViewWithHttpInfo($account_id, $template_id, $return_url_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1539,36 +1554,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/views/edit";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($return_url_request)) {
@@ -1619,13 +1621,13 @@ class TemplatesApi
      *
      * Lock a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
-    public function createLock($account_id, $template_id, $lock_request = null)
+    public function createLock($account_id, $template_id, $lock_request = null): \DocuSign\eSign\Model\LockInformation
     {
         list($response) = $this->createLockWithHttpInfo($account_id, $template_id, $lock_request);
         return $response;
@@ -1636,13 +1638,13 @@ class TemplatesApi
      *
      * Lock a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createLockWithHttpInfo($account_id, $template_id, $lock_request = null)
+    public function createLockWithHttpInfo($account_id, $template_id, $lock_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1654,36 +1656,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/lock";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($lock_request)) {
@@ -1734,14 +1723,14 @@ class TemplatesApi
      *
      * Adds tabs for a recipient.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\CreateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function createRecipients($account_id, $template_id, $template_recipients = null, TemplatesApi\CreateRecipientsOptions $options = null)
+    public function createRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\ApiTemplatesApi\CreateRecipientsOptions $options = null): \DocuSign\eSign\Model\Recipients
     {
         list($response) = $this->createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients, $options);
         return $response;
@@ -1752,14 +1741,14 @@ class TemplatesApi
      *
      * Adds tabs for a recipient.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\CreateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, TemplatesApi\CreateRecipientsOptions $options = null)
+    public function createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\ApiTemplatesApi\CreateRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1771,44 +1760,30 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getResendEnvelope() !== null) {
-            $queryParams['resend_envelope'] = $this->apiClient->getSerializer()->toQueryValue($options->getResendEnvelope());
-        }
+            // query params
+            if ($options->getResendEnvelope() != 'null') {
+                $queryParams['resend_envelope'] = $this->apiClient->getSerializer()->toQueryValue($options->getResendEnvelope());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_recipients)) {
@@ -1859,14 +1834,14 @@ class TemplatesApi
      *
      * Adds tabs for a recipient.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function createTabs($account_id, $recipient_id, $template_id, $template_tabs = null)
+    public function createTabs($account_id, $recipient_id, $template_id, $template_tabs = null): \DocuSign\eSign\Model\Tabs
     {
         list($response) = $this->createTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs);
         return $response;
@@ -1877,14 +1852,14 @@ class TemplatesApi
      *
      * Adds tabs for a recipient.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs = null)
+    public function createTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1900,44 +1875,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_tabs)) {
@@ -1988,12 +1946,12 @@ class TemplatesApi
      *
      * Creates an envelope from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateSummary
      */
-    public function createTemplate($account_id, $envelope_template = null)
+    public function createTemplate($account_id, $envelope_template = null): \DocuSign\eSign\Model\TemplateSummary
     {
         list($response) = $this->createTemplateWithHttpInfo($account_id, $envelope_template);
         return $response;
@@ -2004,12 +1962,12 @@ class TemplatesApi
      *
      * Creates an envelope from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTemplateWithHttpInfo($account_id, $envelope_template = null)
+    public function createTemplateWithHttpInfo($account_id, $envelope_template = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2017,28 +1975,19 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($envelope_template)) {
@@ -2089,14 +2038,14 @@ class TemplatesApi
      *
      * Post Responsive HTML Preview for a document in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
      */
-    public function createTemplateDocumentResponsiveHtmlPreview($account_id, $document_id, $template_id, $document_html_definition = null)
+    public function createTemplateDocumentResponsiveHtmlPreview($account_id, $document_id, $template_id, $document_html_definition = null): \DocuSign\eSign\Model\DocumentHtmlDefinitions
     {
         list($response) = $this->createTemplateDocumentResponsiveHtmlPreviewWithHttpInfo($account_id, $document_id, $template_id, $document_html_definition);
         return $response;
@@ -2107,14 +2056,14 @@ class TemplatesApi
      *
      * Post Responsive HTML Preview for a document in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTemplateDocumentResponsiveHtmlPreviewWithHttpInfo($account_id, $document_id, $template_id, $document_html_definition = null)
+    public function createTemplateDocumentResponsiveHtmlPreviewWithHttpInfo($account_id, $document_id, $template_id, $document_html_definition = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2130,44 +2079,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($document_html_definition)) {
@@ -2218,13 +2150,13 @@ class TemplatesApi
      *
      * Get Responsive HTML Preview for all documents in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
      */
-    public function createTemplateResponsiveHtmlPreview($account_id, $template_id, $document_html_definition = null)
+    public function createTemplateResponsiveHtmlPreview($account_id, $template_id, $document_html_definition = null): \DocuSign\eSign\Model\DocumentHtmlDefinitions
     {
         list($response) = $this->createTemplateResponsiveHtmlPreviewWithHttpInfo($account_id, $template_id, $document_html_definition);
         return $response;
@@ -2235,13 +2167,13 @@ class TemplatesApi
      *
      * Get Responsive HTML Preview for all documents in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTemplateResponsiveHtmlPreviewWithHttpInfo($account_id, $template_id, $document_html_definition = null)
+    public function createTemplateResponsiveHtmlPreviewWithHttpInfo($account_id, $template_id, $document_html_definition = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2253,36 +2185,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/responsive_html_preview";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($document_html_definition)) {
@@ -2333,13 +2252,13 @@ class TemplatesApi
      *
      * Deletes the bulk recipient list on a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsUpdateResponse
      */
-    public function deleteBulkRecipients($account_id, $recipient_id, $template_id)
+    public function deleteBulkRecipients($account_id, $recipient_id, $template_id): \DocuSign\eSign\Model\BulkRecipientsUpdateResponse
     {
         list($response) = $this->deleteBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id);
         return $response;
@@ -2350,13 +2269,13 @@ class TemplatesApi
      *
      * Deletes the bulk recipient list on a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id)
+    public function deleteBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2372,44 +2291,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2455,13 +2357,13 @@ class TemplatesApi
      *
      * Deletes envelope custom fields in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function deleteCustomFields($account_id, $template_id, $template_custom_fields = null)
+    public function deleteCustomFields($account_id, $template_id, $template_custom_fields = null): \DocuSign\eSign\Model\CustomFields
     {
         list($response) = $this->deleteCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields);
         return $response;
@@ -2472,13 +2374,13 @@ class TemplatesApi
      *
      * Deletes envelope custom fields in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields = null)
+    public function deleteCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2490,36 +2392,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_custom_fields)) {
@@ -2570,14 +2459,14 @@ class TemplatesApi
      *
      * Deletes custom document fields from an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
-    public function deleteDocumentFields($account_id, $document_id, $template_id, $document_fields_information = null)
+    public function deleteDocumentFields($account_id, $document_id, $template_id, $document_fields_information = null): \DocuSign\eSign\Model\DocumentFieldsInformation
     {
         list($response) = $this->deleteDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information);
         return $response;
@@ -2588,14 +2477,14 @@ class TemplatesApi
      *
      * Deletes custom document fields from an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information = null)
+    public function deleteDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2611,44 +2500,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($document_fields_information)) {
@@ -2699,15 +2571,15 @@ class TemplatesApi
      *
      * Deletes a page from a document in an template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteDocumentPage($account_id, $document_id, $page_number, $template_id, $page_request = null)
+    public function deleteDocumentPage($account_id, $document_id, $page_number, $template_id, $page_request = null): mixed
     {
         list($response) = $this->deleteDocumentPageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $page_request);
         return $response;
@@ -2718,15 +2590,15 @@ class TemplatesApi
      *
      * Deletes a page from a document in an template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteDocumentPageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $page_request = null)
+    public function deleteDocumentPageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $page_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2746,52 +2618,31 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($page_number !== null) {
-            $resourcePath = str_replace(
-                "{" . "pageNumber" . "}",
-                $this->apiClient->getSerializer()->toPathValue($page_number),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "pageNumber", $page_number);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($page_request)) {
@@ -2838,13 +2689,13 @@ class TemplatesApi
      *
      * Deletes documents from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentsResult
      */
-    public function deleteDocuments($account_id, $template_id, $envelope_definition = null)
+    public function deleteDocuments($account_id, $template_id, $envelope_definition = null): \DocuSign\eSign\Model\TemplateDocumentsResult
     {
         list($response) = $this->deleteDocumentsWithHttpInfo($account_id, $template_id, $envelope_definition);
         return $response;
@@ -2855,13 +2706,13 @@ class TemplatesApi
      *
      * Deletes documents from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteDocumentsWithHttpInfo($account_id, $template_id, $envelope_definition = null)
+    public function deleteDocumentsWithHttpInfo($account_id, $template_id, $envelope_definition = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2873,36 +2724,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($envelope_definition)) {
@@ -2953,14 +2791,14 @@ class TemplatesApi
      *
      * Removes a member group's sharing permissions for a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-    * @param string $template_part Currently, the only defined part is **groups**.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
-    public function deleteGroupShare($account_id, $template_id, $template_part, $group_information = null)
+    public function deleteGroupShare($account_id, $template_id, $template_part, $group_information = null): \DocuSign\eSign\Model\GroupInformation
     {
         list($response) = $this->deleteGroupShareWithHttpInfo($account_id, $template_id, $template_part, $group_information);
         return $response;
@@ -2971,14 +2809,14 @@ class TemplatesApi
      *
      * Removes a member group's sharing permissions for a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-    * @param string $template_part Currently, the only defined part is **groups**.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteGroupShareWithHttpInfo($account_id, $template_id, $template_part, $group_information = null)
+    public function deleteGroupShareWithHttpInfo($account_id, $template_id, $template_part, $group_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2994,44 +2832,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/{templatePart}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
         // path params
         if ($template_part !== null) {
-            $resourcePath = str_replace(
-                "{" . "templatePart" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_part),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templatePart", $template_part);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($group_information)) {
@@ -3082,13 +2903,13 @@ class TemplatesApi
      *
      * Deletes a template lock.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
-    public function deleteLock($account_id, $template_id, $lock_request = null)
+    public function deleteLock($account_id, $template_id, $lock_request = null): \DocuSign\eSign\Model\LockInformation
     {
         list($response) = $this->deleteLockWithHttpInfo($account_id, $template_id, $lock_request);
         return $response;
@@ -3099,13 +2920,13 @@ class TemplatesApi
      *
      * Deletes a template lock.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteLockWithHttpInfo($account_id, $template_id, $lock_request = null)
+    public function deleteLockWithHttpInfo($account_id, $template_id, $lock_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3117,36 +2938,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/lock";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($lock_request)) {
@@ -3197,14 +3005,14 @@ class TemplatesApi
      *
      * Deletes the specified recipient file from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function deleteRecipient($account_id, $recipient_id, $template_id, $template_recipients = null)
+    public function deleteRecipient($account_id, $recipient_id, $template_id, $template_recipients = null): \DocuSign\eSign\Model\Recipients
     {
         list($response) = $this->deleteRecipientWithHttpInfo($account_id, $recipient_id, $template_id, $template_recipients);
         return $response;
@@ -3215,14 +3023,14 @@ class TemplatesApi
      *
      * Deletes the specified recipient file from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteRecipientWithHttpInfo($account_id, $recipient_id, $template_id, $template_recipients = null)
+    public function deleteRecipientWithHttpInfo($account_id, $recipient_id, $template_id, $template_recipients = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3238,44 +3046,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_recipients)) {
@@ -3326,13 +3117,13 @@ class TemplatesApi
      *
      * Deletes recipients from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function deleteRecipients($account_id, $template_id, $template_recipients = null)
+    public function deleteRecipients($account_id, $template_id, $template_recipients = null): \DocuSign\eSign\Model\Recipients
     {
         list($response) = $this->deleteRecipientsWithHttpInfo($account_id, $template_id, $template_recipients);
         return $response;
@@ -3343,13 +3134,13 @@ class TemplatesApi
      *
      * Deletes recipients from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null)
+    public function deleteRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3361,36 +3152,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_recipients)) {
@@ -3441,14 +3219,14 @@ class TemplatesApi
      *
      * Deletes the tabs associated with a recipient in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function deleteTabs($account_id, $recipient_id, $template_id, $template_tabs = null)
+    public function deleteTabs($account_id, $recipient_id, $template_id, $template_tabs = null): \DocuSign\eSign\Model\Tabs
     {
         list($response) = $this->deleteTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs);
         return $response;
@@ -3459,14 +3237,14 @@ class TemplatesApi
      *
      * Deletes the tabs associated with a recipient in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs = null)
+    public function deleteTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3482,44 +3260,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_tabs)) {
@@ -3570,13 +3331,13 @@ class TemplatesApi
      *
      * Gets a list of templates for a specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeTemplate
      */
-    public function get($account_id, $template_id, TemplatesApi\GetOptions $options = null)
+    public function get($account_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetOptions $options = null): \DocuSign\eSign\Model\EnvelopeTemplate
     {
         list($response) = $this->getWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -3587,13 +3348,13 @@ class TemplatesApi
      *
      * Gets a list of templates for a specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeTemplate, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWithHttpInfo($account_id, $template_id, TemplatesApi\GetOptions $options = null)
+    public function getWithHttpInfo($account_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3605,44 +3366,30 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
+            // query params
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3688,14 +3435,14 @@ class TemplatesApi
      *
      * Gets PDF documents from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetDocumentOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getDocument($account_id, $document_id, $template_id, TemplatesApi\GetDocumentOptions $options = null)
+    public function getDocument($account_id, $document_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetDocumentOptions $options = null): \SplFileObject
     {
         list($response) = $this->getDocumentWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -3706,14 +3453,14 @@ class TemplatesApi
      *
      * Gets PDF documents from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetDocumentOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentWithHttpInfo($account_id, $document_id, $template_id, TemplatesApi\GetDocumentOptions $options = null)
+    public function getDocumentWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetDocumentOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3729,56 +3476,37 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/pdf']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/pdf']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getEncrypt() !== null) {
-            $queryParams['encrypt'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncrypt());
-        }
-        // query params
-        if ($options->getShowChanges() !== null) {
-            $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
-        }
+            // query params
+            if ($options->getEncrypt() != 'null') {
+                $queryParams['encrypt'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncrypt());
+            }
+            if ($options->getShowChanges() != 'null') {
+                $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3824,15 +3552,15 @@ class TemplatesApi
      *
      * Gets a page image from a template for display.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetDocumentPageImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getDocumentPageImage($account_id, $document_id, $page_number, $template_id, TemplatesApi\GetDocumentPageImageOptions $options = null)
+    public function getDocumentPageImage($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetDocumentPageImageOptions $options = null): \SplFileObject
     {
         list($response) = $this->getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $options);
         return $response;
@@ -3843,15 +3571,15 @@ class TemplatesApi
      *
      * Gets a page image from a template for display.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetDocumentPageImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, TemplatesApi\GetDocumentPageImageOptions $options = null)
+    public function getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetDocumentPageImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3871,72 +3599,47 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['image/png']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['image/png']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getDpi() !== null) {
-            $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
-        }
-        // query params
-        if ($options->getMaxHeight() !== null) {
-            $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
-        }
-        // query params
-        if ($options->getMaxWidth() !== null) {
-            $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
-        }
-        // query params
-        if ($options->getShowChanges() !== null) {
-            $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
-        }
+            // query params
+            if ($options->getDpi() != 'null') {
+                $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
+            }
+            if ($options->getMaxHeight() != 'null') {
+                $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
+            }
+            if ($options->getMaxWidth() != 'null') {
+                $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
+            }
+            if ($options->getShowChanges() != 'null') {
+                $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($page_number !== null) {
-            $resourcePath = str_replace(
-                "{" . "pageNumber" . "}",
-                $this->apiClient->getSerializer()->toPathValue($page_number),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "pageNumber", $page_number);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3982,14 +3685,14 @@ class TemplatesApi
      *
      * Returns tabs on the document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetDocumentTabsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function getDocumentTabs($account_id, $document_id, $template_id, TemplatesApi\GetDocumentTabsOptions $options = null)
+    public function getDocumentTabs($account_id, $document_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetDocumentTabsOptions $options = null): \DocuSign\eSign\Model\Tabs
     {
         list($response) = $this->getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -4000,14 +3703,14 @@ class TemplatesApi
      *
      * Returns tabs on the document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetDocumentTabsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, TemplatesApi\GetDocumentTabsOptions $options = null)
+    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetDocumentTabsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4023,52 +3726,34 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getPageNumbers() !== null) {
-            $queryParams['page_numbers'] = $this->apiClient->getSerializer()->toQueryValue($options->getPageNumbers());
-        }
+            // query params
+            if ($options->getPageNumbers() != 'null') {
+                $queryParams['page_numbers'] = $this->apiClient->getSerializer()->toQueryValue($options->getPageNumbers());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4114,12 +3799,12 @@ class TemplatesApi
      *
      * Gets template lock information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
-    public function getLock($account_id, $template_id)
+    public function getLock($account_id, $template_id): \DocuSign\eSign\Model\LockInformation
     {
         list($response) = $this->getLockWithHttpInfo($account_id, $template_id);
         return $response;
@@ -4130,12 +3815,12 @@ class TemplatesApi
      *
      * Gets template lock information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLockWithHttpInfo($account_id, $template_id)
+    public function getLockWithHttpInfo($account_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4147,36 +3832,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/lock";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4222,12 +3894,12 @@ class TemplatesApi
      *
      * Gets template notification information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notification
      */
-    public function getNotificationSettings($account_id, $template_id)
+    public function getNotificationSettings($account_id, $template_id): \DocuSign\eSign\Model\Notification
     {
         list($response) = $this->getNotificationSettingsWithHttpInfo($account_id, $template_id);
         return $response;
@@ -4238,12 +3910,12 @@ class TemplatesApi
      *
      * Gets template notification information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notification, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotificationSettingsWithHttpInfo($account_id, $template_id)
+    public function getNotificationSettingsWithHttpInfo($account_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4255,36 +3927,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/notification";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4330,14 +3989,14 @@ class TemplatesApi
      *
      * Returns tabs on the specified page.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function getPageTabs($account_id, $document_id, $page_number, $template_id)
+    public function getPageTabs($account_id, $document_id, $page_number, $template_id): \DocuSign\eSign\Model\Tabs
     {
         list($response) = $this->getPageTabsWithHttpInfo($account_id, $document_id, $page_number, $template_id);
         return $response;
@@ -4348,14 +4007,14 @@ class TemplatesApi
      *
      * Returns tabs on the specified page.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPageTabsWithHttpInfo($account_id, $document_id, $page_number, $template_id)
+    public function getPageTabsWithHttpInfo($account_id, $document_id, $page_number, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4375,52 +4034,31 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($page_number !== null) {
-            $resourcePath = str_replace(
-                "{" . "pageNumber" . "}",
-                $this->apiClient->getSerializer()->toPathValue($page_number),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "pageNumber", $page_number);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4466,14 +4104,14 @@ class TemplatesApi
      *
      * Returns document page image(s) based on input.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetPagesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
-    public function getPages($account_id, $document_id, $template_id, TemplatesApi\GetPagesOptions $options = null)
+    public function getPages($account_id, $document_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetPagesOptions $options = null): \DocuSign\eSign\Model\PageImages
     {
         list($response) = $this->getPagesWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -4484,14 +4122,14 @@ class TemplatesApi
      *
      * Returns document page image(s) based on input.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\GetPagesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPagesWithHttpInfo($account_id, $document_id, $template_id, TemplatesApi\GetPagesOptions $options = null)
+    public function getPagesWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\GetPagesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4507,76 +4145,52 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getDpi() !== null) {
-            $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
-        }
-        // query params
-        if ($options->getMaxHeight() !== null) {
-            $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
-        }
-        // query params
-        if ($options->getMaxWidth() !== null) {
-            $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
-        }
-        // query params
-        if ($options->getNocache() !== null) {
-            $queryParams['nocache'] = $this->apiClient->getSerializer()->toQueryValue($options->getNocache());
-        }
-        // query params
-        if ($options->getShowChanges() !== null) {
-            $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getDpi() != 'null') {
+                $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
+            }
+            if ($options->getMaxHeight() != 'null') {
+                $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
+            }
+            if ($options->getMaxWidth() != 'null') {
+                $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
+            }
+            if ($options->getNocache() != 'null') {
+                $queryParams['nocache'] = $this->apiClient->getSerializer()->toQueryValue($options->getNocache());
+            }
+            if ($options->getShowChanges() != 'null') {
+                $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4622,13 +4236,13 @@ class TemplatesApi
      *
      * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
      */
-    public function getTemplateDocumentHtmlDefinitions($account_id, $document_id, $template_id)
+    public function getTemplateDocumentHtmlDefinitions($account_id, $document_id, $template_id): \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
     {
         list($response) = $this->getTemplateDocumentHtmlDefinitionsWithHttpInfo($account_id, $document_id, $template_id);
         return $response;
@@ -4639,13 +4253,13 @@ class TemplatesApi
      *
      * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTemplateDocumentHtmlDefinitionsWithHttpInfo($account_id, $document_id, $template_id)
+    public function getTemplateDocumentHtmlDefinitionsWithHttpInfo($account_id, $document_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4661,44 +4275,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4744,12 +4341,12 @@ class TemplatesApi
      *
      * Get the Original HTML Definition used to generate the Responsive HTML for the template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
      */
-    public function getTemplateHtmlDefinitions($account_id, $template_id)
+    public function getTemplateHtmlDefinitions($account_id, $template_id): \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
     {
         list($response) = $this->getTemplateHtmlDefinitionsWithHttpInfo($account_id, $template_id);
         return $response;
@@ -4760,12 +4357,12 @@ class TemplatesApi
      *
      * Get the Original HTML Definition used to generate the Responsive HTML for the template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTemplateHtmlDefinitionsWithHttpInfo($account_id, $template_id)
+    public function getTemplateHtmlDefinitionsWithHttpInfo($account_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4777,36 +4374,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/html_definitions";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4852,14 +4436,14 @@ class TemplatesApi
      *
      * Gets the bulk recipient file from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListBulkRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsResponse
      */
-    public function listBulkRecipients($account_id, $recipient_id, $template_id, TemplatesApi\ListBulkRecipientsOptions $options = null)
+    public function listBulkRecipients($account_id, $recipient_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\ListBulkRecipientsOptions $options = null): \DocuSign\eSign\Model\BulkRecipientsResponse
     {
         list($response) = $this->listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, $options);
         return $response;
@@ -4870,14 +4454,14 @@ class TemplatesApi
      *
      * Gets the bulk recipient file from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListBulkRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, TemplatesApi\ListBulkRecipientsOptions $options = null)
+    public function listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\ListBulkRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4893,56 +4477,37 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeTabs() !== null) {
-            $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
+            // query params
+            if ($options->getIncludeTabs() != 'null') {
+                $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4988,12 +4553,12 @@ class TemplatesApi
      *
      * Gets the custom document fields from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function listCustomFields($account_id, $template_id)
+    public function listCustomFields($account_id, $template_id): \DocuSign\eSign\Model\CustomFields
     {
         list($response) = $this->listCustomFieldsWithHttpInfo($account_id, $template_id);
         return $response;
@@ -5004,12 +4569,12 @@ class TemplatesApi
      *
      * Gets the custom document fields from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCustomFieldsWithHttpInfo($account_id, $template_id)
+    public function listCustomFieldsWithHttpInfo($account_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5021,36 +4586,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5096,13 +4648,13 @@ class TemplatesApi
      *
      * Gets the custom document fields for a an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
-    public function listDocumentFields($account_id, $document_id, $template_id)
+    public function listDocumentFields($account_id, $document_id, $template_id): \DocuSign\eSign\Model\DocumentFieldsInformation
     {
         list($response) = $this->listDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id);
         return $response;
@@ -5113,13 +4665,13 @@ class TemplatesApi
      *
      * Gets the custom document fields for a an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id)
+    public function listDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5135,44 +4687,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5218,12 +4753,12 @@ class TemplatesApi
      *
      * Gets a list of documents associated with a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentsResult
      */
-    public function listDocuments($account_id, $template_id)
+    public function listDocuments($account_id, $template_id): \DocuSign\eSign\Model\TemplateDocumentsResult
     {
         list($response) = $this->listDocumentsWithHttpInfo($account_id, $template_id);
         return $response;
@@ -5234,12 +4769,12 @@ class TemplatesApi
      *
      * Gets a list of documents associated with a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listDocumentsWithHttpInfo($account_id, $template_id)
+    public function listDocumentsWithHttpInfo($account_id, $template_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5251,36 +4786,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5326,13 +4848,13 @@ class TemplatesApi
      *
      * Gets recipient information from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function listRecipients($account_id, $template_id, TemplatesApi\ListRecipientsOptions $options = null)
+    public function listRecipients($account_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\ListRecipientsOptions $options = null): \DocuSign\eSign\Model\Recipients
     {
         list($response) = $this->listRecipientsWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -5343,13 +4865,13 @@ class TemplatesApi
      *
      * Gets recipient information from a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRecipientsWithHttpInfo($account_id, $template_id, TemplatesApi\ListRecipientsOptions $options = null)
+    public function listRecipientsWithHttpInfo($account_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\ListRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5361,52 +4883,36 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeAnchorTabLocations() !== null) {
-            $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
-        }
-        // query params
-        if ($options->getIncludeExtended() !== null) {
-            $queryParams['include_extended'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeExtended());
-        }
-        // query params
-        if ($options->getIncludeTabs() !== null) {
-            $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
-        }
+            // query params
+            if ($options->getIncludeAnchorTabLocations() != 'null') {
+                $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
+            }
+            if ($options->getIncludeExtended() != 'null') {
+                $queryParams['include_extended'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeExtended());
+            }
+            if ($options->getIncludeTabs() != 'null') {
+                $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5452,14 +4958,14 @@ class TemplatesApi
      *
      * Gets the tabs information for a signer or sign-in-person recipient in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListTabsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function listTabs($account_id, $recipient_id, $template_id, TemplatesApi\ListTabsOptions $options = null)
+    public function listTabs($account_id, $recipient_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\ListTabsOptions $options = null): \DocuSign\eSign\Model\Tabs
     {
         list($response) = $this->listTabsWithHttpInfo($account_id, $recipient_id, $template_id, $options);
         return $response;
@@ -5470,14 +4976,14 @@ class TemplatesApi
      *
      * Gets the tabs information for a signer or sign-in-person recipient in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListTabsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listTabsWithHttpInfo($account_id, $recipient_id, $template_id, TemplatesApi\ListTabsOptions $options = null)
+    public function listTabsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\ApiTemplatesApi\ListTabsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5493,56 +4999,37 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeAnchorTabLocations() !== null) {
-            $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
-        }
-        // query params
-        if ($options->getIncludeMetadata() !== null) {
-            $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
-        }
+            // query params
+            if ($options->getIncludeAnchorTabLocations() != 'null') {
+                $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
+            }
+            if ($options->getIncludeMetadata() != 'null') {
+                $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5588,12 +5075,12 @@ class TemplatesApi
      *
      * Gets the definition of a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListTemplatesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeTemplateResults
      */
-    public function listTemplates($account_id, TemplatesApi\ListTemplatesOptions $options = null)
+    public function listTemplates($account_id, \DocuSign\eSign\ApiTemplatesApi\ListTemplatesOptions $options = null): \DocuSign\eSign\Model\EnvelopeTemplateResults
     {
         list($response) = $this->listTemplatesWithHttpInfo($account_id, $options);
         return $response;
@@ -5604,12 +5091,12 @@ class TemplatesApi
      *
      * Gets the definition of a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiTemplatesApi\ListTemplatesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeTemplateResults, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listTemplatesWithHttpInfo($account_id, TemplatesApi\ListTemplatesOptions $options = null)
+    public function listTemplatesWithHttpInfo($account_id, \DocuSign\eSign\ApiTemplatesApi\ListTemplatesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5617,100 +5104,74 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getFolder() !== null) {
-            $queryParams['folder'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolder());
-        }
-        // query params
-        if ($options->getFolderIds() !== null) {
-            $queryParams['folder_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolderIds());
-        }
-        // query params
-        if ($options->getFromDate() !== null) {
-            $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
-        }
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
-        // query params
-        if ($options->getModifiedFromDate() !== null) {
-            $queryParams['modified_from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getModifiedFromDate());
-        }
-        // query params
-        if ($options->getModifiedToDate() !== null) {
-            $queryParams['modified_to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getModifiedToDate());
-        }
-        // query params
-        if ($options->getOrder() !== null) {
-            $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
-        }
-        // query params
-        if ($options->getOrderBy() !== null) {
-            $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
-        }
-        // query params
-        if ($options->getSearchText() !== null) {
-            $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
-        }
-        // query params
-        if ($options->getSharedByMe() !== null) {
-            $queryParams['shared_by_me'] = $this->apiClient->getSerializer()->toQueryValue($options->getSharedByMe());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getToDate() !== null) {
-            $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
-        }
-        // query params
-        if ($options->getUsedFromDate() !== null) {
-            $queryParams['used_from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getUsedFromDate());
-        }
-        // query params
-        if ($options->getUsedToDate() !== null) {
-            $queryParams['used_to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getUsedToDate());
-        }
-        // query params
-        if ($options->getUserFilter() !== null) {
-            $queryParams['user_filter'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserFilter());
-        }
-        // query params
-        if ($options->getUserId() !== null) {
-            $queryParams['user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserId());
-        }
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getFolder() != 'null') {
+                $queryParams['folder'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolder());
+            }
+            if ($options->getFolderIds() != 'null') {
+                $queryParams['folder_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolderIds());
+            }
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
+            if ($options->getModifiedFromDate() != 'null') {
+                $queryParams['modified_from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getModifiedFromDate());
+            }
+            if ($options->getModifiedToDate() != 'null') {
+                $queryParams['modified_to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getModifiedToDate());
+            }
+            if ($options->getOrder() != 'null') {
+                $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
+            }
+            if ($options->getOrderBy() != 'null') {
+                $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
+            }
+            if ($options->getSharedByMe() != 'null') {
+                $queryParams['shared_by_me'] = $this->apiClient->getSerializer()->toQueryValue($options->getSharedByMe());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
+            if ($options->getUsedFromDate() != 'null') {
+                $queryParams['used_from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getUsedFromDate());
+            }
+            if ($options->getUsedToDate() != 'null') {
+                $queryParams['used_to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getUsedToDate());
+            }
+            if ($options->getUserFilter() != 'null') {
+                $queryParams['user_filter'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserFilter());
+            }
+            if ($options->getUserId() != 'null') {
+                $queryParams['user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserId());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5756,15 +5217,15 @@ class TemplatesApi
      *
      * Rotates page image from a template for display.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function rotateDocumentPage($account_id, $document_id, $page_number, $template_id, $page_request = null)
+    public function rotateDocumentPage($account_id, $document_id, $page_number, $template_id, $page_request = null): mixed
     {
         list($response) = $this->rotateDocumentPageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $page_request);
         return $response;
@@ -5775,15 +5236,15 @@ class TemplatesApi
      *
      * Rotates page image from a template for display.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $page_number The page number being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $page_number The page number being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rotateDocumentPageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $page_request = null)
+    public function rotateDocumentPageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $page_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5803,52 +5264,31 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($page_number !== null) {
-            $resourcePath = str_replace(
-                "{" . "pageNumber" . "}",
-                $this->apiClient->getSerializer()->toPathValue($page_number),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "pageNumber", $page_number);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($page_request)) {
@@ -5895,13 +5335,13 @@ class TemplatesApi
      *
      * Updates an existing template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateUpdateSummary
      */
-    public function update($account_id, $template_id, $envelope_template = null)
+    public function update($account_id, $template_id, $envelope_template = null): \DocuSign\eSign\Model\TemplateUpdateSummary
     {
         list($response) = $this->updateWithHttpInfo($account_id, $template_id, $envelope_template);
         return $response;
@@ -5912,13 +5352,13 @@ class TemplatesApi
      *
      * Updates an existing template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateUpdateSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateWithHttpInfo($account_id, $template_id, $envelope_template = null)
+    public function updateWithHttpInfo($account_id, $template_id, $envelope_template = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5930,36 +5370,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($envelope_template)) {
@@ -6010,14 +5437,14 @@ class TemplatesApi
      *
      * Adds or replaces the bulk recipients list in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsSummaryResponse
      */
-    public function updateBulkRecipients($account_id, $recipient_id, $template_id, $bulk_recipients_request = null)
+    public function updateBulkRecipients($account_id, $recipient_id, $template_id, $bulk_recipients_request = null): \DocuSign\eSign\Model\BulkRecipientsSummaryResponse
     {
         list($response) = $this->updateBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, $bulk_recipients_request);
         return $response;
@@ -6028,14 +5455,14 @@ class TemplatesApi
      *
      * Adds or replaces the bulk recipients list in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsSummaryResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, $bulk_recipients_request = null)
+    public function updateBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, $bulk_recipients_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6051,44 +5478,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($bulk_recipients_request)) {
@@ -6139,13 +5549,13 @@ class TemplatesApi
      *
      * Updates envelope custom fields in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function updateCustomFields($account_id, $template_id, $template_custom_fields = null)
+    public function updateCustomFields($account_id, $template_id, $template_custom_fields = null): \DocuSign\eSign\Model\CustomFields
     {
         list($response) = $this->updateCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields);
         return $response;
@@ -6156,13 +5566,13 @@ class TemplatesApi
      *
      * Updates envelope custom fields in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields = null)
+    public function updateCustomFieldsWithHttpInfo($account_id, $template_id, $template_custom_fields = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6174,36 +5584,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_custom_fields)) {
@@ -6254,15 +5651,15 @@ class TemplatesApi
      *
      * Adds a document to a template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocument
      */
-    public function updateDocument($account_id, $document_id, $template_id, $envelope_definition = null, TemplatesApi\UpdateDocumentOptions $options = null)
+    public function updateDocument($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentOptions $options = null): \DocuSign\eSign\Model\EnvelopeDocument
     {
         list($response) = $this->updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition, $options);
         return $response;
@@ -6273,15 +5670,15 @@ class TemplatesApi
      *
      * Adds a document to a template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition = null, TemplatesApi\UpdateDocumentOptions $options = null)
+    public function updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6297,56 +5694,37 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getApplyDocumentFields() !== null) {
-            $queryParams['apply_document_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyDocumentFields());
-        }
-        // query params
-        if ($options->getIsEnvelopeDefinition() !== null) {
-            $queryParams['is_envelope_definition'] = $this->apiClient->getSerializer()->toQueryValue($options->getIsEnvelopeDefinition());
-        }
+            // query params
+            if ($options->getApplyDocumentFields() != 'null') {
+                $queryParams['apply_document_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyDocumentFields());
+            }
+            if ($options->getIsEnvelopeDefinition() != 'null') {
+                $queryParams['is_envelope_definition'] = $this->apiClient->getSerializer()->toQueryValue($options->getIsEnvelopeDefinition());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($envelope_definition)) {
@@ -6397,14 +5775,14 @@ class TemplatesApi
      *
      * Updates existing custom document fields in an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
-    public function updateDocumentFields($account_id, $document_id, $template_id, $document_fields_information = null)
+    public function updateDocumentFields($account_id, $document_id, $template_id, $document_fields_information = null): \DocuSign\eSign\Model\DocumentFieldsInformation
     {
         list($response) = $this->updateDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information);
         return $response;
@@ -6415,14 +5793,14 @@ class TemplatesApi
      *
      * Updates existing custom document fields in an existing template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $document_id The ID of the document being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $document_id The ID of the document being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information = null)
+    public function updateDocumentFieldsWithHttpInfo($account_id, $document_id, $template_id, $document_fields_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6438,44 +5816,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($document_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "documentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($document_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($document_fields_information)) {
@@ -6526,14 +5887,14 @@ class TemplatesApi
      *
      * Adds documents to a template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentsResult
      */
-    public function updateDocuments($account_id, $template_id, $envelope_definition = null, TemplatesApi\UpdateDocumentsOptions $options = null)
+    public function updateDocuments($account_id, $template_id, $envelope_definition = null, \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentsOptions $options = null): \DocuSign\eSign\Model\TemplateDocumentsResult
     {
         list($response) = $this->updateDocumentsWithHttpInfo($account_id, $template_id, $envelope_definition, $options);
         return $response;
@@ -6544,14 +5905,14 @@ class TemplatesApi
      *
      * Adds documents to a template document.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDocumentsWithHttpInfo($account_id, $template_id, $envelope_definition = null, TemplatesApi\UpdateDocumentsOptions $options = null)
+    public function updateDocumentsWithHttpInfo($account_id, $template_id, $envelope_definition = null, \DocuSign\eSign\ApiTemplatesApi\UpdateDocumentsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6563,48 +5924,33 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/documents";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getApplyDocumentFields() !== null) {
-            $queryParams['apply_document_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyDocumentFields());
-        }
-        // query params
-        if ($options->getPersistTabs() !== null) {
-            $queryParams['persist_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getPersistTabs());
-        }
+            // query params
+            if ($options->getApplyDocumentFields() != 'null') {
+                $queryParams['apply_document_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyDocumentFields());
+            }
+            if ($options->getPersistTabs() != 'null') {
+                $queryParams['persist_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getPersistTabs());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($envelope_definition)) {
@@ -6655,14 +6001,14 @@ class TemplatesApi
      *
      * Shares a template with a group
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-    * @param string $template_part Currently, the only defined part is **groups**.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
-    public function updateGroupShare($account_id, $template_id, $template_part, $group_information = null)
+    public function updateGroupShare($account_id, $template_id, $template_part, $group_information = null): \DocuSign\eSign\Model\GroupInformation
     {
         list($response) = $this->updateGroupShareWithHttpInfo($account_id, $template_id, $template_part, $group_information);
         return $response;
@@ -6673,14 +6019,14 @@ class TemplatesApi
      *
      * Shares a template with a group
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
-    * @param string $template_part Currently, the only defined part is **groups**.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
+     * @param string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateGroupShareWithHttpInfo($account_id, $template_id, $template_part, $group_information = null)
+    public function updateGroupShareWithHttpInfo($account_id, $template_id, $template_part, $group_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6696,44 +6042,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/{templatePart}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
         // path params
         if ($template_part !== null) {
-            $resourcePath = str_replace(
-                "{" . "templatePart" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_part),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templatePart", $template_part);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($group_information)) {
@@ -6784,13 +6113,13 @@ class TemplatesApi
      *
      * Updates a template lock.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
-    public function updateLock($account_id, $template_id, $lock_request = null)
+    public function updateLock($account_id, $template_id, $lock_request = null): \DocuSign\eSign\Model\LockInformation
     {
         list($response) = $this->updateLockWithHttpInfo($account_id, $template_id, $lock_request);
         return $response;
@@ -6801,13 +6130,13 @@ class TemplatesApi
      *
      * Updates a template lock.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateLockWithHttpInfo($account_id, $template_id, $lock_request = null)
+    public function updateLockWithHttpInfo($account_id, $template_id, $lock_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6819,36 +6148,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/lock";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($lock_request)) {
@@ -6899,13 +6215,13 @@ class TemplatesApi
      *
      * Updates the notification  structure for an existing template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateNotificationRequest $template_notification_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notification
      */
-    public function updateNotificationSettings($account_id, $template_id, $template_notification_request = null)
+    public function updateNotificationSettings($account_id, $template_id, $template_notification_request = null): \DocuSign\eSign\Model\Notification
     {
         list($response) = $this->updateNotificationSettingsWithHttpInfo($account_id, $template_id, $template_notification_request);
         return $response;
@@ -6916,13 +6232,13 @@ class TemplatesApi
      *
      * Updates the notification  structure for an existing template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateNotificationRequest $template_notification_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notification, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateNotificationSettingsWithHttpInfo($account_id, $template_id, $template_notification_request = null)
+    public function updateNotificationSettingsWithHttpInfo($account_id, $template_id, $template_notification_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6934,36 +6250,23 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/notification";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_notification_request)) {
@@ -7014,14 +6317,14 @@ class TemplatesApi
      *
      * Updates recipients in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\UpdateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientsUpdateSummary
      */
-    public function updateRecipients($account_id, $template_id, $template_recipients = null, TemplatesApi\UpdateRecipientsOptions $options = null)
+    public function updateRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\ApiTemplatesApi\UpdateRecipientsOptions $options = null): \DocuSign\eSign\Model\RecipientsUpdateSummary
     {
         list($response) = $this->updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients, $options);
         return $response;
@@ -7032,14 +6335,14 @@ class TemplatesApi
      *
      * Updates recipients in a template.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiTemplatesApi\UpdateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientsUpdateSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, TemplatesApi\UpdateRecipientsOptions $options = null)
+    public function updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\ApiTemplatesApi\UpdateRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7051,44 +6354,30 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getResendEnvelope() !== null) {
-            $queryParams['resend_envelope'] = $this->apiClient->getSerializer()->toQueryValue($options->getResendEnvelope());
-        }
+            // query params
+            if ($options->getResendEnvelope() != 'null') {
+                $queryParams['resend_envelope'] = $this->apiClient->getSerializer()->toQueryValue($options->getResendEnvelope());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_recipients)) {
@@ -7139,14 +6428,14 @@ class TemplatesApi
      *
      * Updates the tabs for a recipient.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function updateTabs($account_id, $recipient_id, $template_id, $template_tabs = null)
+    public function updateTabs($account_id, $recipient_id, $template_id, $template_tabs = null): \DocuSign\eSign\Model\Tabs
     {
         list($response) = $this->updateTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs);
         return $response;
@@ -7157,14 +6446,14 @@ class TemplatesApi
      *
      * Updates the tabs for a recipient.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_id The ID of the recipient being accessed.
-    * @param string $template_id The ID of the template being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_id The ID of the recipient being accessed.
+     * @param string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs = null)
+    public function updateTabsWithHttpInfo($account_id, $recipient_id, $template_id, $template_tabs = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7180,44 +6469,27 @@ class TemplatesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
         }
         // path params
         if ($template_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "templateId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($template_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($template_tabs)) {

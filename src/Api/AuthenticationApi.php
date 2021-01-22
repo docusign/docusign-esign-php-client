@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * AuthenticationApi
- * PHP version 5
+ * AuthenticationApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\AuthenticationApi;
+namespace DocuSign\eSign\ApiAuthenticationApi;
+
 
 class LoginOptions
 {
@@ -34,23 +38,23 @@ class LoginOptions
       * $api_password When set to **true**, shows the account API password in the response.
       * @var string
       */
-    protected $api_password;
+    protected string $api_password;
 
     /**
      * Gets api_password
      * @return string
      */
-    public function getApiPassword()
+    public function getApiPassword(): string
     {
         return $this->api_password;
     }
-  
+
     /**
      * Sets api_password
      * @param string $api_password When set to **true**, shows the account API password in the response.
-     * @return $this
+     * @return self
      */
-    public function setApiPassword($api_password)
+    public function setApiPassword(string $api_password): self
     {
         $this->api_password = $api_password;
         return $this;
@@ -59,23 +63,23 @@ class LoginOptions
       * $embed_account_id_guid 
       * @var string
       */
-    protected $embed_account_id_guid;
+    protected string $embed_account_id_guid;
 
     /**
      * Gets embed_account_id_guid
      * @return string
      */
-    public function getEmbedAccountIdGuid()
+    public function getEmbedAccountIdGuid(): string
     {
         return $this->embed_account_id_guid;
     }
-  
+
     /**
      * Sets embed_account_id_guid
      * @param string $embed_account_id_guid 
-     * @return $this
+     * @return self
      */
-    public function setEmbedAccountIdGuid($embed_account_id_guid)
+    public function setEmbedAccountIdGuid(string $embed_account_id_guid): self
     {
         $this->embed_account_id_guid = $embed_account_id_guid;
         return $this;
@@ -84,23 +88,23 @@ class LoginOptions
       * $include_account_id_guid When set to **true**, shows the account ID GUID in the response.
       * @var string
       */
-    protected $include_account_id_guid;
+    protected string $include_account_id_guid;
 
     /**
      * Gets include_account_id_guid
      * @return string
      */
-    public function getIncludeAccountIdGuid()
+    public function getIncludeAccountIdGuid(): string
     {
         return $this->include_account_id_guid;
     }
-  
+
     /**
      * Sets include_account_id_guid
      * @param string $include_account_id_guid When set to **true**, shows the account ID GUID in the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeAccountIdGuid($include_account_id_guid)
+    public function setIncludeAccountIdGuid(string $include_account_id_guid): self
     {
         $this->include_account_id_guid = $include_account_id_guid;
         return $this;
@@ -109,23 +113,23 @@ class LoginOptions
       * $login_settings Determines whether login settings are returned in the response.  Valid Values:  * all -  All the login settings are returned.  * none - no login settings are returned.
       * @var string
       */
-    protected $login_settings;
+    protected string $login_settings;
 
     /**
      * Gets login_settings
      * @return string
      */
-    public function getLoginSettings()
+    public function getLoginSettings(): string
     {
         return $this->login_settings;
     }
-  
+
     /**
      * Sets login_settings
      * @param string $login_settings Determines whether login settings are returned in the response.  Valid Values:  * all -  All the login settings are returned.  * none - no login settings are returned.
-     * @return $this
+     * @return self
      */
-    public function setLoginSettings($login_settings)
+    public function setLoginSettings(string $login_settings): self
     {
         $this->login_settings = $login_settings;
         return $this;
@@ -133,12 +137,13 @@ class LoginOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * AuthenticationApi Class Doc Comment
@@ -153,30 +158,27 @@ class AuthenticationApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -184,28 +186,47 @@ class AuthenticationApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return AuthenticationApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation deleteSocialLogin
      *
      * Deletes user's social account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteSocialLogin($account_id, $user_id, $social_account_information = null)
+    public function deleteSocialLogin($account_id, $user_id, $social_account_information = null): mixed
     {
         list($response) = $this->deleteSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information);
         return $response;
@@ -216,13 +237,13 @@ class AuthenticationApi
      *
      * Deletes user's social account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information = null)
+    public function deleteSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -234,36 +255,23 @@ class AuthenticationApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/users/{userId}/social";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($social_account_information)) {
@@ -310,10 +318,10 @@ class AuthenticationApi
      *
      * Creates an authorization token.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\OauthAccess
      */
-    public function getOAuthToken()
+    public function getOAuthToken(): \DocuSign\eSign\Model\OauthAccess
     {
         list($response) = $this->getOAuthTokenWithHttpInfo();
         return $response;
@@ -324,27 +332,22 @@ class AuthenticationApi
      *
      * Creates an authorization token.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\OauthAccess, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOAuthTokenWithHttpInfo()
+    public function getOAuthTokenWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2/oauth2/token";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -390,12 +393,12 @@ class AuthenticationApi
      *
      * Gets a list of a user's social accounts.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSocialIdResult
      */
-    public function listSocialLogins($account_id, $user_id)
+    public function listSocialLogins($account_id, $user_id): \DocuSign\eSign\Model\UserSocialIdResult
     {
         list($response) = $this->listSocialLoginsWithHttpInfo($account_id, $user_id);
         return $response;
@@ -406,12 +409,12 @@ class AuthenticationApi
      *
      * Gets a list of a user's social accounts.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSocialIdResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listSocialLoginsWithHttpInfo($account_id, $user_id)
+    public function listSocialLoginsWithHttpInfo($account_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -423,36 +426,23 @@ class AuthenticationApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/users/{userId}/social";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -498,11 +488,11 @@ class AuthenticationApi
      *
      * Gets login information for a specified user.
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAuthenticationApi\LoginOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LoginInformation
      */
-    public function login(AuthenticationApi\LoginOptions $options = null)
+    public function login(\DocuSign\eSign\ApiAuthenticationApi\LoginOptions $options = null): \DocuSign\eSign\Model\LoginInformation
     {
         list($response) = $this->loginWithHttpInfo($options);
         return $response;
@@ -513,48 +503,39 @@ class AuthenticationApi
      *
      * Gets login information for a specified user.
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAuthenticationApi\LoginOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LoginInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function loginWithHttpInfo(AuthenticationApi\LoginOptions $options = null)
+    public function loginWithHttpInfo(\DocuSign\eSign\ApiAuthenticationApi\LoginOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2/login_information";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getApiPassword() !== null) {
-            $queryParams['api_password'] = $this->apiClient->getSerializer()->toQueryValue($options->getApiPassword());
+            // query params
+            if ($options->getApiPassword() != 'null') {
+                $queryParams['api_password'] = $this->apiClient->getSerializer()->toQueryValue($options->getApiPassword());
+            }
+            if ($options->getEmbedAccountIdGuid() != 'null') {
+                $queryParams['embed_account_id_guid'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmbedAccountIdGuid());
+            }
+            if ($options->getIncludeAccountIdGuid() != 'null') {
+                $queryParams['include_account_id_guid'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAccountIdGuid());
+            }
+            if ($options->getLoginSettings() != 'null') {
+                $queryParams['login_settings'] = $this->apiClient->getSerializer()->toQueryValue($options->getLoginSettings());
+            }
         }
-        // query params
-        if ($options->getEmbedAccountIdGuid() !== null) {
-            $queryParams['embed_account_id_guid'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmbedAccountIdGuid());
-        }
-        // query params
-        if ($options->getIncludeAccountIdGuid() !== null) {
-            $queryParams['include_account_id_guid'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAccountIdGuid());
-        }
-        // query params
-        if ($options->getLoginSettings() !== null) {
-            $queryParams['login_settings'] = $this->apiClient->getSerializer()->toQueryValue($options->getLoginSettings());
-        }
-        }
+
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -600,10 +581,10 @@ class AuthenticationApi
      *
      * Revokes an authorization token.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function revokeOAuthToken()
+    public function revokeOAuthToken(): mixed
     {
         list($response) = $this->revokeOAuthTokenWithHttpInfo();
         return $response;
@@ -614,27 +595,22 @@ class AuthenticationApi
      *
      * Revokes an authorization token.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function revokeOAuthTokenWithHttpInfo()
+    public function revokeOAuthTokenWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2/oauth2/revoke";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -676,12 +652,12 @@ class AuthenticationApi
      *
      * Updates the password for a specified user.
      *
-    * @param string $login_part Currently, only the value **password** is supported.
+     * @param string $login_part Currently, only the value **password** is supported.
      * @param \DocuSign\eSign\Model\UserPasswordInformation $user_password_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updatePassword($login_part, $user_password_information = null)
+    public function updatePassword($login_part, $user_password_information = null): mixed
     {
         list($response) = $this->updatePasswordWithHttpInfo($login_part, $user_password_information);
         return $response;
@@ -692,12 +668,12 @@ class AuthenticationApi
      *
      * Updates the password for a specified user.
      *
-    * @param string $login_part Currently, only the value **password** is supported.
+     * @param string $login_part Currently, only the value **password** is supported.
      * @param \DocuSign\eSign\Model\UserPasswordInformation $user_password_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePasswordWithHttpInfo($login_part, $user_password_information = null)
+    public function updatePasswordWithHttpInfo($login_part, $user_password_information = null): array
     {
         // verify the required parameter 'login_part' is set
         if ($login_part === null) {
@@ -705,28 +681,19 @@ class AuthenticationApi
         }
         // parse inputs
         $resourcePath = "/v2/login_information/{loginPart}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($login_part !== null) {
-            $resourcePath = str_replace(
-                "{" . "loginPart" . "}",
-                $this->apiClient->getSerializer()->toPathValue($login_part),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "loginPart", $login_part);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_password_information)) {
@@ -773,13 +740,13 @@ class AuthenticationApi
      *
      * Adds social account for a user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updateSocialLogin($account_id, $user_id, $social_account_information = null)
+    public function updateSocialLogin($account_id, $user_id, $social_account_information = null): mixed
     {
         list($response) = $this->updateSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information);
         return $response;
@@ -790,13 +757,13 @@ class AuthenticationApi
      *
      * Adds social account for a user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information = null)
+    public function updateSocialLoginWithHttpInfo($account_id, $user_id, $social_account_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -808,36 +775,23 @@ class AuthenticationApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/users/{userId}/social";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($social_account_information)) {

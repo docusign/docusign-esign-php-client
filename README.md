@@ -4,12 +4,12 @@
 
 ## Requirements
 
-- PHP 5.4+
+- PHP 7.4+
 - Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
 
-- PHP 5.4+
+- PHP 7.4+
 
 ## Note
 
@@ -36,6 +36,8 @@ This open-source SDK is provided for cases where you would like to make addition
                 <code>`require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
        </ol>
    </li>
+    <li>If you are using Composer V2 and get the error 'namespace cannot be found', add the following class mapping in <em>composer.json</em> file.</li>
+      <code>"autoload": { "classmap": [ "/path/to/docusign-esign-client/src" ] }</code></li>
 </ol>
 
 ## Dependencies

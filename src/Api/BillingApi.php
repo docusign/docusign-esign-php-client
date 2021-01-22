@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * BillingApi
- * PHP version 5
+ * BillingApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\BillingApi;
+namespace DocuSign\eSign\ApiBillingApi;
+
 
 class GetPlanOptions
 {
@@ -34,23 +38,23 @@ class GetPlanOptions
       * $include_credit_card_information When set to **true**, excludes credit card information from the response.
       * @var string
       */
-    protected $include_credit_card_information;
+    protected string $include_credit_card_information;
 
     /**
      * Gets include_credit_card_information
      * @return string
      */
-    public function getIncludeCreditCardInformation()
+    public function getIncludeCreditCardInformation(): string
     {
         return $this->include_credit_card_information;
     }
-  
+
     /**
      * Sets include_credit_card_information
      * @param string $include_credit_card_information When set to **true**, excludes credit card information from the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeCreditCardInformation($include_credit_card_information)
+    public function setIncludeCreditCardInformation(string $include_credit_card_information): self
     {
         $this->include_credit_card_information = $include_credit_card_information;
         return $this;
@@ -59,23 +63,23 @@ class GetPlanOptions
       * $include_metadata When set to **true**, the `canUpgrade` and `renewalStatus` properities are included the response and an array of `supportedCountries` property is added to the `billingAddress` information.
       * @var string
       */
-    protected $include_metadata;
+    protected string $include_metadata;
 
     /**
      * Gets include_metadata
      * @return string
      */
-    public function getIncludeMetadata()
+    public function getIncludeMetadata(): string
     {
         return $this->include_metadata;
     }
-  
+
     /**
      * Sets include_metadata
      * @param string $include_metadata When set to **true**, the `canUpgrade` and `renewalStatus` properities are included the response and an array of `supportedCountries` property is added to the `billingAddress` information.
-     * @return $this
+     * @return self
      */
-    public function setIncludeMetadata($include_metadata)
+    public function setIncludeMetadata(string $include_metadata): self
     {
         $this->include_metadata = $include_metadata;
         return $this;
@@ -84,51 +88,53 @@ class GetPlanOptions
       * $include_successor_plans When set to **true**, excludes successor information from the response.
       * @var string
       */
-    protected $include_successor_plans;
+    protected string $include_successor_plans;
 
     /**
      * Gets include_successor_plans
      * @return string
      */
-    public function getIncludeSuccessorPlans()
+    public function getIncludeSuccessorPlans(): string
     {
         return $this->include_successor_plans;
     }
-  
+
     /**
      * Sets include_successor_plans
      * @param string $include_successor_plans When set to **true**, excludes successor information from the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeSuccessorPlans($include_successor_plans)
+    public function setIncludeSuccessorPlans(string $include_successor_plans): self
     {
         $this->include_successor_plans = $include_successor_plans;
         return $this;
     }
 }
+
+
 class ListInvoicesOptions
 {
     /**
       * $from_date Specifies the date/time of the earliest invoice in the account to retrieve.
       * @var string
       */
-    protected $from_date;
+    protected string $from_date;
 
     /**
      * Gets from_date
      * @return string
      */
-    public function getFromDate()
+    public function getFromDate(): string
     {
         return $this->from_date;
     }
-  
+
     /**
      * Sets from_date
      * @param string $from_date Specifies the date/time of the earliest invoice in the account to retrieve.
-     * @return $this
+     * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate(string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
@@ -137,51 +143,53 @@ class ListInvoicesOptions
       * $to_date Specifies the date/time of the latest invoice in the account to retrieve.
       * @var string
       */
-    protected $to_date;
+    protected string $to_date;
 
     /**
      * Gets to_date
      * @return string
      */
-    public function getToDate()
+    public function getToDate(): string
     {
         return $this->to_date;
     }
-  
+
     /**
      * Sets to_date
      * @param string $to_date Specifies the date/time of the latest invoice in the account to retrieve.
-     * @return $this
+     * @return self
      */
-    public function setToDate($to_date)
+    public function setToDate(string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
     }
 }
+
+
 class ListPaymentsOptions
 {
     /**
       * $from_date Specifies the date/time of the earliest payment in the account to retrieve.
       * @var string
       */
-    protected $from_date;
+    protected string $from_date;
 
     /**
      * Gets from_date
      * @return string
      */
-    public function getFromDate()
+    public function getFromDate(): string
     {
         return $this->from_date;
     }
-  
+
     /**
      * Sets from_date
      * @param string $from_date Specifies the date/time of the earliest payment in the account to retrieve.
-     * @return $this
+     * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate(string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
@@ -190,51 +198,53 @@ class ListPaymentsOptions
       * $to_date Specifies the date/time of the latest payment in the account to retrieve.
       * @var string
       */
-    protected $to_date;
+    protected string $to_date;
 
     /**
      * Gets to_date
      * @return string
      */
-    public function getToDate()
+    public function getToDate(): string
     {
         return $this->to_date;
     }
-  
+
     /**
      * Sets to_date
      * @param string $to_date Specifies the date/time of the latest payment in the account to retrieve.
-     * @return $this
+     * @return self
      */
-    public function setToDate($to_date)
+    public function setToDate(string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
     }
 }
+
+
 class UpdatePlanOptions
 {
     /**
       * $preview_billing_plan When set to **true**, updates the account using a preview billing plan.
       * @var string
       */
-    protected $preview_billing_plan;
+    protected string $preview_billing_plan;
 
     /**
      * Gets preview_billing_plan
      * @return string
      */
-    public function getPreviewBillingPlan()
+    public function getPreviewBillingPlan(): string
     {
         return $this->preview_billing_plan;
     }
-  
+
     /**
      * Sets preview_billing_plan
      * @param string $preview_billing_plan When set to **true**, updates the account using a preview billing plan.
-     * @return $this
+     * @return self
      */
-    public function setPreviewBillingPlan($preview_billing_plan)
+    public function setPreviewBillingPlan(string $preview_billing_plan): self
     {
         $this->preview_billing_plan = $preview_billing_plan;
         return $this;
@@ -242,12 +252,13 @@ class UpdatePlanOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * BillingApi Class Doc Comment
@@ -262,30 +273,27 @@ class BillingApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -293,26 +301,45 @@ class BillingApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return BillingApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation getBillingPlan
      *
      * Get the billing plan details.
      *
-    * @param string $billing_plan_id The ID of the billing plan being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $billing_plan_id The ID of the billing plan being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlanResponse
      */
-    public function getBillingPlan($billing_plan_id)
+    public function getBillingPlan($billing_plan_id): \DocuSign\eSign\Model\BillingPlanResponse
     {
         list($response) = $this->getBillingPlanWithHttpInfo($billing_plan_id);
         return $response;
@@ -323,11 +350,11 @@ class BillingApi
      *
      * Get the billing plan details.
      *
-    * @param string $billing_plan_id The ID of the billing plan being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $billing_plan_id The ID of the billing plan being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlanResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBillingPlanWithHttpInfo($billing_plan_id)
+    public function getBillingPlanWithHttpInfo($billing_plan_id): array
     {
         // verify the required parameter 'billing_plan_id' is set
         if ($billing_plan_id === null) {
@@ -335,28 +362,19 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/billing_plans/{billingPlanId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($billing_plan_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "billingPlanId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($billing_plan_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "billingPlanId", $billing_plan_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -402,11 +420,11 @@ class BillingApi
      *
      * Get metadata for a given credit card.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CreditCardInformation
      */
-    public function getCreditCardInfo($account_id)
+    public function getCreditCardInfo($account_id): \DocuSign\eSign\Model\CreditCardInformation
     {
         list($response) = $this->getCreditCardInfoWithHttpInfo($account_id);
         return $response;
@@ -417,11 +435,11 @@ class BillingApi
      *
      * Get metadata for a given credit card.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CreditCardInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCreditCardInfoWithHttpInfo($account_id)
+    public function getCreditCardInfoWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -429,28 +447,19 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_plan/credit_card";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -496,12 +505,12 @@ class BillingApi
      *
      * Retrieves a billing invoice.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $invoice_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $invoice_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoice
      */
-    public function getInvoice($account_id, $invoice_id)
+    public function getInvoice($account_id, $invoice_id): \DocuSign\eSign\Model\BillingInvoice
     {
         list($response) = $this->getInvoiceWithHttpInfo($account_id, $invoice_id);
         return $response;
@@ -512,12 +521,12 @@ class BillingApi
      *
      * Retrieves a billing invoice.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $invoice_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $invoice_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoice, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getInvoiceWithHttpInfo($account_id, $invoice_id)
+    public function getInvoiceWithHttpInfo($account_id, $invoice_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -529,36 +538,23 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_invoices/{invoiceId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($invoice_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "invoiceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($invoice_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "invoiceId", $invoice_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -604,12 +600,12 @@ class BillingApi
      *
      * Gets billing payment information for a specific payment.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $payment_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $payment_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentItem
      */
-    public function getPayment($account_id, $payment_id)
+    public function getPayment($account_id, $payment_id): \DocuSign\eSign\Model\BillingPaymentItem
     {
         list($response) = $this->getPaymentWithHttpInfo($account_id, $payment_id);
         return $response;
@@ -620,12 +616,12 @@ class BillingApi
      *
      * Gets billing payment information for a specific payment.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $payment_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $payment_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentItem, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPaymentWithHttpInfo($account_id, $payment_id)
+    public function getPaymentWithHttpInfo($account_id, $payment_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -637,36 +633,23 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_payments/{paymentId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($payment_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "paymentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($payment_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "paymentId", $payment_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -712,12 +695,12 @@ class BillingApi
      *
      * Get Account Billing Plan
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBillingApi\GetPlanOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountBillingPlanResponse
      */
-    public function getPlan($account_id, BillingApi\GetPlanOptions $options = null)
+    public function getPlan($account_id, \DocuSign\eSign\ApiBillingApi\GetPlanOptions $options = null): \DocuSign\eSign\Model\AccountBillingPlanResponse
     {
         list($response) = $this->getPlanWithHttpInfo($account_id, $options);
         return $response;
@@ -728,12 +711,12 @@ class BillingApi
      *
      * Get Account Billing Plan
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBillingApi\GetPlanOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountBillingPlanResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPlanWithHttpInfo($account_id, BillingApi\GetPlanOptions $options = null)
+    public function getPlanWithHttpInfo($account_id, \DocuSign\eSign\ApiBillingApi\GetPlanOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -741,44 +724,32 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_plan";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeCreditCardInformation() !== null) {
-            $queryParams['include_credit_card_information'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeCreditCardInformation());
-        }
-        // query params
-        if ($options->getIncludeMetadata() !== null) {
-            $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
-        }
-        // query params
-        if ($options->getIncludeSuccessorPlans() !== null) {
-            $queryParams['include_successor_plans'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeSuccessorPlans());
-        }
+            // query params
+            if ($options->getIncludeCreditCardInformation() != 'null') {
+                $queryParams['include_credit_card_information'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeCreditCardInformation());
+            }
+            if ($options->getIncludeMetadata() != 'null') {
+                $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
+            }
+            if ($options->getIncludeSuccessorPlans() != 'null') {
+                $queryParams['include_successor_plans'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeSuccessorPlans());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -824,10 +795,10 @@ class BillingApi
      *
      * Gets the list of available billing plans.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlansResponse
      */
-    public function listBillingPlans()
+    public function listBillingPlans(): \DocuSign\eSign\Model\BillingPlansResponse
     {
         list($response) = $this->listBillingPlansWithHttpInfo();
         return $response;
@@ -838,27 +809,22 @@ class BillingApi
      *
      * Gets the list of available billing plans.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlansResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listBillingPlansWithHttpInfo()
+    public function listBillingPlansWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2/billing_plans";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -904,12 +870,12 @@ class BillingApi
      *
      * Get a List of Billing Invoices
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoicesResponse
      */
-    public function listInvoices($account_id, BillingApi\ListInvoicesOptions $options = null)
+    public function listInvoices($account_id, \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions $options = null): \DocuSign\eSign\Model\BillingInvoicesResponse
     {
         list($response) = $this->listInvoicesWithHttpInfo($account_id, $options);
         return $response;
@@ -920,12 +886,12 @@ class BillingApi
      *
      * Get a List of Billing Invoices
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoicesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listInvoicesWithHttpInfo($account_id, BillingApi\ListInvoicesOptions $options = null)
+    public function listInvoicesWithHttpInfo($account_id, \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -933,40 +899,29 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_invoices";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getFromDate() !== null) {
-            $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
-        }
-        // query params
-        if ($options->getToDate() !== null) {
-            $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
-        }
+            // query params
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1012,11 +967,11 @@ class BillingApi
      *
      * Get a list of past due invoices.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoicesSummary
      */
-    public function listInvoicesPastDue($account_id)
+    public function listInvoicesPastDue($account_id): \DocuSign\eSign\Model\BillingInvoicesSummary
     {
         list($response) = $this->listInvoicesPastDueWithHttpInfo($account_id);
         return $response;
@@ -1027,11 +982,11 @@ class BillingApi
      *
      * Get a list of past due invoices.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoicesSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listInvoicesPastDueWithHttpInfo($account_id)
+    public function listInvoicesPastDueWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1039,28 +994,19 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_invoices_past_due";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1106,12 +1052,12 @@ class BillingApi
      *
      * Gets payment information for one or more payments.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentsResponse
      */
-    public function listPayments($account_id, BillingApi\ListPaymentsOptions $options = null)
+    public function listPayments($account_id, \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions $options = null): \DocuSign\eSign\Model\BillingPaymentsResponse
     {
         list($response) = $this->listPaymentsWithHttpInfo($account_id, $options);
         return $response;
@@ -1122,12 +1068,12 @@ class BillingApi
      *
      * Gets payment information for one or more payments.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPaymentsWithHttpInfo($account_id, BillingApi\ListPaymentsOptions $options = null)
+    public function listPaymentsWithHttpInfo($account_id, \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1135,40 +1081,29 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_payments";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getFromDate() !== null) {
-            $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
-        }
-        // query params
-        if ($options->getToDate() !== null) {
-            $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
-        }
+            // query params
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1214,12 +1149,12 @@ class BillingApi
      *
      * Posts a payment to a past due invoice.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPaymentRequest $billing_payment_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentResponse
      */
-    public function makePayment($account_id, $billing_payment_request = null)
+    public function makePayment($account_id, $billing_payment_request = null): \DocuSign\eSign\Model\BillingPaymentResponse
     {
         list($response) = $this->makePaymentWithHttpInfo($account_id, $billing_payment_request);
         return $response;
@@ -1230,12 +1165,12 @@ class BillingApi
      *
      * Posts a payment to a past due invoice.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPaymentRequest $billing_payment_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function makePaymentWithHttpInfo($account_id, $billing_payment_request = null)
+    public function makePaymentWithHttpInfo($account_id, $billing_payment_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1243,28 +1178,19 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_payments";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($billing_payment_request)) {
@@ -1315,12 +1241,12 @@ class BillingApi
      *
      * Reserverd: Purchase additional envelopes.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PurchasedEnvelopesInformation $purchased_envelopes_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function purchaseEnvelopes($account_id, $purchased_envelopes_information = null)
+    public function purchaseEnvelopes($account_id, $purchased_envelopes_information = null): mixed
     {
         list($response) = $this->purchaseEnvelopesWithHttpInfo($account_id, $purchased_envelopes_information);
         return $response;
@@ -1331,12 +1257,12 @@ class BillingApi
      *
      * Reserverd: Purchase additional envelopes.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PurchasedEnvelopesInformation $purchased_envelopes_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function purchaseEnvelopesWithHttpInfo($account_id, $purchased_envelopes_information = null)
+    public function purchaseEnvelopesWithHttpInfo($account_id, $purchased_envelopes_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1344,28 +1270,19 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_plan/purchased_envelopes";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($purchased_envelopes_information)) {
@@ -1412,13 +1329,13 @@ class BillingApi
      *
      * Updates the account billing plan.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPlanInformation $billing_plan_information  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlanUpdateResponse
      */
-    public function updatePlan($account_id, $billing_plan_information = null, BillingApi\UpdatePlanOptions $options = null)
+    public function updatePlan($account_id, $billing_plan_information = null, \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions $options = null): \DocuSign\eSign\Model\BillingPlanUpdateResponse
     {
         list($response) = $this->updatePlanWithHttpInfo($account_id, $billing_plan_information, $options);
         return $response;
@@ -1429,13 +1346,13 @@ class BillingApi
      *
      * Updates the account billing plan.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPlanInformation $billing_plan_information  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlanUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePlanWithHttpInfo($account_id, $billing_plan_information = null, BillingApi\UpdatePlanOptions $options = null)
+    public function updatePlanWithHttpInfo($account_id, $billing_plan_information = null, \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1443,36 +1360,26 @@ class BillingApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/billing_plan";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getPreviewBillingPlan() !== null) {
-            $queryParams['preview_billing_plan'] = $this->apiClient->getSerializer()->toQueryValue($options->getPreviewBillingPlan());
-        }
+            // query params
+            if ($options->getPreviewBillingPlan() != 'null') {
+                $queryParams['preview_billing_plan'] = $this->apiClient->getSerializer()->toQueryValue($options->getPreviewBillingPlan());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($billing_plan_information)) {

@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * WorkspacesApi
- * PHP version 5
+ * WorkspacesApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\WorkspacesApi;
+namespace DocuSign\eSign\ApiWorkspacesApi;
+
 
 class GetWorkspaceFileOptions
 {
@@ -34,23 +38,23 @@ class GetWorkspaceFileOptions
       * $is_download When set to **true**, the Content-Disposition header is set in the response. The value of the header provides the filename of the file. Default is **false**.
       * @var string
       */
-    protected $is_download;
+    protected string $is_download;
 
     /**
      * Gets is_download
      * @return string
      */
-    public function getIsDownload()
+    public function getIsDownload(): string
     {
         return $this->is_download;
     }
-  
+
     /**
      * Sets is_download
      * @param string $is_download When set to **true**, the Content-Disposition header is set in the response. The value of the header provides the filename of the file. Default is **false**.
-     * @return $this
+     * @return self
      */
-    public function setIsDownload($is_download)
+    public function setIsDownload(string $is_download): self
     {
         $this->is_download = $is_download;
         return $this;
@@ -59,51 +63,53 @@ class GetWorkspaceFileOptions
       * $pdf_version When set to **true** the file returned as a PDF.
       * @var string
       */
-    protected $pdf_version;
+    protected string $pdf_version;
 
     /**
      * Gets pdf_version
      * @return string
      */
-    public function getPdfVersion()
+    public function getPdfVersion(): string
     {
         return $this->pdf_version;
     }
-  
+
     /**
      * Sets pdf_version
      * @param string $pdf_version When set to **true** the file returned as a PDF.
-     * @return $this
+     * @return self
      */
-    public function setPdfVersion($pdf_version)
+    public function setPdfVersion(string $pdf_version): self
     {
         $this->pdf_version = $pdf_version;
         return $this;
     }
 }
+
+
 class ListWorkspaceFilePagesOptions
 {
     /**
       * $count The maximum number of results to be returned by this request.
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count The maximum number of results to be returned by this request.
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -112,23 +118,23 @@ class ListWorkspaceFilePagesOptions
       * $dpi Number of dots per inch for the resulting image. The default if not used is 94. The range is 1-310.
       * @var string
       */
-    protected $dpi;
+    protected string $dpi;
 
     /**
      * Gets dpi
      * @return string
      */
-    public function getDpi()
+    public function getDpi(): string
     {
         return $this->dpi;
     }
-  
+
     /**
      * Sets dpi
      * @param string $dpi Number of dots per inch for the resulting image. The default if not used is 94. The range is 1-310.
-     * @return $this
+     * @return self
      */
-    public function setDpi($dpi)
+    public function setDpi(string $dpi): self
     {
         $this->dpi = $dpi;
         return $this;
@@ -137,23 +143,23 @@ class ListWorkspaceFilePagesOptions
       * $max_height Sets the maximum height (in pixels) of the returned image.
       * @var string
       */
-    protected $max_height;
+    protected string $max_height;
 
     /**
      * Gets max_height
      * @return string
      */
-    public function getMaxHeight()
+    public function getMaxHeight(): string
     {
         return $this->max_height;
     }
-  
+
     /**
      * Sets max_height
      * @param string $max_height Sets the maximum height (in pixels) of the returned image.
-     * @return $this
+     * @return self
      */
-    public function setMaxHeight($max_height)
+    public function setMaxHeight(string $max_height): self
     {
         $this->max_height = $max_height;
         return $this;
@@ -162,23 +168,23 @@ class ListWorkspaceFilePagesOptions
       * $max_width Sets the maximum width (in pixels) of the returned image.
       * @var string
       */
-    protected $max_width;
+    protected string $max_width;
 
     /**
      * Gets max_width
      * @return string
      */
-    public function getMaxWidth()
+    public function getMaxWidth(): string
     {
         return $this->max_width;
     }
-  
+
     /**
      * Sets max_width
      * @param string $max_width Sets the maximum width (in pixels) of the returned image.
-     * @return $this
+     * @return self
      */
-    public function setMaxWidth($max_width)
+    public function setMaxWidth(string $max_width): self
     {
         $this->max_width = $max_width;
         return $this;
@@ -187,51 +193,53 @@ class ListWorkspaceFilePagesOptions
       * $start_position The position within the total result set from which to start returning values. The value **thumbnail** may be used to return the page image.
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position The position within the total result set from which to start returning values. The value **thumbnail** may be used to return the page image.
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
 }
+
+
 class ListWorkspaceFolderItemsOptions
 {
     /**
       * $count The maximum number of results to be returned by this request.
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count The maximum number of results to be returned by this request.
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -240,23 +248,23 @@ class ListWorkspaceFolderItemsOptions
       * $include_files When set to **true**, file information is returned in the response along with folder information. The default is **false**.
       * @var string
       */
-    protected $include_files;
+    protected string $include_files;
 
     /**
      * Gets include_files
      * @return string
      */
-    public function getIncludeFiles()
+    public function getIncludeFiles(): string
     {
         return $this->include_files;
     }
-  
+
     /**
      * Sets include_files
      * @param string $include_files When set to **true**, file information is returned in the response along with folder information. The default is **false**.
-     * @return $this
+     * @return self
      */
-    public function setIncludeFiles($include_files)
+    public function setIncludeFiles(string $include_files): self
     {
         $this->include_files = $include_files;
         return $this;
@@ -265,23 +273,23 @@ class ListWorkspaceFolderItemsOptions
       * $include_sub_folders When set to **true**, information about the sub-folders of the current folder is returned. The default is **false**.
       * @var string
       */
-    protected $include_sub_folders;
+    protected string $include_sub_folders;
 
     /**
      * Gets include_sub_folders
      * @return string
      */
-    public function getIncludeSubFolders()
+    public function getIncludeSubFolders(): string
     {
         return $this->include_sub_folders;
     }
-  
+
     /**
      * Sets include_sub_folders
      * @param string $include_sub_folders When set to **true**, information about the sub-folders of the current folder is returned. The default is **false**.
-     * @return $this
+     * @return self
      */
-    public function setIncludeSubFolders($include_sub_folders)
+    public function setIncludeSubFolders(string $include_sub_folders): self
     {
         $this->include_sub_folders = $include_sub_folders;
         return $this;
@@ -290,23 +298,23 @@ class ListWorkspaceFolderItemsOptions
       * $include_thumbnails When set to **true**, thumbnails are returned as part of the response.  The default is **false**.
       * @var string
       */
-    protected $include_thumbnails;
+    protected string $include_thumbnails;
 
     /**
      * Gets include_thumbnails
      * @return string
      */
-    public function getIncludeThumbnails()
+    public function getIncludeThumbnails(): string
     {
         return $this->include_thumbnails;
     }
-  
+
     /**
      * Sets include_thumbnails
      * @param string $include_thumbnails When set to **true**, thumbnails are returned as part of the response.  The default is **false**.
-     * @return $this
+     * @return self
      */
-    public function setIncludeThumbnails($include_thumbnails)
+    public function setIncludeThumbnails(string $include_thumbnails): self
     {
         $this->include_thumbnails = $include_thumbnails;
         return $this;
@@ -315,23 +323,23 @@ class ListWorkspaceFolderItemsOptions
       * $include_user_detail Set to **true** to return extended details about the user. The default is **false**.
       * @var string
       */
-    protected $include_user_detail;
+    protected string $include_user_detail;
 
     /**
      * Gets include_user_detail
      * @return string
      */
-    public function getIncludeUserDetail()
+    public function getIncludeUserDetail(): string
     {
         return $this->include_user_detail;
     }
-  
+
     /**
      * Sets include_user_detail
      * @param string $include_user_detail Set to **true** to return extended details about the user. The default is **false**.
-     * @return $this
+     * @return self
      */
-    public function setIncludeUserDetail($include_user_detail)
+    public function setIncludeUserDetail(string $include_user_detail): self
     {
         $this->include_user_detail = $include_user_detail;
         return $this;
@@ -340,23 +348,23 @@ class ListWorkspaceFolderItemsOptions
       * $start_position The position within the total result set from which to start returning values.
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position The position within the total result set from which to start returning values.
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -365,23 +373,23 @@ class ListWorkspaceFolderItemsOptions
       * $workspace_user_id If set, then the results are filtered to those associated with the specified userId.
       * @var string
       */
-    protected $workspace_user_id;
+    protected string $workspace_user_id;
 
     /**
      * Gets workspace_user_id
      * @return string
      */
-    public function getWorkspaceUserId()
+    public function getWorkspaceUserId(): string
     {
         return $this->workspace_user_id;
     }
-  
+
     /**
      * Sets workspace_user_id
      * @param string $workspace_user_id If set, then the results are filtered to those associated with the specified userId.
-     * @return $this
+     * @return self
      */
-    public function setWorkspaceUserId($workspace_user_id)
+    public function setWorkspaceUserId(string $workspace_user_id): self
     {
         $this->workspace_user_id = $workspace_user_id;
         return $this;
@@ -389,12 +397,13 @@ class ListWorkspaceFolderItemsOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * WorkspacesApi Class Doc Comment
@@ -409,30 +418,27 @@ class WorkspacesApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -440,27 +446,46 @@ class WorkspacesApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return WorkspacesApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation createWorkspace
      *
      * Create a Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
-    public function createWorkspace($account_id, $workspace = null)
+    public function createWorkspace($account_id, $workspace = null): \DocuSign\eSign\Model\Workspace
     {
         list($response) = $this->createWorkspaceWithHttpInfo($account_id, $workspace);
         return $response;
@@ -471,12 +496,12 @@ class WorkspacesApi
      *
      * Create a Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWorkspaceWithHttpInfo($account_id, $workspace = null)
+    public function createWorkspaceWithHttpInfo($account_id, $workspace = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -484,28 +509,19 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($workspace)) {
@@ -556,13 +572,13 @@ class WorkspacesApi
      *
      * Creates a workspace file.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
-    public function createWorkspaceFile($account_id, $folder_id, $workspace_id)
+    public function createWorkspaceFile($account_id, $folder_id, $workspace_id): \DocuSign\eSign\Model\WorkspaceItem
     {
         list($response) = $this->createWorkspaceFileWithHttpInfo($account_id, $folder_id, $workspace_id);
         return $response;
@@ -573,13 +589,13 @@ class WorkspacesApi
      *
      * Creates a workspace file.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWorkspaceFileWithHttpInfo($account_id, $folder_id, $workspace_id)
+    public function createWorkspaceFileWithHttpInfo($account_id, $folder_id, $workspace_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -595,44 +611,27 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -678,12 +677,12 @@ class WorkspacesApi
      *
      * Delete Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
-    public function deleteWorkspace($account_id, $workspace_id)
+    public function deleteWorkspace($account_id, $workspace_id): \DocuSign\eSign\Model\Workspace
     {
         list($response) = $this->deleteWorkspaceWithHttpInfo($account_id, $workspace_id);
         return $response;
@@ -694,12 +693,12 @@ class WorkspacesApi
      *
      * Delete Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWorkspaceWithHttpInfo($account_id, $workspace_id)
+    public function deleteWorkspaceWithHttpInfo($account_id, $workspace_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -711,36 +710,23 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -786,14 +772,14 @@ class WorkspacesApi
      *
      * Deletes workspace one or more specific files/folders from the given folder or root.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteWorkspaceFolderItems($account_id, $folder_id, $workspace_id, $workspace_item_list = null)
+    public function deleteWorkspaceFolderItems($account_id, $folder_id, $workspace_id, $workspace_item_list = null): mixed
     {
         list($response) = $this->deleteWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, $workspace_item_list);
         return $response;
@@ -804,14 +790,14 @@ class WorkspacesApi
      *
      * Deletes workspace one or more specific files/folders from the given folder or root.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, $workspace_item_list = null)
+    public function deleteWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, $workspace_item_list = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -827,44 +813,27 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($workspace_item_list)) {
@@ -911,12 +880,12 @@ class WorkspacesApi
      *
      * Get Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
-    public function getWorkspace($account_id, $workspace_id)
+    public function getWorkspace($account_id, $workspace_id): \DocuSign\eSign\Model\Workspace
     {
         list($response) = $this->getWorkspaceWithHttpInfo($account_id, $workspace_id);
         return $response;
@@ -927,12 +896,12 @@ class WorkspacesApi
      *
      * Get Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWorkspaceWithHttpInfo($account_id, $workspace_id)
+    public function getWorkspaceWithHttpInfo($account_id, $workspace_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -944,36 +913,23 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1019,15 +975,15 @@ class WorkspacesApi
      *
      * Get Workspace File
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $file_id Specifies the room file ID GUID.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $file_id Specifies the room file ID GUID.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function getWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\GetWorkspaceFileOptions $options = null)
+    public function getWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions $options = null): mixed
     {
         list($response) = $this->getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1038,15 +994,15 @@ class WorkspacesApi
      *
      * Get Workspace File
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $file_id Specifies the room file ID GUID.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $file_id Specifies the room file ID GUID.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\GetWorkspaceFileOptions $options = null)
+    public function getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1066,64 +1022,41 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIsDownload() !== null) {
-            $queryParams['is_download'] = $this->apiClient->getSerializer()->toQueryValue($options->getIsDownload());
-        }
-        // query params
-        if ($options->getPdfVersion() !== null) {
-            $queryParams['pdf_version'] = $this->apiClient->getSerializer()->toQueryValue($options->getPdfVersion());
-        }
+            // query params
+            if ($options->getIsDownload() != 'null') {
+                $queryParams['is_download'] = $this->apiClient->getSerializer()->toQueryValue($options->getIsDownload());
+            }
+            if ($options->getPdfVersion() != 'null') {
+                $queryParams['pdf_version'] = $this->apiClient->getSerializer()->toQueryValue($options->getPdfVersion());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($file_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "fileId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($file_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "fileId", $file_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1165,15 +1098,15 @@ class WorkspacesApi
      *
      * List File Pages
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $file_id Specifies the room file ID GUID.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $file_id Specifies the room file ID GUID.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
-    public function listWorkspaceFilePages($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFilePagesOptions $options = null)
+    public function listWorkspaceFilePages($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions $options = null): \DocuSign\eSign\Model\PageImages
     {
         list($response) = $this->listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1184,15 +1117,15 @@ class WorkspacesApi
      *
      * List File Pages
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $file_id Specifies the room file ID GUID.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $file_id Specifies the room file ID GUID.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFilePagesOptions $options = null)
+    public function listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1212,76 +1145,50 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}/pages";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getDpi() !== null) {
-            $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
-        }
-        // query params
-        if ($options->getMaxHeight() !== null) {
-            $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
-        }
-        // query params
-        if ($options->getMaxWidth() !== null) {
-            $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getDpi() != 'null') {
+                $queryParams['dpi'] = $this->apiClient->getSerializer()->toQueryValue($options->getDpi());
+            }
+            if ($options->getMaxHeight() != 'null') {
+                $queryParams['max_height'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxHeight());
+            }
+            if ($options->getMaxWidth() != 'null') {
+                $queryParams['max_width'] = $this->apiClient->getSerializer()->toQueryValue($options->getMaxWidth());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($file_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "fileId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($file_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "fileId", $file_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1327,14 +1234,14 @@ class WorkspacesApi
      *
      * List Workspace Folder Contents
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceFolderContents
      */
-    public function listWorkspaceFolderItems($account_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null)
+    public function listWorkspaceFolderItems($account_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): \DocuSign\eSign\Model\WorkspaceFolderContents
     {
         list($response) = $this->listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1345,14 +1252,14 @@ class WorkspacesApi
      *
      * List Workspace Folder Contents
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceFolderContents, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null)
+    public function listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1368,76 +1275,52 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getIncludeFiles() !== null) {
-            $queryParams['include_files'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeFiles());
-        }
-        // query params
-        if ($options->getIncludeSubFolders() !== null) {
-            $queryParams['include_sub_folders'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeSubFolders());
-        }
-        // query params
-        if ($options->getIncludeThumbnails() !== null) {
-            $queryParams['include_thumbnails'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeThumbnails());
-        }
-        // query params
-        if ($options->getIncludeUserDetail() !== null) {
-            $queryParams['include_user_detail'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeUserDetail());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getWorkspaceUserId() !== null) {
-            $queryParams['workspace_user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getWorkspaceUserId());
-        }
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getIncludeFiles() != 'null') {
+                $queryParams['include_files'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeFiles());
+            }
+            if ($options->getIncludeSubFolders() != 'null') {
+                $queryParams['include_sub_folders'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeSubFolders());
+            }
+            if ($options->getIncludeThumbnails() != 'null') {
+                $queryParams['include_thumbnails'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeThumbnails());
+            }
+            if ($options->getIncludeUserDetail() != 'null') {
+                $queryParams['include_user_detail'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeUserDetail());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getWorkspaceUserId() != 'null') {
+                $queryParams['workspace_user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getWorkspaceUserId());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1483,11 +1366,11 @@ class WorkspacesApi
      *
      * List Workspaces
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceList
      */
-    public function listWorkspaces($account_id)
+    public function listWorkspaces($account_id): \DocuSign\eSign\Model\WorkspaceList
     {
         list($response) = $this->listWorkspacesWithHttpInfo($account_id);
         return $response;
@@ -1498,11 +1381,11 @@ class WorkspacesApi
      *
      * List Workspaces
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listWorkspacesWithHttpInfo($account_id)
+    public function listWorkspacesWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1510,28 +1393,19 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1577,13 +1451,13 @@ class WorkspacesApi
      *
      * Update Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
-    public function updateWorkspace($account_id, $workspace_id, $workspace = null)
+    public function updateWorkspace($account_id, $workspace_id, $workspace = null): \DocuSign\eSign\Model\Workspace
     {
         list($response) = $this->updateWorkspaceWithHttpInfo($account_id, $workspace_id, $workspace);
         return $response;
@@ -1594,13 +1468,13 @@ class WorkspacesApi
      *
      * Update Workspace
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateWorkspaceWithHttpInfo($account_id, $workspace_id, $workspace = null)
+    public function updateWorkspaceWithHttpInfo($account_id, $workspace_id, $workspace = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1612,36 +1486,23 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($workspace)) {
@@ -1692,14 +1553,14 @@ class WorkspacesApi
      *
      * Update Workspace File Metadata
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $file_id Specifies the room file ID GUID.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $file_id Specifies the room file ID GUID.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
-    public function updateWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id)
+    public function updateWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id): \DocuSign\eSign\Model\WorkspaceItem
     {
         list($response) = $this->updateWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id);
         return $response;
@@ -1710,14 +1571,14 @@ class WorkspacesApi
      *
      * Update Workspace File Metadata
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $file_id Specifies the room file ID GUID.
-    * @param string $folder_id The ID of the folder being accessed.
-    * @param string $workspace_id Specifies the workspace ID GUID.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $file_id Specifies the room file ID GUID.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id)
+    public function updateWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1737,52 +1598,31 @@ class WorkspacesApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($file_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "fileId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($file_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "fileId", $file_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
         // path params
         if ($workspace_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "workspaceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($workspace_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "workspaceId", $workspace_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {

@@ -2,7 +2,7 @@
 /**
  * EnvelopeDocument
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * EnvelopeDocument Class Doc Comment
@@ -70,7 +70,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'order' => 'string',
         'pages' => 'string',
         'signer_must_acknowledge' => 'string',
-        'size_bytes' => 'string',
+        'size_bytes' => 'object',
         'type' => 'string',
         'uri' => 'string'
     ];
@@ -609,7 +609,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets size_bytes
      *
-     * @return string
+     * @return object
      */
     public function getSizeBytes()
     {
@@ -619,7 +619,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets size_bytes
      *
-     * @param string $size_bytes 
+     * @param object $size_bytes 
      *
      * @return $this
      */
