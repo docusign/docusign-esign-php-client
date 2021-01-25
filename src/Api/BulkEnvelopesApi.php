@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * BulkEnvelopesApi
- * PHP version 5
+ * BulkEnvelopesApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,162 +29,32 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\BulkEnvelopesApi;
+namespace DocuSign\eSign\ApiBulkEnvelopesApi;
 
-class ListOptions
-{
-    /**
-      * $count The number of results to return. This can be 1 to 20.
-      * @var string
-      */
-    protected $count;
 
-    /**
-     * Gets count
-     * @return string
-     */
-    public function getCount()
-    {
-        return $this->count;
-    }
-  
-    /**
-     * Sets count
-     * @param string $count The number of results to return. This can be 1 to 20.
-     * @return $this
-     */
-    public function setCount($count)
-    {
-        $this->count = $count;
-        return $this;
-    }
-    /**
-      * $start_position The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0.
-      * @var string
-      */
-    protected $start_position;
-
-    /**
-     * Gets start_position
-     * @return string
-     */
-    public function getStartPosition()
-    {
-        return $this->start_position;
-    }
-  
-    /**
-     * Sets start_position
-     * @param string $start_position The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0.
-     * @return $this
-     */
-    public function setStartPosition($start_position)
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
-class GetOptions
-{
-    /**
-      * $count Specifies the number of entries to return.
-      * @var string
-      */
-    protected $count;
-
-    /**
-     * Gets count
-     * @return string
-     */
-    public function getCount()
-    {
-        return $this->count;
-    }
-  
-    /**
-     * Sets count
-     * @param string $count Specifies the number of entries to return.
-     * @return $this
-     */
-    public function setCount($count)
-    {
-        $this->count = $count;
-        return $this;
-    }
-    /**
-      * $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.
-      * @var string
-      */
-    protected $include;
-
-    /**
-     * Gets include
-     * @return string
-     */
-    public function getInclude()
-    {
-        return $this->include;
-    }
-  
-    /**
-     * Sets include
-     * @param string $include Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.
-     * @return $this
-     */
-    public function setInclude($include)
-    {
-        $this->include = $include;
-        return $this;
-    }
-    /**
-      * $start_position Specifies the location in the list of envelopes from which to start.
-      * @var string
-      */
-    protected $start_position;
-
-    /**
-     * Gets start_position
-     * @return string
-     */
-    public function getStartPosition()
-    {
-        return $this->start_position;
-    }
-  
-    /**
-     * Sets start_position
-     * @param string $start_position Specifies the location in the list of envelopes from which to start.
-     * @return $this
-     */
-    public function setStartPosition($start_position)
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
 class GetBulkSendBatchesOptions
 {
     /**
       * $batch_ids 
       * @var string
       */
-    protected $batch_ids;
+    protected string $batch_ids;
 
     /**
      * Gets batch_ids
      * @return string
      */
-    public function getBatchIds()
+    public function getBatchIds(): string
     {
         return $this->batch_ids;
     }
-  
+
     /**
      * Sets batch_ids
      * @param string $batch_ids 
-     * @return $this
+     * @return self
      */
-    public function setBatchIds($batch_ids)
+    public function setBatchIds(string $batch_ids): self
     {
         $this->batch_ids = $batch_ids;
         return $this;
@@ -190,23 +63,23 @@ class GetBulkSendBatchesOptions
       * $count 
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count 
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -215,23 +88,23 @@ class GetBulkSendBatchesOptions
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -240,89 +113,37 @@ class GetBulkSendBatchesOptions
       * $status 
       * @var string
       */
-    protected $status;
+    protected string $status;
 
     /**
      * Gets status
      * @return string
      */
-    public function getStatus()
+    public function getStatus(): string
     {
         return $this->status;
     }
-  
+
     /**
      * Sets status
      * @param string $status 
-     * @return $this
+     * @return self
      */
-    public function setStatus($status)
+    public function setStatus(string $status): self
     {
         $this->status = $status;
         return $this;
     }
 }
-class GetRecipientsOptions
-{
-    /**
-      * $include_tabs 
-      * @var string
-      */
-    protected $include_tabs;
 
-    /**
-     * Gets include_tabs
-     * @return string
-     */
-    public function getIncludeTabs()
-    {
-        return $this->include_tabs;
-    }
-  
-    /**
-     * Sets include_tabs
-     * @param string $include_tabs 
-     * @return $this
-     */
-    public function setIncludeTabs($include_tabs)
-    {
-        $this->include_tabs = $include_tabs;
-        return $this;
-    }
-    /**
-      * $start_position 
-      * @var string
-      */
-    protected $start_position;
-
-    /**
-     * Gets start_position
-     * @return string
-     */
-    public function getStartPosition()
-    {
-        return $this->start_position;
-    }
-  
-    /**
-     * Sets start_position
-     * @param string $start_position 
-     * @return $this
-     */
-    public function setStartPosition($start_position)
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
 
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * BulkEnvelopesApi Class Doc Comment
@@ -337,30 +158,27 @@ class BulkEnvelopesApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -368,135 +186,46 @@ class BulkEnvelopesApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return BulkEnvelopesApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
-     * Operation callList
-     *
-     * Gets status information about bulk recipient batches.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\BulkEnvelopesResponse
-     */
-    public function callList($account_id, BulkEnvelopesApi\ListOptions $options = null)
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
     {
-        list($response) = $this->callListWithHttpInfo($account_id, $options);
-        return $response;
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
     }
 
-    /**
-     * Operation callListWithHttpInfo
-     *
-     * Gets status information about bulk recipient batches.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\BulkEnvelopesResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function callListWithHttpInfo($account_id, BulkEnvelopesApi\ListOptions $options = null)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling callList');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/bulk_envelopes";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\BulkEnvelopesResponse',
-                '/v2.1/accounts/{accountId}/bulk_envelopes'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkEnvelopesResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkEnvelopesResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
 
     /**
      * Operation createBulkSendList
      *
      * Creates a new bulk send list
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingList
      */
-    public function createBulkSendList($account_id, $bulk_sending_list = null)
+    public function createBulkSendList($account_id, $bulk_sending_list = null): \DocuSign\eSign\Model\BulkSendingList
     {
         list($response) = $this->createBulkSendListWithHttpInfo($account_id, $bulk_sending_list);
         return $response;
@@ -507,12 +236,12 @@ class BulkEnvelopesApi
      *
      * Creates a new bulk send list
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createBulkSendListWithHttpInfo($account_id, $bulk_sending_list = null)
+    public function createBulkSendListWithHttpInfo($account_id, $bulk_sending_list = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -520,28 +249,19 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_lists";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($bulk_sending_list)) {
@@ -592,13 +312,13 @@ class BulkEnvelopesApi
      *
      * Uses the specified bulk send list to send the envelope specified in the payload
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendResponse
      */
-    public function createBulkSendRequest($account_id, $bulk_send_list_id, $bulk_send_request = null)
+    public function createBulkSendRequest($account_id, $bulk_send_list_id, $bulk_send_request = null): \DocuSign\eSign\Model\BulkSendResponse
     {
         list($response) = $this->createBulkSendRequestWithHttpInfo($account_id, $bulk_send_list_id, $bulk_send_request);
         return $response;
@@ -609,13 +329,13 @@ class BulkEnvelopesApi
      *
      * Uses the specified bulk send list to send the envelope specified in the payload
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createBulkSendRequestWithHttpInfo($account_id, $bulk_send_list_id, $bulk_send_request = null)
+    public function createBulkSendRequestWithHttpInfo($account_id, $bulk_send_list_id, $bulk_send_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -627,36 +347,23 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}/send";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bulk_send_list_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bulkSendListId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bulk_send_list_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendListId", $bulk_send_list_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($bulk_send_request)) {
@@ -707,13 +414,13 @@ class BulkEnvelopesApi
      *
      * Tests whether the specified bulk sending list can be used to send an envelope
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendTestResponse
      */
-    public function createBulkSendTestRequest($account_id, $bulk_send_list_id, $bulk_send_request = null)
+    public function createBulkSendTestRequest($account_id, $bulk_send_list_id, $bulk_send_request = null): \DocuSign\eSign\Model\BulkSendTestResponse
     {
         list($response) = $this->createBulkSendTestRequestWithHttpInfo($account_id, $bulk_send_list_id, $bulk_send_request);
         return $response;
@@ -724,13 +431,13 @@ class BulkEnvelopesApi
      *
      * Tests whether the specified bulk sending list can be used to send an envelope
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendTestResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createBulkSendTestRequestWithHttpInfo($account_id, $bulk_send_list_id, $bulk_send_request = null)
+    public function createBulkSendTestRequestWithHttpInfo($account_id, $bulk_send_list_id, $bulk_send_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -742,36 +449,23 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}/test";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bulk_send_list_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bulkSendListId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bulk_send_list_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendListId", $bulk_send_list_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($bulk_send_request)) {
@@ -822,12 +516,12 @@ class BulkEnvelopesApi
      *
      * Deletes an existing bulk send list
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingListSummaries
      */
-    public function deleteBulkSendList($account_id, $bulk_send_list_id)
+    public function deleteBulkSendList($account_id, $bulk_send_list_id): \DocuSign\eSign\Model\BulkSendingListSummaries
     {
         list($response) = $this->deleteBulkSendListWithHttpInfo($account_id, $bulk_send_list_id);
         return $response;
@@ -838,12 +532,12 @@ class BulkEnvelopesApi
      *
      * Deletes an existing bulk send list
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingListSummaries, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteBulkSendListWithHttpInfo($account_id, $bulk_send_list_id)
+    public function deleteBulkSendListWithHttpInfo($account_id, $bulk_send_list_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -855,36 +549,23 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bulk_send_list_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bulkSendListId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bulk_send_list_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendListId", $bulk_send_list_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -926,264 +607,16 @@ class BulkEnvelopesApi
     }
 
     /**
-     * Operation deleteRecipients
-     *
-     * Deletes the bulk recipient file from an envelope.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\BulkRecipientsUpdateResponse
-     */
-    public function deleteRecipients($account_id, $envelope_id, $recipient_id)
-    {
-        list($response) = $this->deleteRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id);
-        return $response;
-    }
-
-    /**
-     * Operation deleteRecipientsWithHttpInfo
-     *
-     * Deletes the bulk recipient file from an envelope.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\BulkRecipientsUpdateResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteRecipients');
-        }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling deleteRecipients');
-        }
-        // verify the required parameter 'recipient_id' is set
-        if ($recipient_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling deleteRecipients');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($envelope_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "envelopeId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($envelope_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'DELETE',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\BulkRecipientsUpdateResponse',
-                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkRecipientsUpdateResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkRecipientsUpdateResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation get
-     *
-     * Gets the status of a specified bulk send operation.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $batch_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\BulkEnvelopeStatus
-     */
-    public function get($account_id, $batch_id, BulkEnvelopesApi\GetOptions $options = null)
-    {
-        list($response) = $this->getWithHttpInfo($account_id, $batch_id, $options);
-        return $response;
-    }
-
-    /**
-     * Operation getWithHttpInfo
-     *
-     * Gets the status of a specified bulk send operation.
-     *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $batch_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\BulkEnvelopeStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getWithHttpInfo($account_id, $batch_id, BulkEnvelopesApi\GetOptions $options = null)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling get');
-        }
-        // verify the required parameter 'batch_id' is set
-        if ($batch_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $batch_id when calling get');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/bulk_envelopes/{batchId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($batch_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "batchId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($batch_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\BulkEnvelopeStatus',
-                '/v2.1/accounts/{accountId}/bulk_envelopes/{batchId}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkEnvelopeStatus', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkEnvelopeStatus', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation getBulkSendBatchStatus
      *
      * Gets a specific bulk send batch status
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_batch_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_batch_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendBatchStatus
      */
-    public function getBulkSendBatchStatus($account_id, $bulk_send_batch_id)
+    public function getBulkSendBatchStatus($account_id, $bulk_send_batch_id): \DocuSign\eSign\Model\BulkSendBatchStatus
     {
         list($response) = $this->getBulkSendBatchStatusWithHttpInfo($account_id, $bulk_send_batch_id);
         return $response;
@@ -1194,12 +627,12 @@ class BulkEnvelopesApi
      *
      * Gets a specific bulk send batch status
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_batch_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_batch_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendBatchStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBulkSendBatchStatusWithHttpInfo($account_id, $bulk_send_batch_id)
+    public function getBulkSendBatchStatusWithHttpInfo($account_id, $bulk_send_batch_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1211,36 +644,23 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bulk_send_batch_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bulkSendBatchId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bulk_send_batch_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendBatchId", $bulk_send_batch_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1286,12 +706,12 @@ class BulkEnvelopesApi
      *
      * Returns a list of bulk send batch satuses initiated by account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendBatchSummaries
      */
-    public function getBulkSendBatches($account_id, BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null)
+    public function getBulkSendBatches($account_id, \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): \DocuSign\eSign\Model\BulkSendBatchSummaries
     {
         list($response) = $this->getBulkSendBatchesWithHttpInfo($account_id, $options);
         return $response;
@@ -1302,12 +722,12 @@ class BulkEnvelopesApi
      *
      * Returns a list of bulk send batch satuses initiated by account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendBatchSummaries, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBulkSendBatchesWithHttpInfo($account_id, BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null)
+    public function getBulkSendBatchesWithHttpInfo($account_id, \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1315,48 +735,35 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_batch";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getBatchIds() !== null) {
-            $queryParams['batch_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getBatchIds());
-        }
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getStatus() !== null) {
-            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
-        }
+            // query params
+            if ($options->getBatchIds() != 'null') {
+                $queryParams['batch_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getBatchIds());
+            }
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getStatus() != 'null') {
+                $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1402,12 +809,12 @@ class BulkEnvelopesApi
      *
      * Gets a specific bulk send list
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingList
      */
-    public function getBulkSendList($account_id, $bulk_send_list_id)
+    public function getBulkSendList($account_id, $bulk_send_list_id): \DocuSign\eSign\Model\BulkSendingList
     {
         list($response) = $this->getBulkSendListWithHttpInfo($account_id, $bulk_send_list_id);
         return $response;
@@ -1418,12 +825,12 @@ class BulkEnvelopesApi
      *
      * Gets a specific bulk send list
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBulkSendListWithHttpInfo($account_id, $bulk_send_list_id)
+    public function getBulkSendListWithHttpInfo($account_id, $bulk_send_list_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1435,36 +842,23 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bulk_send_list_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bulkSendListId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bulk_send_list_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendListId", $bulk_send_list_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1510,11 +904,11 @@ class BulkEnvelopesApi
      *
      * Lists top-level details for all bulk send lists visible to the current user
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingListSummaries
      */
-    public function getBulkSendLists($account_id)
+    public function getBulkSendLists($account_id): \DocuSign\eSign\Model\BulkSendingListSummaries
     {
         list($response) = $this->getBulkSendListsWithHttpInfo($account_id);
         return $response;
@@ -1525,11 +919,11 @@ class BulkEnvelopesApi
      *
      * Lists top-level details for all bulk send lists visible to the current user
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingListSummaries, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBulkSendListsWithHttpInfo($account_id)
+    public function getBulkSendListsWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1537,28 +931,19 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_lists";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1600,102 +985,68 @@ class BulkEnvelopesApi
     }
 
     /**
-     * Operation getRecipients
+     * Operation updateBulkSendBatchStatus
      *
-     * Gets the bulk recipient file from an envelope.
+     * Put/Update a specific bulk send batch status
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\BulkRecipientsResponse
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_batch_id 
+     * @param \DocuSign\eSign\Model\BulkSendBatchRequest $bulk_send_batch_request  (optional)
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\BulkSendBatchStatus
      */
-    public function getRecipients($account_id, $envelope_id, $recipient_id, BulkEnvelopesApi\GetRecipientsOptions $options = null)
+    public function updateBulkSendBatchStatus($account_id, $bulk_send_batch_id, $bulk_send_batch_request = null): \DocuSign\eSign\Model\BulkSendBatchStatus
     {
-        list($response) = $this->getRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $options);
+        list($response) = $this->updateBulkSendBatchStatusWithHttpInfo($account_id, $bulk_send_batch_id, $bulk_send_batch_request);
         return $response;
     }
 
     /**
-     * Operation getRecipientsWithHttpInfo
+     * Operation updateBulkSendBatchStatusWithHttpInfo
      *
-     * Gets the bulk recipient file from an envelope.
+     * Put/Update a specific bulk send batch status
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $envelope_id The envelopeId Guid of the envelope being accessed.
-    * @param string $recipient_id The ID of the recipient being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\BulkRecipientsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_batch_id 
+     * @param \DocuSign\eSign\Model\BulkSendBatchRequest $bulk_send_batch_request  (optional)
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\BulkSendBatchStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, BulkEnvelopesApi\GetRecipientsOptions $options = null)
+    public function updateBulkSendBatchStatusWithHttpInfo($account_id, $bulk_send_batch_id, $bulk_send_batch_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getRecipients');
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateBulkSendBatchStatus');
         }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getRecipients');
-        }
-        // verify the required parameter 'recipient_id' is set
-        if ($recipient_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling getRecipients');
+        // verify the required parameter 'bulk_send_batch_id' is set
+        if ($bulk_send_batch_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $bulk_send_batch_id when calling updateBulkSendBatchStatus');
         }
         // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
-        if ($options != null)
-        {
-        // query params
-        // query params
-        if ($options->getIncludeTabs() !== null) {
-            $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
-        if ($envelope_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "envelopeId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($envelope_id),
-                $resourcePath
-            );
+        if ($bulk_send_batch_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendBatchId", $bulk_send_batch_id);
         }
-        // path params
-        if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
-        }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($bulk_send_batch_request)) {
+            $_tempBody = $bulk_send_batch_request;
+        }
 
-        
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
@@ -1710,19 +1061,19 @@ class BulkEnvelopesApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'GET',
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\BulkRecipientsResponse',
-                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients'
+                '\DocuSign\eSign\Model\BulkSendBatchStatus',
+                '/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkRecipientsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkSendBatchStatus', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkRecipientsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkSendBatchStatus', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -1740,13 +1091,13 @@ class BulkEnvelopesApi
      *
      * Updates an existing bulk send list.  If send_envelope query string value is provided, will accept an empty payload and try to send the specified envelope
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingList
      */
-    public function updateBulkSendList($account_id, $bulk_send_list_id, $bulk_sending_list = null)
+    public function updateBulkSendList($account_id, $bulk_send_list_id, $bulk_sending_list = null): \DocuSign\eSign\Model\BulkSendingList
     {
         list($response) = $this->updateBulkSendListWithHttpInfo($account_id, $bulk_send_list_id, $bulk_sending_list);
         return $response;
@@ -1757,13 +1108,13 @@ class BulkEnvelopesApi
      *
      * Updates an existing bulk send list.  If send_envelope query string value is provided, will accept an empty payload and try to send the specified envelope
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bulk_send_list_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBulkSendListWithHttpInfo($account_id, $bulk_send_list_id, $bulk_sending_list = null)
+    public function updateBulkSendListWithHttpInfo($account_id, $bulk_send_list_id, $bulk_sending_list = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1775,36 +1126,23 @@ class BulkEnvelopesApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bulk_send_list_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bulkSendListId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bulk_send_list_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendListId", $bulk_send_list_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($bulk_sending_list)) {
@@ -1838,139 +1176,6 @@ class BulkEnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkSendingList', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateRecipients
-     *
-     * Adds or replaces envelope bulk recipients.
-     *
-    * @param string $account_id The external account number (int) or account ID GUID.
-    * @param string $envelope_id The envelope&#39;s GUID.   Example: &#x60;93be49ab-xxxx-xxxx-xxxx-f752070d71ec&#x60;
-    * @param string $recipient_id A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each &#x60;recipientId&#x60; must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a &#x60;recipientId&#x60; of &#x60;1&#x60;.
-     * @param string $bulk_recipients_request  (required)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\BulkRecipientsSummaryResponse
-     */
-    public function updateRecipients($account_id, $envelope_id, $recipient_id, $bulk_recipients_request)
-    {
-        list($response) = $this->updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request);
-        return $response;
-    }
-
-    /**
-     * Operation updateRecipientsWithHttpInfo
-     *
-     * Adds or replaces envelope bulk recipients.
-     *
-    * @param string $account_id The external account number (int) or account ID GUID.
-    * @param string $envelope_id The envelope&#39;s GUID.   Example: &#x60;93be49ab-xxxx-xxxx-xxxx-f752070d71ec&#x60;
-    * @param string $recipient_id A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each &#x60;recipientId&#x60; must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a &#x60;recipientId&#x60; of &#x60;1&#x60;.
-     * @param string $bulk_recipients_request  (required)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\BulkRecipientsSummaryResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateRecipientsWithHttpInfo($account_id, $envelope_id, $recipient_id, $bulk_recipients_request)
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateRecipients');
-        }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling updateRecipients');
-        }
-        // verify the required parameter 'recipient_id' is set
-        if ($recipient_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling updateRecipients');
-        }
-        // verify the required parameter 'bulk_recipients_request' is set
-        if ($bulk_recipients_request === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $bulk_recipients_request when calling updateRecipients');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['text/csv']);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($envelope_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "envelopeId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($envelope_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($recipient_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($bulk_recipients_request)) {
-            $_tempBody = $bulk_recipients_request;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\BulkRecipientsSummaryResponse',
-                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkRecipientsSummaryResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkRecipientsSummaryResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

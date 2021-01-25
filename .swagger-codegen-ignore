@@ -42,6 +42,6 @@ phpunit.xml.dist
 docs/
 test/
 src/Configuration.php
-src/ApiClient.php
+src/ApiClient.php	
 src/ApiException.php
 src/Client/

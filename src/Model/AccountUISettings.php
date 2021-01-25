@@ -2,7 +2,7 @@
 /**
  * AccountUISettings
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * AccountUISettings Class Doc Comment
@@ -67,6 +67,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_envelope_copy_with_data' => 'string',
         'enable_envelope_copy_with_data_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_legacy_homepage_link' => 'string',
+        'enable_legacy_homepage_link_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'hide_send_an_envelope' => 'string',
         'hide_send_an_envelope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'hide_use_a_template' => 'string',
@@ -99,6 +101,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => null,
         'enable_envelope_copy_with_data' => null,
         'enable_envelope_copy_with_data_metadata' => null,
+        'enable_legacy_homepage_link' => null,
+        'enable_legacy_homepage_link_metadata' => null,
         'hide_send_an_envelope' => null,
         'hide_send_an_envelope_metadata' => null,
         'hide_use_a_template' => null,
@@ -152,6 +156,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => 'enableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data' => 'enableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata' => 'enableEnvelopeCopyWithDataMetadata',
+        'enable_legacy_homepage_link' => 'enableLegacyHomepageLink',
+        'enable_legacy_homepage_link_metadata' => 'enableLegacyHomepageLinkMetadata',
         'hide_send_an_envelope' => 'hideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'hideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'hideUseATemplate',
@@ -184,6 +190,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => 'setEnableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data' => 'setEnableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata' => 'setEnableEnvelopeCopyWithDataMetadata',
+        'enable_legacy_homepage_link' => 'setEnableLegacyHomepageLink',
+        'enable_legacy_homepage_link_metadata' => 'setEnableLegacyHomepageLinkMetadata',
         'hide_send_an_envelope' => 'setHideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'setHideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'setHideUseATemplate',
@@ -216,6 +224,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => 'getEnableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data' => 'getEnableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata' => 'getEnableEnvelopeCopyWithDataMetadata',
+        'enable_legacy_homepage_link' => 'getEnableLegacyHomepageLink',
+        'enable_legacy_homepage_link_metadata' => 'getEnableLegacyHomepageLinkMetadata',
         'hide_send_an_envelope' => 'getHideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'getHideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'getHideUseATemplate',
@@ -302,6 +312,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         $this->container['enable_easy_sign_template_upload_metadata'] = isset($data['enable_easy_sign_template_upload_metadata']) ? $data['enable_easy_sign_template_upload_metadata'] : null;
         $this->container['enable_envelope_copy_with_data'] = isset($data['enable_envelope_copy_with_data']) ? $data['enable_envelope_copy_with_data'] : null;
         $this->container['enable_envelope_copy_with_data_metadata'] = isset($data['enable_envelope_copy_with_data_metadata']) ? $data['enable_envelope_copy_with_data_metadata'] : null;
+        $this->container['enable_legacy_homepage_link'] = isset($data['enable_legacy_homepage_link']) ? $data['enable_legacy_homepage_link'] : null;
+        $this->container['enable_legacy_homepage_link_metadata'] = isset($data['enable_legacy_homepage_link_metadata']) ? $data['enable_legacy_homepage_link_metadata'] : null;
         $this->container['hide_send_an_envelope'] = isset($data['hide_send_an_envelope']) ? $data['hide_send_an_envelope'] : null;
         $this->container['hide_send_an_envelope_metadata'] = isset($data['hide_send_an_envelope_metadata']) ? $data['hide_send_an_envelope_metadata'] : null;
         $this->container['hide_use_a_template'] = isset($data['hide_use_a_template']) ? $data['hide_use_a_template'] : null;
@@ -578,6 +590,54 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function setEnableEnvelopeCopyWithDataMetadata($enable_envelope_copy_with_data_metadata)
     {
         $this->container['enable_envelope_copy_with_data_metadata'] = $enable_envelope_copy_with_data_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_legacy_homepage_link
+     *
+     * @return string
+     */
+    public function getEnableLegacyHomepageLink()
+    {
+        return $this->container['enable_legacy_homepage_link'];
+    }
+
+    /**
+     * Sets enable_legacy_homepage_link
+     *
+     * @param string $enable_legacy_homepage_link 
+     *
+     * @return $this
+     */
+    public function setEnableLegacyHomepageLink($enable_legacy_homepage_link)
+    {
+        $this->container['enable_legacy_homepage_link'] = $enable_legacy_homepage_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_legacy_homepage_link_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableLegacyHomepageLinkMetadata()
+    {
+        return $this->container['enable_legacy_homepage_link_metadata'];
+    }
+
+    /**
+     * Sets enable_legacy_homepage_link_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_legacy_homepage_link_metadata enable_legacy_homepage_link_metadata
+     *
+     * @return $this
+     */
+    public function setEnableLegacyHomepageLinkMetadata($enable_legacy_homepage_link_metadata)
+    {
+        $this->container['enable_legacy_homepage_link_metadata'] = $enable_legacy_homepage_link_metadata;
 
         return $this;
     }

@@ -2,7 +2,7 @@
 /**
  * AccountBillingPlan
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * AccountBillingPlan Class Doc Comment
@@ -67,6 +67,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'included_seats' => 'string',
         'incremental_seats' => 'string',
         'is_downgrade' => 'string',
+        'notification_type' => 'string',
         'other_discount_percent' => 'string',
         'payment_cycle' => 'string',
         'payment_method' => 'string',
@@ -96,6 +97,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'included_seats' => null,
         'incremental_seats' => null,
         'is_downgrade' => null,
+        'notification_type' => null,
         'other_discount_percent' => null,
         'payment_cycle' => null,
         'payment_method' => null,
@@ -146,6 +148,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'included_seats' => 'includedSeats',
         'incremental_seats' => 'incrementalSeats',
         'is_downgrade' => 'isDowngrade',
+        'notification_type' => 'notificationType',
         'other_discount_percent' => 'otherDiscountPercent',
         'payment_cycle' => 'paymentCycle',
         'payment_method' => 'paymentMethod',
@@ -175,6 +178,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'included_seats' => 'setIncludedSeats',
         'incremental_seats' => 'setIncrementalSeats',
         'is_downgrade' => 'setIsDowngrade',
+        'notification_type' => 'setNotificationType',
         'other_discount_percent' => 'setOtherDiscountPercent',
         'payment_cycle' => 'setPaymentCycle',
         'payment_method' => 'setPaymentMethod',
@@ -204,6 +208,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'included_seats' => 'getIncludedSeats',
         'incremental_seats' => 'getIncrementalSeats',
         'is_downgrade' => 'getIsDowngrade',
+        'notification_type' => 'getNotificationType',
         'other_discount_percent' => 'getOtherDiscountPercent',
         'payment_cycle' => 'getPaymentCycle',
         'payment_method' => 'getPaymentMethod',
@@ -287,6 +292,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         $this->container['included_seats'] = isset($data['included_seats']) ? $data['included_seats'] : null;
         $this->container['incremental_seats'] = isset($data['incremental_seats']) ? $data['incremental_seats'] : null;
         $this->container['is_downgrade'] = isset($data['is_downgrade']) ? $data['is_downgrade'] : null;
+        $this->container['notification_type'] = isset($data['notification_type']) ? $data['notification_type'] : null;
         $this->container['other_discount_percent'] = isset($data['other_discount_percent']) ? $data['other_discount_percent'] : null;
         $this->container['payment_cycle'] = isset($data['payment_cycle']) ? $data['payment_cycle'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
@@ -537,6 +543,30 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     public function setIsDowngrade($is_downgrade)
     {
         $this->container['is_downgrade'] = $is_downgrade;
+
+        return $this;
+    }
+
+    /**
+     * Gets notification_type
+     *
+     * @return string
+     */
+    public function getNotificationType()
+    {
+        return $this->container['notification_type'];
+    }
+
+    /**
+     * Sets notification_type
+     *
+     * @param string $notification_type 
+     *
+     * @return $this
+     */
+    public function setNotificationType($notification_type)
+    {
+        $this->container['notification_type'] = $notification_type;
 
         return $this;
     }

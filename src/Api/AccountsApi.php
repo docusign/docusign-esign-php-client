@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * AccountsApi
- * PHP version 5
+ * AccountsApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\AccountsApi;
+namespace DocuSign\eSign\ApiAccountsApi;
+
 
 class CreateOptions
 {
@@ -34,247 +38,263 @@ class CreateOptions
       * $preview_billing_plan When set to **true**, creates the account using a preview billing plan.
       * @var string
       */
-    protected $preview_billing_plan;
+    protected string $preview_billing_plan;
 
     /**
      * Gets preview_billing_plan
      * @return string
      */
-    public function getPreviewBillingPlan()
+    public function getPreviewBillingPlan(): string
     {
         return $this->preview_billing_plan;
     }
-  
+
     /**
      * Sets preview_billing_plan
      * @param string $preview_billing_plan When set to **true**, creates the account using a preview billing plan.
-     * @return $this
+     * @return self
      */
-    public function setPreviewBillingPlan($preview_billing_plan)
+    public function setPreviewBillingPlan(string $preview_billing_plan): self
     {
         $this->preview_billing_plan = $preview_billing_plan;
         return $this;
     }
 }
+
+
 class CreateAccountSignaturesOptions
 {
     /**
       * $decode_only 
       * @var string
       */
-    protected $decode_only;
+    protected string $decode_only;
 
     /**
      * Gets decode_only
      * @return string
      */
-    public function getDecodeOnly()
+    public function getDecodeOnly(): string
     {
         return $this->decode_only;
     }
-  
+
     /**
      * Sets decode_only
      * @param string $decode_only 
-     * @return $this
+     * @return self
      */
-    public function setDecodeOnly($decode_only)
+    public function setDecodeOnly(string $decode_only): self
     {
         $this->decode_only = $decode_only;
         return $this;
     }
 }
+
+
 class CreateCustomFieldOptions
 {
     /**
       * $apply_to_templates 
       * @var string
       */
-    protected $apply_to_templates;
+    protected string $apply_to_templates;
 
     /**
      * Gets apply_to_templates
      * @return string
      */
-    public function getApplyToTemplates()
+    public function getApplyToTemplates(): string
     {
         return $this->apply_to_templates;
     }
-  
+
     /**
      * Sets apply_to_templates
      * @param string $apply_to_templates 
-     * @return $this
+     * @return self
      */
-    public function setApplyToTemplates($apply_to_templates)
+    public function setApplyToTemplates(string $apply_to_templates): self
     {
         $this->apply_to_templates = $apply_to_templates;
         return $this;
     }
 }
+
+
 class CreatePermissionProfileOptions
 {
     /**
       * $include 
       * @var string
       */
-    protected $include;
+    protected string $include;
 
     /**
      * Gets include
      * @return string
      */
-    public function getInclude()
+    public function getInclude(): string
     {
         return $this->include;
     }
-  
+
     /**
      * Sets include
      * @param string $include 
-     * @return $this
+     * @return self
      */
-    public function setInclude($include)
+    public function setInclude(string $include): self
     {
         $this->include = $include;
         return $this;
     }
 }
+
+
 class DeleteCustomFieldOptions
 {
     /**
       * $apply_to_templates 
       * @var string
       */
-    protected $apply_to_templates;
+    protected string $apply_to_templates;
 
     /**
      * Gets apply_to_templates
      * @return string
      */
-    public function getApplyToTemplates()
+    public function getApplyToTemplates(): string
     {
         return $this->apply_to_templates;
     }
-  
+
     /**
      * Sets apply_to_templates
      * @param string $apply_to_templates 
-     * @return $this
+     * @return self
      */
-    public function setApplyToTemplates($apply_to_templates)
+    public function setApplyToTemplates(string $apply_to_templates): self
     {
         $this->apply_to_templates = $apply_to_templates;
         return $this;
     }
 }
+
+
 class DeletePermissionProfileOptions
 {
     /**
       * $move_users_to 
       * @var string
       */
-    protected $move_users_to;
+    protected string $move_users_to;
 
     /**
      * Gets move_users_to
      * @return string
      */
-    public function getMoveUsersTo()
+    public function getMoveUsersTo(): string
     {
         return $this->move_users_to;
     }
-  
+
     /**
      * Sets move_users_to
      * @param string $move_users_to 
-     * @return $this
+     * @return self
      */
-    public function setMoveUsersTo($move_users_to)
+    public function setMoveUsersTo(string $move_users_to): self
     {
         $this->move_users_to = $move_users_to;
         return $this;
     }
 }
+
+
 class GetAccountInformationOptions
 {
     /**
       * $include_account_settings When set to **true**, includes the account settings for the account in the response.
       * @var string
       */
-    protected $include_account_settings;
+    protected string $include_account_settings;
 
     /**
      * Gets include_account_settings
      * @return string
      */
-    public function getIncludeAccountSettings()
+    public function getIncludeAccountSettings(): string
     {
         return $this->include_account_settings;
     }
-  
+
     /**
      * Sets include_account_settings
      * @param string $include_account_settings When set to **true**, includes the account settings for the account in the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeAccountSettings($include_account_settings)
+    public function setIncludeAccountSettings(string $include_account_settings): self
     {
         $this->include_account_settings = $include_account_settings;
         return $this;
     }
 }
+
+
 class GetAccountSignatureImageOptions
 {
     /**
       * $include_chrome 
       * @var string
       */
-    protected $include_chrome;
+    protected string $include_chrome;
 
     /**
      * Gets include_chrome
      * @return string
      */
-    public function getIncludeChrome()
+    public function getIncludeChrome(): string
     {
         return $this->include_chrome;
     }
-  
+
     /**
      * Sets include_chrome
      * @param string $include_chrome 
-     * @return $this
+     * @return self
      */
-    public function setIncludeChrome($include_chrome)
+    public function setIncludeChrome(string $include_chrome): self
     {
         $this->include_chrome = $include_chrome;
         return $this;
     }
 }
+
+
 class GetAccountSignaturesOptions
 {
     /**
       * $stamp_format 
       * @var string
       */
-    protected $stamp_format;
+    protected string $stamp_format;
 
     /**
      * Gets stamp_format
      * @return string
      */
-    public function getStampFormat()
+    public function getStampFormat(): string
     {
         return $this->stamp_format;
     }
-  
+
     /**
      * Sets stamp_format
      * @param string $stamp_format 
-     * @return $this
+     * @return self
      */
-    public function setStampFormat($stamp_format)
+    public function setStampFormat(string $stamp_format): self
     {
         $this->stamp_format = $stamp_format;
         return $this;
@@ -283,23 +303,23 @@ class GetAccountSignaturesOptions
       * $stamp_name 
       * @var string
       */
-    protected $stamp_name;
+    protected string $stamp_name;
 
     /**
      * Gets stamp_name
      * @return string
      */
-    public function getStampName()
+    public function getStampName(): string
     {
         return $this->stamp_name;
     }
-  
+
     /**
      * Sets stamp_name
      * @param string $stamp_name 
-     * @return $this
+     * @return self
      */
-    public function setStampName($stamp_name)
+    public function setStampName(string $stamp_name): self
     {
         $this->stamp_name = $stamp_name;
         return $this;
@@ -308,79 +328,83 @@ class GetAccountSignaturesOptions
       * $stamp_type 
       * @var string
       */
-    protected $stamp_type;
+    protected string $stamp_type;
 
     /**
      * Gets stamp_type
      * @return string
      */
-    public function getStampType()
+    public function getStampType(): string
     {
         return $this->stamp_type;
     }
-  
+
     /**
      * Sets stamp_type
      * @param string $stamp_type 
-     * @return $this
+     * @return self
      */
-    public function setStampType($stamp_type)
+    public function setStampType(string $stamp_type): self
     {
         $this->stamp_type = $stamp_type;
         return $this;
     }
 }
+
+
 class GetBillingChargesOptions
 {
     /**
       * $include_charges Specifies which billing charges to return. Valid values are:  * envelopes * seats
       * @var string
       */
-    protected $include_charges;
+    protected string $include_charges;
 
     /**
      * Gets include_charges
      * @return string
      */
-    public function getIncludeCharges()
+    public function getIncludeCharges(): string
     {
         return $this->include_charges;
     }
-  
+
     /**
      * Sets include_charges
      * @param string $include_charges Specifies which billing charges to return. Valid values are:  * envelopes * seats
-     * @return $this
+     * @return self
      */
-    public function setIncludeCharges($include_charges)
+    public function setIncludeCharges(string $include_charges): self
     {
         $this->include_charges = $include_charges;
         return $this;
     }
 }
+
+
 class GetBrandOptions
 {
     /**
       * $include_external_references 
       * @var string
       */
-    protected $include_external_references;
+    protected string $include_external_references;
 
     /**
      * Gets include_external_references
      * @return string
      */
-    public function getIncludeExternalReferences()
+    public function getIncludeExternalReferences(): string
     {
         return $this->include_external_references;
     }
-  
+
     /**
      * Sets include_external_references
      * @param string $include_external_references 
-     * @return $this
+     * @return self
      */
-    public function setIncludeExternalReferences($include_external_references)
+    public function setIncludeExternalReferences(string $include_external_references): self
     {
         $this->include_external_references = $include_external_references;
         return $this;
@@ -389,51 +413,53 @@ class GetBrandOptions
       * $include_logos 
       * @var string
       */
-    protected $include_logos;
+    protected string $include_logos;
 
     /**
      * Gets include_logos
      * @return string
      */
-    public function getIncludeLogos()
+    public function getIncludeLogos(): string
     {
         return $this->include_logos;
     }
-  
+
     /**
      * Sets include_logos
      * @param string $include_logos 
-     * @return $this
+     * @return self
      */
-    public function setIncludeLogos($include_logos)
+    public function setIncludeLogos(string $include_logos): self
     {
         $this->include_logos = $include_logos;
         return $this;
     }
 }
+
+
 class GetBrandResourcesByContentTypeOptions
 {
     /**
       * $langcode 
       * @var string
       */
-    protected $langcode;
+    protected string $langcode;
 
     /**
      * Gets langcode
      * @return string
      */
-    public function getLangcode()
+    public function getLangcode(): string
     {
         return $this->langcode;
     }
-  
+
     /**
      * Sets langcode
      * @param string $langcode 
-     * @return $this
+     * @return self
      */
-    public function setLangcode($langcode)
+    public function setLangcode(string $langcode): self
     {
         $this->langcode = $langcode;
         return $this;
@@ -442,107 +468,113 @@ class GetBrandResourcesByContentTypeOptions
       * $return_master 
       * @var string
       */
-    protected $return_master;
+    protected string $return_master;
 
     /**
      * Gets return_master
      * @return string
      */
-    public function getReturnMaster()
+    public function getReturnMaster(): string
     {
         return $this->return_master;
     }
-  
+
     /**
      * Sets return_master
      * @param string $return_master 
-     * @return $this
+     * @return self
      */
-    public function setReturnMaster($return_master)
+    public function setReturnMaster(string $return_master): self
     {
         $this->return_master = $return_master;
         return $this;
     }
 }
+
+
 class GetConsumerDisclosureDefaultOptions
 {
     /**
       * $lang_code Specifies the language used in the response. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).  Additionally, the value can be set to `browser` to automatically detect the browser language being used by the viewer and display the disclosure in that language.
       * @var string
       */
-    protected $lang_code;
+    protected string $lang_code;
 
     /**
      * Gets lang_code
      * @return string
      */
-    public function getLangCode()
+    public function getLangCode(): string
     {
         return $this->lang_code;
     }
-  
+
     /**
      * Sets lang_code
      * @param string $lang_code Specifies the language used in the response. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).  Additionally, the value can be set to `browser` to automatically detect the browser language being used by the viewer and display the disclosure in that language.
-     * @return $this
+     * @return self
      */
-    public function setLangCode($lang_code)
+    public function setLangCode(string $lang_code): self
     {
         $this->lang_code = $lang_code;
         return $this;
     }
 }
+
+
 class GetPermissionProfileOptions
 {
     /**
       * $include 
       * @var string
       */
-    protected $include;
+    protected string $include;
 
     /**
      * Gets include
      * @return string
      */
-    public function getInclude()
+    public function getInclude(): string
     {
         return $this->include;
     }
-  
+
     /**
      * Sets include
      * @param string $include 
-     * @return $this
+     * @return self
      */
-    public function setInclude($include)
+    public function setInclude(string $include): self
     {
         $this->include = $include;
         return $this;
     }
 }
+
+
 class ListBrandsOptions
 {
     /**
       * $exclude_distributor_brand When set to **true**, excludes distributor brand information from the response set.
       * @var string
       */
-    protected $exclude_distributor_brand;
+    protected string $exclude_distributor_brand;
 
     /**
      * Gets exclude_distributor_brand
      * @return string
      */
-    public function getExcludeDistributorBrand()
+    public function getExcludeDistributorBrand(): string
     {
         return $this->exclude_distributor_brand;
     }
-  
+
     /**
      * Sets exclude_distributor_brand
      * @param string $exclude_distributor_brand When set to **true**, excludes distributor brand information from the response set.
-     * @return $this
+     * @return self
      */
-    public function setExcludeDistributorBrand($exclude_distributor_brand)
+    public function setExcludeDistributorBrand(string $exclude_distributor_brand): self
     {
         $this->exclude_distributor_brand = $exclude_distributor_brand;
         return $this;
@@ -551,107 +583,113 @@ class ListBrandsOptions
       * $include_logos When set to **true**, returns the logos associated with the brand.
       * @var string
       */
-    protected $include_logos;
+    protected string $include_logos;
 
     /**
      * Gets include_logos
      * @return string
      */
-    public function getIncludeLogos()
+    public function getIncludeLogos(): string
     {
         return $this->include_logos;
     }
-  
+
     /**
      * Sets include_logos
      * @param string $include_logos When set to **true**, returns the logos associated with the brand.
-     * @return $this
+     * @return self
      */
-    public function setIncludeLogos($include_logos)
+    public function setIncludeLogos(string $include_logos): self
     {
         $this->include_logos = $include_logos;
         return $this;
     }
 }
+
+
 class ListPermissionsOptions
 {
     /**
       * $include 
       * @var string
       */
-    protected $include;
+    protected string $include;
 
     /**
      * Gets include
      * @return string
      */
-    public function getInclude()
+    public function getInclude(): string
     {
         return $this->include;
     }
-  
+
     /**
      * Sets include
      * @param string $include 
-     * @return $this
+     * @return self
      */
-    public function setInclude($include)
+    public function setInclude(string $include): self
     {
         $this->include = $include;
         return $this;
     }
 }
+
+
 class ListRecipientNamesByEmailOptions
 {
     /**
       * $email The email address for the user
       * @var string
       */
-    protected $email;
+    protected string $email;
 
     /**
      * Gets email
      * @return string
      */
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->email;
     }
-  
+
     /**
      * Sets email
      * @param string $email The email address for the user
-     * @return $this
+     * @return self
      */
-    public function setEmail($email)
+    public function setEmail(string $email): self
     {
         $this->email = $email;
         return $this;
     }
 }
+
+
 class ListSharedAccessOptions
 {
     /**
       * $count Specifies maximum number of results included in the response. If no value is specified, this defaults to 1000.
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count Specifies maximum number of results included in the response. If no value is specified, this defaults to 1000.
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -660,23 +698,23 @@ class ListSharedAccessOptions
       * $envelopes_not_shared_user_status 
       * @var string
       */
-    protected $envelopes_not_shared_user_status;
+    protected string $envelopes_not_shared_user_status;
 
     /**
      * Gets envelopes_not_shared_user_status
      * @return string
      */
-    public function getEnvelopesNotSharedUserStatus()
+    public function getEnvelopesNotSharedUserStatus(): string
     {
         return $this->envelopes_not_shared_user_status;
     }
-  
+
     /**
      * Sets envelopes_not_shared_user_status
      * @param string $envelopes_not_shared_user_status 
-     * @return $this
+     * @return self
      */
-    public function setEnvelopesNotSharedUserStatus($envelopes_not_shared_user_status)
+    public function setEnvelopesNotSharedUserStatus(string $envelopes_not_shared_user_status): self
     {
         $this->envelopes_not_shared_user_status = $envelopes_not_shared_user_status;
         return $this;
@@ -685,23 +723,23 @@ class ListSharedAccessOptions
       * $folder_ids 
       * @var string
       */
-    protected $folder_ids;
+    protected string $folder_ids;
 
     /**
      * Gets folder_ids
      * @return string
      */
-    public function getFolderIds()
+    public function getFolderIds(): string
     {
         return $this->folder_ids;
     }
-  
+
     /**
      * Sets folder_ids
      * @param string $folder_ids 
-     * @return $this
+     * @return self
      */
-    public function setFolderIds($folder_ids)
+    public function setFolderIds(string $folder_ids): self
     {
         $this->folder_ids = $folder_ids;
         return $this;
@@ -710,23 +748,23 @@ class ListSharedAccessOptions
       * $item_type Specifies the type of shared item being requested. The accepted values are: -envelopes: returns information about envelope sharing between users.
       * @var string
       */
-    protected $item_type;
+    protected string $item_type;
 
     /**
      * Gets item_type
      * @return string
      */
-    public function getItemType()
+    public function getItemType(): string
     {
         return $this->item_type;
     }
-  
+
     /**
      * Sets item_type
      * @param string $item_type Specifies the type of shared item being requested. The accepted values are: -envelopes: returns information about envelope sharing between users.
-     * @return $this
+     * @return self
      */
-    public function setItemType($item_type)
+    public function setItemType(string $item_type): self
     {
         $this->item_type = $item_type;
         return $this;
@@ -735,23 +773,23 @@ class ListSharedAccessOptions
       * $search_text This can be used to filter user names in the response. The wild-card '*' (asterisk) can be used around the string.
       * @var string
       */
-    protected $search_text;
+    protected string $search_text;
 
     /**
      * Gets search_text
      * @return string
      */
-    public function getSearchText()
+    public function getSearchText(): string
     {
         return $this->search_text;
     }
-  
+
     /**
      * Sets search_text
      * @param string $search_text This can be used to filter user names in the response. The wild-card '*' (asterisk) can be used around the string.
-     * @return $this
+     * @return self
      */
-    public function setSearchText($search_text)
+    public function setSearchText(string $search_text): self
     {
         $this->search_text = $search_text;
         return $this;
@@ -760,23 +798,23 @@ class ListSharedAccessOptions
       * $shared Specifies which users should be included in the response. Multiple values can be used in the query by using a comma separated list of shared values. If the requestor does not have account administrator privileges, the shared_to value is used. Requestors that do not have account administrator privileges can only use the shared_to, any other setting will result in an error. The accepted values are:  -not_shared: Returns account users that the specified item type is not being shared with and that are not sharing the specified item type with the user.  User X (Share) X Account user  -shared_to: Returns account users that the specified item type is not being shared with and who are sharing the specified item type with the user (only shared to the user).  User X (Share) Account user  -shared_from: Returns account users that the specified item type is being shared with and who are not sharing the specified item type with the user (only shared from the user).  User (Share) >> Account user  -shared_to_and_from: Returns account users that the specified item type is being shared with and who are sharing the specified item type with the user.  User << (Share) >> Account user
       * @var string
       */
-    protected $shared;
+    protected string $shared;
 
     /**
      * Gets shared
      * @return string
      */
-    public function getShared()
+    public function getShared(): string
     {
         return $this->shared;
     }
-  
+
     /**
      * Sets shared
      * @param string $shared Specifies which users should be included in the response. Multiple values can be used in the query by using a comma separated list of shared values. If the requestor does not have account administrator privileges, the shared_to value is used. Requestors that do not have account administrator privileges can only use the shared_to, any other setting will result in an error. The accepted values are:  -not_shared: Returns account users that the specified item type is not being shared with and that are not sharing the specified item type with the user.  User X (Share) X Account user  -shared_to: Returns account users that the specified item type is not being shared with and who are sharing the specified item type with the user (only shared to the user).  User X (Share) Account user  -shared_from: Returns account users that the specified item type is being shared with and who are not sharing the specified item type with the user (only shared from the user).  User (Share) >> Account user  -shared_to_and_from: Returns account users that the specified item type is being shared with and who are sharing the specified item type with the user.  User << (Share) >> Account user
-     * @return $this
+     * @return self
      */
-    public function setShared($shared)
+    public function setShared(string $shared): self
     {
         $this->shared = $shared;
         return $this;
@@ -785,23 +823,23 @@ class ListSharedAccessOptions
       * $start_position If the response set exceeds Count, this can be used to specify that the method should return users starting at the specified index. The first index is 0, and should be used in the first GET call. Typically this number is a multiple of Count. If no value is specified, this defaults to be 0.
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position If the response set exceeds Count, this can be used to specify that the method should return users starting at the specified index. The first index is 0, and should be used in the first GET call. Typically this number is a multiple of Count. If no value is specified, this defaults to be 0.
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -810,191 +848,203 @@ class ListSharedAccessOptions
       * $user_ids A comma separated list of userIds for whom the shared item information is being requested.
       * @var string
       */
-    protected $user_ids;
+    protected string $user_ids;
 
     /**
      * Gets user_ids
      * @return string
      */
-    public function getUserIds()
+    public function getUserIds(): string
     {
         return $this->user_ids;
     }
-  
+
     /**
      * Sets user_ids
      * @param string $user_ids A comma separated list of userIds for whom the shared item information is being requested.
-     * @return $this
+     * @return self
      */
-    public function setUserIds($user_ids)
+    public function setUserIds(string $user_ids): self
     {
         $this->user_ids = $user_ids;
         return $this;
     }
 }
+
+
 class UpdateAccountSignatureByIdOptions
 {
     /**
       * $close_existing_signature 
       * @var string
       */
-    protected $close_existing_signature;
+    protected string $close_existing_signature;
 
     /**
      * Gets close_existing_signature
      * @return string
      */
-    public function getCloseExistingSignature()
+    public function getCloseExistingSignature(): string
     {
         return $this->close_existing_signature;
     }
-  
+
     /**
      * Sets close_existing_signature
      * @param string $close_existing_signature 
-     * @return $this
+     * @return self
      */
-    public function setCloseExistingSignature($close_existing_signature)
+    public function setCloseExistingSignature(string $close_existing_signature): self
     {
         $this->close_existing_signature = $close_existing_signature;
         return $this;
     }
 }
+
+
 class UpdateAccountSignatureImageOptions
 {
     /**
       * $transparent_png 
       * @var string
       */
-    protected $transparent_png;
+    protected string $transparent_png;
 
     /**
      * Gets transparent_png
      * @return string
      */
-    public function getTransparentPng()
+    public function getTransparentPng(): string
     {
         return $this->transparent_png;
     }
-  
+
     /**
      * Sets transparent_png
      * @param string $transparent_png 
-     * @return $this
+     * @return self
      */
-    public function setTransparentPng($transparent_png)
+    public function setTransparentPng(string $transparent_png): self
     {
         $this->transparent_png = $transparent_png;
         return $this;
     }
 }
+
+
 class UpdateConsumerDisclosureOptions
 {
     /**
       * $include_metadata 
       * @var string
       */
-    protected $include_metadata;
+    protected string $include_metadata;
 
     /**
      * Gets include_metadata
      * @return string
      */
-    public function getIncludeMetadata()
+    public function getIncludeMetadata(): string
     {
         return $this->include_metadata;
     }
-  
+
     /**
      * Sets include_metadata
      * @param string $include_metadata 
-     * @return $this
+     * @return self
      */
-    public function setIncludeMetadata($include_metadata)
+    public function setIncludeMetadata(string $include_metadata): self
     {
         $this->include_metadata = $include_metadata;
         return $this;
     }
 }
+
+
 class UpdateCustomFieldOptions
 {
     /**
       * $apply_to_templates 
       * @var string
       */
-    protected $apply_to_templates;
+    protected string $apply_to_templates;
 
     /**
      * Gets apply_to_templates
      * @return string
      */
-    public function getApplyToTemplates()
+    public function getApplyToTemplates(): string
     {
         return $this->apply_to_templates;
     }
-  
+
     /**
      * Sets apply_to_templates
      * @param string $apply_to_templates 
-     * @return $this
+     * @return self
      */
-    public function setApplyToTemplates($apply_to_templates)
+    public function setApplyToTemplates(string $apply_to_templates): self
     {
         $this->apply_to_templates = $apply_to_templates;
         return $this;
     }
 }
+
+
 class UpdatePermissionProfileOptions
 {
     /**
       * $include 
       * @var string
       */
-    protected $include;
+    protected string $include;
 
     /**
      * Gets include
      * @return string
      */
-    public function getInclude()
+    public function getInclude(): string
     {
         return $this->include;
     }
-  
+
     /**
      * Sets include
      * @param string $include 
-     * @return $this
+     * @return self
      */
-    public function setInclude($include)
+    public function setInclude(string $include): self
     {
         $this->include = $include;
         return $this;
     }
 }
+
+
 class UpdateSharedAccessOptions
 {
     /**
       * $item_type 
       * @var string
       */
-    protected $item_type;
+    protected string $item_type;
 
     /**
      * Gets item_type
      * @return string
      */
-    public function getItemType()
+    public function getItemType(): string
     {
         return $this->item_type;
     }
-  
+
     /**
      * Sets item_type
      * @param string $item_type 
-     * @return $this
+     * @return self
      */
-    public function setItemType($item_type)
+    public function setItemType(string $item_type): self
     {
         $this->item_type = $item_type;
         return $this;
@@ -1003,23 +1053,23 @@ class UpdateSharedAccessOptions
       * $preserve_existing_shared_access 
       * @var string
       */
-    protected $preserve_existing_shared_access;
+    protected string $preserve_existing_shared_access;
 
     /**
      * Gets preserve_existing_shared_access
      * @return string
      */
-    public function getPreserveExistingSharedAccess()
+    public function getPreserveExistingSharedAccess(): string
     {
         return $this->preserve_existing_shared_access;
     }
-  
+
     /**
      * Sets preserve_existing_shared_access
      * @param string $preserve_existing_shared_access 
-     * @return $this
+     * @return self
      */
-    public function setPreserveExistingSharedAccess($preserve_existing_shared_access)
+    public function setPreserveExistingSharedAccess(string $preserve_existing_shared_access): self
     {
         $this->preserve_existing_shared_access = $preserve_existing_shared_access;
         return $this;
@@ -1028,23 +1078,23 @@ class UpdateSharedAccessOptions
       * $user_ids 
       * @var string
       */
-    protected $user_ids;
+    protected string $user_ids;
 
     /**
      * Gets user_ids
      * @return string
      */
-    public function getUserIds()
+    public function getUserIds(): string
     {
         return $this->user_ids;
     }
-  
+
     /**
      * Sets user_ids
      * @param string $user_ids 
-     * @return $this
+     * @return self
      */
-    public function setUserIds($user_ids)
+    public function setUserIds(string $user_ids): self
     {
         $this->user_ids = $user_ids;
         return $this;
@@ -1052,12 +1102,13 @@ class UpdateSharedAccessOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * AccountsApi Class Doc Comment
@@ -1072,30 +1123,27 @@ class AccountsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -1103,15 +1151,34 @@ class AccountsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return AccountsApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
+
+    /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
 
     /**
      * Operation create
@@ -1119,11 +1186,11 @@ class AccountsApi
      * Creates new accounts.
      *
      * @param \DocuSign\eSign\Model\NewAccountDefinition $new_account_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreateOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NewAccountSummary
      */
-    public function create($new_account_definition = null, AccountsApi\CreateOptions $options = null)
+    public function create($new_account_definition = null, \DocuSign\eSign\ApiAccountsApi\CreateOptions $options = null): \DocuSign\eSign\Model\NewAccountSummary
     {
         list($response) = $this->createWithHttpInfo($new_account_definition, $options);
         return $response;
@@ -1135,36 +1202,30 @@ class AccountsApi
      * Creates new accounts.
      *
      * @param \DocuSign\eSign\Model\NewAccountDefinition $new_account_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreateOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NewAccountSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWithHttpInfo($new_account_definition = null, AccountsApi\CreateOptions $options = null)
+    public function createWithHttpInfo($new_account_definition = null, \DocuSign\eSign\ApiAccountsApi\CreateOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/accounts";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getPreviewBillingPlan() !== null) {
-            $queryParams['preview_billing_plan'] = $this->apiClient->getSerializer()->toQueryValue($options->getPreviewBillingPlan());
+            // query params
+            if ($options->getPreviewBillingPlan() != 'null') {
+                $queryParams['preview_billing_plan'] = $this->apiClient->getSerializer()->toQueryValue($options->getPreviewBillingPlan());
+            }
         }
-        }
+
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($new_account_definition)) {
@@ -1215,13 +1276,13 @@ class AccountsApi
      *
      * Adds/updates one or more account signatures. This request may include images in multi-part format.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreateAccountSignaturesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignaturesInformation
      */
-    public function createAccountSignatures($account_id, $account_signatures_information = null, AccountsApi\CreateAccountSignaturesOptions $options = null)
+    public function createAccountSignatures($account_id, $account_signatures_information = null, \DocuSign\eSign\ApiAccountsApi\CreateAccountSignaturesOptions $options = null): \DocuSign\eSign\Model\AccountSignaturesInformation
     {
         list($response) = $this->createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information, $options);
         return $response;
@@ -1232,13 +1293,13 @@ class AccountsApi
      *
      * Adds/updates one or more account signatures. This request may include images in multi-part format.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreateAccountSignaturesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information = null, AccountsApi\CreateAccountSignaturesOptions $options = null)
+    public function createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information = null, \DocuSign\eSign\ApiAccountsApi\CreateAccountSignaturesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1246,36 +1307,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getDecodeOnly() !== null) {
-            $queryParams['decode_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getDecodeOnly());
-        }
+            // query params
+            if ($options->getDecodeOnly() != 'null') {
+                $queryParams['decode_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getDecodeOnly());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($account_signatures_information)) {
@@ -1326,12 +1377,12 @@ class AccountsApi
      *
      * Creates one or more brand profile files for the account.
      *
-    * @param string $account_id The external account number (int) or account ID GUID.
+     * @param string $account_id The external account number (int) or account ID GUID.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
-    public function createBrand($account_id, $brand = null)
+    public function createBrand($account_id, $brand = null): \DocuSign\eSign\Model\BrandsResponse
     {
         list($response) = $this->createBrandWithHttpInfo($account_id, $brand);
         return $response;
@@ -1342,12 +1393,12 @@ class AccountsApi
      *
      * Creates one or more brand profile files for the account.
      *
-    * @param string $account_id The external account number (int) or account ID GUID.
+     * @param string $account_id The external account number (int) or account ID GUID.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createBrandWithHttpInfo($account_id, $brand = null)
+    public function createBrandWithHttpInfo($account_id, $brand = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1355,28 +1406,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($brand)) {
@@ -1427,13 +1469,13 @@ class AccountsApi
      *
      * Creates an acount custom field.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function createCustomField($account_id, $custom_field = null, AccountsApi\CreateCustomFieldOptions $options = null)
+    public function createCustomField($account_id, $custom_field = null, \DocuSign\eSign\ApiAccountsApi\CreateCustomFieldOptions $options = null): \DocuSign\eSign\Model\CustomFields
     {
         list($response) = $this->createCustomFieldWithHttpInfo($account_id, $custom_field, $options);
         return $response;
@@ -1444,13 +1486,13 @@ class AccountsApi
      *
      * Creates an acount custom field.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCustomFieldWithHttpInfo($account_id, $custom_field = null, AccountsApi\CreateCustomFieldOptions $options = null)
+    public function createCustomFieldWithHttpInfo($account_id, $custom_field = null, \DocuSign\eSign\ApiAccountsApi\CreateCustomFieldOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1458,36 +1500,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/custom_fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getApplyToTemplates() !== null) {
-            $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
-        }
+            // query params
+            if ($options->getApplyToTemplates() != 'null') {
+                $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($custom_field)) {
@@ -1538,13 +1570,13 @@ class AccountsApi
      *
      * Creates a new permission profile in the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
-    public function createPermissionProfile($account_id, $permission_profile = null, AccountsApi\CreatePermissionProfileOptions $options = null)
+    public function createPermissionProfile($account_id, $permission_profile = null, \DocuSign\eSign\ApiAccountsApi\CreatePermissionProfileOptions $options = null): \DocuSign\eSign\Model\PermissionProfile
     {
         list($response) = $this->createPermissionProfileWithHttpInfo($account_id, $permission_profile, $options);
         return $response;
@@ -1555,13 +1587,13 @@ class AccountsApi
      *
      * Creates a new permission profile in the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\CreatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createPermissionProfileWithHttpInfo($account_id, $permission_profile = null, AccountsApi\CreatePermissionProfileOptions $options = null)
+    public function createPermissionProfileWithHttpInfo($account_id, $permission_profile = null, \DocuSign\eSign\ApiAccountsApi\CreatePermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1569,36 +1601,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/permission_profiles";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
+            // query params
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($permission_profile)) {
@@ -1649,12 +1671,12 @@ class AccountsApi
      *
      * Creates a customized report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
      */
-    public function createReportInProductCreate($account_id, $report_in_product_run_request = null)
+    public function createReportInProductCreate($account_id, $report_in_product_run_request = null): \DocuSign\eSign\Model\ReportInProductSaveResponse
     {
         list($response) = $this->createReportInProductCreateWithHttpInfo($account_id, $report_in_product_run_request);
         return $response;
@@ -1665,12 +1687,12 @@ class AccountsApi
      *
      * Creates a customized report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createReportInProductCreateWithHttpInfo($account_id, $report_in_product_run_request = null)
+    public function createReportInProductCreateWithHttpInfo($account_id, $report_in_product_run_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1678,28 +1700,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/reports";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($report_in_product_run_request)) {
@@ -1750,11 +1763,11 @@ class AccountsApi
      *
      * Deletes the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function delete($account_id)
+    public function delete($account_id): mixed
     {
         list($response) = $this->deleteWithHttpInfo($account_id);
         return $response;
@@ -1765,11 +1778,11 @@ class AccountsApi
      *
      * Deletes the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWithHttpInfo($account_id)
+    public function deleteWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1777,28 +1790,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1840,12 +1844,12 @@ class AccountsApi
      *
      * Close the specified signature by Id.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteAccountSignature($account_id, $signature_id)
+    public function deleteAccountSignature($account_id, $signature_id): mixed
     {
         list($response) = $this->deleteAccountSignatureWithHttpInfo($account_id, $signature_id);
         return $response;
@@ -1856,12 +1860,12 @@ class AccountsApi
      *
      * Close the specified signature by Id.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteAccountSignatureWithHttpInfo($account_id, $signature_id)
+    public function deleteAccountSignatureWithHttpInfo($account_id, $signature_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1873,36 +1877,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1944,13 +1935,13 @@ class AccountsApi
      *
      * Deletes a signature, initials, or stamps image.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignature
      */
-    public function deleteAccountSignatureImage($account_id, $image_type, $signature_id)
+    public function deleteAccountSignatureImage($account_id, $image_type, $signature_id): \DocuSign\eSign\Model\AccountSignature
     {
         list($response) = $this->deleteAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id);
         return $response;
@@ -1961,13 +1952,13 @@ class AccountsApi
      *
      * Deletes a signature, initials, or stamps image.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id)
+    public function deleteAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1983,44 +1974,27 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($image_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "imageType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($image_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "imageType", $image_type);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2066,12 +2040,12 @@ class AccountsApi
      *
      * Removes a brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteBrand($account_id, $brand_id)
+    public function deleteBrand($account_id, $brand_id): mixed
     {
         list($response) = $this->deleteBrandWithHttpInfo($account_id, $brand_id);
         return $response;
@@ -2082,12 +2056,12 @@ class AccountsApi
      *
      * Removes a brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteBrandWithHttpInfo($account_id, $brand_id)
+    public function deleteBrandWithHttpInfo($account_id, $brand_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2099,36 +2073,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2170,13 +2131,13 @@ class AccountsApi
      *
      * Delete one branding logo.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-    * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteBrandLogoByType($account_id, $brand_id, $logo_type)
+    public function deleteBrandLogoByType($account_id, $brand_id, $logo_type): mixed
     {
         list($response) = $this->deleteBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type);
         return $response;
@@ -2187,13 +2148,13 @@ class AccountsApi
      *
      * Delete one branding logo.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-    * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type)
+    public function deleteBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2209,44 +2170,27 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
         // path params
         if ($logo_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "logoType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($logo_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "logoType", $logo_type);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2288,12 +2232,12 @@ class AccountsApi
      *
      * Deletes one or more brand profiles.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
-    public function deleteBrands($account_id, $brands_request = null)
+    public function deleteBrands($account_id, $brands_request = null): \DocuSign\eSign\Model\BrandsResponse
     {
         list($response) = $this->deleteBrandsWithHttpInfo($account_id, $brands_request);
         return $response;
@@ -2304,12 +2248,12 @@ class AccountsApi
      *
      * Deletes one or more brand profiles.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteBrandsWithHttpInfo($account_id, $brands_request = null)
+    public function deleteBrandsWithHttpInfo($account_id, $brands_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2317,28 +2261,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($brands_request)) {
@@ -2389,13 +2324,13 @@ class AccountsApi
      *
      * Deletes the signature for one or more captive recipient records.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_part 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_part 
      * @param \DocuSign\eSign\Model\CaptiveRecipientInformation $captive_recipient_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CaptiveRecipientInformation
      */
-    public function deleteCaptiveRecipient($account_id, $recipient_part, $captive_recipient_information = null)
+    public function deleteCaptiveRecipient($account_id, $recipient_part, $captive_recipient_information = null): \DocuSign\eSign\Model\CaptiveRecipientInformation
     {
         list($response) = $this->deleteCaptiveRecipientWithHttpInfo($account_id, $recipient_part, $captive_recipient_information);
         return $response;
@@ -2406,13 +2341,13 @@ class AccountsApi
      *
      * Deletes the signature for one or more captive recipient records.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $recipient_part 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $recipient_part 
      * @param \DocuSign\eSign\Model\CaptiveRecipientInformation $captive_recipient_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CaptiveRecipientInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCaptiveRecipientWithHttpInfo($account_id, $recipient_part, $captive_recipient_information = null)
+    public function deleteCaptiveRecipientWithHttpInfo($account_id, $recipient_part, $captive_recipient_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2424,36 +2359,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/captive_recipients/{recipientPart}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($recipient_part !== null) {
-            $resourcePath = str_replace(
-                "{" . "recipientPart" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recipient_part),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "recipientPart", $recipient_part);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($captive_recipient_information)) {
@@ -2504,13 +2426,13 @@ class AccountsApi
      *
      * Delete an existing account custom field.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_field_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_field_id 
+     * @param  \DocuSign\eSign\ApiAccountsApi\DeleteCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteCustomField($account_id, $custom_field_id, AccountsApi\DeleteCustomFieldOptions $options = null)
+    public function deleteCustomField($account_id, $custom_field_id, \DocuSign\eSign\ApiAccountsApi\DeleteCustomFieldOptions $options = null): mixed
     {
         list($response) = $this->deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, $options);
         return $response;
@@ -2521,13 +2443,13 @@ class AccountsApi
      *
      * Delete an existing account custom field.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_field_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_field_id 
+     * @param  \DocuSign\eSign\ApiAccountsApi\DeleteCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, AccountsApi\DeleteCustomFieldOptions $options = null)
+    public function deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, \DocuSign\eSign\ApiAccountsApi\DeleteCustomFieldOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2539,44 +2461,30 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getApplyToTemplates() !== null) {
-            $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
-        }
+            // query params
+            if ($options->getApplyToTemplates() != 'null') {
+                $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($custom_field_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "customFieldId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($custom_field_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "customFieldId", $custom_field_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2618,11 +2526,11 @@ class AccountsApi
      *
      * Deletes configuration information for the eNote eOriginal integration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteENoteConfiguration($account_id)
+    public function deleteENoteConfiguration($account_id): mixed
     {
         list($response) = $this->deleteENoteConfigurationWithHttpInfo($account_id);
         return $response;
@@ -2633,11 +2541,11 @@ class AccountsApi
      *
      * Deletes configuration information for the eNote eOriginal integration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteENoteConfigurationWithHttpInfo($account_id)
+    public function deleteENoteConfigurationWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2645,28 +2553,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/enote_configuration";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2708,13 +2607,13 @@ class AccountsApi
      *
      * Deletes a permissions profile within the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $permission_profile_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $permission_profile_id 
+     * @param  \DocuSign\eSign\ApiAccountsApi\DeletePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deletePermissionProfile($account_id, $permission_profile_id, AccountsApi\DeletePermissionProfileOptions $options = null)
+    public function deletePermissionProfile($account_id, $permission_profile_id, \DocuSign\eSign\ApiAccountsApi\DeletePermissionProfileOptions $options = null): mixed
     {
         list($response) = $this->deletePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $options);
         return $response;
@@ -2725,13 +2624,13 @@ class AccountsApi
      *
      * Deletes a permissions profile within the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $permission_profile_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $permission_profile_id 
+     * @param  \DocuSign\eSign\ApiAccountsApi\DeletePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deletePermissionProfileWithHttpInfo($account_id, $permission_profile_id, AccountsApi\DeletePermissionProfileOptions $options = null)
+    public function deletePermissionProfileWithHttpInfo($account_id, $permission_profile_id, \DocuSign\eSign\ApiAccountsApi\DeletePermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2743,44 +2642,30 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getMoveUsersTo() !== null) {
-            $queryParams['move_users_to'] = $this->apiClient->getSerializer()->toQueryValue($options->getMoveUsersTo());
-        }
+            // query params
+            if ($options->getMoveUsersTo() != 'null') {
+                $queryParams['move_users_to'] = $this->apiClient->getSerializer()->toQueryValue($options->getMoveUsersTo());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($permission_profile_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "permissionProfileId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($permission_profile_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "permissionProfileId", $permission_profile_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2822,12 +2707,12 @@ class AccountsApi
      *
      * Removes a customized report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
      */
-    public function deleteReportInProduct($account_id, $id)
+    public function deleteReportInProduct($account_id, $id): \DocuSign\eSign\Model\ReportInProductSaveResponse
     {
         list($response) = $this->deleteReportInProductWithHttpInfo($account_id, $id);
         return $response;
@@ -2838,12 +2723,12 @@ class AccountsApi
      *
      * Removes a customized report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteReportInProductWithHttpInfo($account_id, $id)
+    public function deleteReportInProductWithHttpInfo($account_id, $id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2855,36 +2740,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "id", $id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2930,11 +2802,11 @@ class AccountsApi
      *
      * Get the list of identity verification options for an account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountIdentityVerificationResponse
      */
-    public function getAccountIdentityVerification($account_id)
+    public function getAccountIdentityVerification($account_id): \DocuSign\eSign\Model\AccountIdentityVerificationResponse
     {
         list($response) = $this->getAccountIdentityVerificationWithHttpInfo($account_id);
         return $response;
@@ -2945,11 +2817,11 @@ class AccountsApi
      *
      * Get the list of identity verification options for an account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountIdentityVerificationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountIdentityVerificationWithHttpInfo($account_id)
+    public function getAccountIdentityVerificationWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2957,28 +2829,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/identity_verification";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3024,12 +2887,12 @@ class AccountsApi
      *
      * Retrieves the account information for the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetAccountInformationOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountInformation
      */
-    public function getAccountInformation($account_id, AccountsApi\GetAccountInformationOptions $options = null)
+    public function getAccountInformation($account_id, \DocuSign\eSign\ApiAccountsApi\GetAccountInformationOptions $options = null): \DocuSign\eSign\Model\AccountInformation
     {
         list($response) = $this->getAccountInformationWithHttpInfo($account_id, $options);
         return $response;
@@ -3040,12 +2903,12 @@ class AccountsApi
      *
      * Retrieves the account information for the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetAccountInformationOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountInformationWithHttpInfo($account_id, AccountsApi\GetAccountInformationOptions $options = null)
+    public function getAccountInformationWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\GetAccountInformationOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3053,36 +2916,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeAccountSettings() !== null) {
-            $queryParams['include_account_settings'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAccountSettings());
-        }
+            // query params
+            if ($options->getIncludeAccountSettings() != 'null') {
+                $queryParams['include_account_settings'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAccountSettings());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3124,16 +2977,107 @@ class AccountsApi
     }
 
     /**
+     * Operation getAccountSettingsExport
+     *
+     * Retrieves an account settings comparison.
+     *
+     * @param string $organization_id 
+     * @param string $result_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
+     */
+    public function getAccountSettingsExport($organization_id, $result_id): mixed
+    {
+        list($response) = $this->getAccountSettingsExportWithHttpInfo($organization_id, $result_id);
+        return $response;
+    }
+
+    /**
+     * Operation getAccountSettingsExportWithHttpInfo
+     *
+     * Retrieves an account settings comparison.
+     *
+     * @param string $organization_id 
+     * @param string $result_id 
+     * @throws ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAccountSettingsExportWithHttpInfo($organization_id, $result_id): array
+    {
+        // verify the required parameter 'organization_id' is set
+        if ($organization_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $organization_id when calling getAccountSettingsExport');
+        }
+        // verify the required parameter 'result_id' is set
+        if ($result_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $result_id when calling getAccountSettingsExport');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/organization_exports/{organizationId}/account_settings/{resultId}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($organization_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "organizationId", $organization_id);
+        }
+        // path params
+        if ($result_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "resultId", $result_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/organization_exports/{organizationId}/account_settings/{resultId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getAccountSignature
      *
      * Returns information about a single signature by specifed signatureId.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignature
      */
-    public function getAccountSignature($account_id, $signature_id)
+    public function getAccountSignature($account_id, $signature_id): \DocuSign\eSign\Model\AccountSignature
     {
         list($response) = $this->getAccountSignatureWithHttpInfo($account_id, $signature_id);
         return $response;
@@ -3144,12 +3088,12 @@ class AccountsApi
      *
      * Returns information about a single signature by specifed signatureId.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountSignatureWithHttpInfo($account_id, $signature_id)
+    public function getAccountSignatureWithHttpInfo($account_id, $signature_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3161,36 +3105,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3236,14 +3167,14 @@ class AccountsApi
      *
      * Returns a signature, initials, or stamps image.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetAccountSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getAccountSignatureImage($account_id, $image_type, $signature_id, AccountsApi\GetAccountSignatureImageOptions $options = null)
+    public function getAccountSignatureImage($account_id, $image_type, $signature_id, \DocuSign\eSign\ApiAccountsApi\GetAccountSignatureImageOptions $options = null): \SplFileObject
     {
         list($response) = $this->getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $options);
         return $response;
@@ -3254,14 +3185,14 @@ class AccountsApi
      *
      * Returns a signature, initials, or stamps image.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetAccountSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, AccountsApi\GetAccountSignatureImageOptions $options = null)
+    public function getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, \DocuSign\eSign\ApiAccountsApi\GetAccountSignatureImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3277,52 +3208,34 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['image/gif']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['image/gif']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeChrome() !== null) {
-            $queryParams['include_chrome'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeChrome());
-        }
+            // query params
+            if ($options->getIncludeChrome() != 'null') {
+                $queryParams['include_chrome'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeChrome());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($image_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "imageType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($image_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "imageType", $image_type);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3368,12 +3281,12 @@ class AccountsApi
      *
      * Returns the managed signature definitions for the account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetAccountSignaturesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignaturesInformation
      */
-    public function getAccountSignatures($account_id, AccountsApi\GetAccountSignaturesOptions $options = null)
+    public function getAccountSignatures($account_id, \DocuSign\eSign\ApiAccountsApi\GetAccountSignaturesOptions $options = null): \DocuSign\eSign\Model\AccountSignaturesInformation
     {
         list($response) = $this->getAccountSignaturesWithHttpInfo($account_id, $options);
         return $response;
@@ -3384,12 +3297,12 @@ class AccountsApi
      *
      * Returns the managed signature definitions for the account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetAccountSignaturesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountSignaturesWithHttpInfo($account_id, AccountsApi\GetAccountSignaturesOptions $options = null)
+    public function getAccountSignaturesWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\GetAccountSignaturesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3397,44 +3310,32 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getStampFormat() !== null) {
-            $queryParams['stamp_format'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampFormat());
-        }
-        // query params
-        if ($options->getStampName() !== null) {
-            $queryParams['stamp_name'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampName());
-        }
-        // query params
-        if ($options->getStampType() !== null) {
-            $queryParams['stamp_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampType());
-        }
+            // query params
+            if ($options->getStampFormat() != 'null') {
+                $queryParams['stamp_format'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampFormat());
+            }
+            if ($options->getStampName() != 'null') {
+                $queryParams['stamp_name'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampName());
+            }
+            if ($options->getStampType() != 'null') {
+                $queryParams['stamp_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampType());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3480,11 +3381,11 @@ class AccountsApi
      *
      * Returns tab settings list for specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabAccountSettings
      */
-    public function getAccountTabSettings($account_id)
+    public function getAccountTabSettings($account_id): \DocuSign\eSign\Model\TabAccountSettings
     {
         list($response) = $this->getAccountTabSettingsWithHttpInfo($account_id);
         return $response;
@@ -3495,11 +3396,11 @@ class AccountsApi
      *
      * Returns tab settings list for specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabAccountSettings, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountTabSettingsWithHttpInfo($account_id)
+    public function getAccountTabSettingsWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3507,28 +3408,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3574,11 +3466,11 @@ class AccountsApi
      *
      * Get all payment gateway account for the provided accountId
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PaymentGatewayAccountsInfo
      */
-    public function getAllPaymentGatewayAccounts($account_id)
+    public function getAllPaymentGatewayAccounts($account_id): \DocuSign\eSign\Model\PaymentGatewayAccountsInfo
     {
         list($response) = $this->getAllPaymentGatewayAccountsWithHttpInfo($account_id);
         return $response;
@@ -3589,11 +3481,11 @@ class AccountsApi
      *
      * Get all payment gateway account for the provided accountId
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PaymentGatewayAccountsInfo, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAllPaymentGatewayAccountsWithHttpInfo($account_id)
+    public function getAllPaymentGatewayAccountsWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3601,28 +3493,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/payment_gateway_accounts";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3668,12 +3551,12 @@ class AccountsApi
      *
      * Gets list of recurring and usage charges for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetBillingChargesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingChargeResponse
      */
-    public function getBillingCharges($account_id, AccountsApi\GetBillingChargesOptions $options = null)
+    public function getBillingCharges($account_id, \DocuSign\eSign\ApiAccountsApi\GetBillingChargesOptions $options = null): \DocuSign\eSign\Model\BillingChargeResponse
     {
         list($response) = $this->getBillingChargesWithHttpInfo($account_id, $options);
         return $response;
@@ -3684,12 +3567,12 @@ class AccountsApi
      *
      * Gets list of recurring and usage charges for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetBillingChargesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingChargeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBillingChargesWithHttpInfo($account_id, AccountsApi\GetBillingChargesOptions $options = null)
+    public function getBillingChargesWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\GetBillingChargesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3697,36 +3580,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/billing_charges";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeCharges() !== null) {
-            $queryParams['include_charges'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeCharges());
-        }
+            // query params
+            if ($options->getIncludeCharges() != 'null') {
+                $queryParams['include_charges'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeCharges());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3772,13 +3645,13 @@ class AccountsApi
      *
      * Get information for a specific brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetBrandOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
-    public function getBrand($account_id, $brand_id, AccountsApi\GetBrandOptions $options = null)
+    public function getBrand($account_id, $brand_id, \DocuSign\eSign\ApiAccountsApi\GetBrandOptions $options = null): \DocuSign\eSign\Model\Brand
     {
         list($response) = $this->getBrandWithHttpInfo($account_id, $brand_id, $options);
         return $response;
@@ -3789,13 +3662,13 @@ class AccountsApi
      *
      * Get information for a specific brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetBrandOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBrandWithHttpInfo($account_id, $brand_id, AccountsApi\GetBrandOptions $options = null)
+    public function getBrandWithHttpInfo($account_id, $brand_id, \DocuSign\eSign\ApiAccountsApi\GetBrandOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3807,48 +3680,33 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeExternalReferences() !== null) {
-            $queryParams['include_external_references'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeExternalReferences());
-        }
-        // query params
-        if ($options->getIncludeLogos() !== null) {
-            $queryParams['include_logos'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeLogos());
-        }
+            // query params
+            if ($options->getIncludeExternalReferences() != 'null') {
+                $queryParams['include_external_references'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeExternalReferences());
+            }
+            if ($options->getIncludeLogos() != 'null') {
+                $queryParams['include_logos'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeLogos());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3894,12 +3752,12 @@ class AccountsApi
      *
      * Export a specific brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function getBrandExportFile($account_id, $brand_id)
+    public function getBrandExportFile($account_id, $brand_id): mixed
     {
         list($response) = $this->getBrandExportFileWithHttpInfo($account_id, $brand_id);
         return $response;
@@ -3910,12 +3768,12 @@ class AccountsApi
      *
      * Export a specific brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBrandExportFileWithHttpInfo($account_id, $brand_id)
+    public function getBrandExportFileWithHttpInfo($account_id, $brand_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3927,36 +3785,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}/file";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3998,13 +3843,13 @@ class AccountsApi
      *
      * Obtains the specified image for a brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-    * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
+     * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getBrandLogoByType($account_id, $brand_id, $logo_type)
+    public function getBrandLogoByType($account_id, $brand_id, $logo_type): \SplFileObject
     {
         list($response) = $this->getBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type);
         return $response;
@@ -4015,13 +3860,13 @@ class AccountsApi
      *
      * Obtains the specified image for a brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-    * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param string $logo_type One of **Primary**, **Secondary** or **Email**.
+     * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type)
+    public function getBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4037,44 +3882,27 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['image/png']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['image/png']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
         // path params
         if ($logo_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "logoType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($logo_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "logoType", $logo_type);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4120,12 +3948,12 @@ class AccountsApi
      *
      * Returns the specified account's list of branding resources (metadata).
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandResourcesList
      */
-    public function getBrandResources($account_id, $brand_id)
+    public function getBrandResources($account_id, $brand_id): \DocuSign\eSign\Model\BrandResourcesList
     {
         list($response) = $this->getBrandResourcesWithHttpInfo($account_id, $brand_id);
         return $response;
@@ -4136,12 +3964,12 @@ class AccountsApi
      *
      * Returns the specified account's list of branding resources (metadata).
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandResourcesList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBrandResourcesWithHttpInfo($account_id, $brand_id)
+    public function getBrandResourcesWithHttpInfo($account_id, $brand_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4153,36 +3981,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4228,14 +4043,14 @@ class AccountsApi
      *
      * Returns the specified branding resource file.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-    * @param string $resource_content_type 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param string $resource_content_type 
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetBrandResourcesByContentTypeOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function getBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, AccountsApi\GetBrandResourcesByContentTypeOptions $options = null)
+    public function getBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, \DocuSign\eSign\ApiAccountsApi\GetBrandResourcesByContentTypeOptions $options = null): mixed
     {
         list($response) = $this->getBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, $options);
         return $response;
@@ -4246,14 +4061,14 @@ class AccountsApi
      *
      * Returns the specified branding resource file.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
-    * @param string $resource_content_type 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
+     * @param string $resource_content_type 
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetBrandResourcesByContentTypeOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, AccountsApi\GetBrandResourcesByContentTypeOptions $options = null)
+    public function getBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, \DocuSign\eSign\ApiAccountsApi\GetBrandResourcesByContentTypeOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4269,56 +4084,37 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getLangcode() !== null) {
-            $queryParams['langcode'] = $this->apiClient->getSerializer()->toQueryValue($options->getLangcode());
-        }
-        // query params
-        if ($options->getReturnMaster() !== null) {
-            $queryParams['return_master'] = $this->apiClient->getSerializer()->toQueryValue($options->getReturnMaster());
-        }
+            // query params
+            if ($options->getLangcode() != 'null') {
+                $queryParams['langcode'] = $this->apiClient->getSerializer()->toQueryValue($options->getLangcode());
+            }
+            if ($options->getReturnMaster() != 'null') {
+                $queryParams['return_master'] = $this->apiClient->getSerializer()->toQueryValue($options->getReturnMaster());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
         // path params
         if ($resource_content_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "resourceContentType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($resource_content_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "resourceContentType", $resource_content_type);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4360,12 +4156,12 @@ class AccountsApi
      *
      * Gets the Electronic Record and Signature Disclosure.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
-    public function getConsumerDisclosure($account_id, $lang_code)
+    public function getConsumerDisclosure($account_id, $lang_code): \DocuSign\eSign\Model\ConsumerDisclosure
     {
         list($response) = $this->getConsumerDisclosureWithHttpInfo($account_id, $lang_code);
         return $response;
@@ -4376,12 +4172,12 @@ class AccountsApi
      *
      * Gets the Electronic Record and Signature Disclosure.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getConsumerDisclosureWithHttpInfo($account_id, $lang_code)
+    public function getConsumerDisclosureWithHttpInfo($account_id, $lang_code): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4393,36 +4189,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($lang_code !== null) {
-            $resourcePath = str_replace(
-                "{" . "langCode" . "}",
-                $this->apiClient->getSerializer()->toPathValue($lang_code),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "langCode", $lang_code);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4468,12 +4251,12 @@ class AccountsApi
      *
      * Gets the Electronic Record and Signature Disclosure for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetConsumerDisclosureDefaultOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
-    public function getConsumerDisclosureDefault($account_id, AccountsApi\GetConsumerDisclosureDefaultOptions $options = null)
+    public function getConsumerDisclosureDefault($account_id, \DocuSign\eSign\ApiAccountsApi\GetConsumerDisclosureDefaultOptions $options = null): \DocuSign\eSign\Model\ConsumerDisclosure
     {
         list($response) = $this->getConsumerDisclosureDefaultWithHttpInfo($account_id, $options);
         return $response;
@@ -4484,12 +4267,12 @@ class AccountsApi
      *
      * Gets the Electronic Record and Signature Disclosure for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetConsumerDisclosureDefaultOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getConsumerDisclosureDefaultWithHttpInfo($account_id, AccountsApi\GetConsumerDisclosureDefaultOptions $options = null)
+    public function getConsumerDisclosureDefaultWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\GetConsumerDisclosureDefaultOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4497,36 +4280,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/consumer_disclosure";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getLangCode() !== null) {
-            $queryParams['langCode'] = $this->apiClient->getSerializer()->toQueryValue($options->getLangCode());
-        }
+            // query params
+            if ($options->getLangCode() != 'null') {
+                $queryParams['langCode'] = $this->apiClient->getSerializer()->toQueryValue($options->getLangCode());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4572,11 +4345,11 @@ class AccountsApi
      *
      * Returns the configuration information for the eNote eOriginal integration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ENoteConfiguration
      */
-    public function getENoteConfiguration($account_id)
+    public function getENoteConfiguration($account_id): \DocuSign\eSign\Model\ENoteConfiguration
     {
         list($response) = $this->getENoteConfigurationWithHttpInfo($account_id);
         return $response;
@@ -4587,11 +4360,11 @@ class AccountsApi
      *
      * Returns the configuration information for the eNote eOriginal integration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ENoteConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getENoteConfigurationWithHttpInfo($account_id)
+    public function getENoteConfigurationWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4599,28 +4372,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/enote_configuration";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4666,11 +4430,11 @@ class AccountsApi
      *
      * Select envelope purge configuration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopePurgeConfiguration
      */
-    public function getEnvelopePurgeConfiguration($account_id)
+    public function getEnvelopePurgeConfiguration($account_id): \DocuSign\eSign\Model\EnvelopePurgeConfiguration
     {
         list($response) = $this->getEnvelopePurgeConfigurationWithHttpInfo($account_id);
         return $response;
@@ -4681,11 +4445,11 @@ class AccountsApi
      *
      * Select envelope purge configuration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopePurgeConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEnvelopePurgeConfigurationWithHttpInfo($account_id)
+    public function getEnvelopePurgeConfigurationWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4693,28 +4457,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4760,11 +4515,11 @@ class AccountsApi
      *
      * Retrieves the list of favorited templates for this caller
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FavoriteTemplatesInfo
      */
-    public function getFavoriteTemplates($account_id)
+    public function getFavoriteTemplates($account_id): \DocuSign\eSign\Model\FavoriteTemplatesInfo
     {
         list($response) = $this->getFavoriteTemplatesWithHttpInfo($account_id);
         return $response;
@@ -4775,11 +4530,11 @@ class AccountsApi
      *
      * Retrieves the list of favorited templates for this caller
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FavoriteTemplatesInfo, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFavoriteTemplatesWithHttpInfo($account_id)
+    public function getFavoriteTemplatesWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4787,28 +4542,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/favorite_templates";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4854,11 +4600,11 @@ class AccountsApi
      *
      * Returns default user level settings for a specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotificationDefaults
      */
-    public function getNotificationDefaults($account_id)
+    public function getNotificationDefaults($account_id): \DocuSign\eSign\Model\NotificationDefaults
     {
         list($response) = $this->getNotificationDefaultsWithHttpInfo($account_id);
         return $response;
@@ -4869,11 +4615,11 @@ class AccountsApi
      *
      * Returns default user level settings for a specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotificationDefaults, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotificationDefaultsWithHttpInfo($account_id)
+    public function getNotificationDefaultsWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4881,28 +4627,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/notification_defaults";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -4948,11 +4685,11 @@ class AccountsApi
      *
      * Get the password rules
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountPasswordRules
      */
-    public function getPasswordRules($account_id)
+    public function getPasswordRules($account_id): \DocuSign\eSign\Model\AccountPasswordRules
     {
         list($response) = $this->getPasswordRulesWithHttpInfo($account_id);
         return $response;
@@ -4963,11 +4700,11 @@ class AccountsApi
      *
      * Get the password rules
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPasswordRulesWithHttpInfo($account_id)
+    public function getPasswordRulesWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4975,28 +4712,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/password_rules";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5042,10 +4770,10 @@ class AccountsApi
      *
      * Get membership account password rules
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserPasswordRules
      */
-    public function getPasswordRules_0()
+    public function getPasswordRules_0(): \DocuSign\eSign\Model\UserPasswordRules
     {
         list($response) = $this->getPasswordRules_0WithHttpInfo();
         return $response;
@@ -5056,27 +4784,22 @@ class AccountsApi
      *
      * Get membership account password rules
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPasswordRules_0WithHttpInfo()
+    public function getPasswordRules_0WithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/password_rules";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5122,13 +4845,13 @@ class AccountsApi
      *
      * Returns a permissions profile in the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $permission_profile_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $permission_profile_id 
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetPermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
-    public function getPermissionProfile($account_id, $permission_profile_id, AccountsApi\GetPermissionProfileOptions $options = null)
+    public function getPermissionProfile($account_id, $permission_profile_id, \DocuSign\eSign\ApiAccountsApi\GetPermissionProfileOptions $options = null): \DocuSign\eSign\Model\PermissionProfile
     {
         list($response) = $this->getPermissionProfileWithHttpInfo($account_id, $permission_profile_id, $options);
         return $response;
@@ -5139,13 +4862,13 @@ class AccountsApi
      *
      * Returns a permissions profile in the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $permission_profile_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $permission_profile_id 
+     * @param  \DocuSign\eSign\ApiAccountsApi\GetPermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPermissionProfileWithHttpInfo($account_id, $permission_profile_id, AccountsApi\GetPermissionProfileOptions $options = null)
+    public function getPermissionProfileWithHttpInfo($account_id, $permission_profile_id, \DocuSign\eSign\ApiAccountsApi\GetPermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5157,44 +4880,30 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
+            // query params
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($permission_profile_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "permissionProfileId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($permission_profile_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "permissionProfileId", $permission_profile_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5240,10 +4949,10 @@ class AccountsApi
      *
      * Retrieves the account provisioning information for the account.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ProvisioningInformation
      */
-    public function getProvisioning()
+    public function getProvisioning(): \DocuSign\eSign\Model\ProvisioningInformation
     {
         list($response) = $this->getProvisioningWithHttpInfo();
         return $response;
@@ -5254,27 +4963,22 @@ class AccountsApi
      *
      * Retrieves the account provisioning information for the account.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ProvisioningInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProvisioningWithHttpInfo()
+    public function getProvisioningWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2.1/accounts/provisioning";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5320,12 +5024,12 @@ class AccountsApi
      *
      * Gets the specified report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ReportInProductGet
      */
-    public function getReportInProduct($account_id, $id)
+    public function getReportInProduct($account_id, $id): \DocuSign\eSign\Model\ReportInProductGet
     {
         list($response) = $this->getReportInProductWithHttpInfo($account_id, $id);
         return $response;
@@ -5336,12 +5040,12 @@ class AccountsApi
      *
      * Gets the specified report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ReportInProductGet, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getReportInProductWithHttpInfo($account_id, $id)
+    public function getReportInProductWithHttpInfo($account_id, $id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5353,36 +5057,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "id", $id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5428,11 +5119,11 @@ class AccountsApi
      *
      * Gets the descriptors for all of an account's active reports (for listings)
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ReportInProductList
      */
-    public function getReportInProductList($account_id)
+    public function getReportInProductList($account_id): \DocuSign\eSign\Model\ReportInProductList
     {
         list($response) = $this->getReportInProductListWithHttpInfo($account_id);
         return $response;
@@ -5443,11 +5134,11 @@ class AccountsApi
      *
      * Gets the descriptors for all of an account's active reports (for listings)
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ReportInProductList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getReportInProductListWithHttpInfo($account_id)
+    public function getReportInProductListWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5455,28 +5146,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/reports";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5522,11 +5204,11 @@ class AccountsApi
      *
      * Gets list of supported languages for recipient language setting.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SupportedLanguages
      */
-    public function getSupportedLanguages($account_id)
+    public function getSupportedLanguages($account_id): \DocuSign\eSign\Model\SupportedLanguages
     {
         list($response) = $this->getSupportedLanguagesWithHttpInfo($account_id);
         return $response;
@@ -5537,11 +5219,11 @@ class AccountsApi
      *
      * Gets list of supported languages for recipient language setting.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SupportedLanguages, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSupportedLanguagesWithHttpInfo($account_id)
+    public function getSupportedLanguagesWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5549,28 +5231,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/supported_languages";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5616,11 +5289,11 @@ class AccountsApi
      *
      * Get watermark information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
-    public function getWatermark($account_id)
+    public function getWatermark($account_id): \DocuSign\eSign\Model\Watermark
     {
         list($response) = $this->getWatermarkWithHttpInfo($account_id);
         return $response;
@@ -5631,11 +5304,11 @@ class AccountsApi
      *
      * Get watermark information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWatermarkWithHttpInfo($account_id)
+    public function getWatermarkWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5643,28 +5316,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/watermark";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5710,12 +5374,12 @@ class AccountsApi
      *
      * Get watermark preview.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
-    public function getWatermarkPreview($account_id, $watermark = null)
+    public function getWatermarkPreview($account_id, $watermark = null): \DocuSign\eSign\Model\Watermark
     {
         list($response) = $this->getWatermarkPreviewWithHttpInfo($account_id, $watermark);
         return $response;
@@ -5726,12 +5390,12 @@ class AccountsApi
      *
      * Get watermark preview.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWatermarkPreviewWithHttpInfo($account_id, $watermark = null)
+    public function getWatermarkPreviewWithHttpInfo($account_id, $watermark = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5739,28 +5403,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/watermark/preview";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($watermark)) {
@@ -5811,12 +5466,12 @@ class AccountsApi
      *
      * Gets a list of brand profiles.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListBrandsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
-    public function listBrands($account_id, AccountsApi\ListBrandsOptions $options = null)
+    public function listBrands($account_id, \DocuSign\eSign\ApiAccountsApi\ListBrandsOptions $options = null): \DocuSign\eSign\Model\BrandsResponse
     {
         list($response) = $this->listBrandsWithHttpInfo($account_id, $options);
         return $response;
@@ -5827,12 +5482,12 @@ class AccountsApi
      *
      * Gets a list of brand profiles.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListBrandsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listBrandsWithHttpInfo($account_id, AccountsApi\ListBrandsOptions $options = null)
+    public function listBrandsWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\ListBrandsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5840,40 +5495,29 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getExcludeDistributorBrand() !== null) {
-            $queryParams['exclude_distributor_brand'] = $this->apiClient->getSerializer()->toQueryValue($options->getExcludeDistributorBrand());
-        }
-        // query params
-        if ($options->getIncludeLogos() !== null) {
-            $queryParams['include_logos'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeLogos());
-        }
+            // query params
+            if ($options->getExcludeDistributorBrand() != 'null') {
+                $queryParams['exclude_distributor_brand'] = $this->apiClient->getSerializer()->toQueryValue($options->getExcludeDistributorBrand());
+            }
+            if ($options->getIncludeLogos() != 'null') {
+                $queryParams['include_logos'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeLogos());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -5919,11 +5563,11 @@ class AccountsApi
      *
      * Gets a list of custom fields associated with the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function listCustomFields($account_id)
+    public function listCustomFields($account_id): \DocuSign\eSign\Model\CustomFields
     {
         list($response) = $this->listCustomFieldsWithHttpInfo($account_id);
         return $response;
@@ -5934,11 +5578,11 @@ class AccountsApi
      *
      * Gets a list of custom fields associated with the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCustomFieldsWithHttpInfo($account_id)
+    public function listCustomFieldsWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5946,28 +5590,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/custom_fields";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -6013,12 +5648,12 @@ class AccountsApi
      *
      * Gets a list of permission profiles.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListPermissionsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfileInformation
      */
-    public function listPermissions($account_id, AccountsApi\ListPermissionsOptions $options = null)
+    public function listPermissions($account_id, \DocuSign\eSign\ApiAccountsApi\ListPermissionsOptions $options = null): \DocuSign\eSign\Model\PermissionProfileInformation
     {
         list($response) = $this->listPermissionsWithHttpInfo($account_id, $options);
         return $response;
@@ -6029,12 +5664,12 @@ class AccountsApi
      *
      * Gets a list of permission profiles.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListPermissionsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfileInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPermissionsWithHttpInfo($account_id, AccountsApi\ListPermissionsOptions $options = null)
+    public function listPermissionsWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\ListPermissionsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6042,36 +5677,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/permission_profiles";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
+            // query params
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -6117,12 +5742,12 @@ class AccountsApi
      *
      * Gets recipient names associated with an email address.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListRecipientNamesByEmailOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientNamesResponse
      */
-    public function listRecipientNamesByEmail($account_id, AccountsApi\ListRecipientNamesByEmailOptions $options = null)
+    public function listRecipientNamesByEmail($account_id, \DocuSign\eSign\ApiAccountsApi\ListRecipientNamesByEmailOptions $options = null): \DocuSign\eSign\Model\RecipientNamesResponse
     {
         list($response) = $this->listRecipientNamesByEmailWithHttpInfo($account_id, $options);
         return $response;
@@ -6133,12 +5758,12 @@ class AccountsApi
      *
      * Gets recipient names associated with an email address.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListRecipientNamesByEmailOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientNamesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRecipientNamesByEmailWithHttpInfo($account_id, AccountsApi\ListRecipientNamesByEmailOptions $options = null)
+    public function listRecipientNamesByEmailWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\ListRecipientNamesByEmailOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6146,36 +5771,26 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/recipient_names";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getEmail() !== null) {
-            $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
-        }
+            // query params
+            if ($options->getEmail() != 'null') {
+                $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -6221,11 +5836,11 @@ class AccountsApi
      *
      * Gets account settings information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSettingsInformation
      */
-    public function listSettings($account_id)
+    public function listSettings($account_id): \DocuSign\eSign\Model\AccountSettingsInformation
     {
         list($response) = $this->listSettingsWithHttpInfo($account_id);
         return $response;
@@ -6236,11 +5851,11 @@ class AccountsApi
      *
      * Gets account settings information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listSettingsWithHttpInfo($account_id)
+    public function listSettingsWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6248,28 +5863,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -6315,12 +5921,12 @@ class AccountsApi
      *
      * Reserved: Gets the shared item status for one or more users.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
-    public function listSharedAccess($account_id, AccountsApi\ListSharedAccessOptions $options = null)
+    public function listSharedAccess($account_id, \DocuSign\eSign\ApiAccountsApi\ListSharedAccessOptions $options = null): \DocuSign\eSign\Model\AccountSharedAccess
     {
         list($response) = $this->listSharedAccessWithHttpInfo($account_id, $options);
         return $response;
@@ -6331,12 +5937,12 @@ class AccountsApi
      *
      * Reserved: Gets the shared item status for one or more users.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiAccountsApi\ListSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listSharedAccessWithHttpInfo($account_id, AccountsApi\ListSharedAccessOptions $options = null)
+    public function listSharedAccessWithHttpInfo($account_id, \DocuSign\eSign\ApiAccountsApi\ListSharedAccessOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6344,64 +5950,47 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/shared_access";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getEnvelopesNotSharedUserStatus() !== null) {
-            $queryParams['envelopes_not_shared_user_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getEnvelopesNotSharedUserStatus());
-        }
-        // query params
-        if ($options->getFolderIds() !== null) {
-            $queryParams['folder_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolderIds());
-        }
-        // query params
-        if ($options->getItemType() !== null) {
-            $queryParams['item_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getItemType());
-        }
-        // query params
-        if ($options->getSearchText() !== null) {
-            $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
-        }
-        // query params
-        if ($options->getShared() !== null) {
-            $queryParams['shared'] = $this->apiClient->getSerializer()->toQueryValue($options->getShared());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getUserIds() !== null) {
-            $queryParams['user_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserIds());
-        }
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getEnvelopesNotSharedUserStatus() != 'null') {
+                $queryParams['envelopes_not_shared_user_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getEnvelopesNotSharedUserStatus());
+            }
+            if ($options->getFolderIds() != 'null') {
+                $queryParams['folder_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getFolderIds());
+            }
+            if ($options->getItemType() != 'null') {
+                $queryParams['item_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getItemType());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
+            }
+            if ($options->getShared() != 'null') {
+                $queryParams['shared'] = $this->apiClient->getSerializer()->toQueryValue($options->getShared());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getUserIds() != 'null') {
+                $queryParams['user_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserIds());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -6447,11 +6036,11 @@ class AccountsApi
      *
      * Returns Account available signature providers for specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignatureProviders
      */
-    public function listSignatureProviders($account_id)
+    public function listSignatureProviders($account_id): \DocuSign\eSign\Model\AccountSignatureProviders
     {
         list($response) = $this->listSignatureProvidersWithHttpInfo($account_id);
         return $response;
@@ -6462,11 +6051,11 @@ class AccountsApi
      *
      * Returns Account available signature providers for specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignatureProviders, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listSignatureProvidersWithHttpInfo($account_id)
+    public function listSignatureProvidersWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6474,28 +6063,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatureProviders";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -6541,11 +6121,11 @@ class AccountsApi
      *
      * Gets a list of unsupported file types.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FileTypeList
      */
-    public function listUnsupportedFileTypes($account_id)
+    public function listUnsupportedFileTypes($account_id): \DocuSign\eSign\Model\FileTypeList
     {
         list($response) = $this->listUnsupportedFileTypesWithHttpInfo($account_id);
         return $response;
@@ -6556,11 +6136,11 @@ class AccountsApi
      *
      * Gets a list of unsupported file types.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FileTypeList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listUnsupportedFileTypesWithHttpInfo($account_id)
+    public function listUnsupportedFileTypesWithHttpInfo($account_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6568,28 +6148,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/unsupported_file_types";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -6635,12 +6206,12 @@ class AccountsApi
      *
      * Unfavorite a template
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\FavoriteTemplatesInfo $favorite_templates_info  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FavoriteTemplatesInfo
      */
-    public function unFavoriteTemplate($account_id, $favorite_templates_info = null)
+    public function unFavoriteTemplate($account_id, $favorite_templates_info = null): \DocuSign\eSign\Model\FavoriteTemplatesInfo
     {
         list($response) = $this->unFavoriteTemplateWithHttpInfo($account_id, $favorite_templates_info);
         return $response;
@@ -6651,12 +6222,12 @@ class AccountsApi
      *
      * Unfavorite a template
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\FavoriteTemplatesInfo $favorite_templates_info  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FavoriteTemplatesInfo, HTTP status code, HTTP response headers (array of strings)
      */
-    public function unFavoriteTemplateWithHttpInfo($account_id, $favorite_templates_info = null)
+    public function unFavoriteTemplateWithHttpInfo($account_id, $favorite_templates_info = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6664,28 +6235,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/favorite_templates";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($favorite_templates_info)) {
@@ -6736,12 +6298,12 @@ class AccountsApi
      *
      * Updates a account signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignaturesInformation
      */
-    public function updateAccountSignature($account_id, $account_signatures_information = null)
+    public function updateAccountSignature($account_id, $account_signatures_information = null): \DocuSign\eSign\Model\AccountSignaturesInformation
     {
         list($response) = $this->updateAccountSignatureWithHttpInfo($account_id, $account_signatures_information);
         return $response;
@@ -6752,12 +6314,12 @@ class AccountsApi
      *
      * Updates a account signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSignaturesInformation $account_signatures_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAccountSignatureWithHttpInfo($account_id, $account_signatures_information = null)
+    public function updateAccountSignatureWithHttpInfo($account_id, $account_signatures_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6765,28 +6327,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($account_signatures_information)) {
@@ -6837,14 +6390,14 @@ class AccountsApi
      *
      * Updates a account signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
      * @param \DocuSign\eSign\Model\AccountSignatureDefinition $account_signature_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureByIdOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignature
      */
-    public function updateAccountSignatureById($account_id, $signature_id, $account_signature_definition = null, AccountsApi\UpdateAccountSignatureByIdOptions $options = null)
+    public function updateAccountSignatureById($account_id, $signature_id, $account_signature_definition = null, \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureByIdOptions $options = null): \DocuSign\eSign\Model\AccountSignature
     {
         list($response) = $this->updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition, $options);
         return $response;
@@ -6855,14 +6408,14 @@ class AccountsApi
      *
      * Updates a account signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
      * @param \DocuSign\eSign\Model\AccountSignatureDefinition $account_signature_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureByIdOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition = null, AccountsApi\UpdateAccountSignatureByIdOptions $options = null)
+    public function updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition = null, \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureByIdOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6874,44 +6427,30 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCloseExistingSignature() !== null) {
-            $queryParams['close_existing_signature'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloseExistingSignature());
-        }
+            // query params
+            if ($options->getCloseExistingSignature() != 'null') {
+                $queryParams['close_existing_signature'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloseExistingSignature());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($account_signature_definition)) {
@@ -6962,14 +6501,14 @@ class AccountsApi
      *
      * Sets a signature, initials, or stamps image.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignature
      */
-    public function updateAccountSignatureImage($account_id, $image_type, $signature_id, AccountsApi\UpdateAccountSignatureImageOptions $options = null)
+    public function updateAccountSignatureImage($account_id, $image_type, $signature_id, \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureImageOptions $options = null): \DocuSign\eSign\Model\AccountSignature
     {
         list($response) = $this->updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $options);
         return $response;
@@ -6980,14 +6519,14 @@ class AccountsApi
      *
      * Sets a signature, initials, or stamps image.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, AccountsApi\UpdateAccountSignatureImageOptions $options = null)
+    public function updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, \DocuSign\eSign\ApiAccountsApi\UpdateAccountSignatureImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7003,52 +6542,34 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/gif']);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getTransparentPng() !== null) {
-            $queryParams['transparent_png'] = $this->apiClient->getSerializer()->toQueryValue($options->getTransparentPng());
-        }
+            // query params
+            if ($options->getTransparentPng() != 'null') {
+                $queryParams['transparent_png'] = $this->apiClient->getSerializer()->toQueryValue($options->getTransparentPng());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($image_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "imageType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($image_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "imageType", $image_type);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -7094,12 +6615,12 @@ class AccountsApi
      *
      * Modifies tab settings for specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabAccountSettings $tab_account_settings  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabAccountSettings
      */
-    public function updateAccountTabSettings($account_id, $tab_account_settings = null)
+    public function updateAccountTabSettings($account_id, $tab_account_settings = null): \DocuSign\eSign\Model\TabAccountSettings
     {
         list($response) = $this->updateAccountTabSettingsWithHttpInfo($account_id, $tab_account_settings);
         return $response;
@@ -7110,12 +6631,12 @@ class AccountsApi
      *
      * Modifies tab settings for specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabAccountSettings $tab_account_settings  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabAccountSettings, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAccountTabSettingsWithHttpInfo($account_id, $tab_account_settings = null)
+    public function updateAccountTabSettingsWithHttpInfo($account_id, $tab_account_settings = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7123,28 +6644,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/tabs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($tab_account_settings)) {
@@ -7195,13 +6707,13 @@ class AccountsApi
      *
      * Updates an existing brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
-    public function updateBrand($account_id, $brand_id, $brand = null)
+    public function updateBrand($account_id, $brand_id, $brand = null): \DocuSign\eSign\Model\Brand
     {
         list($response) = $this->updateBrandWithHttpInfo($account_id, $brand_id, $brand);
         return $response;
@@ -7212,13 +6724,13 @@ class AccountsApi
      *
      * Updates an existing brand.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $brand_id The unique identifier of a brand.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBrandWithHttpInfo($account_id, $brand_id, $brand = null)
+    public function updateBrandWithHttpInfo($account_id, $brand_id, $brand = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7230,36 +6742,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($brand)) {
@@ -7310,14 +6809,14 @@ class AccountsApi
      *
      * Put one branding logo.
      *
-    * @param string $account_id The external account number (int) or account ID GUID.
-    * @param string $brand_id The id of the brand.
-    * @param string $logo_type The type of logo. Valid values are:  - &#x60;primary&#x60;  - &#x60;secondary&#x60;  - &#x60;email&#x60;
+     * @param string $account_id The external account number (int) or account ID GUID.
+     * @param string $brand_id The id of the brand.
+     * @param string $logo_type The type of logo. Valid values are:  - &#x60;primary&#x60;  - &#x60;secondary&#x60;  - &#x60;email&#x60;
      * @param string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updateBrandLogoByType($account_id, $brand_id, $logo_type, $logo_file_bytes)
+    public function updateBrandLogoByType($account_id, $brand_id, $logo_type, $logo_file_bytes): mixed
     {
         list($response) = $this->updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type, $logo_file_bytes);
         return $response;
@@ -7328,14 +6827,14 @@ class AccountsApi
      *
      * Put one branding logo.
      *
-    * @param string $account_id The external account number (int) or account ID GUID.
-    * @param string $brand_id The id of the brand.
-    * @param string $logo_type The type of logo. Valid values are:  - &#x60;primary&#x60;  - &#x60;secondary&#x60;  - &#x60;email&#x60;
+     * @param string $account_id The external account number (int) or account ID GUID.
+     * @param string $brand_id The id of the brand.
+     * @param string $logo_type The type of logo. Valid values are:  - &#x60;primary&#x60;  - &#x60;secondary&#x60;  - &#x60;email&#x60;
      * @param string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type, $logo_file_bytes)
+    public function updateBrandLogoByTypeWithHttpInfo($account_id, $brand_id, $logo_type, $logo_file_bytes): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7355,44 +6854,27 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/png']);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
         // path params
         if ($logo_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "logoType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($logo_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "logoType", $logo_type);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($logo_file_bytes)) {
@@ -7439,14 +6921,14 @@ class AccountsApi
      *
      * Uploads a branding resource file.
      *
-    * @param string $account_id The external account number (int) or account ID GUID.
-    * @param string $brand_id The id of the brand.
-    * @param string $resource_content_type The type of brand resource file that you are updating. Valid values are:  - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; - &#x60;signing_captive&#x60;
+     * @param string $account_id The external account number (int) or account ID GUID.
+     * @param string $brand_id The id of the brand.
+     * @param string $resource_content_type The type of brand resource file that you are updating. Valid values are:  - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; - &#x60;signing_captive&#x60;
     * @param \SplFileObject $file_xml Brand resource XML file. (required)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandResources
      */
-    public function updateBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, $file_xml)
+    public function updateBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, $file_xml): \DocuSign\eSign\Model\BrandResources
     {
         list($response) = $this->updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, $file_xml);
         return $response;
@@ -7457,14 +6939,14 @@ class AccountsApi
      *
      * Uploads a branding resource file.
      *
-    * @param string $account_id The external account number (int) or account ID GUID.
-    * @param string $brand_id The id of the brand.
-    * @param string $resource_content_type The type of brand resource file that you are updating. Valid values are:  - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; - &#x60;signing_captive&#x60;
+     * @param string $account_id The external account number (int) or account ID GUID.
+     * @param string $brand_id The id of the brand.
+     * @param string $resource_content_type The type of brand resource file that you are updating. Valid values are:  - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; - &#x60;signing_captive&#x60;
     * @param \SplFileObject $file_xml Brand resource XML file. (required)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandResources, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, $file_xml)
+    public function updateBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, $file_xml): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7484,44 +6966,27 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['multipart/form-data']);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($brand_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "brandId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($brand_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "brandId", $brand_id);
         }
         // path params
         if ($resource_content_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "resourceContentType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($resource_content_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "resourceContentType", $resource_content_type);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // form params
         if ($file_xml !== null) {
             // PHP 5.5 introduced a CurlFile object that deprecates the old @filename syntax
@@ -7577,14 +7042,14 @@ class AccountsApi
      *
      * Update Consumer Disclosure.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateConsumerDisclosureOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
-    public function updateConsumerDisclosure($account_id, $lang_code, $consumer_disclosure = null, AccountsApi\UpdateConsumerDisclosureOptions $options = null)
+    public function updateConsumerDisclosure($account_id, $lang_code, $consumer_disclosure = null, \DocuSign\eSign\ApiAccountsApi\UpdateConsumerDisclosureOptions $options = null): \DocuSign\eSign\Model\ConsumerDisclosure
     {
         list($response) = $this->updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure, $options);
         return $response;
@@ -7595,14 +7060,14 @@ class AccountsApi
      *
      * Update Consumer Disclosure.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateConsumerDisclosureOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure = null, AccountsApi\UpdateConsumerDisclosureOptions $options = null)
+    public function updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure = null, \DocuSign\eSign\ApiAccountsApi\UpdateConsumerDisclosureOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7614,44 +7079,30 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeMetadata() !== null) {
-            $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
-        }
+            // query params
+            if ($options->getIncludeMetadata() != 'null') {
+                $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($lang_code !== null) {
-            $resourcePath = str_replace(
-                "{" . "langCode" . "}",
-                $this->apiClient->getSerializer()->toPathValue($lang_code),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "langCode", $lang_code);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($consumer_disclosure)) {
@@ -7702,14 +7153,14 @@ class AccountsApi
      *
      * Updates an existing account custom field.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_field_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_field_id 
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function updateCustomField($account_id, $custom_field_id, $custom_field = null, AccountsApi\UpdateCustomFieldOptions $options = null)
+    public function updateCustomField($account_id, $custom_field_id, $custom_field = null, \DocuSign\eSign\ApiAccountsApi\UpdateCustomFieldOptions $options = null): \DocuSign\eSign\Model\CustomFields
     {
         list($response) = $this->updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field, $options);
         return $response;
@@ -7720,14 +7171,14 @@ class AccountsApi
      *
      * Updates an existing account custom field.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_field_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_field_id 
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field = null, AccountsApi\UpdateCustomFieldOptions $options = null)
+    public function updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field = null, \DocuSign\eSign\ApiAccountsApi\UpdateCustomFieldOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7739,44 +7190,30 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getApplyToTemplates() !== null) {
-            $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
-        }
+            // query params
+            if ($options->getApplyToTemplates() != 'null') {
+                $queryParams['apply_to_templates'] = $this->apiClient->getSerializer()->toQueryValue($options->getApplyToTemplates());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($custom_field_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "customFieldId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($custom_field_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "customFieldId", $custom_field_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($custom_field)) {
@@ -7827,12 +7264,12 @@ class AccountsApi
      *
      * Updates configuration information for the eNote eOriginal integration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ENoteConfiguration $e_note_configuration  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ENoteConfiguration
      */
-    public function updateENoteConfiguration($account_id, $e_note_configuration = null)
+    public function updateENoteConfiguration($account_id, $e_note_configuration = null): \DocuSign\eSign\Model\ENoteConfiguration
     {
         list($response) = $this->updateENoteConfigurationWithHttpInfo($account_id, $e_note_configuration);
         return $response;
@@ -7843,12 +7280,12 @@ class AccountsApi
      *
      * Updates configuration information for the eNote eOriginal integration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ENoteConfiguration $e_note_configuration  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ENoteConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateENoteConfigurationWithHttpInfo($account_id, $e_note_configuration = null)
+    public function updateENoteConfigurationWithHttpInfo($account_id, $e_note_configuration = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7856,28 +7293,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/enote_configuration";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($e_note_configuration)) {
@@ -7928,12 +7356,12 @@ class AccountsApi
      *
      * Updates envelope purge configuration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopePurgeConfiguration $envelope_purge_configuration  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopePurgeConfiguration
      */
-    public function updateEnvelopePurgeConfiguration($account_id, $envelope_purge_configuration = null)
+    public function updateEnvelopePurgeConfiguration($account_id, $envelope_purge_configuration = null): \DocuSign\eSign\Model\EnvelopePurgeConfiguration
     {
         list($response) = $this->updateEnvelopePurgeConfigurationWithHttpInfo($account_id, $envelope_purge_configuration);
         return $response;
@@ -7944,12 +7372,12 @@ class AccountsApi
      *
      * Updates envelope purge configuration.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopePurgeConfiguration $envelope_purge_configuration  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopePurgeConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateEnvelopePurgeConfigurationWithHttpInfo($account_id, $envelope_purge_configuration = null)
+    public function updateEnvelopePurgeConfigurationWithHttpInfo($account_id, $envelope_purge_configuration = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7957,28 +7385,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($envelope_purge_configuration)) {
@@ -8029,12 +7448,12 @@ class AccountsApi
      *
      * Favorites a template
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\FavoriteTemplatesInfo $favorite_templates_info  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FavoriteTemplatesInfo
      */
-    public function updateFavoriteTemplate($account_id, $favorite_templates_info = null)
+    public function updateFavoriteTemplate($account_id, $favorite_templates_info = null): \DocuSign\eSign\Model\FavoriteTemplatesInfo
     {
         list($response) = $this->updateFavoriteTemplateWithHttpInfo($account_id, $favorite_templates_info);
         return $response;
@@ -8045,12 +7464,12 @@ class AccountsApi
      *
      * Favorites a template
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\FavoriteTemplatesInfo $favorite_templates_info  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FavoriteTemplatesInfo, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateFavoriteTemplateWithHttpInfo($account_id, $favorite_templates_info = null)
+    public function updateFavoriteTemplateWithHttpInfo($account_id, $favorite_templates_info = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8058,28 +7477,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/favorite_templates";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($favorite_templates_info)) {
@@ -8130,12 +7540,12 @@ class AccountsApi
      *
      * Updates default user level settings for a specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\NotificationDefaults $notification_defaults  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotificationDefaults
      */
-    public function updateNotificationDefaults($account_id, $notification_defaults = null)
+    public function updateNotificationDefaults($account_id, $notification_defaults = null): \DocuSign\eSign\Model\NotificationDefaults
     {
         list($response) = $this->updateNotificationDefaultsWithHttpInfo($account_id, $notification_defaults);
         return $response;
@@ -8146,12 +7556,12 @@ class AccountsApi
      *
      * Updates default user level settings for a specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\NotificationDefaults $notification_defaults  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotificationDefaults, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateNotificationDefaultsWithHttpInfo($account_id, $notification_defaults = null)
+    public function updateNotificationDefaultsWithHttpInfo($account_id, $notification_defaults = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8159,28 +7569,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/notification_defaults";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($notification_defaults)) {
@@ -8231,12 +7632,12 @@ class AccountsApi
      *
      * Update the password rules
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountPasswordRules
      */
-    public function updatePasswordRules($account_id, $account_password_rules = null)
+    public function updatePasswordRules($account_id, $account_password_rules = null): \DocuSign\eSign\Model\AccountPasswordRules
     {
         list($response) = $this->updatePasswordRulesWithHttpInfo($account_id, $account_password_rules);
         return $response;
@@ -8247,12 +7648,12 @@ class AccountsApi
      *
      * Update the password rules
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePasswordRulesWithHttpInfo($account_id, $account_password_rules = null)
+    public function updatePasswordRulesWithHttpInfo($account_id, $account_password_rules = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8260,28 +7661,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/password_rules";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($account_password_rules)) {
@@ -8332,14 +7724,14 @@ class AccountsApi
      *
      * Updates a permission profile within the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $permission_profile_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $permission_profile_id 
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
-    public function updatePermissionProfile($account_id, $permission_profile_id, $permission_profile = null, AccountsApi\UpdatePermissionProfileOptions $options = null)
+    public function updatePermissionProfile($account_id, $permission_profile_id, $permission_profile = null, \DocuSign\eSign\ApiAccountsApi\UpdatePermissionProfileOptions $options = null): \DocuSign\eSign\Model\PermissionProfile
     {
         list($response) = $this->updatePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $permission_profile, $options);
         return $response;
@@ -8350,14 +7742,14 @@ class AccountsApi
      *
      * Updates a permission profile within the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $permission_profile_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $permission_profile_id 
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $permission_profile = null, AccountsApi\UpdatePermissionProfileOptions $options = null)
+    public function updatePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $permission_profile = null, \DocuSign\eSign\ApiAccountsApi\UpdatePermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8369,44 +7761,30 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
+            // query params
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($permission_profile_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "permissionProfileId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($permission_profile_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "permissionProfileId", $permission_profile_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($permission_profile)) {
@@ -8457,12 +7835,12 @@ class AccountsApi
      *
      * Returns the result set from running the specified report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ReportInProductRunResponse
      */
-    public function updateReportInProductRunResults($account_id, $report_in_product_run_request = null)
+    public function updateReportInProductRunResults($account_id, $report_in_product_run_request = null): \DocuSign\eSign\Model\ReportInProductRunResponse
     {
         list($response) = $this->updateReportInProductRunResultsWithHttpInfo($account_id, $report_in_product_run_request);
         return $response;
@@ -8473,12 +7851,12 @@ class AccountsApi
      *
      * Returns the result set from running the specified report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ReportInProductRunResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateReportInProductRunResultsWithHttpInfo($account_id, $report_in_product_run_request = null)
+    public function updateReportInProductRunResultsWithHttpInfo($account_id, $report_in_product_run_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8486,28 +7864,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/reports/report_results";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($report_in_product_run_request)) {
@@ -8558,13 +7927,13 @@ class AccountsApi
      *
      * Saves a customized report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $id 
      * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
      */
-    public function updateReportInProductSave($account_id, $id, $report_in_product_run_request = null)
+    public function updateReportInProductSave($account_id, $id, $report_in_product_run_request = null): \DocuSign\eSign\Model\ReportInProductSaveResponse
     {
         list($response) = $this->updateReportInProductSaveWithHttpInfo($account_id, $id, $report_in_product_run_request);
         return $response;
@@ -8575,13 +7944,13 @@ class AccountsApi
      *
      * Saves a customized report
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $id 
      * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateReportInProductSaveWithHttpInfo($account_id, $id, $report_in_product_run_request = null)
+    public function updateReportInProductSaveWithHttpInfo($account_id, $id, $report_in_product_run_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8593,36 +7962,23 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "id", $id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($report_in_product_run_request)) {
@@ -8673,12 +8029,12 @@ class AccountsApi
      *
      * Returns the specified report as a CSV string
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ReportInProductCsvRunRequest $report_in_product_csv_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updateReportResultsCsv($account_id, $report_in_product_csv_run_request = null)
+    public function updateReportResultsCsv($account_id, $report_in_product_csv_run_request = null): mixed
     {
         list($response) = $this->updateReportResultsCsvWithHttpInfo($account_id, $report_in_product_csv_run_request);
         return $response;
@@ -8689,12 +8045,12 @@ class AccountsApi
      *
      * Returns the specified report as a CSV string
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ReportInProductCsvRunRequest $report_in_product_csv_run_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateReportResultsCsvWithHttpInfo($account_id, $report_in_product_csv_run_request = null)
+    public function updateReportResultsCsvWithHttpInfo($account_id, $report_in_product_csv_run_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8702,28 +8058,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/reports/report_results_csv";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($report_in_product_csv_run_request)) {
@@ -8770,12 +8117,12 @@ class AccountsApi
      *
      * Updates the account settings for an account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updateSettings($account_id, $account_settings_information = null)
+    public function updateSettings($account_id, $account_settings_information = null): mixed
     {
         list($response) = $this->updateSettingsWithHttpInfo($account_id, $account_settings_information);
         return $response;
@@ -8786,12 +8133,12 @@ class AccountsApi
      *
      * Updates the account settings for an account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSettingsWithHttpInfo($account_id, $account_settings_information = null)
+    public function updateSettingsWithHttpInfo($account_id, $account_settings_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8799,28 +8146,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($account_settings_information)) {
@@ -8867,13 +8205,13 @@ class AccountsApi
      *
      * Reserved: Sets the shared access information for users.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSharedAccess $account_shared_access  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
-    public function updateSharedAccess($account_id, $account_shared_access = null, AccountsApi\UpdateSharedAccessOptions $options = null)
+    public function updateSharedAccess($account_id, $account_shared_access = null, \DocuSign\eSign\ApiAccountsApi\UpdateSharedAccessOptions $options = null): \DocuSign\eSign\Model\AccountSharedAccess
     {
         list($response) = $this->updateSharedAccessWithHttpInfo($account_id, $account_shared_access, $options);
         return $response;
@@ -8884,13 +8222,13 @@ class AccountsApi
      *
      * Reserved: Sets the shared access information for users.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSharedAccess $account_shared_access  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiAccountsApi\UpdateSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSharedAccessWithHttpInfo($account_id, $account_shared_access = null, AccountsApi\UpdateSharedAccessOptions $options = null)
+    public function updateSharedAccessWithHttpInfo($account_id, $account_shared_access = null, \DocuSign\eSign\ApiAccountsApi\UpdateSharedAccessOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8898,44 +8236,32 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/shared_access";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getItemType() !== null) {
-            $queryParams['item_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getItemType());
-        }
-        // query params
-        if ($options->getPreserveExistingSharedAccess() !== null) {
-            $queryParams['preserve_existing_shared_access'] = $this->apiClient->getSerializer()->toQueryValue($options->getPreserveExistingSharedAccess());
-        }
-        // query params
-        if ($options->getUserIds() !== null) {
-            $queryParams['user_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserIds());
-        }
+            // query params
+            if ($options->getItemType() != 'null') {
+                $queryParams['item_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getItemType());
+            }
+            if ($options->getPreserveExistingSharedAccess() != 'null') {
+                $queryParams['preserve_existing_shared_access'] = $this->apiClient->getSerializer()->toQueryValue($options->getPreserveExistingSharedAccess());
+            }
+            if ($options->getUserIds() != 'null') {
+                $queryParams['user_ids'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserIds());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($account_shared_access)) {
@@ -8986,12 +8312,12 @@ class AccountsApi
      *
      * Update watermark information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
-    public function updateWatermark($account_id, $watermark = null)
+    public function updateWatermark($account_id, $watermark = null): \DocuSign\eSign\Model\Watermark
     {
         list($response) = $this->updateWatermarkWithHttpInfo($account_id, $watermark);
         return $response;
@@ -9002,12 +8328,12 @@ class AccountsApi
      *
      * Update watermark information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateWatermarkWithHttpInfo($account_id, $watermark = null)
+    public function updateWatermarkWithHttpInfo($account_id, $watermark = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -9015,28 +8341,19 @@ class AccountsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/watermark";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($watermark)) {

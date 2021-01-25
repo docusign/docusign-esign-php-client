@@ -2,7 +2,7 @@
 /**
  * Tabs
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * Tabs Class Doc Comment
@@ -84,6 +84,7 @@ class Tabs implements ModelInterface, ArrayAccess
         'number_tabs' => '\DocuSign\eSign\Model\Number[]',
         'phone_number_tabs' => '\DocuSign\eSign\Model\PhoneNumber[]',
         'poly_line_overlay_tabs' => '\DocuSign\eSign\Model\PolyLineOverlay[]',
+        'prefill_tabs' => '\DocuSign\eSign\Model\PrefillTabs',
         'radio_group_tabs' => '\DocuSign\eSign\Model\RadioGroup[]',
         'signer_attachment_tabs' => '\DocuSign\eSign\Model\SignerAttachment[]',
         'sign_here_tabs' => '\DocuSign\eSign\Model\SignHere[]',
@@ -129,6 +130,7 @@ class Tabs implements ModelInterface, ArrayAccess
         'number_tabs' => null,
         'phone_number_tabs' => null,
         'poly_line_overlay_tabs' => null,
+        'prefill_tabs' => null,
         'radio_group_tabs' => null,
         'signer_attachment_tabs' => null,
         'sign_here_tabs' => null,
@@ -195,6 +197,7 @@ class Tabs implements ModelInterface, ArrayAccess
         'number_tabs' => 'numberTabs',
         'phone_number_tabs' => 'phoneNumberTabs',
         'poly_line_overlay_tabs' => 'polyLineOverlayTabs',
+        'prefill_tabs' => 'prefillTabs',
         'radio_group_tabs' => 'radioGroupTabs',
         'signer_attachment_tabs' => 'signerAttachmentTabs',
         'sign_here_tabs' => 'signHereTabs',
@@ -240,6 +243,7 @@ class Tabs implements ModelInterface, ArrayAccess
         'number_tabs' => 'setNumberTabs',
         'phone_number_tabs' => 'setPhoneNumberTabs',
         'poly_line_overlay_tabs' => 'setPolyLineOverlayTabs',
+        'prefill_tabs' => 'setPrefillTabs',
         'radio_group_tabs' => 'setRadioGroupTabs',
         'signer_attachment_tabs' => 'setSignerAttachmentTabs',
         'sign_here_tabs' => 'setSignHereTabs',
@@ -285,6 +289,7 @@ class Tabs implements ModelInterface, ArrayAccess
         'number_tabs' => 'getNumberTabs',
         'phone_number_tabs' => 'getPhoneNumberTabs',
         'poly_line_overlay_tabs' => 'getPolyLineOverlayTabs',
+        'prefill_tabs' => 'getPrefillTabs',
         'radio_group_tabs' => 'getRadioGroupTabs',
         'signer_attachment_tabs' => 'getSignerAttachmentTabs',
         'sign_here_tabs' => 'getSignHereTabs',
@@ -384,6 +389,7 @@ class Tabs implements ModelInterface, ArrayAccess
         $this->container['number_tabs'] = isset($data['number_tabs']) ? $data['number_tabs'] : null;
         $this->container['phone_number_tabs'] = isset($data['phone_number_tabs']) ? $data['phone_number_tabs'] : null;
         $this->container['poly_line_overlay_tabs'] = isset($data['poly_line_overlay_tabs']) ? $data['poly_line_overlay_tabs'] : null;
+        $this->container['prefill_tabs'] = isset($data['prefill_tabs']) ? $data['prefill_tabs'] : null;
         $this->container['radio_group_tabs'] = isset($data['radio_group_tabs']) ? $data['radio_group_tabs'] : null;
         $this->container['signer_attachment_tabs'] = isset($data['signer_attachment_tabs']) ? $data['signer_attachment_tabs'] : null;
         $this->container['sign_here_tabs'] = isset($data['sign_here_tabs']) ? $data['sign_here_tabs'] : null;
@@ -1064,6 +1070,30 @@ class Tabs implements ModelInterface, ArrayAccess
     public function setPolyLineOverlayTabs($poly_line_overlay_tabs)
     {
         $this->container['poly_line_overlay_tabs'] = $poly_line_overlay_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets prefill_tabs
+     *
+     * @return \DocuSign\eSign\Model\PrefillTabs
+     */
+    public function getPrefillTabs()
+    {
+        return $this->container['prefill_tabs'];
+    }
+
+    /**
+     * Sets prefill_tabs
+     *
+     * @param \DocuSign\eSign\Model\PrefillTabs $prefill_tabs prefill_tabs
+     *
+     * @return $this
+     */
+    public function setPrefillTabs($prefill_tabs)
+    {
+        $this->container['prefill_tabs'] = $prefill_tabs;
 
         return $this;
     }

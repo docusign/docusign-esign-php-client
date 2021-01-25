@@ -2,7 +2,7 @@
 /**
  * AccountInformation
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * AccountInformation Class Doc Comment
@@ -73,6 +73,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'created_date' => 'string',
         'currency_code' => 'string',
         'current_plan_id' => 'string',
+        'display_appliance_start_url' => 'string',
+        'display_appliance_url' => 'string',
         'distributor_code' => 'string',
         'docu_sign_landing_url' => 'string',
         'dss_values' => 'map[string,string]',
@@ -91,7 +93,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'seats_in_use' => 'string',
         'status21_cfr_part11' => 'string',
         'suspension_date' => 'string',
-        'suspension_status' => 'string'
+        'suspension_status' => 'string',
+        'use_display_appliance' => 'bool'
     ];
 
     /**
@@ -115,6 +118,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'created_date' => null,
         'currency_code' => null,
         'current_plan_id' => null,
+        'display_appliance_start_url' => null,
+        'display_appliance_url' => null,
         'distributor_code' => null,
         'docu_sign_landing_url' => null,
         'dss_values' => null,
@@ -133,7 +138,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'seats_in_use' => null,
         'status21_cfr_part11' => null,
         'suspension_date' => null,
-        'suspension_status' => null
+        'suspension_status' => null,
+        'use_display_appliance' => null
     ];
 
     /**
@@ -178,6 +184,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'created_date' => 'createdDate',
         'currency_code' => 'currencyCode',
         'current_plan_id' => 'currentPlanId',
+        'display_appliance_start_url' => 'displayApplianceStartUrl',
+        'display_appliance_url' => 'displayApplianceUrl',
         'distributor_code' => 'distributorCode',
         'docu_sign_landing_url' => 'docuSignLandingUrl',
         'dss_values' => 'dssValues',
@@ -196,7 +204,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'seats_in_use' => 'seatsInUse',
         'status21_cfr_part11' => 'status21CFRPart11',
         'suspension_date' => 'suspensionDate',
-        'suspension_status' => 'suspensionStatus'
+        'suspension_status' => 'suspensionStatus',
+        'use_display_appliance' => 'useDisplayAppliance'
     ];
 
     /**
@@ -220,6 +229,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'created_date' => 'setCreatedDate',
         'currency_code' => 'setCurrencyCode',
         'current_plan_id' => 'setCurrentPlanId',
+        'display_appliance_start_url' => 'setDisplayApplianceStartUrl',
+        'display_appliance_url' => 'setDisplayApplianceUrl',
         'distributor_code' => 'setDistributorCode',
         'docu_sign_landing_url' => 'setDocuSignLandingUrl',
         'dss_values' => 'setDssValues',
@@ -238,7 +249,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'seats_in_use' => 'setSeatsInUse',
         'status21_cfr_part11' => 'setStatus21CfrPart11',
         'suspension_date' => 'setSuspensionDate',
-        'suspension_status' => 'setSuspensionStatus'
+        'suspension_status' => 'setSuspensionStatus',
+        'use_display_appliance' => 'setUseDisplayAppliance'
     ];
 
     /**
@@ -262,6 +274,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'created_date' => 'getCreatedDate',
         'currency_code' => 'getCurrencyCode',
         'current_plan_id' => 'getCurrentPlanId',
+        'display_appliance_start_url' => 'getDisplayApplianceStartUrl',
+        'display_appliance_url' => 'getDisplayApplianceUrl',
         'distributor_code' => 'getDistributorCode',
         'docu_sign_landing_url' => 'getDocuSignLandingUrl',
         'dss_values' => 'getDssValues',
@@ -280,7 +294,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'seats_in_use' => 'getSeatsInUse',
         'status21_cfr_part11' => 'getStatus21CfrPart11',
         'suspension_date' => 'getSuspensionDate',
-        'suspension_status' => 'getSuspensionStatus'
+        'suspension_status' => 'getSuspensionStatus',
+        'use_display_appliance' => 'getUseDisplayAppliance'
     ];
 
     /**
@@ -358,6 +373,8 @@ class AccountInformation implements ModelInterface, ArrayAccess
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['current_plan_id'] = isset($data['current_plan_id']) ? $data['current_plan_id'] : null;
+        $this->container['display_appliance_start_url'] = isset($data['display_appliance_start_url']) ? $data['display_appliance_start_url'] : null;
+        $this->container['display_appliance_url'] = isset($data['display_appliance_url']) ? $data['display_appliance_url'] : null;
         $this->container['distributor_code'] = isset($data['distributor_code']) ? $data['distributor_code'] : null;
         $this->container['docu_sign_landing_url'] = isset($data['docu_sign_landing_url']) ? $data['docu_sign_landing_url'] : null;
         $this->container['dss_values'] = isset($data['dss_values']) ? $data['dss_values'] : null;
@@ -377,6 +394,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         $this->container['status21_cfr_part11'] = isset($data['status21_cfr_part11']) ? $data['status21_cfr_part11'] : null;
         $this->container['suspension_date'] = isset($data['suspension_date']) ? $data['suspension_date'] : null;
         $this->container['suspension_status'] = isset($data['suspension_status']) ? $data['suspension_status'] : null;
+        $this->container['use_display_appliance'] = isset($data['use_display_appliance']) ? $data['use_display_appliance'] : null;
     }
 
     /**
@@ -759,6 +777,54 @@ class AccountInformation implements ModelInterface, ArrayAccess
     public function setCurrentPlanId($current_plan_id)
     {
         $this->container['current_plan_id'] = $current_plan_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_appliance_start_url
+     *
+     * @return string
+     */
+    public function getDisplayApplianceStartUrl()
+    {
+        return $this->container['display_appliance_start_url'];
+    }
+
+    /**
+     * Sets display_appliance_start_url
+     *
+     * @param string $display_appliance_start_url 
+     *
+     * @return $this
+     */
+    public function setDisplayApplianceStartUrl($display_appliance_start_url)
+    {
+        $this->container['display_appliance_start_url'] = $display_appliance_start_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_appliance_url
+     *
+     * @return string
+     */
+    public function getDisplayApplianceUrl()
+    {
+        return $this->container['display_appliance_url'];
+    }
+
+    /**
+     * Sets display_appliance_url
+     *
+     * @param string $display_appliance_url 
+     *
+     * @return $this
+     */
+    public function setDisplayApplianceUrl($display_appliance_url)
+    {
+        $this->container['display_appliance_url'] = $display_appliance_url;
 
         return $this;
     }
@@ -1215,6 +1281,30 @@ class AccountInformation implements ModelInterface, ArrayAccess
     public function setSuspensionStatus($suspension_status)
     {
         $this->container['suspension_status'] = $suspension_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_display_appliance
+     *
+     * @return bool
+     */
+    public function getUseDisplayAppliance()
+    {
+        return $this->container['use_display_appliance'];
+    }
+
+    /**
+     * Sets use_display_appliance
+     *
+     * @param bool $use_display_appliance 
+     *
+     * @return $this
+     */
+    public function setUseDisplayAppliance($use_display_appliance)
+    {
+        $this->container['use_display_appliance'] = $use_display_appliance;
 
         return $this;
     }

@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * UsersApi
- * PHP version 5
+ * UsersApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\UsersApi;
+namespace DocuSign\eSign\ApiUsersApi;
+
 
 class ListOptions
 {
@@ -34,23 +38,23 @@ class ListOptions
       * $additional_info When set to **true**, the full list of user information is returned for each user in the account.
       * @var string
       */
-    protected $additional_info;
+    protected string $additional_info;
 
     /**
      * Gets additional_info
      * @return string
      */
-    public function getAdditionalInfo()
+    public function getAdditionalInfo(): string
     {
         return $this->additional_info;
     }
-  
+
     /**
      * Sets additional_info
      * @param string $additional_info When set to **true**, the full list of user information is returned for each user in the account.
-     * @return $this
+     * @return self
      */
-    public function setAdditionalInfo($additional_info)
+    public function setAdditionalInfo(string $additional_info): self
     {
         $this->additional_info = $additional_info;
         return $this;
@@ -59,23 +63,23 @@ class ListOptions
       * $count Number of records to return. The number must be greater than 0 and less than or equal to 100.
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count Number of records to return. The number must be greater than 0 and less than or equal to 100.
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -84,23 +88,23 @@ class ListOptions
       * $email 
       * @var string
       */
-    protected $email;
+    protected string $email;
 
     /**
      * Gets email
      * @return string
      */
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->email;
     }
-  
+
     /**
      * Sets email
      * @param string $email 
-     * @return $this
+     * @return self
      */
-    public function setEmail($email)
+    public function setEmail(string $email): self
     {
         $this->email = $email;
         return $this;
@@ -109,23 +113,23 @@ class ListOptions
       * $email_substring Filters the returned user records by the email address or a sub-string of email address.
       * @var string
       */
-    protected $email_substring;
+    protected string $email_substring;
 
     /**
      * Gets email_substring
      * @return string
      */
-    public function getEmailSubstring()
+    public function getEmailSubstring(): string
     {
         return $this->email_substring;
     }
-  
+
     /**
      * Sets email_substring
      * @param string $email_substring Filters the returned user records by the email address or a sub-string of email address.
-     * @return $this
+     * @return self
      */
-    public function setEmailSubstring($email_substring)
+    public function setEmailSubstring(string $email_substring): self
     {
         $this->email_substring = $email_substring;
         return $this;
@@ -134,23 +138,23 @@ class ListOptions
       * $group_id Filters user records returned by one or more group Id's.
       * @var string
       */
-    protected $group_id;
+    protected string $group_id;
 
     /**
      * Gets group_id
      * @return string
      */
-    public function getGroupId()
+    public function getGroupId(): string
     {
         return $this->group_id;
     }
-  
+
     /**
      * Sets group_id
      * @param string $group_id Filters user records returned by one or more group Id's.
-     * @return $this
+     * @return self
      */
-    public function setGroupId($group_id)
+    public function setGroupId(string $group_id): self
     {
         $this->group_id = $group_id;
         return $this;
@@ -159,23 +163,23 @@ class ListOptions
       * $include_usersettings_for_csv 
       * @var string
       */
-    protected $include_usersettings_for_csv;
+    protected string $include_usersettings_for_csv;
 
     /**
      * Gets include_usersettings_for_csv
      * @return string
      */
-    public function getIncludeUsersettingsForCsv()
+    public function getIncludeUsersettingsForCsv(): string
     {
         return $this->include_usersettings_for_csv;
     }
-  
+
     /**
      * Sets include_usersettings_for_csv
      * @param string $include_usersettings_for_csv 
-     * @return $this
+     * @return self
      */
-    public function setIncludeUsersettingsForCsv($include_usersettings_for_csv)
+    public function setIncludeUsersettingsForCsv(string $include_usersettings_for_csv): self
     {
         $this->include_usersettings_for_csv = $include_usersettings_for_csv;
         return $this;
@@ -184,23 +188,23 @@ class ListOptions
       * $login_status 
       * @var string
       */
-    protected $login_status;
+    protected string $login_status;
 
     /**
      * Gets login_status
      * @return string
      */
-    public function getLoginStatus()
+    public function getLoginStatus(): string
     {
         return $this->login_status;
     }
-  
+
     /**
      * Sets login_status
      * @param string $login_status 
-     * @return $this
+     * @return self
      */
-    public function setLoginStatus($login_status)
+    public function setLoginStatus(string $login_status): self
     {
         $this->login_status = $login_status;
         return $this;
@@ -209,23 +213,23 @@ class ListOptions
       * $not_group_id 
       * @var string
       */
-    protected $not_group_id;
+    protected string $not_group_id;
 
     /**
      * Gets not_group_id
      * @return string
      */
-    public function getNotGroupId()
+    public function getNotGroupId(): string
     {
         return $this->not_group_id;
     }
-  
+
     /**
      * Sets not_group_id
      * @param string $not_group_id 
-     * @return $this
+     * @return self
      */
-    public function setNotGroupId($not_group_id)
+    public function setNotGroupId(string $not_group_id): self
     {
         $this->not_group_id = $not_group_id;
         return $this;
@@ -234,23 +238,23 @@ class ListOptions
       * $start_position Starting value for the list.
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position Starting value for the list.
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -259,23 +263,23 @@ class ListOptions
       * $status 
       * @var string
       */
-    protected $status;
+    protected string $status;
 
     /**
      * Gets status
      * @return string
      */
-    public function getStatus()
+    public function getStatus(): string
     {
         return $this->status;
     }
-  
+
     /**
      * Sets status
      * @param string $status 
-     * @return $this
+     * @return self
      */
-    public function setStatus($status)
+    public function setStatus(string $status): self
     {
         $this->status = $status;
         return $this;
@@ -284,107 +288,113 @@ class ListOptions
       * $user_name_substring Filters the user records returned by the user name or a sub-string of user name.
       * @var string
       */
-    protected $user_name_substring;
+    protected string $user_name_substring;
 
     /**
      * Gets user_name_substring
      * @return string
      */
-    public function getUserNameSubstring()
+    public function getUserNameSubstring(): string
     {
         return $this->user_name_substring;
     }
-  
+
     /**
      * Sets user_name_substring
      * @param string $user_name_substring Filters the user records returned by the user name or a sub-string of user name.
-     * @return $this
+     * @return self
      */
-    public function setUserNameSubstring($user_name_substring)
+    public function setUserNameSubstring(string $user_name_substring): self
     {
         $this->user_name_substring = $user_name_substring;
         return $this;
     }
 }
+
+
 class DeleteOptions
 {
     /**
       * $delete 
       * @var string
       */
-    protected $delete;
+    protected string $delete;
 
     /**
      * Gets delete
      * @return string
      */
-    public function getDelete()
+    public function getDelete(): string
     {
         return $this->delete;
     }
-  
+
     /**
      * Sets delete
      * @param string $delete 
-     * @return $this
+     * @return self
      */
-    public function setDelete($delete)
+    public function setDelete(string $delete): self
     {
         $this->delete = $delete;
         return $this;
     }
 }
+
+
 class GetContactByIdOptions
 {
     /**
       * $cloud_provider 
       * @var string
       */
-    protected $cloud_provider;
+    protected string $cloud_provider;
 
     /**
      * Gets cloud_provider
      * @return string
      */
-    public function getCloudProvider()
+    public function getCloudProvider(): string
     {
         return $this->cloud_provider;
     }
-  
+
     /**
      * Sets cloud_provider
      * @param string $cloud_provider 
-     * @return $this
+     * @return self
      */
-    public function setCloudProvider($cloud_provider)
+    public function setCloudProvider(string $cloud_provider): self
     {
         $this->cloud_provider = $cloud_provider;
         return $this;
     }
 }
+
+
 class GetInformationOptions
 {
     /**
       * $additional_info When set to **true**, the full list of user information is returned for each user in the account.
       * @var string
       */
-    protected $additional_info;
+    protected string $additional_info;
 
     /**
      * Gets additional_info
      * @return string
      */
-    public function getAdditionalInfo()
+    public function getAdditionalInfo(): string
     {
         return $this->additional_info;
     }
-  
+
     /**
      * Sets additional_info
      * @param string $additional_info When set to **true**, the full list of user information is returned for each user in the account.
-     * @return $this
+     * @return self
      */
-    public function setAdditionalInfo($additional_info)
+    public function setAdditionalInfo(string $additional_info): self
     {
         $this->additional_info = $additional_info;
         return $this;
@@ -393,163 +403,173 @@ class GetInformationOptions
       * $email 
       * @var string
       */
-    protected $email;
+    protected string $email;
 
     /**
      * Gets email
      * @return string
      */
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->email;
     }
-  
+
     /**
      * Sets email
      * @param string $email 
-     * @return $this
+     * @return self
      */
-    public function setEmail($email)
+    public function setEmail(string $email): self
     {
         $this->email = $email;
         return $this;
     }
 }
+
+
 class GetProfileImageOptions
 {
     /**
       * $encoding 
       * @var string
       */
-    protected $encoding;
+    protected string $encoding;
 
     /**
      * Gets encoding
      * @return string
      */
-    public function getEncoding()
+    public function getEncoding(): string
     {
         return $this->encoding;
     }
-  
+
     /**
      * Sets encoding
      * @param string $encoding 
-     * @return $this
+     * @return self
      */
-    public function setEncoding($encoding)
+    public function setEncoding(string $encoding): self
     {
         $this->encoding = $encoding;
         return $this;
     }
 }
+
+
 class GetSignatureImageOptions
 {
     /**
       * $include_chrome 
       * @var string
       */
-    protected $include_chrome;
+    protected string $include_chrome;
 
     /**
      * Gets include_chrome
      * @return string
      */
-    public function getIncludeChrome()
+    public function getIncludeChrome(): string
     {
         return $this->include_chrome;
     }
-  
+
     /**
      * Sets include_chrome
      * @param string $include_chrome 
-     * @return $this
+     * @return self
      */
-    public function setIncludeChrome($include_chrome)
+    public function setIncludeChrome(string $include_chrome): self
     {
         $this->include_chrome = $include_chrome;
         return $this;
     }
 }
+
+
 class ListSignaturesOptions
 {
     /**
       * $stamp_type 
       * @var string
       */
-    protected $stamp_type;
+    protected string $stamp_type;
 
     /**
      * Gets stamp_type
      * @return string
      */
-    public function getStampType()
+    public function getStampType(): string
     {
         return $this->stamp_type;
     }
-  
+
     /**
      * Sets stamp_type
      * @param string $stamp_type 
-     * @return $this
+     * @return self
      */
-    public function setStampType($stamp_type)
+    public function setStampType(string $stamp_type): self
     {
         $this->stamp_type = $stamp_type;
         return $this;
     }
 }
+
+
 class UpdateSignatureOptions
 {
     /**
       * $close_existing_signature When set to **true**, closes the current signature.
       * @var string
       */
-    protected $close_existing_signature;
+    protected string $close_existing_signature;
 
     /**
      * Gets close_existing_signature
      * @return string
      */
-    public function getCloseExistingSignature()
+    public function getCloseExistingSignature(): string
     {
         return $this->close_existing_signature;
     }
-  
+
     /**
      * Sets close_existing_signature
      * @param string $close_existing_signature When set to **true**, closes the current signature.
-     * @return $this
+     * @return self
      */
-    public function setCloseExistingSignature($close_existing_signature)
+    public function setCloseExistingSignature(string $close_existing_signature): self
     {
         $this->close_existing_signature = $close_existing_signature;
         return $this;
     }
 }
+
+
 class UpdateSignatureImageOptions
 {
     /**
       * $transparent_png 
       * @var string
       */
-    protected $transparent_png;
+    protected string $transparent_png;
 
     /**
      * Gets transparent_png
      * @return string
      */
-    public function getTransparentPng()
+    public function getTransparentPng(): string
     {
         return $this->transparent_png;
     }
-  
+
     /**
      * Sets transparent_png
      * @param string $transparent_png 
-     * @return $this
+     * @return self
      */
-    public function setTransparentPng($transparent_png)
+    public function setTransparentPng(string $transparent_png): self
     {
         $this->transparent_png = $transparent_png;
         return $this;
@@ -557,12 +577,13 @@ class UpdateSignatureImageOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
@@ -577,30 +598,27 @@ class UsersApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -608,27 +626,46 @@ class UsersApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return UsersApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation callList
      *
      * Retrieves the list of users for the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiUsersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformationList
      */
-    public function callList($account_id, UsersApi\ListOptions $options = null)
+    public function callList($account_id, \DocuSign\eSign\ApiUsersApi\ListOptions $options = null): \DocuSign\eSign\Model\UserInformationList
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -639,12 +676,12 @@ class UsersApi
      *
      * Retrieves the list of users for the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiUsersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformationList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, UsersApi\ListOptions $options = null)
+    public function callListWithHttpInfo($account_id, \DocuSign\eSign\ApiUsersApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -652,76 +689,56 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getAdditionalInfo() !== null) {
-            $queryParams['additional_info'] = $this->apiClient->getSerializer()->toQueryValue($options->getAdditionalInfo());
-        }
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getEmail() !== null) {
-            $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
-        }
-        // query params
-        if ($options->getEmailSubstring() !== null) {
-            $queryParams['email_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailSubstring());
-        }
-        // query params
-        if ($options->getGroupId() !== null) {
-            $queryParams['group_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getGroupId());
-        }
-        // query params
-        if ($options->getIncludeUsersettingsForCsv() !== null) {
-            $queryParams['include_usersettings_for_csv'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeUsersettingsForCsv());
-        }
-        // query params
-        if ($options->getLoginStatus() !== null) {
-            $queryParams['login_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getLoginStatus());
-        }
-        // query params
-        if ($options->getNotGroupId() !== null) {
-            $queryParams['not_group_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getNotGroupId());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getStatus() !== null) {
-            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
-        }
-        // query params
-        if ($options->getUserNameSubstring() !== null) {
-            $queryParams['user_name_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserNameSubstring());
-        }
+            // query params
+            if ($options->getAdditionalInfo() != 'null') {
+                $queryParams['additional_info'] = $this->apiClient->getSerializer()->toQueryValue($options->getAdditionalInfo());
+            }
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getEmail() != 'null') {
+                $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
+            }
+            if ($options->getEmailSubstring() != 'null') {
+                $queryParams['email_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailSubstring());
+            }
+            if ($options->getGroupId() != 'null') {
+                $queryParams['group_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getGroupId());
+            }
+            if ($options->getIncludeUsersettingsForCsv() != 'null') {
+                $queryParams['include_usersettings_for_csv'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeUsersettingsForCsv());
+            }
+            if ($options->getLoginStatus() != 'null') {
+                $queryParams['login_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getLoginStatus());
+            }
+            if ($options->getNotGroupId() != 'null') {
+                $queryParams['not_group_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getNotGroupId());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getStatus() != 'null') {
+                $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
+            }
+            if ($options->getUserNameSubstring() != 'null') {
+                $queryParams['user_name_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserNameSubstring());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -767,12 +784,12 @@ class UsersApi
      *
      * Adds news user to the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\NewUsersDefinition $new_users_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NewUsersSummary
      */
-    public function create($account_id, $new_users_definition = null)
+    public function create($account_id, $new_users_definition = null): \DocuSign\eSign\Model\NewUsersSummary
     {
         list($response) = $this->createWithHttpInfo($account_id, $new_users_definition);
         return $response;
@@ -783,12 +800,12 @@ class UsersApi
      *
      * Adds news user to the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\NewUsersDefinition $new_users_definition  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NewUsersSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWithHttpInfo($account_id, $new_users_definition = null)
+    public function createWithHttpInfo($account_id, $new_users_definition = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -796,28 +813,19 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($new_users_definition)) {
@@ -868,13 +876,13 @@ class UsersApi
      *
      * Adds user Signature and initials images to a Signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignaturesInformation
      */
-    public function createSignatures($account_id, $user_id, $user_signatures_information = null)
+    public function createSignatures($account_id, $user_id, $user_signatures_information = null): \DocuSign\eSign\Model\UserSignaturesInformation
     {
         list($response) = $this->createSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information);
         return $response;
@@ -885,13 +893,13 @@ class UsersApi
      *
      * Adds user Signature and initials images to a Signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information = null)
+    public function createSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -903,36 +911,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_signatures_information)) {
@@ -983,13 +978,13 @@ class UsersApi
      *
      * Removes users account privileges.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiUsersApi\DeleteOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UsersResponse
      */
-    public function delete($account_id, $user_info_list = null, UsersApi\DeleteOptions $options = null)
+    public function delete($account_id, $user_info_list = null, \DocuSign\eSign\ApiUsersApi\DeleteOptions $options = null): \DocuSign\eSign\Model\UsersResponse
     {
         list($response) = $this->deleteWithHttpInfo($account_id, $user_info_list, $options);
         return $response;
@@ -1000,13 +995,13 @@ class UsersApi
      *
      * Removes users account privileges.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInfoList $user_info_list  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiUsersApi\DeleteOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWithHttpInfo($account_id, $user_info_list = null, UsersApi\DeleteOptions $options = null)
+    public function deleteWithHttpInfo($account_id, $user_info_list = null, \DocuSign\eSign\ApiUsersApi\DeleteOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1014,36 +1009,26 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getDelete() !== null) {
-            $queryParams['delete'] = $this->apiClient->getSerializer()->toQueryValue($options->getDelete());
-        }
+            // query params
+            if ($options->getDelete() != 'null') {
+                $queryParams['delete'] = $this->apiClient->getSerializer()->toQueryValue($options->getDelete());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_info_list)) {
@@ -1094,12 +1079,12 @@ class UsersApi
      *
      * Replaces a particular contact associated with an account for the DocuSign service.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $contact_id The unique identifier of a person in the contacts address book.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
-    public function deleteContactWithId($account_id, $contact_id)
+    public function deleteContactWithId($account_id, $contact_id): \DocuSign\eSign\Model\ContactUpdateResponse
     {
         list($response) = $this->deleteContactWithIdWithHttpInfo($account_id, $contact_id);
         return $response;
@@ -1110,12 +1095,12 @@ class UsersApi
      *
      * Replaces a particular contact associated with an account for the DocuSign service.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $contact_id The unique identifier of a person in the contacts address book.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteContactWithIdWithHttpInfo($account_id, $contact_id)
+    public function deleteContactWithIdWithHttpInfo($account_id, $contact_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1127,36 +1112,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/contacts/{contactId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($contact_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "contactId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($contact_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "contactId", $contact_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1202,12 +1174,12 @@ class UsersApi
      *
      * Delete contacts associated with an account for the DocuSign service.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
-    public function deleteContacts($account_id, $contact_mod_request = null)
+    public function deleteContacts($account_id, $contact_mod_request = null): \DocuSign\eSign\Model\ContactUpdateResponse
     {
         list($response) = $this->deleteContactsWithHttpInfo($account_id, $contact_mod_request);
         return $response;
@@ -1218,12 +1190,12 @@ class UsersApi
      *
      * Delete contacts associated with an account for the DocuSign service.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteContactsWithHttpInfo($account_id, $contact_mod_request = null)
+    public function deleteContactsWithHttpInfo($account_id, $contact_mod_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1231,28 +1203,19 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/contacts";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($contact_mod_request)) {
@@ -1303,13 +1266,13 @@ class UsersApi
      *
      * Deletes custom user settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomSettingsInformation
      */
-    public function deleteCustomSettings($account_id, $user_id, $custom_settings_information = null)
+    public function deleteCustomSettings($account_id, $user_id, $custom_settings_information = null): \DocuSign\eSign\Model\CustomSettingsInformation
     {
         list($response) = $this->deleteCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information);
         return $response;
@@ -1320,13 +1283,13 @@ class UsersApi
      *
      * Deletes custom user settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information = null)
+    public function deleteCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1338,36 +1301,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/custom_settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($custom_settings_information)) {
@@ -1418,12 +1368,12 @@ class UsersApi
      *
      * Deletes the user profile image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteProfileImage($account_id, $user_id)
+    public function deleteProfileImage($account_id, $user_id): mixed
     {
         list($response) = $this->deleteProfileImageWithHttpInfo($account_id, $user_id);
         return $response;
@@ -1434,12 +1384,12 @@ class UsersApi
      *
      * Deletes the user profile image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteProfileImageWithHttpInfo($account_id, $user_id)
+    public function deleteProfileImageWithHttpInfo($account_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1451,36 +1401,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/profile/image";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1522,13 +1459,13 @@ class UsersApi
      *
      * Removes removes signature information for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteSignature($account_id, $signature_id, $user_id)
+    public function deleteSignature($account_id, $signature_id, $user_id): mixed
     {
         list($response) = $this->deleteSignatureWithHttpInfo($account_id, $signature_id, $user_id);
         return $response;
@@ -1539,13 +1476,13 @@ class UsersApi
      *
      * Removes removes signature information for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteSignatureWithHttpInfo($account_id, $signature_id, $user_id)
+    public function deleteSignatureWithHttpInfo($account_id, $signature_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1561,44 +1498,27 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures/{signatureId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1640,14 +1560,14 @@ class UsersApi
      *
      * Deletes the user initials image or the  user signature image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
-    public function deleteSignatureImage($account_id, $image_type, $signature_id, $user_id)
+    public function deleteSignatureImage($account_id, $image_type, $signature_id, $user_id): \DocuSign\eSign\Model\UserSignature
     {
         list($response) = $this->deleteSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id);
         return $response;
@@ -1658,14 +1578,14 @@ class UsersApi
      *
      * Deletes the user initials image or the  user signature image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id)
+    public function deleteSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1685,52 +1605,31 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($image_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "imageType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($image_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "imageType", $image_type);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1776,13 +1675,13 @@ class UsersApi
      *
      * Gets a particular contact associated with the user's account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $contact_id The unique identifier of a person in the contacts address book.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetContactByIdOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactGetResponse
      */
-    public function getContactById($account_id, $contact_id, UsersApi\GetContactByIdOptions $options = null)
+    public function getContactById($account_id, $contact_id, \DocuSign\eSign\ApiUsersApi\GetContactByIdOptions $options = null): \DocuSign\eSign\Model\ContactGetResponse
     {
         list($response) = $this->getContactByIdWithHttpInfo($account_id, $contact_id, $options);
         return $response;
@@ -1793,13 +1692,13 @@ class UsersApi
      *
      * Gets a particular contact associated with the user's account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $contact_id The unique identifier of a person in the contacts address book.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $contact_id The unique identifier of a person in the contacts address book.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetContactByIdOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getContactByIdWithHttpInfo($account_id, $contact_id, UsersApi\GetContactByIdOptions $options = null)
+    public function getContactByIdWithHttpInfo($account_id, $contact_id, \DocuSign\eSign\ApiUsersApi\GetContactByIdOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1811,44 +1710,30 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/contacts/{contactId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCloudProvider() !== null) {
-            $queryParams['cloud_provider'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloudProvider());
-        }
+            // query params
+            if ($options->getCloudProvider() != 'null') {
+                $queryParams['cloud_provider'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloudProvider());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($contact_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "contactId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($contact_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "contactId", $contact_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1894,13 +1779,13 @@ class UsersApi
      *
      * Gets the user information for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetInformationOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformation
      */
-    public function getInformation($account_id, $user_id, UsersApi\GetInformationOptions $options = null)
+    public function getInformation($account_id, $user_id, \DocuSign\eSign\ApiUsersApi\GetInformationOptions $options = null): \DocuSign\eSign\Model\UserInformation
     {
         list($response) = $this->getInformationWithHttpInfo($account_id, $user_id, $options);
         return $response;
@@ -1911,13 +1796,13 @@ class UsersApi
      *
      * Gets the user information for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetInformationOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getInformationWithHttpInfo($account_id, $user_id, UsersApi\GetInformationOptions $options = null)
+    public function getInformationWithHttpInfo($account_id, $user_id, \DocuSign\eSign\ApiUsersApi\GetInformationOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1929,48 +1814,33 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getAdditionalInfo() !== null) {
-            $queryParams['additional_info'] = $this->apiClient->getSerializer()->toQueryValue($options->getAdditionalInfo());
-        }
-        // query params
-        if ($options->getEmail() !== null) {
-            $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
-        }
+            // query params
+            if ($options->getAdditionalInfo() != 'null') {
+                $queryParams['additional_info'] = $this->apiClient->getSerializer()->toQueryValue($options->getAdditionalInfo());
+            }
+            if ($options->getEmail() != 'null') {
+                $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2016,12 +1886,12 @@ class UsersApi
      *
      * Retrieves the user profile for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserProfile
      */
-    public function getProfile($account_id, $user_id)
+    public function getProfile($account_id, $user_id): \DocuSign\eSign\Model\UserProfile
     {
         list($response) = $this->getProfileWithHttpInfo($account_id, $user_id);
         return $response;
@@ -2032,12 +1902,12 @@ class UsersApi
      *
      * Retrieves the user profile for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserProfile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProfileWithHttpInfo($account_id, $user_id)
+    public function getProfileWithHttpInfo($account_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2049,36 +1919,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/profile";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2124,13 +1981,13 @@ class UsersApi
      *
      * Retrieves the user profile image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetProfileImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getProfileImage($account_id, $user_id, UsersApi\GetProfileImageOptions $options = null)
+    public function getProfileImage($account_id, $user_id, \DocuSign\eSign\ApiUsersApi\GetProfileImageOptions $options = null): \SplFileObject
     {
         list($response) = $this->getProfileImageWithHttpInfo($account_id, $user_id, $options);
         return $response;
@@ -2141,13 +1998,13 @@ class UsersApi
      *
      * Retrieves the user profile image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetProfileImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProfileImageWithHttpInfo($account_id, $user_id, UsersApi\GetProfileImageOptions $options = null)
+    public function getProfileImageWithHttpInfo($account_id, $user_id, \DocuSign\eSign\ApiUsersApi\GetProfileImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2159,44 +2016,30 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/profile/image";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['image/gif']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['image/gif']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getEncoding() !== null) {
-            $queryParams['encoding'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncoding());
-        }
+            // query params
+            if ($options->getEncoding() != 'null') {
+                $queryParams['encoding'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncoding());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2242,12 +2085,12 @@ class UsersApi
      *
      * Gets the user account settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSettingsInformation
      */
-    public function getSettings($account_id, $user_id)
+    public function getSettings($account_id, $user_id): \DocuSign\eSign\Model\UserSettingsInformation
     {
         list($response) = $this->getSettingsWithHttpInfo($account_id, $user_id);
         return $response;
@@ -2258,12 +2101,12 @@ class UsersApi
      *
      * Gets the user account settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSettingsWithHttpInfo($account_id, $user_id)
+    public function getSettingsWithHttpInfo($account_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2275,36 +2118,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2350,13 +2180,13 @@ class UsersApi
      *
      * Gets the user signature information for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
-    public function getSignature($account_id, $signature_id, $user_id)
+    public function getSignature($account_id, $signature_id, $user_id): \DocuSign\eSign\Model\UserSignature
     {
         list($response) = $this->getSignatureWithHttpInfo($account_id, $signature_id, $user_id);
         return $response;
@@ -2367,13 +2197,13 @@ class UsersApi
      *
      * Gets the user signature information for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSignatureWithHttpInfo($account_id, $signature_id, $user_id)
+    public function getSignatureWithHttpInfo($account_id, $signature_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2389,44 +2219,27 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures/{signatureId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2472,15 +2285,15 @@ class UsersApi
      *
      * Retrieves the user initials image or the  user signature image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getSignatureImage($account_id, $image_type, $signature_id, $user_id, UsersApi\GetSignatureImageOptions $options = null)
+    public function getSignatureImage($account_id, $image_type, $signature_id, $user_id, \DocuSign\eSign\ApiUsersApi\GetSignatureImageOptions $options = null): \SplFileObject
     {
         list($response) = $this->getSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, $options);
         return $response;
@@ -2491,15 +2304,15 @@ class UsersApi
      *
      * Retrieves the user initials image or the  user signature image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\GetSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, UsersApi\GetSignatureImageOptions $options = null)
+    public function getSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, \DocuSign\eSign\ApiUsersApi\GetSignatureImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2519,60 +2332,38 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['image/gif']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['image/gif']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeChrome() !== null) {
-            $queryParams['include_chrome'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeChrome());
-        }
+            // query params
+            if ($options->getIncludeChrome() != 'null') {
+                $queryParams['include_chrome'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeChrome());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($image_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "imageType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($image_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "imageType", $image_type);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2614,16 +2405,107 @@ class UsersApi
     }
 
     /**
+     * Operation getUserListExport
+     *
+     * Retrieves UserList Export Results data.
+     *
+     * @param string $organization_id 
+     * @param string $result_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
+     */
+    public function getUserListExport($organization_id, $result_id): mixed
+    {
+        list($response) = $this->getUserListExportWithHttpInfo($organization_id, $result_id);
+        return $response;
+    }
+
+    /**
+     * Operation getUserListExportWithHttpInfo
+     *
+     * Retrieves UserList Export Results data.
+     *
+     * @param string $organization_id 
+     * @param string $result_id 
+     * @throws ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getUserListExportWithHttpInfo($organization_id, $result_id): array
+    {
+        // verify the required parameter 'organization_id' is set
+        if ($organization_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $organization_id when calling getUserListExport');
+        }
+        // verify the required parameter 'result_id' is set
+        if ($result_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $result_id when calling getUserListExport');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/organization_exports/{organizationId}/user_list/{resultId}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($organization_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "organizationId", $organization_id);
+        }
+        // path params
+        if ($result_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "resultId", $result_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/organization_exports/{organizationId}/user_list/{resultId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation listCustomSettings
      *
      * Retrieves the custom user settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomSettingsInformation
      */
-    public function listCustomSettings($account_id, $user_id)
+    public function listCustomSettings($account_id, $user_id): \DocuSign\eSign\Model\CustomSettingsInformation
     {
         list($response) = $this->listCustomSettingsWithHttpInfo($account_id, $user_id);
         return $response;
@@ -2634,12 +2516,12 @@ class UsersApi
      *
      * Retrieves the custom user settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCustomSettingsWithHttpInfo($account_id, $user_id)
+    public function listCustomSettingsWithHttpInfo($account_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2651,36 +2533,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/custom_settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2726,13 +2595,13 @@ class UsersApi
      *
      * Retrieves a list of user signature definitions for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\ListSignaturesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignaturesInformation
      */
-    public function listSignatures($account_id, $user_id, UsersApi\ListSignaturesOptions $options = null)
+    public function listSignatures($account_id, $user_id, \DocuSign\eSign\ApiUsersApi\ListSignaturesOptions $options = null): \DocuSign\eSign\Model\UserSignaturesInformation
     {
         list($response) = $this->listSignaturesWithHttpInfo($account_id, $user_id, $options);
         return $response;
@@ -2743,13 +2612,13 @@ class UsersApi
      *
      * Retrieves a list of user signature definitions for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\ListSignaturesOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listSignaturesWithHttpInfo($account_id, $user_id, UsersApi\ListSignaturesOptions $options = null)
+    public function listSignaturesWithHttpInfo($account_id, $user_id, \DocuSign\eSign\ApiUsersApi\ListSignaturesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2761,44 +2630,30 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getStampType() !== null) {
-            $queryParams['stamp_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampType());
-        }
+            // query params
+            if ($options->getStampType() != 'null') {
+                $queryParams['stamp_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getStampType());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -2844,12 +2699,12 @@ class UsersApi
      *
      * Imports multiple new contacts into the contacts collection from CSV, JSON, or XML (based on content type).
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
-    public function postContacts($account_id, $contact_mod_request = null)
+    public function postContacts($account_id, $contact_mod_request = null): \DocuSign\eSign\Model\ContactUpdateResponse
     {
         list($response) = $this->postContactsWithHttpInfo($account_id, $contact_mod_request);
         return $response;
@@ -2860,12 +2715,12 @@ class UsersApi
      *
      * Imports multiple new contacts into the contacts collection from CSV, JSON, or XML (based on content type).
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postContactsWithHttpInfo($account_id, $contact_mod_request = null)
+    public function postContactsWithHttpInfo($account_id, $contact_mod_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2873,28 +2728,19 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/contacts";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($contact_mod_request)) {
@@ -2945,12 +2791,12 @@ class UsersApi
      *
      * Replaces contacts associated with an account for the DocuSign service.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactUpdateResponse
      */
-    public function putContacts($account_id, $contact_mod_request = null)
+    public function putContacts($account_id, $contact_mod_request = null): \DocuSign\eSign\Model\ContactUpdateResponse
     {
         list($response) = $this->putContactsWithHttpInfo($account_id, $contact_mod_request);
         return $response;
@@ -2961,12 +2807,12 @@ class UsersApi
      *
      * Replaces contacts associated with an account for the DocuSign service.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ContactModRequest $contact_mod_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putContactsWithHttpInfo($account_id, $contact_mod_request = null)
+    public function putContactsWithHttpInfo($account_id, $contact_mod_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2974,28 +2820,19 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/contacts";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($contact_mod_request)) {
@@ -3046,13 +2883,13 @@ class UsersApi
      *
      * Adds or updates custom user settings for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomSettingsInformation
      */
-    public function updateCustomSettings($account_id, $user_id, $custom_settings_information = null)
+    public function updateCustomSettings($account_id, $user_id, $custom_settings_information = null): \DocuSign\eSign\Model\CustomSettingsInformation
     {
         list($response) = $this->updateCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information);
         return $response;
@@ -3063,13 +2900,13 @@ class UsersApi
      *
      * Adds or updates custom user settings for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CustomSettingsInformation $custom_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information = null)
+    public function updateCustomSettingsWithHttpInfo($account_id, $user_id, $custom_settings_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3081,36 +2918,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/custom_settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($custom_settings_information)) {
@@ -3161,13 +2985,13 @@ class UsersApi
      *
      * Updates the user profile information for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserProfile $user_profile  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updateProfile($account_id, $user_id, $user_profile = null)
+    public function updateProfile($account_id, $user_id, $user_profile = null): mixed
     {
         list($response) = $this->updateProfileWithHttpInfo($account_id, $user_id, $user_profile);
         return $response;
@@ -3178,13 +3002,13 @@ class UsersApi
      *
      * Updates the user profile information for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserProfile $user_profile  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateProfileWithHttpInfo($account_id, $user_id, $user_profile = null)
+    public function updateProfileWithHttpInfo($account_id, $user_id, $user_profile = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3196,36 +3020,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/profile";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_profile)) {
@@ -3272,12 +3083,12 @@ class UsersApi
      *
      * Updates the user profile image for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updateProfileImage($account_id, $user_id)
+    public function updateProfileImage($account_id, $user_id): mixed
     {
         list($response) = $this->updateProfileImageWithHttpInfo($account_id, $user_id);
         return $response;
@@ -3288,12 +3099,12 @@ class UsersApi
      *
      * Updates the user profile image for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateProfileImageWithHttpInfo($account_id, $user_id)
+    public function updateProfileImageWithHttpInfo($account_id, $user_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3305,36 +3116,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/profile/image";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/gif']);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3376,13 +3174,13 @@ class UsersApi
      *
      * Updates the user account settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function updateSettings($account_id, $user_id, $user_settings_information = null)
+    public function updateSettings($account_id, $user_id, $user_settings_information = null): mixed
     {
         list($response) = $this->updateSettingsWithHttpInfo($account_id, $user_id, $user_settings_information);
         return $response;
@@ -3393,13 +3191,13 @@ class UsersApi
      *
      * Updates the user account settings for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSettingsWithHttpInfo($account_id, $user_id, $user_settings_information = null)
+    public function updateSettingsWithHttpInfo($account_id, $user_id, $user_settings_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3411,36 +3209,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_settings_information)) {
@@ -3487,15 +3272,15 @@ class UsersApi
      *
      * Updates the user signature for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignatureDefinition $user_signature_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiUsersApi\UpdateSignatureOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
-    public function updateSignature($account_id, $signature_id, $user_id, $user_signature_definition = null, UsersApi\UpdateSignatureOptions $options = null)
+    public function updateSignature($account_id, $signature_id, $user_id, $user_signature_definition = null, \DocuSign\eSign\ApiUsersApi\UpdateSignatureOptions $options = null): \DocuSign\eSign\Model\UserSignature
     {
         list($response) = $this->updateSignatureWithHttpInfo($account_id, $signature_id, $user_id, $user_signature_definition, $options);
         return $response;
@@ -3506,15 +3291,15 @@ class UsersApi
      *
      * Updates the user signature for a specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignatureDefinition $user_signature_definition  (optional)
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiUsersApi\UpdateSignatureOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSignatureWithHttpInfo($account_id, $signature_id, $user_id, $user_signature_definition = null, UsersApi\UpdateSignatureOptions $options = null)
+    public function updateSignatureWithHttpInfo($account_id, $signature_id, $user_id, $user_signature_definition = null, \DocuSign\eSign\ApiUsersApi\UpdateSignatureOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3530,52 +3315,34 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures/{signatureId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCloseExistingSignature() !== null) {
-            $queryParams['close_existing_signature'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloseExistingSignature());
-        }
+            // query params
+            if ($options->getCloseExistingSignature() != 'null') {
+                $queryParams['close_existing_signature'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloseExistingSignature());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_signature_definition)) {
@@ -3626,15 +3393,15 @@ class UsersApi
      *
      * Updates the user signature image or user initials image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\UpdateSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
-    public function updateSignatureImage($account_id, $image_type, $signature_id, $user_id, UsersApi\UpdateSignatureImageOptions $options = null)
+    public function updateSignatureImage($account_id, $image_type, $signature_id, $user_id, \DocuSign\eSign\ApiUsersApi\UpdateSignatureImageOptions $options = null): \DocuSign\eSign\Model\UserSignature
     {
         list($response) = $this->updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, $options);
         return $response;
@@ -3645,15 +3412,15 @@ class UsersApi
      *
      * Updates the user signature image or user initials image for the specified user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $image_type One of **signature_image** or **initials_image**.
-    * @param string $signature_id The ID of the signature being accessed.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $image_type One of **signature_image** or **initials_image**.
+     * @param string $signature_id The ID of the signature being accessed.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param  \DocuSign\eSign\ApiUsersApi\UpdateSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, UsersApi\UpdateSignatureImageOptions $options = null)
+    public function updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, \DocuSign\eSign\ApiUsersApi\UpdateSignatureImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3673,60 +3440,38 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['image/gif']);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getTransparentPng() !== null) {
-            $queryParams['transparent_png'] = $this->apiClient->getSerializer()->toQueryValue($options->getTransparentPng());
-        }
+            // query params
+            if ($options->getTransparentPng() != 'null') {
+                $queryParams['transparent_png'] = $this->apiClient->getSerializer()->toQueryValue($options->getTransparentPng());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($image_type !== null) {
-            $resourcePath = str_replace(
-                "{" . "imageType" . "}",
-                $this->apiClient->getSerializer()->toPathValue($image_type),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "imageType", $image_type);
         }
         // path params
         if ($signature_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signatureId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signature_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signatureId", $signature_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3772,13 +3517,13 @@ class UsersApi
      *
      * Adds/updates a user signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignaturesInformation
      */
-    public function updateSignatures($account_id, $user_id, $user_signatures_information = null)
+    public function updateSignatures($account_id, $user_id, $user_signatures_information = null): \DocuSign\eSign\Model\UserSignaturesInformation
     {
         list($response) = $this->updateSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information);
         return $response;
@@ -3789,13 +3534,13 @@ class UsersApi
      *
      * Adds/updates a user signature.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserSignaturesInformation $user_signatures_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information = null)
+    public function updateSignaturesWithHttpInfo($account_id, $user_id, $user_signatures_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3807,36 +3552,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_signatures_information)) {
@@ -3887,13 +3619,13 @@ class UsersApi
      *
      * Updates the specified user information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserInformation $user_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformation
      */
-    public function updateUser($account_id, $user_id, $user_information = null)
+    public function updateUser($account_id, $user_id, $user_information = null): \DocuSign\eSign\Model\UserInformation
     {
         list($response) = $this->updateUserWithHttpInfo($account_id, $user_id, $user_information);
         return $response;
@@ -3904,13 +3636,13 @@ class UsersApi
      *
      * Updates the specified user information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\UserInformation $user_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateUserWithHttpInfo($account_id, $user_id, $user_information = null)
+    public function updateUserWithHttpInfo($account_id, $user_id, $user_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3922,36 +3654,23 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($user_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "userId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($user_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "userId", $user_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_information)) {
@@ -4002,12 +3721,12 @@ class UsersApi
      *
      * Change one or more user in the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInformationList $user_information_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserInformationList
      */
-    public function updateUsers($account_id, $user_information_list = null)
+    public function updateUsers($account_id, $user_information_list = null): \DocuSign\eSign\Model\UserInformationList
     {
         list($response) = $this->updateUsersWithHttpInfo($account_id, $user_information_list);
         return $response;
@@ -4018,12 +3737,12 @@ class UsersApi
      *
      * Change one or more user in the specified account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\UserInformationList $user_information_list  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserInformationList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateUsersWithHttpInfo($account_id, $user_information_list = null)
+    public function updateUsersWithHttpInfo($account_id, $user_information_list = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4031,28 +3750,19 @@ class UsersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($user_information_list)) {

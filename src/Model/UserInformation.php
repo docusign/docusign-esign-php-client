@@ -2,7 +2,7 @@
 /**
  * UserInformation
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * UserInformation Class Doc Comment
@@ -70,6 +70,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'first_name' => 'string',
         'forgotten_password_info' => '\DocuSign\eSign\Model\ForgottenPasswordInformation',
         'group_list' => '\DocuSign\eSign\Model\Group[]',
+        'has_remote_notary' => 'bool',
         'home_address' => '\DocuSign\eSign\Model\AddressInformation',
         'initials_image_uri' => 'string',
         'is_admin' => 'string',
@@ -120,6 +121,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'first_name' => null,
         'forgotten_password_info' => null,
         'group_list' => null,
+        'has_remote_notary' => null,
         'home_address' => null,
         'initials_image_uri' => null,
         'is_admin' => null,
@@ -191,6 +193,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'first_name' => 'firstName',
         'forgotten_password_info' => 'forgottenPasswordInfo',
         'group_list' => 'groupList',
+        'has_remote_notary' => 'hasRemoteNotary',
         'home_address' => 'homeAddress',
         'initials_image_uri' => 'initialsImageUri',
         'is_admin' => 'isAdmin',
@@ -241,6 +244,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'first_name' => 'setFirstName',
         'forgotten_password_info' => 'setForgottenPasswordInfo',
         'group_list' => 'setGroupList',
+        'has_remote_notary' => 'setHasRemoteNotary',
         'home_address' => 'setHomeAddress',
         'initials_image_uri' => 'setInitialsImageUri',
         'is_admin' => 'setIsAdmin',
@@ -291,6 +295,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'first_name' => 'getFirstName',
         'forgotten_password_info' => 'getForgottenPasswordInfo',
         'group_list' => 'getGroupList',
+        'has_remote_notary' => 'getHasRemoteNotary',
         'home_address' => 'getHomeAddress',
         'initials_image_uri' => 'getInitialsImageUri',
         'is_admin' => 'getIsAdmin',
@@ -395,6 +400,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['forgotten_password_info'] = isset($data['forgotten_password_info']) ? $data['forgotten_password_info'] : null;
         $this->container['group_list'] = isset($data['group_list']) ? $data['group_list'] : null;
+        $this->container['has_remote_notary'] = isset($data['has_remote_notary']) ? $data['has_remote_notary'] : null;
         $this->container['home_address'] = isset($data['home_address']) ? $data['home_address'] : null;
         $this->container['initials_image_uri'] = isset($data['initials_image_uri']) ? $data['initials_image_uri'] : null;
         $this->container['is_admin'] = isset($data['is_admin']) ? $data['is_admin'] : null;
@@ -758,6 +764,30 @@ class UserInformation implements ModelInterface, ArrayAccess
     public function setGroupList($group_list)
     {
         $this->container['group_list'] = $group_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_remote_notary
+     *
+     * @return bool
+     */
+    public function getHasRemoteNotary()
+    {
+        return $this->container['has_remote_notary'];
+    }
+
+    /**
+     * Sets has_remote_notary
+     *
+     * @param bool $has_remote_notary 
+     *
+     * @return $this
+     */
+    public function setHasRemoteNotary($has_remote_notary)
+    {
+        $this->container['has_remote_notary'] = $has_remote_notary;
 
         return $this;
     }

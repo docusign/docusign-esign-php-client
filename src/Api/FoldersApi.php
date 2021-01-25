@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * FoldersApi
- * PHP version 5
+ * FoldersApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\FoldersApi;
+namespace DocuSign\eSign\ApiFoldersApi;
+
 
 class ListOptions
 {
@@ -34,23 +38,23 @@ class ListOptions
       * $include 
       * @var string
       */
-    protected $include;
+    protected string $include;
 
     /**
      * Gets include
      * @return string
      */
-    public function getInclude()
+    public function getInclude(): string
     {
         return $this->include;
     }
-  
+
     /**
      * Sets include
      * @param string $include 
-     * @return $this
+     * @return self
      */
-    public function setInclude($include)
+    public function setInclude(string $include): self
     {
         $this->include = $include;
         return $this;
@@ -59,23 +63,23 @@ class ListOptions
       * $include_items 
       * @var string
       */
-    protected $include_items;
+    protected string $include_items;
 
     /**
      * Gets include_items
      * @return string
      */
-    public function getIncludeItems()
+    public function getIncludeItems(): string
     {
         return $this->include_items;
     }
-  
+
     /**
      * Sets include_items
      * @param string $include_items 
-     * @return $this
+     * @return self
      */
-    public function setIncludeItems($include_items)
+    public function setIncludeItems(string $include_items): self
     {
         $this->include_items = $include_items;
         return $this;
@@ -84,23 +88,23 @@ class ListOptions
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -109,23 +113,23 @@ class ListOptions
       * $template Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
       * @var string
       */
-    protected $template;
+    protected string $template;
 
     /**
      * Gets template
      * @return string
      */
-    public function getTemplate()
+    public function getTemplate(): string
     {
         return $this->template;
     }
-  
+
     /**
      * Sets template
      * @param string $template Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
-     * @return $this
+     * @return self
      */
-    public function setTemplate($template)
+    public function setTemplate(string $template): self
     {
         $this->template = $template;
         return $this;
@@ -134,51 +138,53 @@ class ListOptions
       * $user_filter 
       * @var string
       */
-    protected $user_filter;
+    protected string $user_filter;
 
     /**
      * Gets user_filter
      * @return string
      */
-    public function getUserFilter()
+    public function getUserFilter(): string
     {
         return $this->user_filter;
     }
-  
+
     /**
      * Sets user_filter
      * @param string $user_filter 
-     * @return $this
+     * @return self
      */
-    public function setUserFilter($user_filter)
+    public function setUserFilter(string $user_filter): self
     {
         $this->user_filter = $user_filter;
         return $this;
     }
 }
+
+
 class ListItemsOptions
 {
     /**
       * $from_date Only return items on or after this date. If no value is provided, the default search is the previous 30 days.
       * @var string
       */
-    protected $from_date;
+    protected string $from_date;
 
     /**
      * Gets from_date
      * @return string
      */
-    public function getFromDate()
+    public function getFromDate(): string
     {
         return $this->from_date;
     }
-  
+
     /**
      * Sets from_date
      * @param string $from_date Only return items on or after this date. If no value is provided, the default search is the previous 30 days.
-     * @return $this
+     * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate(string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
@@ -187,23 +193,23 @@ class ListItemsOptions
       * $include_items 
       * @var string
       */
-    protected $include_items;
+    protected string $include_items;
 
     /**
      * Gets include_items
      * @return string
      */
-    public function getIncludeItems()
+    public function getIncludeItems(): string
     {
         return $this->include_items;
     }
-  
+
     /**
      * Sets include_items
      * @param string $include_items 
-     * @return $this
+     * @return self
      */
-    public function setIncludeItems($include_items)
+    public function setIncludeItems(string $include_items): self
     {
         $this->include_items = $include_items;
         return $this;
@@ -212,23 +218,23 @@ class ListItemsOptions
       * $owner_email The email of the folder owner.
       * @var string
       */
-    protected $owner_email;
+    protected string $owner_email;
 
     /**
      * Gets owner_email
      * @return string
      */
-    public function getOwnerEmail()
+    public function getOwnerEmail(): string
     {
         return $this->owner_email;
     }
-  
+
     /**
      * Sets owner_email
      * @param string $owner_email The email of the folder owner.
-     * @return $this
+     * @return self
      */
-    public function setOwnerEmail($owner_email)
+    public function setOwnerEmail(string $owner_email): self
     {
         $this->owner_email = $owner_email;
         return $this;
@@ -237,23 +243,23 @@ class ListItemsOptions
       * $owner_name The name of the folder owner.
       * @var string
       */
-    protected $owner_name;
+    protected string $owner_name;
 
     /**
      * Gets owner_name
      * @return string
      */
-    public function getOwnerName()
+    public function getOwnerName(): string
     {
         return $this->owner_name;
     }
-  
+
     /**
      * Sets owner_name
      * @param string $owner_name The name of the folder owner.
-     * @return $this
+     * @return self
      */
-    public function setOwnerName($owner_name)
+    public function setOwnerName(string $owner_name): self
     {
         $this->owner_name = $owner_name;
         return $this;
@@ -262,23 +268,23 @@ class ListItemsOptions
       * $search_text The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject.
       * @var string
       */
-    protected $search_text;
+    protected string $search_text;
 
     /**
      * Gets search_text
      * @return string
      */
-    public function getSearchText()
+    public function getSearchText(): string
     {
         return $this->search_text;
     }
-  
+
     /**
      * Sets search_text
      * @param string $search_text The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject.
-     * @return $this
+     * @return self
      */
-    public function setSearchText($search_text)
+    public function setSearchText(string $search_text): self
     {
         $this->search_text = $search_text;
         return $this;
@@ -287,23 +293,23 @@ class ListItemsOptions
       * $start_position The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0.
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0.
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -312,23 +318,23 @@ class ListItemsOptions
       * $status The current status of the envelope. If no value is provided, the default search is all/any status.
       * @var string
       */
-    protected $status;
+    protected string $status;
 
     /**
      * Gets status
      * @return string
      */
-    public function getStatus()
+    public function getStatus(): string
     {
         return $this->status;
     }
-  
+
     /**
      * Sets status
      * @param string $status The current status of the envelope. If no value is provided, the default search is all/any status.
-     * @return $this
+     * @return self
      */
-    public function setStatus($status)
+    public function setStatus(string $status): self
     {
         $this->status = $status;
         return $this;
@@ -337,51 +343,53 @@ class ListItemsOptions
       * $to_date Only return items up to this date. If no value is provided, the default search is to the current date.
       * @var string
       */
-    protected $to_date;
+    protected string $to_date;
 
     /**
      * Gets to_date
      * @return string
      */
-    public function getToDate()
+    public function getToDate(): string
     {
         return $this->to_date;
     }
-  
+
     /**
      * Sets to_date
      * @param string $to_date Only return items up to this date. If no value is provided, the default search is to the current date.
-     * @return $this
+     * @return self
      */
-    public function setToDate($to_date)
+    public function setToDate(string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
     }
 }
+
+
 class SearchOptions
 {
     /**
       * $all Specifies that all envelopes that match the criteria are returned.
       * @var string
       */
-    protected $all;
+    protected string $all;
 
     /**
      * Gets all
      * @return string
      */
-    public function getAll()
+    public function getAll(): string
     {
         return $this->all;
     }
-  
+
     /**
      * Sets all
      * @param string $all Specifies that all envelopes that match the criteria are returned.
-     * @return $this
+     * @return self
      */
-    public function setAll($all)
+    public function setAll(string $all): self
     {
         $this->all = $all;
         return $this;
@@ -390,23 +398,23 @@ class SearchOptions
       * $count Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -415,23 +423,23 @@ class SearchOptions
       * $from_date Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
       * @var string
       */
-    protected $from_date;
+    protected string $from_date;
 
     /**
      * Gets from_date
      * @return string
      */
-    public function getFromDate()
+    public function getFromDate(): string
     {
         return $this->from_date;
     }
-  
+
     /**
      * Sets from_date
      * @param string $from_date Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
-     * @return $this
+     * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate(string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
@@ -440,23 +448,23 @@ class SearchOptions
       * $include_recipients When set to **true**, the recipient information is returned in the response.
       * @var string
       */
-    protected $include_recipients;
+    protected string $include_recipients;
 
     /**
      * Gets include_recipients
      * @return string
      */
-    public function getIncludeRecipients()
+    public function getIncludeRecipients(): string
     {
         return $this->include_recipients;
     }
-  
+
     /**
      * Sets include_recipients
      * @param string $include_recipients When set to **true**, the recipient information is returned in the response.
-     * @return $this
+     * @return self
      */
-    public function setIncludeRecipients($include_recipients)
+    public function setIncludeRecipients(string $include_recipients): self
     {
         $this->include_recipients = $include_recipients;
         return $this;
@@ -465,23 +473,23 @@ class SearchOptions
       * $order Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order.
       * @var string
       */
-    protected $order;
+    protected string $order;
 
     /**
      * Gets order
      * @return string
      */
-    public function getOrder()
+    public function getOrder(): string
     {
         return $this->order;
     }
-  
+
     /**
      * Sets order
      * @param string $order Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order.
-     * @return $this
+     * @return self
      */
-    public function setOrder($order)
+    public function setOrder(string $order): self
     {
         $this->order = $order;
         return $this;
@@ -490,23 +498,23 @@ class SearchOptions
       * $order_by Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
       * @var string
       */
-    protected $order_by;
+    protected string $order_by;
 
     /**
      * Gets order_by
      * @return string
      */
-    public function getOrderBy()
+    public function getOrderBy(): string
     {
         return $this->order_by;
     }
-  
+
     /**
      * Sets order_by
      * @param string $order_by Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
-     * @return $this
+     * @return self
      */
-    public function setOrderBy($order_by)
+    public function setOrderBy(string $order_by): self
     {
         $this->order_by = $order_by;
         return $this;
@@ -515,23 +523,23 @@ class SearchOptions
       * $start_position Specifies the the starting location in the result set of the items that are returned.
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position Specifies the the starting location in the result set of the items that are returned.
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -540,23 +548,23 @@ class SearchOptions
       * $to_date Specifies the end of the date range to return.
       * @var string
       */
-    protected $to_date;
+    protected string $to_date;
 
     /**
      * Gets to_date
      * @return string
      */
-    public function getToDate()
+    public function getToDate(): string
     {
         return $this->to_date;
     }
-  
+
     /**
      * Sets to_date
      * @param string $to_date Specifies the end of the date range to return.
-     * @return $this
+     * @return self
      */
-    public function setToDate($to_date)
+    public function setToDate(string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
@@ -564,12 +572,13 @@ class SearchOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * FoldersApi Class Doc Comment
@@ -584,30 +593,27 @@ class FoldersApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -615,27 +621,46 @@ class FoldersApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return FoldersApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation callList
      *
      * Gets a list of the folders for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiFoldersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FoldersResponse
      */
-    public function callList($account_id, FoldersApi\ListOptions $options = null)
+    public function callList($account_id, \DocuSign\eSign\ApiFoldersApi\ListOptions $options = null): \DocuSign\eSign\Model\FoldersResponse
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -646,12 +671,12 @@ class FoldersApi
      *
      * Gets a list of the folders for the account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiFoldersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FoldersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, FoldersApi\ListOptions $options = null)
+    public function callListWithHttpInfo($account_id, \DocuSign\eSign\ApiFoldersApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -659,52 +684,38 @@ class FoldersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/folders";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getInclude() !== null) {
-            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
-        }
-        // query params
-        if ($options->getIncludeItems() !== null) {
-            $queryParams['include_items'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeItems());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getTemplate() !== null) {
-            $queryParams['template'] = $this->apiClient->getSerializer()->toQueryValue($options->getTemplate());
-        }
-        // query params
-        if ($options->getUserFilter() !== null) {
-            $queryParams['user_filter'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserFilter());
-        }
+            // query params
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
+            if ($options->getIncludeItems() != 'null') {
+                $queryParams['include_items'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeItems());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getTemplate() != 'null') {
+                $queryParams['template'] = $this->apiClient->getSerializer()->toQueryValue($options->getTemplate());
+            }
+            if ($options->getUserFilter() != 'null') {
+                $queryParams['user_filter'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserFilter());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -750,13 +761,13 @@ class FoldersApi
      *
      * Gets a list of the envelopes in the specified folder.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param  \DocuSign\eSign\ApiFoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemsResponse
      */
-    public function listItems($account_id, $folder_id, FoldersApi\ListItemsOptions $options = null)
+    public function listItems($account_id, $folder_id, \DocuSign\eSign\ApiFoldersApi\ListItemsOptions $options = null): \DocuSign\eSign\Model\FolderItemsResponse
     {
         list($response) = $this->listItemsWithHttpInfo($account_id, $folder_id, $options);
         return $response;
@@ -767,13 +778,13 @@ class FoldersApi
      *
      * Gets a list of the envelopes in the specified folder.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
+     * @param  \DocuSign\eSign\ApiFoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listItemsWithHttpInfo($account_id, $folder_id, FoldersApi\ListItemsOptions $options = null)
+    public function listItemsWithHttpInfo($account_id, $folder_id, \DocuSign\eSign\ApiFoldersApi\ListItemsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -785,72 +796,51 @@ class FoldersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/folders/{folderId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getFromDate() !== null) {
-            $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
-        }
-        // query params
-        if ($options->getIncludeItems() !== null) {
-            $queryParams['include_items'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeItems());
-        }
-        // query params
-        if ($options->getOwnerEmail() !== null) {
-            $queryParams['owner_email'] = $this->apiClient->getSerializer()->toQueryValue($options->getOwnerEmail());
-        }
-        // query params
-        if ($options->getOwnerName() !== null) {
-            $queryParams['owner_name'] = $this->apiClient->getSerializer()->toQueryValue($options->getOwnerName());
-        }
-        // query params
-        if ($options->getSearchText() !== null) {
-            $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getStatus() !== null) {
-            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
-        }
-        // query params
-        if ($options->getToDate() !== null) {
-            $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
-        }
+            // query params
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getIncludeItems() != 'null') {
+                $queryParams['include_items'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeItems());
+            }
+            if ($options->getOwnerEmail() != 'null') {
+                $queryParams['owner_email'] = $this->apiClient->getSerializer()->toQueryValue($options->getOwnerEmail());
+            }
+            if ($options->getOwnerName() != 'null') {
+                $queryParams['owner_name'] = $this->apiClient->getSerializer()->toQueryValue($options->getOwnerName());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getStatus() != 'null') {
+                $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -896,13 +886,13 @@ class FoldersApi
      *
      * Moves an envelope from its current folder to the specified folder.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FoldersResponse
      */
-    public function moveEnvelopes($account_id, $folder_id, $folders_request = null)
+    public function moveEnvelopes($account_id, $folder_id, $folders_request = null): \DocuSign\eSign\Model\FoldersResponse
     {
         list($response) = $this->moveEnvelopesWithHttpInfo($account_id, $folder_id, $folders_request);
         return $response;
@@ -913,13 +903,13 @@ class FoldersApi
      *
      * Moves an envelope from its current folder to the specified folder.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $folder_id The ID of the folder being accessed.
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FoldersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function moveEnvelopesWithHttpInfo($account_id, $folder_id, $folders_request = null)
+    public function moveEnvelopesWithHttpInfo($account_id, $folder_id, $folders_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -931,36 +921,23 @@ class FoldersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/folders/{folderId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "folderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "folderId", $folder_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($folders_request)) {
@@ -1011,13 +988,13 @@ class FoldersApi
      *
      * Gets a list of envelopes in folders matching the specified criteria.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
+     * @param  \DocuSign\eSign\ApiFoldersApi\SearchOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemResponse
      */
-    public function search($account_id, $search_folder_id, FoldersApi\SearchOptions $options = null)
+    public function search($account_id, $search_folder_id, \DocuSign\eSign\ApiFoldersApi\SearchOptions $options = null): \DocuSign\eSign\Model\FolderItemResponse
     {
         list($response) = $this->searchWithHttpInfo($account_id, $search_folder_id, $options);
         return $response;
@@ -1028,13 +1005,13 @@ class FoldersApi
      *
      * Gets a list of envelopes in folders matching the specified criteria.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
+     * @param  \DocuSign\eSign\ApiFoldersApi\SearchOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function searchWithHttpInfo($account_id, $search_folder_id, FoldersApi\SearchOptions $options = null)
+    public function searchWithHttpInfo($account_id, $search_folder_id, \DocuSign\eSign\ApiFoldersApi\SearchOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1046,72 +1023,51 @@ class FoldersApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/search_folders/{searchFolderId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getAll() !== null) {
-            $queryParams['all'] = $this->apiClient->getSerializer()->toQueryValue($options->getAll());
-        }
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getFromDate() !== null) {
-            $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
-        }
-        // query params
-        if ($options->getIncludeRecipients() !== null) {
-            $queryParams['include_recipients'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeRecipients());
-        }
-        // query params
-        if ($options->getOrder() !== null) {
-            $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
-        }
-        // query params
-        if ($options->getOrderBy() !== null) {
-            $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        // query params
-        if ($options->getToDate() !== null) {
-            $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
-        }
+            // query params
+            if ($options->getAll() != 'null') {
+                $queryParams['all'] = $this->apiClient->getSerializer()->toQueryValue($options->getAll());
+            }
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getIncludeRecipients() != 'null') {
+                $queryParams['include_recipients'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeRecipients());
+            }
+            if ($options->getOrder() != 'null') {
+                $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
+            }
+            if ($options->getOrderBy() != 'null') {
+                $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($search_folder_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "searchFolderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($search_folder_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "searchFolderId", $search_folder_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {

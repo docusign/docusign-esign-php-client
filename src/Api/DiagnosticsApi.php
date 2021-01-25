@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * DiagnosticsApi
- * PHP version 5
+ * DiagnosticsApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\DiagnosticsApi;
+namespace DocuSign\eSign\ApiDiagnosticsApi;
+
 
 class ListRequestLogsOptions
 {
@@ -34,23 +38,23 @@ class ListRequestLogsOptions
       * $encoding 
       * @var string
       */
-    protected $encoding;
+    protected string $encoding;
 
     /**
      * Gets encoding
      * @return string
      */
-    public function getEncoding()
+    public function getEncoding(): string
     {
         return $this->encoding;
     }
-  
+
     /**
      * Sets encoding
      * @param string $encoding 
-     * @return $this
+     * @return self
      */
-    public function setEncoding($encoding)
+    public function setEncoding(string $encoding): self
     {
         $this->encoding = $encoding;
         return $this;
@@ -58,12 +62,13 @@ class ListRequestLogsOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * DiagnosticsApi Class Doc Comment
@@ -78,30 +83,27 @@ class DiagnosticsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -109,25 +111,44 @@ class DiagnosticsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return DiagnosticsApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation deleteRequestLogs
      *
      * Deletes the request log files.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteRequestLogs()
+    public function deleteRequestLogs(): mixed
     {
         list($response) = $this->deleteRequestLogsWithHttpInfo();
         return $response;
@@ -138,27 +159,22 @@ class DiagnosticsApi
      *
      * Deletes the request log files.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteRequestLogsWithHttpInfo()
+    public function deleteRequestLogsWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/request_logs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -200,11 +216,11 @@ class DiagnosticsApi
      *
      * Gets a request logging log file.
      *
-    * @param string $request_log_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $request_log_id 
+     * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getRequestLog($request_log_id)
+    public function getRequestLog($request_log_id): \SplFileObject
     {
         list($response) = $this->getRequestLogWithHttpInfo($request_log_id);
         return $response;
@@ -215,11 +231,11 @@ class DiagnosticsApi
      *
      * Gets a request logging log file.
      *
-    * @param string $request_log_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $request_log_id 
+     * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRequestLogWithHttpInfo($request_log_id)
+    public function getRequestLogWithHttpInfo($request_log_id): array
     {
         // verify the required parameter 'request_log_id' is set
         if ($request_log_id === null) {
@@ -227,28 +243,19 @@ class DiagnosticsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/request_logs/{requestLogId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['text/plain']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($request_log_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "requestLogId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($request_log_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "requestLogId", $request_log_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -294,10 +301,10 @@ class DiagnosticsApi
      *
      * Gets the API request logging settings.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DiagnosticsSettingsInformation
      */
-    public function getRequestLogSettings()
+    public function getRequestLogSettings(): \DocuSign\eSign\Model\DiagnosticsSettingsInformation
     {
         list($response) = $this->getRequestLogSettingsWithHttpInfo();
         return $response;
@@ -308,27 +315,22 @@ class DiagnosticsApi
      *
      * Gets the API request logging settings.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DiagnosticsSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRequestLogSettingsWithHttpInfo()
+    public function getRequestLogSettingsWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -374,10 +376,10 @@ class DiagnosticsApi
      *
      * Lists resources for REST version specified
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ResourceInformation
      */
-    public function getResources()
+    public function getResources(): \DocuSign\eSign\Model\ResourceInformation
     {
         list($response) = $this->getResourcesWithHttpInfo();
         return $response;
@@ -388,27 +390,22 @@ class DiagnosticsApi
      *
      * Lists resources for REST version specified
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ResourceInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getResourcesWithHttpInfo()
+    public function getResourcesWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2.1";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -454,10 +451,10 @@ class DiagnosticsApi
      *
      * Retrieves the available REST API versions.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ServiceInformation
      */
-    public function getService()
+    public function getService(): \DocuSign\eSign\Model\ServiceInformation
     {
         list($response) = $this->getServiceWithHttpInfo();
         return $response;
@@ -468,27 +465,22 @@ class DiagnosticsApi
      *
      * Retrieves the available REST API versions.
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ServiceInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getServiceWithHttpInfo()
+    public function getServiceWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/service_information";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -534,11 +526,11 @@ class DiagnosticsApi
      *
      * Gets the API request logging log files.
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ApiRequestLogsResult
      */
-    public function listRequestLogs(DiagnosticsApi\ListRequestLogsOptions $options = null)
+    public function listRequestLogs(\DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions $options = null): \DocuSign\eSign\Model\ApiRequestLogsResult
     {
         list($response) = $this->listRequestLogsWithHttpInfo($options);
         return $response;
@@ -549,36 +541,30 @@ class DiagnosticsApi
      *
      * Gets the API request logging log files.
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ApiRequestLogsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRequestLogsWithHttpInfo(DiagnosticsApi\ListRequestLogsOptions $options = null)
+    public function listRequestLogsWithHttpInfo(\DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/request_logs";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getEncoding() !== null) {
-            $queryParams['encoding'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncoding());
+            // query params
+            if ($options->getEncoding() != 'null') {
+                $queryParams['encoding'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncoding());
+            }
         }
-        }
+
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -625,10 +611,10 @@ class DiagnosticsApi
      * Enables or disables API request logging for troubleshooting.
      *
      * @param \DocuSign\eSign\Model\DiagnosticsSettingsInformation $diagnostics_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DiagnosticsSettingsInformation
      */
-    public function updateRequestLogSettings($diagnostics_settings_information = null)
+    public function updateRequestLogSettings($diagnostics_settings_information = null): \DocuSign\eSign\Model\DiagnosticsSettingsInformation
     {
         list($response) = $this->updateRequestLogSettingsWithHttpInfo($diagnostics_settings_information);
         return $response;
@@ -640,27 +626,22 @@ class DiagnosticsApi
      * Enables or disables API request logging for troubleshooting.
      *
      * @param \DocuSign\eSign\Model\DiagnosticsSettingsInformation $diagnostics_settings_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DiagnosticsSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRequestLogSettingsWithHttpInfo($diagnostics_settings_information = null)
+    public function updateRequestLogSettingsWithHttpInfo($diagnostics_settings_information = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/settings";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($diagnostics_settings_information)) {
