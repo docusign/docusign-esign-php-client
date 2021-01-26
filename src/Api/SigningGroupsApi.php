@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * SigningGroupsApi
- * PHP version 5
+ * SigningGroupsApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\SigningGroupsApi;
+namespace DocuSign\eSign\ApiSigningGroupsApi;
+
 
 class ListOptions
 {
@@ -34,23 +38,23 @@ class ListOptions
       * $group_type 
       * @var string
       */
-    protected $group_type;
+    protected string $group_type;
 
     /**
      * Gets group_type
      * @return string
      */
-    public function getGroupType()
+    public function getGroupType(): string
     {
         return $this->group_type;
     }
-  
+
     /**
      * Sets group_type
      * @param string $group_type 
-     * @return $this
+     * @return self
      */
-    public function setGroupType($group_type)
+    public function setGroupType(string $group_type): self
     {
         $this->group_type = $group_type;
         return $this;
@@ -59,23 +63,23 @@ class ListOptions
       * $include_users When set to **true**, the response includes the signing group members.
       * @var string
       */
-    protected $include_users;
+    protected string $include_users;
 
     /**
      * Gets include_users
      * @return string
      */
-    public function getIncludeUsers()
+    public function getIncludeUsers(): string
     {
         return $this->include_users;
     }
-  
+
     /**
      * Sets include_users
      * @param string $include_users When set to **true**, the response includes the signing group members.
-     * @return $this
+     * @return self
      */
-    public function setIncludeUsers($include_users)
+    public function setIncludeUsers(string $include_users): self
     {
         $this->include_users = $include_users;
         return $this;
@@ -83,12 +87,13 @@ class ListOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * SigningGroupsApi Class Doc Comment
@@ -103,30 +108,27 @@ class SigningGroupsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -134,27 +136,46 @@ class SigningGroupsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return SigningGroupsApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation callList
      *
      * Gets a list of the Signing Groups in an account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiSigningGroupsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
-    public function callList($account_id, SigningGroupsApi\ListOptions $options = null)
+    public function callList($account_id, \DocuSign\eSign\ApiSigningGroupsApi\ListOptions $options = null): \DocuSign\eSign\Model\SigningGroupInformation
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -165,12 +186,12 @@ class SigningGroupsApi
      *
      * Gets a list of the Signing Groups in an account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiSigningGroupsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, SigningGroupsApi\ListOptions $options = null)
+    public function callListWithHttpInfo($account_id, \DocuSign\eSign\ApiSigningGroupsApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -178,40 +199,29 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getGroupType() !== null) {
-            $queryParams['group_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getGroupType());
-        }
-        // query params
-        if ($options->getIncludeUsers() !== null) {
-            $queryParams['include_users'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeUsers());
-        }
+            // query params
+            if ($options->getGroupType() != 'null') {
+                $queryParams['group_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getGroupType());
+            }
+            if ($options->getIncludeUsers() != 'null') {
+                $queryParams['include_users'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeUsers());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -257,12 +267,12 @@ class SigningGroupsApi
      *
      * Creates a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
-    public function createList($account_id, $signing_group_information = null)
+    public function createList($account_id, $signing_group_information = null): \DocuSign\eSign\Model\SigningGroupInformation
     {
         list($response) = $this->createListWithHttpInfo($account_id, $signing_group_information);
         return $response;
@@ -273,12 +283,12 @@ class SigningGroupsApi
      *
      * Creates a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createListWithHttpInfo($account_id, $signing_group_information = null)
+    public function createListWithHttpInfo($account_id, $signing_group_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -286,28 +296,19 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($signing_group_information)) {
@@ -358,12 +359,12 @@ class SigningGroupsApi
      *
      * Deletes one or more signing groups.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
-    public function deleteList($account_id, $signing_group_information = null)
+    public function deleteList($account_id, $signing_group_information = null): \DocuSign\eSign\Model\SigningGroupInformation
     {
         list($response) = $this->deleteListWithHttpInfo($account_id, $signing_group_information);
         return $response;
@@ -374,12 +375,12 @@ class SigningGroupsApi
      *
      * Deletes one or more signing groups.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteListWithHttpInfo($account_id, $signing_group_information = null)
+    public function deleteListWithHttpInfo($account_id, $signing_group_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -387,28 +388,19 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($signing_group_information)) {
@@ -459,13 +451,13 @@ class SigningGroupsApi
      *
      * Deletes  one or more members from a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupUsers
      */
-    public function deleteUsers($account_id, $signing_group_id, $signing_group_users = null)
+    public function deleteUsers($account_id, $signing_group_id, $signing_group_users = null): \DocuSign\eSign\Model\SigningGroupUsers
     {
         list($response) = $this->deleteUsersWithHttpInfo($account_id, $signing_group_id, $signing_group_users);
         return $response;
@@ -476,13 +468,13 @@ class SigningGroupsApi
      *
      * Deletes  one or more members from a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupUsers, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteUsersWithHttpInfo($account_id, $signing_group_id, $signing_group_users = null)
+    public function deleteUsersWithHttpInfo($account_id, $signing_group_id, $signing_group_users = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -494,36 +486,23 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}/users";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signing_group_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signingGroupId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signing_group_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signingGroupId", $signing_group_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($signing_group_users)) {
@@ -574,12 +553,12 @@ class SigningGroupsApi
      *
      * Gets information about a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroup
      */
-    public function get($account_id, $signing_group_id)
+    public function get($account_id, $signing_group_id): \DocuSign\eSign\Model\SigningGroup
     {
         list($response) = $this->getWithHttpInfo($account_id, $signing_group_id);
         return $response;
@@ -590,12 +569,12 @@ class SigningGroupsApi
      *
      * Gets information about a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroup, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWithHttpInfo($account_id, $signing_group_id)
+    public function getWithHttpInfo($account_id, $signing_group_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -607,36 +586,23 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signing_group_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signingGroupId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signing_group_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signingGroupId", $signing_group_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -682,12 +648,12 @@ class SigningGroupsApi
      *
      * Gets a list of members in a Signing Group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupUsers
      */
-    public function listUsers($account_id, $signing_group_id)
+    public function listUsers($account_id, $signing_group_id): \DocuSign\eSign\Model\SigningGroupUsers
     {
         list($response) = $this->listUsersWithHttpInfo($account_id, $signing_group_id);
         return $response;
@@ -698,12 +664,12 @@ class SigningGroupsApi
      *
      * Gets a list of members in a Signing Group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupUsers, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listUsersWithHttpInfo($account_id, $signing_group_id)
+    public function listUsersWithHttpInfo($account_id, $signing_group_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -715,36 +681,23 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}/users";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signing_group_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signingGroupId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signing_group_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signingGroupId", $signing_group_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -790,13 +743,13 @@ class SigningGroupsApi
      *
      * Updates a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroup $signing_group  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroup
      */
-    public function update($account_id, $signing_group_id, $signing_group = null)
+    public function update($account_id, $signing_group_id, $signing_group = null): \DocuSign\eSign\Model\SigningGroup
     {
         list($response) = $this->updateWithHttpInfo($account_id, $signing_group_id, $signing_group);
         return $response;
@@ -807,13 +760,13 @@ class SigningGroupsApi
      *
      * Updates a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroup $signing_group  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroup, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateWithHttpInfo($account_id, $signing_group_id, $signing_group = null)
+    public function updateWithHttpInfo($account_id, $signing_group_id, $signing_group = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -825,36 +778,23 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signing_group_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signingGroupId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signing_group_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signingGroupId", $signing_group_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($signing_group)) {
@@ -905,12 +845,12 @@ class SigningGroupsApi
      *
      * Updates signing group names.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
-    public function updateList($account_id, $signing_group_information = null)
+    public function updateList($account_id, $signing_group_information = null): \DocuSign\eSign\Model\SigningGroupInformation
     {
         list($response) = $this->updateListWithHttpInfo($account_id, $signing_group_information);
         return $response;
@@ -921,12 +861,12 @@ class SigningGroupsApi
      *
      * Updates signing group names.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateListWithHttpInfo($account_id, $signing_group_information = null)
+    public function updateListWithHttpInfo($account_id, $signing_group_information = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -934,28 +874,19 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($signing_group_information)) {
@@ -1006,13 +937,13 @@ class SigningGroupsApi
      *
      * Adds members to a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupUsers
      */
-    public function updateUsers($account_id, $signing_group_id, $signing_group_users = null)
+    public function updateUsers($account_id, $signing_group_id, $signing_group_users = null): \DocuSign\eSign\Model\SigningGroupUsers
     {
         list($response) = $this->updateUsersWithHttpInfo($account_id, $signing_group_id, $signing_group_users);
         return $response;
@@ -1023,13 +954,13 @@ class SigningGroupsApi
      *
      * Adds members to a signing group.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $signing_group_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupUsers, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateUsersWithHttpInfo($account_id, $signing_group_id, $signing_group_users = null)
+    public function updateUsersWithHttpInfo($account_id, $signing_group_id, $signing_group_users = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1041,36 +972,23 @@ class SigningGroupsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}/users";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($signing_group_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "signingGroupId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($signing_group_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "signingGroupId", $signing_group_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($signing_group_users)) {

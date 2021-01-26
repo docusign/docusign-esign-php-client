@@ -1,6 +1,6 @@
 <?php
 /**
- * AccountPasswordExpirePasswordDays
+ * PaymentSignerValues
  *
  * PHP version 7.4
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * AccountPasswordExpirePasswordDays Class Doc Comment
+ * PaymentSignerValues Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
+class PaymentSignerValues implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'accountPasswordExpirePasswordDays';
+    protected static $swaggerModelName = 'paymentSignerValues';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_days' => 'string',
-        'minimum_days' => 'string'
+        'payment_option' => 'string'
     ];
 
     /**
@@ -67,8 +66,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'maximum_days' => null,
-        'minimum_days' => null
+        'payment_option' => null
     ];
 
     /**
@@ -98,8 +96,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'maximum_days' => 'maximumDays',
-        'minimum_days' => 'minimumDays'
+        'payment_option' => 'paymentOption'
     ];
 
     /**
@@ -108,8 +105,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'maximum_days' => 'setMaximumDays',
-        'minimum_days' => 'setMinimumDays'
+        'payment_option' => 'setPaymentOption'
     ];
 
     /**
@@ -118,8 +114,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'maximum_days' => 'getMaximumDays',
-        'minimum_days' => 'getMinimumDays'
+        'payment_option' => 'getPaymentOption'
     ];
 
     /**
@@ -182,8 +177,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['maximum_days'] = isset($data['maximum_days']) ? $data['maximum_days'] : null;
-        $this->container['minimum_days'] = isset($data['minimum_days']) ? $data['minimum_days'] : null;
+        $this->container['payment_option'] = isset($data['payment_option']) ? $data['payment_option'] : null;
     }
 
     /**
@@ -211,49 +205,25 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets maximum_days
+     * Gets payment_option
      *
      * @return string
      */
-    public function getMaximumDays()
+    public function getPaymentOption()
     {
-        return $this->container['maximum_days'];
+        return $this->container['payment_option'];
     }
 
     /**
-     * Sets maximum_days
+     * Sets payment_option
      *
-     * @param string $maximum_days 
+     * @param string $payment_option 
      *
      * @return $this
      */
-    public function setMaximumDays($maximum_days)
+    public function setPaymentOption($payment_option)
     {
-        $this->container['maximum_days'] = $maximum_days;
-
-        return $this;
-    }
-
-    /**
-     * Gets minimum_days
-     *
-     * @return string
-     */
-    public function getMinimumDays()
-    {
-        return $this->container['minimum_days'];
-    }
-
-    /**
-     * Sets minimum_days
-     *
-     * @param string $minimum_days 
-     *
-     * @return $this
-     */
-    public function setMinimumDays($minimum_days)
-    {
-        $this->container['minimum_days'] = $minimum_days;
+        $this->container['payment_option'] = $payment_option;
 
         return $this;
     }

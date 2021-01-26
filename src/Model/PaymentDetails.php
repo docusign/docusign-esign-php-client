@@ -2,7 +2,7 @@
 /**
  * PaymentDetails
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * PaymentDetails Class Doc Comment
@@ -69,6 +69,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'line_items' => '\DocuSign\eSign\Model\PaymentLineItem[]',
         'payment_option' => 'string',
         'payment_source_id' => 'string',
+        'signer_values' => '\DocuSign\eSign\Model\PaymentSignerValues',
         'status' => 'string',
         'total' => '\DocuSign\eSign\Model\Money'
     ];
@@ -91,6 +92,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'line_items' => null,
         'payment_option' => null,
         'payment_source_id' => null,
+        'signer_values' => null,
         'status' => null,
         'total' => null
     ];
@@ -134,6 +136,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'line_items' => 'lineItems',
         'payment_option' => 'paymentOption',
         'payment_source_id' => 'paymentSourceId',
+        'signer_values' => 'signerValues',
         'status' => 'status',
         'total' => 'total'
     ];
@@ -156,6 +159,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'line_items' => 'setLineItems',
         'payment_option' => 'setPaymentOption',
         'payment_source_id' => 'setPaymentSourceId',
+        'signer_values' => 'setSignerValues',
         'status' => 'setStatus',
         'total' => 'setTotal'
     ];
@@ -178,6 +182,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'line_items' => 'getLineItems',
         'payment_option' => 'getPaymentOption',
         'payment_source_id' => 'getPaymentSourceId',
+        'signer_values' => 'getSignerValues',
         'status' => 'getStatus',
         'total' => 'getTotal'
     ];
@@ -254,6 +259,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         $this->container['line_items'] = isset($data['line_items']) ? $data['line_items'] : null;
         $this->container['payment_option'] = isset($data['payment_option']) ? $data['payment_option'] : null;
         $this->container['payment_source_id'] = isset($data['payment_source_id']) ? $data['payment_source_id'] : null;
+        $this->container['signer_values'] = isset($data['signer_values']) ? $data['signer_values'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
@@ -566,6 +572,30 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     public function setPaymentSourceId($payment_source_id)
     {
         $this->container['payment_source_id'] = $payment_source_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets signer_values
+     *
+     * @return \DocuSign\eSign\Model\PaymentSignerValues
+     */
+    public function getSignerValues()
+    {
+        return $this->container['signer_values'];
+    }
+
+    /**
+     * Sets signer_values
+     *
+     * @param \DocuSign\eSign\Model\PaymentSignerValues $signer_values signer_values
+     *
+     * @return $this
+     */
+    public function setSignerValues($signer_values)
+    {
+        $this->container['signer_values'] = $signer_values;
 
         return $this;
     }

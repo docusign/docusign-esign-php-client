@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * PowerFormsApi
- * PHP version 5
+ * PowerFormsApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\PowerFormsApi;
+namespace DocuSign\eSign\ApiPowerFormsApi;
+
 
 class GetPowerFormDataOptions
 {
@@ -34,23 +38,23 @@ class GetPowerFormDataOptions
       * $data_layout 
       * @var string
       */
-    protected $data_layout;
+    protected string $data_layout;
 
     /**
      * Gets data_layout
      * @return string
      */
-    public function getDataLayout()
+    public function getDataLayout(): string
     {
         return $this->data_layout;
     }
-  
+
     /**
      * Sets data_layout
      * @param string $data_layout 
-     * @return $this
+     * @return self
      */
-    public function setDataLayout($data_layout)
+    public function setDataLayout(string $data_layout): self
     {
         $this->data_layout = $data_layout;
         return $this;
@@ -59,23 +63,23 @@ class GetPowerFormDataOptions
       * $from_date 
       * @var string
       */
-    protected $from_date;
+    protected string $from_date;
 
     /**
      * Gets from_date
      * @return string
      */
-    public function getFromDate()
+    public function getFromDate(): string
     {
         return $this->from_date;
     }
-  
+
     /**
      * Sets from_date
      * @param string $from_date 
-     * @return $this
+     * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate(string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
@@ -84,79 +88,83 @@ class GetPowerFormDataOptions
       * $to_date 
       * @var string
       */
-    protected $to_date;
+    protected string $to_date;
 
     /**
      * Gets to_date
      * @return string
      */
-    public function getToDate()
+    public function getToDate(): string
     {
         return $this->to_date;
     }
-  
+
     /**
      * Sets to_date
      * @param string $to_date 
-     * @return $this
+     * @return self
      */
-    public function setToDate($to_date)
+    public function setToDate(string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
     }
 }
+
+
 class ListPowerFormSendersOptions
 {
     /**
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
 }
+
+
 class ListPowerFormsOptions
 {
     /**
       * $from_date 
       * @var string
       */
-    protected $from_date;
+    protected string $from_date;
 
     /**
      * Gets from_date
      * @return string
      */
-    public function getFromDate()
+    public function getFromDate(): string
     {
         return $this->from_date;
     }
-  
+
     /**
      * Sets from_date
      * @param string $from_date 
-     * @return $this
+     * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate(string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
@@ -165,23 +173,23 @@ class ListPowerFormsOptions
       * $order 
       * @var string
       */
-    protected $order;
+    protected string $order;
 
     /**
      * Gets order
      * @return string
      */
-    public function getOrder()
+    public function getOrder(): string
     {
         return $this->order;
     }
-  
+
     /**
      * Sets order
      * @param string $order 
-     * @return $this
+     * @return self
      */
-    public function setOrder($order)
+    public function setOrder(string $order): self
     {
         $this->order = $order;
         return $this;
@@ -190,23 +198,23 @@ class ListPowerFormsOptions
       * $order_by 
       * @var string
       */
-    protected $order_by;
+    protected string $order_by;
 
     /**
      * Gets order_by
      * @return string
      */
-    public function getOrderBy()
+    public function getOrderBy(): string
     {
         return $this->order_by;
     }
-  
+
     /**
      * Sets order_by
      * @param string $order_by 
-     * @return $this
+     * @return self
      */
-    public function setOrderBy($order_by)
+    public function setOrderBy(string $order_by): self
     {
         $this->order_by = $order_by;
         return $this;
@@ -215,23 +223,23 @@ class ListPowerFormsOptions
       * $to_date 
       * @var string
       */
-    protected $to_date;
+    protected string $to_date;
 
     /**
      * Gets to_date
      * @return string
      */
-    public function getToDate()
+    public function getToDate(): string
     {
         return $this->to_date;
     }
-  
+
     /**
      * Sets to_date
      * @param string $to_date 
-     * @return $this
+     * @return self
      */
-    public function setToDate($to_date)
+    public function setToDate(string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
@@ -239,12 +247,13 @@ class ListPowerFormsOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * PowerFormsApi Class Doc Comment
@@ -259,30 +268,27 @@ class PowerFormsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -290,27 +296,46 @@ class PowerFormsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return PowerFormsApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation createPowerForm
      *
      * Creates a new PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
-    public function createPowerForm($account_id, $power_form = null)
+    public function createPowerForm($account_id, $power_form = null): \DocuSign\eSign\Model\PowerForm
     {
         list($response) = $this->createPowerFormWithHttpInfo($account_id, $power_form);
         return $response;
@@ -321,12 +346,12 @@ class PowerFormsApi
      *
      * Creates a new PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createPowerFormWithHttpInfo($account_id, $power_form = null)
+    public function createPowerFormWithHttpInfo($account_id, $power_form = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -334,28 +359,19 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($power_form)) {
@@ -406,12 +422,12 @@ class PowerFormsApi
      *
      * Delete a PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deletePowerForm($account_id, $power_form_id)
+    public function deletePowerForm($account_id, $power_form_id): mixed
     {
         list($response) = $this->deletePowerFormWithHttpInfo($account_id, $power_form_id);
         return $response;
@@ -422,12 +438,12 @@ class PowerFormsApi
      *
      * Delete a PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deletePowerFormWithHttpInfo($account_id, $power_form_id)
+    public function deletePowerFormWithHttpInfo($account_id, $power_form_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -439,36 +455,23 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms/{powerFormId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($power_form_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "powerFormId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($power_form_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "powerFormId", $power_form_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -510,12 +513,12 @@ class PowerFormsApi
      *
      * Deletes one or more PowerForms
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
-    public function deletePowerForms($account_id, $power_forms_request = null)
+    public function deletePowerForms($account_id, $power_forms_request = null): \DocuSign\eSign\Model\PowerFormsResponse
     {
         list($response) = $this->deletePowerFormsWithHttpInfo($account_id, $power_forms_request);
         return $response;
@@ -526,12 +529,12 @@ class PowerFormsApi
      *
      * Deletes one or more PowerForms
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deletePowerFormsWithHttpInfo($account_id, $power_forms_request = null)
+    public function deletePowerFormsWithHttpInfo($account_id, $power_forms_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -539,28 +542,19 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($power_forms_request)) {
@@ -611,12 +605,12 @@ class PowerFormsApi
      *
      * Returns a single PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
-    public function getPowerForm($account_id, $power_form_id)
+    public function getPowerForm($account_id, $power_form_id): \DocuSign\eSign\Model\PowerForm
     {
         list($response) = $this->getPowerFormWithHttpInfo($account_id, $power_form_id);
         return $response;
@@ -627,12 +621,12 @@ class PowerFormsApi
      *
      * Returns a single PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPowerFormWithHttpInfo($account_id, $power_form_id)
+    public function getPowerFormWithHttpInfo($account_id, $power_form_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -644,36 +638,23 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms/{powerFormId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($power_form_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "powerFormId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($power_form_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "powerFormId", $power_form_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -719,13 +700,13 @@ class PowerFormsApi
      *
      * Returns the form data associated with the usage of a PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
+     * @param  \DocuSign\eSign\ApiPowerFormsApi\GetPowerFormDataOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsFormDataResponse
      */
-    public function getPowerFormData($account_id, $power_form_id, PowerFormsApi\GetPowerFormDataOptions $options = null)
+    public function getPowerFormData($account_id, $power_form_id, \DocuSign\eSign\ApiPowerFormsApi\GetPowerFormDataOptions $options = null): \DocuSign\eSign\Model\PowerFormsFormDataResponse
     {
         list($response) = $this->getPowerFormDataWithHttpInfo($account_id, $power_form_id, $options);
         return $response;
@@ -736,13 +717,13 @@ class PowerFormsApi
      *
      * Returns the form data associated with the usage of a PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
+     * @param  \DocuSign\eSign\ApiPowerFormsApi\GetPowerFormDataOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsFormDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPowerFormDataWithHttpInfo($account_id, $power_form_id, PowerFormsApi\GetPowerFormDataOptions $options = null)
+    public function getPowerFormDataWithHttpInfo($account_id, $power_form_id, \DocuSign\eSign\ApiPowerFormsApi\GetPowerFormDataOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -754,52 +735,36 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms/{powerFormId}/form_data";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getDataLayout() !== null) {
-            $queryParams['data_layout'] = $this->apiClient->getSerializer()->toQueryValue($options->getDataLayout());
-        }
-        // query params
-        if ($options->getFromDate() !== null) {
-            $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
-        }
-        // query params
-        if ($options->getToDate() !== null) {
-            $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
-        }
+            // query params
+            if ($options->getDataLayout() != 'null') {
+                $queryParams['data_layout'] = $this->apiClient->getSerializer()->toQueryValue($options->getDataLayout());
+            }
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($power_form_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "powerFormId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($power_form_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "powerFormId", $power_form_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -845,12 +810,12 @@ class PowerFormsApi
      *
      * Returns the list of PowerForms available to the user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormSendersOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormSendersResponse
      */
-    public function listPowerFormSenders($account_id, PowerFormsApi\ListPowerFormSendersOptions $options = null)
+    public function listPowerFormSenders($account_id, \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormSendersOptions $options = null): \DocuSign\eSign\Model\PowerFormSendersResponse
     {
         list($response) = $this->listPowerFormSendersWithHttpInfo($account_id, $options);
         return $response;
@@ -861,12 +826,12 @@ class PowerFormsApi
      *
      * Returns the list of PowerForms available to the user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormSendersOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormSendersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPowerFormSendersWithHttpInfo($account_id, PowerFormsApi\ListPowerFormSendersOptions $options = null)
+    public function listPowerFormSendersWithHttpInfo($account_id, \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormSendersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -874,36 +839,26 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms/senders";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
+            // query params
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -949,12 +904,12 @@ class PowerFormsApi
      *
      * Returns the list of PowerForms available to the user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
-    public function listPowerForms($account_id, PowerFormsApi\ListPowerFormsOptions $options = null)
+    public function listPowerForms($account_id, \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormsOptions $options = null): \DocuSign\eSign\Model\PowerFormsResponse
     {
         list($response) = $this->listPowerFormsWithHttpInfo($account_id, $options);
         return $response;
@@ -965,12 +920,12 @@ class PowerFormsApi
      *
      * Returns the list of PowerForms available to the user.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPowerFormsWithHttpInfo($account_id, PowerFormsApi\ListPowerFormsOptions $options = null)
+    public function listPowerFormsWithHttpInfo($account_id, \DocuSign\eSign\ApiPowerFormsApi\ListPowerFormsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -978,48 +933,35 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getFromDate() !== null) {
-            $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
-        }
-        // query params
-        if ($options->getOrder() !== null) {
-            $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
-        }
-        // query params
-        if ($options->getOrderBy() !== null) {
-            $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
-        }
-        // query params
-        if ($options->getToDate() !== null) {
-            $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
-        }
+            // query params
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getOrder() != 'null') {
+                $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
+            }
+            if ($options->getOrderBy() != 'null') {
+                $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -1065,13 +1007,13 @@ class PowerFormsApi
      *
      * Creates a new PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
-    public function updatePowerForm($account_id, $power_form_id, $power_form = null)
+    public function updatePowerForm($account_id, $power_form_id, $power_form = null): \DocuSign\eSign\Model\PowerForm
     {
         list($response) = $this->updatePowerFormWithHttpInfo($account_id, $power_form_id, $power_form);
         return $response;
@@ -1082,13 +1024,13 @@ class PowerFormsApi
      *
      * Creates a new PowerForm.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $power_form_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePowerFormWithHttpInfo($account_id, $power_form_id, $power_form = null)
+    public function updatePowerFormWithHttpInfo($account_id, $power_form_id, $power_form = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1100,36 +1042,23 @@ class PowerFormsApi
         }
         // parse inputs
         $resourcePath = "/v2/accounts/{accountId}/powerforms/{powerFormId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($power_form_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "powerFormId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($power_form_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "powerFormId", $power_form_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($power_form)) {

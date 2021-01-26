@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * OrganizationsApi
- * PHP version 5
+ * OrganizationsApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,16 +29,16 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\OrganizationsApi;
+namespace DocuSign\eSign\ApiOrganizationsApi;
 
 
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * OrganizationsApi Class Doc Comment
@@ -50,30 +53,27 @@ class OrganizationsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -81,27 +81,46 @@ class OrganizationsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return OrganizationsApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation deleteReport
      *
      * Retrieves org level report by correlation id and site.
      *
-    * @param string $organization_id 
-    * @param string $report_correlation_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $organization_id 
+     * @param string $report_correlation_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteReport($organization_id, $report_correlation_id)
+    public function deleteReport($organization_id, $report_correlation_id): mixed
     {
         list($response) = $this->deleteReportWithHttpInfo($organization_id, $report_correlation_id);
         return $response;
@@ -112,12 +131,12 @@ class OrganizationsApi
      *
      * Retrieves org level report by correlation id and site.
      *
-    * @param string $organization_id 
-    * @param string $report_correlation_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $organization_id 
+     * @param string $report_correlation_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteReportWithHttpInfo($organization_id, $report_correlation_id)
+    public function deleteReportWithHttpInfo($organization_id, $report_correlation_id): array
     {
         // verify the required parameter 'organization_id' is set
         if ($organization_id === null) {
@@ -129,36 +148,23 @@ class OrganizationsApi
         }
         // parse inputs
         $resourcePath = "/v2/organization_reporting/{organizationId}/reports/{reportCorrelationId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($organization_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "organizationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($organization_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "organizationId", $organization_id);
         }
         // path params
         if ($report_correlation_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "reportCorrelationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($report_correlation_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "reportCorrelationId", $report_correlation_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -200,12 +206,12 @@ class OrganizationsApi
      *
      * Retrieves org level report by correlation id and site.
      *
-    * @param string $organization_id 
-    * @param string $report_correlation_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $organization_id 
+     * @param string $report_correlation_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function getReport($organization_id, $report_correlation_id)
+    public function getReport($organization_id, $report_correlation_id): mixed
     {
         list($response) = $this->getReportWithHttpInfo($organization_id, $report_correlation_id);
         return $response;
@@ -216,12 +222,12 @@ class OrganizationsApi
      *
      * Retrieves org level report by correlation id and site.
      *
-    * @param string $organization_id 
-    * @param string $report_correlation_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $organization_id 
+     * @param string $report_correlation_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getReportWithHttpInfo($organization_id, $report_correlation_id)
+    public function getReportWithHttpInfo($organization_id, $report_correlation_id): array
     {
         // verify the required parameter 'organization_id' is set
         if ($organization_id === null) {
@@ -233,36 +239,23 @@ class OrganizationsApi
         }
         // parse inputs
         $resourcePath = "/v2/organization_reporting/{organizationId}/reports/{reportCorrelationId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($organization_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "organizationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($organization_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "organizationId", $organization_id);
         }
         // path params
         if ($report_correlation_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "reportCorrelationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($report_correlation_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "reportCorrelationId", $report_correlation_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {

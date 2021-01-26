@@ -1,6 +1,6 @@
 <?php
 /**
- * AccountPasswordExpirePasswordDays
+ * GroupBrands
  *
  * PHP version 7.4
  *
@@ -33,14 +33,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * AccountPasswordExpirePasswordDays Class Doc Comment
+ * GroupBrands Class Doc Comment
  *
  * @category    Class
+ * @description 
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
+class GroupBrands implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'accountPasswordExpirePasswordDays';
+    protected static $swaggerModelName = 'GroupBrands';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +58,9 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_days' => 'string',
-        'minimum_days' => 'string'
+        'recipient_brand_id_default' => 'string',
+        'sender_brand_id_default' => 'string',
+        'brand_options' => '\DocuSign\eSign\Model\Brand[]'
     ];
 
     /**
@@ -67,8 +69,9 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'maximum_days' => null,
-        'minimum_days' => null
+        'recipient_brand_id_default' => null,
+        'sender_brand_id_default' => null,
+        'brand_options' => null
     ];
 
     /**
@@ -98,8 +101,9 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'maximum_days' => 'maximumDays',
-        'minimum_days' => 'minimumDays'
+        'recipient_brand_id_default' => 'recipientBrandIdDefault',
+        'sender_brand_id_default' => 'senderBrandIdDefault',
+        'brand_options' => 'brandOptions'
     ];
 
     /**
@@ -108,8 +112,9 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'maximum_days' => 'setMaximumDays',
-        'minimum_days' => 'setMinimumDays'
+        'recipient_brand_id_default' => 'setRecipientBrandIdDefault',
+        'sender_brand_id_default' => 'setSenderBrandIdDefault',
+        'brand_options' => 'setBrandOptions'
     ];
 
     /**
@@ -118,8 +123,9 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'maximum_days' => 'getMaximumDays',
-        'minimum_days' => 'getMinimumDays'
+        'recipient_brand_id_default' => 'getRecipientBrandIdDefault',
+        'sender_brand_id_default' => 'getSenderBrandIdDefault',
+        'brand_options' => 'getBrandOptions'
     ];
 
     /**
@@ -182,8 +188,9 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['maximum_days'] = isset($data['maximum_days']) ? $data['maximum_days'] : null;
-        $this->container['minimum_days'] = isset($data['minimum_days']) ? $data['minimum_days'] : null;
+        $this->container['recipient_brand_id_default'] = isset($data['recipient_brand_id_default']) ? $data['recipient_brand_id_default'] : null;
+        $this->container['sender_brand_id_default'] = isset($data['sender_brand_id_default']) ? $data['sender_brand_id_default'] : null;
+        $this->container['brand_options'] = isset($data['brand_options']) ? $data['brand_options'] : null;
     }
 
     /**
@@ -211,49 +218,73 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets maximum_days
+     * Gets recipient_brand_id_default
      *
      * @return string
      */
-    public function getMaximumDays()
+    public function getRecipientBrandIdDefault()
     {
-        return $this->container['maximum_days'];
+        return $this->container['recipient_brand_id_default'];
     }
 
     /**
-     * Sets maximum_days
+     * Sets recipient_brand_id_default
      *
-     * @param string $maximum_days 
+     * @param string $recipient_brand_id_default The brand seen by envelope recipients when a brand is not explicitly set.
      *
      * @return $this
      */
-    public function setMaximumDays($maximum_days)
+    public function setRecipientBrandIdDefault($recipient_brand_id_default)
     {
-        $this->container['maximum_days'] = $maximum_days;
+        $this->container['recipient_brand_id_default'] = $recipient_brand_id_default;
 
         return $this;
     }
 
     /**
-     * Gets minimum_days
+     * Gets sender_brand_id_default
      *
      * @return string
      */
-    public function getMinimumDays()
+    public function getSenderBrandIdDefault()
     {
-        return $this->container['minimum_days'];
+        return $this->container['sender_brand_id_default'];
     }
 
     /**
-     * Sets minimum_days
+     * Sets sender_brand_id_default
      *
-     * @param string $minimum_days 
+     * @param string $sender_brand_id_default The brand seen by envelope senders when a brand is not explicitly set.
      *
      * @return $this
      */
-    public function setMinimumDays($minimum_days)
+    public function setSenderBrandIdDefault($sender_brand_id_default)
     {
-        $this->container['minimum_days'] = $minimum_days;
+        $this->container['sender_brand_id_default'] = $sender_brand_id_default;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_options
+     *
+     * @return \DocuSign\eSign\Model\Brand[]
+     */
+    public function getBrandOptions()
+    {
+        return $this->container['brand_options'];
+    }
+
+    /**
+     * Sets brand_options
+     *
+     * @param \DocuSign\eSign\Model\Brand[] $brand_options The list of brands.
+     *
+     * @return $this
+     */
+    public function setBrandOptions($brand_options)
+    {
+        $this->container['brand_options'] = $brand_options;
 
         return $this;
     }

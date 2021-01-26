@@ -2,7 +2,7 @@
 /**
  * EnvelopeFormData
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * EnvelopeFormData Class Doc Comment
@@ -60,6 +60,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
         'email_subject' => 'string',
         'envelope_id' => 'string',
         'form_data' => '\DocuSign\eSign\Model\NameValue[]',
+        'prefill_form_data' => '\DocuSign\eSign\Model\NameValue[]',
         'recipient_form_data' => '\DocuSign\eSign\Model\RecipientFormData[]',
         'sent_date_time' => 'string',
         'status' => 'string'
@@ -74,6 +75,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
         'email_subject' => null,
         'envelope_id' => null,
         'form_data' => null,
+        'prefill_form_data' => null,
         'recipient_form_data' => null,
         'sent_date_time' => null,
         'status' => null
@@ -109,6 +111,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
         'email_subject' => 'emailSubject',
         'envelope_id' => 'envelopeId',
         'form_data' => 'formData',
+        'prefill_form_data' => 'prefillFormData',
         'recipient_form_data' => 'recipientFormData',
         'sent_date_time' => 'sentDateTime',
         'status' => 'status'
@@ -123,6 +126,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
         'email_subject' => 'setEmailSubject',
         'envelope_id' => 'setEnvelopeId',
         'form_data' => 'setFormData',
+        'prefill_form_data' => 'setPrefillFormData',
         'recipient_form_data' => 'setRecipientFormData',
         'sent_date_time' => 'setSentDateTime',
         'status' => 'setStatus'
@@ -137,6 +141,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
         'email_subject' => 'getEmailSubject',
         'envelope_id' => 'getEnvelopeId',
         'form_data' => 'getFormData',
+        'prefill_form_data' => 'getPrefillFormData',
         'recipient_form_data' => 'getRecipientFormData',
         'sent_date_time' => 'getSentDateTime',
         'status' => 'getStatus'
@@ -205,6 +210,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
         $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['form_data'] = isset($data['form_data']) ? $data['form_data'] : null;
+        $this->container['prefill_form_data'] = isset($data['prefill_form_data']) ? $data['prefill_form_data'] : null;
         $this->container['recipient_form_data'] = isset($data['recipient_form_data']) ? $data['recipient_form_data'] : null;
         $this->container['sent_date_time'] = isset($data['sent_date_time']) ? $data['sent_date_time'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -302,6 +308,30 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     public function setFormData($form_data)
     {
         $this->container['form_data'] = $form_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets prefill_form_data
+     *
+     * @return \DocuSign\eSign\Model\NameValue[]
+     */
+    public function getPrefillFormData()
+    {
+        return $this->container['prefill_form_data'];
+    }
+
+    /**
+     * Sets prefill_form_data
+     *
+     * @param \DocuSign\eSign\Model\NameValue[] $prefill_form_data 
+     *
+     * @return $this
+     */
+    public function setPrefillFormData($prefill_form_data)
+    {
+        $this->container['prefill_form_data'] = $prefill_form_data;
 
         return $this;
     }
