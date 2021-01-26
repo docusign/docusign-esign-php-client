@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * DataFeedApi
- * PHP version 5
+ * DataFeedApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,16 +29,16 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\DataFeedApi;
+namespace DocuSign\eSign\ApiDataFeedApi;
 
 
 
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * DataFeedApi Class Doc Comment
@@ -50,30 +53,27 @@ class DataFeedApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -81,27 +81,46 @@ class DataFeedApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return DataFeedApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation getDataFeedElement
      *
      * Retrieves a Datafeed element by Id.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $data_feed_element_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $data_feed_element_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function getDataFeedElement($account_id, $data_feed_element_id)
+    public function getDataFeedElement($account_id, $data_feed_element_id): mixed
     {
         list($response) = $this->getDataFeedElementWithHttpInfo($account_id, $data_feed_element_id);
         return $response;
@@ -112,12 +131,12 @@ class DataFeedApi
      *
      * Retrieves a Datafeed element by Id.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $data_feed_element_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $data_feed_element_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDataFeedElementWithHttpInfo($account_id, $data_feed_element_id)
+    public function getDataFeedElementWithHttpInfo($account_id, $data_feed_element_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -129,36 +148,23 @@ class DataFeedApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/data_feeds/data/{dataFeedElementId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($data_feed_element_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "dataFeedElementId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($data_feed_element_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "dataFeedElementId", $data_feed_element_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {

@@ -2,7 +2,7 @@
 /**
  * BulkSendBatchStatus
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * BulkSendBatchStatus Class Doc Comment
@@ -65,7 +65,9 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => 'string',
         'failed' => 'string',
         'mailing_list_id' => 'string',
+        'owner_user_id' => 'string',
         'queued' => 'string',
+        'sender_user_id' => 'string',
         'sent' => 'string',
         'submitted_date' => 'string'
     ];
@@ -84,7 +86,9 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => null,
         'failed' => null,
         'mailing_list_id' => null,
+        'owner_user_id' => null,
         'queued' => null,
+        'sender_user_id' => null,
         'sent' => null,
         'submitted_date' => null
     ];
@@ -124,7 +128,9 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => 'envelopesUri',
         'failed' => 'failed',
         'mailing_list_id' => 'mailingListId',
+        'owner_user_id' => 'ownerUserId',
         'queued' => 'queued',
+        'sender_user_id' => 'senderUserId',
         'sent' => 'sent',
         'submitted_date' => 'submittedDate'
     ];
@@ -143,7 +149,9 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => 'setEnvelopesUri',
         'failed' => 'setFailed',
         'mailing_list_id' => 'setMailingListId',
+        'owner_user_id' => 'setOwnerUserId',
         'queued' => 'setQueued',
+        'sender_user_id' => 'setSenderUserId',
         'sent' => 'setSent',
         'submitted_date' => 'setSubmittedDate'
     ];
@@ -162,7 +170,9 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => 'getEnvelopesUri',
         'failed' => 'getFailed',
         'mailing_list_id' => 'getMailingListId',
+        'owner_user_id' => 'getOwnerUserId',
         'queued' => 'getQueued',
+        'sender_user_id' => 'getSenderUserId',
         'sent' => 'getSent',
         'submitted_date' => 'getSubmittedDate'
     ];
@@ -235,7 +245,9 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         $this->container['envelopes_uri'] = isset($data['envelopes_uri']) ? $data['envelopes_uri'] : null;
         $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
         $this->container['mailing_list_id'] = isset($data['mailing_list_id']) ? $data['mailing_list_id'] : null;
+        $this->container['owner_user_id'] = isset($data['owner_user_id']) ? $data['owner_user_id'] : null;
         $this->container['queued'] = isset($data['queued']) ? $data['queued'] : null;
+        $this->container['sender_user_id'] = isset($data['sender_user_id']) ? $data['sender_user_id'] : null;
         $this->container['sent'] = isset($data['sent']) ? $data['sent'] : null;
         $this->container['submitted_date'] = isset($data['submitted_date']) ? $data['submitted_date'] : null;
     }
@@ -457,6 +469,30 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets owner_user_id
+     *
+     * @return string
+     */
+    public function getOwnerUserId()
+    {
+        return $this->container['owner_user_id'];
+    }
+
+    /**
+     * Sets owner_user_id
+     *
+     * @param string $owner_user_id 
+     *
+     * @return $this
+     */
+    public function setOwnerUserId($owner_user_id)
+    {
+        $this->container['owner_user_id'] = $owner_user_id;
+
+        return $this;
+    }
+
+    /**
      * Gets queued
      *
      * @return string
@@ -476,6 +512,30 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     public function setQueued($queued)
     {
         $this->container['queued'] = $queued;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_user_id
+     *
+     * @return string
+     */
+    public function getSenderUserId()
+    {
+        return $this->container['sender_user_id'];
+    }
+
+    /**
+     * Sets sender_user_id
+     *
+     * @param string $sender_user_id 
+     *
+     * @return $this
+     */
+    public function setSenderUserId($sender_user_id)
+    {
+        $this->container['sender_user_id'] = $sender_user_id;
 
         return $this;
     }

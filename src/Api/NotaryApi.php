@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * NotaryApi
- * PHP version 5
+ * NotaryApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\NotaryApi;
+namespace DocuSign\eSign\ApiNotaryApi;
+
 
 class GetNotaryOptions
 {
@@ -34,51 +38,53 @@ class GetNotaryOptions
       * $include_jurisdictions 
       * @var string
       */
-    protected $include_jurisdictions;
+    protected string $include_jurisdictions;
 
     /**
      * Gets include_jurisdictions
      * @return string
      */
-    public function getIncludeJurisdictions()
+    public function getIncludeJurisdictions(): string
     {
         return $this->include_jurisdictions;
     }
-  
+
     /**
      * Sets include_jurisdictions
      * @param string $include_jurisdictions 
-     * @return $this
+     * @return self
      */
-    public function setIncludeJurisdictions($include_jurisdictions)
+    public function setIncludeJurisdictions(string $include_jurisdictions): self
     {
         $this->include_jurisdictions = $include_jurisdictions;
         return $this;
     }
 }
+
+
 class ListNotaryJournalsOptions
 {
     /**
       * $count 
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count 
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -87,23 +93,23 @@ class ListNotaryJournalsOptions
       * $search_text 
       * @var string
       */
-    protected $search_text;
+    protected string $search_text;
 
     /**
      * Gets search_text
      * @return string
      */
-    public function getSearchText()
+    public function getSearchText(): string
     {
         return $this->search_text;
     }
-  
+
     /**
      * Sets search_text
      * @param string $search_text 
-     * @return $this
+     * @return self
      */
-    public function setSearchText($search_text)
+    public function setSearchText(string $search_text): self
     {
         $this->search_text = $search_text;
         return $this;
@@ -112,23 +118,23 @@ class ListNotaryJournalsOptions
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -136,12 +142,13 @@ class ListNotaryJournalsOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * NotaryApi Class Doc Comment
@@ -156,30 +163,27 @@ class NotaryApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -187,15 +191,34 @@ class NotaryApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return NotaryApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
+
+    /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
 
     /**
      * Operation createNotary
@@ -203,10 +226,10 @@ class NotaryApi
      * Add a notary to the system
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notary
      */
-    public function createNotary($notary = null)
+    public function createNotary($notary = null): \DocuSign\eSign\Model\Notary
     {
         list($response) = $this->createNotaryWithHttpInfo($notary);
         return $response;
@@ -218,27 +241,22 @@ class NotaryApi
      * Add a notary to the system
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNotaryWithHttpInfo($notary = null)
+    public function createNotaryWithHttpInfo($notary = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($notary)) {
@@ -290,10 +308,10 @@ class NotaryApi
      * Add a notary jurisdiction to the system
      *
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
      */
-    public function createNotaryJurisdictions($notary_jurisdiction = null)
+    public function createNotaryJurisdictions($notary_jurisdiction = null): \DocuSign\eSign\Model\NotaryJurisdiction
     {
         list($response) = $this->createNotaryJurisdictionsWithHttpInfo($notary_jurisdiction);
         return $response;
@@ -305,27 +323,22 @@ class NotaryApi
      * Add a notary jurisdiction to the system
      *
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNotaryJurisdictionsWithHttpInfo($notary_jurisdiction = null)
+    public function createNotaryJurisdictionsWithHttpInfo($notary_jurisdiction = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/jurisdictions";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($notary_jurisdiction)) {
@@ -376,11 +389,11 @@ class NotaryApi
      *
      * Delete a notary jurisdiction a specified user.
      *
-    * @param string $jurisdiction_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $jurisdiction_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteNotaryJurisdiction($jurisdiction_id)
+    public function deleteNotaryJurisdiction($jurisdiction_id): mixed
     {
         list($response) = $this->deleteNotaryJurisdictionWithHttpInfo($jurisdiction_id);
         return $response;
@@ -391,11 +404,11 @@ class NotaryApi
      *
      * Delete a notary jurisdiction a specified user.
      *
-    * @param string $jurisdiction_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $jurisdiction_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteNotaryJurisdictionWithHttpInfo($jurisdiction_id)
+    public function deleteNotaryJurisdictionWithHttpInfo($jurisdiction_id): array
     {
         // verify the required parameter 'jurisdiction_id' is set
         if ($jurisdiction_id === null) {
@@ -403,28 +416,19 @@ class NotaryApi
         }
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/jurisdictions/{jurisdictionId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($jurisdiction_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "jurisdictionId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($jurisdiction_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "jurisdictionId", $jurisdiction_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -466,11 +470,11 @@ class NotaryApi
      *
      * Get notary settings for a user
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiNotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryResult
      */
-    public function getNotary(NotaryApi\GetNotaryOptions $options = null)
+    public function getNotary(\DocuSign\eSign\ApiNotaryApi\GetNotaryOptions $options = null): \DocuSign\eSign\Model\NotaryResult
     {
         list($response) = $this->getNotaryWithHttpInfo($options);
         return $response;
@@ -481,36 +485,30 @@ class NotaryApi
      *
      * Get notary settings for a user
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiNotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotaryWithHttpInfo(NotaryApi\GetNotaryOptions $options = null)
+    public function getNotaryWithHttpInfo(\DocuSign\eSign\ApiNotaryApi\GetNotaryOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getIncludeJurisdictions() !== null) {
-            $queryParams['include_jurisdictions'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeJurisdictions());
+            // query params
+            if ($options->getIncludeJurisdictions() != 'null') {
+                $queryParams['include_jurisdictions'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeJurisdictions());
+            }
         }
-        }
+
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -556,11 +554,11 @@ class NotaryApi
      *
      * Get notary a jurisdiction for a user
      *
-    * @param string $jurisdiction_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $jurisdiction_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
      */
-    public function getNotaryJurisdiction($jurisdiction_id)
+    public function getNotaryJurisdiction($jurisdiction_id): \DocuSign\eSign\Model\NotaryJurisdiction
     {
         list($response) = $this->getNotaryJurisdictionWithHttpInfo($jurisdiction_id);
         return $response;
@@ -571,11 +569,11 @@ class NotaryApi
      *
      * Get notary a jurisdiction for a user
      *
-    * @param string $jurisdiction_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $jurisdiction_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotaryJurisdictionWithHttpInfo($jurisdiction_id)
+    public function getNotaryJurisdictionWithHttpInfo($jurisdiction_id): array
     {
         // verify the required parameter 'jurisdiction_id' is set
         if ($jurisdiction_id === null) {
@@ -583,28 +581,19 @@ class NotaryApi
         }
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/jurisdictions/{jurisdictionId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($jurisdiction_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "jurisdictionId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($jurisdiction_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "jurisdictionId", $jurisdiction_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -650,11 +639,11 @@ class NotaryApi
      *
      * Get notary seal for a jurisdiction
      *
-    * @param string $jurisdiction_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $jurisdiction_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function getNotaryJurisdictionSeal($jurisdiction_id)
+    public function getNotaryJurisdictionSeal($jurisdiction_id): mixed
     {
         list($response) = $this->getNotaryJurisdictionSealWithHttpInfo($jurisdiction_id);
         return $response;
@@ -665,11 +654,11 @@ class NotaryApi
      *
      * Get notary seal for a jurisdiction
      *
-    * @param string $jurisdiction_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $jurisdiction_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotaryJurisdictionSealWithHttpInfo($jurisdiction_id)
+    public function getNotaryJurisdictionSealWithHttpInfo($jurisdiction_id): array
     {
         // verify the required parameter 'jurisdiction_id' is set
         if ($jurisdiction_id === null) {
@@ -677,28 +666,19 @@ class NotaryApi
         }
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/jurisdictions/{jurisdictionId}/seal";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($jurisdiction_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "jurisdictionId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($jurisdiction_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "jurisdictionId", $jurisdiction_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -740,10 +720,10 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdictionList
      */
-    public function getNotaryJurisdictions()
+    public function getNotaryJurisdictions(): \DocuSign\eSign\Model\NotaryJurisdictionList
     {
         list($response) = $this->getNotaryJurisdictionsWithHttpInfo();
         return $response;
@@ -754,27 +734,22 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdictionList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotaryJurisdictionsWithHttpInfo()
+    public function getNotaryJurisdictionsWithHttpInfo(): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/jurisdictions";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -820,11 +795,11 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJournalList
      */
-    public function listNotaryJournals(NotaryApi\ListNotaryJournalsOptions $options = null)
+    public function listNotaryJournals(\DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions $options = null): \DocuSign\eSign\Model\NotaryJournalList
     {
         list($response) = $this->listNotaryJournalsWithHttpInfo($options);
         return $response;
@@ -835,44 +810,36 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param  \DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJournalList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listNotaryJournalsWithHttpInfo(NotaryApi\ListNotaryJournalsOptions $options = null)
+    public function listNotaryJournalsWithHttpInfo(\DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/journals";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
         }
-        // query params
-        if ($options->getSearchText() !== null) {
-            $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
-        }
+
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -919,10 +886,10 @@ class NotaryApi
      * Update a notary
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notary
      */
-    public function updateNotary($notary = null)
+    public function updateNotary($notary = null): \DocuSign\eSign\Model\Notary
     {
         list($response) = $this->updateNotaryWithHttpInfo($notary);
         return $response;
@@ -934,27 +901,22 @@ class NotaryApi
      * Update a notary
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateNotaryWithHttpInfo($notary = null)
+    public function updateNotaryWithHttpInfo($notary = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
 
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($notary)) {
@@ -1005,12 +967,12 @@ class NotaryApi
      *
      * Update a notary jurisdiction
      *
-    * @param string $jurisdiction_id 
+     * @param string $jurisdiction_id 
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
      */
-    public function updateNotaryJurisdiction($jurisdiction_id, $notary_jurisdiction = null)
+    public function updateNotaryJurisdiction($jurisdiction_id, $notary_jurisdiction = null): \DocuSign\eSign\Model\NotaryJurisdiction
     {
         list($response) = $this->updateNotaryJurisdictionWithHttpInfo($jurisdiction_id, $notary_jurisdiction);
         return $response;
@@ -1021,12 +983,12 @@ class NotaryApi
      *
      * Update a notary jurisdiction
      *
-    * @param string $jurisdiction_id 
+     * @param string $jurisdiction_id 
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateNotaryJurisdictionWithHttpInfo($jurisdiction_id, $notary_jurisdiction = null)
+    public function updateNotaryJurisdictionWithHttpInfo($jurisdiction_id, $notary_jurisdiction = null): array
     {
         // verify the required parameter 'jurisdiction_id' is set
         if ($jurisdiction_id === null) {
@@ -1034,28 +996,19 @@ class NotaryApi
         }
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/jurisdictions/{jurisdictionId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($jurisdiction_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "jurisdictionId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($jurisdiction_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "jurisdictionId", $jurisdiction_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($notary_jurisdiction)) {

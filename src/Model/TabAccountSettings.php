@@ -2,7 +2,7 @@
 /**
  * TabAccountSettings
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * TabAccountSettings Class Doc Comment
@@ -77,6 +77,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'note_tabs_enabled' => 'string',
         'note_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'prefill_tabs_enabled' => 'string',
+        'prefill_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'radio_tabs_enabled' => 'string',
         'radio_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'saving_custom_tabs_enabled' => 'string',
@@ -125,6 +127,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => null,
         'note_tabs_enabled' => null,
         'note_tabs_metadata' => null,
+        'prefill_tabs_enabled' => null,
+        'prefill_tabs_metadata' => null,
         'radio_tabs_enabled' => null,
         'radio_tabs_metadata' => null,
         'saving_custom_tabs_enabled' => null,
@@ -194,6 +198,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => 'listTabsMetadata',
         'note_tabs_enabled' => 'noteTabsEnabled',
         'note_tabs_metadata' => 'noteTabsMetadata',
+        'prefill_tabs_enabled' => 'prefillTabsEnabled',
+        'prefill_tabs_metadata' => 'prefillTabsMetadata',
         'radio_tabs_enabled' => 'radioTabsEnabled',
         'radio_tabs_metadata' => 'radioTabsMetadata',
         'saving_custom_tabs_enabled' => 'savingCustomTabsEnabled',
@@ -242,6 +248,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => 'setListTabsMetadata',
         'note_tabs_enabled' => 'setNoteTabsEnabled',
         'note_tabs_metadata' => 'setNoteTabsMetadata',
+        'prefill_tabs_enabled' => 'setPrefillTabsEnabled',
+        'prefill_tabs_metadata' => 'setPrefillTabsMetadata',
         'radio_tabs_enabled' => 'setRadioTabsEnabled',
         'radio_tabs_metadata' => 'setRadioTabsMetadata',
         'saving_custom_tabs_enabled' => 'setSavingCustomTabsEnabled',
@@ -290,6 +298,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => 'getListTabsMetadata',
         'note_tabs_enabled' => 'getNoteTabsEnabled',
         'note_tabs_metadata' => 'getNoteTabsMetadata',
+        'prefill_tabs_enabled' => 'getPrefillTabsEnabled',
+        'prefill_tabs_metadata' => 'getPrefillTabsMetadata',
         'radio_tabs_enabled' => 'getRadioTabsEnabled',
         'radio_tabs_metadata' => 'getRadioTabsMetadata',
         'saving_custom_tabs_enabled' => 'getSavingCustomTabsEnabled',
@@ -392,6 +402,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         $this->container['list_tabs_metadata'] = isset($data['list_tabs_metadata']) ? $data['list_tabs_metadata'] : null;
         $this->container['note_tabs_enabled'] = isset($data['note_tabs_enabled']) ? $data['note_tabs_enabled'] : null;
         $this->container['note_tabs_metadata'] = isset($data['note_tabs_metadata']) ? $data['note_tabs_metadata'] : null;
+        $this->container['prefill_tabs_enabled'] = isset($data['prefill_tabs_enabled']) ? $data['prefill_tabs_enabled'] : null;
+        $this->container['prefill_tabs_metadata'] = isset($data['prefill_tabs_metadata']) ? $data['prefill_tabs_metadata'] : null;
         $this->container['radio_tabs_enabled'] = isset($data['radio_tabs_enabled']) ? $data['radio_tabs_enabled'] : null;
         $this->container['radio_tabs_metadata'] = isset($data['radio_tabs_metadata']) ? $data['radio_tabs_metadata'] : null;
         $this->container['saving_custom_tabs_enabled'] = isset($data['saving_custom_tabs_enabled']) ? $data['saving_custom_tabs_enabled'] : null;
@@ -914,6 +926,54 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     public function setNoteTabsMetadata($note_tabs_metadata)
     {
         $this->container['note_tabs_metadata'] = $note_tabs_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets prefill_tabs_enabled
+     *
+     * @return string
+     */
+    public function getPrefillTabsEnabled()
+    {
+        return $this->container['prefill_tabs_enabled'];
+    }
+
+    /**
+     * Sets prefill_tabs_enabled
+     *
+     * @param string $prefill_tabs_enabled 
+     *
+     * @return $this
+     */
+    public function setPrefillTabsEnabled($prefill_tabs_enabled)
+    {
+        $this->container['prefill_tabs_enabled'] = $prefill_tabs_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets prefill_tabs_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getPrefillTabsMetadata()
+    {
+        return $this->container['prefill_tabs_metadata'];
+    }
+
+    /**
+     * Sets prefill_tabs_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $prefill_tabs_metadata prefill_tabs_metadata
+     *
+     * @return $this
+     */
+    public function setPrefillTabsMetadata($prefill_tabs_metadata)
+    {
+        $this->container['prefill_tabs_metadata'] = $prefill_tabs_metadata;
 
         return $this;
     }

@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * CustomTabsApi
- * PHP version 5
+ * CustomTabsApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\CustomTabsApi;
+namespace DocuSign\eSign\ApiCustomTabsApi;
+
 
 class ListOptions
 {
@@ -34,23 +38,23 @@ class ListOptions
       * $custom_tab_only When set to **true**, only custom tabs are returned in the response.
       * @var string
       */
-    protected $custom_tab_only;
+    protected string $custom_tab_only;
 
     /**
      * Gets custom_tab_only
      * @return string
      */
-    public function getCustomTabOnly()
+    public function getCustomTabOnly(): string
     {
         return $this->custom_tab_only;
     }
-  
+
     /**
      * Sets custom_tab_only
      * @param string $custom_tab_only When set to **true**, only custom tabs are returned in the response.
-     * @return $this
+     * @return self
      */
-    public function setCustomTabOnly($custom_tab_only)
+    public function setCustomTabOnly(string $custom_tab_only): self
     {
         $this->custom_tab_only = $custom_tab_only;
         return $this;
@@ -58,12 +62,13 @@ class ListOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * CustomTabsApi Class Doc Comment
@@ -78,30 +83,27 @@ class CustomTabsApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -109,27 +111,46 @@ class CustomTabsApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return CustomTabsApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation callList
      *
      * Gets a list of all account tabs.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiCustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadataList
      */
-    public function callList($account_id, CustomTabsApi\ListOptions $options = null)
+    public function callList($account_id, \DocuSign\eSign\ApiCustomTabsApi\ListOptions $options = null): \DocuSign\eSign\Model\TabMetadataList
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -140,12 +161,12 @@ class CustomTabsApi
      *
      * Gets a list of all account tabs.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiCustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadataList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, CustomTabsApi\ListOptions $options = null)
+    public function callListWithHttpInfo($account_id, \DocuSign\eSign\ApiCustomTabsApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -153,36 +174,26 @@ class CustomTabsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/tab_definitions";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCustomTabOnly() !== null) {
-            $queryParams['custom_tab_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getCustomTabOnly());
-        }
+            // query params
+            if ($options->getCustomTabOnly() != 'null') {
+                $queryParams['custom_tab_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getCustomTabOnly());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -228,12 +239,12 @@ class CustomTabsApi
      *
      * Creates a custom tab.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
      */
-    public function create($account_id, $tab_metadata = null)
+    public function create($account_id, $tab_metadata = null): \DocuSign\eSign\Model\TabMetadata
     {
         list($response) = $this->createWithHttpInfo($account_id, $tab_metadata);
         return $response;
@@ -244,12 +255,12 @@ class CustomTabsApi
      *
      * Creates a custom tab.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWithHttpInfo($account_id, $tab_metadata = null)
+    public function createWithHttpInfo($account_id, $tab_metadata = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -257,28 +268,19 @@ class CustomTabsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/tab_definitions";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($tab_metadata)) {
@@ -329,12 +331,12 @@ class CustomTabsApi
      *
      * Deletes custom tab information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_tab_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function delete($account_id, $custom_tab_id)
+    public function delete($account_id, $custom_tab_id): mixed
     {
         list($response) = $this->deleteWithHttpInfo($account_id, $custom_tab_id);
         return $response;
@@ -345,12 +347,12 @@ class CustomTabsApi
      *
      * Deletes custom tab information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_tab_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWithHttpInfo($account_id, $custom_tab_id)
+    public function deleteWithHttpInfo($account_id, $custom_tab_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -362,36 +364,23 @@ class CustomTabsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($custom_tab_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "customTabId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($custom_tab_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "customTabId", $custom_tab_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -433,12 +422,12 @@ class CustomTabsApi
      *
      * Gets custom tab information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_tab_id 
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
      */
-    public function get($account_id, $custom_tab_id)
+    public function get($account_id, $custom_tab_id): \DocuSign\eSign\Model\TabMetadata
     {
         list($response) = $this->getWithHttpInfo($account_id, $custom_tab_id);
         return $response;
@@ -449,12 +438,12 @@ class CustomTabsApi
      *
      * Gets custom tab information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_tab_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_tab_id 
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWithHttpInfo($account_id, $custom_tab_id)
+    public function getWithHttpInfo($account_id, $custom_tab_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -466,36 +455,23 @@ class CustomTabsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($custom_tab_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "customTabId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($custom_tab_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "customTabId", $custom_tab_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -541,13 +517,13 @@ class CustomTabsApi
      *
      * Updates custom tab information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_tab_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_tab_id 
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
      */
-    public function update($account_id, $custom_tab_id, $tab_metadata = null)
+    public function update($account_id, $custom_tab_id, $tab_metadata = null): \DocuSign\eSign\Model\TabMetadata
     {
         list($response) = $this->updateWithHttpInfo($account_id, $custom_tab_id, $tab_metadata);
         return $response;
@@ -558,13 +534,13 @@ class CustomTabsApi
      *
      * Updates custom tab information.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $custom_tab_id 
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $custom_tab_id 
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateWithHttpInfo($account_id, $custom_tab_id, $tab_metadata = null)
+    public function updateWithHttpInfo($account_id, $custom_tab_id, $tab_metadata = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -576,36 +552,23 @@ class CustomTabsApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($custom_tab_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "customTabId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($custom_tab_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "customTabId", $custom_tab_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($tab_metadata)) {

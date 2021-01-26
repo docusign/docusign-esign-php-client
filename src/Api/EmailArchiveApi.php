@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 /**
- * EmailArchiveApi
- * PHP version 5
+ * EmailArchiveApi.
+ *
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -26,7 +29,8 @@
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\EmailArchiveApi;
+namespace DocuSign\eSign\ApiEmailArchiveApi;
+
 
 class GetBCCEmailArchiveHistoryListOptions
 {
@@ -34,23 +38,23 @@ class GetBCCEmailArchiveHistoryListOptions
       * $count 
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count 
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -59,51 +63,53 @@ class GetBCCEmailArchiveHistoryListOptions
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
 }
+
+
 class GetBCCEmailArchiveListOptions
 {
     /**
       * $count 
       * @var string
       */
-    protected $count;
+    protected string $count;
 
     /**
      * Gets count
      * @return string
      */
-    public function getCount()
+    public function getCount(): string
     {
         return $this->count;
     }
-  
+
     /**
      * Sets count
      * @param string $count 
-     * @return $this
+     * @return self
      */
-    public function setCount($count)
+    public function setCount(string $count): self
     {
         $this->count = $count;
         return $this;
@@ -112,23 +118,23 @@ class GetBCCEmailArchiveListOptions
       * $start_position 
       * @var string
       */
-    protected $start_position;
+    protected string $start_position;
 
     /**
      * Gets start_position
      * @return string
      */
-    public function getStartPosition()
+    public function getStartPosition(): string
     {
         return $this->start_position;
     }
-  
+
     /**
      * Sets start_position
      * @param string $start_position 
-     * @return $this
+     * @return self
      */
-    public function setStartPosition($start_position)
+    public function setStartPosition(string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -136,12 +142,13 @@ class GetBCCEmailArchiveListOptions
 }
 
 
+
 namespace DocuSign\eSign\Api;
 
-use \DocuSign\eSign\Client\ApiClient;
-use \DocuSign\eSign\Client\ApiException;
-use \DocuSign\eSign\Configuration;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\Client\ApiClient;
+use DocuSign\eSign\Client\ApiException;
+use DocuSign\eSign\Configuration;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * EmailArchiveApi Class Doc Comment
@@ -156,30 +163,27 @@ class EmailArchiveApi
     /**
      * API Client
      *
-     * @var \DocuSign\eSign\Client\ApiClient instance of the ApiClient
+     * @var ApiClient instance of the ApiClient
      */
-    protected $apiClient;
+    protected ApiClient $apiClient;
 
     /**
      * Constructor
      *
-     * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
+     * @param ApiClient|null $apiClient The api client to use
+     * @return void
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(ApiClient $apiClient = null)
     {
-        if ($apiClient === null) {
-            $apiClient = new ApiClient();
-        }
-
-        $this->apiClient = $apiClient;
+        $this->apiClient = $apiClient ?? new ApiClient();
     }
 
     /**
      * Get API client
      *
-     * @return \DocuSign\eSign\Client\ApiClient get the API client
+     * @return ApiClient get the API client
      */
-    public function getApiClient()
+    public function getApiClient(): ApiClient
     {
         return $this->apiClient;
     }
@@ -187,27 +191,46 @@ class EmailArchiveApi
     /**
      * Set the API client
      *
-     * @param \DocuSign\eSign\Client\ApiClient $apiClient set the API client
+     * @param ApiClient $apiClient set the API client
      *
-     * @return EmailArchiveApi
+     * @return self
      */
-    public function setApiClient(\DocuSign\eSign\Client\ApiClient $apiClient)
+    public function setApiClient(ApiClient $apiClient): self
     {
         $this->apiClient = $apiClient;
         return $this;
     }
 
     /**
+    * Update $resourcePath with $
+    *
+    * @param string $resourcePath
+    * @param string $baseName
+    * @param string $paramName
+    *
+    * @return string
+    */
+    public function updateResourcePath(string $resourcePath, string $baseName, string $paramName): string
+    {
+        return str_replace(
+            "{" . $baseName . "}",
+            $this->apiClient->getSerializer()->toPathValue($paramName),
+            $resourcePath
+        );
+    }
+
+
+    /**
      * Operation createBCCEmailArchive
      *
      * Creates a blind carbon copy email archive entry
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BccEmailArchive $bcc_email_archive  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchive
      */
-    public function createBCCEmailArchive($account_id, $bcc_email_archive = null)
+    public function createBCCEmailArchive($account_id, $bcc_email_archive = null): \DocuSign\eSign\Model\BccEmailArchive
     {
         list($response) = $this->createBCCEmailArchiveWithHttpInfo($account_id, $bcc_email_archive);
         return $response;
@@ -218,12 +241,12 @@ class EmailArchiveApi
      *
      * Creates a blind carbon copy email archive entry
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BccEmailArchive $bcc_email_archive  (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchive, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createBCCEmailArchiveWithHttpInfo($account_id, $bcc_email_archive = null)
+    public function createBCCEmailArchiveWithHttpInfo($account_id, $bcc_email_archive = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -231,28 +254,19 @@ class EmailArchiveApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         // body params
         $_tempBody = null;
         if (isset($bcc_email_archive)) {
@@ -303,12 +317,12 @@ class EmailArchiveApi
      *
      * Delete a blind carbon copy email archive for an account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bcc_email_archive_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
-     * @return void
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bcc_email_archive_id 
+     * @throws ApiException on non-2xx response
+     * @return mixed
      */
-    public function deleteBCCEmailArchive($account_id, $bcc_email_archive_id)
+    public function deleteBCCEmailArchive($account_id, $bcc_email_archive_id): mixed
     {
         list($response) = $this->deleteBCCEmailArchiveWithHttpInfo($account_id, $bcc_email_archive_id);
         return $response;
@@ -319,12 +333,12 @@ class EmailArchiveApi
      *
      * Delete a blind carbon copy email archive for an account.
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bcc_email_archive_id 
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bcc_email_archive_id 
+     * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteBCCEmailArchiveWithHttpInfo($account_id, $bcc_email_archive_id)
+    public function deleteBCCEmailArchiveWithHttpInfo($account_id, $bcc_email_archive_id): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -336,36 +350,23 @@ class EmailArchiveApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives/{bccEmailArchiveId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bcc_email_archive_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bccEmailArchiveId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bcc_email_archive_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bccEmailArchiveId", $bcc_email_archive_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -407,13 +408,13 @@ class EmailArchiveApi
      *
      * Get the blind carbon copy email archive history entries for the specified archive
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bcc_email_archive_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bcc_email_archive_id 
+     * @param  \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveHistoryListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchiveHistoryList
      */
-    public function getBCCEmailArchiveHistoryList($account_id, $bcc_email_archive_id, EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null)
+    public function getBCCEmailArchiveHistoryList($account_id, $bcc_email_archive_id, \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null): \DocuSign\eSign\Model\BccEmailArchiveHistoryList
     {
         list($response) = $this->getBCCEmailArchiveHistoryListWithHttpInfo($account_id, $bcc_email_archive_id, $options);
         return $response;
@@ -424,13 +425,13 @@ class EmailArchiveApi
      *
      * Get the blind carbon copy email archive history entries for the specified archive
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-    * @param string $bcc_email_archive_id 
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param string $bcc_email_archive_id 
+     * @param  \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveHistoryListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchiveHistoryList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBCCEmailArchiveHistoryListWithHttpInfo($account_id, $bcc_email_archive_id, EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null)
+    public function getBCCEmailArchiveHistoryListWithHttpInfo($account_id, $bcc_email_archive_id, \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -442,48 +443,33 @@ class EmailArchiveApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives/{bccEmailArchiveId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
         // path params
         if ($bcc_email_archive_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "bccEmailArchiveId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($bcc_email_archive_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "bccEmailArchiveId", $bcc_email_archive_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -529,12 +515,12 @@ class EmailArchiveApi
      *
      * Get the blind carbon copy email archive entries owned by the specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchiveList
      */
-    public function getBCCEmailArchiveList($account_id, EmailArchiveApi\GetBCCEmailArchiveListOptions $options = null)
+    public function getBCCEmailArchiveList($account_id, \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveListOptions $options = null): \DocuSign\eSign\Model\BccEmailArchiveList
     {
         list($response) = $this->getBCCEmailArchiveListWithHttpInfo($account_id, $options);
         return $response;
@@ -545,12 +531,12 @@ class EmailArchiveApi
      *
      * Get the blind carbon copy email archive entries owned by the specified account
      *
-    * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  $options Options for modifying the behavior of the function. (optional)
-     * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
+     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveListOptions for modifying the behavior of the function. (optional)
+     * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchiveList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBCCEmailArchiveListWithHttpInfo($account_id, EmailArchiveApi\GetBCCEmailArchiveListOptions $options = null)
+    public function getBCCEmailArchiveListWithHttpInfo($account_id, \DocuSign\eSign\ApiEmailArchiveApi\GetBCCEmailArchiveListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -558,40 +544,29 @@ class EmailArchiveApi
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         if ($options != null)
         {
-        // query params
-        // query params
-        if ($options->getCount() !== null) {
-            $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
-        }
-        // query params
-        if ($options->getStartPosition() !== null) {
-            $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-        }
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
         }
 
         // path params
         if ($account_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "accountId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($account_id),
-                $resourcePath
-            );
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
         }
+
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-
         
         // for model (json/xml)
         if (isset($_tempBody)) {

@@ -2,7 +2,7 @@
 /**
  * RecipientEvent
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * RecipientEvent Class Doc Comment

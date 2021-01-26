@@ -2,7 +2,7 @@
 /**
  * Document
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -30,7 +30,7 @@
 namespace DocuSign\eSign\Model;
 
 use \ArrayAccess;
-use \DocuSign\eSign\ObjectSerializer;
+use DocuSign\eSign\ObjectSerializer;
 
 /**
  * Document Class Doc Comment
@@ -58,6 +58,7 @@ class Document implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'apply_anchor_tabs' => 'string',
+        'assign_tabs_to_recipient_id' => 'string',
         'display' => 'string',
         'document_base64' => 'string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
@@ -90,6 +91,7 @@ class Document implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'apply_anchor_tabs' => null,
+        'assign_tabs_to_recipient_id' => null,
         'display' => null,
         'document_base64' => null,
         'document_fields' => null,
@@ -143,6 +145,7 @@ class Document implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'apply_anchor_tabs' => 'applyAnchorTabs',
+        'assign_tabs_to_recipient_id' => 'assignTabsToRecipientId',
         'display' => 'display',
         'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
@@ -175,6 +178,7 @@ class Document implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'apply_anchor_tabs' => 'setApplyAnchorTabs',
+        'assign_tabs_to_recipient_id' => 'setAssignTabsToRecipientId',
         'display' => 'setDisplay',
         'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
@@ -207,6 +211,7 @@ class Document implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'apply_anchor_tabs' => 'getApplyAnchorTabs',
+        'assign_tabs_to_recipient_id' => 'getAssignTabsToRecipientId',
         'display' => 'getDisplay',
         'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
@@ -293,6 +298,7 @@ class Document implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['apply_anchor_tabs'] = isset($data['apply_anchor_tabs']) ? $data['apply_anchor_tabs'] : null;
+        $this->container['assign_tabs_to_recipient_id'] = isset($data['assign_tabs_to_recipient_id']) ? $data['assign_tabs_to_recipient_id'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
@@ -362,6 +368,30 @@ class Document implements ModelInterface, ArrayAccess
     public function setApplyAnchorTabs($apply_anchor_tabs)
     {
         $this->container['apply_anchor_tabs'] = $apply_anchor_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets assign_tabs_to_recipient_id
+     *
+     * @return string
+     */
+    public function getAssignTabsToRecipientId()
+    {
+        return $this->container['assign_tabs_to_recipient_id'];
+    }
+
+    /**
+     * Sets assign_tabs_to_recipient_id
+     *
+     * @param string $assign_tabs_to_recipient_id 
+     *
+     * @return $this
+     */
+    public function setAssignTabsToRecipientId($assign_tabs_to_recipient_id)
+    {
+        $this->container['assign_tabs_to_recipient_id'] = $assign_tabs_to_recipient_id;
 
         return $this;
     }

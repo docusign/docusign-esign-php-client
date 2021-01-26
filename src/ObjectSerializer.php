@@ -2,7 +2,7 @@
 /**
  * ObjectSerializer
  *
- * PHP version 5
+ * PHP version 7.4
  *
  * @category Class
  * @package  DocuSign\eSign
@@ -46,11 +46,11 @@ class ObjectSerializer
      * @param string $type   the SwaggerType of the data
      * @param string $format the format of the Swagger type of the data
      *
-     * @return string|object serialized form of $data
+     * @return mixed serialized form of $data
      */
-    public static function sanitizeForSerialization($data, $type = null, $format = null)
+    public static function sanitizeForSerialization($data, ?string $type = null, ?string $format = null)
     {
-        if (is_scalar($data) || null === $data) {
+        if (!isset($data) || is_scalar($data) || $data instanceof \CURLFile) {
             return $data;
         } elseif ($data instanceof \DateTime) {
             return ($format === 'date') ? $data->format('Y-m-d') : $data->format(\DateTime::ATOM);
@@ -95,7 +95,7 @@ class ObjectSerializer
      *
      * @return string the sanitized filename
      */
-    public static function sanitizeFilename($filename)
+    public static function sanitizeFilename(string $filename): string
     {
         if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
             return $match[1];
@@ -112,7 +112,7 @@ class ObjectSerializer
      *
      * @return string the serialized object
      */
-    public static function toPathValue($value)
+    public static function toPathValue(string $value): string
     {
         return rawurlencode(self::toString($value));
     }
@@ -123,11 +123,11 @@ class ObjectSerializer
      * If it's a string, pass through unchanged. It will be url-encoded
      * later.
      *
-     * @param string[]|string|\DateTime $object an object to be serialized to a string
+     * @param array|string|\DateTime $object an object to be serialized to a string
      *
      * @return string the serialized object
      */
-    public static function toQueryValue($object)
+    public static function toQueryValue($object): string
     {
         if (is_array($object)) {
             return implode(',', $object);
@@ -145,7 +145,7 @@ class ObjectSerializer
      *
      * @return string the header string
      */
-    public static function toHeaderValue($value)
+    public static function toHeaderValue(string $value): string
     {
         return self::toString($value);
     }
@@ -159,7 +159,7 @@ class ObjectSerializer
      *
      * @return string the form string
      */
-    public static function toFormValue($value)
+    public static function toFormValue($value): string
     {
         if ($value instanceof \SplFileObject) {
             return $value->getRealPath();
@@ -177,7 +177,7 @@ class ObjectSerializer
      *
      * @return string the header string
      */
-    public static function toString($value)
+    public static function toString($value): string
     {
         if ($value instanceof \DateTime) { // datetime in ISO8601 format
             return $value->format(\DateTime::ATOM);
@@ -196,7 +196,10 @@ class ObjectSerializer
      *
      * @return string
      */
-    public static function serializeCollection(array $collection, $collectionFormat, $allowCollectionFormatMulti = false)
+    public static function serializeCollection(
+        array $collection,
+        string $collectionFormat,
+        bool $allowCollectionFormatMulti = false): string
     {
         if ($allowCollectionFormatMulti && ('multi' === $collectionFormat)) {
             // http_build_query() almost does the job for us. We just
@@ -225,12 +228,12 @@ class ObjectSerializer
      *
      * @param mixed    $data          object or primitive to be deserialized
      * @param string   $class         class name is passed as a string
-     * @param string[] $httpHeaders   HTTP headers
+     * @param array $httpHeaders   HTTP headers
      * @param string   $discriminator discriminator if polymorphism is used
      *
      * @return object|array|null an single or an array of $class instances
      */
-    public static function deserialize($data, $class, $httpHeaders = null)
+    public static function deserialize($data, string $class, ?array $httpHeaders = null)
     {
         if (null === $data) {
             return null;
@@ -303,7 +306,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\DocuSign\eSign\Model\\' . $data->{$discriminator};
+                $subclass = 'DocuSign\eSign\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }
