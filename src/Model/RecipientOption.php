@@ -57,11 +57,11 @@ class RecipientOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
-        'name' => 'string',
-        'recipient_label' => 'string',
-        'role_name' => 'string',
-        'signing_group_id' => 'string'
+        'email' => '?string',
+        'name' => '?string',
+        'recipient_label' => '?string',
+        'role_name' => '?string',
+        'signing_group_id' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -241,7 +241,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -265,7 +265,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_label
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientLabel()
     {
@@ -289,7 +289,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_label
      *
-     * @param string $recipient_label 
+     * @param ?string $recipient_label 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Gets role_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRoleName()
     {
@@ -313,7 +313,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Sets role_name
      *
-     * @param string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+     * @param ?string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupId()
     {
@@ -337,7 +337,7 @@ class RecipientOption implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id
      *
-     * @param string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     * @param ?string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
      *
      * @return $this
      */

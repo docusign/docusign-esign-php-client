@@ -58,8 +58,8 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'auth_steps' => '\DocuSign\eSign\Model\IdCheckSecurityStep[]',
-        'is_default' => 'string',
-        'name' => 'string'
+        'is_default' => '?string',
+        'name' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets is_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDefault()
     {
@@ -253,7 +253,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param string $is_default 
+     * @param ?string $is_default 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -277,7 +277,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */

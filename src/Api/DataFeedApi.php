@@ -29,7 +29,7 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiDataFeedApi;
+namespace DocuSign\eSign\Api\DataFeedApi;
 
 
 
@@ -115,8 +115,8 @@ class DataFeedApi
      *
      * Retrieves a Datafeed element by Id.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $data_feed_element_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $data_feed_element_id 
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -131,8 +131,8 @@ class DataFeedApi
      *
      * Retrieves a Datafeed element by Id.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $data_feed_element_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $data_feed_element_id 
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

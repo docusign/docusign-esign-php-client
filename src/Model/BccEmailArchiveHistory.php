@@ -57,12 +57,12 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'action' => 'string',
-        'email' => 'string',
-        'modified' => 'string',
+        'account_id' => '?string',
+        'action' => '?string',
+        'email' => '?string',
+        'modified' => '?string',
         'modified_by' => '\DocuSign\eSign\Model\UserInfo',
-        'status' => 'string'
+        'status' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -247,7 +247,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Gets action
      *
-     * @return string
+     * @return ?string
      */
     public function getAction()
     {
@@ -271,7 +271,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Sets action
      *
-     * @param string $action 
+     * @param ?string $action 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -295,7 +295,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Gets modified
      *
-     * @return string
+     * @return ?string
      */
     public function getModified()
     {
@@ -319,7 +319,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param string $modified 
+     * @param ?string $modified 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -367,7 +367,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */

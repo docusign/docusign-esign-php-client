@@ -58,8 +58,8 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'custom_fields' => '\DocuSign\eSign\Model\BulkSendingCopyCustomField[]',
-        'email_blurb' => 'string',
-        'email_subject' => 'string',
+        'email_blurb' => '?string',
+        'email_subject' => '?string',
         'recipients' => '\DocuSign\eSign\Model\BulkSendingCopyRecipient[]'
     ];
 
@@ -249,7 +249,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     /**
      * Gets email_blurb
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailBlurb()
     {
@@ -259,7 +259,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     /**
      * Sets email_blurb
      *
-     * @param string $email_blurb 
+     * @param ?string $email_blurb 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     /**
      * Gets email_subject
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailSubject()
     {
@@ -283,7 +283,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     /**
      * Sets email_subject
      *
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * @param ?string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
      *
      * @return $this
      */

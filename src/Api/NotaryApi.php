@@ -29,32 +29,32 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiNotaryApi;
+namespace DocuSign\eSign\Api\NotaryApi;
 
 
 class GetNotaryOptions
 {
     /**
       * $include_jurisdictions 
-      * @var string
+      * @var ?string
       */
-    protected string $include_jurisdictions;
+    protected ?string $include_jurisdictions = null;
 
     /**
      * Gets include_jurisdictions
-     * @return string
+     * @return ?string
      */
-    public function getIncludeJurisdictions(): string
+    public function getIncludeJurisdictions(): ?string
     {
         return $this->include_jurisdictions;
     }
 
     /**
      * Sets include_jurisdictions
-     * @param string $include_jurisdictions 
+     * @param ?string $include_jurisdictions 
      * @return self
      */
-    public function setIncludeJurisdictions(string $include_jurisdictions): self
+    public function setIncludeJurisdictions(?string $include_jurisdictions): self
     {
         $this->include_jurisdictions = $include_jurisdictions;
         return $this;
@@ -66,75 +66,75 @@ class ListNotaryJournalsOptions
 {
     /**
       * $count 
-      * @var string
+      * @var ?string
       */
-    protected string $count;
+    protected ?string $count = null;
 
     /**
      * Gets count
-     * @return string
+     * @return ?string
      */
-    public function getCount(): string
+    public function getCount(): ?string
     {
         return $this->count;
     }
 
     /**
      * Sets count
-     * @param string $count 
+     * @param ?string $count 
      * @return self
      */
-    public function setCount(string $count): self
+    public function setCount(?string $count): self
     {
         $this->count = $count;
         return $this;
     }
     /**
       * $search_text 
-      * @var string
+      * @var ?string
       */
-    protected string $search_text;
+    protected ?string $search_text = null;
 
     /**
      * Gets search_text
-     * @return string
+     * @return ?string
      */
-    public function getSearchText(): string
+    public function getSearchText(): ?string
     {
         return $this->search_text;
     }
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param ?string $search_text 
      * @return self
      */
-    public function setSearchText(string $search_text): self
+    public function setSearchText(?string $search_text): self
     {
         $this->search_text = $search_text;
         return $this;
     }
     /**
       * $start_position 
-      * @var string
+      * @var ?string
       */
-    protected string $start_position;
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return string
+     * @return ?string
      */
-    public function getStartPosition(): string
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param string $start_position 
+     * @param ?string $start_position 
      * @return self
      */
-    public function setStartPosition(string $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -389,7 +389,7 @@ class NotaryApi
      *
      * Delete a notary jurisdiction a specified user.
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -404,7 +404,7 @@ class NotaryApi
      *
      * Delete a notary jurisdiction a specified user.
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -470,11 +470,11 @@ class NotaryApi
      *
      * Get notary settings for a user
      *
-     * @param  \DocuSign\eSign\ApiNotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryResult
      */
-    public function getNotary(\DocuSign\eSign\ApiNotaryApi\GetNotaryOptions $options = null): \DocuSign\eSign\Model\NotaryResult
+    public function getNotary(\DocuSign\eSign\Api\NotaryApi\GetNotaryOptions $options = null): \DocuSign\eSign\Model\NotaryResult
     {
         list($response) = $this->getNotaryWithHttpInfo($options);
         return $response;
@@ -485,11 +485,11 @@ class NotaryApi
      *
      * Get notary settings for a user
      *
-     * @param  \DocuSign\eSign\ApiNotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotaryWithHttpInfo(\DocuSign\eSign\ApiNotaryApi\GetNotaryOptions $options = null): array
+    public function getNotaryWithHttpInfo(\DocuSign\eSign\Api\NotaryApi\GetNotaryOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary";
@@ -554,7 +554,7 @@ class NotaryApi
      *
      * Get notary a jurisdiction for a user
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
      */
@@ -569,7 +569,7 @@ class NotaryApi
      *
      * Get notary a jurisdiction for a user
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)
      */
@@ -639,7 +639,7 @@ class NotaryApi
      *
      * Get notary seal for a jurisdiction
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -654,7 +654,7 @@ class NotaryApi
      *
      * Get notary seal for a jurisdiction
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -795,11 +795,11 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @param  \DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJournalList
      */
-    public function listNotaryJournals(\DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions $options = null): \DocuSign\eSign\Model\NotaryJournalList
+    public function listNotaryJournals(\DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions $options = null): \DocuSign\eSign\Model\NotaryJournalList
     {
         list($response) = $this->listNotaryJournalsWithHttpInfo($options);
         return $response;
@@ -810,11 +810,11 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @param  \DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJournalList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listNotaryJournalsWithHttpInfo(\DocuSign\eSign\ApiNotaryApi\ListNotaryJournalsOptions $options = null): array
+    public function listNotaryJournalsWithHttpInfo(\DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/journals";
@@ -967,7 +967,7 @@ class NotaryApi
      *
      * Update a notary jurisdiction
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
@@ -983,7 +983,7 @@ class NotaryApi
      *
      * Update a notary jurisdiction
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)

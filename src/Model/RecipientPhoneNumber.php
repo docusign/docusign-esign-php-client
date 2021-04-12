@@ -57,9 +57,9 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'country_code' => 'string',
+        'country_code' => '?string',
         'country_code_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'number' => 'string',
+        'number' => '?string',
         'number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
@@ -225,7 +225,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Gets country_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCountryCode()
     {
@@ -235,7 +235,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param string $country_code 
+     * @param ?string $country_code 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Gets number
      *
-     * @return string
+     * @return ?string
      */
     public function getNumber()
     {
@@ -283,7 +283,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets number
      *
-     * @param string $number 
+     * @param ?string $number 
      *
      * @return $this
      */

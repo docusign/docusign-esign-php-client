@@ -58,14 +58,14 @@ class Page implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dpi' => 'string',
+        'dpi' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'height' => 'string',
-        'image_bytes' => 'string',
-        'mime_type' => 'string',
-        'page_id' => 'string',
-        'sequence' => 'string',
-        'width' => 'string'
+        'height' => '?string',
+        'image_bytes' => '?string',
+        'mime_type' => '?string',
+        'page_id' => '?string',
+        'sequence' => '?string',
+        'width' => '?string'
     ];
 
     /**
@@ -250,7 +250,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Gets dpi
      *
-     * @return string
+     * @return ?string
      */
     public function getDpi()
     {
@@ -260,7 +260,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Sets dpi
      *
-     * @param string $dpi The number of dots per inch used for the page image.
+     * @param ?string $dpi The number of dots per inch used for the page image.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Gets height
      *
-     * @return string
+     * @return ?string
      */
     public function getHeight()
     {
@@ -308,7 +308,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Sets height
      *
-     * @param string $height Height of the tab in pixels.
+     * @param ?string $height Height of the tab in pixels.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Gets image_bytes
      *
-     * @return string
+     * @return ?string
      */
     public function getImageBytes()
     {
@@ -332,7 +332,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Sets image_bytes
      *
-     * @param string $image_bytes 
+     * @param ?string $image_bytes 
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Gets mime_type
      *
-     * @return string
+     * @return ?string
      */
     public function getMimeType()
     {
@@ -356,7 +356,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Sets mime_type
      *
-     * @param string $mime_type 
+     * @param ?string $mime_type 
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Gets page_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPageId()
     {
@@ -380,7 +380,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Sets page_id
      *
-     * @param string $page_id 
+     * @param ?string $page_id 
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Gets sequence
      *
-     * @return string
+     * @return ?string
      */
     public function getSequence()
     {
@@ -404,7 +404,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Sets sequence
      *
-     * @param string $sequence 
+     * @param ?string $sequence 
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Gets width
      *
-     * @return string
+     * @return ?string
      */
     public function getWidth()
     {
@@ -428,7 +428,7 @@ class Page implements ModelInterface, ArrayAccess
     /**
      * Sets width
      *
-     * @param string $width Width of the tab in pixels.
+     * @param ?string $width Width of the tab in pixels.
      *
      * @return $this
      */

@@ -58,19 +58,19 @@ class Workspace implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billable_account_id' => 'string',
+        'billable_account_id' => '?string',
         'caller_information' => '\DocuSign\eSign\Model\WorkspaceUser',
-        'created' => 'string',
+        'created' => '?string',
         'created_by_information' => '\DocuSign\eSign\Model\WorkspaceUser',
-        'last_modified' => 'string',
+        'last_modified' => '?string',
         'last_modified_by_information' => '\DocuSign\eSign\Model\WorkspaceUser',
         'settings' => '\DocuSign\eSign\Model\WorkspaceSettings',
-        'status' => 'string',
-        'workspace_base_url' => 'string',
-        'workspace_description' => 'string',
-        'workspace_id' => 'string',
-        'workspace_name' => 'string',
-        'workspace_uri' => 'string'
+        'status' => '?string',
+        'workspace_base_url' => '?string',
+        'workspace_description' => '?string',
+        'workspace_id' => '?string',
+        'workspace_name' => '?string',
+        'workspace_uri' => '?string'
     ];
 
     /**
@@ -280,7 +280,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets billable_account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBillableAccountId()
     {
@@ -290,7 +290,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets billable_account_id
      *
-     * @param string $billable_account_id 
+     * @param ?string $billable_account_id 
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -338,7 +338,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created 
+     * @param ?string $created 
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModified()
     {
@@ -386,7 +386,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param string $last_modified Utc date and time the comment was last updated (can only be done by creator.)
+     * @param ?string $last_modified Utc date and time the comment was last updated (can only be done by creator.)
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -458,7 +458,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_base_url
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceBaseUrl()
     {
@@ -482,7 +482,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_base_url
      *
-     * @param string $workspace_base_url The relative URL that may be used to access the workspace.
+     * @param ?string $workspace_base_url The relative URL that may be used to access the workspace.
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_description
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceDescription()
     {
@@ -506,7 +506,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_description
      *
-     * @param string $workspace_description Text describing the purpose of the workspace.
+     * @param ?string $workspace_description Text describing the purpose of the workspace.
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceId()
     {
@@ -530,7 +530,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_id
      *
-     * @param string $workspace_id The id of the workspace, always populated.
+     * @param ?string $workspace_id The id of the workspace, always populated.
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_name
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceName()
     {
@@ -554,7 +554,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_name
      *
-     * @param string $workspace_name The name of the workspace.
+     * @param ?string $workspace_name The name of the workspace.
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceUri()
     {
@@ -578,7 +578,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_uri
      *
-     * @param string $workspace_uri The relative URI that may be used to access the workspace.
+     * @param ?string $workspace_uri The relative URI that may be used to access the workspace.
      *
      * @return $this
      */

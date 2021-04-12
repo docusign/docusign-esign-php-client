@@ -57,19 +57,19 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'batch_id' => 'string',
-        'batch_name' => 'string',
-        'batch_size' => 'string',
+        'batch_id' => '?string',
+        'batch_name' => '?string',
+        'batch_size' => '?string',
         'bulk_errors' => '\DocuSign\eSign\Model\BulkSendErrorStatus[]',
-        'envelope_id_or_template_id' => 'string',
-        'envelopes_uri' => 'string',
-        'failed' => 'string',
-        'mailing_list_id' => 'string',
-        'owner_user_id' => 'string',
-        'queued' => 'string',
-        'sender_user_id' => 'string',
-        'sent' => 'string',
-        'submitted_date' => 'string'
+        'envelope_id_or_template_id' => '?string',
+        'envelopes_uri' => '?string',
+        'failed' => '?string',
+        'mailing_list_id' => '?string',
+        'owner_user_id' => '?string',
+        'queued' => '?string',
+        'sender_user_id' => '?string',
+        'sent' => '?string',
+        'submitted_date' => '?string'
     ];
 
     /**
@@ -279,7 +279,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets batch_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchId()
     {
@@ -289,7 +289,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets batch_id
      *
-     * @param string $batch_id 
+     * @param ?string $batch_id 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets batch_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchName()
     {
@@ -313,7 +313,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets batch_name
      *
-     * @param string $batch_name 
+     * @param ?string $batch_name 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets batch_size
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchSize()
     {
@@ -337,7 +337,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets batch_size
      *
-     * @param string $batch_size 
+     * @param ?string $batch_size 
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id_or_template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeIdOrTemplateId()
     {
@@ -385,7 +385,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id_or_template_id
      *
-     * @param string $envelope_id_or_template_id 
+     * @param ?string $envelope_id_or_template_id 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesUri()
     {
@@ -409,7 +409,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_uri
      *
-     * @param string $envelopes_uri 
+     * @param ?string $envelopes_uri 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets failed
      *
-     * @return string
+     * @return ?string
      */
     public function getFailed()
     {
@@ -433,7 +433,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets failed
      *
-     * @param string $failed 
+     * @param ?string $failed 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets mailing_list_id
      *
-     * @return string
+     * @return ?string
      */
     public function getMailingListId()
     {
@@ -457,7 +457,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets mailing_list_id
      *
-     * @param string $mailing_list_id 
+     * @param ?string $mailing_list_id 
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets owner_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getOwnerUserId()
     {
@@ -481,7 +481,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets owner_user_id
      *
-     * @param string $owner_user_id 
+     * @param ?string $owner_user_id 
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets queued
      *
-     * @return string
+     * @return ?string
      */
     public function getQueued()
     {
@@ -505,7 +505,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets queued
      *
-     * @param string $queued 
+     * @param ?string $queued 
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets sender_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderUserId()
     {
@@ -529,7 +529,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets sender_user_id
      *
-     * @param string $sender_user_id 
+     * @param ?string $sender_user_id 
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets sent
      *
-     * @return string
+     * @return ?string
      */
     public function getSent()
     {
@@ -553,7 +553,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets sent
      *
-     * @param string $sent 
+     * @param ?string $sent 
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Gets submitted_date
      *
-     * @return string
+     * @return ?string
      */
     public function getSubmittedDate()
     {
@@ -577,7 +577,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets submitted_date
      *
-     * @param string $submitted_date 
+     * @param ?string $submitted_date 
      *
      * @return $this
      */

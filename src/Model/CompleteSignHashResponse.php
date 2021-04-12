@@ -58,8 +58,8 @@ class CompleteSignHashResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'documents' => '\DocuSign\eSign\Model\SignHashDocument[]',
-        'redirection_url' => 'string',
-        'remaining_signature_requests' => 'string'
+        'redirection_url' => '?string',
+        'remaining_signature_requests' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class CompleteSignHashResponse implements ModelInterface, ArrayAccess
     /**
      * Gets redirection_url
      *
-     * @return string
+     * @return ?string
      */
     public function getRedirectionUrl()
     {
@@ -253,7 +253,7 @@ class CompleteSignHashResponse implements ModelInterface, ArrayAccess
     /**
      * Sets redirection_url
      *
-     * @param string $redirection_url 
+     * @param ?string $redirection_url 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class CompleteSignHashResponse implements ModelInterface, ArrayAccess
     /**
      * Gets remaining_signature_requests
      *
-     * @return string
+     * @return ?string
      */
     public function getRemainingSignatureRequests()
     {
@@ -277,7 +277,7 @@ class CompleteSignHashResponse implements ModelInterface, ArrayAccess
     /**
      * Sets remaining_signature_requests
      *
-     * @param string $remaining_signature_requests 
+     * @param ?string $remaining_signature_requests 
      *
      * @return $this
      */

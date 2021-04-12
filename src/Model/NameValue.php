@@ -58,9 +58,9 @@ class NameValue implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'name' => 'string',
-        'original_value' => 'string',
-        'value' => 'string'
+        'name' => '?string',
+        'original_value' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class NameValue implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -259,7 +259,7 @@ class NameValue implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name The name or key of a name/value pair.
+     * @param ?string $name The name or key of a name/value pair.
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class NameValue implements ModelInterface, ArrayAccess
     /**
      * Gets original_value
      *
-     * @return string
+     * @return ?string
      */
     public function getOriginalValue()
     {
@@ -283,7 +283,7 @@ class NameValue implements ModelInterface, ArrayAccess
     /**
      * Sets original_value
      *
-     * @param string $original_value The initial value of the tab when it was sent to the recipient.
+     * @param ?string $original_value The initial value of the tab when it was sent to the recipient.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class NameValue implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -307,7 +307,7 @@ class NameValue implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value The value field of a name/value pair.
+     * @param ?string $value The value field of a name/value pair.
      *
      * @return $this
      */

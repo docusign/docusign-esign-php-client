@@ -57,9 +57,9 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'can_be_sent' => 'bool',
-        'validation_error_details' => 'string[]',
-        'validation_errors' => 'string[]'
+        'can_be_sent' => '?bool',
+        'validation_error_details' => '?string[]',
+        'validation_errors' => '?string[]'
     ];
 
     /**
@@ -219,7 +219,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Gets can_be_sent
      *
-     * @return bool
+     * @return ?bool
      */
     public function getCanBeSent()
     {
@@ -229,7 +229,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Sets can_be_sent
      *
-     * @param bool $can_be_sent 
+     * @param ?bool $can_be_sent 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Gets validation_error_details
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getValidationErrorDetails()
     {
@@ -253,7 +253,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Sets validation_error_details
      *
-     * @param string[] $validation_error_details 
+     * @param ?string[] $validation_error_details 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Gets validation_errors
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getValidationErrors()
     {
@@ -277,7 +277,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Sets validation_errors
      *
-     * @param string[] $validation_errors 
+     * @param ?string[] $validation_errors 
      *
      * @return $this
      */

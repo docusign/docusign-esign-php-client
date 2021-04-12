@@ -59,29 +59,32 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'admin_message' => '\DocuSign\eSign\Model\AdminMessage',
         'ask_an_admin' => '\DocuSign\eSign\Model\AskAnAdmin',
-        'enable_admin_message' => 'string',
+        'enable_admin_message' => '?string',
         'enable_admin_message_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_easy_sign_can_use_multi_template_apply' => 'string',
+        'enable_advanced_payments_react_edit' => '?string',
+        'enable_easy_sign_can_use_multi_template_apply' => '?string',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_easy_sign_template_upload' => 'string',
+        'enable_easy_sign_template_upload' => '?string',
         'enable_easy_sign_template_upload_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_envelope_copy_with_data' => 'string',
+        'enable_envelope_copy_with_data' => '?string',
         'enable_envelope_copy_with_data_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_legacy_homepage_link' => 'string',
+        'enable_legacy_homepage_link' => '?string',
         'enable_legacy_homepage_link_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'hide_send_an_envelope' => 'string',
+        'has_external_linked_accounts' => '?string',
+        'has_external_linked_accounts_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'hide_send_an_envelope' => '?string',
         'hide_send_an_envelope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'hide_use_a_template' => 'string',
-        'hide_use_a_template_in_prepare' => 'string',
+        'hide_use_a_template' => '?string',
+        'hide_use_a_template_in_prepare' => '?string',
         'hide_use_a_template_in_prepare_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'hide_use_a_template_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'order_based_recipient_id_generation' => 'string',
+        'order_based_recipient_id_generation' => '?string',
         'order_based_recipient_id_generation_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'remove_envelope_forwarding' => 'string',
+        'remove_envelope_forwarding' => '?string',
         'remove_envelope_forwarding_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'should_redact_access_code' => 'string',
+        'should_redact_access_code' => '?string',
         'should_redact_access_code_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'upload_new_image_to_sign_or_initial' => 'string',
+        'upload_new_image_to_sign_or_initial' => '?string',
         'upload_new_image_to_sign_or_initial_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
@@ -95,6 +98,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => null,
         'enable_admin_message' => null,
         'enable_admin_message_metadata' => null,
+        'enable_advanced_payments_react_edit' => null,
         'enable_easy_sign_can_use_multi_template_apply' => null,
         'enable_easy_sign_can_use_multi_template_apply_metadata' => null,
         'enable_easy_sign_template_upload' => null,
@@ -103,6 +107,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_envelope_copy_with_data_metadata' => null,
         'enable_legacy_homepage_link' => null,
         'enable_legacy_homepage_link_metadata' => null,
+        'has_external_linked_accounts' => null,
+        'has_external_linked_accounts_metadata' => null,
         'hide_send_an_envelope' => null,
         'hide_send_an_envelope_metadata' => null,
         'hide_use_a_template' => null,
@@ -150,6 +156,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'askAnAdmin',
         'enable_admin_message' => 'enableAdminMessage',
         'enable_admin_message_metadata' => 'enableAdminMessageMetadata',
+        'enable_advanced_payments_react_edit' => 'enableAdvancedPaymentsReactEdit',
         'enable_easy_sign_can_use_multi_template_apply' => 'enableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'enableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'enableEasySignTemplateUpload',
@@ -158,6 +165,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_envelope_copy_with_data_metadata' => 'enableEnvelopeCopyWithDataMetadata',
         'enable_legacy_homepage_link' => 'enableLegacyHomepageLink',
         'enable_legacy_homepage_link_metadata' => 'enableLegacyHomepageLinkMetadata',
+        'has_external_linked_accounts' => 'hasExternalLinkedAccounts',
+        'has_external_linked_accounts_metadata' => 'hasExternalLinkedAccountsMetadata',
         'hide_send_an_envelope' => 'hideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'hideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'hideUseATemplate',
@@ -184,6 +193,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'setAskAnAdmin',
         'enable_admin_message' => 'setEnableAdminMessage',
         'enable_admin_message_metadata' => 'setEnableAdminMessageMetadata',
+        'enable_advanced_payments_react_edit' => 'setEnableAdvancedPaymentsReactEdit',
         'enable_easy_sign_can_use_multi_template_apply' => 'setEnableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'setEnableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'setEnableEasySignTemplateUpload',
@@ -192,6 +202,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_envelope_copy_with_data_metadata' => 'setEnableEnvelopeCopyWithDataMetadata',
         'enable_legacy_homepage_link' => 'setEnableLegacyHomepageLink',
         'enable_legacy_homepage_link_metadata' => 'setEnableLegacyHomepageLinkMetadata',
+        'has_external_linked_accounts' => 'setHasExternalLinkedAccounts',
+        'has_external_linked_accounts_metadata' => 'setHasExternalLinkedAccountsMetadata',
         'hide_send_an_envelope' => 'setHideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'setHideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'setHideUseATemplate',
@@ -218,6 +230,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'getAskAnAdmin',
         'enable_admin_message' => 'getEnableAdminMessage',
         'enable_admin_message_metadata' => 'getEnableAdminMessageMetadata',
+        'enable_advanced_payments_react_edit' => 'getEnableAdvancedPaymentsReactEdit',
         'enable_easy_sign_can_use_multi_template_apply' => 'getEnableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'getEnableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'getEnableEasySignTemplateUpload',
@@ -226,6 +239,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_envelope_copy_with_data_metadata' => 'getEnableEnvelopeCopyWithDataMetadata',
         'enable_legacy_homepage_link' => 'getEnableLegacyHomepageLink',
         'enable_legacy_homepage_link_metadata' => 'getEnableLegacyHomepageLinkMetadata',
+        'has_external_linked_accounts' => 'getHasExternalLinkedAccounts',
+        'has_external_linked_accounts_metadata' => 'getHasExternalLinkedAccountsMetadata',
         'hide_send_an_envelope' => 'getHideSendAnEnvelope',
         'hide_send_an_envelope_metadata' => 'getHideSendAnEnvelopeMetadata',
         'hide_use_a_template' => 'getHideUseATemplate',
@@ -306,6 +321,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         $this->container['ask_an_admin'] = isset($data['ask_an_admin']) ? $data['ask_an_admin'] : null;
         $this->container['enable_admin_message'] = isset($data['enable_admin_message']) ? $data['enable_admin_message'] : null;
         $this->container['enable_admin_message_metadata'] = isset($data['enable_admin_message_metadata']) ? $data['enable_admin_message_metadata'] : null;
+        $this->container['enable_advanced_payments_react_edit'] = isset($data['enable_advanced_payments_react_edit']) ? $data['enable_advanced_payments_react_edit'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply'] = isset($data['enable_easy_sign_can_use_multi_template_apply']) ? $data['enable_easy_sign_can_use_multi_template_apply'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply_metadata'] = isset($data['enable_easy_sign_can_use_multi_template_apply_metadata']) ? $data['enable_easy_sign_can_use_multi_template_apply_metadata'] : null;
         $this->container['enable_easy_sign_template_upload'] = isset($data['enable_easy_sign_template_upload']) ? $data['enable_easy_sign_template_upload'] : null;
@@ -314,6 +330,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         $this->container['enable_envelope_copy_with_data_metadata'] = isset($data['enable_envelope_copy_with_data_metadata']) ? $data['enable_envelope_copy_with_data_metadata'] : null;
         $this->container['enable_legacy_homepage_link'] = isset($data['enable_legacy_homepage_link']) ? $data['enable_legacy_homepage_link'] : null;
         $this->container['enable_legacy_homepage_link_metadata'] = isset($data['enable_legacy_homepage_link_metadata']) ? $data['enable_legacy_homepage_link_metadata'] : null;
+        $this->container['has_external_linked_accounts'] = isset($data['has_external_linked_accounts']) ? $data['has_external_linked_accounts'] : null;
+        $this->container['has_external_linked_accounts_metadata'] = isset($data['has_external_linked_accounts_metadata']) ? $data['has_external_linked_accounts_metadata'] : null;
         $this->container['hide_send_an_envelope'] = isset($data['hide_send_an_envelope']) ? $data['hide_send_an_envelope'] : null;
         $this->container['hide_send_an_envelope_metadata'] = isset($data['hide_send_an_envelope_metadata']) ? $data['hide_send_an_envelope_metadata'] : null;
         $this->container['hide_use_a_template'] = isset($data['hide_use_a_template']) ? $data['hide_use_a_template'] : null;
@@ -405,7 +423,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_admin_message
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableAdminMessage()
     {
@@ -415,7 +433,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_admin_message
      *
-     * @param string $enable_admin_message 
+     * @param ?string $enable_admin_message 
      *
      * @return $this
      */
@@ -451,9 +469,33 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_advanced_payments_react_edit
+     *
+     * @return ?string
+     */
+    public function getEnableAdvancedPaymentsReactEdit()
+    {
+        return $this->container['enable_advanced_payments_react_edit'];
+    }
+
+    /**
+     * Sets enable_advanced_payments_react_edit
+     *
+     * @param ?string $enable_advanced_payments_react_edit 
+     *
+     * @return $this
+     */
+    public function setEnableAdvancedPaymentsReactEdit($enable_advanced_payments_react_edit)
+    {
+        $this->container['enable_advanced_payments_react_edit'] = $enable_advanced_payments_react_edit;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_easy_sign_can_use_multi_template_apply
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableEasySignCanUseMultiTemplateApply()
     {
@@ -463,7 +505,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_easy_sign_can_use_multi_template_apply
      *
-     * @param string $enable_easy_sign_can_use_multi_template_apply 
+     * @param ?string $enable_easy_sign_can_use_multi_template_apply 
      *
      * @return $this
      */
@@ -501,7 +543,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_easy_sign_template_upload
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableEasySignTemplateUpload()
     {
@@ -511,7 +553,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_easy_sign_template_upload
      *
-     * @param string $enable_easy_sign_template_upload 
+     * @param ?string $enable_easy_sign_template_upload 
      *
      * @return $this
      */
@@ -549,7 +591,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_envelope_copy_with_data
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableEnvelopeCopyWithData()
     {
@@ -559,7 +601,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_envelope_copy_with_data
      *
-     * @param string $enable_envelope_copy_with_data 
+     * @param ?string $enable_envelope_copy_with_data 
      *
      * @return $this
      */
@@ -597,7 +639,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_legacy_homepage_link
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableLegacyHomepageLink()
     {
@@ -607,7 +649,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_legacy_homepage_link
      *
-     * @param string $enable_legacy_homepage_link 
+     * @param ?string $enable_legacy_homepage_link 
      *
      * @return $this
      */
@@ -643,9 +685,57 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets has_external_linked_accounts
+     *
+     * @return ?string
+     */
+    public function getHasExternalLinkedAccounts()
+    {
+        return $this->container['has_external_linked_accounts'];
+    }
+
+    /**
+     * Sets has_external_linked_accounts
+     *
+     * @param ?string $has_external_linked_accounts 
+     *
+     * @return $this
+     */
+    public function setHasExternalLinkedAccounts($has_external_linked_accounts)
+    {
+        $this->container['has_external_linked_accounts'] = $has_external_linked_accounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_external_linked_accounts_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getHasExternalLinkedAccountsMetadata()
+    {
+        return $this->container['has_external_linked_accounts_metadata'];
+    }
+
+    /**
+     * Sets has_external_linked_accounts_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $has_external_linked_accounts_metadata has_external_linked_accounts_metadata
+     *
+     * @return $this
+     */
+    public function setHasExternalLinkedAccountsMetadata($has_external_linked_accounts_metadata)
+    {
+        $this->container['has_external_linked_accounts_metadata'] = $has_external_linked_accounts_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets hide_send_an_envelope
      *
-     * @return string
+     * @return ?string
      */
     public function getHideSendAnEnvelope()
     {
@@ -655,7 +745,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_send_an_envelope
      *
-     * @param string $hide_send_an_envelope 
+     * @param ?string $hide_send_an_envelope 
      *
      * @return $this
      */
@@ -693,7 +783,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets hide_use_a_template
      *
-     * @return string
+     * @return ?string
      */
     public function getHideUseATemplate()
     {
@@ -703,7 +793,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_use_a_template
      *
-     * @param string $hide_use_a_template 
+     * @param ?string $hide_use_a_template 
      *
      * @return $this
      */
@@ -717,7 +807,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets hide_use_a_template_in_prepare
      *
-     * @return string
+     * @return ?string
      */
     public function getHideUseATemplateInPrepare()
     {
@@ -727,7 +817,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_use_a_template_in_prepare
      *
-     * @param string $hide_use_a_template_in_prepare 
+     * @param ?string $hide_use_a_template_in_prepare 
      *
      * @return $this
      */
@@ -789,7 +879,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets order_based_recipient_id_generation
      *
-     * @return string
+     * @return ?string
      */
     public function getOrderBasedRecipientIdGeneration()
     {
@@ -799,7 +889,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets order_based_recipient_id_generation
      *
-     * @param string $order_based_recipient_id_generation 
+     * @param ?string $order_based_recipient_id_generation 
      *
      * @return $this
      */
@@ -837,7 +927,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets remove_envelope_forwarding
      *
-     * @return string
+     * @return ?string
      */
     public function getRemoveEnvelopeForwarding()
     {
@@ -847,7 +937,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets remove_envelope_forwarding
      *
-     * @param string $remove_envelope_forwarding 
+     * @param ?string $remove_envelope_forwarding 
      *
      * @return $this
      */
@@ -885,7 +975,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets should_redact_access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getShouldRedactAccessCode()
     {
@@ -895,7 +985,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets should_redact_access_code
      *
-     * @param string $should_redact_access_code 
+     * @param ?string $should_redact_access_code 
      *
      * @return $this
      */
@@ -933,7 +1023,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Gets upload_new_image_to_sign_or_initial
      *
-     * @return string
+     * @return ?string
      */
     public function getUploadNewImageToSignOrInitial()
     {
@@ -943,7 +1033,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets upload_new_image_to_sign_or_initial
      *
-     * @param string $upload_new_image_to_sign_or_initial 
+     * @param ?string $upload_new_image_to_sign_or_initial 
      *
      * @return $this
      */

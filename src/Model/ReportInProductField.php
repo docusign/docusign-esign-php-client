@@ -57,10 +57,10 @@ class ReportInProductField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'display_order' => 'string',
-        'field_version' => 'string',
-        'name' => 'string',
-        'selected' => 'string'
+        'display_order' => '?string',
+        'field_version' => '?string',
+        'name' => '?string',
+        'selected' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Gets display_order
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayOrder()
     {
@@ -235,7 +235,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets display_order
      *
-     * @param string $display_order 
+     * @param ?string $display_order 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Gets field_version
      *
-     * @return string
+     * @return ?string
      */
     public function getFieldVersion()
     {
@@ -259,7 +259,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets field_version
      *
-     * @param string $field_version 
+     * @param ?string $field_version 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -283,7 +283,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Gets selected
      *
-     * @return string
+     * @return ?string
      */
     public function getSelected()
     {
@@ -307,7 +307,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets selected
      *
-     * @param string $selected 
+     * @param ?string $selected 
      *
      * @return $this
      */

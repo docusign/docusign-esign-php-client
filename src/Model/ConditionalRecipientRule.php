@@ -58,9 +58,9 @@ class ConditionalRecipientRule implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'conditions' => '\DocuSign\eSign\Model\ConditionalRecipientRuleCondition[]',
-        'order' => 'string',
+        'order' => '?string',
         'recipient_group' => '\DocuSign\eSign\Model\RecipientGroup',
-        'recipient_id' => 'string'
+        'recipient_id' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class ConditionalRecipientRule implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return string
+     * @return ?string
      */
     public function getOrder()
     {
@@ -259,7 +259,7 @@ class ConditionalRecipientRule implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param string $order 
+     * @param ?string $order 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ConditionalRecipientRule implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -307,7 +307,7 @@ class ConditionalRecipientRule implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */

@@ -58,8 +58,8 @@ class TimeStampField implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'document_security_store' => '\DocuSign\eSign\Model\DocumentSecurityStore',
-        'max_time_stamp_signature_length' => 'string',
-        'time_stamp_field_name' => 'string'
+        'max_time_stamp_signature_length' => '?string',
+        'time_stamp_field_name' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
     /**
      * Gets max_time_stamp_signature_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxTimeStampSignatureLength()
     {
@@ -253,7 +253,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
     /**
      * Sets max_time_stamp_signature_length
      *
-     * @param string $max_time_stamp_signature_length 
+     * @param ?string $max_time_stamp_signature_length 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
     /**
      * Gets time_stamp_field_name
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeStampFieldName()
     {
@@ -277,7 +277,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
     /**
      * Sets time_stamp_field_name
      *
-     * @param string $time_stamp_field_name 
+     * @param ?string $time_stamp_field_name 
      *
      * @return $this
      */

@@ -57,36 +57,36 @@ class UserSignature implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'adopted_date_time' => 'string',
-        'created_date_time' => 'string',
-        'custom_field' => 'string',
+        'adopted_date_time' => '?string',
+        'created_date_time' => '?string',
+        'custom_field' => '?string',
         'date_stamp_properties' => '\DocuSign\eSign\Model\DateStampProperties',
-        'disallow_user_resize_stamp' => 'string',
+        'disallow_user_resize_stamp' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'external_id' => 'string',
-        'image_base64' => 'string',
-        'image_type' => 'string',
-        'initials150_image_id' => 'string',
-        'initials_image_uri' => 'string',
-        'is_default' => 'string',
-        'last_modified_date_time' => 'string',
-        'nrds_id' => 'string',
-        'nrds_last_name' => 'string',
-        'nrds_status' => 'string',
-        'phonetic_name' => 'string',
-        'signature150_image_id' => 'string',
-        'signature_font' => 'string',
-        'signature_id' => 'string',
-        'signature_image_uri' => 'string',
-        'signature_initials' => 'string',
-        'signature_name' => 'string',
-        'signature_rights' => 'string',
-        'signature_type' => 'string',
-        'stamp_format' => 'string',
-        'stamp_image_uri' => 'string',
-        'stamp_size_mm' => 'string',
-        'stamp_type' => 'string',
-        'status' => 'string'
+        'external_id' => '?string',
+        'image_base64' => '?string',
+        'image_type' => '?string',
+        'initials150_image_id' => '?string',
+        'initials_image_uri' => '?string',
+        'is_default' => '?string',
+        'last_modified_date_time' => '?string',
+        'nrds_id' => '?string',
+        'nrds_last_name' => '?string',
+        'nrds_status' => '?string',
+        'phonetic_name' => '?string',
+        'signature150_image_id' => '?string',
+        'signature_font' => '?string',
+        'signature_id' => '?string',
+        'signature_image_uri' => '?string',
+        'signature_initials' => '?string',
+        'signature_name' => '?string',
+        'signature_rights' => '?string',
+        'signature_type' => '?string',
+        'stamp_format' => '?string',
+        'stamp_image_uri' => '?string',
+        'stamp_size_mm' => '?string',
+        'stamp_type' => '?string',
+        'status' => '?string'
     ];
 
     /**
@@ -381,7 +381,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets adopted_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getAdoptedDateTime()
     {
@@ -391,7 +391,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets adopted_date_time
      *
-     * @param string $adopted_date_time The date and time the user adopted their signature.
+     * @param ?string $adopted_date_time The date and time the user adopted their signature.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets created_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDateTime()
     {
@@ -415,7 +415,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets created_date_time
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param ?string $created_date_time Indicates the date and time the item was created.
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets custom_field
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomField()
     {
@@ -439,7 +439,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets custom_field
      *
-     * @param string $custom_field 
+     * @param ?string $custom_field 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets disallow_user_resize_stamp
      *
-     * @return string
+     * @return ?string
      */
     public function getDisallowUserResizeStamp()
     {
@@ -487,7 +487,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets disallow_user_resize_stamp
      *
-     * @param string $disallow_user_resize_stamp 
+     * @param ?string $disallow_user_resize_stamp 
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets external_id
      *
-     * @return string
+     * @return ?string
      */
     public function getExternalId()
     {
@@ -535,7 +535,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets external_id
      *
-     * @param string $external_id 
+     * @param ?string $external_id 
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets image_base64
      *
-     * @return string
+     * @return ?string
      */
     public function getImageBase64()
     {
@@ -559,7 +559,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets image_base64
      *
-     * @param string $image_base64 
+     * @param ?string $image_base64 
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets image_type
      *
-     * @return string
+     * @return ?string
      */
     public function getImageType()
     {
@@ -583,7 +583,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets image_type
      *
-     * @param string $image_type 
+     * @param ?string $image_type 
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets initials150_image_id
      *
-     * @return string
+     * @return ?string
      */
     public function getInitials150ImageId()
     {
@@ -607,7 +607,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets initials150_image_id
      *
-     * @param string $initials150_image_id 
+     * @param ?string $initials150_image_id 
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets initials_image_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialsImageUri()
     {
@@ -631,7 +631,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets initials_image_uri
      *
-     * @param string $initials_image_uri Contains the URI for an endpoint that you can use to retrieve the initials image.
+     * @param ?string $initials_image_uri Contains the URI for an endpoint that you can use to retrieve the initials image.
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets is_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDefault()
     {
@@ -655,7 +655,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param string $is_default 
+     * @param ?string $is_default 
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModifiedDateTime()
     {
@@ -679,7 +679,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_date_time
      *
-     * @param string $last_modified_date_time The date and time the item was last modified.
+     * @param ?string $last_modified_date_time The date and time the item was last modified.
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets nrds_id
      *
-     * @return string
+     * @return ?string
      */
     public function getNrdsId()
     {
@@ -703,7 +703,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_id
      *
-     * @param string $nrds_id 
+     * @param ?string $nrds_id 
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets nrds_last_name
      *
-     * @return string
+     * @return ?string
      */
     public function getNrdsLastName()
     {
@@ -727,7 +727,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_last_name
      *
-     * @param string $nrds_last_name 
+     * @param ?string $nrds_last_name 
      *
      * @return $this
      */
@@ -741,7 +741,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets nrds_status
      *
-     * @return string
+     * @return ?string
      */
     public function getNrdsStatus()
     {
@@ -751,7 +751,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_status
      *
-     * @param string $nrds_status 
+     * @param ?string $nrds_status 
      *
      * @return $this
      */
@@ -765,7 +765,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets phonetic_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneticName()
     {
@@ -775,7 +775,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets phonetic_name
      *
-     * @param string $phonetic_name 
+     * @param ?string $phonetic_name 
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature150_image_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSignature150ImageId()
     {
@@ -799,7 +799,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature150_image_id
      *
-     * @param string $signature150_image_id 
+     * @param ?string $signature150_image_id 
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature_font
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureFont()
     {
@@ -823,7 +823,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_font
      *
-     * @param string $signature_font The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\"
+     * @param ?string $signature_font The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\"
      *
      * @return $this
      */
@@ -837,7 +837,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureId()
     {
@@ -847,7 +847,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_id
      *
-     * @param string $signature_id Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
+     * @param ?string $signature_id Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature_image_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureImageUri()
     {
@@ -871,7 +871,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_image_uri
      *
-     * @param string $signature_image_uri Contains the URI for an endpoint that you can use to retrieve the signature image.
+     * @param ?string $signature_image_uri Contains the URI for an endpoint that you can use to retrieve the signature image.
      *
      * @return $this
      */
@@ -885,7 +885,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature_initials
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureInitials()
     {
@@ -895,7 +895,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_initials
      *
-     * @param string $signature_initials The initials associated with the signature.
+     * @param ?string $signature_initials The initials associated with the signature.
      *
      * @return $this
      */
@@ -909,7 +909,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureName()
     {
@@ -919,7 +919,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_name
      *
-     * @param string $signature_name Specifies the user signature name.
+     * @param ?string $signature_name Specifies the user signature name.
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature_rights
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureRights()
     {
@@ -943,7 +943,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_rights
      *
-     * @param string $signature_rights 
+     * @param ?string $signature_rights 
      *
      * @return $this
      */
@@ -957,7 +957,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets signature_type
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureType()
     {
@@ -967,7 +967,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_type
      *
-     * @param string $signature_type 
+     * @param ?string $signature_type 
      *
      * @return $this
      */
@@ -981,7 +981,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets stamp_format
      *
-     * @return string
+     * @return ?string
      */
     public function getStampFormat()
     {
@@ -991,7 +991,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_format
      *
-     * @param string $stamp_format 
+     * @param ?string $stamp_format 
      *
      * @return $this
      */
@@ -1005,7 +1005,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets stamp_image_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getStampImageUri()
     {
@@ -1015,7 +1015,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_image_uri
      *
-     * @param string $stamp_image_uri 
+     * @param ?string $stamp_image_uri 
      *
      * @return $this
      */
@@ -1029,7 +1029,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets stamp_size_mm
      *
-     * @return string
+     * @return ?string
      */
     public function getStampSizeMm()
     {
@@ -1039,7 +1039,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_size_mm
      *
-     * @param string $stamp_size_mm 
+     * @param ?string $stamp_size_mm 
      *
      * @return $this
      */
@@ -1053,7 +1053,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets stamp_type
      *
-     * @return string
+     * @return ?string
      */
     public function getStampType()
     {
@@ -1063,7 +1063,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_type
      *
-     * @param string $stamp_type 
+     * @param ?string $stamp_type 
      *
      * @return $this
      */
@@ -1077,7 +1077,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -1087,7 +1087,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */

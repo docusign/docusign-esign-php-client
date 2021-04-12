@@ -57,7 +57,7 @@ class AccountPasswordLockoutDurationType implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => 'string[]'
+        'options' => '?string[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class AccountPasswordLockoutDurationType implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getOptions()
     {
@@ -217,7 +217,7 @@ class AccountPasswordLockoutDurationType implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param string[] $options 
+     * @param ?string[] $options 
      *
      * @return $this
      */

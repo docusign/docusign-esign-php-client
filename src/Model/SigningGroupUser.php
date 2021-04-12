@@ -57,9 +57,9 @@ class SigningGroupUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
+        'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'user_name' => 'string'
+        'user_name' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class SigningGroupUser implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -229,7 +229,7 @@ class SigningGroupUser implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class SigningGroupUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -277,7 +277,7 @@ class SigningGroupUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name The name of the group member.   Maximum Length: 100 characters.
+     * @param ?string $user_name The name of the group member.   Maximum Length: 100 characters.
      *
      * @return $this
      */

@@ -58,21 +58,21 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'date_stamp_properties' => '\DocuSign\eSign\Model\DateStampProperties',
-        'disallow_user_resize_stamp' => 'string',
-        'external_id' => 'string',
-        'image_type' => 'string',
-        'is_default' => 'string',
-        'nrds_id' => 'string',
-        'nrds_last_name' => 'string',
-        'phonetic_name' => 'string',
-        'signature_font' => 'string',
+        'disallow_user_resize_stamp' => '?string',
+        'external_id' => '?string',
+        'image_type' => '?string',
+        'is_default' => '?string',
+        'nrds_id' => '?string',
+        'nrds_last_name' => '?string',
+        'phonetic_name' => '?string',
+        'signature_font' => '?string',
         'signature_groups' => '\DocuSign\eSign\Model\SignatureGroupDef[]',
-        'signature_id' => 'string',
-        'signature_initials' => 'string',
-        'signature_name' => 'string',
+        'signature_id' => '?string',
+        'signature_initials' => '?string',
+        'signature_name' => '?string',
         'signature_users' => '\DocuSign\eSign\Model\SignatureUserDef[]',
-        'stamp_format' => 'string',
-        'stamp_size_mm' => 'string'
+        'stamp_format' => '?string',
+        'stamp_size_mm' => '?string'
     ];
 
     /**
@@ -321,7 +321,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets disallow_user_resize_stamp
      *
-     * @return string
+     * @return ?string
      */
     public function getDisallowUserResizeStamp()
     {
@@ -331,7 +331,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets disallow_user_resize_stamp
      *
-     * @param string $disallow_user_resize_stamp 
+     * @param ?string $disallow_user_resize_stamp 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets external_id
      *
-     * @return string
+     * @return ?string
      */
     public function getExternalId()
     {
@@ -355,7 +355,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets external_id
      *
-     * @param string $external_id 
+     * @param ?string $external_id 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets image_type
      *
-     * @return string
+     * @return ?string
      */
     public function getImageType()
     {
@@ -379,7 +379,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets image_type
      *
-     * @param string $image_type 
+     * @param ?string $image_type 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets is_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDefault()
     {
@@ -403,7 +403,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param string $is_default 
+     * @param ?string $is_default 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets nrds_id
      *
-     * @return string
+     * @return ?string
      */
     public function getNrdsId()
     {
@@ -427,7 +427,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_id
      *
-     * @param string $nrds_id 
+     * @param ?string $nrds_id 
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets nrds_last_name
      *
-     * @return string
+     * @return ?string
      */
     public function getNrdsLastName()
     {
@@ -451,7 +451,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_last_name
      *
-     * @param string $nrds_last_name 
+     * @param ?string $nrds_last_name 
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets phonetic_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneticName()
     {
@@ -475,7 +475,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets phonetic_name
      *
-     * @param string $phonetic_name 
+     * @param ?string $phonetic_name 
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_font
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureFont()
     {
@@ -499,7 +499,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_font
      *
-     * @param string $signature_font 
+     * @param ?string $signature_font 
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureId()
     {
@@ -547,7 +547,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_id
      *
-     * @param string $signature_id Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
+     * @param ?string $signature_id Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_initials
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureInitials()
     {
@@ -571,7 +571,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_initials
      *
-     * @param string $signature_initials 
+     * @param ?string $signature_initials 
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureName()
     {
@@ -595,7 +595,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_name
      *
-     * @param string $signature_name Specifies the user signature name.
+     * @param ?string $signature_name Specifies the user signature name.
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets stamp_format
      *
-     * @return string
+     * @return ?string
      */
     public function getStampFormat()
     {
@@ -643,7 +643,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_format
      *
-     * @param string $stamp_format 
+     * @param ?string $stamp_format 
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets stamp_size_mm
      *
-     * @return string
+     * @return ?string
      */
     public function getStampSizeMm()
     {
@@ -667,7 +667,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_size_mm
      *
-     * @param string $stamp_size_mm 
+     * @param ?string $stamp_size_mm 
      *
      * @return $this
      */

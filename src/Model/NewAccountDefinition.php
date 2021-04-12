@@ -57,16 +57,16 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_name' => 'string',
+        'account_name' => '?string',
         'account_settings' => '\DocuSign\eSign\Model\AccountSettingsInformation',
         'address_information' => '\DocuSign\eSign\Model\AccountAddress',
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
-        'distributor_code' => 'string',
-        'distributor_password' => 'string',
-        'envelope_partition_id' => 'string',
+        'distributor_code' => '?string',
+        'distributor_password' => '?string',
+        'envelope_partition_id' => '?string',
         'initial_user' => '\DocuSign\eSign\Model\UserInformation',
-        'payment_method' => 'string',
+        'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
@@ -285,7 +285,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountName()
     {
@@ -295,7 +295,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param string $account_name The account name for the new account.
+     * @param ?string $account_name The account name for the new account.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets distributor_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDistributorCode()
     {
@@ -415,7 +415,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets distributor_code
      *
-     * @param string $distributor_code The code that identifies the billing plan groups and plans for the new account.
+     * @param ?string $distributor_code The code that identifies the billing plan groups and plans for the new account.
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets distributor_password
      *
-     * @return string
+     * @return ?string
      */
     public function getDistributorPassword()
     {
@@ -439,7 +439,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets distributor_password
      *
-     * @param string $distributor_password The password for the distributorCode.
+     * @param ?string $distributor_password The password for the distributorCode.
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_partition_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopePartitionId()
     {
@@ -463,7 +463,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_partition_id
      *
-     * @param string $envelope_partition_id 
+     * @param ?string $envelope_partition_id 
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -511,7 +511,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method 
+     * @param ?string $payment_method 
      *
      * @return $this
      */

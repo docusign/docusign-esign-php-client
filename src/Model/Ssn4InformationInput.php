@@ -57,9 +57,9 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'display_level_code' => 'string',
-        'receive_in_response' => 'string',
-        'ssn4' => 'string'
+        'display_level_code' => '?string',
+        'receive_in_response' => '?string',
+        'ssn4' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets display_level_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayLevelCode()
     {
@@ -229,7 +229,7 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets display_level_code
      *
-     * @param string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
+     * @param ?string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets receive_in_response
      *
-     * @return string
+     * @return ?string
      */
     public function getReceiveInResponse()
     {
@@ -253,7 +253,7 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets receive_in_response
      *
-     * @param string $receive_in_response When set to **true**, the information needs to be returned in the response.
+     * @param ?string $receive_in_response When set to **true**, the information needs to be returned in the response.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets ssn4
      *
-     * @return string
+     * @return ?string
      */
     public function getSsn4()
     {
@@ -277,7 +277,7 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets ssn4
      *
-     * @param string $ssn4 The last four digits of the recipient's Social Security Number (SSN).
+     * @param ?string $ssn4 The last four digits of the recipient's Social Security Number (SSN).
      *
      * @return $this
      */

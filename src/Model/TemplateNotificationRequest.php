@@ -58,9 +58,9 @@ class TemplateNotificationRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'expirations' => '\DocuSign\eSign\Model\Expirations',
-        'password' => 'string',
+        'password' => '?string',
         'reminders' => '\DocuSign\eSign\Model\Reminders',
-        'use_account_defaults' => 'string'
+        'use_account_defaults' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class TemplateNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -259,7 +259,7 @@ class TemplateNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class TemplateNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets use_account_defaults
      *
-     * @return string
+     * @return ?string
      */
     public function getUseAccountDefaults()
     {
@@ -307,7 +307,7 @@ class TemplateNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets use_account_defaults
      *
-     * @param string $use_account_defaults When set to **true**, the account default notification settings are used for the envelope.
+     * @param ?string $use_account_defaults When set to **true**, the account default notification settings are used for the envelope.
      *
      * @return $this
      */

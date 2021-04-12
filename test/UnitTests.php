@@ -6,9 +6,9 @@
  */
 use DocuSign\eSign\Api\AccountsApi;
 use DocuSign\eSign\Api\EnvelopesApi;
-use DocuSign\eSign\ApiEnvelopesApi\CreateEnvelopeOptions;
-use DocuSign\eSign\ApiEnvelopesApi\GetEnvelopeOptions;
-use DocuSign\eSign\ApiEnvelopesApi\ListStatusChangesOptions;
+use DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions;
+use DocuSign\eSign\Api\EnvelopesApi\GetEnvelopeOptions;
+use DocuSign\eSign\Api\EnvelopesApi\ListStatusChangesOptions;
 use DocuSign\eSign\Client\ApiClient;
 use DocuSign\eSign\Client\ApiException;
 use DocuSign\eSign\Configuration;

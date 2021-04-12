@@ -59,541 +59,552 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'access_code_format' => '\DocuSign\eSign\Model\AccessCodeFormat',
-        'account_date_time_format' => 'string',
+        'account_date_time_format' => '?string',
         'account_date_time_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'account_default_language' => 'string',
+        'account_default_language' => '?string',
         'account_default_language_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'account_name' => 'string',
+        'account_name' => '?string',
         'account_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'account_notification' => '\DocuSign\eSign\Model\AccountNotification',
         'account_ui_settings' => '\DocuSign\eSign\Model\AccountUISettings',
-        'adopt_sig_config' => 'string',
+        'adopt_sig_config' => '?string',
         'adopt_sig_config_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'advanced_correct' => 'string',
+        'advanced_correct' => '?string',
         'advanced_correct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_access_code_format' => 'string',
+        'allow_access_code_format' => '?string',
         'allow_access_code_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_account_management_granular' => 'string',
+        'allow_account_management_granular' => '?string',
         'allow_account_management_granular_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_account_member_name_change' => 'string',
+        'allow_account_member_name_change' => '?string',
         'allow_account_member_name_change_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_advanced_recipient_routing_conditional' => 'string',
+        'allow_advanced_recipient_routing_conditional' => '?string',
         'allow_advanced_recipient_routing_conditional_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_agent_name_email_edit' => 'string',
+        'allow_agent_name_email_edit' => '?string',
         'allow_agent_name_email_edit_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_agreement_actions' => 'string',
+        'allow_agreement_actions' => '?string',
         'allow_agreement_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_auto_nav_settings' => 'string',
+        'allow_auto_nav_settings' => '?string',
         'allow_auto_nav_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_auto_tagging' => 'string',
+        'allow_auto_tagging' => '?string',
         'allow_auto_tagging_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_bulk_send' => 'string',
+        'allow_bulk_send' => '?string',
         'allow_bulk_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_cd_withdraw' => 'string',
+        'allow_cd_withdraw' => '?string',
         'allow_cd_withdraw_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_connect_http_listener_configs' => 'string',
-        'allow_connect_send_finish_later' => 'string',
+        'allow_connect_http_listener_configs' => '?string',
+        'allow_connect_send_finish_later' => '?string',
         'allow_connect_send_finish_later_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_connect_unified_payload_ui' => 'string',
-        'allow_consumer_disclosure_override' => 'string',
+        'allow_connect_unified_payload_ui' => '?string',
+        'allow_consumer_disclosure_override' => '?string',
         'allow_consumer_disclosure_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_data_download' => 'string',
+        'allow_data_download' => '?string',
         'allow_data_download_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_document_disclosures' => 'string',
+        'allow_document_disclosures' => '?string',
         'allow_document_disclosures_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_documents_on_signed_envelopes' => 'string',
+        'allow_documents_on_signed_envelopes' => '?string',
         'allow_documents_on_signed_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_document_visibility' => 'string',
+        'allow_document_visibility' => '?string',
         'allow_document_visibility_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_e_hanko_stamps' => 'string',
+        'allow_e_hanko_stamps' => '?string',
         'allow_e_hanko_stamps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_e_note_e_original' => 'string',
+        'allow_e_note_e_original' => '?string',
         'allow_e_note_e_original_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_envelope_correct' => 'string',
+        'allow_envelope_correct' => '?string',
         'allow_envelope_correct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_envelope_custody_transfer' => 'string',
+        'allow_envelope_custody_transfer' => '?string',
         'allow_envelope_custody_transfer_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_envelope_custom_fields' => 'string',
+        'allow_envelope_custom_fields' => '?string',
         'allow_envelope_custom_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_envelope_publish_reporting' => 'string',
+        'allow_envelope_publish_reporting' => '?string',
         'allow_envelope_publish_reporting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_envelope_reporting' => 'string',
+        'allow_envelope_reporting' => '?string',
         'allow_envelope_reporting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_expression' => 'string',
+        'allow_expression' => '?string',
         'allow_expression_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_express_signer_certificate' => 'string',
+        'allow_express_signer_certificate' => '?string',
         'allow_express_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_extended_sending_resource_file' => 'string',
+        'allow_extended_sending_resource_file' => '?string',
         'allow_extended_sending_resource_file_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_external_signature_pad' => 'string',
+        'allow_external_linked_accounts' => '?string',
+        'allow_external_linked_accounts_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_external_signature_pad' => '?string',
         'allow_external_signature_pad_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_idv_level1' => 'string',
+        'allow_idv_level1' => '?string',
         'allow_idv_level1_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_idv_level2' => 'string',
+        'allow_idv_level2' => '?string',
         'allow_idv_level2_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_idv_level3' => 'string',
+        'allow_idv_level3' => '?string',
         'allow_idv_level3_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_idv_platform' => 'string',
+        'allow_idv_platform' => '?string',
         'allow_idv_platform_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_in_person' => 'string',
+        'allow_in_person' => '?string',
         'allow_in_person_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_managed_stamps' => 'string',
+        'allow_managed_stamps' => '?string',
         'allow_managed_stamps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_markup' => 'string',
+        'allow_markup' => '?string',
         'allow_markup_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_member_time_zone' => 'string',
+        'allow_member_time_zone' => '?string',
         'allow_member_time_zone_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_merge_fields' => 'string',
+        'allow_merge_fields' => '?string',
         'allow_merge_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_multiple_brand_profiles' => 'string',
+        'allow_multiple_brand_profiles' => '?string',
         'allow_multiple_brand_profiles_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_multiple_signer_attachments' => 'string',
+        'allow_multiple_signer_attachments' => '?string',
         'allow_multiple_signer_attachments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_non_us_phone_auth' => 'string',
+        'allow_non_us_phone_auth' => '?string',
         'allow_non_us_phone_auth_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_ocr_of_envelope_documents' => 'string',
+        'allow_ocr_of_envelope_documents' => '?string',
         'allow_ocr_of_envelope_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_offline_signing' => 'string',
+        'allow_offline_signing' => '?string',
         'allow_offline_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_open_trust_signer_certificate' => 'string',
+        'allow_open_trust_signer_certificate' => '?string',
         'allow_open_trust_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_organizations' => 'string',
+        'allow_organizations' => '?string',
         'allow_organizations_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_payment_processing' => 'string',
+        'allow_payment_processing' => '?string',
         'allow_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_personal_signer_certificate' => 'string',
+        'allow_personal_signer_certificate' => '?string',
         'allow_personal_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_phone_authentication' => 'string',
+        'allow_phone_authentication' => '?string',
         'allow_phone_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_phone_auth_override' => 'string',
+        'allow_phone_auth_override' => '?string',
         'allow_phone_auth_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_private_signing_groups' => 'string',
+        'allow_private_signing_groups' => '?string',
         'allow_private_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_recipient_connect' => 'string',
+        'allow_recipient_connect' => '?string',
         'allow_recipient_connect_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_reminders' => 'string',
+        'allow_reminders' => '?string',
         'allow_reminders_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_remote_notary' => 'string',
+        'allow_remote_notary' => '?string',
         'allow_remote_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_resource_file_branding' => 'string',
+        'allow_resource_file_branding' => '?string',
         'allow_resource_file_branding_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_safe_bio_pharma_signer_certificate' => 'string',
+        'allow_safe_bio_pharma_signer_certificate' => '?string',
         'allow_safe_bio_pharma_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_security_appliance' => 'string',
+        'allow_security_appliance' => '?string',
         'allow_security_appliance_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_send_to_certified_delivery' => 'string',
+        'allow_send_to_certified_delivery' => '?string',
         'allow_send_to_certified_delivery_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_send_to_intermediary' => 'string',
+        'allow_send_to_intermediary' => '?string',
         'allow_send_to_intermediary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_server_templates' => 'string',
+        'allow_server_templates' => '?string',
         'allow_server_templates_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_set_embedded_recipient_start_url' => 'string',
+        'allow_set_embedded_recipient_start_url' => '?string',
         'allow_set_embedded_recipient_start_url_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_shared_tabs' => 'string',
+        'allow_shared_tabs' => '?string',
         'allow_shared_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signature_stamps' => 'string',
+        'allow_signature_stamps' => '?string',
         'allow_signature_stamps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_sign_document_from_home_page' => 'string',
+        'allow_sign_document_from_home_page' => '?string',
         'allow_sign_document_from_home_page_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signer_reassign' => 'string',
+        'allow_signer_reassign' => '?string',
         'allow_signer_reassign_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signer_reassign_override' => 'string',
+        'allow_signer_reassign_override' => '?string',
         'allow_signer_reassign_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signing_extensions' => 'string',
+        'allow_signing_extensions' => '?string',
         'allow_signing_extensions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signing_groups' => 'string',
+        'allow_signing_groups' => '?string',
         'allow_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signing_insights' => 'string',
+        'allow_signing_insights' => '?string',
         'allow_signing_insights_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signing_radio_deselect' => 'string',
+        'allow_signing_radio_deselect' => '?string',
         'allow_signing_radio_deselect_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_sign_now' => 'string',
-        'allow_sign_now_metadata' => 'string',
-        'allow_sms_delivery' => 'string',
+        'allow_sign_now' => '?string',
+        'allow_sign_now_metadata' => '?string',
+        'allow_sms_delivery' => '?string',
         'allow_sms_delivery_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_social_id_login' => 'string',
+        'allow_social_id_login' => '?string',
         'allow_social_id_login_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_supplemental_documents' => 'string',
+        'allow_supplemental_documents' => '?string',
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_users_to_access_directory' => 'string',
+        'allow_users_to_access_directory' => '?string',
         'allow_users_to_access_directory_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_value_insights' => 'string',
+        'allow_value_insights' => '?string',
         'allow_value_insights_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'anchor_population_scope' => 'string',
+        'anchor_population_scope' => '?string',
         'anchor_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'anchor_tag_versioned_placement_enabled' => 'string',
+        'anchor_tag_versioned_placement_enabled' => '?string',
         'anchor_tag_versioned_placement_metadata_enabled' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'attach_completed_envelope' => 'string',
+        'attach_completed_envelope' => '?string',
         'attach_completed_envelope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'authentication_check' => 'string',
+        'authentication_check' => '?string',
         'authentication_check_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'auto_nav_rule' => 'string',
+        'auto_nav_rule' => '?string',
         'auto_nav_rule_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'auto_provision_signer_account' => 'string',
+        'auto_provision_signer_account' => '?string',
         'auto_provision_signer_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'bcc_email_archive' => 'string',
+        'bcc_email_archive' => '?string',
         'bcc_email_archive_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'beta_switch_configuration' => 'string',
+        'beta_switch_configuration' => '?string',
         'beta_switch_configuration_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'billing_address' => '\DocuSign\eSign\Model\AddressInformation',
         'billing_address_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'bulk_send' => 'string',
-        'bulk_send_max_copies_in_batch' => 'string',
-        'bulk_send_max_unprocessed_envelopes_count' => 'string',
+        'bulk_send' => '?string',
+        'bulk_send_max_copies_in_batch' => '?string',
+        'bulk_send_max_unprocessed_envelopes_count' => '?string',
         'bulk_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_self_brand_send' => 'string',
+        'can_self_brand_send' => '?string',
         'can_self_brand_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_self_brand_sign' => 'string',
+        'can_self_brand_sign' => '?string',
         'can_self_brand_sign_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_use_salesforce_o_auth' => 'string',
+        'can_use_salesforce_o_auth' => '?string',
         'can_use_salesforce_o_auth_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'capture_voice_recording' => 'string',
+        'capture_voice_recording' => '?string',
         'capture_voice_recording_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'cfr_use_wide_image' => 'string',
+        'cfr_use_wide_image' => '?string',
         'cfr_use_wide_image_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'check_for_multiple_admins_on_account' => 'string',
+        'check_for_multiple_admins_on_account' => '?string',
         'check_for_multiple_admins_on_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'chrome_signature_enabled' => 'string',
+        'chrome_signature_enabled' => '?string',
         'chrome_signature_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'comment_email_show_message_text' => 'string',
+        'comment_email_show_message_text' => '?string',
         'comment_email_show_message_text_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'comments_allow_envelope_override' => 'string',
+        'comments_allow_envelope_override' => '?string',
         'comments_allow_envelope_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'conditional_fields_enabled' => 'string',
+        'conditional_fields_enabled' => '?string',
         'conditional_fields_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'consumer_disclosure_frequency' => 'string',
+        'consumer_disclosure_frequency' => '?string',
         'consumer_disclosure_frequency_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'convert_pdf_fields' => 'string',
+        'convert_pdf_fields' => '?string',
         'convert_pdf_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'data_population_scope' => 'string',
+        'data_population_scope' => '?string',
         'data_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_auto_template_matching' => 'string',
+        'disable_auto_template_matching' => '?string',
         'disable_auto_template_matching_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_mobile_app' => 'string',
+        'disable_mobile_app' => '?string',
         'disable_mobile_app_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_mobile_push_notifications' => 'string',
+        'disable_mobile_push_notifications' => '?string',
         'disable_mobile_push_notifications_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_mobile_sending' => 'string',
+        'disable_mobile_sending' => '?string',
         'disable_mobile_sending_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_multiple_sessions' => 'string',
+        'disable_multiple_sessions' => '?string',
         'disable_multiple_sessions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_purge_notifications_for_sender_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_signer_cert_view' => 'string',
+        'disable_signer_cert_view' => '?string',
         'disable_signer_cert_view_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_signer_history_view' => 'string',
+        'disable_signer_history_view' => '?string',
         'disable_signer_history_view_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_style_signature' => 'string',
+        'disable_style_signature' => '?string',
         'disable_style_signature_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_upload_signature' => 'string',
+        'disable_upload_signature' => '?string',
         'disable_upload_signature_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_user_sharing' => 'string',
+        'disable_user_sharing' => '?string',
         'disable_user_sharing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'display_beta_switch' => 'string',
+        'display_beta_switch' => '?string',
         'display_beta_switch_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'document_conversion_restrictions' => 'string',
+        'document_conversion_restrictions' => '?string',
         'document_conversion_restrictions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'document_retention' => 'string',
+        'document_retention' => '?string',
         'document_retention_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'document_retention_purge_tabs' => 'string',
-        'document_visibility' => 'string',
+        'document_retention_purge_tabs' => '?string',
+        'document_visibility' => '?string',
         'document_visibility_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'email_template_version' => 'string',
+        'email_template_version' => '?string',
         'email_template_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_access_code_generator' => 'string',
+        'enable_access_code_generator' => '?string',
         'enable_access_code_generator_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_advanced_payments' => 'string',
+        'enable_advanced_payments' => '?string',
         'enable_advanced_payments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_advanced_power_forms' => 'string',
+        'enable_advanced_power_forms' => '?string',
         'enable_advanced_power_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_agreement_actions_for_clm' => 'string',
+        'enable_agreement_actions_for_clm' => '?string',
         'enable_agreement_actions_for_clm_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_agreement_actions_for_e_sign' => 'string',
+        'enable_agreement_actions_for_e_sign' => '?string',
         'enable_agreement_actions_for_e_sign_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_auto_nav' => 'string',
+        'enable_auto_nav' => '?string',
         'enable_auto_nav_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_calculated_fields' => 'string',
+        'enable_calculated_fields' => '?string',
         'enable_calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_clickwraps' => 'string',
+        'enable_clickwraps' => '?string',
         'enable_clickwraps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_comments_history_download_in_signing' => 'string',
+        'enable_comments_history_download_in_signing' => '?string',
         'enable_comments_history_download_in_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_customer_satisfaction_metric_tracking' => 'string',
+        'enable_customer_satisfaction_metric_tracking' => '?string',
         'enable_customer_satisfaction_metric_tracking_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_ds_pro' => 'string',
+        'enable_ds_pro' => '?string',
         'enable_ds_pro_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_envelope_stamping_by_account_admin' => 'string',
+        'enable_envelope_stamping_by_account_admin' => '?string',
         'enable_envelope_stamping_by_account_admin_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_envelope_stamping_by_ds_admin' => 'string',
+        'enable_envelope_stamping_by_ds_admin' => '?string',
         'enable_envelope_stamping_by_ds_admin_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_esign_communities' => 'string',
+        'enable_esign_communities' => '?string',
         'enable_esign_communities_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_in_browser_editor' => 'string',
+        'enable_in_browser_editor' => '?string',
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_payment_processing' => 'string',
+        'enable_payment_processing' => '?string',
         'enable_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_power_form' => 'string',
-        'enable_power_form_direct' => 'string',
+        'enable_power_form' => '?string',
+        'enable_power_form_direct' => '?string',
         'enable_power_form_direct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_power_form_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_recipient_domain_validation' => 'string',
+        'enable_recipient_domain_validation' => '?string',
         'enable_recipient_domain_validation_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_report_links' => 'string',
+        'enable_report_links' => '?string',
         'enable_report_links_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_require_sign_on_paper' => 'string',
+        'enable_require_sign_on_paper' => '?string',
         'enable_require_sign_on_paper_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_reserved_domain' => 'string',
+        'enable_reserved_domain' => '?string',
         'enable_reserved_domain_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_responsive_signing' => 'string',
+        'enable_responsive_signing' => '?string',
         'enable_responsive_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_scheduled_release' => 'string',
+        'enable_scheduled_release' => '?string',
         'enable_scheduled_release_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_search' => 'string',
+        'enable_search' => '?string',
         'enable_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_search_ui' => 'string',
+        'enable_search_ui' => '?string',
         'enable_search_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sending_tags_font_settings' => 'string',
+        'enable_sending_tags_font_settings' => '?string',
         'enable_sending_tags_font_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_send_to_agent' => 'string',
+        'enable_send_to_agent' => '?string',
         'enable_send_to_agent_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_send_to_intermediary' => 'string',
+        'enable_send_to_intermediary' => '?string',
         'enable_send_to_intermediary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_send_to_manage' => 'string',
+        'enable_send_to_manage' => '?string',
         'enable_send_to_manage_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sequential_signing_api' => 'string',
+        'enable_sequential_signing_api' => '?string',
         'enable_sequential_signing_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sequential_signing_ui' => 'string',
+        'enable_sequential_signing_ui' => '?string',
         'enable_sequential_signing_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_signer_attachments' => 'string',
+        'enable_signer_attachments' => '?string',
         'enable_signer_attachments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_signing_extension_comments' => 'string',
+        'enable_signing_extension_comments' => '?string',
         'enable_signing_extension_comments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_signing_extension_conversations' => 'string',
+        'enable_signing_extension_conversations' => '?string',
         'enable_signing_extension_conversations_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_signing_order_settings_for_account' => 'string',
+        'enable_signing_order_settings_for_account' => '?string',
         'enable_signing_order_settings_for_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sign_on_paper' => 'string',
+        'enable_sign_on_paper' => '?string',
         'enable_sign_on_paper_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sign_on_paper_override' => 'string',
+        'enable_sign_on_paper_override' => '?string',
         'enable_sign_on_paper_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sign_with_notary' => 'string',
+        'enable_sign_with_notary' => '?string',
         'enable_sign_with_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_smart_contracts' => 'string',
+        'enable_smart_contracts' => '?string',
         'enable_smart_contracts_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sms_authentication' => 'string',
+        'enable_sms_authentication' => '?string',
         'enable_sms_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_social_id_login' => 'string',
+        'enable_sms_delivery_additional_notification' => '?string',
+        'enable_sms_delivery_additional_notification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_social_id_login' => '?string',
         'enable_social_id_login_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_strike_through' => 'string',
+        'enable_strike_through' => '?string',
         'enable_strike_through_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_transaction_point' => 'string',
+        'enable_transaction_point' => '?string',
         'enable_transaction_point_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_vaulting' => 'string',
+        'enable_vaulting' => '?string',
         'enable_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_witnessing' => 'string',
+        'enable_witnessing' => '?string',
         'enable_witnessing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enforce_template_name_uniqueness' => 'string',
+        'enforce_template_name_uniqueness' => '?string',
         'enforce_template_name_uniqueness_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'envelope_integration_allowed' => 'string',
+        'envelope_integration_allowed' => '?string',
         'envelope_integration_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'envelope_integration_enabled' => 'string',
+        'envelope_integration_enabled' => '?string',
         'envelope_integration_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'envelope_stamping_default_value' => 'string',
+        'envelope_stamping_default_value' => '?string',
         'envelope_stamping_default_value_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'express_send' => 'string',
-        'express_send_allow_tabs' => 'string',
+        'express_send' => '?string',
+        'express_send_allow_tabs' => '?string',
         'express_send_allow_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'express_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'external_document_sources' => '\DocuSign\eSign\Model\ExternalDocumentSources',
-        'external_signature_pad_type' => 'string',
+        'external_signature_pad_type' => '?string',
         'external_signature_pad_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'fax_out_enabled' => 'string',
+        'fax_out_enabled' => '?string',
         'fax_out_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'guided_forms_html_allowed' => 'string',
+        'guided_forms_html_allowed' => '?string',
         'guided_forms_html_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'hide_account_address_in_co_c' => 'string',
+        'hide_account_address_in_co_c' => '?string',
         'hide_account_address_in_co_c_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'hide_pricing' => 'string',
+        'hide_pricing' => '?string',
         'hide_pricing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'id_check_configurations' => '\DocuSign\eSign\Model\IdCheckConfiguration[]',
-        'id_check_expire' => 'string',
-        'id_check_expire_days' => 'string',
+        'id_check_expire' => '?string',
+        'id_check_expire_days' => '?string',
         'id_check_expire_days_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'id_check_expire_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'id_check_expire_minutes' => 'string',
+        'id_check_expire_minutes' => '?string',
         'id_check_expire_minutes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'id_check_required' => 'string',
+        'id_check_required' => '?string',
         'id_check_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'identity_verification' => '\DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[]',
         'identity_verification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'ignore_error_if_anchor_tab_not_found' => 'string',
+        'ignore_error_if_anchor_tab_not_found' => '?string',
         'ignore_error_if_anchor_tab_not_found_metadata_enabled' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'in_person_id_check_question' => 'string',
+        'in_person_id_check_question' => '?string',
         'in_person_id_check_question_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'in_person_signing_enabled' => 'string',
+        'in_person_signing_enabled' => '?string',
         'in_person_signing_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'in_session_enabled' => 'string',
+        'in_session_enabled' => '?string',
         'in_session_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'in_session_suppress_emails' => 'string',
+        'in_session_suppress_emails' => '?string',
         'in_session_suppress_emails_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'maximum_signing_groups' => 'string',
+        'linked_external_primary_accounts' => '\DocuSign\eSign\Model\LinkedExternalPrimaryAccount[]',
+        'maximum_signing_groups' => '?string',
         'maximum_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'maximum_users_per_signing_group' => 'string',
+        'maximum_users_per_signing_group' => '?string',
         'maximum_users_per_signing_group_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'max_number_of_custom_stamps' => 'string',
-        'mobile_session_timeout' => 'string',
+        'max_number_of_custom_stamps' => '?string',
+        'mobile_session_timeout' => '?string',
         'mobile_session_timeout_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'number_of_active_custom_stamps' => 'string',
-        'opt_in_mobile_signing_v02' => 'string',
+        'number_of_active_custom_stamps' => '?string',
+        'opt_in_mobile_signing_v02' => '?string',
         'opt_in_mobile_signing_v02_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'opt_out_auto_nav_text_and_tab_color_updates' => 'string',
+        'opt_out_auto_nav_text_and_tab_color_updates' => '?string',
         'opt_out_auto_nav_text_and_tab_color_updates_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'opt_out_new_platform_seal' => 'string',
+        'opt_out_new_platform_seal' => '?string',
         'opt_out_new_platform_seal_platform_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'phone_auth_recipient_may_provide_phone_number' => 'string',
+        'phone_auth_recipient_may_provide_phone_number' => '?string',
         'phone_auth_recipient_may_provide_phone_number_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'pki_sign_downloaded_pdf_docs' => 'string',
+        'pki_sign_downloaded_pdf_docs' => '?string',
         'pki_sign_downloaded_pdf_docs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'recipients_can_sign_offline' => 'string',
+        'recipients_can_sign_offline' => '?string',
         'recipients_can_sign_offline_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'recipient_signing_auto_navigation_control' => 'string',
+        'recipient_signing_auto_navigation_control' => '?string',
         'recipient_signing_auto_navigation_control_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'require21_cf_rpt11_compliance' => 'string',
+        'require21_cf_rpt11_compliance' => '?string',
         'require21_cf_rpt11_compliance_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'require_decline_reason' => 'string',
+        'require_decline_reason' => '?string',
         'require_decline_reason_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'require_external_user_management' => 'string',
+        'require_external_user_management' => '?string',
         'require_external_user_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'require_signer_certificate_type' => 'string',
+        'require_signer_certificate_type' => '?string',
         'require_signer_certificate_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'rsa_verid_account_name' => 'string',
-        'rsa_verid_password' => 'string',
-        'rsa_verid_ruleset' => 'string',
-        'rsa_verid_user_id' => 'string',
-        'self_signed_recipient_email_document' => 'string',
+        'rsa_verid_account_name' => '?string',
+        'rsa_verid_password' => '?string',
+        'rsa_verid_ruleset' => '?string',
+        'rsa_verid_user_id' => '?string',
+        'self_signed_recipient_email_document' => '?string',
         'self_signed_recipient_email_document_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'self_signed_recipient_email_document_user_override' => 'string',
+        'self_signed_recipient_email_document_user_override' => '?string',
         'self_signed_recipient_email_document_user_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sender_can_sign_in_each_location' => 'string',
+        'sender_can_sign_in_each_location' => '?string',
         'sender_can_sign_in_each_location_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sender_must_authenticate_signing' => 'string',
+        'sender_must_authenticate_signing' => '?string',
         'sender_must_authenticate_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sending_tags_font_color' => 'string',
+        'sending_tags_font_color' => '?string',
         'sending_tags_font_color_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sending_tags_font_name' => 'string',
+        'sending_tags_font_name' => '?string',
         'sending_tags_font_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sending_tags_font_size' => 'string',
+        'sending_tags_font_size' => '?string',
         'sending_tags_font_size_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'send_to_certified_delivery_enabled' => 'string',
+        'send_to_certified_delivery_enabled' => '?string',
         'send_to_certified_delivery_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'session_timeout' => 'string',
+        'session_timeout' => '?string',
         'session_timeout_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'set_recip_email_lang' => 'string',
+        'set_recip_email_lang' => '?string',
         'set_recip_email_lang_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'set_recip_sign_lang' => 'string',
+        'set_recip_sign_lang' => '?string',
         'set_recip_sign_lang_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'shared_template_folders' => 'string',
+        'shared_template_folders' => '?string',
         'shared_template_folders_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'show_complete_dialog_in_embedded_session' => 'string',
+        'show_complete_dialog_in_embedded_session' => '?string',
         'show_complete_dialog_in_embedded_session_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'show_conditional_routing_on_send' => 'string',
+        'show_conditional_routing_on_send' => '?string',
         'show_conditional_routing_on_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'show_initial_conditional_fields' => 'string',
+        'show_initial_conditional_fields' => '?string',
         'show_initial_conditional_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'show_localized_watermarks' => 'string',
+        'show_localized_watermarks' => '?string',
         'show_localized_watermarks_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'show_tutorials' => 'string',
+        'show_masked_fields_when_downloading_document_as_sender' => '?string',
+        'show_masked_fields_when_downloading_document_as_sender_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'show_tutorials' => '?string',
         'show_tutorials_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signature_providers' => 'string[]',
+        'signature_providers' => '?string[]',
         'signature_providers_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sign_date_format' => 'string',
+        'sign_date_format' => '?string',
         'sign_date_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_attach_certificate_to_envelope_pdf' => 'string',
+        'sign_date_time_account_language_override' => '?string',
+        'sign_date_time_account_language_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'sign_date_time_account_timezone_override' => '?string',
+        'sign_date_time_account_timezone_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'signer_attach_certificate_to_envelope_pdf' => '?string',
         'signer_attach_certificate_to_envelope_pdf_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_attach_concat' => 'string',
+        'signer_attach_concat' => '?string',
         'signer_attach_concat_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_can_create_account' => 'string',
+        'signer_can_create_account' => '?string',
         'signer_can_create_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_can_sign_on_mobile' => 'string',
+        'signer_can_sign_on_mobile' => '?string',
         'signer_can_sign_on_mobile_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_in_session_use_envelope_complete_email' => 'string',
+        'signer_in_session_use_envelope_complete_email' => '?string',
         'signer_in_session_use_envelope_complete_email_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_login_requirements' => 'string',
+        'signer_login_requirements' => '?string',
         'signer_login_requirements_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_must_have_account' => 'string',
+        'signer_must_have_account' => '?string',
         'signer_must_have_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_must_login_to_sign' => 'string',
+        'signer_must_login_to_sign' => '?string',
         'signer_must_login_to_sign_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signer_show_secure_field_initial_values' => 'string',
+        'signer_show_secure_field_initial_values' => '?string',
         'signer_show_secure_field_initial_values_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signing_session_timeout' => 'string',
+        'signing_session_timeout' => '?string',
         'signing_session_timeout_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'signing_ui_version' => 'string',
+        'signing_ui_version' => '?string',
         'signing_ui_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sign_time_format' => 'string',
+        'sign_time_format' => '?string',
         'sign_time_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sign_time_show_am_pm' => 'string',
+        'sign_time_show_am_pm' => '?string',
         'sign_time_show_am_pm_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'simplified_sending_enabled' => 'string',
+        'simplified_sending_enabled' => '?string',
         'simplified_sending_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'single_sign_on_enabled' => 'string',
+        'single_sign_on_enabled' => '?string',
         'single_sign_on_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'skip_auth_completed_envelopes' => 'string',
+        'skip_auth_completed_envelopes' => '?string',
         'skip_auth_completed_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'social_id_recip_auth' => 'string',
+        'social_id_recip_auth' => '?string',
         'social_id_recip_auth_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'specify_document_visibility' => 'string',
+        'specify_document_visibility' => '?string',
         'specify_document_visibility_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'start_in_advanced_correct' => 'string',
+        'start_in_advanced_correct' => '?string',
         'start_in_advanced_correct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_accept' => 'string',
+        'supplemental_documents_must_accept' => '?string',
         'supplemental_documents_must_accept_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_read' => 'string',
+        'supplemental_documents_must_read' => '?string',
         'supplemental_documents_must_read_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_view' => 'string',
+        'supplemental_documents_must_view' => '?string',
         'supplemental_documents_must_view_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'suppress_certificate_enforcement' => 'string',
+        'suppress_certificate_enforcement' => '?string',
         'suppress_certificate_enforcement_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'tab_account_settings' => '\DocuSign\eSign\Model\TabAccountSettings',
-        'timezone_offset_api' => 'string',
+        'timezone_offset_api' => '?string',
         'timezone_offset_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'timezone_offset_ui' => 'string',
+        'timezone_offset_ui' => '?string',
         'timezone_offset_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'universal_signature_opt_in' => 'string',
-        'use_account_level_email' => 'string',
+        'universal_signature_opt_in' => '?string',
+        'use_account_level_email' => '?string',
         'use_account_level_email_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_consumer_disclosure' => 'string',
+        'use_consumer_disclosure' => '?string',
         'use_consumer_disclosure_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_consumer_disclosure_within_account' => 'string',
+        'use_consumer_disclosure_within_account' => '?string',
         'use_consumer_disclosure_within_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_derived_keys' => 'string',
+        'use_derived_keys' => '?string',
         'use_derived_keys_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_docu_sign_express_signer_certificate' => 'string',
+        'use_docu_sign_express_signer_certificate' => '?string',
         'use_docu_sign_express_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_multi_app_groups_data' => 'string',
+        'use_multi_app_groups_data' => '?string',
         'use_multi_app_groups_data_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_new_blob_for_pdf' => 'string',
+        'use_new_blob_for_pdf' => '?string',
         'use_new_blob_for_pdf_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_safe_signer_certificates' => 'string',
+        'use_safe_signer_certificates' => '?string',
         'use_safe_signer_certificates_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'uses_api' => 'string',
+        'uses_api' => '?string',
         'uses_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_signature_provider_platform' => 'string',
+        'use_signature_provider_platform' => '?string',
         'use_signature_provider_platform_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'validations_allowed' => 'string',
+        'validations_allowed' => '?string',
         'validations_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'validations_brand' => 'string',
+        'validations_brand' => '?string',
         'validations_brand_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'validations_cadence' => 'string',
+        'validations_cadence' => '?string',
         'validations_cadence_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'validations_enabled' => 'string',
+        'validations_enabled' => '?string',
         'validations_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'validations_report' => 'string',
+        'validations_report' => '?string',
         'validations_report_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'water_mark_enabled' => 'string',
+        'water_mark_enabled' => '?string',
         'water_mark_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'write_reminder_to_envelope_history' => 'string',
+        'write_reminder_to_envelope_history' => '?string',
         'write_reminder_to_envelope_history_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'wurfl_min_allowable_screen_size' => 'string',
+        'wurfl_min_allowable_screen_size' => '?string',
         'wurfl_min_allowable_screen_size_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
@@ -670,6 +681,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_express_signer_certificate_metadata' => null,
         'allow_extended_sending_resource_file' => null,
         'allow_extended_sending_resource_file_metadata' => null,
+        'allow_external_linked_accounts' => null,
+        'allow_external_linked_accounts_metadata' => null,
         'allow_external_signature_pad' => null,
         'allow_external_signature_pad_metadata' => null,
         'allow_idv_level1' => null,
@@ -926,6 +939,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_smart_contracts_metadata' => null,
         'enable_sms_authentication' => null,
         'enable_sms_authentication_metadata' => null,
+        'enable_sms_delivery_additional_notification' => null,
+        'enable_sms_delivery_additional_notification_metadata' => null,
         'enable_social_id_login' => null,
         'enable_social_id_login_metadata' => null,
         'enable_strike_through' => null,
@@ -980,6 +995,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => null,
         'in_session_suppress_emails' => null,
         'in_session_suppress_emails_metadata' => null,
+        'linked_external_primary_accounts' => null,
         'maximum_signing_groups' => null,
         'maximum_signing_groups_metadata' => null,
         'maximum_users_per_signing_group' => null,
@@ -1046,12 +1062,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'show_initial_conditional_fields_metadata' => null,
         'show_localized_watermarks' => null,
         'show_localized_watermarks_metadata' => null,
+        'show_masked_fields_when_downloading_document_as_sender' => null,
+        'show_masked_fields_when_downloading_document_as_sender_metadata' => null,
         'show_tutorials' => null,
         'show_tutorials_metadata' => null,
         'signature_providers' => null,
         'signature_providers_metadata' => null,
         'sign_date_format' => null,
         'sign_date_format_metadata' => null,
+        'sign_date_time_account_language_override' => null,
+        'sign_date_time_account_language_override_metadata' => null,
+        'sign_date_time_account_timezone_override' => null,
+        'sign_date_time_account_timezone_override_metadata' => null,
         'signer_attach_certificate_to_envelope_pdf' => null,
         'signer_attach_certificate_to_envelope_pdf_metadata' => null,
         'signer_attach_concat' => null,
@@ -1236,6 +1258,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_express_signer_certificate_metadata' => 'allowExpressSignerCertificateMetadata',
         'allow_extended_sending_resource_file' => 'allowExtendedSendingResourceFile',
         'allow_extended_sending_resource_file_metadata' => 'allowExtendedSendingResourceFileMetadata',
+        'allow_external_linked_accounts' => 'allowExternalLinkedAccounts',
+        'allow_external_linked_accounts_metadata' => 'allowExternalLinkedAccountsMetadata',
         'allow_external_signature_pad' => 'allowExternalSignaturePad',
         'allow_external_signature_pad_metadata' => 'allowExternalSignaturePadMetadata',
         'allow_idv_level1' => 'allowIDVLevel1',
@@ -1492,6 +1516,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_smart_contracts_metadata' => 'enableSmartContractsMetadata',
         'enable_sms_authentication' => 'enableSMSAuthentication',
         'enable_sms_authentication_metadata' => 'enableSMSAuthenticationMetadata',
+        'enable_sms_delivery_additional_notification' => 'enableSMSDeliveryAdditionalNotification',
+        'enable_sms_delivery_additional_notification_metadata' => 'enableSMSDeliveryAdditionalNotificationMetadata',
         'enable_social_id_login' => 'enableSocialIdLogin',
         'enable_social_id_login_metadata' => 'enableSocialIdLoginMetadata',
         'enable_strike_through' => 'enableStrikeThrough',
@@ -1546,6 +1572,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => 'inSessionEnabledMetadata',
         'in_session_suppress_emails' => 'inSessionSuppressEmails',
         'in_session_suppress_emails_metadata' => 'inSessionSuppressEmailsMetadata',
+        'linked_external_primary_accounts' => 'linkedExternalPrimaryAccounts',
         'maximum_signing_groups' => 'maximumSigningGroups',
         'maximum_signing_groups_metadata' => 'maximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'maximumUsersPerSigningGroup',
@@ -1612,12 +1639,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'show_initial_conditional_fields_metadata' => 'showInitialConditionalFieldsMetadata',
         'show_localized_watermarks' => 'showLocalizedWatermarks',
         'show_localized_watermarks_metadata' => 'showLocalizedWatermarksMetadata',
+        'show_masked_fields_when_downloading_document_as_sender' => 'showMaskedFieldsWhenDownloadingDocumentAsSender',
+        'show_masked_fields_when_downloading_document_as_sender_metadata' => 'showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata',
         'show_tutorials' => 'showTutorials',
         'show_tutorials_metadata' => 'showTutorialsMetadata',
         'signature_providers' => 'signatureProviders',
         'signature_providers_metadata' => 'signatureProvidersMetadata',
         'sign_date_format' => 'signDateFormat',
         'sign_date_format_metadata' => 'signDateFormatMetadata',
+        'sign_date_time_account_language_override' => 'signDateTimeAccountLanguageOverride',
+        'sign_date_time_account_language_override_metadata' => 'signDateTimeAccountLanguageOverrideMetadata',
+        'sign_date_time_account_timezone_override' => 'signDateTimeAccountTimezoneOverride',
+        'sign_date_time_account_timezone_override_metadata' => 'signDateTimeAccountTimezoneOverrideMetadata',
         'signer_attach_certificate_to_envelope_pdf' => 'signerAttachCertificateToEnvelopePDF',
         'signer_attach_certificate_to_envelope_pdf_metadata' => 'signerAttachCertificateToEnvelopePDFMetadata',
         'signer_attach_concat' => 'signerAttachConcat',
@@ -1781,6 +1814,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_express_signer_certificate_metadata' => 'setAllowExpressSignerCertificateMetadata',
         'allow_extended_sending_resource_file' => 'setAllowExtendedSendingResourceFile',
         'allow_extended_sending_resource_file_metadata' => 'setAllowExtendedSendingResourceFileMetadata',
+        'allow_external_linked_accounts' => 'setAllowExternalLinkedAccounts',
+        'allow_external_linked_accounts_metadata' => 'setAllowExternalLinkedAccountsMetadata',
         'allow_external_signature_pad' => 'setAllowExternalSignaturePad',
         'allow_external_signature_pad_metadata' => 'setAllowExternalSignaturePadMetadata',
         'allow_idv_level1' => 'setAllowIdvLevel1',
@@ -2037,6 +2072,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_smart_contracts_metadata' => 'setEnableSmartContractsMetadata',
         'enable_sms_authentication' => 'setEnableSmsAuthentication',
         'enable_sms_authentication_metadata' => 'setEnableSmsAuthenticationMetadata',
+        'enable_sms_delivery_additional_notification' => 'setEnableSmsDeliveryAdditionalNotification',
+        'enable_sms_delivery_additional_notification_metadata' => 'setEnableSmsDeliveryAdditionalNotificationMetadata',
         'enable_social_id_login' => 'setEnableSocialIdLogin',
         'enable_social_id_login_metadata' => 'setEnableSocialIdLoginMetadata',
         'enable_strike_through' => 'setEnableStrikeThrough',
@@ -2091,6 +2128,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => 'setInSessionEnabledMetadata',
         'in_session_suppress_emails' => 'setInSessionSuppressEmails',
         'in_session_suppress_emails_metadata' => 'setInSessionSuppressEmailsMetadata',
+        'linked_external_primary_accounts' => 'setLinkedExternalPrimaryAccounts',
         'maximum_signing_groups' => 'setMaximumSigningGroups',
         'maximum_signing_groups_metadata' => 'setMaximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'setMaximumUsersPerSigningGroup',
@@ -2157,12 +2195,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'show_initial_conditional_fields_metadata' => 'setShowInitialConditionalFieldsMetadata',
         'show_localized_watermarks' => 'setShowLocalizedWatermarks',
         'show_localized_watermarks_metadata' => 'setShowLocalizedWatermarksMetadata',
+        'show_masked_fields_when_downloading_document_as_sender' => 'setShowMaskedFieldsWhenDownloadingDocumentAsSender',
+        'show_masked_fields_when_downloading_document_as_sender_metadata' => 'setShowMaskedFieldsWhenDownloadingDocumentAsSenderMetadata',
         'show_tutorials' => 'setShowTutorials',
         'show_tutorials_metadata' => 'setShowTutorialsMetadata',
         'signature_providers' => 'setSignatureProviders',
         'signature_providers_metadata' => 'setSignatureProvidersMetadata',
         'sign_date_format' => 'setSignDateFormat',
         'sign_date_format_metadata' => 'setSignDateFormatMetadata',
+        'sign_date_time_account_language_override' => 'setSignDateTimeAccountLanguageOverride',
+        'sign_date_time_account_language_override_metadata' => 'setSignDateTimeAccountLanguageOverrideMetadata',
+        'sign_date_time_account_timezone_override' => 'setSignDateTimeAccountTimezoneOverride',
+        'sign_date_time_account_timezone_override_metadata' => 'setSignDateTimeAccountTimezoneOverrideMetadata',
         'signer_attach_certificate_to_envelope_pdf' => 'setSignerAttachCertificateToEnvelopePdf',
         'signer_attach_certificate_to_envelope_pdf_metadata' => 'setSignerAttachCertificateToEnvelopePdfMetadata',
         'signer_attach_concat' => 'setSignerAttachConcat',
@@ -2326,6 +2370,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_express_signer_certificate_metadata' => 'getAllowExpressSignerCertificateMetadata',
         'allow_extended_sending_resource_file' => 'getAllowExtendedSendingResourceFile',
         'allow_extended_sending_resource_file_metadata' => 'getAllowExtendedSendingResourceFileMetadata',
+        'allow_external_linked_accounts' => 'getAllowExternalLinkedAccounts',
+        'allow_external_linked_accounts_metadata' => 'getAllowExternalLinkedAccountsMetadata',
         'allow_external_signature_pad' => 'getAllowExternalSignaturePad',
         'allow_external_signature_pad_metadata' => 'getAllowExternalSignaturePadMetadata',
         'allow_idv_level1' => 'getAllowIdvLevel1',
@@ -2582,6 +2628,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_smart_contracts_metadata' => 'getEnableSmartContractsMetadata',
         'enable_sms_authentication' => 'getEnableSmsAuthentication',
         'enable_sms_authentication_metadata' => 'getEnableSmsAuthenticationMetadata',
+        'enable_sms_delivery_additional_notification' => 'getEnableSmsDeliveryAdditionalNotification',
+        'enable_sms_delivery_additional_notification_metadata' => 'getEnableSmsDeliveryAdditionalNotificationMetadata',
         'enable_social_id_login' => 'getEnableSocialIdLogin',
         'enable_social_id_login_metadata' => 'getEnableSocialIdLoginMetadata',
         'enable_strike_through' => 'getEnableStrikeThrough',
@@ -2636,6 +2684,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => 'getInSessionEnabledMetadata',
         'in_session_suppress_emails' => 'getInSessionSuppressEmails',
         'in_session_suppress_emails_metadata' => 'getInSessionSuppressEmailsMetadata',
+        'linked_external_primary_accounts' => 'getLinkedExternalPrimaryAccounts',
         'maximum_signing_groups' => 'getMaximumSigningGroups',
         'maximum_signing_groups_metadata' => 'getMaximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'getMaximumUsersPerSigningGroup',
@@ -2702,12 +2751,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'show_initial_conditional_fields_metadata' => 'getShowInitialConditionalFieldsMetadata',
         'show_localized_watermarks' => 'getShowLocalizedWatermarks',
         'show_localized_watermarks_metadata' => 'getShowLocalizedWatermarksMetadata',
+        'show_masked_fields_when_downloading_document_as_sender' => 'getShowMaskedFieldsWhenDownloadingDocumentAsSender',
+        'show_masked_fields_when_downloading_document_as_sender_metadata' => 'getShowMaskedFieldsWhenDownloadingDocumentAsSenderMetadata',
         'show_tutorials' => 'getShowTutorials',
         'show_tutorials_metadata' => 'getShowTutorialsMetadata',
         'signature_providers' => 'getSignatureProviders',
         'signature_providers_metadata' => 'getSignatureProvidersMetadata',
         'sign_date_format' => 'getSignDateFormat',
         'sign_date_format_metadata' => 'getSignDateFormatMetadata',
+        'sign_date_time_account_language_override' => 'getSignDateTimeAccountLanguageOverride',
+        'sign_date_time_account_language_override_metadata' => 'getSignDateTimeAccountLanguageOverrideMetadata',
+        'sign_date_time_account_timezone_override' => 'getSignDateTimeAccountTimezoneOverride',
+        'sign_date_time_account_timezone_override_metadata' => 'getSignDateTimeAccountTimezoneOverrideMetadata',
         'signer_attach_certificate_to_envelope_pdf' => 'getSignerAttachCertificateToEnvelopePdf',
         'signer_attach_certificate_to_envelope_pdf_metadata' => 'getSignerAttachCertificateToEnvelopePdfMetadata',
         'signer_attach_concat' => 'getSignerAttachConcat',
@@ -2925,6 +2980,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_express_signer_certificate_metadata'] = isset($data['allow_express_signer_certificate_metadata']) ? $data['allow_express_signer_certificate_metadata'] : null;
         $this->container['allow_extended_sending_resource_file'] = isset($data['allow_extended_sending_resource_file']) ? $data['allow_extended_sending_resource_file'] : null;
         $this->container['allow_extended_sending_resource_file_metadata'] = isset($data['allow_extended_sending_resource_file_metadata']) ? $data['allow_extended_sending_resource_file_metadata'] : null;
+        $this->container['allow_external_linked_accounts'] = isset($data['allow_external_linked_accounts']) ? $data['allow_external_linked_accounts'] : null;
+        $this->container['allow_external_linked_accounts_metadata'] = isset($data['allow_external_linked_accounts_metadata']) ? $data['allow_external_linked_accounts_metadata'] : null;
         $this->container['allow_external_signature_pad'] = isset($data['allow_external_signature_pad']) ? $data['allow_external_signature_pad'] : null;
         $this->container['allow_external_signature_pad_metadata'] = isset($data['allow_external_signature_pad_metadata']) ? $data['allow_external_signature_pad_metadata'] : null;
         $this->container['allow_idv_level1'] = isset($data['allow_idv_level1']) ? $data['allow_idv_level1'] : null;
@@ -3181,6 +3238,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_smart_contracts_metadata'] = isset($data['enable_smart_contracts_metadata']) ? $data['enable_smart_contracts_metadata'] : null;
         $this->container['enable_sms_authentication'] = isset($data['enable_sms_authentication']) ? $data['enable_sms_authentication'] : null;
         $this->container['enable_sms_authentication_metadata'] = isset($data['enable_sms_authentication_metadata']) ? $data['enable_sms_authentication_metadata'] : null;
+        $this->container['enable_sms_delivery_additional_notification'] = isset($data['enable_sms_delivery_additional_notification']) ? $data['enable_sms_delivery_additional_notification'] : null;
+        $this->container['enable_sms_delivery_additional_notification_metadata'] = isset($data['enable_sms_delivery_additional_notification_metadata']) ? $data['enable_sms_delivery_additional_notification_metadata'] : null;
         $this->container['enable_social_id_login'] = isset($data['enable_social_id_login']) ? $data['enable_social_id_login'] : null;
         $this->container['enable_social_id_login_metadata'] = isset($data['enable_social_id_login_metadata']) ? $data['enable_social_id_login_metadata'] : null;
         $this->container['enable_strike_through'] = isset($data['enable_strike_through']) ? $data['enable_strike_through'] : null;
@@ -3235,6 +3294,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['in_session_enabled_metadata'] = isset($data['in_session_enabled_metadata']) ? $data['in_session_enabled_metadata'] : null;
         $this->container['in_session_suppress_emails'] = isset($data['in_session_suppress_emails']) ? $data['in_session_suppress_emails'] : null;
         $this->container['in_session_suppress_emails_metadata'] = isset($data['in_session_suppress_emails_metadata']) ? $data['in_session_suppress_emails_metadata'] : null;
+        $this->container['linked_external_primary_accounts'] = isset($data['linked_external_primary_accounts']) ? $data['linked_external_primary_accounts'] : null;
         $this->container['maximum_signing_groups'] = isset($data['maximum_signing_groups']) ? $data['maximum_signing_groups'] : null;
         $this->container['maximum_signing_groups_metadata'] = isset($data['maximum_signing_groups_metadata']) ? $data['maximum_signing_groups_metadata'] : null;
         $this->container['maximum_users_per_signing_group'] = isset($data['maximum_users_per_signing_group']) ? $data['maximum_users_per_signing_group'] : null;
@@ -3301,12 +3361,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['show_initial_conditional_fields_metadata'] = isset($data['show_initial_conditional_fields_metadata']) ? $data['show_initial_conditional_fields_metadata'] : null;
         $this->container['show_localized_watermarks'] = isset($data['show_localized_watermarks']) ? $data['show_localized_watermarks'] : null;
         $this->container['show_localized_watermarks_metadata'] = isset($data['show_localized_watermarks_metadata']) ? $data['show_localized_watermarks_metadata'] : null;
+        $this->container['show_masked_fields_when_downloading_document_as_sender'] = isset($data['show_masked_fields_when_downloading_document_as_sender']) ? $data['show_masked_fields_when_downloading_document_as_sender'] : null;
+        $this->container['show_masked_fields_when_downloading_document_as_sender_metadata'] = isset($data['show_masked_fields_when_downloading_document_as_sender_metadata']) ? $data['show_masked_fields_when_downloading_document_as_sender_metadata'] : null;
         $this->container['show_tutorials'] = isset($data['show_tutorials']) ? $data['show_tutorials'] : null;
         $this->container['show_tutorials_metadata'] = isset($data['show_tutorials_metadata']) ? $data['show_tutorials_metadata'] : null;
         $this->container['signature_providers'] = isset($data['signature_providers']) ? $data['signature_providers'] : null;
         $this->container['signature_providers_metadata'] = isset($data['signature_providers_metadata']) ? $data['signature_providers_metadata'] : null;
         $this->container['sign_date_format'] = isset($data['sign_date_format']) ? $data['sign_date_format'] : null;
         $this->container['sign_date_format_metadata'] = isset($data['sign_date_format_metadata']) ? $data['sign_date_format_metadata'] : null;
+        $this->container['sign_date_time_account_language_override'] = isset($data['sign_date_time_account_language_override']) ? $data['sign_date_time_account_language_override'] : null;
+        $this->container['sign_date_time_account_language_override_metadata'] = isset($data['sign_date_time_account_language_override_metadata']) ? $data['sign_date_time_account_language_override_metadata'] : null;
+        $this->container['sign_date_time_account_timezone_override'] = isset($data['sign_date_time_account_timezone_override']) ? $data['sign_date_time_account_timezone_override'] : null;
+        $this->container['sign_date_time_account_timezone_override_metadata'] = isset($data['sign_date_time_account_timezone_override_metadata']) ? $data['sign_date_time_account_timezone_override_metadata'] : null;
         $this->container['signer_attach_certificate_to_envelope_pdf'] = isset($data['signer_attach_certificate_to_envelope_pdf']) ? $data['signer_attach_certificate_to_envelope_pdf'] : null;
         $this->container['signer_attach_certificate_to_envelope_pdf_metadata'] = isset($data['signer_attach_certificate_to_envelope_pdf_metadata']) ? $data['signer_attach_certificate_to_envelope_pdf_metadata'] : null;
         $this->container['signer_attach_concat'] = isset($data['signer_attach_concat']) ? $data['signer_attach_concat'] : null;
@@ -3448,7 +3514,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets account_date_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountDateTimeFormat()
     {
@@ -3458,7 +3524,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_date_time_format
      *
-     * @param string $account_date_time_format 
+     * @param ?string $account_date_time_format 
      *
      * @return $this
      */
@@ -3496,7 +3562,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets account_default_language
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountDefaultLanguage()
     {
@@ -3506,7 +3572,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_default_language
      *
-     * @param string $account_default_language 
+     * @param ?string $account_default_language 
      *
      * @return $this
      */
@@ -3544,7 +3610,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountName()
     {
@@ -3554,7 +3620,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param string $account_name 
+     * @param ?string $account_name 
      *
      * @return $this
      */
@@ -3640,7 +3706,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets adopt_sig_config
      *
-     * @return string
+     * @return ?string
      */
     public function getAdoptSigConfig()
     {
@@ -3650,7 +3716,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets adopt_sig_config
      *
-     * @param string $adopt_sig_config 
+     * @param ?string $adopt_sig_config 
      *
      * @return $this
      */
@@ -3688,7 +3754,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets advanced_correct
      *
-     * @return string
+     * @return ?string
      */
     public function getAdvancedCorrect()
     {
@@ -3698,7 +3764,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_correct
      *
-     * @param string $advanced_correct 
+     * @param ?string $advanced_correct 
      *
      * @return $this
      */
@@ -3736,7 +3802,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_access_code_format
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAccessCodeFormat()
     {
@@ -3746,7 +3812,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_access_code_format
      *
-     * @param string $allow_access_code_format 
+     * @param ?string $allow_access_code_format 
      *
      * @return $this
      */
@@ -3784,7 +3850,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_account_management_granular
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAccountManagementGranular()
     {
@@ -3794,7 +3860,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_account_management_granular
      *
-     * @param string $allow_account_management_granular 
+     * @param ?string $allow_account_management_granular 
      *
      * @return $this
      */
@@ -3832,7 +3898,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_account_member_name_change
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAccountMemberNameChange()
     {
@@ -3842,7 +3908,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_account_member_name_change
      *
-     * @param string $allow_account_member_name_change 
+     * @param ?string $allow_account_member_name_change 
      *
      * @return $this
      */
@@ -3880,7 +3946,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_advanced_recipient_routing_conditional
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAdvancedRecipientRoutingConditional()
     {
@@ -3890,7 +3956,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_advanced_recipient_routing_conditional
      *
-     * @param string $allow_advanced_recipient_routing_conditional 
+     * @param ?string $allow_advanced_recipient_routing_conditional 
      *
      * @return $this
      */
@@ -3928,7 +3994,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_agent_name_email_edit
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAgentNameEmailEdit()
     {
@@ -3938,7 +4004,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_agent_name_email_edit
      *
-     * @param string $allow_agent_name_email_edit 
+     * @param ?string $allow_agent_name_email_edit 
      *
      * @return $this
      */
@@ -3976,7 +4042,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_agreement_actions
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAgreementActions()
     {
@@ -3986,7 +4052,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_agreement_actions
      *
-     * @param string $allow_agreement_actions 
+     * @param ?string $allow_agreement_actions 
      *
      * @return $this
      */
@@ -4024,7 +4090,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_auto_nav_settings
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAutoNavSettings()
     {
@@ -4034,7 +4100,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_nav_settings
      *
-     * @param string $allow_auto_nav_settings 
+     * @param ?string $allow_auto_nav_settings 
      *
      * @return $this
      */
@@ -4072,7 +4138,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_auto_tagging
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAutoTagging()
     {
@@ -4082,7 +4148,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_tagging
      *
-     * @param string $allow_auto_tagging 
+     * @param ?string $allow_auto_tagging 
      *
      * @return $this
      */
@@ -4120,7 +4186,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_bulk_send
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowBulkSend()
     {
@@ -4130,7 +4196,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_bulk_send
      *
-     * @param string $allow_bulk_send 
+     * @param ?string $allow_bulk_send 
      *
      * @return $this
      */
@@ -4168,7 +4234,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_cd_withdraw
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowCdWithdraw()
     {
@@ -4178,7 +4244,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_cd_withdraw
      *
-     * @param string $allow_cd_withdraw 
+     * @param ?string $allow_cd_withdraw 
      *
      * @return $this
      */
@@ -4216,7 +4282,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_connect_http_listener_configs
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowConnectHttpListenerConfigs()
     {
@@ -4226,7 +4292,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_http_listener_configs
      *
-     * @param string $allow_connect_http_listener_configs 
+     * @param ?string $allow_connect_http_listener_configs 
      *
      * @return $this
      */
@@ -4240,7 +4306,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_connect_send_finish_later
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowConnectSendFinishLater()
     {
@@ -4250,7 +4316,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_send_finish_later
      *
-     * @param string $allow_connect_send_finish_later 
+     * @param ?string $allow_connect_send_finish_later 
      *
      * @return $this
      */
@@ -4288,7 +4354,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_connect_unified_payload_ui
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowConnectUnifiedPayloadUi()
     {
@@ -4298,7 +4364,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_unified_payload_ui
      *
-     * @param string $allow_connect_unified_payload_ui 
+     * @param ?string $allow_connect_unified_payload_ui 
      *
      * @return $this
      */
@@ -4312,7 +4378,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_consumer_disclosure_override
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowConsumerDisclosureOverride()
     {
@@ -4322,7 +4388,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_consumer_disclosure_override
      *
-     * @param string $allow_consumer_disclosure_override 
+     * @param ?string $allow_consumer_disclosure_override 
      *
      * @return $this
      */
@@ -4360,7 +4426,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_data_download
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowDataDownload()
     {
@@ -4370,7 +4436,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_data_download
      *
-     * @param string $allow_data_download 
+     * @param ?string $allow_data_download 
      *
      * @return $this
      */
@@ -4408,7 +4474,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_document_disclosures
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowDocumentDisclosures()
     {
@@ -4418,7 +4484,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_document_disclosures
      *
-     * @param string $allow_document_disclosures 
+     * @param ?string $allow_document_disclosures 
      *
      * @return $this
      */
@@ -4456,7 +4522,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_documents_on_signed_envelopes
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowDocumentsOnSignedEnvelopes()
     {
@@ -4466,7 +4532,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_documents_on_signed_envelopes
      *
-     * @param string $allow_documents_on_signed_envelopes 
+     * @param ?string $allow_documents_on_signed_envelopes 
      *
      * @return $this
      */
@@ -4504,7 +4570,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_document_visibility
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowDocumentVisibility()
     {
@@ -4514,7 +4580,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_document_visibility
      *
-     * @param string $allow_document_visibility 
+     * @param ?string $allow_document_visibility 
      *
      * @return $this
      */
@@ -4552,7 +4618,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_e_hanko_stamps
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEHankoStamps()
     {
@@ -4562,7 +4628,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_e_hanko_stamps
      *
-     * @param string $allow_e_hanko_stamps 
+     * @param ?string $allow_e_hanko_stamps 
      *
      * @return $this
      */
@@ -4600,7 +4666,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_e_note_e_original
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowENoteEOriginal()
     {
@@ -4610,7 +4676,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_e_note_e_original
      *
-     * @param string $allow_e_note_e_original 
+     * @param ?string $allow_e_note_e_original 
      *
      * @return $this
      */
@@ -4648,7 +4714,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_correct
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopeCorrect()
     {
@@ -4658,7 +4724,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_correct
      *
-     * @param string $allow_envelope_correct 
+     * @param ?string $allow_envelope_correct 
      *
      * @return $this
      */
@@ -4696,7 +4762,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_custody_transfer
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopeCustodyTransfer()
     {
@@ -4706,7 +4772,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_custody_transfer
      *
-     * @param string $allow_envelope_custody_transfer 
+     * @param ?string $allow_envelope_custody_transfer 
      *
      * @return $this
      */
@@ -4744,7 +4810,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_custom_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopeCustomFields()
     {
@@ -4754,7 +4820,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_custom_fields
      *
-     * @param string $allow_envelope_custom_fields 
+     * @param ?string $allow_envelope_custom_fields 
      *
      * @return $this
      */
@@ -4792,7 +4858,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_publish_reporting
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopePublishReporting()
     {
@@ -4802,7 +4868,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_publish_reporting
      *
-     * @param string $allow_envelope_publish_reporting 
+     * @param ?string $allow_envelope_publish_reporting 
      *
      * @return $this
      */
@@ -4840,7 +4906,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_reporting
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopeReporting()
     {
@@ -4850,7 +4916,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_reporting
      *
-     * @param string $allow_envelope_reporting 
+     * @param ?string $allow_envelope_reporting 
      *
      * @return $this
      */
@@ -4888,7 +4954,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_expression
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowExpression()
     {
@@ -4898,7 +4964,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_expression
      *
-     * @param string $allow_expression 
+     * @param ?string $allow_expression 
      *
      * @return $this
      */
@@ -4936,7 +5002,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_express_signer_certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowExpressSignerCertificate()
     {
@@ -4946,7 +5012,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_express_signer_certificate
      *
-     * @param string $allow_express_signer_certificate 
+     * @param ?string $allow_express_signer_certificate 
      *
      * @return $this
      */
@@ -4984,7 +5050,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_extended_sending_resource_file
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowExtendedSendingResourceFile()
     {
@@ -4994,7 +5060,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_extended_sending_resource_file
      *
-     * @param string $allow_extended_sending_resource_file 
+     * @param ?string $allow_extended_sending_resource_file 
      *
      * @return $this
      */
@@ -5030,9 +5096,57 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_external_linked_accounts
+     *
+     * @return ?string
+     */
+    public function getAllowExternalLinkedAccounts()
+    {
+        return $this->container['allow_external_linked_accounts'];
+    }
+
+    /**
+     * Sets allow_external_linked_accounts
+     *
+     * @param ?string $allow_external_linked_accounts 
+     *
+     * @return $this
+     */
+    public function setAllowExternalLinkedAccounts($allow_external_linked_accounts)
+    {
+        $this->container['allow_external_linked_accounts'] = $allow_external_linked_accounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_external_linked_accounts_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowExternalLinkedAccountsMetadata()
+    {
+        return $this->container['allow_external_linked_accounts_metadata'];
+    }
+
+    /**
+     * Sets allow_external_linked_accounts_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_external_linked_accounts_metadata allow_external_linked_accounts_metadata
+     *
+     * @return $this
+     */
+    public function setAllowExternalLinkedAccountsMetadata($allow_external_linked_accounts_metadata)
+    {
+        $this->container['allow_external_linked_accounts_metadata'] = $allow_external_linked_accounts_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_external_signature_pad
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowExternalSignaturePad()
     {
@@ -5042,7 +5156,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_external_signature_pad
      *
-     * @param string $allow_external_signature_pad 
+     * @param ?string $allow_external_signature_pad 
      *
      * @return $this
      */
@@ -5080,7 +5194,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_idv_level1
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowIdvLevel1()
     {
@@ -5090,7 +5204,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level1
      *
-     * @param string $allow_idv_level1 
+     * @param ?string $allow_idv_level1 
      *
      * @return $this
      */
@@ -5128,7 +5242,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_idv_level2
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowIdvLevel2()
     {
@@ -5138,7 +5252,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level2
      *
-     * @param string $allow_idv_level2 
+     * @param ?string $allow_idv_level2 
      *
      * @return $this
      */
@@ -5176,7 +5290,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_idv_level3
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowIdvLevel3()
     {
@@ -5186,7 +5300,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level3
      *
-     * @param string $allow_idv_level3 
+     * @param ?string $allow_idv_level3 
      *
      * @return $this
      */
@@ -5224,7 +5338,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_idv_platform
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowIdvPlatform()
     {
@@ -5234,7 +5348,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_platform
      *
-     * @param string $allow_idv_platform 
+     * @param ?string $allow_idv_platform 
      *
      * @return $this
      */
@@ -5272,7 +5386,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_in_person
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowInPerson()
     {
@@ -5282,7 +5396,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_in_person
      *
-     * @param string $allow_in_person 
+     * @param ?string $allow_in_person 
      *
      * @return $this
      */
@@ -5320,7 +5434,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_managed_stamps
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowManagedStamps()
     {
@@ -5330,7 +5444,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_managed_stamps
      *
-     * @param string $allow_managed_stamps 
+     * @param ?string $allow_managed_stamps 
      *
      * @return $this
      */
@@ -5368,7 +5482,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_markup
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowMarkup()
     {
@@ -5378,7 +5492,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_markup
      *
-     * @param string $allow_markup When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this
+     * @param ?string $allow_markup When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this
      *
      * @return $this
      */
@@ -5416,7 +5530,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_member_time_zone
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowMemberTimeZone()
     {
@@ -5426,7 +5540,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_member_time_zone
      *
-     * @param string $allow_member_time_zone 
+     * @param ?string $allow_member_time_zone 
      *
      * @return $this
      */
@@ -5464,7 +5578,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_merge_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowMergeFields()
     {
@@ -5474,7 +5588,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_merge_fields
      *
-     * @param string $allow_merge_fields 
+     * @param ?string $allow_merge_fields 
      *
      * @return $this
      */
@@ -5512,7 +5626,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_multiple_brand_profiles
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowMultipleBrandProfiles()
     {
@@ -5522,7 +5636,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_multiple_brand_profiles
      *
-     * @param string $allow_multiple_brand_profiles 
+     * @param ?string $allow_multiple_brand_profiles 
      *
      * @return $this
      */
@@ -5560,7 +5674,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_multiple_signer_attachments
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowMultipleSignerAttachments()
     {
@@ -5570,7 +5684,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_multiple_signer_attachments
      *
-     * @param string $allow_multiple_signer_attachments 
+     * @param ?string $allow_multiple_signer_attachments 
      *
      * @return $this
      */
@@ -5608,7 +5722,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_non_us_phone_auth
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowNonUsPhoneAuth()
     {
@@ -5618,7 +5732,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_non_us_phone_auth
      *
-     * @param string $allow_non_us_phone_auth 
+     * @param ?string $allow_non_us_phone_auth 
      *
      * @return $this
      */
@@ -5656,7 +5770,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_ocr_of_envelope_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowOcrOfEnvelopeDocuments()
     {
@@ -5666,7 +5780,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_ocr_of_envelope_documents
      *
-     * @param string $allow_ocr_of_envelope_documents 
+     * @param ?string $allow_ocr_of_envelope_documents 
      *
      * @return $this
      */
@@ -5704,7 +5818,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_offline_signing
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowOfflineSigning()
     {
@@ -5714,7 +5828,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_offline_signing
      *
-     * @param string $allow_offline_signing 
+     * @param ?string $allow_offline_signing 
      *
      * @return $this
      */
@@ -5752,7 +5866,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_open_trust_signer_certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowOpenTrustSignerCertificate()
     {
@@ -5762,7 +5876,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_open_trust_signer_certificate
      *
-     * @param string $allow_open_trust_signer_certificate 
+     * @param ?string $allow_open_trust_signer_certificate 
      *
      * @return $this
      */
@@ -5800,7 +5914,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_organizations
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowOrganizations()
     {
@@ -5810,7 +5924,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organizations
      *
-     * @param string $allow_organizations 
+     * @param ?string $allow_organizations 
      *
      * @return $this
      */
@@ -5848,7 +5962,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_payment_processing
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowPaymentProcessing()
     {
@@ -5858,7 +5972,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_payment_processing
      *
-     * @param string $allow_payment_processing 
+     * @param ?string $allow_payment_processing 
      *
      * @return $this
      */
@@ -5896,7 +6010,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_personal_signer_certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowPersonalSignerCertificate()
     {
@@ -5906,7 +6020,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_personal_signer_certificate
      *
-     * @param string $allow_personal_signer_certificate 
+     * @param ?string $allow_personal_signer_certificate 
      *
      * @return $this
      */
@@ -5944,7 +6058,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_phone_authentication
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowPhoneAuthentication()
     {
@@ -5954,7 +6068,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_phone_authentication
      *
-     * @param string $allow_phone_authentication 
+     * @param ?string $allow_phone_authentication 
      *
      * @return $this
      */
@@ -5992,7 +6106,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_phone_auth_override
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowPhoneAuthOverride()
     {
@@ -6002,7 +6116,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_phone_auth_override
      *
-     * @param string $allow_phone_auth_override 
+     * @param ?string $allow_phone_auth_override 
      *
      * @return $this
      */
@@ -6040,7 +6154,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_private_signing_groups
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowPrivateSigningGroups()
     {
@@ -6050,7 +6164,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_private_signing_groups
      *
-     * @param string $allow_private_signing_groups 
+     * @param ?string $allow_private_signing_groups 
      *
      * @return $this
      */
@@ -6088,7 +6202,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_recipient_connect
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowRecipientConnect()
     {
@@ -6098,7 +6212,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_recipient_connect
      *
-     * @param string $allow_recipient_connect 
+     * @param ?string $allow_recipient_connect 
      *
      * @return $this
      */
@@ -6136,7 +6250,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_reminders
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowReminders()
     {
@@ -6146,7 +6260,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_reminders
      *
-     * @param string $allow_reminders 
+     * @param ?string $allow_reminders 
      *
      * @return $this
      */
@@ -6184,7 +6298,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_remote_notary
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowRemoteNotary()
     {
@@ -6194,7 +6308,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_remote_notary
      *
-     * @param string $allow_remote_notary 
+     * @param ?string $allow_remote_notary 
      *
      * @return $this
      */
@@ -6232,7 +6346,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_resource_file_branding
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowResourceFileBranding()
     {
@@ -6242,7 +6356,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_resource_file_branding
      *
-     * @param string $allow_resource_file_branding 
+     * @param ?string $allow_resource_file_branding 
      *
      * @return $this
      */
@@ -6280,7 +6394,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_safe_bio_pharma_signer_certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSafeBioPharmaSignerCertificate()
     {
@@ -6290,7 +6404,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_safe_bio_pharma_signer_certificate
      *
-     * @param string $allow_safe_bio_pharma_signer_certificate 
+     * @param ?string $allow_safe_bio_pharma_signer_certificate 
      *
      * @return $this
      */
@@ -6328,7 +6442,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_security_appliance
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSecurityAppliance()
     {
@@ -6338,7 +6452,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_security_appliance
      *
-     * @param string $allow_security_appliance 
+     * @param ?string $allow_security_appliance 
      *
      * @return $this
      */
@@ -6376,7 +6490,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_send_to_certified_delivery
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSendToCertifiedDelivery()
     {
@@ -6386,7 +6500,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_send_to_certified_delivery
      *
-     * @param string $allow_send_to_certified_delivery 
+     * @param ?string $allow_send_to_certified_delivery 
      *
      * @return $this
      */
@@ -6424,7 +6538,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_send_to_intermediary
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSendToIntermediary()
     {
@@ -6434,7 +6548,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_send_to_intermediary
      *
-     * @param string $allow_send_to_intermediary 
+     * @param ?string $allow_send_to_intermediary 
      *
      * @return $this
      */
@@ -6472,7 +6586,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_server_templates
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowServerTemplates()
     {
@@ -6482,7 +6596,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_server_templates
      *
-     * @param string $allow_server_templates 
+     * @param ?string $allow_server_templates 
      *
      * @return $this
      */
@@ -6520,7 +6634,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_set_embedded_recipient_start_url
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSetEmbeddedRecipientStartUrl()
     {
@@ -6530,7 +6644,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_set_embedded_recipient_start_url
      *
-     * @param string $allow_set_embedded_recipient_start_url 
+     * @param ?string $allow_set_embedded_recipient_start_url 
      *
      * @return $this
      */
@@ -6568,7 +6682,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_shared_tabs
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSharedTabs()
     {
@@ -6578,7 +6692,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_shared_tabs
      *
-     * @param string $allow_shared_tabs 
+     * @param ?string $allow_shared_tabs 
      *
      * @return $this
      */
@@ -6616,7 +6730,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signature_stamps
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSignatureStamps()
     {
@@ -6626,7 +6740,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signature_stamps
      *
-     * @param string $allow_signature_stamps 
+     * @param ?string $allow_signature_stamps 
      *
      * @return $this
      */
@@ -6664,7 +6778,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_sign_document_from_home_page
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSignDocumentFromHomePage()
     {
@@ -6674,7 +6788,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sign_document_from_home_page
      *
-     * @param string $allow_sign_document_from_home_page 
+     * @param ?string $allow_sign_document_from_home_page 
      *
      * @return $this
      */
@@ -6712,7 +6826,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signer_reassign
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSignerReassign()
     {
@@ -6722,7 +6836,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_reassign
      *
-     * @param string $allow_signer_reassign 
+     * @param ?string $allow_signer_reassign 
      *
      * @return $this
      */
@@ -6760,7 +6874,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signer_reassign_override
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSignerReassignOverride()
     {
@@ -6770,7 +6884,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_reassign_override
      *
-     * @param string $allow_signer_reassign_override 
+     * @param ?string $allow_signer_reassign_override 
      *
      * @return $this
      */
@@ -6808,7 +6922,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signing_extensions
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSigningExtensions()
     {
@@ -6818,7 +6932,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_extensions
      *
-     * @param string $allow_signing_extensions 
+     * @param ?string $allow_signing_extensions 
      *
      * @return $this
      */
@@ -6856,7 +6970,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signing_groups
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSigningGroups()
     {
@@ -6866,7 +6980,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_groups
      *
-     * @param string $allow_signing_groups 
+     * @param ?string $allow_signing_groups 
      *
      * @return $this
      */
@@ -6904,7 +7018,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signing_insights
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSigningInsights()
     {
@@ -6914,7 +7028,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_insights
      *
-     * @param string $allow_signing_insights 
+     * @param ?string $allow_signing_insights 
      *
      * @return $this
      */
@@ -6952,7 +7066,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signing_radio_deselect
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSigningRadioDeselect()
     {
@@ -6962,7 +7076,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_radio_deselect
      *
-     * @param string $allow_signing_radio_deselect 
+     * @param ?string $allow_signing_radio_deselect 
      *
      * @return $this
      */
@@ -7000,7 +7114,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_sign_now
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSignNow()
     {
@@ -7010,7 +7124,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sign_now
      *
-     * @param string $allow_sign_now 
+     * @param ?string $allow_sign_now 
      *
      * @return $this
      */
@@ -7024,7 +7138,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_sign_now_metadata
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSignNowMetadata()
     {
@@ -7034,7 +7148,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sign_now_metadata
      *
-     * @param string $allow_sign_now_metadata 
+     * @param ?string $allow_sign_now_metadata 
      *
      * @return $this
      */
@@ -7048,7 +7162,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_sms_delivery
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSmsDelivery()
     {
@@ -7058,7 +7172,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sms_delivery
      *
-     * @param string $allow_sms_delivery 
+     * @param ?string $allow_sms_delivery 
      *
      * @return $this
      */
@@ -7096,7 +7210,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_social_id_login
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSocialIdLogin()
     {
@@ -7106,7 +7220,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_social_id_login
      *
-     * @param string $allow_social_id_login 
+     * @param ?string $allow_social_id_login 
      *
      * @return $this
      */
@@ -7144,7 +7258,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_supplemental_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSupplementalDocuments()
     {
@@ -7154,7 +7268,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_supplemental_documents
      *
-     * @param string $allow_supplemental_documents 
+     * @param ?string $allow_supplemental_documents 
      *
      * @return $this
      */
@@ -7192,7 +7306,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_users_to_access_directory
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowUsersToAccessDirectory()
     {
@@ -7202,7 +7316,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_users_to_access_directory
      *
-     * @param string $allow_users_to_access_directory 
+     * @param ?string $allow_users_to_access_directory 
      *
      * @return $this
      */
@@ -7240,7 +7354,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_value_insights
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowValueInsights()
     {
@@ -7250,7 +7364,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_value_insights
      *
-     * @param string $allow_value_insights 
+     * @param ?string $allow_value_insights 
      *
      * @return $this
      */
@@ -7288,7 +7402,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_population_scope
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorPopulationScope()
     {
@@ -7298,7 +7412,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_population_scope
      *
-     * @param string $anchor_population_scope 
+     * @param ?string $anchor_population_scope 
      *
      * @return $this
      */
@@ -7336,7 +7450,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_tag_versioned_placement_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorTagVersionedPlacementEnabled()
     {
@@ -7346,7 +7460,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tag_versioned_placement_enabled
      *
-     * @param string $anchor_tag_versioned_placement_enabled 
+     * @param ?string $anchor_tag_versioned_placement_enabled 
      *
      * @return $this
      */
@@ -7384,7 +7498,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets attach_completed_envelope
      *
-     * @return string
+     * @return ?string
      */
     public function getAttachCompletedEnvelope()
     {
@@ -7394,7 +7508,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets attach_completed_envelope
      *
-     * @param string $attach_completed_envelope 
+     * @param ?string $attach_completed_envelope 
      *
      * @return $this
      */
@@ -7432,7 +7546,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_check
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationCheck()
     {
@@ -7442,7 +7556,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_check
      *
-     * @param string $authentication_check 
+     * @param ?string $authentication_check 
      *
      * @return $this
      */
@@ -7480,7 +7594,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets auto_nav_rule
      *
-     * @return string
+     * @return ?string
      */
     public function getAutoNavRule()
     {
@@ -7490,7 +7604,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets auto_nav_rule
      *
-     * @param string $auto_nav_rule 
+     * @param ?string $auto_nav_rule 
      *
      * @return $this
      */
@@ -7528,7 +7642,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets auto_provision_signer_account
      *
-     * @return string
+     * @return ?string
      */
     public function getAutoProvisionSignerAccount()
     {
@@ -7538,7 +7652,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets auto_provision_signer_account
      *
-     * @param string $auto_provision_signer_account 
+     * @param ?string $auto_provision_signer_account 
      *
      * @return $this
      */
@@ -7576,7 +7690,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bcc_email_archive
      *
-     * @return string
+     * @return ?string
      */
     public function getBccEmailArchive()
     {
@@ -7586,7 +7700,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bcc_email_archive
      *
-     * @param string $bcc_email_archive 
+     * @param ?string $bcc_email_archive 
      *
      * @return $this
      */
@@ -7624,7 +7738,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets beta_switch_configuration
      *
-     * @return string
+     * @return ?string
      */
     public function getBetaSwitchConfiguration()
     {
@@ -7634,7 +7748,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets beta_switch_configuration
      *
-     * @param string $beta_switch_configuration 
+     * @param ?string $beta_switch_configuration 
      *
      * @return $this
      */
@@ -7720,7 +7834,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_send
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkSend()
     {
@@ -7730,7 +7844,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send
      *
-     * @param string $bulk_send 
+     * @param ?string $bulk_send 
      *
      * @return $this
      */
@@ -7744,7 +7858,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_send_max_copies_in_batch
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkSendMaxCopiesInBatch()
     {
@@ -7754,7 +7868,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_max_copies_in_batch
      *
-     * @param string $bulk_send_max_copies_in_batch 
+     * @param ?string $bulk_send_max_copies_in_batch 
      *
      * @return $this
      */
@@ -7768,7 +7882,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_send_max_unprocessed_envelopes_count
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkSendMaxUnprocessedEnvelopesCount()
     {
@@ -7778,7 +7892,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_max_unprocessed_envelopes_count
      *
-     * @param string $bulk_send_max_unprocessed_envelopes_count 
+     * @param ?string $bulk_send_max_unprocessed_envelopes_count 
      *
      * @return $this
      */
@@ -7816,7 +7930,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_self_brand_send
      *
-     * @return string
+     * @return ?string
      */
     public function getCanSelfBrandSend()
     {
@@ -7826,7 +7940,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_self_brand_send
      *
-     * @param string $can_self_brand_send 
+     * @param ?string $can_self_brand_send 
      *
      * @return $this
      */
@@ -7864,7 +7978,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_self_brand_sign
      *
-     * @return string
+     * @return ?string
      */
     public function getCanSelfBrandSign()
     {
@@ -7874,7 +7988,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_self_brand_sign
      *
-     * @param string $can_self_brand_sign 
+     * @param ?string $can_self_brand_sign 
      *
      * @return $this
      */
@@ -7912,7 +8026,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_use_salesforce_o_auth
      *
-     * @return string
+     * @return ?string
      */
     public function getCanUseSalesforceOAuth()
     {
@@ -7922,7 +8036,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_use_salesforce_o_auth
      *
-     * @param string $can_use_salesforce_o_auth 
+     * @param ?string $can_use_salesforce_o_auth 
      *
      * @return $this
      */
@@ -7960,7 +8074,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets capture_voice_recording
      *
-     * @return string
+     * @return ?string
      */
     public function getCaptureVoiceRecording()
     {
@@ -7970,7 +8084,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets capture_voice_recording
      *
-     * @param string $capture_voice_recording 
+     * @param ?string $capture_voice_recording 
      *
      * @return $this
      */
@@ -8008,7 +8122,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets cfr_use_wide_image
      *
-     * @return string
+     * @return ?string
      */
     public function getCfrUseWideImage()
     {
@@ -8018,7 +8132,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets cfr_use_wide_image
      *
-     * @param string $cfr_use_wide_image 
+     * @param ?string $cfr_use_wide_image 
      *
      * @return $this
      */
@@ -8056,7 +8170,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets check_for_multiple_admins_on_account
      *
-     * @return string
+     * @return ?string
      */
     public function getCheckForMultipleAdminsOnAccount()
     {
@@ -8066,7 +8180,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets check_for_multiple_admins_on_account
      *
-     * @param string $check_for_multiple_admins_on_account 
+     * @param ?string $check_for_multiple_admins_on_account 
      *
      * @return $this
      */
@@ -8104,7 +8218,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets chrome_signature_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getChromeSignatureEnabled()
     {
@@ -8114,7 +8228,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets chrome_signature_enabled
      *
-     * @param string $chrome_signature_enabled 
+     * @param ?string $chrome_signature_enabled 
      *
      * @return $this
      */
@@ -8152,7 +8266,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets comment_email_show_message_text
      *
-     * @return string
+     * @return ?string
      */
     public function getCommentEmailShowMessageText()
     {
@@ -8162,7 +8276,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets comment_email_show_message_text
      *
-     * @param string $comment_email_show_message_text 
+     * @param ?string $comment_email_show_message_text 
      *
      * @return $this
      */
@@ -8200,7 +8314,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets comments_allow_envelope_override
      *
-     * @return string
+     * @return ?string
      */
     public function getCommentsAllowEnvelopeOverride()
     {
@@ -8210,7 +8324,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets comments_allow_envelope_override
      *
-     * @param string $comments_allow_envelope_override 
+     * @param ?string $comments_allow_envelope_override 
      *
      * @return $this
      */
@@ -8248,7 +8362,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_fields_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalFieldsEnabled()
     {
@@ -8258,7 +8372,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_fields_enabled
      *
-     * @param string $conditional_fields_enabled 
+     * @param ?string $conditional_fields_enabled 
      *
      * @return $this
      */
@@ -8296,7 +8410,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets consumer_disclosure_frequency
      *
-     * @return string
+     * @return ?string
      */
     public function getConsumerDisclosureFrequency()
     {
@@ -8306,7 +8420,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets consumer_disclosure_frequency
      *
-     * @param string $consumer_disclosure_frequency 
+     * @param ?string $consumer_disclosure_frequency 
      *
      * @return $this
      */
@@ -8344,7 +8458,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets convert_pdf_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getConvertPdfFields()
     {
@@ -8354,7 +8468,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets convert_pdf_fields
      *
-     * @param string $convert_pdf_fields 
+     * @param ?string $convert_pdf_fields 
      *
      * @return $this
      */
@@ -8392,7 +8506,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets data_population_scope
      *
-     * @return string
+     * @return ?string
      */
     public function getDataPopulationScope()
     {
@@ -8402,7 +8516,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets data_population_scope
      *
-     * @param string $data_population_scope 
+     * @param ?string $data_population_scope 
      *
      * @return $this
      */
@@ -8440,7 +8554,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_auto_template_matching
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableAutoTemplateMatching()
     {
@@ -8450,7 +8564,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_auto_template_matching
      *
-     * @param string $disable_auto_template_matching 
+     * @param ?string $disable_auto_template_matching 
      *
      * @return $this
      */
@@ -8488,7 +8602,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_mobile_app
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableMobileApp()
     {
@@ -8498,7 +8612,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_mobile_app
      *
-     * @param string $disable_mobile_app 
+     * @param ?string $disable_mobile_app 
      *
      * @return $this
      */
@@ -8536,7 +8650,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_mobile_push_notifications
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableMobilePushNotifications()
     {
@@ -8546,7 +8660,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_mobile_push_notifications
      *
-     * @param string $disable_mobile_push_notifications 
+     * @param ?string $disable_mobile_push_notifications 
      *
      * @return $this
      */
@@ -8584,7 +8698,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_mobile_sending
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableMobileSending()
     {
@@ -8594,7 +8708,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_mobile_sending
      *
-     * @param string $disable_mobile_sending 
+     * @param ?string $disable_mobile_sending 
      *
      * @return $this
      */
@@ -8632,7 +8746,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_multiple_sessions
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableMultipleSessions()
     {
@@ -8642,7 +8756,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_multiple_sessions
      *
-     * @param string $disable_multiple_sessions 
+     * @param ?string $disable_multiple_sessions 
      *
      * @return $this
      */
@@ -8704,7 +8818,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_signer_cert_view
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableSignerCertView()
     {
@@ -8714,7 +8828,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_signer_cert_view
      *
-     * @param string $disable_signer_cert_view 
+     * @param ?string $disable_signer_cert_view 
      *
      * @return $this
      */
@@ -8752,7 +8866,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_signer_history_view
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableSignerHistoryView()
     {
@@ -8762,7 +8876,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_signer_history_view
      *
-     * @param string $disable_signer_history_view 
+     * @param ?string $disable_signer_history_view 
      *
      * @return $this
      */
@@ -8800,7 +8914,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_style_signature
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableStyleSignature()
     {
@@ -8810,7 +8924,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_style_signature
      *
-     * @param string $disable_style_signature 
+     * @param ?string $disable_style_signature 
      *
      * @return $this
      */
@@ -8848,7 +8962,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_upload_signature
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableUploadSignature()
     {
@@ -8858,7 +8972,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_upload_signature
      *
-     * @param string $disable_upload_signature 
+     * @param ?string $disable_upload_signature 
      *
      * @return $this
      */
@@ -8896,7 +9010,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_user_sharing
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableUserSharing()
     {
@@ -8906,7 +9020,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_user_sharing
      *
-     * @param string $disable_user_sharing 
+     * @param ?string $disable_user_sharing 
      *
      * @return $this
      */
@@ -8944,7 +9058,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets display_beta_switch
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayBetaSwitch()
     {
@@ -8954,7 +9068,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets display_beta_switch
      *
-     * @param string $display_beta_switch 
+     * @param ?string $display_beta_switch 
      *
      * @return $this
      */
@@ -8992,7 +9106,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets document_conversion_restrictions
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentConversionRestrictions()
     {
@@ -9002,7 +9116,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_conversion_restrictions
      *
-     * @param string $document_conversion_restrictions 
+     * @param ?string $document_conversion_restrictions 
      *
      * @return $this
      */
@@ -9040,7 +9154,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets document_retention
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentRetention()
     {
@@ -9050,7 +9164,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_retention
      *
-     * @param string $document_retention 
+     * @param ?string $document_retention 
      *
      * @return $this
      */
@@ -9088,7 +9202,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets document_retention_purge_tabs
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentRetentionPurgeTabs()
     {
@@ -9098,7 +9212,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_retention_purge_tabs
      *
-     * @param string $document_retention_purge_tabs 
+     * @param ?string $document_retention_purge_tabs 
      *
      * @return $this
      */
@@ -9112,7 +9226,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets document_visibility
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentVisibility()
     {
@@ -9122,7 +9236,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_visibility
      *
-     * @param string $document_visibility 
+     * @param ?string $document_visibility 
      *
      * @return $this
      */
@@ -9160,7 +9274,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets email_template_version
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailTemplateVersion()
     {
@@ -9170,7 +9284,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email_template_version
      *
-     * @param string $email_template_version 
+     * @param ?string $email_template_version 
      *
      * @return $this
      */
@@ -9208,7 +9322,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_access_code_generator
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableAccessCodeGenerator()
     {
@@ -9218,7 +9332,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_access_code_generator
      *
-     * @param string $enable_access_code_generator 
+     * @param ?string $enable_access_code_generator 
      *
      * @return $this
      */
@@ -9256,7 +9370,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_advanced_payments
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableAdvancedPayments()
     {
@@ -9266,7 +9380,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_payments
      *
-     * @param string $enable_advanced_payments 
+     * @param ?string $enable_advanced_payments 
      *
      * @return $this
      */
@@ -9304,7 +9418,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_advanced_power_forms
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableAdvancedPowerForms()
     {
@@ -9314,7 +9428,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_power_forms
      *
-     * @param string $enable_advanced_power_forms 
+     * @param ?string $enable_advanced_power_forms 
      *
      * @return $this
      */
@@ -9352,7 +9466,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_agreement_actions_for_clm
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableAgreementActionsForClm()
     {
@@ -9362,7 +9476,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_actions_for_clm
      *
-     * @param string $enable_agreement_actions_for_clm 
+     * @param ?string $enable_agreement_actions_for_clm 
      *
      * @return $this
      */
@@ -9400,7 +9514,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_agreement_actions_for_e_sign
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableAgreementActionsForESign()
     {
@@ -9410,7 +9524,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_actions_for_e_sign
      *
-     * @param string $enable_agreement_actions_for_e_sign 
+     * @param ?string $enable_agreement_actions_for_e_sign 
      *
      * @return $this
      */
@@ -9448,7 +9562,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_auto_nav
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableAutoNav()
     {
@@ -9458,7 +9572,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_auto_nav
      *
-     * @param string $enable_auto_nav 
+     * @param ?string $enable_auto_nav 
      *
      * @return $this
      */
@@ -9496,7 +9610,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_calculated_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableCalculatedFields()
     {
@@ -9506,7 +9620,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_calculated_fields
      *
-     * @param string $enable_calculated_fields 
+     * @param ?string $enable_calculated_fields 
      *
      * @return $this
      */
@@ -9544,7 +9658,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_clickwraps
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableClickwraps()
     {
@@ -9554,7 +9668,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_clickwraps
      *
-     * @param string $enable_clickwraps 
+     * @param ?string $enable_clickwraps 
      *
      * @return $this
      */
@@ -9592,7 +9706,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_comments_history_download_in_signing
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableCommentsHistoryDownloadInSigning()
     {
@@ -9602,7 +9716,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_comments_history_download_in_signing
      *
-     * @param string $enable_comments_history_download_in_signing 
+     * @param ?string $enable_comments_history_download_in_signing 
      *
      * @return $this
      */
@@ -9640,7 +9754,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_customer_satisfaction_metric_tracking
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableCustomerSatisfactionMetricTracking()
     {
@@ -9650,7 +9764,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_customer_satisfaction_metric_tracking
      *
-     * @param string $enable_customer_satisfaction_metric_tracking 
+     * @param ?string $enable_customer_satisfaction_metric_tracking 
      *
      * @return $this
      */
@@ -9688,7 +9802,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_ds_pro
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableDsPro()
     {
@@ -9698,7 +9812,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ds_pro
      *
-     * @param string $enable_ds_pro 
+     * @param ?string $enable_ds_pro 
      *
      * @return $this
      */
@@ -9736,7 +9850,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_envelope_stamping_by_account_admin
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableEnvelopeStampingByAccountAdmin()
     {
@@ -9746,7 +9860,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_envelope_stamping_by_account_admin
      *
-     * @param string $enable_envelope_stamping_by_account_admin 
+     * @param ?string $enable_envelope_stamping_by_account_admin 
      *
      * @return $this
      */
@@ -9784,7 +9898,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_envelope_stamping_by_ds_admin
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableEnvelopeStampingByDsAdmin()
     {
@@ -9794,7 +9908,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_envelope_stamping_by_ds_admin
      *
-     * @param string $enable_envelope_stamping_by_ds_admin 
+     * @param ?string $enable_envelope_stamping_by_ds_admin 
      *
      * @return $this
      */
@@ -9832,7 +9946,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_esign_communities
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableEsignCommunities()
     {
@@ -9842,7 +9956,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_esign_communities
      *
-     * @param string $enable_esign_communities 
+     * @param ?string $enable_esign_communities 
      *
      * @return $this
      */
@@ -9880,7 +9994,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_in_browser_editor
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableInBrowserEditor()
     {
@@ -9890,7 +10004,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_in_browser_editor
      *
-     * @param string $enable_in_browser_editor 
+     * @param ?string $enable_in_browser_editor 
      *
      * @return $this
      */
@@ -9928,7 +10042,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_payment_processing
      *
-     * @return string
+     * @return ?string
      */
     public function getEnablePaymentProcessing()
     {
@@ -9938,7 +10052,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_payment_processing
      *
-     * @param string $enable_payment_processing 
+     * @param ?string $enable_payment_processing 
      *
      * @return $this
      */
@@ -9976,7 +10090,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_power_form
      *
-     * @return string
+     * @return ?string
      */
     public function getEnablePowerForm()
     {
@@ -9986,7 +10100,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_power_form
      *
-     * @param string $enable_power_form 
+     * @param ?string $enable_power_form 
      *
      * @return $this
      */
@@ -10000,7 +10114,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_power_form_direct
      *
-     * @return string
+     * @return ?string
      */
     public function getEnablePowerFormDirect()
     {
@@ -10010,7 +10124,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_power_form_direct
      *
-     * @param string $enable_power_form_direct 
+     * @param ?string $enable_power_form_direct 
      *
      * @return $this
      */
@@ -10072,7 +10186,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_recipient_domain_validation
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableRecipientDomainValidation()
     {
@@ -10082,7 +10196,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_recipient_domain_validation
      *
-     * @param string $enable_recipient_domain_validation 
+     * @param ?string $enable_recipient_domain_validation 
      *
      * @return $this
      */
@@ -10120,7 +10234,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_report_links
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableReportLinks()
     {
@@ -10130,7 +10244,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_report_links
      *
-     * @param string $enable_report_links 
+     * @param ?string $enable_report_links 
      *
      * @return $this
      */
@@ -10168,7 +10282,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_require_sign_on_paper
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableRequireSignOnPaper()
     {
@@ -10178,7 +10292,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_require_sign_on_paper
      *
-     * @param string $enable_require_sign_on_paper 
+     * @param ?string $enable_require_sign_on_paper 
      *
      * @return $this
      */
@@ -10216,7 +10330,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_reserved_domain
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableReservedDomain()
     {
@@ -10226,7 +10340,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_reserved_domain
      *
-     * @param string $enable_reserved_domain 
+     * @param ?string $enable_reserved_domain 
      *
      * @return $this
      */
@@ -10264,7 +10378,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_responsive_signing
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableResponsiveSigning()
     {
@@ -10274,7 +10388,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_responsive_signing
      *
-     * @param string $enable_responsive_signing 
+     * @param ?string $enable_responsive_signing 
      *
      * @return $this
      */
@@ -10312,7 +10426,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_scheduled_release
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableScheduledRelease()
     {
@@ -10322,7 +10436,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_scheduled_release
      *
-     * @param string $enable_scheduled_release 
+     * @param ?string $enable_scheduled_release 
      *
      * @return $this
      */
@@ -10360,7 +10474,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_search
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSearch()
     {
@@ -10370,7 +10484,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_search
      *
-     * @param string $enable_search 
+     * @param ?string $enable_search 
      *
      * @return $this
      */
@@ -10408,7 +10522,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_search_ui
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSearchUi()
     {
@@ -10418,7 +10532,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_search_ui
      *
-     * @param string $enable_search_ui 
+     * @param ?string $enable_search_ui 
      *
      * @return $this
      */
@@ -10456,7 +10570,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sending_tags_font_settings
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSendingTagsFontSettings()
     {
@@ -10466,7 +10580,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sending_tags_font_settings
      *
-     * @param string $enable_sending_tags_font_settings 
+     * @param ?string $enable_sending_tags_font_settings 
      *
      * @return $this
      */
@@ -10504,7 +10618,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_send_to_agent
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSendToAgent()
     {
@@ -10514,7 +10628,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_send_to_agent
      *
-     * @param string $enable_send_to_agent 
+     * @param ?string $enable_send_to_agent 
      *
      * @return $this
      */
@@ -10552,7 +10666,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_send_to_intermediary
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSendToIntermediary()
     {
@@ -10562,7 +10676,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_send_to_intermediary
      *
-     * @param string $enable_send_to_intermediary 
+     * @param ?string $enable_send_to_intermediary 
      *
      * @return $this
      */
@@ -10600,7 +10714,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_send_to_manage
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSendToManage()
     {
@@ -10610,7 +10724,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_send_to_manage
      *
-     * @param string $enable_send_to_manage 
+     * @param ?string $enable_send_to_manage 
      *
      * @return $this
      */
@@ -10648,7 +10762,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sequential_signing_api
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSequentialSigningApi()
     {
@@ -10658,7 +10772,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_api
      *
-     * @param string $enable_sequential_signing_api 
+     * @param ?string $enable_sequential_signing_api 
      *
      * @return $this
      */
@@ -10696,7 +10810,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sequential_signing_ui
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSequentialSigningUi()
     {
@@ -10706,7 +10820,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_ui
      *
-     * @param string $enable_sequential_signing_ui 
+     * @param ?string $enable_sequential_signing_ui 
      *
      * @return $this
      */
@@ -10744,7 +10858,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_signer_attachments
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSignerAttachments()
     {
@@ -10754,7 +10868,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signer_attachments
      *
-     * @param string $enable_signer_attachments 
+     * @param ?string $enable_signer_attachments 
      *
      * @return $this
      */
@@ -10792,7 +10906,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_signing_extension_comments
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSigningExtensionComments()
     {
@@ -10802,7 +10916,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_extension_comments
      *
-     * @param string $enable_signing_extension_comments 
+     * @param ?string $enable_signing_extension_comments 
      *
      * @return $this
      */
@@ -10840,7 +10954,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_signing_extension_conversations
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSigningExtensionConversations()
     {
@@ -10850,7 +10964,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_extension_conversations
      *
-     * @param string $enable_signing_extension_conversations 
+     * @param ?string $enable_signing_extension_conversations 
      *
      * @return $this
      */
@@ -10888,7 +11002,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_signing_order_settings_for_account
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSigningOrderSettingsForAccount()
     {
@@ -10898,7 +11012,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_order_settings_for_account
      *
-     * @param string $enable_signing_order_settings_for_account 
+     * @param ?string $enable_signing_order_settings_for_account 
      *
      * @return $this
      */
@@ -10936,7 +11050,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sign_on_paper
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSignOnPaper()
     {
@@ -10946,7 +11060,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_on_paper
      *
-     * @param string $enable_sign_on_paper 
+     * @param ?string $enable_sign_on_paper 
      *
      * @return $this
      */
@@ -10984,7 +11098,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sign_on_paper_override
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSignOnPaperOverride()
     {
@@ -10994,7 +11108,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_on_paper_override
      *
-     * @param string $enable_sign_on_paper_override 
+     * @param ?string $enable_sign_on_paper_override 
      *
      * @return $this
      */
@@ -11032,7 +11146,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sign_with_notary
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSignWithNotary()
     {
@@ -11042,7 +11156,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_with_notary
      *
-     * @param string $enable_sign_with_notary 
+     * @param ?string $enable_sign_with_notary 
      *
      * @return $this
      */
@@ -11080,7 +11194,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_smart_contracts
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSmartContracts()
     {
@@ -11090,7 +11204,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_smart_contracts
      *
-     * @param string $enable_smart_contracts 
+     * @param ?string $enable_smart_contracts 
      *
      * @return $this
      */
@@ -11128,7 +11242,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sms_authentication
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSmsAuthentication()
     {
@@ -11138,7 +11252,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sms_authentication
      *
-     * @param string $enable_sms_authentication 
+     * @param ?string $enable_sms_authentication 
      *
      * @return $this
      */
@@ -11174,9 +11288,57 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_sms_delivery_additional_notification
+     *
+     * @return ?string
+     */
+    public function getEnableSmsDeliveryAdditionalNotification()
+    {
+        return $this->container['enable_sms_delivery_additional_notification'];
+    }
+
+    /**
+     * Sets enable_sms_delivery_additional_notification
+     *
+     * @param ?string $enable_sms_delivery_additional_notification 
+     *
+     * @return $this
+     */
+    public function setEnableSmsDeliveryAdditionalNotification($enable_sms_delivery_additional_notification)
+    {
+        $this->container['enable_sms_delivery_additional_notification'] = $enable_sms_delivery_additional_notification;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_sms_delivery_additional_notification_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableSmsDeliveryAdditionalNotificationMetadata()
+    {
+        return $this->container['enable_sms_delivery_additional_notification_metadata'];
+    }
+
+    /**
+     * Sets enable_sms_delivery_additional_notification_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sms_delivery_additional_notification_metadata enable_sms_delivery_additional_notification_metadata
+     *
+     * @return $this
+     */
+    public function setEnableSmsDeliveryAdditionalNotificationMetadata($enable_sms_delivery_additional_notification_metadata)
+    {
+        $this->container['enable_sms_delivery_additional_notification_metadata'] = $enable_sms_delivery_additional_notification_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_social_id_login
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSocialIdLogin()
     {
@@ -11186,7 +11348,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_social_id_login
      *
-     * @param string $enable_social_id_login 
+     * @param ?string $enable_social_id_login 
      *
      * @return $this
      */
@@ -11224,7 +11386,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_strike_through
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableStrikeThrough()
     {
@@ -11234,7 +11396,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_strike_through
      *
-     * @param string $enable_strike_through 
+     * @param ?string $enable_strike_through 
      *
      * @return $this
      */
@@ -11272,7 +11434,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_transaction_point
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableTransactionPoint()
     {
@@ -11282,7 +11444,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_transaction_point
      *
-     * @param string $enable_transaction_point 
+     * @param ?string $enable_transaction_point 
      *
      * @return $this
      */
@@ -11320,7 +11482,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_vaulting
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableVaulting()
     {
@@ -11330,7 +11492,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_vaulting
      *
-     * @param string $enable_vaulting 
+     * @param ?string $enable_vaulting 
      *
      * @return $this
      */
@@ -11368,7 +11530,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_witnessing
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableWitnessing()
     {
@@ -11378,7 +11540,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_witnessing
      *
-     * @param string $enable_witnessing 
+     * @param ?string $enable_witnessing 
      *
      * @return $this
      */
@@ -11416,7 +11578,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enforce_template_name_uniqueness
      *
-     * @return string
+     * @return ?string
      */
     public function getEnforceTemplateNameUniqueness()
     {
@@ -11426,7 +11588,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enforce_template_name_uniqueness
      *
-     * @param string $enforce_template_name_uniqueness 
+     * @param ?string $enforce_template_name_uniqueness 
      *
      * @return $this
      */
@@ -11464,7 +11626,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_integration_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeIntegrationAllowed()
     {
@@ -11474,7 +11636,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_integration_allowed
      *
-     * @param string $envelope_integration_allowed 
+     * @param ?string $envelope_integration_allowed 
      *
      * @return $this
      */
@@ -11512,7 +11674,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_integration_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeIntegrationEnabled()
     {
@@ -11522,7 +11684,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_integration_enabled
      *
-     * @param string $envelope_integration_enabled 
+     * @param ?string $envelope_integration_enabled 
      *
      * @return $this
      */
@@ -11560,7 +11722,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_stamping_default_value
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeStampingDefaultValue()
     {
@@ -11570,7 +11732,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_stamping_default_value
      *
-     * @param string $envelope_stamping_default_value 
+     * @param ?string $envelope_stamping_default_value 
      *
      * @return $this
      */
@@ -11608,7 +11770,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets express_send
      *
-     * @return string
+     * @return ?string
      */
     public function getExpressSend()
     {
@@ -11618,7 +11780,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets express_send
      *
-     * @param string $express_send 
+     * @param ?string $express_send 
      *
      * @return $this
      */
@@ -11632,7 +11794,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets express_send_allow_tabs
      *
-     * @return string
+     * @return ?string
      */
     public function getExpressSendAllowTabs()
     {
@@ -11642,7 +11804,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets express_send_allow_tabs
      *
-     * @param string $express_send_allow_tabs 
+     * @param ?string $express_send_allow_tabs 
      *
      * @return $this
      */
@@ -11728,7 +11890,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets external_signature_pad_type
      *
-     * @return string
+     * @return ?string
      */
     public function getExternalSignaturePadType()
     {
@@ -11738,7 +11900,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets external_signature_pad_type
      *
-     * @param string $external_signature_pad_type 
+     * @param ?string $external_signature_pad_type 
      *
      * @return $this
      */
@@ -11776,7 +11938,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets fax_out_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getFaxOutEnabled()
     {
@@ -11786,7 +11948,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets fax_out_enabled
      *
-     * @param string $fax_out_enabled 
+     * @param ?string $fax_out_enabled 
      *
      * @return $this
      */
@@ -11824,7 +11986,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets guided_forms_html_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getGuidedFormsHtmlAllowed()
     {
@@ -11834,7 +11996,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets guided_forms_html_allowed
      *
-     * @param string $guided_forms_html_allowed 
+     * @param ?string $guided_forms_html_allowed 
      *
      * @return $this
      */
@@ -11872,7 +12034,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets hide_account_address_in_co_c
      *
-     * @return string
+     * @return ?string
      */
     public function getHideAccountAddressInCoC()
     {
@@ -11882,7 +12044,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets hide_account_address_in_co_c
      *
-     * @param string $hide_account_address_in_co_c 
+     * @param ?string $hide_account_address_in_co_c 
      *
      * @return $this
      */
@@ -11920,7 +12082,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets hide_pricing
      *
-     * @return string
+     * @return ?string
      */
     public function getHidePricing()
     {
@@ -11930,7 +12092,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets hide_pricing
      *
-     * @param string $hide_pricing 
+     * @param ?string $hide_pricing 
      *
      * @return $this
      */
@@ -11992,7 +12154,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_expire
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckExpire()
     {
@@ -12002,7 +12164,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_expire
      *
-     * @param string $id_check_expire 
+     * @param ?string $id_check_expire 
      *
      * @return $this
      */
@@ -12016,7 +12178,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_expire_days
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckExpireDays()
     {
@@ -12026,7 +12188,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_expire_days
      *
-     * @param string $id_check_expire_days 
+     * @param ?string $id_check_expire_days 
      *
      * @return $this
      */
@@ -12088,7 +12250,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_expire_minutes
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckExpireMinutes()
     {
@@ -12098,7 +12260,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_expire_minutes
      *
-     * @param string $id_check_expire_minutes 
+     * @param ?string $id_check_expire_minutes 
      *
      * @return $this
      */
@@ -12136,7 +12298,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_required
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckRequired()
     {
@@ -12146,7 +12308,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_required
      *
-     * @param string $id_check_required 
+     * @param ?string $id_check_required 
      *
      * @return $this
      */
@@ -12232,7 +12394,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets ignore_error_if_anchor_tab_not_found
      *
-     * @return string
+     * @return ?string
      */
     public function getIgnoreErrorIfAnchorTabNotFound()
     {
@@ -12242,7 +12404,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets ignore_error_if_anchor_tab_not_found
      *
-     * @param string $ignore_error_if_anchor_tab_not_found 
+     * @param ?string $ignore_error_if_anchor_tab_not_found 
      *
      * @return $this
      */
@@ -12280,7 +12442,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets in_person_id_check_question
      *
-     * @return string
+     * @return ?string
      */
     public function getInPersonIdCheckQuestion()
     {
@@ -12290,7 +12452,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_person_id_check_question
      *
-     * @param string $in_person_id_check_question 
+     * @param ?string $in_person_id_check_question 
      *
      * @return $this
      */
@@ -12328,7 +12490,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets in_person_signing_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getInPersonSigningEnabled()
     {
@@ -12338,7 +12500,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_person_signing_enabled
      *
-     * @param string $in_person_signing_enabled 
+     * @param ?string $in_person_signing_enabled 
      *
      * @return $this
      */
@@ -12376,7 +12538,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets in_session_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getInSessionEnabled()
     {
@@ -12386,7 +12548,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_session_enabled
      *
-     * @param string $in_session_enabled 
+     * @param ?string $in_session_enabled 
      *
      * @return $this
      */
@@ -12424,7 +12586,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets in_session_suppress_emails
      *
-     * @return string
+     * @return ?string
      */
     public function getInSessionSuppressEmails()
     {
@@ -12434,7 +12596,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_session_suppress_emails
      *
-     * @param string $in_session_suppress_emails 
+     * @param ?string $in_session_suppress_emails 
      *
      * @return $this
      */
@@ -12470,9 +12632,33 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets linked_external_primary_accounts
+     *
+     * @return \DocuSign\eSign\Model\LinkedExternalPrimaryAccount[]
+     */
+    public function getLinkedExternalPrimaryAccounts()
+    {
+        return $this->container['linked_external_primary_accounts'];
+    }
+
+    /**
+     * Sets linked_external_primary_accounts
+     *
+     * @param \DocuSign\eSign\Model\LinkedExternalPrimaryAccount[] $linked_external_primary_accounts 
+     *
+     * @return $this
+     */
+    public function setLinkedExternalPrimaryAccounts($linked_external_primary_accounts)
+    {
+        $this->container['linked_external_primary_accounts'] = $linked_external_primary_accounts;
+
+        return $this;
+    }
+
+    /**
      * Gets maximum_signing_groups
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumSigningGroups()
     {
@@ -12482,7 +12668,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_signing_groups
      *
-     * @param string $maximum_signing_groups 
+     * @param ?string $maximum_signing_groups 
      *
      * @return $this
      */
@@ -12520,7 +12706,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets maximum_users_per_signing_group
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumUsersPerSigningGroup()
     {
@@ -12530,7 +12716,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_users_per_signing_group
      *
-     * @param string $maximum_users_per_signing_group 
+     * @param ?string $maximum_users_per_signing_group 
      *
      * @return $this
      */
@@ -12568,7 +12754,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets max_number_of_custom_stamps
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxNumberOfCustomStamps()
     {
@@ -12578,7 +12764,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets max_number_of_custom_stamps
      *
-     * @param string $max_number_of_custom_stamps 
+     * @param ?string $max_number_of_custom_stamps 
      *
      * @return $this
      */
@@ -12592,7 +12778,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets mobile_session_timeout
      *
-     * @return string
+     * @return ?string
      */
     public function getMobileSessionTimeout()
     {
@@ -12602,7 +12788,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets mobile_session_timeout
      *
-     * @param string $mobile_session_timeout 
+     * @param ?string $mobile_session_timeout 
      *
      * @return $this
      */
@@ -12640,7 +12826,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_active_custom_stamps
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfActiveCustomStamps()
     {
@@ -12650,7 +12836,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_active_custom_stamps
      *
-     * @param string $number_of_active_custom_stamps 
+     * @param ?string $number_of_active_custom_stamps 
      *
      * @return $this
      */
@@ -12664,7 +12850,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets opt_in_mobile_signing_v02
      *
-     * @return string
+     * @return ?string
      */
     public function getOptInMobileSigningV02()
     {
@@ -12674,7 +12860,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets opt_in_mobile_signing_v02
      *
-     * @param string $opt_in_mobile_signing_v02 
+     * @param ?string $opt_in_mobile_signing_v02 
      *
      * @return $this
      */
@@ -12712,7 +12898,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets opt_out_auto_nav_text_and_tab_color_updates
      *
-     * @return string
+     * @return ?string
      */
     public function getOptOutAutoNavTextAndTabColorUpdates()
     {
@@ -12722,7 +12908,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets opt_out_auto_nav_text_and_tab_color_updates
      *
-     * @param string $opt_out_auto_nav_text_and_tab_color_updates 
+     * @param ?string $opt_out_auto_nav_text_and_tab_color_updates 
      *
      * @return $this
      */
@@ -12760,7 +12946,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets opt_out_new_platform_seal
      *
-     * @return string
+     * @return ?string
      */
     public function getOptOutNewPlatformSeal()
     {
@@ -12770,7 +12956,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets opt_out_new_platform_seal
      *
-     * @param string $opt_out_new_platform_seal 
+     * @param ?string $opt_out_new_platform_seal 
      *
      * @return $this
      */
@@ -12808,7 +12994,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets phone_auth_recipient_may_provide_phone_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneAuthRecipientMayProvidePhoneNumber()
     {
@@ -12818,7 +13004,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets phone_auth_recipient_may_provide_phone_number
      *
-     * @param string $phone_auth_recipient_may_provide_phone_number 
+     * @param ?string $phone_auth_recipient_may_provide_phone_number 
      *
      * @return $this
      */
@@ -12856,7 +13042,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets pki_sign_downloaded_pdf_docs
      *
-     * @return string
+     * @return ?string
      */
     public function getPkiSignDownloadedPdfDocs()
     {
@@ -12866,7 +13052,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pki_sign_downloaded_pdf_docs
      *
-     * @param string $pki_sign_downloaded_pdf_docs 
+     * @param ?string $pki_sign_downloaded_pdf_docs 
      *
      * @return $this
      */
@@ -12904,7 +13090,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets recipients_can_sign_offline
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientsCanSignOffline()
     {
@@ -12914,7 +13100,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recipients_can_sign_offline
      *
-     * @param string $recipients_can_sign_offline 
+     * @param ?string $recipients_can_sign_offline 
      *
      * @return $this
      */
@@ -12952,7 +13138,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_signing_auto_navigation_control
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientSigningAutoNavigationControl()
     {
@@ -12962,7 +13148,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_signing_auto_navigation_control
      *
-     * @param string $recipient_signing_auto_navigation_control 
+     * @param ?string $recipient_signing_auto_navigation_control 
      *
      * @return $this
      */
@@ -13000,7 +13186,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets require21_cf_rpt11_compliance
      *
-     * @return string
+     * @return ?string
      */
     public function getRequire21CfRpt11Compliance()
     {
@@ -13010,7 +13196,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require21_cf_rpt11_compliance
      *
-     * @param string $require21_cf_rpt11_compliance 
+     * @param ?string $require21_cf_rpt11_compliance 
      *
      * @return $this
      */
@@ -13048,7 +13234,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets require_decline_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireDeclineReason()
     {
@@ -13058,7 +13244,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require_decline_reason
      *
-     * @param string $require_decline_reason 
+     * @param ?string $require_decline_reason 
      *
      * @return $this
      */
@@ -13096,7 +13282,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets require_external_user_management
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireExternalUserManagement()
     {
@@ -13106,7 +13292,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require_external_user_management
      *
-     * @param string $require_external_user_management 
+     * @param ?string $require_external_user_management 
      *
      * @return $this
      */
@@ -13144,7 +13330,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets require_signer_certificate_type
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireSignerCertificateType()
     {
@@ -13154,7 +13340,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require_signer_certificate_type
      *
-     * @param string $require_signer_certificate_type 
+     * @param ?string $require_signer_certificate_type 
      *
      * @return $this
      */
@@ -13192,7 +13378,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets rsa_verid_account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRsaVeridAccountName()
     {
@@ -13202,7 +13388,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_account_name
      *
-     * @param string $rsa_verid_account_name 
+     * @param ?string $rsa_verid_account_name 
      *
      * @return $this
      */
@@ -13216,7 +13402,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets rsa_verid_password
      *
-     * @return string
+     * @return ?string
      */
     public function getRsaVeridPassword()
     {
@@ -13226,7 +13412,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_password
      *
-     * @param string $rsa_verid_password 
+     * @param ?string $rsa_verid_password 
      *
      * @return $this
      */
@@ -13240,7 +13426,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets rsa_verid_ruleset
      *
-     * @return string
+     * @return ?string
      */
     public function getRsaVeridRuleset()
     {
@@ -13250,7 +13436,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_ruleset
      *
-     * @param string $rsa_verid_ruleset 
+     * @param ?string $rsa_verid_ruleset 
      *
      * @return $this
      */
@@ -13264,7 +13450,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets rsa_verid_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRsaVeridUserId()
     {
@@ -13274,7 +13460,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_user_id
      *
-     * @param string $rsa_verid_user_id 
+     * @param ?string $rsa_verid_user_id 
      *
      * @return $this
      */
@@ -13288,7 +13474,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets self_signed_recipient_email_document
      *
-     * @return string
+     * @return ?string
      */
     public function getSelfSignedRecipientEmailDocument()
     {
@@ -13298,7 +13484,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets self_signed_recipient_email_document
      *
-     * @param string $self_signed_recipient_email_document 
+     * @param ?string $self_signed_recipient_email_document 
      *
      * @return $this
      */
@@ -13336,7 +13522,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets self_signed_recipient_email_document_user_override
      *
-     * @return string
+     * @return ?string
      */
     public function getSelfSignedRecipientEmailDocumentUserOverride()
     {
@@ -13346,7 +13532,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets self_signed_recipient_email_document_user_override
      *
-     * @param string $self_signed_recipient_email_document_user_override 
+     * @param ?string $self_signed_recipient_email_document_user_override 
      *
      * @return $this
      */
@@ -13384,7 +13570,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sender_can_sign_in_each_location
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderCanSignInEachLocation()
     {
@@ -13394,7 +13580,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sender_can_sign_in_each_location
      *
-     * @param string $sender_can_sign_in_each_location 
+     * @param ?string $sender_can_sign_in_each_location 
      *
      * @return $this
      */
@@ -13432,7 +13618,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sender_must_authenticate_signing
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderMustAuthenticateSigning()
     {
@@ -13442,7 +13628,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sender_must_authenticate_signing
      *
-     * @param string $sender_must_authenticate_signing 
+     * @param ?string $sender_must_authenticate_signing 
      *
      * @return $this
      */
@@ -13480,7 +13666,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sending_tags_font_color
      *
-     * @return string
+     * @return ?string
      */
     public function getSendingTagsFontColor()
     {
@@ -13490,7 +13676,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sending_tags_font_color
      *
-     * @param string $sending_tags_font_color 
+     * @param ?string $sending_tags_font_color 
      *
      * @return $this
      */
@@ -13528,7 +13714,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sending_tags_font_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSendingTagsFontName()
     {
@@ -13538,7 +13724,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sending_tags_font_name
      *
-     * @param string $sending_tags_font_name 
+     * @param ?string $sending_tags_font_name 
      *
      * @return $this
      */
@@ -13576,7 +13762,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sending_tags_font_size
      *
-     * @return string
+     * @return ?string
      */
     public function getSendingTagsFontSize()
     {
@@ -13586,7 +13772,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sending_tags_font_size
      *
-     * @param string $sending_tags_font_size 
+     * @param ?string $sending_tags_font_size 
      *
      * @return $this
      */
@@ -13624,7 +13810,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets send_to_certified_delivery_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getSendToCertifiedDeliveryEnabled()
     {
@@ -13634,7 +13820,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets send_to_certified_delivery_enabled
      *
-     * @param string $send_to_certified_delivery_enabled 
+     * @param ?string $send_to_certified_delivery_enabled 
      *
      * @return $this
      */
@@ -13672,7 +13858,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets session_timeout
      *
-     * @return string
+     * @return ?string
      */
     public function getSessionTimeout()
     {
@@ -13682,7 +13868,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets session_timeout
      *
-     * @param string $session_timeout 
+     * @param ?string $session_timeout 
      *
      * @return $this
      */
@@ -13720,7 +13906,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets set_recip_email_lang
      *
-     * @return string
+     * @return ?string
      */
     public function getSetRecipEmailLang()
     {
@@ -13730,7 +13916,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets set_recip_email_lang
      *
-     * @param string $set_recip_email_lang 
+     * @param ?string $set_recip_email_lang 
      *
      * @return $this
      */
@@ -13768,7 +13954,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets set_recip_sign_lang
      *
-     * @return string
+     * @return ?string
      */
     public function getSetRecipSignLang()
     {
@@ -13778,7 +13964,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets set_recip_sign_lang
      *
-     * @param string $set_recip_sign_lang 
+     * @param ?string $set_recip_sign_lang 
      *
      * @return $this
      */
@@ -13816,7 +14002,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets shared_template_folders
      *
-     * @return string
+     * @return ?string
      */
     public function getSharedTemplateFolders()
     {
@@ -13826,7 +14012,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets shared_template_folders
      *
-     * @param string $shared_template_folders 
+     * @param ?string $shared_template_folders 
      *
      * @return $this
      */
@@ -13864,7 +14050,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets show_complete_dialog_in_embedded_session
      *
-     * @return string
+     * @return ?string
      */
     public function getShowCompleteDialogInEmbeddedSession()
     {
@@ -13874,7 +14060,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_complete_dialog_in_embedded_session
      *
-     * @param string $show_complete_dialog_in_embedded_session 
+     * @param ?string $show_complete_dialog_in_embedded_session 
      *
      * @return $this
      */
@@ -13912,7 +14098,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets show_conditional_routing_on_send
      *
-     * @return string
+     * @return ?string
      */
     public function getShowConditionalRoutingOnSend()
     {
@@ -13922,7 +14108,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_conditional_routing_on_send
      *
-     * @param string $show_conditional_routing_on_send 
+     * @param ?string $show_conditional_routing_on_send 
      *
      * @return $this
      */
@@ -13960,7 +14146,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets show_initial_conditional_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getShowInitialConditionalFields()
     {
@@ -13970,7 +14156,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_initial_conditional_fields
      *
-     * @param string $show_initial_conditional_fields 
+     * @param ?string $show_initial_conditional_fields 
      *
      * @return $this
      */
@@ -14008,7 +14194,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets show_localized_watermarks
      *
-     * @return string
+     * @return ?string
      */
     public function getShowLocalizedWatermarks()
     {
@@ -14018,7 +14204,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_localized_watermarks
      *
-     * @param string $show_localized_watermarks 
+     * @param ?string $show_localized_watermarks 
      *
      * @return $this
      */
@@ -14054,9 +14240,57 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets show_masked_fields_when_downloading_document_as_sender
+     *
+     * @return ?string
+     */
+    public function getShowMaskedFieldsWhenDownloadingDocumentAsSender()
+    {
+        return $this->container['show_masked_fields_when_downloading_document_as_sender'];
+    }
+
+    /**
+     * Sets show_masked_fields_when_downloading_document_as_sender
+     *
+     * @param ?string $show_masked_fields_when_downloading_document_as_sender 
+     *
+     * @return $this
+     */
+    public function setShowMaskedFieldsWhenDownloadingDocumentAsSender($show_masked_fields_when_downloading_document_as_sender)
+    {
+        $this->container['show_masked_fields_when_downloading_document_as_sender'] = $show_masked_fields_when_downloading_document_as_sender;
+
+        return $this;
+    }
+
+    /**
+     * Gets show_masked_fields_when_downloading_document_as_sender_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getShowMaskedFieldsWhenDownloadingDocumentAsSenderMetadata()
+    {
+        return $this->container['show_masked_fields_when_downloading_document_as_sender_metadata'];
+    }
+
+    /**
+     * Sets show_masked_fields_when_downloading_document_as_sender_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $show_masked_fields_when_downloading_document_as_sender_metadata show_masked_fields_when_downloading_document_as_sender_metadata
+     *
+     * @return $this
+     */
+    public function setShowMaskedFieldsWhenDownloadingDocumentAsSenderMetadata($show_masked_fields_when_downloading_document_as_sender_metadata)
+    {
+        $this->container['show_masked_fields_when_downloading_document_as_sender_metadata'] = $show_masked_fields_when_downloading_document_as_sender_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets show_tutorials
      *
-     * @return string
+     * @return ?string
      */
     public function getShowTutorials()
     {
@@ -14066,7 +14300,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_tutorials
      *
-     * @param string $show_tutorials 
+     * @param ?string $show_tutorials 
      *
      * @return $this
      */
@@ -14104,7 +14338,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signature_providers
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSignatureProviders()
     {
@@ -14114,7 +14348,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signature_providers
      *
-     * @param string[] $signature_providers 
+     * @param ?string[] $signature_providers 
      *
      * @return $this
      */
@@ -14152,7 +14386,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sign_date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getSignDateFormat()
     {
@@ -14162,7 +14396,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_format
      *
-     * @param string $sign_date_format 
+     * @param ?string $sign_date_format 
      *
      * @return $this
      */
@@ -14198,9 +14432,105 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets sign_date_time_account_language_override
+     *
+     * @return ?string
+     */
+    public function getSignDateTimeAccountLanguageOverride()
+    {
+        return $this->container['sign_date_time_account_language_override'];
+    }
+
+    /**
+     * Sets sign_date_time_account_language_override
+     *
+     * @param ?string $sign_date_time_account_language_override 
+     *
+     * @return $this
+     */
+    public function setSignDateTimeAccountLanguageOverride($sign_date_time_account_language_override)
+    {
+        $this->container['sign_date_time_account_language_override'] = $sign_date_time_account_language_override;
+
+        return $this;
+    }
+
+    /**
+     * Gets sign_date_time_account_language_override_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getSignDateTimeAccountLanguageOverrideMetadata()
+    {
+        return $this->container['sign_date_time_account_language_override_metadata'];
+    }
+
+    /**
+     * Sets sign_date_time_account_language_override_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_time_account_language_override_metadata sign_date_time_account_language_override_metadata
+     *
+     * @return $this
+     */
+    public function setSignDateTimeAccountLanguageOverrideMetadata($sign_date_time_account_language_override_metadata)
+    {
+        $this->container['sign_date_time_account_language_override_metadata'] = $sign_date_time_account_language_override_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets sign_date_time_account_timezone_override
+     *
+     * @return ?string
+     */
+    public function getSignDateTimeAccountTimezoneOverride()
+    {
+        return $this->container['sign_date_time_account_timezone_override'];
+    }
+
+    /**
+     * Sets sign_date_time_account_timezone_override
+     *
+     * @param ?string $sign_date_time_account_timezone_override 
+     *
+     * @return $this
+     */
+    public function setSignDateTimeAccountTimezoneOverride($sign_date_time_account_timezone_override)
+    {
+        $this->container['sign_date_time_account_timezone_override'] = $sign_date_time_account_timezone_override;
+
+        return $this;
+    }
+
+    /**
+     * Gets sign_date_time_account_timezone_override_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getSignDateTimeAccountTimezoneOverrideMetadata()
+    {
+        return $this->container['sign_date_time_account_timezone_override_metadata'];
+    }
+
+    /**
+     * Sets sign_date_time_account_timezone_override_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_time_account_timezone_override_metadata sign_date_time_account_timezone_override_metadata
+     *
+     * @return $this
+     */
+    public function setSignDateTimeAccountTimezoneOverrideMetadata($sign_date_time_account_timezone_override_metadata)
+    {
+        $this->container['sign_date_time_account_timezone_override_metadata'] = $sign_date_time_account_timezone_override_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets signer_attach_certificate_to_envelope_pdf
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerAttachCertificateToEnvelopePdf()
     {
@@ -14210,7 +14540,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_attach_certificate_to_envelope_pdf
      *
-     * @param string $signer_attach_certificate_to_envelope_pdf 
+     * @param ?string $signer_attach_certificate_to_envelope_pdf 
      *
      * @return $this
      */
@@ -14248,7 +14578,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_attach_concat
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerAttachConcat()
     {
@@ -14258,7 +14588,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_attach_concat
      *
-     * @param string $signer_attach_concat 
+     * @param ?string $signer_attach_concat 
      *
      * @return $this
      */
@@ -14296,7 +14626,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_can_create_account
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerCanCreateAccount()
     {
@@ -14306,7 +14636,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_can_create_account
      *
-     * @param string $signer_can_create_account 
+     * @param ?string $signer_can_create_account 
      *
      * @return $this
      */
@@ -14344,7 +14674,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_can_sign_on_mobile
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerCanSignOnMobile()
     {
@@ -14354,7 +14684,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_can_sign_on_mobile
      *
-     * @param string $signer_can_sign_on_mobile 
+     * @param ?string $signer_can_sign_on_mobile 
      *
      * @return $this
      */
@@ -14392,7 +14722,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_in_session_use_envelope_complete_email
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerInSessionUseEnvelopeCompleteEmail()
     {
@@ -14402,7 +14732,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_in_session_use_envelope_complete_email
      *
-     * @param string $signer_in_session_use_envelope_complete_email 
+     * @param ?string $signer_in_session_use_envelope_complete_email 
      *
      * @return $this
      */
@@ -14440,7 +14770,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_login_requirements
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerLoginRequirements()
     {
@@ -14450,7 +14780,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_login_requirements
      *
-     * @param string $signer_login_requirements 
+     * @param ?string $signer_login_requirements 
      *
      * @return $this
      */
@@ -14488,7 +14818,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_must_have_account
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerMustHaveAccount()
     {
@@ -14498,7 +14828,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_have_account
      *
-     * @param string $signer_must_have_account 
+     * @param ?string $signer_must_have_account 
      *
      * @return $this
      */
@@ -14536,7 +14866,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_must_login_to_sign
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerMustLoginToSign()
     {
@@ -14546,7 +14876,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_login_to_sign
      *
-     * @param string $signer_must_login_to_sign 
+     * @param ?string $signer_must_login_to_sign 
      *
      * @return $this
      */
@@ -14584,7 +14914,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signer_show_secure_field_initial_values
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerShowSecureFieldInitialValues()
     {
@@ -14594,7 +14924,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_show_secure_field_initial_values
      *
-     * @param string $signer_show_secure_field_initial_values 
+     * @param ?string $signer_show_secure_field_initial_values 
      *
      * @return $this
      */
@@ -14632,7 +14962,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signing_session_timeout
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningSessionTimeout()
     {
@@ -14642,7 +14972,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signing_session_timeout
      *
-     * @param string $signing_session_timeout 
+     * @param ?string $signing_session_timeout 
      *
      * @return $this
      */
@@ -14680,7 +15010,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signing_ui_version
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningUiVersion()
     {
@@ -14690,7 +15020,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signing_ui_version
      *
-     * @param string $signing_ui_version 
+     * @param ?string $signing_ui_version 
      *
      * @return $this
      */
@@ -14728,7 +15058,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sign_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getSignTimeFormat()
     {
@@ -14738,7 +15068,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_time_format
      *
-     * @param string $sign_time_format 
+     * @param ?string $sign_time_format 
      *
      * @return $this
      */
@@ -14776,7 +15106,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sign_time_show_am_pm
      *
-     * @return string
+     * @return ?string
      */
     public function getSignTimeShowAmPm()
     {
@@ -14786,7 +15116,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_time_show_am_pm
      *
-     * @param string $sign_time_show_am_pm 
+     * @param ?string $sign_time_show_am_pm 
      *
      * @return $this
      */
@@ -14824,7 +15154,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets simplified_sending_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getSimplifiedSendingEnabled()
     {
@@ -14834,7 +15164,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets simplified_sending_enabled
      *
-     * @param string $simplified_sending_enabled 
+     * @param ?string $simplified_sending_enabled 
      *
      * @return $this
      */
@@ -14872,7 +15202,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets single_sign_on_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getSingleSignOnEnabled()
     {
@@ -14882,7 +15212,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets single_sign_on_enabled
      *
-     * @param string $single_sign_on_enabled 
+     * @param ?string $single_sign_on_enabled 
      *
      * @return $this
      */
@@ -14920,7 +15250,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets skip_auth_completed_envelopes
      *
-     * @return string
+     * @return ?string
      */
     public function getSkipAuthCompletedEnvelopes()
     {
@@ -14930,7 +15260,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets skip_auth_completed_envelopes
      *
-     * @param string $skip_auth_completed_envelopes 
+     * @param ?string $skip_auth_completed_envelopes 
      *
      * @return $this
      */
@@ -14968,7 +15298,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets social_id_recip_auth
      *
-     * @return string
+     * @return ?string
      */
     public function getSocialIdRecipAuth()
     {
@@ -14978,7 +15308,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets social_id_recip_auth
      *
-     * @param string $social_id_recip_auth 
+     * @param ?string $social_id_recip_auth 
      *
      * @return $this
      */
@@ -15016,7 +15346,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets specify_document_visibility
      *
-     * @return string
+     * @return ?string
      */
     public function getSpecifyDocumentVisibility()
     {
@@ -15026,7 +15356,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets specify_document_visibility
      *
-     * @param string $specify_document_visibility 
+     * @param ?string $specify_document_visibility 
      *
      * @return $this
      */
@@ -15064,7 +15394,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets start_in_advanced_correct
      *
-     * @return string
+     * @return ?string
      */
     public function getStartInAdvancedCorrect()
     {
@@ -15074,7 +15404,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets start_in_advanced_correct
      *
-     * @param string $start_in_advanced_correct 
+     * @param ?string $start_in_advanced_correct 
      *
      * @return $this
      */
@@ -15112,7 +15442,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_accept
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustAccept()
     {
@@ -15122,7 +15452,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_accept
      *
-     * @param string $supplemental_documents_must_accept 
+     * @param ?string $supplemental_documents_must_accept 
      *
      * @return $this
      */
@@ -15160,7 +15490,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_read
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustRead()
     {
@@ -15170,7 +15500,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_read
      *
-     * @param string $supplemental_documents_must_read 
+     * @param ?string $supplemental_documents_must_read 
      *
      * @return $this
      */
@@ -15208,7 +15538,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_view
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustView()
     {
@@ -15218,7 +15548,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_view
      *
-     * @param string $supplemental_documents_must_view 
+     * @param ?string $supplemental_documents_must_view 
      *
      * @return $this
      */
@@ -15256,7 +15586,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets suppress_certificate_enforcement
      *
-     * @return string
+     * @return ?string
      */
     public function getSuppressCertificateEnforcement()
     {
@@ -15266,7 +15596,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets suppress_certificate_enforcement
      *
-     * @param string $suppress_certificate_enforcement 
+     * @param ?string $suppress_certificate_enforcement 
      *
      * @return $this
      */
@@ -15328,7 +15658,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets timezone_offset_api
      *
-     * @return string
+     * @return ?string
      */
     public function getTimezoneOffsetApi()
     {
@@ -15338,7 +15668,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_offset_api
      *
-     * @param string $timezone_offset_api 
+     * @param ?string $timezone_offset_api 
      *
      * @return $this
      */
@@ -15376,7 +15706,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets timezone_offset_ui
      *
-     * @return string
+     * @return ?string
      */
     public function getTimezoneOffsetUi()
     {
@@ -15386,7 +15716,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_offset_ui
      *
-     * @param string $timezone_offset_ui 
+     * @param ?string $timezone_offset_ui 
      *
      * @return $this
      */
@@ -15424,7 +15754,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets universal_signature_opt_in
      *
-     * @return string
+     * @return ?string
      */
     public function getUniversalSignatureOptIn()
     {
@@ -15434,7 +15764,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets universal_signature_opt_in
      *
-     * @param string $universal_signature_opt_in 
+     * @param ?string $universal_signature_opt_in 
      *
      * @return $this
      */
@@ -15448,7 +15778,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_account_level_email
      *
-     * @return string
+     * @return ?string
      */
     public function getUseAccountLevelEmail()
     {
@@ -15458,7 +15788,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_account_level_email
      *
-     * @param string $use_account_level_email 
+     * @param ?string $use_account_level_email 
      *
      * @return $this
      */
@@ -15496,7 +15826,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_consumer_disclosure
      *
-     * @return string
+     * @return ?string
      */
     public function getUseConsumerDisclosure()
     {
@@ -15506,7 +15836,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_consumer_disclosure
      *
-     * @param string $use_consumer_disclosure 
+     * @param ?string $use_consumer_disclosure 
      *
      * @return $this
      */
@@ -15544,7 +15874,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_consumer_disclosure_within_account
      *
-     * @return string
+     * @return ?string
      */
     public function getUseConsumerDisclosureWithinAccount()
     {
@@ -15554,7 +15884,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_consumer_disclosure_within_account
      *
-     * @param string $use_consumer_disclosure_within_account 
+     * @param ?string $use_consumer_disclosure_within_account 
      *
      * @return $this
      */
@@ -15592,7 +15922,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_derived_keys
      *
-     * @return string
+     * @return ?string
      */
     public function getUseDerivedKeys()
     {
@@ -15602,7 +15932,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_derived_keys
      *
-     * @param string $use_derived_keys 
+     * @param ?string $use_derived_keys 
      *
      * @return $this
      */
@@ -15640,7 +15970,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_docu_sign_express_signer_certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getUseDocuSignExpressSignerCertificate()
     {
@@ -15650,7 +15980,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_docu_sign_express_signer_certificate
      *
-     * @param string $use_docu_sign_express_signer_certificate 
+     * @param ?string $use_docu_sign_express_signer_certificate 
      *
      * @return $this
      */
@@ -15688,7 +16018,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_multi_app_groups_data
      *
-     * @return string
+     * @return ?string
      */
     public function getUseMultiAppGroupsData()
     {
@@ -15698,7 +16028,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_multi_app_groups_data
      *
-     * @param string $use_multi_app_groups_data 
+     * @param ?string $use_multi_app_groups_data 
      *
      * @return $this
      */
@@ -15736,7 +16066,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_new_blob_for_pdf
      *
-     * @return string
+     * @return ?string
      */
     public function getUseNewBlobForPdf()
     {
@@ -15746,7 +16076,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_blob_for_pdf
      *
-     * @param string $use_new_blob_for_pdf 
+     * @param ?string $use_new_blob_for_pdf 
      *
      * @return $this
      */
@@ -15784,7 +16114,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_safe_signer_certificates
      *
-     * @return string
+     * @return ?string
      */
     public function getUseSafeSignerCertificates()
     {
@@ -15794,7 +16124,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_safe_signer_certificates
      *
-     * @param string $use_safe_signer_certificates 
+     * @param ?string $use_safe_signer_certificates 
      *
      * @return $this
      */
@@ -15832,7 +16162,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets uses_api
      *
-     * @return string
+     * @return ?string
      */
     public function getUsesApi()
     {
@@ -15842,7 +16172,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets uses_api
      *
-     * @param string $uses_api 
+     * @param ?string $uses_api 
      *
      * @return $this
      */
@@ -15880,7 +16210,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_signature_provider_platform
      *
-     * @return string
+     * @return ?string
      */
     public function getUseSignatureProviderPlatform()
     {
@@ -15890,7 +16220,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_signature_provider_platform
      *
-     * @param string $use_signature_provider_platform 
+     * @param ?string $use_signature_provider_platform 
      *
      * @return $this
      */
@@ -15928,7 +16258,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets validations_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getValidationsAllowed()
     {
@@ -15938,7 +16268,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_allowed
      *
-     * @param string $validations_allowed 
+     * @param ?string $validations_allowed 
      *
      * @return $this
      */
@@ -15976,7 +16306,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets validations_brand
      *
-     * @return string
+     * @return ?string
      */
     public function getValidationsBrand()
     {
@@ -15986,7 +16316,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_brand
      *
-     * @param string $validations_brand 
+     * @param ?string $validations_brand 
      *
      * @return $this
      */
@@ -16024,7 +16354,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets validations_cadence
      *
-     * @return string
+     * @return ?string
      */
     public function getValidationsCadence()
     {
@@ -16034,7 +16364,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_cadence
      *
-     * @param string $validations_cadence 
+     * @param ?string $validations_cadence 
      *
      * @return $this
      */
@@ -16072,7 +16402,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets validations_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getValidationsEnabled()
     {
@@ -16082,7 +16412,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_enabled
      *
-     * @param string $validations_enabled 
+     * @param ?string $validations_enabled 
      *
      * @return $this
      */
@@ -16120,7 +16450,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets validations_report
      *
-     * @return string
+     * @return ?string
      */
     public function getValidationsReport()
     {
@@ -16130,7 +16460,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_report
      *
-     * @param string $validations_report 
+     * @param ?string $validations_report 
      *
      * @return $this
      */
@@ -16168,7 +16498,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets water_mark_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getWaterMarkEnabled()
     {
@@ -16178,7 +16508,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets water_mark_enabled
      *
-     * @param string $water_mark_enabled 
+     * @param ?string $water_mark_enabled 
      *
      * @return $this
      */
@@ -16216,7 +16546,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets write_reminder_to_envelope_history
      *
-     * @return string
+     * @return ?string
      */
     public function getWriteReminderToEnvelopeHistory()
     {
@@ -16226,7 +16556,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets write_reminder_to_envelope_history
      *
-     * @param string $write_reminder_to_envelope_history 
+     * @param ?string $write_reminder_to_envelope_history 
      *
      * @return $this
      */
@@ -16264,7 +16594,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets wurfl_min_allowable_screen_size
      *
-     * @return string
+     * @return ?string
      */
     public function getWurflMinAllowableScreenSize()
     {
@@ -16274,7 +16604,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets wurfl_min_allowable_screen_size
      *
-     * @param string $wurfl_min_allowable_screen_size 
+     * @param ?string $wurfl_min_allowable_screen_size 
      *
      * @return $this
      */

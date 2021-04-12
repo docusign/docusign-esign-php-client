@@ -57,10 +57,10 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_fields' => 'string',
-        'authorization_code' => 'string',
-        'credential_status' => 'string',
-        'merchant_id' => 'string'
+        'api_fields' => '?string',
+        'authorization_code' => '?string',
+        'credential_status' => '?string',
+        'merchant_id' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Gets api_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getApiFields()
     {
@@ -235,7 +235,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets api_fields
      *
-     * @param string $api_fields 
+     * @param ?string $api_fields 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Gets authorization_code
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthorizationCode()
     {
@@ -259,7 +259,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets authorization_code
      *
-     * @param string $authorization_code 
+     * @param ?string $authorization_code 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Gets credential_status
      *
-     * @return string
+     * @return ?string
      */
     public function getCredentialStatus()
     {
@@ -283,7 +283,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets credential_status
      *
-     * @param string $credential_status 
+     * @param ?string $credential_status 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Gets merchant_id
      *
-     * @return string
+     * @return ?string
      */
     public function getMerchantId()
     {
@@ -307,7 +307,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_id
      *
-     * @param string $merchant_id 
+     * @param ?string $merchant_id 
      *
      * @return $this
      */

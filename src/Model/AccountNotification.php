@@ -59,7 +59,7 @@ class AccountNotification implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'expirations' => '\DocuSign\eSign\Model\Expirations',
         'reminders' => '\DocuSign\eSign\Model\Reminders',
-        'user_override_enabled' => 'string'
+        'user_override_enabled' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class AccountNotification implements ModelInterface, ArrayAccess
     /**
      * Gets user_override_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getUserOverrideEnabled()
     {
@@ -277,7 +277,7 @@ class AccountNotification implements ModelInterface, ArrayAccess
     /**
      * Sets user_override_enabled
      *
-     * @param string $user_override_enabled 
+     * @param ?string $user_override_enabled 
      *
      * @return $this
      */

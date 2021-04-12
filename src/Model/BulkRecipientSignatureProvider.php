@@ -57,8 +57,8 @@ class BulkRecipientSignatureProvider implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-        'value' => 'string'
+        'name' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class BulkRecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -223,7 +223,7 @@ class BulkRecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class BulkRecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -247,7 +247,7 @@ class BulkRecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value of the tab.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */

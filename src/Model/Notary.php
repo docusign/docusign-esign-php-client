@@ -57,9 +57,9 @@ class Notary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created_date' => 'string',
-        'enabled' => 'string',
-        'searchable' => 'string',
+        'created_date' => '?string',
+        'enabled' => '?string',
+        'searchable' => '?string',
         'user_info' => '\DocuSign\eSign\Model\UserInformation'
     ];
 
@@ -225,7 +225,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Gets created_date
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDate()
     {
@@ -235,7 +235,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param string $created_date 
+     * @param ?string $created_date 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Gets enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getEnabled()
     {
@@ -259,7 +259,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Sets enabled
      *
-     * @param string $enabled 
+     * @param ?string $enabled 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Gets searchable
      *
-     * @return string
+     * @return ?string
      */
     public function getSearchable()
     {
@@ -283,7 +283,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Sets searchable
      *
-     * @param string $searchable 
+     * @param ?string $searchable 
      *
      * @return $this
      */

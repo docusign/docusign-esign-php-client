@@ -58,9 +58,9 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'font_style' => 'string',
-        'signature_initials' => 'string',
-        'signature_name' => 'string'
+        'font_style' => '?string',
+        'signature_initials' => '?string',
+        'signature_name' => '?string'
     ];
 
     /**
@@ -220,7 +220,7 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
     /**
      * Gets font_style
      *
-     * @return string
+     * @return ?string
      */
     public function getFontStyle()
     {
@@ -230,7 +230,7 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
     /**
      * Sets font_style
      *
-     * @param string $font_style 
+     * @param ?string $font_style 
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signature_initials
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureInitials()
     {
@@ -254,7 +254,7 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signature_initials
      *
-     * @param string $signature_initials 
+     * @param ?string $signature_initials 
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signature_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureName()
     {
@@ -278,7 +278,7 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signature_name
      *
-     * @param string $signature_name Specifies the user signature name.
+     * @param ?string $signature_name Specifies the user signature name.
      *
      * @return $this
      */

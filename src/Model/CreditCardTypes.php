@@ -57,7 +57,7 @@ class CreditCardTypes implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'card_types' => 'string[]'
+        'card_types' => '?string[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class CreditCardTypes implements ModelInterface, ArrayAccess
     /**
      * Gets card_types
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getCardTypes()
     {
@@ -217,7 +217,7 @@ class CreditCardTypes implements ModelInterface, ArrayAccess
     /**
      * Sets card_types
      *
-     * @param string[] $card_types An array containing supported credit card types.
+     * @param ?string[] $card_types An array containing supported credit card types.
      *
      * @return $this
      */

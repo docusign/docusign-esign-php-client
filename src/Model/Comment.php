@@ -57,27 +57,27 @@ class Comment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_id' => 'string',
-        'hmac' => 'string',
-        'id' => 'string',
-        'mentions' => 'string[]',
-        'read' => 'bool',
-        'sent_by_email' => 'string',
-        'sent_by_full_name' => 'string',
-        'sent_by_image_id' => 'string',
-        'sent_by_initials' => 'string',
-        'sent_by_recipient_id' => 'string',
-        'sent_by_user_id' => 'string',
-        'signing_group_id' => 'string',
-        'signing_group_name' => 'string',
-        'subject' => 'string',
-        'tab_id' => 'string',
-        'text' => 'string',
-        'thread_id' => 'string',
-        'thread_originator_id' => 'string',
-        'timestamp' => 'string',
-        'time_stamp_formatted' => 'string',
-        'visible_to' => 'string[]'
+        'envelope_id' => '?string',
+        'hmac' => '?string',
+        'id' => '?string',
+        'mentions' => '?string[]',
+        'read' => '?bool',
+        'sent_by_email' => '?string',
+        'sent_by_full_name' => '?string',
+        'sent_by_image_id' => '?string',
+        'sent_by_initials' => '?string',
+        'sent_by_recipient_id' => '?string',
+        'sent_by_user_id' => '?string',
+        'signing_group_id' => '?string',
+        'signing_group_name' => '?string',
+        'subject' => '?string',
+        'tab_id' => '?string',
+        'text' => '?string',
+        'thread_id' => '?string',
+        'thread_originator_id' => '?string',
+        'timestamp' => '?string',
+        'time_stamp_formatted' => '?string',
+        'visible_to' => '?string[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -337,7 +337,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets hmac
      *
-     * @return string
+     * @return ?string
      */
     public function getHmac()
     {
@@ -361,7 +361,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets hmac
      *
-     * @param string $hmac 
+     * @param ?string $hmac 
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -385,7 +385,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets mentions
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getMentions()
     {
@@ -409,7 +409,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets mentions
      *
-     * @param string[] $mentions 
+     * @param ?string[] $mentions 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets read
      *
-     * @return bool
+     * @return ?bool
      */
     public function getRead()
     {
@@ -433,7 +433,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets read
      *
-     * @param bool $read 
+     * @param ?bool $read 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_email
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByEmail()
     {
@@ -457,7 +457,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_email
      *
-     * @param string $sent_by_email 
+     * @param ?string $sent_by_email 
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_full_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByFullName()
     {
@@ -481,7 +481,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_full_name
      *
-     * @param string $sent_by_full_name 
+     * @param ?string $sent_by_full_name 
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_image_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByImageId()
     {
@@ -505,7 +505,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_image_id
      *
-     * @param string $sent_by_image_id 
+     * @param ?string $sent_by_image_id 
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_initials
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByInitials()
     {
@@ -529,7 +529,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_initials
      *
-     * @param string $sent_by_initials 
+     * @param ?string $sent_by_initials 
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByRecipientId()
     {
@@ -553,7 +553,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_recipient_id
      *
-     * @param string $sent_by_recipient_id 
+     * @param ?string $sent_by_recipient_id 
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByUserId()
     {
@@ -577,7 +577,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_user_id
      *
-     * @param string $sent_by_user_id 
+     * @param ?string $sent_by_user_id 
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupId()
     {
@@ -601,7 +601,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id
      *
-     * @param string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     * @param ?string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupName()
     {
@@ -625,7 +625,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_name
      *
-     * @param string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
+     * @param ?string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets subject
      *
-     * @return string
+     * @return ?string
      */
     public function getSubject()
     {
@@ -649,7 +649,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets subject
      *
-     * @param string $subject 
+     * @param ?string $subject 
      *
      * @return $this
      */
@@ -663,7 +663,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTabId()
     {
@@ -673,7 +673,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id
      *
-     * @param string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+     * @param ?string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets text
      *
-     * @return string
+     * @return ?string
      */
     public function getText()
     {
@@ -697,7 +697,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text 
+     * @param ?string $text 
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets thread_id
      *
-     * @return string
+     * @return ?string
      */
     public function getThreadId()
     {
@@ -721,7 +721,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets thread_id
      *
-     * @param string $thread_id 
+     * @param ?string $thread_id 
      *
      * @return $this
      */
@@ -735,7 +735,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets thread_originator_id
      *
-     * @return string
+     * @return ?string
      */
     public function getThreadOriginatorId()
     {
@@ -745,7 +745,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets thread_originator_id
      *
-     * @param string $thread_originator_id 
+     * @param ?string $thread_originator_id 
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets timestamp
      *
-     * @return string
+     * @return ?string
      */
     public function getTimestamp()
     {
@@ -769,7 +769,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets timestamp
      *
-     * @param string $timestamp 
+     * @param ?string $timestamp 
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets time_stamp_formatted
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeStampFormatted()
     {
@@ -793,7 +793,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets time_stamp_formatted
      *
-     * @param string $time_stamp_formatted 
+     * @param ?string $time_stamp_formatted 
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Gets visible_to
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getVisibleTo()
     {
@@ -817,7 +817,7 @@ class Comment implements ModelInterface, ArrayAccess
     /**
      * Sets visible_to
      *
-     * @param string[] $visible_to 
+     * @param ?string[] $visible_to 
      *
      * @return $this
      */

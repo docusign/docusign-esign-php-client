@@ -58,10 +58,10 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authentication_type' => 'string',
-        'last_provider' => 'string',
-        'last_timestamp' => 'string',
-        'total_count' => 'string'
+        'authentication_type' => '?string',
+        'last_provider' => '?string',
+        'last_timestamp' => '?string',
+        'total_count' => '?string'
     ];
 
     /**
@@ -226,7 +226,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_type
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationType()
     {
@@ -236,7 +236,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_type
      *
-     * @param string $authentication_type Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth.
+     * @param ?string $authentication_type Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth.
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Gets last_provider
      *
-     * @return string
+     * @return ?string
      */
     public function getLastProvider()
     {
@@ -260,7 +260,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Sets last_provider
      *
-     * @param string $last_provider The last provider that authenticated the user.
+     * @param ?string $last_provider The last provider that authenticated the user.
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Gets last_timestamp
      *
-     * @return string
+     * @return ?string
      */
     public function getLastTimestamp()
     {
@@ -284,7 +284,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Sets last_timestamp
      *
-     * @param string $last_timestamp The data and time the user last used the authentication method.
+     * @param ?string $last_timestamp The data and time the user last used the authentication method.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Gets total_count
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalCount()
     {
@@ -308,7 +308,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
     /**
      * Sets total_count
      *
-     * @param string $total_count The number of times the authentication method was used.
+     * @param ?string $total_count The number of times the authentication method was used.
      *
      * @return $this
      */

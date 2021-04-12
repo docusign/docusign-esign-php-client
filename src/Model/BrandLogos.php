@@ -57,9 +57,9 @@ class BrandLogos implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
-        'primary' => 'string',
-        'secondary' => 'string'
+        'email' => '?string',
+        'primary' => '?string',
+        'secondary' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -229,7 +229,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Gets primary
      *
-     * @return string
+     * @return ?string
      */
     public function getPrimary()
     {
@@ -253,7 +253,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Sets primary
      *
-     * @param string $primary 
+     * @param ?string $primary 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Gets secondary
      *
-     * @return string
+     * @return ?string
      */
     public function getSecondary()
     {
@@ -277,7 +277,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Sets secondary
      *
-     * @param string $secondary 
+     * @param ?string $secondary 
      *
      * @return $this
      */

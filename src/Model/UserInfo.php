@@ -57,19 +57,19 @@ class UserInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'account_name' => 'string',
-        'activation_access_code' => 'string',
-        'email' => 'string',
+        'account_id' => '?string',
+        'account_name' => '?string',
+        'activation_access_code' => '?string',
+        'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'login_status' => 'string',
-        'membership_id' => 'string',
-        'send_activation_email' => 'string',
-        'uri' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string',
-        'user_status' => 'string',
-        'user_type' => 'string'
+        'login_status' => '?string',
+        'membership_id' => '?string',
+        'send_activation_email' => '?string',
+        'uri' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string',
+        'user_status' => '?string',
+        'user_type' => '?string'
     ];
 
     /**
@@ -279,7 +279,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -289,7 +289,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountName()
     {
@@ -313,7 +313,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param string $account_name 
+     * @param ?string $account_name 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets activation_access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getActivationAccessCode()
     {
@@ -337,7 +337,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets activation_access_code
      *
-     * @param string $activation_access_code 
+     * @param ?string $activation_access_code 
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -361,7 +361,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets login_status
      *
-     * @return string
+     * @return ?string
      */
     public function getLoginStatus()
     {
@@ -409,7 +409,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets login_status
      *
-     * @param string $login_status 
+     * @param ?string $login_status 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets membership_id
      *
-     * @return string
+     * @return ?string
      */
     public function getMembershipId()
     {
@@ -433,7 +433,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets membership_id
      *
-     * @param string $membership_id 
+     * @param ?string $membership_id 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets send_activation_email
      *
-     * @return string
+     * @return ?string
      */
     public function getSendActivationEmail()
     {
@@ -457,7 +457,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets send_activation_email
      *
-     * @param string $send_activation_email 
+     * @param ?string $send_activation_email 
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -481,7 +481,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -505,7 +505,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -529,7 +529,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets user_status
      *
-     * @return string
+     * @return ?string
      */
     public function getUserStatus()
     {
@@ -553,7 +553,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_status
      *
-     * @param string $user_status 
+     * @param ?string $user_status 
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Gets user_type
      *
-     * @return string
+     * @return ?string
      */
     public function getUserType()
     {
@@ -577,7 +577,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param string $user_type 
+     * @param ?string $user_type 
      *
      * @return $this
      */

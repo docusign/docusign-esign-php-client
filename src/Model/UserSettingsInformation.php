@@ -58,123 +58,125 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'account_management_granular' => '\DocuSign\eSign\Model\UserAccountManagementGranularInformation',
-        'admin_only' => 'string',
+        'admin_only' => '?string',
         'admin_only_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_auto_tagging' => 'string',
-        'allow_envelope_transfer_to' => 'string',
+        'allow_auto_tagging' => '?string',
+        'allow_envelope_transfer_to' => '?string',
         'allow_envelope_transfer_to_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_eseal_recipients' => 'string',
+        'allow_eseal_recipients' => '?string',
         'allow_eseal_recipients_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_power_forms_admin_to_access_all_power_form_envelope' => 'string',
+        'allow_power_forms_admin_to_access_all_power_form_envelope' => '?string',
         'allow_power_forms_admin_to_access_all_power_form_envelope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_recipient_language_selection' => 'string',
+        'allow_recipient_language_selection' => '?string',
         'allow_recipient_language_selection_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_send_on_behalf_of' => 'string',
+        'allow_send_on_behalf_of' => '?string',
         'allow_send_on_behalf_of_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_supplemental_documents' => 'string',
+        'allow_supplemental_documents' => '?string',
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'anchor_tag_versioned_placement_enabled' => 'string',
-        'api_account_wide_access' => 'string',
+        'anchor_tag_versioned_placement_enabled' => '?string',
+        'api_account_wide_access' => '?string',
         'api_account_wide_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'api_can_export_ac' => 'string',
+        'api_can_export_ac' => '?string',
         'api_can_export_ac_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'bulk_send' => 'string',
+        'bulk_send' => '?string',
         'bulk_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_charge_account' => 'string',
+        'can_charge_account' => '?string',
         'can_charge_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_edit_shared_addressbook' => 'string',
+        'can_edit_shared_addressbook' => '?string',
         'can_edit_shared_addressbook_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_lock_envelopes' => 'string',
+        'can_lock_envelopes' => '?string',
         'can_lock_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_account' => 'string',
+        'can_manage_account' => '?string',
         'can_manage_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_distributor' => 'string',
+        'can_manage_distributor' => '?string',
         'can_manage_distributor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_templates' => 'string',
+        'can_manage_templates' => '?string',
         'can_manage_templates_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_send_api_requests' => 'string',
+        'can_send_api_requests' => '?string',
         'can_send_api_requests_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_send_envelope' => 'string',
+        'can_send_envelope' => '?string',
         'can_send_envelope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_sign_envelope' => 'string',
+        'can_send_envelopes_via_sms' => '?string',
+        'can_send_envelopes_via_sms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_sign_envelope' => '?string',
         'can_sign_envelope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_use_scratchpad' => 'string',
+        'can_use_scratchpad' => '?string',
         'can_use_scratchpad_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_use_smart_contracts' => 'string',
+        'can_use_smart_contracts' => '?string',
         'can_use_smart_contracts_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_document_upload' => 'string',
+        'disable_document_upload' => '?string',
         'disable_document_upload_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_other_actions' => 'string',
+        'disable_other_actions' => '?string',
         'disable_other_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_ds_pro' => 'string',
+        'enable_ds_pro' => '?string',
         'enable_ds_pro_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sequential_signing_api' => 'string',
+        'enable_sequential_signing_api' => '?string',
         'enable_sequential_signing_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sequential_signing_ui' => 'string',
+        'enable_sequential_signing_ui' => '?string',
         'enable_sequential_signing_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_signer_attachments' => 'string',
+        'enable_signer_attachments' => '?string',
         'enable_signer_attachments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sign_on_paper_override' => 'string',
+        'enable_sign_on_paper_override' => '?string',
         'enable_sign_on_paper_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_transaction_point' => 'string',
+        'enable_transaction_point' => '?string',
         'enable_transaction_point_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_vaulting' => 'string',
+        'enable_vaulting' => '?string',
         'enable_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'express_send_only' => 'string',
-        'locale' => 'string',
+        'express_send_only' => '?string',
+        'locale' => '?string',
         'locale_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'locale_policy' => '\DocuSign\eSign\Model\LocalePolicy',
-        'manage_clickwraps_mode' => 'string',
+        'manage_clickwraps_mode' => '?string',
         'manage_clickwraps_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'modified_by' => 'string',
+        'modified_by' => '?string',
         'modified_by_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'modified_date' => 'string',
+        'modified_date' => '?string',
         'modified_date_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'modified_page' => 'string',
+        'modified_page' => '?string',
         'modified_page_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'new_send_ui' => 'string',
+        'new_send_ui' => '?string',
         'new_send_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'power_form_mode' => 'string',
+        'power_form_mode' => '?string',
         'power_form_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'recipient_viewed_notification' => 'string',
+        'recipient_viewed_notification' => '?string',
         'recipient_viewed_notification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'seal_identifiers' => '\DocuSign\eSign\Model\SealIdentifier[]',
-        'self_signed_recipient_email_document' => 'string',
+        'self_signed_recipient_email_document' => '?string',
         'self_signed_recipient_email_document_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'sender_email_notifications' => '\DocuSign\eSign\Model\SenderEmailNotifications',
         'signer_email_notifications' => '\DocuSign\eSign\Model\SignerEmailNotifications',
-        'supplemental_document_include_in_download' => 'string',
-        'supplemental_documents_must_accept' => 'string',
+        'supplemental_document_include_in_download' => '?string',
+        'supplemental_documents_must_accept' => '?string',
         'supplemental_documents_must_accept_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_read' => 'string',
+        'supplemental_documents_must_read' => '?string',
         'supplemental_documents_must_read_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_view' => 'string',
+        'supplemental_documents_must_view' => '?string',
         'supplemental_documents_must_view_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'template_active_creation' => 'string',
+        'template_active_creation' => '?string',
         'template_active_creation_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'template_apply_notify' => 'string',
+        'template_apply_notify' => '?string',
         'template_apply_notify_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'template_auto_matching' => 'string',
+        'template_auto_matching' => '?string',
         'template_auto_matching_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'template_matching_sensitivity' => 'string',
+        'template_matching_sensitivity' => '?string',
         'template_matching_sensitivity_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'template_page_level_matching' => 'string',
+        'template_page_level_matching' => '?string',
         'template_page_level_matching_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'timezone_dst' => 'string',
+        'timezone_dst' => '?string',
         'timezone_dst_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'timezone_mask' => 'string',
+        'timezone_mask' => '?string',
         'timezone_mask_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'timezone_offset' => 'string',
+        'timezone_offset' => '?string',
         'timezone_offset_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'timezone_sending_pref' => 'string',
+        'timezone_sending_pref' => '?string',
         'timezone_sending_pref_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'timezone_signing_pref' => 'string',
+        'timezone_signing_pref' => '?string',
         'timezone_signing_pref_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'transaction_point_site_name_url' => 'string',
+        'transaction_point_site_name_url' => '?string',
         'transaction_point_site_name_url_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'transaction_point_user_name' => 'string',
+        'transaction_point_user_name' => '?string',
         'transaction_point_user_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'vaulting_mode' => 'string',
+        'vaulting_mode' => '?string',
         'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
@@ -223,6 +225,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_send_api_requests_metadata' => null,
         'can_send_envelope' => null,
         'can_send_envelope_metadata' => null,
+        'can_send_envelopes_via_sms' => null,
+        'can_send_envelopes_via_sms_metadata' => null,
         'can_sign_envelope' => null,
         'can_sign_envelope_metadata' => null,
         'can_use_scratchpad' => null,
@@ -371,6 +375,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_send_api_requests_metadata' => 'canSendAPIRequestsMetadata',
         'can_send_envelope' => 'canSendEnvelope',
         'can_send_envelope_metadata' => 'canSendEnvelopeMetadata',
+        'can_send_envelopes_via_sms' => 'canSendEnvelopesViaSMS',
+        'can_send_envelopes_via_sms_metadata' => 'canSendEnvelopesViaSMSMetadata',
         'can_sign_envelope' => 'canSignEnvelope',
         'can_sign_envelope_metadata' => 'canSignEnvelopeMetadata',
         'can_use_scratchpad' => 'canUseScratchpad',
@@ -498,6 +504,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_send_api_requests_metadata' => 'setCanSendApiRequestsMetadata',
         'can_send_envelope' => 'setCanSendEnvelope',
         'can_send_envelope_metadata' => 'setCanSendEnvelopeMetadata',
+        'can_send_envelopes_via_sms' => 'setCanSendEnvelopesViaSms',
+        'can_send_envelopes_via_sms_metadata' => 'setCanSendEnvelopesViaSmsMetadata',
         'can_sign_envelope' => 'setCanSignEnvelope',
         'can_sign_envelope_metadata' => 'setCanSignEnvelopeMetadata',
         'can_use_scratchpad' => 'setCanUseScratchpad',
@@ -625,6 +633,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_send_api_requests_metadata' => 'getCanSendApiRequestsMetadata',
         'can_send_envelope' => 'getCanSendEnvelope',
         'can_send_envelope_metadata' => 'getCanSendEnvelopeMetadata',
+        'can_send_envelopes_via_sms' => 'getCanSendEnvelopesViaSms',
+        'can_send_envelopes_via_sms_metadata' => 'getCanSendEnvelopesViaSmsMetadata',
         'can_sign_envelope' => 'getCanSignEnvelope',
         'can_sign_envelope_metadata' => 'getCanSignEnvelopeMetadata',
         'can_use_scratchpad' => 'getCanUseScratchpad',
@@ -806,6 +816,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['can_send_api_requests_metadata'] = isset($data['can_send_api_requests_metadata']) ? $data['can_send_api_requests_metadata'] : null;
         $this->container['can_send_envelope'] = isset($data['can_send_envelope']) ? $data['can_send_envelope'] : null;
         $this->container['can_send_envelope_metadata'] = isset($data['can_send_envelope_metadata']) ? $data['can_send_envelope_metadata'] : null;
+        $this->container['can_send_envelopes_via_sms'] = isset($data['can_send_envelopes_via_sms']) ? $data['can_send_envelopes_via_sms'] : null;
+        $this->container['can_send_envelopes_via_sms_metadata'] = isset($data['can_send_envelopes_via_sms_metadata']) ? $data['can_send_envelopes_via_sms_metadata'] : null;
         $this->container['can_sign_envelope'] = isset($data['can_sign_envelope']) ? $data['can_sign_envelope'] : null;
         $this->container['can_sign_envelope_metadata'] = isset($data['can_sign_envelope_metadata']) ? $data['can_sign_envelope_metadata'] : null;
         $this->container['can_use_scratchpad'] = isset($data['can_use_scratchpad']) ? $data['can_use_scratchpad'] : null;
@@ -939,7 +951,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets admin_only
      *
-     * @return string
+     * @return ?string
      */
     public function getAdminOnly()
     {
@@ -949,7 +961,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets admin_only
      *
-     * @param string $admin_only 
+     * @param ?string $admin_only 
      *
      * @return $this
      */
@@ -987,7 +999,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_auto_tagging
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAutoTagging()
     {
@@ -997,7 +1009,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_tagging
      *
-     * @param string $allow_auto_tagging 
+     * @param ?string $allow_auto_tagging 
      *
      * @return $this
      */
@@ -1011,7 +1023,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_transfer_to
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopeTransferTo()
     {
@@ -1021,7 +1033,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_transfer_to
      *
-     * @param string $allow_envelope_transfer_to 
+     * @param ?string $allow_envelope_transfer_to 
      *
      * @return $this
      */
@@ -1059,7 +1071,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_eseal_recipients
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEsealRecipients()
     {
@@ -1069,7 +1081,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_eseal_recipients
      *
-     * @param string $allow_eseal_recipients 
+     * @param ?string $allow_eseal_recipients 
      *
      * @return $this
      */
@@ -1107,7 +1119,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_power_forms_admin_to_access_all_power_form_envelope
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowPowerFormsAdminToAccessAllPowerFormEnvelope()
     {
@@ -1117,7 +1129,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_power_forms_admin_to_access_all_power_form_envelope
      *
-     * @param string $allow_power_forms_admin_to_access_all_power_form_envelope 
+     * @param ?string $allow_power_forms_admin_to_access_all_power_form_envelope 
      *
      * @return $this
      */
@@ -1155,7 +1167,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_recipient_language_selection
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowRecipientLanguageSelection()
     {
@@ -1165,7 +1177,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_recipient_language_selection
      *
-     * @param string $allow_recipient_language_selection 
+     * @param ?string $allow_recipient_language_selection 
      *
      * @return $this
      */
@@ -1203,7 +1215,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_send_on_behalf_of
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSendOnBehalfOf()
     {
@@ -1213,7 +1225,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_send_on_behalf_of
      *
-     * @param string $allow_send_on_behalf_of 
+     * @param ?string $allow_send_on_behalf_of 
      *
      * @return $this
      */
@@ -1251,7 +1263,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_supplemental_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSupplementalDocuments()
     {
@@ -1261,7 +1273,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_supplemental_documents
      *
-     * @param string $allow_supplemental_documents 
+     * @param ?string $allow_supplemental_documents 
      *
      * @return $this
      */
@@ -1299,7 +1311,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_tag_versioned_placement_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorTagVersionedPlacementEnabled()
     {
@@ -1309,7 +1321,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tag_versioned_placement_enabled
      *
-     * @param string $anchor_tag_versioned_placement_enabled 
+     * @param ?string $anchor_tag_versioned_placement_enabled 
      *
      * @return $this
      */
@@ -1323,7 +1335,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets api_account_wide_access
      *
-     * @return string
+     * @return ?string
      */
     public function getApiAccountWideAccess()
     {
@@ -1333,7 +1345,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_account_wide_access
      *
-     * @param string $api_account_wide_access 
+     * @param ?string $api_account_wide_access 
      *
      * @return $this
      */
@@ -1371,7 +1383,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets api_can_export_ac
      *
-     * @return string
+     * @return ?string
      */
     public function getApiCanExportAc()
     {
@@ -1381,7 +1393,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_can_export_ac
      *
-     * @param string $api_can_export_ac 
+     * @param ?string $api_can_export_ac 
      *
      * @return $this
      */
@@ -1419,7 +1431,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_send
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkSend()
     {
@@ -1429,7 +1441,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send
      *
-     * @param string $bulk_send 
+     * @param ?string $bulk_send 
      *
      * @return $this
      */
@@ -1467,7 +1479,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_charge_account
      *
-     * @return string
+     * @return ?string
      */
     public function getCanChargeAccount()
     {
@@ -1477,7 +1489,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_charge_account
      *
-     * @param string $can_charge_account 
+     * @param ?string $can_charge_account 
      *
      * @return $this
      */
@@ -1515,7 +1527,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_edit_shared_addressbook
      *
-     * @return string
+     * @return ?string
      */
     public function getCanEditSharedAddressbook()
     {
@@ -1525,7 +1537,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_edit_shared_addressbook
      *
-     * @param string $can_edit_shared_addressbook 
+     * @param ?string $can_edit_shared_addressbook 
      *
      * @return $this
      */
@@ -1563,7 +1575,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_lock_envelopes
      *
-     * @return string
+     * @return ?string
      */
     public function getCanLockEnvelopes()
     {
@@ -1573,7 +1585,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_lock_envelopes
      *
-     * @param string $can_lock_envelopes 
+     * @param ?string $can_lock_envelopes 
      *
      * @return $this
      */
@@ -1611,7 +1623,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_manage_account
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageAccount()
     {
@@ -1621,7 +1633,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_manage_account
      *
-     * @param string $can_manage_account 
+     * @param ?string $can_manage_account 
      *
      * @return $this
      */
@@ -1659,7 +1671,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_manage_distributor
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageDistributor()
     {
@@ -1669,7 +1681,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_manage_distributor
      *
-     * @param string $can_manage_distributor 
+     * @param ?string $can_manage_distributor 
      *
      * @return $this
      */
@@ -1707,7 +1719,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_manage_templates
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageTemplates()
     {
@@ -1717,7 +1729,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_manage_templates
      *
-     * @param string $can_manage_templates 
+     * @param ?string $can_manage_templates 
      *
      * @return $this
      */
@@ -1755,7 +1767,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_send_api_requests
      *
-     * @return string
+     * @return ?string
      */
     public function getCanSendApiRequests()
     {
@@ -1765,7 +1777,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_api_requests
      *
-     * @param string $can_send_api_requests 
+     * @param ?string $can_send_api_requests 
      *
      * @return $this
      */
@@ -1803,7 +1815,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_send_envelope
      *
-     * @return string
+     * @return ?string
      */
     public function getCanSendEnvelope()
     {
@@ -1813,7 +1825,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_envelope
      *
-     * @param string $can_send_envelope 
+     * @param ?string $can_send_envelope 
      *
      * @return $this
      */
@@ -1849,9 +1861,57 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets can_send_envelopes_via_sms
+     *
+     * @return ?string
+     */
+    public function getCanSendEnvelopesViaSms()
+    {
+        return $this->container['can_send_envelopes_via_sms'];
+    }
+
+    /**
+     * Sets can_send_envelopes_via_sms
+     *
+     * @param ?string $can_send_envelopes_via_sms 
+     *
+     * @return $this
+     */
+    public function setCanSendEnvelopesViaSms($can_send_envelopes_via_sms)
+    {
+        $this->container['can_send_envelopes_via_sms'] = $can_send_envelopes_via_sms;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_send_envelopes_via_sms_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanSendEnvelopesViaSmsMetadata()
+    {
+        return $this->container['can_send_envelopes_via_sms_metadata'];
+    }
+
+    /**
+     * Sets can_send_envelopes_via_sms_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelopes_via_sms_metadata can_send_envelopes_via_sms_metadata
+     *
+     * @return $this
+     */
+    public function setCanSendEnvelopesViaSmsMetadata($can_send_envelopes_via_sms_metadata)
+    {
+        $this->container['can_send_envelopes_via_sms_metadata'] = $can_send_envelopes_via_sms_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets can_sign_envelope
      *
-     * @return string
+     * @return ?string
      */
     public function getCanSignEnvelope()
     {
@@ -1861,7 +1921,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_sign_envelope
      *
-     * @param string $can_sign_envelope 
+     * @param ?string $can_sign_envelope 
      *
      * @return $this
      */
@@ -1899,7 +1959,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_use_scratchpad
      *
-     * @return string
+     * @return ?string
      */
     public function getCanUseScratchpad()
     {
@@ -1909,7 +1969,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_use_scratchpad
      *
-     * @param string $can_use_scratchpad 
+     * @param ?string $can_use_scratchpad 
      *
      * @return $this
      */
@@ -1947,7 +2007,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_use_smart_contracts
      *
-     * @return string
+     * @return ?string
      */
     public function getCanUseSmartContracts()
     {
@@ -1957,7 +2017,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_use_smart_contracts
      *
-     * @param string $can_use_smart_contracts 
+     * @param ?string $can_use_smart_contracts 
      *
      * @return $this
      */
@@ -1995,7 +2055,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_document_upload
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableDocumentUpload()
     {
@@ -2005,7 +2065,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_document_upload
      *
-     * @param string $disable_document_upload 
+     * @param ?string $disable_document_upload 
      *
      * @return $this
      */
@@ -2043,7 +2103,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets disable_other_actions
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableOtherActions()
     {
@@ -2053,7 +2113,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_other_actions
      *
-     * @param string $disable_other_actions 
+     * @param ?string $disable_other_actions 
      *
      * @return $this
      */
@@ -2091,7 +2151,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_ds_pro
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableDsPro()
     {
@@ -2101,7 +2161,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ds_pro
      *
-     * @param string $enable_ds_pro 
+     * @param ?string $enable_ds_pro 
      *
      * @return $this
      */
@@ -2139,7 +2199,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sequential_signing_api
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSequentialSigningApi()
     {
@@ -2149,7 +2209,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_api
      *
-     * @param string $enable_sequential_signing_api 
+     * @param ?string $enable_sequential_signing_api 
      *
      * @return $this
      */
@@ -2187,7 +2247,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sequential_signing_ui
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSequentialSigningUi()
     {
@@ -2197,7 +2257,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_ui
      *
-     * @param string $enable_sequential_signing_ui 
+     * @param ?string $enable_sequential_signing_ui 
      *
      * @return $this
      */
@@ -2235,7 +2295,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_signer_attachments
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSignerAttachments()
     {
@@ -2245,7 +2305,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signer_attachments
      *
-     * @param string $enable_signer_attachments 
+     * @param ?string $enable_signer_attachments 
      *
      * @return $this
      */
@@ -2283,7 +2343,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sign_on_paper_override
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSignOnPaperOverride()
     {
@@ -2293,7 +2353,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_on_paper_override
      *
-     * @param string $enable_sign_on_paper_override 
+     * @param ?string $enable_sign_on_paper_override 
      *
      * @return $this
      */
@@ -2331,7 +2391,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_transaction_point
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableTransactionPoint()
     {
@@ -2341,7 +2401,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_transaction_point
      *
-     * @param string $enable_transaction_point 
+     * @param ?string $enable_transaction_point 
      *
      * @return $this
      */
@@ -2379,7 +2439,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_vaulting
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableVaulting()
     {
@@ -2389,7 +2449,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_vaulting
      *
-     * @param string $enable_vaulting 
+     * @param ?string $enable_vaulting 
      *
      * @return $this
      */
@@ -2427,7 +2487,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets express_send_only
      *
-     * @return string
+     * @return ?string
      */
     public function getExpressSendOnly()
     {
@@ -2437,7 +2497,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets express_send_only
      *
-     * @param string $express_send_only 
+     * @param ?string $express_send_only 
      *
      * @return $this
      */
@@ -2451,7 +2511,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets locale
      *
-     * @return string
+     * @return ?string
      */
     public function getLocale()
     {
@@ -2461,7 +2521,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets locale
      *
-     * @param string $locale 
+     * @param ?string $locale 
      *
      * @return $this
      */
@@ -2523,7 +2583,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets manage_clickwraps_mode
      *
-     * @return string
+     * @return ?string
      */
     public function getManageClickwrapsMode()
     {
@@ -2533,7 +2593,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets manage_clickwraps_mode
      *
-     * @param string $manage_clickwraps_mode 
+     * @param ?string $manage_clickwraps_mode 
      *
      * @return $this
      */
@@ -2571,7 +2631,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets modified_by
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedBy()
     {
@@ -2581,7 +2641,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by
      *
-     * @param string $modified_by 
+     * @param ?string $modified_by 
      *
      * @return $this
      */
@@ -2619,7 +2679,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets modified_date
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedDate()
     {
@@ -2629,7 +2689,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date
      *
-     * @param string $modified_date 
+     * @param ?string $modified_date 
      *
      * @return $this
      */
@@ -2667,7 +2727,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets modified_page
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedPage()
     {
@@ -2677,7 +2737,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets modified_page
      *
-     * @param string $modified_page 
+     * @param ?string $modified_page 
      *
      * @return $this
      */
@@ -2715,7 +2775,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets new_send_ui
      *
-     * @return string
+     * @return ?string
      */
     public function getNewSendUi()
     {
@@ -2725,7 +2785,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets new_send_ui
      *
-     * @param string $new_send_ui 
+     * @param ?string $new_send_ui 
      *
      * @return $this
      */
@@ -2763,7 +2823,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets power_form_mode
      *
-     * @return string
+     * @return ?string
      */
     public function getPowerFormMode()
     {
@@ -2773,7 +2833,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets power_form_mode
      *
-     * @param string $power_form_mode 
+     * @param ?string $power_form_mode 
      *
      * @return $this
      */
@@ -2811,7 +2871,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_viewed_notification
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientViewedNotification()
     {
@@ -2821,7 +2881,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_viewed_notification
      *
-     * @param string $recipient_viewed_notification 
+     * @param ?string $recipient_viewed_notification 
      *
      * @return $this
      */
@@ -2883,7 +2943,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets self_signed_recipient_email_document
      *
-     * @return string
+     * @return ?string
      */
     public function getSelfSignedRecipientEmailDocument()
     {
@@ -2893,7 +2953,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets self_signed_recipient_email_document
      *
-     * @param string $self_signed_recipient_email_document 
+     * @param ?string $self_signed_recipient_email_document 
      *
      * @return $this
      */
@@ -2979,7 +3039,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_document_include_in_download
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentIncludeInDownload()
     {
@@ -2989,7 +3049,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_document_include_in_download
      *
-     * @param string $supplemental_document_include_in_download 
+     * @param ?string $supplemental_document_include_in_download 
      *
      * @return $this
      */
@@ -3003,7 +3063,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_accept
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustAccept()
     {
@@ -3013,7 +3073,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_accept
      *
-     * @param string $supplemental_documents_must_accept 
+     * @param ?string $supplemental_documents_must_accept 
      *
      * @return $this
      */
@@ -3051,7 +3111,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_read
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustRead()
     {
@@ -3061,7 +3121,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_read
      *
-     * @param string $supplemental_documents_must_read 
+     * @param ?string $supplemental_documents_must_read 
      *
      * @return $this
      */
@@ -3099,7 +3159,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_view
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustView()
     {
@@ -3109,7 +3169,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_view
      *
-     * @param string $supplemental_documents_must_view 
+     * @param ?string $supplemental_documents_must_view 
      *
      * @return $this
      */
@@ -3147,7 +3207,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets template_active_creation
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateActiveCreation()
     {
@@ -3157,7 +3217,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_active_creation
      *
-     * @param string $template_active_creation 
+     * @param ?string $template_active_creation 
      *
      * @return $this
      */
@@ -3195,7 +3255,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets template_apply_notify
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateApplyNotify()
     {
@@ -3205,7 +3265,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_apply_notify
      *
-     * @param string $template_apply_notify 
+     * @param ?string $template_apply_notify 
      *
      * @return $this
      */
@@ -3243,7 +3303,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets template_auto_matching
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateAutoMatching()
     {
@@ -3253,7 +3313,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_auto_matching
      *
-     * @param string $template_auto_matching 
+     * @param ?string $template_auto_matching 
      *
      * @return $this
      */
@@ -3291,7 +3351,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets template_matching_sensitivity
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateMatchingSensitivity()
     {
@@ -3301,7 +3361,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_matching_sensitivity
      *
-     * @param string $template_matching_sensitivity 
+     * @param ?string $template_matching_sensitivity 
      *
      * @return $this
      */
@@ -3339,7 +3399,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets template_page_level_matching
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplatePageLevelMatching()
     {
@@ -3349,7 +3409,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_page_level_matching
      *
-     * @param string $template_page_level_matching 
+     * @param ?string $template_page_level_matching 
      *
      * @return $this
      */
@@ -3387,7 +3447,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets timezone_dst
      *
-     * @return string
+     * @return ?string
      */
     public function getTimezoneDst()
     {
@@ -3397,7 +3457,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_dst
      *
-     * @param string $timezone_dst 
+     * @param ?string $timezone_dst 
      *
      * @return $this
      */
@@ -3435,7 +3495,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets timezone_mask
      *
-     * @return string
+     * @return ?string
      */
     public function getTimezoneMask()
     {
@@ -3445,7 +3505,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_mask
      *
-     * @param string $timezone_mask 
+     * @param ?string $timezone_mask 
      *
      * @return $this
      */
@@ -3483,7 +3543,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets timezone_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getTimezoneOffset()
     {
@@ -3493,7 +3553,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_offset
      *
-     * @param string $timezone_offset 
+     * @param ?string $timezone_offset 
      *
      * @return $this
      */
@@ -3531,7 +3591,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets timezone_sending_pref
      *
-     * @return string
+     * @return ?string
      */
     public function getTimezoneSendingPref()
     {
@@ -3541,7 +3601,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_sending_pref
      *
-     * @param string $timezone_sending_pref 
+     * @param ?string $timezone_sending_pref 
      *
      * @return $this
      */
@@ -3579,7 +3639,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets timezone_signing_pref
      *
-     * @return string
+     * @return ?string
      */
     public function getTimezoneSigningPref()
     {
@@ -3589,7 +3649,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_signing_pref
      *
-     * @param string $timezone_signing_pref 
+     * @param ?string $timezone_signing_pref 
      *
      * @return $this
      */
@@ -3627,7 +3687,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_point_site_name_url
      *
-     * @return string
+     * @return ?string
      */
     public function getTransactionPointSiteNameUrl()
     {
@@ -3637,7 +3697,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_point_site_name_url
      *
-     * @param string $transaction_point_site_name_url 
+     * @param ?string $transaction_point_site_name_url 
      *
      * @return $this
      */
@@ -3675,7 +3735,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_point_user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getTransactionPointUserName()
     {
@@ -3685,7 +3745,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_point_user_name
      *
-     * @param string $transaction_point_user_name 
+     * @param ?string $transaction_point_user_name 
      *
      * @return $this
      */
@@ -3723,7 +3783,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets vaulting_mode
      *
-     * @return string
+     * @return ?string
      */
     public function getVaultingMode()
     {
@@ -3733,7 +3793,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets vaulting_mode
      *
-     * @param string $vaulting_mode 
+     * @param ?string $vaulting_mode 
      *
      * @return $this
      */

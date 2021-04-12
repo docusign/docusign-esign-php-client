@@ -59,27 +59,29 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'add_ons' => '\DocuSign\eSign\Model\AddOn[]',
-        'can_cancel_renewal' => 'string',
-        'can_upgrade' => 'string',
-        'currency_code' => 'string',
+        'app_store_receipt_expiration_date' => '?string',
+        'app_store_receipt_purchase_date' => '?string',
+        'can_cancel_renewal' => '?string',
+        'can_upgrade' => '?string',
+        'currency_code' => '?string',
         'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
-        'enable_support' => 'string',
-        'included_seats' => 'string',
-        'incremental_seats' => 'string',
-        'is_downgrade' => 'string',
-        'notification_type' => 'string',
-        'other_discount_percent' => 'string',
-        'payment_cycle' => 'string',
-        'payment_method' => 'string',
-        'per_seat_price' => 'string',
-        'plan_classification' => 'string',
+        'enable_support' => '?string',
+        'included_seats' => '?string',
+        'incremental_seats' => '?string',
+        'is_downgrade' => '?string',
+        'notification_type' => '?string',
+        'other_discount_percent' => '?string',
+        'payment_cycle' => '?string',
+        'payment_method' => '?string',
+        'per_seat_price' => '?string',
+        'plan_classification' => '?string',
         'plan_feature_sets' => '\DocuSign\eSign\Model\FeatureSet[]',
-        'plan_id' => 'string',
-        'plan_name' => 'string',
-        'renewal_status' => 'string',
+        'plan_id' => '?string',
+        'plan_name' => '?string',
+        'renewal_status' => '?string',
         'seat_discounts' => '\DocuSign\eSign\Model\SeatDiscount[]',
-        'support_incident_fee' => 'string',
-        'support_plan_fee' => 'string'
+        'support_incident_fee' => '?string',
+        'support_plan_fee' => '?string'
     ];
 
     /**
@@ -89,6 +91,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'add_ons' => null,
+        'app_store_receipt_expiration_date' => null,
+        'app_store_receipt_purchase_date' => null,
         'can_cancel_renewal' => null,
         'can_upgrade' => null,
         'currency_code' => null,
@@ -140,6 +144,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'add_ons' => 'addOns',
+        'app_store_receipt_expiration_date' => 'appStoreReceiptExpirationDate',
+        'app_store_receipt_purchase_date' => 'appStoreReceiptPurchaseDate',
         'can_cancel_renewal' => 'canCancelRenewal',
         'can_upgrade' => 'canUpgrade',
         'currency_code' => 'currencyCode',
@@ -170,6 +176,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'add_ons' => 'setAddOns',
+        'app_store_receipt_expiration_date' => 'setAppStoreReceiptExpirationDate',
+        'app_store_receipt_purchase_date' => 'setAppStoreReceiptPurchaseDate',
         'can_cancel_renewal' => 'setCanCancelRenewal',
         'can_upgrade' => 'setCanUpgrade',
         'currency_code' => 'setCurrencyCode',
@@ -200,6 +208,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'add_ons' => 'getAddOns',
+        'app_store_receipt_expiration_date' => 'getAppStoreReceiptExpirationDate',
+        'app_store_receipt_purchase_date' => 'getAppStoreReceiptPurchaseDate',
         'can_cancel_renewal' => 'getCanCancelRenewal',
         'can_upgrade' => 'getCanUpgrade',
         'currency_code' => 'getCurrencyCode',
@@ -284,6 +294,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['add_ons'] = isset($data['add_ons']) ? $data['add_ons'] : null;
+        $this->container['app_store_receipt_expiration_date'] = isset($data['app_store_receipt_expiration_date']) ? $data['app_store_receipt_expiration_date'] : null;
+        $this->container['app_store_receipt_purchase_date'] = isset($data['app_store_receipt_purchase_date']) ? $data['app_store_receipt_purchase_date'] : null;
         $this->container['can_cancel_renewal'] = isset($data['can_cancel_renewal']) ? $data['can_cancel_renewal'] : null;
         $this->container['can_upgrade'] = isset($data['can_upgrade']) ? $data['can_upgrade'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
@@ -356,9 +368,57 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets app_store_receipt_expiration_date
+     *
+     * @return ?string
+     */
+    public function getAppStoreReceiptExpirationDate()
+    {
+        return $this->container['app_store_receipt_expiration_date'];
+    }
+
+    /**
+     * Sets app_store_receipt_expiration_date
+     *
+     * @param ?string $app_store_receipt_expiration_date 
+     *
+     * @return $this
+     */
+    public function setAppStoreReceiptExpirationDate($app_store_receipt_expiration_date)
+    {
+        $this->container['app_store_receipt_expiration_date'] = $app_store_receipt_expiration_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_store_receipt_purchase_date
+     *
+     * @return ?string
+     */
+    public function getAppStoreReceiptPurchaseDate()
+    {
+        return $this->container['app_store_receipt_purchase_date'];
+    }
+
+    /**
+     * Sets app_store_receipt_purchase_date
+     *
+     * @param ?string $app_store_receipt_purchase_date 
+     *
+     * @return $this
+     */
+    public function setAppStoreReceiptPurchaseDate($app_store_receipt_purchase_date)
+    {
+        $this->container['app_store_receipt_purchase_date'] = $app_store_receipt_purchase_date;
+
+        return $this;
+    }
+
+    /**
      * Gets can_cancel_renewal
      *
-     * @return string
+     * @return ?string
      */
     public function getCanCancelRenewal()
     {
@@ -368,7 +428,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets can_cancel_renewal
      *
-     * @param string $can_cancel_renewal Reserved: TBD
+     * @param ?string $can_cancel_renewal Reserved: TBD
      *
      * @return $this
      */
@@ -382,7 +442,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets can_upgrade
      *
-     * @return string
+     * @return ?string
      */
     public function getCanUpgrade()
     {
@@ -392,7 +452,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets can_upgrade
      *
-     * @param string $can_upgrade When set to **true**, specifies that you can upgrade the account through the API.
+     * @param ?string $can_upgrade When set to **true**, specifies that you can upgrade the account through the API.
      *
      * @return $this
      */
@@ -406,7 +466,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -416,7 +476,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the ISO currency code for the account.
+     * @param ?string $currency_code Specifies the ISO currency code for the account.
      *
      * @return $this
      */
@@ -454,7 +514,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets enable_support
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSupport()
     {
@@ -464,7 +524,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets enable_support
      *
-     * @param string $enable_support When set to **true**, then customer support is provided as part of the account plan.
+     * @param ?string $enable_support When set to **true**, then customer support is provided as part of the account plan.
      *
      * @return $this
      */
@@ -478,7 +538,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets included_seats
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludedSeats()
     {
@@ -488,7 +548,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets included_seats
      *
-     * @param string $included_seats The number of seats (users) included.
+     * @param ?string $included_seats The number of seats (users) included.
      *
      * @return $this
      */
@@ -502,7 +562,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets incremental_seats
      *
-     * @return string
+     * @return ?string
      */
     public function getIncrementalSeats()
     {
@@ -512,7 +572,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets incremental_seats
      *
-     * @param string $incremental_seats Reserved: TBD
+     * @param ?string $incremental_seats Reserved: TBD
      *
      * @return $this
      */
@@ -526,7 +586,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets is_downgrade
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDowngrade()
     {
@@ -536,7 +596,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets is_downgrade
      *
-     * @param string $is_downgrade 
+     * @param ?string $is_downgrade 
      *
      * @return $this
      */
@@ -550,7 +610,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets notification_type
      *
-     * @return string
+     * @return ?string
      */
     public function getNotificationType()
     {
@@ -560,7 +620,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets notification_type
      *
-     * @param string $notification_type 
+     * @param ?string $notification_type 
      *
      * @return $this
      */
@@ -574,7 +634,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets other_discount_percent
      *
-     * @return string
+     * @return ?string
      */
     public function getOtherDiscountPercent()
     {
@@ -584,7 +644,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets other_discount_percent
      *
-     * @param string $other_discount_percent Any other percentage discount for the plan.
+     * @param ?string $other_discount_percent Any other percentage discount for the plan.
      *
      * @return $this
      */
@@ -598,7 +658,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets payment_cycle
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentCycle()
     {
@@ -608,7 +668,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets payment_cycle
      *
-     * @param string $payment_cycle 
+     * @param ?string $payment_cycle 
      *
      * @return $this
      */
@@ -622,7 +682,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -632,7 +692,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method The payment method used with the plan. The possible values are: CreditCard, PurchaseOrder, Premium, or Freemium.
+     * @param ?string $payment_method The payment method used with the plan. The possible values are: CreditCard, PurchaseOrder, Premium, or Freemium.
      *
      * @return $this
      */
@@ -646,7 +706,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets per_seat_price
      *
-     * @return string
+     * @return ?string
      */
     public function getPerSeatPrice()
     {
@@ -656,7 +716,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets per_seat_price
      *
-     * @param string $per_seat_price 
+     * @param ?string $per_seat_price 
      *
      * @return $this
      */
@@ -670,7 +730,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_classification
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanClassification()
     {
@@ -680,7 +740,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_classification
      *
-     * @param string $plan_classification Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
+     * @param ?string $plan_classification Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
      *
      * @return $this
      */
@@ -718,7 +778,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanId()
     {
@@ -728,7 +788,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_id
      *
-     * @param string $plan_id 
+     * @param ?string $plan_id 
      *
      * @return $this
      */
@@ -742,7 +802,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanName()
     {
@@ -752,7 +812,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_name
      *
-     * @param string $plan_name The name of the Billing Plan.
+     * @param ?string $plan_name The name of the Billing Plan.
      *
      * @return $this
      */
@@ -766,7 +826,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets renewal_status
      *
-     * @return string
+     * @return ?string
      */
     public function getRenewalStatus()
     {
@@ -776,7 +836,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets renewal_status
      *
-     * @param string $renewal_status The renewal status for the account. The acceptable values are:  * auto: The account automatically renews. * queued_for_close: Account will be closed at the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded at the billingPeriodEndDate.
+     * @param ?string $renewal_status The renewal status for the account. The acceptable values are:  * auto: The account automatically renews. * queued_for_close: Account will be closed at the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded at the billingPeriodEndDate.
      *
      * @return $this
      */
@@ -814,7 +874,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets support_incident_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSupportIncidentFee()
     {
@@ -824,7 +884,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets support_incident_fee
      *
-     * @param string $support_incident_fee The support incident fee charged for each support incident.
+     * @param ?string $support_incident_fee The support incident fee charged for each support incident.
      *
      * @return $this
      */
@@ -838,7 +898,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets support_plan_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSupportPlanFee()
     {
@@ -848,7 +908,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets support_plan_fee
      *
-     * @param string $support_plan_fee The support plan fee charged for this plan.
+     * @param ?string $support_plan_fee The support plan fee charged for this plan.
      *
      * @return $this
      */

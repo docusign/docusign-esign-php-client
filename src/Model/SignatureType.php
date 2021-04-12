@@ -57,8 +57,8 @@ class SignatureType implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_default' => 'string',
-        'type' => 'string'
+        'is_default' => '?string',
+        'type' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SignatureType implements ModelInterface, ArrayAccess
     /**
      * Gets is_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDefault()
     {
@@ -223,7 +223,7 @@ class SignatureType implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param string $is_default 
+     * @param ?string $is_default 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SignatureType implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -247,7 +247,7 @@ class SignatureType implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */

@@ -58,17 +58,17 @@ class AccountAddress implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address1' => 'string',
-        'address2' => 'string',
-        'city' => 'string',
-        'country' => 'string',
-        'email' => 'string',
-        'fax' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'phone' => 'string',
-        'postal_code' => 'string',
-        'state' => 'string',
+        'address1' => '?string',
+        'address2' => '?string',
+        'city' => '?string',
+        'country' => '?string',
+        'email' => '?string',
+        'fax' => '?string',
+        'first_name' => '?string',
+        'last_name' => '?string',
+        'phone' => '?string',
+        'postal_code' => '?string',
+        'state' => '?string',
         'supported_countries' => '\DocuSign\eSign\Model\Country[]'
     ];
 
@@ -274,7 +274,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets address1
      *
-     * @return string
+     * @return ?string
      */
     public function getAddress1()
     {
@@ -284,7 +284,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets address1
      *
-     * @param string $address1 First Line of the address. Maximum length: 100 characters.
+     * @param ?string $address1 First Line of the address. Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets address2
      *
-     * @return string
+     * @return ?string
      */
     public function getAddress2()
     {
@@ -308,7 +308,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets address2
      *
-     * @param string $address2 Second Line of the address. Maximum length: 100 characters.
+     * @param ?string $address2 Second Line of the address. Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets city
      *
-     * @return string
+     * @return ?string
      */
     public function getCity()
     {
@@ -332,7 +332,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets city
      *
-     * @param string $city The city value of the address.
+     * @param ?string $city The city value of the address.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return string
+     * @return ?string
      */
     public function getCountry()
     {
@@ -356,7 +356,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country Specifies the country associated with the address.
+     * @param ?string $country Specifies the country associated with the address.
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -380,7 +380,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets fax
      *
-     * @return string
+     * @return ?string
      */
     public function getFax()
     {
@@ -404,7 +404,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets fax
      *
-     * @param string $fax 
+     * @param ?string $fax 
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets first_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFirstName()
     {
@@ -428,7 +428,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets first_name
      *
-     * @param string $first_name The user's first name.  Maximum Length: 50 characters.
+     * @param ?string $first_name The user's first name.  Maximum Length: 50 characters.
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets last_name
      *
-     * @return string
+     * @return ?string
      */
     public function getLastName()
     {
@@ -452,7 +452,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param string $last_name 
+     * @param ?string $last_name 
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets phone
      *
-     * @return string
+     * @return ?string
      */
     public function getPhone()
     {
@@ -476,7 +476,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string $phone 
+     * @param ?string $phone 
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets postal_code
      *
-     * @return string
+     * @return ?string
      */
     public function getPostalCode()
     {
@@ -500,7 +500,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets postal_code
      *
-     * @param string $postal_code 
+     * @param ?string $postal_code 
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return string
+     * @return ?string
      */
     public function getState()
     {
@@ -524,7 +524,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param string $state The state or province associated with the address.
+     * @param ?string $state The state or province associated with the address.
      *
      * @return $this
      */

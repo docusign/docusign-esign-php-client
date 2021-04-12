@@ -57,16 +57,16 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'bcc_email_archive_id' => 'string',
-        'created' => 'string',
+        'account_id' => '?string',
+        'bcc_email_archive_id' => '?string',
+        'created' => '?string',
         'created_by' => '\DocuSign\eSign\Model\UserInfo',
-        'email' => 'string',
-        'email_notification_id' => 'string',
-        'modified' => 'string',
+        'email' => '?string',
+        'email_notification_id' => '?string',
+        'modified' => '?string',
         'modified_by' => '\DocuSign\eSign\Model\UserInfo',
-        'status' => 'string',
-        'uri' => 'string'
+        'status' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -261,7 +261,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -271,7 +271,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets bcc_email_archive_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBccEmailArchiveId()
     {
@@ -295,7 +295,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets bcc_email_archive_id
      *
-     * @param string $bcc_email_archive_id 
+     * @param ?string $bcc_email_archive_id 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -319,7 +319,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created 
+     * @param ?string $created 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -367,7 +367,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets email_notification_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailNotificationId()
     {
@@ -391,7 +391,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification_id
      *
-     * @param string $email_notification_id 
+     * @param ?string $email_notification_id 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets modified
      *
-     * @return string
+     * @return ?string
      */
     public function getModified()
     {
@@ -415,7 +415,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param string $modified 
+     * @param ?string $modified 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -463,7 +463,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -487,7 +487,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

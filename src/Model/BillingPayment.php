@@ -58,9 +58,9 @@ class BillingPayment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount' => 'string',
-        'invoice_id' => 'string',
-        'payment_id' => 'string'
+        'amount' => '?string',
+        'invoice_id' => '?string',
+        'payment_id' => '?string'
     ];
 
     /**
@@ -220,7 +220,7 @@ class BillingPayment implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return string
+     * @return ?string
      */
     public function getAmount()
     {
@@ -230,7 +230,7 @@ class BillingPayment implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param string $amount Reserved: TBD
+     * @param ?string $amount Reserved: TBD
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class BillingPayment implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_id
      *
-     * @return string
+     * @return ?string
      */
     public function getInvoiceId()
     {
@@ -254,7 +254,7 @@ class BillingPayment implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_id
      *
-     * @param string $invoice_id Reserved: TBD
+     * @param ?string $invoice_id Reserved: TBD
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class BillingPayment implements ModelInterface, ArrayAccess
     /**
      * Gets payment_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentId()
     {
@@ -278,7 +278,7 @@ class BillingPayment implements ModelInterface, ArrayAccess
     /**
      * Sets payment_id
      *
-     * @param string $payment_id 
+     * @param ?string $payment_id 
      *
      * @return $this
      */

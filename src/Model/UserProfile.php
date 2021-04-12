@@ -59,16 +59,16 @@ class UserProfile implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'address' => '\DocuSign\eSign\Model\AddressInformation',
         'authentication_methods' => '\DocuSign\eSign\Model\AuthenticationMethod[]',
-        'company_name' => 'string',
-        'display_organization_info' => 'string',
-        'display_personal_info' => 'string',
-        'display_profile' => 'string',
-        'display_usage_history' => 'string',
-        'profile_image_uri' => 'string',
-        'title' => 'string',
+        'company_name' => '?string',
+        'display_organization_info' => '?string',
+        'display_personal_info' => '?string',
+        'display_profile' => '?string',
+        'display_usage_history' => '?string',
+        'profile_image_uri' => '?string',
+        'title' => '?string',
         'usage_history' => '\DocuSign\eSign\Model\UsageHistory',
         'user_details' => '\DocuSign\eSign\Model\UserInformation',
-        'user_profile_last_modified_date' => 'string'
+        'user_profile_last_modified_date' => '?string'
     ];
 
     /**
@@ -321,7 +321,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets company_name
      *
-     * @return string
+     * @return ?string
      */
     public function getCompanyName()
     {
@@ -331,7 +331,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets company_name
      *
-     * @param string $company_name The name of the user's Company.
+     * @param ?string $company_name The name of the user's Company.
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets display_organization_info
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayOrganizationInfo()
     {
@@ -355,7 +355,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets display_organization_info
      *
-     * @param string $display_organization_info When set to **true**, the user's company and title information are shown on the ID card.
+     * @param ?string $display_organization_info When set to **true**, the user's company and title information are shown on the ID card.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets display_personal_info
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayPersonalInfo()
     {
@@ -379,7 +379,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets display_personal_info
      *
-     * @param string $display_personal_info When set to **true**, the user's Address and Phone number are shown on the ID card.
+     * @param ?string $display_personal_info When set to **true**, the user's Address and Phone number are shown on the ID card.
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets display_profile
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayProfile()
     {
@@ -403,7 +403,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets display_profile
      *
-     * @param string $display_profile When set to **true**, the user's ID card can be viewed from signed documents and envelope history.
+     * @param ?string $display_profile When set to **true**, the user's ID card can be viewed from signed documents and envelope history.
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets display_usage_history
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayUsageHistory()
     {
@@ -427,7 +427,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets display_usage_history
      *
-     * @param string $display_usage_history When set to **true**, the user's usage information is shown on the ID card.
+     * @param ?string $display_usage_history When set to **true**, the user's usage information is shown on the ID card.
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets profile_image_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getProfileImageUri()
     {
@@ -451,7 +451,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets profile_image_uri
      *
-     * @param string $profile_image_uri 
+     * @param ?string $profile_image_uri 
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets title
      *
-     * @return string
+     * @return ?string
      */
     public function getTitle()
     {
@@ -475,7 +475,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets title
      *
-     * @param string $title 
+     * @param ?string $title 
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Gets user_profile_last_modified_date
      *
-     * @return string
+     * @return ?string
      */
     public function getUserProfileLastModifiedDate()
     {
@@ -547,7 +547,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets user_profile_last_modified_date
      *
-     * @param string $user_profile_last_modified_date 
+     * @param ?string $user_profile_last_modified_date 
      *
      * @return $this
      */

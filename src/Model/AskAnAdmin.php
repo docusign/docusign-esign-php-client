@@ -57,10 +57,10 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
-        'message' => 'string',
-        'name' => 'string',
-        'phone' => 'string'
+        'email' => '?string',
+        'message' => '?string',
+        'name' => '?string',
+        'phone' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -235,7 +235,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return string
+     * @return ?string
      */
     public function getMessage()
     {
@@ -259,7 +259,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message 
+     * @param ?string $message 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -283,7 +283,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Gets phone
      *
-     * @return string
+     * @return ?string
      */
     public function getPhone()
     {
@@ -307,7 +307,7 @@ class AskAnAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string $phone 
+     * @param ?string $phone 
      *
      * @return $this
      */

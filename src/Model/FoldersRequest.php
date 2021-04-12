@@ -57,9 +57,9 @@ class FoldersRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_ids' => 'string[]',
+        'envelope_ids' => '?string[]',
         'folders' => '\DocuSign\eSign\Model\Folder[]',
-        'from_folder_id' => 'string'
+        'from_folder_id' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class FoldersRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_ids
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getEnvelopeIds()
     {
@@ -229,7 +229,7 @@ class FoldersRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_ids
      *
-     * @param string[] $envelope_ids 
+     * @param ?string[] $envelope_ids 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class FoldersRequest implements ModelInterface, ArrayAccess
     /**
      * Gets from_folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFromFolderId()
     {
@@ -277,7 +277,7 @@ class FoldersRequest implements ModelInterface, ArrayAccess
     /**
      * Sets from_folder_id
      *
-     * @param string $from_folder_id The folder ID the envelope is being moved from.
+     * @param ?string $from_folder_id The folder ID the envelope is being moved from.
      *
      * @return $this
      */

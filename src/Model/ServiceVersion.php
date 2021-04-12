@@ -57,8 +57,8 @@ class ServiceVersion implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'version' => 'string',
-        'version_url' => 'string'
+        'version' => '?string',
+        'version_url' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ServiceVersion implements ModelInterface, ArrayAccess
     /**
      * Gets version
      *
-     * @return string
+     * @return ?string
      */
     public function getVersion()
     {
@@ -223,7 +223,7 @@ class ServiceVersion implements ModelInterface, ArrayAccess
     /**
      * Sets version
      *
-     * @param string $version The version of the rest API.
+     * @param ?string $version The version of the rest API.
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ServiceVersion implements ModelInterface, ArrayAccess
     /**
      * Gets version_url
      *
-     * @return string
+     * @return ?string
      */
     public function getVersionUrl()
     {
@@ -247,7 +247,7 @@ class ServiceVersion implements ModelInterface, ArrayAccess
     /**
      * Sets version_url
      *
-     * @param string $version_url 
+     * @param ?string $version_url 
      *
      * @return $this
      */

@@ -57,128 +57,131 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_code_required' => 'string',
-        'access_codes_attempted' => 'string',
-        'access_codes_failed' => 'string',
-        'account_id' => 'string',
-        'authentication_category' => 'string',
-        'authentication_success' => 'string',
-        'authentication_type' => 'string',
-        'average_time_to_complete_seconds' => 'string',
-        'avg_complete_seconds' => 'string',
-        'completed' => 'string',
-        'completed_ts' => 'string',
-        'created_date' => 'string',
-        'custom_field' => 'string',
-        'declined_date' => 'string',
-        'declined_reason' => 'string',
-        'delivered_date' => 'string',
-        'envelope_count' => 'string',
-        'envelope_creator' => 'string',
-        'envelope_id' => 'string',
-        'envelope_initial_send_ts' => 'string',
-        'envelopes_billed' => 'string',
-        'envelopes_completed' => 'string',
-        'envelopes_completed_count' => 'string',
-        'envelopes_declined' => 'string',
-        'envelopes_sent' => 'string',
-        'envelopes_sent_count' => 'string',
-        'envelopes_voided' => 'string',
-        'envelope_voided_reason' => 'string',
-        'eod_document_description' => 'string',
-        'eod_document_name' => 'string',
-        'eod_document_profile_id' => 'string',
-        'eod_transaction_id' => 'string',
-        'eod_transaction_name' => 'string',
-        'event_date' => 'string',
-        'expiration_date' => 'string',
-        'expired_ts' => 'string',
-        'failures' => 'string',
-        'failure_vendor_code' => 'string',
-        'failure_vendor_reason' => 'string',
-        'first_send_ts' => 'string',
-        'group_id' => 'string',
-        'group_name' => 'string',
-        'hours_to_complete_end' => 'string',
-        'hours_to_complete_start' => 'string',
-        'id_checks_attempted' => 'string',
-        'id_checks_failed' => 'string',
-        'initial_send_ts' => 'string',
-        'ip_address' => 'string',
-        'last_activity' => 'string',
-        'last_activity_date' => 'string',
-        'last_sent_date' => 'string',
-        'not_signed' => 'string',
-        'number_of_authenticated_recipients' => 'string',
-        'number_of_completed_signatures' => 'string',
-        'number_of_documents' => 'string',
-        'number_of_pages' => 'string',
-        'number_of_recipients' => 'string',
-        'number_of_sends' => 'string',
-        'number_of_signers' => 'string',
-        'number_of_total_documents' => 'string',
-        'number_of_total_pages' => 'string',
-        'number_of_total_signers' => 'string',
-        'number_of_unique_senders' => 'string',
-        'number_total_recipients' => 'string',
-        'period_end' => 'string',
-        'period_start' => 'string',
-        'phone_calls_attempted' => 'string',
-        'phone_calls_failed' => 'string',
-        'reason_for_declining' => 'string',
-        'reason_for_voiding' => 'string',
-        'reassign_reason' => 'string',
-        'received' => 'string',
-        'recipient' => 'string',
-        'recipient_action' => 'string',
-        'recipient_company_name' => 'string',
-        'recipient_country' => 'string',
-        'recipient_email' => 'string',
-        'recipient_id' => 'string',
-        'recipient_name' => 'string',
-        'recipient_template_role_name' => 'string',
-        'recipient_title' => 'string',
-        'recipient_type' => 'string',
-        'recipient_user_id' => 'string',
-        'remaining_signatures' => 'string',
-        'routing_order' => 'string',
-        'sender_account_id' => 'string',
-        'sender_company_name' => 'string',
-        'sender_country' => 'string',
-        'sender_email' => 'string',
-        'sender_ip_address' => 'string',
-        'sender_job_title' => 'string',
-        'sender_name' => 'string',
-        'sender_user_id' => 'string',
-        'sign_date' => 'string',
-        'signed' => 'string',
-        'signed_date' => 'string',
-        'signed_on_mobile' => 'string',
-        'signed_on_paper' => 'string',
-        'signer_list' => 'string',
-        'status' => 'string',
-        'status_changed_date' => 'string',
-        'status_changed_ts' => 'string',
-        'subject' => 'string',
-        'successes' => 'string',
-        'templates_created' => 'string',
-        'templates_created_count' => 'string',
-        'terminal_status_date' => 'string',
-        'time_to_complete_seconds' => 'string',
-        'time_to_deliver' => 'string',
-        'total_documents' => 'string',
-        'total_envelopes' => 'string',
-        'total_pages' => 'string',
-        'total_recipients' => 'string',
-        'total_signers' => 'string',
-        'unique_senders' => 'string',
-        'user_account_email' => 'string',
-        'user_account_name' => 'string',
-        'user_account_status' => 'string',
-        'user_count' => 'string',
-        'user_id' => 'string',
-        'view_date' => 'string',
-        'voided_ts' => 'string'
+        'access_code_required' => '?string',
+        'access_codes_attempted' => '?string',
+        'access_codes_failed' => '?string',
+        'account_id' => '?string',
+        'authentication_category' => '?string',
+        'authentication_success' => '?string',
+        'authentication_type' => '?string',
+        'average_time_to_complete_seconds' => '?string',
+        'avg_complete_seconds' => '?string',
+        'completed' => '?string',
+        'completed_ts' => '?string',
+        'created_date' => '?string',
+        'custom_field' => '?string',
+        'declined_date' => '?string',
+        'declined_reason' => '?string',
+        'delivered_date' => '?string',
+        'envelope_count' => '?string',
+        'envelope_creator' => '?string',
+        'envelope_id' => '?string',
+        'envelope_initial_send_ts' => '?string',
+        'envelopes_billed' => '?string',
+        'envelopes_completed' => '?string',
+        'envelopes_completed_count' => '?string',
+        'envelopes_declined' => '?string',
+        'envelopes_sent' => '?string',
+        'envelopes_sent_count' => '?string',
+        'envelopes_voided' => '?string',
+        'envelope_voided_reason' => '?string',
+        'eod_document_description' => '?string',
+        'eod_document_name' => '?string',
+        'eod_document_profile_id' => '?string',
+        'eod_transaction_id' => '?string',
+        'eod_transaction_name' => '?string',
+        'event_date' => '?string',
+        'expiration_date' => '?string',
+        'expired_ts' => '?string',
+        'failure_reason' => '?string',
+        'failures' => '?string',
+        'failure_vendor_code' => '?string',
+        'failure_vendor_reason' => '?string',
+        'first_send_ts' => '?string',
+        'group_id' => '?string',
+        'group_name' => '?string',
+        'hours_to_complete_end' => '?string',
+        'hours_to_complete_start' => '?string',
+        'id_checks_attempted' => '?string',
+        'id_checks_failed' => '?string',
+        'initial_send_ts' => '?string',
+        'ip_address' => '?string',
+        'last_activity' => '?string',
+        'last_activity_date' => '?string',
+        'last_sent_date' => '?string',
+        'not_signed' => '?string',
+        'number_of_authenticated_recipients' => '?string',
+        'number_of_completed_signatures' => '?string',
+        'number_of_documents' => '?string',
+        'number_of_pages' => '?string',
+        'number_of_recipients' => '?string',
+        'number_of_sends' => '?string',
+        'number_of_signers' => '?string',
+        'number_of_total_documents' => '?string',
+        'number_of_total_pages' => '?string',
+        'number_of_total_signers' => '?string',
+        'number_of_unique_senders' => '?string',
+        'number_total_recipients' => '?string',
+        'period_end' => '?string',
+        'period_start' => '?string',
+        'phone_calls_attempted' => '?string',
+        'phone_calls_failed' => '?string',
+        'reason_for_declining' => '?string',
+        'reason_for_voiding' => '?string',
+        'reassign_reason' => '?string',
+        'received' => '?string',
+        'recipient' => '?string',
+        'recipient_action' => '?string',
+        'recipient_company_name' => '?string',
+        'recipient_country' => '?string',
+        'recipient_email' => '?string',
+        'recipient_id' => '?string',
+        'recipient_name' => '?string',
+        'recipient_template_role_name' => '?string',
+        'recipient_title' => '?string',
+        'recipient_type' => '?string',
+        'recipient_user_id' => '?string',
+        'remaining_signatures' => '?string',
+        'routing_order' => '?string',
+        'sender_account_id' => '?string',
+        'sender_company_name' => '?string',
+        'sender_country' => '?string',
+        'sender_email' => '?string',
+        'sender_ip_address' => '?string',
+        'sender_job_title' => '?string',
+        'sender_name' => '?string',
+        'sender_user_id' => '?string',
+        'sign_date' => '?string',
+        'signed' => '?string',
+        'signed_date' => '?string',
+        'signed_on_mobile' => '?string',
+        'signed_on_paper' => '?string',
+        'signer_list' => '?string',
+        'status' => '?string',
+        'status_changed_date' => '?string',
+        'status_changed_ts' => '?string',
+        'subject' => '?string',
+        'successes' => '?string',
+        'templates_created' => '?string',
+        'templates_created_count' => '?string',
+        'terminal_status_date' => '?string',
+        'time_to_complete_seconds' => '?string',
+        'time_to_deliver' => '?string',
+        'total_documents' => '?string',
+        'total_envelopes' => '?string',
+        'total_pages' => '?string',
+        'total_recipients' => '?string',
+        'total_signers' => '?string',
+        'unique_senders' => '?string',
+        'user_account_email' => '?string',
+        'user_account_name' => '?string',
+        'user_account_status' => '?string',
+        'user_count' => '?string',
+        'user_id' => '?string',
+        'verification_status' => '?string',
+        'verification_type' => '?string',
+        'view_date' => '?string',
+        'voided_ts' => '?string'
     ];
 
     /**
@@ -223,6 +226,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'event_date' => null,
         'expiration_date' => null,
         'expired_ts' => null,
+        'failure_reason' => null,
         'failures' => null,
         'failure_vendor_code' => null,
         'failure_vendor_reason' => null,
@@ -307,6 +311,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'user_account_status' => null,
         'user_count' => null,
         'user_id' => null,
+        'verification_status' => null,
+        'verification_type' => null,
         'view_date' => null,
         'voided_ts' => null
     ];
@@ -374,6 +380,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'event_date' => 'eventDate',
         'expiration_date' => 'expirationDate',
         'expired_ts' => 'expiredTs',
+        'failure_reason' => 'failureReason',
         'failures' => 'failures',
         'failure_vendor_code' => 'failureVendorCode',
         'failure_vendor_reason' => 'failureVendorReason',
@@ -458,6 +465,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'user_account_status' => 'userAccountStatus',
         'user_count' => 'userCount',
         'user_id' => 'userId',
+        'verification_status' => 'verificationStatus',
+        'verification_type' => 'verificationType',
         'view_date' => 'viewDate',
         'voided_ts' => 'voidedTs'
     ];
@@ -504,6 +513,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'event_date' => 'setEventDate',
         'expiration_date' => 'setExpirationDate',
         'expired_ts' => 'setExpiredTs',
+        'failure_reason' => 'setFailureReason',
         'failures' => 'setFailures',
         'failure_vendor_code' => 'setFailureVendorCode',
         'failure_vendor_reason' => 'setFailureVendorReason',
@@ -588,6 +598,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'user_account_status' => 'setUserAccountStatus',
         'user_count' => 'setUserCount',
         'user_id' => 'setUserId',
+        'verification_status' => 'setVerificationStatus',
+        'verification_type' => 'setVerificationType',
         'view_date' => 'setViewDate',
         'voided_ts' => 'setVoidedTs'
     ];
@@ -634,6 +646,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'event_date' => 'getEventDate',
         'expiration_date' => 'getExpirationDate',
         'expired_ts' => 'getExpiredTs',
+        'failure_reason' => 'getFailureReason',
         'failures' => 'getFailures',
         'failure_vendor_code' => 'getFailureVendorCode',
         'failure_vendor_reason' => 'getFailureVendorReason',
@@ -718,6 +731,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'user_account_status' => 'getUserAccountStatus',
         'user_count' => 'getUserCount',
         'user_id' => 'getUserId',
+        'verification_status' => 'getVerificationStatus',
+        'verification_type' => 'getVerificationType',
         'view_date' => 'getViewDate',
         'voided_ts' => 'getVoidedTs'
     ];
@@ -818,6 +833,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['event_date'] = isset($data['event_date']) ? $data['event_date'] : null;
         $this->container['expiration_date'] = isset($data['expiration_date']) ? $data['expiration_date'] : null;
         $this->container['expired_ts'] = isset($data['expired_ts']) ? $data['expired_ts'] : null;
+        $this->container['failure_reason'] = isset($data['failure_reason']) ? $data['failure_reason'] : null;
         $this->container['failures'] = isset($data['failures']) ? $data['failures'] : null;
         $this->container['failure_vendor_code'] = isset($data['failure_vendor_code']) ? $data['failure_vendor_code'] : null;
         $this->container['failure_vendor_reason'] = isset($data['failure_vendor_reason']) ? $data['failure_vendor_reason'] : null;
@@ -902,6 +918,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['user_account_status'] = isset($data['user_account_status']) ? $data['user_account_status'] : null;
         $this->container['user_count'] = isset($data['user_count']) ? $data['user_count'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
+        $this->container['verification_type'] = isset($data['verification_type']) ? $data['verification_type'] : null;
         $this->container['view_date'] = isset($data['view_date']) ? $data['view_date'] : null;
         $this->container['voided_ts'] = isset($data['voided_ts']) ? $data['voided_ts'] : null;
     }
@@ -933,7 +951,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets access_code_required
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCodeRequired()
     {
@@ -943,7 +961,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_required
      *
-     * @param string $access_code_required 
+     * @param ?string $access_code_required 
      *
      * @return $this
      */
@@ -957,7 +975,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets access_codes_attempted
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCodesAttempted()
     {
@@ -967,7 +985,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets access_codes_attempted
      *
-     * @param string $access_codes_attempted 
+     * @param ?string $access_codes_attempted 
      *
      * @return $this
      */
@@ -981,7 +999,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets access_codes_failed
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCodesFailed()
     {
@@ -991,7 +1009,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets access_codes_failed
      *
-     * @param string $access_codes_failed 
+     * @param ?string $access_codes_failed 
      *
      * @return $this
      */
@@ -1005,7 +1023,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -1015,7 +1033,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -1029,7 +1047,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_category
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationCategory()
     {
@@ -1039,7 +1057,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_category
      *
-     * @param string $authentication_category 
+     * @param ?string $authentication_category 
      *
      * @return $this
      */
@@ -1053,7 +1071,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_success
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationSuccess()
     {
@@ -1063,7 +1081,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_success
      *
-     * @param string $authentication_success 
+     * @param ?string $authentication_success 
      *
      * @return $this
      */
@@ -1077,7 +1095,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_type
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationType()
     {
@@ -1087,7 +1105,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_type
      *
-     * @param string $authentication_type 
+     * @param ?string $authentication_type 
      *
      * @return $this
      */
@@ -1101,7 +1119,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets average_time_to_complete_seconds
      *
-     * @return string
+     * @return ?string
      */
     public function getAverageTimeToCompleteSeconds()
     {
@@ -1111,7 +1129,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets average_time_to_complete_seconds
      *
-     * @param string $average_time_to_complete_seconds 
+     * @param ?string $average_time_to_complete_seconds 
      *
      * @return $this
      */
@@ -1125,7 +1143,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets avg_complete_seconds
      *
-     * @return string
+     * @return ?string
      */
     public function getAvgCompleteSeconds()
     {
@@ -1135,7 +1153,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets avg_complete_seconds
      *
-     * @param string $avg_complete_seconds 
+     * @param ?string $avg_complete_seconds 
      *
      * @return $this
      */
@@ -1149,7 +1167,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets completed
      *
-     * @return string
+     * @return ?string
      */
     public function getCompleted()
     {
@@ -1159,7 +1177,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets completed
      *
-     * @param string $completed 
+     * @param ?string $completed 
      *
      * @return $this
      */
@@ -1173,7 +1191,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets completed_ts
      *
-     * @return string
+     * @return ?string
      */
     public function getCompletedTs()
     {
@@ -1183,7 +1201,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets completed_ts
      *
-     * @param string $completed_ts 
+     * @param ?string $completed_ts 
      *
      * @return $this
      */
@@ -1197,7 +1215,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets created_date
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDate()
     {
@@ -1207,7 +1225,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param string $created_date 
+     * @param ?string $created_date 
      *
      * @return $this
      */
@@ -1221,7 +1239,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets custom_field
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomField()
     {
@@ -1231,7 +1249,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets custom_field
      *
-     * @param string $custom_field 
+     * @param ?string $custom_field 
      *
      * @return $this
      */
@@ -1245,7 +1263,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets declined_date
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedDate()
     {
@@ -1255,7 +1273,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets declined_date
      *
-     * @param string $declined_date 
+     * @param ?string $declined_date 
      *
      * @return $this
      */
@@ -1269,7 +1287,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets declined_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedReason()
     {
@@ -1279,7 +1297,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets declined_reason
      *
-     * @param string $declined_reason The reason the recipient declined the document.
+     * @param ?string $declined_reason The reason the recipient declined the document.
      *
      * @return $this
      */
@@ -1293,7 +1311,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets delivered_date
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveredDate()
     {
@@ -1303,7 +1321,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets delivered_date
      *
-     * @param string $delivered_date 
+     * @param ?string $delivered_date 
      *
      * @return $this
      */
@@ -1317,7 +1335,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_count
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeCount()
     {
@@ -1327,7 +1345,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_count
      *
-     * @param string $envelope_count 
+     * @param ?string $envelope_count 
      *
      * @return $this
      */
@@ -1341,7 +1359,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_creator
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeCreator()
     {
@@ -1351,7 +1369,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_creator
      *
-     * @param string $envelope_creator 
+     * @param ?string $envelope_creator 
      *
      * @return $this
      */
@@ -1365,7 +1383,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -1375,7 +1393,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -1389,7 +1407,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_initial_send_ts
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeInitialSendTs()
     {
@@ -1399,7 +1417,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_initial_send_ts
      *
-     * @param string $envelope_initial_send_ts 
+     * @param ?string $envelope_initial_send_ts 
      *
      * @return $this
      */
@@ -1413,7 +1431,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_billed
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesBilled()
     {
@@ -1423,7 +1441,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_billed
      *
-     * @param string $envelopes_billed 
+     * @param ?string $envelopes_billed 
      *
      * @return $this
      */
@@ -1437,7 +1455,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_completed
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesCompleted()
     {
@@ -1447,7 +1465,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_completed
      *
-     * @param string $envelopes_completed 
+     * @param ?string $envelopes_completed 
      *
      * @return $this
      */
@@ -1461,7 +1479,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_completed_count
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesCompletedCount()
     {
@@ -1471,7 +1489,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_completed_count
      *
-     * @param string $envelopes_completed_count 
+     * @param ?string $envelopes_completed_count 
      *
      * @return $this
      */
@@ -1485,7 +1503,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_declined
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesDeclined()
     {
@@ -1495,7 +1513,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_declined
      *
-     * @param string $envelopes_declined 
+     * @param ?string $envelopes_declined 
      *
      * @return $this
      */
@@ -1509,7 +1527,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_sent
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesSent()
     {
@@ -1519,7 +1537,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_sent
      *
-     * @param string $envelopes_sent 
+     * @param ?string $envelopes_sent 
      *
      * @return $this
      */
@@ -1533,7 +1551,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_sent_count
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesSentCount()
     {
@@ -1543,7 +1561,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_sent_count
      *
-     * @param string $envelopes_sent_count 
+     * @param ?string $envelopes_sent_count 
      *
      * @return $this
      */
@@ -1557,7 +1575,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelopes_voided
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopesVoided()
     {
@@ -1567,7 +1585,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_voided
      *
-     * @param string $envelopes_voided 
+     * @param ?string $envelopes_voided 
      *
      * @return $this
      */
@@ -1581,7 +1599,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_voided_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeVoidedReason()
     {
@@ -1591,7 +1609,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_voided_reason
      *
-     * @param string $envelope_voided_reason 
+     * @param ?string $envelope_voided_reason 
      *
      * @return $this
      */
@@ -1605,7 +1623,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets eod_document_description
      *
-     * @return string
+     * @return ?string
      */
     public function getEodDocumentDescription()
     {
@@ -1615,7 +1633,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets eod_document_description
      *
-     * @param string $eod_document_description 
+     * @param ?string $eod_document_description 
      *
      * @return $this
      */
@@ -1629,7 +1647,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets eod_document_name
      *
-     * @return string
+     * @return ?string
      */
     public function getEodDocumentName()
     {
@@ -1639,7 +1657,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets eod_document_name
      *
-     * @param string $eod_document_name 
+     * @param ?string $eod_document_name 
      *
      * @return $this
      */
@@ -1653,7 +1671,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets eod_document_profile_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEodDocumentProfileId()
     {
@@ -1663,7 +1681,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets eod_document_profile_id
      *
-     * @param string $eod_document_profile_id 
+     * @param ?string $eod_document_profile_id 
      *
      * @return $this
      */
@@ -1677,7 +1695,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets eod_transaction_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEodTransactionId()
     {
@@ -1687,7 +1705,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets eod_transaction_id
      *
-     * @param string $eod_transaction_id 
+     * @param ?string $eod_transaction_id 
      *
      * @return $this
      */
@@ -1701,7 +1719,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets eod_transaction_name
      *
-     * @return string
+     * @return ?string
      */
     public function getEodTransactionName()
     {
@@ -1711,7 +1729,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets eod_transaction_name
      *
-     * @param string $eod_transaction_name 
+     * @param ?string $eod_transaction_name 
      *
      * @return $this
      */
@@ -1725,7 +1743,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets event_date
      *
-     * @return string
+     * @return ?string
      */
     public function getEventDate()
     {
@@ -1735,7 +1753,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets event_date
      *
-     * @param string $event_date 
+     * @param ?string $event_date 
      *
      * @return $this
      */
@@ -1749,7 +1767,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets expiration_date
      *
-     * @return string
+     * @return ?string
      */
     public function getExpirationDate()
     {
@@ -1759,7 +1777,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets expiration_date
      *
-     * @param string $expiration_date 
+     * @param ?string $expiration_date 
      *
      * @return $this
      */
@@ -1773,7 +1791,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets expired_ts
      *
-     * @return string
+     * @return ?string
      */
     public function getExpiredTs()
     {
@@ -1783,7 +1801,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets expired_ts
      *
-     * @param string $expired_ts 
+     * @param ?string $expired_ts 
      *
      * @return $this
      */
@@ -1795,9 +1813,33 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets failure_reason
+     *
+     * @return ?string
+     */
+    public function getFailureReason()
+    {
+        return $this->container['failure_reason'];
+    }
+
+    /**
+     * Sets failure_reason
+     *
+     * @param ?string $failure_reason 
+     *
+     * @return $this
+     */
+    public function setFailureReason($failure_reason)
+    {
+        $this->container['failure_reason'] = $failure_reason;
+
+        return $this;
+    }
+
+    /**
      * Gets failures
      *
-     * @return string
+     * @return ?string
      */
     public function getFailures()
     {
@@ -1807,7 +1849,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets failures
      *
-     * @param string $failures 
+     * @param ?string $failures 
      *
      * @return $this
      */
@@ -1821,7 +1863,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets failure_vendor_code
      *
-     * @return string
+     * @return ?string
      */
     public function getFailureVendorCode()
     {
@@ -1831,7 +1873,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets failure_vendor_code
      *
-     * @param string $failure_vendor_code 
+     * @param ?string $failure_vendor_code 
      *
      * @return $this
      */
@@ -1845,7 +1887,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets failure_vendor_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getFailureVendorReason()
     {
@@ -1855,7 +1897,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets failure_vendor_reason
      *
-     * @param string $failure_vendor_reason 
+     * @param ?string $failure_vendor_reason 
      *
      * @return $this
      */
@@ -1869,7 +1911,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets first_send_ts
      *
-     * @return string
+     * @return ?string
      */
     public function getFirstSendTs()
     {
@@ -1879,7 +1921,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets first_send_ts
      *
-     * @param string $first_send_ts 
+     * @param ?string $first_send_ts 
      *
      * @return $this
      */
@@ -1893,7 +1935,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupId()
     {
@@ -1903,7 +1945,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets group_id
      *
-     * @param string $group_id 
+     * @param ?string $group_id 
      *
      * @return $this
      */
@@ -1917,7 +1959,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupName()
     {
@@ -1927,7 +1969,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets group_name
      *
-     * @param string $group_name The name of the group.
+     * @param ?string $group_name The name of the group.
      *
      * @return $this
      */
@@ -1941,7 +1983,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets hours_to_complete_end
      *
-     * @return string
+     * @return ?string
      */
     public function getHoursToCompleteEnd()
     {
@@ -1951,7 +1993,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets hours_to_complete_end
      *
-     * @param string $hours_to_complete_end 
+     * @param ?string $hours_to_complete_end 
      *
      * @return $this
      */
@@ -1965,7 +2007,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets hours_to_complete_start
      *
-     * @return string
+     * @return ?string
      */
     public function getHoursToCompleteStart()
     {
@@ -1975,7 +2017,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets hours_to_complete_start
      *
-     * @param string $hours_to_complete_start 
+     * @param ?string $hours_to_complete_start 
      *
      * @return $this
      */
@@ -1989,7 +2031,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets id_checks_attempted
      *
-     * @return string
+     * @return ?string
      */
     public function getIdChecksAttempted()
     {
@@ -1999,7 +2041,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets id_checks_attempted
      *
-     * @param string $id_checks_attempted 
+     * @param ?string $id_checks_attempted 
      *
      * @return $this
      */
@@ -2013,7 +2055,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets id_checks_failed
      *
-     * @return string
+     * @return ?string
      */
     public function getIdChecksFailed()
     {
@@ -2023,7 +2065,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets id_checks_failed
      *
-     * @param string $id_checks_failed 
+     * @param ?string $id_checks_failed 
      *
      * @return $this
      */
@@ -2037,7 +2079,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets initial_send_ts
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialSendTs()
     {
@@ -2047,7 +2089,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets initial_send_ts
      *
-     * @param string $initial_send_ts 
+     * @param ?string $initial_send_ts 
      *
      * @return $this
      */
@@ -2061,7 +2103,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets ip_address
      *
-     * @return string
+     * @return ?string
      */
     public function getIpAddress()
     {
@@ -2071,7 +2113,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets ip_address
      *
-     * @param string $ip_address 
+     * @param ?string $ip_address 
      *
      * @return $this
      */
@@ -2085,7 +2127,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets last_activity
      *
-     * @return string
+     * @return ?string
      */
     public function getLastActivity()
     {
@@ -2095,7 +2137,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets last_activity
      *
-     * @param string $last_activity 
+     * @param ?string $last_activity 
      *
      * @return $this
      */
@@ -2109,7 +2151,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets last_activity_date
      *
-     * @return string
+     * @return ?string
      */
     public function getLastActivityDate()
     {
@@ -2119,7 +2161,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets last_activity_date
      *
-     * @param string $last_activity_date 
+     * @param ?string $last_activity_date 
      *
      * @return $this
      */
@@ -2133,7 +2175,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets last_sent_date
      *
-     * @return string
+     * @return ?string
      */
     public function getLastSentDate()
     {
@@ -2143,7 +2185,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets last_sent_date
      *
-     * @param string $last_sent_date 
+     * @param ?string $last_sent_date 
      *
      * @return $this
      */
@@ -2157,7 +2199,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets not_signed
      *
-     * @return string
+     * @return ?string
      */
     public function getNotSigned()
     {
@@ -2167,7 +2209,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets not_signed
      *
-     * @param string $not_signed 
+     * @param ?string $not_signed 
      *
      * @return $this
      */
@@ -2181,7 +2223,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_authenticated_recipients
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfAuthenticatedRecipients()
     {
@@ -2191,7 +2233,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_authenticated_recipients
      *
-     * @param string $number_of_authenticated_recipients 
+     * @param ?string $number_of_authenticated_recipients 
      *
      * @return $this
      */
@@ -2205,7 +2247,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_completed_signatures
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfCompletedSignatures()
     {
@@ -2215,7 +2257,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_completed_signatures
      *
-     * @param string $number_of_completed_signatures 
+     * @param ?string $number_of_completed_signatures 
      *
      * @return $this
      */
@@ -2229,7 +2271,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfDocuments()
     {
@@ -2239,7 +2281,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_documents
      *
-     * @param string $number_of_documents 
+     * @param ?string $number_of_documents 
      *
      * @return $this
      */
@@ -2253,7 +2295,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_pages
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfPages()
     {
@@ -2263,7 +2305,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_pages
      *
-     * @param string $number_of_pages 
+     * @param ?string $number_of_pages 
      *
      * @return $this
      */
@@ -2277,7 +2319,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_recipients
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfRecipients()
     {
@@ -2287,7 +2329,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_recipients
      *
-     * @param string $number_of_recipients 
+     * @param ?string $number_of_recipients 
      *
      * @return $this
      */
@@ -2301,7 +2343,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_sends
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfSends()
     {
@@ -2311,7 +2353,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_sends
      *
-     * @param string $number_of_sends 
+     * @param ?string $number_of_sends 
      *
      * @return $this
      */
@@ -2325,7 +2367,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_signers
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfSigners()
     {
@@ -2335,7 +2377,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_signers
      *
-     * @param string $number_of_signers 
+     * @param ?string $number_of_signers 
      *
      * @return $this
      */
@@ -2349,7 +2391,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_total_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfTotalDocuments()
     {
@@ -2359,7 +2401,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_total_documents
      *
-     * @param string $number_of_total_documents 
+     * @param ?string $number_of_total_documents 
      *
      * @return $this
      */
@@ -2373,7 +2415,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_total_pages
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfTotalPages()
     {
@@ -2383,7 +2425,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_total_pages
      *
-     * @param string $number_of_total_pages 
+     * @param ?string $number_of_total_pages 
      *
      * @return $this
      */
@@ -2397,7 +2439,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_total_signers
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfTotalSigners()
     {
@@ -2407,7 +2449,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_total_signers
      *
-     * @param string $number_of_total_signers 
+     * @param ?string $number_of_total_signers 
      *
      * @return $this
      */
@@ -2421,7 +2463,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_of_unique_senders
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberOfUniqueSenders()
     {
@@ -2431,7 +2473,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_unique_senders
      *
-     * @param string $number_of_unique_senders 
+     * @param ?string $number_of_unique_senders 
      *
      * @return $this
      */
@@ -2445,7 +2487,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets number_total_recipients
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberTotalRecipients()
     {
@@ -2455,7 +2497,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets number_total_recipients
      *
-     * @param string $number_total_recipients 
+     * @param ?string $number_total_recipients 
      *
      * @return $this
      */
@@ -2469,7 +2511,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets period_end
      *
-     * @return string
+     * @return ?string
      */
     public function getPeriodEnd()
     {
@@ -2479,7 +2521,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets period_end
      *
-     * @param string $period_end 
+     * @param ?string $period_end 
      *
      * @return $this
      */
@@ -2493,7 +2535,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets period_start
      *
-     * @return string
+     * @return ?string
      */
     public function getPeriodStart()
     {
@@ -2503,7 +2545,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets period_start
      *
-     * @param string $period_start 
+     * @param ?string $period_start 
      *
      * @return $this
      */
@@ -2517,7 +2559,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets phone_calls_attempted
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneCallsAttempted()
     {
@@ -2527,7 +2569,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets phone_calls_attempted
      *
-     * @param string $phone_calls_attempted 
+     * @param ?string $phone_calls_attempted 
      *
      * @return $this
      */
@@ -2541,7 +2583,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets phone_calls_failed
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneCallsFailed()
     {
@@ -2551,7 +2593,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets phone_calls_failed
      *
-     * @param string $phone_calls_failed 
+     * @param ?string $phone_calls_failed 
      *
      * @return $this
      */
@@ -2565,7 +2607,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets reason_for_declining
      *
-     * @return string
+     * @return ?string
      */
     public function getReasonForDeclining()
     {
@@ -2575,7 +2617,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets reason_for_declining
      *
-     * @param string $reason_for_declining 
+     * @param ?string $reason_for_declining 
      *
      * @return $this
      */
@@ -2589,7 +2631,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets reason_for_voiding
      *
-     * @return string
+     * @return ?string
      */
     public function getReasonForVoiding()
     {
@@ -2599,7 +2641,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets reason_for_voiding
      *
-     * @param string $reason_for_voiding 
+     * @param ?string $reason_for_voiding 
      *
      * @return $this
      */
@@ -2613,7 +2655,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets reassign_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getReassignReason()
     {
@@ -2623,7 +2665,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets reassign_reason
      *
-     * @param string $reassign_reason 
+     * @param ?string $reassign_reason 
      *
      * @return $this
      */
@@ -2637,7 +2679,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets received
      *
-     * @return string
+     * @return ?string
      */
     public function getReceived()
     {
@@ -2647,7 +2689,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets received
      *
-     * @param string $received 
+     * @param ?string $received 
      *
      * @return $this
      */
@@ -2661,7 +2703,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipient()
     {
@@ -2671,7 +2713,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient
      *
-     * @param string $recipient 
+     * @param ?string $recipient 
      *
      * @return $this
      */
@@ -2685,7 +2727,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_action
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientAction()
     {
@@ -2695,7 +2737,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_action
      *
-     * @param string $recipient_action 
+     * @param ?string $recipient_action 
      *
      * @return $this
      */
@@ -2709,7 +2751,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_company_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientCompanyName()
     {
@@ -2719,7 +2761,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_company_name
      *
-     * @param string $recipient_company_name 
+     * @param ?string $recipient_company_name 
      *
      * @return $this
      */
@@ -2733,7 +2775,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_country
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientCountry()
     {
@@ -2743,7 +2785,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_country
      *
-     * @param string $recipient_country 
+     * @param ?string $recipient_country 
      *
      * @return $this
      */
@@ -2757,7 +2799,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_email
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientEmail()
     {
@@ -2767,7 +2809,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_email
      *
-     * @param string $recipient_email 
+     * @param ?string $recipient_email 
      *
      * @return $this
      */
@@ -2781,7 +2823,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -2791,7 +2833,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -2805,7 +2847,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientName()
     {
@@ -2815,7 +2857,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_name
      *
-     * @param string $recipient_name 
+     * @param ?string $recipient_name 
      *
      * @return $this
      */
@@ -2829,7 +2871,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_template_role_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientTemplateRoleName()
     {
@@ -2839,7 +2881,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_template_role_name
      *
-     * @param string $recipient_template_role_name 
+     * @param ?string $recipient_template_role_name 
      *
      * @return $this
      */
@@ -2853,7 +2895,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_title
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientTitle()
     {
@@ -2863,7 +2905,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_title
      *
-     * @param string $recipient_title 
+     * @param ?string $recipient_title 
      *
      * @return $this
      */
@@ -2877,7 +2919,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_type
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientType()
     {
@@ -2887,7 +2929,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type
      *
-     * @param string $recipient_type 
+     * @param ?string $recipient_type 
      *
      * @return $this
      */
@@ -2901,7 +2943,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientUserId()
     {
@@ -2911,7 +2953,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_user_id
      *
-     * @param string $recipient_user_id 
+     * @param ?string $recipient_user_id 
      *
      * @return $this
      */
@@ -2925,7 +2967,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets remaining_signatures
      *
-     * @return string
+     * @return ?string
      */
     public function getRemainingSignatures()
     {
@@ -2935,7 +2977,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets remaining_signatures
      *
-     * @param string $remaining_signatures 
+     * @param ?string $remaining_signatures 
      *
      * @return $this
      */
@@ -2949,7 +2991,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets routing_order
      *
-     * @return string
+     * @return ?string
      */
     public function getRoutingOrder()
     {
@@ -2959,7 +3001,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order
      *
-     * @param string $routing_order Specifies the routing order of the recipient in the envelope.
+     * @param ?string $routing_order Specifies the routing order of the recipient in the envelope.
      *
      * @return $this
      */
@@ -2973,7 +3015,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderAccountId()
     {
@@ -2983,7 +3025,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_account_id
      *
-     * @param string $sender_account_id 
+     * @param ?string $sender_account_id 
      *
      * @return $this
      */
@@ -2997,7 +3039,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_company_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderCompanyName()
     {
@@ -3007,7 +3049,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_company_name
      *
-     * @param string $sender_company_name 
+     * @param ?string $sender_company_name 
      *
      * @return $this
      */
@@ -3021,7 +3063,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_country
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderCountry()
     {
@@ -3031,7 +3073,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_country
      *
-     * @param string $sender_country 
+     * @param ?string $sender_country 
      *
      * @return $this
      */
@@ -3045,7 +3087,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_email
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderEmail()
     {
@@ -3055,7 +3097,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_email
      *
-     * @param string $sender_email 
+     * @param ?string $sender_email 
      *
      * @return $this
      */
@@ -3069,7 +3111,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_ip_address
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderIpAddress()
     {
@@ -3079,7 +3121,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_ip_address
      *
-     * @param string $sender_ip_address 
+     * @param ?string $sender_ip_address 
      *
      * @return $this
      */
@@ -3093,7 +3135,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_job_title
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderJobTitle()
     {
@@ -3103,7 +3145,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_job_title
      *
-     * @param string $sender_job_title 
+     * @param ?string $sender_job_title 
      *
      * @return $this
      */
@@ -3117,7 +3159,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderName()
     {
@@ -3127,7 +3169,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_name
      *
-     * @param string $sender_name 
+     * @param ?string $sender_name 
      *
      * @return $this
      */
@@ -3141,7 +3183,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sender_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderUserId()
     {
@@ -3151,7 +3193,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sender_user_id
      *
-     * @param string $sender_user_id 
+     * @param ?string $sender_user_id 
      *
      * @return $this
      */
@@ -3165,7 +3207,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets sign_date
      *
-     * @return string
+     * @return ?string
      */
     public function getSignDate()
     {
@@ -3175,7 +3217,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date
      *
-     * @param string $sign_date 
+     * @param ?string $sign_date 
      *
      * @return $this
      */
@@ -3189,7 +3231,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets signed
      *
-     * @return string
+     * @return ?string
      */
     public function getSigned()
     {
@@ -3199,7 +3241,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets signed
      *
-     * @param string $signed 
+     * @param ?string $signed 
      *
      * @return $this
      */
@@ -3213,7 +3255,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets signed_date
      *
-     * @return string
+     * @return ?string
      */
     public function getSignedDate()
     {
@@ -3223,7 +3265,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets signed_date
      *
-     * @param string $signed_date 
+     * @param ?string $signed_date 
      *
      * @return $this
      */
@@ -3237,7 +3279,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets signed_on_mobile
      *
-     * @return string
+     * @return ?string
      */
     public function getSignedOnMobile()
     {
@@ -3247,7 +3289,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets signed_on_mobile
      *
-     * @param string $signed_on_mobile 
+     * @param ?string $signed_on_mobile 
      *
      * @return $this
      */
@@ -3261,7 +3303,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets signed_on_paper
      *
-     * @return string
+     * @return ?string
      */
     public function getSignedOnPaper()
     {
@@ -3271,7 +3313,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets signed_on_paper
      *
-     * @param string $signed_on_paper 
+     * @param ?string $signed_on_paper 
      *
      * @return $this
      */
@@ -3285,7 +3327,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets signer_list
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerList()
     {
@@ -3295,7 +3337,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets signer_list
      *
-     * @param string $signer_list 
+     * @param ?string $signer_list 
      *
      * @return $this
      */
@@ -3309,7 +3351,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -3319,7 +3361,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -3333,7 +3375,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets status_changed_date
      *
-     * @return string
+     * @return ?string
      */
     public function getStatusChangedDate()
     {
@@ -3343,7 +3385,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets status_changed_date
      *
-     * @param string $status_changed_date 
+     * @param ?string $status_changed_date 
      *
      * @return $this
      */
@@ -3357,7 +3399,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets status_changed_ts
      *
-     * @return string
+     * @return ?string
      */
     public function getStatusChangedTs()
     {
@@ -3367,7 +3409,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets status_changed_ts
      *
-     * @param string $status_changed_ts 
+     * @param ?string $status_changed_ts 
      *
      * @return $this
      */
@@ -3381,7 +3423,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets subject
      *
-     * @return string
+     * @return ?string
      */
     public function getSubject()
     {
@@ -3391,7 +3433,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets subject
      *
-     * @param string $subject 
+     * @param ?string $subject 
      *
      * @return $this
      */
@@ -3405,7 +3447,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets successes
      *
-     * @return string
+     * @return ?string
      */
     public function getSuccesses()
     {
@@ -3415,7 +3457,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets successes
      *
-     * @param string $successes 
+     * @param ?string $successes 
      *
      * @return $this
      */
@@ -3429,7 +3471,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets templates_created
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplatesCreated()
     {
@@ -3439,7 +3481,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets templates_created
      *
-     * @param string $templates_created 
+     * @param ?string $templates_created 
      *
      * @return $this
      */
@@ -3453,7 +3495,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets templates_created_count
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplatesCreatedCount()
     {
@@ -3463,7 +3505,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets templates_created_count
      *
-     * @param string $templates_created_count 
+     * @param ?string $templates_created_count 
      *
      * @return $this
      */
@@ -3477,7 +3519,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets terminal_status_date
      *
-     * @return string
+     * @return ?string
      */
     public function getTerminalStatusDate()
     {
@@ -3487,7 +3529,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets terminal_status_date
      *
-     * @param string $terminal_status_date 
+     * @param ?string $terminal_status_date 
      *
      * @return $this
      */
@@ -3501,7 +3543,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets time_to_complete_seconds
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeToCompleteSeconds()
     {
@@ -3511,7 +3553,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets time_to_complete_seconds
      *
-     * @param string $time_to_complete_seconds 
+     * @param ?string $time_to_complete_seconds 
      *
      * @return $this
      */
@@ -3525,7 +3567,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets time_to_deliver
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeToDeliver()
     {
@@ -3535,7 +3577,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets time_to_deliver
      *
-     * @param string $time_to_deliver 
+     * @param ?string $time_to_deliver 
      *
      * @return $this
      */
@@ -3549,7 +3591,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets total_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalDocuments()
     {
@@ -3559,7 +3601,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets total_documents
      *
-     * @param string $total_documents 
+     * @param ?string $total_documents 
      *
      * @return $this
      */
@@ -3573,7 +3615,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets total_envelopes
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalEnvelopes()
     {
@@ -3583,7 +3625,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets total_envelopes
      *
-     * @param string $total_envelopes 
+     * @param ?string $total_envelopes 
      *
      * @return $this
      */
@@ -3597,7 +3639,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets total_pages
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalPages()
     {
@@ -3607,7 +3649,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets total_pages
      *
-     * @param string $total_pages 
+     * @param ?string $total_pages 
      *
      * @return $this
      */
@@ -3621,7 +3663,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets total_recipients
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalRecipients()
     {
@@ -3631,7 +3673,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets total_recipients
      *
-     * @param string $total_recipients 
+     * @param ?string $total_recipients 
      *
      * @return $this
      */
@@ -3645,7 +3687,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets total_signers
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalSigners()
     {
@@ -3655,7 +3697,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets total_signers
      *
-     * @param string $total_signers 
+     * @param ?string $total_signers 
      *
      * @return $this
      */
@@ -3669,7 +3711,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets unique_senders
      *
-     * @return string
+     * @return ?string
      */
     public function getUniqueSenders()
     {
@@ -3679,7 +3721,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets unique_senders
      *
-     * @param string $unique_senders 
+     * @param ?string $unique_senders 
      *
      * @return $this
      */
@@ -3693,7 +3735,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets user_account_email
      *
-     * @return string
+     * @return ?string
      */
     public function getUserAccountEmail()
     {
@@ -3703,7 +3745,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets user_account_email
      *
-     * @param string $user_account_email 
+     * @param ?string $user_account_email 
      *
      * @return $this
      */
@@ -3717,7 +3759,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets user_account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserAccountName()
     {
@@ -3727,7 +3769,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets user_account_name
      *
-     * @param string $user_account_name 
+     * @param ?string $user_account_name 
      *
      * @return $this
      */
@@ -3741,7 +3783,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets user_account_status
      *
-     * @return string
+     * @return ?string
      */
     public function getUserAccountStatus()
     {
@@ -3751,7 +3793,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets user_account_status
      *
-     * @param string $user_account_status 
+     * @param ?string $user_account_status 
      *
      * @return $this
      */
@@ -3765,7 +3807,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets user_count
      *
-     * @return string
+     * @return ?string
      */
     public function getUserCount()
     {
@@ -3775,7 +3817,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets user_count
      *
-     * @param string $user_count 
+     * @param ?string $user_count 
      *
      * @return $this
      */
@@ -3789,7 +3831,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -3799,7 +3841,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */
@@ -3811,9 +3853,57 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets verification_status
+     *
+     * @return ?string
+     */
+    public function getVerificationStatus()
+    {
+        return $this->container['verification_status'];
+    }
+
+    /**
+     * Sets verification_status
+     *
+     * @param ?string $verification_status 
+     *
+     * @return $this
+     */
+    public function setVerificationStatus($verification_status)
+    {
+        $this->container['verification_status'] = $verification_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets verification_type
+     *
+     * @return ?string
+     */
+    public function getVerificationType()
+    {
+        return $this->container['verification_type'];
+    }
+
+    /**
+     * Sets verification_type
+     *
+     * @param ?string $verification_type 
+     *
+     * @return $this
+     */
+    public function setVerificationType($verification_type)
+    {
+        $this->container['verification_type'] = $verification_type;
+
+        return $this;
+    }
+
+    /**
      * Gets view_date
      *
-     * @return string
+     * @return ?string
      */
     public function getViewDate()
     {
@@ -3823,7 +3913,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets view_date
      *
-     * @param string $view_date 
+     * @param ?string $view_date 
      *
      * @return $this
      */
@@ -3837,7 +3927,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Gets voided_ts
      *
-     * @return string
+     * @return ?string
      */
     public function getVoidedTs()
     {
@@ -3847,7 +3937,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     /**
      * Sets voided_ts
      *
-     * @param string $voided_ts 
+     * @param ?string $voided_ts 
      *
      * @return $this
      */

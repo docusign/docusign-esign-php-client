@@ -57,19 +57,19 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_code' => 'string',
-        'access_code_locked' => 'string',
-        'access_code_required' => 'string',
-        'email' => 'string',
-        'email_locked' => 'string',
-        'id_check_configuration_name' => 'string',
-        'id_check_required' => 'string',
-        'name' => 'string',
-        'recipient_type' => 'string',
-        'role_name' => 'string',
-        'routing_order' => 'string',
-        'template_requires_id_lookup' => 'string',
-        'user_name_locked' => 'string'
+        'access_code' => '?string',
+        'access_code_locked' => '?string',
+        'access_code_required' => '?string',
+        'email' => '?string',
+        'email_locked' => '?string',
+        'id_check_configuration_name' => '?string',
+        'id_check_required' => '?string',
+        'name' => '?string',
+        'recipient_type' => '?string',
+        'role_name' => '?string',
+        'routing_order' => '?string',
+        'template_requires_id_lookup' => '?string',
+        'user_name_locked' => '?string'
     ];
 
     /**
@@ -279,7 +279,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCode()
     {
@@ -289,7 +289,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code
      *
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param ?string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets access_code_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCodeLocked()
     {
@@ -313,7 +313,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_locked
      *
-     * @param string $access_code_locked 
+     * @param ?string $access_code_locked 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets access_code_required
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCodeRequired()
     {
@@ -337,7 +337,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_required
      *
-     * @param string $access_code_required 
+     * @param ?string $access_code_required 
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -361,7 +361,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets email_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailLocked()
     {
@@ -385,7 +385,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email_locked
      *
-     * @param string $email_locked 
+     * @param ?string $email_locked 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_configuration_name
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckConfigurationName()
     {
@@ -409,7 +409,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name
      *
-     * @param string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
+     * @param ?string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_required
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckRequired()
     {
@@ -433,7 +433,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_required
      *
-     * @param string $id_check_required 
+     * @param ?string $id_check_required 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -457,7 +457,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_type
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientType()
     {
@@ -481,7 +481,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type
      *
-     * @param string $recipient_type 
+     * @param ?string $recipient_type 
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets role_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRoleName()
     {
@@ -505,7 +505,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets role_name
      *
-     * @param string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+     * @param ?string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets routing_order
      *
-     * @return string
+     * @return ?string
      */
     public function getRoutingOrder()
     {
@@ -529,7 +529,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order
      *
-     * @param string $routing_order Specifies the routing order of the recipient in the envelope.
+     * @param ?string $routing_order Specifies the routing order of the recipient in the envelope.
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets template_requires_id_lookup
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequiresIdLookup()
     {
@@ -553,7 +553,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets template_requires_id_lookup
      *
-     * @param string $template_requires_id_lookup 
+     * @param ?string $template_requires_id_lookup 
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets user_name_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getUserNameLocked()
     {
@@ -577,7 +577,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets user_name_locked
      *
-     * @param string $user_name_locked 
+     * @param ?string $user_name_locked 
      *
      * @return $this
      */

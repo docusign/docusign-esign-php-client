@@ -58,8 +58,8 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'billing_invoices' => '\DocuSign\eSign\Model\BillingInvoice[]',
-        'past_due_balance' => 'string',
-        'payment_allowed' => 'string'
+        'past_due_balance' => '?string',
+        'payment_allowed' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Gets past_due_balance
      *
-     * @return string
+     * @return ?string
      */
     public function getPastDueBalance()
     {
@@ -253,7 +253,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Sets past_due_balance
      *
-     * @param string $past_due_balance 
+     * @param ?string $past_due_balance 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Gets payment_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentAllowed()
     {
@@ -277,7 +277,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Sets payment_allowed
      *
-     * @param string $payment_allowed 
+     * @param ?string $payment_allowed 
      *
      * @return $this
      */

@@ -57,8 +57,8 @@ class AccountPasswordLockoutDurationMinutes implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_minutes' => 'string',
-        'minimum_minutes' => 'string'
+        'maximum_minutes' => '?string',
+        'minimum_minutes' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class AccountPasswordLockoutDurationMinutes implements ModelInterface, ArrayAcce
     /**
      * Gets maximum_minutes
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumMinutes()
     {
@@ -223,7 +223,7 @@ class AccountPasswordLockoutDurationMinutes implements ModelInterface, ArrayAcce
     /**
      * Sets maximum_minutes
      *
-     * @param string $maximum_minutes 
+     * @param ?string $maximum_minutes 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class AccountPasswordLockoutDurationMinutes implements ModelInterface, ArrayAcce
     /**
      * Gets minimum_minutes
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumMinutes()
     {
@@ -247,7 +247,7 @@ class AccountPasswordLockoutDurationMinutes implements ModelInterface, ArrayAcce
     /**
      * Sets minimum_minutes
      *
-     * @param string $minimum_minutes 
+     * @param ?string $minimum_minutes 
      *
      * @return $this
      */

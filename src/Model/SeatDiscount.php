@@ -57,9 +57,9 @@ class SeatDiscount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'begin_seat_count' => 'string',
-        'discount_percent' => 'string',
-        'end_seat_count' => 'string'
+        'begin_seat_count' => '?string',
+        'discount_percent' => '?string',
+        'end_seat_count' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class SeatDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets begin_seat_count
      *
-     * @return string
+     * @return ?string
      */
     public function getBeginSeatCount()
     {
@@ -229,7 +229,7 @@ class SeatDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets begin_seat_count
      *
-     * @param string $begin_seat_count Reserved: TBD
+     * @param ?string $begin_seat_count Reserved: TBD
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class SeatDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets discount_percent
      *
-     * @return string
+     * @return ?string
      */
     public function getDiscountPercent()
     {
@@ -253,7 +253,7 @@ class SeatDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets discount_percent
      *
-     * @param string $discount_percent 
+     * @param ?string $discount_percent 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class SeatDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets end_seat_count
      *
-     * @return string
+     * @return ?string
      */
     public function getEndSeatCount()
     {
@@ -277,7 +277,7 @@ class SeatDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets end_seat_count
      *
-     * @param string $end_seat_count Reserved: TBD
+     * @param ?string $end_seat_count Reserved: TBD
      *
      * @return $this
      */

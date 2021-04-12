@@ -57,14 +57,14 @@ class WorkflowStep implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'action' => 'string',
-        'completed_date' => 'string',
-        'item_id' => 'string',
+        'action' => '?string',
+        'completed_date' => '?string',
+        'item_id' => '?string',
         'recipient_routing' => '\DocuSign\eSign\Model\RecipientRouting',
-        'status' => 'string',
-        'triggered_date' => 'string',
-        'trigger_on_item' => 'string',
-        'workflow_step_id' => 'string'
+        'status' => '?string',
+        'triggered_date' => '?string',
+        'trigger_on_item' => '?string',
+        'workflow_step_id' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets action
      *
-     * @return string
+     * @return ?string
      */
     public function getAction()
     {
@@ -259,7 +259,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets action
      *
-     * @param string $action 
+     * @param ?string $action 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets completed_date
      *
-     * @return string
+     * @return ?string
      */
     public function getCompletedDate()
     {
@@ -283,7 +283,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets completed_date
      *
-     * @param string $completed_date 
+     * @param ?string $completed_date 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets item_id
      *
-     * @return string
+     * @return ?string
      */
     public function getItemId()
     {
@@ -307,7 +307,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets item_id
      *
-     * @param string $item_id 
+     * @param ?string $item_id 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -355,7 +355,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets triggered_date
      *
-     * @return string
+     * @return ?string
      */
     public function getTriggeredDate()
     {
@@ -379,7 +379,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets triggered_date
      *
-     * @param string $triggered_date 
+     * @param ?string $triggered_date 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets trigger_on_item
      *
-     * @return string
+     * @return ?string
      */
     public function getTriggerOnItem()
     {
@@ -403,7 +403,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets trigger_on_item
      *
-     * @param string $trigger_on_item 
+     * @param ?string $trigger_on_item 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets workflow_step_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkflowStepId()
     {
@@ -427,7 +427,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_step_id
      *
-     * @param string $workflow_step_id 
+     * @param ?string $workflow_step_id 
      *
      * @return $this
      */

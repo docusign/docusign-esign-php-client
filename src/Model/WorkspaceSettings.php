@@ -57,7 +57,7 @@ class WorkspaceSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'comments_allowed' => 'string'
+        'comments_allowed' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class WorkspaceSettings implements ModelInterface, ArrayAccess
     /**
      * Gets comments_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getCommentsAllowed()
     {
@@ -217,7 +217,7 @@ class WorkspaceSettings implements ModelInterface, ArrayAccess
     /**
      * Sets comments_allowed
      *
-     * @param string $comments_allowed 
+     * @param ?string $comments_allowed 
      *
      * @return $this
      */

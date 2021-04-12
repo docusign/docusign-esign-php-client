@@ -58,9 +58,9 @@ class DobInformationInput implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'date_of_birth' => 'string',
-        'display_level_code' => 'string',
-        'receive_in_response' => 'string'
+        'date_of_birth' => '?string',
+        'display_level_code' => '?string',
+        'receive_in_response' => '?string'
     ];
 
     /**
@@ -220,7 +220,7 @@ class DobInformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets date_of_birth
      *
-     * @return string
+     * @return ?string
      */
     public function getDateOfBirth()
     {
@@ -230,7 +230,7 @@ class DobInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets date_of_birth
      *
-     * @param string $date_of_birth Specifies the recipient's date, month, and year of birth.
+     * @param ?string $date_of_birth Specifies the recipient's date, month, and year of birth.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class DobInformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets display_level_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayLevelCode()
     {
@@ -254,7 +254,7 @@ class DobInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets display_level_code
      *
-     * @param string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
+     * @param ?string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class DobInformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets receive_in_response
      *
-     * @return string
+     * @return ?string
      */
     public function getReceiveInResponse()
     {
@@ -278,7 +278,7 @@ class DobInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets receive_in_response
      *
-     * @param string $receive_in_response When set to **true**, the information needs to be returned in the response.
+     * @param ?string $receive_in_response When set to **true**, the information needs to be returned in the response.
      *
      * @return $this
      */

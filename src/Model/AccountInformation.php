@@ -58,43 +58,43 @@ class AccountInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id_guid' => 'string',
-        'account_name' => 'string',
+        'account_id_guid' => '?string',
+        'account_name' => '?string',
         'account_settings' => '\DocuSign\eSign\Model\AccountSettingsInformation',
-        'allow_transaction_rooms' => 'string',
-        'billing_period_days_remaining' => 'string',
-        'billing_period_end_date' => 'string',
-        'billing_period_envelopes_allowed' => 'string',
-        'billing_period_envelopes_sent' => 'string',
-        'billing_period_start_date' => 'string',
-        'billing_profile' => 'string',
-        'can_upgrade' => 'string',
-        'connect_permission' => 'string',
-        'created_date' => 'string',
-        'currency_code' => 'string',
-        'current_plan_id' => 'string',
-        'display_appliance_start_url' => 'string',
-        'display_appliance_url' => 'string',
-        'distributor_code' => 'string',
-        'docu_sign_landing_url' => 'string',
-        'dss_values' => 'map[string,string]',
-        'envelope_sending_blocked' => 'string',
-        'envelope_unit_price' => 'string',
-        'external_account_id' => 'string',
-        'forgotten_password_questions_count' => 'string',
-        'is_downgrade' => 'string',
-        'payment_method' => 'string',
-        'plan_classification' => 'string',
-        'plan_end_date' => 'string',
-        'plan_name' => 'string',
-        'plan_start_date' => 'string',
+        'allow_transaction_rooms' => '?string',
+        'billing_period_days_remaining' => '?string',
+        'billing_period_end_date' => '?string',
+        'billing_period_envelopes_allowed' => '?string',
+        'billing_period_envelopes_sent' => '?string',
+        'billing_period_start_date' => '?string',
+        'billing_profile' => '?string',
+        'can_upgrade' => '?string',
+        'connect_permission' => '?string',
+        'created_date' => '?string',
+        'currency_code' => '?string',
+        'current_plan_id' => '?string',
+        'display_appliance_start_url' => '?string',
+        'display_appliance_url' => '?string',
+        'distributor_code' => '?string',
+        'docu_sign_landing_url' => '?string',
+        'dss_values' => 'map[string,?string]',
+        'envelope_sending_blocked' => '?string',
+        'envelope_unit_price' => '?string',
+        'external_account_id' => '?string',
+        'forgotten_password_questions_count' => '?string',
+        'is_downgrade' => '?string',
+        'payment_method' => '?string',
+        'plan_classification' => '?string',
+        'plan_end_date' => '?string',
+        'plan_name' => '?string',
+        'plan_start_date' => '?string',
         'recipient_domains' => '\DocuSign\eSign\Model\RecipientDomain[]',
-        'seats_allowed' => 'string',
-        'seats_in_use' => 'string',
-        'status21_cfr_part11' => 'string',
-        'suspension_date' => 'string',
-        'suspension_status' => 'string',
-        'use_display_appliance' => 'bool'
+        'seats_allowed' => '?string',
+        'seats_in_use' => '?string',
+        'status21_cfr_part11' => '?string',
+        'suspension_date' => '?string',
+        'suspension_status' => '?string',
+        'use_display_appliance' => '?bool'
     ];
 
     /**
@@ -424,7 +424,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets account_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountIdGuid()
     {
@@ -434,7 +434,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_id_guid
      *
-     * @param string $account_id_guid The GUID associated with the account ID.
+     * @param ?string $account_id_guid The GUID associated with the account ID.
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountName()
     {
@@ -458,7 +458,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param string $account_name The name of the current account.
+     * @param ?string $account_name The name of the current account.
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets allow_transaction_rooms
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowTransactionRooms()
     {
@@ -506,7 +506,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_transaction_rooms
      *
-     * @param string $allow_transaction_rooms When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.
+     * @param ?string $allow_transaction_rooms When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets billing_period_days_remaining
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingPeriodDaysRemaining()
     {
@@ -530,7 +530,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_period_days_remaining
      *
-     * @param string $billing_period_days_remaining Reserved: TBD
+     * @param ?string $billing_period_days_remaining Reserved: TBD
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets billing_period_end_date
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingPeriodEndDate()
     {
@@ -554,7 +554,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_period_end_date
      *
-     * @param string $billing_period_end_date Reserved: TBD
+     * @param ?string $billing_period_end_date Reserved: TBD
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets billing_period_envelopes_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingPeriodEnvelopesAllowed()
     {
@@ -578,7 +578,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_period_envelopes_allowed
      *
-     * @param string $billing_period_envelopes_allowed Reserved: TBD
+     * @param ?string $billing_period_envelopes_allowed Reserved: TBD
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets billing_period_envelopes_sent
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingPeriodEnvelopesSent()
     {
@@ -602,7 +602,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_period_envelopes_sent
      *
-     * @param string $billing_period_envelopes_sent Reserved: TBD
+     * @param ?string $billing_period_envelopes_sent Reserved: TBD
      *
      * @return $this
      */
@@ -616,7 +616,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets billing_period_start_date
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingPeriodStartDate()
     {
@@ -626,7 +626,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_period_start_date
      *
-     * @param string $billing_period_start_date Reserved: TBD
+     * @param ?string $billing_period_start_date Reserved: TBD
      *
      * @return $this
      */
@@ -640,7 +640,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets billing_profile
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingProfile()
     {
@@ -650,7 +650,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_profile
      *
-     * @param string $billing_profile Reserved: TBD
+     * @param ?string $billing_profile Reserved: TBD
      *
      * @return $this
      */
@@ -664,7 +664,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets can_upgrade
      *
-     * @return string
+     * @return ?string
      */
     public function getCanUpgrade()
     {
@@ -674,7 +674,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_upgrade
      *
-     * @param string $can_upgrade When set to **true**, specifies that you can upgrade the account through the API.
+     * @param ?string $can_upgrade When set to **true**, specifies that you can upgrade the account through the API.
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets connect_permission
      *
-     * @return string
+     * @return ?string
      */
     public function getConnectPermission()
     {
@@ -698,7 +698,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets connect_permission
      *
-     * @param string $connect_permission 
+     * @param ?string $connect_permission 
      *
      * @return $this
      */
@@ -712,7 +712,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets created_date
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDate()
     {
@@ -722,7 +722,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param string $created_date 
+     * @param ?string $created_date 
      *
      * @return $this
      */
@@ -736,7 +736,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -746,7 +746,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the ISO currency code for the account.
+     * @param ?string $currency_code Specifies the ISO currency code for the account.
      *
      * @return $this
      */
@@ -760,7 +760,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets current_plan_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrentPlanId()
     {
@@ -770,7 +770,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets current_plan_id
      *
-     * @param string $current_plan_id Identifies the plan that was used create this account.
+     * @param ?string $current_plan_id Identifies the plan that was used create this account.
      *
      * @return $this
      */
@@ -784,7 +784,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets display_appliance_start_url
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayApplianceStartUrl()
     {
@@ -794,7 +794,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets display_appliance_start_url
      *
-     * @param string $display_appliance_start_url 
+     * @param ?string $display_appliance_start_url 
      *
      * @return $this
      */
@@ -808,7 +808,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets display_appliance_url
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayApplianceUrl()
     {
@@ -818,7 +818,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets display_appliance_url
      *
-     * @param string $display_appliance_url 
+     * @param ?string $display_appliance_url 
      *
      * @return $this
      */
@@ -832,7 +832,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets distributor_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDistributorCode()
     {
@@ -842,7 +842,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets distributor_code
      *
-     * @param string $distributor_code The code that identifies the billing plan groups and plans for the new account.
+     * @param ?string $distributor_code The code that identifies the billing plan groups and plans for the new account.
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets docu_sign_landing_url
      *
-     * @return string
+     * @return ?string
      */
     public function getDocuSignLandingUrl()
     {
@@ -866,7 +866,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets docu_sign_landing_url
      *
-     * @param string $docu_sign_landing_url 
+     * @param ?string $docu_sign_landing_url 
      *
      * @return $this
      */
@@ -880,7 +880,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets dss_values
      *
-     * @return map[string,string]
+     * @return map[string,?string]
      */
     public function getDssValues()
     {
@@ -890,7 +890,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets dss_values
      *
-     * @param map[string,string] $dss_values 
+     * @param map[string,?string] $dss_values 
      *
      * @return $this
      */
@@ -904,7 +904,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_sending_blocked
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeSendingBlocked()
     {
@@ -914,7 +914,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_sending_blocked
      *
-     * @param string $envelope_sending_blocked 
+     * @param ?string $envelope_sending_blocked 
      *
      * @return $this
      */
@@ -928,7 +928,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_unit_price
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeUnitPrice()
     {
@@ -938,7 +938,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_unit_price
      *
-     * @param string $envelope_unit_price 
+     * @param ?string $envelope_unit_price 
      *
      * @return $this
      */
@@ -952,7 +952,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets external_account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getExternalAccountId()
     {
@@ -962,7 +962,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets external_account_id
      *
-     * @param string $external_account_id 
+     * @param ?string $external_account_id 
      *
      * @return $this
      */
@@ -976,7 +976,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_questions_count
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordQuestionsCount()
     {
@@ -986,7 +986,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_questions_count
      *
-     * @param string $forgotten_password_questions_count A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
+     * @param ?string $forgotten_password_questions_count A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
      *
      * @return $this
      */
@@ -1000,7 +1000,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets is_downgrade
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDowngrade()
     {
@@ -1010,7 +1010,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets is_downgrade
      *
-     * @param string $is_downgrade 
+     * @param ?string $is_downgrade 
      *
      * @return $this
      */
@@ -1024,7 +1024,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -1034,7 +1034,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method 
+     * @param ?string $payment_method 
      *
      * @return $this
      */
@@ -1048,7 +1048,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets plan_classification
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanClassification()
     {
@@ -1058,7 +1058,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_classification
      *
-     * @param string $plan_classification Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
+     * @param ?string $plan_classification Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
      *
      * @return $this
      */
@@ -1072,7 +1072,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets plan_end_date
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanEndDate()
     {
@@ -1082,7 +1082,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_end_date
      *
-     * @param string $plan_end_date The date that the current plan will end.
+     * @param ?string $plan_end_date The date that the current plan will end.
      *
      * @return $this
      */
@@ -1096,7 +1096,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets plan_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanName()
     {
@@ -1106,7 +1106,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_name
      *
-     * @param string $plan_name The name of the Billing Plan.
+     * @param ?string $plan_name The name of the Billing Plan.
      *
      * @return $this
      */
@@ -1120,7 +1120,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets plan_start_date
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanStartDate()
     {
@@ -1130,7 +1130,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_start_date
      *
-     * @param string $plan_start_date The date that the Account started using the current plan.
+     * @param ?string $plan_start_date The date that the Account started using the current plan.
      *
      * @return $this
      */
@@ -1168,7 +1168,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets seats_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getSeatsAllowed()
     {
@@ -1178,7 +1178,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets seats_allowed
      *
-     * @param string $seats_allowed 
+     * @param ?string $seats_allowed 
      *
      * @return $this
      */
@@ -1192,7 +1192,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets seats_in_use
      *
-     * @return string
+     * @return ?string
      */
     public function getSeatsInUse()
     {
@@ -1202,7 +1202,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets seats_in_use
      *
-     * @param string $seats_in_use 
+     * @param ?string $seats_in_use 
      *
      * @return $this
      */
@@ -1216,7 +1216,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets status21_cfr_part11
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus21CfrPart11()
     {
@@ -1226,7 +1226,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets status21_cfr_part11
      *
-     * @param string $status21_cfr_part11 
+     * @param ?string $status21_cfr_part11 
      *
      * @return $this
      */
@@ -1240,7 +1240,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets suspension_date
      *
-     * @return string
+     * @return ?string
      */
     public function getSuspensionDate()
     {
@@ -1250,7 +1250,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets suspension_date
      *
-     * @param string $suspension_date 
+     * @param ?string $suspension_date 
      *
      * @return $this
      */
@@ -1264,7 +1264,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets suspension_status
      *
-     * @return string
+     * @return ?string
      */
     public function getSuspensionStatus()
     {
@@ -1274,7 +1274,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets suspension_status
      *
-     * @param string $suspension_status 
+     * @param ?string $suspension_status 
      *
      * @return $this
      */
@@ -1288,7 +1288,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_display_appliance
      *
-     * @return bool
+     * @return ?bool
      */
     public function getUseDisplayAppliance()
     {
@@ -1298,7 +1298,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_display_appliance
      *
-     * @param bool $use_display_appliance 
+     * @param ?bool $use_display_appliance 
      *
      * @return $this
      */

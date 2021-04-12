@@ -57,9 +57,9 @@ class PathExtendedElement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-        'type' => 'string',
-        'type_name' => 'string'
+        'name' => '?string',
+        'type' => '?string',
+        'type_name' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class PathExtendedElement implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -229,7 +229,7 @@ class PathExtendedElement implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class PathExtendedElement implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -253,7 +253,7 @@ class PathExtendedElement implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class PathExtendedElement implements ModelInterface, ArrayAccess
     /**
      * Gets type_name
      *
-     * @return string
+     * @return ?string
      */
     public function getTypeName()
     {
@@ -277,7 +277,7 @@ class PathExtendedElement implements ModelInterface, ArrayAccess
     /**
      * Sets type_name
      *
-     * @param string $type_name 
+     * @param ?string $type_name 
      *
      * @return $this
      */

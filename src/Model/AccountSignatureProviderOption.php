@@ -57,9 +57,9 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'signature_provider_option_display_name' => 'string',
-        'signature_provider_option_id' => 'string',
-        'signature_provider_option_name' => 'string'
+        'signature_provider_option_display_name' => '?string',
+        'signature_provider_option_id' => '?string',
+        'signature_provider_option_name' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Gets signature_provider_option_display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureProviderOptionDisplayName()
     {
@@ -229,7 +229,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_option_display_name
      *
-     * @param string $signature_provider_option_display_name 
+     * @param ?string $signature_provider_option_display_name 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Gets signature_provider_option_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureProviderOptionId()
     {
@@ -253,7 +253,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_option_id
      *
-     * @param string $signature_provider_option_id 
+     * @param ?string $signature_provider_option_id 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Gets signature_provider_option_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureProviderOptionName()
     {
@@ -277,7 +277,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_option_name
      *
-     * @param string $signature_provider_option_name 
+     * @param ?string $signature_provider_option_name 
      *
      * @return $this
      */

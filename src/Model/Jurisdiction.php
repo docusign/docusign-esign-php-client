@@ -57,16 +57,16 @@ class Jurisdiction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allow_system_created_seal' => 'string',
-        'allow_user_uploaded_seal' => 'string',
-        'commission_id_in_seal' => 'string',
-        'county' => 'string',
-        'county_in_seal' => 'string',
-        'enabled' => 'string',
-        'jurisdiction_id' => 'string',
-        'name' => 'string',
-        'notary_public_in_seal' => 'string',
-        'state_name_in_seal' => 'string'
+        'allow_system_created_seal' => '?string',
+        'allow_user_uploaded_seal' => '?string',
+        'commission_id_in_seal' => '?string',
+        'county' => '?string',
+        'county_in_seal' => '?string',
+        'enabled' => '?string',
+        'jurisdiction_id' => '?string',
+        'name' => '?string',
+        'notary_public_in_seal' => '?string',
+        'state_name_in_seal' => '?string'
     ];
 
     /**
@@ -261,7 +261,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets allow_system_created_seal
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSystemCreatedSeal()
     {
@@ -271,7 +271,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets allow_system_created_seal
      *
-     * @param string $allow_system_created_seal 
+     * @param ?string $allow_system_created_seal 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets allow_user_uploaded_seal
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowUserUploadedSeal()
     {
@@ -295,7 +295,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets allow_user_uploaded_seal
      *
-     * @param string $allow_user_uploaded_seal 
+     * @param ?string $allow_user_uploaded_seal 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets commission_id_in_seal
      *
-     * @return string
+     * @return ?string
      */
     public function getCommissionIdInSeal()
     {
@@ -319,7 +319,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets commission_id_in_seal
      *
-     * @param string $commission_id_in_seal 
+     * @param ?string $commission_id_in_seal 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets county
      *
-     * @return string
+     * @return ?string
      */
     public function getCounty()
     {
@@ -343,7 +343,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets county
      *
-     * @param string $county 
+     * @param ?string $county 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets county_in_seal
      *
-     * @return string
+     * @return ?string
      */
     public function getCountyInSeal()
     {
@@ -367,7 +367,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets county_in_seal
      *
-     * @param string $county_in_seal 
+     * @param ?string $county_in_seal 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getEnabled()
     {
@@ -391,7 +391,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets enabled
      *
-     * @param string $enabled 
+     * @param ?string $enabled 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets jurisdiction_id
      *
-     * @return string
+     * @return ?string
      */
     public function getJurisdictionId()
     {
@@ -415,7 +415,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets jurisdiction_id
      *
-     * @param string $jurisdiction_id 
+     * @param ?string $jurisdiction_id 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -439,7 +439,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets notary_public_in_seal
      *
-     * @return string
+     * @return ?string
      */
     public function getNotaryPublicInSeal()
     {
@@ -463,7 +463,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets notary_public_in_seal
      *
-     * @param string $notary_public_in_seal 
+     * @param ?string $notary_public_in_seal 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets state_name_in_seal
      *
-     * @return string
+     * @return ?string
      */
     public function getStateNameInSeal()
     {
@@ -487,7 +487,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets state_name_in_seal
      *
-     * @param string $state_name_in_seal 
+     * @param ?string $state_name_in_seal 
      *
      * @return $this
      */

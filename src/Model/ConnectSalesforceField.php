@@ -57,14 +57,14 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ds_attribute' => 'string',
-        'ds_link' => 'string',
-        'ds_node' => 'string',
-        'id' => 'string',
-        'sf_field' => 'string',
-        'sf_field_name' => 'string',
-        'sf_folder' => 'string',
-        'sf_locked_value' => 'string'
+        'ds_attribute' => '?string',
+        'ds_link' => '?string',
+        'ds_node' => '?string',
+        'id' => '?string',
+        'sf_field' => '?string',
+        'sf_field_name' => '?string',
+        'sf_folder' => '?string',
+        'sf_locked_value' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets ds_attribute
      *
-     * @return string
+     * @return ?string
      */
     public function getDsAttribute()
     {
@@ -259,7 +259,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets ds_attribute
      *
-     * @param string $ds_attribute 
+     * @param ?string $ds_attribute 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets ds_link
      *
-     * @return string
+     * @return ?string
      */
     public function getDsLink()
     {
@@ -283,7 +283,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets ds_link
      *
-     * @param string $ds_link 
+     * @param ?string $ds_link 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets ds_node
      *
-     * @return string
+     * @return ?string
      */
     public function getDsNode()
     {
@@ -307,7 +307,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets ds_node
      *
-     * @param string $ds_node 
+     * @param ?string $ds_node 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -331,7 +331,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets sf_field
      *
-     * @return string
+     * @return ?string
      */
     public function getSfField()
     {
@@ -355,7 +355,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_field
      *
-     * @param string $sf_field 
+     * @param ?string $sf_field 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets sf_field_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSfFieldName()
     {
@@ -379,7 +379,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_field_name
      *
-     * @param string $sf_field_name 
+     * @param ?string $sf_field_name 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets sf_folder
      *
-     * @return string
+     * @return ?string
      */
     public function getSfFolder()
     {
@@ -403,7 +403,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_folder
      *
-     * @param string $sf_folder 
+     * @param ?string $sf_folder 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Gets sf_locked_value
      *
-     * @return string
+     * @return ?string
      */
     public function getSfLockedValue()
     {
@@ -427,7 +427,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_locked_value
      *
-     * @param string $sf_locked_value 
+     * @param ?string $sf_locked_value 
      *
      * @return $this
      */

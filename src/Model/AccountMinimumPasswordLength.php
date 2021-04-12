@@ -57,8 +57,8 @@ class AccountMinimumPasswordLength implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_length' => 'string',
-        'minimum_length' => 'string'
+        'maximum_length' => '?string',
+        'minimum_length' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class AccountMinimumPasswordLength implements ModelInterface, ArrayAccess
     /**
      * Gets maximum_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumLength()
     {
@@ -223,7 +223,7 @@ class AccountMinimumPasswordLength implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_length
      *
-     * @param string $maximum_length 
+     * @param ?string $maximum_length 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class AccountMinimumPasswordLength implements ModelInterface, ArrayAccess
     /**
      * Gets minimum_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumLength()
     {
@@ -247,7 +247,7 @@ class AccountMinimumPasswordLength implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_length
      *
-     * @param string $minimum_length 
+     * @param ?string $minimum_length 
      *
      * @return $this
      */

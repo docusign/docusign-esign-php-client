@@ -57,8 +57,8 @@ class EnvelopeIdsRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_ids' => 'string[]',
-        'transaction_ids' => 'string[]'
+        'envelope_ids' => '?string[]',
+        'transaction_ids' => '?string[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class EnvelopeIdsRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_ids
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getEnvelopeIds()
     {
@@ -223,7 +223,7 @@ class EnvelopeIdsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_ids
      *
-     * @param string[] $envelope_ids 
+     * @param ?string[] $envelope_ids 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class EnvelopeIdsRequest implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_ids
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getTransactionIds()
     {
@@ -247,7 +247,7 @@ class EnvelopeIdsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_ids
      *
-     * @param string[] $transaction_ids A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.
+     * @param ?string[] $transaction_ids A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.
      *
      * @return $this
      */

@@ -57,10 +57,10 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'certificate' => 'string',
-        'max_signature_length' => 'string',
-        'return_format' => 'string',
-        'signing_location' => 'string'
+        'certificate' => '?string',
+        'max_signature_length' => '?string',
+        'return_format' => '?string',
+        'signing_location' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Gets certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getCertificate()
     {
@@ -235,7 +235,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Sets certificate
      *
-     * @param string $certificate 
+     * @param ?string $certificate 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Gets max_signature_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxSignatureLength()
     {
@@ -259,7 +259,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Sets max_signature_length
      *
-     * @param string $max_signature_length 
+     * @param ?string $max_signature_length 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Gets return_format
      *
-     * @return string
+     * @return ?string
      */
     public function getReturnFormat()
     {
@@ -283,7 +283,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Sets return_format
      *
-     * @param string $return_format 
+     * @param ?string $return_format 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Gets signing_location
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningLocation()
     {
@@ -307,7 +307,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
     /**
      * Sets signing_location
      *
-     * @param string $signing_location Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+     * @param ?string $signing_location Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
      *
      * @return $this
      */

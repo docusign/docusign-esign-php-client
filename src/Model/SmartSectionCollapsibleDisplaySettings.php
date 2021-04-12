@@ -57,16 +57,16 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'arrow_closed' => 'string',
-        'arrow_color' => 'string',
-        'arrow_location' => 'string',
-        'arrow_open' => 'string',
-        'arrow_size' => 'string',
-        'arrow_style' => 'string',
-        'container_style' => 'string',
-        'label_style' => 'string',
-        'only_arrow_is_clickable' => 'bool',
-        'outer_label_and_arrow_style' => 'string'
+        'arrow_closed' => '?string',
+        'arrow_color' => '?string',
+        'arrow_location' => '?string',
+        'arrow_open' => '?string',
+        'arrow_size' => '?string',
+        'arrow_style' => '?string',
+        'container_style' => '?string',
+        'label_style' => '?string',
+        'only_arrow_is_clickable' => '?bool',
+        'outer_label_and_arrow_style' => '?string'
     ];
 
     /**
@@ -261,7 +261,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets arrow_closed
      *
-     * @return string
+     * @return ?string
      */
     public function getArrowClosed()
     {
@@ -271,7 +271,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_closed
      *
-     * @param string $arrow_closed 
+     * @param ?string $arrow_closed 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets arrow_color
      *
-     * @return string
+     * @return ?string
      */
     public function getArrowColor()
     {
@@ -295,7 +295,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_color
      *
-     * @param string $arrow_color 
+     * @param ?string $arrow_color 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets arrow_location
      *
-     * @return string
+     * @return ?string
      */
     public function getArrowLocation()
     {
@@ -319,7 +319,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_location
      *
-     * @param string $arrow_location 
+     * @param ?string $arrow_location 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets arrow_open
      *
-     * @return string
+     * @return ?string
      */
     public function getArrowOpen()
     {
@@ -343,7 +343,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_open
      *
-     * @param string $arrow_open 
+     * @param ?string $arrow_open 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets arrow_size
      *
-     * @return string
+     * @return ?string
      */
     public function getArrowSize()
     {
@@ -367,7 +367,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_size
      *
-     * @param string $arrow_size 
+     * @param ?string $arrow_size 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets arrow_style
      *
-     * @return string
+     * @return ?string
      */
     public function getArrowStyle()
     {
@@ -391,7 +391,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_style
      *
-     * @param string $arrow_style 
+     * @param ?string $arrow_style 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets container_style
      *
-     * @return string
+     * @return ?string
      */
     public function getContainerStyle()
     {
@@ -415,7 +415,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets container_style
      *
-     * @param string $container_style 
+     * @param ?string $container_style 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets label_style
      *
-     * @return string
+     * @return ?string
      */
     public function getLabelStyle()
     {
@@ -439,7 +439,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets label_style
      *
-     * @param string $label_style 
+     * @param ?string $label_style 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets only_arrow_is_clickable
      *
-     * @return bool
+     * @return ?bool
      */
     public function getOnlyArrowIsClickable()
     {
@@ -463,7 +463,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets only_arrow_is_clickable
      *
-     * @param bool $only_arrow_is_clickable 
+     * @param ?bool $only_arrow_is_clickable 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Gets outer_label_and_arrow_style
      *
-     * @return string
+     * @return ?string
      */
     public function getOuterLabelAndArrowStyle()
     {
@@ -487,7 +487,7 @@ class SmartSectionCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets outer_label_and_arrow_style
      *
-     * @param string $outer_label_and_arrow_style 
+     * @param ?string $outer_label_and_arrow_style 
      *
      * @return $this
      */

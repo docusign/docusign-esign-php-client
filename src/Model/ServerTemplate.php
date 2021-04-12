@@ -57,8 +57,8 @@ class ServerTemplate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sequence' => 'string',
-        'template_id' => 'string'
+        'sequence' => '?string',
+        'template_id' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ServerTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets sequence
      *
-     * @return string
+     * @return ?string
      */
     public function getSequence()
     {
@@ -223,7 +223,7 @@ class ServerTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets sequence
      *
-     * @param string $sequence 
+     * @param ?string $sequence 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ServerTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -247,7 +247,7 @@ class ServerTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */

@@ -58,11 +58,11 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'bulk_envelope_status' => '\DocuSign\eSign\Model\BulkEnvelopeStatus',
-        'envelope_id' => 'string',
+        'envelope_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'list_custom_field_update_results' => '\DocuSign\eSign\Model\ListCustomField[]',
         'lock_information' => '\DocuSign\eSign\Model\LockInformation',
-        'purge_state' => 'string',
+        'purge_state' => '?string',
         'recipient_update_results' => '\DocuSign\eSign\Model\RecipientUpdateResponse[]',
         'tab_update_results' => '\DocuSign\eSign\Model\Tabs',
         'text_custom_field_update_results' => '\DocuSign\eSign\Model\TextCustomField[]'
@@ -279,7 +279,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -289,7 +289,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets purge_state
      *
-     * @return string
+     * @return ?string
      */
     public function getPurgeState()
     {
@@ -385,7 +385,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets purge_state
      *
-     * @param string $purge_state 
+     * @param ?string $purge_state 
      *
      * @return $this
      */

@@ -57,14 +57,14 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'batch_id' => 'string',
-        'batch_name' => 'string',
-        'batch_size' => 'string',
-        'batch_uri' => 'string',
-        'failed' => 'string',
-        'queued' => 'string',
-        'sent' => 'string',
-        'submitted_date' => 'string'
+        'batch_id' => '?string',
+        'batch_name' => '?string',
+        'batch_size' => '?string',
+        'batch_uri' => '?string',
+        'failed' => '?string',
+        'queued' => '?string',
+        'sent' => '?string',
+        'submitted_date' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets batch_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchId()
     {
@@ -259,7 +259,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets batch_id
      *
-     * @param string $batch_id 
+     * @param ?string $batch_id 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets batch_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchName()
     {
@@ -283,7 +283,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets batch_name
      *
-     * @param string $batch_name 
+     * @param ?string $batch_name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets batch_size
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchSize()
     {
@@ -307,7 +307,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets batch_size
      *
-     * @param string $batch_size 
+     * @param ?string $batch_size 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets batch_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchUri()
     {
@@ -331,7 +331,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets batch_uri
      *
-     * @param string $batch_uri 
+     * @param ?string $batch_uri 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets failed
      *
-     * @return string
+     * @return ?string
      */
     public function getFailed()
     {
@@ -355,7 +355,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets failed
      *
-     * @param string $failed 
+     * @param ?string $failed 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets queued
      *
-     * @return string
+     * @return ?string
      */
     public function getQueued()
     {
@@ -379,7 +379,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets queued
      *
-     * @param string $queued 
+     * @param ?string $queued 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets sent
      *
-     * @return string
+     * @return ?string
      */
     public function getSent()
     {
@@ -403,7 +403,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets sent
      *
-     * @param string $sent 
+     * @param ?string $sent 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets submitted_date
      *
-     * @return string
+     * @return ?string
      */
     public function getSubmittedDate()
     {
@@ -427,7 +427,7 @@ class BulkSendBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets submitted_date
      *
-     * @param string $submitted_date 
+     * @param ?string $submitted_date 
      *
      * @return $this
      */

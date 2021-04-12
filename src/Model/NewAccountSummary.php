@@ -57,13 +57,13 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'account_id_guid' => 'string',
-        'account_name' => 'string',
-        'api_password' => 'string',
-        'base_url' => 'string',
+        'account_id' => '?string',
+        'account_id_guid' => '?string',
+        'account_name' => '?string',
+        'api_password' => '?string',
+        'base_url' => '?string',
         'billing_plan_preview' => '\DocuSign\eSign\Model\BillingPlanPreview',
-        'user_id' => 'string'
+        'user_id' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -253,7 +253,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets account_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountIdGuid()
     {
@@ -277,7 +277,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets account_id_guid
      *
-     * @param string $account_id_guid The GUID associated with the account ID.
+     * @param ?string $account_id_guid The GUID associated with the account ID.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountName()
     {
@@ -301,7 +301,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param string $account_name The account name for the new account.
+     * @param ?string $account_name The account name for the new account.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets api_password
      *
-     * @return string
+     * @return ?string
      */
     public function getApiPassword()
     {
@@ -325,7 +325,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets api_password
      *
-     * @param string $api_password Contains a token that can be used for authentication in API calls instead of using the user name and password.
+     * @param ?string $api_password Contains a token that can be used for authentication in API calls instead of using the user name and password.
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets base_url
      *
-     * @return string
+     * @return ?string
      */
     public function getBaseUrl()
     {
@@ -349,7 +349,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets base_url
      *
-     * @param string $base_url The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
+     * @param ?string $base_url The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -397,7 +397,7 @@ class NewAccountSummary implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id Specifies the user ID of the new user.
+     * @param ?string $user_id Specifies the user ID of the new user.
      *
      * @return $this
      */

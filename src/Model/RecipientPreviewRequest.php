@@ -57,16 +57,16 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'assertion_id' => 'string',
-        'authentication_instant' => 'string',
-        'authentication_method' => 'string',
-        'ping_frequency' => 'string',
-        'ping_url' => 'string',
-        'recipient_id' => 'string',
-        'return_url' => 'string',
-        'security_domain' => 'string',
-        'x_frame_options' => 'string',
-        'x_frame_options_allow_from_url' => 'string'
+        'assertion_id' => '?string',
+        'authentication_instant' => '?string',
+        'authentication_method' => '?string',
+        'ping_frequency' => '?string',
+        'ping_url' => '?string',
+        'recipient_id' => '?string',
+        'return_url' => '?string',
+        'security_domain' => '?string',
+        'x_frame_options' => '?string',
+        'x_frame_options_allow_from_url' => '?string'
     ];
 
     /**
@@ -261,7 +261,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets assertion_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAssertionId()
     {
@@ -271,7 +271,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets assertion_id
      *
-     * @param string $assertion_id 
+     * @param ?string $assertion_id 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_instant
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationInstant()
     {
@@ -295,7 +295,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_instant
      *
-     * @param string $authentication_instant 
+     * @param ?string $authentication_instant 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_method
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationMethod()
     {
@@ -319,7 +319,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_method
      *
-     * @param string $authentication_method 
+     * @param ?string $authentication_method 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ping_frequency
      *
-     * @return string
+     * @return ?string
      */
     public function getPingFrequency()
     {
@@ -343,7 +343,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ping_frequency
      *
-     * @param string $ping_frequency 
+     * @param ?string $ping_frequency 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ping_url
      *
-     * @return string
+     * @return ?string
      */
     public function getPingUrl()
     {
@@ -367,7 +367,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ping_url
      *
-     * @param string $ping_url 
+     * @param ?string $ping_url 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -391,7 +391,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets return_url
      *
-     * @return string
+     * @return ?string
      */
     public function getReturnUrl()
     {
@@ -415,7 +415,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets return_url
      *
-     * @param string $return_url 
+     * @param ?string $return_url 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets security_domain
      *
-     * @return string
+     * @return ?string
      */
     public function getSecurityDomain()
     {
@@ -439,7 +439,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets security_domain
      *
-     * @param string $security_domain 
+     * @param ?string $security_domain 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets x_frame_options
      *
-     * @return string
+     * @return ?string
      */
     public function getXFrameOptions()
     {
@@ -463,7 +463,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options
      *
-     * @param string $x_frame_options 
+     * @param ?string $x_frame_options 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets x_frame_options_allow_from_url
      *
-     * @return string
+     * @return ?string
      */
     public function getXFrameOptionsAllowFromUrl()
     {
@@ -487,7 +487,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options_allow_from_url
      *
-     * @param string $x_frame_options_allow_from_url 
+     * @param ?string $x_frame_options_allow_from_url 
      *
      * @return $this
      */

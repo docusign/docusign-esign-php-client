@@ -57,10 +57,10 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'combined' => 'string',
+        'combined' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'recipient_id' => 'string',
-        'recipient_id_guid' => 'string',
+        'recipient_id' => '?string',
+        'recipient_id_guid' => '?string',
         'tabs' => '\DocuSign\eSign\Model\Tabs'
     ];
 
@@ -231,7 +231,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets combined
      *
-     * @return string
+     * @return ?string
      */
     public function getCombined()
     {
@@ -241,7 +241,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets combined
      *
-     * @param string $combined 
+     * @param ?string $combined 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -289,7 +289,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientIdGuid()
     {
@@ -313,7 +313,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param string $recipient_id_guid 
+     * @param ?string $recipient_id_guid 
      *
      * @return $this
      */

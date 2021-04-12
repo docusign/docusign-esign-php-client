@@ -58,8 +58,8 @@ class ErrorDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'error_code' => 'string',
-        'message' => 'string'
+        'error_code' => '?string',
+        'message' => '?string'
     ];
 
     /**
@@ -214,7 +214,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Gets error_code
      *
-     * @return string
+     * @return ?string
      */
     public function getErrorCode()
     {
@@ -224,7 +224,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets error_code
      *
-     * @param string $error_code An error code associated with the error.
+     * @param ?string $error_code An error code associated with the error.
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return string
+     * @return ?string
      */
     public function getMessage()
     {
@@ -248,7 +248,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message A short error message.
+     * @param ?string $message A short error message.
      *
      * @return $this
      */

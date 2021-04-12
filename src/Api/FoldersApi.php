@@ -29,132 +29,132 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiFoldersApi;
+namespace DocuSign\eSign\Api\FoldersApi;
 
 
 class ListOptions
 {
     /**
       * $include 
-      * @var string
+      * @var ?string
       */
-    protected string $include;
+    protected ?string $include = null;
 
     /**
      * Gets include
-     * @return string
+     * @return ?string
      */
-    public function getInclude(): string
+    public function getInclude(): ?string
     {
         return $this->include;
     }
 
     /**
      * Sets include
-     * @param string $include 
+     * @param ?string $include 
      * @return self
      */
-    public function setInclude(string $include): self
+    public function setInclude(?string $include): self
     {
         $this->include = $include;
         return $this;
     }
     /**
       * $include_items 
-      * @var string
+      * @var ?string
       */
-    protected string $include_items;
+    protected ?string $include_items = null;
 
     /**
      * Gets include_items
-     * @return string
+     * @return ?string
      */
-    public function getIncludeItems(): string
+    public function getIncludeItems(): ?string
     {
         return $this->include_items;
     }
 
     /**
      * Sets include_items
-     * @param string $include_items 
+     * @param ?string $include_items 
      * @return self
      */
-    public function setIncludeItems(string $include_items): self
+    public function setIncludeItems(?string $include_items): self
     {
         $this->include_items = $include_items;
         return $this;
     }
     /**
       * $start_position 
-      * @var string
+      * @var ?string
       */
-    protected string $start_position;
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return string
+     * @return ?string
      */
-    public function getStartPosition(): string
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param string $start_position 
+     * @param ?string $start_position 
      * @return self
      */
-    public function setStartPosition(string $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
     /**
       * $template Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
-      * @var string
+      * @var ?string
       */
-    protected string $template;
+    protected ?string $template = null;
 
     /**
      * Gets template
-     * @return string
+     * @return ?string
      */
-    public function getTemplate(): string
+    public function getTemplate(): ?string
     {
         return $this->template;
     }
 
     /**
      * Sets template
-     * @param string $template Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
+     * @param ?string $template Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
      * @return self
      */
-    public function setTemplate(string $template): self
+    public function setTemplate(?string $template): self
     {
         $this->template = $template;
         return $this;
     }
     /**
       * $user_filter 
-      * @var string
+      * @var ?string
       */
-    protected string $user_filter;
+    protected ?string $user_filter = null;
 
     /**
      * Gets user_filter
-     * @return string
+     * @return ?string
      */
-    public function getUserFilter(): string
+    public function getUserFilter(): ?string
     {
         return $this->user_filter;
     }
 
     /**
      * Sets user_filter
-     * @param string $user_filter 
+     * @param ?string $user_filter 
      * @return self
      */
-    public function setUserFilter(string $user_filter): self
+    public function setUserFilter(?string $user_filter): self
     {
         $this->user_filter = $user_filter;
         return $this;
@@ -166,200 +166,200 @@ class ListItemsOptions
 {
     /**
       * $from_date Only return items on or after this date. If no value is provided, the default search is the previous 30 days.
-      * @var string
+      * @var ?string
       */
-    protected string $from_date;
+    protected ?string $from_date = null;
 
     /**
      * Gets from_date
-     * @return string
+     * @return ?string
      */
-    public function getFromDate(): string
+    public function getFromDate(): ?string
     {
         return $this->from_date;
     }
 
     /**
      * Sets from_date
-     * @param string $from_date Only return items on or after this date. If no value is provided, the default search is the previous 30 days.
+     * @param ?string $from_date Only return items on or after this date. If no value is provided, the default search is the previous 30 days.
      * @return self
      */
-    public function setFromDate(string $from_date): self
+    public function setFromDate(?string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
     }
     /**
       * $include_items 
-      * @var string
+      * @var ?string
       */
-    protected string $include_items;
+    protected ?string $include_items = null;
 
     /**
      * Gets include_items
-     * @return string
+     * @return ?string
      */
-    public function getIncludeItems(): string
+    public function getIncludeItems(): ?string
     {
         return $this->include_items;
     }
 
     /**
      * Sets include_items
-     * @param string $include_items 
+     * @param ?string $include_items 
      * @return self
      */
-    public function setIncludeItems(string $include_items): self
+    public function setIncludeItems(?string $include_items): self
     {
         $this->include_items = $include_items;
         return $this;
     }
     /**
       * $owner_email The email of the folder owner.
-      * @var string
+      * @var ?string
       */
-    protected string $owner_email;
+    protected ?string $owner_email = null;
 
     /**
      * Gets owner_email
-     * @return string
+     * @return ?string
      */
-    public function getOwnerEmail(): string
+    public function getOwnerEmail(): ?string
     {
         return $this->owner_email;
     }
 
     /**
      * Sets owner_email
-     * @param string $owner_email The email of the folder owner.
+     * @param ?string $owner_email The email of the folder owner.
      * @return self
      */
-    public function setOwnerEmail(string $owner_email): self
+    public function setOwnerEmail(?string $owner_email): self
     {
         $this->owner_email = $owner_email;
         return $this;
     }
     /**
       * $owner_name The name of the folder owner.
-      * @var string
+      * @var ?string
       */
-    protected string $owner_name;
+    protected ?string $owner_name = null;
 
     /**
      * Gets owner_name
-     * @return string
+     * @return ?string
      */
-    public function getOwnerName(): string
+    public function getOwnerName(): ?string
     {
         return $this->owner_name;
     }
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the folder owner.
+     * @param ?string $owner_name The name of the folder owner.
      * @return self
      */
-    public function setOwnerName(string $owner_name): self
+    public function setOwnerName(?string $owner_name): self
     {
         $this->owner_name = $owner_name;
         return $this;
     }
     /**
       * $search_text The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject.
-      * @var string
+      * @var ?string
       */
-    protected string $search_text;
+    protected ?string $search_text = null;
 
     /**
      * Gets search_text
-     * @return string
+     * @return ?string
      */
-    public function getSearchText(): string
+    public function getSearchText(): ?string
     {
         return $this->search_text;
     }
 
     /**
      * Sets search_text
-     * @param string $search_text The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject.
+     * @param ?string $search_text The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject.
      * @return self
      */
-    public function setSearchText(string $search_text): self
+    public function setSearchText(?string $search_text): self
     {
         $this->search_text = $search_text;
         return $this;
     }
     /**
       * $start_position The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0.
-      * @var string
+      * @var ?string
       */
-    protected string $start_position;
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return string
+     * @return ?string
      */
-    public function getStartPosition(): string
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param string $start_position The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0.
+     * @param ?string $start_position The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0.
      * @return self
      */
-    public function setStartPosition(string $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
     /**
       * $status The current status of the envelope. If no value is provided, the default search is all/any status.
-      * @var string
+      * @var ?string
       */
-    protected string $status;
+    protected ?string $status = null;
 
     /**
      * Gets status
-     * @return string
+     * @return ?string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
 
     /**
      * Sets status
-     * @param string $status The current status of the envelope. If no value is provided, the default search is all/any status.
+     * @param ?string $status The current status of the envelope. If no value is provided, the default search is all/any status.
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(?string $status): self
     {
         $this->status = $status;
         return $this;
     }
     /**
       * $to_date Only return items up to this date. If no value is provided, the default search is to the current date.
-      * @var string
+      * @var ?string
       */
-    protected string $to_date;
+    protected ?string $to_date = null;
 
     /**
      * Gets to_date
-     * @return string
+     * @return ?string
      */
-    public function getToDate(): string
+    public function getToDate(): ?string
     {
         return $this->to_date;
     }
 
     /**
      * Sets to_date
-     * @param string $to_date Only return items up to this date. If no value is provided, the default search is to the current date.
+     * @param ?string $to_date Only return items up to this date. If no value is provided, the default search is to the current date.
      * @return self
      */
-    public function setToDate(string $to_date): self
+    public function setToDate(?string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
@@ -371,200 +371,200 @@ class SearchOptions
 {
     /**
       * $all Specifies that all envelopes that match the criteria are returned.
-      * @var string
+      * @var ?string
       */
-    protected string $all;
+    protected ?string $all = null;
 
     /**
      * Gets all
-     * @return string
+     * @return ?string
      */
-    public function getAll(): string
+    public function getAll(): ?string
     {
         return $this->all;
     }
 
     /**
      * Sets all
-     * @param string $all Specifies that all envelopes that match the criteria are returned.
+     * @param ?string $all Specifies that all envelopes that match the criteria are returned.
      * @return self
      */
-    public function setAll(string $all): self
+    public function setAll(?string $all): self
     {
         $this->all = $all;
         return $this;
     }
     /**
       * $count Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
-      * @var string
+      * @var ?string
       */
-    protected string $count;
+    protected ?string $count = null;
 
     /**
      * Gets count
-     * @return string
+     * @return ?string
      */
-    public function getCount(): string
+    public function getCount(): ?string
     {
         return $this->count;
     }
 
     /**
      * Sets count
-     * @param string $count Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
+     * @param ?string $count Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
      * @return self
      */
-    public function setCount(string $count): self
+    public function setCount(?string $count): self
     {
         $this->count = $count;
         return $this;
     }
     /**
       * $from_date Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
-      * @var string
+      * @var ?string
       */
-    protected string $from_date;
+    protected ?string $from_date = null;
 
     /**
      * Gets from_date
-     * @return string
+     * @return ?string
      */
-    public function getFromDate(): string
+    public function getFromDate(): ?string
     {
         return $this->from_date;
     }
 
     /**
      * Sets from_date
-     * @param string $from_date Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
+     * @param ?string $from_date Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
      * @return self
      */
-    public function setFromDate(string $from_date): self
+    public function setFromDate(?string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
     }
     /**
       * $include_recipients When set to **true**, the recipient information is returned in the response.
-      * @var string
+      * @var ?string
       */
-    protected string $include_recipients;
+    protected ?string $include_recipients = null;
 
     /**
      * Gets include_recipients
-     * @return string
+     * @return ?string
      */
-    public function getIncludeRecipients(): string
+    public function getIncludeRecipients(): ?string
     {
         return $this->include_recipients;
     }
 
     /**
      * Sets include_recipients
-     * @param string $include_recipients When set to **true**, the recipient information is returned in the response.
+     * @param ?string $include_recipients When set to **true**, the recipient information is returned in the response.
      * @return self
      */
-    public function setIncludeRecipients(string $include_recipients): self
+    public function setIncludeRecipients(?string $include_recipients): self
     {
         $this->include_recipients = $include_recipients;
         return $this;
     }
     /**
       * $order Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order.
-      * @var string
+      * @var ?string
       */
-    protected string $order;
+    protected ?string $order = null;
 
     /**
      * Gets order
-     * @return string
+     * @return ?string
      */
-    public function getOrder(): string
+    public function getOrder(): ?string
     {
         return $this->order;
     }
 
     /**
      * Sets order
-     * @param string $order Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order.
+     * @param ?string $order Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order.
      * @return self
      */
-    public function setOrder(string $order): self
+    public function setOrder(?string $order): self
     {
         $this->order = $order;
         return $this;
     }
     /**
       * $order_by Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
-      * @var string
+      * @var ?string
       */
-    protected string $order_by;
+    protected ?string $order_by = null;
 
     /**
      * Gets order_by
-     * @return string
+     * @return ?string
      */
-    public function getOrderBy(): string
+    public function getOrderBy(): ?string
     {
         return $this->order_by;
     }
 
     /**
      * Sets order_by
-     * @param string $order_by Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
+     * @param ?string $order_by Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
      * @return self
      */
-    public function setOrderBy(string $order_by): self
+    public function setOrderBy(?string $order_by): self
     {
         $this->order_by = $order_by;
         return $this;
     }
     /**
       * $start_position Specifies the the starting location in the result set of the items that are returned.
-      * @var string
+      * @var ?string
       */
-    protected string $start_position;
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return string
+     * @return ?string
      */
-    public function getStartPosition(): string
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param string $start_position Specifies the the starting location in the result set of the items that are returned.
+     * @param ?string $start_position Specifies the the starting location in the result set of the items that are returned.
      * @return self
      */
-    public function setStartPosition(string $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
     /**
       * $to_date Specifies the end of the date range to return.
-      * @var string
+      * @var ?string
       */
-    protected string $to_date;
+    protected ?string $to_date = null;
 
     /**
      * Gets to_date
-     * @return string
+     * @return ?string
      */
-    public function getToDate(): string
+    public function getToDate(): ?string
     {
         return $this->to_date;
     }
 
     /**
      * Sets to_date
-     * @param string $to_date Specifies the end of the date range to return.
+     * @param ?string $to_date Specifies the end of the date range to return.
      * @return self
      */
-    public function setToDate(string $to_date): self
+    public function setToDate(?string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
@@ -655,12 +655,12 @@ class FoldersApi
      *
      * Gets a list of the folders for the account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiFoldersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FoldersResponse
      */
-    public function callList($account_id, \DocuSign\eSign\ApiFoldersApi\ListOptions $options = null): \DocuSign\eSign\Model\FoldersResponse
+    public function callList($account_id, \DocuSign\eSign\Api\FoldersApi\ListOptions $options = null): \DocuSign\eSign\Model\FoldersResponse
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -671,12 +671,12 @@ class FoldersApi
      *
      * Gets a list of the folders for the account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiFoldersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FoldersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, \DocuSign\eSign\ApiFoldersApi\ListOptions $options = null): array
+    public function callListWithHttpInfo($account_id, \DocuSign\eSign\Api\FoldersApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -761,13 +761,13 @@ class FoldersApi
      *
      * Gets a list of the envelopes in the specified folder.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param  \DocuSign\eSign\ApiFoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemsResponse
      */
-    public function listItems($account_id, $folder_id, \DocuSign\eSign\ApiFoldersApi\ListItemsOptions $options = null): \DocuSign\eSign\Model\FolderItemsResponse
+    public function listItems($account_id, $folder_id, \DocuSign\eSign\Api\FoldersApi\ListItemsOptions $options = null): \DocuSign\eSign\Model\FolderItemsResponse
     {
         list($response) = $this->listItemsWithHttpInfo($account_id, $folder_id, $options);
         return $response;
@@ -778,13 +778,13 @@ class FoldersApi
      *
      * Gets a list of the envelopes in the specified folder.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param  \DocuSign\eSign\ApiFoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listItemsWithHttpInfo($account_id, $folder_id, \DocuSign\eSign\ApiFoldersApi\ListItemsOptions $options = null): array
+    public function listItemsWithHttpInfo($account_id, $folder_id, \DocuSign\eSign\Api\FoldersApi\ListItemsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -886,8 +886,8 @@ class FoldersApi
      *
      * Moves an envelope from its current folder to the specified folder.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FoldersResponse
@@ -903,8 +903,8 @@ class FoldersApi
      *
      * Moves an envelope from its current folder to the specified folder.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FoldersResponse, HTTP status code, HTTP response headers (array of strings)
@@ -988,13 +988,13 @@ class FoldersApi
      *
      * Gets a list of envelopes in folders matching the specified criteria.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-     * @param  \DocuSign\eSign\ApiFoldersApi\SearchOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
+     * @param  \DocuSign\eSign\Api\FoldersApi\SearchOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemResponse
      */
-    public function search($account_id, $search_folder_id, \DocuSign\eSign\ApiFoldersApi\SearchOptions $options = null): \DocuSign\eSign\Model\FolderItemResponse
+    public function search($account_id, $search_folder_id, \DocuSign\eSign\Api\FoldersApi\SearchOptions $options = null): \DocuSign\eSign\Model\FolderItemResponse
     {
         list($response) = $this->searchWithHttpInfo($account_id, $search_folder_id, $options);
         return $response;
@@ -1005,13 +1005,13 @@ class FoldersApi
      *
      * Gets a list of envelopes in folders matching the specified criteria.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-     * @param  \DocuSign\eSign\ApiFoldersApi\SearchOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
+     * @param  \DocuSign\eSign\Api\FoldersApi\SearchOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function searchWithHttpInfo($account_id, $search_folder_id, \DocuSign\eSign\ApiFoldersApi\SearchOptions $options = null): array
+    public function searchWithHttpInfo($account_id, $search_folder_id, \DocuSign\eSign\Api\FoldersApi\SearchOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

@@ -57,12 +57,12 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_key' => 'string',
-        'connect_configured' => 'string',
-        'e_note_configured' => 'string',
-        'organization' => 'string',
-        'password' => 'string',
-        'user_name' => 'string'
+        'api_key' => '?string',
+        'connect_configured' => '?string',
+        'e_note_configured' => '?string',
+        'organization' => '?string',
+        'password' => '?string',
+        'user_name' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets api_key
      *
-     * @return string
+     * @return ?string
      */
     public function getApiKey()
     {
@@ -247,7 +247,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets api_key
      *
-     * @param string $api_key 
+     * @param ?string $api_key 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets connect_configured
      *
-     * @return string
+     * @return ?string
      */
     public function getConnectConfigured()
     {
@@ -271,7 +271,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets connect_configured
      *
-     * @param string $connect_configured 
+     * @param ?string $connect_configured 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets e_note_configured
      *
-     * @return string
+     * @return ?string
      */
     public function getENoteConfigured()
     {
@@ -295,7 +295,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets e_note_configured
      *
-     * @param string $e_note_configured 
+     * @param ?string $e_note_configured 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets organization
      *
-     * @return string
+     * @return ?string
      */
     public function getOrganization()
     {
@@ -319,7 +319,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets organization
      *
-     * @param string $organization 
+     * @param ?string $organization 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -343,7 +343,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -367,7 +367,7 @@ class ENoteConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */

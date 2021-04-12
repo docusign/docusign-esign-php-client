@@ -57,8 +57,8 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'proof_base_uri' => 'string',
-        'resource_token' => 'string'
+        'proof_base_uri' => '?string',
+        'resource_token' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
     /**
      * Gets proof_base_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getProofBaseUri()
     {
@@ -223,7 +223,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
     /**
      * Sets proof_base_uri
      *
-     * @param string $proof_base_uri 
+     * @param ?string $proof_base_uri 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
     /**
      * Gets resource_token
      *
-     * @return string
+     * @return ?string
      */
     public function getResourceToken()
     {
@@ -247,7 +247,7 @@ class ProofServiceResourceToken implements ModelInterface, ArrayAccess
     /**
      * Sets resource_token
      *
-     * @param string $resource_token 
+     * @param ?string $resource_token 
      *
      * @return $this
      */

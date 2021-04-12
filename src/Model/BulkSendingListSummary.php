@@ -57,10 +57,10 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_send_list_id' => 'string',
-        'created_by_user' => 'string',
-        'created_date' => 'string',
-        'name' => 'string'
+        'bulk_send_list_id' => '?string',
+        'created_by_user' => '?string',
+        'created_date' => '?string',
+        'name' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_send_list_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkSendListId()
     {
@@ -235,7 +235,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_list_id
      *
-     * @param string $bulk_send_list_id 
+     * @param ?string $bulk_send_list_id 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Gets created_by_user
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedByUser()
     {
@@ -259,7 +259,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_user
      *
-     * @param string $created_by_user 
+     * @param ?string $created_by_user 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Gets created_date
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDate()
     {
@@ -283,7 +283,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param string $created_date 
+     * @param ?string $created_date 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -307,7 +307,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */

@@ -57,11 +57,11 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'document_end_page' => 'string',
-        'document_id' => 'string',
-        'document_start_page' => 'string',
+        'document_end_page' => '?string',
+        'document_id' => '?string',
+        'document_start_page' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'template_id' => 'string'
+        'template_id' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets document_end_page
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentEndPage()
     {
@@ -241,7 +241,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets document_end_page
      *
-     * @param string $document_end_page 
+     * @param ?string $document_end_page 
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -265,7 +265,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets document_start_page
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentStartPage()
     {
@@ -289,7 +289,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets document_start_page
      *
-     * @param string $document_start_page 
+     * @param ?string $document_start_page 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -337,7 +337,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */

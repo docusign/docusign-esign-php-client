@@ -57,11 +57,11 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
+        'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'provider' => 'string',
-        'social_id' => 'string',
-        'user_name' => 'string'
+        'provider' => '?string',
+        'social_id' => '?string',
+        'user_name' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -241,7 +241,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email The users email address.
+     * @param ?string $email The users email address.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets provider
      *
-     * @return string
+     * @return ?string
      */
     public function getProvider()
     {
@@ -289,7 +289,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets provider
      *
-     * @param string $provider The social account provider (Facebook, Yahoo, etc.)
+     * @param ?string $provider The social account provider (Facebook, Yahoo, etc.)
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets social_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSocialId()
     {
@@ -313,7 +313,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets social_id
      *
-     * @param string $social_id The ID provided by the Socal Account.
+     * @param ?string $social_id The ID provided by the Socal Account.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -337,7 +337,7 @@ class SocialAccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name The full user name for the account.
+     * @param ?string $user_name The full user name for the account.
      *
      * @return $this
      */

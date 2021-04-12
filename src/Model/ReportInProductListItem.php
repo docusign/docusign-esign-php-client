@@ -57,20 +57,20 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'get_uri' => 'string',
-        'last_scheduled_execution_date' => 'string',
-        'last_scheduled_execution_success_date' => 'string',
-        'report_customized_id' => 'string',
-        'report_description' => 'string',
-        'report_id' => 'string',
-        'report_name' => 'string',
-        'report_type' => 'string',
-        'run_uri' => 'string',
-        'save_uri' => 'string',
-        'schedule_create_date' => 'string',
-        'schedule_end_date' => 'string',
-        'schedule_id' => 'string',
-        'schedule_renew_duration_days' => 'string'
+        'get_uri' => '?string',
+        'last_scheduled_execution_date' => '?string',
+        'last_scheduled_execution_success_date' => '?string',
+        'report_customized_id' => '?string',
+        'report_description' => '?string',
+        'report_id' => '?string',
+        'report_name' => '?string',
+        'report_type' => '?string',
+        'run_uri' => '?string',
+        'save_uri' => '?string',
+        'schedule_create_date' => '?string',
+        'schedule_end_date' => '?string',
+        'schedule_id' => '?string',
+        'schedule_renew_duration_days' => '?string'
     ];
 
     /**
@@ -285,7 +285,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets get_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getGetUri()
     {
@@ -295,7 +295,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets get_uri
      *
-     * @param string $get_uri 
+     * @param ?string $get_uri 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets last_scheduled_execution_date
      *
-     * @return string
+     * @return ?string
      */
     public function getLastScheduledExecutionDate()
     {
@@ -319,7 +319,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_scheduled_execution_date
      *
-     * @param string $last_scheduled_execution_date 
+     * @param ?string $last_scheduled_execution_date 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets last_scheduled_execution_success_date
      *
-     * @return string
+     * @return ?string
      */
     public function getLastScheduledExecutionSuccessDate()
     {
@@ -343,7 +343,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_scheduled_execution_success_date
      *
-     * @param string $last_scheduled_execution_success_date 
+     * @param ?string $last_scheduled_execution_success_date 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets report_customized_id
      *
-     * @return string
+     * @return ?string
      */
     public function getReportCustomizedId()
     {
@@ -367,7 +367,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_customized_id
      *
-     * @param string $report_customized_id 
+     * @param ?string $report_customized_id 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets report_description
      *
-     * @return string
+     * @return ?string
      */
     public function getReportDescription()
     {
@@ -391,7 +391,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_description
      *
-     * @param string $report_description 
+     * @param ?string $report_description 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets report_id
      *
-     * @return string
+     * @return ?string
      */
     public function getReportId()
     {
@@ -415,7 +415,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_id
      *
-     * @param string $report_id 
+     * @param ?string $report_id 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets report_name
      *
-     * @return string
+     * @return ?string
      */
     public function getReportName()
     {
@@ -439,7 +439,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_name
      *
-     * @param string $report_name 
+     * @param ?string $report_name 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets report_type
      *
-     * @return string
+     * @return ?string
      */
     public function getReportType()
     {
@@ -463,7 +463,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_type
      *
-     * @param string $report_type 
+     * @param ?string $report_type 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets run_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getRunUri()
     {
@@ -487,7 +487,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets run_uri
      *
-     * @param string $run_uri 
+     * @param ?string $run_uri 
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets save_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getSaveUri()
     {
@@ -511,7 +511,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets save_uri
      *
-     * @param string $save_uri 
+     * @param ?string $save_uri 
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_create_date
      *
-     * @return string
+     * @return ?string
      */
     public function getScheduleCreateDate()
     {
@@ -535,7 +535,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_create_date
      *
-     * @param string $schedule_create_date 
+     * @param ?string $schedule_create_date 
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_end_date
      *
-     * @return string
+     * @return ?string
      */
     public function getScheduleEndDate()
     {
@@ -559,7 +559,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_end_date
      *
-     * @param string $schedule_end_date 
+     * @param ?string $schedule_end_date 
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_id
      *
-     * @return string
+     * @return ?string
      */
     public function getScheduleId()
     {
@@ -583,7 +583,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_id
      *
-     * @param string $schedule_id 
+     * @param ?string $schedule_id 
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_renew_duration_days
      *
-     * @return string
+     * @return ?string
      */
     public function getScheduleRenewDurationDays()
     {
@@ -607,7 +607,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_renew_duration_days
      *
-     * @param string $schedule_renew_duration_days 
+     * @param ?string $schedule_renew_duration_days 
      *
      * @return $this
      */

@@ -58,7 +58,7 @@ class TemplateDocumentsResult implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'template_documents' => '\DocuSign\eSign\Model\EnvelopeDocument[]',
-        'template_id' => 'string'
+        'template_id' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class TemplateDocumentsResult implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -247,7 +247,7 @@ class TemplateDocumentsResult implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */

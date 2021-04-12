@@ -59,7 +59,7 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'favorite_templates' => '\DocuSign\eSign\Model\FavoriteTemplatesContentItem[]',
-        'templates_updated_count' => 'int'
+        'templates_updated_count' => '?int'
     ];
 
     /**
@@ -267,7 +267,7 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
     /**
      * Gets templates_updated_count
      *
-     * @return int
+     * @return ?int
      */
     public function getTemplatesUpdatedCount()
     {
@@ -277,7 +277,7 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets templates_updated_count
      *
-     * @param int $templates_updated_count 
+     * @param ?int $templates_updated_count 
      *
      * @return $this
      */

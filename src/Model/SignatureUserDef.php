@@ -57,9 +57,9 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_default' => 'string',
-        'rights' => 'string',
-        'user_id' => 'string'
+        'is_default' => '?string',
+        'rights' => '?string',
+        'user_id' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Gets is_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDefault()
     {
@@ -229,7 +229,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param string $is_default 
+     * @param ?string $is_default 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Gets rights
      *
-     * @return string
+     * @return ?string
      */
     public function getRights()
     {
@@ -253,7 +253,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param string $rights 
+     * @param ?string $rights 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -277,7 +277,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */

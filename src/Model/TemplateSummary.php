@@ -57,14 +57,14 @@ class TemplateSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'applied' => 'string',
-        'document_id' => 'string',
-        'document_name' => 'string',
+        'applied' => '?string',
+        'document_id' => '?string',
+        'document_name' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'name' => 'string',
-        'template_id' => 'string',
+        'name' => '?string',
+        'template_id' => '?string',
         'template_match' => '\DocuSign\eSign\Model\TemplateMatch',
-        'uri' => 'string'
+        'uri' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets applied
      *
-     * @return string
+     * @return ?string
      */
     public function getApplied()
     {
@@ -259,7 +259,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets applied
      *
-     * @param string $applied Reserved: TBD
+     * @param ?string $applied Reserved: TBD
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -283,7 +283,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets document_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentName()
     {
@@ -307,7 +307,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets document_name
      *
-     * @param string $document_name 
+     * @param ?string $document_name 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -355,7 +355,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -379,7 +379,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -427,7 +427,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

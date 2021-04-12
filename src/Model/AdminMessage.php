@@ -57,8 +57,8 @@ class AdminMessage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'base_message' => 'string',
-        'more_information' => 'string'
+        'base_message' => '?string',
+        'more_information' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class AdminMessage implements ModelInterface, ArrayAccess
     /**
      * Gets base_message
      *
-     * @return string
+     * @return ?string
      */
     public function getBaseMessage()
     {
@@ -223,7 +223,7 @@ class AdminMessage implements ModelInterface, ArrayAccess
     /**
      * Sets base_message
      *
-     * @param string $base_message 
+     * @param ?string $base_message 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class AdminMessage implements ModelInterface, ArrayAccess
     /**
      * Gets more_information
      *
-     * @return string
+     * @return ?string
      */
     public function getMoreInformation()
     {
@@ -247,7 +247,7 @@ class AdminMessage implements ModelInterface, ArrayAccess
     /**
      * Sets more_information
      *
-     * @param string $more_information 
+     * @param ?string $more_information 
      *
      * @return $this
      */

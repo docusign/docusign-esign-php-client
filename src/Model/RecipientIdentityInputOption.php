@@ -57,9 +57,9 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
+        'name' => '?string',
         'phone_number_list' => '\DocuSign\eSign\Model\RecipientIdentityPhoneNumber[]',
-        'value_type' => 'string'
+        'value_type' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -229,7 +229,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Gets value_type
      *
-     * @return string
+     * @return ?string
      */
     public function getValueType()
     {
@@ -277,7 +277,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets value_type
      *
-     * @param string $value_type 
+     * @param ?string $value_type 
      *
      * @return $this
      */

@@ -57,8 +57,8 @@ class AccountPasswordMinimumPasswordAgeDays implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_age' => 'string',
-        'minimum_age' => 'string'
+        'maximum_age' => '?string',
+        'minimum_age' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class AccountPasswordMinimumPasswordAgeDays implements ModelInterface, ArrayAcce
     /**
      * Gets maximum_age
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumAge()
     {
@@ -223,7 +223,7 @@ class AccountPasswordMinimumPasswordAgeDays implements ModelInterface, ArrayAcce
     /**
      * Sets maximum_age
      *
-     * @param string $maximum_age 
+     * @param ?string $maximum_age 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class AccountPasswordMinimumPasswordAgeDays implements ModelInterface, ArrayAcce
     /**
      * Gets minimum_age
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumAge()
     {
@@ -247,7 +247,7 @@ class AccountPasswordMinimumPasswordAgeDays implements ModelInterface, ArrayAcce
     /**
      * Sets minimum_age
      *
-     * @param string $minimum_age 
+     * @param ?string $minimum_age 
      *
      * @return $this
      */

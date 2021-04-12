@@ -58,14 +58,14 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_payment_method' => 'string',
+        'account_payment_method' => '?string',
         'billing_plan_preview' => '\DocuSign\eSign\Model\BillingPlanPreview',
-        'currency_code' => 'string',
-        'included_seats' => 'string',
-        'payment_cycle' => 'string',
-        'payment_method' => 'string',
-        'plan_id' => 'string',
-        'plan_name' => 'string'
+        'currency_code' => '?string',
+        'included_seats' => '?string',
+        'payment_cycle' => '?string',
+        'payment_method' => '?string',
+        'plan_id' => '?string',
+        'plan_name' => '?string'
     ];
 
     /**
@@ -250,7 +250,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets account_payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountPaymentMethod()
     {
@@ -260,7 +260,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets account_payment_method
      *
-     * @param string $account_payment_method 
+     * @param ?string $account_payment_method 
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -308,7 +308,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the ISO currency code for the account.
+     * @param ?string $currency_code Specifies the ISO currency code for the account.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets included_seats
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludedSeats()
     {
@@ -332,7 +332,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets included_seats
      *
-     * @param string $included_seats The number of seats (users) included.
+     * @param ?string $included_seats The number of seats (users) included.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payment_cycle
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentCycle()
     {
@@ -356,7 +356,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_cycle
      *
-     * @param string $payment_cycle 
+     * @param ?string $payment_cycle 
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -380,7 +380,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method 
+     * @param ?string $payment_method 
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets plan_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanId()
     {
@@ -404,7 +404,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets plan_id
      *
-     * @param string $plan_id 
+     * @param ?string $plan_id 
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets plan_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanName()
     {
@@ -428,7 +428,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets plan_name
      *
-     * @param string $plan_name 
+     * @param ?string $plan_name 
      *
      * @return $this
      */

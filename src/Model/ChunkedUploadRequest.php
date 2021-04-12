@@ -57,8 +57,8 @@ class ChunkedUploadRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'chunked_upload_id' => 'string',
-        'data' => 'string'
+        'chunked_upload_id' => '?string',
+        'data' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ChunkedUploadRequest implements ModelInterface, ArrayAccess
     /**
      * Gets chunked_upload_id
      *
-     * @return string
+     * @return ?string
      */
     public function getChunkedUploadId()
     {
@@ -223,7 +223,7 @@ class ChunkedUploadRequest implements ModelInterface, ArrayAccess
     /**
      * Sets chunked_upload_id
      *
-     * @param string $chunked_upload_id 
+     * @param ?string $chunked_upload_id 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ChunkedUploadRequest implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return string
+     * @return ?string
      */
     public function getData()
     {
@@ -247,7 +247,7 @@ class ChunkedUploadRequest implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param string $data 
+     * @param ?string $data 
      *
      * @return $this
      */

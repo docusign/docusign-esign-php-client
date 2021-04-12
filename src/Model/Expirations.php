@@ -58,9 +58,9 @@ class Expirations implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'expire_after' => 'string',
-        'expire_enabled' => 'string',
-        'expire_warn' => 'string'
+        'expire_after' => '?string',
+        'expire_enabled' => '?string',
+        'expire_warn' => '?string'
     ];
 
     /**
@@ -220,7 +220,7 @@ class Expirations implements ModelInterface, ArrayAccess
     /**
      * Gets expire_after
      *
-     * @return string
+     * @return ?string
      */
     public function getExpireAfter()
     {
@@ -230,7 +230,7 @@ class Expirations implements ModelInterface, ArrayAccess
     /**
      * Sets expire_after
      *
-     * @param string $expire_after An integer that sets the number of days the envelope is active.
+     * @param ?string $expire_after An integer that sets the number of days the envelope is active.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class Expirations implements ModelInterface, ArrayAccess
     /**
      * Gets expire_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getExpireEnabled()
     {
@@ -254,7 +254,7 @@ class Expirations implements ModelInterface, ArrayAccess
     /**
      * Sets expire_enabled
      *
-     * @param string $expire_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
+     * @param ?string $expire_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class Expirations implements ModelInterface, ArrayAccess
     /**
      * Gets expire_warn
      *
-     * @return string
+     * @return ?string
      */
     public function getExpireWarn()
     {
@@ -278,7 +278,7 @@ class Expirations implements ModelInterface, ArrayAccess
     /**
      * Sets expire_warn
      *
-     * @param string $expire_warn An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.
+     * @param ?string $expire_warn An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.
      *
      * @return $this
      */

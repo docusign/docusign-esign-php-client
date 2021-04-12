@@ -57,7 +57,7 @@ class BrandRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'brand_id' => 'string'
+        'brand_id' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class BrandRequest implements ModelInterface, ArrayAccess
     /**
      * Gets brand_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBrandId()
     {
@@ -217,7 +217,7 @@ class BrandRequest implements ModelInterface, ArrayAccess
     /**
      * Sets brand_id
      *
-     * @param string $brand_id The ID of the brand used in API calls
+     * @param ?string $brand_id The ID of the brand used in API calls
      *
      * @return $this
      */

@@ -29,32 +29,32 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiDiagnosticsApi;
+namespace DocuSign\eSign\Api\DiagnosticsApi;
 
 
 class ListRequestLogsOptions
 {
     /**
       * $encoding 
-      * @var string
+      * @var ?string
       */
-    protected string $encoding;
+    protected ?string $encoding = null;
 
     /**
      * Gets encoding
-     * @return string
+     * @return ?string
      */
-    public function getEncoding(): string
+    public function getEncoding(): ?string
     {
         return $this->encoding;
     }
 
     /**
      * Sets encoding
-     * @param string $encoding 
+     * @param ?string $encoding 
      * @return self
      */
-    public function setEncoding(string $encoding): self
+    public function setEncoding(?string $encoding): self
     {
         $this->encoding = $encoding;
         return $this;
@@ -216,7 +216,7 @@ class DiagnosticsApi
      *
      * Gets a request logging log file.
      *
-     * @param string $request_log_id 
+     * @param ?string $request_log_id 
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -231,7 +231,7 @@ class DiagnosticsApi
      *
      * Gets a request logging log file.
      *
-     * @param string $request_log_id 
+     * @param ?string $request_log_id 
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -526,11 +526,11 @@ class DiagnosticsApi
      *
      * Gets the API request logging log files.
      *
-     * @param  \DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ApiRequestLogsResult
      */
-    public function listRequestLogs(\DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions $options = null): \DocuSign\eSign\Model\ApiRequestLogsResult
+    public function listRequestLogs(\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null): \DocuSign\eSign\Model\ApiRequestLogsResult
     {
         list($response) = $this->listRequestLogsWithHttpInfo($options);
         return $response;
@@ -541,11 +541,11 @@ class DiagnosticsApi
      *
      * Gets the API request logging log files.
      *
-     * @param  \DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ApiRequestLogsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRequestLogsWithHttpInfo(\DocuSign\eSign\ApiDiagnosticsApi\ListRequestLogsOptions $options = null): array
+    public function listRequestLogsWithHttpInfo(\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/request_logs";

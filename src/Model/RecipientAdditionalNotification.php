@@ -58,9 +58,9 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'phone_number' => '\DocuSign\eSign\Model\RecipientPhoneNumber',
-        'secondary_delivery_method' => 'string',
+        'secondary_delivery_method' => '?string',
         'secondary_delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'secondary_delivery_status' => 'string'
+        'secondary_delivery_status' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Gets secondary_delivery_method
      *
-     * @return string
+     * @return ?string
      */
     public function getSecondaryDeliveryMethod()
     {
@@ -259,7 +259,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Sets secondary_delivery_method
      *
-     * @param string $secondary_delivery_method 
+     * @param ?string $secondary_delivery_method 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Gets secondary_delivery_status
      *
-     * @return string
+     * @return ?string
      */
     public function getSecondaryDeliveryStatus()
     {
@@ -307,7 +307,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Sets secondary_delivery_status
      *
-     * @param string $secondary_delivery_status 
+     * @param ?string $secondary_delivery_status 
      *
      * @return $this
      */

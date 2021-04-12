@@ -58,12 +58,12 @@ class Group implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'group_id' => 'string',
-        'group_name' => 'string',
-        'group_type' => 'string',
-        'permission_profile_id' => 'string',
+        'group_id' => '?string',
+        'group_name' => '?string',
+        'group_type' => '?string',
+        'permission_profile_id' => '?string',
         'users' => '\DocuSign\eSign\Model\UserInfo[]',
-        'users_count' => 'string'
+        'users_count' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Gets group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupId()
     {
@@ -277,7 +277,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets group_id
      *
-     * @param string $group_id The DocuSign group ID for the group.
+     * @param ?string $group_id The DocuSign group ID for the group.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Gets group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupName()
     {
@@ -301,7 +301,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets group_name
      *
-     * @param string $group_name The name of the group.
+     * @param ?string $group_name The name of the group.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Gets group_type
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupType()
     {
@@ -325,7 +325,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets group_type
      *
-     * @param string $group_type The group type.
+     * @param ?string $group_type The group type.
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Gets permission_profile_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPermissionProfileId()
     {
@@ -349,7 +349,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_id
      *
-     * @param string $permission_profile_id The ID of the permission profile associated with the group.
+     * @param ?string $permission_profile_id The ID of the permission profile associated with the group.
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Gets users_count
      *
-     * @return string
+     * @return ?string
      */
     public function getUsersCount()
     {
@@ -397,7 +397,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets users_count
      *
-     * @param string $users_count 
+     * @param ?string $users_count 
      *
      * @return $this
      */

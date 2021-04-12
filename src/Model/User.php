@@ -57,11 +57,11 @@ class User implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'cell_phone_number' => 'string',
-        'country_code' => 'string',
+        'cell_phone_number' => '?string',
+        'country_code' => '?string',
         'credentials' => '\DocuSign\eSign\Model\Credential[]',
-        'display_name' => 'string',
-        'email' => 'string',
+        'display_name' => '?string',
+        'email' => '?string',
         'external_claims' => '\DocuSign\eSign\Model\ExternalClaim[]'
     ];
 
@@ -237,7 +237,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets cell_phone_number
      *
-     * @return string
+     * @return ?string
      */
     public function getCellPhoneNumber()
     {
@@ -247,7 +247,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets cell_phone_number
      *
-     * @param string $cell_phone_number 
+     * @param ?string $cell_phone_number 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets country_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCountryCode()
     {
@@ -271,7 +271,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param string $country_code 
+     * @param ?string $country_code 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayName()
     {
@@ -319,7 +319,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets display_name
      *
-     * @param string $display_name 
+     * @param ?string $display_name 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -343,7 +343,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */

@@ -58,10 +58,10 @@ class UsageHistory implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'last_sent_date_time' => 'string',
-        'last_signed_date_time' => 'string',
-        'sent_count' => 'string',
-        'signed_count' => 'string'
+        'last_sent_date_time' => '?string',
+        'last_signed_date_time' => '?string',
+        'sent_count' => '?string',
+        'signed_count' => '?string'
     ];
 
     /**
@@ -226,7 +226,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Gets last_sent_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getLastSentDateTime()
     {
@@ -236,7 +236,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Sets last_sent_date_time
      *
-     * @param string $last_sent_date_time The date and time the user last sent an envelope.
+     * @param ?string $last_sent_date_time The date and time the user last sent an envelope.
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Gets last_signed_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getLastSignedDateTime()
     {
@@ -260,7 +260,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Sets last_signed_date_time
      *
-     * @param string $last_signed_date_time The date and time the user last signed an envelope.
+     * @param ?string $last_signed_date_time The date and time the user last signed an envelope.
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Gets sent_count
      *
-     * @return string
+     * @return ?string
      */
     public function getSentCount()
     {
@@ -284,7 +284,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Sets sent_count
      *
-     * @param string $sent_count The number of envelopes the user has sent.
+     * @param ?string $sent_count The number of envelopes the user has sent.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Gets signed_count
      *
-     * @return string
+     * @return ?string
      */
     public function getSignedCount()
     {
@@ -308,7 +308,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
     /**
      * Sets signed_count
      *
-     * @param string $signed_count The number of envelopes the user has signed.
+     * @param ?string $signed_count The number of envelopes the user has signed.
      *
      * @return $this
      */

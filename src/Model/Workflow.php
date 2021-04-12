@@ -57,8 +57,8 @@ class Workflow implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'current_workflow_step_id' => 'string',
-        'workflow_status' => 'string',
+        'current_workflow_step_id' => '?string',
+        'workflow_status' => '?string',
         'workflow_steps' => '\DocuSign\eSign\Model\WorkflowStep[]'
     ];
 
@@ -219,7 +219,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
      * Gets current_workflow_step_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrentWorkflowStepId()
     {
@@ -229,7 +229,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
      * Sets current_workflow_step_id
      *
-     * @param string $current_workflow_step_id 
+     * @param ?string $current_workflow_step_id 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
      * Gets workflow_status
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkflowStatus()
     {
@@ -253,7 +253,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_status
      *
-     * @param string $workflow_status 
+     * @param ?string $workflow_status 
      *
      * @return $this
      */

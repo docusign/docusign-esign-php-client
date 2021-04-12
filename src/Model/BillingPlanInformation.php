@@ -61,20 +61,20 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'billing_address' => '\DocuSign\eSign\Model\AccountAddress',
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
-        'downgrade_reason' => 'string',
-        'enable_support' => 'string',
-        'included_seats' => 'string',
-        'incremental_seats' => 'string',
-        'payment_method' => 'string',
+        'downgrade_reason' => '?string',
+        'enable_support' => '?string',
+        'included_seats' => '?string',
+        'incremental_seats' => '?string',
+        'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
-        'renewal_status' => 'string',
-        'sale_discount_amount' => 'string',
-        'sale_discount_fixed_amount' => 'string',
-        'sale_discount_percent' => 'string',
-        'sale_discount_periods' => 'string',
-        'sale_discount_seat_price_override' => 'string'
+        'renewal_status' => '?string',
+        'sale_discount_amount' => '?string',
+        'sale_discount_fixed_amount' => '?string',
+        'sale_discount_percent' => '?string',
+        'sale_discount_periods' => '?string',
+        'sale_discount_seat_price_override' => '?string'
     ];
 
     /**
@@ -405,7 +405,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets downgrade_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getDowngradeReason()
     {
@@ -415,7 +415,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_reason
      *
-     * @param string $downgrade_reason 
+     * @param ?string $downgrade_reason 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_support
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSupport()
     {
@@ -439,7 +439,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_support
      *
-     * @param string $enable_support 
+     * @param ?string $enable_support 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets included_seats
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludedSeats()
     {
@@ -463,7 +463,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets included_seats
      *
-     * @param string $included_seats The number of seats (users) included.
+     * @param ?string $included_seats The number of seats (users) included.
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets incremental_seats
      *
-     * @return string
+     * @return ?string
      */
     public function getIncrementalSeats()
     {
@@ -487,7 +487,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets incremental_seats
      *
-     * @param string $incremental_seats Reserved: TBD
+     * @param ?string $incremental_seats Reserved: TBD
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -511,7 +511,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method 
+     * @param ?string $payment_method 
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets renewal_status
      *
-     * @return string
+     * @return ?string
      */
     public function getRenewalStatus()
     {
@@ -607,7 +607,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets renewal_status
      *
-     * @param string $renewal_status 
+     * @param ?string $renewal_status 
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountAmount()
     {
@@ -631,7 +631,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_amount
      *
-     * @param string $sale_discount_amount 
+     * @param ?string $sale_discount_amount 
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_fixed_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountFixedAmount()
     {
@@ -655,7 +655,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_fixed_amount
      *
-     * @param string $sale_discount_fixed_amount 
+     * @param ?string $sale_discount_fixed_amount 
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_percent
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountPercent()
     {
@@ -679,7 +679,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_percent
      *
-     * @param string $sale_discount_percent 
+     * @param ?string $sale_discount_percent 
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_periods
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountPeriods()
     {
@@ -703,7 +703,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_periods
      *
-     * @param string $sale_discount_periods 
+     * @param ?string $sale_discount_periods 
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_seat_price_override
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountSeatPriceOverride()
     {
@@ -727,7 +727,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_seat_price_override
      *
-     * @param string $sale_discount_seat_price_override 
+     * @param ?string $sale_discount_seat_price_override 
      *
      * @return $this
      */

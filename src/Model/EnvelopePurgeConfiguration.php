@@ -57,10 +57,10 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'purge_envelopes' => 'string',
-        'redact_pii' => 'string',
-        'remove_tabs_and_envelope_attachments' => 'string',
-        'retention_days' => 'string'
+        'purge_envelopes' => '?string',
+        'redact_pii' => '?string',
+        'remove_tabs_and_envelope_attachments' => '?string',
+        'retention_days' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets purge_envelopes
      *
-     * @return string
+     * @return ?string
      */
     public function getPurgeEnvelopes()
     {
@@ -235,7 +235,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets purge_envelopes
      *
-     * @param string $purge_envelopes 
+     * @param ?string $purge_envelopes 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets redact_pii
      *
-     * @return string
+     * @return ?string
      */
     public function getRedactPii()
     {
@@ -259,7 +259,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets redact_pii
      *
-     * @param string $redact_pii 
+     * @param ?string $redact_pii 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets remove_tabs_and_envelope_attachments
      *
-     * @return string
+     * @return ?string
      */
     public function getRemoveTabsAndEnvelopeAttachments()
     {
@@ -283,7 +283,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets remove_tabs_and_envelope_attachments
      *
-     * @param string $remove_tabs_and_envelope_attachments 
+     * @param ?string $remove_tabs_and_envelope_attachments 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets retention_days
      *
-     * @return string
+     * @return ?string
      */
     public function getRetentionDays()
     {
@@ -307,7 +307,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets retention_days
      *
-     * @param string $retention_days 
+     * @param ?string $retention_days 
      *
      * @return $this
      */

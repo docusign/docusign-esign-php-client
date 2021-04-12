@@ -58,11 +58,11 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount' => 'string',
-        'description' => 'string',
-        'payment_date' => 'string',
-        'payment_id' => 'string',
-        'payment_number' => 'string'
+        'amount' => '?string',
+        'description' => '?string',
+        'payment_date' => '?string',
+        'payment_id' => '?string',
+        'payment_number' => '?string'
     ];
 
     /**
@@ -232,7 +232,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return string
+     * @return ?string
      */
     public function getAmount()
     {
@@ -242,7 +242,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param string $amount Reserved: TBD
+     * @param ?string $amount Reserved: TBD
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -266,7 +266,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Gets payment_date
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentDate()
     {
@@ -290,7 +290,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Sets payment_date
      *
-     * @param string $payment_date 
+     * @param ?string $payment_date 
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Gets payment_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentId()
     {
@@ -314,7 +314,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Sets payment_id
      *
-     * @param string $payment_id 
+     * @param ?string $payment_id 
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Gets payment_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentNumber()
     {
@@ -338,7 +338,7 @@ class BillingPaymentItem implements ModelInterface, ArrayAccess
     /**
      * Sets payment_number
      *
-     * @param string $payment_number When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".
+     * @param ?string $payment_number When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".
      *
      * @return $this
      */

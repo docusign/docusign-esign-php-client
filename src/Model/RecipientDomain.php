@@ -57,10 +57,10 @@ class RecipientDomain implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'active' => 'string',
-        'domain_code' => 'string',
-        'domain_name' => 'string',
-        'recipient_domain_id' => 'string'
+        'active' => '?string',
+        'domain_code' => '?string',
+        'domain_name' => '?string',
+        'recipient_domain_id' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Gets active
      *
-     * @return string
+     * @return ?string
      */
     public function getActive()
     {
@@ -235,7 +235,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param string $active 
+     * @param ?string $active 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Gets domain_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDomainCode()
     {
@@ -259,7 +259,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets domain_code
      *
-     * @param string $domain_code 
+     * @param ?string $domain_code 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Gets domain_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDomainName()
     {
@@ -283,7 +283,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets domain_name
      *
-     * @param string $domain_name 
+     * @param ?string $domain_name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_domain_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientDomainId()
     {
@@ -307,7 +307,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_domain_id
      *
-     * @param string $recipient_domain_id 
+     * @param ?string $recipient_domain_id 
      *
      * @return $this
      */

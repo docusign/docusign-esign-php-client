@@ -58,12 +58,12 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_esign_id' => 'string',
-        'device_model' => 'string',
-        'device_name' => 'string',
-        'gps_latitude' => 'string',
-        'gps_longitude' => 'string',
-        'offline_signing_hash' => 'string'
+        'account_esign_id' => '?string',
+        'device_model' => '?string',
+        'device_name' => '?string',
+        'gps_latitude' => '?string',
+        'gps_longitude' => '?string',
+        'offline_signing_hash' => '?string'
     ];
 
     /**
@@ -238,7 +238,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Gets account_esign_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountEsignId()
     {
@@ -248,7 +248,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Sets account_esign_id
      *
-     * @param string $account_esign_id A GUID identifying the account associated with the consumer disclosure
+     * @param ?string $account_esign_id A GUID identifying the account associated with the consumer disclosure
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Gets device_model
      *
-     * @return string
+     * @return ?string
      */
     public function getDeviceModel()
     {
@@ -272,7 +272,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Sets device_model
      *
-     * @param string $device_model A string containing information about the model of the device used for offline signing.
+     * @param ?string $device_model A string containing information about the model of the device used for offline signing.
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Gets device_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDeviceName()
     {
@@ -296,7 +296,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Sets device_name
      *
-     * @param string $device_name A string containing information about the type of device used for offline signing.
+     * @param ?string $device_name A string containing information about the type of device used for offline signing.
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Gets gps_latitude
      *
-     * @return string
+     * @return ?string
      */
     public function getGpsLatitude()
     {
@@ -320,7 +320,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Sets gps_latitude
      *
-     * @param string $gps_latitude A string containing the latitude of the device location at the time of signing.
+     * @param ?string $gps_latitude A string containing the latitude of the device location at the time of signing.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Gets gps_longitude
      *
-     * @return string
+     * @return ?string
      */
     public function getGpsLongitude()
     {
@@ -344,7 +344,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Sets gps_longitude
      *
-     * @param string $gps_longitude A string containing the longitude of the device location at the time of signing.
+     * @param ?string $gps_longitude A string containing the longitude of the device location at the time of signing.
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Gets offline_signing_hash
      *
-     * @return string
+     * @return ?string
      */
     public function getOfflineSigningHash()
     {
@@ -368,7 +368,7 @@ class OfflineAttributes implements ModelInterface, ArrayAccess
     /**
      * Sets offline_signing_hash
      *
-     * @param string $offline_signing_hash 
+     * @param ?string $offline_signing_hash 
      *
      * @return $this
      */

@@ -58,8 +58,8 @@ class BrandsResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'brands' => '\DocuSign\eSign\Model\Brand[]',
-        'recipient_brand_id_default' => 'string',
-        'sender_brand_id_default' => 'string'
+        'recipient_brand_id_default' => '?string',
+        'sender_brand_id_default' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class BrandsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_brand_id_default
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientBrandIdDefault()
     {
@@ -253,7 +253,7 @@ class BrandsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_brand_id_default
      *
-     * @param string $recipient_brand_id_default The brand seen by envelope recipients when a brand is not explicitly set.
+     * @param ?string $recipient_brand_id_default The brand seen by envelope recipients when a brand is not explicitly set.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BrandsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets sender_brand_id_default
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderBrandIdDefault()
     {
@@ -277,7 +277,7 @@ class BrandsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets sender_brand_id_default
      *
-     * @param string $sender_brand_id_default The brand seen by envelope senders when a brand is not explicitly set.
+     * @param ?string $sender_brand_id_default The brand seen by envelope senders when a brand is not explicitly set.
      *
      * @return $this
      */

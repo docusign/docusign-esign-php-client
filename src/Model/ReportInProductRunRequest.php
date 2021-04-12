@@ -57,28 +57,28 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'custom_field_filter' => 'string',
-        'date_range_custom_from_date' => 'string',
-        'date_range_custom_to_date' => 'string',
-        'date_range_filter' => 'string',
-        'envelope_date_type_filter' => 'string',
-        'envelope_recipient_name_contains_filter' => 'string',
-        'envelope_status_filter' => 'string',
-        'envelope_subject_contains_filter' => 'string',
+        'custom_field_filter' => '?string',
+        'date_range_custom_from_date' => '?string',
+        'date_range_custom_to_date' => '?string',
+        'date_range_filter' => '?string',
+        'envelope_date_type_filter' => '?string',
+        'envelope_recipient_name_contains_filter' => '?string',
+        'envelope_status_filter' => '?string',
+        'envelope_subject_contains_filter' => '?string',
         'fields' => '\DocuSign\eSign\Model\ReportInProductField[]',
-        'for_download' => 'string',
-        'is_dashboard' => 'string',
-        'period_length_filter' => 'string',
-        'report_customized_id' => 'string',
-        'report_description' => 'string',
-        'report_id' => 'string',
-        'report_invocation_type' => 'string',
-        'report_name' => 'string',
-        'sent_by_filter' => 'string',
-        'sent_by_ids' => 'string',
-        'sort_direction' => 'string',
-        'sort_field' => 'string',
-        'start_position' => 'string'
+        'for_download' => '?string',
+        'is_dashboard' => '?string',
+        'period_length_filter' => '?string',
+        'report_customized_id' => '?string',
+        'report_description' => '?string',
+        'report_id' => '?string',
+        'report_invocation_type' => '?string',
+        'report_name' => '?string',
+        'sent_by_filter' => '?string',
+        'sent_by_ids' => '?string',
+        'sort_direction' => '?string',
+        'sort_field' => '?string',
+        'start_position' => '?string'
     ];
 
     /**
@@ -333,7 +333,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets custom_field_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomFieldFilter()
     {
@@ -343,7 +343,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets custom_field_filter
      *
-     * @param string $custom_field_filter 
+     * @param ?string $custom_field_filter 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets date_range_custom_from_date
      *
-     * @return string
+     * @return ?string
      */
     public function getDateRangeCustomFromDate()
     {
@@ -367,7 +367,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets date_range_custom_from_date
      *
-     * @param string $date_range_custom_from_date 
+     * @param ?string $date_range_custom_from_date 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets date_range_custom_to_date
      *
-     * @return string
+     * @return ?string
      */
     public function getDateRangeCustomToDate()
     {
@@ -391,7 +391,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets date_range_custom_to_date
      *
-     * @param string $date_range_custom_to_date 
+     * @param ?string $date_range_custom_to_date 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets date_range_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getDateRangeFilter()
     {
@@ -415,7 +415,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets date_range_filter
      *
-     * @param string $date_range_filter 
+     * @param ?string $date_range_filter 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_date_type_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeDateTypeFilter()
     {
@@ -439,7 +439,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_date_type_filter
      *
-     * @param string $envelope_date_type_filter 
+     * @param ?string $envelope_date_type_filter 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_recipient_name_contains_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeRecipientNameContainsFilter()
     {
@@ -463,7 +463,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_recipient_name_contains_filter
      *
-     * @param string $envelope_recipient_name_contains_filter 
+     * @param ?string $envelope_recipient_name_contains_filter 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_status_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeStatusFilter()
     {
@@ -487,7 +487,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_status_filter
      *
-     * @param string $envelope_status_filter 
+     * @param ?string $envelope_status_filter 
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_subject_contains_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeSubjectContainsFilter()
     {
@@ -511,7 +511,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_subject_contains_filter
      *
-     * @param string $envelope_subject_contains_filter 
+     * @param ?string $envelope_subject_contains_filter 
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets for_download
      *
-     * @return string
+     * @return ?string
      */
     public function getForDownload()
     {
@@ -559,7 +559,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets for_download
      *
-     * @param string $for_download 
+     * @param ?string $for_download 
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets is_dashboard
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDashboard()
     {
@@ -583,7 +583,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets is_dashboard
      *
-     * @param string $is_dashboard 
+     * @param ?string $is_dashboard 
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets period_length_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getPeriodLengthFilter()
     {
@@ -607,7 +607,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets period_length_filter
      *
-     * @param string $period_length_filter 
+     * @param ?string $period_length_filter 
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets report_customized_id
      *
-     * @return string
+     * @return ?string
      */
     public function getReportCustomizedId()
     {
@@ -631,7 +631,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_customized_id
      *
-     * @param string $report_customized_id 
+     * @param ?string $report_customized_id 
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets report_description
      *
-     * @return string
+     * @return ?string
      */
     public function getReportDescription()
     {
@@ -655,7 +655,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_description
      *
-     * @param string $report_description 
+     * @param ?string $report_description 
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets report_id
      *
-     * @return string
+     * @return ?string
      */
     public function getReportId()
     {
@@ -679,7 +679,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_id
      *
-     * @param string $report_id 
+     * @param ?string $report_id 
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets report_invocation_type
      *
-     * @return string
+     * @return ?string
      */
     public function getReportInvocationType()
     {
@@ -703,7 +703,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_invocation_type
      *
-     * @param string $report_invocation_type 
+     * @param ?string $report_invocation_type 
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets report_name
      *
-     * @return string
+     * @return ?string
      */
     public function getReportName()
     {
@@ -727,7 +727,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_name
      *
-     * @param string $report_name 
+     * @param ?string $report_name 
      *
      * @return $this
      */
@@ -741,7 +741,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByFilter()
     {
@@ -751,7 +751,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_filter
      *
-     * @param string $sent_by_filter 
+     * @param ?string $sent_by_filter 
      *
      * @return $this
      */
@@ -765,7 +765,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets sent_by_ids
      *
-     * @return string
+     * @return ?string
      */
     public function getSentByIds()
     {
@@ -775,7 +775,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_ids
      *
-     * @param string $sent_by_ids 
+     * @param ?string $sent_by_ids 
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets sort_direction
      *
-     * @return string
+     * @return ?string
      */
     public function getSortDirection()
     {
@@ -799,7 +799,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sort_direction
      *
-     * @param string $sort_direction 
+     * @param ?string $sort_direction 
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets sort_field
      *
-     * @return string
+     * @return ?string
      */
     public function getSortField()
     {
@@ -823,7 +823,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sort_field
      *
-     * @param string $sort_field 
+     * @param ?string $sort_field 
      *
      * @return $this
      */
@@ -837,7 +837,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Gets start_position
      *
-     * @return string
+     * @return ?string
      */
     public function getStartPosition()
     {
@@ -847,7 +847,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets start_position
      *
-     * @param string $start_position Starting position of the current result set.
+     * @param ?string $start_position Starting position of the current result set.
      *
      * @return $this
      */

@@ -57,13 +57,13 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_subject' => 'string',
-        'envelope_id' => 'string',
+        'email_subject' => '?string',
+        'envelope_id' => '?string',
         'form_data' => '\DocuSign\eSign\Model\FormDataItem[]',
         'prefill_form_data' => '\DocuSign\eSign\Model\FormDataItem[]',
         'recipient_form_data' => '\DocuSign\eSign\Model\RecipientFormData[]',
-        'sent_date_time' => 'string',
-        'status' => 'string'
+        'sent_date_time' => '?string',
+        'status' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Gets email_subject
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailSubject()
     {
@@ -253,7 +253,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Sets email_subject
      *
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * @param ?string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -277,7 +277,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Gets sent_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSentDateTime()
     {
@@ -373,7 +373,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Sets sent_date_time
      *
-     * @param string $sent_date_time The date and time the envelope was sent.
+     * @param ?string $sent_date_time The date and time the envelope was sent.
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -397,7 +397,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */

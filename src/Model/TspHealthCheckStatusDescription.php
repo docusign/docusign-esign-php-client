@@ -57,12 +57,12 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'description' => 'string',
-        'error' => 'string',
-        'hostname' => 'string',
-        'response_seconds' => 'string',
-        'status' => 'string',
-        'type' => 'string'
+        'description' => '?string',
+        'error' => '?string',
+        'hostname' => '?string',
+        'response_seconds' => '?string',
+        'status' => '?string',
+        'type' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -247,7 +247,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Gets error
      *
-     * @return string
+     * @return ?string
      */
     public function getError()
     {
@@ -271,7 +271,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets error
      *
-     * @param string $error 
+     * @param ?string $error 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Gets hostname
      *
-     * @return string
+     * @return ?string
      */
     public function getHostname()
     {
@@ -295,7 +295,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets hostname
      *
-     * @param string $hostname 
+     * @param ?string $hostname 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Gets response_seconds
      *
-     * @return string
+     * @return ?string
      */
     public function getResponseSeconds()
     {
@@ -319,7 +319,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets response_seconds
      *
-     * @param string $response_seconds 
+     * @param ?string $response_seconds 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -343,7 +343,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -367,7 +367,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */

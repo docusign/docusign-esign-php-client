@@ -57,10 +57,10 @@ class EnvelopeTransactionStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_id' => 'string',
+        'envelope_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'status' => 'string',
-        'transaction_id' => 'string'
+        'status' => '?string',
+        'transaction_id' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class EnvelopeTransactionStatus implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -235,7 +235,7 @@ class EnvelopeTransactionStatus implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class EnvelopeTransactionStatus implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -283,7 +283,7 @@ class EnvelopeTransactionStatus implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class EnvelopeTransactionStatus implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTransactionId()
     {
@@ -307,7 +307,7 @@ class EnvelopeTransactionStatus implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
+     * @param ?string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
      *
      * @return $this
      */

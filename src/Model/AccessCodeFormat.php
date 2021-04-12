@@ -57,15 +57,15 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'format_required' => 'string',
+        'format_required' => '?string',
         'format_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'letter_required' => 'string',
+        'letter_required' => '?string',
         'letter_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'minimum_length' => 'string',
+        'minimum_length' => '?string',
         'minimum_length_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'number_required' => 'string',
+        'number_required' => '?string',
         'number_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'special_character_required' => 'string',
+        'special_character_required' => '?string',
         'special_character_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
@@ -261,7 +261,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Gets format_required
      *
-     * @return string
+     * @return ?string
      */
     public function getFormatRequired()
     {
@@ -271,7 +271,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets format_required
      *
-     * @param string $format_required 
+     * @param ?string $format_required 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Gets letter_required
      *
-     * @return string
+     * @return ?string
      */
     public function getLetterRequired()
     {
@@ -319,7 +319,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets letter_required
      *
-     * @param string $letter_required 
+     * @param ?string $letter_required 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Gets minimum_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumLength()
     {
@@ -367,7 +367,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_length
      *
-     * @param string $minimum_length 
+     * @param ?string $minimum_length 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Gets number_required
      *
-     * @return string
+     * @return ?string
      */
     public function getNumberRequired()
     {
@@ -415,7 +415,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets number_required
      *
-     * @param string $number_required 
+     * @param ?string $number_required 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Gets special_character_required
      *
-     * @return string
+     * @return ?string
      */
     public function getSpecialCharacterRequired()
     {
@@ -463,7 +463,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets special_character_required
      *
-     * @param string $special_character_required 
+     * @param ?string $special_character_required 
      *
      * @return $this
      */

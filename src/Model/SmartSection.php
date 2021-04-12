@@ -57,88 +57,88 @@ class SmartSection implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'anchor_allow_white_space_in_characters' => 'string',
+        'anchor_allow_white_space_in_characters' => '?string',
         'anchor_allow_white_space_in_characters_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_case_sensitive' => 'string',
+        'anchor_case_sensitive' => '?string',
         'anchor_case_sensitive_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_horizontal_alignment' => 'string',
+        'anchor_horizontal_alignment' => '?string',
         'anchor_horizontal_alignment_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_ignore_if_not_present' => 'string',
+        'anchor_ignore_if_not_present' => '?string',
         'anchor_ignore_if_not_present_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_match_whole_word' => 'string',
+        'anchor_match_whole_word' => '?string',
         'anchor_match_whole_word_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_string' => 'string',
+        'anchor_string' => '?string',
         'anchor_string_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_tab_processor_version' => 'string',
+        'anchor_tab_processor_version' => '?string',
         'anchor_tab_processor_version_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_units' => 'string',
+        'anchor_units' => '?string',
         'anchor_units_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_x_offset' => 'string',
+        'anchor_x_offset' => '?string',
         'anchor_x_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_y_offset' => 'string',
+        'anchor_y_offset' => '?string',
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'case_sensitive' => 'bool',
-        'conditional_parent_label' => 'string',
+        'case_sensitive' => '?bool',
+        'conditional_parent_label' => '?string',
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'conditional_parent_value' => 'string',
+        'conditional_parent_value' => '?string',
         'conditional_parent_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'custom_tab_id' => 'string',
+        'custom_tab_id' => '?string',
         'custom_tab_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'display_settings' => '\DocuSign\eSign\Model\SmartSectionDisplaySettings',
-        'document_id' => 'string',
+        'document_id' => '?string',
         'document_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'end_anchor' => 'string',
+        'end_anchor' => '?string',
         'end_position' => '\DocuSign\eSign\Model\SmartSectionAnchorPosition',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'form_order' => 'string',
+        'form_order' => '?string',
         'form_order_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'form_page_label' => 'string',
+        'form_page_label' => '?string',
         'form_page_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'form_page_number' => 'string',
+        'form_page_number' => '?string',
         'form_page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'height' => 'string',
+        'height' => '?string',
         'height_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'locked' => 'string',
+        'locked' => '?string',
         'locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
-        'merge_field_xml' => 'string',
-        'overlay_type' => 'string',
+        'merge_field_xml' => '?string',
+        'overlay_type' => '?string',
         'overlay_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'page_number' => 'string',
+        'page_number' => '?string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'recipient_id' => 'string',
-        'recipient_id_guid' => 'string',
+        'recipient_id' => '?string',
+        'recipient_id_guid' => '?string',
         'recipient_id_guid_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'remove_end_anchor' => 'bool',
-        'remove_start_anchor' => 'bool',
-        'shared' => 'string',
+        'remove_end_anchor' => '?bool',
+        'remove_start_anchor' => '?bool',
+        'shared' => '?string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
-        'start_anchor' => 'string',
+        'start_anchor' => '?string',
         'start_position' => '\DocuSign\eSign\Model\SmartSectionAnchorPosition',
-        'status' => 'string',
+        'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_group_labels' => 'string[]',
+        'tab_group_labels' => '?string[]',
         'tab_group_labels_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_id' => 'string',
+        'tab_id' => '?string',
         'tab_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_label' => 'string',
-        'tab_order' => 'string',
+        'tab_label' => '?string',
+        'tab_order' => '?string',
         'tab_order_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_type' => 'string',
+        'tab_type' => '?string',
         'tab_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'template_locked' => 'string',
+        'template_locked' => '?string',
         'template_locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'template_required' => 'string',
+        'template_required' => '?string',
         'template_required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tooltip' => 'string',
+        'tooltip' => '?string',
         'tool_tip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'width' => 'string',
+        'width' => '?string',
         'width_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'x_position' => 'string',
+        'x_position' => '?string',
         'x_position_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'y_position' => 'string',
+        'y_position' => '?string',
         'y_position_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
@@ -699,7 +699,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_allow_white_space_in_characters
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorAllowWhiteSpaceInCharacters()
     {
@@ -709,7 +709,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters
      *
-     * @param string $anchor_allow_white_space_in_characters 
+     * @param ?string $anchor_allow_white_space_in_characters 
      *
      * @return $this
      */
@@ -747,7 +747,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_case_sensitive
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorCaseSensitive()
     {
@@ -757,7 +757,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive
      *
-     * @param string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+     * @param ?string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
      *
      * @return $this
      */
@@ -795,7 +795,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_horizontal_alignment
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorHorizontalAlignment()
     {
@@ -805,7 +805,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment
      *
-     * @param string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+     * @param ?string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
      *
      * @return $this
      */
@@ -843,7 +843,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_ignore_if_not_present
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorIgnoreIfNotPresent()
     {
@@ -853,7 +853,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present
      *
-     * @param string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
+     * @param ?string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
      *
      * @return $this
      */
@@ -891,7 +891,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_match_whole_word
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorMatchWholeWord()
     {
@@ -901,7 +901,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word
      *
-     * @param string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+     * @param ?string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
      *
      * @return $this
      */
@@ -939,7 +939,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_string
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorString()
     {
@@ -949,7 +949,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string
      *
-     * @param string $anchor_string Anchor text information for a radio button.
+     * @param ?string $anchor_string Anchor text information for a radio button.
      *
      * @return $this
      */
@@ -987,7 +987,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_tab_processor_version
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorTabProcessorVersion()
     {
@@ -997,7 +997,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version
      *
-     * @param string $anchor_tab_processor_version 
+     * @param ?string $anchor_tab_processor_version 
      *
      * @return $this
      */
@@ -1035,7 +1035,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_units
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorUnits()
     {
@@ -1045,7 +1045,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units
      *
-     * @param string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+     * @param ?string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
      *
      * @return $this
      */
@@ -1083,7 +1083,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_x_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorXOffset()
     {
@@ -1093,7 +1093,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset
      *
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -1131,7 +1131,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_y_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorYOffset()
     {
@@ -1141,7 +1141,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset
      *
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -1179,7 +1179,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets case_sensitive
      *
-     * @return bool
+     * @return ?bool
      */
     public function getCaseSensitive()
     {
@@ -1189,7 +1189,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets case_sensitive
      *
-     * @param bool $case_sensitive 
+     * @param ?bool $case_sensitive 
      *
      * @return $this
      */
@@ -1203,7 +1203,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_label
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentLabel()
     {
@@ -1213,7 +1213,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label
      *
-     * @param string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
+     * @param ?string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
      *
      * @return $this
      */
@@ -1251,7 +1251,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_value
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentValue()
     {
@@ -1261,7 +1261,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value
      *
-     * @param string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+     * @param ?string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
      *
      * @return $this
      */
@@ -1299,7 +1299,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets custom_tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomTabId()
     {
@@ -1309,7 +1309,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id
      *
-     * @param string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+     * @param ?string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
      *
      * @return $this
      */
@@ -1371,7 +1371,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -1381,7 +1381,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -1419,7 +1419,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets end_anchor
      *
-     * @return string
+     * @return ?string
      */
     public function getEndAnchor()
     {
@@ -1429,7 +1429,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets end_anchor
      *
-     * @param string $end_anchor 
+     * @param ?string $end_anchor 
      *
      * @return $this
      */
@@ -1491,7 +1491,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets form_order
      *
-     * @return string
+     * @return ?string
      */
     public function getFormOrder()
     {
@@ -1501,7 +1501,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets form_order
      *
-     * @param string $form_order 
+     * @param ?string $form_order 
      *
      * @return $this
      */
@@ -1539,7 +1539,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets form_page_label
      *
-     * @return string
+     * @return ?string
      */
     public function getFormPageLabel()
     {
@@ -1549,7 +1549,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label
      *
-     * @param string $form_page_label 
+     * @param ?string $form_page_label 
      *
      * @return $this
      */
@@ -1587,7 +1587,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets form_page_number
      *
-     * @return string
+     * @return ?string
      */
     public function getFormPageNumber()
     {
@@ -1597,7 +1597,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number
      *
-     * @param string $form_page_number 
+     * @param ?string $form_page_number 
      *
      * @return $this
      */
@@ -1635,7 +1635,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets height
      *
-     * @return string
+     * @return ?string
      */
     public function getHeight()
     {
@@ -1645,7 +1645,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets height
      *
-     * @param string $height Height of the tab in pixels.
+     * @param ?string $height Height of the tab in pixels.
      *
      * @return $this
      */
@@ -1683,7 +1683,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets locked
      *
-     * @return string
+     * @return ?string
      */
     public function getLocked()
     {
@@ -1693,7 +1693,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets locked
      *
-     * @param string $locked When set to **true**, the signer cannot change the data of the custom tab.
+     * @param ?string $locked When set to **true**, the signer cannot change the data of the custom tab.
      *
      * @return $this
      */
@@ -1755,7 +1755,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets merge_field_xml
      *
-     * @return string
+     * @return ?string
      */
     public function getMergeFieldXml()
     {
@@ -1765,7 +1765,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field_xml
      *
-     * @param string $merge_field_xml 
+     * @param ?string $merge_field_xml 
      *
      * @return $this
      */
@@ -1779,7 +1779,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets overlay_type
      *
-     * @return string
+     * @return ?string
      */
     public function getOverlayType()
     {
@@ -1789,7 +1789,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets overlay_type
      *
-     * @param string $overlay_type 
+     * @param ?string $overlay_type 
      *
      * @return $this
      */
@@ -1827,7 +1827,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets page_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPageNumber()
     {
@@ -1837,7 +1837,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param string $page_number Specifies the page number on which the tab is located.
+     * @param ?string $page_number Specifies the page number on which the tab is located.
      *
      * @return $this
      */
@@ -1875,7 +1875,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -1885,7 +1885,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -1899,7 +1899,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientIdGuid()
     {
@@ -1909,7 +1909,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param string $recipient_id_guid 
+     * @param ?string $recipient_id_guid 
      *
      * @return $this
      */
@@ -1971,7 +1971,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets remove_end_anchor
      *
-     * @return bool
+     * @return ?bool
      */
     public function getRemoveEndAnchor()
     {
@@ -1981,7 +1981,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets remove_end_anchor
      *
-     * @param bool $remove_end_anchor 
+     * @param ?bool $remove_end_anchor 
      *
      * @return $this
      */
@@ -1995,7 +1995,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets remove_start_anchor
      *
-     * @return bool
+     * @return ?bool
      */
     public function getRemoveStartAnchor()
     {
@@ -2005,7 +2005,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets remove_start_anchor
      *
-     * @param bool $remove_start_anchor 
+     * @param ?bool $remove_start_anchor 
      *
      * @return $this
      */
@@ -2019,7 +2019,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -2029,7 +2029,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -2091,7 +2091,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets start_anchor
      *
-     * @return string
+     * @return ?string
      */
     public function getStartAnchor()
     {
@@ -2101,7 +2101,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets start_anchor
      *
-     * @param string $start_anchor 
+     * @param ?string $start_anchor 
      *
      * @return $this
      */
@@ -2139,7 +2139,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -2149,7 +2149,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -2187,7 +2187,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets tab_group_labels
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getTabGroupLabels()
     {
@@ -2197,7 +2197,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels
      *
-     * @param string[] $tab_group_labels 
+     * @param ?string[] $tab_group_labels 
      *
      * @return $this
      */
@@ -2235,7 +2235,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTabId()
     {
@@ -2245,7 +2245,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id
      *
-     * @param string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+     * @param ?string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
      *
      * @return $this
      */
@@ -2283,7 +2283,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets tab_label
      *
-     * @return string
+     * @return ?string
      */
     public function getTabLabel()
     {
@@ -2293,7 +2293,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label
      *
-     * @param string $tab_label The label string associated with the tab.
+     * @param ?string $tab_label The label string associated with the tab.
      *
      * @return $this
      */
@@ -2307,7 +2307,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets tab_order
      *
-     * @return string
+     * @return ?string
      */
     public function getTabOrder()
     {
@@ -2317,7 +2317,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order
      *
-     * @param string $tab_order 
+     * @param ?string $tab_order 
      *
      * @return $this
      */
@@ -2355,7 +2355,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets tab_type
      *
-     * @return string
+     * @return ?string
      */
     public function getTabType()
     {
@@ -2365,7 +2365,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type
      *
-     * @param string $tab_type 
+     * @param ?string $tab_type 
      *
      * @return $this
      */
@@ -2403,7 +2403,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets template_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateLocked()
     {
@@ -2413,7 +2413,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked
      *
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @param ?string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2451,7 +2451,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets template_required
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequired()
     {
@@ -2461,7 +2461,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets template_required
      *
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @param ?string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2499,7 +2499,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets tooltip
      *
-     * @return string
+     * @return ?string
      */
     public function getTooltip()
     {
@@ -2509,7 +2509,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param string $tooltip 
+     * @param ?string $tooltip 
      *
      * @return $this
      */
@@ -2547,7 +2547,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets width
      *
-     * @return string
+     * @return ?string
      */
     public function getWidth()
     {
@@ -2557,7 +2557,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets width
      *
-     * @param string $width Width of the tab in pixels.
+     * @param ?string $width Width of the tab in pixels.
      *
      * @return $this
      */
@@ -2595,7 +2595,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets x_position
      *
-     * @return string
+     * @return ?string
      */
     public function getXPosition()
     {
@@ -2605,7 +2605,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets x_position
      *
-     * @param string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */
@@ -2643,7 +2643,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Gets y_position
      *
-     * @return string
+     * @return ?string
      */
     public function getYPosition()
     {
@@ -2653,7 +2653,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets y_position
      *
-     * @param string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */

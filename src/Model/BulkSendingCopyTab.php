@@ -57,8 +57,8 @@ class BulkSendingCopyTab implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'initial_value' => 'string',
-        'tab_label' => 'string'
+        'initial_value' => '?string',
+        'tab_label' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class BulkSendingCopyTab implements ModelInterface, ArrayAccess
     /**
      * Gets initial_value
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialValue()
     {
@@ -223,7 +223,7 @@ class BulkSendingCopyTab implements ModelInterface, ArrayAccess
     /**
      * Sets initial_value
      *
-     * @param string $initial_value The original value of the tab.
+     * @param ?string $initial_value The original value of the tab.
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class BulkSendingCopyTab implements ModelInterface, ArrayAccess
     /**
      * Gets tab_label
      *
-     * @return string
+     * @return ?string
      */
     public function getTabLabel()
     {
@@ -247,7 +247,7 @@ class BulkSendingCopyTab implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label
      *
-     * @param string $tab_label The label string associated with the tab.
+     * @param ?string $tab_label The label string associated with the tab.
      *
      * @return $this
      */

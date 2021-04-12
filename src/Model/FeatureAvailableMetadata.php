@@ -57,8 +57,8 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'availabilty' => 'string',
-        'feature_name' => 'string'
+        'availabilty' => '?string',
+        'feature_name' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets availabilty
      *
-     * @return string
+     * @return ?string
      */
     public function getAvailabilty()
     {
@@ -223,7 +223,7 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets availabilty
      *
-     * @param string $availabilty 
+     * @param ?string $availabilty 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets feature_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFeatureName()
     {
@@ -247,7 +247,7 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets feature_name
      *
-     * @param string $feature_name 
+     * @param ?string $feature_name 
      *
      * @return $this
      */

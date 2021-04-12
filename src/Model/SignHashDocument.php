@@ -57,14 +57,14 @@ class SignHashDocument implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => 'string',
-        'document_id' => 'string',
-        'format' => 'string',
-        'name' => 'string',
+        'data' => '?string',
+        'document_id' => '?string',
+        'format' => '?string',
+        'name' => '?string',
         'remaining_signatures' => 'int',
         'revisions' => '\DocuSign\eSign\Model\Revision[]',
         'signature_properties' => '\DocuSign\eSign\Model\SignatureProperties',
-        'signature_type' => 'string'
+        'signature_type' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return string
+     * @return ?string
      */
     public function getData()
     {
@@ -259,7 +259,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param string $data 
+     * @param ?string $data 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -283,7 +283,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Gets format
      *
-     * @return string
+     * @return ?string
      */
     public function getFormat()
     {
@@ -307,7 +307,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Sets format
      *
-     * @param string $format 
+     * @param ?string $format 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -331,7 +331,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Gets signature_type
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureType()
     {
@@ -427,7 +427,7 @@ class SignHashDocument implements ModelInterface, ArrayAccess
     /**
      * Sets signature_type
      *
-     * @param string $signature_type 
+     * @param ?string $signature_type 
      *
      * @return $this
      */

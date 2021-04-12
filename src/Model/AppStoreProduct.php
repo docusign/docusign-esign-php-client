@@ -58,8 +58,8 @@ class AppStoreProduct implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'market_place' => 'string',
-        'product_id' => 'string'
+        'market_place' => '?string',
+        'product_id' => '?string'
     ];
 
     /**
@@ -214,7 +214,7 @@ class AppStoreProduct implements ModelInterface, ArrayAccess
     /**
      * Gets market_place
      *
-     * @return string
+     * @return ?string
      */
     public function getMarketPlace()
     {
@@ -224,7 +224,7 @@ class AppStoreProduct implements ModelInterface, ArrayAccess
     /**
      * Sets market_place
      *
-     * @param string $market_place 
+     * @param ?string $market_place 
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class AppStoreProduct implements ModelInterface, ArrayAccess
     /**
      * Gets product_id
      *
-     * @return string
+     * @return ?string
      */
     public function getProductId()
     {
@@ -248,7 +248,7 @@ class AppStoreProduct implements ModelInterface, ArrayAccess
     /**
      * Sets product_id
      *
-     * @param string $product_id The Product ID from the AppStore.
+     * @param ?string $product_id The Product ID from the AppStore.
      *
      * @return $this
      */

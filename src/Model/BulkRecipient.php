@@ -57,15 +57,15 @@ class BulkRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_code' => 'string',
-        'email' => 'string',
+        'access_code' => '?string',
+        'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails[]',
-        'identification' => 'string',
-        'name' => 'string',
-        'note' => 'string',
-        'phone_number' => 'string',
+        'identification' => '?string',
+        'name' => '?string',
+        'note' => '?string',
+        'phone_number' => '?string',
         'recipient_signature_provider_info' => '\DocuSign\eSign\Model\BulkRecipientSignatureProvider[]',
-        'row_number' => 'string',
+        'row_number' => '?string',
         'tab_labels' => '\DocuSign\eSign\Model\BulkRecipientTabLabel[]'
     ];
 
@@ -261,7 +261,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCode()
     {
@@ -271,7 +271,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code
      *
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param ?string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -295,7 +295,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Specifies the recipient's email address.   Maximum length: 100 characters.
+     * @param ?string $email Specifies the recipient's email address.   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets identification
      *
-     * @return string
+     * @return ?string
      */
     public function getIdentification()
     {
@@ -343,7 +343,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets identification
      *
-     * @param string $identification Specifies the authentication check used for the signer. If blank then no authentication check is required for the signer. Only one value can be used in this field.  The acceptable values are:  * KBA: Enables the normal ID check authentication set up for your account. * Phone: Enables phone authentication. * SMS: Enables SMS authentication.
+     * @param ?string $identification Specifies the authentication check used for the signer. If blank then no authentication check is required for the signer. Only one value can be used in this field.  The acceptable values are:  * KBA: Enables the normal ID check authentication set up for your account. * Phone: Enables phone authentication. * SMS: Enables SMS authentication.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -367,7 +367,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Specifies the recipient's name.   Maximum length: 50 characters.
+     * @param ?string $name Specifies the recipient's name.   Maximum length: 50 characters.
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets note
      *
-     * @return string
+     * @return ?string
      */
     public function getNote()
     {
@@ -391,7 +391,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
+     * @param ?string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets phone_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneNumber()
     {
@@ -415,7 +415,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param string $phone_number This is only used if the Identification field value is Phone or SMS. The value for this field can be a valid telephone number or, if Phone, usersupplied (SMS authentication cannot use a user supplied number). Parenthesis and dashes can be used in the telephone number.  If `usersupplied` is used, the signer supplies his or her own telephone number.
+     * @param ?string $phone_number This is only used if the Identification field value is Phone or SMS. The value for this field can be a valid telephone number or, if Phone, usersupplied (SMS authentication cannot use a user supplied number). Parenthesis and dashes can be used in the telephone number.  If `usersupplied` is used, the signer supplies his or her own telephone number.
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets row_number
      *
-     * @return string
+     * @return ?string
      */
     public function getRowNumber()
     {
@@ -463,7 +463,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets row_number
      *
-     * @param string $row_number 
+     * @param ?string $row_number 
      *
      * @return $this
      */

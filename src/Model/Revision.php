@@ -57,12 +57,12 @@ class Revision implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'end_data' => 'string',
-        'field_name' => 'string',
-        'max_signature_length' => 'string',
+        'end_data' => '?string',
+        'field_name' => '?string',
+        'max_signature_length' => '?string',
         'signature_properties' => '\DocuSign\eSign\Model\SignatureProperties',
-        'signature_type' => 'string',
-        'start_data' => 'string'
+        'signature_type' => '?string',
+        'start_data' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Gets end_data
      *
-     * @return string
+     * @return ?string
      */
     public function getEndData()
     {
@@ -247,7 +247,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets end_data
      *
-     * @param string $end_data 
+     * @param ?string $end_data 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Gets field_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFieldName()
     {
@@ -271,7 +271,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets field_name
      *
-     * @param string $field_name 
+     * @param ?string $field_name 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Gets max_signature_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxSignatureLength()
     {
@@ -295,7 +295,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets max_signature_length
      *
-     * @param string $max_signature_length 
+     * @param ?string $max_signature_length 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Gets signature_type
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureType()
     {
@@ -343,7 +343,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets signature_type
      *
-     * @param string $signature_type 
+     * @param ?string $signature_type 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Gets start_data
      *
-     * @return string
+     * @return ?string
      */
     public function getStartData()
     {
@@ -367,7 +367,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets start_data
      *
-     * @param string $start_data 
+     * @param ?string $start_data 
      *
      * @return $this
      */

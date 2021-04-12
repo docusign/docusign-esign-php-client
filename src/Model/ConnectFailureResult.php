@@ -57,11 +57,11 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'config_id' => 'string',
-        'config_url' => 'string',
-        'envelope_id' => 'string',
-        'status' => 'string',
-        'status_message' => 'string'
+        'config_id' => '?string',
+        'config_url' => '?string',
+        'envelope_id' => '?string',
+        'status' => '?string',
+        'status_message' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Gets config_id
      *
-     * @return string
+     * @return ?string
      */
     public function getConfigId()
     {
@@ -241,7 +241,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Sets config_id
      *
-     * @param string $config_id Reserved: TBD
+     * @param ?string $config_id Reserved: TBD
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Gets config_url
      *
-     * @return string
+     * @return ?string
      */
     public function getConfigUrl()
     {
@@ -265,7 +265,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Sets config_url
      *
-     * @param string $config_url Reserved: TBD
+     * @param ?string $config_url Reserved: TBD
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -289,7 +289,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -313,7 +313,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Gets status_message
      *
-     * @return string
+     * @return ?string
      */
     public function getStatusMessage()
     {
@@ -337,7 +337,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
     /**
      * Sets status_message
      *
-     * @param string $status_message 
+     * @param ?string $status_message 
      *
      * @return $this
      */

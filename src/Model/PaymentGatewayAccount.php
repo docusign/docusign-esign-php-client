@@ -57,20 +57,20 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allow_custom_metadata' => 'bool',
+        'allow_custom_metadata' => '?bool',
         'config' => '\DocuSign\eSign\Model\PaymentGatewayAccountSetting',
-        'display_name' => 'string',
-        'is_enabled' => 'string',
-        'is_legacy' => 'string',
-        'last_modified' => 'string',
-        'payment_gateway' => 'string',
-        'payment_gateway_account_id' => 'string',
-        'payment_gateway_display_name' => 'string',
+        'display_name' => '?string',
+        'is_enabled' => '?string',
+        'is_legacy' => '?string',
+        'last_modified' => '?string',
+        'payment_gateway' => '?string',
+        'payment_gateway_account_id' => '?string',
+        'payment_gateway_display_name' => '?string',
         'pay_pal_legacy_settings' => '\DocuSign\eSign\Model\PayPalLegacySettings',
-        'supported_currencies' => 'string[]',
-        'supported_payment_methods' => 'string[]',
+        'supported_currencies' => '?string[]',
+        'supported_payment_methods' => '?string[]',
         'supported_payment_methods_with_options' => '\DocuSign\eSign\Model\PaymentMethodWithOptions[]',
-        'zero_decimal_currencies' => 'string[]'
+        'zero_decimal_currencies' => '?string[]'
     ];
 
     /**
@@ -285,7 +285,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets allow_custom_metadata
      *
-     * @return bool
+     * @return ?bool
      */
     public function getAllowCustomMetadata()
     {
@@ -295,7 +295,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets allow_custom_metadata
      *
-     * @param bool $allow_custom_metadata 
+     * @param ?bool $allow_custom_metadata 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayName()
     {
@@ -343,7 +343,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets display_name
      *
-     * @param string $display_name 
+     * @param ?string $display_name 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets is_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getIsEnabled()
     {
@@ -367,7 +367,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets is_enabled
      *
-     * @param string $is_enabled 
+     * @param ?string $is_enabled 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets is_legacy
      *
-     * @return string
+     * @return ?string
      */
     public function getIsLegacy()
     {
@@ -391,7 +391,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets is_legacy
      *
-     * @param string $is_legacy 
+     * @param ?string $is_legacy 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModified()
     {
@@ -415,7 +415,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param string $last_modified 
+     * @param ?string $last_modified 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets payment_gateway
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentGateway()
     {
@@ -439,7 +439,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets payment_gateway
      *
-     * @param string $payment_gateway 
+     * @param ?string $payment_gateway 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets payment_gateway_account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentGatewayAccountId()
     {
@@ -463,7 +463,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets payment_gateway_account_id
      *
-     * @param string $payment_gateway_account_id 
+     * @param ?string $payment_gateway_account_id 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets payment_gateway_display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentGatewayDisplayName()
     {
@@ -487,7 +487,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets payment_gateway_display_name
      *
-     * @param string $payment_gateway_display_name 
+     * @param ?string $payment_gateway_display_name 
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets supported_currencies
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSupportedCurrencies()
     {
@@ -535,7 +535,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets supported_currencies
      *
-     * @param string[] $supported_currencies 
+     * @param ?string[] $supported_currencies 
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets supported_payment_methods
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSupportedPaymentMethods()
     {
@@ -559,7 +559,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets supported_payment_methods
      *
-     * @param string[] $supported_payment_methods 
+     * @param ?string[] $supported_payment_methods 
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Gets zero_decimal_currencies
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getZeroDecimalCurrencies()
     {
@@ -607,7 +607,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets zero_decimal_currencies
      *
-     * @param string[] $zero_decimal_currencies 
+     * @param ?string[] $zero_decimal_currencies 
      *
      * @return $this
      */

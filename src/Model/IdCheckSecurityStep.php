@@ -57,7 +57,7 @@ class IdCheckSecurityStep implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'auth_type' => 'string'
+        'auth_type' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class IdCheckSecurityStep implements ModelInterface, ArrayAccess
     /**
      * Gets auth_type
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthType()
     {
@@ -217,7 +217,7 @@ class IdCheckSecurityStep implements ModelInterface, ArrayAccess
     /**
      * Sets auth_type
      *
-     * @param string $auth_type 
+     * @param ?string $auth_type 
      *
      * @return $this
      */

@@ -57,18 +57,18 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bank_branch_code' => 'string',
-        'bank_check_digit' => 'string',
-        'bank_code' => 'string',
-        'bank_name' => 'string',
-        'bank_transfer_account_name' => 'string',
-        'bank_transfer_account_number' => 'string',
-        'bank_transfer_type' => 'string',
-        'country' => 'string',
-        'email' => 'string',
-        'first_name' => 'string',
-        'i_ban' => 'string',
-        'last_name' => 'string'
+        'bank_branch_code' => '?string',
+        'bank_check_digit' => '?string',
+        'bank_code' => '?string',
+        'bank_name' => '?string',
+        'bank_transfer_account_name' => '?string',
+        'bank_transfer_account_number' => '?string',
+        'bank_transfer_type' => '?string',
+        'country' => '?string',
+        'email' => '?string',
+        'first_name' => '?string',
+        'i_ban' => '?string',
+        'last_name' => '?string'
     ];
 
     /**
@@ -273,7 +273,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bank_branch_code
      *
-     * @return string
+     * @return ?string
      */
     public function getBankBranchCode()
     {
@@ -283,7 +283,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_branch_code
      *
-     * @param string $bank_branch_code 
+     * @param ?string $bank_branch_code 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bank_check_digit
      *
-     * @return string
+     * @return ?string
      */
     public function getBankCheckDigit()
     {
@@ -307,7 +307,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_check_digit
      *
-     * @param string $bank_check_digit 
+     * @param ?string $bank_check_digit 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bank_code
      *
-     * @return string
+     * @return ?string
      */
     public function getBankCode()
     {
@@ -331,7 +331,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_code
      *
-     * @param string $bank_code 
+     * @param ?string $bank_code 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bank_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBankName()
     {
@@ -355,7 +355,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_name
      *
-     * @param string $bank_name 
+     * @param ?string $bank_name 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bank_transfer_account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBankTransferAccountName()
     {
@@ -379,7 +379,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_transfer_account_name
      *
-     * @param string $bank_transfer_account_name 
+     * @param ?string $bank_transfer_account_name 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bank_transfer_account_number
      *
-     * @return string
+     * @return ?string
      */
     public function getBankTransferAccountNumber()
     {
@@ -403,7 +403,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_transfer_account_number
      *
-     * @param string $bank_transfer_account_number 
+     * @param ?string $bank_transfer_account_number 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets bank_transfer_type
      *
-     * @return string
+     * @return ?string
      */
     public function getBankTransferType()
     {
@@ -427,7 +427,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_transfer_type
      *
-     * @param string $bank_transfer_type 
+     * @param ?string $bank_transfer_type 
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return string
+     * @return ?string
      */
     public function getCountry()
     {
@@ -451,7 +451,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country Specifies the country associated with the address.
+     * @param ?string $country Specifies the country associated with the address.
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -475,7 +475,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets first_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFirstName()
     {
@@ -499,7 +499,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets first_name
      *
-     * @param string $first_name The user's first name.  Maximum Length: 50 characters.
+     * @param ?string $first_name The user's first name.  Maximum Length: 50 characters.
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets i_ban
      *
-     * @return string
+     * @return ?string
      */
     public function getIBan()
     {
@@ -523,7 +523,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets i_ban
      *
-     * @param string $i_ban 
+     * @param ?string $i_ban 
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets last_name
      *
-     * @return string
+     * @return ?string
      */
     public function getLastName()
     {
@@ -547,7 +547,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param string $last_name 
+     * @param ?string $last_name 
      *
      * @return $this
      */

@@ -57,9 +57,9 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_required' => 'bool',
-        'option_name' => 'string',
-        'value_type' => 'string'
+        'is_required' => '?bool',
+        'option_name' => '?string',
+        'value_type' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Gets is_required
      *
-     * @return bool
+     * @return ?bool
      */
     public function getIsRequired()
     {
@@ -229,7 +229,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets is_required
      *
-     * @param bool $is_required 
+     * @param ?bool $is_required 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Gets option_name
      *
-     * @return string
+     * @return ?string
      */
     public function getOptionName()
     {
@@ -253,7 +253,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets option_name
      *
-     * @param string $option_name 
+     * @param ?string $option_name 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Gets value_type
      *
-     * @return string
+     * @return ?string
      */
     public function getValueType()
     {
@@ -277,7 +277,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets value_type
      *
-     * @param string $value_type 
+     * @param ?string $value_type 
      *
      * @return $this
      */

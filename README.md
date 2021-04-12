@@ -1,28 +1,21 @@
-# The Official DocuSign PHP Client 
+# The Official DocuSign eSignature PHP Client SDK
 
 [![Build status][travis-image]][travis-url]
 
 ## Requirements
-
-- PHP 7.4+
-- Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
+*   PHP 7.4+
+*   Free [developer account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
-
-- PHP 7.4+
-
-## Note
-
-This open-source SDK is provided for cases where you would like to make additional changes that the SDK does not provide out-of-the-box. If you simply want to use the SDK with any of the examples shown in the [Developer Center](https://developers.docusign.com/esign-rest-api/code-examples), follow the installation instructions below.
+*   PHP 7.4+
 
 ## Installation
+This SDK is provided as open source, which enables you to customize its functionality to suit your particular use case. To do so, download or clone the repository. If the SDK’s given functionality meets your integration needs, or if you’re working through our [code examples](https://developers.docusign.com/docs/esign-rest-api/how-to/) from the [DocuSign Developer Center](https://developers.docusign.com/), you merely need to install it by following the instructions below.
 
 ### Composer:
-
-1. In your **PHP console** , type:  
-   **Composer require docusign/esign-client;**
-2. To use the package automatically, add to Composer's **Autoload** file:  
-   **require_once('vendor/autoload.php');**
+1. In your PHP console, type: **Composer require docusign/esign-client;**
+2. To use the package automatically, add to Composer's Autoload file: 
+`require_once('vendor/autoload.php');`
 
 ### Manual install:
 
@@ -33,7 +26,7 @@ This open-source SDK is provided for cases where you would like to make addition
            <li>To bind to your server, edit the <em>init.php</em> file. Add:<br>
                <code>require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
            <li>To bind to single pages: In your PHP file that will utilize the PHP SDK, add:<br>
-                <code>`require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
+                <code>require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
        </ol>
    </li>
    <li>If you are using Composer V2 and get the error 'namespace cannot be found', add the following class mapping in <em>composer.json</em> file.</li>
@@ -41,42 +34,26 @@ This open-source SDK is provided for cases where you would like to make addition
 </ol>
 
 ## Dependencies
-
 This client has the following external dependencies:
+*   [PHP cURL extension](https://www.php.net/manual/en/intro.curl.php)
+*   [PHP JSON extension](https://php.net/manual/en/book.json.php)
 
-- [PHP cURL extension](https://www.php.net/manual/en/intro.curl.php)
-- [PHP JSON extension](https://php.net/manual/en/book.json.php)
+## Code examples
+You can find on our GitHub a self-executing package of code examples for the eSignature C# SDK, called a [Launcher](https://github.com/docusign/code-examples-csharp/blob/master/README.md), that demonstrates common use cases. You can also download a version preconfigured for your DocuSign developer account from [Quickstart](https://developers.docusign.com/docs/esign-rest-api/quickstart/). These examples can use either the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Token (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) authentication workflows.
 
-## Code Examples
-
-### Launchers
-
-DocuSign provides a sample application code referred to as a [Launcher](https://github.com/docusign/code-examples-php). The Launcher contains a set of 31 common use cases and associated source files. These examples use either DocuSign&#39;s [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Tokens (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) flows.
-
-## Proof-of-concept applications
-
-If your goal is to create a proof-of-concept application, DocuSign provides a set of [Quick Start](https://github.com/docusign/qs-php) examples. The Quick Startexamples are meant to be used with DocuSign's [OAuth Token Generator](https://developers.docusign.com/oauth-token-generator), which will allow you to generate tokens for the Demo/Sandbox environment only. These tokens last for eight hours and will enable you to build your proof-of-concept application without the need to fully implement an OAuth solution.
-
-## OAuth Implementations
-
-For details regarding which type of OAuth grant will work best for your DocuSign integration, see the [REST API Authentication Overview](https://developers.docusign.com/esign-rest-api/guides/authentication) guide located on the [DocuSign Developer Center](https://developers.docusign.com/esign-rest-api/guides/authentication).
+## OAuth implementations
+For details regarding which type of OAuth grant will work best for your DocuSign integration, see [Choose OAuth Type](https://developers.docusign.com/platform/auth/choose/) in the [DocuSign Developer Center](https://developers.docusign.com/).
 
 For security purposes, DocuSign recommends using the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
 
-
 ## Support
-
 Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
 
 ## License
+The DocuSign eSignature PHP Client SDK is licensed under the [MIT License](https://github.com/docusign/docusign-php-client/blob/master/LICENSE).
 
-The DocuSign PHP Client is licensed under the [MIT License](https://github.com/docusign/docusign-php-client/blob/master/LICENSE).
-
-[travis-image]: https://img.shields.io/travis/docusign/docusign-php-client.svg?style=flat
-[travis-url]: https://travis-ci.org/docusign/docusign-php-client
-
-### Additional Resources
-* [DocuSign Developer Center](https://developers.docusign.com)
-* [DocuSign API on Twitter](https://twitter.com/docusignapi)
-* [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
-* [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2NQ)
+### Additional resources
+*   [DocuSign Developer Center](https://developers.docusign.com/)
+*   [DocuSign API on Twitter](https://twitter.com/docusignapi)
+*   [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
+*   [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2NQ)

@@ -58,8 +58,8 @@ class FavoriteTemplatesContentItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'favorited_date' => 'string',
-        'template_id' => 'string'
+        'favorited_date' => '?string',
+        'template_id' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class FavoriteTemplatesContentItem implements ModelInterface, ArrayAccess
     /**
      * Gets favorited_date
      *
-     * @return string
+     * @return ?string
      */
     public function getFavoritedDate()
     {
@@ -253,7 +253,7 @@ class FavoriteTemplatesContentItem implements ModelInterface, ArrayAccess
     /**
      * Sets favorited_date
      *
-     * @param string $favorited_date 
+     * @param ?string $favorited_date 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class FavoriteTemplatesContentItem implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -277,7 +277,7 @@ class FavoriteTemplatesContentItem implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */

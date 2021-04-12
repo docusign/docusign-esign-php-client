@@ -57,10 +57,10 @@ class DateStampProperties implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'date_area_height' => 'string',
-        'date_area_width' => 'string',
-        'date_area_x' => 'string',
-        'date_area_y' => 'string'
+        'date_area_height' => '?string',
+        'date_area_width' => '?string',
+        'date_area_x' => '?string',
+        'date_area_y' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Gets date_area_height
      *
-     * @return string
+     * @return ?string
      */
     public function getDateAreaHeight()
     {
@@ -235,7 +235,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Sets date_area_height
      *
-     * @param string $date_area_height 
+     * @param ?string $date_area_height 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Gets date_area_width
      *
-     * @return string
+     * @return ?string
      */
     public function getDateAreaWidth()
     {
@@ -259,7 +259,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Sets date_area_width
      *
-     * @param string $date_area_width 
+     * @param ?string $date_area_width 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Gets date_area_x
      *
-     * @return string
+     * @return ?string
      */
     public function getDateAreaX()
     {
@@ -283,7 +283,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Sets date_area_x
      *
-     * @param string $date_area_x 
+     * @param ?string $date_area_x 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Gets date_area_y
      *
-     * @return string
+     * @return ?string
      */
     public function getDateAreaY()
     {
@@ -307,7 +307,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
     /**
      * Sets date_area_y
      *
-     * @param string $date_area_y 
+     * @param ?string $date_area_y 
      *
      * @return $this
      */

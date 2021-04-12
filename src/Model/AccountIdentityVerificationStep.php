@@ -57,8 +57,8 @@ class AccountIdentityVerificationStep implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-        'type' => 'string'
+        'name' => '?string',
+        'type' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class AccountIdentityVerificationStep implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -223,7 +223,7 @@ class AccountIdentityVerificationStep implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class AccountIdentityVerificationStep implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -247,7 +247,7 @@ class AccountIdentityVerificationStep implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */

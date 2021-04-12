@@ -58,7 +58,7 @@ class EnvelopeDocumentsResult implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'envelope_documents' => '\DocuSign\eSign\Model\EnvelopeDocument[]',
-        'envelope_id' => 'string'
+        'envelope_id' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class EnvelopeDocumentsResult implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -247,7 +247,7 @@ class EnvelopeDocumentsResult implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */

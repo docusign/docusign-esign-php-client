@@ -57,56 +57,56 @@ class Signer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_code' => 'string',
+        'access_code' => '?string',
         'access_code_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'add_access_code_to_email' => 'string',
+        'add_access_code_to_email' => '?string',
         'additional_notifications' => '\DocuSign\eSign\Model\RecipientAdditionalNotification[]',
-        'agent_can_edit_email' => 'string',
-        'agent_can_edit_name' => 'string',
-        'allow_system_override_for_locked_recipient' => 'string',
-        'auto_navigation' => 'string',
-        'bulk_recipients_uri' => 'string',
-        'can_sign_offline' => 'string',
-        'client_user_id' => 'string',
-        'completed_count' => 'string',
-        'creation_reason' => 'string',
-        'custom_fields' => 'string[]',
-        'declined_date_time' => 'string',
-        'declined_reason' => 'string',
-        'default_recipient' => 'string',
-        'delivered_date_time' => 'string',
-        'delivery_method' => 'string',
+        'agent_can_edit_email' => '?string',
+        'agent_can_edit_name' => '?string',
+        'allow_system_override_for_locked_recipient' => '?string',
+        'auto_navigation' => '?string',
+        'bulk_recipients_uri' => '?string',
+        'can_sign_offline' => '?string',
+        'client_user_id' => '?string',
+        'completed_count' => '?string',
+        'creation_reason' => '?string',
+        'custom_fields' => '?string[]',
+        'declined_date_time' => '?string',
+        'declined_reason' => '?string',
+        'default_recipient' => '?string',
+        'delivered_date_time' => '?string',
+        'delivery_method' => '?string',
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'designator_id' => 'string',
-        'designator_id_guid' => 'string',
+        'designator_id' => '?string',
+        'designator_id_guid' => '?string',
         'document_visibility' => '\DocuSign\eSign\Model\DocumentVisibility[]',
-        'email' => 'string',
+        'email' => '?string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
-        'embedded_recipient_start_url' => 'string',
+        'embedded_recipient_start_url' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'excluded_documents' => 'string[]',
-        'fax_number' => 'string',
+        'excluded_documents' => '?string[]',
+        'fax_number' => '?string',
         'fax_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'first_name' => 'string',
+        'first_name' => '?string',
         'first_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'full_name' => 'string',
+        'full_name' => '?string',
         'full_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'id_check_configuration_name' => 'string',
+        'id_check_configuration_name' => '?string',
         'id_check_configuration_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
         'identity_verification' => '\DocuSign\eSign\Model\RecipientIdentityVerification',
-        'inherit_email_notification_configuration' => 'string',
-        'is_bulk_recipient' => 'string',
+        'inherit_email_notification_configuration' => '?string',
+        'is_bulk_recipient' => '?string',
         'is_bulk_recipient_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'last_name' => 'string',
+        'last_name' => '?string',
         'last_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'locked_recipient_phone_auth_editable' => 'string',
-        'locked_recipient_sms_editable' => 'string',
-        'name' => 'string',
+        'locked_recipient_phone_auth_editable' => '?string',
+        'locked_recipient_sms_editable' => '?string',
+        'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'notary_id' => 'string',
-        'note' => 'string',
+        'notary_id' => '?string',
+        'note' => '?string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
@@ -114,39 +114,39 @@ class Signer implements ModelInterface, ArrayAccess
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_feature_metadata' => '\DocuSign\eSign\Model\FeatureAvailableMetadata[]',
-        'recipient_id' => 'string',
-        'recipient_id_guid' => 'string',
+        'recipient_id' => '?string',
+        'recipient_id_guid' => '?string',
         'recipient_signature_providers' => '\DocuSign\eSign\Model\RecipientSignatureProvider[]',
-        'recipient_supplies_tabs' => 'string',
-        'recipient_type' => 'string',
+        'recipient_supplies_tabs' => '?string',
+        'recipient_type' => '?string',
         'recipient_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'require_id_lookup' => 'string',
+        'require_id_lookup' => '?string',
         'require_id_lookup_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'require_signer_certificate' => 'string',
-        'require_sign_on_paper' => 'string',
-        'require_upload_signature' => 'string',
-        'role_name' => 'string',
-        'routing_order' => 'string',
+        'require_signer_certificate' => '?string',
+        'require_sign_on_paper' => '?string',
+        'require_upload_signature' => '?string',
+        'role_name' => '?string',
+        'routing_order' => '?string',
         'routing_order_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'sent_date_time' => 'string',
+        'sent_date_time' => '?string',
         'signature_info' => '\DocuSign\eSign\Model\RecipientSignatureInformation',
-        'signed_date_time' => 'string',
-        'sign_in_each_location' => 'string',
+        'signed_date_time' => '?string',
+        'sign_in_each_location' => '?string',
         'sign_in_each_location_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'signing_group_id' => 'string',
+        'signing_group_id' => '?string',
         'signing_group_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'signing_group_name' => 'string',
+        'signing_group_name' => '?string',
         'signing_group_users' => '\DocuSign\eSign\Model\UserInfo[]',
         'sms_authentication' => '\DocuSign\eSign\Model\RecipientSMSAuthentication',
         'social_authentications' => '\DocuSign\eSign\Model\SocialAuthentication[]',
-        'status' => 'string',
-        'status_code' => 'string',
-        'suppress_emails' => 'string',
+        'status' => '?string',
+        'status_code' => '?string',
+        'suppress_emails' => '?string',
         'tabs' => '\DocuSign\eSign\Model\Tabs',
-        'template_locked' => 'string',
-        'template_required' => 'string',
-        'total_tab_count' => 'string',
-        'user_id' => 'string'
+        'template_locked' => '?string',
+        'template_required' => '?string',
+        'total_tab_count' => '?string',
+        'user_id' => '?string'
     ];
 
     /**
@@ -741,7 +741,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCode()
     {
@@ -751,7 +751,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets access_code
      *
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param ?string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets add_access_code_to_email
      *
-     * @return string
+     * @return ?string
      */
     public function getAddAccessCodeToEmail()
     {
@@ -799,7 +799,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets add_access_code_to_email
      *
-     * @param string $add_access_code_to_email This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.
+     * @param ?string $add_access_code_to_email This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.
      *
      * @return $this
      */
@@ -837,7 +837,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets agent_can_edit_email
      *
-     * @return string
+     * @return ?string
      */
     public function getAgentCanEditEmail()
     {
@@ -847,7 +847,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets agent_can_edit_email
      *
-     * @param string $agent_can_edit_email 
+     * @param ?string $agent_can_edit_email 
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets agent_can_edit_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAgentCanEditName()
     {
@@ -871,7 +871,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets agent_can_edit_name
      *
-     * @param string $agent_can_edit_name 
+     * @param ?string $agent_can_edit_name 
      *
      * @return $this
      */
@@ -885,7 +885,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets allow_system_override_for_locked_recipient
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSystemOverrideForLockedRecipient()
     {
@@ -895,7 +895,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets allow_system_override_for_locked_recipient
      *
-     * @param string $allow_system_override_for_locked_recipient 
+     * @param ?string $allow_system_override_for_locked_recipient 
      *
      * @return $this
      */
@@ -909,7 +909,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets auto_navigation
      *
-     * @return string
+     * @return ?string
      */
     public function getAutoNavigation()
     {
@@ -919,7 +919,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets auto_navigation
      *
-     * @param string $auto_navigation 
+     * @param ?string $auto_navigation 
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_recipients_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkRecipientsUri()
     {
@@ -943,7 +943,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_recipients_uri
      *
-     * @param string $bulk_recipients_uri Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.
+     * @param ?string $bulk_recipients_uri Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.
      *
      * @return $this
      */
@@ -957,7 +957,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets can_sign_offline
      *
-     * @return string
+     * @return ?string
      */
     public function getCanSignOffline()
     {
@@ -967,7 +967,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets can_sign_offline
      *
-     * @param string $can_sign_offline When set to **true**, specifies that the signer can perform the signing ceremony offline.
+     * @param ?string $can_sign_offline When set to **true**, specifies that the signer can perform the signing ceremony offline.
      *
      * @return $this
      */
@@ -981,7 +981,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets client_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getClientUserId()
     {
@@ -991,7 +991,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets client_user_id
      *
-     * @param string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
+     * @param ?string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -1005,7 +1005,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets completed_count
      *
-     * @return string
+     * @return ?string
      */
     public function getCompletedCount()
     {
@@ -1015,7 +1015,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets completed_count
      *
-     * @param string $completed_count 
+     * @param ?string $completed_count 
      *
      * @return $this
      */
@@ -1029,7 +1029,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets creation_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getCreationReason()
     {
@@ -1039,7 +1039,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets creation_reason
      *
-     * @param string $creation_reason 
+     * @param ?string $creation_reason 
      *
      * @return $this
      */
@@ -1053,7 +1053,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets custom_fields
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getCustomFields()
     {
@@ -1063,7 +1063,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param string[] $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+     * @param ?string[] $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -1077,7 +1077,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets declined_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedDateTime()
     {
@@ -1087,7 +1087,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets declined_date_time
      *
-     * @param string $declined_date_time The date and time the recipient declined the document.
+     * @param ?string $declined_date_time The date and time the recipient declined the document.
      *
      * @return $this
      */
@@ -1101,7 +1101,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets declined_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedReason()
     {
@@ -1111,7 +1111,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets declined_reason
      *
-     * @param string $declined_reason The reason the recipient declined the document.
+     * @param ?string $declined_reason The reason the recipient declined the document.
      *
      * @return $this
      */
@@ -1125,7 +1125,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets default_recipient
      *
-     * @return string
+     * @return ?string
      */
     public function getDefaultRecipient()
     {
@@ -1135,7 +1135,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets default_recipient
      *
-     * @param string $default_recipient 
+     * @param ?string $default_recipient 
      *
      * @return $this
      */
@@ -1149,7 +1149,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets delivered_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveredDateTime()
     {
@@ -1159,7 +1159,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets delivered_date_time
      *
-     * @param string $delivered_date_time Reserved: For DocuSign use only.
+     * @param ?string $delivered_date_time Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -1173,7 +1173,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_method
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveryMethod()
     {
@@ -1183,7 +1183,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method
      *
-     * @param string $delivery_method Reserved: For DocuSign use only.
+     * @param ?string $delivery_method Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -1221,7 +1221,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets designator_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDesignatorId()
     {
@@ -1231,7 +1231,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets designator_id
      *
-     * @param string $designator_id 
+     * @param ?string $designator_id 
      *
      * @return $this
      */
@@ -1245,7 +1245,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets designator_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getDesignatorIdGuid()
     {
@@ -1255,7 +1255,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets designator_id_guid
      *
-     * @param string $designator_id_guid 
+     * @param ?string $designator_id_guid 
      *
      * @return $this
      */
@@ -1293,7 +1293,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -1303,7 +1303,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters.
+     * @param ?string $email Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -1365,7 +1365,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets embedded_recipient_start_url
      *
-     * @return string
+     * @return ?string
      */
     public function getEmbeddedRecipientStartUrl()
     {
@@ -1375,7 +1375,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets embedded_recipient_start_url
      *
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param ?string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      *
      * @return $this
      */
@@ -1413,7 +1413,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets excluded_documents
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getExcludedDocuments()
     {
@@ -1423,7 +1423,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets excluded_documents
      *
-     * @param string[] $excluded_documents Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.
+     * @param ?string[] $excluded_documents Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.
      *
      * @return $this
      */
@@ -1437,7 +1437,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets fax_number
      *
-     * @return string
+     * @return ?string
      */
     public function getFaxNumber()
     {
@@ -1447,7 +1447,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number
      *
-     * @param string $fax_number Reserved:
+     * @param ?string $fax_number Reserved:
      *
      * @return $this
      */
@@ -1485,7 +1485,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets first_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFirstName()
     {
@@ -1495,7 +1495,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets first_name
      *
-     * @param string $first_name The user's first name.  Maximum Length: 50 characters.
+     * @param ?string $first_name The user's first name.  Maximum Length: 50 characters.
      *
      * @return $this
      */
@@ -1533,7 +1533,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets full_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFullName()
     {
@@ -1543,7 +1543,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets full_name
      *
-     * @param string $full_name 
+     * @param ?string $full_name 
      *
      * @return $this
      */
@@ -1581,7 +1581,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_configuration_name
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckConfigurationName()
     {
@@ -1591,7 +1591,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name
      *
-     * @param string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
+     * @param ?string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
      *
      * @return $this
      */
@@ -1677,7 +1677,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets inherit_email_notification_configuration
      *
-     * @return string
+     * @return ?string
      */
     public function getInheritEmailNotificationConfiguration()
     {
@@ -1687,7 +1687,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets inherit_email_notification_configuration
      *
-     * @param string $inherit_email_notification_configuration When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.
+     * @param ?string $inherit_email_notification_configuration When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.
      *
      * @return $this
      */
@@ -1701,7 +1701,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets is_bulk_recipient
      *
-     * @return string
+     * @return ?string
      */
     public function getIsBulkRecipient()
     {
@@ -1711,7 +1711,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets is_bulk_recipient
      *
-     * @param string $is_bulk_recipient When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file.   Note that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient.
+     * @param ?string $is_bulk_recipient When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file.   Note that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient.
      *
      * @return $this
      */
@@ -1749,7 +1749,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets last_name
      *
-     * @return string
+     * @return ?string
      */
     public function getLastName()
     {
@@ -1759,7 +1759,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param string $last_name 
+     * @param ?string $last_name 
      *
      * @return $this
      */
@@ -1797,7 +1797,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets locked_recipient_phone_auth_editable
      *
-     * @return string
+     * @return ?string
      */
     public function getLockedRecipientPhoneAuthEditable()
     {
@@ -1807,7 +1807,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets locked_recipient_phone_auth_editable
      *
-     * @param string $locked_recipient_phone_auth_editable 
+     * @param ?string $locked_recipient_phone_auth_editable 
      *
      * @return $this
      */
@@ -1821,7 +1821,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets locked_recipient_sms_editable
      *
-     * @return string
+     * @return ?string
      */
     public function getLockedRecipientSmsEditable()
     {
@@ -1831,7 +1831,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets locked_recipient_sms_editable
      *
-     * @param string $locked_recipient_sms_editable 
+     * @param ?string $locked_recipient_sms_editable 
      *
      * @return $this
      */
@@ -1845,7 +1845,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -1855,7 +1855,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -1893,7 +1893,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets notary_id
      *
-     * @return string
+     * @return ?string
      */
     public function getNotaryId()
     {
@@ -1903,7 +1903,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets notary_id
      *
-     * @param string $notary_id 
+     * @param ?string $notary_id 
      *
      * @return $this
      */
@@ -1917,7 +1917,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets note
      *
-     * @return string
+     * @return ?string
      */
     public function getNote()
     {
@@ -1927,7 +1927,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
+     * @param ?string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
      *
      * @return $this
      */
@@ -2109,7 +2109,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -2119,7 +2119,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -2133,7 +2133,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientIdGuid()
     {
@@ -2143,7 +2143,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param string $recipient_id_guid 
+     * @param ?string $recipient_id_guid 
      *
      * @return $this
      */
@@ -2181,7 +2181,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_supplies_tabs
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientSuppliesTabs()
     {
@@ -2191,7 +2191,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_supplies_tabs
      *
-     * @param string $recipient_supplies_tabs 
+     * @param ?string $recipient_supplies_tabs 
      *
      * @return $this
      */
@@ -2205,7 +2205,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_type
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientType()
     {
@@ -2215,7 +2215,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type
      *
-     * @param string $recipient_type 
+     * @param ?string $recipient_type 
      *
      * @return $this
      */
@@ -2253,7 +2253,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets require_id_lookup
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireIdLookup()
     {
@@ -2263,7 +2263,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets require_id_lookup
      *
-     * @param string $require_id_lookup When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.
+     * @param ?string $require_id_lookup When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.
      *
      * @return $this
      */
@@ -2301,7 +2301,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets require_signer_certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireSignerCertificate()
     {
@@ -2311,7 +2311,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets require_signer_certificate
      *
-     * @param string $require_signer_certificate Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.
+     * @param ?string $require_signer_certificate Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.
      *
      * @return $this
      */
@@ -2325,7 +2325,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets require_sign_on_paper
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireSignOnPaper()
     {
@@ -2335,7 +2335,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets require_sign_on_paper
      *
-     * @param string $require_sign_on_paper When set to **true**, the signer must print, sign, and upload or fax the signed documents to DocuSign.
+     * @param ?string $require_sign_on_paper When set to **true**, the signer must print, sign, and upload or fax the signed documents to DocuSign.
      *
      * @return $this
      */
@@ -2349,7 +2349,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets require_upload_signature
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireUploadSignature()
     {
@@ -2359,7 +2359,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets require_upload_signature
      *
-     * @param string $require_upload_signature 
+     * @param ?string $require_upload_signature 
      *
      * @return $this
      */
@@ -2373,7 +2373,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets role_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRoleName()
     {
@@ -2383,7 +2383,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets role_name
      *
-     * @param string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+     * @param ?string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
      *
      * @return $this
      */
@@ -2397,7 +2397,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets routing_order
      *
-     * @return string
+     * @return ?string
      */
     public function getRoutingOrder()
     {
@@ -2407,7 +2407,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order
      *
-     * @param string $routing_order Specifies the routing order of the recipient in the envelope.
+     * @param ?string $routing_order Specifies the routing order of the recipient in the envelope.
      *
      * @return $this
      */
@@ -2445,7 +2445,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets sent_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSentDateTime()
     {
@@ -2455,7 +2455,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets sent_date_time
      *
-     * @param string $sent_date_time The date and time the envelope was sent.
+     * @param ?string $sent_date_time The date and time the envelope was sent.
      *
      * @return $this
      */
@@ -2493,7 +2493,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets signed_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSignedDateTime()
     {
@@ -2503,7 +2503,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets signed_date_time
      *
-     * @param string $signed_date_time Reserved: For DocuSign use only.
+     * @param ?string $signed_date_time Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -2517,7 +2517,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets sign_in_each_location
      *
-     * @return string
+     * @return ?string
      */
     public function getSignInEachLocation()
     {
@@ -2527,7 +2527,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets sign_in_each_location
      *
-     * @param string $sign_in_each_location When set to **true**, specifies that the signer must sign in all locations.
+     * @param ?string $sign_in_each_location When set to **true**, specifies that the signer must sign in all locations.
      *
      * @return $this
      */
@@ -2565,7 +2565,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupId()
     {
@@ -2575,7 +2575,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id
      *
-     * @param string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     * @param ?string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
      *
      * @return $this
      */
@@ -2613,7 +2613,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupName()
     {
@@ -2623,7 +2623,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_name
      *
-     * @param string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
+     * @param ?string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
      *
      * @return $this
      */
@@ -2709,7 +2709,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -2719,7 +2719,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -2733,7 +2733,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets status_code
      *
-     * @return string
+     * @return ?string
      */
     public function getStatusCode()
     {
@@ -2743,7 +2743,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets status_code
      *
-     * @param string $status_code 
+     * @param ?string $status_code 
      *
      * @return $this
      */
@@ -2757,7 +2757,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets suppress_emails
      *
-     * @return string
+     * @return ?string
      */
     public function getSuppressEmails()
     {
@@ -2767,7 +2767,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets suppress_emails
      *
-     * @param string $suppress_emails 
+     * @param ?string $suppress_emails 
      *
      * @return $this
      */
@@ -2805,7 +2805,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets template_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateLocked()
     {
@@ -2815,7 +2815,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked
      *
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @param ?string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2829,7 +2829,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets template_required
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequired()
     {
@@ -2839,7 +2839,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets template_required
      *
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @param ?string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2853,7 +2853,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets total_tab_count
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalTabCount()
     {
@@ -2863,7 +2863,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets total_tab_count
      *
-     * @param string $total_tab_count 
+     * @param ?string $total_tab_count 
      *
      * @return $this
      */
@@ -2877,7 +2877,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -2887,7 +2887,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */

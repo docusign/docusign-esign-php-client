@@ -57,12 +57,12 @@ class CommentPublish implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'mentions' => 'string[]',
-        'text' => 'string',
-        'thread_anchor_keys' => 'map[string,string]',
-        'thread_id' => 'string',
-        'visible_to' => 'string[]'
+        'id' => '?string',
+        'mentions' => '?string[]',
+        'text' => '?string',
+        'thread_anchor_keys' => 'map[string,?string]',
+        'thread_id' => '?string',
+        'visible_to' => '?string[]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -247,7 +247,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Gets mentions
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getMentions()
     {
@@ -271,7 +271,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Sets mentions
      *
-     * @param string[] $mentions 
+     * @param ?string[] $mentions 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Gets text
      *
-     * @return string
+     * @return ?string
      */
     public function getText()
     {
@@ -295,7 +295,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text 
+     * @param ?string $text 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Gets thread_anchor_keys
      *
-     * @return map[string,string]
+     * @return map[string,?string]
      */
     public function getThreadAnchorKeys()
     {
@@ -319,7 +319,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Sets thread_anchor_keys
      *
-     * @param map[string,string] $thread_anchor_keys 
+     * @param map[string,?string] $thread_anchor_keys 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Gets thread_id
      *
-     * @return string
+     * @return ?string
      */
     public function getThreadId()
     {
@@ -343,7 +343,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Sets thread_id
      *
-     * @param string $thread_id 
+     * @param ?string $thread_id 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Gets visible_to
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getVisibleTo()
     {
@@ -367,7 +367,7 @@ class CommentPublish implements ModelInterface, ArrayAccess
     /**
      * Sets visible_to
      *
-     * @param string[] $visible_to 
+     * @param ?string[] $visible_to 
      *
      * @return $this
      */

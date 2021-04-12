@@ -57,13 +57,13 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'carbon_copy_original_owner' => 'string',
-        'enabled' => 'string',
-        'envelope_transfer_rule_id' => 'string',
-        'event_type' => 'string',
+        'carbon_copy_original_owner' => '?string',
+        'enabled' => '?string',
+        'envelope_transfer_rule_id' => '?string',
+        'event_type' => '?string',
         'from_groups' => '\DocuSign\eSign\Model\Group[]',
         'from_users' => '\DocuSign\eSign\Model\UserInformation[]',
-        'modified_date' => 'string',
+        'modified_date' => '?string',
         'modified_user' => '\DocuSign\eSign\Model\UserInformation',
         'to_folder' => '\DocuSign\eSign\Model\Folder',
         'to_user' => '\DocuSign\eSign\Model\UserInformation'
@@ -261,7 +261,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Gets carbon_copy_original_owner
      *
-     * @return string
+     * @return ?string
      */
     public function getCarbonCopyOriginalOwner()
     {
@@ -271,7 +271,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets carbon_copy_original_owner
      *
-     * @param string $carbon_copy_original_owner 
+     * @param ?string $carbon_copy_original_owner 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Gets enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getEnabled()
     {
@@ -295,7 +295,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets enabled
      *
-     * @param string $enabled 
+     * @param ?string $enabled 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_transfer_rule_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeTransferRuleId()
     {
@@ -319,7 +319,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_transfer_rule_id
      *
-     * @param string $envelope_transfer_rule_id 
+     * @param ?string $envelope_transfer_rule_id 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Gets event_type
      *
-     * @return string
+     * @return ?string
      */
     public function getEventType()
     {
@@ -343,7 +343,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets event_type
      *
-     * @param string $event_type 
+     * @param ?string $event_type 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Gets modified_date
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedDate()
     {
@@ -415,7 +415,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date
      *
-     * @param string $modified_date 
+     * @param ?string $modified_date 
      *
      * @return $this
      */
