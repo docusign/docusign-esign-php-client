@@ -29,57 +29,57 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiWorkspacesApi;
+namespace DocuSign\eSign\Api\WorkspacesApi;
 
 
 class GetWorkspaceFileOptions
 {
     /**
       * $is_download When set to **true**, the Content-Disposition header is set in the response. The value of the header provides the filename of the file. Default is **false**.
-      * @var string
+      * @var ?string
       */
-    protected string $is_download;
+    protected ?string $is_download = null;
 
     /**
      * Gets is_download
-     * @return string
+     * @return ?string
      */
-    public function getIsDownload(): string
+    public function getIsDownload(): ?string
     {
         return $this->is_download;
     }
 
     /**
      * Sets is_download
-     * @param string $is_download When set to **true**, the Content-Disposition header is set in the response. The value of the header provides the filename of the file. Default is **false**.
+     * @param ?string $is_download When set to **true**, the Content-Disposition header is set in the response. The value of the header provides the filename of the file. Default is **false**.
      * @return self
      */
-    public function setIsDownload(string $is_download): self
+    public function setIsDownload(?string $is_download): self
     {
         $this->is_download = $is_download;
         return $this;
     }
     /**
       * $pdf_version When set to **true** the file returned as a PDF.
-      * @var string
+      * @var ?string
       */
-    protected string $pdf_version;
+    protected ?string $pdf_version = null;
 
     /**
      * Gets pdf_version
-     * @return string
+     * @return ?string
      */
-    public function getPdfVersion(): string
+    public function getPdfVersion(): ?string
     {
         return $this->pdf_version;
     }
 
     /**
      * Sets pdf_version
-     * @param string $pdf_version When set to **true** the file returned as a PDF.
+     * @param ?string $pdf_version When set to **true** the file returned as a PDF.
      * @return self
      */
-    public function setPdfVersion(string $pdf_version): self
+    public function setPdfVersion(?string $pdf_version): self
     {
         $this->pdf_version = $pdf_version;
         return $this;
@@ -91,125 +91,125 @@ class ListWorkspaceFilePagesOptions
 {
     /**
       * $count The maximum number of results to be returned by this request.
-      * @var string
+      * @var ?string
       */
-    protected string $count;
+    protected ?string $count = null;
 
     /**
      * Gets count
-     * @return string
+     * @return ?string
      */
-    public function getCount(): string
+    public function getCount(): ?string
     {
         return $this->count;
     }
 
     /**
      * Sets count
-     * @param string $count The maximum number of results to be returned by this request.
+     * @param ?string $count The maximum number of results to be returned by this request.
      * @return self
      */
-    public function setCount(string $count): self
+    public function setCount(?string $count): self
     {
         $this->count = $count;
         return $this;
     }
     /**
       * $dpi Number of dots per inch for the resulting image. The default if not used is 94. The range is 1-310.
-      * @var string
+      * @var ?string
       */
-    protected string $dpi;
+    protected ?string $dpi = null;
 
     /**
      * Gets dpi
-     * @return string
+     * @return ?string
      */
-    public function getDpi(): string
+    public function getDpi(): ?string
     {
         return $this->dpi;
     }
 
     /**
      * Sets dpi
-     * @param string $dpi Number of dots per inch for the resulting image. The default if not used is 94. The range is 1-310.
+     * @param ?string $dpi Number of dots per inch for the resulting image. The default if not used is 94. The range is 1-310.
      * @return self
      */
-    public function setDpi(string $dpi): self
+    public function setDpi(?string $dpi): self
     {
         $this->dpi = $dpi;
         return $this;
     }
     /**
       * $max_height Sets the maximum height (in pixels) of the returned image.
-      * @var string
+      * @var ?string
       */
-    protected string $max_height;
+    protected ?string $max_height = null;
 
     /**
      * Gets max_height
-     * @return string
+     * @return ?string
      */
-    public function getMaxHeight(): string
+    public function getMaxHeight(): ?string
     {
         return $this->max_height;
     }
 
     /**
      * Sets max_height
-     * @param string $max_height Sets the maximum height (in pixels) of the returned image.
+     * @param ?string $max_height Sets the maximum height (in pixels) of the returned image.
      * @return self
      */
-    public function setMaxHeight(string $max_height): self
+    public function setMaxHeight(?string $max_height): self
     {
         $this->max_height = $max_height;
         return $this;
     }
     /**
       * $max_width Sets the maximum width (in pixels) of the returned image.
-      * @var string
+      * @var ?string
       */
-    protected string $max_width;
+    protected ?string $max_width = null;
 
     /**
      * Gets max_width
-     * @return string
+     * @return ?string
      */
-    public function getMaxWidth(): string
+    public function getMaxWidth(): ?string
     {
         return $this->max_width;
     }
 
     /**
      * Sets max_width
-     * @param string $max_width Sets the maximum width (in pixels) of the returned image.
+     * @param ?string $max_width Sets the maximum width (in pixels) of the returned image.
      * @return self
      */
-    public function setMaxWidth(string $max_width): self
+    public function setMaxWidth(?string $max_width): self
     {
         $this->max_width = $max_width;
         return $this;
     }
     /**
       * $start_position The position within the total result set from which to start returning values. The value **thumbnail** may be used to return the page image.
-      * @var string
+      * @var ?string
       */
-    protected string $start_position;
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return string
+     * @return ?string
      */
-    public function getStartPosition(): string
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param string $start_position The position within the total result set from which to start returning values. The value **thumbnail** may be used to return the page image.
+     * @param ?string $start_position The position within the total result set from which to start returning values. The value **thumbnail** may be used to return the page image.
      * @return self
      */
-    public function setStartPosition(string $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
@@ -221,175 +221,175 @@ class ListWorkspaceFolderItemsOptions
 {
     /**
       * $count The maximum number of results to be returned by this request.
-      * @var string
+      * @var ?string
       */
-    protected string $count;
+    protected ?string $count = null;
 
     /**
      * Gets count
-     * @return string
+     * @return ?string
      */
-    public function getCount(): string
+    public function getCount(): ?string
     {
         return $this->count;
     }
 
     /**
      * Sets count
-     * @param string $count The maximum number of results to be returned by this request.
+     * @param ?string $count The maximum number of results to be returned by this request.
      * @return self
      */
-    public function setCount(string $count): self
+    public function setCount(?string $count): self
     {
         $this->count = $count;
         return $this;
     }
     /**
       * $include_files When set to **true**, file information is returned in the response along with folder information. The default is **false**.
-      * @var string
+      * @var ?string
       */
-    protected string $include_files;
+    protected ?string $include_files = null;
 
     /**
      * Gets include_files
-     * @return string
+     * @return ?string
      */
-    public function getIncludeFiles(): string
+    public function getIncludeFiles(): ?string
     {
         return $this->include_files;
     }
 
     /**
      * Sets include_files
-     * @param string $include_files When set to **true**, file information is returned in the response along with folder information. The default is **false**.
+     * @param ?string $include_files When set to **true**, file information is returned in the response along with folder information. The default is **false**.
      * @return self
      */
-    public function setIncludeFiles(string $include_files): self
+    public function setIncludeFiles(?string $include_files): self
     {
         $this->include_files = $include_files;
         return $this;
     }
     /**
       * $include_sub_folders When set to **true**, information about the sub-folders of the current folder is returned. The default is **false**.
-      * @var string
+      * @var ?string
       */
-    protected string $include_sub_folders;
+    protected ?string $include_sub_folders = null;
 
     /**
      * Gets include_sub_folders
-     * @return string
+     * @return ?string
      */
-    public function getIncludeSubFolders(): string
+    public function getIncludeSubFolders(): ?string
     {
         return $this->include_sub_folders;
     }
 
     /**
      * Sets include_sub_folders
-     * @param string $include_sub_folders When set to **true**, information about the sub-folders of the current folder is returned. The default is **false**.
+     * @param ?string $include_sub_folders When set to **true**, information about the sub-folders of the current folder is returned. The default is **false**.
      * @return self
      */
-    public function setIncludeSubFolders(string $include_sub_folders): self
+    public function setIncludeSubFolders(?string $include_sub_folders): self
     {
         $this->include_sub_folders = $include_sub_folders;
         return $this;
     }
     /**
       * $include_thumbnails When set to **true**, thumbnails are returned as part of the response.  The default is **false**.
-      * @var string
+      * @var ?string
       */
-    protected string $include_thumbnails;
+    protected ?string $include_thumbnails = null;
 
     /**
      * Gets include_thumbnails
-     * @return string
+     * @return ?string
      */
-    public function getIncludeThumbnails(): string
+    public function getIncludeThumbnails(): ?string
     {
         return $this->include_thumbnails;
     }
 
     /**
      * Sets include_thumbnails
-     * @param string $include_thumbnails When set to **true**, thumbnails are returned as part of the response.  The default is **false**.
+     * @param ?string $include_thumbnails When set to **true**, thumbnails are returned as part of the response.  The default is **false**.
      * @return self
      */
-    public function setIncludeThumbnails(string $include_thumbnails): self
+    public function setIncludeThumbnails(?string $include_thumbnails): self
     {
         $this->include_thumbnails = $include_thumbnails;
         return $this;
     }
     /**
       * $include_user_detail Set to **true** to return extended details about the user. The default is **false**.
-      * @var string
+      * @var ?string
       */
-    protected string $include_user_detail;
+    protected ?string $include_user_detail = null;
 
     /**
      * Gets include_user_detail
-     * @return string
+     * @return ?string
      */
-    public function getIncludeUserDetail(): string
+    public function getIncludeUserDetail(): ?string
     {
         return $this->include_user_detail;
     }
 
     /**
      * Sets include_user_detail
-     * @param string $include_user_detail Set to **true** to return extended details about the user. The default is **false**.
+     * @param ?string $include_user_detail Set to **true** to return extended details about the user. The default is **false**.
      * @return self
      */
-    public function setIncludeUserDetail(string $include_user_detail): self
+    public function setIncludeUserDetail(?string $include_user_detail): self
     {
         $this->include_user_detail = $include_user_detail;
         return $this;
     }
     /**
       * $start_position The position within the total result set from which to start returning values.
-      * @var string
+      * @var ?string
       */
-    protected string $start_position;
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return string
+     * @return ?string
      */
-    public function getStartPosition(): string
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param string $start_position The position within the total result set from which to start returning values.
+     * @param ?string $start_position The position within the total result set from which to start returning values.
      * @return self
      */
-    public function setStartPosition(string $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
     /**
       * $workspace_user_id If set, then the results are filtered to those associated with the specified userId.
-      * @var string
+      * @var ?string
       */
-    protected string $workspace_user_id;
+    protected ?string $workspace_user_id = null;
 
     /**
      * Gets workspace_user_id
-     * @return string
+     * @return ?string
      */
-    public function getWorkspaceUserId(): string
+    public function getWorkspaceUserId(): ?string
     {
         return $this->workspace_user_id;
     }
 
     /**
      * Sets workspace_user_id
-     * @param string $workspace_user_id If set, then the results are filtered to those associated with the specified userId.
+     * @param ?string $workspace_user_id If set, then the results are filtered to those associated with the specified userId.
      * @return self
      */
-    public function setWorkspaceUserId(string $workspace_user_id): self
+    public function setWorkspaceUserId(?string $workspace_user_id): self
     {
         $this->workspace_user_id = $workspace_user_id;
         return $this;
@@ -480,7 +480,7 @@ class WorkspacesApi
      *
      * Create a Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
@@ -496,7 +496,7 @@ class WorkspacesApi
      *
      * Create a Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
@@ -572,9 +572,9 @@ class WorkspacesApi
      *
      * Creates a workspace file.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
@@ -589,9 +589,9 @@ class WorkspacesApi
      *
      * Creates a workspace file.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */
@@ -677,8 +677,8 @@ class WorkspacesApi
      *
      * Delete Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
@@ -693,8 +693,8 @@ class WorkspacesApi
      *
      * Delete Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
@@ -772,9 +772,9 @@ class WorkspacesApi
      *
      * Deletes workspace one or more specific files/folders from the given folder or root.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
      * @throws ApiException on non-2xx response
      * @return mixed
@@ -790,9 +790,9 @@ class WorkspacesApi
      *
      * Deletes workspace one or more specific files/folders from the given folder or root.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
@@ -880,8 +880,8 @@ class WorkspacesApi
      *
      * Get Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
@@ -896,8 +896,8 @@ class WorkspacesApi
      *
      * Get Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
@@ -975,15 +975,15 @@ class WorkspacesApi
      *
      * Get Workspace File
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $file_id Specifies the room file ID GUID.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $file_id Specifies the room file ID GUID.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return mixed
      */
-    public function getWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions $options = null): mixed
+    public function getWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions $options = null): mixed
     {
         list($response) = $this->getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -994,15 +994,15 @@ class WorkspacesApi
      *
      * Get Workspace File
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $file_id Specifies the room file ID GUID.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $file_id Specifies the room file ID GUID.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\GetWorkspaceFileOptions $options = null): array
+    public function getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1098,15 +1098,15 @@ class WorkspacesApi
      *
      * List File Pages
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $file_id Specifies the room file ID GUID.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $file_id Specifies the room file ID GUID.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
-    public function listWorkspaceFilePages($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions $options = null): \DocuSign\eSign\Model\PageImages
+    public function listWorkspaceFilePages($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions $options = null): \DocuSign\eSign\Model\PageImages
     {
         list($response) = $this->listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1117,15 +1117,15 @@ class WorkspacesApi
      *
      * List File Pages
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $file_id Specifies the room file ID GUID.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $file_id Specifies the room file ID GUID.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFilePagesOptions $options = null): array
+    public function listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1234,14 +1234,14 @@ class WorkspacesApi
      *
      * List Workspace Folder Contents
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceFolderContents
      */
-    public function listWorkspaceFolderItems($account_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): \DocuSign\eSign\Model\WorkspaceFolderContents
+    public function listWorkspaceFolderItems($account_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): \DocuSign\eSign\Model\WorkspaceFolderContents
     {
         list($response) = $this->listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1252,14 +1252,14 @@ class WorkspacesApi
      *
      * List Workspace Folder Contents
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceFolderContents, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, \DocuSign\eSign\ApiWorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): array
+    public function listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1366,7 +1366,7 @@ class WorkspacesApi
      *
      * List Workspaces
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceList
      */
@@ -1381,7 +1381,7 @@ class WorkspacesApi
      *
      * List Workspaces
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1451,8 +1451,8 @@ class WorkspacesApi
      *
      * Update Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
@@ -1468,8 +1468,8 @@ class WorkspacesApi
      *
      * Update Workspace
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
@@ -1553,10 +1553,10 @@ class WorkspacesApi
      *
      * Update Workspace File Metadata
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $file_id Specifies the room file ID GUID.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $file_id Specifies the room file ID GUID.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
@@ -1571,10 +1571,10 @@ class WorkspacesApi
      *
      * Update Workspace File Metadata
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $file_id Specifies the room file ID GUID.
-     * @param string $folder_id The ID of the folder being accessed.
-     * @param string $workspace_id Specifies the workspace ID GUID.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $file_id Specifies the room file ID GUID.
+     * @param ?string $folder_id The ID of the folder being accessed.
+     * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */

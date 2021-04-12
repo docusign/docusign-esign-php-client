@@ -57,12 +57,12 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_control' => 'string',
-        'attachment_id' => 'string',
-        'attachment_type' => 'string',
+        'access_control' => '?string',
+        'attachment_id' => '?string',
+        'attachment_type' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'label' => 'string',
-        'name' => 'string'
+        'label' => '?string',
+        'name' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets access_control
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessControl()
     {
@@ -247,7 +247,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets access_control
      *
-     * @param string $access_control 
+     * @param ?string $access_control 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets attachment_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAttachmentId()
     {
@@ -271,7 +271,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_id
      *
-     * @param string $attachment_id 
+     * @param ?string $attachment_id 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets attachment_type
      *
-     * @return string
+     * @return ?string
      */
     public function getAttachmentType()
     {
@@ -295,7 +295,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_type
      *
-     * @param string $attachment_type 
+     * @param ?string $attachment_type 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets label
      *
-     * @return string
+     * @return ?string
      */
     public function getLabel()
     {
@@ -343,7 +343,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets label
      *
-     * @param string $label 
+     * @param ?string $label 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -367,7 +367,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */

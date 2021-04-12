@@ -57,9 +57,9 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_request_logging' => 'string',
-        'api_request_log_max_entries' => 'string',
-        'api_request_log_remaining_entries' => 'string'
+        'api_request_logging' => '?string',
+        'api_request_log_max_entries' => '?string',
+        'api_request_log_remaining_entries' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets api_request_logging
      *
-     * @return string
+     * @return ?string
      */
     public function getApiRequestLogging()
     {
@@ -229,7 +229,7 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_request_logging
      *
-     * @param string $api_request_logging When set to **true**, enables API request logging for the user.
+     * @param ?string $api_request_logging When set to **true**, enables API request logging for the user.
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets api_request_log_max_entries
      *
-     * @return string
+     * @return ?string
      */
     public function getApiRequestLogMaxEntries()
     {
@@ -253,7 +253,7 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_request_log_max_entries
      *
-     * @param string $api_request_log_max_entries Specifies the maximum number of API requests to log.
+     * @param ?string $api_request_log_max_entries Specifies the maximum number of API requests to log.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Gets api_request_log_remaining_entries
      *
-     * @return string
+     * @return ?string
      */
     public function getApiRequestLogRemainingEntries()
     {
@@ -277,7 +277,7 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_request_log_remaining_entries
      *
-     * @param string $api_request_log_remaining_entries Indicates the remaining number of API requests that can be logged.
+     * @param ?string $api_request_log_remaining_entries Indicates the remaining number of API requests that can be logged.
      *
      * @return $this
      */

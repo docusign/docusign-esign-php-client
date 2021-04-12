@@ -59,16 +59,16 @@ class Folder implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'filter' => '\DocuSign\eSign\Model\Filter',
-        'folder_id' => 'string',
+        'folder_id' => '?string',
         'folders' => '\DocuSign\eSign\Model\Folder[]',
-        'name' => 'string',
-        'owner_email' => 'string',
-        'owner_user_id' => 'string',
-        'owner_user_name' => 'string',
-        'parent_folder_id' => 'string',
-        'parent_folder_uri' => 'string',
-        'type' => 'string',
-        'uri' => 'string'
+        'name' => '?string',
+        'owner_email' => '?string',
+        'owner_user_id' => '?string',
+        'owner_user_name' => '?string',
+        'parent_folder_id' => '?string',
+        'parent_folder_uri' => '?string',
+        'type' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -321,7 +321,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFolderId()
     {
@@ -331,7 +331,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets folder_id
      *
-     * @param string $folder_id 
+     * @param ?string $folder_id 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -379,7 +379,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets owner_email
      *
-     * @return string
+     * @return ?string
      */
     public function getOwnerEmail()
     {
@@ -403,7 +403,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets owner_email
      *
-     * @param string $owner_email 
+     * @param ?string $owner_email 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets owner_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getOwnerUserId()
     {
@@ -427,7 +427,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets owner_user_id
      *
-     * @param string $owner_user_id 
+     * @param ?string $owner_user_id 
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets owner_user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getOwnerUserName()
     {
@@ -451,7 +451,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets owner_user_name
      *
-     * @param string $owner_user_name 
+     * @param ?string $owner_user_name 
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderId()
     {
@@ -475,7 +475,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_id
      *
-     * @param string $parent_folder_id 
+     * @param ?string $parent_folder_id 
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderUri()
     {
@@ -499,7 +499,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_uri
      *
-     * @param string $parent_folder_uri 
+     * @param ?string $parent_folder_uri 
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -523,7 +523,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -547,7 +547,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

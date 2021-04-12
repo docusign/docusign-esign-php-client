@@ -57,15 +57,15 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_recipient_row' => 'string',
-        'bulk_status' => 'string',
-        'email' => 'string',
-        'envelope_id' => 'string',
-        'envelope_uri' => 'string',
+        'bulk_recipient_row' => '?string',
+        'bulk_status' => '?string',
+        'email' => '?string',
+        'envelope_id' => '?string',
+        'envelope_uri' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'name' => 'string',
-        'submitted_date_time' => 'string',
-        'transaction_id' => 'string'
+        'name' => '?string',
+        'submitted_date_time' => '?string',
+        'transaction_id' => '?string'
     ];
 
     /**
@@ -255,7 +255,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_recipient_row
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkRecipientRow()
     {
@@ -265,7 +265,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_recipient_row
      *
-     * @param string $bulk_recipient_row Reserved: TBD
+     * @param ?string $bulk_recipient_row Reserved: TBD
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_status
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkStatus()
     {
@@ -289,7 +289,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_status
      *
-     * @param string $bulk_status Indicates the status of the bulk send operation. Returned values can be: * queued * processing * sent * failed
+     * @param ?string $bulk_status Indicates the status of the bulk send operation. Returned values can be: * queued * processing * sent * failed
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -313,7 +313,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -337,7 +337,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeUri()
     {
@@ -361,7 +361,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_uri
      *
-     * @param string $envelope_uri Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+     * @param ?string $envelope_uri Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -409,7 +409,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets submitted_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSubmittedDateTime()
     {
@@ -433,7 +433,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets submitted_date_time
      *
-     * @param string $submitted_date_time 
+     * @param ?string $submitted_date_time 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTransactionId()
     {
@@ -457,7 +457,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
+     * @param ?string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
      *
      * @return $this
      */

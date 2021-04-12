@@ -60,12 +60,12 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
         'agents' => '\DocuSign\eSign\Model\Agent[]',
         'carbon_copies' => '\DocuSign\eSign\Model\CarbonCopy[]',
         'certified_deliveries' => '\DocuSign\eSign\Model\CertifiedDelivery[]',
-        'current_routing_order' => 'string',
+        'current_routing_order' => '?string',
         'editors' => '\DocuSign\eSign\Model\Editor[]',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'in_person_signers' => '\DocuSign\eSign\Model\InPersonSigner[]',
         'intermediaries' => '\DocuSign\eSign\Model\Intermediary[]',
-        'recipient_count' => 'string',
+        'recipient_count' => '?string',
         'seals' => '\DocuSign\eSign\Model\SealSign[]',
         'signers' => '\DocuSign\eSign\Model\Signer[]',
         'witnesses' => '\DocuSign\eSign\Model\Witness[]'
@@ -345,7 +345,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
     /**
      * Gets current_routing_order
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrentRoutingOrder()
     {
@@ -355,7 +355,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
     /**
      * Sets current_routing_order
      *
-     * @param string $current_routing_order 
+     * @param ?string $current_routing_order 
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_count
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientCount()
     {
@@ -475,7 +475,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_count
      *
-     * @param string $recipient_count The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message.
+     * @param ?string $recipient_count The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message.
      *
      * @return $this
      */

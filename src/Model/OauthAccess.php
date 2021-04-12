@@ -57,12 +57,12 @@ class OauthAccess implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_token' => 'string',
+        'access_token' => '?string',
         'data' => '\DocuSign\eSign\Model\NameValue[]',
-        'expires_in' => 'string',
-        'refresh_token' => 'string',
-        'scope' => 'string',
-        'token_type' => 'string'
+        'expires_in' => '?string',
+        'refresh_token' => '?string',
+        'scope' => '?string',
+        'token_type' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Gets access_token
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessToken()
     {
@@ -247,7 +247,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Sets access_token
      *
-     * @param string $access_token Access token information.
+     * @param ?string $access_token Access token information.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Gets expires_in
      *
-     * @return string
+     * @return ?string
      */
     public function getExpiresIn()
     {
@@ -295,7 +295,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Sets expires_in
      *
-     * @param string $expires_in 
+     * @param ?string $expires_in 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Gets refresh_token
      *
-     * @return string
+     * @return ?string
      */
     public function getRefreshToken()
     {
@@ -319,7 +319,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Sets refresh_token
      *
-     * @param string $refresh_token 
+     * @param ?string $refresh_token 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Gets scope
      *
-     * @return string
+     * @return ?string
      */
     public function getScope()
     {
@@ -343,7 +343,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Sets scope
      *
-     * @param string $scope Must be set to \"api\".
+     * @param ?string $scope Must be set to \"api\".
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Gets token_type
      *
-     * @return string
+     * @return ?string
      */
     public function getTokenType()
     {
@@ -367,7 +367,7 @@ class OauthAccess implements ModelInterface, ArrayAccess
     /**
      * Sets token_type
      *
-     * @param string $token_type 
+     * @param ?string $token_type 
      *
      * @return $this
      */

@@ -57,8 +57,8 @@ class Sender implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id_guid' => 'string',
-        'company_name' => 'string'
+        'account_id_guid' => '?string',
+        'company_name' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Gets account_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountIdGuid()
     {
@@ -223,7 +223,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Sets account_id_guid
      *
-     * @param string $account_id_guid The GUID associated with the account ID.
+     * @param ?string $account_id_guid The GUID associated with the account ID.
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Gets company_name
      *
-     * @return string
+     * @return ?string
      */
     public function getCompanyName()
     {
@@ -247,7 +247,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Sets company_name
      *
-     * @param string $company_name 
+     * @param ?string $company_name 
      *
      * @return $this
      */

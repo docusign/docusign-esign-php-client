@@ -57,9 +57,9 @@ class BillingPrice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'begin_quantity' => 'string',
-        'end_quantity' => 'string',
-        'unit_price' => 'string'
+        'begin_quantity' => '?string',
+        'end_quantity' => '?string',
+        'unit_price' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class BillingPrice implements ModelInterface, ArrayAccess
     /**
      * Gets begin_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getBeginQuantity()
     {
@@ -229,7 +229,7 @@ class BillingPrice implements ModelInterface, ArrayAccess
     /**
      * Sets begin_quantity
      *
-     * @param string $begin_quantity Reserved: TBD
+     * @param ?string $begin_quantity Reserved: TBD
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class BillingPrice implements ModelInterface, ArrayAccess
     /**
      * Gets end_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getEndQuantity()
     {
@@ -253,7 +253,7 @@ class BillingPrice implements ModelInterface, ArrayAccess
     /**
      * Sets end_quantity
      *
-     * @param string $end_quantity 
+     * @param ?string $end_quantity 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BillingPrice implements ModelInterface, ArrayAccess
     /**
      * Gets unit_price
      *
-     * @return string
+     * @return ?string
      */
     public function getUnitPrice()
     {
@@ -277,7 +277,7 @@ class BillingPrice implements ModelInterface, ArrayAccess
     /**
      * Sets unit_price
      *
-     * @param string $unit_price Reserved: TBD
+     * @param ?string $unit_price Reserved: TBD
      *
      * @return $this
      */

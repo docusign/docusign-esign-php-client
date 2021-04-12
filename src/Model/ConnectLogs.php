@@ -59,8 +59,8 @@ class ConnectLogs implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'failures' => '\DocuSign\eSign\Model\ConnectLog[]',
         'logs' => '\DocuSign\eSign\Model\ConnectLog[]',
-        'total_records' => 'string',
-        'type' => 'string'
+        'total_records' => '?string',
+        'type' => '?string'
     ];
 
     /**
@@ -273,7 +273,7 @@ class ConnectLogs implements ModelInterface, ArrayAccess
     /**
      * Gets total_records
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalRecords()
     {
@@ -283,7 +283,7 @@ class ConnectLogs implements ModelInterface, ArrayAccess
     /**
      * Sets total_records
      *
-     * @param string $total_records 
+     * @param ?string $total_records 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ConnectLogs implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -307,7 +307,7 @@ class ConnectLogs implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */

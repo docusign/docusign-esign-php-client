@@ -57,11 +57,11 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_required' => 'string',
-        'priority' => 'string',
-        'signature_provider_display_name' => 'string',
-        'signature_provider_id' => 'string',
-        'signature_provider_name' => 'string',
+        'is_required' => '?string',
+        'priority' => '?string',
+        'signature_provider_display_name' => '?string',
+        'signature_provider_id' => '?string',
+        'signature_provider_name' => '?string',
         'signature_provider_options_metadata' => '\DocuSign\eSign\Model\AccountSignatureProviderOption[]',
         'signature_provider_required_options' => '\DocuSign\eSign\Model\SignatureProviderRequiredOption[]'
     ];
@@ -243,7 +243,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets is_required
      *
-     * @return string
+     * @return ?string
      */
     public function getIsRequired()
     {
@@ -253,7 +253,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets is_required
      *
-     * @param string $is_required 
+     * @param ?string $is_required 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets priority
      *
-     * @return string
+     * @return ?string
      */
     public function getPriority()
     {
@@ -277,7 +277,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets priority
      *
-     * @param string $priority 
+     * @param ?string $priority 
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets signature_provider_display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureProviderDisplayName()
     {
@@ -301,7 +301,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_display_name
      *
-     * @param string $signature_provider_display_name 
+     * @param ?string $signature_provider_display_name 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets signature_provider_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureProviderId()
     {
@@ -325,7 +325,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_id
      *
-     * @param string $signature_provider_id 
+     * @param ?string $signature_provider_id 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets signature_provider_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureProviderName()
     {
@@ -349,7 +349,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_name
      *
-     * @param string $signature_provider_name 
+     * @param ?string $signature_provider_name 
      *
      * @return $this
      */

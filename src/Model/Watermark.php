@@ -57,15 +57,15 @@ class Watermark implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'display_angle' => 'string',
-        'enabled' => 'string',
-        'font' => 'string',
-        'font_color' => 'string',
-        'font_size' => 'string',
-        'id' => 'string',
-        'image_base64' => 'string',
-        'transparency' => 'string',
-        'watermark_text' => 'string'
+        'display_angle' => '?string',
+        'enabled' => '?string',
+        'font' => '?string',
+        'font_color' => '?string',
+        'font_size' => '?string',
+        'id' => '?string',
+        'image_base64' => '?string',
+        'transparency' => '?string',
+        'watermark_text' => '?string'
     ];
 
     /**
@@ -255,7 +255,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets display_angle
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayAngle()
     {
@@ -265,7 +265,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets display_angle
      *
-     * @param string $display_angle 
+     * @param ?string $display_angle 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getEnabled()
     {
@@ -289,7 +289,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets enabled
      *
-     * @param string $enabled 
+     * @param ?string $enabled 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets font
      *
-     * @return string
+     * @return ?string
      */
     public function getFont()
     {
@@ -313,7 +313,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets font
      *
-     * @param string $font The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+     * @param ?string $font The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets font_color
      *
-     * @return string
+     * @return ?string
      */
     public function getFontColor()
     {
@@ -337,7 +337,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets font_color
      *
-     * @param string $font_color The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+     * @param ?string $font_color The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets font_size
      *
-     * @return string
+     * @return ?string
      */
     public function getFontSize()
     {
@@ -361,7 +361,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets font_size
      *
-     * @param string $font_size The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+     * @param ?string $font_size The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -385,7 +385,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets image_base64
      *
-     * @return string
+     * @return ?string
      */
     public function getImageBase64()
     {
@@ -409,7 +409,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets image_base64
      *
-     * @param string $image_base64 
+     * @param ?string $image_base64 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets transparency
      *
-     * @return string
+     * @return ?string
      */
     public function getTransparency()
     {
@@ -433,7 +433,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets transparency
      *
-     * @param string $transparency 
+     * @param ?string $transparency 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Gets watermark_text
      *
-     * @return string
+     * @return ?string
      */
     public function getWatermarkText()
     {
@@ -457,7 +457,7 @@ class Watermark implements ModelInterface, ArrayAccess
     /**
      * Sets watermark_text
      *
-     * @param string $watermark_text 
+     * @param ?string $watermark_text 
      *
      * @return $this
      */

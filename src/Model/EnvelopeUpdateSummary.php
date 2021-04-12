@@ -58,7 +58,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'bulk_envelope_status' => '\DocuSign\eSign\Model\BulkEnvelopeStatus',
-        'envelope_id' => 'string',
+        'envelope_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'list_custom_field_update_results' => '\DocuSign\eSign\Model\ListCustomField[]',
         'lock_information' => '\DocuSign\eSign\Model\LockInformation',
@@ -273,7 +273,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -283,7 +283,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */

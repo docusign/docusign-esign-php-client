@@ -57,16 +57,16 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'changed_signer' => 'string',
-        'comments_only_private_and_mention' => 'string',
-        'comments_receive_all' => 'string',
-        'delivery_failed' => 'string',
-        'envelope_complete' => 'string',
-        'offline_signing_failed' => 'string',
-        'powerform_responses_limit_notification_email' => 'string',
-        'recipient_viewed' => 'string',
-        'sender_envelope_declined' => 'string',
-        'withdrawn_consent' => 'string'
+        'changed_signer' => '?string',
+        'comments_only_private_and_mention' => '?string',
+        'comments_receive_all' => '?string',
+        'delivery_failed' => '?string',
+        'envelope_complete' => '?string',
+        'offline_signing_failed' => '?string',
+        'powerform_responses_limit_notification_email' => '?string',
+        'recipient_viewed' => '?string',
+        'sender_envelope_declined' => '?string',
+        'withdrawn_consent' => '?string'
     ];
 
     /**
@@ -261,7 +261,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets changed_signer
      *
-     * @return string
+     * @return ?string
      */
     public function getChangedSigner()
     {
@@ -271,7 +271,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets changed_signer
      *
-     * @param string $changed_signer When set to **true**, the sender receives notification if the signer changes.
+     * @param ?string $changed_signer When set to **true**, the sender receives notification if the signer changes.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets comments_only_private_and_mention
      *
-     * @return string
+     * @return ?string
      */
     public function getCommentsOnlyPrivateAndMention()
     {
@@ -295,7 +295,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets comments_only_private_and_mention
      *
-     * @param string $comments_only_private_and_mention 
+     * @param ?string $comments_only_private_and_mention 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets comments_receive_all
      *
-     * @return string
+     * @return ?string
      */
     public function getCommentsReceiveAll()
     {
@@ -319,7 +319,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets comments_receive_all
      *
-     * @param string $comments_receive_all 
+     * @param ?string $comments_receive_all 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_failed
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveryFailed()
     {
@@ -343,7 +343,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_failed
      *
-     * @param string $delivery_failed When set to **true**, the sender receives notification if the delivery of the envelope fails.
+     * @param ?string $delivery_failed When set to **true**, the sender receives notification if the delivery of the envelope fails.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_complete
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeComplete()
     {
@@ -367,7 +367,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_complete
      *
-     * @param string $envelope_complete When set to **true**, the user receives notification that the envelope has been completed.
+     * @param ?string $envelope_complete When set to **true**, the user receives notification that the envelope has been completed.
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets offline_signing_failed
      *
-     * @return string
+     * @return ?string
      */
     public function getOfflineSigningFailed()
     {
@@ -391,7 +391,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets offline_signing_failed
      *
-     * @param string $offline_signing_failed When set to **true**, the user receives notification if the offline signing failed.
+     * @param ?string $offline_signing_failed When set to **true**, the user receives notification if the offline signing failed.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets powerform_responses_limit_notification_email
      *
-     * @return string
+     * @return ?string
      */
     public function getPowerformResponsesLimitNotificationEmail()
     {
@@ -415,7 +415,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets powerform_responses_limit_notification_email
      *
-     * @param string $powerform_responses_limit_notification_email 
+     * @param ?string $powerform_responses_limit_notification_email 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_viewed
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientViewed()
     {
@@ -439,7 +439,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_viewed
      *
-     * @param string $recipient_viewed When set to **true**, the sender receives notification that the recipient viewed the enveloper.
+     * @param ?string $recipient_viewed When set to **true**, the sender receives notification that the recipient viewed the enveloper.
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets sender_envelope_declined
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderEnvelopeDeclined()
     {
@@ -463,7 +463,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets sender_envelope_declined
      *
-     * @param string $sender_envelope_declined 
+     * @param ?string $sender_envelope_declined 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets withdrawn_consent
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawnConsent()
     {
@@ -487,7 +487,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets withdrawn_consent
      *
-     * @param string $withdrawn_consent When set to **true**, the user receives notification if consent is withdrawn.
+     * @param ?string $withdrawn_consent When set to **true**, the user receives notification if consent is withdrawn.
      *
      * @return $this
      */

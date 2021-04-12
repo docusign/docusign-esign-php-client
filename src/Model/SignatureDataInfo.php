@@ -58,8 +58,8 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'document_security_store' => '\DocuSign\eSign\Model\DocumentSecurityStore',
-        'signature_data' => 'string',
-        'signature_field_name' => 'string'
+        'signature_data' => '?string',
+        'signature_field_name' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
     /**
      * Gets signature_data
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureData()
     {
@@ -253,7 +253,7 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
     /**
      * Sets signature_data
      *
-     * @param string $signature_data 
+     * @param ?string $signature_data 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
     /**
      * Gets signature_field_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureFieldName()
     {
@@ -277,7 +277,7 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
     /**
      * Sets signature_field_name
      *
-     * @param string $signature_field_name 
+     * @param ?string $signature_field_name 
      *
      * @return $this
      */

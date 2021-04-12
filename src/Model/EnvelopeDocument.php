@@ -57,22 +57,22 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'attachment_tab_id' => 'string',
-        'authoritative_copy' => 'string',
+        'attachment_tab_id' => '?string',
+        'authoritative_copy' => '?string',
         'available_document_types' => '\DocuSign\eSign\Model\SignatureType[]',
-        'contains_pdf_form_fields' => 'string',
-        'display' => 'string',
+        'contains_pdf_form_fields' => '?string',
+        'display' => '?string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
-        'document_id' => 'string',
+        'document_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'include_in_download' => 'string',
-        'name' => 'string',
-        'order' => 'string',
-        'pages' => 'string',
-        'signer_must_acknowledge' => 'string',
-        'size_bytes' => 'object',
-        'type' => 'string',
-        'uri' => 'string'
+        'include_in_download' => '?string',
+        'name' => '?string',
+        'order' => '?string',
+        'pages' => '?string',
+        'signer_must_acknowledge' => '?string',
+        'size_bytes' => '?string',
+        'type' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -297,7 +297,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets attachment_tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAttachmentTabId()
     {
@@ -307,7 +307,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_tab_id
      *
-     * @param string $attachment_tab_id 
+     * @param ?string $attachment_tab_id 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets authoritative_copy
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthoritativeCopy()
     {
@@ -331,7 +331,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets authoritative_copy
      *
-     * @param string $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+     * @param ?string $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets contains_pdf_form_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getContainsPdfFormFields()
     {
@@ -379,7 +379,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets contains_pdf_form_fields
      *
-     * @param string $contains_pdf_form_fields 
+     * @param ?string $contains_pdf_form_fields 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets display
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplay()
     {
@@ -403,7 +403,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets display
      *
-     * @param string $display 
+     * @param ?string $display 
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -451,7 +451,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets include_in_download
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeInDownload()
     {
@@ -499,7 +499,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets include_in_download
      *
-     * @param string $include_in_download 
+     * @param ?string $include_in_download 
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -523,7 +523,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return string
+     * @return ?string
      */
     public function getOrder()
     {
@@ -547,7 +547,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param string $order 
+     * @param ?string $order 
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets pages
      *
-     * @return string
+     * @return ?string
      */
     public function getPages()
     {
@@ -571,7 +571,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets pages
      *
-     * @param string $pages 
+     * @param ?string $pages 
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets signer_must_acknowledge
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerMustAcknowledge()
     {
@@ -595,7 +595,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_acknowledge
      *
-     * @param string $signer_must_acknowledge 
+     * @param ?string $signer_must_acknowledge 
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets size_bytes
      *
-     * @return object
+     * @return ?string
      */
     public function getSizeBytes()
     {
@@ -619,7 +619,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets size_bytes
      *
-     * @param object $size_bytes 
+     * @param ?string $size_bytes 
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -643,7 +643,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -667,7 +667,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

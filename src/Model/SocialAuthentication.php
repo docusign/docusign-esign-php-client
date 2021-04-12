@@ -57,7 +57,7 @@ class SocialAuthentication implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authentication' => 'string'
+        'authentication' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class SocialAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets authentication
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthentication()
     {
@@ -217,7 +217,7 @@ class SocialAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets authentication
      *
-     * @param string $authentication Reserved: TBD
+     * @param ?string $authentication Reserved: TBD
      *
      * @return $this
      */

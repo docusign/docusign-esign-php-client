@@ -57,15 +57,15 @@ class Brand implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'brand_company' => 'string',
-        'brand_id' => 'string',
-        'brand_name' => 'string',
+        'brand_company' => '?string',
+        'brand_id' => '?string',
+        'brand_name' => '?string',
         'colors' => '\DocuSign\eSign\Model\NameValue[]',
         'email_content' => '\DocuSign\eSign\Model\BrandEmailContent[]',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'is_overriding_company_name' => 'string',
-        'is_sending_default' => 'string',
-        'is_signing_default' => 'string',
+        'is_overriding_company_name' => '?string',
+        'is_sending_default' => '?string',
+        'is_signing_default' => '?string',
         'landing_pages' => '\DocuSign\eSign\Model\NameValue[]',
         'links' => '\DocuSign\eSign\Model\BrandLink[]',
         'logos' => '\DocuSign\eSign\Model\BrandLogos',
@@ -279,7 +279,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Gets brand_company
      *
-     * @return string
+     * @return ?string
      */
     public function getBrandCompany()
     {
@@ -289,7 +289,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets brand_company
      *
-     * @param string $brand_company The name of the company associated with this brand.
+     * @param ?string $brand_company The name of the company associated with this brand.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Gets brand_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBrandId()
     {
@@ -313,7 +313,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets brand_id
      *
-     * @param string $brand_id The ID used to identify a specific brand in API calls.
+     * @param ?string $brand_id The ID used to identify a specific brand in API calls.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Gets brand_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBrandName()
     {
@@ -337,7 +337,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets brand_name
      *
-     * @param string $brand_name The name of the brand.
+     * @param ?string $brand_name The name of the brand.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Gets is_overriding_company_name
      *
-     * @return string
+     * @return ?string
      */
     public function getIsOverridingCompanyName()
     {
@@ -433,7 +433,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets is_overriding_company_name
      *
-     * @param string $is_overriding_company_name 
+     * @param ?string $is_overriding_company_name 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Gets is_sending_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsSendingDefault()
     {
@@ -457,7 +457,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets is_sending_default
      *
-     * @param string $is_sending_default 
+     * @param ?string $is_sending_default 
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Gets is_signing_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsSigningDefault()
     {
@@ -481,7 +481,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets is_signing_default
      *
-     * @param string $is_signing_default 
+     * @param ?string $is_signing_default 
      *
      * @return $this
      */

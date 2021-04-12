@@ -57,8 +57,8 @@ class Seal implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configuration' => 'map[string,string]',
-        'seal_identifier' => 'string'
+        'configuration' => 'map[string,?string]',
+        'seal_identifier' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class Seal implements ModelInterface, ArrayAccess
     /**
      * Gets configuration
      *
-     * @return map[string,string]
+     * @return map[string,?string]
      */
     public function getConfiguration()
     {
@@ -223,7 +223,7 @@ class Seal implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param map[string,string] $configuration 
+     * @param map[string,?string] $configuration 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class Seal implements ModelInterface, ArrayAccess
     /**
      * Gets seal_identifier
      *
-     * @return string
+     * @return ?string
      */
     public function getSealIdentifier()
     {
@@ -247,7 +247,7 @@ class Seal implements ModelInterface, ArrayAccess
     /**
      * Sets seal_identifier
      *
-     * @param string $seal_identifier 
+     * @param ?string $seal_identifier 
      *
      * @return $this
      */

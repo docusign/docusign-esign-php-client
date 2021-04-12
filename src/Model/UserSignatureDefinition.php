@@ -57,10 +57,10 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'signature_font' => 'string',
-        'signature_id' => 'string',
-        'signature_initials' => 'string',
-        'signature_name' => 'string'
+        'signature_font' => '?string',
+        'signature_id' => '?string',
+        'signature_initials' => '?string',
+        'signature_name' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_font
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureFont()
     {
@@ -235,7 +235,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_font
      *
-     * @param string $signature_font 
+     * @param ?string $signature_font 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureId()
     {
@@ -259,7 +259,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_id
      *
-     * @param string $signature_id Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
+     * @param ?string $signature_id Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_initials
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureInitials()
     {
@@ -283,7 +283,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_initials
      *
-     * @param string $signature_initials 
+     * @param ?string $signature_initials 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signature_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureName()
     {
@@ -307,7 +307,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_name
      *
-     * @param string $signature_name Specifies the user signature name.
+     * @param ?string $signature_name Specifies the user signature name.
      *
      * @return $this
      */

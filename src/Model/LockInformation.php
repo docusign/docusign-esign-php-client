@@ -58,13 +58,13 @@ class LockInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'lock_duration_in_seconds' => 'string',
-        'locked_by_app' => 'string',
+        'lock_duration_in_seconds' => '?string',
+        'locked_by_app' => '?string',
         'locked_by_user' => '\DocuSign\eSign\Model\UserInfo',
-        'locked_until_date_time' => 'string',
-        'lock_token' => 'string',
-        'lock_type' => 'string',
-        'use_scratch_pad' => 'string'
+        'locked_until_date_time' => '?string',
+        'lock_token' => '?string',
+        'lock_type' => '?string',
+        'use_scratch_pad' => '?string'
     ];
 
     /**
@@ -273,7 +273,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Gets lock_duration_in_seconds
      *
-     * @return string
+     * @return ?string
      */
     public function getLockDurationInSeconds()
     {
@@ -283,7 +283,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets lock_duration_in_seconds
      *
-     * @param string $lock_duration_in_seconds Sets the time, in seconds, until the lock expires when there is no activity on the envelope.  If no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.  The lock duration can be extended.
+     * @param ?string $lock_duration_in_seconds Sets the time, in seconds, until the lock expires when there is no activity on the envelope.  If no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.  The lock duration can be extended.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Gets locked_by_app
      *
-     * @return string
+     * @return ?string
      */
     public function getLockedByApp()
     {
@@ -307,7 +307,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets locked_by_app
      *
-     * @param string $locked_by_app Specifies the friendly name of  the application that is locking the envelope.
+     * @param ?string $locked_by_app Specifies the friendly name of  the application that is locking the envelope.
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Gets locked_until_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getLockedUntilDateTime()
     {
@@ -355,7 +355,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets locked_until_date_time
      *
-     * @param string $locked_until_date_time The datetime until the envelope lock expires.
+     * @param ?string $locked_until_date_time The datetime until the envelope lock expires.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Gets lock_token
      *
-     * @return string
+     * @return ?string
      */
     public function getLockToken()
     {
@@ -379,7 +379,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets lock_token
      *
-     * @param string $lock_token A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.
+     * @param ?string $lock_token A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Gets lock_type
      *
-     * @return string
+     * @return ?string
      */
     public function getLockType()
     {
@@ -403,7 +403,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets lock_type
      *
-     * @param string $lock_type The type of envelope lock.  Currently \"edit\" is the only supported type.
+     * @param ?string $lock_type The type of envelope lock.  Currently \"edit\" is the only supported type.
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Gets use_scratch_pad
      *
-     * @return string
+     * @return ?string
      */
     public function getUseScratchPad()
     {
@@ -427,7 +427,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_scratch_pad
      *
-     * @param string $use_scratch_pad Reserved for future use.  Indicates whether a scratchpad is used for editing information.
+     * @param ?string $use_scratch_pad Reserved for future use.  Indicates whether a scratchpad is used for editing information.
      *
      * @return $this
      */

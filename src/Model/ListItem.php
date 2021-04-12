@@ -57,9 +57,9 @@ class ListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'selected' => 'string',
-        'text' => 'string',
-        'value' => 'string'
+        'selected' => '?string',
+        'text' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Gets selected
      *
-     * @return string
+     * @return ?string
      */
     public function getSelected()
     {
@@ -229,7 +229,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Sets selected
      *
-     * @param string $selected When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.
+     * @param ?string $selected When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Gets text
      *
-     * @return string
+     * @return ?string
      */
     public function getText()
     {
@@ -253,7 +253,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text Specifies the text that is shown in the dropdown list.
+     * @param ?string $text Specifies the text that is shown in the dropdown list.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -277,7 +277,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value that is used when the list item is selected.
+     * @param ?string $value Specifies the value that is used when the list item is selected.
      *
      * @return $this
      */

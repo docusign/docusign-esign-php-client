@@ -59,8 +59,8 @@ class BillingPaymentsResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'billing_payments' => '\DocuSign\eSign\Model\BillingPaymentItem[]',
-        'next_uri' => 'string',
-        'previous_uri' => 'string'
+        'next_uri' => '?string',
+        'previous_uri' => '?string'
     ];
 
     /**
@@ -244,7 +244,7 @@ class BillingPaymentsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets next_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getNextUri()
     {
@@ -254,7 +254,7 @@ class BillingPaymentsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets next_uri
      *
-     * @param string $next_uri The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
+     * @param ?string $next_uri The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class BillingPaymentsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets previous_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getPreviousUri()
     {
@@ -278,7 +278,7 @@ class BillingPaymentsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets previous_uri
      *
-     * @param string $previous_uri The postal code for the billing address.
+     * @param ?string $previous_uri The postal code for the billing address.
      *
      * @return $this
      */

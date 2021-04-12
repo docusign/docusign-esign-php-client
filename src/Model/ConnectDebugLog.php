@@ -57,11 +57,11 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'connect_config' => 'string',
+        'connect_config' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'event_date_time' => 'string',
-        'event_description' => 'string',
-        'payload' => 'string'
+        'event_date_time' => '?string',
+        'event_description' => '?string',
+        'payload' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Gets connect_config
      *
-     * @return string
+     * @return ?string
      */
     public function getConnectConfig()
     {
@@ -241,7 +241,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Sets connect_config
      *
-     * @param string $connect_config 
+     * @param ?string $connect_config 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Gets event_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getEventDateTime()
     {
@@ -289,7 +289,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Sets event_date_time
      *
-     * @param string $event_date_time 
+     * @param ?string $event_date_time 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Gets event_description
      *
-     * @return string
+     * @return ?string
      */
     public function getEventDescription()
     {
@@ -313,7 +313,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Sets event_description
      *
-     * @param string $event_description 
+     * @param ?string $event_description 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Gets payload
      *
-     * @return string
+     * @return ?string
      */
     public function getPayload()
     {
@@ -337,7 +337,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
     /**
      * Sets payload
      *
-     * @param string $payload 
+     * @param ?string $payload 
      *
      * @return $this
      */

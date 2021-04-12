@@ -58,19 +58,19 @@ class BillingCharge implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allowed_quantity' => 'string',
-        'blocked' => 'string',
-        'charge_name' => 'string',
-        'charge_type' => 'string',
-        'charge_unit_of_measure' => 'string',
+        'allowed_quantity' => '?string',
+        'blocked' => '?string',
+        'charge_name' => '?string',
+        'charge_type' => '?string',
+        'charge_unit_of_measure' => '?string',
         'discounts' => '\DocuSign\eSign\Model\BillingDiscount[]',
-        'first_effective_date' => 'string',
-        'included_quantity' => 'string',
-        'incremental_quantity' => 'string',
-        'last_effective_date' => 'string',
+        'first_effective_date' => '?string',
+        'included_quantity' => '?string',
+        'incremental_quantity' => '?string',
+        'last_effective_date' => '?string',
         'prices' => '\DocuSign\eSign\Model\BillingPrice[]',
-        'unit_price' => 'string',
-        'used_quantity' => 'string'
+        'unit_price' => '?string',
+        'used_quantity' => '?string'
     ];
 
     /**
@@ -280,7 +280,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowedQuantity()
     {
@@ -290,7 +290,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_quantity
      *
-     * @param string $allowed_quantity Reserved: TBD
+     * @param ?string $allowed_quantity Reserved: TBD
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets blocked
      *
-     * @return string
+     * @return ?string
      */
     public function getBlocked()
     {
@@ -314,7 +314,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets blocked
      *
-     * @param string $blocked Reserved: TBD
+     * @param ?string $blocked Reserved: TBD
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets charge_name
      *
-     * @return string
+     * @return ?string
      */
     public function getChargeName()
     {
@@ -338,7 +338,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets charge_name
      *
-     * @param string $charge_name Provides information on what services the charge item is for.  The following table provides a description of the different chargeName values available at this time.  | chargeName | Description | | --- | --- | | id_check | IDÃÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge |
+     * @param ?string $charge_name Provides information on what services the charge item is for.  The following table provides a description of the different chargeName values available at this time.  | chargeName | Description | | --- | --- | | id_check | IDÃÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge |
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets charge_type
      *
-     * @return string
+     * @return ?string
      */
     public function getChargeType()
     {
@@ -362,7 +362,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets charge_type
      *
-     * @param string $charge_type Reserved: TBD
+     * @param ?string $charge_type Reserved: TBD
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets charge_unit_of_measure
      *
-     * @return string
+     * @return ?string
      */
     public function getChargeUnitOfMeasure()
     {
@@ -386,7 +386,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets charge_unit_of_measure
      *
-     * @param string $charge_unit_of_measure Reserved: TBD
+     * @param ?string $charge_unit_of_measure Reserved: TBD
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets first_effective_date
      *
-     * @return string
+     * @return ?string
      */
     public function getFirstEffectiveDate()
     {
@@ -434,7 +434,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets first_effective_date
      *
-     * @param string $first_effective_date 
+     * @param ?string $first_effective_date 
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets included_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludedQuantity()
     {
@@ -458,7 +458,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets included_quantity
      *
-     * @param string $included_quantity 
+     * @param ?string $included_quantity 
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets incremental_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getIncrementalQuantity()
     {
@@ -482,7 +482,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets incremental_quantity
      *
-     * @param string $incremental_quantity Reserved: TBD
+     * @param ?string $incremental_quantity Reserved: TBD
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets last_effective_date
      *
-     * @return string
+     * @return ?string
      */
     public function getLastEffectiveDate()
     {
@@ -506,7 +506,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets last_effective_date
      *
-     * @param string $last_effective_date 
+     * @param ?string $last_effective_date 
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets unit_price
      *
-     * @return string
+     * @return ?string
      */
     public function getUnitPrice()
     {
@@ -554,7 +554,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets unit_price
      *
-     * @param string $unit_price Reserved: TBD
+     * @param ?string $unit_price Reserved: TBD
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Gets used_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getUsedQuantity()
     {
@@ -578,7 +578,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets used_quantity
      *
-     * @param string $used_quantity 
+     * @param ?string $used_quantity 
      *
      * @return $this
      */

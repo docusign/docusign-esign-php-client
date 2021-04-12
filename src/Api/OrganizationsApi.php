@@ -29,7 +29,7 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiOrganizationsApi;
+namespace DocuSign\eSign\Api\OrganizationsApi;
 
 
 
@@ -115,8 +115,8 @@ class OrganizationsApi
      *
      * Retrieves org level report by correlation id and site.
      *
-     * @param string $organization_id 
-     * @param string $report_correlation_id 
+     * @param ?string $organization_id 
+     * @param ?string $report_correlation_id 
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -131,8 +131,8 @@ class OrganizationsApi
      *
      * Retrieves org level report by correlation id and site.
      *
-     * @param string $organization_id 
-     * @param string $report_correlation_id 
+     * @param ?string $organization_id 
+     * @param ?string $report_correlation_id 
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -206,8 +206,8 @@ class OrganizationsApi
      *
      * Retrieves org level report by correlation id and site.
      *
-     * @param string $organization_id 
-     * @param string $report_correlation_id 
+     * @param ?string $organization_id 
+     * @param ?string $report_correlation_id 
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -222,8 +222,8 @@ class OrganizationsApi
      *
      * Retrieves org level report by correlation id and site.
      *
-     * @param string $organization_id 
-     * @param string $report_correlation_id 
+     * @param ?string $organization_id 
+     * @param ?string $report_correlation_id 
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

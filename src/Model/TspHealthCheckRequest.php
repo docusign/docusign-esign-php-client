@@ -57,10 +57,10 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_version' => 'string',
-        'description' => 'string',
-        'error' => 'string',
-        'status' => 'string',
+        'app_version' => '?string',
+        'description' => '?string',
+        'error' => '?string',
+        'status' => '?string',
         'status_description' => '\DocuSign\eSign\Model\TspHealthCheckStatusDescription[]'
     ];
 
@@ -231,7 +231,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Gets app_version
      *
-     * @return string
+     * @return ?string
      */
     public function getAppVersion()
     {
@@ -241,7 +241,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets app_version
      *
-     * @param string $app_version 
+     * @param ?string $app_version 
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -265,7 +265,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Gets error
      *
-     * @return string
+     * @return ?string
      */
     public function getError()
     {
@@ -289,7 +289,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets error
      *
-     * @param string $error 
+     * @param ?string $error 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -313,7 +313,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */

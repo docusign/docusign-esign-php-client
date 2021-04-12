@@ -58,10 +58,10 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recip_may_provide_number' => 'string',
-        'record_voice_print' => 'string',
-        'sender_provided_numbers' => 'string[]',
-        'validate_recip_provided_number' => 'string'
+        'recip_may_provide_number' => '?string',
+        'record_voice_print' => '?string',
+        'sender_provided_numbers' => '?string[]',
+        'validate_recip_provided_number' => '?string'
     ];
 
     /**
@@ -226,7 +226,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets recip_may_provide_number
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipMayProvideNumber()
     {
@@ -236,7 +236,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets recip_may_provide_number
      *
-     * @param string $recip_may_provide_number Boolean. When set to **true**, the recipient can supply a phone number their choice.
+     * @param ?string $recip_may_provide_number Boolean. When set to **true**, the recipient can supply a phone number their choice.
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets record_voice_print
      *
-     * @return string
+     * @return ?string
      */
     public function getRecordVoicePrint()
     {
@@ -260,7 +260,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets record_voice_print
      *
-     * @param string $record_voice_print Reserved.
+     * @param ?string $record_voice_print Reserved.
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets sender_provided_numbers
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSenderProvidedNumbers()
     {
@@ -284,7 +284,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets sender_provided_numbers
      *
-     * @param string[] $sender_provided_numbers An Array containing a list of phone numbers the recipient may use for SMS text authentication.
+     * @param ?string[] $sender_provided_numbers An Array containing a list of phone numbers the recipient may use for SMS text authentication.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets validate_recip_provided_number
      *
-     * @return string
+     * @return ?string
      */
     public function getValidateRecipProvidedNumber()
     {
@@ -308,7 +308,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets validate_recip_provided_number
      *
-     * @param string $validate_recip_provided_number Reserved.
+     * @param ?string $validate_recip_provided_number Reserved.
      *
      * @return $this
      */

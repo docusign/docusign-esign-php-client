@@ -57,14 +57,14 @@ class CustomField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'custom_field_type' => 'string',
+        'custom_field_type' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'field_id' => 'string',
-        'list_items' => 'string[]',
-        'name' => 'string',
-        'required' => 'string',
-        'show' => 'string',
-        'value' => 'string'
+        'field_id' => '?string',
+        'list_items' => '?string[]',
+        'name' => '?string',
+        'required' => '?string',
+        'show' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Gets custom_field_type
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomFieldType()
     {
@@ -259,7 +259,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets custom_field_type
      *
-     * @param string $custom_field_type 
+     * @param ?string $custom_field_type 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Gets field_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFieldId()
     {
@@ -307,7 +307,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets field_id
      *
-     * @param string $field_id 
+     * @param ?string $field_id 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Gets list_items
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getListItems()
     {
@@ -331,7 +331,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets list_items
      *
-     * @param string[] $list_items 
+     * @param ?string[] $list_items 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -355,7 +355,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Gets required
      *
-     * @return string
+     * @return ?string
      */
     public function getRequired()
     {
@@ -379,7 +379,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets required
      *
-     * @param string $required When set to **true**, the signer is required to fill out this tab
+     * @param ?string $required When set to **true**, the signer is required to fill out this tab
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Gets show
      *
-     * @return string
+     * @return ?string
      */
     public function getShow()
     {
@@ -403,7 +403,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets show
      *
-     * @param string $show 
+     * @param ?string $show 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -427,7 +427,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value of the tab.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */

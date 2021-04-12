@@ -57,8 +57,8 @@ class ConnectFailureFilter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_ids' => 'string[]',
-        'synchronous' => 'string'
+        'envelope_ids' => '?string[]',
+        'synchronous' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ConnectFailureFilter implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_ids
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getEnvelopeIds()
     {
@@ -223,7 +223,7 @@ class ConnectFailureFilter implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_ids
      *
-     * @param string[] $envelope_ids 
+     * @param ?string[] $envelope_ids 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ConnectFailureFilter implements ModelInterface, ArrayAccess
     /**
      * Gets synchronous
      *
-     * @return string
+     * @return ?string
      */
     public function getSynchronous()
     {
@@ -247,7 +247,7 @@ class ConnectFailureFilter implements ModelInterface, ArrayAccess
     /**
      * Sets synchronous
      *
-     * @param string $synchronous 
+     * @param ?string $synchronous 
      *
      * @return $this
      */

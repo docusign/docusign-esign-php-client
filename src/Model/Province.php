@@ -57,8 +57,8 @@ class Province implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'iso_code' => 'string',
-        'name' => 'string'
+        'iso_code' => '?string',
+        'name' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class Province implements ModelInterface, ArrayAccess
     /**
      * Gets iso_code
      *
-     * @return string
+     * @return ?string
      */
     public function getIsoCode()
     {
@@ -223,7 +223,7 @@ class Province implements ModelInterface, ArrayAccess
     /**
      * Sets iso_code
      *
-     * @param string $iso_code 
+     * @param ?string $iso_code 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class Province implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -247,7 +247,7 @@ class Province implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */

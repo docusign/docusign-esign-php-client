@@ -57,8 +57,8 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_days' => 'string',
-        'minimum_days' => 'string'
+        'maximum_days' => '?string',
+        'minimum_days' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
     /**
      * Gets maximum_days
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumDays()
     {
@@ -223,7 +223,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_days
      *
-     * @param string $maximum_days 
+     * @param ?string $maximum_days 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
     /**
      * Gets minimum_days
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumDays()
     {
@@ -247,7 +247,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_days
      *
-     * @param string $minimum_days 
+     * @param ?string $minimum_days 
      *
      * @return $this
      */

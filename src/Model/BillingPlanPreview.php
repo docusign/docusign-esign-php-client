@@ -58,12 +58,12 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'currency_code' => 'string',
+        'currency_code' => '?string',
         'invoice' => '\DocuSign\eSign\Model\BillingInvoice',
-        'is_prorated' => 'string',
-        'subtotal_amount' => 'string',
-        'tax_amount' => 'string',
-        'total_amount' => 'string'
+        'is_prorated' => '?string',
+        'subtotal_amount' => '?string',
+        'tax_amount' => '?string',
+        'total_amount' => '?string'
     ];
 
     /**
@@ -238,7 +238,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -248,7 +248,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the ISO currency code for the account.
+     * @param ?string $currency_code Specifies the ISO currency code for the account.
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Gets is_prorated
      *
-     * @return string
+     * @return ?string
      */
     public function getIsProrated()
     {
@@ -296,7 +296,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets is_prorated
      *
-     * @param string $is_prorated 
+     * @param ?string $is_prorated 
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Gets subtotal_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getSubtotalAmount()
     {
@@ -320,7 +320,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets subtotal_amount
      *
-     * @param string $subtotal_amount 
+     * @param ?string $subtotal_amount 
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Gets tax_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getTaxAmount()
     {
@@ -344,7 +344,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets tax_amount
      *
-     * @param string $tax_amount 
+     * @param ?string $tax_amount 
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Gets total_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalAmount()
     {
@@ -368,7 +368,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets total_amount
      *
-     * @param string $total_amount 
+     * @param ?string $total_amount 
      *
      * @return $this
      */

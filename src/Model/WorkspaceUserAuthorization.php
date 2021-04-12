@@ -58,16 +58,16 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'can_delete' => 'string',
-        'can_move' => 'string',
-        'can_transact' => 'string',
-        'can_view' => 'string',
-        'created' => 'string',
-        'created_by_id' => 'string',
+        'can_delete' => '?string',
+        'can_move' => '?string',
+        'can_transact' => '?string',
+        'can_view' => '?string',
+        'created' => '?string',
+        'created_by_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'modified' => 'string',
-        'modified_by_id' => 'string',
-        'workspace_user_id' => 'string',
+        'modified' => '?string',
+        'modified_by_id' => '?string',
+        'workspace_user_id' => '?string',
         'workspace_user_information' => '\DocuSign\eSign\Model\WorkspaceUser'
     ];
 
@@ -268,7 +268,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets can_delete
      *
-     * @return string
+     * @return ?string
      */
     public function getCanDelete()
     {
@@ -278,7 +278,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_delete
      *
-     * @param string $can_delete 
+     * @param ?string $can_delete 
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets can_move
      *
-     * @return string
+     * @return ?string
      */
     public function getCanMove()
     {
@@ -302,7 +302,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_move
      *
-     * @param string $can_move 
+     * @param ?string $can_move 
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets can_transact
      *
-     * @return string
+     * @return ?string
      */
     public function getCanTransact()
     {
@@ -326,7 +326,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_transact
      *
-     * @param string $can_transact 
+     * @param ?string $can_transact 
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets can_view
      *
-     * @return string
+     * @return ?string
      */
     public function getCanView()
     {
@@ -350,7 +350,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_view
      *
-     * @param string $can_view 
+     * @param ?string $can_view 
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -374,7 +374,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created The UTC DateTime when the workspace user authorization was created.
+     * @param ?string $created The UTC DateTime when the workspace user authorization was created.
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets created_by_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedById()
     {
@@ -398,7 +398,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_id
      *
-     * @param string $created_by_id 
+     * @param ?string $created_by_id 
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets modified
      *
-     * @return string
+     * @return ?string
      */
     public function getModified()
     {
@@ -446,7 +446,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param string $modified 
+     * @param ?string $modified 
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets modified_by_id
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedById()
     {
@@ -470,7 +470,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by_id
      *
-     * @param string $modified_by_id 
+     * @param ?string $modified_by_id 
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceUserId()
     {
@@ -494,7 +494,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_user_id
      *
-     * @param string $workspace_user_id 
+     * @param ?string $workspace_user_id 
      *
      * @return $this
      */

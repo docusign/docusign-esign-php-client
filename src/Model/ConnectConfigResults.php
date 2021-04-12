@@ -58,7 +58,7 @@ class ConnectConfigResults implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'configurations' => '\DocuSign\eSign\Model\ConnectCustomConfiguration[]',
-        'total_records' => 'string'
+        'total_records' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class ConnectConfigResults implements ModelInterface, ArrayAccess
     /**
      * Gets total_records
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalRecords()
     {
@@ -247,7 +247,7 @@ class ConnectConfigResults implements ModelInterface, ArrayAccess
     /**
      * Sets total_records
      *
-     * @param string $total_records 
+     * @param ?string $total_records 
      *
      * @return $this
      */

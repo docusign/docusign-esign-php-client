@@ -57,10 +57,10 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'client_user_id' => 'string',
-        'email' => 'string',
+        'client_user_id' => '?string',
+        'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'user_name' => 'string'
+        'user_name' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets client_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getClientUserId()
     {
@@ -235,7 +235,7 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets client_user_id
      *
-     * @param string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
+     * @param ?string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -259,7 +259,7 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Specifies the email address associated with the captive recipient.
+     * @param ?string $email Specifies the email address associated with the captive recipient.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -307,7 +307,7 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name Specifies the user name associated with the captive recipient.
+     * @param ?string $user_name Specifies the user name associated with the captive recipient.
      *
      * @return $this
      */

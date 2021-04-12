@@ -57,9 +57,9 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'string',
-        'message' => 'string',
-        'state' => 'string'
+        'code' => '?string',
+        'message' => '?string',
+        'state' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return string
+     * @return ?string
      */
     public function getCode()
     {
@@ -229,7 +229,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param string $code 
+     * @param ?string $code 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return string
+     * @return ?string
      */
     public function getMessage()
     {
@@ -253,7 +253,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message 
+     * @param ?string $message 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return string
+     * @return ?string
      */
     public function getState()
     {
@@ -277,7 +277,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param string $state The state or province associated with the address.
+     * @param ?string $state The state or province associated with the address.
      *
      * @return $this
      */

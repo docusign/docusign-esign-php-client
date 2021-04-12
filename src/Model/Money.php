@@ -57,9 +57,9 @@ class Money implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount_in_base_unit' => 'string',
-        'currency' => 'string',
-        'display_amount' => 'string'
+        'amount_in_base_unit' => '?string',
+        'currency' => '?string',
+        'display_amount' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Gets amount_in_base_unit
      *
-     * @return string
+     * @return ?string
      */
     public function getAmountInBaseUnit()
     {
@@ -229,7 +229,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Sets amount_in_base_unit
      *
-     * @param string $amount_in_base_unit 
+     * @param ?string $amount_in_base_unit 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Gets currency
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrency()
     {
@@ -253,7 +253,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Sets currency
      *
-     * @param string $currency 
+     * @param ?string $currency 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Gets display_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayAmount()
     {
@@ -277,7 +277,7 @@ class Money implements ModelInterface, ArrayAccess
     /**
      * Sets display_amount
      *
-     * @param string $display_amount 
+     * @param ?string $display_amount 
      *
      * @return $this
      */

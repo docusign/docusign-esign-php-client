@@ -57,15 +57,15 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'checksum' => 'string',
-        'chunked_upload_id' => 'string',
+        'checksum' => '?string',
+        'chunked_upload_id' => '?string',
         'chunked_upload_parts' => '\DocuSign\eSign\Model\ChunkedUploadPart[]',
-        'chunked_upload_uri' => 'string',
-        'committed' => 'string',
-        'expiration_date_time' => 'string',
-        'max_chunked_upload_parts' => 'string',
-        'max_total_size' => 'string',
-        'total_size' => 'string'
+        'chunked_upload_uri' => '?string',
+        'committed' => '?string',
+        'expiration_date_time' => '?string',
+        'max_chunked_upload_parts' => '?string',
+        'max_total_size' => '?string',
+        'total_size' => '?string'
     ];
 
     /**
@@ -255,7 +255,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets checksum
      *
-     * @return string
+     * @return ?string
      */
     public function getChecksum()
     {
@@ -265,7 +265,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets checksum
      *
-     * @param string $checksum 
+     * @param ?string $checksum 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets chunked_upload_id
      *
-     * @return string
+     * @return ?string
      */
     public function getChunkedUploadId()
     {
@@ -289,7 +289,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets chunked_upload_id
      *
-     * @param string $chunked_upload_id 
+     * @param ?string $chunked_upload_id 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets chunked_upload_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getChunkedUploadUri()
     {
@@ -337,7 +337,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets chunked_upload_uri
      *
-     * @param string $chunked_upload_uri 
+     * @param ?string $chunked_upload_uri 
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets committed
      *
-     * @return string
+     * @return ?string
      */
     public function getCommitted()
     {
@@ -361,7 +361,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets committed
      *
-     * @param string $committed 
+     * @param ?string $committed 
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets expiration_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getExpirationDateTime()
     {
@@ -385,7 +385,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets expiration_date_time
      *
-     * @param string $expiration_date_time 
+     * @param ?string $expiration_date_time 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets max_chunked_upload_parts
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxChunkedUploadParts()
     {
@@ -409,7 +409,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets max_chunked_upload_parts
      *
-     * @param string $max_chunked_upload_parts 
+     * @param ?string $max_chunked_upload_parts 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets max_total_size
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxTotalSize()
     {
@@ -433,7 +433,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets max_total_size
      *
-     * @param string $max_total_size 
+     * @param ?string $max_total_size 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Gets total_size
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalSize()
     {
@@ -457,7 +457,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets total_size
      *
-     * @param string $total_size 
+     * @param ?string $total_size 
      *
      * @return $this
      */

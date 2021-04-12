@@ -57,7 +57,7 @@ class SmartSectionAnchorPosition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page_number' => 'int',
+        'page_number' => '?int',
         'x_position' => 'double',
         'y_position' => 'double'
     ];
@@ -219,7 +219,7 @@ class SmartSectionAnchorPosition implements ModelInterface, ArrayAccess
     /**
      * Gets page_number
      *
-     * @return int
+     * @return ?int
      */
     public function getPageNumber()
     {
@@ -229,7 +229,7 @@ class SmartSectionAnchorPosition implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param int $page_number Specifies the page number on which the tab is located.
+     * @param ?int $page_number Specifies the page number on which the tab is located.
      *
      * @return $this
      */

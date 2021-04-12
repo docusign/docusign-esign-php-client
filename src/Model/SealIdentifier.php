@@ -57,8 +57,8 @@ class SealIdentifier implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'seal_display_name' => 'string',
-        'seal_name' => 'string'
+        'seal_display_name' => '?string',
+        'seal_name' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SealIdentifier implements ModelInterface, ArrayAccess
     /**
      * Gets seal_display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSealDisplayName()
     {
@@ -223,7 +223,7 @@ class SealIdentifier implements ModelInterface, ArrayAccess
     /**
      * Sets seal_display_name
      *
-     * @param string $seal_display_name 
+     * @param ?string $seal_display_name 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SealIdentifier implements ModelInterface, ArrayAccess
     /**
      * Gets seal_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSealName()
     {
@@ -247,7 +247,7 @@ class SealIdentifier implements ModelInterface, ArrayAccess
     /**
      * Sets seal_name
      *
-     * @param string $seal_name 
+     * @param ?string $seal_name 
      *
      * @return $this
      */

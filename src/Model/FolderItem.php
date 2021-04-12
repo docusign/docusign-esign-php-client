@@ -57,27 +57,27 @@ class FolderItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'completed_date_time' => 'string',
-        'created_date_time' => 'string',
+        'completed_date_time' => '?string',
+        'created_date_time' => '?string',
         'custom_fields' => '\DocuSign\eSign\Model\CustomFieldV2[]',
-        'description' => 'string',
-        'envelope_id' => 'string',
-        'envelope_uri' => 'string',
-        'is21_cfr_part11' => 'string',
-        'is_signature_provider_envelope' => 'string',
-        'last_modified' => 'string',
-        'name' => 'string',
-        'owner_name' => 'string',
-        'page_count' => 'int',
-        'password' => 'string',
-        'sender_email' => 'string',
-        'sender_name' => 'string',
-        'sent_date_time' => 'string',
-        'shared' => 'string',
-        'status' => 'string',
-        'subject' => 'string',
-        'template_id' => 'string',
-        'uri' => 'string'
+        'description' => '?string',
+        'envelope_id' => '?string',
+        'envelope_uri' => '?string',
+        'is21_cfr_part11' => '?string',
+        'is_signature_provider_envelope' => '?string',
+        'last_modified' => '?string',
+        'name' => '?string',
+        'owner_name' => '?string',
+        'page_count' => '?int',
+        'password' => '?string',
+        'sender_email' => '?string',
+        'sender_name' => '?string',
+        'sent_date_time' => '?string',
+        'shared' => '?string',
+        'status' => '?string',
+        'subject' => '?string',
+        'template_id' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -327,7 +327,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets completed_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCompletedDateTime()
     {
@@ -337,7 +337,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets completed_date_time
      *
-     * @param string $completed_date_time Specifies the date and time this item was completed.
+     * @param ?string $completed_date_time Specifies the date and time this item was completed.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets created_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDateTime()
     {
@@ -361,7 +361,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets created_date_time
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param ?string $created_date_time Indicates the date and time the item was created.
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -409,7 +409,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -433,7 +433,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeUri()
     {
@@ -457,7 +457,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_uri
      *
-     * @param string $envelope_uri Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+     * @param ?string $envelope_uri Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets is21_cfr_part11
      *
-     * @return string
+     * @return ?string
      */
     public function getIs21CfrPart11()
     {
@@ -481,7 +481,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets is21_cfr_part11
      *
-     * @param string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
+     * @param ?string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets is_signature_provider_envelope
      *
-     * @return string
+     * @return ?string
      */
     public function getIsSignatureProviderEnvelope()
     {
@@ -505,7 +505,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets is_signature_provider_envelope
      *
-     * @param string $is_signature_provider_envelope 
+     * @param ?string $is_signature_provider_envelope 
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModified()
     {
@@ -529,7 +529,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param string $last_modified 
+     * @param ?string $last_modified 
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -553,7 +553,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets owner_name
      *
-     * @return string
+     * @return ?string
      */
     public function getOwnerName()
     {
@@ -577,7 +577,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets owner_name
      *
-     * @param string $owner_name Name of the envelope owner.
+     * @param ?string $owner_name Name of the envelope owner.
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets page_count
      *
-     * @return int
+     * @return ?int
      */
     public function getPageCount()
     {
@@ -601,7 +601,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets page_count
      *
-     * @param int $page_count 
+     * @param ?int $page_count 
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -625,7 +625,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets sender_email
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderEmail()
     {
@@ -649,7 +649,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets sender_email
      *
-     * @param string $sender_email 
+     * @param ?string $sender_email 
      *
      * @return $this
      */
@@ -663,7 +663,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets sender_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderName()
     {
@@ -673,7 +673,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets sender_name
      *
-     * @param string $sender_name Name of the envelope sender.
+     * @param ?string $sender_name Name of the envelope sender.
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets sent_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSentDateTime()
     {
@@ -697,7 +697,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets sent_date_time
      *
-     * @param string $sent_date_time The date and time the envelope was sent.
+     * @param ?string $sent_date_time The date and time the envelope was sent.
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -721,7 +721,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -735,7 +735,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -745,7 +745,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets subject
      *
-     * @return string
+     * @return ?string
      */
     public function getSubject()
     {
@@ -769,7 +769,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets subject
      *
-     * @param string $subject 
+     * @param ?string $subject 
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -793,7 +793,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -817,7 +817,7 @@ class FolderItem implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

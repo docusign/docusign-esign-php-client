@@ -58,12 +58,12 @@ class BrandResources implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'created_by_user_info' => '\DocuSign\eSign\Model\UserInfo',
-        'created_date' => 'string',
+        'created_date' => '?string',
         'modified_by_user_info' => '\DocuSign\eSign\Model\UserInfo',
-        'modified_date' => 'string',
-        'modified_templates' => 'string[]',
-        'resources_content_type' => 'string',
-        'resources_content_uri' => 'string'
+        'modified_date' => '?string',
+        'modified_templates' => '?string[]',
+        'resources_content_type' => '?string',
+        'resources_content_uri' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Gets created_date
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDate()
     {
@@ -277,7 +277,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param string $created_date 
+     * @param ?string $created_date 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Gets modified_date
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedDate()
     {
@@ -325,7 +325,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date
      *
-     * @param string $modified_date 
+     * @param ?string $modified_date 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Gets modified_templates
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getModifiedTemplates()
     {
@@ -349,7 +349,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets modified_templates
      *
-     * @param string[] $modified_templates 
+     * @param ?string[] $modified_templates 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Gets resources_content_type
      *
-     * @return string
+     * @return ?string
      */
     public function getResourcesContentType()
     {
@@ -373,7 +373,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets resources_content_type
      *
-     * @param string $resources_content_type 
+     * @param ?string $resources_content_type 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Gets resources_content_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getResourcesContentUri()
     {
@@ -397,7 +397,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets resources_content_uri
      *
-     * @param string $resources_content_uri 
+     * @param ?string $resources_content_uri 
      *
      * @return $this
      */

@@ -58,10 +58,10 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'documents' => '\DocuSign\eSign\Model\SignHashDocument[]',
-        'envelope_id' => 'string',
-        'language' => 'string',
-        'redirection_url' => 'string',
-        'remaining_signature_requests' => 'string',
+        'envelope_id' => '?string',
+        'language' => '?string',
+        'redirection_url' => '?string',
+        'remaining_signature_requests' => '?string',
         'seal' => '\DocuSign\eSign\Model\Seal',
         'user' => '\DocuSign\eSign\Model\User'
     ];
@@ -267,7 +267,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -277,7 +277,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Gets language
      *
-     * @return string
+     * @return ?string
      */
     public function getLanguage()
     {
@@ -301,7 +301,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets language
      *
-     * @param string $language 
+     * @param ?string $language 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Gets redirection_url
      *
-     * @return string
+     * @return ?string
      */
     public function getRedirectionUrl()
     {
@@ -325,7 +325,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets redirection_url
      *
-     * @param string $redirection_url 
+     * @param ?string $redirection_url 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Gets remaining_signature_requests
      *
-     * @return string
+     * @return ?string
      */
     public function getRemainingSignatureRequests()
     {
@@ -349,7 +349,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets remaining_signature_requests
      *
-     * @param string $remaining_signature_requests 
+     * @param ?string $remaining_signature_requests 
      *
      * @return $this
      */

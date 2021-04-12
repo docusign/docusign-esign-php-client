@@ -58,14 +58,14 @@ class FeatureSet implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'currency_feature_set_prices' => '\DocuSign\eSign\Model\CurrencyFeatureSetPrice[]',
-        'envelope_fee' => 'string',
-        'feature_set_id' => 'string',
-        'fixed_fee' => 'string',
-        'is21_cfr_part11' => 'string',
-        'is_active' => 'string',
-        'is_enabled' => 'string',
-        'name' => 'string',
-        'seat_fee' => 'string'
+        'envelope_fee' => '?string',
+        'feature_set_id' => '?string',
+        'fixed_fee' => '?string',
+        'is21_cfr_part11' => '?string',
+        'is_active' => '?string',
+        'is_enabled' => '?string',
+        'name' => '?string',
+        'seat_fee' => '?string'
     ];
 
     /**
@@ -279,7 +279,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeFee()
     {
@@ -289,7 +289,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_fee
      *
-     * @param string $envelope_fee 
+     * @param ?string $envelope_fee 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets feature_set_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFeatureSetId()
     {
@@ -313,7 +313,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets feature_set_id
      *
-     * @param string $feature_set_id A unique ID for the feature set.
+     * @param ?string $feature_set_id A unique ID for the feature set.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets fixed_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getFixedFee()
     {
@@ -337,7 +337,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets fixed_fee
      *
-     * @param string $fixed_fee 
+     * @param ?string $fixed_fee 
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets is21_cfr_part11
      *
-     * @return string
+     * @return ?string
      */
     public function getIs21CfrPart11()
     {
@@ -361,7 +361,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets is21_cfr_part11
      *
-     * @param string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
+     * @param ?string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets is_active
      *
-     * @return string
+     * @return ?string
      */
     public function getIsActive()
     {
@@ -385,7 +385,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets is_active
      *
-     * @param string $is_active 
+     * @param ?string $is_active 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets is_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getIsEnabled()
     {
@@ -409,7 +409,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets is_enabled
      *
-     * @param string $is_enabled Specifies whether the feature set is actively enabled as part of the plan.
+     * @param ?string $is_enabled Specifies whether the feature set is actively enabled as part of the plan.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -433,7 +433,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Gets seat_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSeatFee()
     {
@@ -457,7 +457,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets seat_fee
      *
-     * @param string $seat_fee An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.
+     * @param ?string $seat_fee An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.
      *
      * @return $this
      */

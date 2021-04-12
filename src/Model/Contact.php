@@ -57,16 +57,16 @@ class Contact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'contact_id' => 'string',
+        'contact_id' => '?string',
         'contact_phone_numbers' => '\DocuSign\eSign\Model\ContactPhoneNumber[]',
-        'contact_uri' => 'string',
-        'emails' => 'string[]',
+        'contact_uri' => '?string',
+        'emails' => '?string[]',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'name' => 'string',
-        'organization' => 'string',
-        'shared' => 'string',
-        'signing_group' => 'string',
-        'signing_group_name' => 'string'
+        'name' => '?string',
+        'organization' => '?string',
+        'shared' => '?string',
+        'signing_group' => '?string',
+        'signing_group_name' => '?string'
     ];
 
     /**
@@ -261,7 +261,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets contact_id
      *
-     * @return string
+     * @return ?string
      */
     public function getContactId()
     {
@@ -271,7 +271,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets contact_id
      *
-     * @param string $contact_id 
+     * @param ?string $contact_id 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets contact_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getContactUri()
     {
@@ -319,7 +319,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets contact_uri
      *
-     * @param string $contact_uri 
+     * @param ?string $contact_uri 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets emails
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getEmails()
     {
@@ -343,7 +343,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets emails
      *
-     * @param string[] $emails 
+     * @param ?string[] $emails 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -391,7 +391,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets organization
      *
-     * @return string
+     * @return ?string
      */
     public function getOrganization()
     {
@@ -415,7 +415,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets organization
      *
-     * @param string $organization 
+     * @param ?string $organization 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -439,7 +439,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroup()
     {
@@ -463,7 +463,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group
      *
-     * @param string $signing_group 
+     * @param ?string $signing_group 
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupName()
     {
@@ -487,7 +487,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_name
      *
-     * @param string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
+     * @param ?string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
      *
      * @return $this
      */

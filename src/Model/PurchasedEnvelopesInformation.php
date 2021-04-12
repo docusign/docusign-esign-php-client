@@ -57,15 +57,15 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount' => 'string',
-        'app_name' => 'string',
-        'currency_code' => 'string',
-        'platform' => 'string',
-        'product_id' => 'string',
-        'quantity' => 'string',
-        'receipt_data' => 'string',
-        'store_name' => 'string',
-        'transaction_id' => 'string'
+        'amount' => '?string',
+        'app_name' => '?string',
+        'currency_code' => '?string',
+        'platform' => '?string',
+        'product_id' => '?string',
+        'quantity' => '?string',
+        'receipt_data' => '?string',
+        'store_name' => '?string',
+        'transaction_id' => '?string'
     ];
 
     /**
@@ -255,7 +255,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return string
+     * @return ?string
      */
     public function getAmount()
     {
@@ -265,7 +265,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param string $amount The total amount of the purchase.
+     * @param ?string $amount The total amount of the purchase.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets app_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAppName()
     {
@@ -289,7 +289,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets app_name
      *
-     * @param string $app_name The AppName of the client application.
+     * @param ?string $app_name The AppName of the client application.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -313,7 +313,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.
+     * @param ?string $currency_code Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets platform
      *
-     * @return string
+     * @return ?string
      */
     public function getPlatform()
     {
@@ -337,7 +337,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets platform
      *
-     * @param string $platform The Platform of the client application
+     * @param ?string $platform The Platform of the client application
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets product_id
      *
-     * @return string
+     * @return ?string
      */
     public function getProductId()
     {
@@ -361,7 +361,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets product_id
      *
-     * @param string $product_id The Product ID from the AppStore.
+     * @param ?string $product_id The Product ID from the AppStore.
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getQuantity()
     {
@@ -385,7 +385,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets quantity
      *
-     * @param string $quantity The quantity of envelopes to add to the account.
+     * @param ?string $quantity The quantity of envelopes to add to the account.
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets receipt_data
      *
-     * @return string
+     * @return ?string
      */
     public function getReceiptData()
     {
@@ -409,7 +409,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets receipt_data
      *
-     * @param string $receipt_data The encrypted Base64 encoded receipt data.
+     * @param ?string $receipt_data The encrypted Base64 encoded receipt data.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets store_name
      *
-     * @return string
+     * @return ?string
      */
     public function getStoreName()
     {
@@ -433,7 +433,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets store_name
      *
-     * @param string $store_name The name of the AppStore.
+     * @param ?string $store_name The name of the AppStore.
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTransactionId()
     {
@@ -457,7 +457,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id Specifies the Transaction ID from the AppStore.
+     * @param ?string $transaction_id Specifies the Transaction ID from the AppStore.
      *
      * @return $this
      */

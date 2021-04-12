@@ -57,11 +57,11 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => 'string',
-        'document_id' => 'string',
+        'data' => '?string',
+        'document_id' => '?string',
         'document_security_store' => '\DocuSign\eSign\Model\DocumentSecurityStore',
-        'name' => 'string',
-        'return_format' => 'string',
+        'name' => '?string',
+        'return_format' => '?string',
         'signature_data_infos' => '\DocuSign\eSign\Model\SignatureDataInfo[]',
         'time_stamp_field' => '\DocuSign\eSign\Model\TimeStampField'
     ];
@@ -243,7 +243,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return string
+     * @return ?string
      */
     public function getData()
     {
@@ -253,7 +253,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param string $data 
+     * @param ?string $data 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -277,7 +277,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -325,7 +325,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Gets return_format
      *
-     * @return string
+     * @return ?string
      */
     public function getReturnFormat()
     {
@@ -349,7 +349,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets return_format
      *
-     * @param string $return_format 
+     * @param ?string $return_format 
      *
      * @return $this
      */

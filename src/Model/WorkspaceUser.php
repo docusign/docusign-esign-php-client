@@ -58,22 +58,22 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'account_name' => 'string',
-        'active_since' => 'string',
-        'created' => 'string',
-        'created_by_id' => 'string',
-        'email' => 'string',
+        'account_id' => '?string',
+        'account_name' => '?string',
+        'active_since' => '?string',
+        'created' => '?string',
+        'created_by_id' => '?string',
+        'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'last_modified' => 'string',
-        'last_modified_by_id' => 'string',
-        'status' => 'string',
-        'type' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string',
-        'workspace_id' => 'string',
-        'workspace_user_base_url' => 'string',
-        'workspace_user_id' => 'string'
+        'last_modified' => '?string',
+        'last_modified_by_id' => '?string',
+        'status' => '?string',
+        'type' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string',
+        'workspace_id' => '?string',
+        'workspace_user_base_url' => '?string',
+        'workspace_user_id' => '?string'
     ];
 
     /**
@@ -298,7 +298,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -308,7 +308,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets account_name
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountName()
     {
@@ -332,7 +332,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param string $account_name The name of the account that the workspace user belongs to.
+     * @param ?string $account_name The name of the account that the workspace user belongs to.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets active_since
      *
-     * @return string
+     * @return ?string
      */
     public function getActiveSince()
     {
@@ -356,7 +356,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets active_since
      *
-     * @param string $active_since 
+     * @param ?string $active_since 
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -380,7 +380,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created The UTC DateTime when the workspace user was created.
+     * @param ?string $created The UTC DateTime when the workspace user was created.
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets created_by_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedById()
     {
@@ -404,7 +404,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_id
      *
-     * @param string $created_by_id 
+     * @param ?string $created_by_id 
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -428,7 +428,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModified()
     {
@@ -476,7 +476,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param string $last_modified Utc date and time the comment was last updated (can only be done by creator.)
+     * @param ?string $last_modified Utc date and time the comment was last updated (can only be done by creator.)
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified_by_id
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModifiedById()
     {
@@ -500,7 +500,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_id
      *
-     * @param string $last_modified_by_id 
+     * @param ?string $last_modified_by_id 
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -524,7 +524,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -548,7 +548,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type Type of the user. Valid values: type_owner, type_participant.
+     * @param ?string $type Type of the user. Valid values: type_owner, type_participant.
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -572,7 +572,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -596,7 +596,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceId()
     {
@@ -620,7 +620,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_id
      *
-     * @param string $workspace_id 
+     * @param ?string $workspace_id 
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_user_base_url
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceUserBaseUrl()
     {
@@ -644,7 +644,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_user_base_url
      *
-     * @param string $workspace_user_base_url The relative URI that may be used to access a workspace user.
+     * @param ?string $workspace_user_base_url The relative URI that may be used to access a workspace user.
      *
      * @return $this
      */
@@ -658,7 +658,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceUserId()
     {
@@ -668,7 +668,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_user_id
      *
-     * @param string $workspace_user_id 
+     * @param ?string $workspace_user_id 
      *
      * @return $this
      */

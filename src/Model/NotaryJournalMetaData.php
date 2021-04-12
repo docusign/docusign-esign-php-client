@@ -57,10 +57,10 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'comment' => 'string',
+        'comment' => '?string',
         'credible_witnesses' => '\DocuSign\eSign\Model\NotaryJournalCredibleWitness[]',
-        'signature_image' => 'string',
-        'signer_id_type' => 'string'
+        'signature_image' => '?string',
+        'signer_id_type' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Gets comment
      *
-     * @return string
+     * @return ?string
      */
     public function getComment()
     {
@@ -235,7 +235,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Sets comment
      *
-     * @param string $comment 
+     * @param ?string $comment 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Gets signature_image
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureImage()
     {
@@ -283,7 +283,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Sets signature_image
      *
-     * @param string $signature_image 
+     * @param ?string $signature_image 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Gets signer_id_type
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerIdType()
     {
@@ -307,7 +307,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Sets signer_id_type
      *
-     * @param string $signer_id_type 
+     * @param ?string $signer_id_type 
      *
      * @return $this
      */

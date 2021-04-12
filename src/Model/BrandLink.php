@@ -57,10 +57,10 @@ class BrandLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'link_text' => 'string',
-        'link_type' => 'string',
-        'show_link' => 'string',
-        'url_or_mail_to' => 'string'
+        'link_text' => '?string',
+        'link_type' => '?string',
+        'show_link' => '?string',
+        'url_or_mail_to' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Gets link_text
      *
-     * @return string
+     * @return ?string
      */
     public function getLinkText()
     {
@@ -235,7 +235,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets link_text
      *
-     * @param string $link_text 
+     * @param ?string $link_text 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Gets link_type
      *
-     * @return string
+     * @return ?string
      */
     public function getLinkType()
     {
@@ -259,7 +259,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets link_type
      *
-     * @param string $link_type 
+     * @param ?string $link_type 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Gets show_link
      *
-     * @return string
+     * @return ?string
      */
     public function getShowLink()
     {
@@ -283,7 +283,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets show_link
      *
-     * @param string $show_link 
+     * @param ?string $show_link 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Gets url_or_mail_to
      *
-     * @return string
+     * @return ?string
      */
     public function getUrlOrMailTo()
     {
@@ -307,7 +307,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets url_or_mail_to
      *
-     * @param string $url_or_mail_to 
+     * @param ?string $url_or_mail_to 
      *
      * @return $this
      */

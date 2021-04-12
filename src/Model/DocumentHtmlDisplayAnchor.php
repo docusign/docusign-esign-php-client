@@ -57,12 +57,12 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'case_sensitive' => 'bool',
+        'case_sensitive' => '?bool',
         'display_settings' => '\DocuSign\eSign\Model\DocumentHtmlDisplaySettings',
-        'end_anchor' => 'string',
-        'remove_end_anchor' => 'bool',
-        'remove_start_anchor' => 'bool',
-        'start_anchor' => 'string'
+        'end_anchor' => '?string',
+        'remove_end_anchor' => '?bool',
+        'remove_start_anchor' => '?bool',
+        'start_anchor' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Gets case_sensitive
      *
-     * @return bool
+     * @return ?bool
      */
     public function getCaseSensitive()
     {
@@ -247,7 +247,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Sets case_sensitive
      *
-     * @param bool $case_sensitive 
+     * @param ?bool $case_sensitive 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Gets end_anchor
      *
-     * @return string
+     * @return ?string
      */
     public function getEndAnchor()
     {
@@ -295,7 +295,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Sets end_anchor
      *
-     * @param string $end_anchor 
+     * @param ?string $end_anchor 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Gets remove_end_anchor
      *
-     * @return bool
+     * @return ?bool
      */
     public function getRemoveEndAnchor()
     {
@@ -319,7 +319,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Sets remove_end_anchor
      *
-     * @param bool $remove_end_anchor 
+     * @param ?bool $remove_end_anchor 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Gets remove_start_anchor
      *
-     * @return bool
+     * @return ?bool
      */
     public function getRemoveStartAnchor()
     {
@@ -343,7 +343,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Sets remove_start_anchor
      *
-     * @param bool $remove_start_anchor 
+     * @param ?bool $remove_start_anchor 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Gets start_anchor
      *
-     * @return string
+     * @return ?string
      */
     public function getStartAnchor()
     {
@@ -367,7 +367,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Sets start_anchor
      *
-     * @param string $start_anchor 
+     * @param ?string $start_anchor 
      *
      * @return $this
      */

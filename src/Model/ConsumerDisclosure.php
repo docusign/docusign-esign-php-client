@@ -57,38 +57,38 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_esign_id' => 'string',
-        'allow_cd_withdraw' => 'string',
+        'account_esign_id' => '?string',
+        'allow_cd_withdraw' => '?string',
         'allow_cd_withdraw_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'change_email' => 'string',
-        'change_email_other' => 'string',
-        'company_name' => 'string',
-        'company_phone' => 'string',
-        'copy_cost_per_page' => 'string',
-        'copy_fee_collection_method' => 'string',
-        'copy_request_email' => 'string',
-        'custom' => 'string',
-        'enable_esign' => 'string',
-        'esign_agreement' => 'string',
-        'esign_text' => 'string',
-        'language_code' => 'string',
-        'must_agree_to_esign' => 'string',
-        'pdf_id' => 'string',
-        'use_brand' => 'string',
-        'use_consumer_disclosure_within_account' => 'string',
+        'change_email' => '?string',
+        'change_email_other' => '?string',
+        'company_name' => '?string',
+        'company_phone' => '?string',
+        'copy_cost_per_page' => '?string',
+        'copy_fee_collection_method' => '?string',
+        'copy_request_email' => '?string',
+        'custom' => '?string',
+        'enable_esign' => '?string',
+        'esign_agreement' => '?string',
+        'esign_text' => '?string',
+        'language_code' => '?string',
+        'must_agree_to_esign' => '?string',
+        'pdf_id' => '?string',
+        'use_brand' => '?string',
+        'use_consumer_disclosure_within_account' => '?string',
         'use_consumer_disclosure_within_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'withdraw_address_line1' => 'string',
-        'withdraw_address_line2' => 'string',
-        'withdraw_by_email' => 'string',
-        'withdraw_by_mail' => 'string',
-        'withdraw_by_phone' => 'string',
-        'withdraw_city' => 'string',
-        'withdraw_consequences' => 'string',
-        'withdraw_email' => 'string',
-        'withdraw_other' => 'string',
-        'withdraw_phone' => 'string',
-        'withdraw_postal_code' => 'string',
-        'withdraw_state' => 'string'
+        'withdraw_address_line1' => '?string',
+        'withdraw_address_line2' => '?string',
+        'withdraw_by_email' => '?string',
+        'withdraw_by_mail' => '?string',
+        'withdraw_by_phone' => '?string',
+        'withdraw_city' => '?string',
+        'withdraw_consequences' => '?string',
+        'withdraw_email' => '?string',
+        'withdraw_other' => '?string',
+        'withdraw_phone' => '?string',
+        'withdraw_postal_code' => '?string',
+        'withdraw_state' => '?string'
     ];
 
     /**
@@ -393,7 +393,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets account_esign_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountEsignId()
     {
@@ -403,7 +403,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets account_esign_id
      *
-     * @param string $account_esign_id A GUID identifying the account associated with the consumer disclosure
+     * @param ?string $account_esign_id A GUID identifying the account associated with the consumer disclosure
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets allow_cd_withdraw
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowCdWithdraw()
     {
@@ -427,7 +427,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets allow_cd_withdraw
      *
-     * @param string $allow_cd_withdraw Indicates whether the customer can withdraw their acceptance of the consumer disclosure.
+     * @param ?string $allow_cd_withdraw Indicates whether the customer can withdraw their acceptance of the consumer disclosure.
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets change_email
      *
-     * @return string
+     * @return ?string
      */
     public function getChangeEmail()
     {
@@ -475,7 +475,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets change_email
      *
-     * @param string $change_email 
+     * @param ?string $change_email 
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets change_email_other
      *
-     * @return string
+     * @return ?string
      */
     public function getChangeEmailOther()
     {
@@ -499,7 +499,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets change_email_other
      *
-     * @param string $change_email_other 
+     * @param ?string $change_email_other 
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets company_name
      *
-     * @return string
+     * @return ?string
      */
     public function getCompanyName()
     {
@@ -523,7 +523,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets company_name
      *
-     * @param string $company_name The name of the company associated with the consumer disclosure.
+     * @param ?string $company_name The name of the company associated with the consumer disclosure.
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets company_phone
      *
-     * @return string
+     * @return ?string
      */
     public function getCompanyPhone()
     {
@@ -547,7 +547,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets company_phone
      *
-     * @param string $company_phone The phone number of the company associated with the consumer disclosure.
+     * @param ?string $company_phone The phone number of the company associated with the consumer disclosure.
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets copy_cost_per_page
      *
-     * @return string
+     * @return ?string
      */
     public function getCopyCostPerPage()
     {
@@ -571,7 +571,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets copy_cost_per_page
      *
-     * @param string $copy_cost_per_page 
+     * @param ?string $copy_cost_per_page 
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets copy_fee_collection_method
      *
-     * @return string
+     * @return ?string
      */
     public function getCopyFeeCollectionMethod()
     {
@@ -595,7 +595,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets copy_fee_collection_method
      *
-     * @param string $copy_fee_collection_method Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters
+     * @param ?string $copy_fee_collection_method Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets copy_request_email
      *
-     * @return string
+     * @return ?string
      */
     public function getCopyRequestEmail()
     {
@@ -619,7 +619,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets copy_request_email
      *
-     * @param string $copy_request_email 
+     * @param ?string $copy_request_email 
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets custom
      *
-     * @return string
+     * @return ?string
      */
     public function getCustom()
     {
@@ -643,7 +643,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets custom
      *
-     * @param string $custom 
+     * @param ?string $custom 
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets enable_esign
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableEsign()
     {
@@ -667,7 +667,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets enable_esign
      *
-     * @param string $enable_esign 
+     * @param ?string $enable_esign 
      *
      * @return $this
      */
@@ -681,7 +681,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets esign_agreement
      *
-     * @return string
+     * @return ?string
      */
     public function getEsignAgreement()
     {
@@ -691,7 +691,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets esign_agreement
      *
-     * @param string $esign_agreement The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.
+     * @param ?string $esign_agreement The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets esign_text
      *
-     * @return string
+     * @return ?string
      */
     public function getEsignText()
     {
@@ -715,7 +715,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets esign_text
      *
-     * @param string $esign_text 
+     * @param ?string $esign_text 
      *
      * @return $this
      */
@@ -729,7 +729,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets language_code
      *
-     * @return string
+     * @return ?string
      */
     public function getLanguageCode()
     {
@@ -739,7 +739,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets language_code
      *
-     * @param string $language_code 
+     * @param ?string $language_code 
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets must_agree_to_esign
      *
-     * @return string
+     * @return ?string
      */
     public function getMustAgreeToEsign()
     {
@@ -763,7 +763,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets must_agree_to_esign
      *
-     * @param string $must_agree_to_esign 
+     * @param ?string $must_agree_to_esign 
      *
      * @return $this
      */
@@ -777,7 +777,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets pdf_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPdfId()
     {
@@ -787,7 +787,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_id
      *
-     * @param string $pdf_id 
+     * @param ?string $pdf_id 
      *
      * @return $this
      */
@@ -801,7 +801,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets use_brand
      *
-     * @return string
+     * @return ?string
      */
     public function getUseBrand()
     {
@@ -811,7 +811,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets use_brand
      *
-     * @param string $use_brand 
+     * @param ?string $use_brand 
      *
      * @return $this
      */
@@ -825,7 +825,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets use_consumer_disclosure_within_account
      *
-     * @return string
+     * @return ?string
      */
     public function getUseConsumerDisclosureWithinAccount()
     {
@@ -835,7 +835,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets use_consumer_disclosure_within_account
      *
-     * @param string $use_consumer_disclosure_within_account 
+     * @param ?string $use_consumer_disclosure_within_account 
      *
      * @return $this
      */
@@ -873,7 +873,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_address_line1
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawAddressLine1()
     {
@@ -883,7 +883,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_address_line1
      *
-     * @param string $withdraw_address_line1 Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.
+     * @param ?string $withdraw_address_line1 Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -897,7 +897,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_address_line2
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawAddressLine2()
     {
@@ -907,7 +907,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_address_line2
      *
-     * @param string $withdraw_address_line2 Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.
+     * @param ?string $withdraw_address_line2 Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -921,7 +921,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_by_email
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawByEmail()
     {
@@ -931,7 +931,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_by_email
      *
-     * @param string $withdraw_by_email Indicates whether the customer can withdraw consent by email.
+     * @param ?string $withdraw_by_email Indicates whether the customer can withdraw consent by email.
      *
      * @return $this
      */
@@ -945,7 +945,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_by_mail
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawByMail()
     {
@@ -955,7 +955,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_by_mail
      *
-     * @param string $withdraw_by_mail Indicates whether the customer can withdraw consent by postal mail.
+     * @param ?string $withdraw_by_mail Indicates whether the customer can withdraw consent by postal mail.
      *
      * @return $this
      */
@@ -969,7 +969,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_by_phone
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawByPhone()
     {
@@ -979,7 +979,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_by_phone
      *
-     * @param string $withdraw_by_phone Indicates whether the customer can withdraw consent by phone.
+     * @param ?string $withdraw_by_phone Indicates whether the customer can withdraw consent by phone.
      *
      * @return $this
      */
@@ -993,7 +993,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_city
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawCity()
     {
@@ -1003,7 +1003,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_city
      *
-     * @param string $withdraw_city Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters.
+     * @param ?string $withdraw_city Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters.
      *
      * @return $this
      */
@@ -1017,7 +1017,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_consequences
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawConsequences()
     {
@@ -1027,7 +1027,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_consequences
      *
-     * @param string $withdraw_consequences Indicates the consequences of withdrawing consent.
+     * @param ?string $withdraw_consequences Indicates the consequences of withdrawing consent.
      *
      * @return $this
      */
@@ -1041,7 +1041,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_email
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawEmail()
     {
@@ -1051,7 +1051,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_email
      *
-     * @param string $withdraw_email Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.
+     * @param ?string $withdraw_email Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -1065,7 +1065,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_other
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawOther()
     {
@@ -1075,7 +1075,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_other
      *
-     * @param string $withdraw_other Indicates other information need to withdraw consent.  Maximum length: 255 characters.
+     * @param ?string $withdraw_other Indicates other information need to withdraw consent.  Maximum length: 255 characters.
      *
      * @return $this
      */
@@ -1089,7 +1089,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_phone
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawPhone()
     {
@@ -1099,7 +1099,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_phone
      *
-     * @param string $withdraw_phone Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters.
+     * @param ?string $withdraw_phone Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters.
      *
      * @return $this
      */
@@ -1113,7 +1113,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_postal_code
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawPostalCode()
     {
@@ -1123,7 +1123,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_postal_code
      *
-     * @param string $withdraw_postal_code Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters.
+     * @param ?string $withdraw_postal_code Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters.
      *
      * @return $this
      */
@@ -1137,7 +1137,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Gets withdraw_state
      *
-     * @return string
+     * @return ?string
      */
     public function getWithdrawState()
     {
@@ -1147,7 +1147,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets withdraw_state
      *
-     * @param string $withdraw_state Contains the state of the postal address to which a customer can send a consent withdrawal notification.
+     * @param ?string $withdraw_state Contains the state of the postal address to which a customer can send a consent withdrawal notification.
      *
      * @return $this
      */
