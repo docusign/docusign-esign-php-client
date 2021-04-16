@@ -58,9 +58,9 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'comments' => '\DocuSign\eSign\Model\Comment[]',
-        'count' => 'int',
-        'end_timetoken' => 'string',
-        'start_timetoken' => 'string'
+        'count' => '?int',
+        'end_timetoken' => '?string',
+        'start_timetoken' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Gets count
      *
-     * @return int
+     * @return ?int
      */
     public function getCount()
     {
@@ -259,7 +259,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets count
      *
-     * @param int $count 
+     * @param ?int $count 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Gets end_timetoken
      *
-     * @return string
+     * @return ?string
      */
     public function getEndTimetoken()
     {
@@ -283,7 +283,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets end_timetoken
      *
-     * @param string $end_timetoken 
+     * @param ?string $end_timetoken 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Gets start_timetoken
      *
-     * @return string
+     * @return ?string
      */
     public function getStartTimetoken()
     {
@@ -307,7 +307,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets start_timetoken
      *
-     * @param string $start_timetoken 
+     * @param ?string $start_timetoken 
      *
      * @return $this
      */

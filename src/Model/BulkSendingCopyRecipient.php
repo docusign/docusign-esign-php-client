@@ -57,23 +57,27 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_code' => 'string',
-        'client_user_id' => 'string',
-        'custom_fields' => 'string[]',
-        'delivery_method' => 'string',
-        'email' => 'string',
+        'access_code' => '?string',
+        'client_user_id' => '?string',
+        'custom_fields' => '?string[]',
+        'delivery_method' => '?string',
+        'email' => '?string',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
-        'embedded_recipient_start_url' => 'string',
-        'fax_number' => 'string',
-        'id_check_configuration_name' => 'string',
+        'embedded_recipient_start_url' => '?string',
+        'fax_number' => '?string',
+        'host_email' => '?string',
+        'host_name' => '?string',
+        'id_check_configuration_name' => '?string',
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
-        'identification_method' => 'string',
-        'name' => 'string',
-        'note' => 'string',
+        'identification_method' => '?string',
+        'name' => '?string',
+        'note' => '?string',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
-        'recipient_id' => 'string',
+        'recipient_id' => '?string',
         'recipient_signature_providers' => '\DocuSign\eSign\Model\RecipientSignatureProvider[]',
-        'role_name' => 'string',
+        'role_name' => '?string',
+        'signer_name' => '?string',
+        'signing_group_id' => '?string',
         'sms_authentication' => '\DocuSign\eSign\Model\RecipientSMSAuthentication',
         'social_authentications' => '\DocuSign\eSign\Model\SocialAuthentication[]',
         'tabs' => '\DocuSign\eSign\Model\BulkSendingCopyTab[]'
@@ -93,6 +97,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'email_notification' => null,
         'embedded_recipient_start_url' => null,
         'fax_number' => null,
+        'host_email' => null,
+        'host_name' => null,
         'id_check_configuration_name' => null,
         'id_check_information_input' => null,
         'identification_method' => null,
@@ -102,6 +108,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'recipient_id' => null,
         'recipient_signature_providers' => null,
         'role_name' => null,
+        'signer_name' => null,
+        'signing_group_id' => null,
         'sms_authentication' => null,
         'social_authentications' => null,
         'tabs' => null
@@ -142,6 +150,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'email_notification' => 'emailNotification',
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
         'fax_number' => 'faxNumber',
+        'host_email' => 'hostEmail',
+        'host_name' => 'hostName',
         'id_check_configuration_name' => 'idCheckConfigurationName',
         'id_check_information_input' => 'idCheckInformationInput',
         'identification_method' => 'identificationMethod',
@@ -151,6 +161,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'recipient_id' => 'recipientId',
         'recipient_signature_providers' => 'recipientSignatureProviders',
         'role_name' => 'roleName',
+        'signer_name' => 'signerName',
+        'signing_group_id' => 'signingGroupId',
         'sms_authentication' => 'smsAuthentication',
         'social_authentications' => 'socialAuthentications',
         'tabs' => 'tabs'
@@ -170,6 +182,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'email_notification' => 'setEmailNotification',
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
         'fax_number' => 'setFaxNumber',
+        'host_email' => 'setHostEmail',
+        'host_name' => 'setHostName',
         'id_check_configuration_name' => 'setIdCheckConfigurationName',
         'id_check_information_input' => 'setIdCheckInformationInput',
         'identification_method' => 'setIdentificationMethod',
@@ -179,6 +193,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'recipient_id' => 'setRecipientId',
         'recipient_signature_providers' => 'setRecipientSignatureProviders',
         'role_name' => 'setRoleName',
+        'signer_name' => 'setSignerName',
+        'signing_group_id' => 'setSigningGroupId',
         'sms_authentication' => 'setSmsAuthentication',
         'social_authentications' => 'setSocialAuthentications',
         'tabs' => 'setTabs'
@@ -198,6 +214,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'email_notification' => 'getEmailNotification',
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
         'fax_number' => 'getFaxNumber',
+        'host_email' => 'getHostEmail',
+        'host_name' => 'getHostName',
         'id_check_configuration_name' => 'getIdCheckConfigurationName',
         'id_check_information_input' => 'getIdCheckInformationInput',
         'identification_method' => 'getIdentificationMethod',
@@ -207,6 +225,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         'recipient_id' => 'getRecipientId',
         'recipient_signature_providers' => 'getRecipientSignatureProviders',
         'role_name' => 'getRoleName',
+        'signer_name' => 'getSignerName',
+        'signing_group_id' => 'getSigningGroupId',
         'sms_authentication' => 'getSmsAuthentication',
         'social_authentications' => 'getSocialAuthentications',
         'tabs' => 'getTabs'
@@ -280,6 +300,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         $this->container['email_notification'] = isset($data['email_notification']) ? $data['email_notification'] : null;
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
         $this->container['fax_number'] = isset($data['fax_number']) ? $data['fax_number'] : null;
+        $this->container['host_email'] = isset($data['host_email']) ? $data['host_email'] : null;
+        $this->container['host_name'] = isset($data['host_name']) ? $data['host_name'] : null;
         $this->container['id_check_configuration_name'] = isset($data['id_check_configuration_name']) ? $data['id_check_configuration_name'] : null;
         $this->container['id_check_information_input'] = isset($data['id_check_information_input']) ? $data['id_check_information_input'] : null;
         $this->container['identification_method'] = isset($data['identification_method']) ? $data['identification_method'] : null;
@@ -289,6 +311,8 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
         $this->container['recipient_signature_providers'] = isset($data['recipient_signature_providers']) ? $data['recipient_signature_providers'] : null;
         $this->container['role_name'] = isset($data['role_name']) ? $data['role_name'] : null;
+        $this->container['signer_name'] = isset($data['signer_name']) ? $data['signer_name'] : null;
+        $this->container['signing_group_id'] = isset($data['signing_group_id']) ? $data['signing_group_id'] : null;
         $this->container['sms_authentication'] = isset($data['sms_authentication']) ? $data['sms_authentication'] : null;
         $this->container['social_authentications'] = isset($data['social_authentications']) ? $data['social_authentications'] : null;
         $this->container['tabs'] = isset($data['tabs']) ? $data['tabs'] : null;
@@ -321,7 +345,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCode()
     {
@@ -331,7 +355,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code
      *
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param ?string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      *
      * @return $this
      */
@@ -345,7 +369,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets client_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getClientUserId()
     {
@@ -355,7 +379,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets client_user_id
      *
-     * @param string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
+     * @param ?string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -369,7 +393,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets custom_fields
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getCustomFields()
     {
@@ -379,7 +403,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param string[] $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+     * @param ?string[] $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -393,7 +417,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_method
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveryMethod()
     {
@@ -403,7 +427,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method
      *
-     * @param string $delivery_method Reserved: For DocuSign use only.
+     * @param ?string $delivery_method Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -417,7 +441,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -427,7 +451,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -465,7 +489,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets embedded_recipient_start_url
      *
-     * @return string
+     * @return ?string
      */
     public function getEmbeddedRecipientStartUrl()
     {
@@ -475,7 +499,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets embedded_recipient_start_url
      *
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param ?string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      *
      * @return $this
      */
@@ -489,7 +513,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets fax_number
      *
-     * @return string
+     * @return ?string
      */
     public function getFaxNumber()
     {
@@ -499,7 +523,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number
      *
-     * @param string $fax_number Reserved:
+     * @param ?string $fax_number Reserved:
      *
      * @return $this
      */
@@ -511,9 +535,57 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets host_email
+     *
+     * @return ?string
+     */
+    public function getHostEmail()
+    {
+        return $this->container['host_email'];
+    }
+
+    /**
+     * Sets host_email
+     *
+     * @param ?string $host_email 
+     *
+     * @return $this
+     */
+    public function setHostEmail($host_email)
+    {
+        $this->container['host_email'] = $host_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets host_name
+     *
+     * @return ?string
+     */
+    public function getHostName()
+    {
+        return $this->container['host_name'];
+    }
+
+    /**
+     * Sets host_name
+     *
+     * @param ?string $host_name 
+     *
+     * @return $this
+     */
+    public function setHostName($host_name)
+    {
+        $this->container['host_name'] = $host_name;
+
+        return $this;
+    }
+
+    /**
      * Gets id_check_configuration_name
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckConfigurationName()
     {
@@ -523,7 +595,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name
      *
-     * @param string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
+     * @param ?string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
      *
      * @return $this
      */
@@ -561,7 +633,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets identification_method
      *
-     * @return string
+     * @return ?string
      */
     public function getIdentificationMethod()
     {
@@ -571,7 +643,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets identification_method
      *
-     * @param string $identification_method 
+     * @param ?string $identification_method 
      *
      * @return $this
      */
@@ -585,7 +657,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -595,7 +667,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -609,7 +681,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets note
      *
-     * @return string
+     * @return ?string
      */
     public function getNote()
     {
@@ -619,7 +691,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
+     * @param ?string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
      *
      * @return $this
      */
@@ -657,7 +729,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -667,7 +739,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -705,7 +777,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets role_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRoleName()
     {
@@ -715,13 +787,61 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets role_name
      *
-     * @param string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+     * @param ?string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
      *
      * @return $this
      */
     public function setRoleName($role_name)
     {
         $this->container['role_name'] = $role_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets signer_name
+     *
+     * @return ?string
+     */
+    public function getSignerName()
+    {
+        return $this->container['signer_name'];
+    }
+
+    /**
+     * Sets signer_name
+     *
+     * @param ?string $signer_name 
+     *
+     * @return $this
+     */
+    public function setSignerName($signer_name)
+    {
+        $this->container['signer_name'] = $signer_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets signing_group_id
+     *
+     * @return ?string
+     */
+    public function getSigningGroupId()
+    {
+        return $this->container['signing_group_id'];
+    }
+
+    /**
+     * Sets signing_group_id
+     *
+     * @param ?string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     *
+     * @return $this
+     */
+    public function setSigningGroupId($signing_group_id)
+    {
+        $this->container['signing_group_id'] = $signing_group_id;
 
         return $this;
     }

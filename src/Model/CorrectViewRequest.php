@@ -57,9 +57,9 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'return_url' => 'string',
-        'suppress_navigation' => 'string',
-        'view_url' => 'string'
+        'return_url' => '?string',
+        'suppress_navigation' => '?string',
+        'view_url' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets return_url
      *
-     * @return string
+     * @return ?string
      */
     public function getReturnUrl()
     {
@@ -229,7 +229,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets return_url
      *
-     * @param string $return_url The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
+     * @param ?string $return_url The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets suppress_navigation
      *
-     * @return string
+     * @return ?string
      */
     public function getSuppressNavigation()
     {
@@ -253,7 +253,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets suppress_navigation
      *
-     * @param string $suppress_navigation Specifies whether the window is displayed with or without dressing.
+     * @param ?string $suppress_navigation Specifies whether the window is displayed with or without dressing.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets view_url
      *
-     * @return string
+     * @return ?string
      */
     public function getViewUrl()
     {
@@ -277,7 +277,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets view_url
      *
-     * @param string $view_url 
+     * @param ?string $view_url 
      *
      * @return $this
      */

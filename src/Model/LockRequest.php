@@ -57,11 +57,11 @@ class LockRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'lock_duration_in_seconds' => 'string',
-        'locked_by_app' => 'string',
-        'lock_type' => 'string',
-        'template_password' => 'string',
-        'use_scratch_pad' => 'string'
+        'lock_duration_in_seconds' => '?string',
+        'locked_by_app' => '?string',
+        'lock_type' => '?string',
+        'template_password' => '?string',
+        'use_scratch_pad' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Gets lock_duration_in_seconds
      *
-     * @return string
+     * @return ?string
      */
     public function getLockDurationInSeconds()
     {
@@ -241,7 +241,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Sets lock_duration_in_seconds
      *
-     * @param string $lock_duration_in_seconds The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.
+     * @param ?string $lock_duration_in_seconds The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Gets locked_by_app
      *
-     * @return string
+     * @return ?string
      */
     public function getLockedByApp()
     {
@@ -265,7 +265,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Sets locked_by_app
      *
-     * @param string $locked_by_app A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.
+     * @param ?string $locked_by_app A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Gets lock_type
      *
-     * @return string
+     * @return ?string
      */
     public function getLockType()
     {
@@ -289,7 +289,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Sets lock_type
      *
-     * @param string $lock_type The type of envelope lock.  Currently \"edit\" is the only supported type.
+     * @param ?string $lock_type The type of envelope lock.  Currently \"edit\" is the only supported type.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Gets template_password
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplatePassword()
     {
@@ -313,7 +313,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Sets template_password
      *
-     * @param string $template_password 
+     * @param ?string $template_password 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Gets use_scratch_pad
      *
-     * @return string
+     * @return ?string
      */
     public function getUseScratchPad()
     {
@@ -337,7 +337,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Sets use_scratch_pad
      *
-     * @param string $use_scratch_pad Reserved for future use.  Indicates whether a scratchpad is used for editing information.
+     * @param ?string $use_scratch_pad Reserved for future use.  Indicates whether a scratchpad is used for editing information.
      *
      * @return $this
      */

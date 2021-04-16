@@ -57,32 +57,32 @@ class RadioGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'conditional_parent_label' => 'string',
+        'conditional_parent_label' => '?string',
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'conditional_parent_value' => 'string',
+        'conditional_parent_value' => '?string',
         'conditional_parent_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'document_id' => 'string',
+        'document_id' => '?string',
         'document_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'group_name' => 'string',
+        'group_name' => '?string',
         'group_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'radios' => '\DocuSign\eSign\Model\Radio[]',
-        'recipient_id' => 'string',
-        'recipient_id_guid' => 'string',
+        'recipient_id' => '?string',
+        'recipient_id_guid' => '?string',
         'recipient_id_guid_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'require_all' => 'string',
+        'require_all' => '?string',
         'require_all_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'require_initial_on_shared_change' => 'string',
+        'require_initial_on_shared_change' => '?string',
         'require_initial_on_shared_change_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'shared' => 'string',
+        'shared' => '?string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_type' => 'string',
+        'tab_type' => '?string',
         'tab_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'template_locked' => 'string',
+        'template_locked' => '?string',
         'template_locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'template_required' => 'string',
+        'template_required' => '?string',
         'template_required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tooltip' => 'string',
+        'tooltip' => '?string',
         'tooltip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
@@ -363,7 +363,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_label
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentLabel()
     {
@@ -373,7 +373,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label
      *
-     * @param string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
+     * @param ?string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_value
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentValue()
     {
@@ -421,7 +421,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value
      *
-     * @param string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+     * @param ?string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -469,7 +469,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupName()
     {
@@ -517,7 +517,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_name
      *
-     * @param string $group_name The name of the group.
+     * @param ?string $group_name The name of the group.
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -589,7 +589,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -603,7 +603,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientIdGuid()
     {
@@ -613,7 +613,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param string $recipient_id_guid 
+     * @param ?string $recipient_id_guid 
      *
      * @return $this
      */
@@ -675,7 +675,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets require_all
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireAll()
     {
@@ -685,7 +685,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets require_all
      *
-     * @param string $require_all When set to **true** and shared is true, information must be entered in this field to complete the envelope.
+     * @param ?string $require_all When set to **true** and shared is true, information must be entered in this field to complete the envelope.
      *
      * @return $this
      */
@@ -723,7 +723,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets require_initial_on_shared_change
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireInitialOnSharedChange()
     {
@@ -733,7 +733,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change
      *
-     * @param string $require_initial_on_shared_change Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
+     * @param ?string $require_initial_on_shared_change Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
      *
      * @return $this
      */
@@ -771,7 +771,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -781,7 +781,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -819,7 +819,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets tab_type
      *
-     * @return string
+     * @return ?string
      */
     public function getTabType()
     {
@@ -829,7 +829,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type
      *
-     * @param string $tab_type 
+     * @param ?string $tab_type 
      *
      * @return $this
      */
@@ -867,7 +867,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets template_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateLocked()
     {
@@ -877,7 +877,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked
      *
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @param ?string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -915,7 +915,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets template_required
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequired()
     {
@@ -925,7 +925,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets template_required
      *
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @param ?string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -963,7 +963,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets tooltip
      *
-     * @return string
+     * @return ?string
      */
     public function getTooltip()
     {
@@ -973,7 +973,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param string $tooltip 
+     * @param ?string $tooltip 
      *
      * @return $this
      */

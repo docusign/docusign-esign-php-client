@@ -57,7 +57,7 @@ class PaymentSignerValues implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'payment_option' => 'string'
+        'payment_option' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class PaymentSignerValues implements ModelInterface, ArrayAccess
     /**
      * Gets payment_option
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentOption()
     {
@@ -217,7 +217,7 @@ class PaymentSignerValues implements ModelInterface, ArrayAccess
     /**
      * Sets payment_option
      *
-     * @param string $payment_option 
+     * @param ?string $payment_option 
      *
      * @return $this
      */

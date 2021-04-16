@@ -59,12 +59,12 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'billing_address' => '\DocuSign\eSign\Model\AccountAddress',
-        'billing_address_is_credit_card_address' => 'string',
+        'billing_address_is_credit_card_address' => '?string',
         'billing_plan' => '\DocuSign\eSign\Model\AccountBillingPlan',
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
         'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
-        'payment_method' => 'string',
+        'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
         'successor_plans' => '\DocuSign\eSign\Model\BillingPlan[]'
@@ -286,7 +286,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address_is_credit_card_address
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingAddressIsCreditCardAddress()
     {
@@ -296,7 +296,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address_is_credit_card_address
      *
-     * @param string $billing_address_is_credit_card_address When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.
+     * @param ?string $billing_address_is_credit_card_address When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -416,7 +416,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method 
+     * @param ?string $payment_method 
      *
      * @return $this
      */

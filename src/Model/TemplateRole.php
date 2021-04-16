@@ -57,18 +57,19 @@ class TemplateRole implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_code' => 'string',
-        'client_user_id' => 'string',
-        'default_recipient' => 'string',
-        'email' => 'string',
+        'access_code' => '?string',
+        'additional_notifications' => '\DocuSign\eSign\Model\RecipientAdditionalNotification[]',
+        'client_user_id' => '?string',
+        'default_recipient' => '?string',
+        'email' => '?string',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
-        'embedded_recipient_start_url' => 'string',
-        'in_person_signer_name' => 'string',
-        'name' => 'string',
+        'embedded_recipient_start_url' => '?string',
+        'in_person_signer_name' => '?string',
+        'name' => '?string',
         'recipient_signature_providers' => '\DocuSign\eSign\Model\RecipientSignatureProvider[]',
-        'role_name' => 'string',
-        'routing_order' => 'string',
-        'signing_group_id' => 'string',
+        'role_name' => '?string',
+        'routing_order' => '?string',
+        'signing_group_id' => '?string',
         'tabs' => '\DocuSign\eSign\Model\Tabs'
     ];
 
@@ -79,6 +80,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'access_code' => null,
+        'additional_notifications' => null,
         'client_user_id' => null,
         'default_recipient' => null,
         'email' => null,
@@ -121,6 +123,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'access_code' => 'accessCode',
+        'additional_notifications' => 'additionalNotifications',
         'client_user_id' => 'clientUserId',
         'default_recipient' => 'defaultRecipient',
         'email' => 'email',
@@ -142,6 +145,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'access_code' => 'setAccessCode',
+        'additional_notifications' => 'setAdditionalNotifications',
         'client_user_id' => 'setClientUserId',
         'default_recipient' => 'setDefaultRecipient',
         'email' => 'setEmail',
@@ -163,6 +167,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'access_code' => 'getAccessCode',
+        'additional_notifications' => 'getAdditionalNotifications',
         'client_user_id' => 'getClientUserId',
         'default_recipient' => 'getDefaultRecipient',
         'email' => 'getEmail',
@@ -238,6 +243,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
+        $this->container['additional_notifications'] = isset($data['additional_notifications']) ? $data['additional_notifications'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['default_recipient'] = isset($data['default_recipient']) ? $data['default_recipient'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -279,7 +285,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCode()
     {
@@ -289,7 +295,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets access_code
      *
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param ?string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      *
      * @return $this
      */
@@ -301,9 +307,33 @@ class TemplateRole implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets additional_notifications
+     *
+     * @return \DocuSign\eSign\Model\RecipientAdditionalNotification[]
+     */
+    public function getAdditionalNotifications()
+    {
+        return $this->container['additional_notifications'];
+    }
+
+    /**
+     * Sets additional_notifications
+     *
+     * @param \DocuSign\eSign\Model\RecipientAdditionalNotification[] $additional_notifications 
+     *
+     * @return $this
+     */
+    public function setAdditionalNotifications($additional_notifications)
+    {
+        $this->container['additional_notifications'] = $additional_notifications;
+
+        return $this;
+    }
+
+    /**
      * Gets client_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getClientUserId()
     {
@@ -313,7 +343,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets client_user_id
      *
-     * @param string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
+     * @param ?string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -327,7 +357,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets default_recipient
      *
-     * @return string
+     * @return ?string
      */
     public function getDefaultRecipient()
     {
@@ -337,7 +367,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets default_recipient
      *
-     * @param string $default_recipient When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.
+     * @param ?string $default_recipient When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.
      *
      * @return $this
      */
@@ -351,7 +381,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -361,7 +391,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Specifies the email associated with a role name.
+     * @param ?string $email Specifies the email associated with a role name.
      *
      * @return $this
      */
@@ -399,7 +429,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets embedded_recipient_start_url
      *
-     * @return string
+     * @return ?string
      */
     public function getEmbeddedRecipientStartUrl()
     {
@@ -409,7 +439,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets embedded_recipient_start_url
      *
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param ?string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      *
      * @return $this
      */
@@ -423,7 +453,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets in_person_signer_name
      *
-     * @return string
+     * @return ?string
      */
     public function getInPersonSignerName()
     {
@@ -433,7 +463,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets in_person_signer_name
      *
-     * @param string $in_person_signer_name Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.
+     * @param ?string $in_person_signer_name Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.
      *
      * @return $this
      */
@@ -447,7 +477,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -457,7 +487,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Specifies the recipient's name.
+     * @param ?string $name Specifies the recipient's name.
      *
      * @return $this
      */
@@ -495,7 +525,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets role_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRoleName()
     {
@@ -505,7 +535,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets role_name
      *
-     * @param string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+     * @param ?string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
      *
      * @return $this
      */
@@ -519,7 +549,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets routing_order
      *
-     * @return string
+     * @return ?string
      */
     public function getRoutingOrder()
     {
@@ -529,7 +559,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order
      *
-     * @param string $routing_order Specifies the routing order of the recipient in the envelope.
+     * @param ?string $routing_order Specifies the routing order of the recipient in the envelope.
      *
      * @return $this
      */
@@ -543,7 +573,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupId()
     {
@@ -553,7 +583,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id
      *
-     * @param string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     * @param ?string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
      *
      * @return $this
      */

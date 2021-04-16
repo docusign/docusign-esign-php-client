@@ -58,7 +58,7 @@ class UserSharedItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'shared' => 'string',
+        'shared' => '?string',
         'user' => '\DocuSign\eSign\Model\UserInfo'
     ];
 
@@ -243,7 +243,7 @@ class UserSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -253,7 +253,7 @@ class UserSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */

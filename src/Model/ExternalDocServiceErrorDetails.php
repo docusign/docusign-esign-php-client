@@ -57,9 +57,9 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authentication_url' => 'string',
-        'error_code' => 'string',
-        'message' => 'string'
+        'authentication_url' => '?string',
+        'error_code' => '?string',
+        'message' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_url
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationUrl()
     {
@@ -229,7 +229,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_url
      *
-     * @param string $authentication_url Reserved: TBD
+     * @param ?string $authentication_url Reserved: TBD
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Gets error_code
      *
-     * @return string
+     * @return ?string
      */
     public function getErrorCode()
     {
@@ -253,7 +253,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets error_code
      *
-     * @param string $error_code 
+     * @param ?string $error_code 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return string
+     * @return ?string
      */
     public function getMessage()
     {
@@ -277,7 +277,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message 
+     * @param ?string $message 
      *
      * @return $this
      */

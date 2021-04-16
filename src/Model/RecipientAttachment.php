@@ -57,12 +57,12 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'attachment_id' => 'string',
-        'attachment_type' => 'string',
-        'data' => 'string',
-        'label' => 'string',
-        'name' => 'string',
-        'remote_url' => 'string'
+        'attachment_id' => '?string',
+        'attachment_type' => '?string',
+        'data' => '?string',
+        'label' => '?string',
+        'name' => '?string',
+        'remote_url' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets attachment_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAttachmentId()
     {
@@ -247,7 +247,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_id
      *
-     * @param string $attachment_id 
+     * @param ?string $attachment_id 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets attachment_type
      *
-     * @return string
+     * @return ?string
      */
     public function getAttachmentType()
     {
@@ -271,7 +271,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_type
      *
-     * @param string $attachment_type 
+     * @param ?string $attachment_type 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return string
+     * @return ?string
      */
     public function getData()
     {
@@ -295,7 +295,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param string $data 
+     * @param ?string $data 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets label
      *
-     * @return string
+     * @return ?string
      */
     public function getLabel()
     {
@@ -319,7 +319,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets label
      *
-     * @param string $label 
+     * @param ?string $label 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -343,7 +343,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets remote_url
      *
-     * @return string
+     * @return ?string
      */
     public function getRemoteUrl()
     {
@@ -367,7 +367,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets remote_url
      *
-     * @param string $remote_url 
+     * @param ?string $remote_url 
      *
      * @return $this
      */

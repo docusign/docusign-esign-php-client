@@ -58,10 +58,10 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created_date_time' => 'string',
-        'description' => 'string',
-        'request_log_id' => 'string',
-        'status' => 'string'
+        'created_date_time' => '?string',
+        'description' => '?string',
+        'request_log_id' => '?string',
+        'status' => '?string'
     ];
 
     /**
@@ -226,7 +226,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Gets created_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDateTime()
     {
@@ -236,7 +236,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Sets created_date_time
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param ?string $created_date_time Indicates the date and time the item was created.
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -260,7 +260,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Gets request_log_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRequestLogId()
     {
@@ -284,7 +284,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Sets request_log_id
      *
-     * @param string $request_log_id 
+     * @param ?string $request_log_id 
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -308,7 +308,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */

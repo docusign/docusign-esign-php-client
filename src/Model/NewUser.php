@@ -57,17 +57,17 @@ class NewUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_password' => 'string',
-        'created_date_time' => 'string',
-        'email' => 'string',
+        'api_password' => '?string',
+        'created_date_time' => '?string',
+        'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'membership_id' => 'string',
-        'permission_profile_id' => 'string',
-        'permission_profile_name' => 'string',
-        'uri' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string',
-        'user_status' => 'string'
+        'membership_id' => '?string',
+        'permission_profile_id' => '?string',
+        'permission_profile_name' => '?string',
+        'uri' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string',
+        'user_status' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets api_password
      *
-     * @return string
+     * @return ?string
      */
     public function getApiPassword()
     {
@@ -277,7 +277,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets api_password
      *
-     * @param string $api_password Contains a token that can be used for authentication in API calls instead of using the user name and password.
+     * @param ?string $api_password Contains a token that can be used for authentication in API calls instead of using the user name and password.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets created_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDateTime()
     {
@@ -301,7 +301,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets created_date_time
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param ?string $created_date_time Indicates the date and time the item was created.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -325,7 +325,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets membership_id
      *
-     * @return string
+     * @return ?string
      */
     public function getMembershipId()
     {
@@ -373,7 +373,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets membership_id
      *
-     * @param string $membership_id 
+     * @param ?string $membership_id 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets permission_profile_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPermissionProfileId()
     {
@@ -397,7 +397,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_id
      *
-     * @param string $permission_profile_id 
+     * @param ?string $permission_profile_id 
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets permission_profile_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPermissionProfileName()
     {
@@ -421,7 +421,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_name
      *
-     * @param string $permission_profile_name 
+     * @param ?string $permission_profile_name 
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -445,7 +445,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -469,7 +469,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id Specifies the user ID for the new user.
+     * @param ?string $user_id Specifies the user ID for the new user.
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -493,7 +493,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_status
      *
-     * @return string
+     * @return ?string
      */
     public function getUserStatus()
     {
@@ -517,7 +517,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_status
      *
-     * @param string $user_status 
+     * @param ?string $user_status 
      *
      * @return $this
      */

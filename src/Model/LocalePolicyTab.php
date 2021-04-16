@@ -57,18 +57,19 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_format' => 'string',
-        'calendar_type' => 'string',
-        'culture_name' => 'string',
-        'currency_negative_format' => 'string',
-        'currency_positive_format' => 'string',
-        'custom_date_format' => 'string',
-        'custom_time_format' => 'string',
-        'date_format' => 'string',
-        'initial_format' => 'string',
-        'name_format' => 'string',
-        'time_format' => 'string',
-        'time_zone' => 'string'
+        'address_format' => '?string',
+        'calendar_type' => '?string',
+        'culture_name' => '?string',
+        'currency_code' => '?string',
+        'currency_negative_format' => '?string',
+        'currency_positive_format' => '?string',
+        'custom_date_format' => '?string',
+        'custom_time_format' => '?string',
+        'date_format' => '?string',
+        'initial_format' => '?string',
+        'name_format' => '?string',
+        'time_format' => '?string',
+        'time_zone' => '?string'
     ];
 
     /**
@@ -80,6 +81,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'address_format' => null,
         'calendar_type' => null,
         'culture_name' => null,
+        'currency_code' => null,
         'currency_negative_format' => null,
         'currency_positive_format' => null,
         'custom_date_format' => null,
@@ -121,6 +123,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'address_format' => 'addressFormat',
         'calendar_type' => 'calendarType',
         'culture_name' => 'cultureName',
+        'currency_code' => 'currencyCode',
         'currency_negative_format' => 'currencyNegativeFormat',
         'currency_positive_format' => 'currencyPositiveFormat',
         'custom_date_format' => 'customDateFormat',
@@ -141,6 +144,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'address_format' => 'setAddressFormat',
         'calendar_type' => 'setCalendarType',
         'culture_name' => 'setCultureName',
+        'currency_code' => 'setCurrencyCode',
         'currency_negative_format' => 'setCurrencyNegativeFormat',
         'currency_positive_format' => 'setCurrencyPositiveFormat',
         'custom_date_format' => 'setCustomDateFormat',
@@ -161,6 +165,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'address_format' => 'getAddressFormat',
         'calendar_type' => 'getCalendarType',
         'culture_name' => 'getCultureName',
+        'currency_code' => 'getCurrencyCode',
         'currency_negative_format' => 'getCurrencyNegativeFormat',
         'currency_positive_format' => 'getCurrencyPositiveFormat',
         'custom_date_format' => 'getCustomDateFormat',
@@ -235,6 +240,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         $this->container['address_format'] = isset($data['address_format']) ? $data['address_format'] : null;
         $this->container['calendar_type'] = isset($data['calendar_type']) ? $data['calendar_type'] : null;
         $this->container['culture_name'] = isset($data['culture_name']) ? $data['culture_name'] : null;
+        $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['currency_negative_format'] = isset($data['currency_negative_format']) ? $data['currency_negative_format'] : null;
         $this->container['currency_positive_format'] = isset($data['currency_positive_format']) ? $data['currency_positive_format'] : null;
         $this->container['custom_date_format'] = isset($data['custom_date_format']) ? $data['custom_date_format'] : null;
@@ -273,7 +279,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets address_format
      *
-     * @return string
+     * @return ?string
      */
     public function getAddressFormat()
     {
@@ -283,7 +289,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets address_format
      *
-     * @param string $address_format 
+     * @param ?string $address_format 
      *
      * @return $this
      */
@@ -297,7 +303,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets calendar_type
      *
-     * @return string
+     * @return ?string
      */
     public function getCalendarType()
     {
@@ -307,7 +313,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets calendar_type
      *
-     * @param string $calendar_type 
+     * @param ?string $calendar_type 
      *
      * @return $this
      */
@@ -321,7 +327,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets culture_name
      *
-     * @return string
+     * @return ?string
      */
     public function getCultureName()
     {
@@ -331,7 +337,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets culture_name
      *
-     * @param string $culture_name 
+     * @param ?string $culture_name 
      *
      * @return $this
      */
@@ -343,9 +349,33 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets currency_code
+     *
+     * @return ?string
+     */
+    public function getCurrencyCode()
+    {
+        return $this->container['currency_code'];
+    }
+
+    /**
+     * Sets currency_code
+     *
+     * @param ?string $currency_code 
+     *
+     * @return $this
+     */
+    public function setCurrencyCode($currency_code)
+    {
+        $this->container['currency_code'] = $currency_code;
+
+        return $this;
+    }
+
+    /**
      * Gets currency_negative_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyNegativeFormat()
     {
@@ -355,7 +385,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets currency_negative_format
      *
-     * @param string $currency_negative_format 
+     * @param ?string $currency_negative_format 
      *
      * @return $this
      */
@@ -369,7 +399,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets currency_positive_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyPositiveFormat()
     {
@@ -379,7 +409,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets currency_positive_format
      *
-     * @param string $currency_positive_format 
+     * @param ?string $currency_positive_format 
      *
      * @return $this
      */
@@ -393,7 +423,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets custom_date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomDateFormat()
     {
@@ -403,7 +433,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets custom_date_format
      *
-     * @param string $custom_date_format 
+     * @param ?string $custom_date_format 
      *
      * @return $this
      */
@@ -417,7 +447,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets custom_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomTimeFormat()
     {
@@ -427,7 +457,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets custom_time_format
      *
-     * @param string $custom_time_format 
+     * @param ?string $custom_time_format 
      *
      * @return $this
      */
@@ -441,7 +471,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getDateFormat()
     {
@@ -451,7 +481,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets date_format
      *
-     * @param string $date_format 
+     * @param ?string $date_format 
      *
      * @return $this
      */
@@ -465,7 +495,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets initial_format
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialFormat()
     {
@@ -475,7 +505,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets initial_format
      *
-     * @param string $initial_format 
+     * @param ?string $initial_format 
      *
      * @return $this
      */
@@ -489,7 +519,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets name_format
      *
-     * @return string
+     * @return ?string
      */
     public function getNameFormat()
     {
@@ -499,7 +529,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets name_format
      *
-     * @param string $name_format 
+     * @param ?string $name_format 
      *
      * @return $this
      */
@@ -513,7 +543,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeFormat()
     {
@@ -523,7 +553,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets time_format
      *
-     * @param string $time_format 
+     * @param ?string $time_format 
      *
      * @return $this
      */
@@ -537,7 +567,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Gets time_zone
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeZone()
     {
@@ -547,7 +577,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     /**
      * Sets time_zone
      *
-     * @param string $time_zone 
+     * @param ?string $time_zone 
      *
      * @return $this
      */

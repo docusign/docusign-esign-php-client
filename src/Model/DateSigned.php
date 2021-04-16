@@ -57,92 +57,92 @@ class DateSigned implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'anchor_allow_white_space_in_characters' => 'string',
+        'anchor_allow_white_space_in_characters' => '?string',
         'anchor_allow_white_space_in_characters_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_case_sensitive' => 'string',
+        'anchor_case_sensitive' => '?string',
         'anchor_case_sensitive_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_horizontal_alignment' => 'string',
+        'anchor_horizontal_alignment' => '?string',
         'anchor_horizontal_alignment_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_ignore_if_not_present' => 'string',
+        'anchor_ignore_if_not_present' => '?string',
         'anchor_ignore_if_not_present_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_match_whole_word' => 'string',
+        'anchor_match_whole_word' => '?string',
         'anchor_match_whole_word_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_string' => 'string',
+        'anchor_string' => '?string',
         'anchor_string_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_tab_processor_version' => 'string',
+        'anchor_tab_processor_version' => '?string',
         'anchor_tab_processor_version_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_units' => 'string',
+        'anchor_units' => '?string',
         'anchor_units_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_x_offset' => 'string',
+        'anchor_x_offset' => '?string',
         'anchor_x_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'anchor_y_offset' => 'string',
+        'anchor_y_offset' => '?string',
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'bold' => 'string',
+        'bold' => '?string',
         'bold_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'conditional_parent_label' => 'string',
+        'conditional_parent_label' => '?string',
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'conditional_parent_value' => 'string',
+        'conditional_parent_value' => '?string',
         'conditional_parent_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'custom_tab_id' => 'string',
+        'custom_tab_id' => '?string',
         'custom_tab_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'document_id' => 'string',
+        'document_id' => '?string',
         'document_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'font' => 'string',
-        'font_color' => 'string',
+        'font' => '?string',
+        'font_color' => '?string',
         'font_color_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'font_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'font_size' => 'string',
+        'font_size' => '?string',
         'font_size_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'form_order' => 'string',
+        'form_order' => '?string',
         'form_order_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'form_page_label' => 'string',
+        'form_page_label' => '?string',
         'form_page_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'form_page_number' => 'string',
+        'form_page_number' => '?string',
         'form_page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'height' => 'string',
+        'height' => '?string',
         'height_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'italic' => 'string',
+        'italic' => '?string',
         'italic_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'locale_policy' => '\DocuSign\eSign\Model\LocalePolicyTab',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
-        'merge_field_xml' => 'string',
-        'name' => 'string',
+        'merge_field_xml' => '?string',
+        'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'page_number' => 'string',
+        'page_number' => '?string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'recipient_id' => 'string',
-        'recipient_id_guid' => 'string',
+        'recipient_id' => '?string',
+        'recipient_id_guid' => '?string',
         'recipient_id_guid_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
-        'status' => 'string',
+        'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_group_labels' => 'string[]',
+        'tab_group_labels' => '?string[]',
         'tab_group_labels_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_id' => 'string',
+        'tab_id' => '?string',
         'tab_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_label' => 'string',
+        'tab_label' => '?string',
         'tab_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_order' => 'string',
+        'tab_order' => '?string',
         'tab_order_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_type' => 'string',
+        'tab_type' => '?string',
         'tab_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'template_locked' => 'string',
+        'template_locked' => '?string',
         'template_locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'template_required' => 'string',
+        'template_required' => '?string',
         'template_required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tooltip' => 'string',
+        'tooltip' => '?string',
         'tool_tip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'underline' => 'string',
+        'underline' => '?string',
         'underline_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'value' => 'string',
+        'value' => '?string',
         'value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'width' => 'string',
+        'width' => '?string',
         'width_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'x_position' => 'string',
+        'x_position' => '?string',
         'x_position_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'y_position' => 'string',
+        'y_position' => '?string',
         'y_position_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
@@ -723,7 +723,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_allow_white_space_in_characters
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorAllowWhiteSpaceInCharacters()
     {
@@ -733,7 +733,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters
      *
-     * @param string $anchor_allow_white_space_in_characters 
+     * @param ?string $anchor_allow_white_space_in_characters 
      *
      * @return $this
      */
@@ -771,7 +771,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_case_sensitive
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorCaseSensitive()
     {
@@ -781,7 +781,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive
      *
-     * @param string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+     * @param ?string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
      *
      * @return $this
      */
@@ -819,7 +819,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_horizontal_alignment
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorHorizontalAlignment()
     {
@@ -829,7 +829,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment
      *
-     * @param string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+     * @param ?string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
      *
      * @return $this
      */
@@ -867,7 +867,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_ignore_if_not_present
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorIgnoreIfNotPresent()
     {
@@ -877,7 +877,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present
      *
-     * @param string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
+     * @param ?string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
      *
      * @return $this
      */
@@ -915,7 +915,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_match_whole_word
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorMatchWholeWord()
     {
@@ -925,7 +925,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word
      *
-     * @param string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+     * @param ?string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
      *
      * @return $this
      */
@@ -963,7 +963,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_string
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorString()
     {
@@ -973,7 +973,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string
      *
-     * @param string $anchor_string Anchor text information for a radio button.
+     * @param ?string $anchor_string Anchor text information for a radio button.
      *
      * @return $this
      */
@@ -1011,7 +1011,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_tab_processor_version
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorTabProcessorVersion()
     {
@@ -1021,7 +1021,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version
      *
-     * @param string $anchor_tab_processor_version 
+     * @param ?string $anchor_tab_processor_version 
      *
      * @return $this
      */
@@ -1059,7 +1059,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_units
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorUnits()
     {
@@ -1069,7 +1069,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units
      *
-     * @param string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+     * @param ?string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
      *
      * @return $this
      */
@@ -1107,7 +1107,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_x_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorXOffset()
     {
@@ -1117,7 +1117,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset
      *
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -1155,7 +1155,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_y_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorYOffset()
     {
@@ -1165,7 +1165,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset
      *
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -1203,7 +1203,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets bold
      *
-     * @return string
+     * @return ?string
      */
     public function getBold()
     {
@@ -1213,7 +1213,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets bold
      *
-     * @param string $bold When set to **true**, the information in the tab is bold.
+     * @param ?string $bold When set to **true**, the information in the tab is bold.
      *
      * @return $this
      */
@@ -1251,7 +1251,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_label
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentLabel()
     {
@@ -1261,7 +1261,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label
      *
-     * @param string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
+     * @param ?string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
      *
      * @return $this
      */
@@ -1299,7 +1299,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_value
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentValue()
     {
@@ -1309,7 +1309,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value
      *
-     * @param string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+     * @param ?string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
      *
      * @return $this
      */
@@ -1347,7 +1347,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets custom_tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomTabId()
     {
@@ -1357,7 +1357,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id
      *
-     * @param string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+     * @param ?string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
      *
      * @return $this
      */
@@ -1395,7 +1395,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -1405,7 +1405,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -1467,7 +1467,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets font
      *
-     * @return string
+     * @return ?string
      */
     public function getFont()
     {
@@ -1477,7 +1477,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets font
      *
-     * @param string $font The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+     * @param ?string $font The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
      *
      * @return $this
      */
@@ -1491,7 +1491,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets font_color
      *
-     * @return string
+     * @return ?string
      */
     public function getFontColor()
     {
@@ -1501,7 +1501,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets font_color
      *
-     * @param string $font_color The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+     * @param ?string $font_color The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
      *
      * @return $this
      */
@@ -1563,7 +1563,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets font_size
      *
-     * @return string
+     * @return ?string
      */
     public function getFontSize()
     {
@@ -1573,7 +1573,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets font_size
      *
-     * @param string $font_size The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+     * @param ?string $font_size The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
      *
      * @return $this
      */
@@ -1611,7 +1611,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets form_order
      *
-     * @return string
+     * @return ?string
      */
     public function getFormOrder()
     {
@@ -1621,7 +1621,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets form_order
      *
-     * @param string $form_order 
+     * @param ?string $form_order 
      *
      * @return $this
      */
@@ -1659,7 +1659,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets form_page_label
      *
-     * @return string
+     * @return ?string
      */
     public function getFormPageLabel()
     {
@@ -1669,7 +1669,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label
      *
-     * @param string $form_page_label 
+     * @param ?string $form_page_label 
      *
      * @return $this
      */
@@ -1707,7 +1707,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets form_page_number
      *
-     * @return string
+     * @return ?string
      */
     public function getFormPageNumber()
     {
@@ -1717,7 +1717,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number
      *
-     * @param string $form_page_number 
+     * @param ?string $form_page_number 
      *
      * @return $this
      */
@@ -1755,7 +1755,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets height
      *
-     * @return string
+     * @return ?string
      */
     public function getHeight()
     {
@@ -1765,7 +1765,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets height
      *
-     * @param string $height Height of the tab in pixels.
+     * @param ?string $height Height of the tab in pixels.
      *
      * @return $this
      */
@@ -1803,7 +1803,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets italic
      *
-     * @return string
+     * @return ?string
      */
     public function getItalic()
     {
@@ -1813,7 +1813,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets italic
      *
-     * @param string $italic When set to **true**, the information in the tab is italic.
+     * @param ?string $italic When set to **true**, the information in the tab is italic.
      *
      * @return $this
      */
@@ -1899,7 +1899,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets merge_field_xml
      *
-     * @return string
+     * @return ?string
      */
     public function getMergeFieldXml()
     {
@@ -1909,7 +1909,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field_xml
      *
-     * @param string $merge_field_xml 
+     * @param ?string $merge_field_xml 
      *
      * @return $this
      */
@@ -1923,7 +1923,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -1933,7 +1933,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -1971,7 +1971,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets page_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPageNumber()
     {
@@ -1981,7 +1981,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param string $page_number Specifies the page number on which the tab is located.
+     * @param ?string $page_number Specifies the page number on which the tab is located.
      *
      * @return $this
      */
@@ -2019,7 +2019,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -2029,7 +2029,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -2043,7 +2043,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientIdGuid()
     {
@@ -2053,7 +2053,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param string $recipient_id_guid 
+     * @param ?string $recipient_id_guid 
      *
      * @return $this
      */
@@ -2139,7 +2139,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -2149,7 +2149,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -2187,7 +2187,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets tab_group_labels
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getTabGroupLabels()
     {
@@ -2197,7 +2197,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels
      *
-     * @param string[] $tab_group_labels 
+     * @param ?string[] $tab_group_labels 
      *
      * @return $this
      */
@@ -2235,7 +2235,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTabId()
     {
@@ -2245,7 +2245,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id
      *
-     * @param string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+     * @param ?string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
      *
      * @return $this
      */
@@ -2283,7 +2283,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets tab_label
      *
-     * @return string
+     * @return ?string
      */
     public function getTabLabel()
     {
@@ -2293,7 +2293,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label
      *
-     * @param string $tab_label The label string associated with the tab.
+     * @param ?string $tab_label The label string associated with the tab.
      *
      * @return $this
      */
@@ -2331,7 +2331,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets tab_order
      *
-     * @return string
+     * @return ?string
      */
     public function getTabOrder()
     {
@@ -2341,7 +2341,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order
      *
-     * @param string $tab_order 
+     * @param ?string $tab_order 
      *
      * @return $this
      */
@@ -2379,7 +2379,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets tab_type
      *
-     * @return string
+     * @return ?string
      */
     public function getTabType()
     {
@@ -2389,7 +2389,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type
      *
-     * @param string $tab_type 
+     * @param ?string $tab_type 
      *
      * @return $this
      */
@@ -2427,7 +2427,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets template_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateLocked()
     {
@@ -2437,7 +2437,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked
      *
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @param ?string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2475,7 +2475,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets template_required
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequired()
     {
@@ -2485,7 +2485,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets template_required
      *
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @param ?string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2523,7 +2523,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets tooltip
      *
-     * @return string
+     * @return ?string
      */
     public function getTooltip()
     {
@@ -2533,7 +2533,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param string $tooltip 
+     * @param ?string $tooltip 
      *
      * @return $this
      */
@@ -2571,7 +2571,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets underline
      *
-     * @return string
+     * @return ?string
      */
     public function getUnderline()
     {
@@ -2581,7 +2581,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets underline
      *
-     * @param string $underline When set to **true**, the information in the tab is underlined.
+     * @param ?string $underline When set to **true**, the information in the tab is underlined.
      *
      * @return $this
      */
@@ -2619,7 +2619,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -2629,7 +2629,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value of the tab.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */
@@ -2667,7 +2667,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets width
      *
-     * @return string
+     * @return ?string
      */
     public function getWidth()
     {
@@ -2677,7 +2677,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets width
      *
-     * @param string $width Width of the tab in pixels.
+     * @param ?string $width Width of the tab in pixels.
      *
      * @return $this
      */
@@ -2715,7 +2715,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets x_position
      *
-     * @return string
+     * @return ?string
      */
     public function getXPosition()
     {
@@ -2725,7 +2725,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets x_position
      *
-     * @param string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */
@@ -2763,7 +2763,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Gets y_position
      *
-     * @return string
+     * @return ?string
      */
     public function getYPosition()
     {
@@ -2773,7 +2773,7 @@ class DateSigned implements ModelInterface, ArrayAccess
     /**
      * Sets y_position
      *
-     * @param string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */

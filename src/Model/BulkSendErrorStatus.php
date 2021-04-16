@@ -57,9 +57,9 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created' => 'string',
-        'error_message' => 'string',
-        'recipient_emails' => 'string[]'
+        'created' => '?string',
+        'error_message' => '?string',
+        'recipient_emails' => '?string[]'
     ];
 
     /**
@@ -219,7 +219,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -229,7 +229,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created 
+     * @param ?string $created 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     /**
      * Gets error_message
      *
-     * @return string
+     * @return ?string
      */
     public function getErrorMessage()
     {
@@ -253,7 +253,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     /**
      * Sets error_message
      *
-     * @param string $error_message 
+     * @param ?string $error_message 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_emails
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getRecipientEmails()
     {
@@ -277,7 +277,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_emails
      *
-     * @param string[] $recipient_emails 
+     * @param ?string[] $recipient_emails 
      *
      * @return $this
      */

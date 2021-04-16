@@ -57,7 +57,7 @@ class ReportInProductSaveResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'report_customized_id' => 'string'
+        'report_customized_id' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class ReportInProductSaveResponse implements ModelInterface, ArrayAccess
     /**
      * Gets report_customized_id
      *
-     * @return string
+     * @return ?string
      */
     public function getReportCustomizedId()
     {
@@ -217,7 +217,7 @@ class ReportInProductSaveResponse implements ModelInterface, ArrayAccess
     /**
      * Sets report_customized_id
      *
-     * @param string $report_customized_id 
+     * @param ?string $report_customized_id 
      *
      * @return $this
      */

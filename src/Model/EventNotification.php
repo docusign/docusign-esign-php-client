@@ -60,21 +60,21 @@ class EventNotification implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'envelope_events' => '\DocuSign\eSign\Model\EnvelopeEvent[]',
         'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
-        'include_certificate_of_completion' => 'string',
-        'include_certificate_with_soap' => 'string',
-        'include_document_fields' => 'string',
-        'include_documents' => 'string',
-        'include_envelope_void_reason' => 'string',
-        'include_hmac' => 'string',
-        'include_sender_account_as_custom_field' => 'string',
-        'include_time_zone' => 'string',
-        'logging_enabled' => 'string',
+        'include_certificate_of_completion' => '?string',
+        'include_certificate_with_soap' => '?string',
+        'include_document_fields' => '?string',
+        'include_documents' => '?string',
+        'include_envelope_void_reason' => '?string',
+        'include_hmac' => '?string',
+        'include_sender_account_as_custom_field' => '?string',
+        'include_time_zone' => '?string',
+        'logging_enabled' => '?string',
         'recipient_events' => '\DocuSign\eSign\Model\RecipientEvent[]',
-        'require_acknowledgment' => 'string',
-        'sign_message_with_x509_cert' => 'string',
-        'soap_name_space' => 'string',
-        'url' => 'string',
-        'use_soap_interface' => 'string'
+        'require_acknowledgment' => '?string',
+        'sign_message_with_x509_cert' => '?string',
+        'soap_name_space' => '?string',
+        'url' => '?string',
+        'use_soap_interface' => '?string'
     ];
 
     /**
@@ -352,7 +352,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_certificate_of_completion
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeCertificateOfCompletion()
     {
@@ -362,7 +362,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_certificate_of_completion
      *
-     * @param string $include_certificate_of_completion When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.
+     * @param ?string $include_certificate_of_completion When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_certificate_with_soap
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeCertificateWithSoap()
     {
@@ -386,7 +386,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_certificate_with_soap
      *
-     * @param string $include_certificate_with_soap When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.
+     * @param ?string $include_certificate_with_soap When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_document_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeDocumentFields()
     {
@@ -410,7 +410,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_document_fields
      *
-     * @param string $include_document_fields When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.
+     * @param ?string $include_document_fields When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeDocuments()
     {
@@ -434,7 +434,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_documents
      *
-     * @param string $include_documents When set to **true**, the PDF documents are included in the message along with the updated XML.
+     * @param ?string $include_documents When set to **true**, the PDF documents are included in the message along with the updated XML.
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_envelope_void_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeEnvelopeVoidReason()
     {
@@ -458,7 +458,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_envelope_void_reason
      *
-     * @param string $include_envelope_void_reason When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.
+     * @param ?string $include_envelope_void_reason When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_hmac
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeHmac()
     {
@@ -482,7 +482,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_hmac
      *
-     * @param string $include_hmac 
+     * @param ?string $include_hmac 
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_sender_account_as_custom_field
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeSenderAccountAsCustomField()
     {
@@ -506,7 +506,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_sender_account_as_custom_field
      *
-     * @param string $include_sender_account_as_custom_field When set to **true**, the sender account ID is included as a envelope custom field in the data.
+     * @param ?string $include_sender_account_as_custom_field When set to **true**, the sender account ID is included as a envelope custom field in the data.
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets include_time_zone
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeTimeZone()
     {
@@ -530,7 +530,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_time_zone
      *
-     * @param string $include_time_zone When set to **true**, the envelope time zone information is included in the message.
+     * @param ?string $include_time_zone When set to **true**, the envelope time zone information is included in the message.
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets logging_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getLoggingEnabled()
     {
@@ -554,7 +554,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets logging_enabled
      *
-     * @param string $logging_enabled When set to **true**, logging is turned on for envelope events on the Web Console Connect page.
+     * @param ?string $logging_enabled When set to **true**, logging is turned on for envelope events on the Web Console Connect page.
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets require_acknowledgment
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireAcknowledgment()
     {
@@ -602,7 +602,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets require_acknowledgment
      *
-     * @param string $require_acknowledgment When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.
+     * @param ?string $require_acknowledgment When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.
      *
      * @return $this
      */
@@ -616,7 +616,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets sign_message_with_x509_cert
      *
-     * @return string
+     * @return ?string
      */
     public function getSignMessageWithX509Cert()
     {
@@ -626,7 +626,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets sign_message_with_x509_cert
      *
-     * @param string $sign_message_with_x509_cert When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.
+     * @param ?string $sign_message_with_x509_cert When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.
      *
      * @return $this
      */
@@ -640,7 +640,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets soap_name_space
      *
-     * @return string
+     * @return ?string
      */
     public function getSoapNameSpace()
     {
@@ -650,7 +650,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets soap_name_space
      *
-     * @param string $soap_name_space This lists the namespace in the SOAP listener provided.
+     * @param ?string $soap_name_space This lists the namespace in the SOAP listener provided.
      *
      * @return $this
      */
@@ -664,7 +664,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets url
      *
-     * @return string
+     * @return ?string
      */
     public function getUrl()
     {
@@ -674,7 +674,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets url
      *
-     * @param string $url Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.
+     * @param ?string $url Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Gets use_soap_interface
      *
-     * @return string
+     * @return ?string
      */
     public function getUseSoapInterface()
     {
@@ -698,7 +698,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets use_soap_interface
      *
-     * @param string $use_soap_interface When set to **true**, this tells the Connect service that the user's endpoint has implemented a SOAP interface.
+     * @param ?string $use_soap_interface When set to **true**, this tells the Connect service that the user's endpoint has implemented a SOAP interface.
      *
      * @return $this
      */

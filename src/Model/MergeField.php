@@ -58,17 +58,17 @@ class MergeField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allow_sender_to_edit' => 'string',
+        'allow_sender_to_edit' => '?string',
         'allow_sender_to_edit_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'configuration_type' => 'string',
+        'configuration_type' => '?string',
         'configuration_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'path' => 'string',
+        'path' => '?string',
         'path_extended' => '\DocuSign\eSign\Model\PathExtendedElement[]',
         'path_extended_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'path_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'row' => 'string',
+        'row' => '?string',
         'row_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'write_back' => 'string',
+        'write_back' => '?string',
         'write_back_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
@@ -274,7 +274,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Gets allow_sender_to_edit
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSenderToEdit()
     {
@@ -284,7 +284,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sender_to_edit
      *
-     * @param string $allow_sender_to_edit When set to **true**, the sender can modify the value of the custom tab during the sending process.
+     * @param ?string $allow_sender_to_edit When set to **true**, the sender can modify the value of the custom tab during the sending process.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Gets configuration_type
      *
-     * @return string
+     * @return ?string
      */
     public function getConfigurationType()
     {
@@ -332,7 +332,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets configuration_type
      *
-     * @param string $configuration_type If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
+     * @param ?string $configuration_type If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Gets path
      *
-     * @return string
+     * @return ?string
      */
     public function getPath()
     {
@@ -380,7 +380,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets path
      *
-     * @param string $path Sets the object associated with the custom tab. Currently this is the Salesforce Object.
+     * @param ?string $path Sets the object associated with the custom tab. Currently this is the Salesforce Object.
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Gets row
      *
-     * @return string
+     * @return ?string
      */
     public function getRow()
     {
@@ -476,7 +476,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets row
      *
-     * @param string $row Specifies the row number in a Salesforce table that the merge field value corresponds to.
+     * @param ?string $row Specifies the row number in a Salesforce table that the merge field value corresponds to.
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Gets write_back
      *
-     * @return string
+     * @return ?string
      */
     public function getWriteBack()
     {
@@ -524,7 +524,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets write_back
      *
-     * @param string $write_back When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.
+     * @param ?string $write_back When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.
      *
      * @return $this
      */

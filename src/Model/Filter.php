@@ -57,17 +57,17 @@ class Filter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'action_required' => 'string',
-        'expires' => 'string',
-        'folder_ids' => 'string',
-        'from_date_time' => 'string',
-        'is_template' => 'string',
-        'order' => 'string',
-        'order_by' => 'string',
-        'search_target' => 'string',
-        'search_text' => 'string',
-        'status' => 'string',
-        'to_date_time' => 'string'
+        'action_required' => '?string',
+        'expires' => '?string',
+        'folder_ids' => '?string',
+        'from_date_time' => '?string',
+        'is_template' => '?string',
+        'order' => '?string',
+        'order_by' => '?string',
+        'search_target' => '?string',
+        'search_text' => '?string',
+        'status' => '?string',
+        'to_date_time' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets action_required
      *
-     * @return string
+     * @return ?string
      */
     public function getActionRequired()
     {
@@ -277,7 +277,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets action_required
      *
-     * @param string $action_required Access token information.
+     * @param ?string $action_required Access token information.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets expires
      *
-     * @return string
+     * @return ?string
      */
     public function getExpires()
     {
@@ -301,7 +301,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets expires
      *
-     * @param string $expires 
+     * @param ?string $expires 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets folder_ids
      *
-     * @return string
+     * @return ?string
      */
     public function getFolderIds()
     {
@@ -325,7 +325,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets folder_ids
      *
-     * @param string $folder_ids 
+     * @param ?string $folder_ids 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets from_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getFromDateTime()
     {
@@ -349,7 +349,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets from_date_time
      *
-     * @param string $from_date_time 
+     * @param ?string $from_date_time 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets is_template
      *
-     * @return string
+     * @return ?string
      */
     public function getIsTemplate()
     {
@@ -373,7 +373,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets is_template
      *
-     * @param string $is_template 
+     * @param ?string $is_template 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return string
+     * @return ?string
      */
     public function getOrder()
     {
@@ -397,7 +397,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param string $order 
+     * @param ?string $order 
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets order_by
      *
-     * @return string
+     * @return ?string
      */
     public function getOrderBy()
     {
@@ -421,7 +421,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets order_by
      *
-     * @param string $order_by 
+     * @param ?string $order_by 
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets search_target
      *
-     * @return string
+     * @return ?string
      */
     public function getSearchTarget()
     {
@@ -445,7 +445,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets search_target
      *
-     * @param string $search_target 
+     * @param ?string $search_target 
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets search_text
      *
-     * @return string
+     * @return ?string
      */
     public function getSearchText()
     {
@@ -469,7 +469,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets search_text
      *
-     * @param string $search_text 
+     * @param ?string $search_text 
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -493,7 +493,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Gets to_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getToDateTime()
     {
@@ -517,7 +517,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets to_date_time
      *
-     * @param string $to_date_time Must be set to \"bearer\".
+     * @param ?string $to_date_time Must be set to \"bearer\".
      *
      * @return $this
      */

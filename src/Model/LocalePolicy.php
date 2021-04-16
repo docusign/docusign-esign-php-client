@@ -57,48 +57,48 @@ class LocalePolicy implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_format' => 'string',
+        'address_format' => '?string',
         'address_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_region' => 'string',
-        'calendar_type' => 'string',
+        'allow_region' => '?string',
+        'calendar_type' => '?string',
         'calendar_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'culture_name' => 'string',
+        'culture_name' => '?string',
         'culture_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'currency_code' => 'string',
+        'currency_code' => '?string',
         'currency_code_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'currency_negative_format' => 'string',
+        'currency_negative_format' => '?string',
         'currency_negative_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'currency_positive_format' => 'string',
+        'currency_positive_format' => '?string',
         'currency_positive_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'custom_date_format' => 'string',
-        'custom_sign_date_format' => 'string',
-        'custom_sign_time_format' => 'string',
-        'custom_time_format' => 'string',
-        'date_format' => 'string',
+        'custom_date_format' => '?string',
+        'custom_sign_date_format' => '?string',
+        'custom_sign_time_format' => '?string',
+        'custom_time_format' => '?string',
+        'date_format' => '?string',
         'date_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'effective_address_format' => 'string',
-        'effective_calendar_type' => 'string',
-        'effective_currency_code' => 'string',
-        'effective_currency_negative_format' => 'string',
-        'effective_currency_positive_format' => 'string',
-        'effective_custom_date_format' => 'string',
-        'effective_custom_time_format' => 'string',
-        'effective_date_format' => 'string',
-        'effective_initial_format' => 'string',
-        'effective_name_format' => 'string',
-        'effective_time_format' => 'string',
-        'effective_time_zone' => 'string',
-        'initial_format' => 'string',
+        'effective_address_format' => '?string',
+        'effective_calendar_type' => '?string',
+        'effective_currency_code' => '?string',
+        'effective_currency_negative_format' => '?string',
+        'effective_currency_positive_format' => '?string',
+        'effective_custom_date_format' => '?string',
+        'effective_custom_time_format' => '?string',
+        'effective_date_format' => '?string',
+        'effective_initial_format' => '?string',
+        'effective_name_format' => '?string',
+        'effective_time_format' => '?string',
+        'effective_time_zone' => '?string',
+        'initial_format' => '?string',
         'initial_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'name_format' => 'string',
+        'name_format' => '?string',
         'name_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sign_date_format' => 'string',
+        'sign_date_format' => '?string',
         'sign_date_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'sign_time_format' => 'string',
+        'sign_time_format' => '?string',
         'sign_time_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'time_format' => 'string',
+        'time_format' => '?string',
         'time_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'time_zone' => 'string',
+        'time_zone' => '?string',
         'time_zone_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
@@ -459,7 +459,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets address_format
      *
-     * @return string
+     * @return ?string
      */
     public function getAddressFormat()
     {
@@ -469,7 +469,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets address_format
      *
-     * @param string $address_format 
+     * @param ?string $address_format 
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets allow_region
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowRegion()
     {
@@ -517,7 +517,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets allow_region
      *
-     * @param string $allow_region 
+     * @param ?string $allow_region 
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets calendar_type
      *
-     * @return string
+     * @return ?string
      */
     public function getCalendarType()
     {
@@ -541,7 +541,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets calendar_type
      *
-     * @param string $calendar_type 
+     * @param ?string $calendar_type 
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets culture_name
      *
-     * @return string
+     * @return ?string
      */
     public function getCultureName()
     {
@@ -589,7 +589,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets culture_name
      *
-     * @param string $culture_name 
+     * @param ?string $culture_name 
      *
      * @return $this
      */
@@ -627,7 +627,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -637,7 +637,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code 
+     * @param ?string $currency_code 
      *
      * @return $this
      */
@@ -675,7 +675,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets currency_negative_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyNegativeFormat()
     {
@@ -685,7 +685,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_negative_format
      *
-     * @param string $currency_negative_format 
+     * @param ?string $currency_negative_format 
      *
      * @return $this
      */
@@ -723,7 +723,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets currency_positive_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyPositiveFormat()
     {
@@ -733,7 +733,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_positive_format
      *
-     * @param string $currency_positive_format 
+     * @param ?string $currency_positive_format 
      *
      * @return $this
      */
@@ -771,7 +771,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets custom_date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomDateFormat()
     {
@@ -781,7 +781,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_date_format
      *
-     * @param string $custom_date_format 
+     * @param ?string $custom_date_format 
      *
      * @return $this
      */
@@ -795,7 +795,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets custom_sign_date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomSignDateFormat()
     {
@@ -805,7 +805,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_sign_date_format
      *
-     * @param string $custom_sign_date_format 
+     * @param ?string $custom_sign_date_format 
      *
      * @return $this
      */
@@ -819,7 +819,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets custom_sign_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomSignTimeFormat()
     {
@@ -829,7 +829,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_sign_time_format
      *
-     * @param string $custom_sign_time_format 
+     * @param ?string $custom_sign_time_format 
      *
      * @return $this
      */
@@ -843,7 +843,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets custom_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomTimeFormat()
     {
@@ -853,7 +853,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_time_format
      *
-     * @param string $custom_time_format 
+     * @param ?string $custom_time_format 
      *
      * @return $this
      */
@@ -867,7 +867,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getDateFormat()
     {
@@ -877,7 +877,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets date_format
      *
-     * @param string $date_format 
+     * @param ?string $date_format 
      *
      * @return $this
      */
@@ -915,7 +915,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_address_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveAddressFormat()
     {
@@ -925,7 +925,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_address_format
      *
-     * @param string $effective_address_format 
+     * @param ?string $effective_address_format 
      *
      * @return $this
      */
@@ -939,7 +939,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_calendar_type
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveCalendarType()
     {
@@ -949,7 +949,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_calendar_type
      *
-     * @param string $effective_calendar_type 
+     * @param ?string $effective_calendar_type 
      *
      * @return $this
      */
@@ -963,7 +963,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveCurrencyCode()
     {
@@ -973,7 +973,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_currency_code
      *
-     * @param string $effective_currency_code 
+     * @param ?string $effective_currency_code 
      *
      * @return $this
      */
@@ -987,7 +987,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_currency_negative_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveCurrencyNegativeFormat()
     {
@@ -997,7 +997,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_currency_negative_format
      *
-     * @param string $effective_currency_negative_format 
+     * @param ?string $effective_currency_negative_format 
      *
      * @return $this
      */
@@ -1011,7 +1011,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_currency_positive_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveCurrencyPositiveFormat()
     {
@@ -1021,7 +1021,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_currency_positive_format
      *
-     * @param string $effective_currency_positive_format 
+     * @param ?string $effective_currency_positive_format 
      *
      * @return $this
      */
@@ -1035,7 +1035,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_custom_date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveCustomDateFormat()
     {
@@ -1045,7 +1045,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_custom_date_format
      *
-     * @param string $effective_custom_date_format 
+     * @param ?string $effective_custom_date_format 
      *
      * @return $this
      */
@@ -1059,7 +1059,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_custom_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveCustomTimeFormat()
     {
@@ -1069,7 +1069,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_custom_time_format
      *
-     * @param string $effective_custom_time_format 
+     * @param ?string $effective_custom_time_format 
      *
      * @return $this
      */
@@ -1083,7 +1083,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveDateFormat()
     {
@@ -1093,7 +1093,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_date_format
      *
-     * @param string $effective_date_format 
+     * @param ?string $effective_date_format 
      *
      * @return $this
      */
@@ -1107,7 +1107,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_initial_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveInitialFormat()
     {
@@ -1117,7 +1117,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_initial_format
      *
-     * @param string $effective_initial_format 
+     * @param ?string $effective_initial_format 
      *
      * @return $this
      */
@@ -1131,7 +1131,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_name_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveNameFormat()
     {
@@ -1141,7 +1141,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_name_format
      *
-     * @param string $effective_name_format 
+     * @param ?string $effective_name_format 
      *
      * @return $this
      */
@@ -1155,7 +1155,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveTimeFormat()
     {
@@ -1165,7 +1165,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_time_format
      *
-     * @param string $effective_time_format 
+     * @param ?string $effective_time_format 
      *
      * @return $this
      */
@@ -1179,7 +1179,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets effective_time_zone
      *
-     * @return string
+     * @return ?string
      */
     public function getEffectiveTimeZone()
     {
@@ -1189,7 +1189,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_time_zone
      *
-     * @param string $effective_time_zone 
+     * @param ?string $effective_time_zone 
      *
      * @return $this
      */
@@ -1203,7 +1203,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets initial_format
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialFormat()
     {
@@ -1213,7 +1213,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets initial_format
      *
-     * @param string $initial_format 
+     * @param ?string $initial_format 
      *
      * @return $this
      */
@@ -1251,7 +1251,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets name_format
      *
-     * @return string
+     * @return ?string
      */
     public function getNameFormat()
     {
@@ -1261,7 +1261,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets name_format
      *
-     * @param string $name_format 
+     * @param ?string $name_format 
      *
      * @return $this
      */
@@ -1299,7 +1299,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets sign_date_format
      *
-     * @return string
+     * @return ?string
      */
     public function getSignDateFormat()
     {
@@ -1309,7 +1309,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_format
      *
-     * @param string $sign_date_format 
+     * @param ?string $sign_date_format 
      *
      * @return $this
      */
@@ -1347,7 +1347,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets sign_time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getSignTimeFormat()
     {
@@ -1357,7 +1357,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets sign_time_format
      *
-     * @param string $sign_time_format 
+     * @param ?string $sign_time_format 
      *
      * @return $this
      */
@@ -1395,7 +1395,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets time_format
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeFormat()
     {
@@ -1405,7 +1405,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_format
      *
-     * @param string $time_format 
+     * @param ?string $time_format 
      *
      * @return $this
      */
@@ -1443,7 +1443,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Gets time_zone
      *
-     * @return string
+     * @return ?string
      */
     public function getTimeZone()
     {
@@ -1453,7 +1453,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_zone
      *
-     * @param string $time_zone 
+     * @param ?string $time_zone 
      *
      * @return $this
      */

@@ -58,7 +58,7 @@ class RecipientSMSAuthentication implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sender_provided_numbers' => 'string[]',
+        'sender_provided_numbers' => '?string[]',
         'sender_provided_numbers_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
@@ -214,7 +214,7 @@ class RecipientSMSAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets sender_provided_numbers
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSenderProvidedNumbers()
     {
@@ -224,7 +224,7 @@ class RecipientSMSAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets sender_provided_numbers
      *
-     * @param string[] $sender_provided_numbers An Array containing a list of phone numbers the recipient may use for SMS text authentication.
+     * @param ?string[] $sender_provided_numbers An Array containing a list of phone numbers the recipient may use for SMS text authentication.
      *
      * @return $this
      */

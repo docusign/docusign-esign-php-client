@@ -57,10 +57,10 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'composite_template_id' => 'string',
+        'composite_template_id' => '?string',
         'document' => '\DocuSign\eSign\Model\Document',
         'inline_templates' => '\DocuSign\eSign\Model\InlineTemplate[]',
-        'pdf_meta_data_template_sequence' => 'string',
+        'pdf_meta_data_template_sequence' => '?string',
         'server_templates' => '\DocuSign\eSign\Model\ServerTemplate[]'
     ];
 
@@ -231,7 +231,7 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets composite_template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCompositeTemplateId()
     {
@@ -241,7 +241,7 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets composite_template_id
      *
-     * @param string $composite_template_id The identify of this composite template. It is used as a reference when adding document object information. If used, the document's `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
+     * @param ?string $composite_template_id The identify of this composite template. It is used as a reference when adding document object information. If used, the document's `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets pdf_meta_data_template_sequence
      *
-     * @return string
+     * @return ?string
      */
     public function getPdfMetaDataTemplateSequence()
     {
@@ -313,7 +313,7 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_meta_data_template_sequence
      *
-     * @param string $pdf_meta_data_template_sequence 
+     * @param ?string $pdf_meta_data_template_sequence 
      *
      * @return $this
      */

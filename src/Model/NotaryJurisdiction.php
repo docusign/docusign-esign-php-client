@@ -57,13 +57,13 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'commission_expiration' => 'string',
-        'commission_id' => 'string',
-        'county' => 'string',
+        'commission_expiration' => '?string',
+        'commission_id' => '?string',
+        'county' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'jurisdiction' => '\DocuSign\eSign\Model\Jurisdiction',
-        'registered_name' => 'string',
-        'seal_type' => 'string'
+        'registered_name' => '?string',
+        'seal_type' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets commission_expiration
      *
-     * @return string
+     * @return ?string
      */
     public function getCommissionExpiration()
     {
@@ -253,7 +253,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets commission_expiration
      *
-     * @param string $commission_expiration 
+     * @param ?string $commission_expiration 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets commission_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCommissionId()
     {
@@ -277,7 +277,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets commission_id
      *
-     * @param string $commission_id 
+     * @param ?string $commission_id 
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets county
      *
-     * @return string
+     * @return ?string
      */
     public function getCounty()
     {
@@ -301,7 +301,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets county
      *
-     * @param string $county 
+     * @param ?string $county 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets registered_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRegisteredName()
     {
@@ -373,7 +373,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets registered_name
      *
-     * @param string $registered_name 
+     * @param ?string $registered_name 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Gets seal_type
      *
-     * @return string
+     * @return ?string
      */
     public function getSealType()
     {
@@ -397,7 +397,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets seal_type
      *
-     * @param string $seal_type 
+     * @param ?string $seal_type 
      *
      * @return $this
      */

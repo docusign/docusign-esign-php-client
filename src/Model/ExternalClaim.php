@@ -57,10 +57,10 @@ class ExternalClaim implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'acquired_time' => 'string',
-        'claim_name' => 'string',
-        'provider' => 'string',
-        'value' => 'string'
+        'acquired_time' => '?string',
+        'claim_name' => '?string',
+        'provider' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Gets acquired_time
      *
-     * @return string
+     * @return ?string
      */
     public function getAcquiredTime()
     {
@@ -235,7 +235,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Sets acquired_time
      *
-     * @param string $acquired_time 
+     * @param ?string $acquired_time 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Gets claim_name
      *
-     * @return string
+     * @return ?string
      */
     public function getClaimName()
     {
@@ -259,7 +259,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Sets claim_name
      *
-     * @param string $claim_name 
+     * @param ?string $claim_name 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Gets provider
      *
-     * @return string
+     * @return ?string
      */
     public function getProvider()
     {
@@ -283,7 +283,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Sets provider
      *
-     * @param string $provider 
+     * @param ?string $provider 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -307,7 +307,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value of the tab.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */

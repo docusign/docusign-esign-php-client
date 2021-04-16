@@ -57,8 +57,8 @@ class SignatureProperties implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filter' => 'string',
-        'sub_filter' => 'string'
+        'filter' => '?string',
+        'sub_filter' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SignatureProperties implements ModelInterface, ArrayAccess
     /**
      * Gets filter
      *
-     * @return string
+     * @return ?string
      */
     public function getFilter()
     {
@@ -223,7 +223,7 @@ class SignatureProperties implements ModelInterface, ArrayAccess
     /**
      * Sets filter
      *
-     * @param string $filter 
+     * @param ?string $filter 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SignatureProperties implements ModelInterface, ArrayAccess
     /**
      * Gets sub_filter
      *
-     * @return string
+     * @return ?string
      */
     public function getSubFilter()
     {
@@ -247,7 +247,7 @@ class SignatureProperties implements ModelInterface, ArrayAccess
     /**
      * Sets sub_filter
      *
-     * @param string $sub_filter 
+     * @param ?string $sub_filter 
      *
      * @return $this
      */

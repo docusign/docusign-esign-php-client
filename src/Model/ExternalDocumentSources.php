@@ -57,15 +57,15 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'boxnet_enabled' => 'string',
+        'boxnet_enabled' => '?string',
         'boxnet_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'dropbox_enabled' => 'string',
+        'dropbox_enabled' => '?string',
         'dropbox_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'google_drive_enabled' => 'string',
+        'google_drive_enabled' => '?string',
         'google_drive_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'one_drive_enabled' => 'string',
+        'one_drive_enabled' => '?string',
         'one_drive_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'salesforce_enabled' => 'string',
+        'salesforce_enabled' => '?string',
         'salesforce_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
@@ -261,7 +261,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Gets boxnet_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getBoxnetEnabled()
     {
@@ -271,7 +271,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets boxnet_enabled
      *
-     * @param string $boxnet_enabled 
+     * @param ?string $boxnet_enabled 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Gets dropbox_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getDropboxEnabled()
     {
@@ -319,7 +319,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets dropbox_enabled
      *
-     * @param string $dropbox_enabled 
+     * @param ?string $dropbox_enabled 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Gets google_drive_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getGoogleDriveEnabled()
     {
@@ -367,7 +367,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets google_drive_enabled
      *
-     * @param string $google_drive_enabled 
+     * @param ?string $google_drive_enabled 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Gets one_drive_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getOneDriveEnabled()
     {
@@ -415,7 +415,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets one_drive_enabled
      *
-     * @param string $one_drive_enabled 
+     * @param ?string $one_drive_enabled 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Gets salesforce_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getSalesforceEnabled()
     {
@@ -463,7 +463,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_enabled
      *
-     * @param string $salesforce_enabled 
+     * @param ?string $salesforce_enabled 
      *
      * @return $this
      */

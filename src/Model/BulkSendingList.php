@@ -58,8 +58,8 @@ class BulkSendingList implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'bulk_copies' => '\DocuSign\eSign\Model\BulkSendingCopy[]',
-        'list_id' => 'string',
-        'name' => 'string'
+        'list_id' => '?string',
+        'name' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
     /**
      * Gets list_id
      *
-     * @return string
+     * @return ?string
      */
     public function getListId()
     {
@@ -253,7 +253,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
     /**
      * Sets list_id
      *
-     * @param string $list_id 
+     * @param ?string $list_id 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -277,7 +277,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */

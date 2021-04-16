@@ -57,14 +57,14 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'active' => 'string',
-        'description' => 'string',
-        'id' => 'string',
-        'insert' => 'string',
-        'on_complete_only' => 'string',
+        'active' => '?string',
+        'description' => '?string',
+        'id' => '?string',
+        'insert' => '?string',
+        'on_complete_only' => '?string',
         'select_fields' => '\DocuSign\eSign\Model\ConnectSalesforceField[]',
-        'sf_object' => 'string',
-        'sf_object_name' => 'string',
+        'sf_object' => '?string',
+        'sf_object_name' => '?string',
         'update_fields' => '\DocuSign\eSign\Model\ConnectSalesforceField[]'
     ];
 
@@ -255,7 +255,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Gets active
      *
-     * @return string
+     * @return ?string
      */
     public function getActive()
     {
@@ -265,7 +265,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param string $active 
+     * @param ?string $active 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -289,7 +289,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -313,7 +313,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Gets insert
      *
-     * @return string
+     * @return ?string
      */
     public function getInsert()
     {
@@ -337,7 +337,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets insert
      *
-     * @param string $insert 
+     * @param ?string $insert 
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Gets on_complete_only
      *
-     * @return string
+     * @return ?string
      */
     public function getOnCompleteOnly()
     {
@@ -361,7 +361,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets on_complete_only
      *
-     * @param string $on_complete_only 
+     * @param ?string $on_complete_only 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Gets sf_object
      *
-     * @return string
+     * @return ?string
      */
     public function getSfObject()
     {
@@ -409,7 +409,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets sf_object
      *
-     * @param string $sf_object 
+     * @param ?string $sf_object 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Gets sf_object_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSfObjectName()
     {
@@ -433,7 +433,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets sf_object_name
      *
-     * @param string $sf_object_name 
+     * @param ?string $sf_object_name 
      *
      * @return $this
      */

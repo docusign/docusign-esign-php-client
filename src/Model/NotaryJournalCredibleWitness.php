@@ -57,9 +57,9 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => 'string',
-        'name' => 'string',
-        'signature_image' => 'string'
+        'address' => '?string',
+        'name' => '?string',
+        'signature_image' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return string
+     * @return ?string
      */
     public function getAddress()
     {
@@ -229,7 +229,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param string $address 
+     * @param ?string $address 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -253,7 +253,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Gets signature_image
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureImage()
     {
@@ -277,7 +277,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Sets signature_image
      *
-     * @param string $signature_image 
+     * @param ?string $signature_image 
      *
      * @return $this
      */

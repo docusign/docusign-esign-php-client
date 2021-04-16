@@ -59,19 +59,19 @@ class Folder implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'filter' => '\DocuSign\eSign\Model\Filter',
-        'folder_id' => 'string',
+        'folder_id' => '?string',
         'folder_items' => '\DocuSign\eSign\Model\FolderItemV2[]',
         'folders' => '\DocuSign\eSign\Model\Folder[]',
-        'has_access' => 'string',
-        'has_sub_folders' => 'string',
-        'item_count' => 'string',
-        'name' => 'string',
+        'has_access' => '?string',
+        'has_sub_folders' => '?string',
+        'item_count' => '?string',
+        'name' => '?string',
         'owner' => '\DocuSign\eSign\Model\UserInfo',
-        'parent_folder_id' => 'string',
-        'parent_folder_uri' => 'string',
-        'sub_folder_count' => 'string',
-        'type' => 'string',
-        'uri' => 'string'
+        'parent_folder_id' => '?string',
+        'parent_folder_uri' => '?string',
+        'sub_folder_count' => '?string',
+        'type' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -339,7 +339,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFolderId()
     {
@@ -349,7 +349,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets folder_id
      *
-     * @param string $folder_id 
+     * @param ?string $folder_id 
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets has_access
      *
-     * @return string
+     * @return ?string
      */
     public function getHasAccess()
     {
@@ -421,7 +421,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets has_access
      *
-     * @param string $has_access 
+     * @param ?string $has_access 
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets has_sub_folders
      *
-     * @return string
+     * @return ?string
      */
     public function getHasSubFolders()
     {
@@ -445,7 +445,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets has_sub_folders
      *
-     * @param string $has_sub_folders 
+     * @param ?string $has_sub_folders 
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets item_count
      *
-     * @return string
+     * @return ?string
      */
     public function getItemCount()
     {
@@ -469,7 +469,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets item_count
      *
-     * @param string $item_count 
+     * @param ?string $item_count 
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -493,7 +493,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderId()
     {
@@ -541,7 +541,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_id
      *
-     * @param string $parent_folder_id 
+     * @param ?string $parent_folder_id 
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderUri()
     {
@@ -565,7 +565,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_uri
      *
-     * @param string $parent_folder_uri 
+     * @param ?string $parent_folder_uri 
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets sub_folder_count
      *
-     * @return string
+     * @return ?string
      */
     public function getSubFolderCount()
     {
@@ -589,7 +589,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets sub_folder_count
      *
-     * @param string $sub_folder_count 
+     * @param ?string $sub_folder_count 
      *
      * @return $this
      */
@@ -603,7 +603,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -613,7 +613,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */
@@ -627,7 +627,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -637,7 +637,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

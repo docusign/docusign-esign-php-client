@@ -29,107 +29,132 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiBulkEnvelopesApi;
+namespace DocuSign\eSign\Api\BulkEnvelopesApi;
 
 
 class GetBulkSendBatchesOptions
 {
     /**
       * $batch_ids 
-      * @var string
+      * @var ?string
       */
-    protected string $batch_ids;
+    protected ?string $batch_ids = null;
 
     /**
      * Gets batch_ids
-     * @return string
+     * @return ?string
      */
-    public function getBatchIds(): string
+    public function getBatchIds(): ?string
     {
         return $this->batch_ids;
     }
 
     /**
      * Sets batch_ids
-     * @param string $batch_ids 
+     * @param ?string $batch_ids 
      * @return self
      */
-    public function setBatchIds(string $batch_ids): self
+    public function setBatchIds(?string $batch_ids): self
     {
         $this->batch_ids = $batch_ids;
         return $this;
     }
     /**
       * $count 
-      * @var string
+      * @var ?string
       */
-    protected string $count;
+    protected ?string $count = null;
 
     /**
      * Gets count
-     * @return string
+     * @return ?string
      */
-    public function getCount(): string
+    public function getCount(): ?string
     {
         return $this->count;
     }
 
     /**
      * Sets count
-     * @param string $count 
+     * @param ?string $count 
      * @return self
      */
-    public function setCount(string $count): self
+    public function setCount(?string $count): self
     {
         $this->count = $count;
         return $this;
     }
     /**
-      * $start_position 
-      * @var string
+      * $search_text 
+      * @var ?string
       */
-    protected string $start_position;
+    protected ?string $search_text = null;
+
+    /**
+     * Gets search_text
+     * @return ?string
+     */
+    public function getSearchText(): ?string
+    {
+        return $this->search_text;
+    }
+
+    /**
+     * Sets search_text
+     * @param ?string $search_text 
+     * @return self
+     */
+    public function setSearchText(?string $search_text): self
+    {
+        $this->search_text = $search_text;
+        return $this;
+    }
+    /**
+      * $start_position 
+      * @var ?string
+      */
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return string
+     * @return ?string
      */
-    public function getStartPosition(): string
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param string $start_position 
+     * @param ?string $start_position 
      * @return self
      */
-    public function setStartPosition(string $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;
     }
     /**
       * $status 
-      * @var string
+      * @var ?string
       */
-    protected string $status;
+    protected ?string $status = null;
 
     /**
      * Gets status
-     * @return string
+     * @return ?string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
 
     /**
      * Sets status
-     * @param string $status 
+     * @param ?string $status 
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(?string $status): self
     {
         $this->status = $status;
         return $this;
@@ -220,7 +245,7 @@ class BulkEnvelopesApi
      *
      * Creates a new bulk send list
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingList
@@ -236,7 +261,7 @@ class BulkEnvelopesApi
      *
      * Creates a new bulk send list
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingList, HTTP status code, HTTP response headers (array of strings)
@@ -312,8 +337,8 @@ class BulkEnvelopesApi
      *
      * Uses the specified bulk send list to send the envelope specified in the payload
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendResponse
@@ -329,8 +354,8 @@ class BulkEnvelopesApi
      *
      * Uses the specified bulk send list to send the envelope specified in the payload
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendResponse, HTTP status code, HTTP response headers (array of strings)
@@ -414,8 +439,8 @@ class BulkEnvelopesApi
      *
      * Tests whether the specified bulk sending list can be used to send an envelope
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendTestResponse
@@ -431,8 +456,8 @@ class BulkEnvelopesApi
      *
      * Tests whether the specified bulk sending list can be used to send an envelope
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendRequest $bulk_send_request  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendTestResponse, HTTP status code, HTTP response headers (array of strings)
@@ -516,8 +541,8 @@ class BulkEnvelopesApi
      *
      * Deletes an existing bulk send list
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingListSummaries
      */
@@ -532,8 +557,8 @@ class BulkEnvelopesApi
      *
      * Deletes an existing bulk send list
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingListSummaries, HTTP status code, HTTP response headers (array of strings)
      */
@@ -611,8 +636,8 @@ class BulkEnvelopesApi
      *
      * Gets a specific bulk send batch status
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_batch_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_batch_id 
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendBatchStatus
      */
@@ -627,8 +652,8 @@ class BulkEnvelopesApi
      *
      * Gets a specific bulk send batch status
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_batch_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_batch_id 
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendBatchStatus, HTTP status code, HTTP response headers (array of strings)
      */
@@ -706,12 +731,12 @@ class BulkEnvelopesApi
      *
      * Returns a list of bulk send batch satuses initiated by account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendBatchSummaries
      */
-    public function getBulkSendBatches($account_id, \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): \DocuSign\eSign\Model\BulkSendBatchSummaries
+    public function getBulkSendBatches($account_id, \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): \DocuSign\eSign\Model\BulkSendBatchSummaries
     {
         list($response) = $this->getBulkSendBatchesWithHttpInfo($account_id, $options);
         return $response;
@@ -722,12 +747,12 @@ class BulkEnvelopesApi
      *
      * Returns a list of bulk send batch satuses initiated by account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendBatchSummaries, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBulkSendBatchesWithHttpInfo($account_id, \DocuSign\eSign\ApiBulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): array
+    public function getBulkSendBatchesWithHttpInfo($account_id, \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -748,6 +773,9 @@ class BulkEnvelopesApi
             }
             if ($options->getCount() != 'null') {
                 $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
             }
             if ($options->getStartPosition() != 'null') {
                 $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
@@ -809,8 +837,8 @@ class BulkEnvelopesApi
      *
      * Gets a specific bulk send list
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingList
      */
@@ -825,8 +853,8 @@ class BulkEnvelopesApi
      *
      * Gets a specific bulk send list
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -904,7 +932,7 @@ class BulkEnvelopesApi
      *
      * Lists top-level details for all bulk send lists visible to the current user
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingListSummaries
      */
@@ -919,7 +947,7 @@ class BulkEnvelopesApi
      *
      * Lists top-level details for all bulk send lists visible to the current user
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingListSummaries, HTTP status code, HTTP response headers (array of strings)
      */
@@ -989,8 +1017,8 @@ class BulkEnvelopesApi
      *
      * Put/Update a specific bulk send batch status
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_batch_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_batch_id 
      * @param \DocuSign\eSign\Model\BulkSendBatchRequest $bulk_send_batch_request  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendBatchStatus
@@ -1006,8 +1034,8 @@ class BulkEnvelopesApi
      *
      * Put/Update a specific bulk send batch status
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_batch_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_batch_id 
      * @param \DocuSign\eSign\Model\BulkSendBatchRequest $bulk_send_batch_request  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendBatchStatus, HTTP status code, HTTP response headers (array of strings)
@@ -1091,8 +1119,8 @@ class BulkEnvelopesApi
      *
      * Updates an existing bulk send list.  If send_envelope query string value is provided, will accept an empty payload and try to send the specified envelope
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendingList
@@ -1108,8 +1136,8 @@ class BulkEnvelopesApi
      *
      * Updates an existing bulk send list.  If send_envelope query string value is provided, will accept an empty payload and try to send the specified envelope
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $bulk_send_list_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_send_list_id 
      * @param \DocuSign\eSign\Model\BulkSendingList $bulk_sending_list  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendingList, HTTP status code, HTTP response headers (array of strings)

@@ -57,10 +57,10 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'current_password' => 'string',
-        'email' => 'string',
+        'current_password' => '?string',
+        'email' => '?string',
         'forgotten_password_info' => '\DocuSign\eSign\Model\ForgottenPasswordInformation',
-        'new_password' => 'string'
+        'new_password' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets current_password
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrentPassword()
     {
@@ -235,7 +235,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets current_password
      *
-     * @param string $current_password The user's current password to be changed.
+     * @param ?string $current_password The user's current password to be changed.
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -259,7 +259,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email The user's email address for the associated account.
+     * @param ?string $email The user's email address for the associated account.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets new_password
      *
-     * @return string
+     * @return ?string
      */
     public function getNewPassword()
     {
@@ -307,7 +307,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets new_password
      *
-     * @param string $new_password The user's new password.
+     * @param ?string $new_password The user's new password.
      *
      * @return $this
      */

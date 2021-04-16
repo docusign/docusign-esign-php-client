@@ -58,7 +58,7 @@ class DowngradRequestBillingInfoResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
-        'payment_method' => 'string'
+        'payment_method' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DowngradRequestBillingInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -247,7 +247,7 @@ class DowngradRequestBillingInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method 
+     * @param ?string $payment_method 
      *
      * @return $this
      */

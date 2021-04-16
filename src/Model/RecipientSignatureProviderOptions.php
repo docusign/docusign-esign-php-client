@@ -57,13 +57,13 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'cpf_number' => 'string',
+        'cpf_number' => '?string',
         'cpf_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'one_time_password' => 'string',
+        'one_time_password' => '?string',
         'one_time_password_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'signer_role' => 'string',
+        'signer_role' => '?string',
         'signer_role_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'sms' => 'string',
+        'sms' => '?string',
         'sms_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
@@ -249,7 +249,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Gets cpf_number
      *
-     * @return string
+     * @return ?string
      */
     public function getCpfNumber()
     {
@@ -259,7 +259,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets cpf_number
      *
-     * @param string $cpf_number 
+     * @param ?string $cpf_number 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Gets one_time_password
      *
-     * @return string
+     * @return ?string
      */
     public function getOneTimePassword()
     {
@@ -307,7 +307,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets one_time_password
      *
-     * @param string $one_time_password 
+     * @param ?string $one_time_password 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Gets signer_role
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerRole()
     {
@@ -355,7 +355,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets signer_role
      *
-     * @param string $signer_role 
+     * @param ?string $signer_role 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Gets sms
      *
-     * @return string
+     * @return ?string
      */
     public function getSms()
     {
@@ -403,7 +403,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets sms
      *
-     * @param string $sms 
+     * @param ?string $sms 
      *
      * @return $this
      */

@@ -57,42 +57,42 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allow_envelope_publish' => 'string',
-        'allow_salesforce_publish' => 'string',
-        'all_users' => 'string',
-        'configuration_type' => 'string',
-        'connect_id' => 'string',
-        'enable_log' => 'string',
-        'envelope_events' => 'string[]',
+        'allow_envelope_publish' => '?string',
+        'allow_salesforce_publish' => '?string',
+        'all_users' => '?string',
+        'configuration_type' => '?string',
+        'connect_id' => '?string',
+        'enable_log' => '?string',
+        'envelope_events' => '?string[]',
         'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
-        'external_folder_id' => 'string',
-        'external_folder_label' => 'string',
-        'include_certificate_of_completion' => 'string',
-        'include_cert_soap_header' => 'string',
-        'include_document_fields' => 'string',
-        'include_documents' => 'string',
-        'include_envelope_void_reason' => 'string',
-        'include_hmac' => 'string',
-        'include_sender_accountas_custom_field' => 'string',
-        'include_time_zone_information' => 'string',
-        'name' => 'string',
-        'password' => 'string',
-        'recipient_events' => 'string[]',
-        'require_mutual_tls' => 'string',
-        'requires_acknowledgement' => 'string',
-        'salesforce_api_version' => 'string',
-        'salesforce_authcode' => 'string',
-        'salesforce_call_back_url' => 'string',
-        'salesforce_documents_as_content_files' => 'string',
-        'sender_override' => 'string',
-        'sender_selectable_items' => 'string[]',
+        'external_folder_id' => '?string',
+        'external_folder_label' => '?string',
+        'include_certificate_of_completion' => '?string',
+        'include_cert_soap_header' => '?string',
+        'include_document_fields' => '?string',
+        'include_documents' => '?string',
+        'include_envelope_void_reason' => '?string',
+        'include_hmac' => '?string',
+        'include_sender_accountas_custom_field' => '?string',
+        'include_time_zone_information' => '?string',
+        'name' => '?string',
+        'password' => '?string',
+        'recipient_events' => '?string[]',
+        'require_mutual_tls' => '?string',
+        'requires_acknowledgement' => '?string',
+        'salesforce_api_version' => '?string',
+        'salesforce_authcode' => '?string',
+        'salesforce_call_back_url' => '?string',
+        'salesforce_documents_as_content_files' => '?string',
+        'sender_override' => '?string',
+        'sender_selectable_items' => '?string[]',
         'sf_objects' => '\DocuSign\eSign\Model\ConnectSalesforceObject[]',
-        'sign_message_with_x509_certificate' => 'string',
-        'soap_namespace' => 'string',
-        'url_to_publish_to' => 'string',
-        'user_ids' => 'string[]',
-        'user_name' => 'string',
-        'use_soap_interface' => 'string'
+        'sign_message_with_x509_certificate' => '?string',
+        'soap_namespace' => '?string',
+        'url_to_publish_to' => '?string',
+        'user_ids' => '?string[]',
+        'user_name' => '?string',
+        'use_soap_interface' => '?string'
     ];
 
     /**
@@ -417,7 +417,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_publish
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopePublish()
     {
@@ -427,7 +427,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_publish
      *
-     * @param string $allow_envelope_publish When set to **true**, data is sent to the urlToPublishTo web address. This option can be set to false to stop sending data while maintaining the Connect configuration information.
+     * @param ?string $allow_envelope_publish When set to **true**, data is sent to the urlToPublishTo web address. This option can be set to false to stop sending data while maintaining the Connect configuration information.
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets allow_salesforce_publish
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSalesforcePublish()
     {
@@ -451,7 +451,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets allow_salesforce_publish
      *
-     * @param string $allow_salesforce_publish 
+     * @param ?string $allow_salesforce_publish 
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets all_users
      *
-     * @return string
+     * @return ?string
      */
     public function getAllUsers()
     {
@@ -475,7 +475,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets all_users
      *
-     * @param string $all_users When set to **true**, the tracked envelope and recipient events for all users, including users that are added a later time, are sent through Connect.
+     * @param ?string $all_users When set to **true**, the tracked envelope and recipient events for all users, including users that are added a later time, are sent through Connect.
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets configuration_type
      *
-     * @return string
+     * @return ?string
      */
     public function getConfigurationType()
     {
@@ -499,7 +499,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets configuration_type
      *
-     * @param string $configuration_type If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
+     * @param ?string $configuration_type If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets connect_id
      *
-     * @return string
+     * @return ?string
      */
     public function getConnectId()
     {
@@ -523,7 +523,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets connect_id
      *
-     * @param string $connect_id Specifies the DocuSign generated ID for the Connect configuration.
+     * @param ?string $connect_id Specifies the DocuSign generated ID for the Connect configuration.
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets enable_log
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableLog()
     {
@@ -547,7 +547,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets enable_log
      *
-     * @param string $enable_log This turns Connect logging on or off. When set to **true**, logging is turned on.
+     * @param ?string $enable_log This turns Connect logging on or off. When set to **true**, logging is turned on.
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_events
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getEnvelopeEvents()
     {
@@ -571,7 +571,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_events
      *
-     * @param string[] $envelope_events A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
+     * @param ?string[] $envelope_events A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets external_folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getExternalFolderId()
     {
@@ -619,7 +619,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets external_folder_id
      *
-     * @param string $external_folder_id 
+     * @param ?string $external_folder_id 
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets external_folder_label
      *
-     * @return string
+     * @return ?string
      */
     public function getExternalFolderLabel()
     {
@@ -643,7 +643,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets external_folder_label
      *
-     * @param string $external_folder_label 
+     * @param ?string $external_folder_label 
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_certificate_of_completion
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeCertificateOfCompletion()
     {
@@ -667,7 +667,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_certificate_of_completion
      *
-     * @param string $include_certificate_of_completion When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.
+     * @param ?string $include_certificate_of_completion When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.
      *
      * @return $this
      */
@@ -681,7 +681,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_cert_soap_header
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeCertSoapHeader()
     {
@@ -691,7 +691,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_cert_soap_header
      *
-     * @param string $include_cert_soap_header 
+     * @param ?string $include_cert_soap_header 
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_document_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeDocumentFields()
     {
@@ -715,7 +715,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_document_fields
      *
-     * @param string $include_document_fields When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.
+     * @param ?string $include_document_fields When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.
      *
      * @return $this
      */
@@ -729,7 +729,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeDocuments()
     {
@@ -739,7 +739,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_documents
      *
-     * @param string $include_documents When set to **true**, Connect will send the PDF document along with the update XML.
+     * @param ?string $include_documents When set to **true**, Connect will send the PDF document along with the update XML.
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_envelope_void_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeEnvelopeVoidReason()
     {
@@ -763,7 +763,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_envelope_void_reason
      *
-     * @param string $include_envelope_void_reason When set to **true**, Connect will include the voidedReason for voided envelopes.
+     * @param ?string $include_envelope_void_reason When set to **true**, Connect will include the voidedReason for voided envelopes.
      *
      * @return $this
      */
@@ -777,7 +777,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_hmac
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeHmac()
     {
@@ -787,7 +787,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_hmac
      *
-     * @param string $include_hmac 
+     * @param ?string $include_hmac 
      *
      * @return $this
      */
@@ -801,7 +801,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_sender_accountas_custom_field
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeSenderAccountasCustomField()
     {
@@ -811,7 +811,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_sender_accountas_custom_field
      *
-     * @param string $include_sender_accountas_custom_field When set to **true**, Connect will include the sender account as Custom Field in the data.
+     * @param ?string $include_sender_accountas_custom_field When set to **true**, Connect will include the sender account as Custom Field in the data.
      *
      * @return $this
      */
@@ -825,7 +825,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets include_time_zone_information
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeTimeZoneInformation()
     {
@@ -835,7 +835,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_time_zone_information
      *
-     * @param string $include_time_zone_information When set to **true**, Connect will include the envelope time zone information.
+     * @param ?string $include_time_zone_information When set to **true**, Connect will include the envelope time zone information.
      *
      * @return $this
      */
@@ -849,7 +849,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -859,7 +859,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name The name of the Connect configuration. The name helps identify the configuration in the list.
+     * @param ?string $name The name of the Connect configuration. The name helps identify the configuration in the list.
      *
      * @return $this
      */
@@ -873,7 +873,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -883,7 +883,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -897,7 +897,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_events
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getRecipientEvents()
     {
@@ -907,7 +907,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_events
      *
-     * @param string[] $recipient_events A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
+     * @param ?string[] $recipient_events A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
      *
      * @return $this
      */
@@ -921,7 +921,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets require_mutual_tls
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireMutualTls()
     {
@@ -931,7 +931,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets require_mutual_tls
      *
-     * @param string $require_mutual_tls 
+     * @param ?string $require_mutual_tls 
      *
      * @return $this
      */
@@ -945,7 +945,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets requires_acknowledgement
      *
-     * @return string
+     * @return ?string
      */
     public function getRequiresAcknowledgement()
     {
@@ -955,7 +955,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets requires_acknowledgement
      *
-     * @param string $requires_acknowledgement When set to **true**, and a publication message fails to be acknowledged, the message goes back into the queue and the system will retry delivery after a successful acknowledgement is received. If the delivery fails a second time, the message is not returned to the queue for sending until Connect receives a successful acknowledgement and it has been at least 24 hours since the previous retry. There is a maximum of ten retries Alternately, you can use Republish Connect Information to manually republish the envelope information.
+     * @param ?string $requires_acknowledgement When set to **true**, and a publication message fails to be acknowledged, the message goes back into the queue and the system will retry delivery after a successful acknowledgement is received. If the delivery fails a second time, the message is not returned to the queue for sending until Connect receives a successful acknowledgement and it has been at least 24 hours since the previous retry. There is a maximum of ten retries Alternately, you can use Republish Connect Information to manually republish the envelope information.
      *
      * @return $this
      */
@@ -969,7 +969,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets salesforce_api_version
      *
-     * @return string
+     * @return ?string
      */
     public function getSalesforceApiVersion()
     {
@@ -979,7 +979,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_api_version
      *
-     * @param string $salesforce_api_version 
+     * @param ?string $salesforce_api_version 
      *
      * @return $this
      */
@@ -993,7 +993,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets salesforce_authcode
      *
-     * @return string
+     * @return ?string
      */
     public function getSalesforceAuthcode()
     {
@@ -1003,7 +1003,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_authcode
      *
-     * @param string $salesforce_authcode 
+     * @param ?string $salesforce_authcode 
      *
      * @return $this
      */
@@ -1017,7 +1017,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets salesforce_call_back_url
      *
-     * @return string
+     * @return ?string
      */
     public function getSalesforceCallBackUrl()
     {
@@ -1027,7 +1027,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_call_back_url
      *
-     * @param string $salesforce_call_back_url 
+     * @param ?string $salesforce_call_back_url 
      *
      * @return $this
      */
@@ -1041,7 +1041,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets salesforce_documents_as_content_files
      *
-     * @return string
+     * @return ?string
      */
     public function getSalesforceDocumentsAsContentFiles()
     {
@@ -1051,7 +1051,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_documents_as_content_files
      *
-     * @param string $salesforce_documents_as_content_files 
+     * @param ?string $salesforce_documents_as_content_files 
      *
      * @return $this
      */
@@ -1065,7 +1065,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets sender_override
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderOverride()
     {
@@ -1075,7 +1075,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets sender_override
      *
-     * @param string $sender_override 
+     * @param ?string $sender_override 
      *
      * @return $this
      */
@@ -1089,7 +1089,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets sender_selectable_items
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSenderSelectableItems()
     {
@@ -1099,7 +1099,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets sender_selectable_items
      *
-     * @param string[] $sender_selectable_items 
+     * @param ?string[] $sender_selectable_items 
      *
      * @return $this
      */
@@ -1137,7 +1137,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets sign_message_with_x509_certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getSignMessageWithX509Certificate()
     {
@@ -1147,7 +1147,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets sign_message_with_x509_certificate
      *
-     * @param string $sign_message_with_x509_certificate When set to **true**, Connect messages are signed with an X509 certificate. This provides support for 2-way SSL.
+     * @param ?string $sign_message_with_x509_certificate When set to **true**, Connect messages are signed with an X509 certificate. This provides support for 2-way SSL.
      *
      * @return $this
      */
@@ -1161,7 +1161,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets soap_namespace
      *
-     * @return string
+     * @return ?string
      */
     public function getSoapNamespace()
     {
@@ -1171,7 +1171,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets soap_namespace
      *
-     * @param string $soap_namespace The namespace of the SOAP interface.  The namespace value must be set if useSoapInterface is set to true.
+     * @param ?string $soap_namespace The namespace of the SOAP interface.  The namespace value must be set if useSoapInterface is set to true.
      *
      * @return $this
      */
@@ -1185,7 +1185,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets url_to_publish_to
      *
-     * @return string
+     * @return ?string
      */
     public function getUrlToPublishTo()
     {
@@ -1195,7 +1195,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets url_to_publish_to
      *
-     * @param string $url_to_publish_to This is the web address and name of your listener or Retrieving Service endpoint. You need to include HTTPS:// in the web address.
+     * @param ?string $url_to_publish_to This is the web address and name of your listener or Retrieving Service endpoint. You need to include HTTPS:// in the web address.
      *
      * @return $this
      */
@@ -1209,7 +1209,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets user_ids
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getUserIds()
     {
@@ -1219,7 +1219,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets user_ids
      *
-     * @param string[] $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.
+     * @param ?string[] $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.
      *
      * @return $this
      */
@@ -1233,7 +1233,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -1243,7 +1243,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */
@@ -1257,7 +1257,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets use_soap_interface
      *
-     * @return string
+     * @return ?string
      */
     public function getUseSoapInterface()
     {
@@ -1267,7 +1267,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets use_soap_interface
      *
-     * @param string $use_soap_interface When set to **true**, indicates that the `urlToPublishTo` property contains a SOAP endpoint.
+     * @param ?string $use_soap_interface When set to **true**, indicates that the `urlToPublishTo` property contains a SOAP endpoint.
      *
      * @return $this
      */

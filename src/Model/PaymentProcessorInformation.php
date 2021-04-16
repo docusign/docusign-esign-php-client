@@ -58,8 +58,8 @@ class PaymentProcessorInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'address' => '\DocuSign\eSign\Model\AddressInformation',
-        'billing_agreement_id' => 'string',
-        'email' => 'string'
+        'billing_agreement_id' => '?string',
+        'email' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class PaymentProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets billing_agreement_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBillingAgreementId()
     {
@@ -253,7 +253,7 @@ class PaymentProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_agreement_id
      *
-     * @param string $billing_agreement_id 
+     * @param ?string $billing_agreement_id 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class PaymentProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -277,7 +277,7 @@ class PaymentProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */

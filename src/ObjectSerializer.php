@@ -71,7 +71,7 @@ class ObjectSerializer
                 $getter = $data::getters()[$property];
                 $value = $data->$getter();
                 if ($value !== null
-                    && !in_array($swaggerType, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)
+                    && !in_array($swaggerType, ['?bool', '?int', '?string', 'DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)
                     && method_exists($swaggerType, 'getAllowableEnumValues')
                     && !in_array($value, $swaggerType::getAllowableEnumValues(), true)) {
                     $imploded = implode("', '", $swaggerType::getAllowableEnumValues());
@@ -95,7 +95,7 @@ class ObjectSerializer
      *
      * @return string the sanitized filename
      */
-    public static function sanitizeFilename(string $filename): string
+    public static function sanitizeFilename(string $filename): ?string
     {
         if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
             return $match[1];
@@ -112,7 +112,7 @@ class ObjectSerializer
      *
      * @return string the serialized object
      */
-    public static function toPathValue(string $value): string
+    public static function toPathValue(string $value): ?string
     {
         return rawurlencode(self::toString($value));
     }
@@ -127,7 +127,7 @@ class ObjectSerializer
      *
      * @return string the serialized object
      */
-    public static function toQueryValue($object): string
+    public static function toQueryValue($object): ?string
     {
         if (is_array($object)) {
             return implode(',', $object);
@@ -145,7 +145,7 @@ class ObjectSerializer
      *
      * @return string the header string
      */
-    public static function toHeaderValue(string $value): string
+    public static function toHeaderValue(string $value): ?string
     {
         return self::toString($value);
     }
@@ -159,7 +159,7 @@ class ObjectSerializer
      *
      * @return string the form string
      */
-    public static function toFormValue($value): string
+    public static function toFormValue($value): ?string
     {
         if ($value instanceof \SplFileObject) {
             return $value->getRealPath();
@@ -177,7 +177,7 @@ class ObjectSerializer
      *
      * @return string the header string
      */
-    public static function toString($value): string
+    public static function toString($value): ?string
     {
         if ($value instanceof \DateTime) { // datetime in ISO8601 format
             return $value->format(\DateTime::ATOM);
@@ -199,7 +199,7 @@ class ObjectSerializer
     public static function serializeCollection(
         array $collection,
         string $collectionFormat,
-        bool $allowCollectionFormatMulti = false): string
+        bool $allowCollectionFormatMulti = false): ?string
     {
         if ($allowCollectionFormatMulti && ('multi' === $collectionFormat)) {
             // http_build_query() almost does the job for us. We just
@@ -270,7 +270,8 @@ class ObjectSerializer
             } else {
                 return null;
             }
-        } elseif (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+        } elseif (in_array($class, ['?bool', '?int', '?string', 'DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+            $class=trim($class,"?");
             settype($data, $class);
             return $data;
         } elseif ($class === '\SplFileObject') {

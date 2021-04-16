@@ -57,8 +57,8 @@ class SmartContractInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'string',
-        'uri' => 'string'
+        'code' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SmartContractInformation implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return string
+     * @return ?string
      */
     public function getCode()
     {
@@ -223,7 +223,7 @@ class SmartContractInformation implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param string $code 
+     * @param ?string $code 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SmartContractInformation implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -247,7 +247,7 @@ class SmartContractInformation implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

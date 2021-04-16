@@ -57,7 +57,7 @@ class ProofServiceViewLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'view_link' => 'string'
+        'view_link' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class ProofServiceViewLink implements ModelInterface, ArrayAccess
     /**
      * Gets view_link
      *
-     * @return string
+     * @return ?string
      */
     public function getViewLink()
     {
@@ -217,7 +217,7 @@ class ProofServiceViewLink implements ModelInterface, ArrayAccess
     /**
      * Sets view_link
      *
-     * @param string $view_link 
+     * @param ?string $view_link 
      *
      * @return $this
      */

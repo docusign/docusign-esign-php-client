@@ -57,9 +57,9 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'country_code' => 'string',
-        'extension' => 'string',
-        'number' => 'string'
+        'country_code' => '?string',
+        'extension' => '?string',
+        'number' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Gets country_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCountryCode()
     {
@@ -229,7 +229,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param string $country_code 
+     * @param ?string $country_code 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Gets extension
      *
-     * @return string
+     * @return ?string
      */
     public function getExtension()
     {
@@ -253,7 +253,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets extension
      *
-     * @param string $extension 
+     * @param ?string $extension 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Gets number
      *
-     * @return string
+     * @return ?string
      */
     public function getNumber()
     {
@@ -277,7 +277,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets number
      *
-     * @param string $number 
+     * @param ?string $number 
      *
      * @return $this
      */

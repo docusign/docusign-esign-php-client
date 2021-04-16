@@ -57,10 +57,10 @@ class PolyLine implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'x1' => 'string',
-        'x2' => 'string',
-        'y1' => 'string',
-        'y2' => 'string'
+        'x1' => '?string',
+        'x2' => '?string',
+        'y1' => '?string',
+        'y2' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Gets x1
      *
-     * @return string
+     * @return ?string
      */
     public function getX1()
     {
@@ -235,7 +235,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Sets x1
      *
-     * @param string $x1 
+     * @param ?string $x1 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Gets x2
      *
-     * @return string
+     * @return ?string
      */
     public function getX2()
     {
@@ -259,7 +259,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Sets x2
      *
-     * @param string $x2 
+     * @param ?string $x2 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Gets y1
      *
-     * @return string
+     * @return ?string
      */
     public function getY1()
     {
@@ -283,7 +283,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Sets y1
      *
-     * @param string $y1 
+     * @param ?string $y1 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Gets y2
      *
-     * @return string
+     * @return ?string
      */
     public function getY2()
     {
@@ -307,7 +307,7 @@ class PolyLine implements ModelInterface, ArrayAccess
     /**
      * Sets y2
      *
-     * @param string $y2 
+     * @param ?string $y2 
      *
      * @return $this
      */

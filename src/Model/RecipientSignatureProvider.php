@@ -57,9 +57,9 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'seal_documents_with_tabs_only' => 'string',
-        'seal_name' => 'string',
-        'signature_provider_name' => 'string',
+        'seal_documents_with_tabs_only' => '?string',
+        'seal_name' => '?string',
+        'signature_provider_name' => '?string',
         'signature_provider_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'signature_provider_options' => '\DocuSign\eSign\Model\RecipientSignatureProviderOptions'
     ];
@@ -231,7 +231,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets seal_documents_with_tabs_only
      *
-     * @return string
+     * @return ?string
      */
     public function getSealDocumentsWithTabsOnly()
     {
@@ -241,7 +241,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets seal_documents_with_tabs_only
      *
-     * @param string $seal_documents_with_tabs_only 
+     * @param ?string $seal_documents_with_tabs_only 
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets seal_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSealName()
     {
@@ -265,7 +265,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets seal_name
      *
-     * @param string $seal_name 
+     * @param ?string $seal_name 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Gets signature_provider_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureProviderName()
     {
@@ -289,7 +289,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_name
      *
-     * @param string $signature_provider_name 
+     * @param ?string $signature_provider_name 
      *
      * @return $this
      */

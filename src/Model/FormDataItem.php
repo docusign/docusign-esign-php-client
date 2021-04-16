@@ -58,10 +58,10 @@ class FormDataItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'list_selected_value' => 'string',
-        'name' => 'string',
-        'original_value' => 'string',
-        'value' => 'string'
+        'list_selected_value' => '?string',
+        'name' => '?string',
+        'original_value' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -255,7 +255,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Gets list_selected_value
      *
-     * @return string
+     * @return ?string
      */
     public function getListSelectedValue()
     {
@@ -265,7 +265,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets list_selected_value
      *
-     * @param string $list_selected_value 
+     * @param ?string $list_selected_value 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -289,7 +289,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Gets original_value
      *
-     * @return string
+     * @return ?string
      */
     public function getOriginalValue()
     {
@@ -313,7 +313,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets original_value
      *
-     * @param string $original_value The initial value of the tab when it was sent to the recipient.
+     * @param ?string $original_value The initial value of the tab when it was sent to the recipient.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -337,7 +337,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value of the tab.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */

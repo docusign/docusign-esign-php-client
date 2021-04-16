@@ -57,15 +57,15 @@ class SigningGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created' => 'string',
-        'created_by' => 'string',
+        'created' => '?string',
+        'created_by' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'group_email' => 'string',
-        'group_name' => 'string',
-        'group_type' => 'string',
-        'modified' => 'string',
-        'modified_by' => 'string',
-        'signing_group_id' => 'string',
+        'group_email' => '?string',
+        'group_name' => '?string',
+        'group_type' => '?string',
+        'modified' => '?string',
+        'modified_by' => '?string',
+        'signing_group_id' => '?string',
         'users' => '\DocuSign\eSign\Model\SigningGroupUser[]'
     ];
 
@@ -261,7 +261,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -271,7 +271,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created 
+     * @param ?string $created 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets created_by
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedBy()
     {
@@ -295,7 +295,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets created_by
      *
-     * @param string $created_by 
+     * @param ?string $created_by 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_email
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupEmail()
     {
@@ -343,7 +343,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_email
      *
-     * @param string $group_email 
+     * @param ?string $group_email 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupName()
     {
@@ -367,7 +367,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_name
      *
-     * @param string $group_name The name of the group.
+     * @param ?string $group_name The name of the group.
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_type
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupType()
     {
@@ -391,7 +391,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_type
      *
-     * @param string $group_type 
+     * @param ?string $group_type 
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets modified
      *
-     * @return string
+     * @return ?string
      */
     public function getModified()
     {
@@ -415,7 +415,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param string $modified 
+     * @param ?string $modified 
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets modified_by
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedBy()
     {
@@ -439,7 +439,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by
      *
-     * @param string $modified_by 
+     * @param ?string $modified_by 
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupId()
     {
@@ -463,7 +463,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id
      *
-     * @param string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     * @param ?string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
      *
      * @return $this
      */

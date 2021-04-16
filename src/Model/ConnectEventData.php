@@ -57,9 +57,9 @@ class ConnectEventData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'format' => 'string',
-        'include_data' => 'string[]',
-        'version' => 'string'
+        'format' => '?string',
+        'include_data' => '?string[]',
+        'version' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Gets format
      *
-     * @return string
+     * @return ?string
      */
     public function getFormat()
     {
@@ -229,7 +229,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Sets format
      *
-     * @param string $format 
+     * @param ?string $format 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Gets include_data
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getIncludeData()
     {
@@ -253,7 +253,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Sets include_data
      *
-     * @param string[] $include_data 
+     * @param ?string[] $include_data 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Gets version
      *
-     * @return string
+     * @return ?string
      */
     public function getVersion()
     {
@@ -277,7 +277,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Sets version
      *
-     * @param string $version 
+     * @param ?string $version 
      *
      * @return $this
      */

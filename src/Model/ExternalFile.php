@@ -57,14 +57,14 @@ class ExternalFile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'date' => 'string',
-        'id' => 'string',
-        'img' => 'string',
-        'name' => 'string',
-        'size' => 'string',
-        'supported' => 'string',
-        'type' => 'string',
-        'uri' => 'string'
+        'date' => '?string',
+        'id' => '?string',
+        'img' => '?string',
+        'name' => '?string',
+        'size' => '?string',
+        'supported' => '?string',
+        'type' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets date
      *
-     * @return string
+     * @return ?string
      */
     public function getDate()
     {
@@ -259,7 +259,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets date
      *
-     * @param string $date 
+     * @param ?string $date 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -283,7 +283,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets img
      *
-     * @return string
+     * @return ?string
      */
     public function getImg()
     {
@@ -307,7 +307,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets img
      *
-     * @param string $img 
+     * @param ?string $img 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -331,7 +331,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets size
      *
-     * @return string
+     * @return ?string
      */
     public function getSize()
     {
@@ -355,7 +355,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets size
      *
-     * @param string $size Reserved: TBD
+     * @param ?string $size Reserved: TBD
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets supported
      *
-     * @return string
+     * @return ?string
      */
     public function getSupported()
     {
@@ -379,7 +379,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets supported
      *
-     * @param string $supported 
+     * @param ?string $supported 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -403,7 +403,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -427,7 +427,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

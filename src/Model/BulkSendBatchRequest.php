@@ -57,7 +57,7 @@ class BulkSendBatchRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'batch_name' => 'string'
+        'batch_name' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class BulkSendBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Gets batch_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchName()
     {
@@ -217,7 +217,7 @@ class BulkSendBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Sets batch_name
      *
-     * @param string $batch_name 
+     * @param ?string $batch_name 
      *
      * @return $this
      */

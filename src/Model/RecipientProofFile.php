@@ -57,7 +57,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_in_proof_file' => 'string'
+        'is_in_proof_file' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
     /**
      * Gets is_in_proof_file
      *
-     * @return string
+     * @return ?string
      */
     public function getIsInProofFile()
     {
@@ -217,7 +217,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
     /**
      * Sets is_in_proof_file
      *
-     * @param string $is_in_proof_file 
+     * @param ?string $is_in_proof_file 
      *
      * @return $this
      */

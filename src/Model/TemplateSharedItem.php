@@ -59,12 +59,12 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'owner' => '\DocuSign\eSign\Model\UserInfo',
-        'password' => 'string',
-        'shared' => 'string',
+        'password' => '?string',
+        'shared' => '?string',
         'shared_groups' => '\DocuSign\eSign\Model\MemberGroupSharedItem[]',
         'shared_users' => '\DocuSign\eSign\Model\UserSharedItem[]',
-        'template_id' => 'string',
-        'template_name' => 'string'
+        'template_id' => '?string',
+        'template_name' => '?string'
     ];
 
     /**
@@ -297,7 +297,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -307,7 +307,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -331,7 +331,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -403,7 +403,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets template_name
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateName()
     {
@@ -427,7 +427,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets template_name
      *
-     * @param string $template_name 
+     * @param ?string $template_name 
      *
      * @return $this
      */

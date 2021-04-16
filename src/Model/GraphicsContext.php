@@ -57,9 +57,9 @@ class GraphicsContext implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'fill_color' => 'string',
-        'line_color' => 'string',
-        'line_weight' => 'string'
+        'fill_color' => '?string',
+        'line_color' => '?string',
+        'line_weight' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Gets fill_color
      *
-     * @return string
+     * @return ?string
      */
     public function getFillColor()
     {
@@ -229,7 +229,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Sets fill_color
      *
-     * @param string $fill_color 
+     * @param ?string $fill_color 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Gets line_color
      *
-     * @return string
+     * @return ?string
      */
     public function getLineColor()
     {
@@ -253,7 +253,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Sets line_color
      *
-     * @param string $line_color 
+     * @param ?string $line_color 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Gets line_weight
      *
-     * @return string
+     * @return ?string
      */
     public function getLineWeight()
     {
@@ -277,7 +277,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Sets line_weight
      *
-     * @param string $line_weight 
+     * @param ?string $line_weight 
      *
      * @return $this
      */

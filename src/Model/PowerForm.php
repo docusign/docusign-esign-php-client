@@ -57,31 +57,31 @@ class PowerForm implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created_by' => 'string',
-        'created_date_time' => 'string',
-        'email_body' => 'string',
-        'email_subject' => 'string',
+        'created_by' => '?string',
+        'created_date_time' => '?string',
+        'email_body' => '?string',
+        'email_subject' => '?string',
         'envelopes' => '\DocuSign\eSign\Model\Envelope[]',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'instructions' => 'string',
-        'is_active' => 'string',
-        'last_used' => 'string',
-        'limit_use_interval' => 'string',
-        'limit_use_interval_enabled' => 'string',
-        'limit_use_interval_units' => 'string',
-        'max_use_enabled' => 'string',
-        'name' => 'string',
-        'power_form_id' => 'string',
-        'power_form_url' => 'string',
+        'instructions' => '?string',
+        'is_active' => '?string',
+        'last_used' => '?string',
+        'limit_use_interval' => '?string',
+        'limit_use_interval_enabled' => '?string',
+        'limit_use_interval_units' => '?string',
+        'max_use_enabled' => '?string',
+        'name' => '?string',
+        'power_form_id' => '?string',
+        'power_form_url' => '?string',
         'recipients' => '\DocuSign\eSign\Model\PowerFormRecipient[]',
-        'sender_name' => 'string',
-        'sender_user_id' => 'string',
-        'signing_mode' => 'string',
-        'template_id' => 'string',
-        'template_name' => 'string',
-        'times_used' => 'string',
-        'uri' => 'string',
-        'uses_remaining' => 'string'
+        'sender_name' => '?string',
+        'sender_user_id' => '?string',
+        'signing_mode' => '?string',
+        'template_id' => '?string',
+        'template_name' => '?string',
+        'times_used' => '?string',
+        'uri' => '?string',
+        'uses_remaining' => '?string'
     ];
 
     /**
@@ -351,7 +351,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets created_by
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedBy()
     {
@@ -361,7 +361,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets created_by
      *
-     * @param string $created_by 
+     * @param ?string $created_by 
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets created_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDateTime()
     {
@@ -385,7 +385,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets created_date_time
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param ?string $created_date_time Indicates the date and time the item was created.
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets email_body
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailBody()
     {
@@ -409,7 +409,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets email_body
      *
-     * @param string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
+     * @param ?string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets email_subject
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailSubject()
     {
@@ -433,7 +433,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets email_subject
      *
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * @param ?string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets instructions
      *
-     * @return string
+     * @return ?string
      */
     public function getInstructions()
     {
@@ -505,7 +505,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets instructions
      *
-     * @param string $instructions 
+     * @param ?string $instructions 
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets is_active
      *
-     * @return string
+     * @return ?string
      */
     public function getIsActive()
     {
@@ -529,7 +529,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets is_active
      *
-     * @param string $is_active 
+     * @param ?string $is_active 
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets last_used
      *
-     * @return string
+     * @return ?string
      */
     public function getLastUsed()
     {
@@ -553,7 +553,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets last_used
      *
-     * @param string $last_used 
+     * @param ?string $last_used 
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets limit_use_interval
      *
-     * @return string
+     * @return ?string
      */
     public function getLimitUseInterval()
     {
@@ -577,7 +577,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets limit_use_interval
      *
-     * @param string $limit_use_interval 
+     * @param ?string $limit_use_interval 
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets limit_use_interval_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getLimitUseIntervalEnabled()
     {
@@ -601,7 +601,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets limit_use_interval_enabled
      *
-     * @param string $limit_use_interval_enabled 
+     * @param ?string $limit_use_interval_enabled 
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets limit_use_interval_units
      *
-     * @return string
+     * @return ?string
      */
     public function getLimitUseIntervalUnits()
     {
@@ -625,7 +625,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets limit_use_interval_units
      *
-     * @param string $limit_use_interval_units 
+     * @param ?string $limit_use_interval_units 
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets max_use_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxUseEnabled()
     {
@@ -649,7 +649,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets max_use_enabled
      *
-     * @param string $max_use_enabled 
+     * @param ?string $max_use_enabled 
      *
      * @return $this
      */
@@ -663,7 +663,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -673,7 +673,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets power_form_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPowerFormId()
     {
@@ -697,7 +697,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets power_form_id
      *
-     * @param string $power_form_id 
+     * @param ?string $power_form_id 
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets power_form_url
      *
-     * @return string
+     * @return ?string
      */
     public function getPowerFormUrl()
     {
@@ -721,7 +721,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets power_form_url
      *
-     * @param string $power_form_url 
+     * @param ?string $power_form_url 
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets sender_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderName()
     {
@@ -769,7 +769,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets sender_name
      *
-     * @param string $sender_name 
+     * @param ?string $sender_name 
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets sender_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSenderUserId()
     {
@@ -793,7 +793,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets sender_user_id
      *
-     * @param string $sender_user_id 
+     * @param ?string $sender_user_id 
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets signing_mode
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningMode()
     {
@@ -817,7 +817,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets signing_mode
      *
-     * @param string $signing_mode 
+     * @param ?string $signing_mode 
      *
      * @return $this
      */
@@ -831,7 +831,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -841,7 +841,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */
@@ -855,7 +855,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets template_name
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateName()
     {
@@ -865,7 +865,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets template_name
      *
-     * @param string $template_name 
+     * @param ?string $template_name 
      *
      * @return $this
      */
@@ -879,7 +879,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets times_used
      *
-     * @return string
+     * @return ?string
      */
     public function getTimesUsed()
     {
@@ -889,7 +889,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets times_used
      *
-     * @param string $times_used 
+     * @param ?string $times_used 
      *
      * @return $this
      */
@@ -903,7 +903,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -913,7 +913,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */
@@ -927,7 +927,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Gets uses_remaining
      *
-     * @return string
+     * @return ?string
      */
     public function getUsesRemaining()
     {
@@ -937,7 +937,7 @@ class PowerForm implements ModelInterface, ArrayAccess
     /**
      * Sets uses_remaining
      *
-     * @param string $uses_remaining 
+     * @param ?string $uses_remaining 
      *
      * @return $this
      */

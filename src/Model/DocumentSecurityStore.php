@@ -57,9 +57,9 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'certificates' => 'string[]',
-        'crls' => 'string[]',
-        'ocsps' => 'string[]'
+        'certificates' => '?string[]',
+        'crls' => '?string[]',
+        'ocsps' => '?string[]'
     ];
 
     /**
@@ -219,7 +219,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Gets certificates
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getCertificates()
     {
@@ -229,7 +229,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Sets certificates
      *
-     * @param string[] $certificates 
+     * @param ?string[] $certificates 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Gets crls
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getCrls()
     {
@@ -253,7 +253,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Sets crls
      *
-     * @param string[] $crls 
+     * @param ?string[] $crls 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Gets ocsps
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getOcsps()
     {
@@ -277,7 +277,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Sets ocsps
      *
-     * @param string[] $ocsps 
+     * @param ?string[] $ocsps 
      *
      * @return $this
      */

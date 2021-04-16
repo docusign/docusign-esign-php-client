@@ -57,8 +57,8 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_id' => 'string',
-        'language' => 'string',
+        'envelope_id' => '?string',
+        'language' => '?string',
         'seal' => '\DocuSign\eSign\Model\Seal',
         'sender' => '\DocuSign\eSign\Model\Sender',
         'user' => '\DocuSign\eSign\Model\User'
@@ -231,7 +231,7 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -241,7 +241,7 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Gets language
      *
-     * @return string
+     * @return ?string
      */
     public function getLanguage()
     {
@@ -265,7 +265,7 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets language
      *
-     * @param string $language 
+     * @param ?string $language 
      *
      * @return $this
      */

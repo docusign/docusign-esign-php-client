@@ -57,14 +57,14 @@ class RecipientFormData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'declined_time' => 'string',
-        'delivered_time' => 'string',
-        'email' => 'string',
+        'declined_time' => '?string',
+        'delivered_time' => '?string',
+        'email' => '?string',
         'form_data' => '\DocuSign\eSign\Model\FormDataItem[]',
-        'name' => 'string',
-        'recipient_id' => 'string',
-        'sent_time' => 'string',
-        'signed_time' => 'string'
+        'name' => '?string',
+        'recipient_id' => '?string',
+        'sent_time' => '?string',
+        'signed_time' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Gets declined_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedTime()
     {
@@ -259,7 +259,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets declined_time
      *
-     * @param string $declined_time 
+     * @param ?string $declined_time 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Gets delivered_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveredTime()
     {
@@ -283,7 +283,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets delivered_time
      *
-     * @param string $delivered_time 
+     * @param ?string $delivered_time 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -307,7 +307,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -355,7 +355,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -379,7 +379,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Gets sent_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSentTime()
     {
@@ -403,7 +403,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets sent_time
      *
-     * @param string $sent_time 
+     * @param ?string $sent_time 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Gets signed_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSignedTime()
     {
@@ -427,7 +427,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets signed_time
      *
-     * @param string $signed_time 
+     * @param ?string $signed_time 
      *
      * @return $this
      */

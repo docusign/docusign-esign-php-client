@@ -57,8 +57,8 @@ class Ssn9InformationInput implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'display_level_code' => 'string',
-        'ssn9' => 'string'
+        'display_level_code' => '?string',
+        'ssn9' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class Ssn9InformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets display_level_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayLevelCode()
     {
@@ -223,7 +223,7 @@ class Ssn9InformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets display_level_code
      *
-     * @param string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
+     * @param ?string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class Ssn9InformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets ssn9
      *
-     * @return string
+     * @return ?string
      */
     public function getSsn9()
     {
@@ -247,7 +247,7 @@ class Ssn9InformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets ssn9
      *
-     * @param string $ssn9 The recipient's Social Security Number(SSN).
+     * @param ?string $ssn9 The recipient's Social Security Number(SSN).
      *
      * @return $this
      */

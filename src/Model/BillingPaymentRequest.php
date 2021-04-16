@@ -57,7 +57,7 @@ class BillingPaymentRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'payment_amount' => 'string'
+        'payment_amount' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class BillingPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets payment_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentAmount()
     {
@@ -217,7 +217,7 @@ class BillingPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets payment_amount
      *
-     * @param string $payment_amount The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.
+     * @param ?string $payment_amount The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.
      *
      * @return $this
      */

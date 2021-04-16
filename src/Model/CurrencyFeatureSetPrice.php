@@ -57,11 +57,11 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'currency_code' => 'string',
-        'currency_symbol' => 'string',
-        'envelope_fee' => 'string',
-        'fixed_fee' => 'string',
-        'seat_fee' => 'string'
+        'currency_code' => '?string',
+        'currency_symbol' => '?string',
+        'envelope_fee' => '?string',
+        'fixed_fee' => '?string',
+        'seat_fee' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -241,7 +241,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the alternate ISO currency code for the account.
+     * @param ?string $currency_code Specifies the alternate ISO currency code for the account.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Gets currency_symbol
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencySymbol()
     {
@@ -265,7 +265,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Sets currency_symbol
      *
-     * @param string $currency_symbol Specifies the alternate currency symbol for the account.
+     * @param ?string $currency_symbol Specifies the alternate currency symbol for the account.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeFee()
     {
@@ -289,7 +289,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_fee
      *
-     * @param string $envelope_fee An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)
+     * @param ?string $envelope_fee An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Gets fixed_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getFixedFee()
     {
@@ -313,7 +313,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Sets fixed_fee
      *
-     * @param string $fixed_fee Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)
+     * @param ?string $fixed_fee Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Gets seat_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSeatFee()
     {
@@ -337,7 +337,7 @@ class CurrencyFeatureSetPrice implements ModelInterface, ArrayAccess
     /**
      * Sets seat_fee
      *
-     * @param string $seat_fee Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)
+     * @param ?string $seat_fee Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)
      *
      * @return $this
      */

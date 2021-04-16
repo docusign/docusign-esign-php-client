@@ -57,13 +57,13 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'default_description' => 'string',
-        'default_name' => 'string',
+        'default_description' => '?string',
+        'default_name' => '?string',
         'input_options' => '\DocuSign\eSign\Model\AccountIdentityInputOption[]',
         'signature_provider' => '\DocuSign\eSign\Model\AccountSignatureProvider',
         'steps' => '\DocuSign\eSign\Model\AccountIdentityVerificationStep[]',
-        'workflow_id' => 'string',
-        'workflow_resource_key' => 'string'
+        'workflow_id' => '?string',
+        'workflow_resource_key' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Gets default_description
      *
-     * @return string
+     * @return ?string
      */
     public function getDefaultDescription()
     {
@@ -253,7 +253,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets default_description
      *
-     * @param string $default_description 
+     * @param ?string $default_description 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Gets default_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDefaultName()
     {
@@ -277,7 +277,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets default_name
      *
-     * @param string $default_name 
+     * @param ?string $default_name 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Gets workflow_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkflowId()
     {
@@ -373,7 +373,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_id
      *
-     * @param string $workflow_id 
+     * @param ?string $workflow_id 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Gets workflow_resource_key
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkflowResourceKey()
     {
@@ -397,7 +397,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_resource_key
      *
-     * @param string $workflow_resource_key 
+     * @param ?string $workflow_resource_key 
      *
      * @return $this
      */

@@ -57,13 +57,13 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'minimum_length' => 'string',
-        'name' => 'string',
-        'password_include_digit' => 'string',
-        'password_include_digit_or_special_character' => 'string',
-        'password_include_lower_case' => 'string',
-        'password_include_special_character' => 'string',
-        'password_include_upper_case' => 'string'
+        'minimum_length' => '?string',
+        'name' => '?string',
+        'password_include_digit' => '?string',
+        'password_include_digit_or_special_character' => '?string',
+        'password_include_lower_case' => '?string',
+        'password_include_special_character' => '?string',
+        'password_include_upper_case' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Gets minimum_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumLength()
     {
@@ -253,7 +253,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_length
      *
-     * @param string $minimum_length 
+     * @param ?string $minimum_length 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -277,7 +277,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_digit
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeDigit()
     {
@@ -301,7 +301,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_digit
      *
-     * @param string $password_include_digit 
+     * @param ?string $password_include_digit 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_digit_or_special_character
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeDigitOrSpecialCharacter()
     {
@@ -325,7 +325,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_digit_or_special_character
      *
-     * @param string $password_include_digit_or_special_character 
+     * @param ?string $password_include_digit_or_special_character 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_lower_case
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeLowerCase()
     {
@@ -349,7 +349,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_lower_case
      *
-     * @param string $password_include_lower_case 
+     * @param ?string $password_include_lower_case 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_special_character
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeSpecialCharacter()
     {
@@ -373,7 +373,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_special_character
      *
-     * @param string $password_include_special_character 
+     * @param ?string $password_include_special_character 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_upper_case
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeUpperCase()
     {
@@ -397,7 +397,7 @@ class AccountPasswordStrengthTypeOption implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_upper_case
      *
-     * @param string $password_include_upper_case 
+     * @param ?string $password_include_upper_case 
      *
      * @return $this
      */

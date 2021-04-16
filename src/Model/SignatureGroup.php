@@ -57,9 +57,9 @@ class SignatureGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'group_id' => 'string',
-        'group_name' => 'string',
-        'rights' => 'string'
+        'group_id' => '?string',
+        'group_name' => '?string',
+        'rights' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupId()
     {
@@ -229,7 +229,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_id
      *
-     * @param string $group_id 
+     * @param ?string $group_id 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupName()
     {
@@ -253,7 +253,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_name
      *
-     * @param string $group_name The name of the group.
+     * @param ?string $group_name The name of the group.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Gets rights
      *
-     * @return string
+     * @return ?string
      */
     public function getRights()
     {
@@ -277,7 +277,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param string $rights 
+     * @param ?string $rights 
      *
      * @return $this
      */

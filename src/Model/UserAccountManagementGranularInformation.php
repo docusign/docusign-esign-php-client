@@ -57,23 +57,23 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'can_manage_account_security_settings' => 'string',
+        'can_manage_account_security_settings' => '?string',
         'can_manage_account_security_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_account_settings' => 'string',
+        'can_manage_account_settings' => '?string',
         'can_manage_account_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_admins' => 'string',
+        'can_manage_admins' => '?string',
         'can_manage_admins_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_envelope_transfer' => 'string',
+        'can_manage_envelope_transfer' => '?string',
         'can_manage_envelope_transfer_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_reporting' => 'string',
+        'can_manage_reporting' => '?string',
         'can_manage_reporting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_sharing' => 'string',
+        'can_manage_sharing' => '?string',
         'can_manage_sharing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_signing_groups' => 'string',
+        'can_manage_signing_groups' => '?string',
         'can_manage_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_manage_users' => 'string',
+        'can_manage_users' => '?string',
         'can_manage_users_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_view_users' => 'string'
+        'can_view_users' => '?string'
     ];
 
     /**
@@ -303,7 +303,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_account_security_settings
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageAccountSecuritySettings()
     {
@@ -313,7 +313,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_security_settings
      *
-     * @param string $can_manage_account_security_settings 
+     * @param ?string $can_manage_account_security_settings 
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_account_settings
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageAccountSettings()
     {
@@ -361,7 +361,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_settings
      *
-     * @param string $can_manage_account_settings 
+     * @param ?string $can_manage_account_settings 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_admins
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageAdmins()
     {
@@ -409,7 +409,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_admins
      *
-     * @param string $can_manage_admins 
+     * @param ?string $can_manage_admins 
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_envelope_transfer
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageEnvelopeTransfer()
     {
@@ -457,7 +457,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_envelope_transfer
      *
-     * @param string $can_manage_envelope_transfer 
+     * @param ?string $can_manage_envelope_transfer 
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_reporting
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageReporting()
     {
@@ -505,7 +505,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_reporting
      *
-     * @param string $can_manage_reporting 
+     * @param ?string $can_manage_reporting 
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_sharing
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageSharing()
     {
@@ -553,7 +553,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_sharing
      *
-     * @param string $can_manage_sharing 
+     * @param ?string $can_manage_sharing 
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_signing_groups
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageSigningGroups()
     {
@@ -601,7 +601,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_signing_groups
      *
-     * @param string $can_manage_signing_groups 
+     * @param ?string $can_manage_signing_groups 
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_manage_users
      *
-     * @return string
+     * @return ?string
      */
     public function getCanManageUsers()
     {
@@ -649,7 +649,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_users
      *
-     * @param string $can_manage_users 
+     * @param ?string $can_manage_users 
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Gets can_view_users
      *
-     * @return string
+     * @return ?string
      */
     public function getCanViewUsers()
     {
@@ -697,7 +697,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_view_users
      *
-     * @param string $can_view_users 
+     * @param ?string $can_view_users 
      *
      * @return $this
      */

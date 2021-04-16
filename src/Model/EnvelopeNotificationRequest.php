@@ -59,7 +59,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'expirations' => '\DocuSign\eSign\Model\Expirations',
         'reminders' => '\DocuSign\eSign\Model\Reminders',
-        'use_account_defaults' => 'string'
+        'use_account_defaults' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets use_account_defaults
      *
-     * @return string
+     * @return ?string
      */
     public function getUseAccountDefaults()
     {
@@ -277,7 +277,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets use_account_defaults
      *
-     * @param string $use_account_defaults 
+     * @param ?string $use_account_defaults 
      *
      * @return $this
      */

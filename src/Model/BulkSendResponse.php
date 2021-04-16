@@ -57,14 +57,14 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'batch_id' => 'string',
-        'batch_name' => 'string',
-        'batch_size' => 'string',
-        'envelope_or_template_id' => 'string',
-        'error_details' => 'string[]',
-        'errors' => 'string[]',
-        'queue_limit' => 'string',
-        'total_queued' => 'string'
+        'batch_id' => '?string',
+        'batch_name' => '?string',
+        'batch_size' => '?string',
+        'envelope_or_template_id' => '?string',
+        'error_details' => '?string[]',
+        'errors' => '?string[]',
+        'queue_limit' => '?string',
+        'total_queued' => '?string'
     ];
 
     /**
@@ -249,7 +249,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets batch_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchId()
     {
@@ -259,7 +259,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets batch_id
      *
-     * @param string $batch_id 
+     * @param ?string $batch_id 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets batch_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchName()
     {
@@ -283,7 +283,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets batch_name
      *
-     * @param string $batch_name 
+     * @param ?string $batch_name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets batch_size
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchSize()
     {
@@ -307,7 +307,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets batch_size
      *
-     * @param string $batch_size 
+     * @param ?string $batch_size 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_or_template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeOrTemplateId()
     {
@@ -331,7 +331,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_or_template_id
      *
-     * @param string $envelope_or_template_id 
+     * @param ?string $envelope_or_template_id 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets error_details
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getErrorDetails()
     {
@@ -355,7 +355,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param string[] $error_details Array or errors.
+     * @param ?string[] $error_details Array or errors.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getErrors()
     {
@@ -379,7 +379,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param string[] $errors 
+     * @param ?string[] $errors 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets queue_limit
      *
-     * @return string
+     * @return ?string
      */
     public function getQueueLimit()
     {
@@ -403,7 +403,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets queue_limit
      *
-     * @param string $queue_limit 
+     * @param ?string $queue_limit 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Gets total_queued
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalQueued()
     {
@@ -427,7 +427,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
     /**
      * Sets total_queued
      *
-     * @param string $total_queued 
+     * @param ?string $total_queued 
      *
      * @return $this
      */

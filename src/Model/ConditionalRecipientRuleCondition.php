@@ -58,8 +58,8 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'filters' => '\DocuSign\eSign\Model\ConditionalRecipientRuleFilter[]',
-        'order' => 'string',
-        'recipient_label' => 'string'
+        'order' => '?string',
+        'recipient_label' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return string
+     * @return ?string
      */
     public function getOrder()
     {
@@ -253,7 +253,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param string $order 
+     * @param ?string $order 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_label
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientLabel()
     {
@@ -277,7 +277,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_label
      *
-     * @param string $recipient_label 
+     * @param ?string $recipient_label 
      *
      * @return $this
      */

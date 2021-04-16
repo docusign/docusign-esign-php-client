@@ -57,8 +57,8 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_questions' => 'string',
-        'minimum_questions' => 'string'
+        'maximum_questions' => '?string',
+        'minimum_questions' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
     /**
      * Gets maximum_questions
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumQuestions()
     {
@@ -223,7 +223,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_questions
      *
-     * @param string $maximum_questions 
+     * @param ?string $maximum_questions 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
     /**
      * Gets minimum_questions
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumQuestions()
     {
@@ -247,7 +247,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_questions
      *
-     * @param string $minimum_questions 
+     * @param ?string $minimum_questions 
      *
      * @return $this
      */

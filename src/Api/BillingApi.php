@@ -29,82 +29,82 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiBillingApi;
+namespace DocuSign\eSign\Api\BillingApi;
 
 
 class GetPlanOptions
 {
     /**
       * $include_credit_card_information When set to **true**, excludes credit card information from the response.
-      * @var string
+      * @var ?string
       */
-    protected string $include_credit_card_information;
+    protected ?string $include_credit_card_information = null;
 
     /**
      * Gets include_credit_card_information
-     * @return string
+     * @return ?string
      */
-    public function getIncludeCreditCardInformation(): string
+    public function getIncludeCreditCardInformation(): ?string
     {
         return $this->include_credit_card_information;
     }
 
     /**
      * Sets include_credit_card_information
-     * @param string $include_credit_card_information When set to **true**, excludes credit card information from the response.
+     * @param ?string $include_credit_card_information When set to **true**, excludes credit card information from the response.
      * @return self
      */
-    public function setIncludeCreditCardInformation(string $include_credit_card_information): self
+    public function setIncludeCreditCardInformation(?string $include_credit_card_information): self
     {
         $this->include_credit_card_information = $include_credit_card_information;
         return $this;
     }
     /**
       * $include_metadata When set to **true**, the `canUpgrade` and `renewalStatus` properities are included the response and an array of `supportedCountries` property is added to the `billingAddress` information.
-      * @var string
+      * @var ?string
       */
-    protected string $include_metadata;
+    protected ?string $include_metadata = null;
 
     /**
      * Gets include_metadata
-     * @return string
+     * @return ?string
      */
-    public function getIncludeMetadata(): string
+    public function getIncludeMetadata(): ?string
     {
         return $this->include_metadata;
     }
 
     /**
      * Sets include_metadata
-     * @param string $include_metadata When set to **true**, the `canUpgrade` and `renewalStatus` properities are included the response and an array of `supportedCountries` property is added to the `billingAddress` information.
+     * @param ?string $include_metadata When set to **true**, the `canUpgrade` and `renewalStatus` properities are included the response and an array of `supportedCountries` property is added to the `billingAddress` information.
      * @return self
      */
-    public function setIncludeMetadata(string $include_metadata): self
+    public function setIncludeMetadata(?string $include_metadata): self
     {
         $this->include_metadata = $include_metadata;
         return $this;
     }
     /**
       * $include_successor_plans When set to **true**, excludes successor information from the response.
-      * @var string
+      * @var ?string
       */
-    protected string $include_successor_plans;
+    protected ?string $include_successor_plans = null;
 
     /**
      * Gets include_successor_plans
-     * @return string
+     * @return ?string
      */
-    public function getIncludeSuccessorPlans(): string
+    public function getIncludeSuccessorPlans(): ?string
     {
         return $this->include_successor_plans;
     }
 
     /**
      * Sets include_successor_plans
-     * @param string $include_successor_plans When set to **true**, excludes successor information from the response.
+     * @param ?string $include_successor_plans When set to **true**, excludes successor information from the response.
      * @return self
      */
-    public function setIncludeSuccessorPlans(string $include_successor_plans): self
+    public function setIncludeSuccessorPlans(?string $include_successor_plans): self
     {
         $this->include_successor_plans = $include_successor_plans;
         return $this;
@@ -116,50 +116,50 @@ class ListInvoicesOptions
 {
     /**
       * $from_date Specifies the date/time of the earliest invoice in the account to retrieve.
-      * @var string
+      * @var ?string
       */
-    protected string $from_date;
+    protected ?string $from_date = null;
 
     /**
      * Gets from_date
-     * @return string
+     * @return ?string
      */
-    public function getFromDate(): string
+    public function getFromDate(): ?string
     {
         return $this->from_date;
     }
 
     /**
      * Sets from_date
-     * @param string $from_date Specifies the date/time of the earliest invoice in the account to retrieve.
+     * @param ?string $from_date Specifies the date/time of the earliest invoice in the account to retrieve.
      * @return self
      */
-    public function setFromDate(string $from_date): self
+    public function setFromDate(?string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
     }
     /**
       * $to_date Specifies the date/time of the latest invoice in the account to retrieve.
-      * @var string
+      * @var ?string
       */
-    protected string $to_date;
+    protected ?string $to_date = null;
 
     /**
      * Gets to_date
-     * @return string
+     * @return ?string
      */
-    public function getToDate(): string
+    public function getToDate(): ?string
     {
         return $this->to_date;
     }
 
     /**
      * Sets to_date
-     * @param string $to_date Specifies the date/time of the latest invoice in the account to retrieve.
+     * @param ?string $to_date Specifies the date/time of the latest invoice in the account to retrieve.
      * @return self
      */
-    public function setToDate(string $to_date): self
+    public function setToDate(?string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
@@ -171,50 +171,50 @@ class ListPaymentsOptions
 {
     /**
       * $from_date Specifies the date/time of the earliest payment in the account to retrieve.
-      * @var string
+      * @var ?string
       */
-    protected string $from_date;
+    protected ?string $from_date = null;
 
     /**
      * Gets from_date
-     * @return string
+     * @return ?string
      */
-    public function getFromDate(): string
+    public function getFromDate(): ?string
     {
         return $this->from_date;
     }
 
     /**
      * Sets from_date
-     * @param string $from_date Specifies the date/time of the earliest payment in the account to retrieve.
+     * @param ?string $from_date Specifies the date/time of the earliest payment in the account to retrieve.
      * @return self
      */
-    public function setFromDate(string $from_date): self
+    public function setFromDate(?string $from_date): self
     {
         $this->from_date = $from_date;
         return $this;
     }
     /**
       * $to_date Specifies the date/time of the latest payment in the account to retrieve.
-      * @var string
+      * @var ?string
       */
-    protected string $to_date;
+    protected ?string $to_date = null;
 
     /**
      * Gets to_date
-     * @return string
+     * @return ?string
      */
-    public function getToDate(): string
+    public function getToDate(): ?string
     {
         return $this->to_date;
     }
 
     /**
      * Sets to_date
-     * @param string $to_date Specifies the date/time of the latest payment in the account to retrieve.
+     * @param ?string $to_date Specifies the date/time of the latest payment in the account to retrieve.
      * @return self
      */
-    public function setToDate(string $to_date): self
+    public function setToDate(?string $to_date): self
     {
         $this->to_date = $to_date;
         return $this;
@@ -226,25 +226,25 @@ class UpdatePlanOptions
 {
     /**
       * $preview_billing_plan When set to **true**, updates the account using a preview billing plan.
-      * @var string
+      * @var ?string
       */
-    protected string $preview_billing_plan;
+    protected ?string $preview_billing_plan = null;
 
     /**
      * Gets preview_billing_plan
-     * @return string
+     * @return ?string
      */
-    public function getPreviewBillingPlan(): string
+    public function getPreviewBillingPlan(): ?string
     {
         return $this->preview_billing_plan;
     }
 
     /**
      * Sets preview_billing_plan
-     * @param string $preview_billing_plan When set to **true**, updates the account using a preview billing plan.
+     * @param ?string $preview_billing_plan When set to **true**, updates the account using a preview billing plan.
      * @return self
      */
-    public function setPreviewBillingPlan(string $preview_billing_plan): self
+    public function setPreviewBillingPlan(?string $preview_billing_plan): self
     {
         $this->preview_billing_plan = $preview_billing_plan;
         return $this;
@@ -335,7 +335,7 @@ class BillingApi
      *
      * Get the billing plan details.
      *
-     * @param string $billing_plan_id The ID of the billing plan being accessed.
+     * @param ?string $billing_plan_id The ID of the billing plan being accessed.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlanResponse
      */
@@ -350,7 +350,7 @@ class BillingApi
      *
      * Get the billing plan details.
      *
-     * @param string $billing_plan_id The ID of the billing plan being accessed.
+     * @param ?string $billing_plan_id The ID of the billing plan being accessed.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlanResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -420,7 +420,7 @@ class BillingApi
      *
      * Get metadata for a given credit card.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CreditCardInformation
      */
@@ -435,7 +435,7 @@ class BillingApi
      *
      * Get metadata for a given credit card.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CreditCardInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -505,7 +505,7 @@ class BillingApi
      *
      * Returns downgrade plan information for the specified account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DowngradRequestBillingInfoResponse
      */
@@ -520,7 +520,7 @@ class BillingApi
      *
      * Returns downgrade plan information for the specified account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DowngradRequestBillingInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -590,8 +590,8 @@ class BillingApi
      *
      * Retrieves a billing invoice.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $invoice_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $invoice_id 
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoice
      */
@@ -606,8 +606,8 @@ class BillingApi
      *
      * Retrieves a billing invoice.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $invoice_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $invoice_id 
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoice, HTTP status code, HTTP response headers (array of strings)
      */
@@ -685,8 +685,8 @@ class BillingApi
      *
      * Gets billing payment information for a specific payment.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $payment_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $payment_id 
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentItem
      */
@@ -701,8 +701,8 @@ class BillingApi
      *
      * Gets billing payment information for a specific payment.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $payment_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $payment_id 
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentItem, HTTP status code, HTTP response headers (array of strings)
      */
@@ -780,12 +780,12 @@ class BillingApi
      *
      * Get Account Billing Plan
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBillingApi\GetPlanOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BillingApi\GetPlanOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountBillingPlanResponse
      */
-    public function getPlan($account_id, \DocuSign\eSign\ApiBillingApi\GetPlanOptions $options = null): \DocuSign\eSign\Model\AccountBillingPlanResponse
+    public function getPlan($account_id, \DocuSign\eSign\Api\BillingApi\GetPlanOptions $options = null): \DocuSign\eSign\Model\AccountBillingPlanResponse
     {
         list($response) = $this->getPlanWithHttpInfo($account_id, $options);
         return $response;
@@ -796,12 +796,12 @@ class BillingApi
      *
      * Get Account Billing Plan
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBillingApi\GetPlanOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BillingApi\GetPlanOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountBillingPlanResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPlanWithHttpInfo($account_id, \DocuSign\eSign\ApiBillingApi\GetPlanOptions $options = null): array
+    public function getPlanWithHttpInfo($account_id, \DocuSign\eSign\Api\BillingApi\GetPlanOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -955,12 +955,12 @@ class BillingApi
      *
      * Get a List of Billing Invoices
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BillingApi\ListInvoicesOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoicesResponse
      */
-    public function listInvoices($account_id, \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions $options = null): \DocuSign\eSign\Model\BillingInvoicesResponse
+    public function listInvoices($account_id, \DocuSign\eSign\Api\BillingApi\ListInvoicesOptions $options = null): \DocuSign\eSign\Model\BillingInvoicesResponse
     {
         list($response) = $this->listInvoicesWithHttpInfo($account_id, $options);
         return $response;
@@ -971,12 +971,12 @@ class BillingApi
      *
      * Get a List of Billing Invoices
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BillingApi\ListInvoicesOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoicesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listInvoicesWithHttpInfo($account_id, \DocuSign\eSign\ApiBillingApi\ListInvoicesOptions $options = null): array
+    public function listInvoicesWithHttpInfo($account_id, \DocuSign\eSign\Api\BillingApi\ListInvoicesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1052,7 +1052,7 @@ class BillingApi
      *
      * Get a list of past due invoices.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoicesSummary
      */
@@ -1067,7 +1067,7 @@ class BillingApi
      *
      * Get a list of past due invoices.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoicesSummary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1137,12 +1137,12 @@ class BillingApi
      *
      * Gets payment information for one or more payments.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BillingApi\ListPaymentsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentsResponse
      */
-    public function listPayments($account_id, \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions $options = null): \DocuSign\eSign\Model\BillingPaymentsResponse
+    public function listPayments($account_id, \DocuSign\eSign\Api\BillingApi\ListPaymentsOptions $options = null): \DocuSign\eSign\Model\BillingPaymentsResponse
     {
         list($response) = $this->listPaymentsWithHttpInfo($account_id, $options);
         return $response;
@@ -1153,12 +1153,12 @@ class BillingApi
      *
      * Gets payment information for one or more payments.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\BillingApi\ListPaymentsOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPaymentsWithHttpInfo($account_id, \DocuSign\eSign\ApiBillingApi\ListPaymentsOptions $options = null): array
+    public function listPaymentsWithHttpInfo($account_id, \DocuSign\eSign\Api\BillingApi\ListPaymentsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1234,7 +1234,7 @@ class BillingApi
      *
      * Posts a payment to a past due invoice.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPaymentRequest $billing_payment_request  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentResponse
@@ -1250,7 +1250,7 @@ class BillingApi
      *
      * Posts a payment to a past due invoice.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPaymentRequest $billing_payment_request  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentResponse, HTTP status code, HTTP response headers (array of strings)
@@ -1326,7 +1326,7 @@ class BillingApi
      *
      * Reserverd: Purchase additional envelopes.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PurchasedEnvelopesInformation $purchased_envelopes_information  (optional)
      * @throws ApiException on non-2xx response
      * @return mixed
@@ -1342,7 +1342,7 @@ class BillingApi
      *
      * Reserverd: Purchase additional envelopes.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PurchasedEnvelopesInformation $purchased_envelopes_information  (optional)
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
@@ -1414,7 +1414,7 @@ class BillingApi
      *
      * Queues downgrade billing plan request for an account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\DowngradeBillingPlanInformation $downgrade_billing_plan_information  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DowngradePlanUpdateResponse
@@ -1430,7 +1430,7 @@ class BillingApi
      *
      * Queues downgrade billing plan request for an account.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\DowngradeBillingPlanInformation $downgrade_billing_plan_information  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DowngradePlanUpdateResponse, HTTP status code, HTTP response headers (array of strings)
@@ -1506,13 +1506,13 @@ class BillingApi
      *
      * Updates the account billing plan.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPlanInformation $billing_plan_information  (optional)
-     * @param  \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\BillingApi\UpdatePlanOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlanUpdateResponse
      */
-    public function updatePlan($account_id, $billing_plan_information = null, \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions $options = null): \DocuSign\eSign\Model\BillingPlanUpdateResponse
+    public function updatePlan($account_id, $billing_plan_information = null, \DocuSign\eSign\Api\BillingApi\UpdatePlanOptions $options = null): \DocuSign\eSign\Model\BillingPlanUpdateResponse
     {
         list($response) = $this->updatePlanWithHttpInfo($account_id, $billing_plan_information, $options);
         return $response;
@@ -1523,13 +1523,13 @@ class BillingApi
      *
      * Updates the account billing plan.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BillingPlanInformation $billing_plan_information  (optional)
-     * @param  \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\BillingApi\UpdatePlanOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlanUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePlanWithHttpInfo($account_id, $billing_plan_information = null, \DocuSign\eSign\ApiBillingApi\UpdatePlanOptions $options = null): array
+    public function updatePlanWithHttpInfo($account_id, $billing_plan_information = null, \DocuSign\eSign\Api\BillingApi\UpdatePlanOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

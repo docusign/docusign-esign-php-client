@@ -57,16 +57,16 @@ class ExternalFolder implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'end_position' => 'string',
+        'end_position' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ExternalDocServiceErrorDetails',
-        'id' => 'string',
+        'id' => '?string',
         'items' => '\DocuSign\eSign\Model\ExternalFile[]',
-        'name' => 'string',
-        'next_uri' => 'string',
-        'previous_uri' => 'string',
-        'result_set_size' => 'string',
-        'start_position' => 'string',
-        'total_set_size' => 'string'
+        'name' => '?string',
+        'next_uri' => '?string',
+        'previous_uri' => '?string',
+        'result_set_size' => '?string',
+        'start_position' => '?string',
+        'total_set_size' => '?string'
     ];
 
     /**
@@ -261,7 +261,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets end_position
      *
-     * @return string
+     * @return ?string
      */
     public function getEndPosition()
     {
@@ -271,7 +271,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets end_position
      *
-     * @param string $end_position The last position in the result set.
+     * @param ?string $end_position The last position in the result set.
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -319,7 +319,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -367,7 +367,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets next_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getNextUri()
     {
@@ -391,7 +391,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets next_uri
      *
-     * @param string $next_uri The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
+     * @param ?string $next_uri The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets previous_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getPreviousUri()
     {
@@ -415,7 +415,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets previous_uri
      *
-     * @param string $previous_uri The postal code for the billing address.
+     * @param ?string $previous_uri The postal code for the billing address.
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets result_set_size
      *
-     * @return string
+     * @return ?string
      */
     public function getResultSetSize()
     {
@@ -439,7 +439,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets result_set_size
      *
-     * @param string $result_set_size The number of results returned in this response.
+     * @param ?string $result_set_size The number of results returned in this response.
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets start_position
      *
-     * @return string
+     * @return ?string
      */
     public function getStartPosition()
     {
@@ -463,7 +463,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets start_position
      *
-     * @param string $start_position Starting position of the current result set.
+     * @param ?string $start_position Starting position of the current result set.
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Gets total_set_size
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalSetSize()
     {
@@ -487,7 +487,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets total_set_size
      *
-     * @param string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+     * @param ?string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
      *
      * @return $this
      */

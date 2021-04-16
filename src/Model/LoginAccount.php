@@ -57,17 +57,17 @@ class LoginAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'account_id_guid' => 'string',
-        'base_url' => 'string',
-        'email' => 'string',
-        'is_default' => 'string',
+        'account_id' => '?string',
+        'account_id_guid' => '?string',
+        'base_url' => '?string',
+        'email' => '?string',
+        'is_default' => '?string',
         'login_account_settings' => '\DocuSign\eSign\Model\NameValue[]',
         'login_user_settings' => '\DocuSign\eSign\Model\NameValue[]',
-        'name' => 'string',
-        'site_description' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string'
+        'name' => '?string',
+        'site_description' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -277,7 +277,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets account_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountIdGuid()
     {
@@ -301,7 +301,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets account_id_guid
      *
-     * @param string $account_id_guid The GUID associated with the account ID.
+     * @param ?string $account_id_guid The GUID associated with the account ID.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets base_url
      *
-     * @return string
+     * @return ?string
      */
     public function getBaseUrl()
     {
@@ -325,7 +325,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets base_url
      *
-     * @param string $base_url The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
+     * @param ?string $base_url The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -349,7 +349,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email The email address for the user.
+     * @param ?string $email The email address for the user.
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets is_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDefault()
     {
@@ -373,7 +373,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param string $is_default This value is true if this is the default account for the user, otherwise false is returned.
+     * @param ?string $is_default This value is true if this is the default account for the user, otherwise false is returned.
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -445,7 +445,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name The name associated with the account.
+     * @param ?string $name The name associated with the account.
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets site_description
      *
-     * @return string
+     * @return ?string
      */
     public function getSiteDescription()
     {
@@ -469,7 +469,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets site_description
      *
-     * @param string $site_description An optional descirption of the site that hosts the account.
+     * @param ?string $site_description An optional descirption of the site that hosts the account.
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -493,7 +493,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -517,7 +517,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name The name of this user as defined by the account.
+     * @param ?string $user_name The name of this user as defined by the account.
      *
      * @return $this
      */

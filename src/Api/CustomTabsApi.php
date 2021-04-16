@@ -29,32 +29,32 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\ApiCustomTabsApi;
+namespace DocuSign\eSign\Api\CustomTabsApi;
 
 
 class ListOptions
 {
     /**
       * $custom_tab_only When set to **true**, only custom tabs are returned in the response.
-      * @var string
+      * @var ?string
       */
-    protected string $custom_tab_only;
+    protected ?string $custom_tab_only = null;
 
     /**
      * Gets custom_tab_only
-     * @return string
+     * @return ?string
      */
-    public function getCustomTabOnly(): string
+    public function getCustomTabOnly(): ?string
     {
         return $this->custom_tab_only;
     }
 
     /**
      * Sets custom_tab_only
-     * @param string $custom_tab_only When set to **true**, only custom tabs are returned in the response.
+     * @param ?string $custom_tab_only When set to **true**, only custom tabs are returned in the response.
      * @return self
      */
-    public function setCustomTabOnly(string $custom_tab_only): self
+    public function setCustomTabOnly(?string $custom_tab_only): self
     {
         $this->custom_tab_only = $custom_tab_only;
         return $this;
@@ -145,12 +145,12 @@ class CustomTabsApi
      *
      * Gets a list of all account tabs.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiCustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\CustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadataList
      */
-    public function callList($account_id, \DocuSign\eSign\ApiCustomTabsApi\ListOptions $options = null): \DocuSign\eSign\Model\TabMetadataList
+    public function callList($account_id, \DocuSign\eSign\Api\CustomTabsApi\ListOptions $options = null): \DocuSign\eSign\Model\TabMetadataList
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -161,12 +161,12 @@ class CustomTabsApi
      *
      * Gets a list of all account tabs.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\ApiCustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\CustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadataList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, \DocuSign\eSign\ApiCustomTabsApi\ListOptions $options = null): array
+    public function callListWithHttpInfo($account_id, \DocuSign\eSign\Api\CustomTabsApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -239,7 +239,7 @@ class CustomTabsApi
      *
      * Creates a custom tab.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
@@ -255,7 +255,7 @@ class CustomTabsApi
      *
      * Creates a custom tab.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
@@ -331,8 +331,8 @@ class CustomTabsApi
      *
      * Deletes custom tab information.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $custom_tab_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $custom_tab_id 
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -347,8 +347,8 @@ class CustomTabsApi
      *
      * Deletes custom tab information.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $custom_tab_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $custom_tab_id 
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -422,8 +422,8 @@ class CustomTabsApi
      *
      * Gets custom tab information.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $custom_tab_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $custom_tab_id 
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
      */
@@ -438,8 +438,8 @@ class CustomTabsApi
      *
      * Gets custom tab information.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $custom_tab_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $custom_tab_id 
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
      */
@@ -517,8 +517,8 @@ class CustomTabsApi
      *
      * Updates custom tab information.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $custom_tab_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $custom_tab_id 
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabMetadata
@@ -534,8 +534,8 @@ class CustomTabsApi
      *
      * Updates custom tab information.
      *
-     * @param string $account_id The external account number (int) or account ID Guid.
-     * @param string $custom_tab_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $custom_tab_id 
      * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)

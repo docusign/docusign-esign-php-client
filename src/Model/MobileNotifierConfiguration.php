@@ -57,9 +57,9 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'device_id' => 'string',
+        'device_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'platform' => 'string'
+        'platform' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets device_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDeviceId()
     {
@@ -229,7 +229,7 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets device_id
      *
-     * @param string $device_id 
+     * @param ?string $device_id 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets platform
      *
-     * @return string
+     * @return ?string
      */
     public function getPlatform()
     {
@@ -277,7 +277,7 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets platform
      *
-     * @param string $platform 
+     * @param ?string $platform 
      *
      * @return $this
      */

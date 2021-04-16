@@ -58,9 +58,9 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reminder_delay' => 'string',
-        'reminder_enabled' => 'string',
-        'reminder_frequency' => 'string'
+        'reminder_delay' => '?string',
+        'reminder_enabled' => '?string',
+        'reminder_frequency' => '?string'
     ];
 
     /**
@@ -220,7 +220,7 @@ class Reminders implements ModelInterface, ArrayAccess
     /**
      * Gets reminder_delay
      *
-     * @return string
+     * @return ?string
      */
     public function getReminderDelay()
     {
@@ -230,7 +230,7 @@ class Reminders implements ModelInterface, ArrayAccess
     /**
      * Sets reminder_delay
      *
-     * @param string $reminder_delay An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
+     * @param ?string $reminder_delay An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class Reminders implements ModelInterface, ArrayAccess
     /**
      * Gets reminder_enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getReminderEnabled()
     {
@@ -254,7 +254,7 @@ class Reminders implements ModelInterface, ArrayAccess
     /**
      * Sets reminder_enabled
      *
-     * @param string $reminder_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
+     * @param ?string $reminder_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class Reminders implements ModelInterface, ArrayAccess
     /**
      * Gets reminder_frequency
      *
-     * @return string
+     * @return ?string
      */
     public function getReminderFrequency()
     {
@@ -278,7 +278,7 @@ class Reminders implements ModelInterface, ArrayAccess
     /**
      * Sets reminder_frequency
      *
-     * @param string $reminder_frequency An interger that sets the interval, in days, between reminder emails.
+     * @param ?string $reminder_frequency An interger that sets the interval, in days, between reminder emails.
      *
      * @return $this
      */

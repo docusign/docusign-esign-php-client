@@ -57,9 +57,9 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'multiple_users' => 'string',
-        'recipient_names' => 'string[]',
-        'reserved_recipient_email' => 'string'
+        'multiple_users' => '?string',
+        'recipient_names' => '?string[]',
+        'reserved_recipient_email' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
     /**
      * Gets multiple_users
      *
-     * @return string
+     * @return ?string
      */
     public function getMultipleUsers()
     {
@@ -229,7 +229,7 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
     /**
      * Sets multiple_users
      *
-     * @param string $multiple_users Indicates whether email address is used by more than one user.
+     * @param ?string $multiple_users Indicates whether email address is used by more than one user.
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_names
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getRecipientNames()
     {
@@ -253,7 +253,7 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_names
      *
-     * @param string[] $recipient_names 
+     * @param ?string[] $recipient_names 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
     /**
      * Gets reserved_recipient_email
      *
-     * @return string
+     * @return ?string
      */
     public function getReservedRecipientEmail()
     {
@@ -277,7 +277,7 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
     /**
      * Sets reserved_recipient_email
      *
-     * @param string $reserved_recipient_email 
+     * @param ?string $reserved_recipient_email 
      *
      * @return $this
      */

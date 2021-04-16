@@ -57,12 +57,12 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'operator' => 'string',
-        'recipient_id' => 'string',
-        'scope' => 'string',
-        'tab_id' => 'string',
-        'tab_label' => 'string',
-        'value' => 'string'
+        'operator' => '?string',
+        'recipient_id' => '?string',
+        'scope' => '?string',
+        'tab_id' => '?string',
+        'tab_label' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Gets operator
      *
-     * @return string
+     * @return ?string
      */
     public function getOperator()
     {
@@ -247,7 +247,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Sets operator
      *
-     * @param string $operator 
+     * @param ?string $operator 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -271,7 +271,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Gets scope
      *
-     * @return string
+     * @return ?string
      */
     public function getScope()
     {
@@ -295,7 +295,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Sets scope
      *
-     * @param string $scope 
+     * @param ?string $scope 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Gets tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTabId()
     {
@@ -319,7 +319,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id
      *
-     * @param string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+     * @param ?string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Gets tab_label
      *
-     * @return string
+     * @return ?string
      */
     public function getTabLabel()
     {
@@ -343,7 +343,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label
      *
-     * @param string $tab_label The label string associated with the tab.
+     * @param ?string $tab_label The label string associated with the tab.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -367,7 +367,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value of the tab.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */

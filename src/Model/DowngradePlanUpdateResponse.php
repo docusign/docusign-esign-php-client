@@ -57,13 +57,13 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_payment_method' => 'string',
-        'downgrade_effective_date' => 'string',
-        'downgrade_payment_cycle' => 'string',
-        'downgrade_plan_id' => 'string',
-        'downgrade_plan_name' => 'string',
-        'downgrade_request_status' => 'string',
-        'message' => 'string'
+        'account_payment_method' => '?string',
+        'downgrade_effective_date' => '?string',
+        'downgrade_payment_cycle' => '?string',
+        'downgrade_plan_id' => '?string',
+        'downgrade_plan_name' => '?string',
+        'downgrade_request_status' => '?string',
+        'message' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets account_payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountPaymentMethod()
     {
@@ -253,7 +253,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets account_payment_method
      *
-     * @param string $account_payment_method 
+     * @param ?string $account_payment_method 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets downgrade_effective_date
      *
-     * @return string
+     * @return ?string
      */
     public function getDowngradeEffectiveDate()
     {
@@ -277,7 +277,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_effective_date
      *
-     * @param string $downgrade_effective_date 
+     * @param ?string $downgrade_effective_date 
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets downgrade_payment_cycle
      *
-     * @return string
+     * @return ?string
      */
     public function getDowngradePaymentCycle()
     {
@@ -301,7 +301,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_payment_cycle
      *
-     * @param string $downgrade_payment_cycle 
+     * @param ?string $downgrade_payment_cycle 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets downgrade_plan_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDowngradePlanId()
     {
@@ -325,7 +325,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_id
      *
-     * @param string $downgrade_plan_id 
+     * @param ?string $downgrade_plan_id 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets downgrade_plan_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDowngradePlanName()
     {
@@ -349,7 +349,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_name
      *
-     * @param string $downgrade_plan_name 
+     * @param ?string $downgrade_plan_name 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets downgrade_request_status
      *
-     * @return string
+     * @return ?string
      */
     public function getDowngradeRequestStatus()
     {
@@ -373,7 +373,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_request_status
      *
-     * @param string $downgrade_request_status 
+     * @param ?string $downgrade_request_status 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return string
+     * @return ?string
      */
     public function getMessage()
     {
@@ -397,7 +397,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message 
+     * @param ?string $message 
      *
      * @return $this
      */

@@ -57,12 +57,12 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is21_cfr_part11' => 'string',
-        'options' => 'string[]',
-        'rights' => 'string',
-        'ui_hint' => 'string',
-        'ui_order' => 'string',
-        'ui_type' => 'string'
+        'is21_cfr_part11' => '?string',
+        'options' => '?string[]',
+        'rights' => '?string',
+        'ui_hint' => '?string',
+        'ui_order' => '?string',
+        'ui_type' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets is21_cfr_part11
      *
-     * @return string
+     * @return ?string
      */
     public function getIs21CfrPart11()
     {
@@ -247,7 +247,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets is21_cfr_part11
      *
-     * @param string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
+     * @param ?string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getOptions()
     {
@@ -271,7 +271,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param string[] $options 
+     * @param ?string[] $options 
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets rights
      *
-     * @return string
+     * @return ?string
      */
     public function getRights()
     {
@@ -295,7 +295,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param string $rights 
+     * @param ?string $rights 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets ui_hint
      *
-     * @return string
+     * @return ?string
      */
     public function getUiHint()
     {
@@ -319,7 +319,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets ui_hint
      *
-     * @param string $ui_hint 
+     * @param ?string $ui_hint 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets ui_order
      *
-     * @return string
+     * @return ?string
      */
     public function getUiOrder()
     {
@@ -343,7 +343,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets ui_order
      *
-     * @param string $ui_order 
+     * @param ?string $ui_order 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets ui_type
      *
-     * @return string
+     * @return ?string
      */
     public function getUiType()
     {
@@ -367,7 +367,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets ui_type
      *
-     * @param string $ui_type 
+     * @param ?string $ui_type 
      *
      * @return $this
      */

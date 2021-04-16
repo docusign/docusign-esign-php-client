@@ -59,28 +59,28 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'caller_authorization' => '\DocuSign\eSign\Model\WorkspaceUserAuthorization',
-        'content_type' => 'string',
-        'created' => 'string',
-        'created_by_id' => 'string',
+        'content_type' => '?string',
+        'created' => '?string',
+        'created_by_id' => '?string',
         'created_by_information' => '\DocuSign\eSign\Model\WorkspaceUser',
-        'extension' => 'string',
-        'file_size' => 'string',
-        'file_uri' => 'string',
-        'id' => 'string',
-        'is_public' => 'string',
-        'last_modified' => 'string',
-        'last_modified_by_id' => 'string',
+        'extension' => '?string',
+        'file_size' => '?string',
+        'file_uri' => '?string',
+        'id' => '?string',
+        'is_public' => '?string',
+        'last_modified' => '?string',
+        'last_modified_by_id' => '?string',
         'last_modified_by_information' => '\DocuSign\eSign\Model\WorkspaceUser',
-        'name' => 'string',
-        'page_count' => 'string',
-        'parent_folder_id' => 'string',
-        'parent_folder_uri' => 'string',
-        'sha256' => 'string',
-        'thumb_height' => 'string',
+        'name' => '?string',
+        'page_count' => '?string',
+        'parent_folder_id' => '?string',
+        'parent_folder_uri' => '?string',
+        'sha256' => '?string',
+        'thumb_height' => '?string',
         'thumbnail' => '\DocuSign\eSign\Model\Page',
-        'thumb_width' => 'string',
-        'type' => 'string',
-        'uri' => 'string',
+        'thumb_width' => '?string',
+        'type' => '?string',
+        'uri' => '?string',
         'user_authorization' => '\DocuSign\eSign\Model\WorkspaceUserAuthorization'
     ];
 
@@ -370,7 +370,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets content_type
      *
-     * @return string
+     * @return ?string
      */
     public function getContentType()
     {
@@ -380,7 +380,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets content_type
      *
-     * @param string $content_type 
+     * @param ?string $content_type 
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -404,7 +404,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created The UTC DateTime when the workspace item was created.
+     * @param ?string $created The UTC DateTime when the workspace item was created.
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets created_by_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedById()
     {
@@ -428,7 +428,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_id
      *
-     * @param string $created_by_id 
+     * @param ?string $created_by_id 
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets extension
      *
-     * @return string
+     * @return ?string
      */
     public function getExtension()
     {
@@ -476,7 +476,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets extension
      *
-     * @param string $extension 
+     * @param ?string $extension 
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets file_size
      *
-     * @return string
+     * @return ?string
      */
     public function getFileSize()
     {
@@ -500,7 +500,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets file_size
      *
-     * @param string $file_size 
+     * @param ?string $file_size 
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets file_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getFileUri()
     {
@@ -524,7 +524,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets file_uri
      *
-     * @param string $file_uri 
+     * @param ?string $file_uri 
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -548,7 +548,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets is_public
      *
-     * @return string
+     * @return ?string
      */
     public function getIsPublic()
     {
@@ -572,7 +572,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets is_public
      *
-     * @param string $is_public If true, this supersedes need for bit mask permission with workspaceUserAuthorization
+     * @param ?string $is_public If true, this supersedes need for bit mask permission with workspaceUserAuthorization
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModified()
     {
@@ -596,7 +596,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param string $last_modified 
+     * @param ?string $last_modified 
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified_by_id
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModifiedById()
     {
@@ -620,7 +620,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_id
      *
-     * @param string $last_modified_by_id Utc date and time the comment was last updated (can only be done by creator)
+     * @param ?string $last_modified_by_id Utc date and time the comment was last updated (can only be done by creator)
      *
      * @return $this
      */
@@ -658,7 +658,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -668,7 +668,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name A simple string description of the item, such as a file name or a folder name.
+     * @param ?string $name A simple string description of the item, such as a file name or a folder name.
      *
      * @return $this
      */
@@ -682,7 +682,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets page_count
      *
-     * @return string
+     * @return ?string
      */
     public function getPageCount()
     {
@@ -692,7 +692,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets page_count
      *
-     * @param string $page_count 
+     * @param ?string $page_count 
      *
      * @return $this
      */
@@ -706,7 +706,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderId()
     {
@@ -716,7 +716,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_id
      *
-     * @param string $parent_folder_id The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.
+     * @param ?string $parent_folder_id The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.
      *
      * @return $this
      */
@@ -730,7 +730,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderUri()
     {
@@ -740,7 +740,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_uri
      *
-     * @param string $parent_folder_uri 
+     * @param ?string $parent_folder_uri 
      *
      * @return $this
      */
@@ -754,7 +754,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets sha256
      *
-     * @return string
+     * @return ?string
      */
     public function getSha256()
     {
@@ -764,7 +764,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets sha256
      *
-     * @param string $sha256 
+     * @param ?string $sha256 
      *
      * @return $this
      */
@@ -778,7 +778,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets thumb_height
      *
-     * @return string
+     * @return ?string
      */
     public function getThumbHeight()
     {
@@ -788,7 +788,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets thumb_height
      *
-     * @param string $thumb_height 
+     * @param ?string $thumb_height 
      *
      * @return $this
      */
@@ -826,7 +826,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets thumb_width
      *
-     * @return string
+     * @return ?string
      */
     public function getThumbWidth()
     {
@@ -836,7 +836,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets thumb_width
      *
-     * @param string $thumb_width 
+     * @param ?string $thumb_width 
      *
      * @return $this
      */
@@ -850,7 +850,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -860,7 +860,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type The type of the workspace item. Valid values are file, folder.
+     * @param ?string $type The type of the workspace item. Valid values are file, folder.
      *
      * @return $this
      */
@@ -874,7 +874,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -884,7 +884,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

@@ -57,7 +57,7 @@ class LoginInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'api_password' => 'string',
+        'api_password' => '?string',
         'login_accounts' => '\DocuSign\eSign\Model\LoginAccount[]'
     ];
 
@@ -213,7 +213,7 @@ class LoginInformation implements ModelInterface, ArrayAccess
     /**
      * Gets api_password
      *
-     * @return string
+     * @return ?string
      */
     public function getApiPassword()
     {
@@ -223,7 +223,7 @@ class LoginInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_password
      *
-     * @param string $api_password Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
+     * @param ?string $api_password Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
      *
      * @return $this
      */

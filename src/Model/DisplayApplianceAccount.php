@@ -57,11 +57,11 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'opt_out_auto_nav_text_and_tab_color_updates' => 'bool',
-        'show_initial_conditional_fields' => 'bool',
-        'signing_version' => 'string',
-        'tag_has_sig_block' => 'bool'
+        'account_id' => '?string',
+        'opt_out_auto_nav_text_and_tab_color_updates' => '?bool',
+        'show_initial_conditional_fields' => '?bool',
+        'signing_version' => '?string',
+        'tag_has_sig_block' => '?bool'
     ];
 
     /**
@@ -231,7 +231,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -241,7 +241,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Gets opt_out_auto_nav_text_and_tab_color_updates
      *
-     * @return bool
+     * @return ?bool
      */
     public function getOptOutAutoNavTextAndTabColorUpdates()
     {
@@ -265,7 +265,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets opt_out_auto_nav_text_and_tab_color_updates
      *
-     * @param bool $opt_out_auto_nav_text_and_tab_color_updates 
+     * @param ?bool $opt_out_auto_nav_text_and_tab_color_updates 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Gets show_initial_conditional_fields
      *
-     * @return bool
+     * @return ?bool
      */
     public function getShowInitialConditionalFields()
     {
@@ -289,7 +289,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets show_initial_conditional_fields
      *
-     * @param bool $show_initial_conditional_fields 
+     * @param ?bool $show_initial_conditional_fields 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Gets signing_version
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningVersion()
     {
@@ -313,7 +313,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets signing_version
      *
-     * @param string $signing_version 
+     * @param ?string $signing_version 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Gets tag_has_sig_block
      *
-     * @return bool
+     * @return ?bool
      */
     public function getTagHasSigBlock()
     {
@@ -337,7 +337,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets tag_has_sig_block
      *
-     * @param bool $tag_has_sig_block 
+     * @param ?bool $tag_has_sig_block 
      *
      * @return $this
      */

@@ -57,11 +57,11 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'currency' => 'string',
-        'partner' => 'string',
-        'password' => 'string',
-        'user_name' => 'string',
-        'vendor' => 'string'
+        'currency' => '?string',
+        'partner' => '?string',
+        'password' => '?string',
+        'user_name' => '?string',
+        'vendor' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Gets currency
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrency()
     {
@@ -241,7 +241,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets currency
      *
-     * @param string $currency 
+     * @param ?string $currency 
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Gets partner
      *
-     * @return string
+     * @return ?string
      */
     public function getPartner()
     {
@@ -265,7 +265,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets partner
      *
-     * @param string $partner 
+     * @param ?string $partner 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -289,7 +289,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -313,7 +313,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Gets vendor
      *
-     * @return string
+     * @return ?string
      */
     public function getVendor()
     {
@@ -337,7 +337,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets vendor
      *
-     * @param string $vendor 
+     * @param ?string $vendor 
      *
      * @return $this
      */

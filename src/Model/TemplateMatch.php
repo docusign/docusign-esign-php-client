@@ -57,9 +57,9 @@ class TemplateMatch implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'document_end_page' => 'string',
-        'document_start_page' => 'string',
-        'match_percentage' => 'string'
+        'document_end_page' => '?string',
+        'document_start_page' => '?string',
+        'match_percentage' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Gets document_end_page
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentEndPage()
     {
@@ -229,7 +229,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Sets document_end_page
      *
-     * @param string $document_end_page 
+     * @param ?string $document_end_page 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Gets document_start_page
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentStartPage()
     {
@@ -253,7 +253,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Sets document_start_page
      *
-     * @param string $document_start_page 
+     * @param ?string $document_start_page 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Gets match_percentage
      *
-     * @return string
+     * @return ?string
      */
     public function getMatchPercentage()
     {
@@ -277,7 +277,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Sets match_percentage
      *
-     * @param string $match_percentage 
+     * @param ?string $match_percentage 
      *
      * @return $this
      */

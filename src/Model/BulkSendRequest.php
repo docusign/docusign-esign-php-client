@@ -57,8 +57,8 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'batch_name' => 'string',
-        'envelope_or_template_id' => 'string'
+        'batch_name' => '?string',
+        'envelope_or_template_id' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
     /**
      * Gets batch_name
      *
-     * @return string
+     * @return ?string
      */
     public function getBatchName()
     {
@@ -223,7 +223,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
     /**
      * Sets batch_name
      *
-     * @param string $batch_name 
+     * @param ?string $batch_name 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_or_template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeOrTemplateId()
     {
@@ -247,7 +247,7 @@ class BulkSendRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_or_template_id
      *
-     * @param string $envelope_or_template_id 
+     * @param ?string $envelope_or_template_id 
      *
      * @return $this
      */

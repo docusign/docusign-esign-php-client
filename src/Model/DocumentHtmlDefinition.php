@@ -57,17 +57,17 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'display_anchor_prefix' => 'string',
+        'display_anchor_prefix' => '?string',
         'display_anchors' => '\DocuSign\eSign\Model\DocumentHtmlDisplayAnchor[]',
-        'display_order' => 'string',
-        'display_page_number' => 'string',
-        'document_guid' => 'string',
-        'document_id' => 'string',
-        'header_label' => 'string',
-        'max_screen_width' => 'string',
-        'remove_empty_tags' => 'string',
-        'show_mobile_optimized_toggle' => 'string',
-        'source' => 'string'
+        'display_order' => '?string',
+        'display_page_number' => '?string',
+        'document_guid' => '?string',
+        'document_id' => '?string',
+        'header_label' => '?string',
+        'max_screen_width' => '?string',
+        'remove_empty_tags' => '?string',
+        'show_mobile_optimized_toggle' => '?string',
+        'source' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets display_anchor_prefix
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayAnchorPrefix()
     {
@@ -277,7 +277,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets display_anchor_prefix
      *
-     * @param string $display_anchor_prefix 
+     * @param ?string $display_anchor_prefix 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets display_order
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayOrder()
     {
@@ -325,7 +325,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets display_order
      *
-     * @param string $display_order 
+     * @param ?string $display_order 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets display_page_number
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayPageNumber()
     {
@@ -349,7 +349,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets display_page_number
      *
-     * @param string $display_page_number 
+     * @param ?string $display_page_number 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets document_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentGuid()
     {
@@ -373,7 +373,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets document_guid
      *
-     * @param string $document_guid 
+     * @param ?string $document_guid 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -397,7 +397,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets header_label
      *
-     * @return string
+     * @return ?string
      */
     public function getHeaderLabel()
     {
@@ -421,7 +421,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets header_label
      *
-     * @param string $header_label 
+     * @param ?string $header_label 
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets max_screen_width
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxScreenWidth()
     {
@@ -445,7 +445,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets max_screen_width
      *
-     * @param string $max_screen_width 
+     * @param ?string $max_screen_width 
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets remove_empty_tags
      *
-     * @return string
+     * @return ?string
      */
     public function getRemoveEmptyTags()
     {
@@ -469,7 +469,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets remove_empty_tags
      *
-     * @param string $remove_empty_tags 
+     * @param ?string $remove_empty_tags 
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets show_mobile_optimized_toggle
      *
-     * @return string
+     * @return ?string
      */
     public function getShowMobileOptimizedToggle()
     {
@@ -493,7 +493,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets show_mobile_optimized_toggle
      *
-     * @param string $show_mobile_optimized_toggle 
+     * @param ?string $show_mobile_optimized_toggle 
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return string
+     * @return ?string
      */
     public function getSource()
     {
@@ -517,7 +517,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param string $source 
+     * @param ?string $source 
      *
      * @return $this
      */

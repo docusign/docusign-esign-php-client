@@ -57,13 +57,13 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'default_connection_id' => 'string',
-        'default_plan_id' => 'string',
-        'distributor_code' => 'string',
-        'distributor_password' => 'string',
-        'password_rule_text' => 'string',
-        'plan_promotion_text' => 'string',
-        'purchase_order_or_prom_allowed' => 'string'
+        'default_connection_id' => '?string',
+        'default_plan_id' => '?string',
+        'distributor_code' => '?string',
+        'distributor_password' => '?string',
+        'password_rule_text' => '?string',
+        'plan_promotion_text' => '?string',
+        'purchase_order_or_prom_allowed' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Gets default_connection_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDefaultConnectionId()
     {
@@ -253,7 +253,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_connection_id
      *
-     * @param string $default_connection_id 
+     * @param ?string $default_connection_id 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Gets default_plan_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDefaultPlanId()
     {
@@ -277,7 +277,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_plan_id
      *
-     * @param string $default_plan_id 
+     * @param ?string $default_plan_id 
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Gets distributor_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDistributorCode()
     {
@@ -301,7 +301,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets distributor_code
      *
-     * @param string $distributor_code The code that identifies the billing plan groups and plans for the new account.
+     * @param ?string $distributor_code The code that identifies the billing plan groups and plans for the new account.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Gets distributor_password
      *
-     * @return string
+     * @return ?string
      */
     public function getDistributorPassword()
     {
@@ -325,7 +325,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets distributor_password
      *
-     * @param string $distributor_password The password for the distributorCode.
+     * @param ?string $distributor_password The password for the distributorCode.
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Gets password_rule_text
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordRuleText()
     {
@@ -349,7 +349,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets password_rule_text
      *
-     * @param string $password_rule_text 
+     * @param ?string $password_rule_text 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Gets plan_promotion_text
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanPromotionText()
     {
@@ -373,7 +373,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_promotion_text
      *
-     * @param string $plan_promotion_text 
+     * @param ?string $plan_promotion_text 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Gets purchase_order_or_prom_allowed
      *
-     * @return string
+     * @return ?string
      */
     public function getPurchaseOrderOrPromAllowed()
     {
@@ -397,7 +397,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets purchase_order_or_prom_allowed
      *
-     * @param string $purchase_order_or_prom_allowed 
+     * @param ?string $purchase_order_or_prom_allowed 
      *
      * @return $this
      */

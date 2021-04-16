@@ -57,9 +57,9 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allow_advanced_correct' => 'string',
-        'allow_correct' => 'string',
-        'enable_sign_with_notary' => 'string'
+        'allow_advanced_correct' => '?string',
+        'allow_correct' => '?string',
+        'enable_sign_with_notary' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets allow_advanced_correct
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAdvancedCorrect()
     {
@@ -229,7 +229,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets allow_advanced_correct
      *
-     * @param string $allow_advanced_correct 
+     * @param ?string $allow_advanced_correct 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets allow_correct
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowCorrect()
     {
@@ -253,7 +253,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets allow_correct
      *
-     * @param string $allow_correct 
+     * @param ?string $allow_correct 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sign_with_notary
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSignWithNotary()
     {
@@ -277,7 +277,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_with_notary
      *
-     * @param string $enable_sign_with_notary 
+     * @param ?string $enable_sign_with_notary 
      *
      * @return $this
      */

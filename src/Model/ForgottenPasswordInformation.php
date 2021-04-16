@@ -58,14 +58,14 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'forgotten_password_answer1' => 'string',
-        'forgotten_password_answer2' => 'string',
-        'forgotten_password_answer3' => 'string',
-        'forgotten_password_answer4' => 'string',
-        'forgotten_password_question1' => 'string',
-        'forgotten_password_question2' => 'string',
-        'forgotten_password_question3' => 'string',
-        'forgotten_password_question4' => 'string'
+        'forgotten_password_answer1' => '?string',
+        'forgotten_password_answer2' => '?string',
+        'forgotten_password_answer3' => '?string',
+        'forgotten_password_answer4' => '?string',
+        'forgotten_password_question1' => '?string',
+        'forgotten_password_question2' => '?string',
+        'forgotten_password_question3' => '?string',
+        'forgotten_password_question4' => '?string'
     ];
 
     /**
@@ -250,7 +250,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_answer1
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordAnswer1()
     {
@@ -260,7 +260,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_answer1
      *
-     * @param string $forgotten_password_answer1 The answer to the first forgotten password challenge question.
+     * @param ?string $forgotten_password_answer1 The answer to the first forgotten password challenge question.
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_answer2
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordAnswer2()
     {
@@ -284,7 +284,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_answer2
      *
-     * @param string $forgotten_password_answer2 The answer to the second forgotten password challenge question.
+     * @param ?string $forgotten_password_answer2 The answer to the second forgotten password challenge question.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_answer3
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordAnswer3()
     {
@@ -308,7 +308,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_answer3
      *
-     * @param string $forgotten_password_answer3 The answer to the third forgotten password challenge question.
+     * @param ?string $forgotten_password_answer3 The answer to the third forgotten password challenge question.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_answer4
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordAnswer4()
     {
@@ -332,7 +332,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_answer4
      *
-     * @param string $forgotten_password_answer4 The answer to the fourth forgotten password challenge question.
+     * @param ?string $forgotten_password_answer4 The answer to the fourth forgotten password challenge question.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_question1
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordQuestion1()
     {
@@ -356,7 +356,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_question1
      *
-     * @param string $forgotten_password_question1 The first challenge question presented to a user who has forgotten their password.
+     * @param ?string $forgotten_password_question1 The first challenge question presented to a user who has forgotten their password.
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_question2
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordQuestion2()
     {
@@ -380,7 +380,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_question2
      *
-     * @param string $forgotten_password_question2 The second challenge question presented to a user who has forgotten their password.
+     * @param ?string $forgotten_password_question2 The second challenge question presented to a user who has forgotten their password.
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_question3
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordQuestion3()
     {
@@ -404,7 +404,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_question3
      *
-     * @param string $forgotten_password_question3 The third challenge question presented to a user who has forgotten their password.
+     * @param ?string $forgotten_password_question3 The third challenge question presented to a user who has forgotten their password.
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Gets forgotten_password_question4
      *
-     * @return string
+     * @return ?string
      */
     public function getForgottenPasswordQuestion4()
     {
@@ -428,7 +428,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_question4
      *
-     * @param string $forgotten_password_question4 The fourth challenge question presented to a user who has forgotten their password.
+     * @param ?string $forgotten_password_question4 The fourth challenge question presented to a user who has forgotten their password.
      *
      * @return $this
      */

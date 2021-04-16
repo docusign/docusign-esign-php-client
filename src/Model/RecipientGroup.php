@@ -57,8 +57,8 @@ class RecipientGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'group_message' => 'string',
-        'group_name' => 'string',
+        'group_message' => '?string',
+        'group_name' => '?string',
         'recipients' => '\DocuSign\eSign\Model\RecipientOption[]'
     ];
 
@@ -219,7 +219,7 @@ class RecipientGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_message
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupMessage()
     {
@@ -229,7 +229,7 @@ class RecipientGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_message
      *
-     * @param string $group_message 
+     * @param ?string $group_message 
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class RecipientGroup implements ModelInterface, ArrayAccess
     /**
      * Gets group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupName()
     {
@@ -253,7 +253,7 @@ class RecipientGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_name
      *
-     * @param string $group_name The name of the group.
+     * @param ?string $group_name The name of the group.
      *
      * @return $this
      */

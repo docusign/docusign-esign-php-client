@@ -57,10 +57,10 @@ class SignatureUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_default' => 'string',
-        'rights' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string'
+        'is_default' => '?string',
+        'rights' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Gets is_default
      *
-     * @return string
+     * @return ?string
      */
     public function getIsDefault()
     {
@@ -235,7 +235,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param string $is_default 
+     * @param ?string $is_default 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Gets rights
      *
-     * @return string
+     * @return ?string
      */
     public function getRights()
     {
@@ -259,7 +259,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param string $rights 
+     * @param ?string $rights 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -283,7 +283,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -307,7 +307,7 @@ class SignatureUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */

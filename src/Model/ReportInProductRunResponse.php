@@ -57,13 +57,13 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'end_position' => 'string',
-        'exceeded_max_results' => 'string',
-        'last_warehouse_refresh_date_time' => 'string',
-        'result_set_size' => 'string',
+        'end_position' => '?string',
+        'exceeded_max_results' => '?string',
+        'last_warehouse_refresh_date_time' => '?string',
+        'result_set_size' => '?string',
         'rows' => '\DocuSign\eSign\Model\ReportInProductRunResponseRow[]',
-        'start_position' => 'string',
-        'total_set_size' => 'string'
+        'start_position' => '?string',
+        'total_set_size' => '?string'
     ];
 
     /**
@@ -243,7 +243,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Gets end_position
      *
-     * @return string
+     * @return ?string
      */
     public function getEndPosition()
     {
@@ -253,7 +253,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets end_position
      *
-     * @param string $end_position The last position in the result set.
+     * @param ?string $end_position The last position in the result set.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Gets exceeded_max_results
      *
-     * @return string
+     * @return ?string
      */
     public function getExceededMaxResults()
     {
@@ -277,7 +277,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets exceeded_max_results
      *
-     * @param string $exceeded_max_results 
+     * @param ?string $exceeded_max_results 
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Gets last_warehouse_refresh_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getLastWarehouseRefreshDateTime()
     {
@@ -301,7 +301,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets last_warehouse_refresh_date_time
      *
-     * @param string $last_warehouse_refresh_date_time 
+     * @param ?string $last_warehouse_refresh_date_time 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Gets result_set_size
      *
-     * @return string
+     * @return ?string
      */
     public function getResultSetSize()
     {
@@ -325,7 +325,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets result_set_size
      *
-     * @param string $result_set_size The number of results returned in this response.
+     * @param ?string $result_set_size The number of results returned in this response.
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Gets start_position
      *
-     * @return string
+     * @return ?string
      */
     public function getStartPosition()
     {
@@ -373,7 +373,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets start_position
      *
-     * @param string $start_position Starting position of the current result set.
+     * @param ?string $start_position Starting position of the current result set.
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Gets total_set_size
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalSetSize()
     {
@@ -397,7 +397,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets total_set_size
      *
-     * @param string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+     * @param ?string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
      *
      * @return $this
      */

@@ -57,31 +57,31 @@ class Document implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'apply_anchor_tabs' => 'string',
-        'assign_tabs_to_recipient_id' => 'string',
-        'display' => 'string',
-        'document_base64' => 'string',
+        'apply_anchor_tabs' => '?string',
+        'assign_tabs_to_recipient_id' => '?string',
+        'display' => '?string',
+        'document_base64' => '?string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
-        'document_id' => 'string',
-        'encrypted_with_key_manager' => 'string',
-        'file_extension' => 'string',
-        'file_format_hint' => 'string',
+        'document_id' => '?string',
+        'encrypted_with_key_manager' => '?string',
+        'file_extension' => '?string',
+        'file_format_hint' => '?string',
         'html_definition' => '\DocuSign\eSign\Model\DocumentHtmlDefinition',
-        'include_in_download' => 'string',
+        'include_in_download' => '?string',
         'match_boxes' => '\DocuSign\eSign\Model\MatchBox[]',
-        'name' => 'string',
-        'order' => 'string',
-        'pages' => 'string',
-        'password' => 'string',
-        'pdf_form_field_option' => 'string',
-        'remote_url' => 'string',
-        'signer_must_acknowledge' => 'string',
-        'signer_must_acknowledge_use_account_default' => 'bool',
+        'name' => '?string',
+        'order' => '?string',
+        'pages' => '?string',
+        'password' => '?string',
+        'pdf_form_field_option' => '?string',
+        'remote_url' => '?string',
+        'signer_must_acknowledge' => '?string',
+        'signer_must_acknowledge_use_account_default' => '?bool',
         'tabs' => '\DocuSign\eSign\Model\Tabs',
-        'template_locked' => 'string',
-        'template_required' => 'string',
-        'transform_pdf_fields' => 'string',
-        'uri' => 'string'
+        'template_locked' => '?string',
+        'template_required' => '?string',
+        'transform_pdf_fields' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -351,7 +351,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets apply_anchor_tabs
      *
-     * @return string
+     * @return ?string
      */
     public function getApplyAnchorTabs()
     {
@@ -361,7 +361,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets apply_anchor_tabs
      *
-     * @param string $apply_anchor_tabs Reserved: TBD
+     * @param ?string $apply_anchor_tabs Reserved: TBD
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets assign_tabs_to_recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAssignTabsToRecipientId()
     {
@@ -385,7 +385,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets assign_tabs_to_recipient_id
      *
-     * @param string $assign_tabs_to_recipient_id 
+     * @param ?string $assign_tabs_to_recipient_id 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets display
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplay()
     {
@@ -409,7 +409,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets display
      *
-     * @param string $display 
+     * @param ?string $display 
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets document_base64
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentBase64()
     {
@@ -433,7 +433,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets document_base64
      *
-     * @param string $document_base64 The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
+     * @param ?string $document_base64 The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -481,7 +481,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets encrypted_with_key_manager
      *
-     * @return string
+     * @return ?string
      */
     public function getEncryptedWithKeyManager()
     {
@@ -505,7 +505,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets encrypted_with_key_manager
      *
-     * @param string $encrypted_with_key_manager When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.
+     * @param ?string $encrypted_with_key_manager When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets file_extension
      *
-     * @return string
+     * @return ?string
      */
     public function getFileExtension()
     {
@@ -529,7 +529,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets file_extension
      *
-     * @param string $file_extension The file extension type of the document. If the document is not a PDF it is converted to a PDF.
+     * @param ?string $file_extension The file extension type of the document. If the document is not a PDF it is converted to a PDF.
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets file_format_hint
      *
-     * @return string
+     * @return ?string
      */
     public function getFileFormatHint()
     {
@@ -553,7 +553,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets file_format_hint
      *
-     * @param string $file_format_hint 
+     * @param ?string $file_format_hint 
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets include_in_download
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeInDownload()
     {
@@ -601,7 +601,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets include_in_download
      *
-     * @param string $include_in_download 
+     * @param ?string $include_in_download 
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -649,7 +649,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -663,7 +663,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return string
+     * @return ?string
      */
     public function getOrder()
     {
@@ -673,7 +673,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param string $order 
+     * @param ?string $order 
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets pages
      *
-     * @return string
+     * @return ?string
      */
     public function getPages()
     {
@@ -697,7 +697,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets pages
      *
-     * @param string $pages 
+     * @param ?string $pages 
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -721,7 +721,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -735,7 +735,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets pdf_form_field_option
      *
-     * @return string
+     * @return ?string
      */
     public function getPdfFormFieldOption()
     {
@@ -745,7 +745,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_form_field_option
      *
-     * @param string $pdf_form_field_option 
+     * @param ?string $pdf_form_field_option 
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets remote_url
      *
-     * @return string
+     * @return ?string
      */
     public function getRemoteUrl()
     {
@@ -769,7 +769,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets remote_url
      *
-     * @param string $remote_url The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}].
+     * @param ?string $remote_url The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}].
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets signer_must_acknowledge
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerMustAcknowledge()
     {
@@ -793,7 +793,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_acknowledge
      *
-     * @param string $signer_must_acknowledge 
+     * @param ?string $signer_must_acknowledge 
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets signer_must_acknowledge_use_account_default
      *
-     * @return bool
+     * @return ?bool
      */
     public function getSignerMustAcknowledgeUseAccountDefault()
     {
@@ -817,7 +817,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_acknowledge_use_account_default
      *
-     * @param bool $signer_must_acknowledge_use_account_default 
+     * @param ?bool $signer_must_acknowledge_use_account_default 
      *
      * @return $this
      */
@@ -855,7 +855,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets template_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateLocked()
     {
@@ -865,7 +865,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked
      *
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @param ?string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -879,7 +879,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets template_required
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequired()
     {
@@ -889,7 +889,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets template_required
      *
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @param ?string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -903,7 +903,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets transform_pdf_fields
      *
-     * @return string
+     * @return ?string
      */
     public function getTransformPdfFields()
     {
@@ -913,7 +913,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets transform_pdf_fields
      *
-     * @param string $transform_pdf_fields When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs.
+     * @param ?string $transform_pdf_fields When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs.
      *
      * @return $this
      */
@@ -927,7 +927,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -937,7 +937,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

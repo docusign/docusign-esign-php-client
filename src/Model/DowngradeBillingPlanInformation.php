@@ -57,7 +57,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'downgrade_event_type' => 'string',
+        'downgrade_event_type' => '?string',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation'
     ];
 
@@ -213,7 +213,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets downgrade_event_type
      *
-     * @return string
+     * @return ?string
      */
     public function getDowngradeEventType()
     {
@@ -223,7 +223,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_event_type
      *
-     * @param string $downgrade_event_type 
+     * @param ?string $downgrade_event_type 
      *
      * @return $this
      */

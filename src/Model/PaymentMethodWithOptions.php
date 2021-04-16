@@ -57,8 +57,8 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'supported_options' => 'string[]',
-        'type' => 'string'
+        'supported_options' => '?string[]',
+        'type' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
     /**
      * Gets supported_options
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSupportedOptions()
     {
@@ -223,7 +223,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
     /**
      * Sets supported_options
      *
-     * @param string[] $supported_options 
+     * @param ?string[] $supported_options 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -247,7 +247,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type 
+     * @param ?string $type 
      *
      * @return $this
      */

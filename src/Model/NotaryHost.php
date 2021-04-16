@@ -57,69 +57,69 @@ class NotaryHost implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_code' => 'string',
+        'access_code' => '?string',
         'access_code_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'add_access_code_to_email' => 'string',
-        'allow_system_override_for_locked_recipient' => 'string',
-        'client_user_id' => 'string',
-        'completed_count' => 'string',
-        'custom_fields' => 'string[]',
-        'declined_date_time' => 'string',
-        'declined_reason' => 'string',
-        'delivered_date_time' => 'string',
-        'delivery_method' => 'string',
+        'add_access_code_to_email' => '?string',
+        'allow_system_override_for_locked_recipient' => '?string',
+        'client_user_id' => '?string',
+        'completed_count' => '?string',
+        'custom_fields' => '?string[]',
+        'declined_date_time' => '?string',
+        'declined_reason' => '?string',
+        'delivered_date_time' => '?string',
+        'delivery_method' => '?string',
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'designator_id' => 'string',
-        'designator_id_guid' => 'string',
+        'designator_id' => '?string',
+        'designator_id_guid' => '?string',
         'document_visibility' => '\DocuSign\eSign\Model\DocumentVisibility[]',
-        'email' => 'string',
+        'email' => '?string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
-        'embedded_recipient_start_url' => 'string',
+        'embedded_recipient_start_url' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'fax_number' => 'string',
+        'fax_number' => '?string',
         'fax_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'host_recipient_id' => 'string',
-        'id_check_configuration_name' => 'string',
+        'host_recipient_id' => '?string',
+        'id_check_configuration_name' => '?string',
         'id_check_configuration_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'id_check_information_input' => '\DocuSign\eSign\Model\IdCheckInformationInput',
         'identity_verification' => '\DocuSign\eSign\Model\RecipientIdentityVerification',
-        'inherit_email_notification_configuration' => 'string',
-        'locked_recipient_phone_auth_editable' => 'string',
-        'locked_recipient_sms_editable' => 'string',
-        'name' => 'string',
+        'inherit_email_notification_configuration' => '?string',
+        'locked_recipient_phone_auth_editable' => '?string',
+        'locked_recipient_sms_editable' => '?string',
+        'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'note' => 'string',
+        'note' => '?string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_feature_metadata' => '\DocuSign\eSign\Model\FeatureAvailableMetadata[]',
-        'recipient_id' => 'string',
-        'recipient_id_guid' => 'string',
-        'recipient_type' => 'string',
+        'recipient_id' => '?string',
+        'recipient_id_guid' => '?string',
+        'recipient_type' => '?string',
         'recipient_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'require_id_lookup' => 'string',
+        'require_id_lookup' => '?string',
         'require_id_lookup_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'role_name' => 'string',
-        'routing_order' => 'string',
+        'role_name' => '?string',
+        'routing_order' => '?string',
         'routing_order_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'sent_date_time' => 'string',
-        'signed_date_time' => 'string',
-        'signing_group_id' => 'string',
+        'sent_date_time' => '?string',
+        'signed_date_time' => '?string',
+        'signing_group_id' => '?string',
         'signing_group_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'signing_group_name' => 'string',
+        'signing_group_name' => '?string',
         'signing_group_users' => '\DocuSign\eSign\Model\UserInfo[]',
         'sms_authentication' => '\DocuSign\eSign\Model\RecipientSMSAuthentication',
         'social_authentications' => '\DocuSign\eSign\Model\SocialAuthentication[]',
-        'status' => 'string',
-        'status_code' => 'string',
-        'suppress_emails' => 'string',
+        'status' => '?string',
+        'status_code' => '?string',
+        'suppress_emails' => '?string',
         'tabs' => '\DocuSign\eSign\Model\Tabs',
-        'template_locked' => 'string',
-        'template_required' => 'string',
-        'total_tab_count' => 'string',
-        'user_id' => 'string'
+        'template_locked' => '?string',
+        'template_required' => '?string',
+        'total_tab_count' => '?string',
+        'user_id' => '?string'
     ];
 
     /**
@@ -579,7 +579,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessCode()
     {
@@ -589,7 +589,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets access_code
      *
-     * @param string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+     * @param ?string $access_code If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
      *
      * @return $this
      */
@@ -627,7 +627,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets add_access_code_to_email
      *
-     * @return string
+     * @return ?string
      */
     public function getAddAccessCodeToEmail()
     {
@@ -637,7 +637,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets add_access_code_to_email
      *
-     * @param string $add_access_code_to_email This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.
+     * @param ?string $add_access_code_to_email This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.
      *
      * @return $this
      */
@@ -651,7 +651,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets allow_system_override_for_locked_recipient
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSystemOverrideForLockedRecipient()
     {
@@ -661,7 +661,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets allow_system_override_for_locked_recipient
      *
-     * @param string $allow_system_override_for_locked_recipient 
+     * @param ?string $allow_system_override_for_locked_recipient 
      *
      * @return $this
      */
@@ -675,7 +675,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets client_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getClientUserId()
     {
@@ -685,7 +685,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets client_user_id
      *
-     * @param string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
+     * @param ?string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -699,7 +699,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets completed_count
      *
-     * @return string
+     * @return ?string
      */
     public function getCompletedCount()
     {
@@ -709,7 +709,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets completed_count
      *
-     * @param string $completed_count 
+     * @param ?string $completed_count 
      *
      * @return $this
      */
@@ -723,7 +723,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets custom_fields
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getCustomFields()
     {
@@ -733,7 +733,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param string[] $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+     * @param ?string[] $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -747,7 +747,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets declined_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedDateTime()
     {
@@ -757,7 +757,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets declined_date_time
      *
-     * @param string $declined_date_time The date and time the recipient declined the document.
+     * @param ?string $declined_date_time The date and time the recipient declined the document.
      *
      * @return $this
      */
@@ -771,7 +771,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets declined_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedReason()
     {
@@ -781,7 +781,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets declined_reason
      *
-     * @param string $declined_reason The reason the recipient declined the document.
+     * @param ?string $declined_reason The reason the recipient declined the document.
      *
      * @return $this
      */
@@ -795,7 +795,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets delivered_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveredDateTime()
     {
@@ -805,7 +805,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets delivered_date_time
      *
-     * @param string $delivered_date_time Reserved: For DocuSign use only.
+     * @param ?string $delivered_date_time Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -819,7 +819,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_method
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveryMethod()
     {
@@ -829,7 +829,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method
      *
-     * @param string $delivery_method Reserved: For DocuSign use only.
+     * @param ?string $delivery_method Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -867,7 +867,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets designator_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDesignatorId()
     {
@@ -877,7 +877,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets designator_id
      *
-     * @param string $designator_id 
+     * @param ?string $designator_id 
      *
      * @return $this
      */
@@ -891,7 +891,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets designator_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getDesignatorIdGuid()
     {
@@ -901,7 +901,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets designator_id_guid
      *
-     * @param string $designator_id_guid 
+     * @param ?string $designator_id_guid 
      *
      * @return $this
      */
@@ -939,7 +939,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -949,7 +949,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -1011,7 +1011,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets embedded_recipient_start_url
      *
-     * @return string
+     * @return ?string
      */
     public function getEmbeddedRecipientStartUrl()
     {
@@ -1021,7 +1021,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets embedded_recipient_start_url
      *
-     * @param string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+     * @param ?string $embedded_recipient_start_url Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
      *
      * @return $this
      */
@@ -1059,7 +1059,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets fax_number
      *
-     * @return string
+     * @return ?string
      */
     public function getFaxNumber()
     {
@@ -1069,7 +1069,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number
      *
-     * @param string $fax_number Reserved:
+     * @param ?string $fax_number Reserved:
      *
      * @return $this
      */
@@ -1107,7 +1107,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets host_recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getHostRecipientId()
     {
@@ -1117,7 +1117,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets host_recipient_id
      *
-     * @param string $host_recipient_id 
+     * @param ?string $host_recipient_id 
      *
      * @return $this
      */
@@ -1131,7 +1131,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets id_check_configuration_name
      *
-     * @return string
+     * @return ?string
      */
     public function getIdCheckConfigurationName()
     {
@@ -1141,7 +1141,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name
      *
-     * @param string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
+     * @param ?string $id_check_configuration_name Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
      *
      * @return $this
      */
@@ -1227,7 +1227,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets inherit_email_notification_configuration
      *
-     * @return string
+     * @return ?string
      */
     public function getInheritEmailNotificationConfiguration()
     {
@@ -1237,7 +1237,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets inherit_email_notification_configuration
      *
-     * @param string $inherit_email_notification_configuration When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.
+     * @param ?string $inherit_email_notification_configuration When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.
      *
      * @return $this
      */
@@ -1251,7 +1251,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets locked_recipient_phone_auth_editable
      *
-     * @return string
+     * @return ?string
      */
     public function getLockedRecipientPhoneAuthEditable()
     {
@@ -1261,7 +1261,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets locked_recipient_phone_auth_editable
      *
-     * @param string $locked_recipient_phone_auth_editable 
+     * @param ?string $locked_recipient_phone_auth_editable 
      *
      * @return $this
      */
@@ -1275,7 +1275,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets locked_recipient_sms_editable
      *
-     * @return string
+     * @return ?string
      */
     public function getLockedRecipientSmsEditable()
     {
@@ -1285,7 +1285,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets locked_recipient_sms_editable
      *
-     * @param string $locked_recipient_sms_editable 
+     * @param ?string $locked_recipient_sms_editable 
      *
      * @return $this
      */
@@ -1299,7 +1299,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -1309,7 +1309,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -1347,7 +1347,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets note
      *
-     * @return string
+     * @return ?string
      */
     public function getNote()
     {
@@ -1357,7 +1357,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
+     * @param ?string $note Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
      *
      * @return $this
      */
@@ -1491,7 +1491,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -1501,7 +1501,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -1515,7 +1515,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id_guid
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientIdGuid()
     {
@@ -1525,7 +1525,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param string $recipient_id_guid 
+     * @param ?string $recipient_id_guid 
      *
      * @return $this
      */
@@ -1539,7 +1539,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_type
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientType()
     {
@@ -1549,7 +1549,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type
      *
-     * @param string $recipient_type 
+     * @param ?string $recipient_type 
      *
      * @return $this
      */
@@ -1587,7 +1587,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets require_id_lookup
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireIdLookup()
     {
@@ -1597,7 +1597,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets require_id_lookup
      *
-     * @param string $require_id_lookup When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.
+     * @param ?string $require_id_lookup When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.
      *
      * @return $this
      */
@@ -1635,7 +1635,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets role_name
      *
-     * @return string
+     * @return ?string
      */
     public function getRoleName()
     {
@@ -1645,7 +1645,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets role_name
      *
-     * @param string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+     * @param ?string $role_name Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
      *
      * @return $this
      */
@@ -1659,7 +1659,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets routing_order
      *
-     * @return string
+     * @return ?string
      */
     public function getRoutingOrder()
     {
@@ -1669,7 +1669,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order
      *
-     * @param string $routing_order Specifies the routing order of the recipient in the envelope.
+     * @param ?string $routing_order Specifies the routing order of the recipient in the envelope.
      *
      * @return $this
      */
@@ -1707,7 +1707,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets sent_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSentDateTime()
     {
@@ -1717,7 +1717,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets sent_date_time
      *
-     * @param string $sent_date_time The date and time the envelope was sent.
+     * @param ?string $sent_date_time The date and time the envelope was sent.
      *
      * @return $this
      */
@@ -1731,7 +1731,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets signed_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSignedDateTime()
     {
@@ -1741,7 +1741,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets signed_date_time
      *
-     * @param string $signed_date_time Reserved: For DocuSign use only.
+     * @param ?string $signed_date_time Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -1755,7 +1755,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_id
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupId()
     {
@@ -1765,7 +1765,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id
      *
-     * @param string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+     * @param ?string $signing_group_id When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
      *
      * @return $this
      */
@@ -1803,7 +1803,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets signing_group_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningGroupName()
     {
@@ -1813,7 +1813,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_name
      *
-     * @param string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
+     * @param ?string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
      *
      * @return $this
      */
@@ -1899,7 +1899,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -1909,7 +1909,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -1923,7 +1923,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets status_code
      *
-     * @return string
+     * @return ?string
      */
     public function getStatusCode()
     {
@@ -1933,7 +1933,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets status_code
      *
-     * @param string $status_code 
+     * @param ?string $status_code 
      *
      * @return $this
      */
@@ -1947,7 +1947,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets suppress_emails
      *
-     * @return string
+     * @return ?string
      */
     public function getSuppressEmails()
     {
@@ -1957,7 +1957,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets suppress_emails
      *
-     * @param string $suppress_emails 
+     * @param ?string $suppress_emails 
      *
      * @return $this
      */
@@ -1995,7 +1995,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets template_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateLocked()
     {
@@ -2005,7 +2005,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked
      *
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @param ?string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2019,7 +2019,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets template_required
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequired()
     {
@@ -2029,7 +2029,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets template_required
      *
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @param ?string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -2043,7 +2043,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets total_tab_count
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalTabCount()
     {
@@ -2053,7 +2053,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets total_tab_count
      *
-     * @param string $total_tab_count 
+     * @param ?string $total_tab_count 
      *
      * @return $this
      */
@@ -2067,7 +2067,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -2077,7 +2077,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */

@@ -57,22 +57,22 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'assertion_id' => 'string',
-        'authentication_instant' => 'string',
-        'authentication_method' => 'string',
-        'client_user_id' => 'string',
-        'email' => 'string',
-        'frame_ancestors' => 'string[]',
-        'message_origins' => 'string[]',
-        'ping_frequency' => 'string',
-        'ping_url' => 'string',
-        'recipient_id' => 'string',
-        'return_url' => 'string',
-        'security_domain' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string',
-        'x_frame_options' => 'string',
-        'x_frame_options_allow_from_url' => 'string'
+        'assertion_id' => '?string',
+        'authentication_instant' => '?string',
+        'authentication_method' => '?string',
+        'client_user_id' => '?string',
+        'email' => '?string',
+        'frame_ancestors' => '?string[]',
+        'message_origins' => '?string[]',
+        'ping_frequency' => '?string',
+        'ping_url' => '?string',
+        'recipient_id' => '?string',
+        'return_url' => '?string',
+        'security_domain' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string',
+        'x_frame_options' => '?string',
+        'x_frame_options_allow_from_url' => '?string'
     ];
 
     /**
@@ -297,7 +297,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets assertion_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAssertionId()
     {
@@ -307,7 +307,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets assertion_id
      *
-     * @param string $assertion_id A unique identifier of the authentication event executed by the client application.
+     * @param ?string $assertion_id A unique identifier of the authentication event executed by the client application.
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_instant
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationInstant()
     {
@@ -331,7 +331,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_instant
      *
-     * @param string $authentication_instant A sender generated value that indicates the date/time that the signer was authenticated.
+     * @param ?string $authentication_instant A sender generated value that indicates the date/time that the signer was authenticated.
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_method
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationMethod()
     {
@@ -355,7 +355,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_method
      *
-     * @param string $authentication_method A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion.
+     * @param ?string $authentication_method A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets client_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getClientUserId()
     {
@@ -379,7 +379,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets client_user_id
      *
-     * @param string $client_user_id A sender created value that shows the recipient is embedded (captive).   Maximum length: 100 characters.
+     * @param ?string $client_user_id A sender created value that shows the recipient is embedded (captive).   Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -403,7 +403,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient.
+     * @param ?string $email Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient.
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets frame_ancestors
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getFrameAncestors()
     {
@@ -427,7 +427,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets frame_ancestors
      *
-     * @param string[] $frame_ancestors 
+     * @param ?string[] $frame_ancestors 
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets message_origins
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getMessageOrigins()
     {
@@ -451,7 +451,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message_origins
      *
-     * @param string[] $message_origins 
+     * @param ?string[] $message_origins 
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ping_frequency
      *
-     * @return string
+     * @return ?string
      */
     public function getPingFrequency()
     {
@@ -475,7 +475,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ping_frequency
      *
-     * @param string $ping_frequency Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds.
+     * @param ?string $ping_frequency Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds.
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets ping_url
      *
-     * @return string
+     * @return ?string
      */
     public function getPingUrl()
     {
@@ -499,7 +499,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ping_url
      *
-     * @param string $ping_url A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received.
+     * @param ?string $ping_url A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received.
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -523,7 +523,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets return_url
      *
-     * @return string
+     * @return ?string
      */
     public function getReturnUrl()
     {
@@ -547,7 +547,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets return_url
      *
-     * @param string $return_url The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values:   * cancel (recipient canceled the signing operation) * decline (recipient declined to sign) * exception (an exception occurred) * fax_pending (recipient has a fax pending) * session_timeout (session timed out) * signing_complete (signer completed the signing ceremony) * ttl_expired (the TTL, time to live, timer expired) * viewing_complete (recipient completed viewing the envelope)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
+     * @param ?string $return_url The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values:   * cancel (recipient canceled the signing operation) * decline (recipient declined to sign) * exception (an exception occurred) * fax_pending (recipient has a fax pending) * session_timeout (session timed out) * signing_complete (signer completed the signing ceremony) * ttl_expired (the TTL, time to live, timer expired) * viewing_complete (recipient completed viewing the envelope)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets security_domain
      *
-     * @return string
+     * @return ?string
      */
     public function getSecurityDomain()
     {
@@ -571,7 +571,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets security_domain
      *
-     * @param string $security_domain The domain in which the user authenticated.
+     * @param ?string $security_domain The domain in which the user authenticated.
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -595,7 +595,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user.
+     * @param ?string $user_id Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user.
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -619,7 +619,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient.
+     * @param ?string $user_name Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient.
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets x_frame_options
      *
-     * @return string
+     * @return ?string
      */
     public function getXFrameOptions()
     {
@@ -643,7 +643,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options
      *
-     * @param string $x_frame_options 
+     * @param ?string $x_frame_options 
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Gets x_frame_options_allow_from_url
      *
-     * @return string
+     * @return ?string
      */
     public function getXFrameOptionsAllowFromUrl()
     {
@@ -667,7 +667,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options_allow_from_url
      *
-     * @param string $x_frame_options_allow_from_url 
+     * @param ?string $x_frame_options_allow_from_url 
      *
      * @return $this
      */

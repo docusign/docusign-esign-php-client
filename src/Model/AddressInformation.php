@@ -58,15 +58,15 @@ class AddressInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address1' => 'string',
-        'address2' => 'string',
-        'city' => 'string',
-        'country' => 'string',
-        'fax' => 'string',
-        'phone' => 'string',
-        'postal_code' => 'string',
-        'state_or_province' => 'string',
-        'zip_plus4' => 'string'
+        'address1' => '?string',
+        'address2' => '?string',
+        'city' => '?string',
+        'country' => '?string',
+        'fax' => '?string',
+        'phone' => '?string',
+        'postal_code' => '?string',
+        'state_or_province' => '?string',
+        'zip_plus4' => '?string'
     ];
 
     /**
@@ -256,7 +256,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets address1
      *
-     * @return string
+     * @return ?string
      */
     public function getAddress1()
     {
@@ -266,7 +266,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets address1
      *
-     * @param string $address1 First Line of the address. Maximum length: 100 characters.
+     * @param ?string $address1 First Line of the address. Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets address2
      *
-     * @return string
+     * @return ?string
      */
     public function getAddress2()
     {
@@ -290,7 +290,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets address2
      *
-     * @param string $address2 Second Line of the address. Maximum length: 100 characters.
+     * @param ?string $address2 Second Line of the address. Maximum length: 100 characters.
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets city
      *
-     * @return string
+     * @return ?string
      */
     public function getCity()
     {
@@ -314,7 +314,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets city
      *
-     * @param string $city The city associated with the address.
+     * @param ?string $city The city associated with the address.
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return string
+     * @return ?string
      */
     public function getCountry()
     {
@@ -338,7 +338,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country Specifies the country associated with the address.
+     * @param ?string $country Specifies the country associated with the address.
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets fax
      *
-     * @return string
+     * @return ?string
      */
     public function getFax()
     {
@@ -362,7 +362,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets fax
      *
-     * @param string $fax A Fax number associated with the address if one is available.
+     * @param ?string $fax A Fax number associated with the address if one is available.
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets phone
      *
-     * @return string
+     * @return ?string
      */
     public function getPhone()
     {
@@ -386,7 +386,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string $phone A phone number associated with the address.
+     * @param ?string $phone A phone number associated with the address.
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets postal_code
      *
-     * @return string
+     * @return ?string
      */
     public function getPostalCode()
     {
@@ -410,7 +410,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets postal_code
      *
-     * @param string $postal_code 
+     * @param ?string $postal_code 
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets state_or_province
      *
-     * @return string
+     * @return ?string
      */
     public function getStateOrProvince()
     {
@@ -434,7 +434,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets state_or_province
      *
-     * @param string $state_or_province 
+     * @param ?string $state_or_province 
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Gets zip_plus4
      *
-     * @return string
+     * @return ?string
      */
     public function getZipPlus4()
     {
@@ -458,7 +458,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets zip_plus4
      *
-     * @param string $zip_plus4 
+     * @param ?string $zip_plus4 
      *
      * @return $this
      */

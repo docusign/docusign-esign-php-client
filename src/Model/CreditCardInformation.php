@@ -58,12 +58,12 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'address' => '\DocuSign\eSign\Model\AddressInformation',
-        'card_number' => 'string',
-        'card_type' => 'string',
-        'cv_number' => 'string',
-        'expiration_month' => 'string',
-        'expiration_year' => 'string',
-        'name_on_card' => 'string'
+        'card_number' => '?string',
+        'card_type' => '?string',
+        'cv_number' => '?string',
+        'expiration_month' => '?string',
+        'expiration_year' => '?string',
+        'name_on_card' => '?string'
     ];
 
     /**
@@ -267,7 +267,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Gets card_number
      *
-     * @return string
+     * @return ?string
      */
     public function getCardNumber()
     {
@@ -277,7 +277,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets card_number
      *
-     * @param string $card_number The number on the credit card.
+     * @param ?string $card_number The number on the credit card.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Gets card_type
      *
-     * @return string
+     * @return ?string
      */
     public function getCardType()
     {
@@ -301,7 +301,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets card_type
      *
-     * @param string $card_type The credit card type. Valid values are: visa, mastercard, or amex.
+     * @param ?string $card_type The credit card type. Valid values are: visa, mastercard, or amex.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Gets cv_number
      *
-     * @return string
+     * @return ?string
      */
     public function getCvNumber()
     {
@@ -325,7 +325,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets cv_number
      *
-     * @param string $cv_number 
+     * @param ?string $cv_number 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Gets expiration_month
      *
-     * @return string
+     * @return ?string
      */
     public function getExpirationMonth()
     {
@@ -349,7 +349,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets expiration_month
      *
-     * @param string $expiration_month The month that the credit card expires (1-12).
+     * @param ?string $expiration_month The month that the credit card expires (1-12).
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Gets expiration_year
      *
-     * @return string
+     * @return ?string
      */
     public function getExpirationYear()
     {
@@ -373,7 +373,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets expiration_year
      *
-     * @param string $expiration_year The year 4 digit year in which the credit card expires.
+     * @param ?string $expiration_year The year 4 digit year in which the credit card expires.
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Gets name_on_card
      *
-     * @return string
+     * @return ?string
      */
     public function getNameOnCard()
     {
@@ -397,7 +397,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets name_on_card
      *
-     * @param string $name_on_card The exact name printed on the credit card.
+     * @param ?string $name_on_card The exact name printed on the credit card.
      *
      * @return $this
      */

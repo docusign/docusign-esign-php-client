@@ -57,11 +57,11 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configurationtype' => 'string',
-        'connect_id' => 'string',
-        'enabled' => 'string',
-        'has_access' => 'string',
-        'sender_searchable_items' => 'string[]'
+        'configurationtype' => '?string',
+        'connect_id' => '?string',
+        'enabled' => '?string',
+        'has_access' => '?string',
+        'sender_searchable_items' => '?string[]'
     ];
 
     /**
@@ -231,7 +231,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Gets configurationtype
      *
-     * @return string
+     * @return ?string
      */
     public function getConfigurationtype()
     {
@@ -241,7 +241,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Sets configurationtype
      *
-     * @param string $configurationtype If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
+     * @param ?string $configurationtype If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Gets connect_id
      *
-     * @return string
+     * @return ?string
      */
     public function getConnectId()
     {
@@ -265,7 +265,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Sets connect_id
      *
-     * @param string $connect_id 
+     * @param ?string $connect_id 
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Gets enabled
      *
-     * @return string
+     * @return ?string
      */
     public function getEnabled()
     {
@@ -289,7 +289,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Sets enabled
      *
-     * @param string $enabled 
+     * @param ?string $enabled 
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Gets has_access
      *
-     * @return string
+     * @return ?string
      */
     public function getHasAccess()
     {
@@ -313,7 +313,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Sets has_access
      *
-     * @param string $has_access 
+     * @param ?string $has_access 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Gets sender_searchable_items
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getSenderSearchableItems()
     {
@@ -337,7 +337,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
     /**
      * Sets sender_searchable_items
      *
-     * @param string[] $sender_searchable_items 
+     * @param ?string[] $sender_searchable_items 
      *
      * @return $this
      */

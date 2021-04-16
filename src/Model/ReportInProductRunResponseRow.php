@@ -57,7 +57,7 @@ class ReportInProductRunResponseRow implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_id' => 'string',
+        'envelope_id' => '?string',
         'fields' => '\DocuSign\eSign\Model\ReportInProductRunResponseRowFields'
     ];
 
@@ -213,7 +213,7 @@ class ReportInProductRunResponseRow implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -223,7 +223,7 @@ class ReportInProductRunResponseRow implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */

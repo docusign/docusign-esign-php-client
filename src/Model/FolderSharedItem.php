@@ -58,15 +58,15 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'folder_id' => 'string',
-        'name' => 'string',
+        'folder_id' => '?string',
+        'name' => '?string',
         'owner' => '\DocuSign\eSign\Model\UserInfo',
-        'parent_folder_id' => 'string',
-        'parent_folder_uri' => 'string',
-        'shared' => 'string',
+        'parent_folder_id' => '?string',
+        'parent_folder_uri' => '?string',
+        'shared' => '?string',
         'shared_groups' => '\DocuSign\eSign\Model\MemberGroupSharedItem[]',
         'shared_users' => '\DocuSign\eSign\Model\UserSharedItem[]',
-        'uri' => 'string',
+        'uri' => '?string',
         'user' => '\DocuSign\eSign\Model\UserInfo'
     ];
 
@@ -291,7 +291,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFolderId()
     {
@@ -301,7 +301,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets folder_id
      *
-     * @param string $folder_id 
+     * @param ?string $folder_id 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -325,7 +325,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderId()
     {
@@ -373,7 +373,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_id
      *
-     * @param string $parent_folder_id 
+     * @param ?string $parent_folder_id 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderUri()
     {
@@ -397,7 +397,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_uri
      *
-     * @param string $parent_folder_uri 
+     * @param ?string $parent_folder_uri 
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -421,7 +421,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -493,7 +493,7 @@ class FolderSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

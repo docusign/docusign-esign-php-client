@@ -57,12 +57,12 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'certificate' => 'string',
-        'correlation_id' => 'string',
+        'certificate' => '?string',
+        'correlation_id' => '?string',
         'document_update_infos' => '\DocuSign\eSign\Model\DocumentUpdateInfo[]',
-        'max_signature_length' => 'string',
-        'signing_location' => 'string',
-        'transaction_id' => 'string'
+        'max_signature_length' => '?string',
+        'signing_location' => '?string',
+        'transaction_id' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Gets certificate
      *
-     * @return string
+     * @return ?string
      */
     public function getCertificate()
     {
@@ -247,7 +247,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets certificate
      *
-     * @param string $certificate 
+     * @param ?string $certificate 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Gets correlation_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCorrelationId()
     {
@@ -271,7 +271,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets correlation_id
      *
-     * @param string $correlation_id 
+     * @param ?string $correlation_id 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Gets max_signature_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMaxSignatureLength()
     {
@@ -319,7 +319,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets max_signature_length
      *
-     * @param string $max_signature_length 
+     * @param ?string $max_signature_length 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Gets signing_location
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningLocation()
     {
@@ -343,7 +343,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets signing_location
      *
-     * @param string $signing_location Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+     * @param ?string $signing_location Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTransactionId()
     {
@@ -367,7 +367,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
+     * @param ?string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
      *
      * @return $this
      */
