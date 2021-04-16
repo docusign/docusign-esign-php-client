@@ -57,8 +57,8 @@ class ContactPhoneNumber implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'phone_number' => 'string',
-        'phone_type' => 'string'
+        'phone_number' => '?string',
+        'phone_type' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ContactPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Gets phone_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneNumber()
     {
@@ -223,7 +223,7 @@ class ContactPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param string $phone_number 
+     * @param ?string $phone_number 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ContactPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Gets phone_type
      *
-     * @return string
+     * @return ?string
      */
     public function getPhoneType()
     {
@@ -247,7 +247,7 @@ class ContactPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets phone_type
      *
-     * @param string $phone_type 
+     * @param ?string $phone_type 
      *
      * @return $this
      */

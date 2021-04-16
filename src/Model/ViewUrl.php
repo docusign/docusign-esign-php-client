@@ -57,7 +57,7 @@ class ViewUrl implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'url' => 'string'
+        'url' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class ViewUrl implements ModelInterface, ArrayAccess
     /**
      * Gets url
      *
-     * @return string
+     * @return ?string
      */
     public function getUrl()
     {
@@ -217,7 +217,7 @@ class ViewUrl implements ModelInterface, ArrayAccess
     /**
      * Sets url
      *
-     * @param string $url The view URL to be navigated to.
+     * @param ?string $url The view URL to be navigated to.
      *
      * @return $this
      */

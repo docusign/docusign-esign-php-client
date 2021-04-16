@@ -57,10 +57,10 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
+        'email' => '?string',
         'form_data' => '\DocuSign\eSign\Model\NameValue[]',
-        'name' => 'string',
-        'recipient_id' => 'string'
+        'name' => '?string',
+        'recipient_id' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -235,7 +235,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -283,7 +283,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -307,7 +307,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */

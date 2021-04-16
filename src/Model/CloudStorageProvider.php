@@ -57,11 +57,11 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authentication_url' => 'string',
+        'authentication_url' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'redirect_url' => 'string',
-        'service' => 'string',
-        'service_id' => 'string'
+        'redirect_url' => '?string',
+        'service' => '?string',
+        'service_id' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_url
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthenticationUrl()
     {
@@ -241,7 +241,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_url
      *
-     * @param string $authentication_url The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl.
+     * @param ?string $authentication_url The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Gets redirect_url
      *
-     * @return string
+     * @return ?string
      */
     public function getRedirectUrl()
     {
@@ -289,7 +289,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Sets redirect_url
      *
-     * @param string $redirect_url The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
+     * @param ?string $redirect_url The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Gets service
      *
-     * @return string
+     * @return ?string
      */
     public function getService()
     {
@@ -313,7 +313,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Sets service
      *
-     * @param string $service The service name for the cloud storage provider.
+     * @param ?string $service The service name for the cloud storage provider.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Gets service_id
      *
-     * @return string
+     * @return ?string
      */
     public function getServiceId()
     {
@@ -337,7 +337,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Sets service_id
      *
-     * @param string $service_id The DocuSign generated ID for the cloud storage provider
+     * @param ?string $service_id The DocuSign generated ID for the cloud storage provider
      *
      * @return $this
      */

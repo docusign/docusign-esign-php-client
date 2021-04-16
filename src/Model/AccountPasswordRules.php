@@ -57,25 +57,25 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'expire_password' => 'string',
-        'expire_password_days' => 'string',
+        'expire_password' => '?string',
+        'expire_password_days' => '?string',
         'expire_password_days_metadata' => '\DocuSign\eSign\Model\AccountPasswordExpirePasswordDays',
-        'lockout_duration_minutes' => 'string',
+        'lockout_duration_minutes' => '?string',
         'lockout_duration_minutes_metadata' => '\DocuSign\eSign\Model\AccountPasswordLockoutDurationMinutes',
-        'lockout_duration_type' => 'string',
+        'lockout_duration_type' => '?string',
         'lockout_duration_type_metadata' => '\DocuSign\eSign\Model\AccountPasswordLockoutDurationType',
-        'minimum_password_age_days' => 'string',
+        'minimum_password_age_days' => '?string',
         'minimum_password_age_days_metadata' => '\DocuSign\eSign\Model\AccountPasswordMinimumPasswordAgeDays',
-        'minimum_password_length' => 'string',
+        'minimum_password_length' => '?string',
         'minimum_password_length_metadata' => '\DocuSign\eSign\Model\AccountMinimumPasswordLength',
-        'password_include_digit' => 'string',
-        'password_include_digit_or_special_character' => 'string',
-        'password_include_lower_case' => 'string',
-        'password_include_special_character' => 'string',
-        'password_include_upper_case' => 'string',
-        'password_strength_type' => 'string',
+        'password_include_digit' => '?string',
+        'password_include_digit_or_special_character' => '?string',
+        'password_include_lower_case' => '?string',
+        'password_include_special_character' => '?string',
+        'password_include_upper_case' => '?string',
+        'password_strength_type' => '?string',
         'password_strength_type_metadata' => '\DocuSign\eSign\Model\AccountPasswordStrengthType',
-        'questions_required' => 'string',
+        'questions_required' => '?string',
         'questions_required_metadata' => '\DocuSign\eSign\Model\AccountPasswordQuestionsRequired'
     ];
 
@@ -321,7 +321,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets expire_password
      *
-     * @return string
+     * @return ?string
      */
     public function getExpirePassword()
     {
@@ -331,7 +331,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets expire_password
      *
-     * @param string $expire_password 
+     * @param ?string $expire_password 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets expire_password_days
      *
-     * @return string
+     * @return ?string
      */
     public function getExpirePasswordDays()
     {
@@ -355,7 +355,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets expire_password_days
      *
-     * @param string $expire_password_days 
+     * @param ?string $expire_password_days 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets lockout_duration_minutes
      *
-     * @return string
+     * @return ?string
      */
     public function getLockoutDurationMinutes()
     {
@@ -403,7 +403,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets lockout_duration_minutes
      *
-     * @param string $lockout_duration_minutes 
+     * @param ?string $lockout_duration_minutes 
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets lockout_duration_type
      *
-     * @return string
+     * @return ?string
      */
     public function getLockoutDurationType()
     {
@@ -451,7 +451,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets lockout_duration_type
      *
-     * @param string $lockout_duration_type 
+     * @param ?string $lockout_duration_type 
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets minimum_password_age_days
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumPasswordAgeDays()
     {
@@ -499,7 +499,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_password_age_days
      *
-     * @param string $minimum_password_age_days 
+     * @param ?string $minimum_password_age_days 
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets minimum_password_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMinimumPasswordLength()
     {
@@ -547,7 +547,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_password_length
      *
-     * @param string $minimum_password_length 
+     * @param ?string $minimum_password_length 
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_digit
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeDigit()
     {
@@ -595,7 +595,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_digit
      *
-     * @param string $password_include_digit 
+     * @param ?string $password_include_digit 
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_digit_or_special_character
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeDigitOrSpecialCharacter()
     {
@@ -619,7 +619,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_digit_or_special_character
      *
-     * @param string $password_include_digit_or_special_character 
+     * @param ?string $password_include_digit_or_special_character 
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_lower_case
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeLowerCase()
     {
@@ -643,7 +643,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_lower_case
      *
-     * @param string $password_include_lower_case 
+     * @param ?string $password_include_lower_case 
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_special_character
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeSpecialCharacter()
     {
@@ -667,7 +667,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_special_character
      *
-     * @param string $password_include_special_character 
+     * @param ?string $password_include_special_character 
      *
      * @return $this
      */
@@ -681,7 +681,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets password_include_upper_case
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordIncludeUpperCase()
     {
@@ -691,7 +691,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_upper_case
      *
-     * @param string $password_include_upper_case 
+     * @param ?string $password_include_upper_case 
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets password_strength_type
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordStrengthType()
     {
@@ -715,7 +715,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_strength_type
      *
-     * @param string $password_strength_type 
+     * @param ?string $password_strength_type 
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Gets questions_required
      *
-     * @return string
+     * @return ?string
      */
     public function getQuestionsRequired()
     {
@@ -763,7 +763,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets questions_required
      *
-     * @param string $questions_required 
+     * @param ?string $questions_required 
      *
      * @return $this
      */

@@ -57,12 +57,12 @@ class PermissionProfile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'modified_by_username' => 'string',
-        'modified_date_time' => 'string',
-        'permission_profile_id' => 'string',
-        'permission_profile_name' => 'string',
+        'modified_by_username' => '?string',
+        'modified_date_time' => '?string',
+        'permission_profile_id' => '?string',
+        'permission_profile_name' => '?string',
         'settings' => '\DocuSign\eSign\Model\AccountRoleSettings',
-        'user_count' => 'string',
+        'user_count' => '?string',
         'users' => '\DocuSign\eSign\Model\UserInformation[]'
     ];
 
@@ -243,7 +243,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Gets modified_by_username
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedByUsername()
     {
@@ -253,7 +253,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by_username
      *
-     * @param string $modified_by_username 
+     * @param ?string $modified_by_username 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Gets modified_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getModifiedDateTime()
     {
@@ -277,7 +277,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date_time
      *
-     * @param string $modified_date_time 
+     * @param ?string $modified_date_time 
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Gets permission_profile_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPermissionProfileId()
     {
@@ -301,7 +301,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_id
      *
-     * @param string $permission_profile_id 
+     * @param ?string $permission_profile_id 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Gets permission_profile_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPermissionProfileName()
     {
@@ -325,7 +325,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_name
      *
-     * @param string $permission_profile_name 
+     * @param ?string $permission_profile_name 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Gets user_count
      *
-     * @return string
+     * @return ?string
      */
     public function getUserCount()
     {
@@ -373,7 +373,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets user_count
      *
-     * @param string $user_count 
+     * @param ?string $user_count 
      *
      * @return $this
      */

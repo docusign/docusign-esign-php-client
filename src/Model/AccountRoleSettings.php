@@ -57,75 +57,75 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allow_account_management' => 'string',
+        'allow_account_management' => '?string',
         'allow_account_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_api_access' => 'string',
+        'allow_api_access' => '?string',
         'allow_api_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_api_access_to_account' => 'string',
+        'allow_api_access_to_account' => '?string',
         'allow_api_access_to_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_api_sending_on_behalf_of_others' => 'string',
+        'allow_api_sending_on_behalf_of_others' => '?string',
         'allow_api_sending_on_behalf_of_others_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_api_sequential_signing' => 'string',
+        'allow_api_sequential_signing' => '?string',
         'allow_api_sequential_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_auto_tagging' => 'string',
+        'allow_auto_tagging' => '?string',
         'allow_auto_tagging_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_bulk_sending' => 'string',
+        'allow_bulk_sending' => '?string',
         'allow_bulk_sending_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_docu_sign_desktop_client' => 'string',
+        'allow_docu_sign_desktop_client' => '?string',
         'allow_docu_sign_desktop_client_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allowed_address_book_access' => 'string',
+        'allowed_address_book_access' => '?string',
         'allowed_address_book_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allowed_template_access' => 'string',
+        'allowed_template_access' => '?string',
         'allowed_template_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allowed_to_be_envelope_transfer_recipient' => 'string',
+        'allowed_to_be_envelope_transfer_recipient' => '?string',
         'allowed_to_be_envelope_transfer_recipient_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_envelope_sending' => 'string',
+        'allow_envelope_sending' => '?string',
         'allow_envelope_sending_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_e_seal_recipients' => 'string',
+        'allow_e_seal_recipients' => '?string',
         'allow_e_seal_recipients_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_power_forms_admin_to_access_all_power_form_envelopes' => 'string',
+        'allow_power_forms_admin_to_access_all_power_form_envelopes' => '?string',
         'allow_power_forms_admin_to_access_all_power_form_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_senders_to_set_recipient_email_language' => 'string',
+        'allow_senders_to_set_recipient_email_language' => '?string',
         'allow_senders_to_set_recipient_email_language_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_signer_attachments' => 'string',
+        'allow_signer_attachments' => '?string',
         'allow_signer_attachments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_supplemental_documents' => 'string',
+        'allow_supplemental_documents' => '?string',
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_tagging_in_send_and_correct' => 'string',
+        'allow_tagging_in_send_and_correct' => '?string',
         'allow_tagging_in_send_and_correct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_vaulting' => 'string',
+        'allow_vaulting' => '?string',
         'allow_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_wet_signing_override' => 'string',
+        'allow_wet_signing_override' => '?string',
         'allow_wet_signing_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'can_create_workspaces' => 'string',
+        'can_create_workspaces' => '?string',
         'can_create_workspaces_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_document_upload' => 'string',
+        'disable_document_upload' => '?string',
         'disable_document_upload_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'disable_other_actions' => 'string',
+        'disable_other_actions' => '?string',
         'disable_other_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_api_request_logging' => 'string',
+        'enable_api_request_logging' => '?string',
         'enable_api_request_logging_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_recipient_viewing_notifications' => 'string',
+        'enable_recipient_viewing_notifications' => '?string',
         'enable_recipient_viewing_notifications_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_sequential_signing_interface' => 'string',
+        'enable_sequential_signing_interface' => '?string',
         'enable_sequential_signing_interface_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_transaction_point_integration' => 'string',
+        'enable_transaction_point_integration' => '?string',
         'enable_transaction_point_integration_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'power_form_role' => 'string',
+        'power_form_role' => '?string',
         'power_form_role_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'receive_completed_self_signed_documents_as_email_links' => 'string',
+        'receive_completed_self_signed_documents_as_email_links' => '?string',
         'receive_completed_self_signed_documents_as_email_links_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_accept' => 'string',
+        'supplemental_documents_must_accept' => '?string',
         'supplemental_documents_must_accept_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_read' => 'string',
+        'supplemental_documents_must_read' => '?string',
         'supplemental_documents_must_read_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'supplemental_documents_must_view' => 'string',
+        'supplemental_documents_must_view' => '?string',
         'supplemental_documents_must_view_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_new_docu_sign_experience_interface' => 'string',
+        'use_new_docu_sign_experience_interface' => '?string',
         'use_new_docu_sign_experience_interface_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'use_new_sending_interface' => 'string',
+        'use_new_sending_interface' => '?string',
         'use_new_sending_interface_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'vaulting_mode' => 'string',
+        'vaulting_mode' => '?string',
         'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
@@ -621,7 +621,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_account_management
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAccountManagement()
     {
@@ -631,7 +631,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_account_management
      *
-     * @param string $allow_account_management 
+     * @param ?string $allow_account_management 
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_api_access
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowApiAccess()
     {
@@ -679,7 +679,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_access
      *
-     * @param string $allow_api_access 
+     * @param ?string $allow_api_access 
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_api_access_to_account
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowApiAccessToAccount()
     {
@@ -727,7 +727,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_access_to_account
      *
-     * @param string $allow_api_access_to_account 
+     * @param ?string $allow_api_access_to_account 
      *
      * @return $this
      */
@@ -765,7 +765,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_api_sending_on_behalf_of_others
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowApiSendingOnBehalfOfOthers()
     {
@@ -775,7 +775,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_sending_on_behalf_of_others
      *
-     * @param string $allow_api_sending_on_behalf_of_others 
+     * @param ?string $allow_api_sending_on_behalf_of_others 
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_api_sequential_signing
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowApiSequentialSigning()
     {
@@ -823,7 +823,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_sequential_signing
      *
-     * @param string $allow_api_sequential_signing 
+     * @param ?string $allow_api_sequential_signing 
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_auto_tagging
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowAutoTagging()
     {
@@ -871,7 +871,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_tagging
      *
-     * @param string $allow_auto_tagging 
+     * @param ?string $allow_auto_tagging 
      *
      * @return $this
      */
@@ -909,7 +909,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_bulk_sending
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowBulkSending()
     {
@@ -919,7 +919,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_bulk_sending
      *
-     * @param string $allow_bulk_sending 
+     * @param ?string $allow_bulk_sending 
      *
      * @return $this
      */
@@ -957,7 +957,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_docu_sign_desktop_client
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowDocuSignDesktopClient()
     {
@@ -967,7 +967,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_docu_sign_desktop_client
      *
-     * @param string $allow_docu_sign_desktop_client 
+     * @param ?string $allow_docu_sign_desktop_client 
      *
      * @return $this
      */
@@ -1005,7 +1005,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_address_book_access
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowedAddressBookAccess()
     {
@@ -1015,7 +1015,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_address_book_access
      *
-     * @param string $allowed_address_book_access 
+     * @param ?string $allowed_address_book_access 
      *
      * @return $this
      */
@@ -1053,7 +1053,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_template_access
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowedTemplateAccess()
     {
@@ -1063,7 +1063,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_template_access
      *
-     * @param string $allowed_template_access 
+     * @param ?string $allowed_template_access 
      *
      * @return $this
      */
@@ -1101,7 +1101,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_to_be_envelope_transfer_recipient
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowedToBeEnvelopeTransferRecipient()
     {
@@ -1111,7 +1111,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_to_be_envelope_transfer_recipient
      *
-     * @param string $allowed_to_be_envelope_transfer_recipient 
+     * @param ?string $allowed_to_be_envelope_transfer_recipient 
      *
      * @return $this
      */
@@ -1149,7 +1149,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_envelope_sending
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowEnvelopeSending()
     {
@@ -1159,7 +1159,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_sending
      *
-     * @param string $allow_envelope_sending 
+     * @param ?string $allow_envelope_sending 
      *
      * @return $this
      */
@@ -1197,7 +1197,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_e_seal_recipients
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowESealRecipients()
     {
@@ -1207,7 +1207,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_e_seal_recipients
      *
-     * @param string $allow_e_seal_recipients 
+     * @param ?string $allow_e_seal_recipients 
      *
      * @return $this
      */
@@ -1245,7 +1245,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_power_forms_admin_to_access_all_power_form_envelopes
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowPowerFormsAdminToAccessAllPowerFormEnvelopes()
     {
@@ -1255,7 +1255,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_power_forms_admin_to_access_all_power_form_envelopes
      *
-     * @param string $allow_power_forms_admin_to_access_all_power_form_envelopes 
+     * @param ?string $allow_power_forms_admin_to_access_all_power_form_envelopes 
      *
      * @return $this
      */
@@ -1293,7 +1293,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_senders_to_set_recipient_email_language
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSendersToSetRecipientEmailLanguage()
     {
@@ -1303,7 +1303,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_senders_to_set_recipient_email_language
      *
-     * @param string $allow_senders_to_set_recipient_email_language 
+     * @param ?string $allow_senders_to_set_recipient_email_language 
      *
      * @return $this
      */
@@ -1341,7 +1341,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_signer_attachments
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSignerAttachments()
     {
@@ -1351,7 +1351,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_attachments
      *
-     * @param string $allow_signer_attachments 
+     * @param ?string $allow_signer_attachments 
      *
      * @return $this
      */
@@ -1389,7 +1389,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_supplemental_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowSupplementalDocuments()
     {
@@ -1399,7 +1399,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_supplemental_documents
      *
-     * @param string $allow_supplemental_documents 
+     * @param ?string $allow_supplemental_documents 
      *
      * @return $this
      */
@@ -1437,7 +1437,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_tagging_in_send_and_correct
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowTaggingInSendAndCorrect()
     {
@@ -1447,7 +1447,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_tagging_in_send_and_correct
      *
-     * @param string $allow_tagging_in_send_and_correct 
+     * @param ?string $allow_tagging_in_send_and_correct 
      *
      * @return $this
      */
@@ -1485,7 +1485,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_vaulting
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowVaulting()
     {
@@ -1495,7 +1495,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_vaulting
      *
-     * @param string $allow_vaulting 
+     * @param ?string $allow_vaulting 
      *
      * @return $this
      */
@@ -1533,7 +1533,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets allow_wet_signing_override
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowWetSigningOverride()
     {
@@ -1543,7 +1543,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_wet_signing_override
      *
-     * @param string $allow_wet_signing_override 
+     * @param ?string $allow_wet_signing_override 
      *
      * @return $this
      */
@@ -1581,7 +1581,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets can_create_workspaces
      *
-     * @return string
+     * @return ?string
      */
     public function getCanCreateWorkspaces()
     {
@@ -1591,7 +1591,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_create_workspaces
      *
-     * @param string $can_create_workspaces 
+     * @param ?string $can_create_workspaces 
      *
      * @return $this
      */
@@ -1629,7 +1629,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets disable_document_upload
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableDocumentUpload()
     {
@@ -1639,7 +1639,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets disable_document_upload
      *
-     * @param string $disable_document_upload 
+     * @param ?string $disable_document_upload 
      *
      * @return $this
      */
@@ -1677,7 +1677,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets disable_other_actions
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableOtherActions()
     {
@@ -1687,7 +1687,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets disable_other_actions
      *
-     * @param string $disable_other_actions 
+     * @param ?string $disable_other_actions 
      *
      * @return $this
      */
@@ -1725,7 +1725,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_api_request_logging
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableApiRequestLogging()
     {
@@ -1735,7 +1735,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_api_request_logging
      *
-     * @param string $enable_api_request_logging 
+     * @param ?string $enable_api_request_logging 
      *
      * @return $this
      */
@@ -1773,7 +1773,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_recipient_viewing_notifications
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableRecipientViewingNotifications()
     {
@@ -1783,7 +1783,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_recipient_viewing_notifications
      *
-     * @param string $enable_recipient_viewing_notifications 
+     * @param ?string $enable_recipient_viewing_notifications 
      *
      * @return $this
      */
@@ -1821,7 +1821,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_sequential_signing_interface
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSequentialSigningInterface()
     {
@@ -1831,7 +1831,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_interface
      *
-     * @param string $enable_sequential_signing_interface 
+     * @param ?string $enable_sequential_signing_interface 
      *
      * @return $this
      */
@@ -1869,7 +1869,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets enable_transaction_point_integration
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableTransactionPointIntegration()
     {
@@ -1879,7 +1879,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_transaction_point_integration
      *
-     * @param string $enable_transaction_point_integration 
+     * @param ?string $enable_transaction_point_integration 
      *
      * @return $this
      */
@@ -1917,7 +1917,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets power_form_role
      *
-     * @return string
+     * @return ?string
      */
     public function getPowerFormRole()
     {
@@ -1927,7 +1927,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets power_form_role
      *
-     * @param string $power_form_role 
+     * @param ?string $power_form_role 
      *
      * @return $this
      */
@@ -1965,7 +1965,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets receive_completed_self_signed_documents_as_email_links
      *
-     * @return string
+     * @return ?string
      */
     public function getReceiveCompletedSelfSignedDocumentsAsEmailLinks()
     {
@@ -1975,7 +1975,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets receive_completed_self_signed_documents_as_email_links
      *
-     * @param string $receive_completed_self_signed_documents_as_email_links 
+     * @param ?string $receive_completed_self_signed_documents_as_email_links 
      *
      * @return $this
      */
@@ -2013,7 +2013,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_accept
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustAccept()
     {
@@ -2023,7 +2023,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_accept
      *
-     * @param string $supplemental_documents_must_accept 
+     * @param ?string $supplemental_documents_must_accept 
      *
      * @return $this
      */
@@ -2061,7 +2061,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_read
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustRead()
     {
@@ -2071,7 +2071,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_read
      *
-     * @param string $supplemental_documents_must_read 
+     * @param ?string $supplemental_documents_must_read 
      *
      * @return $this
      */
@@ -2109,7 +2109,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets supplemental_documents_must_view
      *
-     * @return string
+     * @return ?string
      */
     public function getSupplementalDocumentsMustView()
     {
@@ -2119,7 +2119,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_view
      *
-     * @param string $supplemental_documents_must_view 
+     * @param ?string $supplemental_documents_must_view 
      *
      * @return $this
      */
@@ -2157,7 +2157,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets use_new_docu_sign_experience_interface
      *
-     * @return string
+     * @return ?string
      */
     public function getUseNewDocuSignExperienceInterface()
     {
@@ -2167,7 +2167,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_docu_sign_experience_interface
      *
-     * @param string $use_new_docu_sign_experience_interface 
+     * @param ?string $use_new_docu_sign_experience_interface 
      *
      * @return $this
      */
@@ -2205,7 +2205,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets use_new_sending_interface
      *
-     * @return string
+     * @return ?string
      */
     public function getUseNewSendingInterface()
     {
@@ -2215,7 +2215,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_sending_interface
      *
-     * @param string $use_new_sending_interface 
+     * @param ?string $use_new_sending_interface 
      *
      * @return $this
      */
@@ -2253,7 +2253,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Gets vaulting_mode
      *
-     * @return string
+     * @return ?string
      */
     public function getVaultingMode()
     {
@@ -2263,7 +2263,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets vaulting_mode
      *
-     * @param string $vaulting_mode 
+     * @param ?string $vaulting_mode 
      *
      * @return $this
      */

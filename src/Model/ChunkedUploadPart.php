@@ -57,8 +57,8 @@ class ChunkedUploadPart implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sequence' => 'string',
-        'size' => 'string'
+        'sequence' => '?string',
+        'size' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ChunkedUploadPart implements ModelInterface, ArrayAccess
     /**
      * Gets sequence
      *
-     * @return string
+     * @return ?string
      */
     public function getSequence()
     {
@@ -223,7 +223,7 @@ class ChunkedUploadPart implements ModelInterface, ArrayAccess
     /**
      * Sets sequence
      *
-     * @param string $sequence 
+     * @param ?string $sequence 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ChunkedUploadPart implements ModelInterface, ArrayAccess
     /**
      * Gets size
      *
-     * @return string
+     * @return ?string
      */
     public function getSize()
     {
@@ -247,7 +247,7 @@ class ChunkedUploadPart implements ModelInterface, ArrayAccess
     /**
      * Sets size
      *
-     * @param string $size 
+     * @param ?string $size 
      *
      * @return $this
      */

@@ -58,22 +58,22 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created' => 'string',
-        'description' => 'string',
-        'folder_id' => 'string',
-        'folder_name' => 'string',
-        'folder_uri' => 'string',
-        'last_modified' => 'string',
+        'created' => '?string',
+        'description' => '?string',
+        'folder_id' => '?string',
+        'folder_name' => '?string',
+        'folder_uri' => '?string',
+        'last_modified' => '?string',
         'last_modified_by' => '\DocuSign\eSign\Model\UserInfo',
-        'name' => 'string',
-        'new_password' => 'string',
+        'name' => '?string',
+        'new_password' => '?string',
         'owner' => '\DocuSign\eSign\Model\UserInfo',
-        'page_count' => 'int',
-        'parent_folder_uri' => 'string',
-        'password' => 'string',
-        'shared' => 'string',
-        'template_id' => 'string',
-        'uri' => 'string'
+        'page_count' => '?int',
+        'parent_folder_uri' => '?string',
+        'password' => '?string',
+        'shared' => '?string',
+        'template_id' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -298,7 +298,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -308,7 +308,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created 
+     * @param ?string $created 
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -332,7 +332,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets folder_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFolderId()
     {
@@ -356,7 +356,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets folder_id
      *
-     * @param string $folder_id The ID for the folder.
+     * @param ?string $folder_id The ID for the folder.
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets folder_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFolderName()
     {
@@ -380,7 +380,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets folder_name
      *
-     * @param string $folder_name The name of the folder in which the template is located.
+     * @param ?string $folder_name The name of the folder in which the template is located.
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets folder_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getFolderUri()
     {
@@ -404,7 +404,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets folder_uri
      *
-     * @param string $folder_uri The URI of the folder.
+     * @param ?string $folder_uri The URI of the folder.
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModified()
     {
@@ -428,7 +428,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param string $last_modified 
+     * @param ?string $last_modified 
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -476,7 +476,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets new_password
      *
-     * @return string
+     * @return ?string
      */
     public function getNewPassword()
     {
@@ -500,7 +500,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets new_password
      *
-     * @param string $new_password 
+     * @param ?string $new_password 
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets page_count
      *
-     * @return int
+     * @return ?int
      */
     public function getPageCount()
     {
@@ -548,7 +548,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets page_count
      *
-     * @param int $page_count An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.
+     * @param ?int $page_count An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets parent_folder_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getParentFolderUri()
     {
@@ -572,7 +572,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_uri
      *
-     * @param string $parent_folder_uri 
+     * @param ?string $parent_folder_uri 
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -596,7 +596,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -620,7 +620,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -644,7 +644,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */
@@ -658,7 +658,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -668,7 +668,7 @@ class EnvelopeTemplateDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

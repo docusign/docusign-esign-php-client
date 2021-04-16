@@ -57,67 +57,67 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'accessibility' => 'string',
-        'allow_markup' => 'string',
-        'allow_reassign' => 'string',
-        'allow_recipient_recursion' => 'string',
-        'allow_view_history' => 'string',
-        'asynchronous' => 'string',
+        'accessibility' => '?string',
+        'allow_markup' => '?string',
+        'allow_reassign' => '?string',
+        'allow_recipient_recursion' => '?string',
+        'allow_view_history' => '?string',
+        'asynchronous' => '?string',
         'attachments' => '\DocuSign\eSign\Model\Attachment[]',
-        'attachments_uri' => 'string',
-        'authoritative_copy' => 'string',
-        'authoritative_copy_default' => 'string',
-        'auto_navigation' => 'string',
-        'brand_id' => 'string',
-        'brand_lock' => 'string',
-        'certificate_uri' => 'string',
-        'completed_date_time' => 'string',
+        'attachments_uri' => '?string',
+        'authoritative_copy' => '?string',
+        'authoritative_copy_default' => '?string',
+        'auto_navigation' => '?string',
+        'brand_id' => '?string',
+        'brand_lock' => '?string',
+        'certificate_uri' => '?string',
+        'completed_date_time' => '?string',
         'composite_templates' => '\DocuSign\eSign\Model\CompositeTemplate[]',
-        'copy_recipient_data' => 'string',
-        'created_date_time' => 'string',
+        'copy_recipient_data' => '?string',
+        'created_date_time' => '?string',
         'custom_fields' => '\DocuSign\eSign\Model\CustomFields',
-        'custom_fields_uri' => 'string',
-        'declined_date_time' => 'string',
-        'deleted_date_time' => 'string',
-        'delivered_date_time' => 'string',
-        'disable_responsive_document' => 'string',
+        'custom_fields_uri' => '?string',
+        'declined_date_time' => '?string',
+        'deleted_date_time' => '?string',
+        'delivered_date_time' => '?string',
+        'disable_responsive_document' => '?string',
         'documents' => '\DocuSign\eSign\Model\Document[]',
-        'documents_combined_uri' => 'string',
-        'documents_uri' => 'string',
-        'email_blurb' => 'string',
+        'documents_combined_uri' => '?string',
+        'documents_uri' => '?string',
+        'email_blurb' => '?string',
         'email_settings' => '\DocuSign\eSign\Model\EmailSettings',
-        'email_subject' => 'string',
-        'enable_wet_sign' => 'string',
-        'enforce_signer_visibility' => 'string',
-        'envelope_id' => 'string',
-        'envelope_id_stamping' => 'string',
-        'envelope_uri' => 'string',
+        'email_subject' => '?string',
+        'enable_wet_sign' => '?string',
+        'enforce_signer_visibility' => '?string',
+        'envelope_id' => '?string',
+        'envelope_id_stamping' => '?string',
+        'envelope_uri' => '?string',
         'event_notification' => '\DocuSign\eSign\Model\EventNotification',
-        'initial_sent_date_time' => 'string',
-        'is21_cfr_part11' => 'string',
-        'is_signature_provider_envelope' => 'string',
-        'last_modified_date_time' => 'string',
+        'initial_sent_date_time' => '?string',
+        'is21_cfr_part11' => '?string',
+        'is_signature_provider_envelope' => '?string',
+        'last_modified_date_time' => '?string',
         'lock_information' => '\DocuSign\eSign\Model\LockInformation',
-        'message_lock' => 'string',
+        'message_lock' => '?string',
         'notification' => '\DocuSign\eSign\Model\Notification',
-        'notification_uri' => 'string',
-        'password' => 'string',
-        'purge_state' => 'string',
+        'notification_uri' => '?string',
+        'password' => '?string',
+        'purge_state' => '?string',
         'recipients' => '\DocuSign\eSign\Model\Recipients',
-        'recipients_lock' => 'string',
-        'recipients_uri' => 'string',
-        'sent_date_time' => 'string',
-        'signer_can_sign_on_mobile' => 'string',
-        'signing_location' => 'string',
-        'status' => 'string',
-        'status_changed_date_time' => 'string',
-        'template_id' => 'string',
+        'recipients_lock' => '?string',
+        'recipients_uri' => '?string',
+        'sent_date_time' => '?string',
+        'signer_can_sign_on_mobile' => '?string',
+        'signing_location' => '?string',
+        'status' => '?string',
+        'status_changed_date_time' => '?string',
+        'template_id' => '?string',
         'template_roles' => '\DocuSign\eSign\Model\TemplateRole[]',
-        'templates_uri' => 'string',
-        'transaction_id' => 'string',
-        'use_disclosure' => 'string',
-        'voided_date_time' => 'string',
-        'voided_reason' => 'string'
+        'templates_uri' => '?string',
+        'transaction_id' => '?string',
+        'use_disclosure' => '?string',
+        'voided_date_time' => '?string',
+        'voided_reason' => '?string'
     ];
 
     /**
@@ -567,7 +567,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets accessibility
      *
-     * @return string
+     * @return ?string
      */
     public function getAccessibility()
     {
@@ -577,7 +577,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets accessibility
      *
-     * @param string $accessibility Sets the document reading zones for screen reader applications.  This element can only be used if Document Accessibility is enabled for the account.   ###### Note: This information is currently generated from the DocuSign web console by setting the reading zones when creating a template, exporting the reading zone string information, and adding it here.
+     * @param ?string $accessibility Sets the document reading zones for screen reader applications.  This element can only be used if Document Accessibility is enabled for the account.   ###### Note: This information is currently generated from the DocuSign web console by setting the reading zones when creating a template, exporting the reading zone string information, and adding it here.
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets allow_markup
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowMarkup()
     {
@@ -601,7 +601,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets allow_markup
      *
-     * @param string $allow_markup When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this
+     * @param ?string $allow_markup When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets allow_reassign
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowReassign()
     {
@@ -625,7 +625,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets allow_reassign
      *
-     * @param string $allow_reassign When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.
+     * @param ?string $allow_reassign When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets allow_recipient_recursion
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowRecipientRecursion()
     {
@@ -649,7 +649,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets allow_recipient_recursion
      *
-     * @param string $allow_recipient_recursion When set to **true**, this enables the Recursive Recipients feature and allows a recipient to appear more than once in the routing order.
+     * @param ?string $allow_recipient_recursion When set to **true**, this enables the Recursive Recipients feature and allows a recipient to appear more than once in the routing order.
      *
      * @return $this
      */
@@ -663,7 +663,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets allow_view_history
      *
-     * @return string
+     * @return ?string
      */
     public function getAllowViewHistory()
     {
@@ -673,7 +673,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets allow_view_history
      *
-     * @param string $allow_view_history 
+     * @param ?string $allow_view_history 
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets asynchronous
      *
-     * @return string
+     * @return ?string
      */
     public function getAsynchronous()
     {
@@ -697,7 +697,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets asynchronous
      *
-     * @param string $asynchronous When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.
+     * @param ?string $asynchronous When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.
      *
      * @return $this
      */
@@ -735,7 +735,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets attachments_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getAttachmentsUri()
     {
@@ -745,7 +745,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets attachments_uri
      *
-     * @param string $attachments_uri 
+     * @param ?string $attachments_uri 
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets authoritative_copy
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthoritativeCopy()
     {
@@ -769,7 +769,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets authoritative_copy
      *
-     * @param string $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+     * @param ?string $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets authoritative_copy_default
      *
-     * @return string
+     * @return ?string
      */
     public function getAuthoritativeCopyDefault()
     {
@@ -793,7 +793,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets authoritative_copy_default
      *
-     * @param string $authoritative_copy_default 
+     * @param ?string $authoritative_copy_default 
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets auto_navigation
      *
-     * @return string
+     * @return ?string
      */
     public function getAutoNavigation()
     {
@@ -817,7 +817,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets auto_navigation
      *
-     * @param string $auto_navigation 
+     * @param ?string $auto_navigation 
      *
      * @return $this
      */
@@ -831,7 +831,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets brand_id
      *
-     * @return string
+     * @return ?string
      */
     public function getBrandId()
     {
@@ -841,7 +841,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets brand_id
      *
-     * @param string $brand_id This sets the brand profile format used for the envelope. The value in the string is the brandId associated with the profile. Account branding must be enabled for the account to use this option.
+     * @param ?string $brand_id This sets the brand profile format used for the envelope. The value in the string is the brandId associated with the profile. Account branding must be enabled for the account to use this option.
      *
      * @return $this
      */
@@ -855,7 +855,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets brand_lock
      *
-     * @return string
+     * @return ?string
      */
     public function getBrandLock()
     {
@@ -865,7 +865,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets brand_lock
      *
-     * @param string $brand_lock 
+     * @param ?string $brand_lock 
      *
      * @return $this
      */
@@ -879,7 +879,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets certificate_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getCertificateUri()
     {
@@ -889,7 +889,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets certificate_uri
      *
-     * @param string $certificate_uri Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.
+     * @param ?string $certificate_uri Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.
      *
      * @return $this
      */
@@ -903,7 +903,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets completed_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCompletedDateTime()
     {
@@ -913,7 +913,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets completed_date_time
      *
-     * @param string $completed_date_time Specifies the date and time this item was completed.
+     * @param ?string $completed_date_time Specifies the date and time this item was completed.
      *
      * @return $this
      */
@@ -951,7 +951,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets copy_recipient_data
      *
-     * @return string
+     * @return ?string
      */
     public function getCopyRecipientData()
     {
@@ -961,7 +961,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets copy_recipient_data
      *
-     * @param string $copy_recipient_data 
+     * @param ?string $copy_recipient_data 
      *
      * @return $this
      */
@@ -975,7 +975,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets created_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDateTime()
     {
@@ -985,7 +985,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets created_date_time
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param ?string $created_date_time Indicates the date and time the item was created.
      *
      * @return $this
      */
@@ -1023,7 +1023,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets custom_fields_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomFieldsUri()
     {
@@ -1033,7 +1033,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields_uri
      *
-     * @param string $custom_fields_uri Contains a URI for an endpoint that you can use to retrieve the custom fields.
+     * @param ?string $custom_fields_uri Contains a URI for an endpoint that you can use to retrieve the custom fields.
      *
      * @return $this
      */
@@ -1047,7 +1047,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets declined_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeclinedDateTime()
     {
@@ -1057,7 +1057,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets declined_date_time
      *
-     * @param string $declined_date_time The date and time the recipient declined the document.
+     * @param ?string $declined_date_time The date and time the recipient declined the document.
      *
      * @return $this
      */
@@ -1071,7 +1071,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets deleted_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeletedDateTime()
     {
@@ -1081,7 +1081,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets deleted_date_time
      *
-     * @param string $deleted_date_time Specifies the data and time the item was deleted.
+     * @param ?string $deleted_date_time Specifies the data and time the item was deleted.
      *
      * @return $this
      */
@@ -1095,7 +1095,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets delivered_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getDeliveredDateTime()
     {
@@ -1105,7 +1105,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets delivered_date_time
      *
-     * @param string $delivered_date_time Reserved: For DocuSign use only.
+     * @param ?string $delivered_date_time Reserved: For DocuSign use only.
      *
      * @return $this
      */
@@ -1119,7 +1119,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets disable_responsive_document
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableResponsiveDocument()
     {
@@ -1129,7 +1129,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets disable_responsive_document
      *
-     * @param string $disable_responsive_document 
+     * @param ?string $disable_responsive_document 
      *
      * @return $this
      */
@@ -1167,7 +1167,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets documents_combined_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentsCombinedUri()
     {
@@ -1177,7 +1177,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets documents_combined_uri
      *
-     * @param string $documents_combined_uri 
+     * @param ?string $documents_combined_uri 
      *
      * @return $this
      */
@@ -1191,7 +1191,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets documents_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentsUri()
     {
@@ -1201,7 +1201,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets documents_uri
      *
-     * @param string $documents_uri Contains a URI for an endpoint that you can use to retrieve the documents.
+     * @param ?string $documents_uri Contains a URI for an endpoint that you can use to retrieve the documents.
      *
      * @return $this
      */
@@ -1215,7 +1215,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets email_blurb
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailBlurb()
     {
@@ -1225,7 +1225,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets email_blurb
      *
-     * @param string $email_blurb Optional element. This is the same as the email body. If specified it is included in email body for all envelope recipients. This can be a maximum of 10000 characters
+     * @param ?string $email_blurb Optional element. This is the same as the email body. If specified it is included in email body for all envelope recipients. This can be a maximum of 10000 characters
      *
      * @return $this
      */
@@ -1263,7 +1263,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets email_subject
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailSubject()
     {
@@ -1273,7 +1273,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets email_subject
      *
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * @param ?string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
      *
      * @return $this
      */
@@ -1287,7 +1287,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets enable_wet_sign
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableWetSign()
     {
@@ -1297,7 +1297,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets enable_wet_sign
      *
-     * @param string $enable_wet_sign When set to **true**, the signer is allowed to print the document and sign it on paper.
+     * @param ?string $enable_wet_sign When set to **true**, the signer is allowed to print the document and sign it on paper.
      *
      * @return $this
      */
@@ -1311,7 +1311,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets enforce_signer_visibility
      *
-     * @return string
+     * @return ?string
      */
     public function getEnforceSignerVisibility()
     {
@@ -1321,7 +1321,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets enforce_signer_visibility
      *
-     * @param string $enforce_signer_visibility When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.  Your account must have Document Visibility enabled to use this.
+     * @param ?string $enforce_signer_visibility When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.  Your account must have Document Visibility enabled to use this.
      *
      * @return $this
      */
@@ -1335,7 +1335,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -1345,7 +1345,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -1359,7 +1359,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id_stamping
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeIdStamping()
     {
@@ -1369,7 +1369,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id_stamping
      *
-     * @param string $envelope_id_stamping When set to **true**, Envelope ID Stamping is enabled.
+     * @param ?string $envelope_id_stamping When set to **true**, Envelope ID Stamping is enabled.
      *
      * @return $this
      */
@@ -1383,7 +1383,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeUri()
     {
@@ -1393,7 +1393,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_uri
      *
-     * @param string $envelope_uri Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+     * @param ?string $envelope_uri Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
      *
      * @return $this
      */
@@ -1431,7 +1431,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets initial_sent_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialSentDateTime()
     {
@@ -1441,7 +1441,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets initial_sent_date_time
      *
-     * @param string $initial_sent_date_time 
+     * @param ?string $initial_sent_date_time 
      *
      * @return $this
      */
@@ -1455,7 +1455,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets is21_cfr_part11
      *
-     * @return string
+     * @return ?string
      */
     public function getIs21CfrPart11()
     {
@@ -1465,7 +1465,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets is21_cfr_part11
      *
-     * @param string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
+     * @param ?string $is21_cfr_part11 When set to **true**, indicates that this module is enabled on the account.
      *
      * @return $this
      */
@@ -1479,7 +1479,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets is_signature_provider_envelope
      *
-     * @return string
+     * @return ?string
      */
     public function getIsSignatureProviderEnvelope()
     {
@@ -1489,7 +1489,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets is_signature_provider_envelope
      *
-     * @param string $is_signature_provider_envelope 
+     * @param ?string $is_signature_provider_envelope 
      *
      * @return $this
      */
@@ -1503,7 +1503,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModifiedDateTime()
     {
@@ -1513,7 +1513,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_date_time
      *
-     * @param string $last_modified_date_time The date and time the item was last modified.
+     * @param ?string $last_modified_date_time The date and time the item was last modified.
      *
      * @return $this
      */
@@ -1551,7 +1551,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets message_lock
      *
-     * @return string
+     * @return ?string
      */
     public function getMessageLock()
     {
@@ -1561,7 +1561,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets message_lock
      *
-     * @param string $message_lock When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope.   Additionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes.   However, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.
+     * @param ?string $message_lock When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope.   Additionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes.   However, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.
      *
      * @return $this
      */
@@ -1599,7 +1599,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets notification_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getNotificationUri()
     {
@@ -1609,7 +1609,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets notification_uri
      *
-     * @param string $notification_uri Contains a URI for an endpoint that you can use to retrieve the notifications.
+     * @param ?string $notification_uri Contains a URI for an endpoint that you can use to retrieve the notifications.
      *
      * @return $this
      */
@@ -1623,7 +1623,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -1633,7 +1633,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -1647,7 +1647,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets purge_state
      *
-     * @return string
+     * @return ?string
      */
     public function getPurgeState()
     {
@@ -1657,7 +1657,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets purge_state
      *
-     * @param string $purge_state Initiates a purge request. Valid values are: * documents_queued: Places envelope documents in the purge queue. * documents_and_metadata_queued: Places envelope documents and metadata in the purge queue.
+     * @param ?string $purge_state Initiates a purge request. Valid values are: * documents_queued: Places envelope documents in the purge queue. * documents_and_metadata_queued: Places envelope documents and metadata in the purge queue.
      *
      * @return $this
      */
@@ -1695,7 +1695,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets recipients_lock
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientsLock()
     {
@@ -1705,7 +1705,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets recipients_lock
      *
-     * @param string $recipients_lock When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.
+     * @param ?string $recipients_lock When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.
      *
      * @return $this
      */
@@ -1719,7 +1719,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets recipients_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientsUri()
     {
@@ -1729,7 +1729,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets recipients_uri
      *
-     * @param string $recipients_uri Contains a URI for an endpoint that you can use to retrieve the recipients.
+     * @param ?string $recipients_uri Contains a URI for an endpoint that you can use to retrieve the recipients.
      *
      * @return $this
      */
@@ -1743,7 +1743,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets sent_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getSentDateTime()
     {
@@ -1753,7 +1753,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets sent_date_time
      *
-     * @param string $sent_date_time The date and time the envelope was sent.
+     * @param ?string $sent_date_time The date and time the envelope was sent.
      *
      * @return $this
      */
@@ -1767,7 +1767,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signer_can_sign_on_mobile
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerCanSignOnMobile()
     {
@@ -1777,7 +1777,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signer_can_sign_on_mobile
      *
-     * @param string $signer_can_sign_on_mobile 
+     * @param ?string $signer_can_sign_on_mobile 
      *
      * @return $this
      */
@@ -1791,7 +1791,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets signing_location
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningLocation()
     {
@@ -1801,7 +1801,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signing_location
      *
-     * @param string $signing_location Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+     * @param ?string $signing_location Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
      *
      * @return $this
      */
@@ -1815,7 +1815,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -1825,7 +1825,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -1839,7 +1839,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets status_changed_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getStatusChangedDateTime()
     {
@@ -1849,7 +1849,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets status_changed_date_time
      *
-     * @param string $status_changed_date_time The data and time the status changed.
+     * @param ?string $status_changed_date_time The data and time the status changed.
      *
      * @return $this
      */
@@ -1863,7 +1863,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets template_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateId()
     {
@@ -1873,7 +1873,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets template_id
      *
-     * @param string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
      *
      * @return $this
      */
@@ -1911,7 +1911,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets templates_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplatesUri()
     {
@@ -1921,7 +1921,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets templates_uri
      *
-     * @param string $templates_uri Contains a URI for an endpoint which you can use to retrieve the templates.
+     * @param ?string $templates_uri Contains a URI for an endpoint which you can use to retrieve the templates.
      *
      * @return $this
      */
@@ -1935,7 +1935,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTransactionId()
     {
@@ -1945,7 +1945,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
+     * @param ?string $transaction_id Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
      *
      * @return $this
      */
@@ -1959,7 +1959,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets use_disclosure
      *
-     * @return string
+     * @return ?string
      */
     public function getUseDisclosure()
     {
@@ -1969,7 +1969,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets use_disclosure
      *
-     * @param string $use_disclosure When set to **true**, the disclosure is shown to recipients in accordance with the account's Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
+     * @param ?string $use_disclosure When set to **true**, the disclosure is shown to recipients in accordance with the account's Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
      *
      * @return $this
      */
@@ -1983,7 +1983,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets voided_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getVoidedDateTime()
     {
@@ -1993,7 +1993,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets voided_date_time
      *
-     * @param string $voided_date_time The date and time the envelope or template was voided.
+     * @param ?string $voided_date_time The date and time the envelope or template was voided.
      *
      * @return $this
      */
@@ -2007,7 +2007,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets voided_reason
      *
-     * @return string
+     * @return ?string
      */
     public function getVoidedReason()
     {
@@ -2017,7 +2017,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets voided_reason
      *
-     * @param string $voided_reason The reason the envelope or template was voided.
+     * @param ?string $voided_reason The reason the envelope or template was voided.
      *
      * @return $this
      */

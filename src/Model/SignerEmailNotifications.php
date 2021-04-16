@@ -58,22 +58,22 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'agent_notification' => 'string',
-        'carbon_copy_notification' => 'string',
-        'certified_delivery_notification' => 'string',
-        'comments_only_private_and_mention' => 'string',
-        'comments_receive_all' => 'string',
-        'document_markup_activation' => 'string',
-        'envelope_activation' => 'string',
-        'envelope_complete' => 'string',
-        'envelope_corrected' => 'string',
-        'envelope_declined' => 'string',
-        'envelope_voided' => 'string',
-        'fax_received' => 'string',
-        'offline_signing_failed' => 'string',
-        'purge_documents' => 'string',
-        'reassigned_signer' => 'string',
-        'when_signing_group_member' => 'string'
+        'agent_notification' => '?string',
+        'carbon_copy_notification' => '?string',
+        'certified_delivery_notification' => '?string',
+        'comments_only_private_and_mention' => '?string',
+        'comments_receive_all' => '?string',
+        'document_markup_activation' => '?string',
+        'envelope_activation' => '?string',
+        'envelope_complete' => '?string',
+        'envelope_corrected' => '?string',
+        'envelope_declined' => '?string',
+        'envelope_voided' => '?string',
+        'fax_received' => '?string',
+        'offline_signing_failed' => '?string',
+        'purge_documents' => '?string',
+        'reassigned_signer' => '?string',
+        'when_signing_group_member' => '?string'
     ];
 
     /**
@@ -298,7 +298,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets agent_notification
      *
-     * @return string
+     * @return ?string
      */
     public function getAgentNotification()
     {
@@ -308,7 +308,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets agent_notification
      *
-     * @param string $agent_notification When set to **true**, the user receives agent notification emails.
+     * @param ?string $agent_notification When set to **true**, the user receives agent notification emails.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets carbon_copy_notification
      *
-     * @return string
+     * @return ?string
      */
     public function getCarbonCopyNotification()
     {
@@ -332,7 +332,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets carbon_copy_notification
      *
-     * @param string $carbon_copy_notification When set to **true**, the user receives notifications of carbon copy deliveries.
+     * @param ?string $carbon_copy_notification When set to **true**, the user receives notifications of carbon copy deliveries.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets certified_delivery_notification
      *
-     * @return string
+     * @return ?string
      */
     public function getCertifiedDeliveryNotification()
     {
@@ -356,7 +356,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets certified_delivery_notification
      *
-     * @param string $certified_delivery_notification When set to **true**, the user receives notifications of certified deliveries.
+     * @param ?string $certified_delivery_notification When set to **true**, the user receives notifications of certified deliveries.
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets comments_only_private_and_mention
      *
-     * @return string
+     * @return ?string
      */
     public function getCommentsOnlyPrivateAndMention()
     {
@@ -380,7 +380,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets comments_only_private_and_mention
      *
-     * @param string $comments_only_private_and_mention 
+     * @param ?string $comments_only_private_and_mention 
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets comments_receive_all
      *
-     * @return string
+     * @return ?string
      */
     public function getCommentsReceiveAll()
     {
@@ -404,7 +404,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets comments_receive_all
      *
-     * @param string $comments_receive_all 
+     * @param ?string $comments_receive_all 
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets document_markup_activation
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentMarkupActivation()
     {
@@ -428,7 +428,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets document_markup_activation
      *
-     * @param string $document_markup_activation When set to **true**, the user receives notification that document markup has been activated.
+     * @param ?string $document_markup_activation When set to **true**, the user receives notification that document markup has been activated.
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_activation
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeActivation()
     {
@@ -452,7 +452,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_activation
      *
-     * @param string $envelope_activation When set to **true**, the user receives notification that the envelope has been activated.
+     * @param ?string $envelope_activation When set to **true**, the user receives notification that the envelope has been activated.
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_complete
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeComplete()
     {
@@ -476,7 +476,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_complete
      *
-     * @param string $envelope_complete When set to **true**, the user receives notification that the envelope has been completed.
+     * @param ?string $envelope_complete When set to **true**, the user receives notification that the envelope has been completed.
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_corrected
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeCorrected()
     {
@@ -500,7 +500,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_corrected
      *
-     * @param string $envelope_corrected When set to **true**, the user receives notification that the envelope has been corrected.
+     * @param ?string $envelope_corrected When set to **true**, the user receives notification that the envelope has been corrected.
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_declined
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeDeclined()
     {
@@ -524,7 +524,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_declined
      *
-     * @param string $envelope_declined When set to **true**, the user receives notification that the envelope has been declined.
+     * @param ?string $envelope_declined When set to **true**, the user receives notification that the envelope has been declined.
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_voided
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeVoided()
     {
@@ -548,7 +548,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_voided
      *
-     * @param string $envelope_voided When set to **true**, the user receives notification that the envelope has been voided.
+     * @param ?string $envelope_voided When set to **true**, the user receives notification that the envelope has been voided.
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets fax_received
      *
-     * @return string
+     * @return ?string
      */
     public function getFaxReceived()
     {
@@ -572,7 +572,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets fax_received
      *
-     * @param string $fax_received Reserved:
+     * @param ?string $fax_received Reserved:
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets offline_signing_failed
      *
-     * @return string
+     * @return ?string
      */
     public function getOfflineSigningFailed()
     {
@@ -596,7 +596,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets offline_signing_failed
      *
-     * @param string $offline_signing_failed When set to **true**, the user receives notification if the offline signing failed.
+     * @param ?string $offline_signing_failed When set to **true**, the user receives notification if the offline signing failed.
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets purge_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getPurgeDocuments()
     {
@@ -620,7 +620,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets purge_documents
      *
-     * @param string $purge_documents When set to **true**, the user receives notification of document purges.
+     * @param ?string $purge_documents When set to **true**, the user receives notification of document purges.
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets reassigned_signer
      *
-     * @return string
+     * @return ?string
      */
     public function getReassignedSigner()
     {
@@ -644,7 +644,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets reassigned_signer
      *
-     * @param string $reassigned_signer When set to **true**, the user receives notification that the envelope has been reassigned.
+     * @param ?string $reassigned_signer When set to **true**, the user receives notification that the envelope has been reassigned.
      *
      * @return $this
      */
@@ -658,7 +658,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Gets when_signing_group_member
      *
-     * @return string
+     * @return ?string
      */
     public function getWhenSigningGroupMember()
     {
@@ -668,7 +668,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets when_signing_group_member
      *
-     * @param string $when_signing_group_member 
+     * @param ?string $when_signing_group_member 
      *
      * @return $this
      */

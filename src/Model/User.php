@@ -57,10 +57,10 @@ class User implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'country_code' => 'string',
+        'country_code' => '?string',
         'credentials' => '\DocuSign\eSign\Model\Credential[]',
-        'display_name' => 'string',
-        'email' => 'string'
+        'display_name' => '?string',
+        'email' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets country_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCountryCode()
     {
@@ -235,7 +235,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param string $country_code 
+     * @param ?string $country_code 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayName()
     {
@@ -283,7 +283,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets display_name
      *
-     * @param string $display_name 
+     * @param ?string $display_name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -307,7 +307,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */

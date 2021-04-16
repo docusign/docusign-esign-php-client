@@ -59,8 +59,8 @@ class AddressInformationInput implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'address_information' => '\DocuSign\eSign\Model\AddressInformation',
-        'display_level_code' => 'string',
-        'receive_in_response' => 'string'
+        'display_level_code' => '?string',
+        'receive_in_response' => '?string'
     ];
 
     /**
@@ -244,7 +244,7 @@ class AddressInformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets display_level_code
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayLevelCode()
     {
@@ -254,7 +254,7 @@ class AddressInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets display_level_code
      *
-     * @param string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
+     * @param ?string $display_level_code Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class AddressInformationInput implements ModelInterface, ArrayAccess
     /**
      * Gets receive_in_response
      *
-     * @return string
+     * @return ?string
      */
     public function getReceiveInResponse()
     {
@@ -278,7 +278,7 @@ class AddressInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets receive_in_response
      *
-     * @param string $receive_in_response When set to **true**, the information needs to be returned in the response.
+     * @param ?string $receive_in_response When set to **true**, the information needs to be returned in the response.
      *
      * @return $this
      */

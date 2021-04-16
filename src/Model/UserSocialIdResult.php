@@ -58,7 +58,7 @@ class UserSocialIdResult implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'social_account_information' => '\DocuSign\eSign\Model\SocialAccountInformation[]',
-        'user_id' => 'string'
+        'user_id' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class UserSocialIdResult implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -247,7 +247,7 @@ class UserSocialIdResult implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */

@@ -59,8 +59,8 @@ class EmailSettings implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'bcc_email_addresses' => '\DocuSign\eSign\Model\BccEmailAddress[]',
-        'reply_email_address_override' => 'string',
-        'reply_email_name_override' => 'string'
+        'reply_email_address_override' => '?string',
+        'reply_email_name_override' => '?string'
     ];
 
     /**
@@ -244,7 +244,7 @@ class EmailSettings implements ModelInterface, ArrayAccess
     /**
      * Gets reply_email_address_override
      *
-     * @return string
+     * @return ?string
      */
     public function getReplyEmailAddressOverride()
     {
@@ -254,7 +254,7 @@ class EmailSettings implements ModelInterface, ArrayAccess
     /**
      * Sets reply_email_address_override
      *
-     * @param string $reply_email_address_override 
+     * @param ?string $reply_email_address_override 
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class EmailSettings implements ModelInterface, ArrayAccess
     /**
      * Gets reply_email_name_override
      *
-     * @return string
+     * @return ?string
      */
     public function getReplyEmailNameOverride()
     {
@@ -278,7 +278,7 @@ class EmailSettings implements ModelInterface, ArrayAccess
     /**
      * Sets reply_email_name_override
      *
-     * @param string $reply_email_name_override 
+     * @param ?string $reply_email_name_override 
      *
      * @return $this
      */

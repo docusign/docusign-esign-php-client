@@ -58,24 +58,24 @@ class ReferralInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'advertisement_id' => 'string',
-        'enable_support' => 'string',
-        'external_org_id' => 'string',
-        'group_member_id' => 'string',
-        'id_type' => 'string',
-        'included_seats' => 'string',
-        'industry' => 'string',
-        'plan_start_month' => 'string',
-        'promo_code' => 'string',
-        'publisher_id' => 'string',
-        'referral_code' => 'string',
-        'referrer_name' => 'string',
-        'sale_discount_amount' => 'string',
-        'sale_discount_fixed_amount' => 'string',
-        'sale_discount_percent' => 'string',
-        'sale_discount_periods' => 'string',
-        'sale_discount_seat_price_override' => 'string',
-        'shopper_id' => 'string'
+        'advertisement_id' => '?string',
+        'enable_support' => '?string',
+        'external_org_id' => '?string',
+        'group_member_id' => '?string',
+        'id_type' => '?string',
+        'included_seats' => '?string',
+        'industry' => '?string',
+        'plan_start_month' => '?string',
+        'promo_code' => '?string',
+        'publisher_id' => '?string',
+        'referral_code' => '?string',
+        'referrer_name' => '?string',
+        'sale_discount_amount' => '?string',
+        'sale_discount_fixed_amount' => '?string',
+        'sale_discount_percent' => '?string',
+        'sale_discount_periods' => '?string',
+        'sale_discount_seat_price_override' => '?string',
+        'shopper_id' => '?string'
     ];
 
     /**
@@ -310,7 +310,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets advertisement_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAdvertisementId()
     {
@@ -320,7 +320,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advertisement_id
      *
-     * @param string $advertisement_id A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.
+     * @param ?string $advertisement_id A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_support
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSupport()
     {
@@ -344,7 +344,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_support
      *
-     * @param string $enable_support When set to **true**, then customer support is provided as part of the account plan.
+     * @param ?string $enable_support When set to **true**, then customer support is provided as part of the account plan.
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets external_org_id
      *
-     * @return string
+     * @return ?string
      */
     public function getExternalOrgId()
     {
@@ -368,7 +368,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets external_org_id
      *
-     * @param string $external_org_id 
+     * @param ?string $external_org_id 
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets group_member_id
      *
-     * @return string
+     * @return ?string
      */
     public function getGroupMemberId()
     {
@@ -392,7 +392,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets group_member_id
      *
-     * @param string $group_member_id 
+     * @param ?string $group_member_id 
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets id_type
      *
-     * @return string
+     * @return ?string
      */
     public function getIdType()
     {
@@ -416,7 +416,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_type
      *
-     * @param string $id_type 
+     * @param ?string $id_type 
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets included_seats
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludedSeats()
     {
@@ -440,7 +440,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets included_seats
      *
-     * @param string $included_seats The number of seats (users) included.
+     * @param ?string $included_seats The number of seats (users) included.
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets industry
      *
-     * @return string
+     * @return ?string
      */
     public function getIndustry()
     {
@@ -464,7 +464,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets industry
      *
-     * @param string $industry 
+     * @param ?string $industry 
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets plan_start_month
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanStartMonth()
     {
@@ -488,7 +488,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_start_month
      *
-     * @param string $plan_start_month 
+     * @param ?string $plan_start_month 
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets promo_code
      *
-     * @return string
+     * @return ?string
      */
     public function getPromoCode()
     {
@@ -512,7 +512,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets promo_code
      *
-     * @param string $promo_code 
+     * @param ?string $promo_code 
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets publisher_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPublisherId()
     {
@@ -536,7 +536,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets publisher_id
      *
-     * @param string $publisher_id 
+     * @param ?string $publisher_id 
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets referral_code
      *
-     * @return string
+     * @return ?string
      */
     public function getReferralCode()
     {
@@ -560,7 +560,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets referral_code
      *
-     * @param string $referral_code 
+     * @param ?string $referral_code 
      *
      * @return $this
      */
@@ -574,7 +574,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets referrer_name
      *
-     * @return string
+     * @return ?string
      */
     public function getReferrerName()
     {
@@ -584,7 +584,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets referrer_name
      *
-     * @param string $referrer_name 
+     * @param ?string $referrer_name 
      *
      * @return $this
      */
@@ -598,7 +598,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountAmount()
     {
@@ -608,7 +608,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_amount
      *
-     * @param string $sale_discount_amount Reserved for DocuSign use only.
+     * @param ?string $sale_discount_amount Reserved for DocuSign use only.
      *
      * @return $this
      */
@@ -622,7 +622,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_fixed_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountFixedAmount()
     {
@@ -632,7 +632,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_fixed_amount
      *
-     * @param string $sale_discount_fixed_amount Reserved for DocuSign use only.
+     * @param ?string $sale_discount_fixed_amount Reserved for DocuSign use only.
      *
      * @return $this
      */
@@ -646,7 +646,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_percent
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountPercent()
     {
@@ -656,7 +656,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_percent
      *
-     * @param string $sale_discount_percent Reserved for DocuSign use only.
+     * @param ?string $sale_discount_percent Reserved for DocuSign use only.
      *
      * @return $this
      */
@@ -670,7 +670,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_periods
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountPeriods()
     {
@@ -680,7 +680,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_periods
      *
-     * @param string $sale_discount_periods Reserved for DocuSign use only.
+     * @param ?string $sale_discount_periods Reserved for DocuSign use only.
      *
      * @return $this
      */
@@ -694,7 +694,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets sale_discount_seat_price_override
      *
-     * @return string
+     * @return ?string
      */
     public function getSaleDiscountSeatPriceOverride()
     {
@@ -704,7 +704,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_seat_price_override
      *
-     * @param string $sale_discount_seat_price_override Reserved for DocuSign use only.
+     * @param ?string $sale_discount_seat_price_override Reserved for DocuSign use only.
      *
      * @return $this
      */
@@ -718,7 +718,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Gets shopper_id
      *
-     * @return string
+     * @return ?string
      */
     public function getShopperId()
     {
@@ -728,7 +728,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets shopper_id
      *
-     * @param string $shopper_id 
+     * @param ?string $shopper_id 
      *
      * @return $this
      */

@@ -57,10 +57,10 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_id' => 'string',
-        'status' => 'string',
-        'status_date_time' => 'string',
-        'uri' => 'string'
+        'envelope_id' => '?string',
+        'status' => '?string',
+        'status_date_time' => '?string',
+        'uri' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -235,7 +235,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -259,7 +259,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Gets status_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getStatusDateTime()
     {
@@ -283,7 +283,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets status_date_time
      *
-     * @param string $status_date_time The DateTime that the envelope changed status (i.e. was created or sent.)
+     * @param ?string $status_date_time The DateTime that the envelope changed status (i.e. was created or sent.)
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -307,7 +307,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */

@@ -61,7 +61,7 @@ class Tabs implements ModelInterface, ArrayAccess
         'checkbox_tabs' => '\DocuSign\eSign\Model\Checkbox[]',
         'company_tabs' => '\DocuSign\eSign\Model\Company[]',
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
-        'date_tabs' => '\DocuSign\eSign\Model\\Date[]',
+        'date_tabs' => '\DocuSign\eSign\Model\Date[]',
         'decline_tabs' => '\DocuSign\eSign\Model\Decline[]',
         'email_address_tabs' => '\DocuSign\eSign\Model\EmailAddress[]',
         'email_tabs' => '\DocuSign\eSign\Model\Email[]',
@@ -459,7 +459,7 @@ class Tabs implements ModelInterface, ArrayAccess
     /**
      * Gets date_tabs
      *
-     * @return \DocuSign\eSign\Model\\DateTime[]
+     * @return \DocuSign\eSign\Model\Date[]
      */
     public function getDateTabs()
     {
@@ -469,7 +469,7 @@ class Tabs implements ModelInterface, ArrayAccess
     /**
      * Sets date_tabs
      *
-     * @param \DocuSign\eSign\Model\\DateTime[] $date_tabs Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.
+     * @param \DocuSign\eSign\Model\Date[] $date_tabs Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.
      *
      * @return $this
      */

@@ -57,8 +57,8 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'required_signature_provider_option_ids' => 'string[]',
-        'signer_type' => 'string'
+        'required_signature_provider_option_ids' => '?string[]',
+        'signer_type' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
     /**
      * Gets required_signature_provider_option_ids
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getRequiredSignatureProviderOptionIds()
     {
@@ -223,7 +223,7 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
     /**
      * Sets required_signature_provider_option_ids
      *
-     * @param string[] $required_signature_provider_option_ids 
+     * @param ?string[] $required_signature_provider_option_ids 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
     /**
      * Gets signer_type
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerType()
     {
@@ -247,7 +247,7 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
     /**
      * Sets signer_type
      *
-     * @param string $signer_type 
+     * @param ?string $signer_type 
      *
      * @return $this
      */

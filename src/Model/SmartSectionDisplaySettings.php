@@ -57,18 +57,18 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'cell_style' => 'string',
+        'cell_style' => '?string',
         'collapsible_settings' => '\DocuSign\eSign\Model\SmartSectionCollapsibleDisplaySettings',
-        'display' => 'string',
-        'display_label' => 'string',
-        'display_order' => 'int',
-        'display_page_number' => 'int',
-        'hide_label_when_opened' => 'bool',
-        'inline_outer_style' => 'string',
-        'label_when_opened' => 'string',
-        'pre_label' => 'string',
-        'scroll_to_top_when_opened' => 'bool',
-        'table_style' => 'string'
+        'display' => '?string',
+        'display_label' => '?string',
+        'display_order' => '?int',
+        'display_page_number' => '?int',
+        'hide_label_when_opened' => '?bool',
+        'inline_outer_style' => '?string',
+        'label_when_opened' => '?string',
+        'pre_label' => '?string',
+        'scroll_to_top_when_opened' => '?bool',
+        'table_style' => '?string'
     ];
 
     /**
@@ -273,7 +273,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets cell_style
      *
-     * @return string
+     * @return ?string
      */
     public function getCellStyle()
     {
@@ -283,7 +283,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets cell_style
      *
-     * @param string $cell_style 
+     * @param ?string $cell_style 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets display
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplay()
     {
@@ -331,7 +331,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display
      *
-     * @param string $display 
+     * @param ?string $display 
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets display_label
      *
-     * @return string
+     * @return ?string
      */
     public function getDisplayLabel()
     {
@@ -355,7 +355,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display_label
      *
-     * @param string $display_label 
+     * @param ?string $display_label 
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets display_order
      *
-     * @return int
+     * @return ?int
      */
     public function getDisplayOrder()
     {
@@ -379,7 +379,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display_order
      *
-     * @param int $display_order 
+     * @param ?int $display_order 
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets display_page_number
      *
-     * @return int
+     * @return ?int
      */
     public function getDisplayPageNumber()
     {
@@ -403,7 +403,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display_page_number
      *
-     * @param int $display_page_number 
+     * @param ?int $display_page_number 
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets hide_label_when_opened
      *
-     * @return bool
+     * @return ?bool
      */
     public function getHideLabelWhenOpened()
     {
@@ -427,7 +427,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_label_when_opened
      *
-     * @param bool $hide_label_when_opened 
+     * @param ?bool $hide_label_when_opened 
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets inline_outer_style
      *
-     * @return string
+     * @return ?string
      */
     public function getInlineOuterStyle()
     {
@@ -451,7 +451,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets inline_outer_style
      *
-     * @param string $inline_outer_style 
+     * @param ?string $inline_outer_style 
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets label_when_opened
      *
-     * @return string
+     * @return ?string
      */
     public function getLabelWhenOpened()
     {
@@ -475,7 +475,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets label_when_opened
      *
-     * @param string $label_when_opened 
+     * @param ?string $label_when_opened 
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets pre_label
      *
-     * @return string
+     * @return ?string
      */
     public function getPreLabel()
     {
@@ -499,7 +499,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets pre_label
      *
-     * @param string $pre_label 
+     * @param ?string $pre_label 
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets scroll_to_top_when_opened
      *
-     * @return bool
+     * @return ?bool
      */
     public function getScrollToTopWhenOpened()
     {
@@ -523,7 +523,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets scroll_to_top_when_opened
      *
-     * @param bool $scroll_to_top_when_opened 
+     * @param ?bool $scroll_to_top_when_opened 
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Gets table_style
      *
-     * @return string
+     * @return ?string
      */
     public function getTableStyle()
     {
@@ -547,7 +547,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets table_style
      *
-     * @param string $table_style 
+     * @param ?string $table_style 
      *
      * @return $this
      */

@@ -57,8 +57,8 @@ class PropertyMetadata implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => 'string[]',
-        'rights' => 'string'
+        'options' => '?string[]',
+        'rights' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class PropertyMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getOptions()
     {
@@ -223,7 +223,7 @@ class PropertyMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param string[] $options 
+     * @param ?string[] $options 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class PropertyMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets rights
      *
-     * @return string
+     * @return ?string
      */
     public function getRights()
     {
@@ -247,7 +247,7 @@ class PropertyMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param string $rights 
+     * @param ?string $rights 
      *
      * @return $this
      */

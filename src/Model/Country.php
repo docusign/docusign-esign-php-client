@@ -57,10 +57,10 @@ class Country implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'iso_code' => 'string',
-        'name' => 'string',
+        'iso_code' => '?string',
+        'name' => '?string',
         'provinces' => '\DocuSign\eSign\Model\Province[]',
-        'province_validated' => 'string'
+        'province_validated' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class Country implements ModelInterface, ArrayAccess
     /**
      * Gets iso_code
      *
-     * @return string
+     * @return ?string
      */
     public function getIsoCode()
     {
@@ -235,7 +235,7 @@ class Country implements ModelInterface, ArrayAccess
     /**
      * Sets iso_code
      *
-     * @param string $iso_code 
+     * @param ?string $iso_code 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class Country implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -259,7 +259,7 @@ class Country implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class Country implements ModelInterface, ArrayAccess
     /**
      * Gets province_validated
      *
-     * @return string
+     * @return ?string
      */
     public function getProvinceValidated()
     {
@@ -307,7 +307,7 @@ class Country implements ModelInterface, ArrayAccess
     /**
      * Sets province_validated
      *
-     * @param string $province_validated 
+     * @param ?string $province_validated 
      *
      * @return $this
      */

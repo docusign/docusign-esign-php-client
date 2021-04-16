@@ -57,10 +57,10 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'content' => 'string',
-        'email_content_type' => 'string',
-        'email_to_link' => 'string',
-        'link_text' => 'string'
+        'content' => '?string',
+        'email_content_type' => '?string',
+        'email_to_link' => '?string',
+        'link_text' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Gets content
      *
-     * @return string
+     * @return ?string
      */
     public function getContent()
     {
@@ -235,7 +235,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param string $content 
+     * @param ?string $content 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Gets email_content_type
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailContentType()
     {
@@ -259,7 +259,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets email_content_type
      *
-     * @param string $email_content_type 
+     * @param ?string $email_content_type 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Gets email_to_link
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailToLink()
     {
@@ -283,7 +283,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets email_to_link
      *
-     * @param string $email_to_link 
+     * @param ?string $email_to_link 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Gets link_text
      *
-     * @return string
+     * @return ?string
      */
     public function getLinkText()
     {
@@ -307,7 +307,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets link_text
      *
-     * @param string $link_text 
+     * @param ?string $link_text 
      *
      * @return $this
      */

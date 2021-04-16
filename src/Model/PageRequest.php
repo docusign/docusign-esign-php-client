@@ -57,8 +57,8 @@ class PageRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'password' => 'string',
-        'rotate' => 'string'
+        'password' => '?string',
+        'rotate' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class PageRequest implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -223,7 +223,7 @@ class PageRequest implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class PageRequest implements ModelInterface, ArrayAccess
     /**
      * Gets rotate
      *
-     * @return string
+     * @return ?string
      */
     public function getRotate()
     {
@@ -247,7 +247,7 @@ class PageRequest implements ModelInterface, ArrayAccess
     /**
      * Sets rotate
      *
-     * @param string $rotate Sets the direction the page image is rotated. The possible settings are: left or right
+     * @param ?string $rotate Sets the direction the page image is rotated. The possible settings are: left or right
      *
      * @return $this
      */

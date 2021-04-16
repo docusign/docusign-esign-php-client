@@ -57,12 +57,12 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'currency_code' => 'string',
-        'currency_symbol' => 'string',
-        'per_seat_price' => 'string',
+        'currency_code' => '?string',
+        'currency_symbol' => '?string',
+        'per_seat_price' => '?string',
         'supported_card_types' => '\DocuSign\eSign\Model\CreditCardTypes',
-        'support_incident_fee' => 'string',
-        'support_plan_fee' => 'string'
+        'support_incident_fee' => '?string',
+        'support_plan_fee' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -247,7 +247,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the ISO currency code for the account.
+     * @param ?string $currency_code Specifies the ISO currency code for the account.
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Gets currency_symbol
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencySymbol()
     {
@@ -271,7 +271,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Sets currency_symbol
      *
-     * @param string $currency_symbol Specifies the currency symbol for the account.
+     * @param ?string $currency_symbol Specifies the currency symbol for the account.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Gets per_seat_price
      *
-     * @return string
+     * @return ?string
      */
     public function getPerSeatPrice()
     {
@@ -295,7 +295,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Sets per_seat_price
      *
-     * @param string $per_seat_price 
+     * @param ?string $per_seat_price 
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Gets support_incident_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSupportIncidentFee()
     {
@@ -343,7 +343,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Sets support_incident_fee
      *
-     * @param string $support_incident_fee The support incident fee charged for each support incident.
+     * @param ?string $support_incident_fee The support incident fee charged for each support incident.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Gets support_plan_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSupportPlanFee()
     {
@@ -367,7 +367,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Sets support_plan_fee
      *
-     * @param string $support_plan_fee The support plan fee charged for this plan.
+     * @param ?string $support_plan_fee The support plan fee charged for this plan.
      *
      * @return $this
      */

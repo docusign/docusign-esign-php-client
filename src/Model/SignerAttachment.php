@@ -57,35 +57,35 @@ class SignerAttachment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'anchor_case_sensitive' => 'string',
-        'anchor_horizontal_alignment' => 'string',
-        'anchor_ignore_if_not_present' => 'string',
-        'anchor_match_whole_word' => 'string',
-        'anchor_string' => 'string',
-        'anchor_units' => 'string',
-        'anchor_x_offset' => 'string',
-        'anchor_y_offset' => 'string',
-        'conditional_parent_label' => 'string',
-        'conditional_parent_value' => 'string',
-        'custom_tab_id' => 'string',
-        'document_id' => 'string',
+        'anchor_case_sensitive' => '?string',
+        'anchor_horizontal_alignment' => '?string',
+        'anchor_ignore_if_not_present' => '?string',
+        'anchor_match_whole_word' => '?string',
+        'anchor_string' => '?string',
+        'anchor_units' => '?string',
+        'anchor_x_offset' => '?string',
+        'anchor_y_offset' => '?string',
+        'conditional_parent_label' => '?string',
+        'conditional_parent_value' => '?string',
+        'custom_tab_id' => '?string',
+        'document_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
-        'name' => 'string',
-        'optional' => 'string',
-        'page_number' => 'string',
-        'recipient_id' => 'string',
+        'name' => '?string',
+        'optional' => '?string',
+        'page_number' => '?string',
+        'recipient_id' => '?string',
         'scale_value' => 'float',
-        'status' => 'string',
-        'tab_group_labels' => 'string[]',
-        'tab_id' => 'string',
-        'tab_label' => 'string',
-        'tab_order' => 'string',
-        'template_locked' => 'string',
-        'template_required' => 'string',
-        'tooltip' => 'string',
-        'x_position' => 'string',
-        'y_position' => 'string'
+        'status' => '?string',
+        'tab_group_labels' => '?string[]',
+        'tab_id' => '?string',
+        'tab_label' => '?string',
+        'tab_order' => '?string',
+        'template_locked' => '?string',
+        'template_required' => '?string',
+        'tooltip' => '?string',
+        'x_position' => '?string',
+        'y_position' => '?string'
     ];
 
     /**
@@ -375,7 +375,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_case_sensitive
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorCaseSensitive()
     {
@@ -385,7 +385,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive
      *
-     * @param string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+     * @param ?string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_horizontal_alignment
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorHorizontalAlignment()
     {
@@ -409,7 +409,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment
      *
-     * @param string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+     * @param ?string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_ignore_if_not_present
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorIgnoreIfNotPresent()
     {
@@ -433,7 +433,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present
      *
-     * @param string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
+     * @param ?string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_match_whole_word
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorMatchWholeWord()
     {
@@ -457,7 +457,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word
      *
-     * @param string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+     * @param ?string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_string
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorString()
     {
@@ -481,7 +481,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string
      *
-     * @param string $anchor_string Anchor text information for a radio button.
+     * @param ?string $anchor_string Anchor text information for a radio button.
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_units
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorUnits()
     {
@@ -505,7 +505,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units
      *
-     * @param string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+     * @param ?string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_x_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorXOffset()
     {
@@ -529,7 +529,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset
      *
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_y_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorYOffset()
     {
@@ -553,7 +553,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset
      *
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_label
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentLabel()
     {
@@ -577,7 +577,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label
      *
-     * @param string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
+     * @param ?string $conditional_parent_label For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets conditional_parent_value
      *
-     * @return string
+     * @return ?string
      */
     public function getConditionalParentValue()
     {
@@ -601,7 +601,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value
      *
-     * @param string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+     * @param ?string $conditional_parent_value For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets custom_tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomTabId()
     {
@@ -625,7 +625,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id
      *
-     * @param string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+     * @param ?string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -649,7 +649,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -721,7 +721,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -735,7 +735,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets optional
      *
-     * @return string
+     * @return ?string
      */
     public function getOptional()
     {
@@ -745,7 +745,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets optional
      *
-     * @param string $optional 
+     * @param ?string $optional 
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets page_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPageNumber()
     {
@@ -769,7 +769,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param string $page_number Specifies the page number on which the tab is located.
+     * @param ?string $page_number Specifies the page number on which the tab is located.
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -793,7 +793,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -831,7 +831,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -841,7 +841,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -855,7 +855,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets tab_group_labels
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getTabGroupLabels()
     {
@@ -865,7 +865,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels
      *
-     * @param string[] $tab_group_labels 
+     * @param ?string[] $tab_group_labels 
      *
      * @return $this
      */
@@ -879,7 +879,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTabId()
     {
@@ -889,7 +889,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id
      *
-     * @param string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+     * @param ?string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
      *
      * @return $this
      */
@@ -903,7 +903,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets tab_label
      *
-     * @return string
+     * @return ?string
      */
     public function getTabLabel()
     {
@@ -913,7 +913,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label
      *
-     * @param string $tab_label The label string associated with the tab.
+     * @param ?string $tab_label The label string associated with the tab.
      *
      * @return $this
      */
@@ -927,7 +927,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets tab_order
      *
-     * @return string
+     * @return ?string
      */
     public function getTabOrder()
     {
@@ -937,7 +937,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order
      *
-     * @param string $tab_order 
+     * @param ?string $tab_order 
      *
      * @return $this
      */
@@ -951,7 +951,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets template_locked
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateLocked()
     {
@@ -961,7 +961,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked
      *
-     * @param string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+     * @param ?string $template_locked When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -975,7 +975,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets template_required
      *
-     * @return string
+     * @return ?string
      */
     public function getTemplateRequired()
     {
@@ -985,7 +985,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets template_required
      *
-     * @param string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+     * @param ?string $template_required When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
      *
      * @return $this
      */
@@ -999,7 +999,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets tooltip
      *
-     * @return string
+     * @return ?string
      */
     public function getTooltip()
     {
@@ -1009,7 +1009,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param string $tooltip 
+     * @param ?string $tooltip 
      *
      * @return $this
      */
@@ -1023,7 +1023,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets x_position
      *
-     * @return string
+     * @return ?string
      */
     public function getXPosition()
     {
@@ -1033,7 +1033,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets x_position
      *
-     * @param string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */
@@ -1047,7 +1047,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Gets y_position
      *
-     * @return string
+     * @return ?string
      */
     public function getYPosition()
     {
@@ -1057,7 +1057,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets y_position
      *
-     * @param string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */

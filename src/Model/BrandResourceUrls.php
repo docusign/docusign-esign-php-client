@@ -57,10 +57,10 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
-        'sending' => 'string',
-        'signing' => 'string',
-        'signing_captive' => 'string'
+        'email' => '?string',
+        'sending' => '?string',
+        'signing' => '?string',
+        'signing_captive' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -235,7 +235,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Gets sending
      *
-     * @return string
+     * @return ?string
      */
     public function getSending()
     {
@@ -259,7 +259,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets sending
      *
-     * @param string $sending 
+     * @param ?string $sending 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Gets signing
      *
-     * @return string
+     * @return ?string
      */
     public function getSigning()
     {
@@ -283,7 +283,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets signing
      *
-     * @param string $signing 
+     * @param ?string $signing 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Gets signing_captive
      *
-     * @return string
+     * @return ?string
      */
     public function getSigningCaptive()
     {
@@ -307,7 +307,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets signing_captive
      *
-     * @param string $signing_captive 
+     * @param ?string $signing_captive 
      *
      * @return $this
      */

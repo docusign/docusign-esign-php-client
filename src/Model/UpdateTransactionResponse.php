@@ -57,7 +57,7 @@ class UpdateTransactionResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'redirection_url' => 'string'
+        'redirection_url' => '?string'
     ];
 
     /**
@@ -207,7 +207,7 @@ class UpdateTransactionResponse implements ModelInterface, ArrayAccess
     /**
      * Gets redirection_url
      *
-     * @return string
+     * @return ?string
      */
     public function getRedirectionUrl()
     {
@@ -217,7 +217,7 @@ class UpdateTransactionResponse implements ModelInterface, ArrayAccess
     /**
      * Sets redirection_url
      *
-     * @param string $redirection_url 
+     * @param ?string $redirection_url 
      *
      * @return $this
      */

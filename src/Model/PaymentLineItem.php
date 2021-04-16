@@ -57,10 +57,10 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount_reference' => 'string',
-        'description' => 'string',
-        'item_code' => 'string',
-        'name' => 'string'
+        'amount_reference' => '?string',
+        'description' => '?string',
+        'item_code' => '?string',
+        'name' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Gets amount_reference
      *
-     * @return string
+     * @return ?string
      */
     public function getAmountReference()
     {
@@ -235,7 +235,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets amount_reference
      *
-     * @param string $amount_reference 
+     * @param ?string $amount_reference 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
     public function getDescription()
     {
@@ -259,7 +259,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param ?string $description 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Gets item_code
      *
-     * @return string
+     * @return ?string
      */
     public function getItemCode()
     {
@@ -283,7 +283,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets item_code
      *
-     * @param string $item_code 
+     * @param ?string $item_code 
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -307,7 +307,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */

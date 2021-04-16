@@ -59,10 +59,10 @@ class PlanInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'add_ons' => '\DocuSign\eSign\Model\AddOn[]',
-        'currency_code' => 'string',
-        'free_trial_days_override' => 'string',
+        'currency_code' => '?string',
+        'free_trial_days_override' => '?string',
         'plan_feature_sets' => '\DocuSign\eSign\Model\FeatureSet[]',
-        'plan_id' => 'string',
+        'plan_id' => '?string',
         'recipient_domains' => '\DocuSign\eSign\Model\RecipientDomain[]'
     ];
 
@@ -262,7 +262,7 @@ class PlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -272,7 +272,7 @@ class PlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code Specifies the ISO currency code for the account.
+     * @param ?string $currency_code Specifies the ISO currency code for the account.
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class PlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets free_trial_days_override
      *
-     * @return string
+     * @return ?string
      */
     public function getFreeTrialDaysOverride()
     {
@@ -296,7 +296,7 @@ class PlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets free_trial_days_override
      *
-     * @param string $free_trial_days_override Reserved for DocuSign use only.
+     * @param ?string $free_trial_days_override Reserved for DocuSign use only.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class PlanInformation implements ModelInterface, ArrayAccess
     /**
      * Gets plan_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanId()
     {
@@ -344,7 +344,7 @@ class PlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_id
      *
-     * @param string $plan_id The DocuSign Plan ID for the account.
+     * @param ?string $plan_id The DocuSign Plan ID for the account.
      *
      * @return $this
      */

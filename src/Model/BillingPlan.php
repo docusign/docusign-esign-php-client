@@ -60,19 +60,19 @@ class BillingPlan implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'app_store_products' => '\DocuSign\eSign\Model\AppStoreProduct[]',
         'currency_plan_prices' => '\DocuSign\eSign\Model\CurrencyPlanPrice[]',
-        'enable_support' => 'string',
-        'included_seats' => 'string',
-        'other_discount_percent' => 'string',
-        'payment_cycle' => 'string',
-        'payment_method' => 'string',
-        'per_seat_price' => 'string',
-        'plan_classification' => 'string',
+        'enable_support' => '?string',
+        'included_seats' => '?string',
+        'other_discount_percent' => '?string',
+        'payment_cycle' => '?string',
+        'payment_method' => '?string',
+        'per_seat_price' => '?string',
+        'plan_classification' => '?string',
         'plan_feature_sets' => '\DocuSign\eSign\Model\FeatureSet[]',
-        'plan_id' => 'string',
-        'plan_name' => 'string',
+        'plan_id' => '?string',
+        'plan_name' => '?string',
         'seat_discounts' => '\DocuSign\eSign\Model\SeatDiscount[]',
-        'support_incident_fee' => 'string',
-        'support_plan_fee' => 'string'
+        'support_incident_fee' => '?string',
+        'support_plan_fee' => '?string'
     ];
 
     /**
@@ -340,7 +340,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets enable_support
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableSupport()
     {
@@ -350,7 +350,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets enable_support
      *
-     * @param string $enable_support When set to **true**, then customer support is provided as part of the account plan.
+     * @param ?string $enable_support When set to **true**, then customer support is provided as part of the account plan.
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets included_seats
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludedSeats()
     {
@@ -374,7 +374,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets included_seats
      *
-     * @param string $included_seats The number of seats (users) included.
+     * @param ?string $included_seats The number of seats (users) included.
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets other_discount_percent
      *
-     * @return string
+     * @return ?string
      */
     public function getOtherDiscountPercent()
     {
@@ -398,7 +398,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets other_discount_percent
      *
-     * @param string $other_discount_percent 
+     * @param ?string $other_discount_percent 
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets payment_cycle
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentCycle()
     {
@@ -422,7 +422,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets payment_cycle
      *
-     * @param string $payment_cycle The payment cycle associated with the plan. The possible values are: Monthly or Annually.
+     * @param ?string $payment_cycle The payment cycle associated with the plan. The possible values are: Monthly or Annually.
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentMethod()
     {
@@ -446,7 +446,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param string $payment_method 
+     * @param ?string $payment_method 
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets per_seat_price
      *
-     * @return string
+     * @return ?string
      */
     public function getPerSeatPrice()
     {
@@ -470,7 +470,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets per_seat_price
      *
-     * @param string $per_seat_price The per seat price for the plan.
+     * @param ?string $per_seat_price The per seat price for the plan.
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_classification
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanClassification()
     {
@@ -494,7 +494,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_classification
      *
-     * @param string $plan_classification Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
+     * @param ?string $plan_classification Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
      *
      * @return $this
      */
@@ -532,7 +532,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanId()
     {
@@ -542,7 +542,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_id
      *
-     * @param string $plan_id 
+     * @param ?string $plan_id 
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPlanName()
     {
@@ -566,7 +566,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_name
      *
-     * @param string $plan_name The name of the Billing Plan.
+     * @param ?string $plan_name The name of the Billing Plan.
      *
      * @return $this
      */
@@ -604,7 +604,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets support_incident_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSupportIncidentFee()
     {
@@ -614,7 +614,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets support_incident_fee
      *
-     * @param string $support_incident_fee The support incident fee charged for each support incident.
+     * @param ?string $support_incident_fee The support incident fee charged for each support incident.
      *
      * @return $this
      */
@@ -628,7 +628,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Gets support_plan_fee
      *
-     * @return string
+     * @return ?string
      */
     public function getSupportPlanFee()
     {
@@ -638,7 +638,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets support_plan_fee
      *
-     * @param string $support_plan_fee The support plan fee charged for this plan.
+     * @param ?string $support_plan_fee The support plan fee charged for this plan.
      *
      * @return $this
      */

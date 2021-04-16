@@ -57,11 +57,11 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'document_id' => 'string',
+        'document_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'recipient_id' => 'string',
-        'rights' => 'string',
-        'visible' => 'string'
+        'recipient_id' => '?string',
+        'rights' => '?string',
+        'visible' => '?string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Gets document_id
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentId()
     {
@@ -241,7 +241,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Sets document_id
      *
-     * @param string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_id
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientId()
     {
@@ -289,7 +289,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id
      *
-     * @param string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+     * @param ?string $recipient_id Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Gets rights
      *
-     * @return string
+     * @return ?string
      */
     public function getRights()
     {
@@ -313,7 +313,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param string $rights 
+     * @param ?string $rights 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Gets visible
      *
-     * @return string
+     * @return ?string
      */
     public function getVisible()
     {
@@ -337,7 +337,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Sets visible
      *
-     * @param string $visible 
+     * @param ?string $visible 
      *
      * @return $this
      */

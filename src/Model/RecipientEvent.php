@@ -57,8 +57,8 @@ class RecipientEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_documents' => 'string',
-        'recipient_event_status_code' => 'string'
+        'include_documents' => '?string',
+        'recipient_event_status_code' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class RecipientEvent implements ModelInterface, ArrayAccess
     /**
      * Gets include_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeDocuments()
     {
@@ -223,7 +223,7 @@ class RecipientEvent implements ModelInterface, ArrayAccess
     /**
      * Sets include_documents
      *
-     * @param string $include_documents When set to **true**, the PDF documents are included in the message along with the updated XML.
+     * @param ?string $include_documents When set to **true**, the PDF documents are included in the message along with the updated XML.
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class RecipientEvent implements ModelInterface, ArrayAccess
     /**
      * Gets recipient_event_status_code
      *
-     * @return string
+     * @return ?string
      */
     public function getRecipientEventStatusCode()
     {
@@ -247,7 +247,7 @@ class RecipientEvent implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_event_status_code
      *
-     * @param string $recipient_event_status_code The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
+     * @param ?string $recipient_event_status_code The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
      *
      * @return $this
      */

@@ -57,24 +57,24 @@ class ConnectLog implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account_id' => 'string',
-        'config_url' => 'string',
+        'account_id' => '?string',
+        'config_url' => '?string',
         'connect_debug_log' => '\DocuSign\eSign\Model\ConnectDebugLog[]',
-        'connect_id' => 'string',
-        'created' => 'string',
-        'email' => 'string',
-        'envelope_id' => 'string',
-        'error' => 'string',
-        'failure_id' => 'string',
-        'failure_uri' => 'string',
-        'last_try' => 'string',
-        'log_id' => 'string',
-        'log_uri' => 'string',
-        'retry_count' => 'string',
-        'retry_uri' => 'string',
-        'status' => 'string',
-        'subject' => 'string',
-        'user_name' => 'string'
+        'connect_id' => '?string',
+        'created' => '?string',
+        'email' => '?string',
+        'envelope_id' => '?string',
+        'error' => '?string',
+        'failure_id' => '?string',
+        'failure_uri' => '?string',
+        'last_try' => '?string',
+        'log_id' => '?string',
+        'log_uri' => '?string',
+        'retry_count' => '?string',
+        'retry_uri' => '?string',
+        'status' => '?string',
+        'subject' => '?string',
+        'user_name' => '?string'
     ];
 
     /**
@@ -309,7 +309,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAccountId()
     {
@@ -319,7 +319,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets account_id
      *
-     * @param string $account_id The account ID associated with the envelope.
+     * @param ?string $account_id The account ID associated with the envelope.
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets config_url
      *
-     * @return string
+     * @return ?string
      */
     public function getConfigUrl()
     {
@@ -343,7 +343,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets config_url
      *
-     * @param string $config_url The web address of the listener or Retrieving Service end point for Connect.
+     * @param ?string $config_url The web address of the listener or Retrieving Service end point for Connect.
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets connect_id
      *
-     * @return string
+     * @return ?string
      */
     public function getConnectId()
     {
@@ -391,7 +391,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets connect_id
      *
-     * @param string $connect_id The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post.
+     * @param ?string $connect_id The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets created
      *
-     * @return string
+     * @return ?string
      */
     public function getCreated()
     {
@@ -415,7 +415,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param string $created The date and time the entry was created.
+     * @param ?string $created The date and time the entry was created.
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -439,7 +439,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email The email that sent the envelope.
+     * @param ?string $email The email that sent the envelope.
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_id
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeId()
     {
@@ -463,7 +463,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_id
      *
-     * @param string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets error
      *
-     * @return string
+     * @return ?string
      */
     public function getError()
     {
@@ -487,7 +487,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets error
      *
-     * @param string $error The error that caused the Connect post to fail.
+     * @param ?string $error The error that caused the Connect post to fail.
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets failure_id
      *
-     * @return string
+     * @return ?string
      */
     public function getFailureId()
     {
@@ -511,7 +511,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets failure_id
      *
-     * @param string $failure_id The failure log ID for the failure.
+     * @param ?string $failure_id The failure log ID for the failure.
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets failure_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getFailureUri()
     {
@@ -535,7 +535,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets failure_uri
      *
-     * @param string $failure_uri The URI for the failure.
+     * @param ?string $failure_uri The URI for the failure.
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets last_try
      *
-     * @return string
+     * @return ?string
      */
     public function getLastTry()
     {
@@ -559,7 +559,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets last_try
      *
-     * @param string $last_try The date and time the last attempt to post.
+     * @param ?string $last_try The date and time the last attempt to post.
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets log_id
      *
-     * @return string
+     * @return ?string
      */
     public function getLogId()
     {
@@ -583,7 +583,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets log_id
      *
-     * @param string $log_id The Connect log ID for the entry.
+     * @param ?string $log_id The Connect log ID for the entry.
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets log_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getLogUri()
     {
@@ -607,7 +607,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets log_uri
      *
-     * @param string $log_uri The URI for the log item.
+     * @param ?string $log_uri The URI for the log item.
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets retry_count
      *
-     * @return string
+     * @return ?string
      */
     public function getRetryCount()
     {
@@ -631,7 +631,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets retry_count
      *
-     * @param string $retry_count The number of times the Connect post has been retried.
+     * @param ?string $retry_count The number of times the Connect post has been retried.
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets retry_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getRetryUri()
     {
@@ -655,7 +655,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets retry_uri
      *
-     * @param string $retry_uri The UEI to retry to publish the Connect failure.
+     * @param ?string $retry_uri The UEI to retry to publish the Connect failure.
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -679,7 +679,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing.
+     * @param ?string $status The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing.
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets subject
      *
-     * @return string
+     * @return ?string
      */
     public function getSubject()
     {
@@ -703,7 +703,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets subject
      *
-     * @param string $subject The envelope subject.
+     * @param ?string $subject The envelope subject.
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -727,7 +727,7 @@ class ConnectLog implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name The name of the envelope sender.
+     * @param ?string $user_name The name of the envelope sender.
      *
      * @return $this
      */

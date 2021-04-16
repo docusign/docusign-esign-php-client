@@ -57,11 +57,11 @@ class MatchBox implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'height' => 'int',
-        'page_number' => 'int',
-        'width' => 'int',
-        'x_position' => 'int',
-        'y_position' => 'int'
+        'height' => '?int',
+        'page_number' => '?int',
+        'width' => '?int',
+        'x_position' => '?int',
+        'y_position' => '?int'
     ];
 
     /**
@@ -231,7 +231,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Gets height
      *
-     * @return int
+     * @return ?int
      */
     public function getHeight()
     {
@@ -241,7 +241,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Sets height
      *
-     * @param int $height Height of the tab in pixels.
+     * @param ?int $height Height of the tab in pixels.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Gets page_number
      *
-     * @return int
+     * @return ?int
      */
     public function getPageNumber()
     {
@@ -265,7 +265,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param int $page_number Specifies the page number on which the tab is located.
+     * @param ?int $page_number Specifies the page number on which the tab is located.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Gets width
      *
-     * @return int
+     * @return ?int
      */
     public function getWidth()
     {
@@ -289,7 +289,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Sets width
      *
-     * @param int $width Width of the tab in pixels.
+     * @param ?int $width Width of the tab in pixels.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Gets x_position
      *
-     * @return int
+     * @return ?int
      */
     public function getXPosition()
     {
@@ -313,7 +313,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Sets x_position
      *
-     * @param int $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?int $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Gets y_position
      *
-     * @return int
+     * @return ?int
      */
     public function getYPosition()
     {
@@ -337,7 +337,7 @@ class MatchBox implements ModelInterface, ArrayAccess
     /**
      * Sets y_position
      *
-     * @param int $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?int $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */

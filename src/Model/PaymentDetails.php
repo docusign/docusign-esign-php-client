@@ -57,20 +57,20 @@ class PaymentDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allowed_payment_methods' => 'string[]',
-        'charge_id' => 'string',
-        'currency_code' => 'string',
-        'customer_id' => 'string',
-        'custom_metadata' => 'string',
-        'custom_metadata_required' => 'bool',
-        'gateway_account_id' => 'string',
-        'gateway_display_name' => 'string',
-        'gateway_name' => 'string',
+        'allowed_payment_methods' => '?string[]',
+        'charge_id' => '?string',
+        'currency_code' => '?string',
+        'customer_id' => '?string',
+        'custom_metadata' => '?string',
+        'custom_metadata_required' => '?bool',
+        'gateway_account_id' => '?string',
+        'gateway_display_name' => '?string',
+        'gateway_name' => '?string',
         'line_items' => '\DocuSign\eSign\Model\PaymentLineItem[]',
-        'payment_option' => 'string',
-        'payment_source_id' => 'string',
+        'payment_option' => '?string',
+        'payment_source_id' => '?string',
         'signer_values' => '\DocuSign\eSign\Model\PaymentSignerValues',
-        'status' => 'string',
+        'status' => '?string',
         'total' => '\DocuSign\eSign\Model\Money'
     ];
 
@@ -291,7 +291,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_payment_methods
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getAllowedPaymentMethods()
     {
@@ -301,7 +301,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_payment_methods
      *
-     * @param string[] $allowed_payment_methods 
+     * @param ?string[] $allowed_payment_methods 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets charge_id
      *
-     * @return string
+     * @return ?string
      */
     public function getChargeId()
     {
@@ -325,7 +325,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets charge_id
      *
-     * @param string $charge_id 
+     * @param ?string $charge_id 
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets currency_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCurrencyCode()
     {
@@ -349,7 +349,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code 
+     * @param ?string $currency_code 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets customer_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomerId()
     {
@@ -373,7 +373,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id 
+     * @param ?string $customer_id 
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets custom_metadata
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomMetadata()
     {
@@ -397,7 +397,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets custom_metadata
      *
-     * @param string $custom_metadata 
+     * @param ?string $custom_metadata 
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets custom_metadata_required
      *
-     * @return bool
+     * @return ?bool
      */
     public function getCustomMetadataRequired()
     {
@@ -421,7 +421,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets custom_metadata_required
      *
-     * @param bool $custom_metadata_required 
+     * @param ?bool $custom_metadata_required 
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets gateway_account_id
      *
-     * @return string
+     * @return ?string
      */
     public function getGatewayAccountId()
     {
@@ -445,7 +445,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_account_id
      *
-     * @param string $gateway_account_id 
+     * @param ?string $gateway_account_id 
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets gateway_display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGatewayDisplayName()
     {
@@ -469,7 +469,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_display_name
      *
-     * @param string $gateway_display_name 
+     * @param ?string $gateway_display_name 
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets gateway_name
      *
-     * @return string
+     * @return ?string
      */
     public function getGatewayName()
     {
@@ -493,7 +493,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_name
      *
-     * @param string $gateway_name 
+     * @param ?string $gateway_name 
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets payment_option
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentOption()
     {
@@ -541,7 +541,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets payment_option
      *
-     * @param string $payment_option 
+     * @param ?string $payment_option 
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets payment_source_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentSourceId()
     {
@@ -565,7 +565,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets payment_source_id
      *
-     * @param string $payment_source_id 
+     * @param ?string $payment_source_id 
      *
      * @return $this
      */
@@ -603,7 +603,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -613,7 +613,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */

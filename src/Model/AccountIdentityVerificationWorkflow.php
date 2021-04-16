@@ -57,9 +57,9 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'default_name' => 'string',
+        'default_name' => '?string',
         'steps' => '\DocuSign\eSign\Model\AccountIdentityVerificationStep[]',
-        'workflow_id' => 'string'
+        'workflow_id' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Gets default_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDefaultName()
     {
@@ -229,7 +229,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets default_name
      *
-     * @param string $default_name 
+     * @param ?string $default_name 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Gets workflow_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkflowId()
     {
@@ -277,7 +277,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_id
      *
-     * @param string $workflow_id 
+     * @param ?string $workflow_id 
      *
      * @return $this
      */

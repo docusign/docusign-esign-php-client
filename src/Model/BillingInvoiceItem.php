@@ -58,11 +58,11 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'charge_amount' => 'string',
-        'charge_name' => 'string',
-        'invoice_item_id' => 'string',
-        'quantity' => 'string',
-        'unit_price' => 'string'
+        'charge_amount' => '?string',
+        'charge_name' => '?string',
+        'invoice_item_id' => '?string',
+        'quantity' => '?string',
+        'unit_price' => '?string'
     ];
 
     /**
@@ -232,7 +232,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Gets charge_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getChargeAmount()
     {
@@ -242,7 +242,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets charge_amount
      *
-     * @param string $charge_amount Reserved: TBD
+     * @param ?string $charge_amount Reserved: TBD
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Gets charge_name
      *
-     * @return string
+     * @return ?string
      */
     public function getChargeName()
     {
@@ -266,7 +266,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets charge_name
      *
-     * @param string $charge_name Reserved: TBD
+     * @param ?string $charge_name Reserved: TBD
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_item_id
      *
-     * @return string
+     * @return ?string
      */
     public function getInvoiceItemId()
     {
@@ -290,7 +290,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_item_id
      *
-     * @param string $invoice_item_id Reserved: TBD
+     * @param ?string $invoice_item_id Reserved: TBD
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Gets quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getQuantity()
     {
@@ -314,7 +314,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity
      *
-     * @param string $quantity 
+     * @param ?string $quantity 
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Gets unit_price
      *
-     * @return string
+     * @return ?string
      */
     public function getUnitPrice()
     {
@@ -338,7 +338,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets unit_price
      *
-     * @param string $unit_price Reserved: TBD
+     * @param ?string $unit_price Reserved: TBD
      *
      * @return $this
      */

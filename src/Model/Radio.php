@@ -57,24 +57,24 @@ class Radio implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'anchor_case_sensitive' => 'string',
-        'anchor_horizontal_alignment' => 'string',
-        'anchor_ignore_if_not_present' => 'string',
-        'anchor_match_whole_word' => 'string',
-        'anchor_string' => 'string',
-        'anchor_units' => 'string',
-        'anchor_x_offset' => 'string',
-        'anchor_y_offset' => 'string',
+        'anchor_case_sensitive' => '?string',
+        'anchor_horizontal_alignment' => '?string',
+        'anchor_ignore_if_not_present' => '?string',
+        'anchor_match_whole_word' => '?string',
+        'anchor_string' => '?string',
+        'anchor_units' => '?string',
+        'anchor_x_offset' => '?string',
+        'anchor_y_offset' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'locked' => 'string',
-        'page_number' => 'string',
-        'required' => 'string',
-        'selected' => 'string',
-        'tab_id' => 'string',
-        'tab_order' => 'string',
-        'value' => 'string',
-        'x_position' => 'string',
-        'y_position' => 'string'
+        'locked' => '?string',
+        'page_number' => '?string',
+        'required' => '?string',
+        'selected' => '?string',
+        'tab_id' => '?string',
+        'tab_order' => '?string',
+        'value' => '?string',
+        'x_position' => '?string',
+        'y_position' => '?string'
     ];
 
     /**
@@ -309,7 +309,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_case_sensitive
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorCaseSensitive()
     {
@@ -319,7 +319,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive
      *
-     * @param string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+     * @param ?string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_horizontal_alignment
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorHorizontalAlignment()
     {
@@ -343,7 +343,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment
      *
-     * @param string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+     * @param ?string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_ignore_if_not_present
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorIgnoreIfNotPresent()
     {
@@ -367,7 +367,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present
      *
-     * @param string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
+     * @param ?string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_match_whole_word
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorMatchWholeWord()
     {
@@ -391,7 +391,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word
      *
-     * @param string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+     * @param ?string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_string
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorString()
     {
@@ -415,7 +415,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string
      *
-     * @param string $anchor_string Anchor text information for a radio button.
+     * @param ?string $anchor_string Anchor text information for a radio button.
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_units
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorUnits()
     {
@@ -439,7 +439,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units
      *
-     * @param string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+     * @param ?string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_x_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorXOffset()
     {
@@ -463,7 +463,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset
      *
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_y_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorYOffset()
     {
@@ -487,7 +487,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset
      *
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets locked
      *
-     * @return string
+     * @return ?string
      */
     public function getLocked()
     {
@@ -535,7 +535,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets locked
      *
-     * @param string $locked When set to **true**, the signer cannot change the data of the custom tab.
+     * @param ?string $locked When set to **true**, the signer cannot change the data of the custom tab.
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets page_number
      *
-     * @return string
+     * @return ?string
      */
     public function getPageNumber()
     {
@@ -559,7 +559,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param string $page_number Specifies the page number on which the tab is located.
+     * @param ?string $page_number Specifies the page number on which the tab is located.
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets required
      *
-     * @return string
+     * @return ?string
      */
     public function getRequired()
     {
@@ -583,7 +583,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets required
      *
-     * @param string $required When set to **true**, the signer is required to fill out this tab
+     * @param ?string $required When set to **true**, the signer is required to fill out this tab
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets selected
      *
-     * @return string
+     * @return ?string
      */
     public function getSelected()
     {
@@ -607,7 +607,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets selected
      *
-     * @param string $selected When set to **true**, the radio button is selected.
+     * @param ?string $selected When set to **true**, the radio button is selected.
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getTabId()
     {
@@ -631,7 +631,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id
      *
-     * @param string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+     * @param ?string $tab_id The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets tab_order
      *
-     * @return string
+     * @return ?string
      */
     public function getTabOrder()
     {
@@ -655,7 +655,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order
      *
-     * @param string $tab_order 
+     * @param ?string $tab_order 
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return string
+     * @return ?string
      */
     public function getValue()
     {
@@ -679,7 +679,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Specifies the value of the tab.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets x_position
      *
-     * @return string
+     * @return ?string
      */
     public function getXPosition()
     {
@@ -703,7 +703,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets x_position
      *
-     * @param string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $x_position This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Gets y_position
      *
-     * @return string
+     * @return ?string
      */
     public function getYPosition()
     {
@@ -727,7 +727,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets y_position
      *
-     * @param string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+     * @param ?string $y_position This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
      *
      * @return $this
      */

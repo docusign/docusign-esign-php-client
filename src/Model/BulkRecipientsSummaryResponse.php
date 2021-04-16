@@ -58,8 +58,8 @@ class BulkRecipientsSummaryResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'bulk_recipients' => '\DocuSign\eSign\Model\BulkRecipient[]',
-        'bulk_recipients_count' => 'string',
-        'bulk_recipients_uri' => 'string',
+        'bulk_recipients_count' => '?string',
+        'bulk_recipients_uri' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails[]'
     ];
 
@@ -249,7 +249,7 @@ class BulkRecipientsSummaryResponse implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_recipients_count
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkRecipientsCount()
     {
@@ -259,7 +259,7 @@ class BulkRecipientsSummaryResponse implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_recipients_count
      *
-     * @param string $bulk_recipients_count The number of items returned in this response.
+     * @param ?string $bulk_recipients_count The number of items returned in this response.
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class BulkRecipientsSummaryResponse implements ModelInterface, ArrayAccess
     /**
      * Gets bulk_recipients_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getBulkRecipientsUri()
     {
@@ -283,7 +283,7 @@ class BulkRecipientsSummaryResponse implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_recipients_uri
      *
-     * @param string $bulk_recipients_uri Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.
+     * @param ?string $bulk_recipients_uri Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.
      *
      * @return $this
      */

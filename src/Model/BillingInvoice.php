@@ -58,16 +58,16 @@ class BillingInvoice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount' => 'string',
-        'balance' => 'string',
-        'due_date' => 'string',
-        'invoice_id' => 'string',
+        'amount' => '?string',
+        'balance' => '?string',
+        'due_date' => '?string',
+        'invoice_id' => '?string',
         'invoice_items' => '\DocuSign\eSign\Model\BillingInvoiceItem[]',
-        'invoice_number' => 'string',
-        'invoice_uri' => 'string',
-        'non_taxable_amount' => 'string',
-        'pdf_available' => 'string',
-        'taxable_amount' => 'string'
+        'invoice_number' => '?string',
+        'invoice_uri' => '?string',
+        'non_taxable_amount' => '?string',
+        'pdf_available' => '?string',
+        'taxable_amount' => '?string'
     ];
 
     /**
@@ -262,7 +262,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return string
+     * @return ?string
      */
     public function getAmount()
     {
@@ -272,7 +272,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param string $amount Reserved: TBD
+     * @param ?string $amount Reserved: TBD
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets balance
      *
-     * @return string
+     * @return ?string
      */
     public function getBalance()
     {
@@ -296,7 +296,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets balance
      *
-     * @param string $balance Reserved: TBD
+     * @param ?string $balance Reserved: TBD
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets due_date
      *
-     * @return string
+     * @return ?string
      */
     public function getDueDate()
     {
@@ -320,7 +320,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets due_date
      *
-     * @param string $due_date Reserved: TBD
+     * @param ?string $due_date Reserved: TBD
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_id
      *
-     * @return string
+     * @return ?string
      */
     public function getInvoiceId()
     {
@@ -344,7 +344,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_id
      *
-     * @param string $invoice_id Reserved: TBD
+     * @param ?string $invoice_id Reserved: TBD
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_number
      *
-     * @return string
+     * @return ?string
      */
     public function getInvoiceNumber()
     {
@@ -392,7 +392,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_number
      *
-     * @param string $invoice_number Reserved: TBD
+     * @param ?string $invoice_number Reserved: TBD
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getInvoiceUri()
     {
@@ -416,7 +416,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_uri
      *
-     * @param string $invoice_uri Contains a URI for an endpoint that you can use to retrieve invoice information.
+     * @param ?string $invoice_uri Contains a URI for an endpoint that you can use to retrieve invoice information.
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets non_taxable_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getNonTaxableAmount()
     {
@@ -440,7 +440,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets non_taxable_amount
      *
-     * @param string $non_taxable_amount 
+     * @param ?string $non_taxable_amount 
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets pdf_available
      *
-     * @return string
+     * @return ?string
      */
     public function getPdfAvailable()
     {
@@ -464,7 +464,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_available
      *
-     * @param string $pdf_available 
+     * @param ?string $pdf_available 
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets taxable_amount
      *
-     * @return string
+     * @return ?string
      */
     public function getTaxableAmount()
     {
@@ -488,7 +488,7 @@ class BillingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets taxable_amount
      *
-     * @param string $taxable_amount 
+     * @param ?string $taxable_amount 
      *
      * @return $this
      */

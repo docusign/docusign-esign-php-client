@@ -58,14 +58,14 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'end_position' => 'string',
+        'end_position' => '?string',
         'folder' => '\DocuSign\eSign\Model\WorkspaceItem',
         'items' => '\DocuSign\eSign\Model\WorkspaceItem[]',
         'parent_folders' => '\DocuSign\eSign\Model\WorkspaceItem[]',
-        'result_set_size' => 'string',
-        'start_position' => 'string',
-        'total_set_size' => 'string',
-        'workspace_id' => 'string'
+        'result_set_size' => '?string',
+        'start_position' => '?string',
+        'total_set_size' => '?string',
+        'workspace_id' => '?string'
     ];
 
     /**
@@ -250,7 +250,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Gets end_position
      *
-     * @return string
+     * @return ?string
      */
     public function getEndPosition()
     {
@@ -260,7 +260,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Sets end_position
      *
-     * @param string $end_position The last position in the result set.
+     * @param ?string $end_position The last position in the result set.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Gets result_set_size
      *
-     * @return string
+     * @return ?string
      */
     public function getResultSetSize()
     {
@@ -356,7 +356,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Sets result_set_size
      *
-     * @param string $result_set_size The number of results returned in this response.
+     * @param ?string $result_set_size The number of results returned in this response.
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Gets start_position
      *
-     * @return string
+     * @return ?string
      */
     public function getStartPosition()
     {
@@ -380,7 +380,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Sets start_position
      *
-     * @param string $start_position Starting position of the current result set.
+     * @param ?string $start_position Starting position of the current result set.
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Gets total_set_size
      *
-     * @return string
+     * @return ?string
      */
     public function getTotalSetSize()
     {
@@ -404,7 +404,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Sets total_set_size
      *
-     * @param string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+     * @param ?string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Gets workspace_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkspaceId()
     {
@@ -428,7 +428,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_id
      *
-     * @param string $workspace_id The id of the workspace, always populated.
+     * @param ?string $workspace_id The id of the workspace, always populated.
      *
      * @return $this
      */

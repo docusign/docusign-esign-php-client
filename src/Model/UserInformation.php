@@ -58,42 +58,42 @@ class UserInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'account_management_granular' => '\DocuSign\eSign\Model\UserAccountManagementGranularInformation',
-        'activation_access_code' => 'string',
-        'country_code' => 'string',
-        'created_date_time' => 'string',
+        'activation_access_code' => '?string',
+        'country_code' => '?string',
+        'created_date_time' => '?string',
         'custom_settings' => '\DocuSign\eSign\Model\NameValue[]',
-        'email' => 'string',
-        'enable_connect_for_user' => 'string',
+        'email' => '?string',
+        'enable_connect_for_user' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'first_name' => 'string',
+        'first_name' => '?string',
         'forgotten_password_info' => '\DocuSign\eSign\Model\ForgottenPasswordInformation',
         'group_list' => '\DocuSign\eSign\Model\Group[]',
         'home_address' => '\DocuSign\eSign\Model\AddressInformationV2',
-        'initials_image_uri' => 'string',
-        'is_admin' => 'string',
-        'job_title' => 'string',
-        'last_login' => 'string',
-        'last_name' => 'string',
-        'login_status' => 'string',
-        'middle_name' => 'string',
-        'password' => 'string',
-        'password_expiration' => 'string',
-        'permission_profile_id' => 'string',
-        'permission_profile_name' => 'string',
-        'profile_image_uri' => 'string',
-        'send_activation_email' => 'string',
-        'send_activation_on_invalid_login' => 'string',
-        'signature_image_uri' => 'string',
-        'subscribe' => 'string',
-        'suffix_name' => 'string',
-        'title' => 'string',
-        'uri' => 'string',
-        'user_id' => 'string',
-        'user_name' => 'string',
-        'user_profile_last_modified_date' => 'string',
+        'initials_image_uri' => '?string',
+        'is_admin' => '?string',
+        'job_title' => '?string',
+        'last_login' => '?string',
+        'last_name' => '?string',
+        'login_status' => '?string',
+        'middle_name' => '?string',
+        'password' => '?string',
+        'password_expiration' => '?string',
+        'permission_profile_id' => '?string',
+        'permission_profile_name' => '?string',
+        'profile_image_uri' => '?string',
+        'send_activation_email' => '?string',
+        'send_activation_on_invalid_login' => '?string',
+        'signature_image_uri' => '?string',
+        'subscribe' => '?string',
+        'suffix_name' => '?string',
+        'title' => '?string',
+        'uri' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string',
+        'user_profile_last_modified_date' => '?string',
         'user_settings' => '\DocuSign\eSign\Model\NameValue[]',
-        'user_status' => 'string',
-        'user_type' => 'string',
+        'user_status' => '?string',
+        'user_type' => '?string',
         'work_address' => '\DocuSign\eSign\Model\AddressInformationV2'
     ];
 
@@ -453,7 +453,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets activation_access_code
      *
-     * @return string
+     * @return ?string
      */
     public function getActivationAccessCode()
     {
@@ -463,7 +463,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets activation_access_code
      *
-     * @param string $activation_access_code The activation code the new user must enter when activating their account.
+     * @param ?string $activation_access_code The activation code the new user must enter when activating their account.
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets country_code
      *
-     * @return string
+     * @return ?string
      */
     public function getCountryCode()
     {
@@ -487,7 +487,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param string $country_code 
+     * @param ?string $country_code 
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets created_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDateTime()
     {
@@ -511,7 +511,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets created_date_time
      *
-     * @param string $created_date_time Indicates the date and time the item was created.
+     * @param ?string $created_date_time Indicates the date and time the item was created.
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
     public function getEmail()
     {
@@ -559,7 +559,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email 
+     * @param ?string $email 
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets enable_connect_for_user
      *
-     * @return string
+     * @return ?string
      */
     public function getEnableConnectForUser()
     {
@@ -583,7 +583,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_connect_for_user
      *
-     * @param string $enable_connect_for_user Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.
+     * @param ?string $enable_connect_for_user Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets first_name
      *
-     * @return string
+     * @return ?string
      */
     public function getFirstName()
     {
@@ -631,7 +631,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets first_name
      *
-     * @param string $first_name The user's first name.  Maximum Length: 50 characters.
+     * @param ?string $first_name The user's first name.  Maximum Length: 50 characters.
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets initials_image_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialsImageUri()
     {
@@ -727,7 +727,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets initials_image_uri
      *
-     * @param string $initials_image_uri Contains the URI for an endpoint that you can use to retrieve the initials image.
+     * @param ?string $initials_image_uri Contains the URI for an endpoint that you can use to retrieve the initials image.
      *
      * @return $this
      */
@@ -741,7 +741,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets is_admin
      *
-     * @return string
+     * @return ?string
      */
     public function getIsAdmin()
     {
@@ -751,7 +751,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets is_admin
      *
-     * @param string $is_admin Determines if the feature set is actively set as part of the plan.
+     * @param ?string $is_admin Determines if the feature set is actively set as part of the plan.
      *
      * @return $this
      */
@@ -765,7 +765,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets job_title
      *
-     * @return string
+     * @return ?string
      */
     public function getJobTitle()
     {
@@ -775,7 +775,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets job_title
      *
-     * @param string $job_title 
+     * @param ?string $job_title 
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets last_login
      *
-     * @return string
+     * @return ?string
      */
     public function getLastLogin()
     {
@@ -799,7 +799,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets last_login
      *
-     * @param string $last_login Shows the date-time when the user last logged on to the system.
+     * @param ?string $last_login Shows the date-time when the user last logged on to the system.
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets last_name
      *
-     * @return string
+     * @return ?string
      */
     public function getLastName()
     {
@@ -823,7 +823,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param string $last_name The user's last name.  Maximum Length: 50 characters.
+     * @param ?string $last_name The user's last name.  Maximum Length: 50 characters.
      *
      * @return $this
      */
@@ -837,7 +837,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets login_status
      *
-     * @return string
+     * @return ?string
      */
     public function getLoginStatus()
     {
@@ -847,7 +847,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets login_status
      *
-     * @param string $login_status Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed
+     * @param ?string $login_status Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets middle_name
      *
-     * @return string
+     * @return ?string
      */
     public function getMiddleName()
     {
@@ -871,7 +871,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets middle_name
      *
-     * @param string $middle_name The user's middle name.  Maximum Length: 50 characters.
+     * @param ?string $middle_name The user's middle name.  Maximum Length: 50 characters.
      *
      * @return $this
      */
@@ -885,7 +885,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets password
      *
-     * @return string
+     * @return ?string
      */
     public function getPassword()
     {
@@ -895,7 +895,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password 
+     * @param ?string $password 
      *
      * @return $this
      */
@@ -909,7 +909,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets password_expiration
      *
-     * @return string
+     * @return ?string
      */
     public function getPasswordExpiration()
     {
@@ -919,7 +919,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets password_expiration
      *
-     * @param string $password_expiration 
+     * @param ?string $password_expiration 
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets permission_profile_id
      *
-     * @return string
+     * @return ?string
      */
     public function getPermissionProfileId()
     {
@@ -943,7 +943,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_id
      *
-     * @param string $permission_profile_id 
+     * @param ?string $permission_profile_id 
      *
      * @return $this
      */
@@ -957,7 +957,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets permission_profile_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPermissionProfileName()
     {
@@ -967,7 +967,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_name
      *
-     * @param string $permission_profile_name 
+     * @param ?string $permission_profile_name 
      *
      * @return $this
      */
@@ -981,7 +981,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets profile_image_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getProfileImageUri()
     {
@@ -991,7 +991,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets profile_image_uri
      *
-     * @param string $profile_image_uri 
+     * @param ?string $profile_image_uri 
      *
      * @return $this
      */
@@ -1005,7 +1005,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets send_activation_email
      *
-     * @return string
+     * @return ?string
      */
     public function getSendActivationEmail()
     {
@@ -1015,7 +1015,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets send_activation_email
      *
-     * @param string $send_activation_email 
+     * @param ?string $send_activation_email 
      *
      * @return $this
      */
@@ -1029,7 +1029,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets send_activation_on_invalid_login
      *
-     * @return string
+     * @return ?string
      */
     public function getSendActivationOnInvalidLogin()
     {
@@ -1039,7 +1039,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets send_activation_on_invalid_login
      *
-     * @param string $send_activation_on_invalid_login When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.
+     * @param ?string $send_activation_on_invalid_login When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.
      *
      * @return $this
      */
@@ -1053,7 +1053,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets signature_image_uri
      *
-     * @return string
+     * @return ?string
      */
     public function getSignatureImageUri()
     {
@@ -1063,7 +1063,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signature_image_uri
      *
-     * @param string $signature_image_uri Contains the URI for an endpoint that you can use to retrieve the signature image.
+     * @param ?string $signature_image_uri Contains the URI for an endpoint that you can use to retrieve the signature image.
      *
      * @return $this
      */
@@ -1077,7 +1077,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets subscribe
      *
-     * @return string
+     * @return ?string
      */
     public function getSubscribe()
     {
@@ -1087,7 +1087,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets subscribe
      *
-     * @param string $subscribe 
+     * @param ?string $subscribe 
      *
      * @return $this
      */
@@ -1101,7 +1101,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets suffix_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSuffixName()
     {
@@ -1111,7 +1111,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets suffix_name
      *
-     * @param string $suffix_name The suffix for the user's name.   Maximum Length: 50 characters.
+     * @param ?string $suffix_name The suffix for the user's name.   Maximum Length: 50 characters.
      *
      * @return $this
      */
@@ -1125,7 +1125,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets title
      *
-     * @return string
+     * @return ?string
      */
     public function getTitle()
     {
@@ -1135,7 +1135,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets title
      *
-     * @param string $title The title of the user.
+     * @param ?string $title The title of the user.
      *
      * @return $this
      */
@@ -1149,7 +1149,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets uri
      *
-     * @return string
+     * @return ?string
      */
     public function getUri()
     {
@@ -1159,7 +1159,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param string $uri 
+     * @param ?string $uri 
      *
      * @return $this
      */
@@ -1173,7 +1173,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getUserId()
     {
@@ -1183,7 +1183,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param string $user_id 
+     * @param ?string $user_id 
      *
      * @return $this
      */
@@ -1197,7 +1197,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets user_name
      *
-     * @return string
+     * @return ?string
      */
     public function getUserName()
     {
@@ -1207,7 +1207,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param string $user_name 
+     * @param ?string $user_name 
      *
      * @return $this
      */
@@ -1221,7 +1221,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets user_profile_last_modified_date
      *
-     * @return string
+     * @return ?string
      */
     public function getUserProfileLastModifiedDate()
     {
@@ -1231,7 +1231,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_profile_last_modified_date
      *
-     * @param string $user_profile_last_modified_date 
+     * @param ?string $user_profile_last_modified_date 
      *
      * @return $this
      */
@@ -1269,7 +1269,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets user_status
      *
-     * @return string
+     * @return ?string
      */
     public function getUserStatus()
     {
@@ -1279,7 +1279,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_status
      *
-     * @param string $user_status 
+     * @param ?string $user_status 
      *
      * @return $this
      */
@@ -1293,7 +1293,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Gets user_type
      *
-     * @return string
+     * @return ?string
      */
     public function getUserType()
     {
@@ -1303,7 +1303,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param string $user_type 
+     * @param ?string $user_type 
      *
      * @return $this
      */

@@ -57,9 +57,9 @@ class BillingDiscount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'begin_quantity' => 'string',
-        'discount' => 'string',
-        'end_quantity' => 'string'
+        'begin_quantity' => '?string',
+        'discount' => '?string',
+        'end_quantity' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets begin_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getBeginQuantity()
     {
@@ -229,7 +229,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets begin_quantity
      *
-     * @param string $begin_quantity Reserved: TBD
+     * @param ?string $begin_quantity Reserved: TBD
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets discount
      *
-     * @return string
+     * @return ?string
      */
     public function getDiscount()
     {
@@ -253,7 +253,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets discount
      *
-     * @param string $discount 
+     * @param ?string $discount 
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets end_quantity
      *
-     * @return string
+     * @return ?string
      */
     public function getEndQuantity()
     {
@@ -277,7 +277,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets end_quantity
      *
-     * @param string $end_quantity 
+     * @param ?string $end_quantity 
      *
      * @return $this
      */

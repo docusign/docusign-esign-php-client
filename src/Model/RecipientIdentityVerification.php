@@ -58,7 +58,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'input_options' => '\DocuSign\eSign\Model\RecipientIdentityInputOption[]',
-        'workflow_id' => 'string'
+        'workflow_id' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     /**
      * Gets workflow_id
      *
-     * @return string
+     * @return ?string
      */
     public function getWorkflowId()
     {
@@ -247,7 +247,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_id
      *
-     * @param string $workflow_id 
+     * @param ?string $workflow_id 
      *
      * @return $this
      */

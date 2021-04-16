@@ -61,7 +61,7 @@ class InlineTemplate implements ModelInterface, ArrayAccess
         'documents' => '\DocuSign\eSign\Model\Document[]',
         'envelope' => '\DocuSign\eSign\Model\Envelope',
         'recipients' => '\DocuSign\eSign\Model\Recipients',
-        'sequence' => 'string'
+        'sequence' => '?string'
     ];
 
     /**
@@ -327,7 +327,7 @@ class InlineTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets sequence
      *
-     * @return string
+     * @return ?string
      */
     public function getSequence()
     {
@@ -337,7 +337,7 @@ class InlineTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets sequence
      *
-     * @param string $sequence Specifies the order in which templates are overlaid.
+     * @param ?string $sequence Specifies the order in which templates are overlaid.
      *
      * @return $this
      */

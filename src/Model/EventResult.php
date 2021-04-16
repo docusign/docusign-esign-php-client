@@ -57,10 +57,10 @@ class EventResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'event_timestamp' => 'string',
-        'failure_description' => 'string',
-        'status' => 'string',
-        'vendor_failure_status_code' => 'string'
+        'event_timestamp' => '?string',
+        'failure_description' => '?string',
+        'status' => '?string',
+        'vendor_failure_status_code' => '?string'
     ];
 
     /**
@@ -225,7 +225,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Gets event_timestamp
      *
-     * @return string
+     * @return ?string
      */
     public function getEventTimestamp()
     {
@@ -235,7 +235,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Sets event_timestamp
      *
-     * @param string $event_timestamp 
+     * @param ?string $event_timestamp 
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Gets failure_description
      *
-     * @return string
+     * @return ?string
      */
     public function getFailureDescription()
     {
@@ -259,7 +259,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Sets failure_description
      *
-     * @param string $failure_description 
+     * @param ?string $failure_description 
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
     public function getStatus()
     {
@@ -283,7 +283,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Gets vendor_failure_status_code
      *
-     * @return string
+     * @return ?string
      */
     public function getVendorFailureStatusCode()
     {
@@ -307,7 +307,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Sets vendor_failure_status_code
      *
-     * @param string $vendor_failure_status_code 
+     * @param ?string $vendor_failure_status_code 
      *
      * @return $this
      */

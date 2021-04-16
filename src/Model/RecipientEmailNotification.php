@@ -57,9 +57,9 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_body' => 'string',
-        'email_subject' => 'string',
-        'supported_language' => 'string'
+        'email_body' => '?string',
+        'email_subject' => '?string',
+        'supported_language' => '?string'
     ];
 
     /**
@@ -219,7 +219,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Gets email_body
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailBody()
     {
@@ -229,7 +229,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Sets email_body
      *
-     * @param string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
+     * @param ?string $email_body Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters.
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Gets email_subject
      *
-     * @return string
+     * @return ?string
      */
     public function getEmailSubject()
     {
@@ -253,7 +253,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Sets email_subject
      *
-     * @param string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+     * @param ?string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Gets supported_language
      *
-     * @return string
+     * @return ?string
      */
     public function getSupportedLanguage()
     {
@@ -277,7 +277,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Sets supported_language
      *
-     * @param string $supported_language A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).
+     * @param ?string $supported_language A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).
      *
      * @return $this
      */

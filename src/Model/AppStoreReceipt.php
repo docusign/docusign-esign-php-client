@@ -58,8 +58,8 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_id' => 'string',
-        'receipt_data' => 'string'
+        'product_id' => '?string',
+        'receipt_data' => '?string'
     ];
 
     /**
@@ -214,7 +214,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
     /**
      * Gets product_id
      *
-     * @return string
+     * @return ?string
      */
     public function getProductId()
     {
@@ -224,7 +224,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
     /**
      * Sets product_id
      *
-     * @param string $product_id 
+     * @param ?string $product_id 
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
     /**
      * Gets receipt_data
      *
-     * @return string
+     * @return ?string
      */
     public function getReceiptData()
     {
@@ -248,7 +248,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
     /**
      * Sets receipt_data
      *
-     * @param string $receipt_data Reserved: TBD
+     * @param ?string $receipt_data Reserved: TBD
      *
      * @return $this
      */

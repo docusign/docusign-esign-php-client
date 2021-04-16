@@ -57,8 +57,8 @@ class EnvelopeEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope_event_status_code' => 'string',
-        'include_documents' => 'string'
+        'envelope_event_status_code' => '?string',
+        'include_documents' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class EnvelopeEvent implements ModelInterface, ArrayAccess
     /**
      * Gets envelope_event_status_code
      *
-     * @return string
+     * @return ?string
      */
     public function getEnvelopeEventStatusCode()
     {
@@ -223,7 +223,7 @@ class EnvelopeEvent implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_event_status_code
      *
-     * @param string $envelope_event_status_code he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.
+     * @param ?string $envelope_event_status_code he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class EnvelopeEvent implements ModelInterface, ArrayAccess
     /**
      * Gets include_documents
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludeDocuments()
     {
@@ -247,7 +247,7 @@ class EnvelopeEvent implements ModelInterface, ArrayAccess
     /**
      * Sets include_documents
      *
-     * @param string $include_documents When set to **true**, the PDF documents are included in the message along with the updated XML.
+     * @param ?string $include_documents When set to **true**, the PDF documents are included in the message along with the updated XML.
      *
      * @return $this
      */

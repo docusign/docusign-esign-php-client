@@ -57,12 +57,12 @@ class NotaryJournal implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created_date' => 'string',
-        'document_name' => 'string',
+        'created_date' => '?string',
+        'document_name' => '?string',
         'jurisdiction' => '\DocuSign\eSign\Model\Jurisdiction',
-        'notary_journal_id' => 'string',
+        'notary_journal_id' => '?string',
         'notary_journal_meta_data' => '\DocuSign\eSign\Model\NotaryJournalMetaData',
-        'signer_name' => 'string'
+        'signer_name' => '?string'
     ];
 
     /**
@@ -237,7 +237,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Gets created_date
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedDate()
     {
@@ -247,7 +247,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param string $created_date 
+     * @param ?string $created_date 
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Gets document_name
      *
-     * @return string
+     * @return ?string
      */
     public function getDocumentName()
     {
@@ -271,7 +271,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets document_name
      *
-     * @param string $document_name 
+     * @param ?string $document_name 
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Gets notary_journal_id
      *
-     * @return string
+     * @return ?string
      */
     public function getNotaryJournalId()
     {
@@ -319,7 +319,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets notary_journal_id
      *
-     * @param string $notary_journal_id 
+     * @param ?string $notary_journal_id 
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Gets signer_name
      *
-     * @return string
+     * @return ?string
      */
     public function getSignerName()
     {
@@ -367,7 +367,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets signer_name
      *
-     * @param string $signer_name 
+     * @param ?string $signer_name 
      *
      * @return $this
      */

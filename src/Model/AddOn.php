@@ -58,10 +58,10 @@ class AddOn implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'active' => 'string',
-        'add_on_id' => 'string',
-        'id' => 'string',
-        'name' => 'string'
+        'active' => '?string',
+        'add_on_id' => '?string',
+        'id' => '?string',
+        'name' => '?string'
     ];
 
     /**
@@ -226,7 +226,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Gets active
      *
-     * @return string
+     * @return ?string
      */
     public function getActive()
     {
@@ -236,7 +236,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param string $active Reserved:
+     * @param ?string $active Reserved:
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Gets add_on_id
      *
-     * @return string
+     * @return ?string
      */
     public function getAddOnId()
     {
@@ -260,7 +260,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Sets add_on_id
      *
-     * @param string $add_on_id Reserved:
+     * @param ?string $add_on_id Reserved:
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
     public function getId()
     {
@@ -284,7 +284,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id 
+     * @param ?string $id 
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -308,7 +308,7 @@ class AddOn implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Reserved:
+     * @param ?string $name Reserved:
      *
      * @return $this
      */

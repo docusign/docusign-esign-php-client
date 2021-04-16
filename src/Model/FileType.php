@@ -57,8 +57,8 @@ class FileType implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'file_extension' => 'string',
-        'mime_type' => 'string'
+        'file_extension' => '?string',
+        'mime_type' => '?string'
     ];
 
     /**
@@ -213,7 +213,7 @@ class FileType implements ModelInterface, ArrayAccess
     /**
      * Gets file_extension
      *
-     * @return string
+     * @return ?string
      */
     public function getFileExtension()
     {
@@ -223,7 +223,7 @@ class FileType implements ModelInterface, ArrayAccess
     /**
      * Sets file_extension
      *
-     * @param string $file_extension 
+     * @param ?string $file_extension 
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class FileType implements ModelInterface, ArrayAccess
     /**
      * Gets mime_type
      *
-     * @return string
+     * @return ?string
      */
     public function getMimeType()
     {
@@ -247,7 +247,7 @@ class FileType implements ModelInterface, ArrayAccess
     /**
      * Sets mime_type
      *
-     * @param string $mime_type The mime-type of a file type listed in a fileTypes collection.
+     * @param ?string $mime_type The mime-type of a file type listed in a fileTypes collection.
      *
      * @return $this
      */

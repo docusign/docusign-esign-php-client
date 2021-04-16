@@ -57,11 +57,11 @@ class ServiceInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'build_branch' => 'string',
-        'build_branch_deployed_date_time' => 'string',
-        'build_sha' => 'string',
-        'build_version' => 'string',
-        'linked_sites' => 'string[]',
+        'build_branch' => '?string',
+        'build_branch_deployed_date_time' => '?string',
+        'build_sha' => '?string',
+        'build_version' => '?string',
+        'linked_sites' => '?string[]',
         'service_versions' => '\DocuSign\eSign\Model\ServiceVersion[]'
     ];
 
@@ -237,7 +237,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Gets build_branch
      *
-     * @return string
+     * @return ?string
      */
     public function getBuildBranch()
     {
@@ -247,7 +247,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Sets build_branch
      *
-     * @param string $build_branch Reserved: TBD
+     * @param ?string $build_branch Reserved: TBD
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Gets build_branch_deployed_date_time
      *
-     * @return string
+     * @return ?string
      */
     public function getBuildBranchDeployedDateTime()
     {
@@ -271,7 +271,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Sets build_branch_deployed_date_time
      *
-     * @param string $build_branch_deployed_date_time Reserved: TBD
+     * @param ?string $build_branch_deployed_date_time Reserved: TBD
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Gets build_sha
      *
-     * @return string
+     * @return ?string
      */
     public function getBuildSha()
     {
@@ -295,7 +295,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Sets build_sha
      *
-     * @param string $build_sha Reserved: TBD
+     * @param ?string $build_sha Reserved: TBD
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Gets build_version
      *
-     * @return string
+     * @return ?string
      */
     public function getBuildVersion()
     {
@@ -319,7 +319,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Sets build_version
      *
-     * @param string $build_version Reserved: TBD
+     * @param ?string $build_version Reserved: TBD
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Gets linked_sites
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getLinkedSites()
     {
@@ -343,7 +343,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
     /**
      * Sets linked_sites
      *
-     * @param string[] $linked_sites 
+     * @param ?string[] $linked_sites 
      *
      * @return $this
      */

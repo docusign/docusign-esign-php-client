@@ -57,7 +57,7 @@ class DocumentHtmlDefinitions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'html_definitions' => 'string[]'
+        'html_definitions' => '?string[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class DocumentHtmlDefinitions implements ModelInterface, ArrayAccess
     /**
      * Gets html_definitions
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getHtmlDefinitions()
     {
@@ -217,7 +217,7 @@ class DocumentHtmlDefinitions implements ModelInterface, ArrayAccess
     /**
      * Sets html_definitions
      *
-     * @param string[] $html_definitions 
+     * @param ?string[] $html_definitions 
      *
      * @return $this
      */

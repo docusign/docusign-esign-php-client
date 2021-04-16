@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /**
- * CustomTabsApi.
+ * SignatureApi.
  *
  * PHP version 7.4
  *
@@ -29,37 +29,7 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\CustomTabsApi;
-
-
-class ListOptions
-{
-    /**
-      * $custom_tab_only When set to **true**, only custom tabs are returned in the response.
-      * @var ?string
-      */
-    protected ?string $custom_tab_only = null;
-
-    /**
-     * Gets custom_tab_only
-     * @return ?string
-     */
-    public function getCustomTabOnly(): ?string
-    {
-        return $this->custom_tab_only;
-    }
-
-    /**
-     * Sets custom_tab_only
-     * @param ?string $custom_tab_only When set to **true**, only custom tabs are returned in the response.
-     * @return self
-     */
-    public function setCustomTabOnly(?string $custom_tab_only): self
-    {
-        $this->custom_tab_only = $custom_tab_only;
-        return $this;
-    }
-}
+namespace DocuSign\eSign\Api\SignatureApi;
 
 
 
@@ -71,14 +41,14 @@ use DocuSign\eSign\Configuration;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * CustomTabsApi Class Doc Comment
+ * SignatureApi Class Doc Comment
  *
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomTabsApi
+class SignatureApi
 {
     /**
      * API Client
@@ -141,150 +111,46 @@ class CustomTabsApi
 
 
     /**
-     * Operation callList
+     * Operation completeSignHash
      *
-     * Gets a list of all account tabs.
+     * Complete Sign Hash
      *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\CustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param \DocuSign\eSign\Model\CompleteSignRequest $complete_sign_request  (optional)
      * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\TabMetadataList
+     * @return \DocuSign\eSign\Model\CompleteSignHashResponse
      */
-    public function callList($account_id, \DocuSign\eSign\Api\CustomTabsApi\ListOptions $options = null): \DocuSign\eSign\Model\TabMetadataList
+    public function completeSignHash($complete_sign_request = null): \DocuSign\eSign\Model\CompleteSignHashResponse
     {
-        list($response) = $this->callListWithHttpInfo($account_id, $options);
+        list($response) = $this->completeSignHashWithHttpInfo($complete_sign_request);
         return $response;
     }
 
     /**
-     * Operation callListWithHttpInfo
+     * Operation completeSignHashWithHttpInfo
      *
-     * Gets a list of all account tabs.
+     * Complete Sign Hash
      *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\CustomTabsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param \DocuSign\eSign\Model\CompleteSignRequest $complete_sign_request  (optional)
      * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\TabMetadataList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocuSign\eSign\Model\CompleteSignHashResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, \DocuSign\eSign\Api\CustomTabsApi\ListOptions $options = null): array
+    public function completeSignHashWithHttpInfo($complete_sign_request = null): array
     {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling callList');
-        }
         // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/tab_definitions";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-            // query params
-            if ($options->getCustomTabOnly() != 'null') {
-                $queryParams['custom_tab_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getCustomTabOnly());
-            }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\TabMetadataList',
-                '/v2/accounts/{accountId}/tab_definitions'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\TabMetadataList', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TabMetadataList', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation create
-     *
-     * Creates a custom tab.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\TabMetadata
-     */
-    public function create($account_id, $tab_metadata = null): \DocuSign\eSign\Model\TabMetadata
-    {
-        list($response) = $this->createWithHttpInfo($account_id, $tab_metadata);
-        return $response;
-    }
-
-    /**
-     * Operation createWithHttpInfo
-     *
-     * Creates a custom tab.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function createWithHttpInfo($account_id, $tab_metadata = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling create');
-        }
-        // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/tab_definitions";
+        $resourcePath = "/v2/signature/completesignhash";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
         // body params
         $_tempBody = null;
-        if (isset($tab_metadata)) {
-            $_tempBody = $tab_metadata;
+        if (isset($complete_sign_request)) {
+            $_tempBody = $complete_sign_request;
         }
 
         // for model (json/xml)
@@ -305,15 +171,15 @@ class CustomTabsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\TabMetadata',
-                '/v2/accounts/{accountId}/tab_definitions'
+                '\DocuSign\eSign\Model\CompleteSignHashResponse',
+                '/v2/signature/completesignhash'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\TabMetadata', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\CompleteSignHashResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TabMetadata', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\CompleteSignHashResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -327,148 +193,37 @@ class CustomTabsApi
     }
 
     /**
-     * Operation delete
+     * Operation getUserInfo
      *
-     * Deletes custom tab information.
+     * Get User Info To Sign Document
      *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $custom_tab_id 
      * @throws ApiException on non-2xx response
-     * @return mixed
+     * @return \DocuSign\eSign\Model\UserInfoResponse
      */
-    public function delete($account_id, $custom_tab_id): mixed
+    public function getUserInfo(): \DocuSign\eSign\Model\UserInfoResponse
     {
-        list($response) = $this->deleteWithHttpInfo($account_id, $custom_tab_id);
+        list($response) = $this->getUserInfoWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation deleteWithHttpInfo
+     * Operation getUserInfoWithHttpInfo
      *
-     * Deletes custom tab information.
+     * Get User Info To Sign Document
      *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $custom_tab_id 
      * @throws ApiException on non-2xx response
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocuSign\eSign\Model\UserInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWithHttpInfo($account_id, $custom_tab_id): array
+    public function getUserInfoWithHttpInfo(): array
     {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling delete');
-        }
-        // verify the required parameter 'custom_tab_id' is set
-        if ($custom_tab_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $custom_tab_id when calling delete');
-        }
         // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/tab_definitions/{customTabId}";
+        $resourcePath = "/v2/signature/userInfo";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($custom_tab_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "customTabId", $custom_tab_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'DELETE',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                null,
-                '/v2/accounts/{accountId}/tab_definitions/{customTabId}'
-            );
-
-            return [null, $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation get
-     *
-     * Gets custom tab information.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $custom_tab_id 
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\TabMetadata
-     */
-    public function get($account_id, $custom_tab_id): \DocuSign\eSign\Model\TabMetadata
-    {
-        list($response) = $this->getWithHttpInfo($account_id, $custom_tab_id);
-        return $response;
-    }
-
-    /**
-     * Operation getWithHttpInfo
-     *
-     * Gets custom tab information.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $custom_tab_id 
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getWithHttpInfo($account_id, $custom_tab_id): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling get');
-        }
-        // verify the required parameter 'custom_tab_id' is set
-        if ($custom_tab_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $custom_tab_id when calling get');
-        }
-        // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/tab_definitions/{customTabId}";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($custom_tab_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "customTabId", $custom_tab_id);
-        }
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -491,15 +246,15 @@ class CustomTabsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\TabMetadata',
-                '/v2/accounts/{accountId}/tab_definitions/{customTabId}'
+                '\DocuSign\eSign\Model\UserInfoResponse',
+                '/v2/signature/userInfo'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\TabMetadata', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\UserInfoResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TabMetadata', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\UserInfoResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -513,66 +268,46 @@ class CustomTabsApi
     }
 
     /**
-     * Operation update
+     * Operation healthCheck
      *
-     * Updates custom tab information.
+     * Report status from the TSP to DocuSign
      *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $custom_tab_id 
-     * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
+     * @param \DocuSign\eSign\Model\TspHealthCheckRequest $tsp_health_check_request  (optional)
      * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\TabMetadata
+     * @return mixed
      */
-    public function update($account_id, $custom_tab_id, $tab_metadata = null): \DocuSign\eSign\Model\TabMetadata
+    public function healthCheck($tsp_health_check_request = null): mixed
     {
-        list($response) = $this->updateWithHttpInfo($account_id, $custom_tab_id, $tab_metadata);
+        list($response) = $this->healthCheckWithHttpInfo($tsp_health_check_request);
         return $response;
     }
 
     /**
-     * Operation updateWithHttpInfo
+     * Operation healthCheckWithHttpInfo
      *
-     * Updates custom tab information.
+     * Report status from the TSP to DocuSign
      *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $custom_tab_id 
-     * @param \DocuSign\eSign\Model\TabMetadata $tab_metadata  (optional)
+     * @param \DocuSign\eSign\Model\TspHealthCheckRequest $tsp_health_check_request  (optional)
      * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\TabMetadata, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateWithHttpInfo($account_id, $custom_tab_id, $tab_metadata = null): array
+    public function healthCheckWithHttpInfo($tsp_health_check_request = null): array
     {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling update');
-        }
-        // verify the required parameter 'custom_tab_id' is set
-        if ($custom_tab_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $custom_tab_id when calling update');
-        }
         // parse inputs
-        $resourcePath = "/v2/accounts/{accountId}/tab_definitions/{customTabId}";
+        $resourcePath = "/v2/signature/healthcheck";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($custom_tab_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "customTabId", $custom_tab_id);
-        }
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
         // body params
         $_tempBody = null;
-        if (isset($tab_metadata)) {
-            $_tempBody = $tab_metadata;
+        if (isset($tsp_health_check_request)) {
+            $_tempBody = $tsp_health_check_request;
         }
 
         // for model (json/xml)
@@ -589,19 +324,179 @@ class CustomTabsApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'PUT',
+                'POST',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\TabMetadata',
-                '/v2/accounts/{accountId}/tab_definitions/{customTabId}'
+                null,
+                '/v2/signature/healthcheck'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\TabMetadata', $httpHeader), $statusCode, $httpHeader];
+            return [null, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TabMetadata', $e->getResponseHeaders());
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation signHashSessionInfo
+     *
+     * Get Signature Session Info To Sign Document Hash
+     *
+     * @param \DocuSign\eSign\Model\SignSessionInfoRequest $sign_session_info_request  (optional)
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\SignHashSessionInfoResponse
+     */
+    public function signHashSessionInfo($sign_session_info_request = null): \DocuSign\eSign\Model\SignHashSessionInfoResponse
+    {
+        list($response) = $this->signHashSessionInfoWithHttpInfo($sign_session_info_request);
+        return $response;
+    }
+
+    /**
+     * Operation signHashSessionInfoWithHttpInfo
+     *
+     * Get Signature Session Info To Sign Document Hash
+     *
+     * @param \DocuSign\eSign\Model\SignSessionInfoRequest $sign_session_info_request  (optional)
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\SignHashSessionInfoResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function signHashSessionInfoWithHttpInfo($sign_session_info_request = null): array
+    {
+        // parse inputs
+        $resourcePath = "/v2/signature/signhashsessioninfo";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($sign_session_info_request)) {
+            $_tempBody = $sign_session_info_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\SignHashSessionInfoResponse',
+                '/v2/signature/signhashsessioninfo'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\SignHashSessionInfoResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\SignHashSessionInfoResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateTransaction
+     *
+     * Report an error from the tsp to docusign
+     *
+     * @param \DocuSign\eSign\Model\UpdateTransactionRequest $update_transaction_request  (optional)
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\UpdateTransactionResponse
+     */
+    public function updateTransaction($update_transaction_request = null): \DocuSign\eSign\Model\UpdateTransactionResponse
+    {
+        list($response) = $this->updateTransactionWithHttpInfo($update_transaction_request);
+        return $response;
+    }
+
+    /**
+     * Operation updateTransactionWithHttpInfo
+     *
+     * Report an error from the tsp to docusign
+     *
+     * @param \DocuSign\eSign\Model\UpdateTransactionRequest $update_transaction_request  (optional)
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\UpdateTransactionResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateTransactionWithHttpInfo($update_transaction_request = null): array
+    {
+        // parse inputs
+        $resourcePath = "/v2/signature/updatetransaction";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($update_transaction_request)) {
+            $_tempBody = $update_transaction_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\UpdateTransactionResponse',
+                '/v2/signature/updatetransaction'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\UpdateTransactionResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\UpdateTransactionResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

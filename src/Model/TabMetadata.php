@@ -57,54 +57,54 @@ class TabMetadata implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'anchor' => 'string',
-        'anchor_case_sensitive' => 'string',
-        'anchor_horizontal_alignment' => 'string',
-        'anchor_ignore_if_not_present' => 'string',
-        'anchor_match_whole_word' => 'string',
-        'anchor_units' => 'string',
-        'anchor_x_offset' => 'string',
-        'anchor_y_offset' => 'string',
-        'bold' => 'string',
-        'collaborative' => 'string',
-        'conceal_value_on_document' => 'string',
-        'created_by_display_name' => 'string',
-        'created_by_user_id' => 'string',
-        'custom_tab_id' => 'string',
-        'disable_auto_size' => 'string',
-        'editable' => 'string',
-        'font' => 'string',
-        'font_color' => 'string',
-        'font_size' => 'string',
-        'height' => 'string',
-        'included_in_email' => 'string',
-        'initial_value' => 'string',
-        'italic' => 'string',
-        'items' => 'string[]',
-        'last_modified' => 'string',
-        'last_modified_by_display_name' => 'string',
-        'last_modified_by_user_id' => 'string',
-        'locked' => 'string',
-        'maximum_length' => 'string',
+        'anchor' => '?string',
+        'anchor_case_sensitive' => '?string',
+        'anchor_horizontal_alignment' => '?string',
+        'anchor_ignore_if_not_present' => '?string',
+        'anchor_match_whole_word' => '?string',
+        'anchor_units' => '?string',
+        'anchor_x_offset' => '?string',
+        'anchor_y_offset' => '?string',
+        'bold' => '?string',
+        'collaborative' => '?string',
+        'conceal_value_on_document' => '?string',
+        'created_by_display_name' => '?string',
+        'created_by_user_id' => '?string',
+        'custom_tab_id' => '?string',
+        'disable_auto_size' => '?string',
+        'editable' => '?string',
+        'font' => '?string',
+        'font_color' => '?string',
+        'font_size' => '?string',
+        'height' => '?string',
+        'included_in_email' => '?string',
+        'initial_value' => '?string',
+        'italic' => '?string',
+        'items' => '?string[]',
+        'last_modified' => '?string',
+        'last_modified_by_display_name' => '?string',
+        'last_modified_by_user_id' => '?string',
+        'locked' => '?string',
+        'maximum_length' => '?string',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
-        'name' => 'string',
-        'payment_item_code' => 'string',
-        'payment_item_description' => 'string',
-        'payment_item_name' => 'string',
-        'require_all' => 'string',
-        'required' => 'string',
-        'require_initial_on_shared_change' => 'string',
-        'scale_value' => 'string',
-        'selected' => 'string',
-        'shared' => 'string',
-        'stamp_type' => 'string',
+        'name' => '?string',
+        'payment_item_code' => '?string',
+        'payment_item_description' => '?string',
+        'payment_item_name' => '?string',
+        'require_all' => '?string',
+        'required' => '?string',
+        'require_initial_on_shared_change' => '?string',
+        'scale_value' => '?string',
+        'selected' => '?string',
+        'shared' => '?string',
+        'stamp_type' => '?string',
         'stamp_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'tab_label' => 'string',
-        'type' => 'string',
-        'underline' => 'string',
-        'validation_message' => 'string',
-        'validation_pattern' => 'string',
-        'width' => 'string'
+        'tab_label' => '?string',
+        'type' => '?string',
+        'underline' => '?string',
+        'validation_message' => '?string',
+        'validation_pattern' => '?string',
+        'width' => '?string'
     ];
 
     /**
@@ -489,7 +489,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchor()
     {
@@ -499,7 +499,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor
      *
-     * @param string $anchor An optional string that is used to auto-match tabs to strings located in the documents of an envelope.
+     * @param ?string $anchor An optional string that is used to auto-match tabs to strings located in the documents of an envelope.
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_case_sensitive
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorCaseSensitive()
     {
@@ -523,7 +523,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive
      *
-     * @param string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+     * @param ?string $anchor_case_sensitive When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_horizontal_alignment
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorHorizontalAlignment()
     {
@@ -547,7 +547,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment
      *
-     * @param string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+     * @param ?string $anchor_horizontal_alignment Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_ignore_if_not_present
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorIgnoreIfNotPresent()
     {
@@ -571,7 +571,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present
      *
-     * @param string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
+     * @param ?string $anchor_ignore_if_not_present When set to **true**, this tab is ignored if anchorString is not found in the document.
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_match_whole_word
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorMatchWholeWord()
     {
@@ -595,7 +595,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word
      *
-     * @param string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+     * @param ?string $anchor_match_whole_word When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_units
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorUnits()
     {
@@ -619,7 +619,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units
      *
-     * @param string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+     * @param ?string $anchor_units Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_x_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorXOffset()
     {
@@ -643,7 +643,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset
      *
-     * @param string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_x_offset Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets anchor_y_offset
      *
-     * @return string
+     * @return ?string
      */
     public function getAnchorYOffset()
     {
@@ -667,7 +667,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset
      *
-     * @param string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+     * @param ?string $anchor_y_offset Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
      *
      * @return $this
      */
@@ -681,7 +681,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets bold
      *
-     * @return string
+     * @return ?string
      */
     public function getBold()
     {
@@ -691,7 +691,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets bold
      *
-     * @param string $bold When set to **true**, the information in the tab is bold.
+     * @param ?string $bold When set to **true**, the information in the tab is bold.
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets collaborative
      *
-     * @return string
+     * @return ?string
      */
     public function getCollaborative()
     {
@@ -715,7 +715,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets collaborative
      *
-     * @param string $collaborative 
+     * @param ?string $collaborative 
      *
      * @return $this
      */
@@ -729,7 +729,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets conceal_value_on_document
      *
-     * @return string
+     * @return ?string
      */
     public function getConcealValueOnDocument()
     {
@@ -739,7 +739,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets conceal_value_on_document
      *
-     * @param string $conceal_value_on_document When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
+     * @param ?string $conceal_value_on_document When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets created_by_display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedByDisplayName()
     {
@@ -763,7 +763,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_display_name
      *
-     * @param string $created_by_display_name The user name of the DocuSign user who created this object.
+     * @param ?string $created_by_display_name The user name of the DocuSign user who created this object.
      *
      * @return $this
      */
@@ -777,7 +777,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets created_by_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCreatedByUserId()
     {
@@ -787,7 +787,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_user_id
      *
-     * @param string $created_by_user_id The userId of the DocuSign user who created this object.
+     * @param ?string $created_by_user_id The userId of the DocuSign user who created this object.
      *
      * @return $this
      */
@@ -801,7 +801,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets custom_tab_id
      *
-     * @return string
+     * @return ?string
      */
     public function getCustomTabId()
     {
@@ -811,7 +811,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id
      *
-     * @param string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+     * @param ?string $custom_tab_id The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
      *
      * @return $this
      */
@@ -825,7 +825,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets disable_auto_size
      *
-     * @return string
+     * @return ?string
      */
     public function getDisableAutoSize()
     {
@@ -835,7 +835,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets disable_auto_size
      *
-     * @param string $disable_auto_size When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
+     * @param ?string $disable_auto_size When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
      *
      * @return $this
      */
@@ -849,7 +849,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets editable
      *
-     * @return string
+     * @return ?string
      */
     public function getEditable()
     {
@@ -859,7 +859,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets editable
      *
-     * @param string $editable When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.
+     * @param ?string $editable When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.
      *
      * @return $this
      */
@@ -873,7 +873,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets font
      *
-     * @return string
+     * @return ?string
      */
     public function getFont()
     {
@@ -883,7 +883,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets font
      *
-     * @param string $font The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+     * @param ?string $font The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
      *
      * @return $this
      */
@@ -897,7 +897,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets font_color
      *
-     * @return string
+     * @return ?string
      */
     public function getFontColor()
     {
@@ -907,7 +907,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets font_color
      *
-     * @param string $font_color The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+     * @param ?string $font_color The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
      *
      * @return $this
      */
@@ -921,7 +921,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets font_size
      *
-     * @return string
+     * @return ?string
      */
     public function getFontSize()
     {
@@ -931,7 +931,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets font_size
      *
-     * @param string $font_size The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+     * @param ?string $font_size The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
      *
      * @return $this
      */
@@ -945,7 +945,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets height
      *
-     * @return string
+     * @return ?string
      */
     public function getHeight()
     {
@@ -955,7 +955,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets height
      *
-     * @param string $height Height of the tab in pixels.
+     * @param ?string $height Height of the tab in pixels.
      *
      * @return $this
      */
@@ -969,7 +969,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets included_in_email
      *
-     * @return string
+     * @return ?string
      */
     public function getIncludedInEmail()
     {
@@ -979,7 +979,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets included_in_email
      *
-     * @param string $included_in_email When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.
+     * @param ?string $included_in_email When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.
      *
      * @return $this
      */
@@ -993,7 +993,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets initial_value
      *
-     * @return string
+     * @return ?string
      */
     public function getInitialValue()
     {
@@ -1003,7 +1003,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets initial_value
      *
-     * @param string $initial_value The original value of the tab.
+     * @param ?string $initial_value The original value of the tab.
      *
      * @return $this
      */
@@ -1017,7 +1017,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets italic
      *
-     * @return string
+     * @return ?string
      */
     public function getItalic()
     {
@@ -1027,7 +1027,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets italic
      *
-     * @param string $italic When set to **true**, the information in the tab is italic.
+     * @param ?string $italic When set to **true**, the information in the tab is italic.
      *
      * @return $this
      */
@@ -1041,7 +1041,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return string[]
+     * @return ?string[]
      */
     public function getItems()
     {
@@ -1051,7 +1051,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param string[] $items If the tab is a list, this represents the values that are possible for the tab.
+     * @param ?string[] $items If the tab is a list, this represents the values that are possible for the tab.
      *
      * @return $this
      */
@@ -1065,7 +1065,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModified()
     {
@@ -1075,7 +1075,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param string $last_modified The UTC DateTime this object was last modified. This is in ISO8601 format.
+     * @param ?string $last_modified The UTC DateTime this object was last modified. This is in ISO8601 format.
      *
      * @return $this
      */
@@ -1089,7 +1089,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified_by_display_name
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModifiedByDisplayName()
     {
@@ -1099,7 +1099,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_display_name
      *
-     * @param string $last_modified_by_display_name The User Name of the DocuSign user who last modified this object.
+     * @param ?string $last_modified_by_display_name The User Name of the DocuSign user who last modified this object.
      *
      * @return $this
      */
@@ -1113,7 +1113,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified_by_user_id
      *
-     * @return string
+     * @return ?string
      */
     public function getLastModifiedByUserId()
     {
@@ -1123,7 +1123,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_user_id
      *
-     * @param string $last_modified_by_user_id The userId of the DocuSign user who last modified this object.
+     * @param ?string $last_modified_by_user_id The userId of the DocuSign user who last modified this object.
      *
      * @return $this
      */
@@ -1137,7 +1137,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets locked
      *
-     * @return string
+     * @return ?string
      */
     public function getLocked()
     {
@@ -1147,7 +1147,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets locked
      *
-     * @param string $locked When set to **true**, the signer cannot change the data of the custom tab.
+     * @param ?string $locked When set to **true**, the signer cannot change the data of the custom tab.
      *
      * @return $this
      */
@@ -1161,7 +1161,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets maximum_length
      *
-     * @return string
+     * @return ?string
      */
     public function getMaximumLength()
     {
@@ -1171,7 +1171,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_length
      *
-     * @param string $maximum_length The maximum number of entry characters supported by the custom tab.
+     * @param ?string $maximum_length The maximum number of entry characters supported by the custom tab.
      *
      * @return $this
      */
@@ -1209,7 +1209,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
     public function getName()
     {
@@ -1219,7 +1219,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param ?string $name 
      *
      * @return $this
      */
@@ -1233,7 +1233,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets payment_item_code
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentItemCode()
     {
@@ -1243,7 +1243,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets payment_item_code
      *
-     * @param string $payment_item_code 
+     * @param ?string $payment_item_code 
      *
      * @return $this
      */
@@ -1257,7 +1257,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets payment_item_description
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentItemDescription()
     {
@@ -1267,7 +1267,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets payment_item_description
      *
-     * @param string $payment_item_description 
+     * @param ?string $payment_item_description 
      *
      * @return $this
      */
@@ -1281,7 +1281,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets payment_item_name
      *
-     * @return string
+     * @return ?string
      */
     public function getPaymentItemName()
     {
@@ -1291,7 +1291,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets payment_item_name
      *
-     * @param string $payment_item_name 
+     * @param ?string $payment_item_name 
      *
      * @return $this
      */
@@ -1305,7 +1305,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets require_all
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireAll()
     {
@@ -1315,7 +1315,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets require_all
      *
-     * @param string $require_all When set to **true** and shared is true, information must be entered in this field to complete the envelope.
+     * @param ?string $require_all When set to **true** and shared is true, information must be entered in this field to complete the envelope.
      *
      * @return $this
      */
@@ -1329,7 +1329,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets required
      *
-     * @return string
+     * @return ?string
      */
     public function getRequired()
     {
@@ -1339,7 +1339,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets required
      *
-     * @param string $required When set to **true**, the signer is required to fill out this tab
+     * @param ?string $required When set to **true**, the signer is required to fill out this tab
      *
      * @return $this
      */
@@ -1353,7 +1353,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets require_initial_on_shared_change
      *
-     * @return string
+     * @return ?string
      */
     public function getRequireInitialOnSharedChange()
     {
@@ -1363,7 +1363,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change
      *
-     * @param string $require_initial_on_shared_change Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
+     * @param ?string $require_initial_on_shared_change Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
      *
      * @return $this
      */
@@ -1377,7 +1377,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets scale_value
      *
-     * @return string
+     * @return ?string
      */
     public function getScaleValue()
     {
@@ -1387,7 +1387,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets scale_value
      *
-     * @param string $scale_value 
+     * @param ?string $scale_value 
      *
      * @return $this
      */
@@ -1401,7 +1401,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets selected
      *
-     * @return string
+     * @return ?string
      */
     public function getSelected()
     {
@@ -1411,7 +1411,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets selected
      *
-     * @param string $selected 
+     * @param ?string $selected 
      *
      * @return $this
      */
@@ -1425,7 +1425,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets shared
      *
-     * @return string
+     * @return ?string
      */
     public function getShared()
     {
@@ -1435,7 +1435,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets shared
      *
-     * @param string $shared When set to **true**, this custom tab is shared.
+     * @param ?string $shared When set to **true**, this custom tab is shared.
      *
      * @return $this
      */
@@ -1449,7 +1449,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets stamp_type
      *
-     * @return string
+     * @return ?string
      */
     public function getStampType()
     {
@@ -1459,7 +1459,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_type
      *
-     * @param string $stamp_type 
+     * @param ?string $stamp_type 
      *
      * @return $this
      */
@@ -1497,7 +1497,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets tab_label
      *
-     * @return string
+     * @return ?string
      */
     public function getTabLabel()
     {
@@ -1507,7 +1507,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label
      *
-     * @param string $tab_label The label string associated with the tab.
+     * @param ?string $tab_label The label string associated with the tab.
      *
      * @return $this
      */
@@ -1521,7 +1521,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
     public function getType()
     {
@@ -1531,7 +1531,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.
+     * @param ?string $type The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.
      *
      * @return $this
      */
@@ -1545,7 +1545,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets underline
      *
-     * @return string
+     * @return ?string
      */
     public function getUnderline()
     {
@@ -1555,7 +1555,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets underline
      *
-     * @param string $underline When set to **true**, the information in the tab is underlined.
+     * @param ?string $underline When set to **true**, the information in the tab is underlined.
      *
      * @return $this
      */
@@ -1569,7 +1569,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets validation_message
      *
-     * @return string
+     * @return ?string
      */
     public function getValidationMessage()
     {
@@ -1579,7 +1579,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets validation_message
      *
-     * @param string $validation_message The message displayed if the custom tab fails input validation (either custom of embedded).
+     * @param ?string $validation_message The message displayed if the custom tab fails input validation (either custom of embedded).
      *
      * @return $this
      */
@@ -1593,7 +1593,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets validation_pattern
      *
-     * @return string
+     * @return ?string
      */
     public function getValidationPattern()
     {
@@ -1603,7 +1603,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets validation_pattern
      *
-     * @param string $validation_pattern A regular expression used to validate input for the tab.
+     * @param ?string $validation_pattern A regular expression used to validate input for the tab.
      *
      * @return $this
      */
@@ -1617,7 +1617,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets width
      *
-     * @return string
+     * @return ?string
      */
     public function getWidth()
     {
@@ -1627,7 +1627,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets width
      *
-     * @param string $width Width of the tab in pixels.
+     * @param ?string $width Width of the tab in pixels.
      *
      * @return $this
      */
