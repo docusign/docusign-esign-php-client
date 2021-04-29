@@ -116,6 +116,7 @@ class EmailAddress implements ModelInterface, ArrayAccess
         'recipient_id_guid_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
+        'source' => '?string',
         'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_group_labels' => '?string[]',
@@ -211,6 +212,7 @@ class EmailAddress implements ModelInterface, ArrayAccess
         'recipient_id_guid_metadata' => null,
         'recipient_id_metadata' => null,
         'smart_contract_information' => null,
+        'source' => null,
         'status' => null,
         'status_metadata' => null,
         'tab_group_labels' => null,
@@ -327,6 +329,7 @@ class EmailAddress implements ModelInterface, ArrayAccess
         'recipient_id_guid_metadata' => 'recipientIdGuidMetadata',
         'recipient_id_metadata' => 'recipientIdMetadata',
         'smart_contract_information' => 'smartContractInformation',
+        'source' => 'source',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
         'tab_group_labels' => 'tabGroupLabels',
@@ -422,6 +425,7 @@ class EmailAddress implements ModelInterface, ArrayAccess
         'recipient_id_guid_metadata' => 'setRecipientIdGuidMetadata',
         'recipient_id_metadata' => 'setRecipientIdMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
+        'source' => 'setSource',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
         'tab_group_labels' => 'setTabGroupLabels',
@@ -517,6 +521,7 @@ class EmailAddress implements ModelInterface, ArrayAccess
         'recipient_id_guid_metadata' => 'getRecipientIdGuidMetadata',
         'recipient_id_metadata' => 'getRecipientIdMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
+        'source' => 'getSource',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
         'tab_group_labels' => 'getTabGroupLabels',
@@ -666,6 +671,7 @@ class EmailAddress implements ModelInterface, ArrayAccess
         $this->container['recipient_id_guid_metadata'] = isset($data['recipient_id_guid_metadata']) ? $data['recipient_id_guid_metadata'] : null;
         $this->container['recipient_id_metadata'] = isset($data['recipient_id_metadata']) ? $data['recipient_id_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
         $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
@@ -2132,6 +2138,30 @@ class EmailAddress implements ModelInterface, ArrayAccess
     public function setSmartContractInformation($smart_contract_information)
     {
         $this->container['smart_contract_information'] = $smart_contract_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return ?string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param ?string $source 
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
 
         return $this;
     }

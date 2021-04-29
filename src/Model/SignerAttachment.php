@@ -109,6 +109,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'scale_value' => '?string',
         'scale_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
+        'source' => '?string',
         'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_group_labels' => '?string[]',
@@ -193,6 +194,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'scale_value' => null,
         'scale_value_metadata' => null,
         'smart_contract_information' => null,
+        'source' => null,
         'status' => null,
         'status_metadata' => null,
         'tab_group_labels' => null,
@@ -298,6 +300,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'scale_value' => 'scaleValue',
         'scale_value_metadata' => 'scaleValueMetadata',
         'smart_contract_information' => 'smartContractInformation',
+        'source' => 'source',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
         'tab_group_labels' => 'tabGroupLabels',
@@ -382,6 +385,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'scale_value' => 'setScaleValue',
         'scale_value_metadata' => 'setScaleValueMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
+        'source' => 'setSource',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
         'tab_group_labels' => 'setTabGroupLabels',
@@ -466,6 +470,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'scale_value' => 'getScaleValue',
         'scale_value_metadata' => 'getScaleValueMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
+        'source' => 'getSource',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
         'tab_group_labels' => 'getTabGroupLabels',
@@ -604,6 +609,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         $this->container['scale_value'] = isset($data['scale_value']) ? $data['scale_value'] : null;
         $this->container['scale_value_metadata'] = isset($data['scale_value_metadata']) ? $data['scale_value_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
         $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
@@ -1898,6 +1904,30 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     public function setSmartContractInformation($smart_contract_information)
     {
         $this->container['smart_contract_information'] = $smart_contract_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return ?string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param ?string $source 
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
 
         return $this;
     }
