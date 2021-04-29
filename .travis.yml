@@ -1,9 +1,7 @@
 branches:
   only: 
-    - master
     - v2-master
 language: php
-dist: trusty
 sudo: false
 php:
     - 7.4
