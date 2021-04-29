@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [4.9.0] - eSignature API v2-21.1.01.03 - 2021-04-23
+### Added
+- Added new method `deleteConnectSecret` to connect.
+### Changed	
+- Added support for version v2-21.1.01.03 of the DocuSign eSignature API.
+- Updated the SDK release version.
+
 ## [4.9.0-rc] - eSignature API v2-21.1.01 - 2021-04-08
 ### Changed
 
