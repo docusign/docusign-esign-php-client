@@ -140,6 +140,7 @@ class Text implements ModelInterface, ArrayAccess
         'shared' => '?string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
+        'source' => '?string',
         'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_group_labels' => '?string[]',
@@ -263,6 +264,7 @@ class Text implements ModelInterface, ArrayAccess
         'shared' => null,
         'shared_metadata' => null,
         'smart_contract_information' => null,
+        'source' => null,
         'status' => null,
         'status_metadata' => null,
         'tab_group_labels' => null,
@@ -407,6 +409,7 @@ class Text implements ModelInterface, ArrayAccess
         'shared' => 'shared',
         'shared_metadata' => 'sharedMetadata',
         'smart_contract_information' => 'smartContractInformation',
+        'source' => 'source',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
         'tab_group_labels' => 'tabGroupLabels',
@@ -530,6 +533,7 @@ class Text implements ModelInterface, ArrayAccess
         'shared' => 'setShared',
         'shared_metadata' => 'setSharedMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
+        'source' => 'setSource',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
         'tab_group_labels' => 'setTabGroupLabels',
@@ -653,6 +657,7 @@ class Text implements ModelInterface, ArrayAccess
         'shared' => 'getShared',
         'shared_metadata' => 'getSharedMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
+        'source' => 'getSource',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
         'tab_group_labels' => 'getTabGroupLabels',
@@ -830,6 +835,7 @@ class Text implements ModelInterface, ArrayAccess
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['shared_metadata'] = isset($data['shared_metadata']) ? $data['shared_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
         $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
@@ -2876,6 +2882,30 @@ class Text implements ModelInterface, ArrayAccess
     public function setSmartContractInformation($smart_contract_information)
     {
         $this->container['smart_contract_information'] = $smart_contract_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return ?string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param ?string $source 
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
 
         return $this;
     }

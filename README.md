@@ -29,7 +29,7 @@ This SDK is provided as open source, which enables you to customize its function
                 <code>require_once('/path/to/docusign-esign-client/autoload.php');</code></li>
        </ol>
    </li>
-   <li>If you are using Composer V2 and get the error 'namespace cannot be found', add the following class mapping in <em>composer.json</em> file.</li>
+   <li>If you are using Composer V2 and get the error 'namespace cannot be found', add the following class mapping in the composer.json file.</li>
       <code>"autoload": { "classmap": [ "/path/to/docusign-esign-client/src" ] }</code></li>
 </ol>
 
@@ -57,3 +57,6 @@ The DocuSign eSignature PHP Client SDK is licensed under the [MIT License](https
 *   [DocuSign API on Twitter](https://twitter.com/docusignapi)
 *   [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
 *   [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2NQ)
+
+[travis-image]: https://img.shields.io/travis/docusign/docusign-php-client.svg?style=flat
+[travis-url]: https://travis-ci.org/docusign/docusign-php-client

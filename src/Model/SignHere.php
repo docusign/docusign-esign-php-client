@@ -110,6 +110,7 @@ class SignHere implements ModelInterface, ArrayAccess
         'scale_value' => '?string',
         'scale_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
+        'source' => '?string',
         'stamp' => '\DocuSign\eSign\Model\Stamp',
         'stamp_type' => '?string',
         'stamp_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -198,6 +199,7 @@ class SignHere implements ModelInterface, ArrayAccess
         'scale_value' => null,
         'scale_value_metadata' => null,
         'smart_contract_information' => null,
+        'source' => null,
         'stamp' => null,
         'stamp_type' => null,
         'stamp_type_metadata' => null,
@@ -307,6 +309,7 @@ class SignHere implements ModelInterface, ArrayAccess
         'scale_value' => 'scaleValue',
         'scale_value_metadata' => 'scaleValueMetadata',
         'smart_contract_information' => 'smartContractInformation',
+        'source' => 'source',
         'stamp' => 'stamp',
         'stamp_type' => 'stampType',
         'stamp_type_metadata' => 'stampTypeMetadata',
@@ -395,6 +398,7 @@ class SignHere implements ModelInterface, ArrayAccess
         'scale_value' => 'setScaleValue',
         'scale_value_metadata' => 'setScaleValueMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
+        'source' => 'setSource',
         'stamp' => 'setStamp',
         'stamp_type' => 'setStampType',
         'stamp_type_metadata' => 'setStampTypeMetadata',
@@ -483,6 +487,7 @@ class SignHere implements ModelInterface, ArrayAccess
         'scale_value' => 'getScaleValue',
         'scale_value_metadata' => 'getScaleValueMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
+        'source' => 'getSource',
         'stamp' => 'getStamp',
         'stamp_type' => 'getStampType',
         'stamp_type_metadata' => 'getStampTypeMetadata',
@@ -625,6 +630,7 @@ class SignHere implements ModelInterface, ArrayAccess
         $this->container['scale_value'] = isset($data['scale_value']) ? $data['scale_value'] : null;
         $this->container['scale_value_metadata'] = isset($data['scale_value_metadata']) ? $data['scale_value_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['stamp'] = isset($data['stamp']) ? $data['stamp'] : null;
         $this->container['stamp_type'] = isset($data['stamp_type']) ? $data['stamp_type'] : null;
         $this->container['stamp_type_metadata'] = isset($data['stamp_type_metadata']) ? $data['stamp_type_metadata'] : null;
@@ -1946,6 +1952,30 @@ class SignHere implements ModelInterface, ArrayAccess
     public function setSmartContractInformation($smart_contract_information)
     {
         $this->container['smart_contract_information'] = $smart_contract_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return ?string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param ?string $source 
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
 
         return $this;
     }

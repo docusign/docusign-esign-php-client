@@ -115,6 +115,7 @@ class SmartSection implements ModelInterface, ArrayAccess
         'shared' => '?string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
+        'source' => '?string',
         'start_anchor' => '?string',
         'start_position' => '\DocuSign\eSign\Model\SmartSectionAnchorPosition',
         'status' => '?string',
@@ -206,6 +207,7 @@ class SmartSection implements ModelInterface, ArrayAccess
         'shared' => null,
         'shared_metadata' => null,
         'smart_contract_information' => null,
+        'source' => null,
         'start_anchor' => null,
         'start_position' => null,
         'status' => null,
@@ -318,6 +320,7 @@ class SmartSection implements ModelInterface, ArrayAccess
         'shared' => 'shared',
         'shared_metadata' => 'sharedMetadata',
         'smart_contract_information' => 'smartContractInformation',
+        'source' => 'source',
         'start_anchor' => 'startAnchor',
         'start_position' => 'startPosition',
         'status' => 'status',
@@ -409,6 +412,7 @@ class SmartSection implements ModelInterface, ArrayAccess
         'shared' => 'setShared',
         'shared_metadata' => 'setSharedMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
+        'source' => 'setSource',
         'start_anchor' => 'setStartAnchor',
         'start_position' => 'setStartPosition',
         'status' => 'setStatus',
@@ -500,6 +504,7 @@ class SmartSection implements ModelInterface, ArrayAccess
         'shared' => 'getShared',
         'shared_metadata' => 'getSharedMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
+        'source' => 'getSource',
         'start_anchor' => 'getStartAnchor',
         'start_position' => 'getStartPosition',
         'status' => 'getStatus',
@@ -645,6 +650,7 @@ class SmartSection implements ModelInterface, ArrayAccess
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['shared_metadata'] = isset($data['shared_metadata']) ? $data['shared_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['start_anchor'] = isset($data['start_anchor']) ? $data['start_anchor'] : null;
         $this->container['start_position'] = isset($data['start_position']) ? $data['start_position'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -2084,6 +2090,30 @@ class SmartSection implements ModelInterface, ArrayAccess
     public function setSmartContractInformation($smart_contract_information)
     {
         $this->container['smart_contract_information'] = $smart_contract_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return ?string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param ?string $source 
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
 
         return $this;
     }

@@ -107,6 +107,7 @@ class Notarize implements ModelInterface, ArrayAccess
         'required' => '?string',
         'required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
+        'source' => '?string',
         'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_group_labels' => '?string[]',
@@ -187,6 +188,7 @@ class Notarize implements ModelInterface, ArrayAccess
         'required' => null,
         'required_metadata' => null,
         'smart_contract_information' => null,
+        'source' => null,
         'status' => null,
         'status_metadata' => null,
         'tab_group_labels' => null,
@@ -288,6 +290,7 @@ class Notarize implements ModelInterface, ArrayAccess
         'required' => 'required',
         'required_metadata' => 'requiredMetadata',
         'smart_contract_information' => 'smartContractInformation',
+        'source' => 'source',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
         'tab_group_labels' => 'tabGroupLabels',
@@ -368,6 +371,7 @@ class Notarize implements ModelInterface, ArrayAccess
         'required' => 'setRequired',
         'required_metadata' => 'setRequiredMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
+        'source' => 'setSource',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
         'tab_group_labels' => 'setTabGroupLabels',
@@ -448,6 +452,7 @@ class Notarize implements ModelInterface, ArrayAccess
         'required' => 'getRequired',
         'required_metadata' => 'getRequiredMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
+        'source' => 'getSource',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
         'tab_group_labels' => 'getTabGroupLabels',
@@ -582,6 +587,7 @@ class Notarize implements ModelInterface, ArrayAccess
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['required_metadata'] = isset($data['required_metadata']) ? $data['required_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
         $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
@@ -1826,6 +1832,30 @@ class Notarize implements ModelInterface, ArrayAccess
     public function setSmartContractInformation($smart_contract_information)
     {
         $this->container['smart_contract_information'] = $smart_contract_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return ?string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param ?string $source 
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
 
         return $this;
     }
