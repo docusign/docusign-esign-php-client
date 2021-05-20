@@ -65,6 +65,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => '?string',
         'failed' => '?string',
         'mailing_list_id' => '?string',
+        'mailing_list_name' => '?string',
         'owner_user_id' => '?string',
         'queued' => '?string',
         'sender_user_id' => '?string',
@@ -86,6 +87,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => null,
         'failed' => null,
         'mailing_list_id' => null,
+        'mailing_list_name' => null,
         'owner_user_id' => null,
         'queued' => null,
         'sender_user_id' => null,
@@ -128,6 +130,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => 'envelopesUri',
         'failed' => 'failed',
         'mailing_list_id' => 'mailingListId',
+        'mailing_list_name' => 'mailingListName',
         'owner_user_id' => 'ownerUserId',
         'queued' => 'queued',
         'sender_user_id' => 'senderUserId',
@@ -149,6 +152,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => 'setEnvelopesUri',
         'failed' => 'setFailed',
         'mailing_list_id' => 'setMailingListId',
+        'mailing_list_name' => 'setMailingListName',
         'owner_user_id' => 'setOwnerUserId',
         'queued' => 'setQueued',
         'sender_user_id' => 'setSenderUserId',
@@ -170,6 +174,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'envelopes_uri' => 'getEnvelopesUri',
         'failed' => 'getFailed',
         'mailing_list_id' => 'getMailingListId',
+        'mailing_list_name' => 'getMailingListName',
         'owner_user_id' => 'getOwnerUserId',
         'queued' => 'getQueued',
         'sender_user_id' => 'getSenderUserId',
@@ -245,6 +250,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         $this->container['envelopes_uri'] = isset($data['envelopes_uri']) ? $data['envelopes_uri'] : null;
         $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
         $this->container['mailing_list_id'] = isset($data['mailing_list_id']) ? $data['mailing_list_id'] : null;
+        $this->container['mailing_list_name'] = isset($data['mailing_list_name']) ? $data['mailing_list_name'] : null;
         $this->container['owner_user_id'] = isset($data['owner_user_id']) ? $data['owner_user_id'] : null;
         $this->container['queued'] = isset($data['queued']) ? $data['queued'] : null;
         $this->container['sender_user_id'] = isset($data['sender_user_id']) ? $data['sender_user_id'] : null;
@@ -464,6 +470,30 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     public function setMailingListId($mailing_list_id)
     {
         $this->container['mailing_list_id'] = $mailing_list_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets mailing_list_name
+     *
+     * @return ?string
+     */
+    public function getMailingListName()
+    {
+        return $this->container['mailing_list_name'];
+    }
+
+    /**
+     * Sets mailing_list_name
+     *
+     * @param ?string $mailing_list_name 
+     *
+     * @return $this
+     */
+    public function setMailingListName($mailing_list_name)
+    {
+        $this->container['mailing_list_name'] = $mailing_list_name;
 
         return $this;
     }

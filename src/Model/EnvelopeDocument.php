@@ -65,6 +65,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => '?string',
         'display' => '?string',
         'display_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'document_base64' => '?string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
         'document_id' => '?string',
         'document_id_guid' => '?string',
@@ -98,6 +99,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => null,
         'display' => null,
         'display_metadata' => null,
+        'document_base64' => null,
         'document_fields' => null,
         'document_id' => null,
         'document_id_guid' => null,
@@ -152,6 +154,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => 'containsPdfFormFields',
         'display' => 'display',
         'display_metadata' => 'displayMetadata',
+        'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
         'document_id' => 'documentId',
         'document_id_guid' => 'documentIdGuid',
@@ -185,6 +188,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => 'setContainsPdfFormFields',
         'display' => 'setDisplay',
         'display_metadata' => 'setDisplayMetadata',
+        'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
         'document_id' => 'setDocumentId',
         'document_id_guid' => 'setDocumentIdGuid',
@@ -218,6 +222,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => 'getContainsPdfFormFields',
         'display' => 'getDisplay',
         'display_metadata' => 'getDisplayMetadata',
+        'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
         'document_id' => 'getDocumentId',
         'document_id_guid' => 'getDocumentIdGuid',
@@ -305,6 +310,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         $this->container['contains_pdf_form_fields'] = isset($data['contains_pdf_form_fields']) ? $data['contains_pdf_form_fields'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['display_metadata'] = isset($data['display_metadata']) ? $data['display_metadata'] : null;
+        $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_id_guid'] = isset($data['document_id_guid']) ? $data['document_id_guid'] : null;
@@ -536,6 +542,30 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setDisplayMetadata($display_metadata)
     {
         $this->container['display_metadata'] = $display_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_base64
+     *
+     * @return ?string
+     */
+    public function getDocumentBase64()
+    {
+        return $this->container['document_base64'];
+    }
+
+    /**
+     * Sets document_base64
+     *
+     * @param ?string $document_base64 
+     *
+     * @return $this
+     */
+    public function setDocumentBase64($document_base64)
+    {
+        $this->container['document_base64'] = $document_base64;
 
         return $this;
     }

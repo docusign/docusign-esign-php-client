@@ -66,6 +66,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'authentication_type' => '?string',
         'average_time_to_complete_seconds' => '?string',
         'avg_complete_seconds' => '?string',
+        'capture_method' => '?string',
         'completed' => '?string',
         'completed_ts' => '?string',
         'created_date' => '?string',
@@ -104,11 +105,14 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'hours_to_complete_start' => '?string',
         'id_checks_attempted' => '?string',
         'id_checks_failed' => '?string',
+        'id_country' => '?string',
+        'id_method' => '?string',
         'initial_send_ts' => '?string',
         'ip_address' => '?string',
         'last_activity' => '?string',
         'last_activity_date' => '?string',
         'last_sent_date' => '?string',
+        'metadata_removed' => '?string',
         'not_signed' => '?string',
         'number_of_authenticated_recipients' => '?string',
         'number_of_completed_signatures' => '?string',
@@ -126,6 +130,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'period_start' => '?string',
         'phone_calls_attempted' => '?string',
         'phone_calls_failed' => '?string',
+        'pii_redacted' => '?string',
+        'purge_date' => '?string',
         'reason_for_declining' => '?string',
         'reason_for_voiding' => '?string',
         'reassign_reason' => '?string',
@@ -160,6 +166,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'status' => '?string',
         'status_changed_date' => '?string',
         'status_changed_ts' => '?string',
+        'status_comment' => '?string',
         'subject' => '?string',
         'successes' => '?string',
         'templates_created' => '?string',
@@ -199,6 +206,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'authentication_type' => null,
         'average_time_to_complete_seconds' => null,
         'avg_complete_seconds' => null,
+        'capture_method' => null,
         'completed' => null,
         'completed_ts' => null,
         'created_date' => null,
@@ -237,11 +245,14 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'hours_to_complete_start' => null,
         'id_checks_attempted' => null,
         'id_checks_failed' => null,
+        'id_country' => null,
+        'id_method' => null,
         'initial_send_ts' => null,
         'ip_address' => null,
         'last_activity' => null,
         'last_activity_date' => null,
         'last_sent_date' => null,
+        'metadata_removed' => null,
         'not_signed' => null,
         'number_of_authenticated_recipients' => null,
         'number_of_completed_signatures' => null,
@@ -259,6 +270,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'period_start' => null,
         'phone_calls_attempted' => null,
         'phone_calls_failed' => null,
+        'pii_redacted' => null,
+        'purge_date' => null,
         'reason_for_declining' => null,
         'reason_for_voiding' => null,
         'reassign_reason' => null,
@@ -293,6 +306,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'status' => null,
         'status_changed_date' => null,
         'status_changed_ts' => null,
+        'status_comment' => null,
         'subject' => null,
         'successes' => null,
         'templates_created' => null,
@@ -353,6 +367,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'authentication_type' => 'authenticationType',
         'average_time_to_complete_seconds' => 'averageTimeToCompleteSeconds',
         'avg_complete_seconds' => 'avgCompleteSeconds',
+        'capture_method' => 'captureMethod',
         'completed' => 'completed',
         'completed_ts' => 'completedTs',
         'created_date' => 'createdDate',
@@ -391,11 +406,14 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'hours_to_complete_start' => 'hoursToCompleteStart',
         'id_checks_attempted' => 'idChecksAttempted',
         'id_checks_failed' => 'idChecksFailed',
+        'id_country' => 'idCountry',
+        'id_method' => 'idMethod',
         'initial_send_ts' => 'initialSendTs',
         'ip_address' => 'ipAddress',
         'last_activity' => 'lastActivity',
         'last_activity_date' => 'lastActivityDate',
         'last_sent_date' => 'lastSentDate',
+        'metadata_removed' => 'metadataRemoved',
         'not_signed' => 'notSigned',
         'number_of_authenticated_recipients' => 'numberOfAuthenticatedRecipients',
         'number_of_completed_signatures' => 'numberOfCompletedSignatures',
@@ -413,6 +431,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'period_start' => 'periodStart',
         'phone_calls_attempted' => 'phoneCallsAttempted',
         'phone_calls_failed' => 'phoneCallsFailed',
+        'pii_redacted' => 'piiRedacted',
+        'purge_date' => 'purgeDate',
         'reason_for_declining' => 'reasonForDeclining',
         'reason_for_voiding' => 'reasonForVoiding',
         'reassign_reason' => 'reassignReason',
@@ -447,6 +467,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'status' => 'status',
         'status_changed_date' => 'statusChangedDate',
         'status_changed_ts' => 'statusChangedTs',
+        'status_comment' => 'statusComment',
         'subject' => 'subject',
         'successes' => 'successes',
         'templates_created' => 'templatesCreated',
@@ -486,6 +507,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'authentication_type' => 'setAuthenticationType',
         'average_time_to_complete_seconds' => 'setAverageTimeToCompleteSeconds',
         'avg_complete_seconds' => 'setAvgCompleteSeconds',
+        'capture_method' => 'setCaptureMethod',
         'completed' => 'setCompleted',
         'completed_ts' => 'setCompletedTs',
         'created_date' => 'setCreatedDate',
@@ -524,11 +546,14 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'hours_to_complete_start' => 'setHoursToCompleteStart',
         'id_checks_attempted' => 'setIdChecksAttempted',
         'id_checks_failed' => 'setIdChecksFailed',
+        'id_country' => 'setIdCountry',
+        'id_method' => 'setIdMethod',
         'initial_send_ts' => 'setInitialSendTs',
         'ip_address' => 'setIpAddress',
         'last_activity' => 'setLastActivity',
         'last_activity_date' => 'setLastActivityDate',
         'last_sent_date' => 'setLastSentDate',
+        'metadata_removed' => 'setMetadataRemoved',
         'not_signed' => 'setNotSigned',
         'number_of_authenticated_recipients' => 'setNumberOfAuthenticatedRecipients',
         'number_of_completed_signatures' => 'setNumberOfCompletedSignatures',
@@ -546,6 +571,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'period_start' => 'setPeriodStart',
         'phone_calls_attempted' => 'setPhoneCallsAttempted',
         'phone_calls_failed' => 'setPhoneCallsFailed',
+        'pii_redacted' => 'setPiiRedacted',
+        'purge_date' => 'setPurgeDate',
         'reason_for_declining' => 'setReasonForDeclining',
         'reason_for_voiding' => 'setReasonForVoiding',
         'reassign_reason' => 'setReassignReason',
@@ -580,6 +607,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'status' => 'setStatus',
         'status_changed_date' => 'setStatusChangedDate',
         'status_changed_ts' => 'setStatusChangedTs',
+        'status_comment' => 'setStatusComment',
         'subject' => 'setSubject',
         'successes' => 'setSuccesses',
         'templates_created' => 'setTemplatesCreated',
@@ -619,6 +647,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'authentication_type' => 'getAuthenticationType',
         'average_time_to_complete_seconds' => 'getAverageTimeToCompleteSeconds',
         'avg_complete_seconds' => 'getAvgCompleteSeconds',
+        'capture_method' => 'getCaptureMethod',
         'completed' => 'getCompleted',
         'completed_ts' => 'getCompletedTs',
         'created_date' => 'getCreatedDate',
@@ -657,11 +686,14 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'hours_to_complete_start' => 'getHoursToCompleteStart',
         'id_checks_attempted' => 'getIdChecksAttempted',
         'id_checks_failed' => 'getIdChecksFailed',
+        'id_country' => 'getIdCountry',
+        'id_method' => 'getIdMethod',
         'initial_send_ts' => 'getInitialSendTs',
         'ip_address' => 'getIpAddress',
         'last_activity' => 'getLastActivity',
         'last_activity_date' => 'getLastActivityDate',
         'last_sent_date' => 'getLastSentDate',
+        'metadata_removed' => 'getMetadataRemoved',
         'not_signed' => 'getNotSigned',
         'number_of_authenticated_recipients' => 'getNumberOfAuthenticatedRecipients',
         'number_of_completed_signatures' => 'getNumberOfCompletedSignatures',
@@ -679,6 +711,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'period_start' => 'getPeriodStart',
         'phone_calls_attempted' => 'getPhoneCallsAttempted',
         'phone_calls_failed' => 'getPhoneCallsFailed',
+        'pii_redacted' => 'getPiiRedacted',
+        'purge_date' => 'getPurgeDate',
         'reason_for_declining' => 'getReasonForDeclining',
         'reason_for_voiding' => 'getReasonForVoiding',
         'reassign_reason' => 'getReassignReason',
@@ -713,6 +747,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'status' => 'getStatus',
         'status_changed_date' => 'getStatusChangedDate',
         'status_changed_ts' => 'getStatusChangedTs',
+        'status_comment' => 'getStatusComment',
         'subject' => 'getSubject',
         'successes' => 'getSuccesses',
         'templates_created' => 'getTemplatesCreated',
@@ -806,6 +841,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['authentication_type'] = isset($data['authentication_type']) ? $data['authentication_type'] : null;
         $this->container['average_time_to_complete_seconds'] = isset($data['average_time_to_complete_seconds']) ? $data['average_time_to_complete_seconds'] : null;
         $this->container['avg_complete_seconds'] = isset($data['avg_complete_seconds']) ? $data['avg_complete_seconds'] : null;
+        $this->container['capture_method'] = isset($data['capture_method']) ? $data['capture_method'] : null;
         $this->container['completed'] = isset($data['completed']) ? $data['completed'] : null;
         $this->container['completed_ts'] = isset($data['completed_ts']) ? $data['completed_ts'] : null;
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
@@ -844,11 +880,14 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['hours_to_complete_start'] = isset($data['hours_to_complete_start']) ? $data['hours_to_complete_start'] : null;
         $this->container['id_checks_attempted'] = isset($data['id_checks_attempted']) ? $data['id_checks_attempted'] : null;
         $this->container['id_checks_failed'] = isset($data['id_checks_failed']) ? $data['id_checks_failed'] : null;
+        $this->container['id_country'] = isset($data['id_country']) ? $data['id_country'] : null;
+        $this->container['id_method'] = isset($data['id_method']) ? $data['id_method'] : null;
         $this->container['initial_send_ts'] = isset($data['initial_send_ts']) ? $data['initial_send_ts'] : null;
         $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
         $this->container['last_activity'] = isset($data['last_activity']) ? $data['last_activity'] : null;
         $this->container['last_activity_date'] = isset($data['last_activity_date']) ? $data['last_activity_date'] : null;
         $this->container['last_sent_date'] = isset($data['last_sent_date']) ? $data['last_sent_date'] : null;
+        $this->container['metadata_removed'] = isset($data['metadata_removed']) ? $data['metadata_removed'] : null;
         $this->container['not_signed'] = isset($data['not_signed']) ? $data['not_signed'] : null;
         $this->container['number_of_authenticated_recipients'] = isset($data['number_of_authenticated_recipients']) ? $data['number_of_authenticated_recipients'] : null;
         $this->container['number_of_completed_signatures'] = isset($data['number_of_completed_signatures']) ? $data['number_of_completed_signatures'] : null;
@@ -866,6 +905,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['period_start'] = isset($data['period_start']) ? $data['period_start'] : null;
         $this->container['phone_calls_attempted'] = isset($data['phone_calls_attempted']) ? $data['phone_calls_attempted'] : null;
         $this->container['phone_calls_failed'] = isset($data['phone_calls_failed']) ? $data['phone_calls_failed'] : null;
+        $this->container['pii_redacted'] = isset($data['pii_redacted']) ? $data['pii_redacted'] : null;
+        $this->container['purge_date'] = isset($data['purge_date']) ? $data['purge_date'] : null;
         $this->container['reason_for_declining'] = isset($data['reason_for_declining']) ? $data['reason_for_declining'] : null;
         $this->container['reason_for_voiding'] = isset($data['reason_for_voiding']) ? $data['reason_for_voiding'] : null;
         $this->container['reassign_reason'] = isset($data['reassign_reason']) ? $data['reassign_reason'] : null;
@@ -900,6 +941,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_changed_date'] = isset($data['status_changed_date']) ? $data['status_changed_date'] : null;
         $this->container['status_changed_ts'] = isset($data['status_changed_ts']) ? $data['status_changed_ts'] : null;
+        $this->container['status_comment'] = isset($data['status_comment']) ? $data['status_comment'] : null;
         $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
         $this->container['successes'] = isset($data['successes']) ? $data['successes'] : null;
         $this->container['templates_created'] = isset($data['templates_created']) ? $data['templates_created'] : null;
@@ -1160,6 +1202,30 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     public function setAvgCompleteSeconds($avg_complete_seconds)
     {
         $this->container['avg_complete_seconds'] = $avg_complete_seconds;
+
+        return $this;
+    }
+
+    /**
+     * Gets capture_method
+     *
+     * @return ?string
+     */
+    public function getCaptureMethod()
+    {
+        return $this->container['capture_method'];
+    }
+
+    /**
+     * Sets capture_method
+     *
+     * @param ?string $capture_method 
+     *
+     * @return $this
+     */
+    public function setCaptureMethod($capture_method)
+    {
+        $this->container['capture_method'] = $capture_method;
 
         return $this;
     }
@@ -2077,6 +2143,54 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets id_country
+     *
+     * @return ?string
+     */
+    public function getIdCountry()
+    {
+        return $this->container['id_country'];
+    }
+
+    /**
+     * Sets id_country
+     *
+     * @param ?string $id_country 
+     *
+     * @return $this
+     */
+    public function setIdCountry($id_country)
+    {
+        $this->container['id_country'] = $id_country;
+
+        return $this;
+    }
+
+    /**
+     * Gets id_method
+     *
+     * @return ?string
+     */
+    public function getIdMethod()
+    {
+        return $this->container['id_method'];
+    }
+
+    /**
+     * Sets id_method
+     *
+     * @param ?string $id_method 
+     *
+     * @return $this
+     */
+    public function setIdMethod($id_method)
+    {
+        $this->container['id_method'] = $id_method;
+
+        return $this;
+    }
+
+    /**
      * Gets initial_send_ts
      *
      * @return ?string
@@ -2192,6 +2306,30 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     public function setLastSentDate($last_sent_date)
     {
         $this->container['last_sent_date'] = $last_sent_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets metadata_removed
+     *
+     * @return ?string
+     */
+    public function getMetadataRemoved()
+    {
+        return $this->container['metadata_removed'];
+    }
+
+    /**
+     * Sets metadata_removed
+     *
+     * @param ?string $metadata_removed 
+     *
+     * @return $this
+     */
+    public function setMetadataRemoved($metadata_removed)
+    {
+        $this->container['metadata_removed'] = $metadata_removed;
 
         return $this;
     }
@@ -2600,6 +2738,54 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     public function setPhoneCallsFailed($phone_calls_failed)
     {
         $this->container['phone_calls_failed'] = $phone_calls_failed;
+
+        return $this;
+    }
+
+    /**
+     * Gets pii_redacted
+     *
+     * @return ?string
+     */
+    public function getPiiRedacted()
+    {
+        return $this->container['pii_redacted'];
+    }
+
+    /**
+     * Sets pii_redacted
+     *
+     * @param ?string $pii_redacted 
+     *
+     * @return $this
+     */
+    public function setPiiRedacted($pii_redacted)
+    {
+        $this->container['pii_redacted'] = $pii_redacted;
+
+        return $this;
+    }
+
+    /**
+     * Gets purge_date
+     *
+     * @return ?string
+     */
+    public function getPurgeDate()
+    {
+        return $this->container['purge_date'];
+    }
+
+    /**
+     * Sets purge_date
+     *
+     * @param ?string $purge_date 
+     *
+     * @return $this
+     */
+    public function setPurgeDate($purge_date)
+    {
+        $this->container['purge_date'] = $purge_date;
 
         return $this;
     }
@@ -3416,6 +3602,30 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     public function setStatusChangedTs($status_changed_ts)
     {
         $this->container['status_changed_ts'] = $status_changed_ts;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_comment
+     *
+     * @return ?string
+     */
+    public function getStatusComment()
+    {
+        return $this->container['status_comment'];
+    }
+
+    /**
+     * Sets status_comment
+     *
+     * @param ?string $status_comment 
+     *
+     * @return $this
+     */
+    public function setStatusComment($status_comment)
+    {
+        $this->container['status_comment'] = $status_comment;
 
         return $this;
     }

@@ -61,7 +61,6 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => '\DocuSign\eSign\Model\AskAnAdmin',
         'enable_admin_message' => '?string',
         'enable_admin_message_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_advanced_payments_react_edit' => '?string',
         'enable_easy_sign_can_use_multi_template_apply' => '?string',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_easy_sign_template_upload' => '?string',
@@ -98,7 +97,6 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => null,
         'enable_admin_message' => null,
         'enable_admin_message_metadata' => null,
-        'enable_advanced_payments_react_edit' => null,
         'enable_easy_sign_can_use_multi_template_apply' => null,
         'enable_easy_sign_can_use_multi_template_apply_metadata' => null,
         'enable_easy_sign_template_upload' => null,
@@ -156,7 +154,6 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'askAnAdmin',
         'enable_admin_message' => 'enableAdminMessage',
         'enable_admin_message_metadata' => 'enableAdminMessageMetadata',
-        'enable_advanced_payments_react_edit' => 'enableAdvancedPaymentsReactEdit',
         'enable_easy_sign_can_use_multi_template_apply' => 'enableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'enableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'enableEasySignTemplateUpload',
@@ -193,7 +190,6 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'setAskAnAdmin',
         'enable_admin_message' => 'setEnableAdminMessage',
         'enable_admin_message_metadata' => 'setEnableAdminMessageMetadata',
-        'enable_advanced_payments_react_edit' => 'setEnableAdvancedPaymentsReactEdit',
         'enable_easy_sign_can_use_multi_template_apply' => 'setEnableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'setEnableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'setEnableEasySignTemplateUpload',
@@ -230,7 +226,6 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'getAskAnAdmin',
         'enable_admin_message' => 'getEnableAdminMessage',
         'enable_admin_message_metadata' => 'getEnableAdminMessageMetadata',
-        'enable_advanced_payments_react_edit' => 'getEnableAdvancedPaymentsReactEdit',
         'enable_easy_sign_can_use_multi_template_apply' => 'getEnableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata' => 'getEnableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload' => 'getEnableEasySignTemplateUpload',
@@ -321,7 +316,6 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         $this->container['ask_an_admin'] = isset($data['ask_an_admin']) ? $data['ask_an_admin'] : null;
         $this->container['enable_admin_message'] = isset($data['enable_admin_message']) ? $data['enable_admin_message'] : null;
         $this->container['enable_admin_message_metadata'] = isset($data['enable_admin_message_metadata']) ? $data['enable_admin_message_metadata'] : null;
-        $this->container['enable_advanced_payments_react_edit'] = isset($data['enable_advanced_payments_react_edit']) ? $data['enable_advanced_payments_react_edit'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply'] = isset($data['enable_easy_sign_can_use_multi_template_apply']) ? $data['enable_easy_sign_can_use_multi_template_apply'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply_metadata'] = isset($data['enable_easy_sign_can_use_multi_template_apply_metadata']) ? $data['enable_easy_sign_can_use_multi_template_apply_metadata'] : null;
         $this->container['enable_easy_sign_template_upload'] = isset($data['enable_easy_sign_template_upload']) ? $data['enable_easy_sign_template_upload'] : null;
@@ -464,30 +458,6 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function setEnableAdminMessageMetadata($enable_admin_message_metadata)
     {
         $this->container['enable_admin_message_metadata'] = $enable_admin_message_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets enable_advanced_payments_react_edit
-     *
-     * @return ?string
-     */
-    public function getEnableAdvancedPaymentsReactEdit()
-    {
-        return $this->container['enable_advanced_payments_react_edit'];
-    }
-
-    /**
-     * Sets enable_advanced_payments_react_edit
-     *
-     * @param ?string $enable_advanced_payments_react_edit 
-     *
-     * @return $this
-     */
-    public function setEnableAdvancedPaymentsReactEdit($enable_advanced_payments_react_edit)
-    {
-        $this->container['enable_advanced_payments_react_edit'] = $enable_advanced_payments_react_edit;
 
         return $this;
     }
