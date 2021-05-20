@@ -16,7 +16,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 - Added support for version v2.1-21.1.02.00 of the DocuSign eSignature API.
 - Updated the SDK release version.
 
-## [6.1.0] - eSignature API v2.1-21.1.01.03 - 2021-04-23
+## [6.1.0] - eSignature API v2.1-21.1.01.03 - 2021-04-29
 ### Added
 - Added new methods `deleteCustomFieldsV2`, `deletePageInfoV2`, `getApplianceEnvelopeInfo`, `getTemplateInfo` to envelopes.
 - Added new method `deleteConnectSecret` to connect.
