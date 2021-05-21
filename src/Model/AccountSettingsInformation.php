@@ -313,6 +313,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_e_sign_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_auto_nav' => '?string',
         'enable_auto_nav_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_bcc_dummy_link' => '?string',
+        'enable_bcc_dummy_link_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_calculated_fields' => '?string',
         'enable_calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_clickwraps' => '?string',
@@ -333,12 +335,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_payment_processing' => '?string',
         'enable_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_pdfa_conversion' => '?string',
+        'enable_pdfa_conversion_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_power_form' => '?string',
         'enable_power_form_direct' => '?string',
         'enable_power_form_direct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_power_form_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_recipient_domain_validation' => '?string',
         'enable_recipient_domain_validation_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_recipient_may_provide_phone_number' => '?string',
+        'enable_recipient_may_provide_phone_number_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_report_links' => '?string',
         'enable_report_links_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_require_sign_on_paper' => '?string',
@@ -869,6 +875,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_e_sign_metadata' => null,
         'enable_auto_nav' => null,
         'enable_auto_nav_metadata' => null,
+        'enable_bcc_dummy_link' => null,
+        'enable_bcc_dummy_link_metadata' => null,
         'enable_calculated_fields' => null,
         'enable_calculated_fields_metadata' => null,
         'enable_clickwraps' => null,
@@ -889,12 +897,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => null,
         'enable_payment_processing' => null,
         'enable_payment_processing_metadata' => null,
+        'enable_pdfa_conversion' => null,
+        'enable_pdfa_conversion_metadata' => null,
         'enable_power_form' => null,
         'enable_power_form_direct' => null,
         'enable_power_form_direct_metadata' => null,
         'enable_power_form_metadata' => null,
         'enable_recipient_domain_validation' => null,
         'enable_recipient_domain_validation_metadata' => null,
+        'enable_recipient_may_provide_phone_number' => null,
+        'enable_recipient_may_provide_phone_number_metadata' => null,
         'enable_report_links' => null,
         'enable_report_links_metadata' => null,
         'enable_require_sign_on_paper' => null,
@@ -1446,6 +1458,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_e_sign_metadata' => 'enableAgreementActionsForESignMetadata',
         'enable_auto_nav' => 'enableAutoNav',
         'enable_auto_nav_metadata' => 'enableAutoNavMetadata',
+        'enable_bcc_dummy_link' => 'enableBccDummyLink',
+        'enable_bcc_dummy_link_metadata' => 'enableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'enableCalculatedFields',
         'enable_calculated_fields_metadata' => 'enableCalculatedFieldsMetadata',
         'enable_clickwraps' => 'enableClickwraps',
@@ -1466,12 +1480,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => 'enableInBrowserEditorMetadata',
         'enable_payment_processing' => 'enablePaymentProcessing',
         'enable_payment_processing_metadata' => 'enablePaymentProcessingMetadata',
+        'enable_pdfa_conversion' => 'enablePDFAConversion',
+        'enable_pdfa_conversion_metadata' => 'enablePDFAConversionMetadata',
         'enable_power_form' => 'enablePowerForm',
         'enable_power_form_direct' => 'enablePowerFormDirect',
         'enable_power_form_direct_metadata' => 'enablePowerFormDirectMetadata',
         'enable_power_form_metadata' => 'enablePowerFormMetadata',
         'enable_recipient_domain_validation' => 'enableRecipientDomainValidation',
         'enable_recipient_domain_validation_metadata' => 'enableRecipientDomainValidationMetadata',
+        'enable_recipient_may_provide_phone_number' => 'enableRecipientMayProvidePhoneNumber',
+        'enable_recipient_may_provide_phone_number_metadata' => 'enableRecipientMayProvidePhoneNumberMetadata',
         'enable_report_links' => 'enableReportLinks',
         'enable_report_links_metadata' => 'enableReportLinksMetadata',
         'enable_require_sign_on_paper' => 'enableRequireSignOnPaper',
@@ -2002,6 +2020,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_e_sign_metadata' => 'setEnableAgreementActionsForESignMetadata',
         'enable_auto_nav' => 'setEnableAutoNav',
         'enable_auto_nav_metadata' => 'setEnableAutoNavMetadata',
+        'enable_bcc_dummy_link' => 'setEnableBccDummyLink',
+        'enable_bcc_dummy_link_metadata' => 'setEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'setEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'setEnableCalculatedFieldsMetadata',
         'enable_clickwraps' => 'setEnableClickwraps',
@@ -2022,12 +2042,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => 'setEnableInBrowserEditorMetadata',
         'enable_payment_processing' => 'setEnablePaymentProcessing',
         'enable_payment_processing_metadata' => 'setEnablePaymentProcessingMetadata',
+        'enable_pdfa_conversion' => 'setEnablePdfaConversion',
+        'enable_pdfa_conversion_metadata' => 'setEnablePdfaConversionMetadata',
         'enable_power_form' => 'setEnablePowerForm',
         'enable_power_form_direct' => 'setEnablePowerFormDirect',
         'enable_power_form_direct_metadata' => 'setEnablePowerFormDirectMetadata',
         'enable_power_form_metadata' => 'setEnablePowerFormMetadata',
         'enable_recipient_domain_validation' => 'setEnableRecipientDomainValidation',
         'enable_recipient_domain_validation_metadata' => 'setEnableRecipientDomainValidationMetadata',
+        'enable_recipient_may_provide_phone_number' => 'setEnableRecipientMayProvidePhoneNumber',
+        'enable_recipient_may_provide_phone_number_metadata' => 'setEnableRecipientMayProvidePhoneNumberMetadata',
         'enable_report_links' => 'setEnableReportLinks',
         'enable_report_links_metadata' => 'setEnableReportLinksMetadata',
         'enable_require_sign_on_paper' => 'setEnableRequireSignOnPaper',
@@ -2558,6 +2582,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_e_sign_metadata' => 'getEnableAgreementActionsForESignMetadata',
         'enable_auto_nav' => 'getEnableAutoNav',
         'enable_auto_nav_metadata' => 'getEnableAutoNavMetadata',
+        'enable_bcc_dummy_link' => 'getEnableBccDummyLink',
+        'enable_bcc_dummy_link_metadata' => 'getEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'getEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'getEnableCalculatedFieldsMetadata',
         'enable_clickwraps' => 'getEnableClickwraps',
@@ -2578,12 +2604,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => 'getEnableInBrowserEditorMetadata',
         'enable_payment_processing' => 'getEnablePaymentProcessing',
         'enable_payment_processing_metadata' => 'getEnablePaymentProcessingMetadata',
+        'enable_pdfa_conversion' => 'getEnablePdfaConversion',
+        'enable_pdfa_conversion_metadata' => 'getEnablePdfaConversionMetadata',
         'enable_power_form' => 'getEnablePowerForm',
         'enable_power_form_direct' => 'getEnablePowerFormDirect',
         'enable_power_form_direct_metadata' => 'getEnablePowerFormDirectMetadata',
         'enable_power_form_metadata' => 'getEnablePowerFormMetadata',
         'enable_recipient_domain_validation' => 'getEnableRecipientDomainValidation',
         'enable_recipient_domain_validation_metadata' => 'getEnableRecipientDomainValidationMetadata',
+        'enable_recipient_may_provide_phone_number' => 'getEnableRecipientMayProvidePhoneNumber',
+        'enable_recipient_may_provide_phone_number_metadata' => 'getEnableRecipientMayProvidePhoneNumberMetadata',
         'enable_report_links' => 'getEnableReportLinks',
         'enable_report_links_metadata' => 'getEnableReportLinksMetadata',
         'enable_require_sign_on_paper' => 'getEnableRequireSignOnPaper',
@@ -3168,6 +3198,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_agreement_actions_for_e_sign_metadata'] = isset($data['enable_agreement_actions_for_e_sign_metadata']) ? $data['enable_agreement_actions_for_e_sign_metadata'] : null;
         $this->container['enable_auto_nav'] = isset($data['enable_auto_nav']) ? $data['enable_auto_nav'] : null;
         $this->container['enable_auto_nav_metadata'] = isset($data['enable_auto_nav_metadata']) ? $data['enable_auto_nav_metadata'] : null;
+        $this->container['enable_bcc_dummy_link'] = isset($data['enable_bcc_dummy_link']) ? $data['enable_bcc_dummy_link'] : null;
+        $this->container['enable_bcc_dummy_link_metadata'] = isset($data['enable_bcc_dummy_link_metadata']) ? $data['enable_bcc_dummy_link_metadata'] : null;
         $this->container['enable_calculated_fields'] = isset($data['enable_calculated_fields']) ? $data['enable_calculated_fields'] : null;
         $this->container['enable_calculated_fields_metadata'] = isset($data['enable_calculated_fields_metadata']) ? $data['enable_calculated_fields_metadata'] : null;
         $this->container['enable_clickwraps'] = isset($data['enable_clickwraps']) ? $data['enable_clickwraps'] : null;
@@ -3188,12 +3220,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_in_browser_editor_metadata'] = isset($data['enable_in_browser_editor_metadata']) ? $data['enable_in_browser_editor_metadata'] : null;
         $this->container['enable_payment_processing'] = isset($data['enable_payment_processing']) ? $data['enable_payment_processing'] : null;
         $this->container['enable_payment_processing_metadata'] = isset($data['enable_payment_processing_metadata']) ? $data['enable_payment_processing_metadata'] : null;
+        $this->container['enable_pdfa_conversion'] = isset($data['enable_pdfa_conversion']) ? $data['enable_pdfa_conversion'] : null;
+        $this->container['enable_pdfa_conversion_metadata'] = isset($data['enable_pdfa_conversion_metadata']) ? $data['enable_pdfa_conversion_metadata'] : null;
         $this->container['enable_power_form'] = isset($data['enable_power_form']) ? $data['enable_power_form'] : null;
         $this->container['enable_power_form_direct'] = isset($data['enable_power_form_direct']) ? $data['enable_power_form_direct'] : null;
         $this->container['enable_power_form_direct_metadata'] = isset($data['enable_power_form_direct_metadata']) ? $data['enable_power_form_direct_metadata'] : null;
         $this->container['enable_power_form_metadata'] = isset($data['enable_power_form_metadata']) ? $data['enable_power_form_metadata'] : null;
         $this->container['enable_recipient_domain_validation'] = isset($data['enable_recipient_domain_validation']) ? $data['enable_recipient_domain_validation'] : null;
         $this->container['enable_recipient_domain_validation_metadata'] = isset($data['enable_recipient_domain_validation_metadata']) ? $data['enable_recipient_domain_validation_metadata'] : null;
+        $this->container['enable_recipient_may_provide_phone_number'] = isset($data['enable_recipient_may_provide_phone_number']) ? $data['enable_recipient_may_provide_phone_number'] : null;
+        $this->container['enable_recipient_may_provide_phone_number_metadata'] = isset($data['enable_recipient_may_provide_phone_number_metadata']) ? $data['enable_recipient_may_provide_phone_number_metadata'] : null;
         $this->container['enable_report_links'] = isset($data['enable_report_links']) ? $data['enable_report_links'] : null;
         $this->container['enable_report_links_metadata'] = isset($data['enable_report_links_metadata']) ? $data['enable_report_links_metadata'] : null;
         $this->container['enable_require_sign_on_paper'] = isset($data['enable_require_sign_on_paper']) ? $data['enable_require_sign_on_paper'] : null;
@@ -9608,6 +9644,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_bcc_dummy_link
+     *
+     * @return ?string
+     */
+    public function getEnableBccDummyLink()
+    {
+        return $this->container['enable_bcc_dummy_link'];
+    }
+
+    /**
+     * Sets enable_bcc_dummy_link
+     *
+     * @param ?string $enable_bcc_dummy_link 
+     *
+     * @return $this
+     */
+    public function setEnableBccDummyLink($enable_bcc_dummy_link)
+    {
+        $this->container['enable_bcc_dummy_link'] = $enable_bcc_dummy_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_bcc_dummy_link_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableBccDummyLinkMetadata()
+    {
+        return $this->container['enable_bcc_dummy_link_metadata'];
+    }
+
+    /**
+     * Sets enable_bcc_dummy_link_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_bcc_dummy_link_metadata enable_bcc_dummy_link_metadata
+     *
+     * @return $this
+     */
+    public function setEnableBccDummyLinkMetadata($enable_bcc_dummy_link_metadata)
+    {
+        $this->container['enable_bcc_dummy_link_metadata'] = $enable_bcc_dummy_link_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_calculated_fields
      *
      * @return ?string
@@ -10088,6 +10172,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_pdfa_conversion
+     *
+     * @return ?string
+     */
+    public function getEnablePdfaConversion()
+    {
+        return $this->container['enable_pdfa_conversion'];
+    }
+
+    /**
+     * Sets enable_pdfa_conversion
+     *
+     * @param ?string $enable_pdfa_conversion 
+     *
+     * @return $this
+     */
+    public function setEnablePdfaConversion($enable_pdfa_conversion)
+    {
+        $this->container['enable_pdfa_conversion'] = $enable_pdfa_conversion;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_pdfa_conversion_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnablePdfaConversionMetadata()
+    {
+        return $this->container['enable_pdfa_conversion_metadata'];
+    }
+
+    /**
+     * Sets enable_pdfa_conversion_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_pdfa_conversion_metadata enable_pdfa_conversion_metadata
+     *
+     * @return $this
+     */
+    public function setEnablePdfaConversionMetadata($enable_pdfa_conversion_metadata)
+    {
+        $this->container['enable_pdfa_conversion_metadata'] = $enable_pdfa_conversion_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_power_form
      *
      * @return ?string
@@ -10227,6 +10359,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableRecipientDomainValidationMetadata($enable_recipient_domain_validation_metadata)
     {
         $this->container['enable_recipient_domain_validation_metadata'] = $enable_recipient_domain_validation_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_recipient_may_provide_phone_number
+     *
+     * @return ?string
+     */
+    public function getEnableRecipientMayProvidePhoneNumber()
+    {
+        return $this->container['enable_recipient_may_provide_phone_number'];
+    }
+
+    /**
+     * Sets enable_recipient_may_provide_phone_number
+     *
+     * @param ?string $enable_recipient_may_provide_phone_number 
+     *
+     * @return $this
+     */
+    public function setEnableRecipientMayProvidePhoneNumber($enable_recipient_may_provide_phone_number)
+    {
+        $this->container['enable_recipient_may_provide_phone_number'] = $enable_recipient_may_provide_phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_recipient_may_provide_phone_number_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableRecipientMayProvidePhoneNumberMetadata()
+    {
+        return $this->container['enable_recipient_may_provide_phone_number_metadata'];
+    }
+
+    /**
+     * Sets enable_recipient_may_provide_phone_number_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_recipient_may_provide_phone_number_metadata enable_recipient_may_provide_phone_number_metadata
+     *
+     * @return $this
+     */
+    public function setEnableRecipientMayProvidePhoneNumberMetadata($enable_recipient_may_provide_phone_number_metadata)
+    {
+        $this->container['enable_recipient_may_provide_phone_number_metadata'] = $enable_recipient_may_provide_phone_number_metadata;
 
         return $this;
     }

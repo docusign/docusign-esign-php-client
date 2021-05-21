@@ -57,6 +57,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'authentication_success_filter' => '?string',
         'custom_field_filter' => '?string',
         'date_range_custom_from_date' => '?string',
         'date_range_custom_to_date' => '?string',
@@ -82,7 +83,8 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         'separator' => '?string',
         'sort_direction' => '?string',
         'sort_field' => '?string',
-        'start_position' => '?string'
+        'start_position' => '?string',
+        'verification_status_filter' => '?string'
     ];
 
     /**
@@ -91,6 +93,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'authentication_success_filter' => null,
         'custom_field_filter' => null,
         'date_range_custom_from_date' => null,
         'date_range_custom_to_date' => null,
@@ -116,7 +119,8 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         'separator' => null,
         'sort_direction' => null,
         'sort_field' => null,
-        'start_position' => null
+        'start_position' => null,
+        'verification_status_filter' => null
     ];
 
     /**
@@ -146,6 +150,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'authentication_success_filter' => 'authenticationSuccessFilter',
         'custom_field_filter' => 'customFieldFilter',
         'date_range_custom_from_date' => 'dateRangeCustomFromDate',
         'date_range_custom_to_date' => 'dateRangeCustomToDate',
@@ -171,7 +176,8 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         'separator' => 'separator',
         'sort_direction' => 'sortDirection',
         'sort_field' => 'sortField',
-        'start_position' => 'startPosition'
+        'start_position' => 'startPosition',
+        'verification_status_filter' => 'verificationStatusFilter'
     ];
 
     /**
@@ -180,6 +186,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'authentication_success_filter' => 'setAuthenticationSuccessFilter',
         'custom_field_filter' => 'setCustomFieldFilter',
         'date_range_custom_from_date' => 'setDateRangeCustomFromDate',
         'date_range_custom_to_date' => 'setDateRangeCustomToDate',
@@ -205,7 +212,8 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         'separator' => 'setSeparator',
         'sort_direction' => 'setSortDirection',
         'sort_field' => 'setSortField',
-        'start_position' => 'setStartPosition'
+        'start_position' => 'setStartPosition',
+        'verification_status_filter' => 'setVerificationStatusFilter'
     ];
 
     /**
@@ -214,6 +222,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'authentication_success_filter' => 'getAuthenticationSuccessFilter',
         'custom_field_filter' => 'getCustomFieldFilter',
         'date_range_custom_from_date' => 'getDateRangeCustomFromDate',
         'date_range_custom_to_date' => 'getDateRangeCustomToDate',
@@ -239,7 +248,8 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         'separator' => 'getSeparator',
         'sort_direction' => 'getSortDirection',
         'sort_field' => 'getSortField',
-        'start_position' => 'getStartPosition'
+        'start_position' => 'getStartPosition',
+        'verification_status_filter' => 'getVerificationStatusFilter'
     ];
 
     /**
@@ -302,6 +312,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['authentication_success_filter'] = isset($data['authentication_success_filter']) ? $data['authentication_success_filter'] : null;
         $this->container['custom_field_filter'] = isset($data['custom_field_filter']) ? $data['custom_field_filter'] : null;
         $this->container['date_range_custom_from_date'] = isset($data['date_range_custom_from_date']) ? $data['date_range_custom_from_date'] : null;
         $this->container['date_range_custom_to_date'] = isset($data['date_range_custom_to_date']) ? $data['date_range_custom_to_date'] : null;
@@ -328,6 +339,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         $this->container['sort_direction'] = isset($data['sort_direction']) ? $data['sort_direction'] : null;
         $this->container['sort_field'] = isset($data['sort_field']) ? $data['sort_field'] : null;
         $this->container['start_position'] = isset($data['start_position']) ? $data['start_position'] : null;
+        $this->container['verification_status_filter'] = isset($data['verification_status_filter']) ? $data['verification_status_filter'] : null;
     }
 
     /**
@@ -353,6 +365,30 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets authentication_success_filter
+     *
+     * @return ?string
+     */
+    public function getAuthenticationSuccessFilter()
+    {
+        return $this->container['authentication_success_filter'];
+    }
+
+    /**
+     * Sets authentication_success_filter
+     *
+     * @param ?string $authentication_success_filter 
+     *
+     * @return $this
+     */
+    public function setAuthenticationSuccessFilter($authentication_success_filter)
+    {
+        $this->container['authentication_success_filter'] = $authentication_success_filter;
+
+        return $this;
+    }
 
     /**
      * Gets custom_field_filter
@@ -974,6 +1010,30 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     public function setStartPosition($start_position)
     {
         $this->container['start_position'] = $start_position;
+
+        return $this;
+    }
+
+    /**
+     * Gets verification_status_filter
+     *
+     * @return ?string
+     */
+    public function getVerificationStatusFilter()
+    {
+        return $this->container['verification_status_filter'];
+    }
+
+    /**
+     * Sets verification_status_filter
+     *
+     * @param ?string $verification_status_filter 
+     *
+     * @return $this
+     */
+    public function setVerificationStatusFilter($verification_status_filter)
+    {
+        $this->container['verification_status_filter'] = $verification_status_filter;
 
         return $this;
     }

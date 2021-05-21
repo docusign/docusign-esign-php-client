@@ -57,6 +57,7 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'authentication_success_filter' => '?string',
         'custom_field_filter' => '?string',
         'date_range_custom_from_date' => '?string',
         'date_range_custom_to_date' => '?string',
@@ -85,7 +86,8 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
         'sent_by_filter' => '?string',
         'sent_by_ids' => '?string',
         'sort_field_direction' => '?string',
-        'sort_field_name' => '?string'
+        'sort_field_name' => '?string',
+        'verification_status_filter' => '?string'
     ];
 
     /**
@@ -94,6 +96,7 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'authentication_success_filter' => null,
         'custom_field_filter' => null,
         'date_range_custom_from_date' => null,
         'date_range_custom_to_date' => null,
@@ -122,7 +125,8 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
         'sent_by_filter' => null,
         'sent_by_ids' => null,
         'sort_field_direction' => null,
-        'sort_field_name' => null
+        'sort_field_name' => null,
+        'verification_status_filter' => null
     ];
 
     /**
@@ -152,6 +156,7 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'authentication_success_filter' => 'authenticationSuccessFilter',
         'custom_field_filter' => 'customFieldFilter',
         'date_range_custom_from_date' => 'dateRangeCustomFromDate',
         'date_range_custom_to_date' => 'dateRangeCustomToDate',
@@ -180,7 +185,8 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
         'sent_by_filter' => 'sentByFilter',
         'sent_by_ids' => 'sentByIds',
         'sort_field_direction' => 'sortFieldDirection',
-        'sort_field_name' => 'sortFieldName'
+        'sort_field_name' => 'sortFieldName',
+        'verification_status_filter' => 'verificationStatusFilter'
     ];
 
     /**
@@ -189,6 +195,7 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'authentication_success_filter' => 'setAuthenticationSuccessFilter',
         'custom_field_filter' => 'setCustomFieldFilter',
         'date_range_custom_from_date' => 'setDateRangeCustomFromDate',
         'date_range_custom_to_date' => 'setDateRangeCustomToDate',
@@ -217,7 +224,8 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
         'sent_by_filter' => 'setSentByFilter',
         'sent_by_ids' => 'setSentByIds',
         'sort_field_direction' => 'setSortFieldDirection',
-        'sort_field_name' => 'setSortFieldName'
+        'sort_field_name' => 'setSortFieldName',
+        'verification_status_filter' => 'setVerificationStatusFilter'
     ];
 
     /**
@@ -226,6 +234,7 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'authentication_success_filter' => 'getAuthenticationSuccessFilter',
         'custom_field_filter' => 'getCustomFieldFilter',
         'date_range_custom_from_date' => 'getDateRangeCustomFromDate',
         'date_range_custom_to_date' => 'getDateRangeCustomToDate',
@@ -254,7 +263,8 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
         'sent_by_filter' => 'getSentByFilter',
         'sent_by_ids' => 'getSentByIds',
         'sort_field_direction' => 'getSortFieldDirection',
-        'sort_field_name' => 'getSortFieldName'
+        'sort_field_name' => 'getSortFieldName',
+        'verification_status_filter' => 'getVerificationStatusFilter'
     ];
 
     /**
@@ -317,6 +327,7 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['authentication_success_filter'] = isset($data['authentication_success_filter']) ? $data['authentication_success_filter'] : null;
         $this->container['custom_field_filter'] = isset($data['custom_field_filter']) ? $data['custom_field_filter'] : null;
         $this->container['date_range_custom_from_date'] = isset($data['date_range_custom_from_date']) ? $data['date_range_custom_from_date'] : null;
         $this->container['date_range_custom_to_date'] = isset($data['date_range_custom_to_date']) ? $data['date_range_custom_to_date'] : null;
@@ -346,6 +357,7 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
         $this->container['sent_by_ids'] = isset($data['sent_by_ids']) ? $data['sent_by_ids'] : null;
         $this->container['sort_field_direction'] = isset($data['sort_field_direction']) ? $data['sort_field_direction'] : null;
         $this->container['sort_field_name'] = isset($data['sort_field_name']) ? $data['sort_field_name'] : null;
+        $this->container['verification_status_filter'] = isset($data['verification_status_filter']) ? $data['verification_status_filter'] : null;
     }
 
     /**
@@ -371,6 +383,30 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets authentication_success_filter
+     *
+     * @return ?string
+     */
+    public function getAuthenticationSuccessFilter()
+    {
+        return $this->container['authentication_success_filter'];
+    }
+
+    /**
+     * Sets authentication_success_filter
+     *
+     * @param ?string $authentication_success_filter 
+     *
+     * @return $this
+     */
+    public function setAuthenticationSuccessFilter($authentication_success_filter)
+    {
+        $this->container['authentication_success_filter'] = $authentication_success_filter;
+
+        return $this;
+    }
 
     /**
      * Gets custom_field_filter
@@ -1064,6 +1100,30 @@ class ReportInProductGet implements ModelInterface, ArrayAccess
     public function setSortFieldName($sort_field_name)
     {
         $this->container['sort_field_name'] = $sort_field_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets verification_status_filter
+     *
+     * @return ?string
+     */
+    public function getVerificationStatusFilter()
+    {
+        return $this->container['verification_status_filter'];
+    }
+
+    /**
+     * Sets verification_status_filter
+     *
+     * @param ?string $verification_status_filter 
+     *
+     * @return $this
+     */
+    public function setVerificationStatusFilter($verification_status_filter)
+    {
+        $this->container['verification_status_filter'] = $verification_status_filter;
 
         return $this;
     }

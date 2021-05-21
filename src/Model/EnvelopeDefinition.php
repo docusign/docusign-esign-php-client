@@ -84,6 +84,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'deleted_date_time' => '?string',
         'delivered_date_time' => '?string',
         'disable_responsive_document' => '?string',
+        'document_base64' => '?string',
         'documents' => '\DocuSign\eSign\Model\Document[]',
         'documents_combined_uri' => '?string',
         'documents_uri' => '?string',
@@ -128,6 +129,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'recipients' => '\DocuSign\eSign\Model\Recipients',
         'recipients_lock' => '?string',
         'recipients_uri' => '?string',
+        'recipient_view_request' => '\DocuSign\eSign\Model\RecipientViewRequest',
         'sender' => '\DocuSign\eSign\Model\UserInfo',
         'sent_date_time' => '?string',
         'signer_can_sign_on_mobile' => '?string',
@@ -178,6 +180,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'deleted_date_time' => null,
         'delivered_date_time' => null,
         'disable_responsive_document' => null,
+        'document_base64' => null,
         'documents' => null,
         'documents_combined_uri' => null,
         'documents_uri' => null,
@@ -222,6 +225,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'recipients' => null,
         'recipients_lock' => null,
         'recipients_uri' => null,
+        'recipient_view_request' => null,
         'sender' => null,
         'sent_date_time' => null,
         'signer_can_sign_on_mobile' => null,
@@ -293,6 +297,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'deleted_date_time' => 'deletedDateTime',
         'delivered_date_time' => 'deliveredDateTime',
         'disable_responsive_document' => 'disableResponsiveDocument',
+        'document_base64' => 'documentBase64',
         'documents' => 'documents',
         'documents_combined_uri' => 'documentsCombinedUri',
         'documents_uri' => 'documentsUri',
@@ -337,6 +342,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'recipients' => 'recipients',
         'recipients_lock' => 'recipientsLock',
         'recipients_uri' => 'recipientsUri',
+        'recipient_view_request' => 'recipientViewRequest',
         'sender' => 'sender',
         'sent_date_time' => 'sentDateTime',
         'signer_can_sign_on_mobile' => 'signerCanSignOnMobile',
@@ -387,6 +393,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'deleted_date_time' => 'setDeletedDateTime',
         'delivered_date_time' => 'setDeliveredDateTime',
         'disable_responsive_document' => 'setDisableResponsiveDocument',
+        'document_base64' => 'setDocumentBase64',
         'documents' => 'setDocuments',
         'documents_combined_uri' => 'setDocumentsCombinedUri',
         'documents_uri' => 'setDocumentsUri',
@@ -431,6 +438,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'recipients' => 'setRecipients',
         'recipients_lock' => 'setRecipientsLock',
         'recipients_uri' => 'setRecipientsUri',
+        'recipient_view_request' => 'setRecipientViewRequest',
         'sender' => 'setSender',
         'sent_date_time' => 'setSentDateTime',
         'signer_can_sign_on_mobile' => 'setSignerCanSignOnMobile',
@@ -481,6 +489,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'deleted_date_time' => 'getDeletedDateTime',
         'delivered_date_time' => 'getDeliveredDateTime',
         'disable_responsive_document' => 'getDisableResponsiveDocument',
+        'document_base64' => 'getDocumentBase64',
         'documents' => 'getDocuments',
         'documents_combined_uri' => 'getDocumentsCombinedUri',
         'documents_uri' => 'getDocumentsUri',
@@ -525,6 +534,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'recipients' => 'getRecipients',
         'recipients_lock' => 'getRecipientsLock',
         'recipients_uri' => 'getRecipientsUri',
+        'recipient_view_request' => 'getRecipientViewRequest',
         'sender' => 'getSender',
         'sent_date_time' => 'getSentDateTime',
         'signer_can_sign_on_mobile' => 'getSignerCanSignOnMobile',
@@ -629,6 +639,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         $this->container['deleted_date_time'] = isset($data['deleted_date_time']) ? $data['deleted_date_time'] : null;
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['disable_responsive_document'] = isset($data['disable_responsive_document']) ? $data['disable_responsive_document'] : null;
+        $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
         $this->container['documents_combined_uri'] = isset($data['documents_combined_uri']) ? $data['documents_combined_uri'] : null;
         $this->container['documents_uri'] = isset($data['documents_uri']) ? $data['documents_uri'] : null;
@@ -673,6 +684,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         $this->container['recipients'] = isset($data['recipients']) ? $data['recipients'] : null;
         $this->container['recipients_lock'] = isset($data['recipients_lock']) ? $data['recipients_lock'] : null;
         $this->container['recipients_uri'] = isset($data['recipients_uri']) ? $data['recipients_uri'] : null;
+        $this->container['recipient_view_request'] = isset($data['recipient_view_request']) ? $data['recipient_view_request'] : null;
         $this->container['sender'] = isset($data['sender']) ? $data['sender'] : null;
         $this->container['sent_date_time'] = isset($data['sent_date_time']) ? $data['sent_date_time'] : null;
         $this->container['signer_can_sign_on_mobile'] = isset($data['signer_can_sign_on_mobile']) ? $data['signer_can_sign_on_mobile'] : null;
@@ -1358,6 +1370,30 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     public function setDisableResponsiveDocument($disable_responsive_document)
     {
         $this->container['disable_responsive_document'] = $disable_responsive_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_base64
+     *
+     * @return ?string
+     */
+    public function getDocumentBase64()
+    {
+        return $this->container['document_base64'];
+    }
+
+    /**
+     * Sets document_base64
+     *
+     * @param ?string $document_base64 
+     *
+     * @return $this
+     */
+    public function setDocumentBase64($document_base64)
+    {
+        $this->container['document_base64'] = $document_base64;
 
         return $this;
     }
@@ -2414,6 +2450,30 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     public function setRecipientsUri($recipients_uri)
     {
         $this->container['recipients_uri'] = $recipients_uri;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_view_request
+     *
+     * @return \DocuSign\eSign\Model\RecipientViewRequest
+     */
+    public function getRecipientViewRequest()
+    {
+        return $this->container['recipient_view_request'];
+    }
+
+    /**
+     * Sets recipient_view_request
+     *
+     * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request recipient_view_request
+     *
+     * @return $this
+     */
+    public function setRecipientViewRequest($recipient_view_request)
+    {
+        $this->container['recipient_view_request'] = $recipient_view_request;
 
         return $this;
     }

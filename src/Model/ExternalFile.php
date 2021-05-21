@@ -58,9 +58,11 @@ class ExternalFile implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'date' => '?string',
+        'has_composite_template' => '?string',
         'id' => '?string',
         'img' => '?string',
         'name' => '?string',
+        'owner_name' => '?string',
         'size' => '?string',
         'supported' => '?string',
         'type' => '?string',
@@ -74,9 +76,11 @@ class ExternalFile implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'date' => null,
+        'has_composite_template' => null,
         'id' => null,
         'img' => null,
         'name' => null,
+        'owner_name' => null,
         'size' => null,
         'supported' => null,
         'type' => null,
@@ -111,9 +115,11 @@ class ExternalFile implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'date' => 'date',
+        'has_composite_template' => 'hasCompositeTemplate',
         'id' => 'id',
         'img' => 'img',
         'name' => 'name',
+        'owner_name' => 'ownerName',
         'size' => 'size',
         'supported' => 'supported',
         'type' => 'type',
@@ -127,9 +133,11 @@ class ExternalFile implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'date' => 'setDate',
+        'has_composite_template' => 'setHasCompositeTemplate',
         'id' => 'setId',
         'img' => 'setImg',
         'name' => 'setName',
+        'owner_name' => 'setOwnerName',
         'size' => 'setSize',
         'supported' => 'setSupported',
         'type' => 'setType',
@@ -143,9 +151,11 @@ class ExternalFile implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'date' => 'getDate',
+        'has_composite_template' => 'getHasCompositeTemplate',
         'id' => 'getId',
         'img' => 'getImg',
         'name' => 'getName',
+        'owner_name' => 'getOwnerName',
         'size' => 'getSize',
         'supported' => 'getSupported',
         'type' => 'getType',
@@ -213,9 +223,11 @@ class ExternalFile implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['has_composite_template'] = isset($data['has_composite_template']) ? $data['has_composite_template'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['img'] = isset($data['img']) ? $data['img'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['supported'] = isset($data['supported']) ? $data['supported'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -266,6 +278,30 @@ class ExternalFile implements ModelInterface, ArrayAccess
     public function setDate($date)
     {
         $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_composite_template
+     *
+     * @return ?string
+     */
+    public function getHasCompositeTemplate()
+    {
+        return $this->container['has_composite_template'];
+    }
+
+    /**
+     * Sets has_composite_template
+     *
+     * @param ?string $has_composite_template 
+     *
+     * @return $this
+     */
+    public function setHasCompositeTemplate($has_composite_template)
+    {
+        $this->container['has_composite_template'] = $has_composite_template;
 
         return $this;
     }
@@ -338,6 +374,30 @@ class ExternalFile implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_name
+     *
+     * @return ?string
+     */
+    public function getOwnerName()
+    {
+        return $this->container['owner_name'];
+    }
+
+    /**
+     * Sets owner_name
+     *
+     * @param ?string $owner_name 
+     *
+     * @return $this
+     */
+    public function setOwnerName($owner_name)
+    {
+        $this->container['owner_name'] = $owner_name;
 
         return $this;
     }

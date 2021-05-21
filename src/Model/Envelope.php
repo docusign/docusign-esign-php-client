@@ -80,6 +80,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'deleted_date_time' => '?string',
         'delivered_date_time' => '?string',
         'disable_responsive_document' => '?string',
+        'document_base64' => '?string',
         'documents_combined_uri' => '?string',
         'documents_uri' => '?string',
         'email_blurb' => '?string',
@@ -164,6 +165,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'deleted_date_time' => null,
         'delivered_date_time' => null,
         'disable_responsive_document' => null,
+        'document_base64' => null,
         'documents_combined_uri' => null,
         'documents_uri' => null,
         'email_blurb' => null,
@@ -269,6 +271,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'deleted_date_time' => 'deletedDateTime',
         'delivered_date_time' => 'deliveredDateTime',
         'disable_responsive_document' => 'disableResponsiveDocument',
+        'document_base64' => 'documentBase64',
         'documents_combined_uri' => 'documentsCombinedUri',
         'documents_uri' => 'documentsUri',
         'email_blurb' => 'emailBlurb',
@@ -353,6 +356,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'deleted_date_time' => 'setDeletedDateTime',
         'delivered_date_time' => 'setDeliveredDateTime',
         'disable_responsive_document' => 'setDisableResponsiveDocument',
+        'document_base64' => 'setDocumentBase64',
         'documents_combined_uri' => 'setDocumentsCombinedUri',
         'documents_uri' => 'setDocumentsUri',
         'email_blurb' => 'setEmailBlurb',
@@ -437,6 +441,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'deleted_date_time' => 'getDeletedDateTime',
         'delivered_date_time' => 'getDeliveredDateTime',
         'disable_responsive_document' => 'getDisableResponsiveDocument',
+        'document_base64' => 'getDocumentBase64',
         'documents_combined_uri' => 'getDocumentsCombinedUri',
         'documents_uri' => 'getDocumentsUri',
         'email_blurb' => 'getEmailBlurb',
@@ -575,6 +580,7 @@ class Envelope implements ModelInterface, ArrayAccess
         $this->container['deleted_date_time'] = isset($data['deleted_date_time']) ? $data['deleted_date_time'] : null;
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['disable_responsive_document'] = isset($data['disable_responsive_document']) ? $data['disable_responsive_document'] : null;
+        $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['documents_combined_uri'] = isset($data['documents_combined_uri']) ? $data['documents_combined_uri'] : null;
         $this->container['documents_uri'] = isset($data['documents_uri']) ? $data['documents_uri'] : null;
         $this->container['email_blurb'] = isset($data['email_blurb']) ? $data['email_blurb'] : null;
@@ -1202,6 +1208,30 @@ class Envelope implements ModelInterface, ArrayAccess
     public function setDisableResponsiveDocument($disable_responsive_document)
     {
         $this->container['disable_responsive_document'] = $disable_responsive_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_base64
+     *
+     * @return ?string
+     */
+    public function getDocumentBase64()
+    {
+        return $this->container['document_base64'];
+    }
+
+    /**
+     * Sets document_base64
+     *
+     * @param ?string $document_base64 
+     *
+     * @return $this
+     */
+    public function setDocumentBase64($document_base64)
+    {
+        $this->container['document_base64'] = $document_base64;
 
         return $this;
     }

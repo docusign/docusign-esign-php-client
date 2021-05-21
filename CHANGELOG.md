@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [6.2.0-rc] - eSignature API v2.1-21.1.02.00 - 2021-05-20
+### Breaking
+- Removed methods `getAccountSettingsExport`,`getSealProviders` from Accounts.
+- Removed methods `createConnectSecret`,`deleteConnectSecret`,`generateConnectSecret`,`getConnectSecrets` from Connect.
+- Removed methods `getDynamicSystemSettings`,`getTemplateInfo`,`getApplianceInfo`,`getAccount`,`getCustomFields`,`deleteCustomFieldsV2`,`getDocumentPages`,`getImage`,`getLocalePolicy`,`updatePageInfo`,`createPageInfo`,`deletePageInfo`,`updatePdf`,`getPdf`,`getPdfBlob`,`updatePdfBlob`,`createPdfBlob`,`updateRecipientDeniedDocumentCopy`,`deleteRecipientDeniedDocumentCopy`,`getSignerAttachment`,`deleteSignerAttachment`, from Envelopes.
+- Removed methods `completeSignHash`,`getUserInfo`,`healthCheck`,`signHashSessionInfo`,`updateTransaction` from TrustServiceProviders.
+- Removed method `getUserListExport` from Users.
+### Added
+- Added new methods `getBulkSendBatchEnvelopes` to BulkEnvelopes.
+### Changed
+- Added support for version v2.1-21.1.02.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+
 ## [6.1.0] - eSignature API v2.1-21.1.01.03 - 2021-04-29
 ### Added
 - Added new methods `deleteCustomFieldsV2`, `deletePageInfoV2`, `getApplianceEnvelopeInfo`, `getTemplateInfo` to envelopes.

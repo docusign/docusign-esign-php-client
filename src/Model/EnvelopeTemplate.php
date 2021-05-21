@@ -84,6 +84,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'delivered_date_time' => '?string',
         'description' => '?string',
         'disable_responsive_document' => '?string',
+        'document_base64' => '?string',
         'documents' => '\DocuSign\eSign\Model\Document[]',
         'documents_combined_uri' => '?string',
         'documents_uri' => '?string',
@@ -190,6 +191,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'delivered_date_time' => null,
         'description' => null,
         'disable_responsive_document' => null,
+        'document_base64' => null,
         'documents' => null,
         'documents_combined_uri' => null,
         'documents_uri' => null,
@@ -317,6 +319,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'delivered_date_time' => 'deliveredDateTime',
         'description' => 'description',
         'disable_responsive_document' => 'disableResponsiveDocument',
+        'document_base64' => 'documentBase64',
         'documents' => 'documents',
         'documents_combined_uri' => 'documentsCombinedUri',
         'documents_uri' => 'documentsUri',
@@ -423,6 +426,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'delivered_date_time' => 'setDeliveredDateTime',
         'description' => 'setDescription',
         'disable_responsive_document' => 'setDisableResponsiveDocument',
+        'document_base64' => 'setDocumentBase64',
         'documents' => 'setDocuments',
         'documents_combined_uri' => 'setDocumentsCombinedUri',
         'documents_uri' => 'setDocumentsUri',
@@ -529,6 +533,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'delivered_date_time' => 'getDeliveredDateTime',
         'description' => 'getDescription',
         'disable_responsive_document' => 'getDisableResponsiveDocument',
+        'document_base64' => 'getDocumentBase64',
         'documents' => 'getDocuments',
         'documents_combined_uri' => 'getDocumentsCombinedUri',
         'documents_uri' => 'getDocumentsUri',
@@ -689,6 +694,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['disable_responsive_document'] = isset($data['disable_responsive_document']) ? $data['disable_responsive_document'] : null;
+        $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
         $this->container['documents_combined_uri'] = isset($data['documents_combined_uri']) ? $data['documents_combined_uri'] : null;
         $this->container['documents_uri'] = isset($data['documents_uri']) ? $data['documents_uri'] : null;
@@ -1430,6 +1436,30 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     public function setDisableResponsiveDocument($disable_responsive_document)
     {
         $this->container['disable_responsive_document'] = $disable_responsive_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_base64
+     *
+     * @return ?string
+     */
+    public function getDocumentBase64()
+    {
+        return $this->container['document_base64'];
+    }
+
+    /**
+     * Sets document_base64
+     *
+     * @param ?string $document_base64 
+     *
+     * @return $this
+     */
+    public function setDocumentBase64($document_base64)
+    {
+        $this->container['document_base64'] = $document_base64;
 
         return $this;
     }

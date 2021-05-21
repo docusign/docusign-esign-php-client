@@ -60,6 +60,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'list_selected_value' => '?string',
         'name' => '?string',
+        'numerical_value' => '?string',
         'original_value' => '?string',
         'value' => '?string'
     ];
@@ -73,6 +74,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
         'error_details' => null,
         'list_selected_value' => null,
         'name' => null,
+        'numerical_value' => null,
         'original_value' => null,
         'value' => null
     ];
@@ -107,6 +109,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
         'error_details' => 'errorDetails',
         'list_selected_value' => 'listSelectedValue',
         'name' => 'name',
+        'numerical_value' => 'numericalValue',
         'original_value' => 'originalValue',
         'value' => 'value'
     ];
@@ -120,6 +123,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
         'error_details' => 'setErrorDetails',
         'list_selected_value' => 'setListSelectedValue',
         'name' => 'setName',
+        'numerical_value' => 'setNumericalValue',
         'original_value' => 'setOriginalValue',
         'value' => 'setValue'
     ];
@@ -133,6 +137,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
         'error_details' => 'getErrorDetails',
         'list_selected_value' => 'getListSelectedValue',
         'name' => 'getName',
+        'numerical_value' => 'getNumericalValue',
         'original_value' => 'getOriginalValue',
         'value' => 'getValue'
     ];
@@ -200,6 +205,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['list_selected_value'] = isset($data['list_selected_value']) ? $data['list_selected_value'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['numerical_value'] = isset($data['numerical_value']) ? $data['numerical_value'] : null;
         $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
@@ -296,6 +302,30 @@ class FormDataItem implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets numerical_value
+     *
+     * @return ?string
+     */
+    public function getNumericalValue()
+    {
+        return $this->container['numerical_value'];
+    }
+
+    /**
+     * Sets numerical_value
+     *
+     * @param ?string $numerical_value 
+     *
+     * @return $this
+     */
+    public function setNumericalValue($numerical_value)
+    {
+        $this->container['numerical_value'] = $numerical_value;
 
         return $this;
     }

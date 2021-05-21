@@ -62,6 +62,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
         'scope' => '?string',
         'tab_id' => '?string',
         'tab_label' => '?string',
+        'tab_type' => '?string',
         'value' => '?string'
     ];
 
@@ -76,6 +77,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
         'scope' => null,
         'tab_id' => null,
         'tab_label' => null,
+        'tab_type' => null,
         'value' => null
     ];
 
@@ -111,6 +113,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
         'scope' => 'scope',
         'tab_id' => 'tabId',
         'tab_label' => 'tabLabel',
+        'tab_type' => 'tabType',
         'value' => 'value'
     ];
 
@@ -125,6 +128,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
         'scope' => 'setScope',
         'tab_id' => 'setTabId',
         'tab_label' => 'setTabLabel',
+        'tab_type' => 'setTabType',
         'value' => 'setValue'
     ];
 
@@ -139,6 +143,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
         'scope' => 'getScope',
         'tab_id' => 'getTabId',
         'tab_label' => 'getTabLabel',
+        'tab_type' => 'getTabType',
         'value' => 'getValue'
     ];
 
@@ -207,6 +212,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
         $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
         $this->container['tab_id'] = isset($data['tab_id']) ? $data['tab_id'] : null;
         $this->container['tab_label'] = isset($data['tab_label']) ? $data['tab_label'] : null;
+        $this->container['tab_type'] = isset($data['tab_type']) ? $data['tab_type'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
@@ -350,6 +356,30 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
     public function setTabLabel($tab_label)
     {
         $this->container['tab_label'] = $tab_label;
+
+        return $this;
+    }
+
+    /**
+     * Gets tab_type
+     *
+     * @return ?string
+     */
+    public function getTabType()
+    {
+        return $this->container['tab_type'];
+    }
+
+    /**
+     * Sets tab_type
+     *
+     * @param ?string $tab_type 
+     *
+     * @return $this
+     */
+    public function setTabType($tab_type)
+    {
+        $this->container['tab_type'] = $tab_type;
 
         return $this;
     }

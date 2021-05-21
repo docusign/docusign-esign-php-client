@@ -60,6 +60,8 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
         'bulk_envelope_status' => '\DocuSign\eSign\Model\BulkEnvelopeStatus',
         'envelope_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'recipient_signing_uri' => '?string',
+        'recipient_signing_uri_error' => '?string',
         'status' => '?string',
         'status_date_time' => '?string',
         'uri' => '?string'
@@ -74,6 +76,8 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
         'bulk_envelope_status' => null,
         'envelope_id' => null,
         'error_details' => null,
+        'recipient_signing_uri' => null,
+        'recipient_signing_uri_error' => null,
         'status' => null,
         'status_date_time' => null,
         'uri' => null
@@ -109,6 +113,8 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
         'bulk_envelope_status' => 'bulkEnvelopeStatus',
         'envelope_id' => 'envelopeId',
         'error_details' => 'errorDetails',
+        'recipient_signing_uri' => 'recipientSigningUri',
+        'recipient_signing_uri_error' => 'recipientSigningUriError',
         'status' => 'status',
         'status_date_time' => 'statusDateTime',
         'uri' => 'uri'
@@ -123,6 +129,8 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
         'bulk_envelope_status' => 'setBulkEnvelopeStatus',
         'envelope_id' => 'setEnvelopeId',
         'error_details' => 'setErrorDetails',
+        'recipient_signing_uri' => 'setRecipientSigningUri',
+        'recipient_signing_uri_error' => 'setRecipientSigningUriError',
         'status' => 'setStatus',
         'status_date_time' => 'setStatusDateTime',
         'uri' => 'setUri'
@@ -137,6 +145,8 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
         'bulk_envelope_status' => 'getBulkEnvelopeStatus',
         'envelope_id' => 'getEnvelopeId',
         'error_details' => 'getErrorDetails',
+        'recipient_signing_uri' => 'getRecipientSigningUri',
+        'recipient_signing_uri_error' => 'getRecipientSigningUriError',
         'status' => 'getStatus',
         'status_date_time' => 'getStatusDateTime',
         'uri' => 'getUri'
@@ -205,6 +215,8 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
         $this->container['bulk_envelope_status'] = isset($data['bulk_envelope_status']) ? $data['bulk_envelope_status'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['recipient_signing_uri'] = isset($data['recipient_signing_uri']) ? $data['recipient_signing_uri'] : null;
+        $this->container['recipient_signing_uri_error'] = isset($data['recipient_signing_uri_error']) ? $data['recipient_signing_uri_error'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_date_time'] = isset($data['status_date_time']) ? $data['status_date_time'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
@@ -302,6 +314,54 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_signing_uri
+     *
+     * @return ?string
+     */
+    public function getRecipientSigningUri()
+    {
+        return $this->container['recipient_signing_uri'];
+    }
+
+    /**
+     * Sets recipient_signing_uri
+     *
+     * @param ?string $recipient_signing_uri 
+     *
+     * @return $this
+     */
+    public function setRecipientSigningUri($recipient_signing_uri)
+    {
+        $this->container['recipient_signing_uri'] = $recipient_signing_uri;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_signing_uri_error
+     *
+     * @return ?string
+     */
+    public function getRecipientSigningUriError()
+    {
+        return $this->container['recipient_signing_uri_error'];
+    }
+
+    /**
+     * Sets recipient_signing_uri_error
+     *
+     * @param ?string $recipient_signing_uri_error 
+     *
+     * @return $this
+     */
+    public function setRecipientSigningUriError($recipient_signing_uri_error)
+    {
+        $this->container['recipient_signing_uri_error'] = $recipient_signing_uri_error;
 
         return $this;
     }
