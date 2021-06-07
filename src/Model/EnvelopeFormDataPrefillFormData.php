@@ -1,6 +1,6 @@
 <?php
 /**
- * EnvelopeFormData
+ * EnvelopeFormDataPrefillFormData
  *
  * PHP version 7.4
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * EnvelopeFormData Class Doc Comment
+ * EnvelopeFormDataPrefillFormData Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EnvelopeFormData implements ModelInterface, ArrayAccess
+class EnvelopeFormDataPrefillFormData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'envelopeFormData';
+    protected static $swaggerModelName = 'envelopeFormData_prefillFormData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,13 +57,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email_subject' => '?string',
-        'envelope_id' => '?string',
-        'form_data' => '\DocuSign\eSign\Model\NameValue[]',
-        'prefill_form_data' => '\DocuSign\eSign\Model\EnvelopeFormDataPrefillFormData',
-        'recipient_form_data' => '\DocuSign\eSign\Model\RecipientFormData[]',
-        'sent_date_time' => '?string',
-        'status' => '?string'
+        'form_data' => '\DocuSign\eSign\Model\NameValue[]'
     ];
 
     /**
@@ -72,13 +66,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'email_subject' => null,
-        'envelope_id' => null,
-        'form_data' => null,
-        'prefill_form_data' => null,
-        'recipient_form_data' => null,
-        'sent_date_time' => null,
-        'status' => null
+        'form_data' => null
     ];
 
     /**
@@ -108,13 +96,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email_subject' => 'emailSubject',
-        'envelope_id' => 'envelopeId',
-        'form_data' => 'formData',
-        'prefill_form_data' => 'prefillFormData',
-        'recipient_form_data' => 'recipientFormData',
-        'sent_date_time' => 'sentDateTime',
-        'status' => 'status'
+        'form_data' => 'formData'
     ];
 
     /**
@@ -123,13 +105,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email_subject' => 'setEmailSubject',
-        'envelope_id' => 'setEnvelopeId',
-        'form_data' => 'setFormData',
-        'prefill_form_data' => 'setPrefillFormData',
-        'recipient_form_data' => 'setRecipientFormData',
-        'sent_date_time' => 'setSentDateTime',
-        'status' => 'setStatus'
+        'form_data' => 'setFormData'
     ];
 
     /**
@@ -138,13 +114,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email_subject' => 'getEmailSubject',
-        'envelope_id' => 'getEnvelopeId',
-        'form_data' => 'getFormData',
-        'prefill_form_data' => 'getPrefillFormData',
-        'recipient_form_data' => 'getRecipientFormData',
-        'sent_date_time' => 'getSentDateTime',
-        'status' => 'getStatus'
+        'form_data' => 'getFormData'
     ];
 
     /**
@@ -207,13 +177,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
-        $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['form_data'] = isset($data['form_data']) ? $data['form_data'] : null;
-        $this->container['prefill_form_data'] = isset($data['prefill_form_data']) ? $data['prefill_form_data'] : null;
-        $this->container['recipient_form_data'] = isset($data['recipient_form_data']) ? $data['recipient_form_data'] : null;
-        $this->container['sent_date_time'] = isset($data['sent_date_time']) ? $data['sent_date_time'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -241,54 +205,6 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets email_subject
-     *
-     * @return ?string
-     */
-    public function getEmailSubject()
-    {
-        return $this->container['email_subject'];
-    }
-
-    /**
-     * Sets email_subject
-     *
-     * @param ?string $email_subject Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
-     *
-     * @return $this
-     */
-    public function setEmailSubject($email_subject)
-    {
-        $this->container['email_subject'] = $email_subject;
-
-        return $this;
-    }
-
-    /**
-     * Gets envelope_id
-     *
-     * @return ?string
-     */
-    public function getEnvelopeId()
-    {
-        return $this->container['envelope_id'];
-    }
-
-    /**
-     * Sets envelope_id
-     *
-     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
-     *
-     * @return $this
-     */
-    public function setEnvelopeId($envelope_id)
-    {
-        $this->container['envelope_id'] = $envelope_id;
-
-        return $this;
-    }
-
-    /**
      * Gets form_data
      *
      * @return \DocuSign\eSign\Model\NameValue[]
@@ -308,102 +224,6 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     public function setFormData($form_data)
     {
         $this->container['form_data'] = $form_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets prefill_form_data
-     *
-     * @return \DocuSign\eSign\Model\EnvelopeFormDataPrefillFormData
-     */
-    public function getPrefillFormData()
-    {
-        return $this->container['prefill_form_data'];
-    }
-
-    /**
-     * Sets prefill_form_data
-     *
-     * @param \DocuSign\eSign\Model\EnvelopeFormDataPrefillFormData $prefill_form_data prefill_form_data
-     *
-     * @return $this
-     */
-    public function setPrefillFormData($prefill_form_data)
-    {
-        $this->container['prefill_form_data'] = $prefill_form_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets recipient_form_data
-     *
-     * @return \DocuSign\eSign\Model\RecipientFormData[]
-     */
-    public function getRecipientFormData()
-    {
-        return $this->container['recipient_form_data'];
-    }
-
-    /**
-     * Sets recipient_form_data
-     *
-     * @param \DocuSign\eSign\Model\RecipientFormData[] $recipient_form_data 
-     *
-     * @return $this
-     */
-    public function setRecipientFormData($recipient_form_data)
-    {
-        $this->container['recipient_form_data'] = $recipient_form_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets sent_date_time
-     *
-     * @return ?string
-     */
-    public function getSentDateTime()
-    {
-        return $this->container['sent_date_time'];
-    }
-
-    /**
-     * Sets sent_date_time
-     *
-     * @param ?string $sent_date_time The date and time the envelope was sent.
-     *
-     * @return $this
-     */
-    public function setSentDateTime($sent_date_time)
-    {
-        $this->container['sent_date_time'] = $sent_date_time;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return ?string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
 
         return $this;
     }

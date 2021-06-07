@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [4.10.0] - eSignature API v2-21.1.02.00 - 2021-06-03
+### Fixed
+- Issue - EnvelopeFormData::get results in exception (DCM-5835)
+- Issue - [`#138`](https://github.com/docusign/docusign-esign-php-client/issues/138):  Tabs class refers to `array` instead of `ModelList` (DCM-3768)
+
 ## [4.10.0-rc] - eSignature API v2-21.1.02.00 - 2021-05-20
 ### Breaking
 - Removed methods `getAccountSettingsExport`,`getSealProviders` from Accounts.
