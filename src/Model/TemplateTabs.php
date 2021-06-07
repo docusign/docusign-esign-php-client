@@ -78,7 +78,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'full_name_tabs' => '\DocuSign\eSign\Model\FullName[]',
         'initial_here_tabs' => '\DocuSign\eSign\Model\InitialHere[]',
         'last_name_tabs' => '\DocuSign\eSign\Model\LastName[]',
-        'list_tabs' => '\DocuSign\eSign\Model\array[]',
+        'list_tabs' => '\DocuSign\eSign\Model\ModelList[]',
         'notarize_tabs' => '\DocuSign\eSign\Model\Notarize[]',
         'notary_seal_tabs' => '\DocuSign\eSign\Model\NotarySeal[]',
         'note_tabs' => '\DocuSign\eSign\Model\Note[]',
