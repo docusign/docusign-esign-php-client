@@ -153,6 +153,39 @@ class UnitTests extends TestCase
         return $testConfig;
     }
 
+    /**
+     * @depends testCreateEnvelope
+     */
+    public function testGetFormData($testConfig)
+    { 
+        $envelopeApi = new EnvelopesApi($testConfig->getApiClient());    
+        $envelopeFormData = $envelopeApi->getFormData( $testConfig->getAccountId(), $testConfig->getEnvelopeId());
+        $this->assertNotNull($envelopeFormData);
+        $this->assertNotNull($envelopeFormData->getFormData());
+        $this->assertNotNull($envelopeFormData->getFormData()[0]);
+        $this->assertNotNull($envelopeFormData->getFormData()[0]->getName());
+        $this->assertNotNull($envelopeFormData->getPrefillFormData());
+        $this->assertNotNull($envelopeFormData->getPrefillFormData()->getFormData());
+        $this->assertNotNull($envelopeFormData->getPrefillFormData()->getFormData()[0]);
+        $this->assertNotNull($envelopeFormData->getPrefillFormData()->getFormData()[0]->getName());
+    }
+
+    /**
+     * @depends testCreateEnvelope
+     */
+    public function testListTabs($testConfig)
+    { 
+        $envelopesApi = new EnvelopesApi($testConfig->getApiClient());
+        $createdEnvelope = $envelopesApi->getEnvelope($testConfig->getAccountId(), $testConfig->getEnvelopeId());
+        $recipients = $envelopesApi->listRecipients($testConfig->getAccountId(), $createdEnvelope->getEnvelopeId());
+        $tabs = $envelopesApi->listTabs($testConfig->getAccountId(), $testConfig->getEnvelopeId(), $recipients->getSigners()[0]->getRecipientId());
+        $listTabs = $tabs->getListTabs();
+
+        $this->assertNotNull($listTabs);
+        $this->assertContainsOnlyInstancesOf('DocuSign\eSign\Model\ModelList', $listTabs);
+
+        return $testConfig;
+    }
 
     /**
      * @depends testLogin
