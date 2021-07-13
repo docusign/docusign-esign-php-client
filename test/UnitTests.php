@@ -522,6 +522,9 @@ class UnitTests extends TestCase
             $this->assertInstanceOf(ErrorDetails::class, $responseObject); 
             $this->assertNotEmpty($responseObject->getErrorCode()); 
             $this->assertNotEmpty($responseObject->getMessage()); 
+
+            $responseHeaders = $e->getResponseHeaders();
+            $this->assertArrayHasKey('X-DocuSign-TraceToken',$responseHeaders);        
         }
         return $testConfig;
     }
