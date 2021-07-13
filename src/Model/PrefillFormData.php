@@ -1,6 +1,6 @@
 <?php
 /**
- * ServiceInformation
+ * PrefillFormData
  *
  * PHP version 7.4
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ServiceInformation Class Doc Comment
+ * PrefillFormData Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ServiceInformation implements ModelInterface, ArrayAccess
+class PrefillFormData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'serviceInformation';
+    protected static $swaggerModelName = 'prefillFormData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,10 @@ class ServiceInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'build_branch' => '?string',
-        'build_branch_deployed_date_time' => '?string',
-        'build_sha' => '?string',
-        'build_version' => '?string',
-        'linked_sites' => '?string[]',
-        'service_versions' => '\DocuSign\eSign\Model\ServiceVersion[]'
+        'form_data' => '\DocuSign\eSign\Model\NameValue[]',
+        'sender_email' => '?string',
+        'sender_name' => '?string',
+        'sender_user_id' => '?string'
     ];
 
     /**
@@ -71,12 +69,10 @@ class ServiceInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'build_branch' => null,
-        'build_branch_deployed_date_time' => null,
-        'build_sha' => null,
-        'build_version' => null,
-        'linked_sites' => null,
-        'service_versions' => null
+        'form_data' => null,
+        'sender_email' => null,
+        'sender_name' => null,
+        'sender_user_id' => null
     ];
 
     /**
@@ -106,12 +102,10 @@ class ServiceInformation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'build_branch' => 'buildBranch',
-        'build_branch_deployed_date_time' => 'buildBranchDeployedDateTime',
-        'build_sha' => 'buildSHA',
-        'build_version' => 'buildVersion',
-        'linked_sites' => 'linkedSites',
-        'service_versions' => 'serviceVersions'
+        'form_data' => 'formData',
+        'sender_email' => 'senderEmail',
+        'sender_name' => 'senderName',
+        'sender_user_id' => 'senderUserId'
     ];
 
     /**
@@ -120,12 +114,10 @@ class ServiceInformation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'build_branch' => 'setBuildBranch',
-        'build_branch_deployed_date_time' => 'setBuildBranchDeployedDateTime',
-        'build_sha' => 'setBuildSha',
-        'build_version' => 'setBuildVersion',
-        'linked_sites' => 'setLinkedSites',
-        'service_versions' => 'setServiceVersions'
+        'form_data' => 'setFormData',
+        'sender_email' => 'setSenderEmail',
+        'sender_name' => 'setSenderName',
+        'sender_user_id' => 'setSenderUserId'
     ];
 
     /**
@@ -134,12 +126,10 @@ class ServiceInformation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'build_branch' => 'getBuildBranch',
-        'build_branch_deployed_date_time' => 'getBuildBranchDeployedDateTime',
-        'build_sha' => 'getBuildSha',
-        'build_version' => 'getBuildVersion',
-        'linked_sites' => 'getLinkedSites',
-        'service_versions' => 'getServiceVersions'
+        'form_data' => 'getFormData',
+        'sender_email' => 'getSenderEmail',
+        'sender_name' => 'getSenderName',
+        'sender_user_id' => 'getSenderUserId'
     ];
 
     /**
@@ -202,12 +192,10 @@ class ServiceInformation implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['build_branch'] = isset($data['build_branch']) ? $data['build_branch'] : null;
-        $this->container['build_branch_deployed_date_time'] = isset($data['build_branch_deployed_date_time']) ? $data['build_branch_deployed_date_time'] : null;
-        $this->container['build_sha'] = isset($data['build_sha']) ? $data['build_sha'] : null;
-        $this->container['build_version'] = isset($data['build_version']) ? $data['build_version'] : null;
-        $this->container['linked_sites'] = isset($data['linked_sites']) ? $data['linked_sites'] : null;
-        $this->container['service_versions'] = isset($data['service_versions']) ? $data['service_versions'] : null;
+        $this->container['form_data'] = isset($data['form_data']) ? $data['form_data'] : null;
+        $this->container['sender_email'] = isset($data['sender_email']) ? $data['sender_email'] : null;
+        $this->container['sender_name'] = isset($data['sender_name']) ? $data['sender_name'] : null;
+        $this->container['sender_user_id'] = isset($data['sender_user_id']) ? $data['sender_user_id'] : null;
     }
 
     /**
@@ -235,145 +223,97 @@ class ServiceInformation implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets build_branch
+     * Gets form_data
+     *
+     * @return \DocuSign\eSign\Model\NameValue[]
+     */
+    public function getFormData()
+    {
+        return $this->container['form_data'];
+    }
+
+    /**
+     * Sets form_data
+     *
+     * @param \DocuSign\eSign\Model\NameValue[] $form_data 
+     *
+     * @return $this
+     */
+    public function setFormData($form_data)
+    {
+        $this->container['form_data'] = $form_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_email
      *
      * @return ?string
      */
-    public function getBuildBranch()
+    public function getSenderEmail()
     {
-        return $this->container['build_branch'];
+        return $this->container['sender_email'];
     }
 
     /**
-     * Sets build_branch
+     * Sets sender_email
      *
-     * @param ?string $build_branch Reserved: TBD
+     * @param ?string $sender_email 
      *
      * @return $this
      */
-    public function setBuildBranch($build_branch)
+    public function setSenderEmail($sender_email)
     {
-        $this->container['build_branch'] = $build_branch;
+        $this->container['sender_email'] = $sender_email;
 
         return $this;
     }
 
     /**
-     * Gets build_branch_deployed_date_time
+     * Gets sender_name
      *
      * @return ?string
      */
-    public function getBuildBranchDeployedDateTime()
+    public function getSenderName()
     {
-        return $this->container['build_branch_deployed_date_time'];
+        return $this->container['sender_name'];
     }
 
     /**
-     * Sets build_branch_deployed_date_time
+     * Sets sender_name
      *
-     * @param ?string $build_branch_deployed_date_time Reserved: TBD
+     * @param ?string $sender_name 
      *
      * @return $this
      */
-    public function setBuildBranchDeployedDateTime($build_branch_deployed_date_time)
+    public function setSenderName($sender_name)
     {
-        $this->container['build_branch_deployed_date_time'] = $build_branch_deployed_date_time;
+        $this->container['sender_name'] = $sender_name;
 
         return $this;
     }
 
     /**
-     * Gets build_sha
+     * Gets sender_user_id
      *
      * @return ?string
      */
-    public function getBuildSha()
+    public function getSenderUserId()
     {
-        return $this->container['build_sha'];
+        return $this->container['sender_user_id'];
     }
 
     /**
-     * Sets build_sha
+     * Sets sender_user_id
      *
-     * @param ?string $build_sha Reserved: TBD
+     * @param ?string $sender_user_id 
      *
      * @return $this
      */
-    public function setBuildSha($build_sha)
+    public function setSenderUserId($sender_user_id)
     {
-        $this->container['build_sha'] = $build_sha;
-
-        return $this;
-    }
-
-    /**
-     * Gets build_version
-     *
-     * @return ?string
-     */
-    public function getBuildVersion()
-    {
-        return $this->container['build_version'];
-    }
-
-    /**
-     * Sets build_version
-     *
-     * @param ?string $build_version Reserved: TBD
-     *
-     * @return $this
-     */
-    public function setBuildVersion($build_version)
-    {
-        $this->container['build_version'] = $build_version;
-
-        return $this;
-    }
-
-    /**
-     * Gets linked_sites
-     *
-     * @return ?string[]
-     */
-    public function getLinkedSites()
-    {
-        return $this->container['linked_sites'];
-    }
-
-    /**
-     * Sets linked_sites
-     *
-     * @param ?string[] $linked_sites 
-     *
-     * @return $this
-     */
-    public function setLinkedSites($linked_sites)
-    {
-        $this->container['linked_sites'] = $linked_sites;
-
-        return $this;
-    }
-
-    /**
-     * Gets service_versions
-     *
-     * @return \DocuSign\eSign\Model\ServiceVersion[]
-     */
-    public function getServiceVersions()
-    {
-        return $this->container['service_versions'];
-    }
-
-    /**
-     * Sets service_versions
-     *
-     * @param \DocuSign\eSign\Model\ServiceVersion[] $service_versions 
-     *
-     * @return $this
-     */
-    public function setServiceVersions($service_versions)
-    {
-        $this->container['service_versions'] = $service_versions;
+        $this->container['sender_user_id'] = $sender_user_id;
 
         return $this;
     }
