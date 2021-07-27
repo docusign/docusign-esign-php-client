@@ -939,7 +939,7 @@ class Tabs implements ModelInterface, ArrayAccess
     /**
      * Gets list_tabs
      *
-     * @return \DocuSign\eSign\Model\array[]
+     * @return \DocuSign\eSign\Model\ModelList[]
      */
     public function getListTabs()
     {
@@ -949,7 +949,7 @@ class Tabs implements ModelInterface, ArrayAccess
     /**
      * Sets list_tabs
      *
-     * @param \DocuSign\eSign\Model\array[] $list_tabs Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.
+     * @param \DocuSign\eSign\Model\ModelList[] $list_tabs Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.
      *
      * @return $this
      */
