@@ -42,25 +42,31 @@ class HeaderSelector
 {
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+     * SelectHeaders method comment
+     *
+     * @param string[] $accept list of strings
+     * @param string[] $contentTypes list of strings for contentTypes
+     *
      * @return array
      */
     public function selectHeaders($accept, $contentTypes)
     {
         $headers = [];
 
-        $accept = $this->selectAcceptHeader($accept);
+        $accept = $this->_selectAcceptHeader($accept);
         if ($accept !== null) {
             $headers['Accept'] = $accept;
         }
 
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
+        $headers['Content-Type'] = $this->_selectContentTypeHeader($contentTypes);
         return $headers;
     }
 
     /**
-     * @param string[] $accept
+     * SelectHeadersForMultipart method comment
+     *
+     * @param string[] $accept list of strings
+     *
      * @return array
      */
     public function selectHeadersForMultipart($accept)
@@ -78,7 +84,7 @@ class HeaderSelector
      *
      * @return string Accept (e.g. application/json)
      */
-    private function selectAcceptHeader($accept)
+    private function _selectAcceptHeader($accept)
     {
         if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
             return null;
@@ -96,7 +102,7 @@ class HeaderSelector
      *
      * @return string Content-Type (e.g. application/json)
      */
-    private function selectContentTypeHeader($contentType)
+    private function _selectContentTypeHeader($contentType)
     {
         if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
             return 'application/json';
