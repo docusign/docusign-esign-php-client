@@ -64,6 +64,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
         'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
+        'entity_name' => '?string',
         'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
@@ -82,6 +83,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'credit_card_information' => null,
         'direct_debit_processor_information' => null,
         'downgrade_plan_information' => null,
+        'entity_name' => null,
         'payment_method' => null,
         'payment_processor_information' => null,
         'referral_information' => null,
@@ -121,6 +123,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'credit_card_information' => 'creditCardInformation',
         'direct_debit_processor_information' => 'directDebitProcessorInformation',
         'downgrade_plan_information' => 'downgradePlanInformation',
+        'entity_name' => 'entityName',
         'payment_method' => 'paymentMethod',
         'payment_processor_information' => 'paymentProcessorInformation',
         'referral_information' => 'referralInformation',
@@ -139,6 +142,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'credit_card_information' => 'setCreditCardInformation',
         'direct_debit_processor_information' => 'setDirectDebitProcessorInformation',
         'downgrade_plan_information' => 'setDowngradePlanInformation',
+        'entity_name' => 'setEntityName',
         'payment_method' => 'setPaymentMethod',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'referral_information' => 'setReferralInformation',
@@ -157,6 +161,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'credit_card_information' => 'getCreditCardInformation',
         'direct_debit_processor_information' => 'getDirectDebitProcessorInformation',
         'downgrade_plan_information' => 'getDowngradePlanInformation',
+        'entity_name' => 'getEntityName',
         'payment_method' => 'getPaymentMethod',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'referral_information' => 'getReferralInformation',
@@ -229,6 +234,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         $this->container['credit_card_information'] = isset($data['credit_card_information']) ? $data['credit_card_information'] : null;
         $this->container['direct_debit_processor_information'] = isset($data['direct_debit_processor_information']) ? $data['direct_debit_processor_information'] : null;
         $this->container['downgrade_plan_information'] = isset($data['downgrade_plan_information']) ? $data['downgrade_plan_information'] : null;
+        $this->container['entity_name'] = isset($data['entity_name']) ? $data['entity_name'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
@@ -399,6 +405,30 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     public function setDowngradePlanInformation($downgrade_plan_information)
     {
         $this->container['downgrade_plan_information'] = $downgrade_plan_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets entity_name
+     *
+     * @return ?string
+     */
+    public function getEntityName()
+    {
+        return $this->container['entity_name'];
+    }
+
+    /**
+     * Sets entity_name
+     *
+     * @param ?string $entity_name 
+     *
+     * @return $this
+     */
+    public function setEntityName($entity_name)
+    {
+        $this->container['entity_name'] = $entity_name;
 
         return $this;
     }

@@ -36,25 +36,25 @@ class GetBulkSendBatchEnvelopesOptions
 {
     /**
       * $count 
-      * @var ?int
+      * @var ?string
       */
-    protected ?int $count = null;
+    protected ?string $count = null;
 
     /**
      * Gets count
-     * @return ?int
+     * @return ?string
      */
-    public function getCount(): ?int
+    public function getCount(): ?string
     {
         return $this->count;
     }
 
     /**
      * Sets count
-     * @param ?int $count 
+     * @param ?string $count 
      * @return self
      */
-    public function setCount(?int $count): self
+    public function setCount(?string $count): self
     {
         $this->count = $count;
         return $this;
@@ -161,25 +161,25 @@ class GetBulkSendBatchEnvelopesOptions
     }
     /**
       * $start_position 
-      * @var ?int
+      * @var ?string
       */
-    protected ?int $start_position = null;
+    protected ?string $start_position = null;
 
     /**
      * Gets start_position
-     * @return ?int
+     * @return ?string
      */
-    public function getStartPosition(): ?int
+    public function getStartPosition(): ?string
     {
         return $this->start_position;
     }
 
     /**
      * Sets start_position
-     * @param ?int $start_position 
+     * @param ?string $start_position 
      * @return self
      */
-    public function setStartPosition(?int $start_position): self
+    public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
         return $this;

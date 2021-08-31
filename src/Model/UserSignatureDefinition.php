@@ -69,6 +69,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
         'signature_id' => '?string',
         'signature_initials' => '?string',
         'signature_name' => '?string',
+        'signature_type' => '?string',
         'stamp_format' => '?string',
         'stamp_size_mm' => '?string'
     ];
@@ -91,6 +92,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
         'signature_id' => null,
         'signature_initials' => null,
         'signature_name' => null,
+        'signature_type' => null,
         'stamp_format' => null,
         'stamp_size_mm' => null
     ];
@@ -134,6 +136,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
         'signature_id' => 'signatureId',
         'signature_initials' => 'signatureInitials',
         'signature_name' => 'signatureName',
+        'signature_type' => 'signatureType',
         'stamp_format' => 'stampFormat',
         'stamp_size_mm' => 'stampSizeMM'
     ];
@@ -156,6 +159,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
         'signature_id' => 'setSignatureId',
         'signature_initials' => 'setSignatureInitials',
         'signature_name' => 'setSignatureName',
+        'signature_type' => 'setSignatureType',
         'stamp_format' => 'setStampFormat',
         'stamp_size_mm' => 'setStampSizeMm'
     ];
@@ -178,6 +182,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
         'signature_id' => 'getSignatureId',
         'signature_initials' => 'getSignatureInitials',
         'signature_name' => 'getSignatureName',
+        'signature_type' => 'getSignatureType',
         'stamp_format' => 'getStampFormat',
         'stamp_size_mm' => 'getStampSizeMm'
     ];
@@ -254,6 +259,7 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
         $this->container['signature_id'] = isset($data['signature_id']) ? $data['signature_id'] : null;
         $this->container['signature_initials'] = isset($data['signature_initials']) ? $data['signature_initials'] : null;
         $this->container['signature_name'] = isset($data['signature_name']) ? $data['signature_name'] : null;
+        $this->container['signature_type'] = isset($data['signature_type']) ? $data['signature_type'] : null;
         $this->container['stamp_format'] = isset($data['stamp_format']) ? $data['stamp_format'] : null;
         $this->container['stamp_size_mm'] = isset($data['stamp_size_mm']) ? $data['stamp_size_mm'] : null;
     }
@@ -566,6 +572,30 @@ class UserSignatureDefinition implements ModelInterface, ArrayAccess
     public function setSignatureName($signature_name)
     {
         $this->container['signature_name'] = $signature_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets signature_type
+     *
+     * @return ?string
+     */
+    public function getSignatureType()
+    {
+        return $this->container['signature_type'];
+    }
+
+    /**
+     * Sets signature_type
+     *
+     * @param ?string $signature_type 
+     *
+     * @return $this
+     */
+    public function setSignatureType($signature_type)
+    {
+        $this->container['signature_type'] = $signature_type;
 
         return $this;
     }

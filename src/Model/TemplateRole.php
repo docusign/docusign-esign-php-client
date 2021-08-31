@@ -66,6 +66,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'embedded_recipient_start_url' => '?string',
         'in_person_signer_name' => '?string',
         'name' => '?string',
+        'phone_number' => '\DocuSign\eSign\Model\RecipientPhoneNumber',
         'recipient_signature_providers' => '\DocuSign\eSign\Model\RecipientSignatureProvider[]',
         'role_name' => '?string',
         'routing_order' => '?string',
@@ -88,6 +89,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'embedded_recipient_start_url' => null,
         'in_person_signer_name' => null,
         'name' => null,
+        'phone_number' => null,
         'recipient_signature_providers' => null,
         'role_name' => null,
         'routing_order' => null,
@@ -131,6 +133,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
         'in_person_signer_name' => 'inPersonSignerName',
         'name' => 'name',
+        'phone_number' => 'phoneNumber',
         'recipient_signature_providers' => 'recipientSignatureProviders',
         'role_name' => 'roleName',
         'routing_order' => 'routingOrder',
@@ -153,6 +156,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
         'in_person_signer_name' => 'setInPersonSignerName',
         'name' => 'setName',
+        'phone_number' => 'setPhoneNumber',
         'recipient_signature_providers' => 'setRecipientSignatureProviders',
         'role_name' => 'setRoleName',
         'routing_order' => 'setRoutingOrder',
@@ -175,6 +179,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
         'in_person_signer_name' => 'getInPersonSignerName',
         'name' => 'getName',
+        'phone_number' => 'getPhoneNumber',
         'recipient_signature_providers' => 'getRecipientSignatureProviders',
         'role_name' => 'getRoleName',
         'routing_order' => 'getRoutingOrder',
@@ -251,6 +256,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
         $this->container['in_person_signer_name'] = isset($data['in_person_signer_name']) ? $data['in_person_signer_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['recipient_signature_providers'] = isset($data['recipient_signature_providers']) ? $data['recipient_signature_providers'] : null;
         $this->container['role_name'] = isset($data['role_name']) ? $data['role_name'] : null;
         $this->container['routing_order'] = isset($data['routing_order']) ? $data['routing_order'] : null;
@@ -494,6 +500,30 @@ class TemplateRole implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number
+     *
+     * @return \DocuSign\eSign\Model\RecipientPhoneNumber
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phone_number'];
+    }
+
+    /**
+     * Sets phone_number
+     *
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     *
+     * @return $this
+     */
+    public function setPhoneNumber($phone_number)
+    {
+        $this->container['phone_number'] = $phone_number;
 
         return $this;
     }
