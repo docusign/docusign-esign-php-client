@@ -542,6 +542,23 @@ class UnitTests extends TestCase
         $this->assertInstanceOf('DocuSign\eSign\Model\BrandResources', $brandResources);
         return $testConfig;
     }
+
+    /**
+     * @depends testLogin
+     */
+    public function testRecipientsUpdate($testConfig)
+    {       
+        $envelopesApi = new EnvelopesApi($testConfig->getApiClient());
+        $createdEnvelope = $envelopesApi->getEnvelope($testConfig->getAccountId(), $testConfig->getEnvelopeId());
+        $recipients = $envelopesApi->listRecipients($testConfig->getAccountId(), $createdEnvelope->getEnvelopeId());
+        $this->assertNotEmpty($recipients);
+        $this->assertNotEmpty($recipients->getSigners());
+        $this->assertNotEmpty($recipients->getSigners()[0]);
+        $recipients->getSigners()[0]->setClientUserId(uniqid());
+        $updateRecipients = $envelopesApi->updateRecipients($testConfig->getAccountId(), $createdEnvelope->getEnvelopeId(),$recipients);
+        $this->assertNotEmpty($updateRecipients);
+        return $testConfig;
+    }
 }
 
 ?>

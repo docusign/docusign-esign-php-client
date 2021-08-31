@@ -57,6 +57,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'has_identity_attempts' => '?string',
         'is_in_proof_file' => '?string'
     ];
 
@@ -66,6 +67,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'has_identity_attempts' => null,
         'is_in_proof_file' => null
     ];
 
@@ -96,6 +98,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'has_identity_attempts' => 'hasIdentityAttempts',
         'is_in_proof_file' => 'isInProofFile'
     ];
 
@@ -105,6 +108,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'has_identity_attempts' => 'setHasIdentityAttempts',
         'is_in_proof_file' => 'setIsInProofFile'
     ];
 
@@ -114,6 +118,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'has_identity_attempts' => 'getHasIdentityAttempts',
         'is_in_proof_file' => 'getIsInProofFile'
     ];
 
@@ -177,6 +182,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['has_identity_attempts'] = isset($data['has_identity_attempts']) ? $data['has_identity_attempts'] : null;
         $this->container['is_in_proof_file'] = isset($data['is_in_proof_file']) ? $data['is_in_proof_file'] : null;
     }
 
@@ -203,6 +209,30 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets has_identity_attempts
+     *
+     * @return ?string
+     */
+    public function getHasIdentityAttempts()
+    {
+        return $this->container['has_identity_attempts'];
+    }
+
+    /**
+     * Sets has_identity_attempts
+     *
+     * @param ?string $has_identity_attempts 
+     *
+     * @return $this
+     */
+    public function setHasIdentityAttempts($has_identity_attempts)
+    {
+        $this->container['has_identity_attempts'] = $has_identity_attempts;
+
+        return $this;
+    }
 
     /**
      * Gets is_in_proof_file

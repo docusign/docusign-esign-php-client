@@ -32,8 +32,10 @@ namespace DocuSign\eSign\Model;
 /**
  * Interface abstracting model access.
  *
+ * @category Interface
  * @package DocuSign\eSign\Model
- * @author  Swagger Codegen team
+ * @author   Swagger Codegen team
+ * @link     https://github.com/swagger-api/swagger-codegen
  */
 interface ModelInterface
 {

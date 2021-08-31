@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="DocuSign">
+    <description>DocuSign custom coding standard.</description>
+    <rule ref="PEAR">
+        <exclude name="Generic.Files.LineLength" />
+    </rule>
+</ruleset>

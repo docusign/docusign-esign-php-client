@@ -63,6 +63,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_account_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_admins' => '?string',
         'can_manage_admins_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_document_retention' => '?string',
+        'can_manage_document_retention_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_envelope_transfer' => '?string',
         'can_manage_envelope_transfer_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_groups' => '?string',
@@ -91,6 +93,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_account_settings_metadata' => null,
         'can_manage_admins' => null,
         'can_manage_admins_metadata' => null,
+        'can_manage_document_retention' => null,
+        'can_manage_document_retention_metadata' => null,
         'can_manage_envelope_transfer' => null,
         'can_manage_envelope_transfer_metadata' => null,
         'can_manage_groups' => null,
@@ -140,6 +144,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_account_settings_metadata' => 'canManageAccountSettingsMetadata',
         'can_manage_admins' => 'canManageAdmins',
         'can_manage_admins_metadata' => 'canManageAdminsMetadata',
+        'can_manage_document_retention' => 'canManageDocumentRetention',
+        'can_manage_document_retention_metadata' => 'canManageDocumentRetentionMetadata',
         'can_manage_envelope_transfer' => 'canManageEnvelopeTransfer',
         'can_manage_envelope_transfer_metadata' => 'canManageEnvelopeTransferMetadata',
         'can_manage_groups' => 'canManageGroups',
@@ -168,6 +174,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_account_settings_metadata' => 'setCanManageAccountSettingsMetadata',
         'can_manage_admins' => 'setCanManageAdmins',
         'can_manage_admins_metadata' => 'setCanManageAdminsMetadata',
+        'can_manage_document_retention' => 'setCanManageDocumentRetention',
+        'can_manage_document_retention_metadata' => 'setCanManageDocumentRetentionMetadata',
         'can_manage_envelope_transfer' => 'setCanManageEnvelopeTransfer',
         'can_manage_envelope_transfer_metadata' => 'setCanManageEnvelopeTransferMetadata',
         'can_manage_groups' => 'setCanManageGroups',
@@ -196,6 +204,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_account_settings_metadata' => 'getCanManageAccountSettingsMetadata',
         'can_manage_admins' => 'getCanManageAdmins',
         'can_manage_admins_metadata' => 'getCanManageAdminsMetadata',
+        'can_manage_document_retention' => 'getCanManageDocumentRetention',
+        'can_manage_document_retention_metadata' => 'getCanManageDocumentRetentionMetadata',
         'can_manage_envelope_transfer' => 'getCanManageEnvelopeTransfer',
         'can_manage_envelope_transfer_metadata' => 'getCanManageEnvelopeTransferMetadata',
         'can_manage_groups' => 'getCanManageGroups',
@@ -278,6 +288,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         $this->container['can_manage_account_settings_metadata'] = isset($data['can_manage_account_settings_metadata']) ? $data['can_manage_account_settings_metadata'] : null;
         $this->container['can_manage_admins'] = isset($data['can_manage_admins']) ? $data['can_manage_admins'] : null;
         $this->container['can_manage_admins_metadata'] = isset($data['can_manage_admins_metadata']) ? $data['can_manage_admins_metadata'] : null;
+        $this->container['can_manage_document_retention'] = isset($data['can_manage_document_retention']) ? $data['can_manage_document_retention'] : null;
+        $this->container['can_manage_document_retention_metadata'] = isset($data['can_manage_document_retention_metadata']) ? $data['can_manage_document_retention_metadata'] : null;
         $this->container['can_manage_envelope_transfer'] = isset($data['can_manage_envelope_transfer']) ? $data['can_manage_envelope_transfer'] : null;
         $this->container['can_manage_envelope_transfer_metadata'] = isset($data['can_manage_envelope_transfer_metadata']) ? $data['can_manage_envelope_transfer_metadata'] : null;
         $this->container['can_manage_groups'] = isset($data['can_manage_groups']) ? $data['can_manage_groups'] : null;
@@ -458,6 +470,54 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     public function setCanManageAdminsMetadata($can_manage_admins_metadata)
     {
         $this->container['can_manage_admins_metadata'] = $can_manage_admins_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_document_retention
+     *
+     * @return ?string
+     */
+    public function getCanManageDocumentRetention()
+    {
+        return $this->container['can_manage_document_retention'];
+    }
+
+    /**
+     * Sets can_manage_document_retention
+     *
+     * @param ?string $can_manage_document_retention 
+     *
+     * @return $this
+     */
+    public function setCanManageDocumentRetention($can_manage_document_retention)
+    {
+        $this->container['can_manage_document_retention'] = $can_manage_document_retention;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_document_retention_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageDocumentRetentionMetadata()
+    {
+        return $this->container['can_manage_document_retention_metadata'];
+    }
+
+    /**
+     * Sets can_manage_document_retention_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_document_retention_metadata can_manage_document_retention_metadata
+     *
+     * @return $this
+     */
+    public function setCanManageDocumentRetentionMetadata($can_manage_document_retention_metadata)
+    {
+        $this->container['can_manage_document_retention_metadata'] = $can_manage_document_retention_metadata;
 
         return $this;
     }
