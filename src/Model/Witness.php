@@ -112,7 +112,6 @@ class Witness implements ModelInterface, ArrayAccess
         'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
         'phone_number' => '\DocuSign\eSign\Model\RecipientPhoneNumber',
-        'phone_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'proof_file' => '\DocuSign\eSign\Model\RecipientProofFile',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
@@ -215,7 +214,6 @@ class Witness implements ModelInterface, ArrayAccess
         'offline_attributes' => null,
         'phone_authentication' => null,
         'phone_number' => null,
-        'phone_number_metadata' => null,
         'proof_file' => null,
         'recipient_attachments' => null,
         'recipient_authentication_status' => null,
@@ -339,7 +337,6 @@ class Witness implements ModelInterface, ArrayAccess
         'offline_attributes' => 'offlineAttributes',
         'phone_authentication' => 'phoneAuthentication',
         'phone_number' => 'phoneNumber',
-        'phone_number_metadata' => 'phoneNumberMetadata',
         'proof_file' => 'proofFile',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
@@ -442,7 +439,6 @@ class Witness implements ModelInterface, ArrayAccess
         'offline_attributes' => 'setOfflineAttributes',
         'phone_authentication' => 'setPhoneAuthentication',
         'phone_number' => 'setPhoneNumber',
-        'phone_number_metadata' => 'setPhoneNumberMetadata',
         'proof_file' => 'setProofFile',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
@@ -545,7 +541,6 @@ class Witness implements ModelInterface, ArrayAccess
         'offline_attributes' => 'getOfflineAttributes',
         'phone_authentication' => 'getPhoneAuthentication',
         'phone_number' => 'getPhoneNumber',
-        'phone_number_metadata' => 'getPhoneNumberMetadata',
         'proof_file' => 'getProofFile',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
@@ -702,7 +697,6 @@ class Witness implements ModelInterface, ArrayAccess
         $this->container['offline_attributes'] = isset($data['offline_attributes']) ? $data['offline_attributes'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['phone_number_metadata'] = isset($data['phone_number_metadata']) ? $data['phone_number_metadata'] : null;
         $this->container['proof_file'] = isset($data['proof_file']) ? $data['proof_file'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
@@ -2084,30 +2078,6 @@ class Witness implements ModelInterface, ArrayAccess
     public function setPhoneNumber($phone_number)
     {
         $this->container['phone_number'] = $phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets phone_number_metadata
-     *
-     * @return \DocuSign\eSign\Model\PropertyMetadata
-     */
-    public function getPhoneNumberMetadata()
-    {
-        return $this->container['phone_number_metadata'];
-    }
-
-    /**
-     * Sets phone_number_metadata
-     *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $phone_number_metadata phone_number_metadata
-     *
-     * @return $this
-     */
-    public function setPhoneNumberMetadata($phone_number_metadata)
-    {
-        $this->container['phone_number_metadata'] = $phone_number_metadata;
 
         return $this;
     }

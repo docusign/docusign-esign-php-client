@@ -82,6 +82,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'renewal_date' => '?string',
         'renewal_status' => '?string',
         'seat_discounts' => '\DocuSign\eSign\Model\SeatDiscount[]',
+        'subscription_start_date' => '?string',
         'support_incident_fee' => '?string',
         'support_plan_fee' => '?string'
     ];
@@ -116,6 +117,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'renewal_date' => null,
         'renewal_status' => null,
         'seat_discounts' => null,
+        'subscription_start_date' => null,
         'support_incident_fee' => null,
         'support_plan_fee' => null
     ];
@@ -171,6 +173,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'renewal_date' => 'renewalDate',
         'renewal_status' => 'renewalStatus',
         'seat_discounts' => 'seatDiscounts',
+        'subscription_start_date' => 'subscriptionStartDate',
         'support_incident_fee' => 'supportIncidentFee',
         'support_plan_fee' => 'supportPlanFee'
     ];
@@ -205,6 +208,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'renewal_date' => 'setRenewalDate',
         'renewal_status' => 'setRenewalStatus',
         'seat_discounts' => 'setSeatDiscounts',
+        'subscription_start_date' => 'setSubscriptionStartDate',
         'support_incident_fee' => 'setSupportIncidentFee',
         'support_plan_fee' => 'setSupportPlanFee'
     ];
@@ -239,6 +243,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'renewal_date' => 'getRenewalDate',
         'renewal_status' => 'getRenewalStatus',
         'seat_discounts' => 'getSeatDiscounts',
+        'subscription_start_date' => 'getSubscriptionStartDate',
         'support_incident_fee' => 'getSupportIncidentFee',
         'support_plan_fee' => 'getSupportPlanFee'
     ];
@@ -327,6 +332,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         $this->container['renewal_date'] = isset($data['renewal_date']) ? $data['renewal_date'] : null;
         $this->container['renewal_status'] = isset($data['renewal_status']) ? $data['renewal_status'] : null;
         $this->container['seat_discounts'] = isset($data['seat_discounts']) ? $data['seat_discounts'] : null;
+        $this->container['subscription_start_date'] = isset($data['subscription_start_date']) ? $data['subscription_start_date'] : null;
         $this->container['support_incident_fee'] = isset($data['support_incident_fee']) ? $data['support_incident_fee'] : null;
         $this->container['support_plan_fee'] = isset($data['support_plan_fee']) ? $data['support_plan_fee'] : null;
     }
@@ -927,6 +933,30 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     public function setSeatDiscounts($seat_discounts)
     {
         $this->container['seat_discounts'] = $seat_discounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription_start_date
+     *
+     * @return ?string
+     */
+    public function getSubscriptionStartDate()
+    {
+        return $this->container['subscription_start_date'];
+    }
+
+    /**
+     * Sets subscription_start_date
+     *
+     * @param ?string $subscription_start_date 
+     *
+     * @return $this
+     */
+    public function setSubscriptionStartDate($subscription_start_date)
+    {
+        $this->container['subscription_start_date'] = $subscription_start_date;
 
         return $this;
     }

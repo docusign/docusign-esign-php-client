@@ -130,6 +130,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'number_of_total_signers' => '?string',
         'number_of_unique_senders' => '?string',
         'number_total_recipients' => '?string',
+        'other_recipients_list' => '?string',
         'owner' => '?string',
         'owner_mail' => '?string',
         'period_end' => '?string',
@@ -164,6 +165,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'sender_job_title' => '?string',
         'sender_name' => '?string',
         'sender_user_id' => '?string',
+        'signature_type' => '?string',
+        'signature_type_value' => '?string',
         'sign_date' => '?string',
         'signed' => '?string',
         'signed_date' => '?string',
@@ -279,6 +282,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'number_of_total_signers' => null,
         'number_of_unique_senders' => null,
         'number_total_recipients' => null,
+        'other_recipients_list' => null,
         'owner' => null,
         'owner_mail' => null,
         'period_end' => null,
@@ -313,6 +317,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'sender_job_title' => null,
         'sender_name' => null,
         'sender_user_id' => null,
+        'signature_type' => null,
+        'signature_type_value' => null,
         'sign_date' => null,
         'signed' => null,
         'signed_date' => null,
@@ -449,6 +455,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'number_of_total_signers' => 'numberOfTotalSigners',
         'number_of_unique_senders' => 'numberOfUniqueSenders',
         'number_total_recipients' => 'numberTotalRecipients',
+        'other_recipients_list' => 'otherRecipientsList',
         'owner' => 'owner',
         'owner_mail' => 'ownerMail',
         'period_end' => 'periodEnd',
@@ -483,6 +490,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'sender_job_title' => 'senderJobTitle',
         'sender_name' => 'senderName',
         'sender_user_id' => 'senderUserId',
+        'signature_type' => 'signatureType',
+        'signature_type_value' => 'signatureTypeValue',
         'sign_date' => 'signDate',
         'signed' => 'signed',
         'signed_date' => 'signedDate',
@@ -598,6 +607,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'number_of_total_signers' => 'setNumberOfTotalSigners',
         'number_of_unique_senders' => 'setNumberOfUniqueSenders',
         'number_total_recipients' => 'setNumberTotalRecipients',
+        'other_recipients_list' => 'setOtherRecipientsList',
         'owner' => 'setOwner',
         'owner_mail' => 'setOwnerMail',
         'period_end' => 'setPeriodEnd',
@@ -632,6 +642,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'sender_job_title' => 'setSenderJobTitle',
         'sender_name' => 'setSenderName',
         'sender_user_id' => 'setSenderUserId',
+        'signature_type' => 'setSignatureType',
+        'signature_type_value' => 'setSignatureTypeValue',
         'sign_date' => 'setSignDate',
         'signed' => 'setSigned',
         'signed_date' => 'setSignedDate',
@@ -747,6 +759,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'number_of_total_signers' => 'getNumberOfTotalSigners',
         'number_of_unique_senders' => 'getNumberOfUniqueSenders',
         'number_total_recipients' => 'getNumberTotalRecipients',
+        'other_recipients_list' => 'getOtherRecipientsList',
         'owner' => 'getOwner',
         'owner_mail' => 'getOwnerMail',
         'period_end' => 'getPeriodEnd',
@@ -781,6 +794,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         'sender_job_title' => 'getSenderJobTitle',
         'sender_name' => 'getSenderName',
         'sender_user_id' => 'getSenderUserId',
+        'signature_type' => 'getSignatureType',
+        'signature_type_value' => 'getSignatureTypeValue',
         'sign_date' => 'getSignDate',
         'signed' => 'getSigned',
         'signed_date' => 'getSignedDate',
@@ -950,6 +965,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['number_of_total_signers'] = isset($data['number_of_total_signers']) ? $data['number_of_total_signers'] : null;
         $this->container['number_of_unique_senders'] = isset($data['number_of_unique_senders']) ? $data['number_of_unique_senders'] : null;
         $this->container['number_total_recipients'] = isset($data['number_total_recipients']) ? $data['number_total_recipients'] : null;
+        $this->container['other_recipients_list'] = isset($data['other_recipients_list']) ? $data['other_recipients_list'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['owner_mail'] = isset($data['owner_mail']) ? $data['owner_mail'] : null;
         $this->container['period_end'] = isset($data['period_end']) ? $data['period_end'] : null;
@@ -984,6 +1000,8 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
         $this->container['sender_job_title'] = isset($data['sender_job_title']) ? $data['sender_job_title'] : null;
         $this->container['sender_name'] = isset($data['sender_name']) ? $data['sender_name'] : null;
         $this->container['sender_user_id'] = isset($data['sender_user_id']) ? $data['sender_user_id'] : null;
+        $this->container['signature_type'] = isset($data['signature_type']) ? $data['signature_type'] : null;
+        $this->container['signature_type_value'] = isset($data['signature_type_value']) ? $data['signature_type_value'] : null;
         $this->container['sign_date'] = isset($data['sign_date']) ? $data['sign_date'] : null;
         $this->container['signed'] = isset($data['signed']) ? $data['signed'] : null;
         $this->container['signed_date'] = isset($data['signed_date']) ? $data['signed_date'] : null;
@@ -2797,6 +2815,30 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets other_recipients_list
+     *
+     * @return ?string
+     */
+    public function getOtherRecipientsList()
+    {
+        return $this->container['other_recipients_list'];
+    }
+
+    /**
+     * Sets other_recipients_list
+     *
+     * @param ?string $other_recipients_list 
+     *
+     * @return $this
+     */
+    public function setOtherRecipientsList($other_recipients_list)
+    {
+        $this->container['other_recipients_list'] = $other_recipients_list;
+
+        return $this;
+    }
+
+    /**
      * Gets owner
      *
      * @return ?string
@@ -3608,6 +3650,54 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
     public function setSenderUserId($sender_user_id)
     {
         $this->container['sender_user_id'] = $sender_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets signature_type
+     *
+     * @return ?string
+     */
+    public function getSignatureType()
+    {
+        return $this->container['signature_type'];
+    }
+
+    /**
+     * Sets signature_type
+     *
+     * @param ?string $signature_type 
+     *
+     * @return $this
+     */
+    public function setSignatureType($signature_type)
+    {
+        $this->container['signature_type'] = $signature_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets signature_type_value
+     *
+     * @return ?string
+     */
+    public function getSignatureTypeValue()
+    {
+        return $this->container['signature_type_value'];
+    }
+
+    /**
+     * Sets signature_type_value
+     *
+     * @param ?string $signature_type_value 
+     *
+     * @return $this
+     */
+    public function setSignatureTypeValue($signature_type_value)
+    {
+        $this->container['signature_type_value'] = $signature_type_value;
 
         return $this;
     }

@@ -58,12 +58,14 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'address' => '\DocuSign\eSign\Model\AddressInformation',
+        'card_last_digits' => '?string',
         'card_number' => '?string',
         'card_type' => '?string',
         'cv_number' => '?string',
         'expiration_month' => '?string',
         'expiration_year' => '?string',
-        'name_on_card' => '?string'
+        'name_on_card' => '?string',
+        'tokenized_card' => '?string'
     ];
 
     /**
@@ -73,12 +75,14 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'address' => null,
+        'card_last_digits' => null,
         'card_number' => null,
         'card_type' => null,
         'cv_number' => null,
         'expiration_month' => null,
         'expiration_year' => null,
-        'name_on_card' => null
+        'name_on_card' => null,
+        'tokenized_card' => null
     ];
 
     /**
@@ -109,12 +113,14 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'address' => 'address',
+        'card_last_digits' => 'cardLastDigits',
         'card_number' => 'cardNumber',
         'card_type' => 'cardType',
         'cv_number' => 'cvNumber',
         'expiration_month' => 'expirationMonth',
         'expiration_year' => 'expirationYear',
-        'name_on_card' => 'nameOnCard'
+        'name_on_card' => 'nameOnCard',
+        'tokenized_card' => 'tokenizedCard'
     ];
 
     /**
@@ -124,12 +130,14 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'address' => 'setAddress',
+        'card_last_digits' => 'setCardLastDigits',
         'card_number' => 'setCardNumber',
         'card_type' => 'setCardType',
         'cv_number' => 'setCvNumber',
         'expiration_month' => 'setExpirationMonth',
         'expiration_year' => 'setExpirationYear',
-        'name_on_card' => 'setNameOnCard'
+        'name_on_card' => 'setNameOnCard',
+        'tokenized_card' => 'setTokenizedCard'
     ];
 
     /**
@@ -139,12 +147,14 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'address' => 'getAddress',
+        'card_last_digits' => 'getCardLastDigits',
         'card_number' => 'getCardNumber',
         'card_type' => 'getCardType',
         'cv_number' => 'getCvNumber',
         'expiration_month' => 'getExpirationMonth',
         'expiration_year' => 'getExpirationYear',
-        'name_on_card' => 'getNameOnCard'
+        'name_on_card' => 'getNameOnCard',
+        'tokenized_card' => 'getTokenizedCard'
     ];
 
     /**
@@ -208,12 +218,14 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['card_last_digits'] = isset($data['card_last_digits']) ? $data['card_last_digits'] : null;
         $this->container['card_number'] = isset($data['card_number']) ? $data['card_number'] : null;
         $this->container['card_type'] = isset($data['card_type']) ? $data['card_type'] : null;
         $this->container['cv_number'] = isset($data['cv_number']) ? $data['cv_number'] : null;
         $this->container['expiration_month'] = isset($data['expiration_month']) ? $data['expiration_month'] : null;
         $this->container['expiration_year'] = isset($data['expiration_year']) ? $data['expiration_year'] : null;
         $this->container['name_on_card'] = isset($data['name_on_card']) ? $data['name_on_card'] : null;
+        $this->container['tokenized_card'] = isset($data['tokenized_card']) ? $data['tokenized_card'] : null;
     }
 
     /**
@@ -260,6 +272,30 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     public function setAddress($address)
     {
         $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets card_last_digits
+     *
+     * @return ?string
+     */
+    public function getCardLastDigits()
+    {
+        return $this->container['card_last_digits'];
+    }
+
+    /**
+     * Sets card_last_digits
+     *
+     * @param ?string $card_last_digits 
+     *
+     * @return $this
+     */
+    public function setCardLastDigits($card_last_digits)
+    {
+        $this->container['card_last_digits'] = $card_last_digits;
 
         return $this;
     }
@@ -404,6 +440,30 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     public function setNameOnCard($name_on_card)
     {
         $this->container['name_on_card'] = $name_on_card;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenized_card
+     *
+     * @return ?string
+     */
+    public function getTokenizedCard()
+    {
+        return $this->container['tokenized_card'];
+    }
+
+    /**
+     * Sets tokenized_card
+     *
+     * @param ?string $tokenized_card 
+     *
+     * @return $this
+     */
+    public function setTokenizedCard($tokenized_card)
+    {
+        $this->container['tokenized_card'] = $tokenized_card;
 
         return $this;
     }

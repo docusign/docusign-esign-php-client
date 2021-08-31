@@ -100,7 +100,6 @@ class Editor implements ModelInterface, ArrayAccess
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
         'phone_number' => '\DocuSign\eSign\Model\RecipientPhoneNumber',
-        'phone_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_feature_metadata' => '\DocuSign\eSign\Model\FeatureAvailableMetadata[]',
@@ -179,7 +178,6 @@ class Editor implements ModelInterface, ArrayAccess
         'note_metadata' => null,
         'phone_authentication' => null,
         'phone_number' => null,
-        'phone_number_metadata' => null,
         'recipient_attachments' => null,
         'recipient_authentication_status' => null,
         'recipient_feature_metadata' => null,
@@ -279,7 +277,6 @@ class Editor implements ModelInterface, ArrayAccess
         'note_metadata' => 'noteMetadata',
         'phone_authentication' => 'phoneAuthentication',
         'phone_number' => 'phoneNumber',
-        'phone_number_metadata' => 'phoneNumberMetadata',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
         'recipient_feature_metadata' => 'recipientFeatureMetadata',
@@ -358,7 +355,6 @@ class Editor implements ModelInterface, ArrayAccess
         'note_metadata' => 'setNoteMetadata',
         'phone_authentication' => 'setPhoneAuthentication',
         'phone_number' => 'setPhoneNumber',
-        'phone_number_metadata' => 'setPhoneNumberMetadata',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'setRecipientFeatureMetadata',
@@ -437,7 +433,6 @@ class Editor implements ModelInterface, ArrayAccess
         'note_metadata' => 'getNoteMetadata',
         'phone_authentication' => 'getPhoneAuthentication',
         'phone_number' => 'getPhoneNumber',
-        'phone_number_metadata' => 'getPhoneNumberMetadata',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'getRecipientFeatureMetadata',
@@ -570,7 +565,6 @@ class Editor implements ModelInterface, ArrayAccess
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['phone_number_metadata'] = isset($data['phone_number_metadata']) ? $data['phone_number_metadata'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
         $this->container['recipient_feature_metadata'] = isset($data['recipient_feature_metadata']) ? $data['recipient_feature_metadata'] : null;
@@ -1652,30 +1646,6 @@ class Editor implements ModelInterface, ArrayAccess
     public function setPhoneNumber($phone_number)
     {
         $this->container['phone_number'] = $phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets phone_number_metadata
-     *
-     * @return \DocuSign\eSign\Model\PropertyMetadata
-     */
-    public function getPhoneNumberMetadata()
-    {
-        return $this->container['phone_number_metadata'];
-    }
-
-    /**
-     * Sets phone_number_metadata
-     *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $phone_number_metadata phone_number_metadata
-     *
-     * @return $this
-     */
-    public function setPhoneNumberMetadata($phone_number_metadata)
-    {
-        $this->container['phone_number_metadata'] = $phone_number_metadata;
 
         return $this;
     }

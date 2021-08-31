@@ -58,7 +58,11 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'downgrade_event_type' => '?string',
-        'plan_information' => '\DocuSign\eSign\Model\PlanInformation'
+        'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
+        'promo_code' => '?string',
+        'sale_discount' => '?string',
+        'sale_discount_periods' => '?string',
+        'sale_discount_type' => '?string'
     ];
 
     /**
@@ -68,7 +72,11 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'downgrade_event_type' => null,
-        'plan_information' => null
+        'plan_information' => null,
+        'promo_code' => null,
+        'sale_discount' => null,
+        'sale_discount_periods' => null,
+        'sale_discount_type' => null
     ];
 
     /**
@@ -99,7 +107,11 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'downgrade_event_type' => 'downgradeEventType',
-        'plan_information' => 'planInformation'
+        'plan_information' => 'planInformation',
+        'promo_code' => 'promoCode',
+        'sale_discount' => 'saleDiscount',
+        'sale_discount_periods' => 'saleDiscountPeriods',
+        'sale_discount_type' => 'saleDiscountType'
     ];
 
     /**
@@ -109,7 +121,11 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'downgrade_event_type' => 'setDowngradeEventType',
-        'plan_information' => 'setPlanInformation'
+        'plan_information' => 'setPlanInformation',
+        'promo_code' => 'setPromoCode',
+        'sale_discount' => 'setSaleDiscount',
+        'sale_discount_periods' => 'setSaleDiscountPeriods',
+        'sale_discount_type' => 'setSaleDiscountType'
     ];
 
     /**
@@ -119,7 +135,11 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'downgrade_event_type' => 'getDowngradeEventType',
-        'plan_information' => 'getPlanInformation'
+        'plan_information' => 'getPlanInformation',
+        'promo_code' => 'getPromoCode',
+        'sale_discount' => 'getSaleDiscount',
+        'sale_discount_periods' => 'getSaleDiscountPeriods',
+        'sale_discount_type' => 'getSaleDiscountType'
     ];
 
     /**
@@ -184,6 +204,10 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     {
         $this->container['downgrade_event_type'] = isset($data['downgrade_event_type']) ? $data['downgrade_event_type'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
+        $this->container['promo_code'] = isset($data['promo_code']) ? $data['promo_code'] : null;
+        $this->container['sale_discount'] = isset($data['sale_discount']) ? $data['sale_discount'] : null;
+        $this->container['sale_discount_periods'] = isset($data['sale_discount_periods']) ? $data['sale_discount_periods'] : null;
+        $this->container['sale_discount_type'] = isset($data['sale_discount_type']) ? $data['sale_discount_type'] : null;
     }
 
     /**
@@ -254,6 +278,102 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     public function setPlanInformation($plan_information)
     {
         $this->container['plan_information'] = $plan_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets promo_code
+     *
+     * @return ?string
+     */
+    public function getPromoCode()
+    {
+        return $this->container['promo_code'];
+    }
+
+    /**
+     * Sets promo_code
+     *
+     * @param ?string $promo_code 
+     *
+     * @return $this
+     */
+    public function setPromoCode($promo_code)
+    {
+        $this->container['promo_code'] = $promo_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets sale_discount
+     *
+     * @return ?string
+     */
+    public function getSaleDiscount()
+    {
+        return $this->container['sale_discount'];
+    }
+
+    /**
+     * Sets sale_discount
+     *
+     * @param ?string $sale_discount 
+     *
+     * @return $this
+     */
+    public function setSaleDiscount($sale_discount)
+    {
+        $this->container['sale_discount'] = $sale_discount;
+
+        return $this;
+    }
+
+    /**
+     * Gets sale_discount_periods
+     *
+     * @return ?string
+     */
+    public function getSaleDiscountPeriods()
+    {
+        return $this->container['sale_discount_periods'];
+    }
+
+    /**
+     * Sets sale_discount_periods
+     *
+     * @param ?string $sale_discount_periods 
+     *
+     * @return $this
+     */
+    public function setSaleDiscountPeriods($sale_discount_periods)
+    {
+        $this->container['sale_discount_periods'] = $sale_discount_periods;
+
+        return $this;
+    }
+
+    /**
+     * Gets sale_discount_type
+     *
+     * @return ?string
+     */
+    public function getSaleDiscountType()
+    {
+        return $this->container['sale_discount_type'];
+    }
+
+    /**
+     * Sets sale_discount_type
+     *
+     * @param ?string $sale_discount_type 
+     *
+     * @return $this
+     */
+    public function setSaleDiscountType($sale_discount_type)
+    {
+        $this->container['sale_discount_type'] = $sale_discount_type;
 
         return $this;
     }
