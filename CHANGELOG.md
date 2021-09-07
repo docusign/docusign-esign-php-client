@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.4.0] - ESignature API v2.1-21.2.02.00 - 2021-09-02
+### Changed
+- Added support for version v2.1-21.2.02.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+
 ## [v6.4.0-rc] - ESignature API v2.1-21.2.02.00 - 2021-08-19
 ### Breaking
 - Removed `phone_number_metadata` from models `Agent`,`CarbonCopy`,`CertifiedDelivery`,`Editor`,`Intermediary`,`Signer`,`Witness`
