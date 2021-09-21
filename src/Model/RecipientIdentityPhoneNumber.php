@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,7 +38,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category    Class
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
@@ -58,8 +60,12 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'country_code' => '?string',
+        'country_code_lock' => '?string',
+        'country_code_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'extension' => '?string',
-        'number' => '?string'
+        'extension_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'number' => '?string',
+        'number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
     /**
@@ -69,8 +75,12 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'country_code' => null,
+        'country_code_lock' => null,
+        'country_code_metadata' => null,
         'extension' => null,
-        'number' => null
+        'extension_metadata' => null,
+        'number' => null,
+        'number_metadata' => null
     ];
 
     /**
@@ -101,8 +111,12 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'country_code' => 'countryCode',
+        'country_code_lock' => 'countryCodeLock',
+        'country_code_metadata' => 'countryCodeMetadata',
         'extension' => 'extension',
-        'number' => 'number'
+        'extension_metadata' => 'extensionMetadata',
+        'number' => 'number',
+        'number_metadata' => 'numberMetadata'
     ];
 
     /**
@@ -112,8 +126,12 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'country_code' => 'setCountryCode',
+        'country_code_lock' => 'setCountryCodeLock',
+        'country_code_metadata' => 'setCountryCodeMetadata',
         'extension' => 'setExtension',
-        'number' => 'setNumber'
+        'extension_metadata' => 'setExtensionMetadata',
+        'number' => 'setNumber',
+        'number_metadata' => 'setNumberMetadata'
     ];
 
     /**
@@ -123,8 +141,12 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'country_code' => 'getCountryCode',
+        'country_code_lock' => 'getCountryCodeLock',
+        'country_code_metadata' => 'getCountryCodeMetadata',
         'extension' => 'getExtension',
-        'number' => 'getNumber'
+        'extension_metadata' => 'getExtensionMetadata',
+        'number' => 'getNumber',
+        'number_metadata' => 'getNumberMetadata'
     ];
 
     /**
@@ -188,8 +210,12 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
+        $this->container['country_code_lock'] = isset($data['country_code_lock']) ? $data['country_code_lock'] : null;
+        $this->container['country_code_metadata'] = isset($data['country_code_metadata']) ? $data['country_code_metadata'] : null;
         $this->container['extension'] = isset($data['extension']) ? $data['extension'] : null;
+        $this->container['extension_metadata'] = isset($data['extension_metadata']) ? $data['extension_metadata'] : null;
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
+        $this->container['number_metadata'] = isset($data['number_metadata']) ? $data['number_metadata'] : null;
     }
 
     /**
@@ -241,6 +267,54 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets country_code_lock
+     *
+     * @return ?string
+     */
+    public function getCountryCodeLock()
+    {
+        return $this->container['country_code_lock'];
+    }
+
+    /**
+     * Sets country_code_lock
+     *
+     * @param ?string $country_code_lock 
+     *
+     * @return $this
+     */
+    public function setCountryCodeLock($country_code_lock)
+    {
+        $this->container['country_code_lock'] = $country_code_lock;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_code_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getCountryCodeMetadata()
+    {
+        return $this->container['country_code_metadata'];
+    }
+
+    /**
+     * Sets country_code_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $country_code_metadata country_code_metadata
+     *
+     * @return $this
+     */
+    public function setCountryCodeMetadata($country_code_metadata)
+    {
+        $this->container['country_code_metadata'] = $country_code_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets extension
      *
      * @return ?string
@@ -265,6 +339,30 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets extension_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getExtensionMetadata()
+    {
+        return $this->container['extension_metadata'];
+    }
+
+    /**
+     * Sets extension_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $extension_metadata extension_metadata
+     *
+     * @return $this
+     */
+    public function setExtensionMetadata($extension_metadata)
+    {
+        $this->container['extension_metadata'] = $extension_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets number
      *
      * @return ?string
@@ -284,6 +382,30 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     public function setNumber($number)
     {
         $this->container['number'] = $number;
+
+        return $this;
+    }
+
+    /**
+     * Gets number_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getNumberMetadata()
+    {
+        return $this->container['number_metadata'];
+    }
+
+    /**
+     * Sets number_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $number_metadata number_metadata
+     *
+     * @return $this
+     */
+    public function setNumberMetadata($number_metadata)
+    {
+        $this->container['number_metadata'] = $number_metadata;
 
         return $this;
     }

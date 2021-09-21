@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -38,7 +39,8 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @description This optional complex element allows a message to be sent a specified URL when the envelope or recipient changes status. It is similar to DocuSign Connect. For example, if an envelope changes from \&quot;Sent\&quot; to \&quot;Delivered\&quot;, a message containing the updated envelope status and optionally the documents is sent to the URL. When an eventNotification is attached to an envelope using the API, it only applies to the envelope (treating the envelope as the sender). This is different from envelopes created through the console user interface, where the user is treated as the sender.
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class EventNotification implements ModelInterface, ArrayAccess
@@ -58,6 +60,7 @@ class EventNotification implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'delivery_mode' => '?string',
         'envelope_events' => '\DocuSign\eSign\Model\EnvelopeEvent[]',
         'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
         'include_certificate_of_completion' => '?string',
@@ -83,6 +86,7 @@ class EventNotification implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'delivery_mode' => null,
         'envelope_events' => null,
         'event_data' => null,
         'include_certificate_of_completion' => null,
@@ -129,6 +133,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'delivery_mode' => 'deliveryMode',
         'envelope_events' => 'envelopeEvents',
         'event_data' => 'eventData',
         'include_certificate_of_completion' => 'includeCertificateOfCompletion',
@@ -154,6 +159,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'delivery_mode' => 'setDeliveryMode',
         'envelope_events' => 'setEnvelopeEvents',
         'event_data' => 'setEventData',
         'include_certificate_of_completion' => 'setIncludeCertificateOfCompletion',
@@ -179,6 +185,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'delivery_mode' => 'getDeliveryMode',
         'envelope_events' => 'getEnvelopeEvents',
         'event_data' => 'getEventData',
         'include_certificate_of_completion' => 'getIncludeCertificateOfCompletion',
@@ -258,6 +265,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['delivery_mode'] = isset($data['delivery_mode']) ? $data['delivery_mode'] : null;
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
         $this->container['event_data'] = isset($data['event_data']) ? $data['event_data'] : null;
         $this->container['include_certificate_of_completion'] = isset($data['include_certificate_of_completion']) ? $data['include_certificate_of_completion'] : null;
@@ -300,6 +308,30 @@ class EventNotification implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets delivery_mode
+     *
+     * @return ?string
+     */
+    public function getDeliveryMode()
+    {
+        return $this->container['delivery_mode'];
+    }
+
+    /**
+     * Sets delivery_mode
+     *
+     * @param ?string $delivery_mode 
+     *
+     * @return $this
+     */
+    public function setDeliveryMode($delivery_mode)
+    {
+        $this->container['delivery_mode'] = $delivery_mode;
+
+        return $this;
+    }
 
     /**
      * Gets envelope_events

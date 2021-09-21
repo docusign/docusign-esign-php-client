@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,7 +38,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category    Class
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
@@ -62,6 +64,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'all_users' => '?string',
         'configuration_type' => '?string',
         'connect_id' => '?string',
+        'delivery_mode' => '?string',
         'enable_log' => '?string',
         'envelope_events' => '?string[]',
         'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
@@ -106,6 +109,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'all_users' => null,
         'configuration_type' => null,
         'connect_id' => null,
+        'delivery_mode' => null,
         'enable_log' => null,
         'envelope_events' => null,
         'event_data' => null,
@@ -171,6 +175,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'all_users' => 'allUsers',
         'configuration_type' => 'configurationType',
         'connect_id' => 'connectId',
+        'delivery_mode' => 'deliveryMode',
         'enable_log' => 'enableLog',
         'envelope_events' => 'envelopeEvents',
         'event_data' => 'eventData',
@@ -215,6 +220,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'all_users' => 'setAllUsers',
         'configuration_type' => 'setConfigurationType',
         'connect_id' => 'setConnectId',
+        'delivery_mode' => 'setDeliveryMode',
         'enable_log' => 'setEnableLog',
         'envelope_events' => 'setEnvelopeEvents',
         'event_data' => 'setEventData',
@@ -259,6 +265,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'all_users' => 'getAllUsers',
         'configuration_type' => 'getConfigurationType',
         'connect_id' => 'getConnectId',
+        'delivery_mode' => 'getDeliveryMode',
         'enable_log' => 'getEnableLog',
         'envelope_events' => 'getEnvelopeEvents',
         'event_data' => 'getEventData',
@@ -357,6 +364,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['all_users'] = isset($data['all_users']) ? $data['all_users'] : null;
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['connect_id'] = isset($data['connect_id']) ? $data['connect_id'] : null;
+        $this->container['delivery_mode'] = isset($data['delivery_mode']) ? $data['delivery_mode'] : null;
         $this->container['enable_log'] = isset($data['enable_log']) ? $data['enable_log'] : null;
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
         $this->container['event_data'] = isset($data['event_data']) ? $data['event_data'] : null;
@@ -535,6 +543,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets delivery_mode
+     *
+     * @return ?string
+     */
+    public function getDeliveryMode()
+    {
+        return $this->container['delivery_mode'];
+    }
+
+    /**
+     * Sets delivery_mode
+     *
+     * @param ?string $delivery_mode 
+     *
+     * @return $this
+     */
+    public function setDeliveryMode($delivery_mode)
+    {
+        $this->container['delivery_mode'] = $delivery_mode;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_log
      *
      * @return ?string
@@ -571,7 +603,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_events
      *
-     * @param ?string[] $envelope_events A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
+     * @param ?string[] $envelope_events A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
      *
      * @return $this
      */
@@ -907,7 +939,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_events
      *
-     * @param ?string[] $recipient_events A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
+     * @param ?string[] $recipient_events A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
      *
      * @return $this
      */
@@ -1219,7 +1251,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets user_ids
      *
-     * @param ?string[] $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.
+     * @param ?string[] $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s.
      *
      * @return $this
      */

@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,7 +38,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category    Class
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RadioGroup implements ModelInterface, ArrayAccess
@@ -76,6 +78,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'shared' => '?string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'share_to_recipients' => '?string',
+        'share_to_recipients_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_type' => '?string',
         'tab_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'template_locked' => '?string',
@@ -111,6 +115,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => null,
         'shared' => null,
         'shared_metadata' => null,
+        'share_to_recipients' => null,
+        'share_to_recipients_metadata' => null,
         'tab_type' => null,
         'tab_type_metadata' => null,
         'template_locked' => null,
@@ -167,6 +173,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => 'requireInitialOnSharedChangeMetadata',
         'shared' => 'shared',
         'shared_metadata' => 'sharedMetadata',
+        'share_to_recipients' => 'shareToRecipients',
+        'share_to_recipients_metadata' => 'shareToRecipientsMetadata',
         'tab_type' => 'tabType',
         'tab_type_metadata' => 'tabTypeMetadata',
         'template_locked' => 'templateLocked',
@@ -202,6 +210,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => 'setRequireInitialOnSharedChangeMetadata',
         'shared' => 'setShared',
         'shared_metadata' => 'setSharedMetadata',
+        'share_to_recipients' => 'setShareToRecipients',
+        'share_to_recipients_metadata' => 'setShareToRecipientsMetadata',
         'tab_type' => 'setTabType',
         'tab_type_metadata' => 'setTabTypeMetadata',
         'template_locked' => 'setTemplateLocked',
@@ -237,6 +247,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => 'getRequireInitialOnSharedChangeMetadata',
         'shared' => 'getShared',
         'shared_metadata' => 'getSharedMetadata',
+        'share_to_recipients' => 'getShareToRecipients',
+        'share_to_recipients_metadata' => 'getShareToRecipientsMetadata',
         'tab_type' => 'getTabType',
         'tab_type_metadata' => 'getTabTypeMetadata',
         'template_locked' => 'getTemplateLocked',
@@ -326,6 +338,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         $this->container['require_initial_on_shared_change_metadata'] = isset($data['require_initial_on_shared_change_metadata']) ? $data['require_initial_on_shared_change_metadata'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['shared_metadata'] = isset($data['shared_metadata']) ? $data['shared_metadata'] : null;
+        $this->container['share_to_recipients'] = isset($data['share_to_recipients']) ? $data['share_to_recipients'] : null;
+        $this->container['share_to_recipients_metadata'] = isset($data['share_to_recipients_metadata']) ? $data['share_to_recipients_metadata'] : null;
         $this->container['tab_type'] = isset($data['tab_type']) ? $data['tab_type'] : null;
         $this->container['tab_type_metadata'] = isset($data['tab_type_metadata']) ? $data['tab_type_metadata'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
@@ -812,6 +826,54 @@ class RadioGroup implements ModelInterface, ArrayAccess
     public function setSharedMetadata($shared_metadata)
     {
         $this->container['shared_metadata'] = $shared_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets share_to_recipients
+     *
+     * @return ?string
+     */
+    public function getShareToRecipients()
+    {
+        return $this->container['share_to_recipients'];
+    }
+
+    /**
+     * Sets share_to_recipients
+     *
+     * @param ?string $share_to_recipients 
+     *
+     * @return $this
+     */
+    public function setShareToRecipients($share_to_recipients)
+    {
+        $this->container['share_to_recipients'] = $share_to_recipients;
+
+        return $this;
+    }
+
+    /**
+     * Gets share_to_recipients_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getShareToRecipientsMetadata()
+    {
+        return $this->container['share_to_recipients_metadata'];
+    }
+
+    /**
+     * Sets share_to_recipients_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata share_to_recipients_metadata
+     *
+     * @return $this
+     */
+    public function setShareToRecipientsMetadata($share_to_recipients_metadata)
+    {
+        $this->container['share_to_recipients_metadata'] = $share_to_recipients_metadata;
 
         return $this;
     }

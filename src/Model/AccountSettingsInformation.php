@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -38,7 +39,8 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @description Contains account settings information.
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AccountSettingsInformation implements ModelInterface, ArrayAccess
@@ -331,6 +333,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_esign_communities' => '?string',
         'enable_esign_communities_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_id_fx_intuit_kba' => '?string',
+        'enable_id_fx_intuit_kba_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_in_browser_editor' => '?string',
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_payment_processing' => '?string',
@@ -435,6 +439,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'identity_verification' => '\DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[]',
         'identity_verification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'idfx_phone_authentication_override' => '?string',
+        'idfx_phone_authentication_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'ignore_error_if_anchor_tab_not_found' => '?string',
         'ignore_error_if_anchor_tab_not_found_metadata_enabled' => '\DocuSign\eSign\Model\SettingsMetadata',
         'in_person_id_check_question' => '?string',
@@ -893,6 +899,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => null,
         'enable_esign_communities' => null,
         'enable_esign_communities_metadata' => null,
+        'enable_id_fx_intuit_kba' => null,
+        'enable_id_fx_intuit_kba_metadata' => null,
         'enable_in_browser_editor' => null,
         'enable_in_browser_editor_metadata' => null,
         'enable_payment_processing' => null,
@@ -997,6 +1005,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => null,
         'identity_verification' => null,
         'identity_verification_metadata' => null,
+        'idfx_phone_authentication_override' => null,
+        'idfx_phone_authentication_override_metadata' => null,
         'ignore_error_if_anchor_tab_not_found' => null,
         'ignore_error_if_anchor_tab_not_found_metadata_enabled' => null,
         'in_person_id_check_question' => null,
@@ -1476,6 +1486,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => 'enableEnvelopeStampingByDSAdminMetadata',
         'enable_esign_communities' => 'enableEsignCommunities',
         'enable_esign_communities_metadata' => 'enableEsignCommunitiesMetadata',
+        'enable_id_fx_intuit_kba' => 'enableIDFxIntuitKBA',
+        'enable_id_fx_intuit_kba_metadata' => 'enableIDFxIntuitKBAMetadata',
         'enable_in_browser_editor' => 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'enableInBrowserEditorMetadata',
         'enable_payment_processing' => 'enablePaymentProcessing',
@@ -1580,6 +1592,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'idCheckRequiredMetadata',
         'identity_verification' => 'identityVerification',
         'identity_verification_metadata' => 'identityVerificationMetadata',
+        'idfx_phone_authentication_override' => 'idfxPhoneAuthenticationOverride',
+        'idfx_phone_authentication_override_metadata' => 'idfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'ignoreErrorIfAnchorTabNotFound',
         'ignore_error_if_anchor_tab_not_found_metadata_enabled' => 'ignoreErrorIfAnchorTabNotFoundMetadataEnabled',
         'in_person_id_check_question' => 'inPersonIDCheckQuestion',
@@ -2038,6 +2052,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => 'setEnableEnvelopeStampingByDsAdminMetadata',
         'enable_esign_communities' => 'setEnableEsignCommunities',
         'enable_esign_communities_metadata' => 'setEnableEsignCommunitiesMetadata',
+        'enable_id_fx_intuit_kba' => 'setEnableIdFxIntuitKba',
+        'enable_id_fx_intuit_kba_metadata' => 'setEnableIdFxIntuitKbaMetadata',
         'enable_in_browser_editor' => 'setEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'setEnableInBrowserEditorMetadata',
         'enable_payment_processing' => 'setEnablePaymentProcessing',
@@ -2142,6 +2158,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'setIdCheckRequiredMetadata',
         'identity_verification' => 'setIdentityVerification',
         'identity_verification_metadata' => 'setIdentityVerificationMetadata',
+        'idfx_phone_authentication_override' => 'setIdfxPhoneAuthenticationOverride',
+        'idfx_phone_authentication_override_metadata' => 'setIdfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'setIgnoreErrorIfAnchorTabNotFound',
         'ignore_error_if_anchor_tab_not_found_metadata_enabled' => 'setIgnoreErrorIfAnchorTabNotFoundMetadataEnabled',
         'in_person_id_check_question' => 'setInPersonIdCheckQuestion',
@@ -2600,6 +2618,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => 'getEnableEnvelopeStampingByDsAdminMetadata',
         'enable_esign_communities' => 'getEnableEsignCommunities',
         'enable_esign_communities_metadata' => 'getEnableEsignCommunitiesMetadata',
+        'enable_id_fx_intuit_kba' => 'getEnableIdFxIntuitKba',
+        'enable_id_fx_intuit_kba_metadata' => 'getEnableIdFxIntuitKbaMetadata',
         'enable_in_browser_editor' => 'getEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'getEnableInBrowserEditorMetadata',
         'enable_payment_processing' => 'getEnablePaymentProcessing',
@@ -2704,6 +2724,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'getIdCheckRequiredMetadata',
         'identity_verification' => 'getIdentityVerification',
         'identity_verification_metadata' => 'getIdentityVerificationMetadata',
+        'idfx_phone_authentication_override' => 'getIdfxPhoneAuthenticationOverride',
+        'idfx_phone_authentication_override_metadata' => 'getIdfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'getIgnoreErrorIfAnchorTabNotFound',
         'ignore_error_if_anchor_tab_not_found_metadata_enabled' => 'getIgnoreErrorIfAnchorTabNotFoundMetadataEnabled',
         'in_person_id_check_question' => 'getInPersonIdCheckQuestion',
@@ -3216,6 +3238,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_envelope_stamping_by_ds_admin_metadata'] = isset($data['enable_envelope_stamping_by_ds_admin_metadata']) ? $data['enable_envelope_stamping_by_ds_admin_metadata'] : null;
         $this->container['enable_esign_communities'] = isset($data['enable_esign_communities']) ? $data['enable_esign_communities'] : null;
         $this->container['enable_esign_communities_metadata'] = isset($data['enable_esign_communities_metadata']) ? $data['enable_esign_communities_metadata'] : null;
+        $this->container['enable_id_fx_intuit_kba'] = isset($data['enable_id_fx_intuit_kba']) ? $data['enable_id_fx_intuit_kba'] : null;
+        $this->container['enable_id_fx_intuit_kba_metadata'] = isset($data['enable_id_fx_intuit_kba_metadata']) ? $data['enable_id_fx_intuit_kba_metadata'] : null;
         $this->container['enable_in_browser_editor'] = isset($data['enable_in_browser_editor']) ? $data['enable_in_browser_editor'] : null;
         $this->container['enable_in_browser_editor_metadata'] = isset($data['enable_in_browser_editor_metadata']) ? $data['enable_in_browser_editor_metadata'] : null;
         $this->container['enable_payment_processing'] = isset($data['enable_payment_processing']) ? $data['enable_payment_processing'] : null;
@@ -3320,6 +3344,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['id_check_required_metadata'] = isset($data['id_check_required_metadata']) ? $data['id_check_required_metadata'] : null;
         $this->container['identity_verification'] = isset($data['identity_verification']) ? $data['identity_verification'] : null;
         $this->container['identity_verification_metadata'] = isset($data['identity_verification_metadata']) ? $data['identity_verification_metadata'] : null;
+        $this->container['idfx_phone_authentication_override'] = isset($data['idfx_phone_authentication_override']) ? $data['idfx_phone_authentication_override'] : null;
+        $this->container['idfx_phone_authentication_override_metadata'] = isset($data['idfx_phone_authentication_override_metadata']) ? $data['idfx_phone_authentication_override_metadata'] : null;
         $this->container['ignore_error_if_anchor_tab_not_found'] = isset($data['ignore_error_if_anchor_tab_not_found']) ? $data['ignore_error_if_anchor_tab_not_found'] : null;
         $this->container['ignore_error_if_anchor_tab_not_found_metadata_enabled'] = isset($data['ignore_error_if_anchor_tab_not_found_metadata_enabled']) ? $data['ignore_error_if_anchor_tab_not_found_metadata_enabled'] : null;
         $this->container['in_person_id_check_question'] = isset($data['in_person_id_check_question']) ? $data['in_person_id_check_question'] : null;
@@ -10076,6 +10102,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_id_fx_intuit_kba
+     *
+     * @return ?string
+     */
+    public function getEnableIdFxIntuitKba()
+    {
+        return $this->container['enable_id_fx_intuit_kba'];
+    }
+
+    /**
+     * Sets enable_id_fx_intuit_kba
+     *
+     * @param ?string $enable_id_fx_intuit_kba 
+     *
+     * @return $this
+     */
+    public function setEnableIdFxIntuitKba($enable_id_fx_intuit_kba)
+    {
+        $this->container['enable_id_fx_intuit_kba'] = $enable_id_fx_intuit_kba;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_id_fx_intuit_kba_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableIdFxIntuitKbaMetadata()
+    {
+        return $this->container['enable_id_fx_intuit_kba_metadata'];
+    }
+
+    /**
+     * Sets enable_id_fx_intuit_kba_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_intuit_kba_metadata enable_id_fx_intuit_kba_metadata
+     *
+     * @return $this
+     */
+    public function setEnableIdFxIntuitKbaMetadata($enable_id_fx_intuit_kba_metadata)
+    {
+        $this->container['enable_id_fx_intuit_kba_metadata'] = $enable_id_fx_intuit_kba_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_in_browser_editor
      *
      * @return ?string
@@ -12567,6 +12641,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setIdentityVerificationMetadata($identity_verification_metadata)
     {
         $this->container['identity_verification_metadata'] = $identity_verification_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets idfx_phone_authentication_override
+     *
+     * @return ?string
+     */
+    public function getIdfxPhoneAuthenticationOverride()
+    {
+        return $this->container['idfx_phone_authentication_override'];
+    }
+
+    /**
+     * Sets idfx_phone_authentication_override
+     *
+     * @param ?string $idfx_phone_authentication_override 
+     *
+     * @return $this
+     */
+    public function setIdfxPhoneAuthenticationOverride($idfx_phone_authentication_override)
+    {
+        $this->container['idfx_phone_authentication_override'] = $idfx_phone_authentication_override;
+
+        return $this;
+    }
+
+    /**
+     * Gets idfx_phone_authentication_override_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getIdfxPhoneAuthenticationOverrideMetadata()
+    {
+        return $this->container['idfx_phone_authentication_override_metadata'];
+    }
+
+    /**
+     * Sets idfx_phone_authentication_override_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $idfx_phone_authentication_override_metadata idfx_phone_authentication_override_metadata
+     *
+     * @return $this
+     */
+    public function setIdfxPhoneAuthenticationOverrideMetadata($idfx_phone_authentication_override_metadata)
+    {
+        $this->container['idfx_phone_authentication_override_metadata'] = $idfx_phone_authentication_override_metadata;
 
         return $this;
     }
