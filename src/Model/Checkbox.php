@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,7 +38,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category    Class
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Checkbox implements ModelInterface, ArrayAccess
@@ -124,6 +126,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'selected_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'shared' => '?string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'share_to_recipients' => '?string',
+        'share_to_recipients_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'smart_contract_information' => '\DocuSign\eSign\Model\SmartContractInformation',
         'source' => '?string',
         'status' => '?string',
@@ -227,6 +231,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'selected_metadata' => null,
         'shared' => null,
         'shared_metadata' => null,
+        'share_to_recipients' => null,
+        'share_to_recipients_metadata' => null,
         'smart_contract_information' => null,
         'source' => null,
         'status' => null,
@@ -351,6 +357,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'selected_metadata' => 'selectedMetadata',
         'shared' => 'shared',
         'shared_metadata' => 'sharedMetadata',
+        'share_to_recipients' => 'shareToRecipients',
+        'share_to_recipients_metadata' => 'shareToRecipientsMetadata',
         'smart_contract_information' => 'smartContractInformation',
         'source' => 'source',
         'status' => 'status',
@@ -454,6 +462,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'selected_metadata' => 'setSelectedMetadata',
         'shared' => 'setShared',
         'shared_metadata' => 'setSharedMetadata',
+        'share_to_recipients' => 'setShareToRecipients',
+        'share_to_recipients_metadata' => 'setShareToRecipientsMetadata',
         'smart_contract_information' => 'setSmartContractInformation',
         'source' => 'setSource',
         'status' => 'setStatus',
@@ -557,6 +567,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'selected_metadata' => 'getSelectedMetadata',
         'shared' => 'getShared',
         'shared_metadata' => 'getSharedMetadata',
+        'share_to_recipients' => 'getShareToRecipients',
+        'share_to_recipients_metadata' => 'getShareToRecipientsMetadata',
         'smart_contract_information' => 'getSmartContractInformation',
         'source' => 'getSource',
         'status' => 'getStatus',
@@ -714,6 +726,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['selected_metadata'] = isset($data['selected_metadata']) ? $data['selected_metadata'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['shared_metadata'] = isset($data['shared_metadata']) ? $data['shared_metadata'] : null;
+        $this->container['share_to_recipients'] = isset($data['share_to_recipients']) ? $data['share_to_recipients'] : null;
+        $this->container['share_to_recipients_metadata'] = isset($data['share_to_recipients_metadata']) ? $data['share_to_recipients_metadata'] : null;
         $this->container['smart_contract_information'] = isset($data['smart_contract_information']) ? $data['smart_contract_information'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -2372,6 +2386,54 @@ class Checkbox implements ModelInterface, ArrayAccess
     public function setSharedMetadata($shared_metadata)
     {
         $this->container['shared_metadata'] = $shared_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets share_to_recipients
+     *
+     * @return ?string
+     */
+    public function getShareToRecipients()
+    {
+        return $this->container['share_to_recipients'];
+    }
+
+    /**
+     * Sets share_to_recipients
+     *
+     * @param ?string $share_to_recipients 
+     *
+     * @return $this
+     */
+    public function setShareToRecipients($share_to_recipients)
+    {
+        $this->container['share_to_recipients'] = $share_to_recipients;
+
+        return $this;
+    }
+
+    /**
+     * Gets share_to_recipients_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getShareToRecipientsMetadata()
+    {
+        return $this->container['share_to_recipients_metadata'];
+    }
+
+    /**
+     * Sets share_to_recipients_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata share_to_recipients_metadata
+     *
+     * @return $this
+     */
+    public function setShareToRecipientsMetadata($share_to_recipients_metadata)
+    {
+        $this->container['share_to_recipients_metadata'] = $share_to_recipients_metadata;
 
         return $this;
     }

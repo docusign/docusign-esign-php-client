@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -38,7 +39,8 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @description Contains information about an APP store receipt.
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AppStoreReceipt implements ModelInterface, ArrayAccess
@@ -58,6 +60,8 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'downgrade_product_id' => '?string',
+        'is_downgrade_cancellation' => '?string',
         'product_id' => '?string',
         'receipt_data' => '?string'
     ];
@@ -68,6 +72,8 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'downgrade_product_id' => null,
+        'is_downgrade_cancellation' => null,
         'product_id' => null,
         'receipt_data' => null
     ];
@@ -99,6 +105,8 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'downgrade_product_id' => 'downgradeProductId',
+        'is_downgrade_cancellation' => 'isDowngradeCancellation',
         'product_id' => 'productId',
         'receipt_data' => 'receiptData'
     ];
@@ -109,6 +117,8 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'downgrade_product_id' => 'setDowngradeProductId',
+        'is_downgrade_cancellation' => 'setIsDowngradeCancellation',
         'product_id' => 'setProductId',
         'receipt_data' => 'setReceiptData'
     ];
@@ -119,6 +129,8 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'downgrade_product_id' => 'getDowngradeProductId',
+        'is_downgrade_cancellation' => 'getIsDowngradeCancellation',
         'product_id' => 'getProductId',
         'receipt_data' => 'getReceiptData'
     ];
@@ -183,6 +195,8 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['downgrade_product_id'] = isset($data['downgrade_product_id']) ? $data['downgrade_product_id'] : null;
+        $this->container['is_downgrade_cancellation'] = isset($data['is_downgrade_cancellation']) ? $data['is_downgrade_cancellation'] : null;
         $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
         $this->container['receipt_data'] = isset($data['receipt_data']) ? $data['receipt_data'] : null;
     }
@@ -210,6 +224,54 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets downgrade_product_id
+     *
+     * @return ?string
+     */
+    public function getDowngradeProductId()
+    {
+        return $this->container['downgrade_product_id'];
+    }
+
+    /**
+     * Sets downgrade_product_id
+     *
+     * @param ?string $downgrade_product_id 
+     *
+     * @return $this
+     */
+    public function setDowngradeProductId($downgrade_product_id)
+    {
+        $this->container['downgrade_product_id'] = $downgrade_product_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_downgrade_cancellation
+     *
+     * @return ?string
+     */
+    public function getIsDowngradeCancellation()
+    {
+        return $this->container['is_downgrade_cancellation'];
+    }
+
+    /**
+     * Sets is_downgrade_cancellation
+     *
+     * @param ?string $is_downgrade_cancellation 
+     *
+     * @return $this
+     */
+    public function setIsDowngradeCancellation($is_downgrade_cancellation)
+    {
+        $this->container['is_downgrade_cancellation'] = $is_downgrade_cancellation;
+
+        return $this;
+    }
 
     /**
      * Gets product_id

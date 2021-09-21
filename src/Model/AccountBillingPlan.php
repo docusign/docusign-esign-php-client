@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -38,7 +39,8 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @description Contains information about an account billing plan.
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AccountBillingPlan implements ModelInterface, ArrayAccess
@@ -79,6 +81,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'plan_id' => '?string',
         'plan_name' => '?string',
         'plan_start_date' => '?string',
+        'product_id' => '?string',
         'renewal_date' => '?string',
         'renewal_status' => '?string',
         'seat_discounts' => '\DocuSign\eSign\Model\SeatDiscount[]',
@@ -114,6 +117,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'plan_id' => null,
         'plan_name' => null,
         'plan_start_date' => null,
+        'product_id' => null,
         'renewal_date' => null,
         'renewal_status' => null,
         'seat_discounts' => null,
@@ -170,6 +174,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'plan_id' => 'planId',
         'plan_name' => 'planName',
         'plan_start_date' => 'planStartDate',
+        'product_id' => 'productId',
         'renewal_date' => 'renewalDate',
         'renewal_status' => 'renewalStatus',
         'seat_discounts' => 'seatDiscounts',
@@ -205,6 +210,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'plan_id' => 'setPlanId',
         'plan_name' => 'setPlanName',
         'plan_start_date' => 'setPlanStartDate',
+        'product_id' => 'setProductId',
         'renewal_date' => 'setRenewalDate',
         'renewal_status' => 'setRenewalStatus',
         'seat_discounts' => 'setSeatDiscounts',
@@ -240,6 +246,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'plan_id' => 'getPlanId',
         'plan_name' => 'getPlanName',
         'plan_start_date' => 'getPlanStartDate',
+        'product_id' => 'getProductId',
         'renewal_date' => 'getRenewalDate',
         'renewal_status' => 'getRenewalStatus',
         'seat_discounts' => 'getSeatDiscounts',
@@ -329,6 +336,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         $this->container['plan_id'] = isset($data['plan_id']) ? $data['plan_id'] : null;
         $this->container['plan_name'] = isset($data['plan_name']) ? $data['plan_name'] : null;
         $this->container['plan_start_date'] = isset($data['plan_start_date']) ? $data['plan_start_date'] : null;
+        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
         $this->container['renewal_date'] = isset($data['renewal_date']) ? $data['renewal_date'] : null;
         $this->container['renewal_status'] = isset($data['renewal_status']) ? $data['renewal_status'] : null;
         $this->container['seat_discounts'] = isset($data['seat_discounts']) ? $data['seat_discounts'] : null;
@@ -861,6 +869,30 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     public function setPlanStartDate($plan_start_date)
     {
         $this->container['plan_start_date'] = $plan_start_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_id
+     *
+     * @return ?string
+     */
+    public function getProductId()
+    {
+        return $this->container['product_id'];
+    }
+
+    /**
+     * Sets product_id
+     *
+     * @param ?string $product_id 
+     *
+     * @return $this
+     */
+    public function setProductId($product_id)
+    {
+        $this->container['product_id'] = $product_id;
 
         return $this;
     }

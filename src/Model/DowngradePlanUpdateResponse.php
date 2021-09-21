@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,7 +38,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category    Class
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
@@ -65,6 +67,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
         'downgrade_plan_name' => '?string',
         'downgrade_request_status' => '?string',
         'message' => '?string',
+        'product_id' => '?string',
         'promo_code' => '?string',
         'sale_discount' => '?string',
         'sale_discount_periods' => '?string',
@@ -85,6 +88,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
         'downgrade_plan_name' => null,
         'downgrade_request_status' => null,
         'message' => null,
+        'product_id' => null,
         'promo_code' => null,
         'sale_discount' => null,
         'sale_discount_periods' => null,
@@ -126,6 +130,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
         'downgrade_plan_name' => 'downgradePlanName',
         'downgrade_request_status' => 'downgradeRequestStatus',
         'message' => 'message',
+        'product_id' => 'productId',
         'promo_code' => 'promoCode',
         'sale_discount' => 'saleDiscount',
         'sale_discount_periods' => 'saleDiscountPeriods',
@@ -146,6 +151,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
         'downgrade_plan_name' => 'setDowngradePlanName',
         'downgrade_request_status' => 'setDowngradeRequestStatus',
         'message' => 'setMessage',
+        'product_id' => 'setProductId',
         'promo_code' => 'setPromoCode',
         'sale_discount' => 'setSaleDiscount',
         'sale_discount_periods' => 'setSaleDiscountPeriods',
@@ -166,6 +172,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
         'downgrade_plan_name' => 'getDowngradePlanName',
         'downgrade_request_status' => 'getDowngradeRequestStatus',
         'message' => 'getMessage',
+        'product_id' => 'getProductId',
         'promo_code' => 'getPromoCode',
         'sale_discount' => 'getSaleDiscount',
         'sale_discount_periods' => 'getSaleDiscountPeriods',
@@ -240,6 +247,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
         $this->container['downgrade_plan_name'] = isset($data['downgrade_plan_name']) ? $data['downgrade_plan_name'] : null;
         $this->container['downgrade_request_status'] = isset($data['downgrade_request_status']) ? $data['downgrade_request_status'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
         $this->container['promo_code'] = isset($data['promo_code']) ? $data['promo_code'] : null;
         $this->container['sale_discount'] = isset($data['sale_discount']) ? $data['sale_discount'] : null;
         $this->container['sale_discount_periods'] = isset($data['sale_discount_periods']) ? $data['sale_discount_periods'] : null;
@@ -458,6 +466,30 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_id
+     *
+     * @return ?string
+     */
+    public function getProductId()
+    {
+        return $this->container['product_id'];
+    }
+
+    /**
+     * Sets product_id
+     *
+     * @param ?string $product_id 
+     *
+     * @return $this
+     */
+    public function setProductId($product_id)
+    {
+        $this->container['product_id'] = $product_id;
 
         return $this;
     }
