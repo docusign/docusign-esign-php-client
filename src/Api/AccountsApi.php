@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -32,6 +33,15 @@ declare(strict_types=1);
 namespace DocuSign\eSign\Api\AccountsApi;
 
 
+/**
+ * CreateOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class CreateOptions
 {
     /**
@@ -42,6 +52,7 @@ class CreateOptions
 
     /**
      * Gets preview_billing_plan
+     *
      * @return ?string
      */
     public function getPreviewBillingPlan(): ?string
@@ -52,6 +63,7 @@ class CreateOptions
     /**
      * Sets preview_billing_plan
      * @param ?string $preview_billing_plan When set to **true**, creates the account using a preview billing plan.
+     *
      * @return self
      */
     public function setPreviewBillingPlan(?string $preview_billing_plan): self
@@ -62,6 +74,15 @@ class CreateOptions
 }
 
 
+/**
+ * CreateCustomFieldOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class CreateCustomFieldOptions
 {
     /**
@@ -72,6 +93,7 @@ class CreateCustomFieldOptions
 
     /**
      * Gets apply_to_templates
+     *
      * @return ?string
      */
     public function getApplyToTemplates(): ?string
@@ -82,6 +104,7 @@ class CreateCustomFieldOptions
     /**
      * Sets apply_to_templates
      * @param ?string $apply_to_templates 
+     *
      * @return self
      */
     public function setApplyToTemplates(?string $apply_to_templates): self
@@ -92,6 +115,15 @@ class CreateCustomFieldOptions
 }
 
 
+/**
+ * CreatePermissionProfileOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class CreatePermissionProfileOptions
 {
     /**
@@ -102,6 +134,7 @@ class CreatePermissionProfileOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -112,6 +145,7 @@ class CreatePermissionProfileOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -122,6 +156,15 @@ class CreatePermissionProfileOptions
 }
 
 
+/**
+ * DeleteCustomFieldOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class DeleteCustomFieldOptions
 {
     /**
@@ -132,6 +175,7 @@ class DeleteCustomFieldOptions
 
     /**
      * Gets apply_to_templates
+     *
      * @return ?string
      */
     public function getApplyToTemplates(): ?string
@@ -142,6 +186,7 @@ class DeleteCustomFieldOptions
     /**
      * Sets apply_to_templates
      * @param ?string $apply_to_templates 
+     *
      * @return self
      */
     public function setApplyToTemplates(?string $apply_to_templates): self
@@ -152,6 +197,15 @@ class DeleteCustomFieldOptions
 }
 
 
+/**
+ * DeletePermissionProfileOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class DeletePermissionProfileOptions
 {
     /**
@@ -162,6 +216,7 @@ class DeletePermissionProfileOptions
 
     /**
      * Gets move_users_to
+     *
      * @return ?string
      */
     public function getMoveUsersTo(): ?string
@@ -172,6 +227,7 @@ class DeletePermissionProfileOptions
     /**
      * Sets move_users_to
      * @param ?string $move_users_to 
+     *
      * @return self
      */
     public function setMoveUsersTo(?string $move_users_to): self
@@ -182,6 +238,15 @@ class DeletePermissionProfileOptions
 }
 
 
+/**
+ * GetAccountInformationOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetAccountInformationOptions
 {
     /**
@@ -192,6 +257,7 @@ class GetAccountInformationOptions
 
     /**
      * Gets include_account_settings
+     *
      * @return ?string
      */
     public function getIncludeAccountSettings(): ?string
@@ -202,6 +268,7 @@ class GetAccountInformationOptions
     /**
      * Sets include_account_settings
      * @param ?string $include_account_settings When set to **true**, includes the account settings for the account in the response.
+     *
      * @return self
      */
     public function setIncludeAccountSettings(?string $include_account_settings): self
@@ -212,6 +279,15 @@ class GetAccountInformationOptions
 }
 
 
+/**
+ * GetBillingChargesOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetBillingChargesOptions
 {
     /**
@@ -222,6 +298,7 @@ class GetBillingChargesOptions
 
     /**
      * Gets include_charges
+     *
      * @return ?string
      */
     public function getIncludeCharges(): ?string
@@ -232,6 +309,7 @@ class GetBillingChargesOptions
     /**
      * Sets include_charges
      * @param ?string $include_charges Specifies which billing charges to return. Valid values are:  * envelopes * seats
+     *
      * @return self
      */
     public function setIncludeCharges(?string $include_charges): self
@@ -242,6 +320,15 @@ class GetBillingChargesOptions
 }
 
 
+/**
+ * GetBrandOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetBrandOptions
 {
     /**
@@ -252,6 +339,7 @@ class GetBrandOptions
 
     /**
      * Gets include_external_references
+     *
      * @return ?string
      */
     public function getIncludeExternalReferences(): ?string
@@ -262,6 +350,7 @@ class GetBrandOptions
     /**
      * Sets include_external_references
      * @param ?string $include_external_references 
+     *
      * @return self
      */
     public function setIncludeExternalReferences(?string $include_external_references): self
@@ -277,6 +366,7 @@ class GetBrandOptions
 
     /**
      * Gets include_logos
+     *
      * @return ?string
      */
     public function getIncludeLogos(): ?string
@@ -287,6 +377,7 @@ class GetBrandOptions
     /**
      * Sets include_logos
      * @param ?string $include_logos 
+     *
      * @return self
      */
     public function setIncludeLogos(?string $include_logos): self
@@ -297,6 +388,15 @@ class GetBrandOptions
 }
 
 
+/**
+ * GetBrandResourcesByContentTypeOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetBrandResourcesByContentTypeOptions
 {
     /**
@@ -307,6 +407,7 @@ class GetBrandResourcesByContentTypeOptions
 
     /**
      * Gets langcode
+     *
      * @return ?string
      */
     public function getLangcode(): ?string
@@ -317,6 +418,7 @@ class GetBrandResourcesByContentTypeOptions
     /**
      * Sets langcode
      * @param ?string $langcode 
+     *
      * @return self
      */
     public function setLangcode(?string $langcode): self
@@ -332,6 +434,7 @@ class GetBrandResourcesByContentTypeOptions
 
     /**
      * Gets return_master
+     *
      * @return ?string
      */
     public function getReturnMaster(): ?string
@@ -342,6 +445,7 @@ class GetBrandResourcesByContentTypeOptions
     /**
      * Sets return_master
      * @param ?string $return_master 
+     *
      * @return self
      */
     public function setReturnMaster(?string $return_master): self
@@ -352,6 +456,15 @@ class GetBrandResourcesByContentTypeOptions
 }
 
 
+/**
+ * GetConsumerDisclosureDefaultOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetConsumerDisclosureDefaultOptions
 {
     /**
@@ -362,6 +475,7 @@ class GetConsumerDisclosureDefaultOptions
 
     /**
      * Gets lang_code
+     *
      * @return ?string
      */
     public function getLangCode(): ?string
@@ -372,6 +486,7 @@ class GetConsumerDisclosureDefaultOptions
     /**
      * Sets lang_code
      * @param ?string $lang_code Specifies the language used in the response. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).  Additionally, the value can be set to `browser` to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     *
      * @return self
      */
     public function setLangCode(?string $lang_code): self
@@ -382,6 +497,15 @@ class GetConsumerDisclosureDefaultOptions
 }
 
 
+/**
+ * GetPermissionProfileOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetPermissionProfileOptions
 {
     /**
@@ -392,6 +516,7 @@ class GetPermissionProfileOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -402,6 +527,7 @@ class GetPermissionProfileOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -412,6 +538,15 @@ class GetPermissionProfileOptions
 }
 
 
+/**
+ * ListBrandsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListBrandsOptions
 {
     /**
@@ -422,6 +557,7 @@ class ListBrandsOptions
 
     /**
      * Gets exclude_distributor_brand
+     *
      * @return ?string
      */
     public function getExcludeDistributorBrand(): ?string
@@ -432,6 +568,7 @@ class ListBrandsOptions
     /**
      * Sets exclude_distributor_brand
      * @param ?string $exclude_distributor_brand When set to **true**, excludes distributor brand information from the response set.
+     *
      * @return self
      */
     public function setExcludeDistributorBrand(?string $exclude_distributor_brand): self
@@ -447,6 +584,7 @@ class ListBrandsOptions
 
     /**
      * Gets include_logos
+     *
      * @return ?string
      */
     public function getIncludeLogos(): ?string
@@ -457,6 +595,7 @@ class ListBrandsOptions
     /**
      * Sets include_logos
      * @param ?string $include_logos When set to **true**, returns the logos associated with the brand.
+     *
      * @return self
      */
     public function setIncludeLogos(?string $include_logos): self
@@ -467,6 +606,15 @@ class ListBrandsOptions
 }
 
 
+/**
+ * ListPermissionsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListPermissionsOptions
 {
     /**
@@ -477,6 +625,7 @@ class ListPermissionsOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -487,6 +636,7 @@ class ListPermissionsOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -497,6 +647,15 @@ class ListPermissionsOptions
 }
 
 
+/**
+ * ListRecipientNamesByEmailOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListRecipientNamesByEmailOptions
 {
     /**
@@ -507,6 +666,7 @@ class ListRecipientNamesByEmailOptions
 
     /**
      * Gets email
+     *
      * @return ?string
      */
     public function getEmail(): ?string
@@ -517,6 +677,7 @@ class ListRecipientNamesByEmailOptions
     /**
      * Sets email
      * @param ?string $email The email address for the user
+     *
      * @return self
      */
     public function setEmail(?string $email): self
@@ -527,6 +688,15 @@ class ListRecipientNamesByEmailOptions
 }
 
 
+/**
+ * ListSharedAccessOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListSharedAccessOptions
 {
     /**
@@ -537,6 +707,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -547,6 +718,7 @@ class ListSharedAccessOptions
     /**
      * Sets count
      * @param ?string $count Specifies maximum number of results included in the response. If no value is specified, this defaults to 1000.
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -562,6 +734,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets envelopes_not_shared_user_status
+     *
      * @return ?string
      */
     public function getEnvelopesNotSharedUserStatus(): ?string
@@ -572,6 +745,7 @@ class ListSharedAccessOptions
     /**
      * Sets envelopes_not_shared_user_status
      * @param ?string $envelopes_not_shared_user_status 
+     *
      * @return self
      */
     public function setEnvelopesNotSharedUserStatus(?string $envelopes_not_shared_user_status): self
@@ -587,6 +761,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets folder_ids
+     *
      * @return ?string
      */
     public function getFolderIds(): ?string
@@ -597,6 +772,7 @@ class ListSharedAccessOptions
     /**
      * Sets folder_ids
      * @param ?string $folder_ids 
+     *
      * @return self
      */
     public function setFolderIds(?string $folder_ids): self
@@ -612,6 +788,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets item_type
+     *
      * @return ?string
      */
     public function getItemType(): ?string
@@ -622,6 +799,7 @@ class ListSharedAccessOptions
     /**
      * Sets item_type
      * @param ?string $item_type Specifies the type of shared item being requested. The accepted values are: -envelopes: returns information about envelope sharing between users.
+     *
      * @return self
      */
     public function setItemType(?string $item_type): self
@@ -637,6 +815,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets search_text
+     *
      * @return ?string
      */
     public function getSearchText(): ?string
@@ -647,6 +826,7 @@ class ListSharedAccessOptions
     /**
      * Sets search_text
      * @param ?string $search_text This can be used to filter user names in the response. The wild-card '*' (asterisk) can be used around the string.
+     *
      * @return self
      */
     public function setSearchText(?string $search_text): self
@@ -662,6 +842,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets shared
+     *
      * @return ?string
      */
     public function getShared(): ?string
@@ -672,6 +853,7 @@ class ListSharedAccessOptions
     /**
      * Sets shared
      * @param ?string $shared Specifies which users should be included in the response. Multiple values can be used in the query by using a comma separated list of shared values. If the requestor does not have account administrator privileges, the shared_to value is used. Requestors that do not have account administrator privileges can only use the shared_to, any other setting will result in an error. The accepted values are:  -not_shared: Returns account users that the specified item type is not being shared with and that are not sharing the specified item type with the user.  User X (Share) X Account user  -shared_to: Returns account users that the specified item type is not being shared with and who are sharing the specified item type with the user (only shared to the user).  User X (Share) Account user  -shared_from: Returns account users that the specified item type is being shared with and who are not sharing the specified item type with the user (only shared from the user).  User (Share) >> Account user  -shared_to_and_from: Returns account users that the specified item type is being shared with and who are sharing the specified item type with the user.  User << (Share) >> Account user
+     *
      * @return self
      */
     public function setShared(?string $shared): self
@@ -687,6 +869,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -697,6 +880,7 @@ class ListSharedAccessOptions
     /**
      * Sets start_position
      * @param ?string $start_position If the response set exceeds Count, this can be used to specify that the method should return users starting at the specified index. The first index is 0, and should be used in the first GET call. Typically this number is a multiple of Count. If no value is specified, this defaults to be 0.
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -712,6 +896,7 @@ class ListSharedAccessOptions
 
     /**
      * Gets user_ids
+     *
      * @return ?string
      */
     public function getUserIds(): ?string
@@ -722,6 +907,7 @@ class ListSharedAccessOptions
     /**
      * Sets user_ids
      * @param ?string $user_ids A comma separated list of userIds for whom the shared item information is being requested.
+     *
      * @return self
      */
     public function setUserIds(?string $user_ids): self
@@ -732,6 +918,15 @@ class ListSharedAccessOptions
 }
 
 
+/**
+ * UpdateConsumerDisclosureOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateConsumerDisclosureOptions
 {
     /**
@@ -742,6 +937,7 @@ class UpdateConsumerDisclosureOptions
 
     /**
      * Gets include_metadata
+     *
      * @return ?string
      */
     public function getIncludeMetadata(): ?string
@@ -752,6 +948,7 @@ class UpdateConsumerDisclosureOptions
     /**
      * Sets include_metadata
      * @param ?string $include_metadata 
+     *
      * @return self
      */
     public function setIncludeMetadata(?string $include_metadata): self
@@ -762,6 +959,15 @@ class UpdateConsumerDisclosureOptions
 }
 
 
+/**
+ * UpdateCustomFieldOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateCustomFieldOptions
 {
     /**
@@ -772,6 +978,7 @@ class UpdateCustomFieldOptions
 
     /**
      * Gets apply_to_templates
+     *
      * @return ?string
      */
     public function getApplyToTemplates(): ?string
@@ -782,6 +989,7 @@ class UpdateCustomFieldOptions
     /**
      * Sets apply_to_templates
      * @param ?string $apply_to_templates 
+     *
      * @return self
      */
     public function setApplyToTemplates(?string $apply_to_templates): self
@@ -792,6 +1000,15 @@ class UpdateCustomFieldOptions
 }
 
 
+/**
+ * UpdatePermissionProfileOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdatePermissionProfileOptions
 {
     /**
@@ -802,6 +1019,7 @@ class UpdatePermissionProfileOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -812,6 +1030,7 @@ class UpdatePermissionProfileOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -822,6 +1041,15 @@ class UpdatePermissionProfileOptions
 }
 
 
+/**
+ * UpdateSharedAccessOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateSharedAccessOptions
 {
     /**
@@ -832,6 +1060,7 @@ class UpdateSharedAccessOptions
 
     /**
      * Gets item_type
+     *
      * @return ?string
      */
     public function getItemType(): ?string
@@ -842,6 +1071,7 @@ class UpdateSharedAccessOptions
     /**
      * Sets item_type
      * @param ?string $item_type 
+     *
      * @return self
      */
     public function setItemType(?string $item_type): self
@@ -857,6 +1087,7 @@ class UpdateSharedAccessOptions
 
     /**
      * Gets user_ids
+     *
      * @return ?string
      */
     public function getUserIds(): ?string
@@ -867,6 +1098,7 @@ class UpdateSharedAccessOptions
     /**
      * Sets user_ids
      * @param ?string $user_ids 
+     *
      * @return self
      */
     public function setUserIds(?string $user_ids): self
@@ -890,7 +1122,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class AccountsApi
@@ -906,6 +1139,7 @@ class AccountsApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -939,9 +1173,9 @@ class AccountsApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -961,7 +1195,8 @@ class AccountsApi
      * Creates new accounts.
      *
      * @param \DocuSign\eSign\Model\NewAccountDefinition $new_account_definition  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\CreateOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\CreateOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NewAccountSummary
      */
@@ -977,7 +1212,8 @@ class AccountsApi
      * Creates new accounts.
      *
      * @param \DocuSign\eSign\Model\NewAccountDefinition $new_account_definition  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\CreateOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\CreateOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NewAccountSummary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1053,6 +1289,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account id GUID.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
@@ -1069,6 +1306,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account id GUID.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1145,7 +1383,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -1162,7 +1401,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1246,7 +1486,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
@@ -1263,7 +1504,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1346,6 +1588,7 @@ class AccountsApi
      * Deletes the specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -1361,6 +1604,7 @@ class AccountsApi
      * Deletes the specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1428,6 +1672,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -1444,6 +1689,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1520,6 +1766,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $logo_type One of **Primary**, **Secondary** or **Email**.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -1537,6 +1784,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $logo_type One of **Primary**, **Secondary** or **Email**.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1620,6 +1868,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
@@ -1636,6 +1885,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BrandsRequest $brands_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1713,6 +1963,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_part 
      * @param \DocuSign\eSign\Model\CaptiveRecipientInformation $captive_recipient_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CaptiveRecipientInformation
      */
@@ -1730,6 +1981,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_part 
      * @param \DocuSign\eSign\Model\CaptiveRecipientInformation $captive_recipient_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CaptiveRecipientInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1814,7 +2066,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $custom_field_id 
-     * @param  \DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -1831,7 +2084,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $custom_field_id 
-     * @param  \DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1913,6 +2167,7 @@ class AccountsApi
      * Deletes configuration information for the eNote eOriginal integration.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -1928,6 +2183,7 @@ class AccountsApi
      * Deletes configuration information for the eNote eOriginal integration.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1995,7 +2251,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $permission_profile_id 
-     * @param  \DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -2012,7 +2269,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $permission_profile_id 
-     * @param  \DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2094,6 +2352,7 @@ class AccountsApi
      * Get the list of identity verification options for an account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountIdentityVerificationResponse
      */
@@ -2109,6 +2368,7 @@ class AccountsApi
      * Get the list of identity verification options for an account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountIdentityVerificationResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2179,7 +2439,8 @@ class AccountsApi
      * Retrieves the account information for the specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountInformation
      */
@@ -2195,7 +2456,8 @@ class AccountsApi
      * Retrieves the account information for the specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2273,6 +2535,7 @@ class AccountsApi
      * Returns tab settings list for specified account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabAccountSettings
      */
@@ -2288,6 +2551,7 @@ class AccountsApi
      * Returns tab settings list for specified account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabAccountSettings, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2358,6 +2622,7 @@ class AccountsApi
      * Get all payment gateway account for the provided accountId
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PaymentGatewayAccountsInfo
      */
@@ -2373,6 +2638,7 @@ class AccountsApi
      * Get all payment gateway account for the provided accountId
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PaymentGatewayAccountsInfo, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2443,7 +2709,8 @@ class AccountsApi
      * Gets list of recurring and usage charges for the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingChargeResponse
      */
@@ -2459,7 +2726,8 @@ class AccountsApi
      * Gets list of recurring and usage charges for the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingChargeResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2538,7 +2806,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
@@ -2555,7 +2824,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2645,6 +2915,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -2661,6 +2932,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2737,6 +3009,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $logo_type One of **Primary**, **Secondary** or **Email**.
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -2754,6 +3027,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $logo_type One of **Primary**, **Secondary** or **Email**.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2841,6 +3115,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandResourcesList
      */
@@ -2857,6 +3132,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandResourcesList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2937,7 +3213,8 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $resource_content_type 
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -2955,7 +3232,8 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $resource_content_type 
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3048,7 +3326,8 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
@@ -3064,7 +3343,8 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3143,7 +3423,8 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure for the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
@@ -3159,7 +3440,8 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure for the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3237,6 +3519,7 @@ class AccountsApi
      * Returns the configuration information for the eNote eOriginal integration.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ENoteConfiguration
      */
@@ -3252,6 +3535,7 @@ class AccountsApi
      * Returns the configuration information for the eNote eOriginal integration.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ENoteConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3322,6 +3606,7 @@ class AccountsApi
      * Get the password rules
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountPasswordRules
      */
@@ -3337,6 +3622,7 @@ class AccountsApi
      * Get the password rules
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3406,6 +3692,7 @@ class AccountsApi
      *
      * Get membership account password rules
      *
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserPasswordRules
      */
@@ -3419,6 +3706,7 @@ class AccountsApi
      * Operation getPasswordRules_0WithHttpInfo
      *
      * Get membership account password rules
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserPasswordRules, HTTP status code, HTTP response headers (array of strings)
@@ -3483,7 +3771,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $permission_profile_id 
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
@@ -3500,7 +3789,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $permission_profile_id 
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3585,6 +3875,7 @@ class AccountsApi
      *
      * Retrieves the account provisioning information for the account.
      *
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ProvisioningInformation
      */
@@ -3598,6 +3889,7 @@ class AccountsApi
      * Operation getProvisioningWithHttpInfo
      *
      * Retrieves the account provisioning information for the account.
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ProvisioningInformation, HTTP status code, HTTP response headers (array of strings)
@@ -3661,6 +3953,7 @@ class AccountsApi
      * Gets list of supported languages for recipient language setting.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SupportedLanguages
      */
@@ -3676,6 +3969,7 @@ class AccountsApi
      * Gets list of supported languages for recipient language setting.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SupportedLanguages, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3746,6 +4040,7 @@ class AccountsApi
      * Get watermark information.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
@@ -3761,6 +4056,7 @@ class AccountsApi
      * Get watermark information.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3832,6 +4128,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
@@ -3848,6 +4145,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3923,7 +4221,8 @@ class AccountsApi
      * Gets a list of brand profiles.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListBrandsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListBrandsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
@@ -3939,7 +4238,8 @@ class AccountsApi
      * Gets a list of brand profiles.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListBrandsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListBrandsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4020,6 +4320,7 @@ class AccountsApi
      * Gets a list of custom fields associated with the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -4035,6 +4336,7 @@ class AccountsApi
      * Gets a list of custom fields associated with the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4105,7 +4407,8 @@ class AccountsApi
      * Gets a list of permission profiles.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfileInformation
      */
@@ -4121,7 +4424,8 @@ class AccountsApi
      * Gets a list of permission profiles.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfileInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4199,7 +4503,8 @@ class AccountsApi
      * Gets recipient names associated with an email address.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientNamesResponse
      */
@@ -4215,7 +4520,8 @@ class AccountsApi
      * Gets recipient names associated with an email address.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientNamesResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4293,6 +4599,7 @@ class AccountsApi
      * Gets account settings information.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSettingsInformation
      */
@@ -4308,6 +4615,7 @@ class AccountsApi
      * Gets account settings information.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4378,7 +4686,8 @@ class AccountsApi
      * Reserved: Gets the shared item status for one or more users.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
@@ -4394,7 +4703,8 @@ class AccountsApi
      * Reserved: Gets the shared item status for one or more users.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4493,6 +4803,7 @@ class AccountsApi
      * Returns Account available signature providers for specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignatureProviders
      */
@@ -4508,6 +4819,7 @@ class AccountsApi
      * Returns Account available signature providers for specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignatureProviders, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4578,6 +4890,7 @@ class AccountsApi
      * Gets a list of unsupported file types.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FileTypeList
      */
@@ -4593,6 +4906,7 @@ class AccountsApi
      * Gets a list of unsupported file types.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FileTypeList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4664,6 +4978,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabAccountSettings $tab_account_settings  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TabAccountSettings
      */
@@ -4680,6 +4995,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\TabAccountSettings $tab_account_settings  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TabAccountSettings, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4757,6 +5073,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
@@ -4774,6 +5091,7 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4860,6 +5178,7 @@ class AccountsApi
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $logo_type One of **Primary**, **Secondary** or **Email**.
      * @param ?string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -4878,6 +5197,7 @@ class AccountsApi
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $logo_type One of **Primary**, **Secondary** or **Email**.
      * @param ?string $logo_file_bytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4972,6 +5292,7 @@ class AccountsApi
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $resource_content_type 
     * @param \SplFileObject $file_xml Brand resource XML file. (required)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandResources
      */
@@ -4990,6 +5311,7 @@ class AccountsApi
      * @param ?string $brand_id The unique identifier of a brand.
      * @param ?string $resource_content_type 
     * @param \SplFileObject $file_xml Brand resource XML file. (required)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandResources, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5090,9 +5412,10 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
@@ -5108,9 +5431,10 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5203,7 +5527,8 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $custom_field_id 
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -5221,7 +5546,8 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $custom_field_id 
      * @param \DocuSign\eSign\Model\CustomField $custom_field  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5313,6 +5639,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ENoteConfiguration $e_note_configuration  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ENoteConfiguration
      */
@@ -5329,6 +5656,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ENoteConfiguration $e_note_configuration  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ENoteConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5405,6 +5733,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountPasswordRules
      */
@@ -5421,6 +5750,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountPasswordRules $account_password_rules  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountPasswordRules, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5498,7 +5828,8 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $permission_profile_id 
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
@@ -5516,7 +5847,8 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $permission_profile_id 
      * @param \DocuSign\eSign\Model\PermissionProfile $permission_profile  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5608,6 +5940,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -5624,6 +5957,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5696,7 +6030,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSharedAccess $account_shared_access  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
@@ -5713,7 +6048,8 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\AccountSharedAccess $account_shared_access  (optional)
-     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5800,6 +6136,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Watermark
      */
@@ -5816,6 +6153,7 @@ class AccountsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Watermark $watermark  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Watermark, HTTP status code, HTTP response headers (array of strings)
      */

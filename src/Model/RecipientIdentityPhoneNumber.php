@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,7 +38,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category    Class
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
@@ -58,6 +60,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'country_code' => '?string',
+        'country_code_lock' => '?string',
         'extension' => '?string',
         'number' => '?string'
     ];
@@ -69,6 +72,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'country_code' => null,
+        'country_code_lock' => null,
         'extension' => null,
         'number' => null
     ];
@@ -101,6 +105,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'country_code' => 'countryCode',
+        'country_code_lock' => 'countryCodeLock',
         'extension' => 'extension',
         'number' => 'number'
     ];
@@ -112,6 +117,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'country_code' => 'setCountryCode',
+        'country_code_lock' => 'setCountryCodeLock',
         'extension' => 'setExtension',
         'number' => 'setNumber'
     ];
@@ -123,6 +129,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'country_code' => 'getCountryCode',
+        'country_code_lock' => 'getCountryCodeLock',
         'extension' => 'getExtension',
         'number' => 'getNumber'
     ];
@@ -188,6 +195,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
+        $this->container['country_code_lock'] = isset($data['country_code_lock']) ? $data['country_code_lock'] : null;
         $this->container['extension'] = isset($data['extension']) ? $data['extension'] : null;
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
     }
@@ -236,6 +244,30 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     public function setCountryCode($country_code)
     {
         $this->container['country_code'] = $country_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_code_lock
+     *
+     * @return ?string
+     */
+    public function getCountryCodeLock()
+    {
+        return $this->container['country_code_lock'];
+    }
+
+    /**
+     * Sets country_code_lock
+     *
+     * @param ?string $country_code_lock 
+     *
+     * @return $this
+     */
+    public function setCountryCodeLock($country_code_lock)
+    {
+        $this->container['country_code_lock'] = $country_code_lock;
 
         return $this;
     }

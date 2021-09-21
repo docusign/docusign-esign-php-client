@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -38,7 +39,8 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @description A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved.
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess

@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -32,6 +33,15 @@ declare(strict_types=1);
 namespace DocuSign\eSign\Api\FoldersApi;
 
 
+/**
+ * ListOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListOptions
 {
     /**
@@ -42,6 +52,7 @@ class ListOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -52,6 +63,7 @@ class ListOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -67,6 +79,7 @@ class ListOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -77,6 +90,7 @@ class ListOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -92,6 +106,7 @@ class ListOptions
 
     /**
      * Gets template
+     *
      * @return ?string
      */
     public function getTemplate(): ?string
@@ -102,6 +117,7 @@ class ListOptions
     /**
      * Sets template
      * @param ?string $template Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
+     *
      * @return self
      */
     public function setTemplate(?string $template): self
@@ -117,6 +133,7 @@ class ListOptions
 
     /**
      * Gets user_filter
+     *
      * @return ?string
      */
     public function getUserFilter(): ?string
@@ -127,6 +144,7 @@ class ListOptions
     /**
      * Sets user_filter
      * @param ?string $user_filter 
+     *
      * @return self
      */
     public function setUserFilter(?string $user_filter): self
@@ -137,6 +155,15 @@ class ListOptions
 }
 
 
+/**
+ * ListItemsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListItemsOptions
 {
     /**
@@ -147,6 +174,7 @@ class ListItemsOptions
 
     /**
      * Gets from_date
+     *
      * @return ?string
      */
     public function getFromDate(): ?string
@@ -157,6 +185,7 @@ class ListItemsOptions
     /**
      * Sets from_date
      * @param ?string $from_date Only return items on or after this date. If no value is provided, the default search is the previous 30 days.
+     *
      * @return self
      */
     public function setFromDate(?string $from_date): self
@@ -172,6 +201,7 @@ class ListItemsOptions
 
     /**
      * Gets owner_email
+     *
      * @return ?string
      */
     public function getOwnerEmail(): ?string
@@ -182,6 +212,7 @@ class ListItemsOptions
     /**
      * Sets owner_email
      * @param ?string $owner_email The email of the folder owner.
+     *
      * @return self
      */
     public function setOwnerEmail(?string $owner_email): self
@@ -197,6 +228,7 @@ class ListItemsOptions
 
     /**
      * Gets owner_name
+     *
      * @return ?string
      */
     public function getOwnerName(): ?string
@@ -207,6 +239,7 @@ class ListItemsOptions
     /**
      * Sets owner_name
      * @param ?string $owner_name The name of the folder owner.
+     *
      * @return self
      */
     public function setOwnerName(?string $owner_name): self
@@ -222,6 +255,7 @@ class ListItemsOptions
 
     /**
      * Gets search_text
+     *
      * @return ?string
      */
     public function getSearchText(): ?string
@@ -232,6 +266,7 @@ class ListItemsOptions
     /**
      * Sets search_text
      * @param ?string $search_text The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject.
+     *
      * @return self
      */
     public function setSearchText(?string $search_text): self
@@ -247,6 +282,7 @@ class ListItemsOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -257,6 +293,7 @@ class ListItemsOptions
     /**
      * Sets start_position
      * @param ?string $start_position The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0.
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -272,6 +309,7 @@ class ListItemsOptions
 
     /**
      * Gets status
+     *
      * @return ?string
      */
     public function getStatus(): ?string
@@ -282,6 +320,7 @@ class ListItemsOptions
     /**
      * Sets status
      * @param ?string $status The current status of the envelope. If no value is provided, the default search is all/any status.
+     *
      * @return self
      */
     public function setStatus(?string $status): self
@@ -297,6 +336,7 @@ class ListItemsOptions
 
     /**
      * Gets to_date
+     *
      * @return ?string
      */
     public function getToDate(): ?string
@@ -307,6 +347,7 @@ class ListItemsOptions
     /**
      * Sets to_date
      * @param ?string $to_date Only return items up to this date. If no value is provided, the default search is to the current date.
+     *
      * @return self
      */
     public function setToDate(?string $to_date): self
@@ -317,6 +358,15 @@ class ListItemsOptions
 }
 
 
+/**
+ * SearchOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class SearchOptions
 {
     /**
@@ -327,6 +377,7 @@ class SearchOptions
 
     /**
      * Gets all
+     *
      * @return ?string
      */
     public function getAll(): ?string
@@ -337,6 +388,7 @@ class SearchOptions
     /**
      * Sets all
      * @param ?string $all Specifies that all envelopes that match the criteria are returned.
+     *
      * @return self
      */
     public function setAll(?string $all): self
@@ -352,6 +404,7 @@ class SearchOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -362,6 +415,7 @@ class SearchOptions
     /**
      * Sets count
      * @param ?string $count Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -377,6 +431,7 @@ class SearchOptions
 
     /**
      * Gets from_date
+     *
      * @return ?string
      */
     public function getFromDate(): ?string
@@ -387,6 +442,7 @@ class SearchOptions
     /**
      * Sets from_date
      * @param ?string $from_date Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
+     *
      * @return self
      */
     public function setFromDate(?string $from_date): self
@@ -402,6 +458,7 @@ class SearchOptions
 
     /**
      * Gets include_recipients
+     *
      * @return ?string
      */
     public function getIncludeRecipients(): ?string
@@ -412,6 +469,7 @@ class SearchOptions
     /**
      * Sets include_recipients
      * @param ?string $include_recipients When set to **true**, the recipient information is returned in the response.
+     *
      * @return self
      */
     public function setIncludeRecipients(?string $include_recipients): self
@@ -427,6 +485,7 @@ class SearchOptions
 
     /**
      * Gets order
+     *
      * @return ?string
      */
     public function getOrder(): ?string
@@ -437,6 +496,7 @@ class SearchOptions
     /**
      * Sets order
      * @param ?string $order Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order.
+     *
      * @return self
      */
     public function setOrder(?string $order): self
@@ -452,6 +512,7 @@ class SearchOptions
 
     /**
      * Gets order_by
+     *
      * @return ?string
      */
     public function getOrderBy(): ?string
@@ -462,6 +523,7 @@ class SearchOptions
     /**
      * Sets order_by
      * @param ?string $order_by Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
+     *
      * @return self
      */
     public function setOrderBy(?string $order_by): self
@@ -477,6 +539,7 @@ class SearchOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -487,6 +550,7 @@ class SearchOptions
     /**
      * Sets start_position
      * @param ?string $start_position Specifies the the starting location in the result set of the items that are returned.
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -502,6 +566,7 @@ class SearchOptions
 
     /**
      * Gets to_date
+     *
      * @return ?string
      */
     public function getToDate(): ?string
@@ -512,6 +577,7 @@ class SearchOptions
     /**
      * Sets to_date
      * @param ?string $to_date Specifies the end of the date range to return.
+     *
      * @return self
      */
     public function setToDate(?string $to_date): self
@@ -535,7 +601,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class FoldersApi
@@ -551,6 +618,7 @@ class FoldersApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -584,9 +652,9 @@ class FoldersApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -606,7 +674,8 @@ class FoldersApi
      * Gets a list of the folders for the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\FoldersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FoldersResponse
      */
@@ -622,7 +691,8 @@ class FoldersApi
      * Gets a list of the folders for the account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\FoldersApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FoldersResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -710,7 +780,8 @@ class FoldersApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
-     * @param  \DocuSign\eSign\Api\FoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListItemsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemsResponse
      */
@@ -727,7 +798,8 @@ class FoldersApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
-     * @param  \DocuSign\eSign\Api\FoldersApi\ListItemsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\FoldersApi\ListItemsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -833,6 +905,7 @@ class FoldersApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -850,6 +923,7 @@ class FoldersApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param \DocuSign\eSign\Model\FoldersRequest $folders_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -930,7 +1004,8 @@ class FoldersApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-     * @param  \DocuSign\eSign\Api\FoldersApi\SearchOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\FoldersApi\SearchOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemResponse
      */
@@ -947,7 +1022,8 @@ class FoldersApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $search_folder_id Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-     * @param  \DocuSign\eSign\Api\FoldersApi\SearchOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\FoldersApi\SearchOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemResponse, HTTP status code, HTTP response headers (array of strings)
      */

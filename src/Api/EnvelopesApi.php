@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -32,6 +33,15 @@ declare(strict_types=1);
 namespace DocuSign\eSign\Api\EnvelopesApi;
 
 
+/**
+ * CreateEnvelopeOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class CreateEnvelopeOptions
 {
     /**
@@ -42,6 +52,7 @@ class CreateEnvelopeOptions
 
     /**
      * Gets cdse_mode
+     *
      * @return ?string
      */
     public function getCdseMode(): ?string
@@ -52,6 +63,7 @@ class CreateEnvelopeOptions
     /**
      * Sets cdse_mode
      * @param ?string $cdse_mode 
+     *
      * @return self
      */
     public function setCdseMode(?string $cdse_mode): self
@@ -67,6 +79,7 @@ class CreateEnvelopeOptions
 
     /**
      * Gets change_routing_order
+     *
      * @return ?string
      */
     public function getChangeRoutingOrder(): ?string
@@ -77,6 +90,7 @@ class CreateEnvelopeOptions
     /**
      * Sets change_routing_order
      * @param ?string $change_routing_order 
+     *
      * @return self
      */
     public function setChangeRoutingOrder(?string $change_routing_order): self
@@ -92,6 +106,7 @@ class CreateEnvelopeOptions
 
     /**
      * Gets completed_documents_only
+     *
      * @return ?string
      */
     public function getCompletedDocumentsOnly(): ?string
@@ -102,6 +117,7 @@ class CreateEnvelopeOptions
     /**
      * Sets completed_documents_only
      * @param ?string $completed_documents_only If set to true then we want to set the sourceEnvelopeId to indicate that this is a\"forward\" envelope action
+     *
      * @return self
      */
     public function setCompletedDocumentsOnly(?string $completed_documents_only): self
@@ -117,6 +133,7 @@ class CreateEnvelopeOptions
 
     /**
      * Gets merge_roles_on_draft
+     *
      * @return ?string
      */
     public function getMergeRolesOnDraft(): ?string
@@ -127,6 +144,7 @@ class CreateEnvelopeOptions
     /**
      * Sets merge_roles_on_draft
      * @param ?string $merge_roles_on_draft When set to **true**, merges template roles and remove empty recipients when you create an envelope with multiple templates.
+     *
      * @return self
      */
     public function setMergeRolesOnDraft(?string $merge_roles_on_draft): self
@@ -142,6 +160,7 @@ class CreateEnvelopeOptions
 
     /**
      * Gets tab_label_exact_matches
+     *
      * @return ?string
      */
     public function getTabLabelExactMatches(): ?string
@@ -152,6 +171,7 @@ class CreateEnvelopeOptions
     /**
      * Sets tab_label_exact_matches
      * @param ?string $tab_label_exact_matches 
+     *
      * @return self
      */
     public function setTabLabelExactMatches(?string $tab_label_exact_matches): self
@@ -162,6 +182,15 @@ class CreateEnvelopeOptions
 }
 
 
+/**
+ * CreateRecipientOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class CreateRecipientOptions
 {
     /**
@@ -172,6 +201,7 @@ class CreateRecipientOptions
 
     /**
      * Gets resend_envelope
+     *
      * @return ?string
      */
     public function getResendEnvelope(): ?string
@@ -182,6 +212,7 @@ class CreateRecipientOptions
     /**
      * Sets resend_envelope
      * @param ?string $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope's next recipient.
+     *
      * @return self
      */
     public function setResendEnvelope(?string $resend_envelope): self
@@ -192,6 +223,15 @@ class CreateRecipientOptions
 }
 
 
+/**
+ * GetChunkedUploadOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetChunkedUploadOptions
 {
     /**
@@ -202,6 +242,7 @@ class GetChunkedUploadOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -212,6 +253,7 @@ class GetChunkedUploadOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -222,6 +264,15 @@ class GetChunkedUploadOptions
 }
 
 
+/**
+ * GetCommentsTranscriptOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetCommentsTranscriptOptions
 {
     /**
@@ -232,6 +283,7 @@ class GetCommentsTranscriptOptions
 
     /**
      * Gets encoding
+     *
      * @return ?string
      */
     public function getEncoding(): ?string
@@ -242,6 +294,7 @@ class GetCommentsTranscriptOptions
     /**
      * Sets encoding
      * @param ?string $encoding 
+     *
      * @return self
      */
     public function setEncoding(?string $encoding): self
@@ -252,16 +305,26 @@ class GetCommentsTranscriptOptions
 }
 
 
+/**
+ * GetConsumerDisclosureOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetConsumerDisclosureOptions
 {
     /**
-      * $lang_code2 
+      * $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
       * @var ?string
       */
     protected ?string $lang_code2 = null;
 
     /**
      * Gets lang_code2
+     *
      * @return ?string
      */
     public function getLangCode2(): ?string
@@ -271,7 +334,8 @@ class GetConsumerDisclosureOptions
 
     /**
      * Sets lang_code2
-     * @param ?string $lang_code2 
+     * @param ?string $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     *
      * @return self
      */
     public function setLangCode2(?string $lang_code2): self
@@ -282,6 +346,15 @@ class GetConsumerDisclosureOptions
 }
 
 
+/**
+ * GetConsumerDisclosureDefaultOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetConsumerDisclosureDefaultOptions
 {
     /**
@@ -292,6 +365,7 @@ class GetConsumerDisclosureDefaultOptions
 
     /**
      * Gets lang_code
+     *
      * @return ?string
      */
     public function getLangCode(): ?string
@@ -302,6 +376,7 @@ class GetConsumerDisclosureDefaultOptions
     /**
      * Sets lang_code
      * @param ?string $lang_code 
+     *
      * @return self
      */
     public function setLangCode(?string $lang_code): self
@@ -312,6 +387,15 @@ class GetConsumerDisclosureDefaultOptions
 }
 
 
+/**
+ * GetDocumentOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetDocumentOptions
 {
     /**
@@ -322,6 +406,7 @@ class GetDocumentOptions
 
     /**
      * Gets certificate
+     *
      * @return ?string
      */
     public function getCertificate(): ?string
@@ -332,6 +417,7 @@ class GetDocumentOptions
     /**
      * Sets certificate
      * @param ?string $certificate When set to **false**, the envelope signing certificate is removed from the download.
+     *
      * @return self
      */
     public function setCertificate(?string $certificate): self
@@ -347,6 +433,7 @@ class GetDocumentOptions
 
     /**
      * Gets encoding
+     *
      * @return ?string
      */
     public function getEncoding(): ?string
@@ -357,6 +444,7 @@ class GetDocumentOptions
     /**
      * Sets encoding
      * @param ?string $encoding 
+     *
      * @return self
      */
     public function setEncoding(?string $encoding): self
@@ -372,6 +460,7 @@ class GetDocumentOptions
 
     /**
      * Gets encrypt
+     *
      * @return ?string
      */
     public function getEncrypt(): ?string
@@ -382,6 +471,7 @@ class GetDocumentOptions
     /**
      * Sets encrypt
      * @param ?string $encrypt When set to **true**, the PDF bytes returned in the response are encrypted for all the key managers configured on your DocuSign account. The documents can be decrypted with the KeyManager Decrypt Document API.
+     *
      * @return self
      */
     public function setEncrypt(?string $encrypt): self
@@ -397,6 +487,7 @@ class GetDocumentOptions
 
     /**
      * Gets language
+     *
      * @return ?string
      */
     public function getLanguage(): ?string
@@ -407,6 +498,7 @@ class GetDocumentOptions
     /**
      * Sets language
      * @param ?string $language Specifies the language for the Certificate of Completion in the response. The supported languages, with the language value shown in parenthesis, are: Chinese Simplified (zh_CN), , Chinese Traditional (zh_TW), Dutch (nl), English US (en), French (fr), German (de), Italian (it), Japanese (ja), Korean (ko), Portuguese (pt), Portuguese (Brazil) (pt_BR), Russian (ru), Spanish (es).
+     *
      * @return self
      */
     public function setLanguage(?string $language): self
@@ -422,6 +514,7 @@ class GetDocumentOptions
 
     /**
      * Gets recipient_id
+     *
      * @return ?string
      */
     public function getRecipientId(): ?string
@@ -432,6 +525,7 @@ class GetDocumentOptions
     /**
      * Sets recipient_id
      * @param ?string $recipient_id 
+     *
      * @return self
      */
     public function setRecipientId(?string $recipient_id): self
@@ -447,6 +541,7 @@ class GetDocumentOptions
 
     /**
      * Gets show_changes
+     *
      * @return ?string
      */
     public function getShowChanges(): ?string
@@ -457,6 +552,7 @@ class GetDocumentOptions
     /**
      * Sets show_changes
      * @param ?string $show_changes When set to **true**, any changed fields for the returned PDF are highlighted in yellow and optional signatures or initials outlined in red.
+     *
      * @return self
      */
     public function setShowChanges(?string $show_changes): self
@@ -472,6 +568,7 @@ class GetDocumentOptions
 
     /**
      * Gets watermark
+     *
      * @return ?string
      */
     public function getWatermark(): ?string
@@ -482,6 +579,7 @@ class GetDocumentOptions
     /**
      * Sets watermark
      * @param ?string $watermark When set to **true**, the account has the watermark feature enabled, and the envelope is not complete, the watermark for the account is added to the PDF documents. This option can remove the watermark.
+     *
      * @return self
      */
     public function setWatermark(?string $watermark): self
@@ -492,6 +590,15 @@ class GetDocumentOptions
 }
 
 
+/**
+ * GetDocumentPageImageOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetDocumentPageImageOptions
 {
     /**
@@ -502,6 +609,7 @@ class GetDocumentPageImageOptions
 
     /**
      * Gets dpi
+     *
      * @return ?string
      */
     public function getDpi(): ?string
@@ -512,6 +620,7 @@ class GetDocumentPageImageOptions
     /**
      * Sets dpi
      * @param ?string $dpi Sets the dpi for the image.
+     *
      * @return self
      */
     public function setDpi(?string $dpi): self
@@ -527,6 +636,7 @@ class GetDocumentPageImageOptions
 
     /**
      * Gets max_height
+     *
      * @return ?string
      */
     public function getMaxHeight(): ?string
@@ -537,6 +647,7 @@ class GetDocumentPageImageOptions
     /**
      * Sets max_height
      * @param ?string $max_height Sets the maximum height for the page image in pixels. The dpi is recalculated based on this setting.
+     *
      * @return self
      */
     public function setMaxHeight(?string $max_height): self
@@ -552,6 +663,7 @@ class GetDocumentPageImageOptions
 
     /**
      * Gets max_width
+     *
      * @return ?string
      */
     public function getMaxWidth(): ?string
@@ -562,6 +674,7 @@ class GetDocumentPageImageOptions
     /**
      * Sets max_width
      * @param ?string $max_width Sets the maximum width for the page image in pixels. The dpi is recalculated based on this setting.
+     *
      * @return self
      */
     public function setMaxWidth(?string $max_width): self
@@ -577,6 +690,7 @@ class GetDocumentPageImageOptions
 
     /**
      * Gets show_changes
+     *
      * @return ?string
      */
     public function getShowChanges(): ?string
@@ -587,6 +701,7 @@ class GetDocumentPageImageOptions
     /**
      * Sets show_changes
      * @param ?string $show_changes 
+     *
      * @return self
      */
     public function setShowChanges(?string $show_changes): self
@@ -597,6 +712,15 @@ class GetDocumentPageImageOptions
 }
 
 
+/**
+ * GetDocumentTabsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetDocumentTabsOptions
 {
     /**
@@ -607,6 +731,7 @@ class GetDocumentTabsOptions
 
     /**
      * Gets page_numbers
+     *
      * @return ?string
      */
     public function getPageNumbers(): ?string
@@ -617,6 +742,7 @@ class GetDocumentTabsOptions
     /**
      * Sets page_numbers
      * @param ?string $page_numbers 
+     *
      * @return self
      */
     public function setPageNumbers(?string $page_numbers): self
@@ -627,6 +753,15 @@ class GetDocumentTabsOptions
 }
 
 
+/**
+ * GetEnvelopeOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetEnvelopeOptions
 {
     /**
@@ -637,6 +772,7 @@ class GetEnvelopeOptions
 
     /**
      * Gets advanced_update
+     *
      * @return ?string
      */
     public function getAdvancedUpdate(): ?string
@@ -647,6 +783,7 @@ class GetEnvelopeOptions
     /**
      * Sets advanced_update
      * @param ?string $advanced_update When true, envelope information can be added or modified.
+     *
      * @return self
      */
     public function setAdvancedUpdate(?string $advanced_update): self
@@ -662,6 +799,7 @@ class GetEnvelopeOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -672,6 +810,7 @@ class GetEnvelopeOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -682,6 +821,15 @@ class GetEnvelopeOptions
 }
 
 
+/**
+ * GetPagesOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetPagesOptions
 {
     /**
@@ -692,6 +840,7 @@ class GetPagesOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -702,6 +851,7 @@ class GetPagesOptions
     /**
      * Sets count
      * @param ?string $count 
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -717,6 +867,7 @@ class GetPagesOptions
 
     /**
      * Gets dpi
+     *
      * @return ?string
      */
     public function getDpi(): ?string
@@ -727,6 +878,7 @@ class GetPagesOptions
     /**
      * Sets dpi
      * @param ?string $dpi 
+     *
      * @return self
      */
     public function setDpi(?string $dpi): self
@@ -742,6 +894,7 @@ class GetPagesOptions
 
     /**
      * Gets max_height
+     *
      * @return ?string
      */
     public function getMaxHeight(): ?string
@@ -752,6 +905,7 @@ class GetPagesOptions
     /**
      * Sets max_height
      * @param ?string $max_height 
+     *
      * @return self
      */
     public function setMaxHeight(?string $max_height): self
@@ -767,6 +921,7 @@ class GetPagesOptions
 
     /**
      * Gets max_width
+     *
      * @return ?string
      */
     public function getMaxWidth(): ?string
@@ -777,6 +932,7 @@ class GetPagesOptions
     /**
      * Sets max_width
      * @param ?string $max_width 
+     *
      * @return self
      */
     public function setMaxWidth(?string $max_width): self
@@ -792,6 +948,7 @@ class GetPagesOptions
 
     /**
      * Gets nocache
+     *
      * @return ?string
      */
     public function getNocache(): ?string
@@ -802,6 +959,7 @@ class GetPagesOptions
     /**
      * Sets nocache
      * @param ?string $nocache 
+     *
      * @return self
      */
     public function setNocache(?string $nocache): self
@@ -817,6 +975,7 @@ class GetPagesOptions
 
     /**
      * Gets show_changes
+     *
      * @return ?string
      */
     public function getShowChanges(): ?string
@@ -827,6 +986,7 @@ class GetPagesOptions
     /**
      * Sets show_changes
      * @param ?string $show_changes 
+     *
      * @return self
      */
     public function setShowChanges(?string $show_changes): self
@@ -842,6 +1002,7 @@ class GetPagesOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -852,6 +1013,7 @@ class GetPagesOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -862,6 +1024,15 @@ class GetPagesOptions
 }
 
 
+/**
+ * GetRecipientInitialsImageOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetRecipientInitialsImageOptions
 {
     /**
@@ -872,6 +1043,7 @@ class GetRecipientInitialsImageOptions
 
     /**
      * Gets include_chrome
+     *
      * @return ?string
      */
     public function getIncludeChrome(): ?string
@@ -882,6 +1054,7 @@ class GetRecipientInitialsImageOptions
     /**
      * Sets include_chrome
      * @param ?string $include_chrome The added line and identifier around the initial image. Note: Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
+     *
      * @return self
      */
     public function setIncludeChrome(?string $include_chrome): self
@@ -892,6 +1065,15 @@ class GetRecipientInitialsImageOptions
 }
 
 
+/**
+ * GetRecipientSignatureImageOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetRecipientSignatureImageOptions
 {
     /**
@@ -902,6 +1084,7 @@ class GetRecipientSignatureImageOptions
 
     /**
      * Gets include_chrome
+     *
      * @return ?string
      */
     public function getIncludeChrome(): ?string
@@ -912,6 +1095,7 @@ class GetRecipientSignatureImageOptions
     /**
      * Sets include_chrome
      * @param ?string $include_chrome When set to **true**, indicates the chromed version of the signature image should be retrieved.
+     *
      * @return self
      */
     public function setIncludeChrome(?string $include_chrome): self
@@ -922,6 +1106,15 @@ class GetRecipientSignatureImageOptions
 }
 
 
+/**
+ * ListDocumentsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListDocumentsOptions
 {
     /**
@@ -932,6 +1125,7 @@ class ListDocumentsOptions
 
     /**
      * Gets include_document_size
+     *
      * @return ?string
      */
     public function getIncludeDocumentSize(): ?string
@@ -942,6 +1136,7 @@ class ListDocumentsOptions
     /**
      * Sets include_document_size
      * @param ?string $include_document_size 
+     *
      * @return self
      */
     public function setIncludeDocumentSize(?string $include_document_size): self
@@ -952,6 +1147,15 @@ class ListDocumentsOptions
 }
 
 
+/**
+ * ListRecipientsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListRecipientsOptions
 {
     /**
@@ -962,6 +1166,7 @@ class ListRecipientsOptions
 
     /**
      * Gets include_anchor_tab_locations
+     *
      * @return ?string
      */
     public function getIncludeAnchorTabLocations(): ?string
@@ -972,6 +1177,7 @@ class ListRecipientsOptions
     /**
      * Sets include_anchor_tab_locations
      * @param ?string $include_anchor_tab_locations When set to **true** and `include_tabs` is set to **true**, all tabs with anchor tab properties are included in the response.
+     *
      * @return self
      */
     public function setIncludeAnchorTabLocations(?string $include_anchor_tab_locations): self
@@ -987,6 +1193,7 @@ class ListRecipientsOptions
 
     /**
      * Gets include_extended
+     *
      * @return ?string
      */
     public function getIncludeExtended(): ?string
@@ -997,6 +1204,7 @@ class ListRecipientsOptions
     /**
      * Sets include_extended
      * @param ?string $include_extended When set to **true**, the extended properties are included in the response.
+     *
      * @return self
      */
     public function setIncludeExtended(?string $include_extended): self
@@ -1012,6 +1220,7 @@ class ListRecipientsOptions
 
     /**
      * Gets include_tabs
+     *
      * @return ?string
      */
     public function getIncludeTabs(): ?string
@@ -1022,6 +1231,7 @@ class ListRecipientsOptions
     /**
      * Sets include_tabs
      * @param ?string $include_tabs When set to **true**, the tab information associated with the recipient is included in the response.
+     *
      * @return self
      */
     public function setIncludeTabs(?string $include_tabs): self
@@ -1032,6 +1242,15 @@ class ListRecipientsOptions
 }
 
 
+/**
+ * ListStatusOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListStatusOptions
 {
     /**
@@ -1042,6 +1261,7 @@ class ListStatusOptions
 
     /**
      * Gets ac_status
+     *
      * @return ?string
      */
     public function getAcStatus(): ?string
@@ -1052,6 +1272,7 @@ class ListStatusOptions
     /**
      * Sets ac_status
      * @param ?string $ac_status 
+     *
      * @return self
      */
     public function setAcStatus(?string $ac_status): self
@@ -1067,6 +1288,7 @@ class ListStatusOptions
 
     /**
      * Gets block
+     *
      * @return ?string
      */
     public function getBlock(): ?string
@@ -1077,6 +1299,7 @@ class ListStatusOptions
     /**
      * Sets block
      * @param ?string $block 
+     *
      * @return self
      */
     public function setBlock(?string $block): self
@@ -1092,6 +1315,7 @@ class ListStatusOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -1102,6 +1326,7 @@ class ListStatusOptions
     /**
      * Sets count
      * @param ?string $count 
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -1117,6 +1342,7 @@ class ListStatusOptions
 
     /**
      * Gets email
+     *
      * @return ?string
      */
     public function getEmail(): ?string
@@ -1127,6 +1353,7 @@ class ListStatusOptions
     /**
      * Sets email
      * @param ?string $email 
+     *
      * @return self
      */
     public function setEmail(?string $email): self
@@ -1142,6 +1369,7 @@ class ListStatusOptions
 
     /**
      * Gets envelope_ids
+     *
      * @return ?string
      */
     public function getEnvelopeIds(): ?string
@@ -1152,6 +1380,7 @@ class ListStatusOptions
     /**
      * Sets envelope_ids
      * @param ?string $envelope_ids 
+     *
      * @return self
      */
     public function setEnvelopeIds(?string $envelope_ids): self
@@ -1167,6 +1396,7 @@ class ListStatusOptions
 
     /**
      * Gets from_date
+     *
      * @return ?string
      */
     public function getFromDate(): ?string
@@ -1177,6 +1407,7 @@ class ListStatusOptions
     /**
      * Sets from_date
      * @param ?string $from_date 
+     *
      * @return self
      */
     public function setFromDate(?string $from_date): self
@@ -1192,6 +1423,7 @@ class ListStatusOptions
 
     /**
      * Gets from_to_status
+     *
      * @return ?string
      */
     public function getFromToStatus(): ?string
@@ -1202,6 +1434,7 @@ class ListStatusOptions
     /**
      * Sets from_to_status
      * @param ?string $from_to_status 
+     *
      * @return self
      */
     public function setFromToStatus(?string $from_to_status): self
@@ -1217,6 +1450,7 @@ class ListStatusOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -1227,6 +1461,7 @@ class ListStatusOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -1242,6 +1477,7 @@ class ListStatusOptions
 
     /**
      * Gets status
+     *
      * @return ?string
      */
     public function getStatus(): ?string
@@ -1252,6 +1488,7 @@ class ListStatusOptions
     /**
      * Sets status
      * @param ?string $status 
+     *
      * @return self
      */
     public function setStatus(?string $status): self
@@ -1267,6 +1504,7 @@ class ListStatusOptions
 
     /**
      * Gets to_date
+     *
      * @return ?string
      */
     public function getToDate(): ?string
@@ -1277,6 +1515,7 @@ class ListStatusOptions
     /**
      * Sets to_date
      * @param ?string $to_date 
+     *
      * @return self
      */
     public function setToDate(?string $to_date): self
@@ -1292,6 +1531,7 @@ class ListStatusOptions
 
     /**
      * Gets transaction_ids
+     *
      * @return ?string
      */
     public function getTransactionIds(): ?string
@@ -1302,6 +1542,7 @@ class ListStatusOptions
     /**
      * Sets transaction_ids
      * @param ?string $transaction_ids 
+     *
      * @return self
      */
     public function setTransactionIds(?string $transaction_ids): self
@@ -1317,6 +1558,7 @@ class ListStatusOptions
 
     /**
      * Gets user_name
+     *
      * @return ?string
      */
     public function getUserName(): ?string
@@ -1327,6 +1569,7 @@ class ListStatusOptions
     /**
      * Sets user_name
      * @param ?string $user_name 
+     *
      * @return self
      */
     public function setUserName(?string $user_name): self
@@ -1337,6 +1580,15 @@ class ListStatusOptions
 }
 
 
+/**
+ * ListStatusChangesOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListStatusChangesOptions
 {
     /**
@@ -1347,6 +1599,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets ac_status
+     *
      * @return ?string
      */
     public function getAcStatus(): ?string
@@ -1357,6 +1610,7 @@ class ListStatusChangesOptions
     /**
      * Sets ac_status
      * @param ?string $ac_status Specifies the Authoritative Copy Status for the envelopes. The possible values are: Unknown, Original, Transferred, AuthoritativeCopy, AuthoritativeCopyExportPending, AuthoritativeCopyExported, DepositPending, Deposited, DepositedEO, or DepositFailed.
+     *
      * @return self
      */
     public function setAcStatus(?string $ac_status): self
@@ -1372,6 +1626,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets block
+     *
      * @return ?string
      */
     public function getBlock(): ?string
@@ -1382,6 +1637,7 @@ class ListStatusChangesOptions
     /**
      * Sets block
      * @param ?string $block 
+     *
      * @return self
      */
     public function setBlock(?string $block): self
@@ -1397,6 +1653,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -1407,6 +1664,7 @@ class ListStatusChangesOptions
     /**
      * Sets count
      * @param ?string $count 
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -1422,6 +1680,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets custom_field
+     *
      * @return ?string
      */
     public function getCustomField(): ?string
@@ -1432,6 +1691,7 @@ class ListStatusChangesOptions
     /**
      * Sets custom_field
      * @param ?string $custom_field This specifies the envelope custom field name and value searched for in the envelope information. The value portion of the query can use partial strings by adding '%' (percent sign) around the custom field query value.   Example 1: If you have an envelope custom field called \"Region\" and you want to search for all envelopes where the value is \"West\" you would use the query: `?custom_field=Region=West`.   Example 2: To search for envelopes where the `ApplicationID` custom field has the value or partial value of \"DocuSign\" in field, the query would be: `?custom_field=ApplicationId=%DocuSign%` This would find envelopes where the custom field value is \"DocuSign for Salesforce\" or \"DocuSign envelope.\"
+     *
      * @return self
      */
     public function setCustomField(?string $custom_field): self
@@ -1447,6 +1707,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets email
+     *
      * @return ?string
      */
     public function getEmail(): ?string
@@ -1457,6 +1718,7 @@ class ListStatusChangesOptions
     /**
      * Sets email
      * @param ?string $email 
+     *
      * @return self
      */
     public function setEmail(?string $email): self
@@ -1472,6 +1734,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets envelope_ids
+     *
      * @return ?string
      */
     public function getEnvelopeIds(): ?string
@@ -1482,6 +1745,7 @@ class ListStatusChangesOptions
     /**
      * Sets envelope_ids
      * @param ?string $envelope_ids 
+     *
      * @return self
      */
     public function setEnvelopeIds(?string $envelope_ids): self
@@ -1497,6 +1761,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets from_date
+     *
      * @return ?string
      */
     public function getFromDate(): ?string
@@ -1507,6 +1772,7 @@ class ListStatusChangesOptions
     /**
      * Sets from_date
      * @param ?string $from_date The date/time setting that specifies the date/time when the request begins checking for status changes for envelopes in the account.  This is required unless 'envelopeId's are used.
+     *
      * @return self
      */
     public function setFromDate(?string $from_date): self
@@ -1522,6 +1788,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets from_to_status
+     *
      * @return ?string
      */
     public function getFromToStatus(): ?string
@@ -1532,6 +1799,7 @@ class ListStatusChangesOptions
     /**
      * Sets from_to_status
      * @param ?string $from_to_status This is the status type checked for in the `from_date`/`to_date` period. If `changed` is specified, then envelopes that changed status during the period are found. If for example, `created` is specified, then envelopes created during the period are found. Default is `changed`.   Possible values are: Voided, Changed, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing.
+     *
      * @return self
      */
     public function setFromToStatus(?string $from_to_status): self
@@ -1547,6 +1815,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -1557,6 +1826,7 @@ class ListStatusChangesOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -1572,6 +1842,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets status
+     *
      * @return ?string
      */
     public function getStatus(): ?string
@@ -1582,6 +1853,7 @@ class ListStatusChangesOptions
     /**
      * Sets status
      * @param ?string $status The list of current statuses to include in the response. By default, all envelopes found are returned. If values are specified, then of the envelopes found, only those with the current status specified are returned in the results.   Possible values are: Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing.
+     *
      * @return self
      */
     public function setStatus(?string $status): self
@@ -1597,6 +1869,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets to_date
+     *
      * @return ?string
      */
     public function getToDate(): ?string
@@ -1607,6 +1880,7 @@ class ListStatusChangesOptions
     /**
      * Sets to_date
      * @param ?string $to_date Optional date/time setting that specifies the date/time when the request stops for status changes for envelopes in the account. If no entry, the system uses the time of the call as the `to_date`.
+     *
      * @return self
      */
     public function setToDate(?string $to_date): self
@@ -1622,6 +1896,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets transaction_ids
+     *
      * @return ?string
      */
     public function getTransactionIds(): ?string
@@ -1632,6 +1907,7 @@ class ListStatusChangesOptions
     /**
      * Sets transaction_ids
      * @param ?string $transaction_ids If included in the query string, this is a comma separated list of envelope `transactionId`s.   If included in the `request_body`, this is a list of envelope `transactionId`s.   ###### Note: `transactionId`s are only valid in the DocuSign system for seven days.
+     *
      * @return self
      */
     public function setTransactionIds(?string $transaction_ids): self
@@ -1647,6 +1923,7 @@ class ListStatusChangesOptions
 
     /**
      * Gets user_name
+     *
      * @return ?string
      */
     public function getUserName(): ?string
@@ -1657,6 +1934,7 @@ class ListStatusChangesOptions
     /**
      * Sets user_name
      * @param ?string $user_name 
+     *
      * @return self
      */
     public function setUserName(?string $user_name): self
@@ -1667,6 +1945,15 @@ class ListStatusChangesOptions
 }
 
 
+/**
+ * ListTabsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListTabsOptions
 {
     /**
@@ -1677,6 +1964,7 @@ class ListTabsOptions
 
     /**
      * Gets include_anchor_tab_locations
+     *
      * @return ?string
      */
     public function getIncludeAnchorTabLocations(): ?string
@@ -1687,6 +1975,7 @@ class ListTabsOptions
     /**
      * Sets include_anchor_tab_locations
      * @param ?string $include_anchor_tab_locations When set to **true**, all tabs with anchor tab properties are included in the response.
+     *
      * @return self
      */
     public function setIncludeAnchorTabLocations(?string $include_anchor_tab_locations): self
@@ -1702,6 +1991,7 @@ class ListTabsOptions
 
     /**
      * Gets include_metadata
+     *
      * @return ?string
      */
     public function getIncludeMetadata(): ?string
@@ -1712,6 +2002,7 @@ class ListTabsOptions
     /**
      * Sets include_metadata
      * @param ?string $include_metadata 
+     *
      * @return self
      */
     public function setIncludeMetadata(?string $include_metadata): self
@@ -1722,6 +2013,15 @@ class ListTabsOptions
 }
 
 
+/**
+ * ListTemplatesOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListTemplatesOptions
 {
     /**
@@ -1732,6 +2032,7 @@ class ListTemplatesOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -1742,6 +2043,7 @@ class ListTemplatesOptions
     /**
      * Sets include
      * @param ?string $include The possible values are:  matching_applied - This returns template matching information for the template.
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -1752,6 +2054,15 @@ class ListTemplatesOptions
 }
 
 
+/**
+ * ListTemplatesForDocumentOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListTemplatesForDocumentOptions
 {
     /**
@@ -1762,6 +2073,7 @@ class ListTemplatesForDocumentOptions
 
     /**
      * Gets include
+     *
      * @return ?string
      */
     public function getInclude(): ?string
@@ -1772,6 +2084,7 @@ class ListTemplatesForDocumentOptions
     /**
      * Sets include
      * @param ?string $include 
+     *
      * @return self
      */
     public function setInclude(?string $include): self
@@ -1782,6 +2095,15 @@ class ListTemplatesForDocumentOptions
 }
 
 
+/**
+ * UpdateOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateOptions
 {
     /**
@@ -1792,6 +2114,7 @@ class UpdateOptions
 
     /**
      * Gets advanced_update
+     *
      * @return ?string
      */
     public function getAdvancedUpdate(): ?string
@@ -1802,6 +2125,7 @@ class UpdateOptions
     /**
      * Sets advanced_update
      * @param ?string $advanced_update When set to **true**, allows the caller to update recipients, tabs, custom fields, notification, email settings and other envelope attributes.
+     *
      * @return self
      */
     public function setAdvancedUpdate(?string $advanced_update): self
@@ -1817,6 +2141,7 @@ class UpdateOptions
 
     /**
      * Gets resend_envelope
+     *
      * @return ?string
      */
     public function getResendEnvelope(): ?string
@@ -1827,6 +2152,7 @@ class UpdateOptions
     /**
      * Sets resend_envelope
      * @param ?string $resend_envelope When set to **true**, sends the specified envelope again.
+     *
      * @return self
      */
     public function setResendEnvelope(?string $resend_envelope): self
@@ -1837,6 +2163,15 @@ class UpdateOptions
 }
 
 
+/**
+ * UpdateChunkedUploadOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateChunkedUploadOptions
 {
     /**
@@ -1847,6 +2182,7 @@ class UpdateChunkedUploadOptions
 
     /**
      * Gets action
+     *
      * @return ?string
      */
     public function getAction(): ?string
@@ -1857,6 +2193,7 @@ class UpdateChunkedUploadOptions
     /**
      * Sets action
      * @param ?string $action 
+     *
      * @return self
      */
     public function setAction(?string $action): self
@@ -1867,6 +2204,15 @@ class UpdateChunkedUploadOptions
 }
 
 
+/**
+ * UpdateDocumentOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateDocumentOptions
 {
     /**
@@ -1877,6 +2223,7 @@ class UpdateDocumentOptions
 
     /**
      * Gets apply_document_fields
+     *
      * @return ?string
      */
     public function getApplyDocumentFields(): ?string
@@ -1887,6 +2234,7 @@ class UpdateDocumentOptions
     /**
      * Sets apply_document_fields
      * @param ?string $apply_document_fields 
+     *
      * @return self
      */
     public function setApplyDocumentFields(?string $apply_document_fields): self
@@ -1897,6 +2245,15 @@ class UpdateDocumentOptions
 }
 
 
+/**
+ * UpdateDocumentsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateDocumentsOptions
 {
     /**
@@ -1907,6 +2264,7 @@ class UpdateDocumentsOptions
 
     /**
      * Gets apply_document_fields
+     *
      * @return ?string
      */
     public function getApplyDocumentFields(): ?string
@@ -1917,6 +2275,7 @@ class UpdateDocumentsOptions
     /**
      * Sets apply_document_fields
      * @param ?string $apply_document_fields When true, Document fields can be added or modified while adding or modifying envelope documents.
+     *
      * @return self
      */
     public function setApplyDocumentFields(?string $apply_document_fields): self
@@ -1932,6 +2291,7 @@ class UpdateDocumentsOptions
 
     /**
      * Gets persist_tabs
+     *
      * @return ?string
      */
     public function getPersistTabs(): ?string
@@ -1942,6 +2302,7 @@ class UpdateDocumentsOptions
     /**
      * Sets persist_tabs
      * @param ?string $persist_tabs 
+     *
      * @return self
      */
     public function setPersistTabs(?string $persist_tabs): self
@@ -1952,6 +2313,15 @@ class UpdateDocumentsOptions
 }
 
 
+/**
+ * UpdateRecipientsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class UpdateRecipientsOptions
 {
     /**
@@ -1962,6 +2332,7 @@ class UpdateRecipientsOptions
 
     /**
      * Gets offline_signing
+     *
      * @return ?string
      */
     public function getOfflineSigning(): ?string
@@ -1972,6 +2343,7 @@ class UpdateRecipientsOptions
     /**
      * Sets offline_signing
      * @param ?string $offline_signing 
+     *
      * @return self
      */
     public function setOfflineSigning(?string $offline_signing): self
@@ -1987,6 +2359,7 @@ class UpdateRecipientsOptions
 
     /**
      * Gets resend_envelope
+     *
      * @return ?string
      */
     public function getResendEnvelope(): ?string
@@ -1997,6 +2370,7 @@ class UpdateRecipientsOptions
     /**
      * Sets resend_envelope
      * @param ?string $resend_envelope When set to **true**, resends the   envelope if the new recipient's routing order is before or the same as the envelope's next recipient.
+     *
      * @return self
      */
     public function setResendEnvelope(?string $resend_envelope): self
@@ -2020,7 +2394,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class EnvelopesApi
@@ -2036,6 +2411,7 @@ class EnvelopesApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -2069,9 +2445,9 @@ class EnvelopesApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -2093,6 +2469,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentTemplateList $document_template_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentTemplateList
      */
@@ -2110,6 +2487,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentTemplateList $document_template_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentTemplateList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2196,6 +2574,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentTemplateList $document_template_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentTemplateList
      */
@@ -2214,6 +2593,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentTemplateList $document_template_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentTemplateList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2306,6 +2686,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ChunkedUploadRequest $chunked_upload_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ChunkedUploadResponse
      */
@@ -2322,6 +2703,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ChunkedUploadRequest $chunked_upload_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ChunkedUploadResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2398,6 +2780,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConsoleViewRequest $console_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -2414,6 +2797,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConsoleViewRequest $console_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2491,6 +2875,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CorrectViewRequest $correct_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -2508,6 +2893,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CorrectViewRequest $correct_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2593,6 +2979,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CustomFields $custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -2610,6 +2997,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CustomFields $custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2696,6 +3084,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -2714,6 +3103,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2808,6 +3198,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
      */
@@ -2826,6 +3217,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2919,6 +3311,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -2936,6 +3329,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3021,6 +3415,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EmailSettings $email_settings  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EmailSettings
      */
@@ -3038,6 +3433,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EmailSettings $email_settings  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EmailSettings, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3122,7 +3518,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeSummary
      */
@@ -3139,7 +3536,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateEnvelopeOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeSummary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3236,6 +3634,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -3253,6 +3652,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3338,6 +3738,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -3355,6 +3756,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3440,7 +3842,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Recipients $recipients  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
@@ -3458,7 +3861,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Recipients $recipients  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3551,6 +3955,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -3568,6 +3973,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3653,6 +4059,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
      */
@@ -3670,6 +4077,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3755,6 +4163,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -3772,6 +4181,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3858,6 +4268,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\Tabs $tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -3876,6 +4287,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\Tabs $tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3969,6 +4381,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeAttachmentsRequest $envelope_attachments_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeAttachmentsResult
      */
@@ -3986,6 +4399,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeAttachmentsRequest $envelope_attachments_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeAttachmentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4070,6 +4484,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $chunked_upload_id 
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ChunkedUploadResponse
      */
@@ -4086,6 +4501,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $chunked_upload_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ChunkedUploadResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4166,6 +4582,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CustomFields $custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -4183,6 +4600,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CustomFields $custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4269,6 +4687,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -4287,6 +4706,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4381,6 +4801,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -4399,6 +4820,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4491,6 +4913,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocumentsResult
      */
@@ -4508,6 +4931,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4592,6 +5016,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EmailSettings
      */
@@ -4608,6 +5033,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EmailSettings, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4688,6 +5114,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CorrectViewRequest $correct_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -4705,6 +5132,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CorrectViewRequest $correct_view_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4785,6 +5213,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -4801,6 +5230,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4881,6 +5311,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
@@ -4898,6 +5329,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4986,6 +5418,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Recipients $recipients  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
@@ -5003,6 +5436,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Recipients $recipients  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5089,6 +5523,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\Tabs $tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -5107,6 +5542,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\Tabs $tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5201,6 +5637,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -5219,6 +5656,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5311,6 +5749,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $attachment_id 
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -5328,6 +5767,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $attachment_id 
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5411,6 +5851,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeAttachmentsResult
      */
@@ -5427,6 +5868,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeAttachmentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5506,7 +5948,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $chunked_upload_id 
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetChunkedUploadOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetChunkedUploadOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ChunkedUploadResponse
      */
@@ -5523,7 +5966,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $chunked_upload_id 
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetChunkedUploadOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetChunkedUploadOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ChunkedUploadResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5610,7 +6054,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetCommentsTranscriptOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetCommentsTranscriptOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -5627,7 +6072,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetCommentsTranscriptOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetCommentsTranscriptOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5714,9 +6160,10 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
@@ -5733,9 +6180,10 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5839,7 +6287,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureDefaultOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureDefaultOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
@@ -5857,7 +6306,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureDefaultOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureDefaultOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5953,7 +6403,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -5971,7 +6422,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6086,7 +6538,8 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentPageImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentPageImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -6105,7 +6558,8 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentPageImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentPageImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6218,7 +6672,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -6236,7 +6691,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6331,6 +6787,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EmailSettings
      */
@@ -6347,6 +6804,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EmailSettings, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6426,7 +6884,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetEnvelopeOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetEnvelopeOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Envelope
      */
@@ -6443,7 +6902,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetEnvelopeOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetEnvelopeOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Envelope, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6534,6 +6994,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
      */
@@ -6551,6 +7012,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6638,6 +7100,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
      */
@@ -6654,6 +7117,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6733,6 +7197,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeFormData
      */
@@ -6749,6 +7214,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeFormData, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6828,6 +7294,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -6844,6 +7311,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6923,6 +7391,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notification
      */
@@ -6939,6 +7408,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notification, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7020,6 +7490,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -7038,6 +7509,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7134,7 +7606,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetPagesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetPagesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
@@ -7152,7 +7625,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetPagesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetPagesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7266,6 +7740,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentVisibilityList
      */
@@ -7283,6 +7758,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentVisibilityList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7371,7 +7847,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientInitialsImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientInitialsImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -7389,7 +7866,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientInitialsImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientInitialsImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7485,6 +7963,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
@@ -7502,6 +7981,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7590,7 +8070,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientSignatureImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -7608,7 +8089,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientSignatureImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetRecipientSignatureImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7704,6 +8186,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentVisibilityList
      */
@@ -7721,6 +8204,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentVisibilityList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7808,6 +8292,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeAuditEventResponse
      */
@@ -7824,6 +8309,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeAuditEventResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7903,6 +8389,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFieldsEnvelope
      */
@@ -7919,6 +8406,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFieldsEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7999,6 +8487,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -8016,6 +8505,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8103,7 +8593,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListDocumentsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListDocumentsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocumentsResult
      */
@@ -8120,7 +8611,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListDocumentsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListDocumentsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8207,7 +8699,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
@@ -8224,7 +8717,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8317,7 +8811,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeIdsRequest $envelope_ids_request  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopesInformation
      */
@@ -8334,7 +8829,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeIdsRequest $envelope_ids_request  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopesInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8450,7 +8946,8 @@ class EnvelopesApi
      * Gets status changes for one or more envelopes.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusChangesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusChangesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopesInformation
      */
@@ -8466,7 +8963,8 @@ class EnvelopesApi
      * Gets status changes for one or more envelopes.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusChangesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListStatusChangesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopesInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8582,7 +9080,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -8600,7 +9099,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8698,7 +9198,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateInformation
      */
@@ -8715,7 +9216,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8803,7 +9305,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesForDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesForDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateInformation
      */
@@ -8821,7 +9324,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesForDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListTemplatesForDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8918,6 +9422,7 @@ class EnvelopesApi
      * @param ?string $attachment_id 
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Attachment $attachment  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeAttachmentsResult
      */
@@ -8936,6 +9441,7 @@ class EnvelopesApi
      * @param ?string $attachment_id 
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Attachment $attachment  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeAttachmentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9029,6 +9535,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeAttachmentsRequest $envelope_attachments_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeAttachmentsResult
      */
@@ -9046,6 +9553,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeAttachmentsRequest $envelope_attachments_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeAttachmentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9133,6 +9641,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -9152,6 +9661,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $page_number The page number being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9249,7 +9759,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Envelope $envelope  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeUpdateSummary
      */
@@ -9267,7 +9778,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Envelope $envelope  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeUpdateSummary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9362,7 +9874,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $chunked_upload_id 
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateChunkedUploadOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateChunkedUploadOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ChunkedUploadResponse
      */
@@ -9379,7 +9892,8 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $chunked_upload_id 
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateChunkedUploadOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateChunkedUploadOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ChunkedUploadResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9468,6 +9982,7 @@ class EnvelopesApi
      * @param ?string $chunked_upload_id 
      * @param ?string $chunked_upload_part_seq 
      * @param \DocuSign\eSign\Model\ChunkedUploadRequest $chunked_upload_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ChunkedUploadResponse
      */
@@ -9486,6 +10001,7 @@ class EnvelopesApi
      * @param ?string $chunked_upload_id 
      * @param ?string $chunked_upload_part_seq 
      * @param \DocuSign\eSign\Model\ChunkedUploadRequest $chunked_upload_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ChunkedUploadResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9579,6 +10095,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CustomFields $custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -9596,6 +10113,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\CustomFields $custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9681,7 +10199,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -9699,7 +10218,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9792,6 +10312,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -9810,6 +10331,7 @@ class EnvelopesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9903,7 +10425,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocumentsResult
      */
@@ -9921,7 +10444,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateDocumentsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10017,6 +10541,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EmailSettings $email_settings  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EmailSettings
      */
@@ -10034,6 +10559,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EmailSettings $email_settings  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EmailSettings, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10119,6 +10645,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -10136,6 +10663,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10221,6 +10749,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeNotificationRequest $envelope_notification_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notification
      */
@@ -10238,6 +10767,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeNotificationRequest $envelope_notification_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notification, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10324,6 +10854,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\DocumentVisibilityList $document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentVisibilityList
      */
@@ -10342,6 +10873,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\DocumentVisibilityList $document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentVisibilityList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10435,6 +10967,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -10452,6 +10985,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10536,6 +11070,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -10553,6 +11088,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10637,7 +11173,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Recipients $recipients  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientsUpdateSummary
      */
@@ -10655,7 +11192,8 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\Recipients $recipients  (optional)
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\UpdateRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientsUpdateSummary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10751,6 +11289,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentVisibilityList $document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentVisibilityList
      */
@@ -10768,6 +11307,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param \DocuSign\eSign\Model\DocumentVisibilityList $document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentVisibilityList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10854,6 +11394,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\Tabs $tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -10872,6 +11413,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param \DocuSign\eSign\Model\Tabs $tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10966,6 +11508,7 @@ class EnvelopesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateDocumentVisibilityList $template_document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentVisibilityList
      */
@@ -10984,6 +11527,7 @@ class EnvelopesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateDocumentVisibilityList $template_document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentVisibilityList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11077,6 +11621,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateDocumentVisibilityList $template_document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentVisibilityList
      */
@@ -11094,6 +11639,7 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateDocumentVisibilityList $template_document_visibility_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentVisibilityList, HTTP status code, HTTP response headers (array of strings)
      */
