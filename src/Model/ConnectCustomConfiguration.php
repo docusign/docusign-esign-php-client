@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,7 +38,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category    Class
  * @package     DocuSign\eSign
- * @author      Swagger Codegen team
+ * @author      Swagger Codegen team <apihelp@docusign.com>
+ * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
@@ -463,7 +465,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_events
      *
-     * @param ?string $envelope_events A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
+     * @param ?string $envelope_events A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
      *
      * @return $this
      */
@@ -703,7 +705,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_events
      *
-     * @param ?string $recipient_events A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
+     * @param ?string $recipient_events A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
      *
      * @return $this
      */
@@ -823,7 +825,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets user_ids
      *
-     * @param ?string $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.
+     * @param ?string $user_ids A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s.
      *
      * @return $this
      */
