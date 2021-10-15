@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,405 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\CloudStorageApi;
-
-
-class ListOptions
-{
-    /**
-      * $cloud_storage_folder_path 
-      * @var ?string
-      */
-    protected ?string $cloud_storage_folder_path = null;
-
-    /**
-     * Gets cloud_storage_folder_path
-     * @return ?string
-     */
-    public function getCloudStorageFolderPath(): ?string
-    {
-        return $this->cloud_storage_folder_path;
-    }
-
-    /**
-     * Sets cloud_storage_folder_path
-     * @param ?string $cloud_storage_folder_path 
-     * @return self
-     */
-    public function setCloudStorageFolderPath(?string $cloud_storage_folder_path): self
-    {
-        $this->cloud_storage_folder_path = $cloud_storage_folder_path;
-        return $this;
-    }
-    /**
-      * $cloud_storage_folderid_plain 
-      * @var ?string
-      */
-    protected ?string $cloud_storage_folderid_plain = null;
-
-    /**
-     * Gets cloud_storage_folderid_plain
-     * @return ?string
-     */
-    public function getCloudStorageFolderidPlain(): ?string
-    {
-        return $this->cloud_storage_folderid_plain;
-    }
-
-    /**
-     * Sets cloud_storage_folderid_plain
-     * @param ?string $cloud_storage_folderid_plain 
-     * @return self
-     */
-    public function setCloudStorageFolderidPlain(?string $cloud_storage_folderid_plain): self
-    {
-        $this->cloud_storage_folderid_plain = $cloud_storage_folderid_plain;
-        return $this;
-    }
-    /**
-      * $count An optional value that sets how many items are included in the response.   The default setting for this is 25.
-      * @var ?string
-      */
-    protected ?string $count = null;
-
-    /**
-     * Gets count
-     * @return ?string
-     */
-    public function getCount(): ?string
-    {
-        return $this->count;
-    }
-
-    /**
-     * Sets count
-     * @param ?string $count An optional value that sets how many items are included in the response.   The default setting for this is 25.
-     * @return self
-     */
-    public function setCount(?string $count): self
-    {
-        $this->count = $count;
-        return $this;
-    }
-    /**
-      * $order An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc = ascending sort order * desc = descending sort order
-      * @var ?string
-      */
-    protected ?string $order = null;
-
-    /**
-     * Gets order
-     * @return ?string
-     */
-    public function getOrder(): ?string
-    {
-        return $this->order;
-    }
-
-    /**
-     * Sets order
-     * @param ?string $order An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc = ascending sort order * desc = descending sort order
-     * @return self
-     */
-    public function setOrder(?string $order): self
-    {
-        $this->order = $order;
-        return $this;
-    }
-    /**
-      * $order_by An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name
-      * @var ?string
-      */
-    protected ?string $order_by = null;
-
-    /**
-     * Gets order_by
-     * @return ?string
-     */
-    public function getOrderBy(): ?string
-    {
-        return $this->order_by;
-    }
-
-    /**
-     * Sets order_by
-     * @param ?string $order_by An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name
-     * @return self
-     */
-    public function setOrderBy(?string $order_by): self
-    {
-        $this->order_by = $order_by;
-        return $this;
-    }
-    /**
-      * $search_text 
-      * @var ?string
-      */
-    protected ?string $search_text = null;
-
-    /**
-     * Gets search_text
-     * @return ?string
-     */
-    public function getSearchText(): ?string
-    {
-        return $this->search_text;
-    }
-
-    /**
-     * Sets search_text
-     * @param ?string $search_text 
-     * @return self
-     */
-    public function setSearchText(?string $search_text): self
-    {
-        $this->search_text = $search_text;
-        return $this;
-    }
-    /**
-      * $start_position Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
-
-
-class GetProviderOptions
-{
-    /**
-      * $redirect_url The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
-      * @var ?string
-      */
-    protected ?string $redirect_url = null;
-
-    /**
-     * Gets redirect_url
-     * @return ?string
-     */
-    public function getRedirectUrl(): ?string
-    {
-        return $this->redirect_url;
-    }
-
-    /**
-     * Sets redirect_url
-     * @param ?string $redirect_url The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
-     * @return self
-     */
-    public function setRedirectUrl(?string $redirect_url): self
-    {
-        $this->redirect_url = $redirect_url;
-        return $this;
-    }
-}
-
-
-class ListFoldersOptions
-{
-    /**
-      * $cloud_storage_folder_path A comma separated list of folder IDs included in the request.
-      * @var ?string
-      */
-    protected ?string $cloud_storage_folder_path = null;
-
-    /**
-     * Gets cloud_storage_folder_path
-     * @return ?string
-     */
-    public function getCloudStorageFolderPath(): ?string
-    {
-        return $this->cloud_storage_folder_path;
-    }
-
-    /**
-     * Sets cloud_storage_folder_path
-     * @param ?string $cloud_storage_folder_path A comma separated list of folder IDs included in the request.
-     * @return self
-     */
-    public function setCloudStorageFolderPath(?string $cloud_storage_folder_path): self
-    {
-        $this->cloud_storage_folder_path = $cloud_storage_folder_path;
-        return $this;
-    }
-    /**
-      * $count An optional value that sets how many items are included in the response.   The default setting for this is 25.
-      * @var ?string
-      */
-    protected ?string $count = null;
-
-    /**
-     * Gets count
-     * @return ?string
-     */
-    public function getCount(): ?string
-    {
-        return $this->count;
-    }
-
-    /**
-     * Sets count
-     * @param ?string $count An optional value that sets how many items are included in the response.   The default setting for this is 25.
-     * @return self
-     */
-    public function setCount(?string $count): self
-    {
-        $this->count = $count;
-        return $this;
-    }
-    /**
-      * $order An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc = ascending sort order * desc = descending sort order
-      * @var ?string
-      */
-    protected ?string $order = null;
-
-    /**
-     * Gets order
-     * @return ?string
-     */
-    public function getOrder(): ?string
-    {
-        return $this->order;
-    }
-
-    /**
-     * Sets order
-     * @param ?string $order An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc = ascending sort order * desc = descending sort order
-     * @return self
-     */
-    public function setOrder(?string $order): self
-    {
-        $this->order = $order;
-        return $this;
-    }
-    /**
-      * $order_by An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name
-      * @var ?string
-      */
-    protected ?string $order_by = null;
-
-    /**
-     * Gets order_by
-     * @return ?string
-     */
-    public function getOrderBy(): ?string
-    {
-        return $this->order_by;
-    }
-
-    /**
-     * Sets order_by
-     * @param ?string $order_by An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name
-     * @return self
-     */
-    public function setOrderBy(?string $order_by): self
-    {
-        $this->order_by = $order_by;
-        return $this;
-    }
-    /**
-      * $search_text 
-      * @var ?string
-      */
-    protected ?string $search_text = null;
-
-    /**
-     * Gets search_text
-     * @return ?string
-     */
-    public function getSearchText(): ?string
-    {
-        return $this->search_text;
-    }
-
-    /**
-     * Sets search_text
-     * @param ?string $search_text 
-     * @return self
-     */
-    public function setSearchText(?string $search_text): self
-    {
-        $this->search_text = $search_text;
-        return $this;
-    }
-    /**
-      * $start_position Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
-
-
-class ListProvidersOptions
-{
-    /**
-      * $redirect_url The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
-      * @var ?string
-      */
-    protected ?string $redirect_url = null;
-
-    /**
-     * Gets redirect_url
-     * @return ?string
-     */
-    public function getRedirectUrl(): ?string
-    {
-        return $this->redirect_url;
-    }
-
-    /**
-     * Sets redirect_url
-     * @param ?string $redirect_url The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
-     * @return self
-     */
-    public function setRedirectUrl(?string $redirect_url): self
-    {
-        $this->redirect_url = $redirect_url;
-        return $this;
-    }
-}
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -440,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class CloudStorageApi
@@ -456,6 +59,7 @@ class CloudStorageApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -489,9 +93,9 @@ class CloudStorageApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -514,11 +118,12 @@ class CloudStorageApi
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ExternalFolder
      */
-    public function callList($account_id, $folder_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListOptions $options = null)
+    public function callList($account_id, $folder_id, $service_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiListOptions $options = null)
     {
         list($response) = $this->callListWithHttpInfo($account_id, $folder_id, $service_id, $user_id, $options);
         return $response;
@@ -533,11 +138,12 @@ class CloudStorageApi
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ExternalFolder, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, $folder_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListOptions $options = null): array
+    public function callListWithHttpInfo($account_id, $folder_id, $service_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -655,6 +261,7 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
@@ -672,6 +279,7 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
@@ -757,6 +365,7 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
@@ -774,6 +383,7 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
@@ -862,6 +472,7 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
@@ -879,6 +490,7 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\CloudStorageProviders $cloud_storage_providers  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
@@ -964,11 +576,12 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiGetProviderOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
-    public function getProvider($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions $options = null)
+    public function getProvider($account_id, $service_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiGetProviderOptions $options = null)
     {
         list($response) = $this->getProviderWithHttpInfo($account_id, $service_id, $user_id, $options);
         return $response;
@@ -982,11 +595,12 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiGetProviderOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProviderWithHttpInfo($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions $options = null): array
+    public function getProviderWithHttpInfo($account_id, $service_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiGetProviderOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1078,11 +692,12 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiListFoldersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ExternalFolder
      */
-    public function listFolders($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions $options = null)
+    public function listFolders($account_id, $service_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiListFoldersOptions $options = null)
     {
         list($response) = $this->listFoldersWithHttpInfo($account_id, $service_id, $user_id, $options);
         return $response;
@@ -1096,11 +711,12 @@ class CloudStorageApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $service_id The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;).
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiListFoldersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ExternalFolder, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listFoldersWithHttpInfo($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions $options = null): array
+    public function listFoldersWithHttpInfo($account_id, $service_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiListFoldersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1206,11 +822,12 @@ class CloudStorageApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiListProvidersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
-    public function listProviders($account_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions $options = null)
+    public function listProviders($account_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiListProvidersOptions $options = null)
     {
         list($response) = $this->listProvidersWithHttpInfo($account_id, $user_id, $options);
         return $response;
@@ -1223,11 +840,12 @@ class CloudStorageApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param  \DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\CloudStorageApiListProvidersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listProvidersWithHttpInfo($account_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions $options = null): array
+    public function listProvidersWithHttpInfo($account_id, $user_id, \DocuSign\eSign\Api\Options\CloudStorageApiListProvidersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

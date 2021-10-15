@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,65 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\SigningGroupsApi;
-
-
-class ListOptions
-{
-    /**
-      * $group_type 
-      * @var ?string
-      */
-    protected ?string $group_type = null;
-
-    /**
-     * Gets group_type
-     * @return ?string
-     */
-    public function getGroupType(): ?string
-    {
-        return $this->group_type;
-    }
-
-    /**
-     * Sets group_type
-     * @param ?string $group_type 
-     * @return self
-     */
-    public function setGroupType(?string $group_type): self
-    {
-        $this->group_type = $group_type;
-        return $this;
-    }
-    /**
-      * $include_users When set to **true**, the response includes the signing group members.
-      * @var ?string
-      */
-    protected ?string $include_users = null;
-
-    /**
-     * Gets include_users
-     * @return ?string
-     */
-    public function getIncludeUsers(): ?string
-    {
-        return $this->include_users;
-    }
-
-    /**
-     * Sets include_users
-     * @param ?string $include_users When set to **true**, the response includes the signing group members.
-     * @return self
-     */
-    public function setIncludeUsers(?string $include_users): self
-    {
-        $this->include_users = $include_users;
-        return $this;
-    }
-}
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -100,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class SigningGroupsApi
@@ -116,6 +59,7 @@ class SigningGroupsApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -149,9 +93,9 @@ class SigningGroupsApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -171,11 +115,12 @@ class SigningGroupsApi
      * Gets a list of the Signing Groups in an account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\SigningGroupsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\SigningGroupsApiListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
-    public function callList($account_id, \DocuSign\eSign\Api\SigningGroupsApi\ListOptions $options = null)
+    public function callList($account_id, \DocuSign\eSign\Api\Options\SigningGroupsApiListOptions $options = null)
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -187,11 +132,12 @@ class SigningGroupsApi
      * Gets a list of the Signing Groups in an account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\SigningGroupsApi\ListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\SigningGroupsApiListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, \DocuSign\eSign\Api\SigningGroupsApi\ListOptions $options = null): array
+    public function callListWithHttpInfo($account_id, \DocuSign\eSign\Api\Options\SigningGroupsApiListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -269,6 +215,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
@@ -285,6 +232,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -361,6 +309,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
@@ -377,6 +326,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -454,6 +404,7 @@ class SigningGroupsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupUsers
      */
@@ -471,6 +422,7 @@ class SigningGroupsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupUsers, HTTP status code, HTTP response headers (array of strings)
      */
@@ -555,6 +507,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroup
      */
@@ -571,6 +524,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroup, HTTP status code, HTTP response headers (array of strings)
      */
@@ -650,6 +604,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupUsers
      */
@@ -666,6 +621,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupUsers, HTTP status code, HTTP response headers (array of strings)
      */
@@ -746,6 +702,7 @@ class SigningGroupsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroup $signing_group  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroup
      */
@@ -763,6 +720,7 @@ class SigningGroupsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroup $signing_group  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroup, HTTP status code, HTTP response headers (array of strings)
      */
@@ -847,6 +805,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
@@ -863,6 +822,7 @@ class SigningGroupsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\SigningGroupInformation $signing_group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -940,6 +900,7 @@ class SigningGroupsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupUsers
      */
@@ -957,6 +918,7 @@ class SigningGroupsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $signing_group_id 
      * @param \DocuSign\eSign\Model\SigningGroupUsers $signing_group_users  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupUsers, HTTP status code, HTTP response headers (array of strings)
      */

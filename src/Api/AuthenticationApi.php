@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,115 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\AuthenticationApi;
-
-
-class LoginOptions
-{
-    /**
-      * $api_password When set to **true**, shows the account API password in the response.
-      * @var ?string
-      */
-    protected ?string $api_password = null;
-
-    /**
-     * Gets api_password
-     * @return ?string
-     */
-    public function getApiPassword(): ?string
-    {
-        return $this->api_password;
-    }
-
-    /**
-     * Sets api_password
-     * @param ?string $api_password When set to **true**, shows the account API password in the response.
-     * @return self
-     */
-    public function setApiPassword(?string $api_password): self
-    {
-        $this->api_password = $api_password;
-        return $this;
-    }
-    /**
-      * $embed_account_id_guid 
-      * @var ?string
-      */
-    protected ?string $embed_account_id_guid = null;
-
-    /**
-     * Gets embed_account_id_guid
-     * @return ?string
-     */
-    public function getEmbedAccountIdGuid(): ?string
-    {
-        return $this->embed_account_id_guid;
-    }
-
-    /**
-     * Sets embed_account_id_guid
-     * @param ?string $embed_account_id_guid 
-     * @return self
-     */
-    public function setEmbedAccountIdGuid(?string $embed_account_id_guid): self
-    {
-        $this->embed_account_id_guid = $embed_account_id_guid;
-        return $this;
-    }
-    /**
-      * $include_account_id_guid When set to **true**, shows the account ID GUID in the response.
-      * @var ?string
-      */
-    protected ?string $include_account_id_guid = null;
-
-    /**
-     * Gets include_account_id_guid
-     * @return ?string
-     */
-    public function getIncludeAccountIdGuid(): ?string
-    {
-        return $this->include_account_id_guid;
-    }
-
-    /**
-     * Sets include_account_id_guid
-     * @param ?string $include_account_id_guid When set to **true**, shows the account ID GUID in the response.
-     * @return self
-     */
-    public function setIncludeAccountIdGuid(?string $include_account_id_guid): self
-    {
-        $this->include_account_id_guid = $include_account_id_guid;
-        return $this;
-    }
-    /**
-      * $login_settings Determines whether login settings are returned in the response.  Valid Values:  * all -  All the login settings are returned.  * none - no login settings are returned.
-      * @var ?string
-      */
-    protected ?string $login_settings = null;
-
-    /**
-     * Gets login_settings
-     * @return ?string
-     */
-    public function getLoginSettings(): ?string
-    {
-        return $this->login_settings;
-    }
-
-    /**
-     * Sets login_settings
-     * @param ?string $login_settings Determines whether login settings are returned in the response.  Valid Values:  * all -  All the login settings are returned.  * none - no login settings are returned.
-     * @return self
-     */
-    public function setLoginSettings(?string $login_settings): self
-    {
-        $this->login_settings = $login_settings;
-        return $this;
-    }
-}
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -150,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class AuthenticationApi
@@ -166,6 +59,7 @@ class AuthenticationApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -199,9 +93,9 @@ class AuthenticationApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -223,6 +117,7 @@ class AuthenticationApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -240,6 +135,7 @@ class AuthenticationApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -318,6 +214,7 @@ class AuthenticationApi
      *
      * Creates an authorization token.
      *
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\OauthAccess
      */
@@ -331,6 +228,7 @@ class AuthenticationApi
      * Operation getOAuthTokenWithHttpInfo
      *
      * Creates an authorization token.
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\OauthAccess, HTTP status code, HTTP response headers (array of strings)
@@ -395,6 +293,7 @@ class AuthenticationApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSocialIdResult
      */
@@ -411,6 +310,7 @@ class AuthenticationApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSocialIdResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -488,11 +388,12 @@ class AuthenticationApi
      *
      * Gets login information for a specified user.
      *
-     * @param  \DocuSign\eSign\Api\AuthenticationApi\LoginOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\AuthenticationApiLoginOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LoginInformation
      */
-    public function login(\DocuSign\eSign\Api\AuthenticationApi\LoginOptions $options = null)
+    public function login(\DocuSign\eSign\Api\Options\AuthenticationApiLoginOptions $options = null)
     {
         list($response) = $this->loginWithHttpInfo($options);
         return $response;
@@ -503,11 +404,12 @@ class AuthenticationApi
      *
      * Gets login information for a specified user.
      *
-     * @param  \DocuSign\eSign\Api\AuthenticationApi\LoginOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\AuthenticationApiLoginOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LoginInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function loginWithHttpInfo(\DocuSign\eSign\Api\AuthenticationApi\LoginOptions $options = null): array
+    public function loginWithHttpInfo(\DocuSign\eSign\Api\Options\AuthenticationApiLoginOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/login_information";
@@ -581,6 +483,7 @@ class AuthenticationApi
      *
      * Revokes an authorization token.
      *
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -594,6 +497,7 @@ class AuthenticationApi
      * Operation revokeOAuthTokenWithHttpInfo
      *
      * Revokes an authorization token.
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
@@ -654,6 +558,7 @@ class AuthenticationApi
      *
      * @param ?string $login_part Currently, only the value **password** is supported.
      * @param \DocuSign\eSign\Model\UserPasswordInformation $user_password_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -670,6 +575,7 @@ class AuthenticationApi
      *
      * @param ?string $login_part Currently, only the value **password** is supported.
      * @param \DocuSign\eSign\Model\UserPasswordInformation $user_password_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -743,6 +649,7 @@ class AuthenticationApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -760,6 +667,7 @@ class AuthenticationApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
      * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,305 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\ConnectApi;
-
-
-class GetEventLogOptions
-{
-    /**
-      * $additional_info When true, the connectDebugLog information is included in the response.
-      * @var ?string
-      */
-    protected ?string $additional_info = null;
-
-    /**
-     * Gets additional_info
-     * @return ?string
-     */
-    public function getAdditionalInfo(): ?string
-    {
-        return $this->additional_info;
-    }
-
-    /**
-     * Sets additional_info
-     * @param ?string $additional_info When true, the connectDebugLog information is included in the response.
-     * @return self
-     */
-    public function setAdditionalInfo(?string $additional_info): self
-    {
-        $this->additional_info = $additional_info;
-        return $this;
-    }
-}
-
-
-class ListEventFailureLogsOptions
-{
-    /**
-      * $from_date 
-      * @var ?string
-      */
-    protected ?string $from_date = null;
-
-    /**
-     * Gets from_date
-     * @return ?string
-     */
-    public function getFromDate(): ?string
-    {
-        return $this->from_date;
-    }
-
-    /**
-     * Sets from_date
-     * @param ?string $from_date 
-     * @return self
-     */
-    public function setFromDate(?string $from_date): self
-    {
-        $this->from_date = $from_date;
-        return $this;
-    }
-    /**
-      * $to_date 
-      * @var ?string
-      */
-    protected ?string $to_date = null;
-
-    /**
-     * Gets to_date
-     * @return ?string
-     */
-    public function getToDate(): ?string
-    {
-        return $this->to_date;
-    }
-
-    /**
-     * Sets to_date
-     * @param ?string $to_date 
-     * @return self
-     */
-    public function setToDate(?string $to_date): self
-    {
-        $this->to_date = $to_date;
-        return $this;
-    }
-}
-
-
-class ListEventLogsOptions
-{
-    /**
-      * $from_date 
-      * @var ?string
-      */
-    protected ?string $from_date = null;
-
-    /**
-     * Gets from_date
-     * @return ?string
-     */
-    public function getFromDate(): ?string
-    {
-        return $this->from_date;
-    }
-
-    /**
-     * Sets from_date
-     * @param ?string $from_date 
-     * @return self
-     */
-    public function setFromDate(?string $from_date): self
-    {
-        $this->from_date = $from_date;
-        return $this;
-    }
-    /**
-      * $to_date 
-      * @var ?string
-      */
-    protected ?string $to_date = null;
-
-    /**
-     * Gets to_date
-     * @return ?string
-     */
-    public function getToDate(): ?string
-    {
-        return $this->to_date;
-    }
-
-    /**
-     * Sets to_date
-     * @param ?string $to_date 
-     * @return self
-     */
-    public function setToDate(?string $to_date): self
-    {
-        $this->to_date = $to_date;
-        return $this;
-    }
-}
-
-
-class ListUsersOptions
-{
-    /**
-      * $count 
-      * @var ?string
-      */
-    protected ?string $count = null;
-
-    /**
-     * Gets count
-     * @return ?string
-     */
-    public function getCount(): ?string
-    {
-        return $this->count;
-    }
-
-    /**
-     * Sets count
-     * @param ?string $count 
-     * @return self
-     */
-    public function setCount(?string $count): self
-    {
-        $this->count = $count;
-        return $this;
-    }
-    /**
-      * $email_substring 
-      * @var ?string
-      */
-    protected ?string $email_substring = null;
-
-    /**
-     * Gets email_substring
-     * @return ?string
-     */
-    public function getEmailSubstring(): ?string
-    {
-        return $this->email_substring;
-    }
-
-    /**
-     * Sets email_substring
-     * @param ?string $email_substring 
-     * @return self
-     */
-    public function setEmailSubstring(?string $email_substring): self
-    {
-        $this->email_substring = $email_substring;
-        return $this;
-    }
-    /**
-      * $list_included_users 
-      * @var ?string
-      */
-    protected ?string $list_included_users = null;
-
-    /**
-     * Gets list_included_users
-     * @return ?string
-     */
-    public function getListIncludedUsers(): ?string
-    {
-        return $this->list_included_users;
-    }
-
-    /**
-     * Sets list_included_users
-     * @param ?string $list_included_users 
-     * @return self
-     */
-    public function setListIncludedUsers(?string $list_included_users): self
-    {
-        $this->list_included_users = $list_included_users;
-        return $this;
-    }
-    /**
-      * $start_position 
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position 
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-    /**
-      * $status 
-      * @var ?string
-      */
-    protected ?string $status = null;
-
-    /**
-     * Gets status
-     * @return ?string
-     */
-    public function getStatus(): ?string
-    {
-        return $this->status;
-    }
-
-    /**
-     * Sets status
-     * @param ?string $status 
-     * @return self
-     */
-    public function setStatus(?string $status): self
-    {
-        $this->status = $status;
-        return $this;
-    }
-    /**
-      * $user_name_substring 
-      * @var ?string
-      */
-    protected ?string $user_name_substring = null;
-
-    /**
-     * Gets user_name_substring
-     * @return ?string
-     */
-    public function getUserNameSubstring(): ?string
-    {
-        return $this->user_name_substring;
-    }
-
-    /**
-     * Sets user_name_substring
-     * @param ?string $user_name_substring 
-     * @return self
-     */
-    public function setUserNameSubstring(?string $user_name_substring): self
-    {
-        $this->user_name_substring = $user_name_substring;
-        return $this;
-    }
-}
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -340,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ConnectApi
@@ -356,6 +59,7 @@ class ConnectApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -389,9 +93,9 @@ class ConnectApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -412,6 +116,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectCustomConfiguration
      */
@@ -428,6 +133,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectCustomConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
@@ -504,6 +210,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -520,6 +227,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -595,6 +303,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $failure_id The ID of the failed connect log entry.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -611,6 +320,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $failure_id The ID of the failed connect log entry.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -686,6 +396,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $log_id The ID of the connect log entry
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -702,6 +413,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $log_id The ID of the connect log entry
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -776,6 +488,7 @@ class ConnectApi
      * Gets a list of Connect log entries.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -791,6 +504,7 @@ class ConnectApi
      * Gets a list of Connect log entries.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -858,6 +572,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\MobileNotifierConfigurationInformation
      */
@@ -874,6 +589,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\MobileNotifierConfigurationInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -950,6 +666,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectConfigResults
      */
@@ -966,6 +683,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectConfigResults, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1039,17 +757,139 @@ class ConnectApi
     }
 
     /**
+     * Operation getConnectAllUsers
+     *
+     * Returns all users from the configured Connect service.
+     *
+     * @param ?string $account_id 
+     * @param ?string $connect_id 
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiGetConnectAllUsersOptions  $options for modifying the behavior of the function. (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\IntegratedConnectUserInfoList
+     */
+    public function getConnectAllUsers($account_id, $connect_id, \DocuSign\eSign\Api\Options\ConnectApiGetConnectAllUsersOptions $options = null)
+    {
+        list($response) = $this->getConnectAllUsersWithHttpInfo($account_id, $connect_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getConnectAllUsersWithHttpInfo
+     *
+     * Returns all users from the configured Connect service.
+     *
+     * @param ?string $account_id 
+     * @param ?string $connect_id 
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiGetConnectAllUsersOptions  $options for modifying the behavior of the function. (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\IntegratedConnectUserInfoList, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getConnectAllUsersWithHttpInfo($account_id, $connect_id, \DocuSign\eSign\Api\Options\ConnectApiGetConnectAllUsersOptions $options = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getConnectAllUsers');
+        }
+        // verify the required parameter 'connect_id' is set
+        if ($connect_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $connect_id when calling getConnectAllUsers');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/connect/{connectId}/all/users";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getEmailSubstring() != 'null') {
+                $queryParams['email_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailSubstring());
+            }
+            if ($options->getIsRecipientConnectConfig() != 'null') {
+                $queryParams['is_recipient_connect_config'] = $this->apiClient->getSerializer()->toQueryValue($options->getIsRecipientConnectConfig());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getStatus() != 'null') {
+                $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
+            }
+            if ($options->getUserNameSubstring() != 'null') {
+                $queryParams['user_name_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserNameSubstring());
+            }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($connect_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "connectId", $connect_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\IntegratedConnectUserInfoList',
+                '/v2.1/accounts/{accountId}/connect/{connectId}/all/users'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\IntegratedConnectUserInfoList', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\IntegratedConnectUserInfoList', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getEventLog
      *
      * Get the specified Connect log entry.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $log_id The ID of the connect log entry
-     * @param  \DocuSign\eSign\Api\ConnectApi\GetEventLogOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiGetEventLogOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLog
      */
-    public function getEventLog($account_id, $log_id, \DocuSign\eSign\Api\ConnectApi\GetEventLogOptions $options = null)
+    public function getEventLog($account_id, $log_id, \DocuSign\eSign\Api\Options\ConnectApiGetEventLogOptions $options = null)
     {
         list($response) = $this->getEventLogWithHttpInfo($account_id, $log_id, $options);
         return $response;
@@ -1062,11 +902,12 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $log_id The ID of the connect log entry
-     * @param  \DocuSign\eSign\Api\ConnectApi\GetEventLogOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiGetEventLogOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLog, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEventLogWithHttpInfo($account_id, $log_id, \DocuSign\eSign\Api\ConnectApi\GetEventLogOptions $options = null): array
+    public function getEventLogWithHttpInfo($account_id, $log_id, \DocuSign\eSign\Api\Options\ConnectApiGetEventLogOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1148,6 +989,7 @@ class ConnectApi
      * Get Connect Configuration Information
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectConfigResults
      */
@@ -1163,6 +1005,7 @@ class ConnectApi
      * Get Connect Configuration Information
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectConfigResults, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1233,11 +1076,12 @@ class ConnectApi
      * Gets the Connect failure log information.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiListEventFailureLogsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLogs
      */
-    public function listEventFailureLogs($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions $options = null)
+    public function listEventFailureLogs($account_id, \DocuSign\eSign\Api\Options\ConnectApiListEventFailureLogsOptions $options = null)
     {
         list($response) = $this->listEventFailureLogsWithHttpInfo($account_id, $options);
         return $response;
@@ -1249,11 +1093,12 @@ class ConnectApi
      * Gets the Connect failure log information.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiListEventFailureLogsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLogs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listEventFailureLogsWithHttpInfo($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions $options = null): array
+    public function listEventFailureLogsWithHttpInfo($account_id, \DocuSign\eSign\Api\Options\ConnectApiListEventFailureLogsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1330,11 +1175,12 @@ class ConnectApi
      * Gets the Connect log.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiListEventLogsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLogs
      */
-    public function listEventLogs($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions $options = null)
+    public function listEventLogs($account_id, \DocuSign\eSign\Api\Options\ConnectApiListEventLogsOptions $options = null)
     {
         list($response) = $this->listEventLogsWithHttpInfo($account_id, $options);
         return $response;
@@ -1346,11 +1192,12 @@ class ConnectApi
      * Gets the Connect log.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiListEventLogsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLogs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listEventLogsWithHttpInfo($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions $options = null): array
+    public function listEventLogsWithHttpInfo($account_id, \DocuSign\eSign\Api\Options\ConnectApiListEventLogsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1427,6 +1274,7 @@ class ConnectApi
      * Reserved
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\MobileNotifierConfigurationInformation
      */
@@ -1442,6 +1290,7 @@ class ConnectApi
      * Reserved
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\MobileNotifierConfigurationInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1513,11 +1362,12 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
-     * @param  \DocuSign\eSign\Api\ConnectApi\ListUsersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiListUsersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\IntegratedUserInfoList
      */
-    public function listUsers($account_id, $connect_id, \DocuSign\eSign\Api\ConnectApi\ListUsersOptions $options = null)
+    public function listUsers($account_id, $connect_id, \DocuSign\eSign\Api\Options\ConnectApiListUsersOptions $options = null)
     {
         list($response) = $this->listUsersWithHttpInfo($account_id, $connect_id, $options);
         return $response;
@@ -1530,11 +1380,12 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
-     * @param  \DocuSign\eSign\Api\ConnectApi\ListUsersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\ConnectApiListUsersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\IntegratedUserInfoList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listUsersWithHttpInfo($account_id, $connect_id, \DocuSign\eSign\Api\ConnectApi\ListUsersOptions $options = null): array
+    public function listUsersWithHttpInfo($account_id, $connect_id, \DocuSign\eSign\Api\Options\ConnectApiListUsersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1632,6 +1483,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectFailureResults
      */
@@ -1648,6 +1500,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectFailureResults, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1727,6 +1580,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectFailureFilter $connect_failure_filter  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectFailureResults
      */
@@ -1743,6 +1597,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectFailureFilter $connect_failure_filter  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectFailureResults, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1819,6 +1674,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectCustomConfiguration
      */
@@ -1835,6 +1691,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $connect_custom_configuration  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectCustomConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1911,6 +1768,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\MobileNotifierConfigurationInformation
      */
@@ -1927,6 +1785,7 @@ class ConnectApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\MobileNotifierConfigurationInformation $mobile_notifier_configuration_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\MobileNotifierConfigurationInformation, HTTP status code, HTTP response headers (array of strings)
      */

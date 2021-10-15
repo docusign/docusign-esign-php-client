@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,225 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\PowerFormsApi;
-
-
-class GetPowerFormDataOptions
-{
-    /**
-      * $data_layout 
-      * @var ?string
-      */
-    protected ?string $data_layout = null;
-
-    /**
-     * Gets data_layout
-     * @return ?string
-     */
-    public function getDataLayout(): ?string
-    {
-        return $this->data_layout;
-    }
-
-    /**
-     * Sets data_layout
-     * @param ?string $data_layout 
-     * @return self
-     */
-    public function setDataLayout(?string $data_layout): self
-    {
-        $this->data_layout = $data_layout;
-        return $this;
-    }
-    /**
-      * $from_date 
-      * @var ?string
-      */
-    protected ?string $from_date = null;
-
-    /**
-     * Gets from_date
-     * @return ?string
-     */
-    public function getFromDate(): ?string
-    {
-        return $this->from_date;
-    }
-
-    /**
-     * Sets from_date
-     * @param ?string $from_date 
-     * @return self
-     */
-    public function setFromDate(?string $from_date): self
-    {
-        $this->from_date = $from_date;
-        return $this;
-    }
-    /**
-      * $to_date 
-      * @var ?string
-      */
-    protected ?string $to_date = null;
-
-    /**
-     * Gets to_date
-     * @return ?string
-     */
-    public function getToDate(): ?string
-    {
-        return $this->to_date;
-    }
-
-    /**
-     * Sets to_date
-     * @param ?string $to_date 
-     * @return self
-     */
-    public function setToDate(?string $to_date): self
-    {
-        $this->to_date = $to_date;
-        return $this;
-    }
-}
-
-
-class ListPowerFormSendersOptions
-{
-    /**
-      * $start_position 
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position 
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
-
-
-class ListPowerFormsOptions
-{
-    /**
-      * $from_date 
-      * @var ?string
-      */
-    protected ?string $from_date = null;
-
-    /**
-     * Gets from_date
-     * @return ?string
-     */
-    public function getFromDate(): ?string
-    {
-        return $this->from_date;
-    }
-
-    /**
-     * Sets from_date
-     * @param ?string $from_date 
-     * @return self
-     */
-    public function setFromDate(?string $from_date): self
-    {
-        $this->from_date = $from_date;
-        return $this;
-    }
-    /**
-      * $order 
-      * @var ?string
-      */
-    protected ?string $order = null;
-
-    /**
-     * Gets order
-     * @return ?string
-     */
-    public function getOrder(): ?string
-    {
-        return $this->order;
-    }
-
-    /**
-     * Sets order
-     * @param ?string $order 
-     * @return self
-     */
-    public function setOrder(?string $order): self
-    {
-        $this->order = $order;
-        return $this;
-    }
-    /**
-      * $order_by 
-      * @var ?string
-      */
-    protected ?string $order_by = null;
-
-    /**
-     * Gets order_by
-     * @return ?string
-     */
-    public function getOrderBy(): ?string
-    {
-        return $this->order_by;
-    }
-
-    /**
-     * Sets order_by
-     * @param ?string $order_by 
-     * @return self
-     */
-    public function setOrderBy(?string $order_by): self
-    {
-        $this->order_by = $order_by;
-        return $this;
-    }
-    /**
-      * $to_date 
-      * @var ?string
-      */
-    protected ?string $to_date = null;
-
-    /**
-     * Gets to_date
-     * @return ?string
-     */
-    public function getToDate(): ?string
-    {
-        return $this->to_date;
-    }
-
-    /**
-     * Sets to_date
-     * @param ?string $to_date 
-     * @return self
-     */
-    public function setToDate(?string $to_date): self
-    {
-        $this->to_date = $to_date;
-        return $this;
-    }
-}
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -260,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class PowerFormsApi
@@ -276,6 +59,7 @@ class PowerFormsApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -309,9 +93,9 @@ class PowerFormsApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -332,6 +116,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
@@ -348,6 +133,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
@@ -424,6 +210,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -440,6 +227,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -515,6 +303,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
@@ -531,6 +320,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -607,6 +397,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
@@ -623,6 +414,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
@@ -702,11 +494,12 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\PowerFormsApiGetPowerFormDataOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsFormDataResponse
      */
-    public function getPowerFormData($account_id, $power_form_id, \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions $options = null)
+    public function getPowerFormData($account_id, $power_form_id, \DocuSign\eSign\Api\Options\PowerFormsApiGetPowerFormDataOptions $options = null)
     {
         list($response) = $this->getPowerFormDataWithHttpInfo($account_id, $power_form_id, $options);
         return $response;
@@ -719,11 +512,12 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\PowerFormsApiGetPowerFormDataOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsFormDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPowerFormDataWithHttpInfo($account_id, $power_form_id, \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions $options = null): array
+    public function getPowerFormDataWithHttpInfo($account_id, $power_form_id, \DocuSign\eSign\Api\Options\PowerFormsApiGetPowerFormDataOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -811,11 +605,12 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormSendersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormSendersResponse
      */
-    public function listPowerFormSenders($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions $options = null)
+    public function listPowerFormSenders($account_id, \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormSendersOptions $options = null)
     {
         list($response) = $this->listPowerFormSendersWithHttpInfo($account_id, $options);
         return $response;
@@ -827,11 +622,12 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormSendersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormSendersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPowerFormSendersWithHttpInfo($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions $options = null): array
+    public function listPowerFormSendersWithHttpInfo($account_id, \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormSendersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -905,11 +701,12 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
-    public function listPowerForms($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions $options = null)
+    public function listPowerForms($account_id, \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormsOptions $options = null)
     {
         list($response) = $this->listPowerFormsWithHttpInfo($account_id, $options);
         return $response;
@@ -921,11 +718,12 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPowerFormsWithHttpInfo($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions $options = null): array
+    public function listPowerFormsWithHttpInfo($account_id, \DocuSign\eSign\Api\Options\PowerFormsApiListPowerFormsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1010,6 +808,7 @@ class PowerFormsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
@@ -1027,6 +826,7 @@ class PowerFormsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */

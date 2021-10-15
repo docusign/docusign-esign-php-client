@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,1300 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\TemplatesApi;
-
-
-class CreateRecipientsOptions
-{
-    /**
-      * $resend_envelope 
-      * @var ?string
-      */
-    protected ?string $resend_envelope = null;
-
-    /**
-     * Gets resend_envelope
-     * @return ?string
-     */
-    public function getResendEnvelope(): ?string
-    {
-        return $this->resend_envelope;
-    }
-
-    /**
-     * Sets resend_envelope
-     * @param ?string $resend_envelope 
-     * @return self
-     */
-    public function setResendEnvelope(?string $resend_envelope): self
-    {
-        $this->resend_envelope = $resend_envelope;
-        return $this;
-    }
-}
-
-
-class GetOptions
-{
-    /**
-      * $include 
-      * @var ?string
-      */
-    protected ?string $include = null;
-
-    /**
-     * Gets include
-     * @return ?string
-     */
-    public function getInclude(): ?string
-    {
-        return $this->include;
-    }
-
-    /**
-     * Sets include
-     * @param ?string $include 
-     * @return self
-     */
-    public function setInclude(?string $include): self
-    {
-        $this->include = $include;
-        return $this;
-    }
-}
-
-
-class GetDocumentOptions
-{
-    /**
-      * $encrypt 
-      * @var ?string
-      */
-    protected ?string $encrypt = null;
-
-    /**
-     * Gets encrypt
-     * @return ?string
-     */
-    public function getEncrypt(): ?string
-    {
-        return $this->encrypt;
-    }
-
-    /**
-     * Sets encrypt
-     * @param ?string $encrypt 
-     * @return self
-     */
-    public function setEncrypt(?string $encrypt): self
-    {
-        $this->encrypt = $encrypt;
-        return $this;
-    }
-    /**
-      * $show_changes 
-      * @var ?string
-      */
-    protected ?string $show_changes = null;
-
-    /**
-     * Gets show_changes
-     * @return ?string
-     */
-    public function getShowChanges(): ?string
-    {
-        return $this->show_changes;
-    }
-
-    /**
-     * Sets show_changes
-     * @param ?string $show_changes 
-     * @return self
-     */
-    public function setShowChanges(?string $show_changes): self
-    {
-        $this->show_changes = $show_changes;
-        return $this;
-    }
-}
-
-
-class GetDocumentPageImageOptions
-{
-    /**
-      * $dpi 
-      * @var ?string
-      */
-    protected ?string $dpi = null;
-
-    /**
-     * Gets dpi
-     * @return ?string
-     */
-    public function getDpi(): ?string
-    {
-        return $this->dpi;
-    }
-
-    /**
-     * Sets dpi
-     * @param ?string $dpi 
-     * @return self
-     */
-    public function setDpi(?string $dpi): self
-    {
-        $this->dpi = $dpi;
-        return $this;
-    }
-    /**
-      * $max_height 
-      * @var ?string
-      */
-    protected ?string $max_height = null;
-
-    /**
-     * Gets max_height
-     * @return ?string
-     */
-    public function getMaxHeight(): ?string
-    {
-        return $this->max_height;
-    }
-
-    /**
-     * Sets max_height
-     * @param ?string $max_height 
-     * @return self
-     */
-    public function setMaxHeight(?string $max_height): self
-    {
-        $this->max_height = $max_height;
-        return $this;
-    }
-    /**
-      * $max_width 
-      * @var ?string
-      */
-    protected ?string $max_width = null;
-
-    /**
-     * Gets max_width
-     * @return ?string
-     */
-    public function getMaxWidth(): ?string
-    {
-        return $this->max_width;
-    }
-
-    /**
-     * Sets max_width
-     * @param ?string $max_width 
-     * @return self
-     */
-    public function setMaxWidth(?string $max_width): self
-    {
-        $this->max_width = $max_width;
-        return $this;
-    }
-    /**
-      * $show_changes 
-      * @var ?string
-      */
-    protected ?string $show_changes = null;
-
-    /**
-     * Gets show_changes
-     * @return ?string
-     */
-    public function getShowChanges(): ?string
-    {
-        return $this->show_changes;
-    }
-
-    /**
-     * Sets show_changes
-     * @param ?string $show_changes 
-     * @return self
-     */
-    public function setShowChanges(?string $show_changes): self
-    {
-        $this->show_changes = $show_changes;
-        return $this;
-    }
-}
-
-
-class GetDocumentTabsOptions
-{
-    /**
-      * $page_numbers 
-      * @var ?string
-      */
-    protected ?string $page_numbers = null;
-
-    /**
-     * Gets page_numbers
-     * @return ?string
-     */
-    public function getPageNumbers(): ?string
-    {
-        return $this->page_numbers;
-    }
-
-    /**
-     * Sets page_numbers
-     * @param ?string $page_numbers 
-     * @return self
-     */
-    public function setPageNumbers(?string $page_numbers): self
-    {
-        $this->page_numbers = $page_numbers;
-        return $this;
-    }
-}
-
-
-class GetPagesOptions
-{
-    /**
-      * $count 
-      * @var ?string
-      */
-    protected ?string $count = null;
-
-    /**
-     * Gets count
-     * @return ?string
-     */
-    public function getCount(): ?string
-    {
-        return $this->count;
-    }
-
-    /**
-     * Sets count
-     * @param ?string $count 
-     * @return self
-     */
-    public function setCount(?string $count): self
-    {
-        $this->count = $count;
-        return $this;
-    }
-    /**
-      * $dpi 
-      * @var ?string
-      */
-    protected ?string $dpi = null;
-
-    /**
-     * Gets dpi
-     * @return ?string
-     */
-    public function getDpi(): ?string
-    {
-        return $this->dpi;
-    }
-
-    /**
-     * Sets dpi
-     * @param ?string $dpi 
-     * @return self
-     */
-    public function setDpi(?string $dpi): self
-    {
-        $this->dpi = $dpi;
-        return $this;
-    }
-    /**
-      * $max_height 
-      * @var ?string
-      */
-    protected ?string $max_height = null;
-
-    /**
-     * Gets max_height
-     * @return ?string
-     */
-    public function getMaxHeight(): ?string
-    {
-        return $this->max_height;
-    }
-
-    /**
-     * Sets max_height
-     * @param ?string $max_height 
-     * @return self
-     */
-    public function setMaxHeight(?string $max_height): self
-    {
-        $this->max_height = $max_height;
-        return $this;
-    }
-    /**
-      * $max_width 
-      * @var ?string
-      */
-    protected ?string $max_width = null;
-
-    /**
-     * Gets max_width
-     * @return ?string
-     */
-    public function getMaxWidth(): ?string
-    {
-        return $this->max_width;
-    }
-
-    /**
-     * Sets max_width
-     * @param ?string $max_width 
-     * @return self
-     */
-    public function setMaxWidth(?string $max_width): self
-    {
-        $this->max_width = $max_width;
-        return $this;
-    }
-    /**
-      * $nocache 
-      * @var ?string
-      */
-    protected ?string $nocache = null;
-
-    /**
-     * Gets nocache
-     * @return ?string
-     */
-    public function getNocache(): ?string
-    {
-        return $this->nocache;
-    }
-
-    /**
-     * Sets nocache
-     * @param ?string $nocache 
-     * @return self
-     */
-    public function setNocache(?string $nocache): self
-    {
-        $this->nocache = $nocache;
-        return $this;
-    }
-    /**
-      * $show_changes 
-      * @var ?string
-      */
-    protected ?string $show_changes = null;
-
-    /**
-     * Gets show_changes
-     * @return ?string
-     */
-    public function getShowChanges(): ?string
-    {
-        return $this->show_changes;
-    }
-
-    /**
-     * Sets show_changes
-     * @param ?string $show_changes 
-     * @return self
-     */
-    public function setShowChanges(?string $show_changes): self
-    {
-        $this->show_changes = $show_changes;
-        return $this;
-    }
-    /**
-      * $start_position 
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position 
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
-
-
-class ListBulkRecipientsOptions
-{
-    /**
-      * $include_tabs 
-      * @var ?string
-      */
-    protected ?string $include_tabs = null;
-
-    /**
-     * Gets include_tabs
-     * @return ?string
-     */
-    public function getIncludeTabs(): ?string
-    {
-        return $this->include_tabs;
-    }
-
-    /**
-     * Sets include_tabs
-     * @param ?string $include_tabs 
-     * @return self
-     */
-    public function setIncludeTabs(?string $include_tabs): self
-    {
-        $this->include_tabs = $include_tabs;
-        return $this;
-    }
-    /**
-      * $start_position 
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position 
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
-
-
-class ListDocumentsOptions
-{
-    /**
-      * $include_tabs 
-      * @var ?string
-      */
-    protected ?string $include_tabs = null;
-
-    /**
-     * Gets include_tabs
-     * @return ?string
-     */
-    public function getIncludeTabs(): ?string
-    {
-        return $this->include_tabs;
-    }
-
-    /**
-     * Sets include_tabs
-     * @param ?string $include_tabs 
-     * @return self
-     */
-    public function setIncludeTabs(?string $include_tabs): self
-    {
-        $this->include_tabs = $include_tabs;
-        return $this;
-    }
-}
-
-
-class ListRecipientsOptions
-{
-    /**
-      * $include_anchor_tab_locations When set to **true** and `include_tabs` is set to **true**, all tabs with anchor tab properties are included in the response.
-      * @var ?string
-      */
-    protected ?string $include_anchor_tab_locations = null;
-
-    /**
-     * Gets include_anchor_tab_locations
-     * @return ?string
-     */
-    public function getIncludeAnchorTabLocations(): ?string
-    {
-        return $this->include_anchor_tab_locations;
-    }
-
-    /**
-     * Sets include_anchor_tab_locations
-     * @param ?string $include_anchor_tab_locations When set to **true** and `include_tabs` is set to **true**, all tabs with anchor tab properties are included in the response.
-     * @return self
-     */
-    public function setIncludeAnchorTabLocations(?string $include_anchor_tab_locations): self
-    {
-        $this->include_anchor_tab_locations = $include_anchor_tab_locations;
-        return $this;
-    }
-    /**
-      * $include_extended When set to **true**, the extended properties are included in the response.
-      * @var ?string
-      */
-    protected ?string $include_extended = null;
-
-    /**
-     * Gets include_extended
-     * @return ?string
-     */
-    public function getIncludeExtended(): ?string
-    {
-        return $this->include_extended;
-    }
-
-    /**
-     * Sets include_extended
-     * @param ?string $include_extended When set to **true**, the extended properties are included in the response.
-     * @return self
-     */
-    public function setIncludeExtended(?string $include_extended): self
-    {
-        $this->include_extended = $include_extended;
-        return $this;
-    }
-    /**
-      * $include_tabs When set to **true**, the tab information associated with the recipient is included in the response.
-      * @var ?string
-      */
-    protected ?string $include_tabs = null;
-
-    /**
-     * Gets include_tabs
-     * @return ?string
-     */
-    public function getIncludeTabs(): ?string
-    {
-        return $this->include_tabs;
-    }
-
-    /**
-     * Sets include_tabs
-     * @param ?string $include_tabs When set to **true**, the tab information associated with the recipient is included in the response.
-     * @return self
-     */
-    public function setIncludeTabs(?string $include_tabs): self
-    {
-        $this->include_tabs = $include_tabs;
-        return $this;
-    }
-}
-
-
-class ListTabsOptions
-{
-    /**
-      * $include_anchor_tab_locations When set to **true**, all tabs with anchor tab properties are included in the response.
-      * @var ?string
-      */
-    protected ?string $include_anchor_tab_locations = null;
-
-    /**
-     * Gets include_anchor_tab_locations
-     * @return ?string
-     */
-    public function getIncludeAnchorTabLocations(): ?string
-    {
-        return $this->include_anchor_tab_locations;
-    }
-
-    /**
-     * Sets include_anchor_tab_locations
-     * @param ?string $include_anchor_tab_locations When set to **true**, all tabs with anchor tab properties are included in the response.
-     * @return self
-     */
-    public function setIncludeAnchorTabLocations(?string $include_anchor_tab_locations): self
-    {
-        $this->include_anchor_tab_locations = $include_anchor_tab_locations;
-        return $this;
-    }
-    /**
-      * $include_metadata 
-      * @var ?string
-      */
-    protected ?string $include_metadata = null;
-
-    /**
-     * Gets include_metadata
-     * @return ?string
-     */
-    public function getIncludeMetadata(): ?string
-    {
-        return $this->include_metadata;
-    }
-
-    /**
-     * Sets include_metadata
-     * @param ?string $include_metadata 
-     * @return self
-     */
-    public function setIncludeMetadata(?string $include_metadata): self
-    {
-        $this->include_metadata = $include_metadata;
-        return $this;
-    }
-}
-
-
-class ListTemplatesOptions
-{
-    /**
-      * $count Number of records to return in the cache.
-      * @var ?string
-      */
-    protected ?string $count = null;
-
-    /**
-     * Gets count
-     * @return ?string
-     */
-    public function getCount(): ?string
-    {
-        return $this->count;
-    }
-
-    /**
-     * Sets count
-     * @param ?string $count Number of records to return in the cache.
-     * @return self
-     */
-    public function setCount(?string $count): self
-    {
-        $this->count = $count;
-        return $this;
-    }
-    /**
-      * $created_from_date 
-      * @var ?string
-      */
-    protected ?string $created_from_date = null;
-
-    /**
-     * Gets created_from_date
-     * @return ?string
-     */
-    public function getCreatedFromDate(): ?string
-    {
-        return $this->created_from_date;
-    }
-
-    /**
-     * Sets created_from_date
-     * @param ?string $created_from_date 
-     * @return self
-     */
-    public function setCreatedFromDate(?string $created_from_date): self
-    {
-        $this->created_from_date = $created_from_date;
-        return $this;
-    }
-    /**
-      * $created_to_date 
-      * @var ?string
-      */
-    protected ?string $created_to_date = null;
-
-    /**
-     * Gets created_to_date
-     * @return ?string
-     */
-    public function getCreatedToDate(): ?string
-    {
-        return $this->created_to_date;
-    }
-
-    /**
-     * Sets created_to_date
-     * @param ?string $created_to_date 
-     * @return self
-     */
-    public function setCreatedToDate(?string $created_to_date): self
-    {
-        $this->created_to_date = $created_to_date;
-        return $this;
-    }
-    /**
-      * $folder_ids A comma separated list of folder ID GUIDs.
-      * @var ?string
-      */
-    protected ?string $folder_ids = null;
-
-    /**
-     * Gets folder_ids
-     * @return ?string
-     */
-    public function getFolderIds(): ?string
-    {
-        return $this->folder_ids;
-    }
-
-    /**
-     * Sets folder_ids
-     * @param ?string $folder_ids A comma separated list of folder ID GUIDs.
-     * @return self
-     */
-    public function setFolderIds(?string $folder_ids): self
-    {
-        $this->folder_ids = $folder_ids;
-        return $this;
-    }
-    /**
-      * $folder_types 
-      * @var ?string
-      */
-    protected ?string $folder_types = null;
-
-    /**
-     * Gets folder_types
-     * @return ?string
-     */
-    public function getFolderTypes(): ?string
-    {
-        return $this->folder_types;
-    }
-
-    /**
-     * Sets folder_types
-     * @param ?string $folder_types 
-     * @return self
-     */
-    public function setFolderTypes(?string $folder_types): self
-    {
-        $this->folder_types = $folder_types;
-        return $this;
-    }
-    /**
-      * $from_date Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created.
-      * @var ?string
-      */
-    protected ?string $from_date = null;
-
-    /**
-     * Gets from_date
-     * @return ?string
-     */
-    public function getFromDate(): ?string
-    {
-        return $this->from_date;
-    }
-
-    /**
-     * Sets from_date
-     * @param ?string $from_date Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created.
-     * @return self
-     */
-    public function setFromDate(?string $from_date): self
-    {
-        $this->from_date = $from_date;
-        return $this;
-    }
-    /**
-      * $include A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
-      * @var ?string
-      */
-    protected ?string $include = null;
-
-    /**
-     * Gets include
-     * @return ?string
-     */
-    public function getInclude(): ?string
-    {
-        return $this->include;
-    }
-
-    /**
-     * Sets include
-     * @param ?string $include A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
-     * @return self
-     */
-    public function setInclude(?string $include): self
-    {
-        $this->include = $include;
-        return $this;
-    }
-    /**
-      * $is_deleted_template_only 
-      * @var ?string
-      */
-    protected ?string $is_deleted_template_only = null;
-
-    /**
-     * Gets is_deleted_template_only
-     * @return ?string
-     */
-    public function getIsDeletedTemplateOnly(): ?string
-    {
-        return $this->is_deleted_template_only;
-    }
-
-    /**
-     * Sets is_deleted_template_only
-     * @param ?string $is_deleted_template_only 
-     * @return self
-     */
-    public function setIsDeletedTemplateOnly(?string $is_deleted_template_only): self
-    {
-        $this->is_deleted_template_only = $is_deleted_template_only;
-        return $this;
-    }
-    /**
-      * $is_download 
-      * @var ?string
-      */
-    protected ?string $is_download = null;
-
-    /**
-     * Gets is_download
-     * @return ?string
-     */
-    public function getIsDownload(): ?string
-    {
-        return $this->is_download;
-    }
-
-    /**
-     * Sets is_download
-     * @param ?string $is_download 
-     * @return self
-     */
-    public function setIsDownload(?string $is_download): self
-    {
-        $this->is_download = $is_download;
-        return $this;
-    }
-    /**
-      * $modified_from_date 
-      * @var ?string
-      */
-    protected ?string $modified_from_date = null;
-
-    /**
-     * Gets modified_from_date
-     * @return ?string
-     */
-    public function getModifiedFromDate(): ?string
-    {
-        return $this->modified_from_date;
-    }
-
-    /**
-     * Sets modified_from_date
-     * @param ?string $modified_from_date 
-     * @return self
-     */
-    public function setModifiedFromDate(?string $modified_from_date): self
-    {
-        $this->modified_from_date = $modified_from_date;
-        return $this;
-    }
-    /**
-      * $modified_to_date 
-      * @var ?string
-      */
-    protected ?string $modified_to_date = null;
-
-    /**
-     * Gets modified_to_date
-     * @return ?string
-     */
-    public function getModifiedToDate(): ?string
-    {
-        return $this->modified_to_date;
-    }
-
-    /**
-     * Sets modified_to_date
-     * @param ?string $modified_to_date 
-     * @return self
-     */
-    public function setModifiedToDate(?string $modified_to_date): self
-    {
-        $this->modified_to_date = $modified_to_date;
-        return $this;
-    }
-    /**
-      * $order Sets the direction order used to sort the list. Valid values are: -asc = ascending sort order (a to z)  -desc = descending sort order (z to a)
-      * @var ?string
-      */
-    protected ?string $order = null;
-
-    /**
-     * Gets order
-     * @return ?string
-     */
-    public function getOrder(): ?string
-    {
-        return $this->order;
-    }
-
-    /**
-     * Sets order
-     * @param ?string $order Sets the direction order used to sort the list. Valid values are: -asc = ascending sort order (a to z)  -desc = descending sort order (z to a)
-     * @return self
-     */
-    public function setOrder(?string $order): self
-    {
-        $this->order = $order;
-        return $this;
-    }
-    /**
-      * $order_by Sets the file attribute used to sort the list. Valid values are:  -name: template name  -modified: date/time template was last modified.  -used: date/time the template was last used.
-      * @var ?string
-      */
-    protected ?string $order_by = null;
-
-    /**
-     * Gets order_by
-     * @return ?string
-     */
-    public function getOrderBy(): ?string
-    {
-        return $this->order_by;
-    }
-
-    /**
-     * Sets order_by
-     * @param ?string $order_by Sets the file attribute used to sort the list. Valid values are:  -name: template name  -modified: date/time template was last modified.  -used: date/time the template was last used.
-     * @return self
-     */
-    public function setOrderBy(?string $order_by): self
-    {
-        $this->order_by = $order_by;
-        return $this;
-    }
-    /**
-      * $search_fields 
-      * @var ?string
-      */
-    protected ?string $search_fields = null;
-
-    /**
-     * Gets search_fields
-     * @return ?string
-     */
-    public function getSearchFields(): ?string
-    {
-        return $this->search_fields;
-    }
-
-    /**
-     * Sets search_fields
-     * @param ?string $search_fields 
-     * @return self
-     */
-    public function setSearchFields(?string $search_fields): self
-    {
-        $this->search_fields = $search_fields;
-        return $this;
-    }
-    /**
-      * $search_text The search text used to search the names of templates.
-      * @var ?string
-      */
-    protected ?string $search_text = null;
-
-    /**
-     * Gets search_text
-     * @return ?string
-     */
-    public function getSearchText(): ?string
-    {
-        return $this->search_text;
-    }
-
-    /**
-     * Sets search_text
-     * @param ?string $search_text The search text used to search the names of templates.
-     * @return self
-     */
-    public function setSearchText(?string $search_text): self
-    {
-        $this->search_text = $search_text;
-        return $this;
-    }
-    /**
-      * $shared_by_me If true, the response only includes templates shared by the user. If false, the response only returns template not shared by the user. If not specified, the response is not affected.
-      * @var ?string
-      */
-    protected ?string $shared_by_me = null;
-
-    /**
-     * Gets shared_by_me
-     * @return ?string
-     */
-    public function getSharedByMe(): ?string
-    {
-        return $this->shared_by_me;
-    }
-
-    /**
-     * Sets shared_by_me
-     * @param ?string $shared_by_me If true, the response only includes templates shared by the user. If false, the response only returns template not shared by the user. If not specified, the response is not affected.
-     * @return self
-     */
-    public function setSharedByMe(?string $shared_by_me): self
-    {
-        $this->shared_by_me = $shared_by_me;
-        return $this;
-    }
-    /**
-      * $start_position The starting index for the first template shown in the response. This must be greater than or equal to 0 (zero).
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position The starting index for the first template shown in the response. This must be greater than or equal to 0 (zero).
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-    /**
-      * $template_ids 
-      * @var ?string
-      */
-    protected ?string $template_ids = null;
-
-    /**
-     * Gets template_ids
-     * @return ?string
-     */
-    public function getTemplateIds(): ?string
-    {
-        return $this->template_ids;
-    }
-
-    /**
-     * Sets template_ids
-     * @param ?string $template_ids 
-     * @return self
-     */
-    public function setTemplateIds(?string $template_ids): self
-    {
-        $this->template_ids = $template_ids;
-        return $this;
-    }
-    /**
-      * $to_date End of the search date range. Only returns templates created up to this date/time. If no value is provided, this defaults to the current date.
-      * @var ?string
-      */
-    protected ?string $to_date = null;
-
-    /**
-     * Gets to_date
-     * @return ?string
-     */
-    public function getToDate(): ?string
-    {
-        return $this->to_date;
-    }
-
-    /**
-     * Sets to_date
-     * @param ?string $to_date End of the search date range. Only returns templates created up to this date/time. If no value is provided, this defaults to the current date.
-     * @return self
-     */
-    public function setToDate(?string $to_date): self
-    {
-        $this->to_date = $to_date;
-        return $this;
-    }
-    /**
-      * $used_from_date Start of the search date range. Only returns templates used or edited on or after this date/time. If no value is specified, there is no limit on the earliest date used.
-      * @var ?string
-      */
-    protected ?string $used_from_date = null;
-
-    /**
-     * Gets used_from_date
-     * @return ?string
-     */
-    public function getUsedFromDate(): ?string
-    {
-        return $this->used_from_date;
-    }
-
-    /**
-     * Sets used_from_date
-     * @param ?string $used_from_date Start of the search date range. Only returns templates used or edited on or after this date/time. If no value is specified, there is no limit on the earliest date used.
-     * @return self
-     */
-    public function setUsedFromDate(?string $used_from_date): self
-    {
-        $this->used_from_date = $used_from_date;
-        return $this;
-    }
-    /**
-      * $used_to_date End of the search date range. Only returns templates used or edited up to this date/time. If no value is provided, this defaults to the current date.
-      * @var ?string
-      */
-    protected ?string $used_to_date = null;
-
-    /**
-     * Gets used_to_date
-     * @return ?string
-     */
-    public function getUsedToDate(): ?string
-    {
-        return $this->used_to_date;
-    }
-
-    /**
-     * Sets used_to_date
-     * @param ?string $used_to_date End of the search date range. Only returns templates used or edited up to this date/time. If no value is provided, this defaults to the current date.
-     * @return self
-     */
-    public function setUsedToDate(?string $used_to_date): self
-    {
-        $this->used_to_date = $used_to_date;
-        return $this;
-    }
-    /**
-      * $user_filter Sets if the templates shown in the response Valid values are:  -owned_by_me: only shows templates the user owns.  -shared_with_me: only shows templates that are shared with the user.  -all: shows all templates owned or shared with the user.
-      * @var ?string
-      */
-    protected ?string $user_filter = null;
-
-    /**
-     * Gets user_filter
-     * @return ?string
-     */
-    public function getUserFilter(): ?string
-    {
-        return $this->user_filter;
-    }
-
-    /**
-     * Sets user_filter
-     * @param ?string $user_filter Sets if the templates shown in the response Valid values are:  -owned_by_me: only shows templates the user owns.  -shared_with_me: only shows templates that are shared with the user.  -all: shows all templates owned or shared with the user.
-     * @return self
-     */
-    public function setUserFilter(?string $user_filter): self
-    {
-        $this->user_filter = $user_filter;
-        return $this;
-    }
-    /**
-      * $user_id 
-      * @var ?string
-      */
-    protected ?string $user_id = null;
-
-    /**
-     * Gets user_id
-     * @return ?string
-     */
-    public function getUserId(): ?string
-    {
-        return $this->user_id;
-    }
-
-    /**
-     * Sets user_id
-     * @param ?string $user_id 
-     * @return self
-     */
-    public function setUserId(?string $user_id): self
-    {
-        $this->user_id = $user_id;
-        return $this;
-    }
-}
-
-
-class UpdateDocumentOptions
-{
-    /**
-      * $is_envelope_definition 
-      * @var ?string
-      */
-    protected ?string $is_envelope_definition = null;
-
-    /**
-     * Gets is_envelope_definition
-     * @return ?string
-     */
-    public function getIsEnvelopeDefinition(): ?string
-    {
-        return $this->is_envelope_definition;
-    }
-
-    /**
-     * Sets is_envelope_definition
-     * @param ?string $is_envelope_definition 
-     * @return self
-     */
-    public function setIsEnvelopeDefinition(?string $is_envelope_definition): self
-    {
-        $this->is_envelope_definition = $is_envelope_definition;
-        return $this;
-    }
-}
-
-
-class UpdateRecipientsOptions
-{
-    /**
-      * $resend_envelope 
-      * @var ?string
-      */
-    protected ?string $resend_envelope = null;
-
-    /**
-     * Gets resend_envelope
-     * @return ?string
-     */
-    public function getResendEnvelope(): ?string
-    {
-        return $this->resend_envelope;
-    }
-
-    /**
-     * Sets resend_envelope
-     * @param ?string $resend_envelope 
-     * @return self
-     */
-    public function setResendEnvelope(?string $resend_envelope): self
-    {
-        $this->resend_envelope = $resend_envelope;
-        return $this;
-    }
-}
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -1335,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class TemplatesApi
@@ -1351,6 +59,7 @@ class TemplatesApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -1384,9 +93,9 @@ class TemplatesApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -1408,6 +117,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -1425,6 +135,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1511,6 +222,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -1529,6 +241,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1622,6 +335,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -1639,6 +353,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1724,6 +439,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -1741,6 +457,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1826,11 +543,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  \DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiCreateRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function createRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions $options = null)
+    public function createRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\Options\TemplatesApiCreateRecipientsOptions $options = null)
     {
         list($response) = $this->createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients, $options);
         return $response;
@@ -1844,11 +562,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  \DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiCreateRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions $options = null): array
+    public function createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\Options\TemplatesApiCreateRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1938,6 +657,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -1956,6 +676,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2048,6 +769,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateSummary
      */
@@ -2064,6 +786,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateSummary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2142,6 +865,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
      */
@@ -2160,6 +884,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2254,6 +979,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -2272,6 +998,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2365,6 +1092,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\RecipientPreviewRequest $recipient_preview_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
@@ -2382,6 +1110,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\RecipientPreviewRequest $recipient_preview_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2467,6 +1196,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitions
      */
@@ -2484,6 +1214,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $document_html_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitions, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2569,6 +1300,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsUpdateResponse
      */
@@ -2586,6 +1318,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2674,6 +1407,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -2691,6 +1425,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2777,6 +1512,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -2795,6 +1531,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2890,6 +1627,7 @@ class TemplatesApi
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -2909,6 +1647,7 @@ class TemplatesApi
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3006,6 +1745,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentsResult
      */
@@ -3023,6 +1763,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3109,6 +1850,7 @@ class TemplatesApi
      * @param ?string $template_id The ID of the template being accessed.
      * @param ?string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
@@ -3127,6 +1869,7 @@ class TemplatesApi
      * @param ?string $template_id The ID of the template being accessed.
      * @param ?string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3220,6 +1963,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -3237,6 +1981,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3323,6 +2068,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
@@ -3341,6 +2087,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3434,6 +2181,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
@@ -3451,6 +2199,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3537,6 +2286,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -3555,6 +2305,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3649,6 +2400,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -3667,6 +2419,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3759,11 +2512,12 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeTemplate
      */
-    public function get($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetOptions $options = null)
+    public function get($account_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetOptions $options = null)
     {
         list($response) = $this->getWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -3776,11 +2530,12 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeTemplate, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetOptions $options = null): array
+    public function getWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3864,11 +2619,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getDocument($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions $options = null)
+    public function getDocument($account_id, $document_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentOptions $options = null)
     {
         list($response) = $this->getDocumentWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -3882,11 +2638,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions $options = null): array
+    public function getDocumentWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3982,11 +2739,12 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentPageImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getDocumentPageImage($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions $options = null)
+    public function getDocumentPageImage($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentPageImageOptions $options = null)
     {
         list($response) = $this->getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $options);
         return $response;
@@ -4001,11 +2759,12 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentPageImageOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions $options = null): array
+    public function getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentPageImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4114,11 +2873,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function getDocumentTabs($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions $options = null)
+    public function getDocumentTabs($account_id, $document_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentTabsOptions $options = null)
     {
         list($response) = $this->getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -4132,11 +2892,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions $options = null): array
+    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetDocumentTabsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4227,6 +2988,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -4243,6 +3005,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4322,6 +3085,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notification
      */
@@ -4338,6 +3102,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notification, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4419,6 +3184,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -4437,6 +3203,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4533,11 +3300,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetPagesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetPagesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
-    public function getPages($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetPagesOptions $options = null)
+    public function getPages($account_id, $document_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetPagesOptions $options = null)
     {
         list($response) = $this->getPagesWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -4551,11 +3319,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\GetPagesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiGetPagesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPagesWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetPagesOptions $options = null): array
+    public function getPagesWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiGetPagesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4665,6 +3434,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
      */
@@ -4682,6 +3452,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4769,6 +3540,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
      */
@@ -4785,6 +3557,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4865,11 +3638,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListBulkRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsResponse
      */
-    public function listBulkRecipients($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions $options = null)
+    public function listBulkRecipients($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListBulkRecipientsOptions $options = null)
     {
         list($response) = $this->listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, $options);
         return $response;
@@ -4883,11 +3657,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListBulkRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions $options = null): array
+    public function listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListBulkRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4981,6 +3756,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -4997,6 +3773,7 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5077,6 +3854,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -5094,6 +3872,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5181,11 +3960,12 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListDocumentsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentsResult
      */
-    public function listDocuments($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions $options = null)
+    public function listDocuments($account_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListDocumentsOptions $options = null)
     {
         list($response) = $this->listDocumentsWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -5198,11 +3978,12 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListDocumentsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listDocumentsWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions $options = null): array
+    public function listDocumentsWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListDocumentsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5285,11 +4066,12 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function listRecipients($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions $options = null)
+    public function listRecipients($account_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListRecipientsOptions $options = null)
     {
         list($response) = $this->listRecipientsWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -5302,11 +4084,12 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRecipientsWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions $options = null): array
+    public function listRecipientsWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5396,11 +4179,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function listTabs($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListTabsOptions $options = null)
+    public function listTabs($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListTabsOptions $options = null)
     {
         list($response) = $this->listTabsWithHttpInfo($account_id, $recipient_id, $template_id, $options);
         return $response;
@@ -5414,11 +4198,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListTabsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListTabsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listTabsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListTabsOptions $options = null): array
+    public function listTabsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\Options\TemplatesApiListTabsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5511,11 +4296,12 @@ class TemplatesApi
      * Gets the definition of a template.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListTemplatesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeTemplateResults
      */
-    public function listTemplates($account_id, \DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions $options = null)
+    public function listTemplates($account_id, \DocuSign\eSign\Api\Options\TemplatesApiListTemplatesOptions $options = null)
     {
         list($response) = $this->listTemplatesWithHttpInfo($account_id, $options);
         return $response;
@@ -5527,11 +4313,12 @@ class TemplatesApi
      * Gets the definition of a template.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiListTemplatesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeTemplateResults, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listTemplatesWithHttpInfo($account_id, \DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions $options = null): array
+    public function listTemplatesWithHttpInfo($account_id, \DocuSign\eSign\Api\Options\TemplatesApiListTemplatesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5675,6 +4462,7 @@ class TemplatesApi
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -5694,6 +4482,7 @@ class TemplatesApi
      * @param ?string $page_number The page number being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\PageRequest $page_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5791,6 +4580,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateUpdateSummary
      */
@@ -5808,6 +4598,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeTemplate $envelope_template  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateUpdateSummary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5894,6 +4685,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkRecipientsSummaryResponse
      */
@@ -5912,6 +4704,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\BulkRecipientsRequest $bulk_recipients_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkRecipientsSummaryResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6005,6 +4798,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
@@ -6022,6 +4816,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateCustomFields $template_custom_fields  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6108,11 +4903,12 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  \DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiUpdateDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocument
      */
-    public function updateDocument($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions $options = null)
+    public function updateDocument($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\Api\Options\TemplatesApiUpdateDocumentOptions $options = null)
     {
         list($response) = $this->updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition, $options);
         return $response;
@@ -6127,11 +4923,12 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
-     * @param  \DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiUpdateDocumentOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions $options = null): array
+    public function updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\Api\Options\TemplatesApiUpdateDocumentOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6229,6 +5026,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DocumentFieldsInformation
      */
@@ -6247,6 +5045,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\DocumentFieldsInformation $document_fields_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DocumentFieldsInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6340,6 +5139,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentsResult
      */
@@ -6357,6 +5157,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\EnvelopeDefinition $envelope_definition  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6443,6 +5244,7 @@ class TemplatesApi
      * @param ?string $template_id The ID of the template being accessed.
      * @param ?string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
@@ -6461,6 +5263,7 @@ class TemplatesApi
      * @param ?string $template_id The ID of the template being accessed.
      * @param ?string $template_part Currently, the only defined part is **groups**.
      * @param \DocuSign\eSign\Model\GroupInformation $group_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6554,6 +5357,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LockInformation
      */
@@ -6571,6 +5375,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\LockRequest $lock_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LockInformation, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6656,6 +5461,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateNotificationRequest $template_notification_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notification
      */
@@ -6673,6 +5479,7 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateNotificationRequest $template_notification_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notification, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6758,11 +5565,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  \DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiUpdateRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientsUpdateSummary
      */
-    public function updateRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions $options = null)
+    public function updateRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\Options\TemplatesApiUpdateRecipientsOptions $options = null)
     {
         list($response) = $this->updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients, $options);
         return $response;
@@ -6776,11 +5584,12 @@ class TemplatesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateRecipients $template_recipients  (optional)
-     * @param  \DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\TemplatesApiUpdateRecipientsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientsUpdateSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions $options = null): array
+    public function updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\Options\TemplatesApiUpdateRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6870,6 +5679,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -6888,6 +5698,7 @@ class TemplatesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6982,6 +5793,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
@@ -7000,6 +5812,7 @@ class TemplatesApi
      * @param ?string $document_id The ID of the document being accessed.
      * @param ?string $template_id The ID of the template being accessed.
      * @param \DocuSign\eSign\Model\TemplateTabs $template_tabs  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */

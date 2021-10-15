@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,40 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\DiagnosticsApi;
-
-
-class ListRequestLogsOptions
-{
-    /**
-      * $encoding 
-      * @var ?string
-      */
-    protected ?string $encoding = null;
-
-    /**
-     * Gets encoding
-     * @return ?string
-     */
-    public function getEncoding(): ?string
-    {
-        return $this->encoding;
-    }
-
-    /**
-     * Sets encoding
-     * @param ?string $encoding 
-     * @return self
-     */
-    public function setEncoding(?string $encoding): self
-    {
-        $this->encoding = $encoding;
-        return $this;
-    }
-}
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -75,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class DiagnosticsApi
@@ -91,6 +59,7 @@ class DiagnosticsApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -124,9 +93,9 @@ class DiagnosticsApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -145,6 +114,7 @@ class DiagnosticsApi
      *
      * Deletes the request log files.
      *
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -158,6 +128,7 @@ class DiagnosticsApi
      * Operation deleteRequestLogsWithHttpInfo
      *
      * Deletes the request log files.
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
@@ -217,6 +188,7 @@ class DiagnosticsApi
      * Gets a request logging log file.
      *
      * @param ?string $request_log_id 
+     *
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
@@ -232,6 +204,7 @@ class DiagnosticsApi
      * Gets a request logging log file.
      *
      * @param ?string $request_log_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -301,6 +274,7 @@ class DiagnosticsApi
      *
      * Gets the API request logging settings.
      *
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DiagnosticsSettingsInformation
      */
@@ -314,6 +288,7 @@ class DiagnosticsApi
      * Operation getRequestLogSettingsWithHttpInfo
      *
      * Gets the API request logging settings.
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DiagnosticsSettingsInformation, HTTP status code, HTTP response headers (array of strings)
@@ -376,6 +351,7 @@ class DiagnosticsApi
      *
      * Lists resources for REST version specified
      *
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ResourceInformation
      */
@@ -389,6 +365,7 @@ class DiagnosticsApi
      * Operation getResourcesWithHttpInfo
      *
      * Lists resources for REST version specified
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ResourceInformation, HTTP status code, HTTP response headers (array of strings)
@@ -451,6 +428,7 @@ class DiagnosticsApi
      *
      * Retrieves the available REST API versions.
      *
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ServiceInformation
      */
@@ -464,6 +442,7 @@ class DiagnosticsApi
      * Operation getServiceWithHttpInfo
      *
      * Retrieves the available REST API versions.
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ServiceInformation, HTTP status code, HTTP response headers (array of strings)
@@ -526,11 +505,12 @@ class DiagnosticsApi
      *
      * Gets the API request logging log files.
      *
-     * @param  \DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\DiagnosticsApiListRequestLogsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ApiRequestLogsResult
      */
-    public function listRequestLogs(\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null)
+    public function listRequestLogs(\DocuSign\eSign\Api\Options\DiagnosticsApiListRequestLogsOptions $options = null)
     {
         list($response) = $this->listRequestLogsWithHttpInfo($options);
         return $response;
@@ -541,11 +521,12 @@ class DiagnosticsApi
      *
      * Gets the API request logging log files.
      *
-     * @param  \DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\Options\DiagnosticsApiListRequestLogsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ApiRequestLogsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRequestLogsWithHttpInfo(\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null): array
+    public function listRequestLogsWithHttpInfo(\DocuSign\eSign\Api\Options\DiagnosticsApiListRequestLogsOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/request_logs";
@@ -611,6 +592,7 @@ class DiagnosticsApi
      * Enables or disables API request logging for troubleshooting.
      *
      * @param \DocuSign\eSign\Model\DiagnosticsSettingsInformation $diagnostics_settings_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\DiagnosticsSettingsInformation
      */
@@ -626,6 +608,7 @@ class DiagnosticsApi
      * Enables or disables API request logging for troubleshooting.
      *
      * @param \DocuSign\eSign\Model\DiagnosticsSettingsInformation $diagnostics_settings_information  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\DiagnosticsSettingsInformation, HTTP status code, HTTP response headers (array of strings)
      */

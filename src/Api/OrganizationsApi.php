@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -29,10 +30,6 @@ declare(strict_types=1);
  * Do not edit the class manually.
  */
 
-namespace DocuSign\eSign\Api\OrganizationsApi;
-
-
-
 namespace DocuSign\eSign\Api;
 
 use DocuSign\eSign\Client\ApiClient;
@@ -45,7 +42,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature Ruby Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class OrganizationsApi
@@ -61,6 +59,7 @@ class OrganizationsApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -94,9 +93,9 @@ class OrganizationsApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -117,6 +116,7 @@ class OrganizationsApi
      *
      * @param ?string $organization_id 
      * @param ?string $report_correlation_id 
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -133,6 +133,7 @@ class OrganizationsApi
      *
      * @param ?string $organization_id 
      * @param ?string $report_correlation_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -208,6 +209,7 @@ class OrganizationsApi
      *
      * @param ?string $organization_id 
      * @param ?string $report_correlation_id 
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -224,6 +226,7 @@ class OrganizationsApi
      *
      * @param ?string $organization_id 
      * @param ?string $report_correlation_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
