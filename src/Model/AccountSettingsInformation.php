@@ -161,8 +161,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_offline_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_open_trust_signer_certificate' => '?string',
         'allow_open_trust_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_organization_docusign_monitor' => '?string',
+        'allow_organization_docusign_monitor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_organization_domain_user_management' => '?string',
+        'allow_organization_domain_user_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_organizations' => '?string',
         'allow_organizations_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_organization_sso_management' => '?string',
+        'allow_organization_sso_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_organization_to_use_remote_notary' => '?string',
+        'allow_organization_to_use_remote_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_payment_processing' => '?string',
         'allow_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_personal_signer_certificate' => '?string',
@@ -424,6 +432,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'guided_forms_html_allowed' => '?string',
         'guided_forms_html_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'has_recipient_connect_claimed_domain' => '?string',
         'hide_account_address_in_co_c' => '?string',
         'hide_account_address_in_co_c_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'hide_pricing' => '?string',
@@ -470,6 +479,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'phone_auth_recipient_may_provide_phone_number_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'pki_sign_downloaded_pdf_docs' => '?string',
         'pki_sign_downloaded_pdf_docs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'read_only_mode' => '?string',
+        'read_only_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'recipients_can_sign_offline' => '?string',
         'recipients_can_sign_offline_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'recipient_signing_auto_navigation_control' => '?string',
@@ -727,8 +738,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_offline_signing_metadata' => null,
         'allow_open_trust_signer_certificate' => null,
         'allow_open_trust_signer_certificate_metadata' => null,
+        'allow_organization_docusign_monitor' => null,
+        'allow_organization_docusign_monitor_metadata' => null,
+        'allow_organization_domain_user_management' => null,
+        'allow_organization_domain_user_management_metadata' => null,
         'allow_organizations' => null,
         'allow_organizations_metadata' => null,
+        'allow_organization_sso_management' => null,
+        'allow_organization_sso_management_metadata' => null,
+        'allow_organization_to_use_remote_notary' => null,
+        'allow_organization_to_use_remote_notary_metadata' => null,
         'allow_payment_processing' => null,
         'allow_payment_processing_metadata' => null,
         'allow_personal_signer_certificate' => null,
@@ -990,6 +1009,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => null,
         'guided_forms_html_allowed' => null,
         'guided_forms_html_allowed_metadata' => null,
+        'has_recipient_connect_claimed_domain' => null,
         'hide_account_address_in_co_c' => null,
         'hide_account_address_in_co_c_metadata' => null,
         'hide_pricing' => null,
@@ -1036,6 +1056,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'phone_auth_recipient_may_provide_phone_number_metadata' => null,
         'pki_sign_downloaded_pdf_docs' => null,
         'pki_sign_downloaded_pdf_docs_metadata' => null,
+        'read_only_mode' => null,
+        'read_only_mode_metadata' => null,
         'recipients_can_sign_offline' => null,
         'recipients_can_sign_offline_metadata' => null,
         'recipient_signing_auto_navigation_control' => null,
@@ -1314,8 +1336,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_offline_signing_metadata' => 'allowOfflineSigningMetadata',
         'allow_open_trust_signer_certificate' => 'allowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata' => 'allowOpenTrustSignerCertificateMetadata',
+        'allow_organization_docusign_monitor' => 'allowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_metadata' => 'allowOrganizationDocusignMonitorMetadata',
+        'allow_organization_domain_user_management' => 'allowOrganizationDomainUserManagement',
+        'allow_organization_domain_user_management_metadata' => 'allowOrganizationDomainUserManagementMetadata',
         'allow_organizations' => 'allowOrganizations',
         'allow_organizations_metadata' => 'allowOrganizationsMetadata',
+        'allow_organization_sso_management' => 'allowOrganizationSsoManagement',
+        'allow_organization_sso_management_metadata' => 'allowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_remote_notary' => 'allowOrganizationToUseRemoteNotary',
+        'allow_organization_to_use_remote_notary_metadata' => 'allowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing' => 'allowPaymentProcessing',
         'allow_payment_processing_metadata' => 'allowPaymentProcessingMetadata',
         'allow_personal_signer_certificate' => 'allowPersonalSignerCertificate',
@@ -1577,6 +1607,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => 'faxOutEnabledMetadata',
         'guided_forms_html_allowed' => 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'guidedFormsHtmlAllowedMetadata',
+        'has_recipient_connect_claimed_domain' => 'hasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'hideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'hideAccountAddressInCoCMetadata',
         'hide_pricing' => 'hidePricing',
@@ -1623,6 +1654,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'phone_auth_recipient_may_provide_phone_number_metadata' => 'phoneAuthRecipientMayProvidePhoneNumberMetadata',
         'pki_sign_downloaded_pdf_docs' => 'pkiSignDownloadedPDFDocs',
         'pki_sign_downloaded_pdf_docs_metadata' => 'pkiSignDownloadedPDFDocsMetadata',
+        'read_only_mode' => 'readOnlyMode',
+        'read_only_mode_metadata' => 'readOnlyModeMetadata',
         'recipients_can_sign_offline' => 'recipientsCanSignOffline',
         'recipients_can_sign_offline_metadata' => 'recipientsCanSignOfflineMetadata',
         'recipient_signing_auto_navigation_control' => 'recipientSigningAutoNavigationControl',
@@ -1880,8 +1913,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_offline_signing_metadata' => 'setAllowOfflineSigningMetadata',
         'allow_open_trust_signer_certificate' => 'setAllowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata' => 'setAllowOpenTrustSignerCertificateMetadata',
+        'allow_organization_docusign_monitor' => 'setAllowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_metadata' => 'setAllowOrganizationDocusignMonitorMetadata',
+        'allow_organization_domain_user_management' => 'setAllowOrganizationDomainUserManagement',
+        'allow_organization_domain_user_management_metadata' => 'setAllowOrganizationDomainUserManagementMetadata',
         'allow_organizations' => 'setAllowOrganizations',
         'allow_organizations_metadata' => 'setAllowOrganizationsMetadata',
+        'allow_organization_sso_management' => 'setAllowOrganizationSsoManagement',
+        'allow_organization_sso_management_metadata' => 'setAllowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_remote_notary' => 'setAllowOrganizationToUseRemoteNotary',
+        'allow_organization_to_use_remote_notary_metadata' => 'setAllowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing' => 'setAllowPaymentProcessing',
         'allow_payment_processing_metadata' => 'setAllowPaymentProcessingMetadata',
         'allow_personal_signer_certificate' => 'setAllowPersonalSignerCertificate',
@@ -2143,6 +2184,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => 'setFaxOutEnabledMetadata',
         'guided_forms_html_allowed' => 'setGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'setGuidedFormsHtmlAllowedMetadata',
+        'has_recipient_connect_claimed_domain' => 'setHasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'setHideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'setHideAccountAddressInCoCMetadata',
         'hide_pricing' => 'setHidePricing',
@@ -2189,6 +2231,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'phone_auth_recipient_may_provide_phone_number_metadata' => 'setPhoneAuthRecipientMayProvidePhoneNumberMetadata',
         'pki_sign_downloaded_pdf_docs' => 'setPkiSignDownloadedPdfDocs',
         'pki_sign_downloaded_pdf_docs_metadata' => 'setPkiSignDownloadedPdfDocsMetadata',
+        'read_only_mode' => 'setReadOnlyMode',
+        'read_only_mode_metadata' => 'setReadOnlyModeMetadata',
         'recipients_can_sign_offline' => 'setRecipientsCanSignOffline',
         'recipients_can_sign_offline_metadata' => 'setRecipientsCanSignOfflineMetadata',
         'recipient_signing_auto_navigation_control' => 'setRecipientSigningAutoNavigationControl',
@@ -2446,8 +2490,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_offline_signing_metadata' => 'getAllowOfflineSigningMetadata',
         'allow_open_trust_signer_certificate' => 'getAllowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata' => 'getAllowOpenTrustSignerCertificateMetadata',
+        'allow_organization_docusign_monitor' => 'getAllowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_metadata' => 'getAllowOrganizationDocusignMonitorMetadata',
+        'allow_organization_domain_user_management' => 'getAllowOrganizationDomainUserManagement',
+        'allow_organization_domain_user_management_metadata' => 'getAllowOrganizationDomainUserManagementMetadata',
         'allow_organizations' => 'getAllowOrganizations',
         'allow_organizations_metadata' => 'getAllowOrganizationsMetadata',
+        'allow_organization_sso_management' => 'getAllowOrganizationSsoManagement',
+        'allow_organization_sso_management_metadata' => 'getAllowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_remote_notary' => 'getAllowOrganizationToUseRemoteNotary',
+        'allow_organization_to_use_remote_notary_metadata' => 'getAllowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing' => 'getAllowPaymentProcessing',
         'allow_payment_processing_metadata' => 'getAllowPaymentProcessingMetadata',
         'allow_personal_signer_certificate' => 'getAllowPersonalSignerCertificate',
@@ -2709,6 +2761,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => 'getFaxOutEnabledMetadata',
         'guided_forms_html_allowed' => 'getGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'getGuidedFormsHtmlAllowedMetadata',
+        'has_recipient_connect_claimed_domain' => 'getHasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'getHideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'getHideAccountAddressInCoCMetadata',
         'hide_pricing' => 'getHidePricing',
@@ -2755,6 +2808,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'phone_auth_recipient_may_provide_phone_number_metadata' => 'getPhoneAuthRecipientMayProvidePhoneNumberMetadata',
         'pki_sign_downloaded_pdf_docs' => 'getPkiSignDownloadedPdfDocs',
         'pki_sign_downloaded_pdf_docs_metadata' => 'getPkiSignDownloadedPdfDocsMetadata',
+        'read_only_mode' => 'getReadOnlyMode',
+        'read_only_mode_metadata' => 'getReadOnlyModeMetadata',
         'recipients_can_sign_offline' => 'getRecipientsCanSignOffline',
         'recipients_can_sign_offline_metadata' => 'getRecipientsCanSignOfflineMetadata',
         'recipient_signing_auto_navigation_control' => 'getRecipientSigningAutoNavigationControl',
@@ -3066,8 +3121,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_offline_signing_metadata'] = isset($data['allow_offline_signing_metadata']) ? $data['allow_offline_signing_metadata'] : null;
         $this->container['allow_open_trust_signer_certificate'] = isset($data['allow_open_trust_signer_certificate']) ? $data['allow_open_trust_signer_certificate'] : null;
         $this->container['allow_open_trust_signer_certificate_metadata'] = isset($data['allow_open_trust_signer_certificate_metadata']) ? $data['allow_open_trust_signer_certificate_metadata'] : null;
+        $this->container['allow_organization_docusign_monitor'] = isset($data['allow_organization_docusign_monitor']) ? $data['allow_organization_docusign_monitor'] : null;
+        $this->container['allow_organization_docusign_monitor_metadata'] = isset($data['allow_organization_docusign_monitor_metadata']) ? $data['allow_organization_docusign_monitor_metadata'] : null;
+        $this->container['allow_organization_domain_user_management'] = isset($data['allow_organization_domain_user_management']) ? $data['allow_organization_domain_user_management'] : null;
+        $this->container['allow_organization_domain_user_management_metadata'] = isset($data['allow_organization_domain_user_management_metadata']) ? $data['allow_organization_domain_user_management_metadata'] : null;
         $this->container['allow_organizations'] = isset($data['allow_organizations']) ? $data['allow_organizations'] : null;
         $this->container['allow_organizations_metadata'] = isset($data['allow_organizations_metadata']) ? $data['allow_organizations_metadata'] : null;
+        $this->container['allow_organization_sso_management'] = isset($data['allow_organization_sso_management']) ? $data['allow_organization_sso_management'] : null;
+        $this->container['allow_organization_sso_management_metadata'] = isset($data['allow_organization_sso_management_metadata']) ? $data['allow_organization_sso_management_metadata'] : null;
+        $this->container['allow_organization_to_use_remote_notary'] = isset($data['allow_organization_to_use_remote_notary']) ? $data['allow_organization_to_use_remote_notary'] : null;
+        $this->container['allow_organization_to_use_remote_notary_metadata'] = isset($data['allow_organization_to_use_remote_notary_metadata']) ? $data['allow_organization_to_use_remote_notary_metadata'] : null;
         $this->container['allow_payment_processing'] = isset($data['allow_payment_processing']) ? $data['allow_payment_processing'] : null;
         $this->container['allow_payment_processing_metadata'] = isset($data['allow_payment_processing_metadata']) ? $data['allow_payment_processing_metadata'] : null;
         $this->container['allow_personal_signer_certificate'] = isset($data['allow_personal_signer_certificate']) ? $data['allow_personal_signer_certificate'] : null;
@@ -3329,6 +3392,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['fax_out_enabled_metadata'] = isset($data['fax_out_enabled_metadata']) ? $data['fax_out_enabled_metadata'] : null;
         $this->container['guided_forms_html_allowed'] = isset($data['guided_forms_html_allowed']) ? $data['guided_forms_html_allowed'] : null;
         $this->container['guided_forms_html_allowed_metadata'] = isset($data['guided_forms_html_allowed_metadata']) ? $data['guided_forms_html_allowed_metadata'] : null;
+        $this->container['has_recipient_connect_claimed_domain'] = isset($data['has_recipient_connect_claimed_domain']) ? $data['has_recipient_connect_claimed_domain'] : null;
         $this->container['hide_account_address_in_co_c'] = isset($data['hide_account_address_in_co_c']) ? $data['hide_account_address_in_co_c'] : null;
         $this->container['hide_account_address_in_co_c_metadata'] = isset($data['hide_account_address_in_co_c_metadata']) ? $data['hide_account_address_in_co_c_metadata'] : null;
         $this->container['hide_pricing'] = isset($data['hide_pricing']) ? $data['hide_pricing'] : null;
@@ -3375,6 +3439,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['phone_auth_recipient_may_provide_phone_number_metadata'] = isset($data['phone_auth_recipient_may_provide_phone_number_metadata']) ? $data['phone_auth_recipient_may_provide_phone_number_metadata'] : null;
         $this->container['pki_sign_downloaded_pdf_docs'] = isset($data['pki_sign_downloaded_pdf_docs']) ? $data['pki_sign_downloaded_pdf_docs'] : null;
         $this->container['pki_sign_downloaded_pdf_docs_metadata'] = isset($data['pki_sign_downloaded_pdf_docs_metadata']) ? $data['pki_sign_downloaded_pdf_docs_metadata'] : null;
+        $this->container['read_only_mode'] = isset($data['read_only_mode']) ? $data['read_only_mode'] : null;
+        $this->container['read_only_mode_metadata'] = isset($data['read_only_mode_metadata']) ? $data['read_only_mode_metadata'] : null;
         $this->container['recipients_can_sign_offline'] = isset($data['recipients_can_sign_offline']) ? $data['recipients_can_sign_offline'] : null;
         $this->container['recipients_can_sign_offline_metadata'] = isset($data['recipients_can_sign_offline_metadata']) ? $data['recipients_can_sign_offline_metadata'] : null;
         $this->container['recipient_signing_auto_navigation_control'] = isset($data['recipient_signing_auto_navigation_control']) ? $data['recipient_signing_auto_navigation_control'] : null;
@@ -5974,6 +6040,102 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_organization_docusign_monitor
+     *
+     * @return ?string
+     */
+    public function getAllowOrganizationDocusignMonitor()
+    {
+        return $this->container['allow_organization_docusign_monitor'];
+    }
+
+    /**
+     * Sets allow_organization_docusign_monitor
+     *
+     * @param ?string $allow_organization_docusign_monitor 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationDocusignMonitor($allow_organization_docusign_monitor)
+    {
+        $this->container['allow_organization_docusign_monitor'] = $allow_organization_docusign_monitor;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_docusign_monitor_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowOrganizationDocusignMonitorMetadata()
+    {
+        return $this->container['allow_organization_docusign_monitor_metadata'];
+    }
+
+    /**
+     * Sets allow_organization_docusign_monitor_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_docusign_monitor_metadata allow_organization_docusign_monitor_metadata
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationDocusignMonitorMetadata($allow_organization_docusign_monitor_metadata)
+    {
+        $this->container['allow_organization_docusign_monitor_metadata'] = $allow_organization_docusign_monitor_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_domain_user_management
+     *
+     * @return ?string
+     */
+    public function getAllowOrganizationDomainUserManagement()
+    {
+        return $this->container['allow_organization_domain_user_management'];
+    }
+
+    /**
+     * Sets allow_organization_domain_user_management
+     *
+     * @param ?string $allow_organization_domain_user_management 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationDomainUserManagement($allow_organization_domain_user_management)
+    {
+        $this->container['allow_organization_domain_user_management'] = $allow_organization_domain_user_management;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_domain_user_management_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowOrganizationDomainUserManagementMetadata()
+    {
+        return $this->container['allow_organization_domain_user_management_metadata'];
+    }
+
+    /**
+     * Sets allow_organization_domain_user_management_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_domain_user_management_metadata allow_organization_domain_user_management_metadata
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationDomainUserManagementMetadata($allow_organization_domain_user_management_metadata)
+    {
+        $this->container['allow_organization_domain_user_management_metadata'] = $allow_organization_domain_user_management_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_organizations
      *
      * @return ?string
@@ -6017,6 +6179,102 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowOrganizationsMetadata($allow_organizations_metadata)
     {
         $this->container['allow_organizations_metadata'] = $allow_organizations_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_sso_management
+     *
+     * @return ?string
+     */
+    public function getAllowOrganizationSsoManagement()
+    {
+        return $this->container['allow_organization_sso_management'];
+    }
+
+    /**
+     * Sets allow_organization_sso_management
+     *
+     * @param ?string $allow_organization_sso_management 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationSsoManagement($allow_organization_sso_management)
+    {
+        $this->container['allow_organization_sso_management'] = $allow_organization_sso_management;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_sso_management_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowOrganizationSsoManagementMetadata()
+    {
+        return $this->container['allow_organization_sso_management_metadata'];
+    }
+
+    /**
+     * Sets allow_organization_sso_management_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_sso_management_metadata allow_organization_sso_management_metadata
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationSsoManagementMetadata($allow_organization_sso_management_metadata)
+    {
+        $this->container['allow_organization_sso_management_metadata'] = $allow_organization_sso_management_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_to_use_remote_notary
+     *
+     * @return ?string
+     */
+    public function getAllowOrganizationToUseRemoteNotary()
+    {
+        return $this->container['allow_organization_to_use_remote_notary'];
+    }
+
+    /**
+     * Sets allow_organization_to_use_remote_notary
+     *
+     * @param ?string $allow_organization_to_use_remote_notary 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationToUseRemoteNotary($allow_organization_to_use_remote_notary)
+    {
+        $this->container['allow_organization_to_use_remote_notary'] = $allow_organization_to_use_remote_notary;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_to_use_remote_notary_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowOrganizationToUseRemoteNotaryMetadata()
+    {
+        return $this->container['allow_organization_to_use_remote_notary_metadata'];
+    }
+
+    /**
+     * Sets allow_organization_to_use_remote_notary_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_remote_notary_metadata allow_organization_to_use_remote_notary_metadata
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationToUseRemoteNotaryMetadata($allow_organization_to_use_remote_notary_metadata)
+    {
+        $this->container['allow_organization_to_use_remote_notary_metadata'] = $allow_organization_to_use_remote_notary_metadata;
 
         return $this;
     }
@@ -12286,6 +12544,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets has_recipient_connect_claimed_domain
+     *
+     * @return ?string
+     */
+    public function getHasRecipientConnectClaimedDomain()
+    {
+        return $this->container['has_recipient_connect_claimed_domain'];
+    }
+
+    /**
+     * Sets has_recipient_connect_claimed_domain
+     *
+     * @param ?string $has_recipient_connect_claimed_domain 
+     *
+     * @return $this
+     */
+    public function setHasRecipientConnectClaimedDomain($has_recipient_connect_claimed_domain)
+    {
+        $this->container['has_recipient_connect_claimed_domain'] = $has_recipient_connect_claimed_domain;
+
+        return $this;
+    }
+
+    /**
      * Gets hide_account_address_in_co_c
      *
      * @return ?string
@@ -13385,6 +13667,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setPkiSignDownloadedPdfDocsMetadata($pki_sign_downloaded_pdf_docs_metadata)
     {
         $this->container['pki_sign_downloaded_pdf_docs_metadata'] = $pki_sign_downloaded_pdf_docs_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets read_only_mode
+     *
+     * @return ?string
+     */
+    public function getReadOnlyMode()
+    {
+        return $this->container['read_only_mode'];
+    }
+
+    /**
+     * Sets read_only_mode
+     *
+     * @param ?string $read_only_mode 
+     *
+     * @return $this
+     */
+    public function setReadOnlyMode($read_only_mode)
+    {
+        $this->container['read_only_mode'] = $read_only_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets read_only_mode_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getReadOnlyModeMetadata()
+    {
+        return $this->container['read_only_mode_metadata'];
+    }
+
+    /**
+     * Sets read_only_mode_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $read_only_mode_metadata read_only_mode_metadata
+     *
+     * @return $this
+     */
+    public function setReadOnlyModeMetadata($read_only_mode_metadata)
+    {
+        $this->container['read_only_mode_metadata'] = $read_only_mode_metadata;
 
         return $this;
     }

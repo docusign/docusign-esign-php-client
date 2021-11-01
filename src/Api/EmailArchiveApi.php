@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -32,6 +33,15 @@ declare(strict_types=1);
 namespace DocuSign\eSign\Api\EmailArchiveApi;
 
 
+/**
+ * GetBCCEmailArchiveHistoryListOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetBCCEmailArchiveHistoryListOptions
 {
     /**
@@ -42,6 +52,7 @@ class GetBCCEmailArchiveHistoryListOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -52,6 +63,7 @@ class GetBCCEmailArchiveHistoryListOptions
     /**
      * Sets count
      * @param ?string $count 
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -67,6 +79,7 @@ class GetBCCEmailArchiveHistoryListOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -77,6 +90,7 @@ class GetBCCEmailArchiveHistoryListOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -87,6 +101,15 @@ class GetBCCEmailArchiveHistoryListOptions
 }
 
 
+/**
+ * GetBCCEmailArchiveListOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetBCCEmailArchiveListOptions
 {
     /**
@@ -97,6 +120,7 @@ class GetBCCEmailArchiveListOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -107,6 +131,7 @@ class GetBCCEmailArchiveListOptions
     /**
      * Sets count
      * @param ?string $count 
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -122,6 +147,7 @@ class GetBCCEmailArchiveListOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -132,6 +158,7 @@ class GetBCCEmailArchiveListOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -155,7 +182,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class EmailArchiveApi
@@ -171,6 +199,7 @@ class EmailArchiveApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -204,9 +233,9 @@ class EmailArchiveApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -227,6 +256,7 @@ class EmailArchiveApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BccEmailArchive $bcc_email_archive  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchive
      */
@@ -243,6 +273,7 @@ class EmailArchiveApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\BccEmailArchive $bcc_email_archive  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchive, HTTP status code, HTTP response headers (array of strings)
      */
@@ -319,6 +350,7 @@ class EmailArchiveApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $bcc_email_archive_id 
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -335,6 +367,7 @@ class EmailArchiveApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $bcc_email_archive_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -410,7 +443,8 @@ class EmailArchiveApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $bcc_email_archive_id 
-     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchiveHistoryList
      */
@@ -427,7 +461,8 @@ class EmailArchiveApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $bcc_email_archive_id 
-     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchiveHistoryList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -516,7 +551,8 @@ class EmailArchiveApi
      * Get the blind carbon copy email archive entries owned by the specified account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchiveList
      */
@@ -532,7 +568,8 @@ class EmailArchiveApi
      * Get the blind carbon copy email archive entries owned by the specified account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchiveList, HTTP status code, HTTP response headers (array of strings)
      */
