@@ -276,19 +276,28 @@ class ObjectSerializer
             settype($data, $class);
             return $data;
         } elseif ($class === '\SplFileObject') {
-            /** Description @var \Psr\Http\Message\StreamInterface $data **/
+            /** @var \Psr\Http\Message\StreamInterface $data */
 
-            $file = new \SplFileObject("php://memory", 'rw+');
+            // determine file name
+            if (array_key_exists('Content-Disposition', $httpHeaders) &&
+                preg_match('/inline; filename=[\'"]?([^\'"\s]+)[\'"]?$/i', $httpHeaders['Content-Disposition'], $match)) {
+                $filename = Configuration::getDefaultConfiguration()->getTempFolderPath() . DIRECTORY_SEPARATOR . self::sanitizeFilename($match[1]);
+            } else {
+                $filename = tempnam(Configuration::getDefaultConfiguration()->getTempFolderPath(), '');
+            }
+
+            $file = fopen($filename, 'w');
             if(is_string($data)){
-                $file->fwrite($data);
+                fwrite($file, $data);
             }
             else{
                 while ($chunk = $data->read(200)) {
-                    $file->fwrite($chunk);
+                    fwrite($file, $chunk);
                 } 
             }
+            fclose($file);
 
-            return $file;
+            return new \SplFileObject($filename, 'r');
         } elseif (method_exists($class, 'getAllowableEnumValues')) {
             if (!in_array($data, $class::getAllowableEnumValues(), true)) {
                 $imploded = implode("', '", $class::getAllowableEnumValues());
