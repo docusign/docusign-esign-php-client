@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class ConnectUserInfo implements ModelInterface, ArrayAccess
@@ -61,7 +61,6 @@ class ConnectUserInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'email' => '?string',
         'is_included' => '?string',
-        'is_part_of_domain' => '?string',
         'user_id' => '?string',
         'user_name' => '?string'
     ];
@@ -74,7 +73,6 @@ class ConnectUserInfo implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'email' => null,
         'is_included' => null,
-        'is_part_of_domain' => null,
         'user_id' => null,
         'user_name' => null
     ];
@@ -108,7 +106,6 @@ class ConnectUserInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'email' => 'email',
         'is_included' => 'isIncluded',
-        'is_part_of_domain' => 'isPartOfDomain',
         'user_id' => 'userId',
         'user_name' => 'userName'
     ];
@@ -121,7 +118,6 @@ class ConnectUserInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
         'email' => 'setEmail',
         'is_included' => 'setIsIncluded',
-        'is_part_of_domain' => 'setIsPartOfDomain',
         'user_id' => 'setUserId',
         'user_name' => 'setUserName'
     ];
@@ -134,7 +130,6 @@ class ConnectUserInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
         'email' => 'getEmail',
         'is_included' => 'getIsIncluded',
-        'is_part_of_domain' => 'getIsPartOfDomain',
         'user_id' => 'getUserId',
         'user_name' => 'getUserName'
     ];
@@ -201,7 +196,6 @@ class ConnectUserInfo implements ModelInterface, ArrayAccess
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['is_included'] = isset($data['is_included']) ? $data['is_included'] : null;
-        $this->container['is_part_of_domain'] = isset($data['is_part_of_domain']) ? $data['is_part_of_domain'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
     }
@@ -274,30 +268,6 @@ class ConnectUserInfo implements ModelInterface, ArrayAccess
     public function setIsIncluded($is_included)
     {
         $this->container['is_included'] = $is_included;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_part_of_domain
-     *
-     * @return ?string
-     */
-    public function getIsPartOfDomain()
-    {
-        return $this->container['is_part_of_domain'];
-    }
-
-    /**
-     * Sets is_part_of_domain
-     *
-     * @param ?string $is_part_of_domain 
-     *
-     * @return $this
-     */
-    public function setIsPartOfDomain($is_part_of_domain)
-    {
-        $this->container['is_part_of_domain'] = $is_part_of_domain;
 
         return $this;
     }

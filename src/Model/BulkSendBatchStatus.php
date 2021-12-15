@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class BulkSendBatchStatus implements ModelInterface, ArrayAccess
@@ -64,6 +64,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'batch_size' => '?string',
         'bulk_errors' => '\DocuSign\eSign\Model\BulkSendErrorStatus[]',
         'envelope_id_or_template_id' => '?string',
+        'envelopes_info' => '\DocuSign\eSign\Model\BulkSendEnvelopesInfo',
         'envelopes_uri' => '?string',
         'failed' => '?string',
         'mailing_list_id' => '?string',
@@ -86,6 +87,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'batch_size' => null,
         'bulk_errors' => null,
         'envelope_id_or_template_id' => null,
+        'envelopes_info' => null,
         'envelopes_uri' => null,
         'failed' => null,
         'mailing_list_id' => null,
@@ -129,6 +131,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'batch_size' => 'batchSize',
         'bulk_errors' => 'bulkErrors',
         'envelope_id_or_template_id' => 'envelopeIdOrTemplateId',
+        'envelopes_info' => 'envelopesInfo',
         'envelopes_uri' => 'envelopesUri',
         'failed' => 'failed',
         'mailing_list_id' => 'mailingListId',
@@ -151,6 +154,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'batch_size' => 'setBatchSize',
         'bulk_errors' => 'setBulkErrors',
         'envelope_id_or_template_id' => 'setEnvelopeIdOrTemplateId',
+        'envelopes_info' => 'setEnvelopesInfo',
         'envelopes_uri' => 'setEnvelopesUri',
         'failed' => 'setFailed',
         'mailing_list_id' => 'setMailingListId',
@@ -173,6 +177,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'batch_size' => 'getBatchSize',
         'bulk_errors' => 'getBulkErrors',
         'envelope_id_or_template_id' => 'getEnvelopeIdOrTemplateId',
+        'envelopes_info' => 'getEnvelopesInfo',
         'envelopes_uri' => 'getEnvelopesUri',
         'failed' => 'getFailed',
         'mailing_list_id' => 'getMailingListId',
@@ -249,6 +254,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;
         $this->container['bulk_errors'] = isset($data['bulk_errors']) ? $data['bulk_errors'] : null;
         $this->container['envelope_id_or_template_id'] = isset($data['envelope_id_or_template_id']) ? $data['envelope_id_or_template_id'] : null;
+        $this->container['envelopes_info'] = isset($data['envelopes_info']) ? $data['envelopes_info'] : null;
         $this->container['envelopes_uri'] = isset($data['envelopes_uri']) ? $data['envelopes_uri'] : null;
         $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
         $this->container['mailing_list_id'] = isset($data['mailing_list_id']) ? $data['mailing_list_id'] : null;
@@ -400,6 +406,30 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     public function setEnvelopeIdOrTemplateId($envelope_id_or_template_id)
     {
         $this->container['envelope_id_or_template_id'] = $envelope_id_or_template_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelopes_info
+     *
+     * @return \DocuSign\eSign\Model\BulkSendEnvelopesInfo
+     */
+    public function getEnvelopesInfo()
+    {
+        return $this->container['envelopes_info'];
+    }
+
+    /**
+     * Sets envelopes_info
+     *
+     * @param \DocuSign\eSign\Model\BulkSendEnvelopesInfo $envelopes_info envelopes_info
+     *
+     * @return $this
+     */
+    public function setEnvelopesInfo($envelopes_info)
+    {
+        $this->container['envelopes_info'] = $envelopes_info;
 
         return $this;
     }

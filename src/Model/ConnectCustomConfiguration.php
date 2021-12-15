@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
@@ -68,6 +68,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'enable_log' => '?string',
         'envelope_events' => '?string[]',
         'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
+        'events' => '?string[]',
         'external_folder_id' => '?string',
         'external_folder_label' => '?string',
         'include_certificate_of_completion' => '?string',
@@ -113,6 +114,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'enable_log' => null,
         'envelope_events' => null,
         'event_data' => null,
+        'events' => null,
         'external_folder_id' => null,
         'external_folder_label' => null,
         'include_certificate_of_completion' => null,
@@ -179,6 +181,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'enable_log' => 'enableLog',
         'envelope_events' => 'envelopeEvents',
         'event_data' => 'eventData',
+        'events' => 'events',
         'external_folder_id' => 'externalFolderId',
         'external_folder_label' => 'externalFolderLabel',
         'include_certificate_of_completion' => 'includeCertificateOfCompletion',
@@ -224,6 +227,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'enable_log' => 'setEnableLog',
         'envelope_events' => 'setEnvelopeEvents',
         'event_data' => 'setEventData',
+        'events' => 'setEvents',
         'external_folder_id' => 'setExternalFolderId',
         'external_folder_label' => 'setExternalFolderLabel',
         'include_certificate_of_completion' => 'setIncludeCertificateOfCompletion',
@@ -269,6 +273,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'enable_log' => 'getEnableLog',
         'envelope_events' => 'getEnvelopeEvents',
         'event_data' => 'getEventData',
+        'events' => 'getEvents',
         'external_folder_id' => 'getExternalFolderId',
         'external_folder_label' => 'getExternalFolderLabel',
         'include_certificate_of_completion' => 'getIncludeCertificateOfCompletion',
@@ -368,6 +373,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['enable_log'] = isset($data['enable_log']) ? $data['enable_log'] : null;
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
         $this->container['event_data'] = isset($data['event_data']) ? $data['event_data'] : null;
+        $this->container['events'] = isset($data['events']) ? $data['events'] : null;
         $this->container['external_folder_id'] = isset($data['external_folder_id']) ? $data['external_folder_id'] : null;
         $this->container['external_folder_label'] = isset($data['external_folder_label']) ? $data['external_folder_label'] : null;
         $this->container['include_certificate_of_completion'] = isset($data['include_certificate_of_completion']) ? $data['include_certificate_of_completion'] : null;
@@ -634,6 +640,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     public function setEventData($event_data)
     {
         $this->container['event_data'] = $event_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets events
+     *
+     * @return ?string[]
+     */
+    public function getEvents()
+    {
+        return $this->container['events'];
+    }
+
+    /**
+     * Sets events
+     *
+     * @param ?string[] $events 
+     *
+     * @return $this
+     */
+    public function setEvents($events)
+    {
+        $this->container['events'] = $events;
 
         return $this;
     }

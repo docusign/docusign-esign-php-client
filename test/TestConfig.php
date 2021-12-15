@@ -1,5 +1,8 @@
 <?php
 
+use DocuSign\eSign\Model\Envelope;
+use DocuSign\eSign\Model\EnvelopeTemplate;
+
 class TestConfig
 {
     /**
@@ -94,6 +97,24 @@ class TestConfig
 
     protected $userId;
 
+    protected $createdUserId;
+
+    protected $folderOneId;
+
+    protected $folderTwoId;
+
+    /**
+     * $envelope
+     * @var \DocuSign\eSign\Model\Envelope
+     */
+    protected $envelope;
+
+    /**
+     * $envelopeTemplate
+     * @var \DocuSign\eSign\Model\EnvelopeTemplate
+     */
+    protected $template;
+
     protected $brandId;
 
     public function __construct($integratorKey = null, $host = null, $returnUrl = null, $envelopeId = null, $secret = null, $key = null, $userId = null, $privateKey = null)
@@ -101,7 +122,7 @@ class TestConfig
         $this->host = !empty($host) ? $host : 'https://demo.docusign.net/restapi';
         $this->integratorKey = !empty($integratorKey) ? $integratorKey : getenv('INTEGRATOR_KEY_JWT');
         $this->clientSecret = !empty($secret) ? $secret : getenv('CLIENT_SECRET');
-        $this->clientKey = !empty($key) ? $key : 'Docs/private.pem';
+        $this->clientKey = !empty($key) ? $key : __DIR__ . '/Docs/private.pem';
         $this->privateKeyB64 = !empty($privateKey) ? $privateKey : getenv('PRIVATE_KEY');
 
         $this->recipientEmail = !empty($recipientEmail) ? $recipientEmail : 'node_sdk@mailinator.com';
@@ -455,6 +476,91 @@ class TestConfig
     public function setBrandId($brandId)
     {
         $this->brandId = $brandId;
+        return $this;
+    }
+
+    /**
+     * @return Envelope
+     */
+    public function getEnvelope(): Model\Envelope
+    {
+        return $this->envelope;
+    }
+
+    /**
+     * @param mixed $envelope
+     */
+    public function setEnvelope($envelope)
+    {
+        $this->envelope = $envelope;
+        return $this;
+    }
+
+    /**
+     * @param Model\EnvelopeTemplate $template
+     */
+    public function setTemplate(EnvelopeTemplate $template)
+    {
+        $this->template = $template;
+        return $this;
+    }
+
+    /**
+     * @return Model\EnvelopeTemplate
+     */
+    public function getTemplate()
+    {
+        return $this->template;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFolderOneId()
+    {
+        return $this->folderOneId;
+    }
+
+    /**
+     * @param mixed $folderOneId
+     */
+    public function setFolderOneId($folderOneId)
+    {
+        $this->folderOneId = $folderOneId;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFolderTwoId()
+    {
+        return $this->folderTwoId;
+    }
+
+    /**
+     * @param mixed $folderTwoId
+     */
+    public function setFolderTwoId($folderTwoId)
+    {
+        $this->folderTwoId = $folderTwoId;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedUserId()
+    {
+        return $this->createdUserId;
+    }
+
+    /**
+     * @param mixed $createdUserId
+     */
+    public function setCreatedUserId($createdUserId)
+    {
+        $this->createdUserId = $createdUserId;
         return $this;
     }
 }

@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
@@ -63,6 +63,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => '?string',
         'email' => '?string',
         'link_id' => '?string',
+        'recipient_auth_requirements' => '\DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements',
         'status' => '?string',
         'user_id' => '?string'
     ];
@@ -77,6 +78,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => null,
         'email' => null,
         'link_id' => null,
+        'recipient_auth_requirements' => null,
         'status' => null,
         'user_id' => null
     ];
@@ -112,6 +114,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => 'configurationId',
         'email' => 'email',
         'link_id' => 'linkId',
+        'recipient_auth_requirements' => 'recipientAuthRequirements',
         'status' => 'status',
         'user_id' => 'userId'
     ];
@@ -126,6 +129,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => 'setConfigurationId',
         'email' => 'setEmail',
         'link_id' => 'setLinkId',
+        'recipient_auth_requirements' => 'setRecipientAuthRequirements',
         'status' => 'setStatus',
         'user_id' => 'setUserId'
     ];
@@ -140,6 +144,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => 'getConfigurationId',
         'email' => 'getEmail',
         'link_id' => 'getLinkId',
+        'recipient_auth_requirements' => 'getRecipientAuthRequirements',
         'status' => 'getStatus',
         'user_id' => 'getUserId'
     ];
@@ -208,6 +213,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         $this->container['configuration_id'] = isset($data['configuration_id']) ? $data['configuration_id'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['link_id'] = isset($data['link_id']) ? $data['link_id'] : null;
+        $this->container['recipient_auth_requirements'] = isset($data['recipient_auth_requirements']) ? $data['recipient_auth_requirements'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
     }
@@ -328,6 +334,30 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     public function setLinkId($link_id)
     {
         $this->container['link_id'] = $link_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient_auth_requirements
+     *
+     * @return \DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements
+     */
+    public function getRecipientAuthRequirements()
+    {
+        return $this->container['recipient_auth_requirements'];
+    }
+
+    /**
+     * Sets recipient_auth_requirements
+     *
+     * @param \DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements $recipient_auth_requirements recipient_auth_requirements
+     *
+     * @return $this
+     */
+    public function setRecipientAuthRequirements($recipient_auth_requirements)
+    {
+        $this->container['recipient_auth_requirements'] = $recipient_auth_requirements;
 
         return $this;
     }

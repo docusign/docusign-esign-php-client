@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Contains account settings information.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AccountSettingsInformation implements ModelInterface, ArrayAccess
@@ -101,6 +101,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_data_download' => '?string',
         'allow_data_download_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_delegated_signing' => '?string',
+        'allow_delegated_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_document_disclosures' => '?string',
         'allow_document_disclosures_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_documents_on_signed_envelopes' => '?string',
@@ -261,6 +263,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'can_use_salesforce_o_auth_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'capture_voice_recording' => '?string',
         'capture_voice_recording_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'cfr21_simplified_signing_enabled' => '?string',
+        'cfr21_simplified_signing_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'cfr_use_wide_image' => '?string',
         'cfr_use_wide_image_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'check_for_multiple_admins_on_account' => '?string',
@@ -309,6 +313,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => '?string',
         'document_visibility' => '?string',
         'document_visibility_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'dss_sign_28411_enable_leave_page_prompt_radmin_option' => '?string',
+        'dss_sign_29182_slide_up_bar_radmin_option' => '?string',
         'email_template_version' => '?string',
         'email_template_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_access_code_generator' => '?string',
@@ -343,6 +349,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_esign_communities_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_id_fx_intuit_kba' => '?string',
         'enable_id_fx_intuit_kba_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_id_fx_phone_authentication' => '?string',
+        'enable_id_fx_phone_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_in_browser_editor' => '?string',
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_payment_processing' => '?string',
@@ -403,6 +411,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sms_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sms_delivery_additional_notification' => '?string',
         'enable_sms_delivery_additional_notification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_sms_delivery_primary' => '?string',
         'enable_social_id_login' => '?string',
         'enable_social_id_login_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_strike_through' => '?string',
@@ -421,6 +430,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_integration_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_stamping_default_value' => '?string',
         'envelope_stamping_default_value_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'exit_prompt' => '?string',
+        'exit_prompt_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'express_send' => '?string',
         'express_send_allow_tabs' => '?string',
         'express_send_allow_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -430,6 +441,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'external_signature_pad_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'fax_out_enabled' => '?string',
         'fax_out_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'finish_reminder' => '?string',
+        'finish_reminder_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'guided_forms_html_allowed' => '?string',
         'guided_forms_html_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'has_recipient_connect_claimed_domain' => '?string',
@@ -511,6 +524,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'sending_tags_font_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'sending_tags_font_size' => '?string',
         'sending_tags_font_size_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'send_lockout_recipient_notification' => '?string',
+        'send_lockout_recipient_notification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'send_to_certified_delivery_enabled' => '?string',
         'send_to_certified_delivery_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'session_timeout' => '?string',
@@ -678,6 +693,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => null,
         'allow_data_download' => null,
         'allow_data_download_metadata' => null,
+        'allow_delegated_signing' => null,
+        'allow_delegated_signing_metadata' => null,
         'allow_document_disclosures' => null,
         'allow_document_disclosures_metadata' => null,
         'allow_documents_on_signed_envelopes' => null,
@@ -838,6 +855,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'can_use_salesforce_o_auth_metadata' => null,
         'capture_voice_recording' => null,
         'capture_voice_recording_metadata' => null,
+        'cfr21_simplified_signing_enabled' => null,
+        'cfr21_simplified_signing_enabled_metadata' => null,
         'cfr_use_wide_image' => null,
         'cfr_use_wide_image_metadata' => null,
         'check_for_multiple_admins_on_account' => null,
@@ -886,6 +905,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => null,
         'document_visibility' => null,
         'document_visibility_metadata' => null,
+        'dss_sign_28411_enable_leave_page_prompt_radmin_option' => null,
+        'dss_sign_29182_slide_up_bar_radmin_option' => null,
         'email_template_version' => null,
         'email_template_version_metadata' => null,
         'enable_access_code_generator' => null,
@@ -920,6 +941,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_esign_communities_metadata' => null,
         'enable_id_fx_intuit_kba' => null,
         'enable_id_fx_intuit_kba_metadata' => null,
+        'enable_id_fx_phone_authentication' => null,
+        'enable_id_fx_phone_authentication_metadata' => null,
         'enable_in_browser_editor' => null,
         'enable_in_browser_editor_metadata' => null,
         'enable_payment_processing' => null,
@@ -980,6 +1003,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sms_authentication_metadata' => null,
         'enable_sms_delivery_additional_notification' => null,
         'enable_sms_delivery_additional_notification_metadata' => null,
+        'enable_sms_delivery_primary' => null,
         'enable_social_id_login' => null,
         'enable_social_id_login_metadata' => null,
         'enable_strike_through' => null,
@@ -998,6 +1022,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_integration_enabled_metadata' => null,
         'envelope_stamping_default_value' => null,
         'envelope_stamping_default_value_metadata' => null,
+        'exit_prompt' => null,
+        'exit_prompt_metadata' => null,
         'express_send' => null,
         'express_send_allow_tabs' => null,
         'express_send_allow_tabs_metadata' => null,
@@ -1007,6 +1033,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'external_signature_pad_type_metadata' => null,
         'fax_out_enabled' => null,
         'fax_out_enabled_metadata' => null,
+        'finish_reminder' => null,
+        'finish_reminder_metadata' => null,
         'guided_forms_html_allowed' => null,
         'guided_forms_html_allowed_metadata' => null,
         'has_recipient_connect_claimed_domain' => null,
@@ -1088,6 +1116,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'sending_tags_font_name_metadata' => null,
         'sending_tags_font_size' => null,
         'sending_tags_font_size_metadata' => null,
+        'send_lockout_recipient_notification' => null,
+        'send_lockout_recipient_notification_metadata' => null,
         'send_to_certified_delivery_enabled' => null,
         'send_to_certified_delivery_enabled_metadata' => null,
         'session_timeout' => null,
@@ -1276,6 +1306,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => 'allowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'allowDataDownload',
         'allow_data_download_metadata' => 'allowDataDownloadMetadata',
+        'allow_delegated_signing' => 'allowDelegatedSigning',
+        'allow_delegated_signing_metadata' => 'allowDelegatedSigningMetadata',
         'allow_document_disclosures' => 'allowDocumentDisclosures',
         'allow_document_disclosures_metadata' => 'allowDocumentDisclosuresMetadata',
         'allow_documents_on_signed_envelopes' => 'allowDocumentsOnSignedEnvelopes',
@@ -1436,6 +1468,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'can_use_salesforce_o_auth_metadata' => 'canUseSalesforceOAuthMetadata',
         'capture_voice_recording' => 'captureVoiceRecording',
         'capture_voice_recording_metadata' => 'captureVoiceRecordingMetadata',
+        'cfr21_simplified_signing_enabled' => 'cfr21SimplifiedSigningEnabled',
+        'cfr21_simplified_signing_enabled_metadata' => 'cfr21SimplifiedSigningEnabledMetadata',
         'cfr_use_wide_image' => 'cfrUseWideImage',
         'cfr_use_wide_image_metadata' => 'cfrUseWideImageMetadata',
         'check_for_multiple_admins_on_account' => 'checkForMultipleAdminsOnAccount',
@@ -1484,6 +1518,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => 'documentRetentionPurgeTabs',
         'document_visibility' => 'documentVisibility',
         'document_visibility_metadata' => 'documentVisibilityMetadata',
+        'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
+        'dss_sign_29182_slide_up_bar_radmin_option' => 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version' => 'emailTemplateVersion',
         'email_template_version_metadata' => 'emailTemplateVersionMetadata',
         'enable_access_code_generator' => 'enableAccessCodeGenerator',
@@ -1518,6 +1554,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_esign_communities_metadata' => 'enableEsignCommunitiesMetadata',
         'enable_id_fx_intuit_kba' => 'enableIDFxIntuitKBA',
         'enable_id_fx_intuit_kba_metadata' => 'enableIDFxIntuitKBAMetadata',
+        'enable_id_fx_phone_authentication' => 'enableIDFxPhoneAuthentication',
+        'enable_id_fx_phone_authentication_metadata' => 'enableIDFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor' => 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'enableInBrowserEditorMetadata',
         'enable_payment_processing' => 'enablePaymentProcessing',
@@ -1578,6 +1616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sms_authentication_metadata' => 'enableSMSAuthenticationMetadata',
         'enable_sms_delivery_additional_notification' => 'enableSMSDeliveryAdditionalNotification',
         'enable_sms_delivery_additional_notification_metadata' => 'enableSMSDeliveryAdditionalNotificationMetadata',
+        'enable_sms_delivery_primary' => 'enableSMSDeliveryPrimary',
         'enable_social_id_login' => 'enableSocialIdLogin',
         'enable_social_id_login_metadata' => 'enableSocialIdLoginMetadata',
         'enable_strike_through' => 'enableStrikeThrough',
@@ -1596,6 +1635,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_integration_enabled_metadata' => 'envelopeIntegrationEnabledMetadata',
         'envelope_stamping_default_value' => 'envelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'envelopeStampingDefaultValueMetadata',
+        'exit_prompt' => 'exitPrompt',
+        'exit_prompt_metadata' => 'exitPromptMetadata',
         'express_send' => 'expressSend',
         'express_send_allow_tabs' => 'expressSendAllowTabs',
         'express_send_allow_tabs_metadata' => 'expressSendAllowTabsMetadata',
@@ -1605,6 +1646,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'external_signature_pad_type_metadata' => 'externalSignaturePadTypeMetadata',
         'fax_out_enabled' => 'faxOutEnabled',
         'fax_out_enabled_metadata' => 'faxOutEnabledMetadata',
+        'finish_reminder' => 'finishReminder',
+        'finish_reminder_metadata' => 'finishReminderMetadata',
         'guided_forms_html_allowed' => 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'guidedFormsHtmlAllowedMetadata',
         'has_recipient_connect_claimed_domain' => 'hasRecipientConnectClaimedDomain',
@@ -1686,6 +1729,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'sending_tags_font_name_metadata' => 'sendingTagsFontNameMetadata',
         'sending_tags_font_size' => 'sendingTagsFontSize',
         'sending_tags_font_size_metadata' => 'sendingTagsFontSizeMetadata',
+        'send_lockout_recipient_notification' => 'sendLockoutRecipientNotification',
+        'send_lockout_recipient_notification_metadata' => 'sendLockoutRecipientNotificationMetadata',
         'send_to_certified_delivery_enabled' => 'sendToCertifiedDeliveryEnabled',
         'send_to_certified_delivery_enabled_metadata' => 'sendToCertifiedDeliveryEnabledMetadata',
         'session_timeout' => 'sessionTimeout',
@@ -1853,6 +1898,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => 'setAllowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'setAllowDataDownload',
         'allow_data_download_metadata' => 'setAllowDataDownloadMetadata',
+        'allow_delegated_signing' => 'setAllowDelegatedSigning',
+        'allow_delegated_signing_metadata' => 'setAllowDelegatedSigningMetadata',
         'allow_document_disclosures' => 'setAllowDocumentDisclosures',
         'allow_document_disclosures_metadata' => 'setAllowDocumentDisclosuresMetadata',
         'allow_documents_on_signed_envelopes' => 'setAllowDocumentsOnSignedEnvelopes',
@@ -2013,6 +2060,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'can_use_salesforce_o_auth_metadata' => 'setCanUseSalesforceOAuthMetadata',
         'capture_voice_recording' => 'setCaptureVoiceRecording',
         'capture_voice_recording_metadata' => 'setCaptureVoiceRecordingMetadata',
+        'cfr21_simplified_signing_enabled' => 'setCfr21SimplifiedSigningEnabled',
+        'cfr21_simplified_signing_enabled_metadata' => 'setCfr21SimplifiedSigningEnabledMetadata',
         'cfr_use_wide_image' => 'setCfrUseWideImage',
         'cfr_use_wide_image_metadata' => 'setCfrUseWideImageMetadata',
         'check_for_multiple_admins_on_account' => 'setCheckForMultipleAdminsOnAccount',
@@ -2061,6 +2110,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => 'setDocumentRetentionPurgeTabs',
         'document_visibility' => 'setDocumentVisibility',
         'document_visibility_metadata' => 'setDocumentVisibilityMetadata',
+        'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'setDssSign28411EnableLeavePagePromptRadminOption',
+        'dss_sign_29182_slide_up_bar_radmin_option' => 'setDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'setEmailTemplateVersion',
         'email_template_version_metadata' => 'setEmailTemplateVersionMetadata',
         'enable_access_code_generator' => 'setEnableAccessCodeGenerator',
@@ -2095,6 +2146,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_esign_communities_metadata' => 'setEnableEsignCommunitiesMetadata',
         'enable_id_fx_intuit_kba' => 'setEnableIdFxIntuitKba',
         'enable_id_fx_intuit_kba_metadata' => 'setEnableIdFxIntuitKbaMetadata',
+        'enable_id_fx_phone_authentication' => 'setEnableIdFxPhoneAuthentication',
+        'enable_id_fx_phone_authentication_metadata' => 'setEnableIdFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor' => 'setEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'setEnableInBrowserEditorMetadata',
         'enable_payment_processing' => 'setEnablePaymentProcessing',
@@ -2155,6 +2208,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sms_authentication_metadata' => 'setEnableSmsAuthenticationMetadata',
         'enable_sms_delivery_additional_notification' => 'setEnableSmsDeliveryAdditionalNotification',
         'enable_sms_delivery_additional_notification_metadata' => 'setEnableSmsDeliveryAdditionalNotificationMetadata',
+        'enable_sms_delivery_primary' => 'setEnableSmsDeliveryPrimary',
         'enable_social_id_login' => 'setEnableSocialIdLogin',
         'enable_social_id_login_metadata' => 'setEnableSocialIdLoginMetadata',
         'enable_strike_through' => 'setEnableStrikeThrough',
@@ -2173,6 +2227,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_integration_enabled_metadata' => 'setEnvelopeIntegrationEnabledMetadata',
         'envelope_stamping_default_value' => 'setEnvelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'setEnvelopeStampingDefaultValueMetadata',
+        'exit_prompt' => 'setExitPrompt',
+        'exit_prompt_metadata' => 'setExitPromptMetadata',
         'express_send' => 'setExpressSend',
         'express_send_allow_tabs' => 'setExpressSendAllowTabs',
         'express_send_allow_tabs_metadata' => 'setExpressSendAllowTabsMetadata',
@@ -2182,6 +2238,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'external_signature_pad_type_metadata' => 'setExternalSignaturePadTypeMetadata',
         'fax_out_enabled' => 'setFaxOutEnabled',
         'fax_out_enabled_metadata' => 'setFaxOutEnabledMetadata',
+        'finish_reminder' => 'setFinishReminder',
+        'finish_reminder_metadata' => 'setFinishReminderMetadata',
         'guided_forms_html_allowed' => 'setGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'setGuidedFormsHtmlAllowedMetadata',
         'has_recipient_connect_claimed_domain' => 'setHasRecipientConnectClaimedDomain',
@@ -2263,6 +2321,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'sending_tags_font_name_metadata' => 'setSendingTagsFontNameMetadata',
         'sending_tags_font_size' => 'setSendingTagsFontSize',
         'sending_tags_font_size_metadata' => 'setSendingTagsFontSizeMetadata',
+        'send_lockout_recipient_notification' => 'setSendLockoutRecipientNotification',
+        'send_lockout_recipient_notification_metadata' => 'setSendLockoutRecipientNotificationMetadata',
         'send_to_certified_delivery_enabled' => 'setSendToCertifiedDeliveryEnabled',
         'send_to_certified_delivery_enabled_metadata' => 'setSendToCertifiedDeliveryEnabledMetadata',
         'session_timeout' => 'setSessionTimeout',
@@ -2430,6 +2490,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => 'getAllowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'getAllowDataDownload',
         'allow_data_download_metadata' => 'getAllowDataDownloadMetadata',
+        'allow_delegated_signing' => 'getAllowDelegatedSigning',
+        'allow_delegated_signing_metadata' => 'getAllowDelegatedSigningMetadata',
         'allow_document_disclosures' => 'getAllowDocumentDisclosures',
         'allow_document_disclosures_metadata' => 'getAllowDocumentDisclosuresMetadata',
         'allow_documents_on_signed_envelopes' => 'getAllowDocumentsOnSignedEnvelopes',
@@ -2590,6 +2652,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'can_use_salesforce_o_auth_metadata' => 'getCanUseSalesforceOAuthMetadata',
         'capture_voice_recording' => 'getCaptureVoiceRecording',
         'capture_voice_recording_metadata' => 'getCaptureVoiceRecordingMetadata',
+        'cfr21_simplified_signing_enabled' => 'getCfr21SimplifiedSigningEnabled',
+        'cfr21_simplified_signing_enabled_metadata' => 'getCfr21SimplifiedSigningEnabledMetadata',
         'cfr_use_wide_image' => 'getCfrUseWideImage',
         'cfr_use_wide_image_metadata' => 'getCfrUseWideImageMetadata',
         'check_for_multiple_admins_on_account' => 'getCheckForMultipleAdminsOnAccount',
@@ -2638,6 +2702,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => 'getDocumentRetentionPurgeTabs',
         'document_visibility' => 'getDocumentVisibility',
         'document_visibility_metadata' => 'getDocumentVisibilityMetadata',
+        'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'getDssSign28411EnableLeavePagePromptRadminOption',
+        'dss_sign_29182_slide_up_bar_radmin_option' => 'getDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'getEmailTemplateVersion',
         'email_template_version_metadata' => 'getEmailTemplateVersionMetadata',
         'enable_access_code_generator' => 'getEnableAccessCodeGenerator',
@@ -2672,6 +2738,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_esign_communities_metadata' => 'getEnableEsignCommunitiesMetadata',
         'enable_id_fx_intuit_kba' => 'getEnableIdFxIntuitKba',
         'enable_id_fx_intuit_kba_metadata' => 'getEnableIdFxIntuitKbaMetadata',
+        'enable_id_fx_phone_authentication' => 'getEnableIdFxPhoneAuthentication',
+        'enable_id_fx_phone_authentication_metadata' => 'getEnableIdFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor' => 'getEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'getEnableInBrowserEditorMetadata',
         'enable_payment_processing' => 'getEnablePaymentProcessing',
@@ -2732,6 +2800,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sms_authentication_metadata' => 'getEnableSmsAuthenticationMetadata',
         'enable_sms_delivery_additional_notification' => 'getEnableSmsDeliveryAdditionalNotification',
         'enable_sms_delivery_additional_notification_metadata' => 'getEnableSmsDeliveryAdditionalNotificationMetadata',
+        'enable_sms_delivery_primary' => 'getEnableSmsDeliveryPrimary',
         'enable_social_id_login' => 'getEnableSocialIdLogin',
         'enable_social_id_login_metadata' => 'getEnableSocialIdLoginMetadata',
         'enable_strike_through' => 'getEnableStrikeThrough',
@@ -2750,6 +2819,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_integration_enabled_metadata' => 'getEnvelopeIntegrationEnabledMetadata',
         'envelope_stamping_default_value' => 'getEnvelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'getEnvelopeStampingDefaultValueMetadata',
+        'exit_prompt' => 'getExitPrompt',
+        'exit_prompt_metadata' => 'getExitPromptMetadata',
         'express_send' => 'getExpressSend',
         'express_send_allow_tabs' => 'getExpressSendAllowTabs',
         'express_send_allow_tabs_metadata' => 'getExpressSendAllowTabsMetadata',
@@ -2759,6 +2830,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'external_signature_pad_type_metadata' => 'getExternalSignaturePadTypeMetadata',
         'fax_out_enabled' => 'getFaxOutEnabled',
         'fax_out_enabled_metadata' => 'getFaxOutEnabledMetadata',
+        'finish_reminder' => 'getFinishReminder',
+        'finish_reminder_metadata' => 'getFinishReminderMetadata',
         'guided_forms_html_allowed' => 'getGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'getGuidedFormsHtmlAllowedMetadata',
         'has_recipient_connect_claimed_domain' => 'getHasRecipientConnectClaimedDomain',
@@ -2840,6 +2913,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'sending_tags_font_name_metadata' => 'getSendingTagsFontNameMetadata',
         'sending_tags_font_size' => 'getSendingTagsFontSize',
         'sending_tags_font_size_metadata' => 'getSendingTagsFontSizeMetadata',
+        'send_lockout_recipient_notification' => 'getSendLockoutRecipientNotification',
+        'send_lockout_recipient_notification_metadata' => 'getSendLockoutRecipientNotificationMetadata',
         'send_to_certified_delivery_enabled' => 'getSendToCertifiedDeliveryEnabled',
         'send_to_certified_delivery_enabled_metadata' => 'getSendToCertifiedDeliveryEnabledMetadata',
         'session_timeout' => 'getSessionTimeout',
@@ -3061,6 +3136,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_consumer_disclosure_override_metadata'] = isset($data['allow_consumer_disclosure_override_metadata']) ? $data['allow_consumer_disclosure_override_metadata'] : null;
         $this->container['allow_data_download'] = isset($data['allow_data_download']) ? $data['allow_data_download'] : null;
         $this->container['allow_data_download_metadata'] = isset($data['allow_data_download_metadata']) ? $data['allow_data_download_metadata'] : null;
+        $this->container['allow_delegated_signing'] = isset($data['allow_delegated_signing']) ? $data['allow_delegated_signing'] : null;
+        $this->container['allow_delegated_signing_metadata'] = isset($data['allow_delegated_signing_metadata']) ? $data['allow_delegated_signing_metadata'] : null;
         $this->container['allow_document_disclosures'] = isset($data['allow_document_disclosures']) ? $data['allow_document_disclosures'] : null;
         $this->container['allow_document_disclosures_metadata'] = isset($data['allow_document_disclosures_metadata']) ? $data['allow_document_disclosures_metadata'] : null;
         $this->container['allow_documents_on_signed_envelopes'] = isset($data['allow_documents_on_signed_envelopes']) ? $data['allow_documents_on_signed_envelopes'] : null;
@@ -3221,6 +3298,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['can_use_salesforce_o_auth_metadata'] = isset($data['can_use_salesforce_o_auth_metadata']) ? $data['can_use_salesforce_o_auth_metadata'] : null;
         $this->container['capture_voice_recording'] = isset($data['capture_voice_recording']) ? $data['capture_voice_recording'] : null;
         $this->container['capture_voice_recording_metadata'] = isset($data['capture_voice_recording_metadata']) ? $data['capture_voice_recording_metadata'] : null;
+        $this->container['cfr21_simplified_signing_enabled'] = isset($data['cfr21_simplified_signing_enabled']) ? $data['cfr21_simplified_signing_enabled'] : null;
+        $this->container['cfr21_simplified_signing_enabled_metadata'] = isset($data['cfr21_simplified_signing_enabled_metadata']) ? $data['cfr21_simplified_signing_enabled_metadata'] : null;
         $this->container['cfr_use_wide_image'] = isset($data['cfr_use_wide_image']) ? $data['cfr_use_wide_image'] : null;
         $this->container['cfr_use_wide_image_metadata'] = isset($data['cfr_use_wide_image_metadata']) ? $data['cfr_use_wide_image_metadata'] : null;
         $this->container['check_for_multiple_admins_on_account'] = isset($data['check_for_multiple_admins_on_account']) ? $data['check_for_multiple_admins_on_account'] : null;
@@ -3269,6 +3348,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['document_retention_purge_tabs'] = isset($data['document_retention_purge_tabs']) ? $data['document_retention_purge_tabs'] : null;
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
         $this->container['document_visibility_metadata'] = isset($data['document_visibility_metadata']) ? $data['document_visibility_metadata'] : null;
+        $this->container['dss_sign_28411_enable_leave_page_prompt_radmin_option'] = isset($data['dss_sign_28411_enable_leave_page_prompt_radmin_option']) ? $data['dss_sign_28411_enable_leave_page_prompt_radmin_option'] : null;
+        $this->container['dss_sign_29182_slide_up_bar_radmin_option'] = isset($data['dss_sign_29182_slide_up_bar_radmin_option']) ? $data['dss_sign_29182_slide_up_bar_radmin_option'] : null;
         $this->container['email_template_version'] = isset($data['email_template_version']) ? $data['email_template_version'] : null;
         $this->container['email_template_version_metadata'] = isset($data['email_template_version_metadata']) ? $data['email_template_version_metadata'] : null;
         $this->container['enable_access_code_generator'] = isset($data['enable_access_code_generator']) ? $data['enable_access_code_generator'] : null;
@@ -3303,6 +3384,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_esign_communities_metadata'] = isset($data['enable_esign_communities_metadata']) ? $data['enable_esign_communities_metadata'] : null;
         $this->container['enable_id_fx_intuit_kba'] = isset($data['enable_id_fx_intuit_kba']) ? $data['enable_id_fx_intuit_kba'] : null;
         $this->container['enable_id_fx_intuit_kba_metadata'] = isset($data['enable_id_fx_intuit_kba_metadata']) ? $data['enable_id_fx_intuit_kba_metadata'] : null;
+        $this->container['enable_id_fx_phone_authentication'] = isset($data['enable_id_fx_phone_authentication']) ? $data['enable_id_fx_phone_authentication'] : null;
+        $this->container['enable_id_fx_phone_authentication_metadata'] = isset($data['enable_id_fx_phone_authentication_metadata']) ? $data['enable_id_fx_phone_authentication_metadata'] : null;
         $this->container['enable_in_browser_editor'] = isset($data['enable_in_browser_editor']) ? $data['enable_in_browser_editor'] : null;
         $this->container['enable_in_browser_editor_metadata'] = isset($data['enable_in_browser_editor_metadata']) ? $data['enable_in_browser_editor_metadata'] : null;
         $this->container['enable_payment_processing'] = isset($data['enable_payment_processing']) ? $data['enable_payment_processing'] : null;
@@ -3363,6 +3446,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_sms_authentication_metadata'] = isset($data['enable_sms_authentication_metadata']) ? $data['enable_sms_authentication_metadata'] : null;
         $this->container['enable_sms_delivery_additional_notification'] = isset($data['enable_sms_delivery_additional_notification']) ? $data['enable_sms_delivery_additional_notification'] : null;
         $this->container['enable_sms_delivery_additional_notification_metadata'] = isset($data['enable_sms_delivery_additional_notification_metadata']) ? $data['enable_sms_delivery_additional_notification_metadata'] : null;
+        $this->container['enable_sms_delivery_primary'] = isset($data['enable_sms_delivery_primary']) ? $data['enable_sms_delivery_primary'] : null;
         $this->container['enable_social_id_login'] = isset($data['enable_social_id_login']) ? $data['enable_social_id_login'] : null;
         $this->container['enable_social_id_login_metadata'] = isset($data['enable_social_id_login_metadata']) ? $data['enable_social_id_login_metadata'] : null;
         $this->container['enable_strike_through'] = isset($data['enable_strike_through']) ? $data['enable_strike_through'] : null;
@@ -3381,6 +3465,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['envelope_integration_enabled_metadata'] = isset($data['envelope_integration_enabled_metadata']) ? $data['envelope_integration_enabled_metadata'] : null;
         $this->container['envelope_stamping_default_value'] = isset($data['envelope_stamping_default_value']) ? $data['envelope_stamping_default_value'] : null;
         $this->container['envelope_stamping_default_value_metadata'] = isset($data['envelope_stamping_default_value_metadata']) ? $data['envelope_stamping_default_value_metadata'] : null;
+        $this->container['exit_prompt'] = isset($data['exit_prompt']) ? $data['exit_prompt'] : null;
+        $this->container['exit_prompt_metadata'] = isset($data['exit_prompt_metadata']) ? $data['exit_prompt_metadata'] : null;
         $this->container['express_send'] = isset($data['express_send']) ? $data['express_send'] : null;
         $this->container['express_send_allow_tabs'] = isset($data['express_send_allow_tabs']) ? $data['express_send_allow_tabs'] : null;
         $this->container['express_send_allow_tabs_metadata'] = isset($data['express_send_allow_tabs_metadata']) ? $data['express_send_allow_tabs_metadata'] : null;
@@ -3390,6 +3476,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['external_signature_pad_type_metadata'] = isset($data['external_signature_pad_type_metadata']) ? $data['external_signature_pad_type_metadata'] : null;
         $this->container['fax_out_enabled'] = isset($data['fax_out_enabled']) ? $data['fax_out_enabled'] : null;
         $this->container['fax_out_enabled_metadata'] = isset($data['fax_out_enabled_metadata']) ? $data['fax_out_enabled_metadata'] : null;
+        $this->container['finish_reminder'] = isset($data['finish_reminder']) ? $data['finish_reminder'] : null;
+        $this->container['finish_reminder_metadata'] = isset($data['finish_reminder_metadata']) ? $data['finish_reminder_metadata'] : null;
         $this->container['guided_forms_html_allowed'] = isset($data['guided_forms_html_allowed']) ? $data['guided_forms_html_allowed'] : null;
         $this->container['guided_forms_html_allowed_metadata'] = isset($data['guided_forms_html_allowed_metadata']) ? $data['guided_forms_html_allowed_metadata'] : null;
         $this->container['has_recipient_connect_claimed_domain'] = isset($data['has_recipient_connect_claimed_domain']) ? $data['has_recipient_connect_claimed_domain'] : null;
@@ -3471,6 +3559,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['sending_tags_font_name_metadata'] = isset($data['sending_tags_font_name_metadata']) ? $data['sending_tags_font_name_metadata'] : null;
         $this->container['sending_tags_font_size'] = isset($data['sending_tags_font_size']) ? $data['sending_tags_font_size'] : null;
         $this->container['sending_tags_font_size_metadata'] = isset($data['sending_tags_font_size_metadata']) ? $data['sending_tags_font_size_metadata'] : null;
+        $this->container['send_lockout_recipient_notification'] = isset($data['send_lockout_recipient_notification']) ? $data['send_lockout_recipient_notification'] : null;
+        $this->container['send_lockout_recipient_notification_metadata'] = isset($data['send_lockout_recipient_notification_metadata']) ? $data['send_lockout_recipient_notification_metadata'] : null;
         $this->container['send_to_certified_delivery_enabled'] = isset($data['send_to_certified_delivery_enabled']) ? $data['send_to_certified_delivery_enabled'] : null;
         $this->container['send_to_certified_delivery_enabled_metadata'] = isset($data['send_to_certified_delivery_enabled_metadata']) ? $data['send_to_certified_delivery_enabled_metadata'] : null;
         $this->container['session_timeout'] = isset($data['session_timeout']) ? $data['session_timeout'] : null;
@@ -4595,6 +4685,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowDataDownloadMetadata($allow_data_download_metadata)
     {
         $this->container['allow_data_download_metadata'] = $allow_data_download_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_delegated_signing
+     *
+     * @return ?string
+     */
+    public function getAllowDelegatedSigning()
+    {
+        return $this->container['allow_delegated_signing'];
+    }
+
+    /**
+     * Sets allow_delegated_signing
+     *
+     * @param ?string $allow_delegated_signing 
+     *
+     * @return $this
+     */
+    public function setAllowDelegatedSigning($allow_delegated_signing)
+    {
+        $this->container['allow_delegated_signing'] = $allow_delegated_signing;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_delegated_signing_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowDelegatedSigningMetadata()
+    {
+        return $this->container['allow_delegated_signing_metadata'];
+    }
+
+    /**
+     * Sets allow_delegated_signing_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_delegated_signing_metadata allow_delegated_signing_metadata
+     *
+     * @return $this
+     */
+    public function setAllowDelegatedSigningMetadata($allow_delegated_signing_metadata)
+    {
+        $this->container['allow_delegated_signing_metadata'] = $allow_delegated_signing_metadata;
 
         return $this;
     }
@@ -8440,6 +8578,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets cfr21_simplified_signing_enabled
+     *
+     * @return ?string
+     */
+    public function getCfr21SimplifiedSigningEnabled()
+    {
+        return $this->container['cfr21_simplified_signing_enabled'];
+    }
+
+    /**
+     * Sets cfr21_simplified_signing_enabled
+     *
+     * @param ?string $cfr21_simplified_signing_enabled 
+     *
+     * @return $this
+     */
+    public function setCfr21SimplifiedSigningEnabled($cfr21_simplified_signing_enabled)
+    {
+        $this->container['cfr21_simplified_signing_enabled'] = $cfr21_simplified_signing_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets cfr21_simplified_signing_enabled_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCfr21SimplifiedSigningEnabledMetadata()
+    {
+        return $this->container['cfr21_simplified_signing_enabled_metadata'];
+    }
+
+    /**
+     * Sets cfr21_simplified_signing_enabled_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $cfr21_simplified_signing_enabled_metadata cfr21_simplified_signing_enabled_metadata
+     *
+     * @return $this
+     */
+    public function setCfr21SimplifiedSigningEnabledMetadata($cfr21_simplified_signing_enabled_metadata)
+    {
+        $this->container['cfr21_simplified_signing_enabled_metadata'] = $cfr21_simplified_signing_enabled_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets cfr_use_wide_image
      *
      * @return ?string
@@ -9592,6 +9778,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets dss_sign_28411_enable_leave_page_prompt_radmin_option
+     *
+     * @return ?string
+     */
+    public function getDssSign28411EnableLeavePagePromptRadminOption()
+    {
+        return $this->container['dss_sign_28411_enable_leave_page_prompt_radmin_option'];
+    }
+
+    /**
+     * Sets dss_sign_28411_enable_leave_page_prompt_radmin_option
+     *
+     * @param ?string $dss_sign_28411_enable_leave_page_prompt_radmin_option 
+     *
+     * @return $this
+     */
+    public function setDssSign28411EnableLeavePagePromptRadminOption($dss_sign_28411_enable_leave_page_prompt_radmin_option)
+    {
+        $this->container['dss_sign_28411_enable_leave_page_prompt_radmin_option'] = $dss_sign_28411_enable_leave_page_prompt_radmin_option;
+
+        return $this;
+    }
+
+    /**
+     * Gets dss_sign_29182_slide_up_bar_radmin_option
+     *
+     * @return ?string
+     */
+    public function getDssSign29182SlideUpBarRadminOption()
+    {
+        return $this->container['dss_sign_29182_slide_up_bar_radmin_option'];
+    }
+
+    /**
+     * Sets dss_sign_29182_slide_up_bar_radmin_option
+     *
+     * @param ?string $dss_sign_29182_slide_up_bar_radmin_option 
+     *
+     * @return $this
+     */
+    public function setDssSign29182SlideUpBarRadminOption($dss_sign_29182_slide_up_bar_radmin_option)
+    {
+        $this->container['dss_sign_29182_slide_up_bar_radmin_option'] = $dss_sign_29182_slide_up_bar_radmin_option;
+
+        return $this;
+    }
+
+    /**
      * Gets email_template_version
      *
      * @return ?string
@@ -10403,6 +10637,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableIdFxIntuitKbaMetadata($enable_id_fx_intuit_kba_metadata)
     {
         $this->container['enable_id_fx_intuit_kba_metadata'] = $enable_id_fx_intuit_kba_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_id_fx_phone_authentication
+     *
+     * @return ?string
+     */
+    public function getEnableIdFxPhoneAuthentication()
+    {
+        return $this->container['enable_id_fx_phone_authentication'];
+    }
+
+    /**
+     * Sets enable_id_fx_phone_authentication
+     *
+     * @param ?string $enable_id_fx_phone_authentication 
+     *
+     * @return $this
+     */
+    public function setEnableIdFxPhoneAuthentication($enable_id_fx_phone_authentication)
+    {
+        $this->container['enable_id_fx_phone_authentication'] = $enable_id_fx_phone_authentication;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_id_fx_phone_authentication_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableIdFxPhoneAuthenticationMetadata()
+    {
+        return $this->container['enable_id_fx_phone_authentication_metadata'];
+    }
+
+    /**
+     * Sets enable_id_fx_phone_authentication_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_phone_authentication_metadata enable_id_fx_phone_authentication_metadata
+     *
+     * @return $this
+     */
+    public function setEnableIdFxPhoneAuthenticationMetadata($enable_id_fx_phone_authentication_metadata)
+    {
+        $this->container['enable_id_fx_phone_authentication_metadata'] = $enable_id_fx_phone_authentication_metadata;
 
         return $this;
     }
@@ -11848,6 +12130,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_sms_delivery_primary
+     *
+     * @return ?string
+     */
+    public function getEnableSmsDeliveryPrimary()
+    {
+        return $this->container['enable_sms_delivery_primary'];
+    }
+
+    /**
+     * Sets enable_sms_delivery_primary
+     *
+     * @param ?string $enable_sms_delivery_primary 
+     *
+     * @return $this
+     */
+    public function setEnableSmsDeliveryPrimary($enable_sms_delivery_primary)
+    {
+        $this->container['enable_sms_delivery_primary'] = $enable_sms_delivery_primary;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_social_id_login
      *
      * @return ?string
@@ -12280,6 +12586,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets exit_prompt
+     *
+     * @return ?string
+     */
+    public function getExitPrompt()
+    {
+        return $this->container['exit_prompt'];
+    }
+
+    /**
+     * Sets exit_prompt
+     *
+     * @param ?string $exit_prompt 
+     *
+     * @return $this
+     */
+    public function setExitPrompt($exit_prompt)
+    {
+        $this->container['exit_prompt'] = $exit_prompt;
+
+        return $this;
+    }
+
+    /**
+     * Gets exit_prompt_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getExitPromptMetadata()
+    {
+        return $this->container['exit_prompt_metadata'];
+    }
+
+    /**
+     * Sets exit_prompt_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $exit_prompt_metadata exit_prompt_metadata
+     *
+     * @return $this
+     */
+    public function setExitPromptMetadata($exit_prompt_metadata)
+    {
+        $this->container['exit_prompt_metadata'] = $exit_prompt_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets express_send
      *
      * @return ?string
@@ -12491,6 +12845,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setFaxOutEnabledMetadata($fax_out_enabled_metadata)
     {
         $this->container['fax_out_enabled_metadata'] = $fax_out_enabled_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets finish_reminder
+     *
+     * @return ?string
+     */
+    public function getFinishReminder()
+    {
+        return $this->container['finish_reminder'];
+    }
+
+    /**
+     * Sets finish_reminder
+     *
+     * @param ?string $finish_reminder 
+     *
+     * @return $this
+     */
+    public function setFinishReminder($finish_reminder)
+    {
+        $this->container['finish_reminder'] = $finish_reminder;
+
+        return $this;
+    }
+
+    /**
+     * Gets finish_reminder_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getFinishReminderMetadata()
+    {
+        return $this->container['finish_reminder_metadata'];
+    }
+
+    /**
+     * Sets finish_reminder_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $finish_reminder_metadata finish_reminder_metadata
+     *
+     * @return $this
+     */
+    public function setFinishReminderMetadata($finish_reminder_metadata)
+    {
+        $this->container['finish_reminder_metadata'] = $finish_reminder_metadata;
 
         return $this;
     }
@@ -14435,6 +14837,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setSendingTagsFontSizeMetadata($sending_tags_font_size_metadata)
     {
         $this->container['sending_tags_font_size_metadata'] = $sending_tags_font_size_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets send_lockout_recipient_notification
+     *
+     * @return ?string
+     */
+    public function getSendLockoutRecipientNotification()
+    {
+        return $this->container['send_lockout_recipient_notification'];
+    }
+
+    /**
+     * Sets send_lockout_recipient_notification
+     *
+     * @param ?string $send_lockout_recipient_notification 
+     *
+     * @return $this
+     */
+    public function setSendLockoutRecipientNotification($send_lockout_recipient_notification)
+    {
+        $this->container['send_lockout_recipient_notification'] = $send_lockout_recipient_notification;
+
+        return $this;
+    }
+
+    /**
+     * Gets send_lockout_recipient_notification_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getSendLockoutRecipientNotificationMetadata()
+    {
+        return $this->container['send_lockout_recipient_notification_metadata'];
+    }
+
+    /**
+     * Sets send_lockout_recipient_notification_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $send_lockout_recipient_notification_metadata send_lockout_recipient_notification_metadata
+     *
+     * @return $this
+     */
+    public function setSendLockoutRecipientNotificationMetadata($send_lockout_recipient_notification_metadata)
+    {
+        $this->container['send_lockout_recipient_notification_metadata'] = $send_lockout_recipient_notification_metadata;
 
         return $this;
     }

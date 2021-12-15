@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ namespace DocuSign\eSign\Api\ConnectApi;
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetConnectAllUsersOptions
@@ -72,6 +72,33 @@ class GetConnectAllUsersOptions
         return $this;
     }
     /**
+      * $domain_users_only 
+      * @var ?string
+      */
+    protected ?string $domain_users_only = null;
+
+    /**
+     * Gets domain_users_only
+     *
+     * @return ?string
+     */
+    public function getDomainUsersOnly(): ?string
+    {
+        return $this->domain_users_only;
+    }
+
+    /**
+     * Sets domain_users_only
+     * @param ?string $domain_users_only 
+     *
+     * @return self
+     */
+    public function setDomainUsersOnly(?string $domain_users_only): self
+    {
+        $this->domain_users_only = $domain_users_only;
+        return $this;
+    }
+    /**
       * $email_substring 
       * @var ?string
       */
@@ -96,33 +123,6 @@ class GetConnectAllUsersOptions
     public function setEmailSubstring(?string $email_substring): self
     {
         $this->email_substring = $email_substring;
-        return $this;
-    }
-    /**
-      * $is_recipient_connect_config 
-      * @var ?string
-      */
-    protected ?string $is_recipient_connect_config = null;
-
-    /**
-     * Gets is_recipient_connect_config
-     *
-     * @return ?string
-     */
-    public function getIsRecipientConnectConfig(): ?string
-    {
-        return $this->is_recipient_connect_config;
-    }
-
-    /**
-     * Sets is_recipient_connect_config
-     * @param ?string $is_recipient_connect_config 
-     *
-     * @return self
-     */
-    public function setIsRecipientConnectConfig(?string $is_recipient_connect_config): self
-    {
-        $this->is_recipient_connect_config = $is_recipient_connect_config;
         return $this;
     }
     /**
@@ -215,7 +215,7 @@ class GetConnectAllUsersOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetEventLogOptions
@@ -256,7 +256,7 @@ class GetEventLogOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListEventFailureLogsOptions
@@ -324,7 +324,7 @@ class ListEventFailureLogsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListEventLogsOptions
@@ -392,7 +392,7 @@ class ListEventLogsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListUsersOptions
@@ -576,7 +576,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ConnectApi
@@ -1298,8 +1298,8 @@ class ConnectApi
      *
      * Returns all users from the configured Connect service.
      *
-     * @param ?string $account_id 
-     * @param ?string $connect_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
      * @param  \DocuSign\eSign\Api\ConnectApi\GetConnectAllUsersOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
@@ -1316,8 +1316,8 @@ class ConnectApi
      *
      * Returns all users from the configured Connect service.
      *
-     * @param ?string $account_id 
-     * @param ?string $connect_id 
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $connect_id The ID of the custom Connect configuration being accessed.
      * @param  \DocuSign\eSign\Api\ConnectApi\GetConnectAllUsersOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
@@ -1346,11 +1346,11 @@ class ConnectApi
             if ($options->getCount() != 'null') {
                 $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
             }
+            if ($options->getDomainUsersOnly() != 'null') {
+                $queryParams['domain_users_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getDomainUsersOnly());
+            }
             if ($options->getEmailSubstring() != 'null') {
                 $queryParams['email_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailSubstring());
-            }
-            if ($options->getIsRecipientConnectConfig() != 'null') {
-                $queryParams['is_recipient_connect_config'] = $this->apiClient->getSerializer()->toQueryValue($options->getIsRecipientConnectConfig());
             }
             if ($options->getStartPosition() != 'null') {
                 $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());

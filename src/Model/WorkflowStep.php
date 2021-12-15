@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class WorkflowStep implements ModelInterface, ArrayAccess
@@ -61,6 +61,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'action' => '?string',
         'completed_date' => '?string',
+        'delayed_routing' => '\DocuSign\eSign\Model\DelayedRoutingApiModel',
         'item_id' => '?string',
         'recipient_routing' => '\DocuSign\eSign\Model\RecipientRouting',
         'status' => '?string',
@@ -77,6 +78,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'action' => null,
         'completed_date' => null,
+        'delayed_routing' => null,
         'item_id' => null,
         'recipient_routing' => null,
         'status' => null,
@@ -114,6 +116,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'action' => 'action',
         'completed_date' => 'completedDate',
+        'delayed_routing' => 'delayedRouting',
         'item_id' => 'itemId',
         'recipient_routing' => 'recipientRouting',
         'status' => 'status',
@@ -130,6 +133,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $setters = [
         'action' => 'setAction',
         'completed_date' => 'setCompletedDate',
+        'delayed_routing' => 'setDelayedRouting',
         'item_id' => 'setItemId',
         'recipient_routing' => 'setRecipientRouting',
         'status' => 'setStatus',
@@ -146,6 +150,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $getters = [
         'action' => 'getAction',
         'completed_date' => 'getCompletedDate',
+        'delayed_routing' => 'getDelayedRouting',
         'item_id' => 'getItemId',
         'recipient_routing' => 'getRecipientRouting',
         'status' => 'getStatus',
@@ -216,6 +221,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['completed_date'] = isset($data['completed_date']) ? $data['completed_date'] : null;
+        $this->container['delayed_routing'] = isset($data['delayed_routing']) ? $data['delayed_routing'] : null;
         $this->container['item_id'] = isset($data['item_id']) ? $data['item_id'] : null;
         $this->container['recipient_routing'] = isset($data['recipient_routing']) ? $data['recipient_routing'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -292,6 +298,30 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     public function setCompletedDate($completed_date)
     {
         $this->container['completed_date'] = $completed_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets delayed_routing
+     *
+     * @return \DocuSign\eSign\Model\DelayedRoutingApiModel
+     */
+    public function getDelayedRouting()
+    {
+        return $this->container['delayed_routing'];
+    }
+
+    /**
+     * Sets delayed_routing
+     *
+     * @param \DocuSign\eSign\Model\DelayedRoutingApiModel $delayed_routing delayed_routing
+     *
+     * @return $this
+     */
+    public function setDelayedRouting($delayed_routing)
+    {
+        $this->container['delayed_routing'] = $delayed_routing;
 
         return $this;
     }

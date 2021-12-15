@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class UserAccountManagementGranularInformation implements ModelInterface, ArrayAccess
@@ -69,6 +69,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_document_retention_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_envelope_transfer' => '?string',
         'can_manage_envelope_transfer_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_groups_but_not_users' => '?string',
+        'can_manage_groups_but_not_users_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_reporting' => '?string',
         'can_manage_reporting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_sharing' => '?string',
@@ -96,6 +98,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_document_retention_metadata' => null,
         'can_manage_envelope_transfer' => null,
         'can_manage_envelope_transfer_metadata' => null,
+        'can_manage_groups_but_not_users' => null,
+        'can_manage_groups_but_not_users_metadata' => null,
         'can_manage_reporting' => null,
         'can_manage_reporting_metadata' => null,
         'can_manage_sharing' => null,
@@ -144,6 +148,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_document_retention_metadata' => 'canManageDocumentRetentionMetadata',
         'can_manage_envelope_transfer' => 'canManageEnvelopeTransfer',
         'can_manage_envelope_transfer_metadata' => 'canManageEnvelopeTransferMetadata',
+        'can_manage_groups_but_not_users' => 'canManageGroupsButNotUsers',
+        'can_manage_groups_but_not_users_metadata' => 'canManageGroupsButNotUsersMetadata',
         'can_manage_reporting' => 'canManageReporting',
         'can_manage_reporting_metadata' => 'canManageReportingMetadata',
         'can_manage_sharing' => 'canManageSharing',
@@ -171,6 +177,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_document_retention_metadata' => 'setCanManageDocumentRetentionMetadata',
         'can_manage_envelope_transfer' => 'setCanManageEnvelopeTransfer',
         'can_manage_envelope_transfer_metadata' => 'setCanManageEnvelopeTransferMetadata',
+        'can_manage_groups_but_not_users' => 'setCanManageGroupsButNotUsers',
+        'can_manage_groups_but_not_users_metadata' => 'setCanManageGroupsButNotUsersMetadata',
         'can_manage_reporting' => 'setCanManageReporting',
         'can_manage_reporting_metadata' => 'setCanManageReportingMetadata',
         'can_manage_sharing' => 'setCanManageSharing',
@@ -198,6 +206,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_document_retention_metadata' => 'getCanManageDocumentRetentionMetadata',
         'can_manage_envelope_transfer' => 'getCanManageEnvelopeTransfer',
         'can_manage_envelope_transfer_metadata' => 'getCanManageEnvelopeTransferMetadata',
+        'can_manage_groups_but_not_users' => 'getCanManageGroupsButNotUsers',
+        'can_manage_groups_but_not_users_metadata' => 'getCanManageGroupsButNotUsersMetadata',
         'can_manage_reporting' => 'getCanManageReporting',
         'can_manage_reporting_metadata' => 'getCanManageReportingMetadata',
         'can_manage_sharing' => 'getCanManageSharing',
@@ -279,6 +289,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         $this->container['can_manage_document_retention_metadata'] = isset($data['can_manage_document_retention_metadata']) ? $data['can_manage_document_retention_metadata'] : null;
         $this->container['can_manage_envelope_transfer'] = isset($data['can_manage_envelope_transfer']) ? $data['can_manage_envelope_transfer'] : null;
         $this->container['can_manage_envelope_transfer_metadata'] = isset($data['can_manage_envelope_transfer_metadata']) ? $data['can_manage_envelope_transfer_metadata'] : null;
+        $this->container['can_manage_groups_but_not_users'] = isset($data['can_manage_groups_but_not_users']) ? $data['can_manage_groups_but_not_users'] : null;
+        $this->container['can_manage_groups_but_not_users_metadata'] = isset($data['can_manage_groups_but_not_users_metadata']) ? $data['can_manage_groups_but_not_users_metadata'] : null;
         $this->container['can_manage_reporting'] = isset($data['can_manage_reporting']) ? $data['can_manage_reporting'] : null;
         $this->container['can_manage_reporting_metadata'] = isset($data['can_manage_reporting_metadata']) ? $data['can_manage_reporting_metadata'] : null;
         $this->container['can_manage_sharing'] = isset($data['can_manage_sharing']) ? $data['can_manage_sharing'] : null;
@@ -550,6 +562,54 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     public function setCanManageEnvelopeTransferMetadata($can_manage_envelope_transfer_metadata)
     {
         $this->container['can_manage_envelope_transfer_metadata'] = $can_manage_envelope_transfer_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_groups_but_not_users
+     *
+     * @return ?string
+     */
+    public function getCanManageGroupsButNotUsers()
+    {
+        return $this->container['can_manage_groups_but_not_users'];
+    }
+
+    /**
+     * Sets can_manage_groups_but_not_users
+     *
+     * @param ?string $can_manage_groups_but_not_users 
+     *
+     * @return $this
+     */
+    public function setCanManageGroupsButNotUsers($can_manage_groups_but_not_users)
+    {
+        $this->container['can_manage_groups_but_not_users'] = $can_manage_groups_but_not_users;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_groups_but_not_users_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageGroupsButNotUsersMetadata()
+    {
+        return $this->container['can_manage_groups_but_not_users_metadata'];
+    }
+
+    /**
+     * Sets can_manage_groups_but_not_users_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_groups_but_not_users_metadata can_manage_groups_but_not_users_metadata
+     *
+     * @return $this
+     */
+    public function setCanManageGroupsButNotUsersMetadata($can_manage_groups_but_not_users_metadata)
+    {
+        $this->container['can_manage_groups_but_not_users_metadata'] = $can_manage_groups_but_not_users_metadata;
 
         return $this;
     }

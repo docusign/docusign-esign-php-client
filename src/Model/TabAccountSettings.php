@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class TabAccountSettings implements ModelInterface, ArrayAccess
@@ -67,6 +67,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'checkbox_tabs_enabled' => '?string',
         'check_box_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'currency_tabs_enabled' => '?string',
+        'currency_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_field_regex_enabled' => '?string',
         'data_field_regex_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_field_size_enabled' => '?string',
@@ -117,6 +119,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => null,
         'checkbox_tabs_enabled' => null,
         'check_box_tabs_metadata' => null,
+        'currency_tabs_enabled' => null,
+        'currency_tabs_metadata' => null,
         'data_field_regex_enabled' => null,
         'data_field_regex_metadata' => null,
         'data_field_size_enabled' => null,
@@ -188,6 +192,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'calculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'checkboxTabsEnabled',
         'check_box_tabs_metadata' => 'checkBoxTabsMetadata',
+        'currency_tabs_enabled' => 'currencyTabsEnabled',
+        'currency_tabs_metadata' => 'currencyTabsMetadata',
         'data_field_regex_enabled' => 'dataFieldRegexEnabled',
         'data_field_regex_metadata' => 'dataFieldRegexMetadata',
         'data_field_size_enabled' => 'dataFieldSizeEnabled',
@@ -238,6 +244,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'setCalculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'setCheckboxTabsEnabled',
         'check_box_tabs_metadata' => 'setCheckBoxTabsMetadata',
+        'currency_tabs_enabled' => 'setCurrencyTabsEnabled',
+        'currency_tabs_metadata' => 'setCurrencyTabsMetadata',
         'data_field_regex_enabled' => 'setDataFieldRegexEnabled',
         'data_field_regex_metadata' => 'setDataFieldRegexMetadata',
         'data_field_size_enabled' => 'setDataFieldSizeEnabled',
@@ -288,6 +296,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'getCalculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'getCheckboxTabsEnabled',
         'check_box_tabs_metadata' => 'getCheckBoxTabsMetadata',
+        'currency_tabs_enabled' => 'getCurrencyTabsEnabled',
+        'currency_tabs_metadata' => 'getCurrencyTabsMetadata',
         'data_field_regex_enabled' => 'getDataFieldRegexEnabled',
         'data_field_regex_metadata' => 'getDataFieldRegexMetadata',
         'data_field_size_enabled' => 'getDataFieldSizeEnabled',
@@ -392,6 +402,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         $this->container['calculated_fields_metadata'] = isset($data['calculated_fields_metadata']) ? $data['calculated_fields_metadata'] : null;
         $this->container['checkbox_tabs_enabled'] = isset($data['checkbox_tabs_enabled']) ? $data['checkbox_tabs_enabled'] : null;
         $this->container['check_box_tabs_metadata'] = isset($data['check_box_tabs_metadata']) ? $data['check_box_tabs_metadata'] : null;
+        $this->container['currency_tabs_enabled'] = isset($data['currency_tabs_enabled']) ? $data['currency_tabs_enabled'] : null;
+        $this->container['currency_tabs_metadata'] = isset($data['currency_tabs_metadata']) ? $data['currency_tabs_metadata'] : null;
         $this->container['data_field_regex_enabled'] = isset($data['data_field_regex_enabled']) ? $data['data_field_regex_enabled'] : null;
         $this->container['data_field_regex_metadata'] = isset($data['data_field_regex_metadata']) ? $data['data_field_regex_metadata'] : null;
         $this->container['data_field_size_enabled'] = isset($data['data_field_size_enabled']) ? $data['data_field_size_enabled'] : null;
@@ -640,6 +652,54 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     public function setCheckBoxTabsMetadata($check_box_tabs_metadata)
     {
         $this->container['check_box_tabs_metadata'] = $check_box_tabs_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_tabs_enabled
+     *
+     * @return ?string
+     */
+    public function getCurrencyTabsEnabled()
+    {
+        return $this->container['currency_tabs_enabled'];
+    }
+
+    /**
+     * Sets currency_tabs_enabled
+     *
+     * @param ?string $currency_tabs_enabled 
+     *
+     * @return $this
+     */
+    public function setCurrencyTabsEnabled($currency_tabs_enabled)
+    {
+        $this->container['currency_tabs_enabled'] = $currency_tabs_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_tabs_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCurrencyTabsMetadata()
+    {
+        return $this->container['currency_tabs_metadata'];
+    }
+
+    /**
+     * Sets currency_tabs_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_tabs_metadata currency_tabs_metadata
+     *
+     * @return $this
+     */
+    public function setCurrencyTabsMetadata($currency_tabs_metadata)
+    {
+        $this->container['currency_tabs_metadata'] = $currency_tabs_metadata;
 
         return $this;
     }
