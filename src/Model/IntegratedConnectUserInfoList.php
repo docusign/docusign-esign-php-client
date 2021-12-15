@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class IntegratedConnectUserInfoList implements ModelInterface, ArrayAccess
@@ -255,7 +255,7 @@ class IntegratedConnectUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets end_position
      *
-     * @param ?string $end_position 
+     * @param ?string $end_position The last position in the result set.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class IntegratedConnectUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets next_uri
      *
-     * @param ?string $next_uri 
+     * @param ?string $next_uri The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class IntegratedConnectUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets previous_uri
      *
-     * @param ?string $previous_uri 
+     * @param ?string $previous_uri The postal code for the billing address.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class IntegratedConnectUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets result_set_size
      *
-     * @param ?string $result_set_size 
+     * @param ?string $result_set_size The number of results returned in this response.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class IntegratedConnectUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets start_position
      *
-     * @param ?string $start_position 
+     * @param ?string $start_position Starting position of the current result set.
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class IntegratedConnectUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets total_set_size
      *
-     * @param ?string $total_set_size 
+     * @param ?string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
      *
      * @return $this
      */

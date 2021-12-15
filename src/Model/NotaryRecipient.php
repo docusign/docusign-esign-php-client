@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class NotaryRecipient implements ModelInterface, ArrayAccess
@@ -77,6 +77,8 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'declined_date_time' => '?string',
         'declined_reason' => '?string',
         'default_recipient' => '?string',
+        'delegated_by' => '\DocuSign\eSign\Model\DelegationInfo',
+        'delegated_to' => '\DocuSign\eSign\Model\DelegationInfo[]',
         'delivered_date_time' => '?string',
         'delivery_method' => '?string',
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -110,6 +112,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'notary_id' => '?string',
+        'notary_signer_email_sent' => '?string',
         'notary_signers' => '?string[]',
         'notary_type' => '?string',
         'note' => '?string',
@@ -180,6 +183,8 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'declined_date_time' => null,
         'declined_reason' => null,
         'default_recipient' => null,
+        'delegated_by' => null,
+        'delegated_to' => null,
         'delivered_date_time' => null,
         'delivery_method' => null,
         'delivery_method_metadata' => null,
@@ -213,6 +218,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => null,
         'name_metadata' => null,
         'notary_id' => null,
+        'notary_signer_email_sent' => null,
         'notary_signers' => null,
         'notary_type' => null,
         'note' => null,
@@ -304,6 +310,8 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'declined_date_time' => 'declinedDateTime',
         'declined_reason' => 'declinedReason',
         'default_recipient' => 'defaultRecipient',
+        'delegated_by' => 'delegatedBy',
+        'delegated_to' => 'delegatedTo',
         'delivered_date_time' => 'deliveredDateTime',
         'delivery_method' => 'deliveryMethod',
         'delivery_method_metadata' => 'deliveryMethodMetadata',
@@ -337,6 +345,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'notary_id' => 'notaryId',
+        'notary_signer_email_sent' => 'notarySignerEmailSent',
         'notary_signers' => 'notarySigners',
         'notary_type' => 'notaryType',
         'note' => 'note',
@@ -407,6 +416,8 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'declined_date_time' => 'setDeclinedDateTime',
         'declined_reason' => 'setDeclinedReason',
         'default_recipient' => 'setDefaultRecipient',
+        'delegated_by' => 'setDelegatedBy',
+        'delegated_to' => 'setDelegatedTo',
         'delivered_date_time' => 'setDeliveredDateTime',
         'delivery_method' => 'setDeliveryMethod',
         'delivery_method_metadata' => 'setDeliveryMethodMetadata',
@@ -440,6 +451,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'notary_id' => 'setNotaryId',
+        'notary_signer_email_sent' => 'setNotarySignerEmailSent',
         'notary_signers' => 'setNotarySigners',
         'notary_type' => 'setNotaryType',
         'note' => 'setNote',
@@ -510,6 +522,8 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'declined_date_time' => 'getDeclinedDateTime',
         'declined_reason' => 'getDeclinedReason',
         'default_recipient' => 'getDefaultRecipient',
+        'delegated_by' => 'getDelegatedBy',
+        'delegated_to' => 'getDelegatedTo',
         'delivered_date_time' => 'getDeliveredDateTime',
         'delivery_method' => 'getDeliveryMethod',
         'delivery_method_metadata' => 'getDeliveryMethodMetadata',
@@ -543,6 +557,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'notary_id' => 'getNotaryId',
+        'notary_signer_email_sent' => 'getNotarySignerEmailSent',
         'notary_signers' => 'getNotarySigners',
         'notary_type' => 'getNotaryType',
         'note' => 'getNote',
@@ -667,6 +682,8 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
         $this->container['declined_reason'] = isset($data['declined_reason']) ? $data['declined_reason'] : null;
         $this->container['default_recipient'] = isset($data['default_recipient']) ? $data['default_recipient'] : null;
+        $this->container['delegated_by'] = isset($data['delegated_by']) ? $data['delegated_by'] : null;
+        $this->container['delegated_to'] = isset($data['delegated_to']) ? $data['delegated_to'] : null;
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
         $this->container['delivery_method_metadata'] = isset($data['delivery_method_metadata']) ? $data['delivery_method_metadata'] : null;
@@ -700,6 +717,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['notary_id'] = isset($data['notary_id']) ? $data['notary_id'] : null;
+        $this->container['notary_signer_email_sent'] = isset($data['notary_signer_email_sent']) ? $data['notary_signer_email_sent'] : null;
         $this->container['notary_signers'] = isset($data['notary_signers']) ? $data['notary_signers'] : null;
         $this->container['notary_type'] = isset($data['notary_type']) ? $data['notary_type'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
@@ -1198,6 +1216,54 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setDefaultRecipient($default_recipient)
     {
         $this->container['default_recipient'] = $default_recipient;
+
+        return $this;
+    }
+
+    /**
+     * Gets delegated_by
+     *
+     * @return \DocuSign\eSign\Model\DelegationInfo
+     */
+    public function getDelegatedBy()
+    {
+        return $this->container['delegated_by'];
+    }
+
+    /**
+     * Sets delegated_by
+     *
+     * @param \DocuSign\eSign\Model\DelegationInfo $delegated_by delegated_by
+     *
+     * @return $this
+     */
+    public function setDelegatedBy($delegated_by)
+    {
+        $this->container['delegated_by'] = $delegated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets delegated_to
+     *
+     * @return \DocuSign\eSign\Model\DelegationInfo[]
+     */
+    public function getDelegatedTo()
+    {
+        return $this->container['delegated_to'];
+    }
+
+    /**
+     * Sets delegated_to
+     *
+     * @param \DocuSign\eSign\Model\DelegationInfo[] $delegated_to 
+     *
+     * @return $this
+     */
+    public function setDelegatedTo($delegated_to)
+    {
+        $this->container['delegated_to'] = $delegated_to;
 
         return $this;
     }
@@ -1990,6 +2056,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setNotaryId($notary_id)
     {
         $this->container['notary_id'] = $notary_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_signer_email_sent
+     *
+     * @return ?string
+     */
+    public function getNotarySignerEmailSent()
+    {
+        return $this->container['notary_signer_email_sent'];
+    }
+
+    /**
+     * Sets notary_signer_email_sent
+     *
+     * @param ?string $notary_signer_email_sent 
+     *
+     * @return $this
+     */
+    public function setNotarySignerEmailSent($notary_signer_email_sent)
+    {
+        $this->container['notary_signer_email_sent'] = $notary_signer_email_sent;
 
         return $this;
     }

@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Defines an account billing plan response object.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
@@ -67,7 +67,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
         'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
         'downgrade_request_information' => '\DocuSign\eSign\Model\DowngradeRequestInformation',
-        'entity_name' => '?string',
+        'entity_information' => '\DocuSign\eSign\Model\BillingEntityInformationResponse',
         'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
@@ -87,7 +87,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => null,
         'downgrade_plan_information' => null,
         'downgrade_request_information' => null,
-        'entity_name' => null,
+        'entity_information' => null,
         'payment_method' => null,
         'payment_processor_information' => null,
         'referral_information' => null,
@@ -128,7 +128,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'directDebitProcessorInformation',
         'downgrade_plan_information' => 'downgradePlanInformation',
         'downgrade_request_information' => 'downgradeRequestInformation',
-        'entity_name' => 'entityName',
+        'entity_information' => 'entityInformation',
         'payment_method' => 'paymentMethod',
         'payment_processor_information' => 'paymentProcessorInformation',
         'referral_information' => 'referralInformation',
@@ -148,7 +148,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'setDirectDebitProcessorInformation',
         'downgrade_plan_information' => 'setDowngradePlanInformation',
         'downgrade_request_information' => 'setDowngradeRequestInformation',
-        'entity_name' => 'setEntityName',
+        'entity_information' => 'setEntityInformation',
         'payment_method' => 'setPaymentMethod',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'referral_information' => 'setReferralInformation',
@@ -168,7 +168,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'getDirectDebitProcessorInformation',
         'downgrade_plan_information' => 'getDowngradePlanInformation',
         'downgrade_request_information' => 'getDowngradeRequestInformation',
-        'entity_name' => 'getEntityName',
+        'entity_information' => 'getEntityInformation',
         'payment_method' => 'getPaymentMethod',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'referral_information' => 'getReferralInformation',
@@ -242,7 +242,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         $this->container['direct_debit_processor_information'] = isset($data['direct_debit_processor_information']) ? $data['direct_debit_processor_information'] : null;
         $this->container['downgrade_plan_information'] = isset($data['downgrade_plan_information']) ? $data['downgrade_plan_information'] : null;
         $this->container['downgrade_request_information'] = isset($data['downgrade_request_information']) ? $data['downgrade_request_information'] : null;
-        $this->container['entity_name'] = isset($data['entity_name']) ? $data['entity_name'] : null;
+        $this->container['entity_information'] = isset($data['entity_information']) ? $data['entity_information'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
@@ -442,25 +442,25 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets entity_name
+     * Gets entity_information
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\BillingEntityInformationResponse
      */
-    public function getEntityName()
+    public function getEntityInformation()
     {
-        return $this->container['entity_name'];
+        return $this->container['entity_information'];
     }
 
     /**
-     * Sets entity_name
+     * Sets entity_information
      *
-     * @param ?string $entity_name 
+     * @param \DocuSign\eSign\Model\BillingEntityInformationResponse $entity_information entity_information
      *
      * @return $this
      */
-    public function setEntityName($entity_name)
+    public function setEntityInformation($entity_information)
     {
-        $this->container['entity_name'] = $entity_name;
+        $this->container['entity_information'] = $entity_information;
 
         return $this;
     }

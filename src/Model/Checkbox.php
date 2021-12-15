@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Checkbox implements ModelInterface, ArrayAccess
@@ -112,6 +112,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => '?string',
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'original_value' => '?string',
         'page_number' => '?string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id' => '?string',
@@ -150,6 +151,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'underline' => '?string',
         'underline_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'value' => '?string',
         'width' => '?string',
         'width_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'x_position' => '?string',
@@ -217,6 +219,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => null,
         'name' => null,
         'name_metadata' => null,
+        'original_value' => null,
         'page_number' => null,
         'page_number_metadata' => null,
         'recipient_id' => null,
@@ -255,6 +258,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => null,
         'underline' => null,
         'underline_metadata' => null,
+        'value' => null,
         'width' => null,
         'width_metadata' => null,
         'x_position' => null,
@@ -343,6 +347,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => 'mergeFieldXml',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
+        'original_value' => 'originalValue',
         'page_number' => 'pageNumber',
         'page_number_metadata' => 'pageNumberMetadata',
         'recipient_id' => 'recipientId',
@@ -381,6 +386,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => 'toolTipMetadata',
         'underline' => 'underline',
         'underline_metadata' => 'underlineMetadata',
+        'value' => 'value',
         'width' => 'width',
         'width_metadata' => 'widthMetadata',
         'x_position' => 'xPosition',
@@ -448,6 +454,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => 'setMergeFieldXml',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
+        'original_value' => 'setOriginalValue',
         'page_number' => 'setPageNumber',
         'page_number_metadata' => 'setPageNumberMetadata',
         'recipient_id' => 'setRecipientId',
@@ -486,6 +493,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => 'setToolTipMetadata',
         'underline' => 'setUnderline',
         'underline_metadata' => 'setUnderlineMetadata',
+        'value' => 'setValue',
         'width' => 'setWidth',
         'width_metadata' => 'setWidthMetadata',
         'x_position' => 'setXPosition',
@@ -553,6 +561,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => 'getMergeFieldXml',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
+        'original_value' => 'getOriginalValue',
         'page_number' => 'getPageNumber',
         'page_number_metadata' => 'getPageNumberMetadata',
         'recipient_id' => 'getRecipientId',
@@ -591,6 +600,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => 'getToolTipMetadata',
         'underline' => 'getUnderline',
         'underline_metadata' => 'getUnderlineMetadata',
+        'value' => 'getValue',
         'width' => 'getWidth',
         'width_metadata' => 'getWidthMetadata',
         'x_position' => 'getXPosition',
@@ -712,6 +722,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['merge_field_xml'] = isset($data['merge_field_xml']) ? $data['merge_field_xml'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
+        $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
         $this->container['page_number_metadata'] = isset($data['page_number_metadata']) ? $data['page_number_metadata'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
@@ -750,6 +761,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['tool_tip_metadata'] = isset($data['tool_tip_metadata']) ? $data['tool_tip_metadata'] : null;
         $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
         $this->container['underline_metadata'] = isset($data['underline_metadata']) ? $data['underline_metadata'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['width_metadata'] = isset($data['width_metadata']) ? $data['width_metadata'] : null;
         $this->container['x_position'] = isset($data['x_position']) ? $data['x_position'] : null;
@@ -2055,6 +2067,30 @@ class Checkbox implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets original_value
+     *
+     * @return ?string
+     */
+    public function getOriginalValue()
+    {
+        return $this->container['original_value'];
+    }
+
+    /**
+     * Sets original_value
+     *
+     * @param ?string $original_value The initial value of the tab when it was sent to the recipient.
+     *
+     * @return $this
+     */
+    public function setOriginalValue($original_value)
+    {
+        $this->container['original_value'] = $original_value;
+
+        return $this;
+    }
+
+    /**
      * Gets page_number
      *
      * @return ?string
@@ -2962,6 +2998,30 @@ class Checkbox implements ModelInterface, ArrayAccess
     public function setUnderlineMetadata($underline_metadata)
     {
         $this->container['underline_metadata'] = $underline_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return ?string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param ?string $value Specifies the value of the tab.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
 
         return $this;
     }

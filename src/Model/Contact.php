@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Contact implements ModelInterface, ArrayAccess
@@ -69,6 +69,7 @@ class Contact implements ModelInterface, ArrayAccess
         'is_owner' => '?bool',
         'name' => '?string',
         'organization' => '?string',
+        'room_contact_type' => '?string',
         'shared' => '?string',
         'signing_group' => '?string',
         'signing_group_name' => '?string'
@@ -90,6 +91,7 @@ class Contact implements ModelInterface, ArrayAccess
         'is_owner' => null,
         'name' => null,
         'organization' => null,
+        'room_contact_type' => null,
         'shared' => null,
         'signing_group' => null,
         'signing_group_name' => null
@@ -132,6 +134,7 @@ class Contact implements ModelInterface, ArrayAccess
         'is_owner' => 'isOwner',
         'name' => 'name',
         'organization' => 'organization',
+        'room_contact_type' => 'roomContactType',
         'shared' => 'shared',
         'signing_group' => 'signingGroup',
         'signing_group_name' => 'signingGroupName'
@@ -153,6 +156,7 @@ class Contact implements ModelInterface, ArrayAccess
         'is_owner' => 'setIsOwner',
         'name' => 'setName',
         'organization' => 'setOrganization',
+        'room_contact_type' => 'setRoomContactType',
         'shared' => 'setShared',
         'signing_group' => 'setSigningGroup',
         'signing_group_name' => 'setSigningGroupName'
@@ -174,6 +178,7 @@ class Contact implements ModelInterface, ArrayAccess
         'is_owner' => 'getIsOwner',
         'name' => 'getName',
         'organization' => 'getOrganization',
+        'room_contact_type' => 'getRoomContactType',
         'shared' => 'getShared',
         'signing_group' => 'getSigningGroup',
         'signing_group_name' => 'getSigningGroupName'
@@ -249,6 +254,7 @@ class Contact implements ModelInterface, ArrayAccess
         $this->container['is_owner'] = isset($data['is_owner']) ? $data['is_owner'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
+        $this->container['room_contact_type'] = isset($data['room_contact_type']) ? $data['room_contact_type'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['signing_group'] = isset($data['signing_group']) ? $data['signing_group'] : null;
         $this->container['signing_group_name'] = isset($data['signing_group_name']) ? $data['signing_group_name'] : null;
@@ -514,6 +520,30 @@ class Contact implements ModelInterface, ArrayAccess
     public function setOrganization($organization)
     {
         $this->container['organization'] = $organization;
+
+        return $this;
+    }
+
+    /**
+     * Gets room_contact_type
+     *
+     * @return ?string
+     */
+    public function getRoomContactType()
+    {
+        return $this->container['room_contact_type'];
+    }
+
+    /**
+     * Sets room_contact_type
+     *
+     * @param ?string $room_contact_type 
+     *
+     * @return $this
+     */
+    public function setRoomContactType($room_contact_type)
+    {
+        $this->container['room_contact_type'] = $room_contact_type;
 
         return $this;
     }

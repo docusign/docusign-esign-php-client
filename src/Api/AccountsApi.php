@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ namespace DocuSign\eSign\Api\AccountsApi;
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class CreateOptions
@@ -80,7 +80,7 @@ class CreateOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class CreateAccountSignaturesOptions
@@ -121,7 +121,7 @@ class CreateAccountSignaturesOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class CreateCustomFieldOptions
@@ -162,7 +162,7 @@ class CreateCustomFieldOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class CreatePermissionProfileOptions
@@ -203,7 +203,7 @@ class CreatePermissionProfileOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class DeleteCustomFieldOptions
@@ -244,7 +244,7 @@ class DeleteCustomFieldOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class DeletePermissionProfileOptions
@@ -285,7 +285,7 @@ class DeletePermissionProfileOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetAccountInformationOptions
@@ -326,7 +326,7 @@ class GetAccountInformationOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetAccountSignatureImageOptions
@@ -367,7 +367,7 @@ class GetAccountSignatureImageOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetAccountSignaturesOptions
@@ -462,7 +462,7 @@ class GetAccountSignaturesOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetBillingChargesOptions
@@ -503,7 +503,7 @@ class GetBillingChargesOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetBrandOptions
@@ -571,7 +571,7 @@ class GetBrandOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetBrandResourcesByContentTypeOptions
@@ -639,7 +639,7 @@ class GetBrandResourcesByContentTypeOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetConsumerDisclosureDefaultOptions
@@ -680,7 +680,7 @@ class GetConsumerDisclosureDefaultOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetPermissionProfileOptions
@@ -716,12 +716,53 @@ class GetPermissionProfileOptions
 
 
 /**
+ * GetReservedDomainExistenceOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
+class GetReservedDomainExistenceOptions
+{
+    /**
+      * $email_domain 
+      * @var ?string
+      */
+    protected ?string $email_domain = null;
+
+    /**
+     * Gets email_domain
+     *
+     * @return ?string
+     */
+    public function getEmailDomain(): ?string
+    {
+        return $this->email_domain;
+    }
+
+    /**
+     * Sets email_domain
+     * @param ?string $email_domain 
+     *
+     * @return self
+     */
+    public function setEmailDomain(?string $email_domain): self
+    {
+        $this->email_domain = $email_domain;
+        return $this;
+    }
+}
+
+
+/**
  * ListBrandsOptions Class Doc Comment
  *
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListBrandsOptions
@@ -789,7 +830,7 @@ class ListBrandsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListPermissionsOptions
@@ -830,7 +871,7 @@ class ListPermissionsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListRecipientNamesByEmailOptions
@@ -871,7 +912,7 @@ class ListRecipientNamesByEmailOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListSharedAccessOptions
@@ -1101,7 +1142,7 @@ class ListSharedAccessOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdateAccountSignatureByIdOptions
@@ -1142,7 +1183,7 @@ class UpdateAccountSignatureByIdOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdateAccountSignatureImageOptions
@@ -1183,7 +1224,7 @@ class UpdateAccountSignatureImageOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdateConsumerDisclosureOptions
@@ -1224,7 +1265,7 @@ class UpdateConsumerDisclosureOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdateCustomFieldOptions
@@ -1265,7 +1306,7 @@ class UpdateCustomFieldOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdatePermissionProfileOptions
@@ -1306,7 +1347,7 @@ class UpdatePermissionProfileOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdateSharedAccessOptions
@@ -1409,7 +1450,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class AccountsApi
@@ -1959,100 +2000,6 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 201:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PermissionProfile', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation createReportInProductCreate
-     *
-     * Creates a customized report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
-     */
-    public function createReportInProductCreate($account_id, $report_in_product_run_request = null)
-    {
-        list($response) = $this->createReportInProductCreateWithHttpInfo($account_id, $report_in_product_run_request);
-        return $response;
-    }
-
-    /**
-     * Operation createReportInProductCreateWithHttpInfo
-     *
-     * Creates a customized report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function createReportInProductCreateWithHttpInfo($account_id, $report_in_product_run_request = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createReportInProductCreate');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reports";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        // body params
-        $_tempBody = null;
-        if (isset($report_in_product_run_request)) {
-            $_tempBody = $report_in_product_run_request;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\ReportInProductSaveResponse',
-                '/v2.1/accounts/{accountId}/reports'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductSaveResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductSaveResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -3019,103 +2966,6 @@ class AccountsApi
             return [null, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation deleteReportInProduct
-     *
-     * Removes a customized report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $id 
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
-     */
-    public function deleteReportInProduct($account_id, $id)
-    {
-        list($response) = $this->deleteReportInProductWithHttpInfo($account_id, $id);
-        return $response;
-    }
-
-    /**
-     * Operation deleteReportInProductWithHttpInfo
-     *
-     * Removes a customized report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $id 
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteReportInProductWithHttpInfo($account_id, $id): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteReportInProduct');
-        }
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling deleteReportInProduct');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "id", $id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'DELETE',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\ReportInProductSaveResponse',
-                '/v2.1/accounts/{accountId}/reports/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductSaveResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductSaveResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -5304,141 +5154,57 @@ class AccountsApi
     }
 
     /**
-     * Operation getReportInProduct
+     * Operation getReservedDomainExistence
      *
-     * Gets the specified report
+     * Returns whether or not the specified email domain is reserved/claimed.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $id 
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ReportInProductGet
+     * @return \DocuSign\eSign\Model\ReservedDomainExistence
      */
-    public function getReportInProduct($account_id, $id)
+    public function getReservedDomainExistence($account_id, \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions $options = null)
     {
-        list($response) = $this->getReportInProductWithHttpInfo($account_id, $id);
+        list($response) = $this->getReservedDomainExistenceWithHttpInfo($account_id, $options);
         return $response;
     }
 
     /**
-     * Operation getReportInProductWithHttpInfo
+     * Operation getReservedDomainExistenceWithHttpInfo
      *
-     * Gets the specified report
+     * Returns whether or not the specified email domain is reserved/claimed.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $id 
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ReportInProductGet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocuSign\eSign\Model\ReservedDomainExistence, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getReportInProductWithHttpInfo($account_id, $id): array
+    public function getReservedDomainExistenceWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getReportInProduct');
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getReservedDomainExistence');
         }
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling getReportInProduct');
+        // verify the required parameter 'email_domain' is set
+        if ($email_domain === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $email_domain when calling getReservedDomainExistence');
         }
         // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
+        $resourcePath = "/v2.1/accounts/{accountId}/reserved_domains";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "id", $id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\ReportInProductGet',
-                '/v2.1/accounts/{accountId}/reports/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductGet', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductGet', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
+        if ($options != null)
+        {
+            // query params
+            if ($options->getEmailDomain() != 'null') {
+                $queryParams['email_domain'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailDomain());
             }
-
-            throw $e;
         }
-    }
-
-    /**
-     * Operation getReportInProductList
-     *
-     * Gets the descriptors for all of an account's active reports (for listings)
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ReportInProductList
-     */
-    public function getReportInProductList($account_id)
-    {
-        list($response) = $this->getReportInProductListWithHttpInfo($account_id);
-        return $response;
-    }
-
-    /**
-     * Operation getReportInProductListWithHttpInfo
-     *
-     * Gets the descriptors for all of an account's active reports (for listings)
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ReportInProductList, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getReportInProductListWithHttpInfo($account_id): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getReportInProductList');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reports";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
 
         // path params
         if ($account_id !== null) {
@@ -5466,15 +5232,15 @@ class AccountsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\ReportInProductList',
-                '/v2.1/accounts/{accountId}/reports'
+                '\DocuSign\eSign\Model\ReservedDomainExistence',
+                '/v2.1/accounts/{accountId}/reserved_domains'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductList', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReservedDomainExistence', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductList', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReservedDomainExistence', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -8162,294 +7928,6 @@ class AccountsApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PermissionProfile', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateReportInProductRunResults
-     *
-     * Returns the result set from running the specified report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ReportInProductRunResponse
-     */
-    public function updateReportInProductRunResults($account_id, $report_in_product_run_request = null)
-    {
-        list($response) = $this->updateReportInProductRunResultsWithHttpInfo($account_id, $report_in_product_run_request);
-        return $response;
-    }
-
-    /**
-     * Operation updateReportInProductRunResultsWithHttpInfo
-     *
-     * Returns the result set from running the specified report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ReportInProductRunResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateReportInProductRunResultsWithHttpInfo($account_id, $report_in_product_run_request = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateReportInProductRunResults');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reports/report_results";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        // body params
-        $_tempBody = null;
-        if (isset($report_in_product_run_request)) {
-            $_tempBody = $report_in_product_run_request;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\ReportInProductRunResponse',
-                '/v2.1/accounts/{accountId}/reports/report_results'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductRunResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductRunResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateReportInProductSave
-     *
-     * Saves a customized report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $id 
-     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ReportInProductSaveResponse
-     */
-    public function updateReportInProductSave($account_id, $id, $report_in_product_run_request = null)
-    {
-        list($response) = $this->updateReportInProductSaveWithHttpInfo($account_id, $id, $report_in_product_run_request);
-        return $response;
-    }
-
-    /**
-     * Operation updateReportInProductSaveWithHttpInfo
-     *
-     * Saves a customized report
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $id 
-     * @param \DocuSign\eSign\Model\ReportInProductRunRequest $report_in_product_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ReportInProductSaveResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateReportInProductSaveWithHttpInfo($account_id, $id, $report_in_product_run_request = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateReportInProductSave');
-        }
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling updateReportInProductSave');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reports/{id}";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "id", $id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        // body params
-        $_tempBody = null;
-        if (isset($report_in_product_run_request)) {
-            $_tempBody = $report_in_product_run_request;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\ReportInProductSaveResponse',
-                '/v2.1/accounts/{accountId}/reports/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReportInProductSaveResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReportInProductSaveResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateReportResultsCsv
-     *
-     * Returns the specified report as a CSV string
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\ReportInProductCsvRunRequest $report_in_product_csv_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return mixed
-     */
-    public function updateReportResultsCsv($account_id, $report_in_product_csv_run_request = null)
-    {
-        list($response) = $this->updateReportResultsCsvWithHttpInfo($account_id, $report_in_product_csv_run_request);
-        return $response;
-    }
-
-    /**
-     * Operation updateReportResultsCsvWithHttpInfo
-     *
-     * Returns the specified report as a CSV string
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param \DocuSign\eSign\Model\ReportInProductCsvRunRequest $report_in_product_csv_run_request  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateReportResultsCsvWithHttpInfo($account_id, $report_in_product_csv_run_request = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateReportResultsCsv');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reports/report_results_csv";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        // body params
-        $_tempBody = null;
-        if (isset($report_in_product_csv_run_request)) {
-            $_tempBody = $report_in_product_csv_run_request;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                null,
-                '/v2.1/accounts/{accountId}/reports/report_results_csv'
-            );
-
-            return [null, $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
