@@ -72,7 +72,8 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
-        'social_account_information' => '\DocuSign\eSign\Model\SocialAccountInformation'
+        'social_account_information' => '\DocuSign\eSign\Model\SocialAccountInformation',
+        'tax_exempt_id' => '?string'
     ];
 
     /**
@@ -94,7 +95,8 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'payment_processor_information' => null,
         'plan_information' => null,
         'referral_information' => null,
-        'social_account_information' => null
+        'social_account_information' => null,
+        'tax_exempt_id' => null
     ];
 
     /**
@@ -137,7 +139,8 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'payment_processor_information' => 'paymentProcessorInformation',
         'plan_information' => 'planInformation',
         'referral_information' => 'referralInformation',
-        'social_account_information' => 'socialAccountInformation'
+        'social_account_information' => 'socialAccountInformation',
+        'tax_exempt_id' => 'taxExemptId'
     ];
 
     /**
@@ -159,7 +162,8 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
         'referral_information' => 'setReferralInformation',
-        'social_account_information' => 'setSocialAccountInformation'
+        'social_account_information' => 'setSocialAccountInformation',
+        'tax_exempt_id' => 'setTaxExemptId'
     ];
 
     /**
@@ -181,7 +185,8 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
         'referral_information' => 'getReferralInformation',
-        'social_account_information' => 'getSocialAccountInformation'
+        'social_account_information' => 'getSocialAccountInformation',
+        'tax_exempt_id' => 'getTaxExemptId'
     ];
 
     /**
@@ -258,6 +263,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['social_account_information'] = isset($data['social_account_information']) ? $data['social_account_information'] : null;
+        $this->container['tax_exempt_id'] = isset($data['tax_exempt_id']) ? $data['tax_exempt_id'] : null;
     }
 
     /**
@@ -616,6 +622,30 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     public function setSocialAccountInformation($social_account_information)
     {
         $this->container['social_account_information'] = $social_account_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_exempt_id
+     *
+     * @return ?string
+     */
+    public function getTaxExemptId()
+    {
+        return $this->container['tax_exempt_id'];
+    }
+
+    /**
+     * Sets tax_exempt_id
+     *
+     * @param ?string $tax_exempt_id 
+     *
+     * @return $this
+     */
+    public function setTaxExemptId($tax_exempt_id)
+    {
+        $this->container['tax_exempt_id'] = $tax_exempt_id;
 
         return $this;
     }

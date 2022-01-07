@@ -89,7 +89,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'locale_policy' => '\DocuSign\eSign\Model\LocalePolicyTab',
         'locked' => '?string',
         'maximum_length' => '?string',
+        'max_numerical_value' => '?string',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
+        'min_numerical_value' => '?string',
         'name' => '?string',
         'numerical_value' => '?string',
         'payment_item_code' => '?string',
@@ -147,7 +149,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'locale_policy' => null,
         'locked' => null,
         'maximum_length' => null,
+        'max_numerical_value' => null,
         'merge_field' => null,
+        'min_numerical_value' => null,
         'name' => null,
         'numerical_value' => null,
         'payment_item_code' => null,
@@ -226,7 +230,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'locale_policy' => 'localePolicy',
         'locked' => 'locked',
         'maximum_length' => 'maximumLength',
+        'max_numerical_value' => 'maxNumericalValue',
         'merge_field' => 'mergeField',
+        'min_numerical_value' => 'minNumericalValue',
         'name' => 'name',
         'numerical_value' => 'numericalValue',
         'payment_item_code' => 'paymentItemCode',
@@ -284,7 +290,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'locale_policy' => 'setLocalePolicy',
         'locked' => 'setLocked',
         'maximum_length' => 'setMaximumLength',
+        'max_numerical_value' => 'setMaxNumericalValue',
         'merge_field' => 'setMergeField',
+        'min_numerical_value' => 'setMinNumericalValue',
         'name' => 'setName',
         'numerical_value' => 'setNumericalValue',
         'payment_item_code' => 'setPaymentItemCode',
@@ -342,7 +350,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'locale_policy' => 'getLocalePolicy',
         'locked' => 'getLocked',
         'maximum_length' => 'getMaximumLength',
+        'max_numerical_value' => 'getMaxNumericalValue',
         'merge_field' => 'getMergeField',
+        'min_numerical_value' => 'getMinNumericalValue',
         'name' => 'getName',
         'numerical_value' => 'getNumericalValue',
         'payment_item_code' => 'getPaymentItemCode',
@@ -454,7 +464,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         $this->container['locale_policy'] = isset($data['locale_policy']) ? $data['locale_policy'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['maximum_length'] = isset($data['maximum_length']) ? $data['maximum_length'] : null;
+        $this->container['max_numerical_value'] = isset($data['max_numerical_value']) ? $data['max_numerical_value'] : null;
         $this->container['merge_field'] = isset($data['merge_field']) ? $data['merge_field'] : null;
+        $this->container['min_numerical_value'] = isset($data['min_numerical_value']) ? $data['min_numerical_value'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['numerical_value'] = isset($data['numerical_value']) ? $data['numerical_value'] : null;
         $this->container['payment_item_code'] = isset($data['payment_item_code']) ? $data['payment_item_code'] : null;
@@ -1221,6 +1233,30 @@ class TabMetadata implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets max_numerical_value
+     *
+     * @return ?string
+     */
+    public function getMaxNumericalValue()
+    {
+        return $this->container['max_numerical_value'];
+    }
+
+    /**
+     * Sets max_numerical_value
+     *
+     * @param ?string $max_numerical_value 
+     *
+     * @return $this
+     */
+    public function setMaxNumericalValue($max_numerical_value)
+    {
+        $this->container['max_numerical_value'] = $max_numerical_value;
+
+        return $this;
+    }
+
+    /**
      * Gets merge_field
      *
      * @return \DocuSign\eSign\Model\MergeField
@@ -1240,6 +1276,30 @@ class TabMetadata implements ModelInterface, ArrayAccess
     public function setMergeField($merge_field)
     {
         $this->container['merge_field'] = $merge_field;
+
+        return $this;
+    }
+
+    /**
+     * Gets min_numerical_value
+     *
+     * @return ?string
+     */
+    public function getMinNumericalValue()
+    {
+        return $this->container['min_numerical_value'];
+    }
+
+    /**
+     * Sets min_numerical_value
+     *
+     * @param ?string $min_numerical_value 
+     *
+     * @return $this
+     */
+    public function setMinNumericalValue($min_numerical_value)
+    {
+        $this->container['min_numerical_value'] = $min_numerical_value;
 
         return $this;
     }

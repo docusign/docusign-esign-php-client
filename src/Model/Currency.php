@@ -115,8 +115,10 @@ class Currency implements ModelInterface, ArrayAccess
         'locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'max_length' => '?string',
         'max_length_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'max_numerical_value' => '?string',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
         'merge_field_xml' => '?string',
+        'min_numerical_value' => '?string',
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'numerical_value' => '?string',
@@ -232,8 +234,10 @@ class Currency implements ModelInterface, ArrayAccess
         'locked_metadata' => null,
         'max_length' => null,
         'max_length_metadata' => null,
+        'max_numerical_value' => null,
         'merge_field' => null,
         'merge_field_xml' => null,
+        'min_numerical_value' => null,
         'name' => null,
         'name_metadata' => null,
         'numerical_value' => null,
@@ -370,8 +374,10 @@ class Currency implements ModelInterface, ArrayAccess
         'locked_metadata' => 'lockedMetadata',
         'max_length' => 'maxLength',
         'max_length_metadata' => 'maxLengthMetadata',
+        'max_numerical_value' => 'maxNumericalValue',
         'merge_field' => 'mergeField',
         'merge_field_xml' => 'mergeFieldXml',
+        'min_numerical_value' => 'minNumericalValue',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'numerical_value' => 'numericalValue',
@@ -487,8 +493,10 @@ class Currency implements ModelInterface, ArrayAccess
         'locked_metadata' => 'setLockedMetadata',
         'max_length' => 'setMaxLength',
         'max_length_metadata' => 'setMaxLengthMetadata',
+        'max_numerical_value' => 'setMaxNumericalValue',
         'merge_field' => 'setMergeField',
         'merge_field_xml' => 'setMergeFieldXml',
+        'min_numerical_value' => 'setMinNumericalValue',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'numerical_value' => 'setNumericalValue',
@@ -604,8 +612,10 @@ class Currency implements ModelInterface, ArrayAccess
         'locked_metadata' => 'getLockedMetadata',
         'max_length' => 'getMaxLength',
         'max_length_metadata' => 'getMaxLengthMetadata',
+        'max_numerical_value' => 'getMaxNumericalValue',
         'merge_field' => 'getMergeField',
         'merge_field_xml' => 'getMergeFieldXml',
+        'min_numerical_value' => 'getMinNumericalValue',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'numerical_value' => 'getNumericalValue',
@@ -775,8 +785,10 @@ class Currency implements ModelInterface, ArrayAccess
         $this->container['locked_metadata'] = isset($data['locked_metadata']) ? $data['locked_metadata'] : null;
         $this->container['max_length'] = isset($data['max_length']) ? $data['max_length'] : null;
         $this->container['max_length_metadata'] = isset($data['max_length_metadata']) ? $data['max_length_metadata'] : null;
+        $this->container['max_numerical_value'] = isset($data['max_numerical_value']) ? $data['max_numerical_value'] : null;
         $this->container['merge_field'] = isset($data['merge_field']) ? $data['merge_field'] : null;
         $this->container['merge_field_xml'] = isset($data['merge_field_xml']) ? $data['merge_field_xml'] : null;
+        $this->container['min_numerical_value'] = isset($data['min_numerical_value']) ? $data['min_numerical_value'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['numerical_value'] = isset($data['numerical_value']) ? $data['numerical_value'] : null;
@@ -2199,6 +2211,30 @@ class Currency implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets max_numerical_value
+     *
+     * @return ?string
+     */
+    public function getMaxNumericalValue()
+    {
+        return $this->container['max_numerical_value'];
+    }
+
+    /**
+     * Sets max_numerical_value
+     *
+     * @param ?string $max_numerical_value 
+     *
+     * @return $this
+     */
+    public function setMaxNumericalValue($max_numerical_value)
+    {
+        $this->container['max_numerical_value'] = $max_numerical_value;
+
+        return $this;
+    }
+
+    /**
      * Gets merge_field
      *
      * @return \DocuSign\eSign\Model\MergeField
@@ -2242,6 +2278,30 @@ class Currency implements ModelInterface, ArrayAccess
     public function setMergeFieldXml($merge_field_xml)
     {
         $this->container['merge_field_xml'] = $merge_field_xml;
+
+        return $this;
+    }
+
+    /**
+     * Gets min_numerical_value
+     *
+     * @return ?string
+     */
+    public function getMinNumericalValue()
+    {
+        return $this->container['min_numerical_value'];
+    }
+
+    /**
+     * Sets min_numerical_value
+     *
+     * @param ?string $min_numerical_value 
+     *
+     * @return $this
+     */
+    public function setMinNumericalValue($min_numerical_value)
+    {
+        $this->container['min_numerical_value'] = $min_numerical_value;
 
         return $this;
     }

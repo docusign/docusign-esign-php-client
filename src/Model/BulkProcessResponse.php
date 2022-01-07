@@ -1,6 +1,6 @@
 <?php
 /**
- * Group
+ * BulkProcessResponse
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * Group Class Doc Comment
+ * BulkProcessResponse Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Group implements ModelInterface, ArrayAccess
+class BulkProcessResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class Group implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'group';
+    protected static $swaggerModelName = 'bulkProcessResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,14 +59,13 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ds_group_id' => '?string',
-        'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'group_id' => '?string',
-        'group_name' => '?string',
-        'group_type' => '?string',
-        'permission_profile_id' => '?string',
-        'users' => '\DocuSign\eSign\Model\UserInfo[]',
-        'users_count' => '?string'
+        'batch_id' => '?string',
+        'batch_name' => '?string',
+        'batch_size' => '?string',
+        'error_details' => '?string[]',
+        'errors' => '?string[]',
+        'queue_limit' => '?string',
+        'total_queued' => '?string'
     ];
 
     /**
@@ -75,14 +74,13 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ds_group_id' => null,
+        'batch_id' => null,
+        'batch_name' => null,
+        'batch_size' => null,
         'error_details' => null,
-        'group_id' => null,
-        'group_name' => null,
-        'group_type' => null,
-        'permission_profile_id' => null,
-        'users' => null,
-        'users_count' => null
+        'errors' => null,
+        'queue_limit' => null,
+        'total_queued' => null
     ];
 
     /**
@@ -112,14 +110,13 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ds_group_id' => 'dsGroupId',
+        'batch_id' => 'batchId',
+        'batch_name' => 'batchName',
+        'batch_size' => 'batchSize',
         'error_details' => 'errorDetails',
-        'group_id' => 'groupId',
-        'group_name' => 'groupName',
-        'group_type' => 'groupType',
-        'permission_profile_id' => 'permissionProfileId',
-        'users' => 'users',
-        'users_count' => 'usersCount'
+        'errors' => 'errors',
+        'queue_limit' => 'queueLimit',
+        'total_queued' => 'totalQueued'
     ];
 
     /**
@@ -128,14 +125,13 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ds_group_id' => 'setDsGroupId',
+        'batch_id' => 'setBatchId',
+        'batch_name' => 'setBatchName',
+        'batch_size' => 'setBatchSize',
         'error_details' => 'setErrorDetails',
-        'group_id' => 'setGroupId',
-        'group_name' => 'setGroupName',
-        'group_type' => 'setGroupType',
-        'permission_profile_id' => 'setPermissionProfileId',
-        'users' => 'setUsers',
-        'users_count' => 'setUsersCount'
+        'errors' => 'setErrors',
+        'queue_limit' => 'setQueueLimit',
+        'total_queued' => 'setTotalQueued'
     ];
 
     /**
@@ -144,14 +140,13 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ds_group_id' => 'getDsGroupId',
+        'batch_id' => 'getBatchId',
+        'batch_name' => 'getBatchName',
+        'batch_size' => 'getBatchSize',
         'error_details' => 'getErrorDetails',
-        'group_id' => 'getGroupId',
-        'group_name' => 'getGroupName',
-        'group_type' => 'getGroupType',
-        'permission_profile_id' => 'getPermissionProfileId',
-        'users' => 'getUsers',
-        'users_count' => 'getUsersCount'
+        'errors' => 'getErrors',
+        'queue_limit' => 'getQueueLimit',
+        'total_queued' => 'getTotalQueued'
     ];
 
     /**
@@ -214,14 +209,13 @@ class Group implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ds_group_id'] = isset($data['ds_group_id']) ? $data['ds_group_id'] : null;
+        $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
+        $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
+        $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
-        $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
-        $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
-        $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
-        $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
-        $this->container['users_count'] = isset($data['users_count']) ? $data['users_count'] : null;
+        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['queue_limit'] = isset($data['queue_limit']) ? $data['queue_limit'] : null;
+        $this->container['total_queued'] = isset($data['total_queued']) ? $data['total_queued'] : null;
     }
 
     /**
@@ -249,25 +243,73 @@ class Group implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ds_group_id
+     * Gets batch_id
      *
      * @return ?string
      */
-    public function getDsGroupId()
+    public function getBatchId()
     {
-        return $this->container['ds_group_id'];
+        return $this->container['batch_id'];
     }
 
     /**
-     * Sets ds_group_id
+     * Sets batch_id
      *
-     * @param ?string $ds_group_id 
+     * @param ?string $batch_id 
      *
      * @return $this
      */
-    public function setDsGroupId($ds_group_id)
+    public function setBatchId($batch_id)
     {
-        $this->container['ds_group_id'] = $ds_group_id;
+        $this->container['batch_id'] = $batch_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets batch_name
+     *
+     * @return ?string
+     */
+    public function getBatchName()
+    {
+        return $this->container['batch_name'];
+    }
+
+    /**
+     * Sets batch_name
+     *
+     * @param ?string $batch_name 
+     *
+     * @return $this
+     */
+    public function setBatchName($batch_name)
+    {
+        $this->container['batch_name'] = $batch_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets batch_size
+     *
+     * @return ?string
+     */
+    public function getBatchSize()
+    {
+        return $this->container['batch_size'];
+    }
+
+    /**
+     * Sets batch_size
+     *
+     * @param ?string $batch_size 
+     *
+     * @return $this
+     */
+    public function setBatchSize($batch_size)
+    {
+        $this->container['batch_size'] = $batch_size;
 
         return $this;
     }
@@ -275,7 +317,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Gets error_details
      *
-     * @return \DocuSign\eSign\Model\ErrorDetails
+     * @return ?string[]
      */
     public function getErrorDetails()
     {
@@ -285,7 +327,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param ?string[] $error_details Array or errors.
      *
      * @return $this
      */
@@ -297,145 +339,73 @@ class Group implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets group_id
+     * Gets errors
      *
-     * @return ?string
+     * @return ?string[]
      */
-    public function getGroupId()
+    public function getErrors()
     {
-        return $this->container['group_id'];
+        return $this->container['errors'];
     }
 
     /**
-     * Sets group_id
+     * Sets errors
      *
-     * @param ?string $group_id The DocuSign group ID for the group.
+     * @param ?string[] $errors 
      *
      * @return $this
      */
-    public function setGroupId($group_id)
+    public function setErrors($errors)
     {
-        $this->container['group_id'] = $group_id;
+        $this->container['errors'] = $errors;
 
         return $this;
     }
 
     /**
-     * Gets group_name
+     * Gets queue_limit
      *
      * @return ?string
      */
-    public function getGroupName()
+    public function getQueueLimit()
     {
-        return $this->container['group_name'];
+        return $this->container['queue_limit'];
     }
 
     /**
-     * Sets group_name
+     * Sets queue_limit
      *
-     * @param ?string $group_name The name of the group.
+     * @param ?string $queue_limit 
      *
      * @return $this
      */
-    public function setGroupName($group_name)
+    public function setQueueLimit($queue_limit)
     {
-        $this->container['group_name'] = $group_name;
+        $this->container['queue_limit'] = $queue_limit;
 
         return $this;
     }
 
     /**
-     * Gets group_type
+     * Gets total_queued
      *
      * @return ?string
      */
-    public function getGroupType()
+    public function getTotalQueued()
     {
-        return $this->container['group_type'];
+        return $this->container['total_queued'];
     }
 
     /**
-     * Sets group_type
+     * Sets total_queued
      *
-     * @param ?string $group_type The group type.
+     * @param ?string $total_queued 
      *
      * @return $this
      */
-    public function setGroupType($group_type)
+    public function setTotalQueued($total_queued)
     {
-        $this->container['group_type'] = $group_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets permission_profile_id
-     *
-     * @return ?string
-     */
-    public function getPermissionProfileId()
-    {
-        return $this->container['permission_profile_id'];
-    }
-
-    /**
-     * Sets permission_profile_id
-     *
-     * @param ?string $permission_profile_id The ID of the permission profile associated with the group.
-     *
-     * @return $this
-     */
-    public function setPermissionProfileId($permission_profile_id)
-    {
-        $this->container['permission_profile_id'] = $permission_profile_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return \DocuSign\eSign\Model\UserInfo[]
-     */
-    public function getUsers()
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param \DocuSign\eSign\Model\UserInfo[] $users 
-     *
-     * @return $this
-     */
-    public function setUsers($users)
-    {
-        $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets users_count
-     *
-     * @return ?string
-     */
-    public function getUsersCount()
-    {
-        return $this->container['users_count'];
-    }
-
-    /**
-     * Sets users_count
-     *
-     * @param ?string $users_count 
-     *
-     * @return $this
-     */
-    public function setUsersCount($users_count)
-    {
-        $this->container['users_count'] = $users_count;
+        $this->container['total_queued'] = $total_queued;
 
         return $this;
     }

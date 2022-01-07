@@ -76,7 +76,8 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'sale_discount_fixed_amount' => '?string',
         'sale_discount_percent' => '?string',
         'sale_discount_periods' => '?string',
-        'sale_discount_seat_price_override' => '?string'
+        'sale_discount_seat_price_override' => '?string',
+        'tax_exempt_id' => '?string'
     ];
 
     /**
@@ -102,7 +103,8 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'sale_discount_fixed_amount' => null,
         'sale_discount_percent' => null,
         'sale_discount_periods' => null,
-        'sale_discount_seat_price_override' => null
+        'sale_discount_seat_price_override' => null,
+        'tax_exempt_id' => null
     ];
 
     /**
@@ -149,7 +151,8 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'sale_discount_fixed_amount' => 'saleDiscountFixedAmount',
         'sale_discount_percent' => 'saleDiscountPercent',
         'sale_discount_periods' => 'saleDiscountPeriods',
-        'sale_discount_seat_price_override' => 'saleDiscountSeatPriceOverride'
+        'sale_discount_seat_price_override' => 'saleDiscountSeatPriceOverride',
+        'tax_exempt_id' => 'taxExemptId'
     ];
 
     /**
@@ -175,7 +178,8 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'sale_discount_fixed_amount' => 'setSaleDiscountFixedAmount',
         'sale_discount_percent' => 'setSaleDiscountPercent',
         'sale_discount_periods' => 'setSaleDiscountPeriods',
-        'sale_discount_seat_price_override' => 'setSaleDiscountSeatPriceOverride'
+        'sale_discount_seat_price_override' => 'setSaleDiscountSeatPriceOverride',
+        'tax_exempt_id' => 'setTaxExemptId'
     ];
 
     /**
@@ -201,7 +205,8 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'sale_discount_fixed_amount' => 'getSaleDiscountFixedAmount',
         'sale_discount_percent' => 'getSaleDiscountPercent',
         'sale_discount_periods' => 'getSaleDiscountPeriods',
-        'sale_discount_seat_price_override' => 'getSaleDiscountSeatPriceOverride'
+        'sale_discount_seat_price_override' => 'getSaleDiscountSeatPriceOverride',
+        'tax_exempt_id' => 'getTaxExemptId'
     ];
 
     /**
@@ -282,6 +287,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         $this->container['sale_discount_percent'] = isset($data['sale_discount_percent']) ? $data['sale_discount_percent'] : null;
         $this->container['sale_discount_periods'] = isset($data['sale_discount_periods']) ? $data['sale_discount_periods'] : null;
         $this->container['sale_discount_seat_price_override'] = isset($data['sale_discount_seat_price_override']) ? $data['sale_discount_seat_price_override'] : null;
+        $this->container['tax_exempt_id'] = isset($data['tax_exempt_id']) ? $data['tax_exempt_id'] : null;
     }
 
     /**
@@ -736,6 +742,30 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     public function setSaleDiscountSeatPriceOverride($sale_discount_seat_price_override)
     {
         $this->container['sale_discount_seat_price_override'] = $sale_discount_seat_price_override;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_exempt_id
+     *
+     * @return ?string
+     */
+    public function getTaxExemptId()
+    {
+        return $this->container['tax_exempt_id'];
+    }
+
+    /**
+     * Sets tax_exempt_id
+     *
+     * @param ?string $tax_exempt_id 
+     *
+     * @return $this
+     */
+    public function setTaxExemptId($tax_exempt_id)
+    {
+        $this->container['tax_exempt_id'] = $tax_exempt_id;
 
         return $this;
     }

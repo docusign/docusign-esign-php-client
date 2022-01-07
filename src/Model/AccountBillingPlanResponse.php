@@ -71,7 +71,8 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
-        'successor_plans' => '\DocuSign\eSign\Model\BillingPlan[]'
+        'successor_plans' => '\DocuSign\eSign\Model\BillingPlan[]',
+        'tax_exempt_id' => '?string'
     ];
 
     /**
@@ -91,7 +92,8 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'payment_method' => null,
         'payment_processor_information' => null,
         'referral_information' => null,
-        'successor_plans' => null
+        'successor_plans' => null,
+        'tax_exempt_id' => null
     ];
 
     /**
@@ -132,7 +134,8 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'payment_method' => 'paymentMethod',
         'payment_processor_information' => 'paymentProcessorInformation',
         'referral_information' => 'referralInformation',
-        'successor_plans' => 'successorPlans'
+        'successor_plans' => 'successorPlans',
+        'tax_exempt_id' => 'taxExemptId'
     ];
 
     /**
@@ -152,7 +155,8 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'payment_method' => 'setPaymentMethod',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'referral_information' => 'setReferralInformation',
-        'successor_plans' => 'setSuccessorPlans'
+        'successor_plans' => 'setSuccessorPlans',
+        'tax_exempt_id' => 'setTaxExemptId'
     ];
 
     /**
@@ -172,7 +176,8 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'payment_method' => 'getPaymentMethod',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'referral_information' => 'getReferralInformation',
-        'successor_plans' => 'getSuccessorPlans'
+        'successor_plans' => 'getSuccessorPlans',
+        'tax_exempt_id' => 'getTaxExemptId'
     ];
 
     /**
@@ -247,6 +252,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['successor_plans'] = isset($data['successor_plans']) ? $data['successor_plans'] : null;
+        $this->container['tax_exempt_id'] = isset($data['tax_exempt_id']) ? $data['tax_exempt_id'] : null;
     }
 
     /**
@@ -557,6 +563,30 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     public function setSuccessorPlans($successor_plans)
     {
         $this->container['successor_plans'] = $successor_plans;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_exempt_id
+     *
+     * @return ?string
+     */
+    public function getTaxExemptId()
+    {
+        return $this->container['tax_exempt_id'];
+    }
+
+    /**
+     * Sets tax_exempt_id
+     *
+     * @param ?string $tax_exempt_id 
+     *
+     * @return $this
+     */
+    public function setTaxExemptId($tax_exempt_id)
+    {
+        $this->container['tax_exempt_id'] = $tax_exempt_id;
 
         return $this;
     }
