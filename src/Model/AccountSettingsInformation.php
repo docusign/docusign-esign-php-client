@@ -101,6 +101,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_data_download' => '?string',
         'allow_data_download_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_delayed_routing' => '?string',
+        'allow_delayed_routing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_delegated_signing' => '?string',
         'allow_delegated_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_document_disclosures' => '?string',
@@ -193,6 +195,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_resource_file_branding_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_safe_bio_pharma_signer_certificate' => '?string',
         'allow_safe_bio_pharma_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_scheduled_sending' => '?string',
+        'allow_scheduled_sending_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_security_appliance' => '?string',
         'allow_security_appliance_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_send_to_certified_delivery' => '?string',
@@ -693,6 +697,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => null,
         'allow_data_download' => null,
         'allow_data_download_metadata' => null,
+        'allow_delayed_routing' => null,
+        'allow_delayed_routing_metadata' => null,
         'allow_delegated_signing' => null,
         'allow_delegated_signing_metadata' => null,
         'allow_document_disclosures' => null,
@@ -785,6 +791,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_resource_file_branding_metadata' => null,
         'allow_safe_bio_pharma_signer_certificate' => null,
         'allow_safe_bio_pharma_signer_certificate_metadata' => null,
+        'allow_scheduled_sending' => null,
+        'allow_scheduled_sending_metadata' => null,
         'allow_security_appliance' => null,
         'allow_security_appliance_metadata' => null,
         'allow_send_to_certified_delivery' => null,
@@ -1306,6 +1314,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => 'allowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'allowDataDownload',
         'allow_data_download_metadata' => 'allowDataDownloadMetadata',
+        'allow_delayed_routing' => 'allowDelayedRouting',
+        'allow_delayed_routing_metadata' => 'allowDelayedRoutingMetadata',
         'allow_delegated_signing' => 'allowDelegatedSigning',
         'allow_delegated_signing_metadata' => 'allowDelegatedSigningMetadata',
         'allow_document_disclosures' => 'allowDocumentDisclosures',
@@ -1398,6 +1408,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_resource_file_branding_metadata' => 'allowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate' => 'allowSafeBioPharmaSignerCertificate',
         'allow_safe_bio_pharma_signer_certificate_metadata' => 'allowSafeBioPharmaSignerCertificateMetadata',
+        'allow_scheduled_sending' => 'allowScheduledSending',
+        'allow_scheduled_sending_metadata' => 'allowScheduledSendingMetadata',
         'allow_security_appliance' => 'allowSecurityAppliance',
         'allow_security_appliance_metadata' => 'allowSecurityApplianceMetadata',
         'allow_send_to_certified_delivery' => 'allowSendToCertifiedDelivery',
@@ -1898,6 +1910,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => 'setAllowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'setAllowDataDownload',
         'allow_data_download_metadata' => 'setAllowDataDownloadMetadata',
+        'allow_delayed_routing' => 'setAllowDelayedRouting',
+        'allow_delayed_routing_metadata' => 'setAllowDelayedRoutingMetadata',
         'allow_delegated_signing' => 'setAllowDelegatedSigning',
         'allow_delegated_signing_metadata' => 'setAllowDelegatedSigningMetadata',
         'allow_document_disclosures' => 'setAllowDocumentDisclosures',
@@ -1990,6 +2004,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_resource_file_branding_metadata' => 'setAllowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate' => 'setAllowSafeBioPharmaSignerCertificate',
         'allow_safe_bio_pharma_signer_certificate_metadata' => 'setAllowSafeBioPharmaSignerCertificateMetadata',
+        'allow_scheduled_sending' => 'setAllowScheduledSending',
+        'allow_scheduled_sending_metadata' => 'setAllowScheduledSendingMetadata',
         'allow_security_appliance' => 'setAllowSecurityAppliance',
         'allow_security_appliance_metadata' => 'setAllowSecurityApplianceMetadata',
         'allow_send_to_certified_delivery' => 'setAllowSendToCertifiedDelivery',
@@ -2490,6 +2506,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_consumer_disclosure_override_metadata' => 'getAllowConsumerDisclosureOverrideMetadata',
         'allow_data_download' => 'getAllowDataDownload',
         'allow_data_download_metadata' => 'getAllowDataDownloadMetadata',
+        'allow_delayed_routing' => 'getAllowDelayedRouting',
+        'allow_delayed_routing_metadata' => 'getAllowDelayedRoutingMetadata',
         'allow_delegated_signing' => 'getAllowDelegatedSigning',
         'allow_delegated_signing_metadata' => 'getAllowDelegatedSigningMetadata',
         'allow_document_disclosures' => 'getAllowDocumentDisclosures',
@@ -2582,6 +2600,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_resource_file_branding_metadata' => 'getAllowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate' => 'getAllowSafeBioPharmaSignerCertificate',
         'allow_safe_bio_pharma_signer_certificate_metadata' => 'getAllowSafeBioPharmaSignerCertificateMetadata',
+        'allow_scheduled_sending' => 'getAllowScheduledSending',
+        'allow_scheduled_sending_metadata' => 'getAllowScheduledSendingMetadata',
         'allow_security_appliance' => 'getAllowSecurityAppliance',
         'allow_security_appliance_metadata' => 'getAllowSecurityApplianceMetadata',
         'allow_send_to_certified_delivery' => 'getAllowSendToCertifiedDelivery',
@@ -3136,6 +3156,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_consumer_disclosure_override_metadata'] = isset($data['allow_consumer_disclosure_override_metadata']) ? $data['allow_consumer_disclosure_override_metadata'] : null;
         $this->container['allow_data_download'] = isset($data['allow_data_download']) ? $data['allow_data_download'] : null;
         $this->container['allow_data_download_metadata'] = isset($data['allow_data_download_metadata']) ? $data['allow_data_download_metadata'] : null;
+        $this->container['allow_delayed_routing'] = isset($data['allow_delayed_routing']) ? $data['allow_delayed_routing'] : null;
+        $this->container['allow_delayed_routing_metadata'] = isset($data['allow_delayed_routing_metadata']) ? $data['allow_delayed_routing_metadata'] : null;
         $this->container['allow_delegated_signing'] = isset($data['allow_delegated_signing']) ? $data['allow_delegated_signing'] : null;
         $this->container['allow_delegated_signing_metadata'] = isset($data['allow_delegated_signing_metadata']) ? $data['allow_delegated_signing_metadata'] : null;
         $this->container['allow_document_disclosures'] = isset($data['allow_document_disclosures']) ? $data['allow_document_disclosures'] : null;
@@ -3228,6 +3250,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_resource_file_branding_metadata'] = isset($data['allow_resource_file_branding_metadata']) ? $data['allow_resource_file_branding_metadata'] : null;
         $this->container['allow_safe_bio_pharma_signer_certificate'] = isset($data['allow_safe_bio_pharma_signer_certificate']) ? $data['allow_safe_bio_pharma_signer_certificate'] : null;
         $this->container['allow_safe_bio_pharma_signer_certificate_metadata'] = isset($data['allow_safe_bio_pharma_signer_certificate_metadata']) ? $data['allow_safe_bio_pharma_signer_certificate_metadata'] : null;
+        $this->container['allow_scheduled_sending'] = isset($data['allow_scheduled_sending']) ? $data['allow_scheduled_sending'] : null;
+        $this->container['allow_scheduled_sending_metadata'] = isset($data['allow_scheduled_sending_metadata']) ? $data['allow_scheduled_sending_metadata'] : null;
         $this->container['allow_security_appliance'] = isset($data['allow_security_appliance']) ? $data['allow_security_appliance'] : null;
         $this->container['allow_security_appliance_metadata'] = isset($data['allow_security_appliance_metadata']) ? $data['allow_security_appliance_metadata'] : null;
         $this->container['allow_send_to_certified_delivery'] = isset($data['allow_send_to_certified_delivery']) ? $data['allow_send_to_certified_delivery'] : null;
@@ -4685,6 +4709,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowDataDownloadMetadata($allow_data_download_metadata)
     {
         $this->container['allow_data_download_metadata'] = $allow_data_download_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_delayed_routing
+     *
+     * @return ?string
+     */
+    public function getAllowDelayedRouting()
+    {
+        return $this->container['allow_delayed_routing'];
+    }
+
+    /**
+     * Sets allow_delayed_routing
+     *
+     * @param ?string $allow_delayed_routing 
+     *
+     * @return $this
+     */
+    public function setAllowDelayedRouting($allow_delayed_routing)
+    {
+        $this->container['allow_delayed_routing'] = $allow_delayed_routing;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_delayed_routing_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowDelayedRoutingMetadata()
+    {
+        return $this->container['allow_delayed_routing_metadata'];
+    }
+
+    /**
+     * Sets allow_delayed_routing_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_delayed_routing_metadata allow_delayed_routing_metadata
+     *
+     * @return $this
+     */
+    public function setAllowDelayedRoutingMetadata($allow_delayed_routing_metadata)
+    {
+        $this->container['allow_delayed_routing_metadata'] = $allow_delayed_routing_metadata;
 
         return $this;
     }
@@ -6893,6 +6965,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowSafeBioPharmaSignerCertificateMetadata($allow_safe_bio_pharma_signer_certificate_metadata)
     {
         $this->container['allow_safe_bio_pharma_signer_certificate_metadata'] = $allow_safe_bio_pharma_signer_certificate_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_scheduled_sending
+     *
+     * @return ?string
+     */
+    public function getAllowScheduledSending()
+    {
+        return $this->container['allow_scheduled_sending'];
+    }
+
+    /**
+     * Sets allow_scheduled_sending
+     *
+     * @param ?string $allow_scheduled_sending 
+     *
+     * @return $this
+     */
+    public function setAllowScheduledSending($allow_scheduled_sending)
+    {
+        $this->container['allow_scheduled_sending'] = $allow_scheduled_sending;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_scheduled_sending_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowScheduledSendingMetadata()
+    {
+        return $this->container['allow_scheduled_sending_metadata'];
+    }
+
+    /**
+     * Sets allow_scheduled_sending_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_scheduled_sending_metadata allow_scheduled_sending_metadata
+     *
+     * @return $this
+     */
+    public function setAllowScheduledSendingMetadata($allow_scheduled_sending_metadata)
+    {
+        $this->container['allow_scheduled_sending_metadata'] = $allow_scheduled_sending_metadata;
 
         return $this;
     }

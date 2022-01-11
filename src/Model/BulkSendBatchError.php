@@ -1,6 +1,6 @@
 <?php
 /**
- * Group
+ * BulkSendBatchError
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * Group Class Doc Comment
+ * BulkSendBatchError Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Group implements ModelInterface, ArrayAccess
+class BulkSendBatchError implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class Group implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'group';
+    protected static $swaggerModelName = 'bulkSendBatchError';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,14 +59,8 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ds_group_id' => '?string',
-        'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'group_id' => '?string',
-        'group_name' => '?string',
-        'group_type' => '?string',
-        'permission_profile_id' => '?string',
-        'users' => '\DocuSign\eSign\Model\UserInfo[]',
-        'users_count' => '?string'
+        'error' => '?string',
+        'error_detail' => '?string'
     ];
 
     /**
@@ -75,14 +69,8 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ds_group_id' => null,
-        'error_details' => null,
-        'group_id' => null,
-        'group_name' => null,
-        'group_type' => null,
-        'permission_profile_id' => null,
-        'users' => null,
-        'users_count' => null
+        'error' => null,
+        'error_detail' => null
     ];
 
     /**
@@ -112,14 +100,8 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ds_group_id' => 'dsGroupId',
-        'error_details' => 'errorDetails',
-        'group_id' => 'groupId',
-        'group_name' => 'groupName',
-        'group_type' => 'groupType',
-        'permission_profile_id' => 'permissionProfileId',
-        'users' => 'users',
-        'users_count' => 'usersCount'
+        'error' => 'error',
+        'error_detail' => 'errorDetail'
     ];
 
     /**
@@ -128,14 +110,8 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ds_group_id' => 'setDsGroupId',
-        'error_details' => 'setErrorDetails',
-        'group_id' => 'setGroupId',
-        'group_name' => 'setGroupName',
-        'group_type' => 'setGroupType',
-        'permission_profile_id' => 'setPermissionProfileId',
-        'users' => 'setUsers',
-        'users_count' => 'setUsersCount'
+        'error' => 'setError',
+        'error_detail' => 'setErrorDetail'
     ];
 
     /**
@@ -144,14 +120,8 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ds_group_id' => 'getDsGroupId',
-        'error_details' => 'getErrorDetails',
-        'group_id' => 'getGroupId',
-        'group_name' => 'getGroupName',
-        'group_type' => 'getGroupType',
-        'permission_profile_id' => 'getPermissionProfileId',
-        'users' => 'getUsers',
-        'users_count' => 'getUsersCount'
+        'error' => 'getError',
+        'error_detail' => 'getErrorDetail'
     ];
 
     /**
@@ -214,14 +184,8 @@ class Group implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ds_group_id'] = isset($data['ds_group_id']) ? $data['ds_group_id'] : null;
-        $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
-        $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
-        $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
-        $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
-        $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
-        $this->container['users_count'] = isset($data['users_count']) ? $data['users_count'] : null;
+        $this->container['error'] = isset($data['error']) ? $data['error'] : null;
+        $this->container['error_detail'] = isset($data['error_detail']) ? $data['error_detail'] : null;
     }
 
     /**
@@ -249,193 +213,49 @@ class Group implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ds_group_id
+     * Gets error
      *
      * @return ?string
      */
-    public function getDsGroupId()
+    public function getError()
     {
-        return $this->container['ds_group_id'];
+        return $this->container['error'];
     }
 
     /**
-     * Sets ds_group_id
+     * Sets error
      *
-     * @param ?string $ds_group_id 
+     * @param ?string $error 
      *
      * @return $this
      */
-    public function setDsGroupId($ds_group_id)
+    public function setError($error)
     {
-        $this->container['ds_group_id'] = $ds_group_id;
+        $this->container['error'] = $error;
 
         return $this;
     }
 
     /**
-     * Gets error_details
-     *
-     * @return \DocuSign\eSign\Model\ErrorDetails
-     */
-    public function getErrorDetails()
-    {
-        return $this->container['error_details'];
-    }
-
-    /**
-     * Sets error_details
-     *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
-     *
-     * @return $this
-     */
-    public function setErrorDetails($error_details)
-    {
-        $this->container['error_details'] = $error_details;
-
-        return $this;
-    }
-
-    /**
-     * Gets group_id
+     * Gets error_detail
      *
      * @return ?string
      */
-    public function getGroupId()
+    public function getErrorDetail()
     {
-        return $this->container['group_id'];
+        return $this->container['error_detail'];
     }
 
     /**
-     * Sets group_id
+     * Sets error_detail
      *
-     * @param ?string $group_id The DocuSign group ID for the group.
+     * @param ?string $error_detail 
      *
      * @return $this
      */
-    public function setGroupId($group_id)
+    public function setErrorDetail($error_detail)
     {
-        $this->container['group_id'] = $group_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets group_name
-     *
-     * @return ?string
-     */
-    public function getGroupName()
-    {
-        return $this->container['group_name'];
-    }
-
-    /**
-     * Sets group_name
-     *
-     * @param ?string $group_name The name of the group.
-     *
-     * @return $this
-     */
-    public function setGroupName($group_name)
-    {
-        $this->container['group_name'] = $group_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets group_type
-     *
-     * @return ?string
-     */
-    public function getGroupType()
-    {
-        return $this->container['group_type'];
-    }
-
-    /**
-     * Sets group_type
-     *
-     * @param ?string $group_type The group type.
-     *
-     * @return $this
-     */
-    public function setGroupType($group_type)
-    {
-        $this->container['group_type'] = $group_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets permission_profile_id
-     *
-     * @return ?string
-     */
-    public function getPermissionProfileId()
-    {
-        return $this->container['permission_profile_id'];
-    }
-
-    /**
-     * Sets permission_profile_id
-     *
-     * @param ?string $permission_profile_id The ID of the permission profile associated with the group.
-     *
-     * @return $this
-     */
-    public function setPermissionProfileId($permission_profile_id)
-    {
-        $this->container['permission_profile_id'] = $permission_profile_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return \DocuSign\eSign\Model\UserInfo[]
-     */
-    public function getUsers()
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param \DocuSign\eSign\Model\UserInfo[] $users 
-     *
-     * @return $this
-     */
-    public function setUsers($users)
-    {
-        $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets users_count
-     *
-     * @return ?string
-     */
-    public function getUsersCount()
-    {
-        return $this->container['users_count'];
-    }
-
-    /**
-     * Sets users_count
-     *
-     * @param ?string $users_count 
-     *
-     * @return $this
-     */
-    public function setUsersCount($users_count)
-    {
-        $this->container['users_count'] = $users_count;
+        $this->container['error_detail'] = $error_detail;
 
         return $this;
     }

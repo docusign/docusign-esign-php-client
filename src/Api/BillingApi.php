@@ -152,6 +152,33 @@ class GetPlanOptions
         $this->include_successor_plans = $include_successor_plans;
         return $this;
     }
+    /**
+      * $include_tax_exempt_id 
+      * @var ?string
+      */
+    protected ?string $include_tax_exempt_id = null;
+
+    /**
+     * Gets include_tax_exempt_id
+     *
+     * @return ?string
+     */
+    public function getIncludeTaxExemptId(): ?string
+    {
+        return $this->include_tax_exempt_id;
+    }
+
+    /**
+     * Sets include_tax_exempt_id
+     * @param ?string $include_tax_exempt_id 
+     *
+     * @return self
+     */
+    public function setIncludeTaxExemptId(?string $include_tax_exempt_id): self
+    {
+        $this->include_tax_exempt_id = $include_tax_exempt_id;
+        return $this;
+    }
 }
 
 
@@ -922,6 +949,9 @@ class BillingApi
             }
             if ($options->getIncludeSuccessorPlans() != 'null') {
                 $queryParams['include_successor_plans'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeSuccessorPlans());
+            }
+            if ($options->getIncludeTaxExemptId() != 'null') {
+                $queryParams['include_tax_exempt_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTaxExemptId());
             }
         }
 

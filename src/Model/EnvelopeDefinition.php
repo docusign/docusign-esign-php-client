@@ -96,6 +96,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'enable_wet_sign' => '?string',
         'enforce_signer_visibility' => '?string',
         'envelope_attachments' => '\DocuSign\eSign\Model\Attachment[]',
+        'envelope_custom_metadata' => '\DocuSign\eSign\Model\EnvelopeCustomMetadata',
         'envelope_documents' => '\DocuSign\eSign\Model\EnvelopeDocument[]',
         'envelope_id' => '?string',
         'envelope_id_stamping' => '?string',
@@ -192,6 +193,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'enable_wet_sign' => null,
         'enforce_signer_visibility' => null,
         'envelope_attachments' => null,
+        'envelope_custom_metadata' => null,
         'envelope_documents' => null,
         'envelope_id' => null,
         'envelope_id_stamping' => null,
@@ -309,6 +311,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'enable_wet_sign' => 'enableWetSign',
         'enforce_signer_visibility' => 'enforceSignerVisibility',
         'envelope_attachments' => 'envelopeAttachments',
+        'envelope_custom_metadata' => 'envelopeCustomMetadata',
         'envelope_documents' => 'envelopeDocuments',
         'envelope_id' => 'envelopeId',
         'envelope_id_stamping' => 'envelopeIdStamping',
@@ -405,6 +408,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'enable_wet_sign' => 'setEnableWetSign',
         'enforce_signer_visibility' => 'setEnforceSignerVisibility',
         'envelope_attachments' => 'setEnvelopeAttachments',
+        'envelope_custom_metadata' => 'setEnvelopeCustomMetadata',
         'envelope_documents' => 'setEnvelopeDocuments',
         'envelope_id' => 'setEnvelopeId',
         'envelope_id_stamping' => 'setEnvelopeIdStamping',
@@ -501,6 +505,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'enable_wet_sign' => 'getEnableWetSign',
         'enforce_signer_visibility' => 'getEnforceSignerVisibility',
         'envelope_attachments' => 'getEnvelopeAttachments',
+        'envelope_custom_metadata' => 'getEnvelopeCustomMetadata',
         'envelope_documents' => 'getEnvelopeDocuments',
         'envelope_id' => 'getEnvelopeId',
         'envelope_id_stamping' => 'getEnvelopeIdStamping',
@@ -651,6 +656,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         $this->container['enable_wet_sign'] = isset($data['enable_wet_sign']) ? $data['enable_wet_sign'] : null;
         $this->container['enforce_signer_visibility'] = isset($data['enforce_signer_visibility']) ? $data['enforce_signer_visibility'] : null;
         $this->container['envelope_attachments'] = isset($data['envelope_attachments']) ? $data['envelope_attachments'] : null;
+        $this->container['envelope_custom_metadata'] = isset($data['envelope_custom_metadata']) ? $data['envelope_custom_metadata'] : null;
         $this->container['envelope_documents'] = isset($data['envelope_documents']) ? $data['envelope_documents'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['envelope_id_stamping'] = isset($data['envelope_id_stamping']) ? $data['envelope_id_stamping'] : null;
@@ -1612,6 +1618,30 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     public function setEnvelopeAttachments($envelope_attachments)
     {
         $this->container['envelope_attachments'] = $envelope_attachments;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelope_custom_metadata
+     *
+     * @return \DocuSign\eSign\Model\EnvelopeCustomMetadata
+     */
+    public function getEnvelopeCustomMetadata()
+    {
+        return $this->container['envelope_custom_metadata'];
+    }
+
+    /**
+     * Sets envelope_custom_metadata
+     *
+     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata envelope_custom_metadata
+     *
+     * @return $this
+     */
+    public function setEnvelopeCustomMetadata($envelope_custom_metadata)
+    {
+        $this->container['envelope_custom_metadata'] = $envelope_custom_metadata;
 
         return $this;
     }
