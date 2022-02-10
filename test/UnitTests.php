@@ -1497,7 +1497,7 @@ class UnitTests extends TestCase
 		$options->setSearchText('null');
 		$options->setStartPosition('null');
 		$options->setStatus('Created');
-		$options->setToDate('12.12.2021');
+		$options->setToDate(date("Y-m-d"));
 		$options->setTransactionIds('null');
 		$options->setUserFilter('null');
 		$options->setFolderTypes('null');

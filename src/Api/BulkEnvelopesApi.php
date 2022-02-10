@@ -1408,6 +1408,120 @@ class BulkEnvelopesApi
     }
 
     /**
+     * Operation updateBulkSendBatchAction
+     *
+     * Initiate a specific bulk send batch action
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_action 
+     * @param ?string $bulk_send_batch_id 
+     * @param \DocuSign\eSign\Model\BulkSendBatchActionRequest $bulk_send_batch_action_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\BulkSendBatchStatus
+     */
+    public function updateBulkSendBatchAction($account_id, $bulk_action, $bulk_send_batch_id, $bulk_send_batch_action_request = null)
+    {
+        list($response) = $this->updateBulkSendBatchActionWithHttpInfo($account_id, $bulk_action, $bulk_send_batch_id, $bulk_send_batch_action_request);
+        return $response;
+    }
+
+    /**
+     * Operation updateBulkSendBatchActionWithHttpInfo
+     *
+     * Initiate a specific bulk send batch action
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $bulk_action 
+     * @param ?string $bulk_send_batch_id 
+     * @param \DocuSign\eSign\Model\BulkSendBatchActionRequest $bulk_send_batch_action_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\BulkSendBatchStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateBulkSendBatchActionWithHttpInfo($account_id, $bulk_action, $bulk_send_batch_id, $bulk_send_batch_action_request = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateBulkSendBatchAction');
+        }
+        // verify the required parameter 'bulk_action' is set
+        if ($bulk_action === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $bulk_action when calling updateBulkSendBatchAction');
+        }
+        // verify the required parameter 'bulk_send_batch_id' is set
+        if ($bulk_send_batch_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $bulk_send_batch_id when calling updateBulkSendBatchAction');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}/{bulkAction}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($bulk_action !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkAction", $bulk_action);
+        }
+        // path params
+        if ($bulk_send_batch_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "bulkSendBatchId", $bulk_send_batch_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($bulk_send_batch_action_request)) {
+            $_tempBody = $bulk_send_batch_action_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\BulkSendBatchStatus',
+                '/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}/{bulkAction}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkSendBatchStatus', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkSendBatchStatus', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation updateBulkSendBatchStatus
      *
      * Put/Update a specific bulk send batch status

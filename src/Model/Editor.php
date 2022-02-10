@@ -79,6 +79,7 @@ class Editor implements ModelInterface, ArrayAccess
         'email' => '?string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
+        'email_recipient_post_signing_url' => '?string',
         'embedded_recipient_start_url' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'fax_number' => '?string',
@@ -157,6 +158,7 @@ class Editor implements ModelInterface, ArrayAccess
         'email' => null,
         'email_metadata' => null,
         'email_notification' => null,
+        'email_recipient_post_signing_url' => null,
         'embedded_recipient_start_url' => null,
         'error_details' => null,
         'fax_number' => null,
@@ -256,6 +258,7 @@ class Editor implements ModelInterface, ArrayAccess
         'email' => 'email',
         'email_metadata' => 'emailMetadata',
         'email_notification' => 'emailNotification',
+        'email_recipient_post_signing_url' => 'emailRecipientPostSigningURL',
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
         'error_details' => 'errorDetails',
         'fax_number' => 'faxNumber',
@@ -334,6 +337,7 @@ class Editor implements ModelInterface, ArrayAccess
         'email' => 'setEmail',
         'email_metadata' => 'setEmailMetadata',
         'email_notification' => 'setEmailNotification',
+        'email_recipient_post_signing_url' => 'setEmailRecipientPostSigningUrl',
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
         'error_details' => 'setErrorDetails',
         'fax_number' => 'setFaxNumber',
@@ -412,6 +416,7 @@ class Editor implements ModelInterface, ArrayAccess
         'email' => 'getEmail',
         'email_metadata' => 'getEmailMetadata',
         'email_notification' => 'getEmailNotification',
+        'email_recipient_post_signing_url' => 'getEmailRecipientPostSigningUrl',
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
         'error_details' => 'getErrorDetails',
         'fax_number' => 'getFaxNumber',
@@ -544,6 +549,7 @@ class Editor implements ModelInterface, ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_metadata'] = isset($data['email_metadata']) ? $data['email_metadata'] : null;
         $this->container['email_notification'] = isset($data['email_notification']) ? $data['email_notification'] : null;
+        $this->container['email_recipient_post_signing_url'] = isset($data['email_recipient_post_signing_url']) ? $data['email_recipient_post_signing_url'] : null;
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['fax_number'] = isset($data['fax_number']) ? $data['fax_number'] : null;
@@ -1096,6 +1102,30 @@ class Editor implements ModelInterface, ArrayAccess
     public function setEmailNotification($email_notification)
     {
         $this->container['email_notification'] = $email_notification;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_recipient_post_signing_url
+     *
+     * @return ?string
+     */
+    public function getEmailRecipientPostSigningUrl()
+    {
+        return $this->container['email_recipient_post_signing_url'];
+    }
+
+    /**
+     * Sets email_recipient_post_signing_url
+     *
+     * @param ?string $email_recipient_post_signing_url 
+     *
+     * @return $this
+     */
+    public function setEmailRecipientPostSigningUrl($email_recipient_post_signing_url)
+    {
+        $this->container['email_recipient_post_signing_url'] = $email_recipient_post_signing_url;
 
         return $this;
     }

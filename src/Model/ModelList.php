@@ -114,6 +114,8 @@ class ModelList implements ModelInterface, ArrayAccess
         'locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'merge_field' => '\DocuSign\eSign\Model\MergeField',
         'merge_field_xml' => '?string',
+        'original_value' => '?string',
+        'original_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'page_number' => '?string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id' => '?string',
@@ -225,6 +227,8 @@ class ModelList implements ModelInterface, ArrayAccess
         'locked_metadata' => null,
         'merge_field' => null,
         'merge_field_xml' => null,
+        'original_value' => null,
+        'original_value_metadata' => null,
         'page_number' => null,
         'page_number_metadata' => null,
         'recipient_id' => null,
@@ -357,6 +361,8 @@ class ModelList implements ModelInterface, ArrayAccess
         'locked_metadata' => 'lockedMetadata',
         'merge_field' => 'mergeField',
         'merge_field_xml' => 'mergeFieldXml',
+        'original_value' => 'originalValue',
+        'original_value_metadata' => 'originalValueMetadata',
         'page_number' => 'pageNumber',
         'page_number_metadata' => 'pageNumberMetadata',
         'recipient_id' => 'recipientId',
@@ -468,6 +474,8 @@ class ModelList implements ModelInterface, ArrayAccess
         'locked_metadata' => 'setLockedMetadata',
         'merge_field' => 'setMergeField',
         'merge_field_xml' => 'setMergeFieldXml',
+        'original_value' => 'setOriginalValue',
+        'original_value_metadata' => 'setOriginalValueMetadata',
         'page_number' => 'setPageNumber',
         'page_number_metadata' => 'setPageNumberMetadata',
         'recipient_id' => 'setRecipientId',
@@ -579,6 +587,8 @@ class ModelList implements ModelInterface, ArrayAccess
         'locked_metadata' => 'getLockedMetadata',
         'merge_field' => 'getMergeField',
         'merge_field_xml' => 'getMergeFieldXml',
+        'original_value' => 'getOriginalValue',
+        'original_value_metadata' => 'getOriginalValueMetadata',
         'page_number' => 'getPageNumber',
         'page_number_metadata' => 'getPageNumberMetadata',
         'recipient_id' => 'getRecipientId',
@@ -744,6 +754,8 @@ class ModelList implements ModelInterface, ArrayAccess
         $this->container['locked_metadata'] = isset($data['locked_metadata']) ? $data['locked_metadata'] : null;
         $this->container['merge_field'] = isset($data['merge_field']) ? $data['merge_field'] : null;
         $this->container['merge_field_xml'] = isset($data['merge_field_xml']) ? $data['merge_field_xml'] : null;
+        $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
+        $this->container['original_value_metadata'] = isset($data['original_value_metadata']) ? $data['original_value_metadata'] : null;
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
         $this->container['page_number_metadata'] = isset($data['page_number_metadata']) ? $data['page_number_metadata'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
@@ -2134,6 +2146,54 @@ class ModelList implements ModelInterface, ArrayAccess
     public function setMergeFieldXml($merge_field_xml)
     {
         $this->container['merge_field_xml'] = $merge_field_xml;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value
+     *
+     * @return ?string
+     */
+    public function getOriginalValue()
+    {
+        return $this->container['original_value'];
+    }
+
+    /**
+     * Sets original_value
+     *
+     * @param ?string $original_value The initial value of the tab when it was sent to the recipient.
+     *
+     * @return $this
+     */
+    public function setOriginalValue($original_value)
+    {
+        $this->container['original_value'] = $original_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getOriginalValueMetadata()
+    {
+        return $this->container['original_value_metadata'];
+    }
+
+    /**
+     * Sets original_value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     *
+     * @return $this
+     */
+    public function setOriginalValueMetadata($original_value_metadata)
+    {
+        $this->container['original_value_metadata'] = $original_value_metadata;
 
         return $this;
     }

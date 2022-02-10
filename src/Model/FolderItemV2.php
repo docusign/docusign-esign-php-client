@@ -67,6 +67,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
         'folder_id' => '?string',
         'folder_uri' => '?string',
         'is21_cfr_part11' => '?string',
+        'last_modified_date_time' => '?string',
         'owner_name' => '?string',
         'recipients' => '\DocuSign\eSign\Model\Recipients',
         'recipients_uri' => '?string',
@@ -95,6 +96,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
         'folder_id' => null,
         'folder_uri' => null,
         'is21_cfr_part11' => null,
+        'last_modified_date_time' => null,
         'owner_name' => null,
         'recipients' => null,
         'recipients_uri' => null,
@@ -144,6 +146,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
         'folder_id' => 'folderId',
         'folder_uri' => 'folderUri',
         'is21_cfr_part11' => 'is21CFRPart11',
+        'last_modified_date_time' => 'lastModifiedDateTime',
         'owner_name' => 'ownerName',
         'recipients' => 'recipients',
         'recipients_uri' => 'recipientsUri',
@@ -172,6 +175,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
         'folder_id' => 'setFolderId',
         'folder_uri' => 'setFolderUri',
         'is21_cfr_part11' => 'setIs21CfrPart11',
+        'last_modified_date_time' => 'setLastModifiedDateTime',
         'owner_name' => 'setOwnerName',
         'recipients' => 'setRecipients',
         'recipients_uri' => 'setRecipientsUri',
@@ -200,6 +204,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
         'folder_id' => 'getFolderId',
         'folder_uri' => 'getFolderUri',
         'is21_cfr_part11' => 'getIs21CfrPart11',
+        'last_modified_date_time' => 'getLastModifiedDateTime',
         'owner_name' => 'getOwnerName',
         'recipients' => 'getRecipients',
         'recipients_uri' => 'getRecipientsUri',
@@ -282,6 +287,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
         $this->container['folder_id'] = isset($data['folder_id']) ? $data['folder_id'] : null;
         $this->container['folder_uri'] = isset($data['folder_uri']) ? $data['folder_uri'] : null;
         $this->container['is21_cfr_part11'] = isset($data['is21_cfr_part11']) ? $data['is21_cfr_part11'] : null;
+        $this->container['last_modified_date_time'] = isset($data['last_modified_date_time']) ? $data['last_modified_date_time'] : null;
         $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
         $this->container['recipients'] = isset($data['recipients']) ? $data['recipients'] : null;
         $this->container['recipients_uri'] = isset($data['recipients_uri']) ? $data['recipients_uri'] : null;
@@ -508,6 +514,30 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     public function setIs21CfrPart11($is21_cfr_part11)
     {
         $this->container['is21_cfr_part11'] = $is21_cfr_part11;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_modified_date_time
+     *
+     * @return ?string
+     */
+    public function getLastModifiedDateTime()
+    {
+        return $this->container['last_modified_date_time'];
+    }
+
+    /**
+     * Sets last_modified_date_time
+     *
+     * @param ?string $last_modified_date_time The date and time the item was last modified.
+     *
+     * @return $this
+     */
+    public function setLastModifiedDateTime($last_modified_date_time)
+    {
+        $this->container['last_modified_date_time'] = $last_modified_date_time;
 
         return $this;
     }

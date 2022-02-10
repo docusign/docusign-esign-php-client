@@ -113,6 +113,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'original_value' => '?string',
+        'original_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'page_number' => '?string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id' => '?string',
@@ -125,6 +126,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'selected' => '?string',
         'selected_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'selected_original' => '?string',
+        'selected_original_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'shared' => '?string',
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'share_to_recipients' => '?string',
@@ -152,6 +155,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'underline' => '?string',
         'underline_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'value' => '?string',
+        'value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'width' => '?string',
         'width_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'x_position' => '?string',
@@ -220,6 +224,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'name' => null,
         'name_metadata' => null,
         'original_value' => null,
+        'original_value_metadata' => null,
         'page_number' => null,
         'page_number_metadata' => null,
         'recipient_id' => null,
@@ -232,6 +237,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => null,
         'selected' => null,
         'selected_metadata' => null,
+        'selected_original' => null,
+        'selected_original_metadata' => null,
         'shared' => null,
         'shared_metadata' => null,
         'share_to_recipients' => null,
@@ -259,6 +266,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'underline' => null,
         'underline_metadata' => null,
         'value' => null,
+        'value_metadata' => null,
         'width' => null,
         'width_metadata' => null,
         'x_position' => null,
@@ -348,6 +356,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'original_value' => 'originalValue',
+        'original_value_metadata' => 'originalValueMetadata',
         'page_number' => 'pageNumber',
         'page_number_metadata' => 'pageNumberMetadata',
         'recipient_id' => 'recipientId',
@@ -360,6 +369,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => 'requireInitialOnSharedChangeMetadata',
         'selected' => 'selected',
         'selected_metadata' => 'selectedMetadata',
+        'selected_original' => 'selectedOriginal',
+        'selected_original_metadata' => 'selectedOriginalMetadata',
         'shared' => 'shared',
         'shared_metadata' => 'sharedMetadata',
         'share_to_recipients' => 'shareToRecipients',
@@ -387,6 +398,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'underline' => 'underline',
         'underline_metadata' => 'underlineMetadata',
         'value' => 'value',
+        'value_metadata' => 'valueMetadata',
         'width' => 'width',
         'width_metadata' => 'widthMetadata',
         'x_position' => 'xPosition',
@@ -455,6 +467,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'original_value' => 'setOriginalValue',
+        'original_value_metadata' => 'setOriginalValueMetadata',
         'page_number' => 'setPageNumber',
         'page_number_metadata' => 'setPageNumberMetadata',
         'recipient_id' => 'setRecipientId',
@@ -467,6 +480,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => 'setRequireInitialOnSharedChangeMetadata',
         'selected' => 'setSelected',
         'selected_metadata' => 'setSelectedMetadata',
+        'selected_original' => 'setSelectedOriginal',
+        'selected_original_metadata' => 'setSelectedOriginalMetadata',
         'shared' => 'setShared',
         'shared_metadata' => 'setSharedMetadata',
         'share_to_recipients' => 'setShareToRecipients',
@@ -494,6 +509,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'underline' => 'setUnderline',
         'underline_metadata' => 'setUnderlineMetadata',
         'value' => 'setValue',
+        'value_metadata' => 'setValueMetadata',
         'width' => 'setWidth',
         'width_metadata' => 'setWidthMetadata',
         'x_position' => 'setXPosition',
@@ -562,6 +578,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'original_value' => 'getOriginalValue',
+        'original_value_metadata' => 'getOriginalValueMetadata',
         'page_number' => 'getPageNumber',
         'page_number_metadata' => 'getPageNumberMetadata',
         'recipient_id' => 'getRecipientId',
@@ -574,6 +591,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         'require_initial_on_shared_change_metadata' => 'getRequireInitialOnSharedChangeMetadata',
         'selected' => 'getSelected',
         'selected_metadata' => 'getSelectedMetadata',
+        'selected_original' => 'getSelectedOriginal',
+        'selected_original_metadata' => 'getSelectedOriginalMetadata',
         'shared' => 'getShared',
         'shared_metadata' => 'getSharedMetadata',
         'share_to_recipients' => 'getShareToRecipients',
@@ -601,6 +620,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         'underline' => 'getUnderline',
         'underline_metadata' => 'getUnderlineMetadata',
         'value' => 'getValue',
+        'value_metadata' => 'getValueMetadata',
         'width' => 'getWidth',
         'width_metadata' => 'getWidthMetadata',
         'x_position' => 'getXPosition',
@@ -723,6 +743,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
+        $this->container['original_value_metadata'] = isset($data['original_value_metadata']) ? $data['original_value_metadata'] : null;
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
         $this->container['page_number_metadata'] = isset($data['page_number_metadata']) ? $data['page_number_metadata'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
@@ -735,6 +756,8 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['require_initial_on_shared_change_metadata'] = isset($data['require_initial_on_shared_change_metadata']) ? $data['require_initial_on_shared_change_metadata'] : null;
         $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
         $this->container['selected_metadata'] = isset($data['selected_metadata']) ? $data['selected_metadata'] : null;
+        $this->container['selected_original'] = isset($data['selected_original']) ? $data['selected_original'] : null;
+        $this->container['selected_original_metadata'] = isset($data['selected_original_metadata']) ? $data['selected_original_metadata'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['shared_metadata'] = isset($data['shared_metadata']) ? $data['shared_metadata'] : null;
         $this->container['share_to_recipients'] = isset($data['share_to_recipients']) ? $data['share_to_recipients'] : null;
@@ -762,6 +785,7 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
         $this->container['underline_metadata'] = isset($data['underline_metadata']) ? $data['underline_metadata'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['value_metadata'] = isset($data['value_metadata']) ? $data['value_metadata'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['width_metadata'] = isset($data['width_metadata']) ? $data['width_metadata'] : null;
         $this->container['x_position'] = isset($data['x_position']) ? $data['x_position'] : null;
@@ -2091,6 +2115,30 @@ class Checkbox implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets original_value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getOriginalValueMetadata()
+    {
+        return $this->container['original_value_metadata'];
+    }
+
+    /**
+     * Sets original_value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     *
+     * @return $this
+     */
+    public function setOriginalValueMetadata($original_value_metadata)
+    {
+        $this->container['original_value_metadata'] = $original_value_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets page_number
      *
      * @return ?string
@@ -2374,6 +2422,54 @@ class Checkbox implements ModelInterface, ArrayAccess
     public function setSelectedMetadata($selected_metadata)
     {
         $this->container['selected_metadata'] = $selected_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets selected_original
+     *
+     * @return ?string
+     */
+    public function getSelectedOriginal()
+    {
+        return $this->container['selected_original'];
+    }
+
+    /**
+     * Sets selected_original
+     *
+     * @param ?string $selected_original 
+     *
+     * @return $this
+     */
+    public function setSelectedOriginal($selected_original)
+    {
+        $this->container['selected_original'] = $selected_original;
+
+        return $this;
+    }
+
+    /**
+     * Gets selected_original_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getSelectedOriginalMetadata()
+    {
+        return $this->container['selected_original_metadata'];
+    }
+
+    /**
+     * Sets selected_original_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_original_metadata selected_original_metadata
+     *
+     * @return $this
+     */
+    public function setSelectedOriginalMetadata($selected_original_metadata)
+    {
+        $this->container['selected_original_metadata'] = $selected_original_metadata;
 
         return $this;
     }
@@ -3022,6 +3118,30 @@ class Checkbox implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getValueMetadata()
+    {
+        return $this->container['value_metadata'];
+    }
+
+    /**
+     * Sets value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     *
+     * @return $this
+     */
+    public function setValueMetadata($value_metadata)
+    {
+        $this->container['value_metadata'] = $value_metadata;
 
         return $this;
     }
