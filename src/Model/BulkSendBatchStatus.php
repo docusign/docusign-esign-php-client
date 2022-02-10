@@ -59,6 +59,8 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'action' => '?string',
+        'action_status' => '?string',
         'batch_id' => '?string',
         'batch_name' => '?string',
         'batch_size' => '?string',
@@ -82,6 +84,8 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'action' => null,
+        'action_status' => null,
         'batch_id' => null,
         'batch_name' => null,
         'batch_size' => null,
@@ -126,6 +130,8 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'action' => 'action',
+        'action_status' => 'actionStatus',
         'batch_id' => 'batchId',
         'batch_name' => 'batchName',
         'batch_size' => 'batchSize',
@@ -149,6 +155,8 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'action' => 'setAction',
+        'action_status' => 'setActionStatus',
         'batch_id' => 'setBatchId',
         'batch_name' => 'setBatchName',
         'batch_size' => 'setBatchSize',
@@ -172,6 +180,8 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'action' => 'getAction',
+        'action_status' => 'getActionStatus',
         'batch_id' => 'getBatchId',
         'batch_name' => 'getBatchName',
         'batch_size' => 'getBatchSize',
@@ -249,6 +259,8 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['action_status'] = isset($data['action_status']) ? $data['action_status'] : null;
         $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
         $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
         $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;
@@ -289,6 +301,54 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets action
+     *
+     * @return ?string
+     */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+     * Sets action
+     *
+     * @param ?string $action 
+     *
+     * @return $this
+     */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
+
+        return $this;
+    }
+
+    /**
+     * Gets action_status
+     *
+     * @return ?string
+     */
+    public function getActionStatus()
+    {
+        return $this->container['action_status'];
+    }
+
+    /**
+     * Sets action_status
+     *
+     * @param ?string $action_status 
+     *
+     * @return $this
+     */
+    public function setActionStatus($action_status)
+    {
+        $this->container['action_status'] = $action_status;
+
+        return $this;
+    }
 
     /**
      * Gets batch_id

@@ -1,6 +1,6 @@
 <?php
 /**
- * EnvelopeDelayRuleApiModel
+ * BulkSendBatchActionRequest
  *
  * PHP version 7.4
  *
@@ -34,16 +34,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * EnvelopeDelayRuleApiModel Class Doc Comment
+ * BulkSendBatchActionRequest Class Doc Comment
  *
  * @category    Class
- * @description An envelope delay rule is a rule which determines how the envelope should be delayed either for sending or routing. It can expressed as either a delay in some number of days, hours, minutes and seconds or an exact resumeDate in the future.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
+class BulkSendBatchActionRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -52,7 +51,7 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'envelopeDelayRuleApiModel';
+    protected static $swaggerModelName = 'bulkSendBatchActionRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,8 +59,9 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'delay' => '?string',
-        'resume_date' => '?string'
+        'action' => '?string',
+        'notification' => '\DocuSign\eSign\Model\Notification',
+        'void_reason' => '?string'
     ];
 
     /**
@@ -70,8 +70,9 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'delay' => null,
-        'resume_date' => null
+        'action' => null,
+        'notification' => null,
+        'void_reason' => null
     ];
 
     /**
@@ -101,8 +102,9 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'delay' => 'delay',
-        'resume_date' => 'resumeDate'
+        'action' => 'action',
+        'notification' => 'notification',
+        'void_reason' => 'voidReason'
     ];
 
     /**
@@ -111,8 +113,9 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'delay' => 'setDelay',
-        'resume_date' => 'setResumeDate'
+        'action' => 'setAction',
+        'notification' => 'setNotification',
+        'void_reason' => 'setVoidReason'
     ];
 
     /**
@@ -121,8 +124,9 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'delay' => 'getDelay',
-        'resume_date' => 'getResumeDate'
+        'action' => 'getAction',
+        'notification' => 'getNotification',
+        'void_reason' => 'getVoidReason'
     ];
 
     /**
@@ -185,8 +189,9 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['notification'] = isset($data['notification']) ? $data['notification'] : null;
+        $this->container['void_reason'] = isset($data['void_reason']) ? $data['void_reason'] : null;
     }
 
     /**
@@ -214,49 +219,73 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets delay
+     * Gets action
      *
      * @return ?string
      */
-    public function getDelay()
+    public function getAction()
     {
-        return $this->container['delay'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets delay
+     * Sets action
      *
-     * @param ?string $delay A string timespan duration represented as d.hh:mm:ss where the d component is days, hh is hours measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the expected delay for this envelope rule. The maximum delay is 30 days.
+     * @param ?string $action 
      *
      * @return $this
      */
-    public function setDelay($delay)
+    public function setAction($action)
     {
-        $this->container['delay'] = $delay;
+        $this->container['action'] = $action;
 
         return $this;
     }
 
     /**
-     * Gets resume_date
+     * Gets notification
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\Notification
      */
-    public function getResumeDate()
+    public function getNotification()
     {
-        return $this->container['resume_date'];
+        return $this->container['notification'];
     }
 
     /**
-     * Sets resume_date
+     * Sets notification
      *
-     * @param ?string $resume_date A string formatted as an ISO 8601 DATETIME with TimeZone specified, indicating the expected resumeDate for this envelope rule. The specified datetime must occur in the future relative to the current UTC time hen the request is made. The maximum resumeDate must not exceed 30 days in the future.
+     * @param \DocuSign\eSign\Model\Notification $notification notification
      *
      * @return $this
      */
-    public function setResumeDate($resume_date)
+    public function setNotification($notification)
     {
-        $this->container['resume_date'] = $resume_date;
+        $this->container['notification'] = $notification;
+
+        return $this;
+    }
+
+    /**
+     * Gets void_reason
+     *
+     * @return ?string
+     */
+    public function getVoidReason()
+    {
+        return $this->container['void_reason'];
+    }
+
+    /**
+     * Sets void_reason
+     *
+     * @param ?string $void_reason 
+     *
+     * @return $this
+     */
+    public function setVoidReason($void_reason)
+    {
+        $this->container['void_reason'] = $void_reason;
 
         return $this;
     }

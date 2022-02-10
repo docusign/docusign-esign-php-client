@@ -102,9 +102,9 @@ class ScheduledSendingApiModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'resume_date' => 'ResumeDate',
-        'rules' => 'Rules',
-        'status' => 'Status'
+        'resume_date' => 'resumeDate',
+        'rules' => 'rules',
+        'status' => 'status'
     ];
 
     /**
@@ -231,7 +231,7 @@ class ScheduledSendingApiModel implements ModelInterface, ArrayAccess
     /**
      * Sets resume_date
      *
-     * @param ?string $resume_date 
+     * @param ?string $resume_date An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class ScheduledSendingApiModel implements ModelInterface, ArrayAccess
     /**
      * Sets rules
      *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRuleApiModel[] $rules 
+     * @param \DocuSign\eSign\Model\EnvelopeDelayRuleApiModel[] $rules A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ScheduledSendingApiModel implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $status \"pending\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \"started\" if the scheduled sending delay is in progress. \"completed\" if the scheduled sending delay has elapsed and the envelope has been sent.
      *
      * @return $this
      */

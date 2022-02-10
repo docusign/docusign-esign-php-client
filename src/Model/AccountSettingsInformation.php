@@ -4726,7 +4726,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_delayed_routing
      *
-     * @param ?string $allow_delayed_routing 
+     * @param ?string $allow_delayed_routing \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.
      *
      * @return $this
      */
@@ -6982,7 +6982,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_scheduled_sending
      *
-     * @param ?string $allow_scheduled_sending 
+     * @param ?string $allow_scheduled_sending \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.
      *
      * @return $this
      */

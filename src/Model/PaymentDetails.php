@@ -75,6 +75,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => '?string',
         'signer_values' => '\DocuSign\eSign\Model\PaymentSignerValues',
         'status' => '?string',
+        'sub_gateway_name' => '?string',
         'total' => '\DocuSign\eSign\Model\Money'
     ];
 
@@ -100,6 +101,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => null,
         'signer_values' => null,
         'status' => null,
+        'sub_gateway_name' => null,
         'total' => null
     ];
 
@@ -146,6 +148,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => 'paymentSourceId',
         'signer_values' => 'signerValues',
         'status' => 'status',
+        'sub_gateway_name' => 'subGatewayName',
         'total' => 'total'
     ];
 
@@ -171,6 +174,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => 'setPaymentSourceId',
         'signer_values' => 'setSignerValues',
         'status' => 'setStatus',
+        'sub_gateway_name' => 'setSubGatewayName',
         'total' => 'setTotal'
     ];
 
@@ -196,6 +200,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => 'getPaymentSourceId',
         'signer_values' => 'getSignerValues',
         'status' => 'getStatus',
+        'sub_gateway_name' => 'getSubGatewayName',
         'total' => 'getTotal'
     ];
 
@@ -275,6 +280,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         $this->container['payment_source_id'] = isset($data['payment_source_id']) ? $data['payment_source_id'] : null;
         $this->container['signer_values'] = isset($data['signer_values']) ? $data['signer_values'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['sub_gateway_name'] = isset($data['sub_gateway_name']) ? $data['sub_gateway_name'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
@@ -682,6 +688,30 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets sub_gateway_name
+     *
+     * @return ?string
+     */
+    public function getSubGatewayName()
+    {
+        return $this->container['sub_gateway_name'];
+    }
+
+    /**
+     * Sets sub_gateway_name
+     *
+     * @param ?string $sub_gateway_name 
+     *
+     * @return $this
+     */
+    public function setSubGatewayName($sub_gateway_name)
+    {
+        $this->container['sub_gateway_name'] = $sub_gateway_name;
 
         return $this;
     }

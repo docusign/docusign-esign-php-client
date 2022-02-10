@@ -67,6 +67,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'group_name' => '?string',
         'group_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'original_value' => '?string',
+        'original_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'radios' => '\DocuSign\eSign\Model\Radio[]',
         'recipient_id' => '?string',
         'recipient_id_guid' => '?string',
@@ -87,7 +89,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => '?string',
         'template_required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tooltip' => '?string',
-        'tooltip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
+        'tooltip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'value' => '?string',
+        'value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
     /**
@@ -104,6 +108,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => null,
         'group_name' => null,
         'group_name_metadata' => null,
+        'original_value' => null,
+        'original_value_metadata' => null,
         'radios' => null,
         'recipient_id' => null,
         'recipient_id_guid' => null,
@@ -124,7 +130,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => null,
         'template_required_metadata' => null,
         'tooltip' => null,
-        'tooltip_metadata' => null
+        'tooltip_metadata' => null,
+        'value' => null,
+        'value_metadata' => null
     ];
 
     /**
@@ -162,6 +170,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => 'documentIdMetadata',
         'group_name' => 'groupName',
         'group_name_metadata' => 'groupNameMetadata',
+        'original_value' => 'originalValue',
+        'original_value_metadata' => 'originalValueMetadata',
         'radios' => 'radios',
         'recipient_id' => 'recipientId',
         'recipient_id_guid' => 'recipientIdGuid',
@@ -182,7 +192,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => 'templateRequired',
         'template_required_metadata' => 'templateRequiredMetadata',
         'tooltip' => 'tooltip',
-        'tooltip_metadata' => 'tooltipMetadata'
+        'tooltip_metadata' => 'tooltipMetadata',
+        'value' => 'value',
+        'value_metadata' => 'valueMetadata'
     ];
 
     /**
@@ -199,6 +211,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => 'setDocumentIdMetadata',
         'group_name' => 'setGroupName',
         'group_name_metadata' => 'setGroupNameMetadata',
+        'original_value' => 'setOriginalValue',
+        'original_value_metadata' => 'setOriginalValueMetadata',
         'radios' => 'setRadios',
         'recipient_id' => 'setRecipientId',
         'recipient_id_guid' => 'setRecipientIdGuid',
@@ -219,7 +233,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => 'setTemplateRequired',
         'template_required_metadata' => 'setTemplateRequiredMetadata',
         'tooltip' => 'setTooltip',
-        'tooltip_metadata' => 'setTooltipMetadata'
+        'tooltip_metadata' => 'setTooltipMetadata',
+        'value' => 'setValue',
+        'value_metadata' => 'setValueMetadata'
     ];
 
     /**
@@ -236,6 +252,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => 'getDocumentIdMetadata',
         'group_name' => 'getGroupName',
         'group_name_metadata' => 'getGroupNameMetadata',
+        'original_value' => 'getOriginalValue',
+        'original_value_metadata' => 'getOriginalValueMetadata',
         'radios' => 'getRadios',
         'recipient_id' => 'getRecipientId',
         'recipient_id_guid' => 'getRecipientIdGuid',
@@ -256,7 +274,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => 'getTemplateRequired',
         'template_required_metadata' => 'getTemplateRequiredMetadata',
         'tooltip' => 'getTooltip',
-        'tooltip_metadata' => 'getTooltipMetadata'
+        'tooltip_metadata' => 'getTooltipMetadata',
+        'value' => 'getValue',
+        'value_metadata' => 'getValueMetadata'
     ];
 
     /**
@@ -327,6 +347,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         $this->container['document_id_metadata'] = isset($data['document_id_metadata']) ? $data['document_id_metadata'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
         $this->container['group_name_metadata'] = isset($data['group_name_metadata']) ? $data['group_name_metadata'] : null;
+        $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
+        $this->container['original_value_metadata'] = isset($data['original_value_metadata']) ? $data['original_value_metadata'] : null;
         $this->container['radios'] = isset($data['radios']) ? $data['radios'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
         $this->container['recipient_id_guid'] = isset($data['recipient_id_guid']) ? $data['recipient_id_guid'] : null;
@@ -348,6 +370,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         $this->container['template_required_metadata'] = isset($data['template_required_metadata']) ? $data['template_required_metadata'] : null;
         $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
         $this->container['tooltip_metadata'] = isset($data['tooltip_metadata']) ? $data['tooltip_metadata'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['value_metadata'] = isset($data['value_metadata']) ? $data['value_metadata'] : null;
     }
 
     /**
@@ -562,6 +586,54 @@ class RadioGroup implements ModelInterface, ArrayAccess
     public function setGroupNameMetadata($group_name_metadata)
     {
         $this->container['group_name_metadata'] = $group_name_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value
+     *
+     * @return ?string
+     */
+    public function getOriginalValue()
+    {
+        return $this->container['original_value'];
+    }
+
+    /**
+     * Sets original_value
+     *
+     * @param ?string $original_value The initial value of the tab when it was sent to the recipient.
+     *
+     * @return $this
+     */
+    public function setOriginalValue($original_value)
+    {
+        $this->container['original_value'] = $original_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getOriginalValueMetadata()
+    {
+        return $this->container['original_value_metadata'];
+    }
+
+    /**
+     * Sets original_value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     *
+     * @return $this
+     */
+    public function setOriginalValueMetadata($original_value_metadata)
+    {
+        $this->container['original_value_metadata'] = $original_value_metadata;
 
         return $this;
     }
@@ -1066,6 +1138,54 @@ class RadioGroup implements ModelInterface, ArrayAccess
     public function setTooltipMetadata($tooltip_metadata)
     {
         $this->container['tooltip_metadata'] = $tooltip_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return ?string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param ?string $value Specifies the value of the tab.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getValueMetadata()
+    {
+        return $this->container['value_metadata'];
+    }
+
+    /**
+     * Sets value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     *
+     * @return $this
+     */
+    public function setValueMetadata($value_metadata)
+    {
+        $this->container['value_metadata'] = $value_metadata;
 
         return $this;
     }

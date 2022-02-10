@@ -1217,6 +1217,8 @@ class UnitTests extends TestCase
 
     /**
      * @depends testSignatureRequestOnDocument
+     * @expectedException \DocuSign\eSign\Client\ApiException
+     * @expectedExceptionMessage The document specified was not found.
      */
     public function testDeleteDocuments($testConfig)
     {
@@ -1242,21 +1244,7 @@ class UnitTests extends TestCase
         $this->assertInstanceOf(EnvelopeDocumentsResult::class, $result);
         
         // document does not exist after delete 
-        try
-        {
-            $envelopesApi->getDocument($testConfig->getAccountId(), $documentId, $testConfig->getEnvelopeId());
-        }
-        catch (\Exception $e)
-        {
-            $this->assertInstanceOf(ApiException::class, $e); 
-            $responseBody = $e->getResponseBody();      
-            $this->assertNotNull($responseBody);
-            $this->assertEquals("DOCUMENT_DOES_NOT_EXIST",$responseBody->errorCode); 
-            $this->assertNotEmpty("The document specified was not found.",$responseBody->message); 
-
-            $responseHeaders = $e->getResponseHeaders();
-            $this->assertArrayHasKey('X-DocuSign-TraceToken',$responseHeaders);            
-        }
+        $envelopesApi->getDocument($testConfig->getAccountId(), $documentId, $testConfig->getEnvelopeId());
     }
 
     /**
@@ -1497,7 +1485,7 @@ class UnitTests extends TestCase
 		$options->setSearchText('null');
 		$options->setStartPosition('null');
 		$options->setStatus('Created');
-		$options->setToDate('12.12.2021');
+		$options->setToDate(date("Y-m-d"));
 		$options->setTransactionIds('null');
 		$options->setUserFilter('null');
 		$options->setFolderTypes('null');
