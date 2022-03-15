@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.7.1] - eSignature API v2.1-21.4.02.00 - 2022-03-15
+### Fixed
+- Issue - [`#165`](https://github.com/docusign/docusign-esign-php-client/issues/165):  Not working on php 8+ (DCM-7267)
+
 ## [v6.7.0] - eSignature API v2.1-21.4.02.00 - 2022-02-08
 ### Changed
 - Added support for version v2.1-21.4.02.00 of the DocuSign ESignature API.
