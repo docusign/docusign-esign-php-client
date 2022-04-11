@@ -2022,7 +2022,7 @@ class UsersApi
         if ($options === null) {
             if ('object' === gettype($queryParams)) { // if $queryParams is 'object', consider it as $options, for backward compatibility.
                 $options = $queryParams;
-                $queryParams = null;
+                $queryParams = [];
             }
 
         }elseif ($options->getCloudProvider() !== 'null') {
