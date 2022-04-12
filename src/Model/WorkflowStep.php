@@ -61,7 +61,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'action' => '?string',
         'completed_date' => '?string',
-        'delayed_routing' => '\DocuSign\eSign\Model\DelayedRoutingApiModel',
+        'delayed_routing' => '\DocuSign\eSign\Model\DelayedRouting',
         'item_id' => '?string',
         'recipient_routing' => '\DocuSign\eSign\Model\RecipientRouting',
         'status' => '?string',
@@ -305,7 +305,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Gets delayed_routing
      *
-     * @return \DocuSign\eSign\Model\DelayedRoutingApiModel
+     * @return \DocuSign\eSign\Model\DelayedRouting
      */
     public function getDelayedRouting()
     {
@@ -315,7 +315,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets delayed_routing
      *
-     * @param \DocuSign\eSign\Model\DelayedRoutingApiModel $delayed_routing delayed_routing
+     * @param \DocuSign\eSign\Model\DelayedRouting $delayed_routing delayed_routing
      *
      * @return $this
      */

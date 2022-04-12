@@ -541,10 +541,10 @@ class UnitTests extends TestCase
         $usersApi = new UsersApi($testConfig->getApiClient());
 
         $userInformation = new UserInformation();
-        $userInformation->setEmail('TestUser@gmail.com');
-        $userInformation->setFirstName("Test");
+        $userInformation->setEmail('SdkTestUser@gmail.com');
+        $userInformation->setFirstName("SdkTest");
         $userInformation->setLastName("User");
-        $userInformation->setUserName("Test User");
+        $userInformation->setUserName("SdkTest User");
 
         $userDefinition = new NewUsersDefinition();
         $userDefinition->setNewUsers([$userInformation]);

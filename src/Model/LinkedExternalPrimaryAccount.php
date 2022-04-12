@@ -63,6 +63,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => '?string',
         'email' => '?string',
         'link_id' => '?string',
+        'pdf_field_handling_option' => '?string',
         'recipient_auth_requirements' => '\DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements',
         'status' => '?string',
         'user_id' => '?string'
@@ -78,6 +79,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => null,
         'email' => null,
         'link_id' => null,
+        'pdf_field_handling_option' => null,
         'recipient_auth_requirements' => null,
         'status' => null,
         'user_id' => null
@@ -114,6 +116,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => 'configurationId',
         'email' => 'email',
         'link_id' => 'linkId',
+        'pdf_field_handling_option' => 'pdfFieldHandlingOption',
         'recipient_auth_requirements' => 'recipientAuthRequirements',
         'status' => 'status',
         'user_id' => 'userId'
@@ -129,6 +132,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => 'setConfigurationId',
         'email' => 'setEmail',
         'link_id' => 'setLinkId',
+        'pdf_field_handling_option' => 'setPdfFieldHandlingOption',
         'recipient_auth_requirements' => 'setRecipientAuthRequirements',
         'status' => 'setStatus',
         'user_id' => 'setUserId'
@@ -144,6 +148,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'configuration_id' => 'getConfigurationId',
         'email' => 'getEmail',
         'link_id' => 'getLinkId',
+        'pdf_field_handling_option' => 'getPdfFieldHandlingOption',
         'recipient_auth_requirements' => 'getRecipientAuthRequirements',
         'status' => 'getStatus',
         'user_id' => 'getUserId'
@@ -213,6 +218,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         $this->container['configuration_id'] = isset($data['configuration_id']) ? $data['configuration_id'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['link_id'] = isset($data['link_id']) ? $data['link_id'] : null;
+        $this->container['pdf_field_handling_option'] = isset($data['pdf_field_handling_option']) ? $data['pdf_field_handling_option'] : null;
         $this->container['recipient_auth_requirements'] = isset($data['recipient_auth_requirements']) ? $data['recipient_auth_requirements'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
@@ -334,6 +340,30 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     public function setLinkId($link_id)
     {
         $this->container['link_id'] = $link_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets pdf_field_handling_option
+     *
+     * @return ?string
+     */
+    public function getPdfFieldHandlingOption()
+    {
+        return $this->container['pdf_field_handling_option'];
+    }
+
+    /**
+     * Sets pdf_field_handling_option
+     *
+     * @param ?string $pdf_field_handling_option 
+     *
+     * @return $this
+     */
+    public function setPdfFieldHandlingOption($pdf_field_handling_option)
+    {
+        $this->container['pdf_field_handling_option'] = $pdf_field_handling_option;
 
         return $this;
     }

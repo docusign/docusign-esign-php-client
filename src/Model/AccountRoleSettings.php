@@ -133,7 +133,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => '?string',
         'use_new_sending_interface_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'vaulting_mode' => '?string',
-        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
+        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'web_forms' => '?string',
+        'web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
     /**
@@ -216,7 +218,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => null,
         'use_new_sending_interface_metadata' => null,
         'vaulting_mode' => null,
-        'vaulting_mode_metadata' => null
+        'vaulting_mode_metadata' => null,
+        'web_forms' => null,
+        'web_forms_metadata' => null
     ];
 
     /**
@@ -320,7 +324,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => 'useNewSendingInterface',
         'use_new_sending_interface_metadata' => 'useNewSendingInterfaceMetadata',
         'vaulting_mode' => 'vaultingMode',
-        'vaulting_mode_metadata' => 'vaultingModeMetadata'
+        'vaulting_mode_metadata' => 'vaultingModeMetadata',
+        'web_forms' => 'webForms',
+        'web_forms_metadata' => 'webFormsMetadata'
     ];
 
     /**
@@ -403,7 +409,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => 'setUseNewSendingInterface',
         'use_new_sending_interface_metadata' => 'setUseNewSendingInterfaceMetadata',
         'vaulting_mode' => 'setVaultingMode',
-        'vaulting_mode_metadata' => 'setVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'setVaultingModeMetadata',
+        'web_forms' => 'setWebForms',
+        'web_forms_metadata' => 'setWebFormsMetadata'
     ];
 
     /**
@@ -486,7 +494,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => 'getUseNewSendingInterface',
         'use_new_sending_interface_metadata' => 'getUseNewSendingInterfaceMetadata',
         'vaulting_mode' => 'getVaultingMode',
-        'vaulting_mode_metadata' => 'getVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'getVaultingModeMetadata',
+        'web_forms' => 'getWebForms',
+        'web_forms_metadata' => 'getWebFormsMetadata'
     ];
 
     /**
@@ -624,6 +634,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['use_new_sending_interface_metadata'] = isset($data['use_new_sending_interface_metadata']) ? $data['use_new_sending_interface_metadata'] : null;
         $this->container['vaulting_mode'] = isset($data['vaulting_mode']) ? $data['vaulting_mode'] : null;
         $this->container['vaulting_mode_metadata'] = isset($data['vaulting_mode_metadata']) ? $data['vaulting_mode_metadata'] : null;
+        $this->container['web_forms'] = isset($data['web_forms']) ? $data['web_forms'] : null;
+        $this->container['web_forms_metadata'] = isset($data['web_forms_metadata']) ? $data['web_forms_metadata'] : null;
     }
 
     /**
@@ -2446,6 +2458,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     public function setVaultingModeMetadata($vaulting_mode_metadata)
     {
         $this->container['vaulting_mode_metadata'] = $vaulting_mode_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms
+     *
+     * @return ?string
+     */
+    public function getWebForms()
+    {
+        return $this->container['web_forms'];
+    }
+
+    /**
+     * Sets web_forms
+     *
+     * @param ?string $web_forms 
+     *
+     * @return $this
+     */
+    public function setWebForms($web_forms)
+    {
+        $this->container['web_forms'] = $web_forms;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getWebFormsMetadata()
+    {
+        return $this->container['web_forms_metadata'];
+    }
+
+    /**
+     * Sets web_forms_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata web_forms_metadata
+     *
+     * @return $this
+     */
+    public function setWebFormsMetadata($web_forms_metadata)
+    {
+        $this->container['web_forms_metadata'] = $web_forms_metadata;
 
         return $this;
     }

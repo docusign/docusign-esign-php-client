@@ -233,33 +233,6 @@ class GetBulkSendBatchEnvelopesOptions
         $this->status = $status;
         return $this;
     }
-    /**
-      * $user_id 
-      * @var ?string
-      */
-    protected ?string $user_id = null;
-
-    /**
-     * Gets user_id
-     *
-     * @return ?string
-     */
-    public function getUserId(): ?string
-    {
-        return $this->user_id;
-    }
-
-    /**
-     * Sets user_id
-     * @param ?string $user_id 
-     *
-     * @return self
-     */
-    public function setUserId(?string $user_id): self
-    {
-        $this->user_id = $user_id;
-        return $this;
-    }
 }
 
 
@@ -326,6 +299,33 @@ class GetBulkSendBatchesOptions
     public function setCount(?string $count): self
     {
         $this->count = $count;
+        return $this;
+    }
+    /**
+      * $from_date 
+      * @var ?string
+      */
+    protected ?string $from_date = null;
+
+    /**
+     * Gets from_date
+     *
+     * @return ?string
+     */
+    public function getFromDate(): ?string
+    {
+        return $this->from_date;
+    }
+
+    /**
+     * Sets from_date
+     * @param ?string $from_date 
+     *
+     * @return self
+     */
+    public function setFromDate(?string $from_date): self
+    {
+        $this->from_date = $from_date;
         return $this;
     }
     /**
@@ -407,6 +407,60 @@ class GetBulkSendBatchesOptions
     public function setStatus(?string $status): self
     {
         $this->status = $status;
+        return $this;
+    }
+    /**
+      * $to_date 
+      * @var ?string
+      */
+    protected ?string $to_date = null;
+
+    /**
+     * Gets to_date
+     *
+     * @return ?string
+     */
+    public function getToDate(): ?string
+    {
+        return $this->to_date;
+    }
+
+    /**
+     * Sets to_date
+     * @param ?string $to_date 
+     *
+     * @return self
+     */
+    public function setToDate(?string $to_date): self
+    {
+        $this->to_date = $to_date;
+        return $this;
+    }
+    /**
+      * $user_id 
+      * @var ?string
+      */
+    protected ?string $user_id = null;
+
+    /**
+     * Gets user_id
+     *
+     * @return ?string
+     */
+    public function getUserId(): ?string
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * Sets user_id
+     * @param ?string $user_id 
+     *
+     * @return self
+     */
+    public function setUserId(?string $user_id): self
+    {
+        $this->user_id = $user_id;
         return $this;
     }
 }
@@ -962,9 +1016,6 @@ class BulkEnvelopesApi
             if ($options->getStatus() != 'null') {
                 $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
             }
-            if ($options->getUserId() != 'null') {
-                $queryParams['user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserId());
-            }
         }
 
         // path params
@@ -1165,6 +1216,9 @@ class BulkEnvelopesApi
             if ($options->getCount() != 'null') {
                 $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
             }
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
             if ($options->getSearchText() != 'null') {
                 $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
             }
@@ -1173,6 +1227,12 @@ class BulkEnvelopesApi
             }
             if ($options->getStatus() != 'null') {
                 $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
+            if ($options->getUserId() != 'null') {
+                $queryParams['user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserId());
             }
         }
 

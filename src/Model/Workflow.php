@@ -60,8 +60,9 @@ class Workflow implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'current_workflow_step_id' => '?string',
+        'overwrite_update_mode' => '?string',
         'resume_date' => '?string',
-        'scheduled_sending' => '\DocuSign\eSign\Model\ScheduledSendingApiModel',
+        'scheduled_sending' => '\DocuSign\eSign\Model\ScheduledSending',
         'workflow_status' => '?string',
         'workflow_steps' => '\DocuSign\eSign\Model\WorkflowStep[]'
     ];
@@ -73,6 +74,7 @@ class Workflow implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'current_workflow_step_id' => null,
+        'overwrite_update_mode' => null,
         'resume_date' => null,
         'scheduled_sending' => null,
         'workflow_status' => null,
@@ -107,6 +109,7 @@ class Workflow implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'current_workflow_step_id' => 'currentWorkflowStepId',
+        'overwrite_update_mode' => 'overwriteUpdateMode',
         'resume_date' => 'resumeDate',
         'scheduled_sending' => 'scheduledSending',
         'workflow_status' => 'workflowStatus',
@@ -120,6 +123,7 @@ class Workflow implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'current_workflow_step_id' => 'setCurrentWorkflowStepId',
+        'overwrite_update_mode' => 'setOverwriteUpdateMode',
         'resume_date' => 'setResumeDate',
         'scheduled_sending' => 'setScheduledSending',
         'workflow_status' => 'setWorkflowStatus',
@@ -133,6 +137,7 @@ class Workflow implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'current_workflow_step_id' => 'getCurrentWorkflowStepId',
+        'overwrite_update_mode' => 'getOverwriteUpdateMode',
         'resume_date' => 'getResumeDate',
         'scheduled_sending' => 'getScheduledSending',
         'workflow_status' => 'getWorkflowStatus',
@@ -200,6 +205,7 @@ class Workflow implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['current_workflow_step_id'] = isset($data['current_workflow_step_id']) ? $data['current_workflow_step_id'] : null;
+        $this->container['overwrite_update_mode'] = isset($data['overwrite_update_mode']) ? $data['overwrite_update_mode'] : null;
         $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
         $this->container['scheduled_sending'] = isset($data['scheduled_sending']) ? $data['scheduled_sending'] : null;
         $this->container['workflow_status'] = isset($data['workflow_status']) ? $data['workflow_status'] : null;
@@ -255,6 +261,30 @@ class Workflow implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets overwrite_update_mode
+     *
+     * @return ?string
+     */
+    public function getOverwriteUpdateMode()
+    {
+        return $this->container['overwrite_update_mode'];
+    }
+
+    /**
+     * Sets overwrite_update_mode
+     *
+     * @param ?string $overwrite_update_mode 
+     *
+     * @return $this
+     */
+    public function setOverwriteUpdateMode($overwrite_update_mode)
+    {
+        $this->container['overwrite_update_mode'] = $overwrite_update_mode;
+
+        return $this;
+    }
+
+    /**
      * Gets resume_date
      *
      * @return ?string
@@ -281,7 +311,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
      * Gets scheduled_sending
      *
-     * @return \DocuSign\eSign\Model\ScheduledSendingApiModel
+     * @return \DocuSign\eSign\Model\ScheduledSending
      */
     public function getScheduledSending()
     {
@@ -291,7 +321,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
      * Sets scheduled_sending
      *
-     * @param \DocuSign\eSign\Model\ScheduledSendingApiModel $scheduled_sending scheduled_sending
+     * @param \DocuSign\eSign\Model\ScheduledSending $scheduled_sending scheduled_sending
      *
      * @return $this
      */
