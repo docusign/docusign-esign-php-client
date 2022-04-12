@@ -76,6 +76,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'home_address' => '\DocuSign\eSign\Model\AddressInformation',
         'initials_image_uri' => '?string',
         'is_admin' => '?string',
+        'is_alternate_admin' => '?string',
         'is_nar_enabled' => '?string',
         'job_title' => '?string',
         'last_login' => '?string',
@@ -127,6 +128,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'home_address' => null,
         'initials_image_uri' => null,
         'is_admin' => null,
+        'is_alternate_admin' => null,
         'is_nar_enabled' => null,
         'job_title' => null,
         'last_login' => null,
@@ -199,6 +201,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'home_address' => 'homeAddress',
         'initials_image_uri' => 'initialsImageUri',
         'is_admin' => 'isAdmin',
+        'is_alternate_admin' => 'isAlternateAdmin',
         'is_nar_enabled' => 'isNAREnabled',
         'job_title' => 'jobTitle',
         'last_login' => 'lastLogin',
@@ -250,6 +253,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'home_address' => 'setHomeAddress',
         'initials_image_uri' => 'setInitialsImageUri',
         'is_admin' => 'setIsAdmin',
+        'is_alternate_admin' => 'setIsAlternateAdmin',
         'is_nar_enabled' => 'setIsNarEnabled',
         'job_title' => 'setJobTitle',
         'last_login' => 'setLastLogin',
@@ -301,6 +305,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         'home_address' => 'getHomeAddress',
         'initials_image_uri' => 'getInitialsImageUri',
         'is_admin' => 'getIsAdmin',
+        'is_alternate_admin' => 'getIsAlternateAdmin',
         'is_nar_enabled' => 'getIsNarEnabled',
         'job_title' => 'getJobTitle',
         'last_login' => 'getLastLogin',
@@ -406,6 +411,7 @@ class UserInformation implements ModelInterface, ArrayAccess
         $this->container['home_address'] = isset($data['home_address']) ? $data['home_address'] : null;
         $this->container['initials_image_uri'] = isset($data['initials_image_uri']) ? $data['initials_image_uri'] : null;
         $this->container['is_admin'] = isset($data['is_admin']) ? $data['is_admin'] : null;
+        $this->container['is_alternate_admin'] = isset($data['is_alternate_admin']) ? $data['is_alternate_admin'] : null;
         $this->container['is_nar_enabled'] = isset($data['is_nar_enabled']) ? $data['is_nar_enabled'] : null;
         $this->container['job_title'] = isset($data['job_title']) ? $data['job_title'] : null;
         $this->container['last_login'] = isset($data['last_login']) ? $data['last_login'] : null;
@@ -862,6 +868,30 @@ class UserInformation implements ModelInterface, ArrayAccess
     public function setIsAdmin($is_admin)
     {
         $this->container['is_admin'] = $is_admin;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_alternate_admin
+     *
+     * @return ?string
+     */
+    public function getIsAlternateAdmin()
+    {
+        return $this->container['is_alternate_admin'];
+    }
+
+    /**
+     * Sets is_alternate_admin
+     *
+     * @param ?string $is_alternate_admin 
+     *
+     * @return $this
+     */
+    public function setIsAlternateAdmin($is_alternate_admin)
+    {
+        $this->container['is_alternate_admin'] = $is_alternate_admin;
 
         return $this;
     }

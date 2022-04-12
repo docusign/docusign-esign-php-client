@@ -144,6 +144,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_platform' => '?string',
         'allow_idv_platform_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_in_person' => '?string',
+        'allow_in_person_electronic_notary' => '?string',
+        'allow_in_person_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_in_person_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_managed_stamps' => '?string',
         'allow_managed_stamps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -173,12 +175,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organizations_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_organization_sso_management' => '?string',
         'allow_organization_sso_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_organization_to_use_in_person_electronic_notary' => '?string',
+        'allow_organization_to_use_in_person_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_organization_to_use_remote_notary' => '?string',
         'allow_organization_to_use_remote_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_payment_processing' => '?string',
         'allow_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_personal_signer_certificate' => '?string',
-        'allow_personal_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_phone_authentication' => '?string',
         'allow_phone_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_phone_auth_override' => '?string',
@@ -237,6 +239,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_users_to_access_directory_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_value_insights' => '?string',
         'allow_value_insights_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_web_forms' => '?string',
+        'allow_web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'anchor_population_scope' => '?string',
         'anchor_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'anchor_tag_versioned_placement_enabled' => '?string',
@@ -632,6 +636,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'uses_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_signature_provider_platform' => '?string',
         'use_signature_provider_platform_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'use_smart_contracts_v1' => '?string',
         'validations_allowed' => '?string',
         'validations_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'validations_brand' => '?string',
@@ -740,6 +745,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_platform' => null,
         'allow_idv_platform_metadata' => null,
         'allow_in_person' => null,
+        'allow_in_person_electronic_notary' => null,
+        'allow_in_person_electronic_notary_metadata' => null,
         'allow_in_person_metadata' => null,
         'allow_managed_stamps' => null,
         'allow_managed_stamps_metadata' => null,
@@ -769,12 +776,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organizations_metadata' => null,
         'allow_organization_sso_management' => null,
         'allow_organization_sso_management_metadata' => null,
+        'allow_organization_to_use_in_person_electronic_notary' => null,
+        'allow_organization_to_use_in_person_electronic_notary_metadata' => null,
         'allow_organization_to_use_remote_notary' => null,
         'allow_organization_to_use_remote_notary_metadata' => null,
         'allow_payment_processing' => null,
         'allow_payment_processing_metadata' => null,
-        'allow_personal_signer_certificate' => null,
-        'allow_personal_signer_certificate_metadata' => null,
         'allow_phone_authentication' => null,
         'allow_phone_authentication_metadata' => null,
         'allow_phone_auth_override' => null,
@@ -833,6 +840,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_users_to_access_directory_metadata' => null,
         'allow_value_insights' => null,
         'allow_value_insights_metadata' => null,
+        'allow_web_forms' => null,
+        'allow_web_forms_metadata' => null,
         'anchor_population_scope' => null,
         'anchor_population_scope_metadata' => null,
         'anchor_tag_versioned_placement_enabled' => null,
@@ -1228,6 +1237,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'uses_api_metadata' => null,
         'use_signature_provider_platform' => null,
         'use_signature_provider_platform_metadata' => null,
+        'use_smart_contracts_v1' => null,
         'validations_allowed' => null,
         'validations_allowed_metadata' => null,
         'validations_brand' => null,
@@ -1357,6 +1367,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_platform' => 'allowIDVPlatform',
         'allow_idv_platform_metadata' => 'allowIDVPlatformMetadata',
         'allow_in_person' => 'allowInPerson',
+        'allow_in_person_electronic_notary' => 'allowInPersonElectronicNotary',
+        'allow_in_person_electronic_notary_metadata' => 'allowInPersonElectronicNotaryMetadata',
         'allow_in_person_metadata' => 'allowInPersonMetadata',
         'allow_managed_stamps' => 'allowManagedStamps',
         'allow_managed_stamps_metadata' => 'allowManagedStampsMetadata',
@@ -1386,12 +1398,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organizations_metadata' => 'allowOrganizationsMetadata',
         'allow_organization_sso_management' => 'allowOrganizationSsoManagement',
         'allow_organization_sso_management_metadata' => 'allowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_in_person_electronic_notary' => 'allowOrganizationToUseInPersonElectronicNotary',
+        'allow_organization_to_use_in_person_electronic_notary_metadata' => 'allowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary' => 'allowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata' => 'allowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing' => 'allowPaymentProcessing',
         'allow_payment_processing_metadata' => 'allowPaymentProcessingMetadata',
-        'allow_personal_signer_certificate' => 'allowPersonalSignerCertificate',
-        'allow_personal_signer_certificate_metadata' => 'allowPersonalSignerCertificateMetadata',
         'allow_phone_authentication' => 'allowPhoneAuthentication',
         'allow_phone_authentication_metadata' => 'allowPhoneAuthenticationMetadata',
         'allow_phone_auth_override' => 'allowPhoneAuthOverride',
@@ -1450,6 +1462,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_users_to_access_directory_metadata' => 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'allowValueInsights',
         'allow_value_insights_metadata' => 'allowValueInsightsMetadata',
+        'allow_web_forms' => 'allowWebForms',
+        'allow_web_forms_metadata' => 'allowWebFormsMetadata',
         'anchor_population_scope' => 'anchorPopulationScope',
         'anchor_population_scope_metadata' => 'anchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'anchorTagVersionedPlacementEnabled',
@@ -1845,6 +1859,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'uses_api_metadata' => 'usesAPIMetadata',
         'use_signature_provider_platform' => 'useSignatureProviderPlatform',
         'use_signature_provider_platform_metadata' => 'useSignatureProviderPlatformMetadata',
+        'use_smart_contracts_v1' => 'useSmartContractsV1',
         'validations_allowed' => 'validationsAllowed',
         'validations_allowed_metadata' => 'validationsAllowedMetadata',
         'validations_brand' => 'validationsBrand',
@@ -1953,6 +1968,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_platform' => 'setAllowIdvPlatform',
         'allow_idv_platform_metadata' => 'setAllowIdvPlatformMetadata',
         'allow_in_person' => 'setAllowInPerson',
+        'allow_in_person_electronic_notary' => 'setAllowInPersonElectronicNotary',
+        'allow_in_person_electronic_notary_metadata' => 'setAllowInPersonElectronicNotaryMetadata',
         'allow_in_person_metadata' => 'setAllowInPersonMetadata',
         'allow_managed_stamps' => 'setAllowManagedStamps',
         'allow_managed_stamps_metadata' => 'setAllowManagedStampsMetadata',
@@ -1982,12 +1999,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organizations_metadata' => 'setAllowOrganizationsMetadata',
         'allow_organization_sso_management' => 'setAllowOrganizationSsoManagement',
         'allow_organization_sso_management_metadata' => 'setAllowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_in_person_electronic_notary' => 'setAllowOrganizationToUseInPersonElectronicNotary',
+        'allow_organization_to_use_in_person_electronic_notary_metadata' => 'setAllowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary' => 'setAllowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata' => 'setAllowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing' => 'setAllowPaymentProcessing',
         'allow_payment_processing_metadata' => 'setAllowPaymentProcessingMetadata',
-        'allow_personal_signer_certificate' => 'setAllowPersonalSignerCertificate',
-        'allow_personal_signer_certificate_metadata' => 'setAllowPersonalSignerCertificateMetadata',
         'allow_phone_authentication' => 'setAllowPhoneAuthentication',
         'allow_phone_authentication_metadata' => 'setAllowPhoneAuthenticationMetadata',
         'allow_phone_auth_override' => 'setAllowPhoneAuthOverride',
@@ -2046,6 +2063,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_users_to_access_directory_metadata' => 'setAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'setAllowValueInsights',
         'allow_value_insights_metadata' => 'setAllowValueInsightsMetadata',
+        'allow_web_forms' => 'setAllowWebForms',
+        'allow_web_forms_metadata' => 'setAllowWebFormsMetadata',
         'anchor_population_scope' => 'setAnchorPopulationScope',
         'anchor_population_scope_metadata' => 'setAnchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'setAnchorTagVersionedPlacementEnabled',
@@ -2441,6 +2460,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'uses_api_metadata' => 'setUsesApiMetadata',
         'use_signature_provider_platform' => 'setUseSignatureProviderPlatform',
         'use_signature_provider_platform_metadata' => 'setUseSignatureProviderPlatformMetadata',
+        'use_smart_contracts_v1' => 'setUseSmartContractsV1',
         'validations_allowed' => 'setValidationsAllowed',
         'validations_allowed_metadata' => 'setValidationsAllowedMetadata',
         'validations_brand' => 'setValidationsBrand',
@@ -2549,6 +2569,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_platform' => 'getAllowIdvPlatform',
         'allow_idv_platform_metadata' => 'getAllowIdvPlatformMetadata',
         'allow_in_person' => 'getAllowInPerson',
+        'allow_in_person_electronic_notary' => 'getAllowInPersonElectronicNotary',
+        'allow_in_person_electronic_notary_metadata' => 'getAllowInPersonElectronicNotaryMetadata',
         'allow_in_person_metadata' => 'getAllowInPersonMetadata',
         'allow_managed_stamps' => 'getAllowManagedStamps',
         'allow_managed_stamps_metadata' => 'getAllowManagedStampsMetadata',
@@ -2578,12 +2600,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organizations_metadata' => 'getAllowOrganizationsMetadata',
         'allow_organization_sso_management' => 'getAllowOrganizationSsoManagement',
         'allow_organization_sso_management_metadata' => 'getAllowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_in_person_electronic_notary' => 'getAllowOrganizationToUseInPersonElectronicNotary',
+        'allow_organization_to_use_in_person_electronic_notary_metadata' => 'getAllowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary' => 'getAllowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata' => 'getAllowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing' => 'getAllowPaymentProcessing',
         'allow_payment_processing_metadata' => 'getAllowPaymentProcessingMetadata',
-        'allow_personal_signer_certificate' => 'getAllowPersonalSignerCertificate',
-        'allow_personal_signer_certificate_metadata' => 'getAllowPersonalSignerCertificateMetadata',
         'allow_phone_authentication' => 'getAllowPhoneAuthentication',
         'allow_phone_authentication_metadata' => 'getAllowPhoneAuthenticationMetadata',
         'allow_phone_auth_override' => 'getAllowPhoneAuthOverride',
@@ -2642,6 +2664,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_users_to_access_directory_metadata' => 'getAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'getAllowValueInsights',
         'allow_value_insights_metadata' => 'getAllowValueInsightsMetadata',
+        'allow_web_forms' => 'getAllowWebForms',
+        'allow_web_forms_metadata' => 'getAllowWebFormsMetadata',
         'anchor_population_scope' => 'getAnchorPopulationScope',
         'anchor_population_scope_metadata' => 'getAnchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'getAnchorTagVersionedPlacementEnabled',
@@ -3037,6 +3061,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'uses_api_metadata' => 'getUsesApiMetadata',
         'use_signature_provider_platform' => 'getUseSignatureProviderPlatform',
         'use_signature_provider_platform_metadata' => 'getUseSignatureProviderPlatformMetadata',
+        'use_smart_contracts_v1' => 'getUseSmartContractsV1',
         'validations_allowed' => 'getValidationsAllowed',
         'validations_allowed_metadata' => 'getValidationsAllowedMetadata',
         'validations_brand' => 'getValidationsBrand',
@@ -3199,6 +3224,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_idv_platform'] = isset($data['allow_idv_platform']) ? $data['allow_idv_platform'] : null;
         $this->container['allow_idv_platform_metadata'] = isset($data['allow_idv_platform_metadata']) ? $data['allow_idv_platform_metadata'] : null;
         $this->container['allow_in_person'] = isset($data['allow_in_person']) ? $data['allow_in_person'] : null;
+        $this->container['allow_in_person_electronic_notary'] = isset($data['allow_in_person_electronic_notary']) ? $data['allow_in_person_electronic_notary'] : null;
+        $this->container['allow_in_person_electronic_notary_metadata'] = isset($data['allow_in_person_electronic_notary_metadata']) ? $data['allow_in_person_electronic_notary_metadata'] : null;
         $this->container['allow_in_person_metadata'] = isset($data['allow_in_person_metadata']) ? $data['allow_in_person_metadata'] : null;
         $this->container['allow_managed_stamps'] = isset($data['allow_managed_stamps']) ? $data['allow_managed_stamps'] : null;
         $this->container['allow_managed_stamps_metadata'] = isset($data['allow_managed_stamps_metadata']) ? $data['allow_managed_stamps_metadata'] : null;
@@ -3228,12 +3255,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_organizations_metadata'] = isset($data['allow_organizations_metadata']) ? $data['allow_organizations_metadata'] : null;
         $this->container['allow_organization_sso_management'] = isset($data['allow_organization_sso_management']) ? $data['allow_organization_sso_management'] : null;
         $this->container['allow_organization_sso_management_metadata'] = isset($data['allow_organization_sso_management_metadata']) ? $data['allow_organization_sso_management_metadata'] : null;
+        $this->container['allow_organization_to_use_in_person_electronic_notary'] = isset($data['allow_organization_to_use_in_person_electronic_notary']) ? $data['allow_organization_to_use_in_person_electronic_notary'] : null;
+        $this->container['allow_organization_to_use_in_person_electronic_notary_metadata'] = isset($data['allow_organization_to_use_in_person_electronic_notary_metadata']) ? $data['allow_organization_to_use_in_person_electronic_notary_metadata'] : null;
         $this->container['allow_organization_to_use_remote_notary'] = isset($data['allow_organization_to_use_remote_notary']) ? $data['allow_organization_to_use_remote_notary'] : null;
         $this->container['allow_organization_to_use_remote_notary_metadata'] = isset($data['allow_organization_to_use_remote_notary_metadata']) ? $data['allow_organization_to_use_remote_notary_metadata'] : null;
         $this->container['allow_payment_processing'] = isset($data['allow_payment_processing']) ? $data['allow_payment_processing'] : null;
         $this->container['allow_payment_processing_metadata'] = isset($data['allow_payment_processing_metadata']) ? $data['allow_payment_processing_metadata'] : null;
-        $this->container['allow_personal_signer_certificate'] = isset($data['allow_personal_signer_certificate']) ? $data['allow_personal_signer_certificate'] : null;
-        $this->container['allow_personal_signer_certificate_metadata'] = isset($data['allow_personal_signer_certificate_metadata']) ? $data['allow_personal_signer_certificate_metadata'] : null;
         $this->container['allow_phone_authentication'] = isset($data['allow_phone_authentication']) ? $data['allow_phone_authentication'] : null;
         $this->container['allow_phone_authentication_metadata'] = isset($data['allow_phone_authentication_metadata']) ? $data['allow_phone_authentication_metadata'] : null;
         $this->container['allow_phone_auth_override'] = isset($data['allow_phone_auth_override']) ? $data['allow_phone_auth_override'] : null;
@@ -3292,6 +3319,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_users_to_access_directory_metadata'] = isset($data['allow_users_to_access_directory_metadata']) ? $data['allow_users_to_access_directory_metadata'] : null;
         $this->container['allow_value_insights'] = isset($data['allow_value_insights']) ? $data['allow_value_insights'] : null;
         $this->container['allow_value_insights_metadata'] = isset($data['allow_value_insights_metadata']) ? $data['allow_value_insights_metadata'] : null;
+        $this->container['allow_web_forms'] = isset($data['allow_web_forms']) ? $data['allow_web_forms'] : null;
+        $this->container['allow_web_forms_metadata'] = isset($data['allow_web_forms_metadata']) ? $data['allow_web_forms_metadata'] : null;
         $this->container['anchor_population_scope'] = isset($data['anchor_population_scope']) ? $data['anchor_population_scope'] : null;
         $this->container['anchor_population_scope_metadata'] = isset($data['anchor_population_scope_metadata']) ? $data['anchor_population_scope_metadata'] : null;
         $this->container['anchor_tag_versioned_placement_enabled'] = isset($data['anchor_tag_versioned_placement_enabled']) ? $data['anchor_tag_versioned_placement_enabled'] : null;
@@ -3687,6 +3716,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['uses_api_metadata'] = isset($data['uses_api_metadata']) ? $data['uses_api_metadata'] : null;
         $this->container['use_signature_provider_platform'] = isset($data['use_signature_provider_platform']) ? $data['use_signature_provider_platform'] : null;
         $this->container['use_signature_provider_platform_metadata'] = isset($data['use_signature_provider_platform_metadata']) ? $data['use_signature_provider_platform_metadata'] : null;
+        $this->container['use_smart_contracts_v1'] = isset($data['use_smart_contracts_v1']) ? $data['use_smart_contracts_v1'] : null;
         $this->container['validations_allowed'] = isset($data['validations_allowed']) ? $data['validations_allowed'] : null;
         $this->container['validations_allowed_metadata'] = isset($data['validations_allowed_metadata']) ? $data['validations_allowed_metadata'] : null;
         $this->container['validations_brand'] = isset($data['validations_brand']) ? $data['validations_brand'] : null;
@@ -5746,6 +5776,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_in_person_electronic_notary
+     *
+     * @return ?string
+     */
+    public function getAllowInPersonElectronicNotary()
+    {
+        return $this->container['allow_in_person_electronic_notary'];
+    }
+
+    /**
+     * Sets allow_in_person_electronic_notary
+     *
+     * @param ?string $allow_in_person_electronic_notary 
+     *
+     * @return $this
+     */
+    public function setAllowInPersonElectronicNotary($allow_in_person_electronic_notary)
+    {
+        $this->container['allow_in_person_electronic_notary'] = $allow_in_person_electronic_notary;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_in_person_electronic_notary_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowInPersonElectronicNotaryMetadata()
+    {
+        return $this->container['allow_in_person_electronic_notary_metadata'];
+    }
+
+    /**
+     * Sets allow_in_person_electronic_notary_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_in_person_electronic_notary_metadata allow_in_person_electronic_notary_metadata
+     *
+     * @return $this
+     */
+    public function setAllowInPersonElectronicNotaryMetadata($allow_in_person_electronic_notary_metadata)
+    {
+        $this->container['allow_in_person_electronic_notary_metadata'] = $allow_in_person_electronic_notary_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_in_person_metadata
      *
      * @return \DocuSign\eSign\Model\SettingsMetadata
@@ -6442,6 +6520,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_organization_to_use_in_person_electronic_notary
+     *
+     * @return ?string
+     */
+    public function getAllowOrganizationToUseInPersonElectronicNotary()
+    {
+        return $this->container['allow_organization_to_use_in_person_electronic_notary'];
+    }
+
+    /**
+     * Sets allow_organization_to_use_in_person_electronic_notary
+     *
+     * @param ?string $allow_organization_to_use_in_person_electronic_notary 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationToUseInPersonElectronicNotary($allow_organization_to_use_in_person_electronic_notary)
+    {
+        $this->container['allow_organization_to_use_in_person_electronic_notary'] = $allow_organization_to_use_in_person_electronic_notary;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_to_use_in_person_electronic_notary_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowOrganizationToUseInPersonElectronicNotaryMetadata()
+    {
+        return $this->container['allow_organization_to_use_in_person_electronic_notary_metadata'];
+    }
+
+    /**
+     * Sets allow_organization_to_use_in_person_electronic_notary_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_in_person_electronic_notary_metadata allow_organization_to_use_in_person_electronic_notary_metadata
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationToUseInPersonElectronicNotaryMetadata($allow_organization_to_use_in_person_electronic_notary_metadata)
+    {
+        $this->container['allow_organization_to_use_in_person_electronic_notary_metadata'] = $allow_organization_to_use_in_person_electronic_notary_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_organization_to_use_remote_notary
      *
      * @return ?string
@@ -6533,54 +6659,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowPaymentProcessingMetadata($allow_payment_processing_metadata)
     {
         $this->container['allow_payment_processing_metadata'] = $allow_payment_processing_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets allow_personal_signer_certificate
-     *
-     * @return ?string
-     */
-    public function getAllowPersonalSignerCertificate()
-    {
-        return $this->container['allow_personal_signer_certificate'];
-    }
-
-    /**
-     * Sets allow_personal_signer_certificate
-     *
-     * @param ?string $allow_personal_signer_certificate 
-     *
-     * @return $this
-     */
-    public function setAllowPersonalSignerCertificate($allow_personal_signer_certificate)
-    {
-        $this->container['allow_personal_signer_certificate'] = $allow_personal_signer_certificate;
-
-        return $this;
-    }
-
-    /**
-     * Gets allow_personal_signer_certificate_metadata
-     *
-     * @return \DocuSign\eSign\Model\SettingsMetadata
-     */
-    public function getAllowPersonalSignerCertificateMetadata()
-    {
-        return $this->container['allow_personal_signer_certificate_metadata'];
-    }
-
-    /**
-     * Sets allow_personal_signer_certificate_metadata
-     *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_personal_signer_certificate_metadata allow_personal_signer_certificate_metadata
-     *
-     * @return $this
-     */
-    public function setAllowPersonalSignerCertificateMetadata($allow_personal_signer_certificate_metadata)
-    {
-        $this->container['allow_personal_signer_certificate_metadata'] = $allow_personal_signer_certificate_metadata;
 
         return $this;
     }
@@ -7973,6 +8051,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowValueInsightsMetadata($allow_value_insights_metadata)
     {
         $this->container['allow_value_insights_metadata'] = $allow_value_insights_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_web_forms
+     *
+     * @return ?string
+     */
+    public function getAllowWebForms()
+    {
+        return $this->container['allow_web_forms'];
+    }
+
+    /**
+     * Sets allow_web_forms
+     *
+     * @param ?string $allow_web_forms 
+     *
+     * @return $this
+     */
+    public function setAllowWebForms($allow_web_forms)
+    {
+        $this->container['allow_web_forms'] = $allow_web_forms;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_web_forms_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowWebFormsMetadata()
+    {
+        return $this->container['allow_web_forms_metadata'];
+    }
+
+    /**
+     * Sets allow_web_forms_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_web_forms_metadata allow_web_forms_metadata
+     *
+     * @return $this
+     */
+    public function setAllowWebFormsMetadata($allow_web_forms_metadata)
+    {
+        $this->container['allow_web_forms_metadata'] = $allow_web_forms_metadata;
 
         return $this;
     }
@@ -17453,6 +17579,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setUseSignatureProviderPlatformMetadata($use_signature_provider_platform_metadata)
     {
         $this->container['use_signature_provider_platform_metadata'] = $use_signature_provider_platform_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_smart_contracts_v1
+     *
+     * @return ?string
+     */
+    public function getUseSmartContractsV1()
+    {
+        return $this->container['use_smart_contracts_v1'];
+    }
+
+    /**
+     * Sets use_smart_contracts_v1
+     *
+     * @param ?string $use_smart_contracts_v1 
+     *
+     * @return $this
+     */
+    public function setUseSmartContractsV1($use_smart_contracts_v1)
+    {
+        $this->container['use_smart_contracts_v1'] = $use_smart_contracts_v1;
 
         return $this;
     }

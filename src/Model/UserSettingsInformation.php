@@ -179,7 +179,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => '?string',
         'transaction_point_user_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'vaulting_mode' => '?string',
-        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
+        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'web_forms' => '?string',
+        'web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
     /**
@@ -308,7 +310,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => null,
         'transaction_point_user_name_metadata' => null,
         'vaulting_mode' => null,
-        'vaulting_mode_metadata' => null
+        'vaulting_mode_metadata' => null,
+        'web_forms' => null,
+        'web_forms_metadata' => null
     ];
 
     /**
@@ -458,7 +462,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => 'transactionPointUserName',
         'transaction_point_user_name_metadata' => 'transactionPointUserNameMetadata',
         'vaulting_mode' => 'vaultingMode',
-        'vaulting_mode_metadata' => 'vaultingModeMetadata'
+        'vaulting_mode_metadata' => 'vaultingModeMetadata',
+        'web_forms' => 'webForms',
+        'web_forms_metadata' => 'webFormsMetadata'
     ];
 
     /**
@@ -587,7 +593,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => 'setTransactionPointUserName',
         'transaction_point_user_name_metadata' => 'setTransactionPointUserNameMetadata',
         'vaulting_mode' => 'setVaultingMode',
-        'vaulting_mode_metadata' => 'setVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'setVaultingModeMetadata',
+        'web_forms' => 'setWebForms',
+        'web_forms_metadata' => 'setWebFormsMetadata'
     ];
 
     /**
@@ -716,7 +724,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => 'getTransactionPointUserName',
         'transaction_point_user_name_metadata' => 'getTransactionPointUserNameMetadata',
         'vaulting_mode' => 'getVaultingMode',
-        'vaulting_mode_metadata' => 'getVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'getVaultingModeMetadata',
+        'web_forms' => 'getWebForms',
+        'web_forms_metadata' => 'getWebFormsMetadata'
     ];
 
     /**
@@ -900,6 +910,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['transaction_point_user_name_metadata'] = isset($data['transaction_point_user_name_metadata']) ? $data['transaction_point_user_name_metadata'] : null;
         $this->container['vaulting_mode'] = isset($data['vaulting_mode']) ? $data['vaulting_mode'] : null;
         $this->container['vaulting_mode_metadata'] = isset($data['vaulting_mode_metadata']) ? $data['vaulting_mode_metadata'] : null;
+        $this->container['web_forms'] = isset($data['web_forms']) ? $data['web_forms'] : null;
+        $this->container['web_forms_metadata'] = isset($data['web_forms_metadata']) ? $data['web_forms_metadata'] : null;
     }
 
     /**
@@ -3826,6 +3838,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setVaultingModeMetadata($vaulting_mode_metadata)
     {
         $this->container['vaulting_mode_metadata'] = $vaulting_mode_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms
+     *
+     * @return ?string
+     */
+    public function getWebForms()
+    {
+        return $this->container['web_forms'];
+    }
+
+    /**
+     * Sets web_forms
+     *
+     * @param ?string $web_forms 
+     *
+     * @return $this
+     */
+    public function setWebForms($web_forms)
+    {
+        $this->container['web_forms'] = $web_forms;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getWebFormsMetadata()
+    {
+        return $this->container['web_forms_metadata'];
+    }
+
+    /**
+     * Sets web_forms_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata web_forms_metadata
+     *
+     * @return $this
+     */
+    public function setWebFormsMetadata($web_forms_metadata)
+    {
+        $this->container['web_forms_metadata'] = $web_forms_metadata;
 
         return $this;
     }

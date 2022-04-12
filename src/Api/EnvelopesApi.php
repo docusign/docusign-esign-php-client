@@ -849,47 +849,6 @@ class GetDocumentPageImageOptions
 
 
 /**
- * GetDocumentResponsiveHtmlOptions Class Doc Comment
- *
- * @category Class
- * @package  DocuSign\eSign
- * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
- * @link     https://github.com/swagger-api/swagger-codegen
- */
-class GetDocumentResponsiveHtmlOptions
-{
-    /**
-      * $include_anchor_tab_locations 
-      * @var ?string
-      */
-    protected ?string $include_anchor_tab_locations = null;
-
-    /**
-     * Gets include_anchor_tab_locations
-     *
-     * @return ?string
-     */
-    public function getIncludeAnchorTabLocations(): ?string
-    {
-        return $this->include_anchor_tab_locations;
-    }
-
-    /**
-     * Sets include_anchor_tab_locations
-     * @param ?string $include_anchor_tab_locations 
-     *
-     * @return self
-     */
-    public function setIncludeAnchorTabLocations(?string $include_anchor_tab_locations): self
-    {
-        $this->include_anchor_tab_locations = $include_anchor_tab_locations;
-        return $this;
-    }
-}
-
-
-/**
  * GetDocumentTabsOptions Class Doc Comment
  *
  * @category Class
@@ -1373,47 +1332,6 @@ class GetRecipientSignatureImageOptions
     public function setIncludeChrome(?string $include_chrome): self
     {
         $this->include_chrome = $include_chrome;
-        return $this;
-    }
-}
-
-
-/**
- * GetResponsiveHtmlOptions Class Doc Comment
- *
- * @category Class
- * @package  DocuSign\eSign
- * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
- * @link     https://github.com/swagger-api/swagger-codegen
- */
-class GetResponsiveHtmlOptions
-{
-    /**
-      * $include_anchor_tab_locations 
-      * @var ?string
-      */
-    protected ?string $include_anchor_tab_locations = null;
-
-    /**
-     * Gets include_anchor_tab_locations
-     *
-     * @return ?string
-     */
-    public function getIncludeAnchorTabLocations(): ?string
-    {
-        return $this->include_anchor_tab_locations;
-    }
-
-    /**
-     * Sets include_anchor_tab_locations
-     * @param ?string $include_anchor_tab_locations 
-     *
-     * @return self
-     */
-    public function setIncludeAnchorTabLocations(?string $include_anchor_tab_locations): self
-    {
-        $this->include_anchor_tab_locations = $include_anchor_tab_locations;
         return $this;
     }
 }
@@ -8681,122 +8599,6 @@ class EnvelopesApi
     }
 
     /**
-     * Operation getDocumentResponsiveHtml
-     *
-     * Get Responsive HTML for a document in an envelope.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $document_id The ID of the document being accessed.
-     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentResponsiveHtmlOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
-     */
-    public function getDocumentResponsiveHtml($account_id, $document_id, $envelope_id, \DocuSign\eSign\Api\EnvelopesApi\GetDocumentResponsiveHtmlOptions $options = null)
-    {
-        list($response) = $this->getDocumentResponsiveHtmlWithHttpInfo($account_id, $document_id, $envelope_id, $options);
-        return $response;
-    }
-
-    /**
-     * Operation getDocumentResponsiveHtmlWithHttpInfo
-     *
-     * Get Responsive HTML for a document in an envelope.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $document_id The ID of the document being accessed.
-     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetDocumentResponsiveHtmlOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getDocumentResponsiveHtmlWithHttpInfo($account_id, $document_id, $envelope_id, \DocuSign\eSign\Api\EnvelopesApi\GetDocumentResponsiveHtmlOptions $options = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getDocumentResponsiveHtml');
-        }
-        // verify the required parameter 'document_id' is set
-        if ($document_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document_id when calling getDocumentResponsiveHtml');
-        }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getDocumentResponsiveHtml');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-            // query params
-            if ($options->getIncludeAnchorTabLocations() != 'null') {
-                $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
-            }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($document_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "documentId", $document_id);
-        }
-        // path params
-        if ($envelope_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals',
-                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation getDocumentTabs
      *
      * Returns tabs on the document.
@@ -10497,112 +10299,6 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getResponsiveHtml
-     *
-     * Get Responsive HTML for all documents in an envelope.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetResponsiveHtmlOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals
-     */
-    public function getResponsiveHtml($account_id, $envelope_id, \DocuSign\eSign\Api\EnvelopesApi\GetResponsiveHtmlOptions $options = null)
-    {
-        list($response) = $this->getResponsiveHtmlWithHttpInfo($account_id, $envelope_id, $options);
-        return $response;
-    }
-
-    /**
-     * Operation getResponsiveHtmlWithHttpInfo
-     *
-     * Get Responsive HTML for all documents in an envelope.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetResponsiveHtmlOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getResponsiveHtmlWithHttpInfo($account_id, $envelope_id, \DocuSign\eSign\Api\EnvelopesApi\GetResponsiveHtmlOptions $options = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getResponsiveHtml');
-        }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getResponsiveHtml');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/responsive_html";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-            // query params
-            if ($options->getIncludeAnchorTabLocations() != 'null') {
-                $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
-            }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($envelope_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals',
-                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/responsive_html'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -14471,6 +14167,120 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentVisibilityList', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateRegenDocument
+     *
+     * Retrieves a PDF document from the envelope with no CoC.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $regen_document_id 
+     * @param \DocuSign\eSign\Model\Document $document  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \SplFileObject
+     */
+    public function updateRegenDocument($account_id, $envelope_id, $regen_document_id, $document = null)
+    {
+        list($response) = $this->updateRegenDocumentWithHttpInfo($account_id, $envelope_id, $regen_document_id, $document);
+        return $response;
+    }
+
+    /**
+     * Operation updateRegenDocumentWithHttpInfo
+     *
+     * Retrieves a PDF document from the envelope with no CoC.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $regen_document_id 
+     * @param \DocuSign\eSign\Model\Document $document  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateRegenDocumentWithHttpInfo($account_id, $envelope_id, $regen_document_id, $document = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateRegenDocument');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling updateRegenDocument');
+        }
+        // verify the required parameter 'regen_document_id' is set
+        if ($regen_document_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $regen_document_id when calling updateRegenDocument');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{regenDocumentId}/regen";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/pdf']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
+        }
+        // path params
+        if ($regen_document_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "regenDocumentId", $regen_document_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($document)) {
+            $_tempBody = $document;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\SplFileObject',
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{regenDocumentId}/regen'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

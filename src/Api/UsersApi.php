@@ -72,6 +72,33 @@ class ListOptions
         return $this;
     }
     /**
+      * $alternate_admins_only 
+      * @var ?string
+      */
+    protected ?string $alternate_admins_only = null;
+
+    /**
+     * Gets alternate_admins_only
+     *
+     * @return ?string
+     */
+    public function getAlternateAdminsOnly(): ?string
+    {
+        return $this->alternate_admins_only;
+    }
+
+    /**
+     * Sets alternate_admins_only
+     * @param ?string $alternate_admins_only 
+     *
+     * @return self
+     */
+    public function setAlternateAdminsOnly(?string $alternate_admins_only): self
+    {
+        $this->alternate_admins_only = $alternate_admins_only;
+        return $this;
+    }
+    /**
       * $count Number of records to return. The number must be greater than 0 and less than or equal to 100.
       * @var ?string
       */
@@ -975,6 +1002,9 @@ class UsersApi
             // query params
             if ($options->getAdditionalInfo() != 'null') {
                 $queryParams['additional_info'] = $this->apiClient->getSerializer()->toQueryValue($options->getAdditionalInfo());
+            }
+            if ($options->getAlternateAdminsOnly() != 'null') {
+                $queryParams['alternate_admins_only'] = $this->apiClient->getSerializer()->toQueryValue($options->getAlternateAdminsOnly());
             }
             if ($options->getCount() != 'null') {
                 $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
