@@ -260,6 +260,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'billing_address' => '\DocuSign\eSign\Model\AddressInformation',
         'billing_address_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'bulk_send' => '?string',
+        'bulk_send_action_resend_limit' => '?string',
         'bulk_send_max_copies_in_batch' => '?string',
         'bulk_send_max_unprocessed_envelopes_count' => '?string',
         'bulk_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -343,6 +344,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_clickwraps' => '?string',
         'enable_clickwraps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_combined_pdf_download_for_sbs' => '?string',
         'enable_comments_history_download_in_signing' => '?string',
         'enable_comments_history_download_in_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking' => '?string',
@@ -355,12 +357,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_esign_communities' => '?string',
         'enable_esign_communities_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_id_fx_accountless_sms_auth_for_part11' => '?string',
+        'enable_id_fx_accountless_sms_auth_for_part11_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_id_fx_intuit_kba' => '?string',
         'enable_id_fx_intuit_kba_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_id_fx_phone_authentication' => '?string',
         'enable_id_fx_phone_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_in_browser_editor' => '?string',
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type' => '?string',
+        'enable_key_terms_suggestions_by_document_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_payment_processing' => '?string',
         'enable_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_pdfa_conversion' => '?string',
@@ -385,6 +391,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_search' => '?string',
         'enable_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_search_site_specific_api' => '?string',
+        'enable_search_site_specific_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_search_ui' => '?string',
         'enable_search_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sending_tags_font_settings' => '?string',
@@ -861,6 +869,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'billing_address' => null,
         'billing_address_metadata' => null,
         'bulk_send' => null,
+        'bulk_send_action_resend_limit' => null,
         'bulk_send_max_copies_in_batch' => null,
         'bulk_send_max_unprocessed_envelopes_count' => null,
         'bulk_send_metadata' => null,
@@ -944,6 +953,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_calculated_fields_metadata' => null,
         'enable_clickwraps' => null,
         'enable_clickwraps_metadata' => null,
+        'enable_combined_pdf_download_for_sbs' => null,
         'enable_comments_history_download_in_signing' => null,
         'enable_comments_history_download_in_signing_metadata' => null,
         'enable_customer_satisfaction_metric_tracking' => null,
@@ -956,12 +966,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => null,
         'enable_esign_communities' => null,
         'enable_esign_communities_metadata' => null,
+        'enable_id_fx_accountless_sms_auth_for_part11' => null,
+        'enable_id_fx_accountless_sms_auth_for_part11_metadata' => null,
         'enable_id_fx_intuit_kba' => null,
         'enable_id_fx_intuit_kba_metadata' => null,
         'enable_id_fx_phone_authentication' => null,
         'enable_id_fx_phone_authentication_metadata' => null,
         'enable_in_browser_editor' => null,
         'enable_in_browser_editor_metadata' => null,
+        'enable_key_terms_suggestions_by_document_type' => null,
+        'enable_key_terms_suggestions_by_document_type_metadata' => null,
         'enable_payment_processing' => null,
         'enable_payment_processing_metadata' => null,
         'enable_pdfa_conversion' => null,
@@ -986,6 +1000,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => null,
         'enable_search' => null,
         'enable_search_metadata' => null,
+        'enable_search_site_specific_api' => null,
+        'enable_search_site_specific_api_metadata' => null,
         'enable_search_ui' => null,
         'enable_search_ui_metadata' => null,
         'enable_sending_tags_font_settings' => null,
@@ -1483,6 +1499,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'billing_address' => 'billingAddress',
         'billing_address_metadata' => 'billingAddressMetadata',
         'bulk_send' => 'bulkSend',
+        'bulk_send_action_resend_limit' => 'bulkSendActionResendLimit',
         'bulk_send_max_copies_in_batch' => 'bulkSendMaxCopiesInBatch',
         'bulk_send_max_unprocessed_envelopes_count' => 'bulkSendMaxUnprocessedEnvelopesCount',
         'bulk_send_metadata' => 'bulkSendMetadata',
@@ -1566,6 +1583,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_calculated_fields_metadata' => 'enableCalculatedFieldsMetadata',
         'enable_clickwraps' => 'enableClickwraps',
         'enable_clickwraps_metadata' => 'enableClickwrapsMetadata',
+        'enable_combined_pdf_download_for_sbs' => 'enableCombinedPDFDownloadForSBS',
         'enable_comments_history_download_in_signing' => 'enableCommentsHistoryDownloadInSigning',
         'enable_comments_history_download_in_signing_metadata' => 'enableCommentsHistoryDownloadInSigningMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'enableCustomerSatisfactionMetricTracking',
@@ -1578,12 +1596,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => 'enableEnvelopeStampingByDSAdminMetadata',
         'enable_esign_communities' => 'enableEsignCommunities',
         'enable_esign_communities_metadata' => 'enableEsignCommunitiesMetadata',
+        'enable_id_fx_accountless_sms_auth_for_part11' => 'enableIDFxAccountlessSMSAuthForPart11',
+        'enable_id_fx_accountless_sms_auth_for_part11_metadata' => 'enableIDFxAccountlessSMSAuthForPart11Metadata',
         'enable_id_fx_intuit_kba' => 'enableIDFxIntuitKBA',
         'enable_id_fx_intuit_kba_metadata' => 'enableIDFxIntuitKBAMetadata',
         'enable_id_fx_phone_authentication' => 'enableIDFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'enableIDFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor' => 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'enableInBrowserEditorMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_payment_processing' => 'enablePaymentProcessing',
         'enable_payment_processing_metadata' => 'enablePaymentProcessingMetadata',
         'enable_pdfa_conversion' => 'enablePDFAConversion',
@@ -1608,6 +1630,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => 'enableScheduledReleaseMetadata',
         'enable_search' => 'enableSearch',
         'enable_search_metadata' => 'enableSearchMetadata',
+        'enable_search_site_specific_api' => 'enableSearchSiteSpecificApi',
+        'enable_search_site_specific_api_metadata' => 'enableSearchSiteSpecificApiMetadata',
         'enable_search_ui' => 'enableSearchUI',
         'enable_search_ui_metadata' => 'enableSearchUIMetadata',
         'enable_sending_tags_font_settings' => 'enableSendingTagsFontSettings',
@@ -2084,6 +2108,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'billing_address' => 'setBillingAddress',
         'billing_address_metadata' => 'setBillingAddressMetadata',
         'bulk_send' => 'setBulkSend',
+        'bulk_send_action_resend_limit' => 'setBulkSendActionResendLimit',
         'bulk_send_max_copies_in_batch' => 'setBulkSendMaxCopiesInBatch',
         'bulk_send_max_unprocessed_envelopes_count' => 'setBulkSendMaxUnprocessedEnvelopesCount',
         'bulk_send_metadata' => 'setBulkSendMetadata',
@@ -2167,6 +2192,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_calculated_fields_metadata' => 'setEnableCalculatedFieldsMetadata',
         'enable_clickwraps' => 'setEnableClickwraps',
         'enable_clickwraps_metadata' => 'setEnableClickwrapsMetadata',
+        'enable_combined_pdf_download_for_sbs' => 'setEnableCombinedPdfDownloadForSbs',
         'enable_comments_history_download_in_signing' => 'setEnableCommentsHistoryDownloadInSigning',
         'enable_comments_history_download_in_signing_metadata' => 'setEnableCommentsHistoryDownloadInSigningMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'setEnableCustomerSatisfactionMetricTracking',
@@ -2179,12 +2205,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => 'setEnableEnvelopeStampingByDsAdminMetadata',
         'enable_esign_communities' => 'setEnableEsignCommunities',
         'enable_esign_communities_metadata' => 'setEnableEsignCommunitiesMetadata',
+        'enable_id_fx_accountless_sms_auth_for_part11' => 'setEnableIdFxAccountlessSmsAuthForPart11',
+        'enable_id_fx_accountless_sms_auth_for_part11_metadata' => 'setEnableIdFxAccountlessSmsAuthForPart11Metadata',
         'enable_id_fx_intuit_kba' => 'setEnableIdFxIntuitKba',
         'enable_id_fx_intuit_kba_metadata' => 'setEnableIdFxIntuitKbaMetadata',
         'enable_id_fx_phone_authentication' => 'setEnableIdFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'setEnableIdFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor' => 'setEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'setEnableInBrowserEditorMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'setEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_payment_processing' => 'setEnablePaymentProcessing',
         'enable_payment_processing_metadata' => 'setEnablePaymentProcessingMetadata',
         'enable_pdfa_conversion' => 'setEnablePdfaConversion',
@@ -2209,6 +2239,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => 'setEnableScheduledReleaseMetadata',
         'enable_search' => 'setEnableSearch',
         'enable_search_metadata' => 'setEnableSearchMetadata',
+        'enable_search_site_specific_api' => 'setEnableSearchSiteSpecificApi',
+        'enable_search_site_specific_api_metadata' => 'setEnableSearchSiteSpecificApiMetadata',
         'enable_search_ui' => 'setEnableSearchUi',
         'enable_search_ui_metadata' => 'setEnableSearchUiMetadata',
         'enable_sending_tags_font_settings' => 'setEnableSendingTagsFontSettings',
@@ -2685,6 +2717,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'billing_address' => 'getBillingAddress',
         'billing_address_metadata' => 'getBillingAddressMetadata',
         'bulk_send' => 'getBulkSend',
+        'bulk_send_action_resend_limit' => 'getBulkSendActionResendLimit',
         'bulk_send_max_copies_in_batch' => 'getBulkSendMaxCopiesInBatch',
         'bulk_send_max_unprocessed_envelopes_count' => 'getBulkSendMaxUnprocessedEnvelopesCount',
         'bulk_send_metadata' => 'getBulkSendMetadata',
@@ -2768,6 +2801,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_calculated_fields_metadata' => 'getEnableCalculatedFieldsMetadata',
         'enable_clickwraps' => 'getEnableClickwraps',
         'enable_clickwraps_metadata' => 'getEnableClickwrapsMetadata',
+        'enable_combined_pdf_download_for_sbs' => 'getEnableCombinedPdfDownloadForSbs',
         'enable_comments_history_download_in_signing' => 'getEnableCommentsHistoryDownloadInSigning',
         'enable_comments_history_download_in_signing_metadata' => 'getEnableCommentsHistoryDownloadInSigningMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'getEnableCustomerSatisfactionMetricTracking',
@@ -2780,12 +2814,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_envelope_stamping_by_ds_admin_metadata' => 'getEnableEnvelopeStampingByDsAdminMetadata',
         'enable_esign_communities' => 'getEnableEsignCommunities',
         'enable_esign_communities_metadata' => 'getEnableEsignCommunitiesMetadata',
+        'enable_id_fx_accountless_sms_auth_for_part11' => 'getEnableIdFxAccountlessSmsAuthForPart11',
+        'enable_id_fx_accountless_sms_auth_for_part11_metadata' => 'getEnableIdFxAccountlessSmsAuthForPart11Metadata',
         'enable_id_fx_intuit_kba' => 'getEnableIdFxIntuitKba',
         'enable_id_fx_intuit_kba_metadata' => 'getEnableIdFxIntuitKbaMetadata',
         'enable_id_fx_phone_authentication' => 'getEnableIdFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'getEnableIdFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor' => 'getEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'getEnableInBrowserEditorMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'getEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_payment_processing' => 'getEnablePaymentProcessing',
         'enable_payment_processing_metadata' => 'getEnablePaymentProcessingMetadata',
         'enable_pdfa_conversion' => 'getEnablePdfaConversion',
@@ -2810,6 +2848,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => 'getEnableScheduledReleaseMetadata',
         'enable_search' => 'getEnableSearch',
         'enable_search_metadata' => 'getEnableSearchMetadata',
+        'enable_search_site_specific_api' => 'getEnableSearchSiteSpecificApi',
+        'enable_search_site_specific_api_metadata' => 'getEnableSearchSiteSpecificApiMetadata',
         'enable_search_ui' => 'getEnableSearchUi',
         'enable_search_ui_metadata' => 'getEnableSearchUiMetadata',
         'enable_sending_tags_font_settings' => 'getEnableSendingTagsFontSettings',
@@ -3340,6 +3380,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['billing_address'] = isset($data['billing_address']) ? $data['billing_address'] : null;
         $this->container['billing_address_metadata'] = isset($data['billing_address_metadata']) ? $data['billing_address_metadata'] : null;
         $this->container['bulk_send'] = isset($data['bulk_send']) ? $data['bulk_send'] : null;
+        $this->container['bulk_send_action_resend_limit'] = isset($data['bulk_send_action_resend_limit']) ? $data['bulk_send_action_resend_limit'] : null;
         $this->container['bulk_send_max_copies_in_batch'] = isset($data['bulk_send_max_copies_in_batch']) ? $data['bulk_send_max_copies_in_batch'] : null;
         $this->container['bulk_send_max_unprocessed_envelopes_count'] = isset($data['bulk_send_max_unprocessed_envelopes_count']) ? $data['bulk_send_max_unprocessed_envelopes_count'] : null;
         $this->container['bulk_send_metadata'] = isset($data['bulk_send_metadata']) ? $data['bulk_send_metadata'] : null;
@@ -3423,6 +3464,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_calculated_fields_metadata'] = isset($data['enable_calculated_fields_metadata']) ? $data['enable_calculated_fields_metadata'] : null;
         $this->container['enable_clickwraps'] = isset($data['enable_clickwraps']) ? $data['enable_clickwraps'] : null;
         $this->container['enable_clickwraps_metadata'] = isset($data['enable_clickwraps_metadata']) ? $data['enable_clickwraps_metadata'] : null;
+        $this->container['enable_combined_pdf_download_for_sbs'] = isset($data['enable_combined_pdf_download_for_sbs']) ? $data['enable_combined_pdf_download_for_sbs'] : null;
         $this->container['enable_comments_history_download_in_signing'] = isset($data['enable_comments_history_download_in_signing']) ? $data['enable_comments_history_download_in_signing'] : null;
         $this->container['enable_comments_history_download_in_signing_metadata'] = isset($data['enable_comments_history_download_in_signing_metadata']) ? $data['enable_comments_history_download_in_signing_metadata'] : null;
         $this->container['enable_customer_satisfaction_metric_tracking'] = isset($data['enable_customer_satisfaction_metric_tracking']) ? $data['enable_customer_satisfaction_metric_tracking'] : null;
@@ -3435,12 +3477,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_envelope_stamping_by_ds_admin_metadata'] = isset($data['enable_envelope_stamping_by_ds_admin_metadata']) ? $data['enable_envelope_stamping_by_ds_admin_metadata'] : null;
         $this->container['enable_esign_communities'] = isset($data['enable_esign_communities']) ? $data['enable_esign_communities'] : null;
         $this->container['enable_esign_communities_metadata'] = isset($data['enable_esign_communities_metadata']) ? $data['enable_esign_communities_metadata'] : null;
+        $this->container['enable_id_fx_accountless_sms_auth_for_part11'] = isset($data['enable_id_fx_accountless_sms_auth_for_part11']) ? $data['enable_id_fx_accountless_sms_auth_for_part11'] : null;
+        $this->container['enable_id_fx_accountless_sms_auth_for_part11_metadata'] = isset($data['enable_id_fx_accountless_sms_auth_for_part11_metadata']) ? $data['enable_id_fx_accountless_sms_auth_for_part11_metadata'] : null;
         $this->container['enable_id_fx_intuit_kba'] = isset($data['enable_id_fx_intuit_kba']) ? $data['enable_id_fx_intuit_kba'] : null;
         $this->container['enable_id_fx_intuit_kba_metadata'] = isset($data['enable_id_fx_intuit_kba_metadata']) ? $data['enable_id_fx_intuit_kba_metadata'] : null;
         $this->container['enable_id_fx_phone_authentication'] = isset($data['enable_id_fx_phone_authentication']) ? $data['enable_id_fx_phone_authentication'] : null;
         $this->container['enable_id_fx_phone_authentication_metadata'] = isset($data['enable_id_fx_phone_authentication_metadata']) ? $data['enable_id_fx_phone_authentication_metadata'] : null;
         $this->container['enable_in_browser_editor'] = isset($data['enable_in_browser_editor']) ? $data['enable_in_browser_editor'] : null;
         $this->container['enable_in_browser_editor_metadata'] = isset($data['enable_in_browser_editor_metadata']) ? $data['enable_in_browser_editor_metadata'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = isset($data['enable_key_terms_suggestions_by_document_type_metadata']) ? $data['enable_key_terms_suggestions_by_document_type_metadata'] : null;
         $this->container['enable_payment_processing'] = isset($data['enable_payment_processing']) ? $data['enable_payment_processing'] : null;
         $this->container['enable_payment_processing_metadata'] = isset($data['enable_payment_processing_metadata']) ? $data['enable_payment_processing_metadata'] : null;
         $this->container['enable_pdfa_conversion'] = isset($data['enable_pdfa_conversion']) ? $data['enable_pdfa_conversion'] : null;
@@ -3465,6 +3511,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_scheduled_release_metadata'] = isset($data['enable_scheduled_release_metadata']) ? $data['enable_scheduled_release_metadata'] : null;
         $this->container['enable_search'] = isset($data['enable_search']) ? $data['enable_search'] : null;
         $this->container['enable_search_metadata'] = isset($data['enable_search_metadata']) ? $data['enable_search_metadata'] : null;
+        $this->container['enable_search_site_specific_api'] = isset($data['enable_search_site_specific_api']) ? $data['enable_search_site_specific_api'] : null;
+        $this->container['enable_search_site_specific_api_metadata'] = isset($data['enable_search_site_specific_api_metadata']) ? $data['enable_search_site_specific_api_metadata'] : null;
         $this->container['enable_search_ui'] = isset($data['enable_search_ui']) ? $data['enable_search_ui'] : null;
         $this->container['enable_search_ui_metadata'] = isset($data['enable_search_ui_metadata']) ? $data['enable_search_ui_metadata'] : null;
         $this->container['enable_sending_tags_font_settings'] = isset($data['enable_sending_tags_font_settings']) ? $data['enable_sending_tags_font_settings'] : null;
@@ -5788,7 +5836,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_in_person_electronic_notary
      *
-     * @param ?string $allow_in_person_electronic_notary 
+     * @param ?string $allow_in_person_electronic_notary Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions
      *
      * @return $this
      */
@@ -5812,7 +5860,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_in_person_electronic_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_in_person_electronic_notary_metadata allow_in_person_electronic_notary_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_in_person_electronic_notary_metadata MetaData for the allowInPersonElectronicNotary flag
      *
      * @return $this
      */
@@ -6532,7 +6580,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_to_use_in_person_electronic_notary
      *
-     * @param ?string $allow_organization_to_use_in_person_electronic_notary 
+     * @param ?string $allow_organization_to_use_in_person_electronic_notary Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions
      *
      * @return $this
      */
@@ -6556,7 +6604,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_to_use_in_person_electronic_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_in_person_electronic_notary_metadata allow_organization_to_use_in_person_electronic_notary_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_in_person_electronic_notary_metadata MetaData for the allowOrganizationToUseInPersonElectronicNotary flag
      *
      * @return $this
      */
@@ -8560,6 +8608,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets bulk_send_action_resend_limit
+     *
+     * @return ?string
+     */
+    public function getBulkSendActionResendLimit()
+    {
+        return $this->container['bulk_send_action_resend_limit'];
+    }
+
+    /**
+     * Sets bulk_send_action_resend_limit
+     *
+     * @param ?string $bulk_send_action_resend_limit 
+     *
+     * @return $this
+     */
+    public function setBulkSendActionResendLimit($bulk_send_action_resend_limit)
+    {
+        $this->container['bulk_send_action_resend_limit'] = $bulk_send_action_resend_limit;
+
+        return $this;
+    }
+
+    /**
      * Gets bulk_send_max_copies_in_batch
      *
      * @return ?string
@@ -10552,6 +10624,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_combined_pdf_download_for_sbs
+     *
+     * @return ?string
+     */
+    public function getEnableCombinedPdfDownloadForSbs()
+    {
+        return $this->container['enable_combined_pdf_download_for_sbs'];
+    }
+
+    /**
+     * Sets enable_combined_pdf_download_for_sbs
+     *
+     * @param ?string $enable_combined_pdf_download_for_sbs 
+     *
+     * @return $this
+     */
+    public function setEnableCombinedPdfDownloadForSbs($enable_combined_pdf_download_for_sbs)
+    {
+        $this->container['enable_combined_pdf_download_for_sbs'] = $enable_combined_pdf_download_for_sbs;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_comments_history_download_in_signing
      *
      * @return ?string
@@ -10840,6 +10936,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_id_fx_accountless_sms_auth_for_part11
+     *
+     * @return ?string
+     */
+    public function getEnableIdFxAccountlessSmsAuthForPart11()
+    {
+        return $this->container['enable_id_fx_accountless_sms_auth_for_part11'];
+    }
+
+    /**
+     * Sets enable_id_fx_accountless_sms_auth_for_part11
+     *
+     * @param ?string $enable_id_fx_accountless_sms_auth_for_part11 
+     *
+     * @return $this
+     */
+    public function setEnableIdFxAccountlessSmsAuthForPart11($enable_id_fx_accountless_sms_auth_for_part11)
+    {
+        $this->container['enable_id_fx_accountless_sms_auth_for_part11'] = $enable_id_fx_accountless_sms_auth_for_part11;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_id_fx_accountless_sms_auth_for_part11_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableIdFxAccountlessSmsAuthForPart11Metadata()
+    {
+        return $this->container['enable_id_fx_accountless_sms_auth_for_part11_metadata'];
+    }
+
+    /**
+     * Sets enable_id_fx_accountless_sms_auth_for_part11_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_accountless_sms_auth_for_part11_metadata enable_id_fx_accountless_sms_auth_for_part11_metadata
+     *
+     * @return $this
+     */
+    public function setEnableIdFxAccountlessSmsAuthForPart11Metadata($enable_id_fx_accountless_sms_auth_for_part11_metadata)
+    {
+        $this->container['enable_id_fx_accountless_sms_auth_for_part11_metadata'] = $enable_id_fx_accountless_sms_auth_for_part11_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_id_fx_intuit_kba
      *
      * @return ?string
@@ -10979,6 +11123,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableInBrowserEditorMetadata($enable_in_browser_editor_metadata)
     {
         $this->container['enable_in_browser_editor_metadata'] = $enable_in_browser_editor_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type
+     *
+     * @return ?string
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentType()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type
+     *
+     * @param ?string $enable_key_terms_suggestions_by_document_type 
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentType($enable_key_terms_suggestions_by_document_type)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type'] = $enable_key_terms_suggestions_by_document_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentTypeMetadata()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type_metadata'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentTypeMetadata($enable_key_terms_suggestions_by_document_type_metadata)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = $enable_key_terms_suggestions_by_document_type_metadata;
 
         return $this;
     }
@@ -11555,6 +11747,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableSearchMetadata($enable_search_metadata)
     {
         $this->container['enable_search_metadata'] = $enable_search_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_search_site_specific_api
+     *
+     * @return ?string
+     */
+    public function getEnableSearchSiteSpecificApi()
+    {
+        return $this->container['enable_search_site_specific_api'];
+    }
+
+    /**
+     * Sets enable_search_site_specific_api
+     *
+     * @param ?string $enable_search_site_specific_api 
+     *
+     * @return $this
+     */
+    public function setEnableSearchSiteSpecificApi($enable_search_site_specific_api)
+    {
+        $this->container['enable_search_site_specific_api'] = $enable_search_site_specific_api;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_search_site_specific_api_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableSearchSiteSpecificApiMetadata()
+    {
+        return $this->container['enable_search_site_specific_api_metadata'];
+    }
+
+    /**
+     * Sets enable_search_site_specific_api_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_site_specific_api_metadata enable_search_site_specific_api_metadata
+     *
+     * @return $this
+     */
+    public function setEnableSearchSiteSpecificApiMetadata($enable_search_site_specific_api_metadata)
+    {
+        $this->container['enable_search_site_specific_api_metadata'] = $enable_search_site_specific_api_metadata;
 
         return $this;
     }

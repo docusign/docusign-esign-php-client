@@ -59,7 +59,9 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'account_balance' => '?string',
         'billing_invoices' => '\DocuSign\eSign\Model\BillingInvoice[]',
+        'currency_code' => '?string',
         'past_due_balance' => '?string',
         'payment_allowed' => '?string'
     ];
@@ -70,7 +72,9 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'account_balance' => null,
         'billing_invoices' => null,
+        'currency_code' => null,
         'past_due_balance' => null,
         'payment_allowed' => null
     ];
@@ -102,7 +106,9 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'account_balance' => 'accountBalance',
         'billing_invoices' => 'billingInvoices',
+        'currency_code' => 'currencyCode',
         'past_due_balance' => 'pastDueBalance',
         'payment_allowed' => 'paymentAllowed'
     ];
@@ -113,7 +119,9 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'account_balance' => 'setAccountBalance',
         'billing_invoices' => 'setBillingInvoices',
+        'currency_code' => 'setCurrencyCode',
         'past_due_balance' => 'setPastDueBalance',
         'payment_allowed' => 'setPaymentAllowed'
     ];
@@ -124,7 +132,9 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'account_balance' => 'getAccountBalance',
         'billing_invoices' => 'getBillingInvoices',
+        'currency_code' => 'getCurrencyCode',
         'past_due_balance' => 'getPastDueBalance',
         'payment_allowed' => 'getPaymentAllowed'
     ];
@@ -189,7 +199,9 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['account_balance'] = isset($data['account_balance']) ? $data['account_balance'] : null;
         $this->container['billing_invoices'] = isset($data['billing_invoices']) ? $data['billing_invoices'] : null;
+        $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['past_due_balance'] = isset($data['past_due_balance']) ? $data['past_due_balance'] : null;
         $this->container['payment_allowed'] = isset($data['payment_allowed']) ? $data['payment_allowed'] : null;
     }
@@ -219,6 +231,30 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets account_balance
+     *
+     * @return ?string
+     */
+    public function getAccountBalance()
+    {
+        return $this->container['account_balance'];
+    }
+
+    /**
+     * Sets account_balance
+     *
+     * @param ?string $account_balance 
+     *
+     * @return $this
+     */
+    public function setAccountBalance($account_balance)
+    {
+        $this->container['account_balance'] = $account_balance;
+
+        return $this;
+    }
+
+    /**
      * Gets billing_invoices
      *
      * @return \DocuSign\eSign\Model\BillingInvoice[]
@@ -238,6 +274,30 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     public function setBillingInvoices($billing_invoices)
     {
         $this->container['billing_invoices'] = $billing_invoices;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_code
+     *
+     * @return ?string
+     */
+    public function getCurrencyCode()
+    {
+        return $this->container['currency_code'];
+    }
+
+    /**
+     * Sets currency_code
+     *
+     * @param ?string $currency_code 
+     *
+     * @return $this
+     */
+    public function setCurrencyCode($currency_code)
+    {
+        $this->container['currency_code'] = $currency_code;
 
         return $this;
     }

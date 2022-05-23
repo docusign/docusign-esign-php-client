@@ -81,6 +81,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'bold' => '?string',
         'bold_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'caption' => '?string',
+        'caption_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'font' => '?string',
         'font_color' => '?string',
@@ -142,6 +144,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => null,
         'bold' => null,
         'bold_metadata' => null,
+        'caption' => null,
+        'caption_metadata' => null,
         'error_details' => null,
         'font' => null,
         'font_color' => null,
@@ -224,6 +228,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'anchorYOffsetMetadata',
         'bold' => 'bold',
         'bold_metadata' => 'boldMetadata',
+        'caption' => 'caption',
+        'caption_metadata' => 'captionMetadata',
         'error_details' => 'errorDetails',
         'font' => 'font',
         'font_color' => 'fontColor',
@@ -285,6 +291,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'setAnchorYOffsetMetadata',
         'bold' => 'setBold',
         'bold_metadata' => 'setBoldMetadata',
+        'caption' => 'setCaption',
+        'caption_metadata' => 'setCaptionMetadata',
         'error_details' => 'setErrorDetails',
         'font' => 'setFont',
         'font_color' => 'setFontColor',
@@ -346,6 +354,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'getAnchorYOffsetMetadata',
         'bold' => 'getBold',
         'bold_metadata' => 'getBoldMetadata',
+        'caption' => 'getCaption',
+        'caption_metadata' => 'getCaptionMetadata',
         'error_details' => 'getErrorDetails',
         'font' => 'getFont',
         'font_color' => 'getFontColor',
@@ -461,6 +471,8 @@ class Radio implements ModelInterface, ArrayAccess
         $this->container['anchor_y_offset_metadata'] = isset($data['anchor_y_offset_metadata']) ? $data['anchor_y_offset_metadata'] : null;
         $this->container['bold'] = isset($data['bold']) ? $data['bold'] : null;
         $this->container['bold_metadata'] = isset($data['bold_metadata']) ? $data['bold_metadata'] : null;
+        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
+        $this->container['caption_metadata'] = isset($data['caption_metadata']) ? $data['caption_metadata'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['font'] = isset($data['font']) ? $data['font'] : null;
         $this->container['font_color'] = isset($data['font_color']) ? $data['font_color'] : null;
@@ -1042,6 +1054,54 @@ class Radio implements ModelInterface, ArrayAccess
     public function setBoldMetadata($bold_metadata)
     {
         $this->container['bold_metadata'] = $bold_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption
+     *
+     * @return ?string
+     */
+    public function getCaption()
+    {
+        return $this->container['caption'];
+    }
+
+    /**
+     * Sets caption
+     *
+     * @param ?string $caption 
+     *
+     * @return $this
+     */
+    public function setCaption($caption)
+    {
+        $this->container['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getCaptionMetadata()
+    {
+        return $this->container['caption_metadata'];
+    }
+
+    /**
+     * Sets caption_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     *
+     * @return $this
+     */
+    public function setCaptionMetadata($caption_metadata)
+    {
+        $this->container['caption_metadata'] = $caption_metadata;
 
         return $this;
     }

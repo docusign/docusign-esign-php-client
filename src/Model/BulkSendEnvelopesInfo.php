@@ -59,8 +59,18 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'authoritative_copy' => '?string',
         'completed' => '?string',
+        'correct' => '?string',
+        'created' => '?string',
         'declined' => '?string',
+        'deleted' => '?string',
+        'delivered' => '?string',
+        'digital_signatures_pending' => '?string',
+        'sent' => '?string',
+        'signed' => '?string',
+        'timed_out' => '?string',
+        'transfer_completed' => '?string',
         'voided' => '?string'
     ];
 
@@ -70,8 +80,18 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'authoritative_copy' => null,
         'completed' => null,
+        'correct' => null,
+        'created' => null,
         'declined' => null,
+        'deleted' => null,
+        'delivered' => null,
+        'digital_signatures_pending' => null,
+        'sent' => null,
+        'signed' => null,
+        'timed_out' => null,
+        'transfer_completed' => null,
         'voided' => null
     ];
 
@@ -102,8 +122,18 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'authoritative_copy' => 'authoritativeCopy',
         'completed' => 'completed',
+        'correct' => 'correct',
+        'created' => 'created',
         'declined' => 'declined',
+        'deleted' => 'deleted',
+        'delivered' => 'delivered',
+        'digital_signatures_pending' => 'digitalSignaturesPending',
+        'sent' => 'sent',
+        'signed' => 'signed',
+        'timed_out' => 'timedOut',
+        'transfer_completed' => 'transferCompleted',
         'voided' => 'voided'
     ];
 
@@ -113,8 +143,18 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'authoritative_copy' => 'setAuthoritativeCopy',
         'completed' => 'setCompleted',
+        'correct' => 'setCorrect',
+        'created' => 'setCreated',
         'declined' => 'setDeclined',
+        'deleted' => 'setDeleted',
+        'delivered' => 'setDelivered',
+        'digital_signatures_pending' => 'setDigitalSignaturesPending',
+        'sent' => 'setSent',
+        'signed' => 'setSigned',
+        'timed_out' => 'setTimedOut',
+        'transfer_completed' => 'setTransferCompleted',
         'voided' => 'setVoided'
     ];
 
@@ -124,8 +164,18 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'authoritative_copy' => 'getAuthoritativeCopy',
         'completed' => 'getCompleted',
+        'correct' => 'getCorrect',
+        'created' => 'getCreated',
         'declined' => 'getDeclined',
+        'deleted' => 'getDeleted',
+        'delivered' => 'getDelivered',
+        'digital_signatures_pending' => 'getDigitalSignaturesPending',
+        'sent' => 'getSent',
+        'signed' => 'getSigned',
+        'timed_out' => 'getTimedOut',
+        'transfer_completed' => 'getTransferCompleted',
         'voided' => 'getVoided'
     ];
 
@@ -189,8 +239,18 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['completed'] = isset($data['completed']) ? $data['completed'] : null;
+        $this->container['correct'] = isset($data['correct']) ? $data['correct'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['declined'] = isset($data['declined']) ? $data['declined'] : null;
+        $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
+        $this->container['delivered'] = isset($data['delivered']) ? $data['delivered'] : null;
+        $this->container['digital_signatures_pending'] = isset($data['digital_signatures_pending']) ? $data['digital_signatures_pending'] : null;
+        $this->container['sent'] = isset($data['sent']) ? $data['sent'] : null;
+        $this->container['signed'] = isset($data['signed']) ? $data['signed'] : null;
+        $this->container['timed_out'] = isset($data['timed_out']) ? $data['timed_out'] : null;
+        $this->container['transfer_completed'] = isset($data['transfer_completed']) ? $data['transfer_completed'] : null;
         $this->container['voided'] = isset($data['voided']) ? $data['voided'] : null;
     }
 
@@ -219,6 +279,30 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets authoritative_copy
+     *
+     * @return ?string
+     */
+    public function getAuthoritativeCopy()
+    {
+        return $this->container['authoritative_copy'];
+    }
+
+    /**
+     * Sets authoritative_copy
+     *
+     * @param ?string $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+     *
+     * @return $this
+     */
+    public function setAuthoritativeCopy($authoritative_copy)
+    {
+        $this->container['authoritative_copy'] = $authoritative_copy;
+
+        return $this;
+    }
+
+    /**
      * Gets completed
      *
      * @return ?string
@@ -243,6 +327,54 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets correct
+     *
+     * @return ?string
+     */
+    public function getCorrect()
+    {
+        return $this->container['correct'];
+    }
+
+    /**
+     * Sets correct
+     *
+     * @param ?string $correct 
+     *
+     * @return $this
+     */
+    public function setCorrect($correct)
+    {
+        $this->container['correct'] = $correct;
+
+        return $this;
+    }
+
+    /**
+     * Gets created
+     *
+     * @return ?string
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     *
+     * @param ?string $created 
+     *
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
      * Gets declined
      *
      * @return ?string
@@ -262,6 +394,174 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     public function setDeclined($declined)
     {
         $this->container['declined'] = $declined;
+
+        return $this;
+    }
+
+    /**
+     * Gets deleted
+     *
+     * @return ?string
+     */
+    public function getDeleted()
+    {
+        return $this->container['deleted'];
+    }
+
+    /**
+     * Sets deleted
+     *
+     * @param ?string $deleted 
+     *
+     * @return $this
+     */
+    public function setDeleted($deleted)
+    {
+        $this->container['deleted'] = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivered
+     *
+     * @return ?string
+     */
+    public function getDelivered()
+    {
+        return $this->container['delivered'];
+    }
+
+    /**
+     * Sets delivered
+     *
+     * @param ?string $delivered 
+     *
+     * @return $this
+     */
+    public function setDelivered($delivered)
+    {
+        $this->container['delivered'] = $delivered;
+
+        return $this;
+    }
+
+    /**
+     * Gets digital_signatures_pending
+     *
+     * @return ?string
+     */
+    public function getDigitalSignaturesPending()
+    {
+        return $this->container['digital_signatures_pending'];
+    }
+
+    /**
+     * Sets digital_signatures_pending
+     *
+     * @param ?string $digital_signatures_pending 
+     *
+     * @return $this
+     */
+    public function setDigitalSignaturesPending($digital_signatures_pending)
+    {
+        $this->container['digital_signatures_pending'] = $digital_signatures_pending;
+
+        return $this;
+    }
+
+    /**
+     * Gets sent
+     *
+     * @return ?string
+     */
+    public function getSent()
+    {
+        return $this->container['sent'];
+    }
+
+    /**
+     * Sets sent
+     *
+     * @param ?string $sent 
+     *
+     * @return $this
+     */
+    public function setSent($sent)
+    {
+        $this->container['sent'] = $sent;
+
+        return $this;
+    }
+
+    /**
+     * Gets signed
+     *
+     * @return ?string
+     */
+    public function getSigned()
+    {
+        return $this->container['signed'];
+    }
+
+    /**
+     * Sets signed
+     *
+     * @param ?string $signed 
+     *
+     * @return $this
+     */
+    public function setSigned($signed)
+    {
+        $this->container['signed'] = $signed;
+
+        return $this;
+    }
+
+    /**
+     * Gets timed_out
+     *
+     * @return ?string
+     */
+    public function getTimedOut()
+    {
+        return $this->container['timed_out'];
+    }
+
+    /**
+     * Sets timed_out
+     *
+     * @param ?string $timed_out 
+     *
+     * @return $this
+     */
+    public function setTimedOut($timed_out)
+    {
+        $this->container['timed_out'] = $timed_out;
+
+        return $this;
+    }
+
+    /**
+     * Gets transfer_completed
+     *
+     * @return ?string
+     */
+    public function getTransferCompleted()
+    {
+        return $this->container['transfer_completed'];
+    }
+
+    /**
+     * Sets transfer_completed
+     *
+     * @param ?string $transfer_completed 
+     *
+     * @return $this
+     */
+    public function setTransferCompleted($transfer_completed)
+    {
+        $this->container['transfer_completed'] = $transfer_completed;
 
         return $this;
     }

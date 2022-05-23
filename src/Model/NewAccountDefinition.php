@@ -66,11 +66,13 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
         'distributor_code' => '?string',
         'distributor_password' => '?string',
+        'enable_pre_auth' => '?string',
         'envelope_partition_id' => '?string',
         'initial_user' => '\DocuSign\eSign\Model\UserInformation',
         'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
+        'process_payment' => '?string',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
         'social_account_information' => '\DocuSign\eSign\Model\SocialAccountInformation',
         'tax_exempt_id' => '?string'
@@ -89,11 +91,13 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => null,
         'distributor_code' => null,
         'distributor_password' => null,
+        'enable_pre_auth' => null,
         'envelope_partition_id' => null,
         'initial_user' => null,
         'payment_method' => null,
         'payment_processor_information' => null,
         'plan_information' => null,
+        'process_payment' => null,
         'referral_information' => null,
         'social_account_information' => null,
         'tax_exempt_id' => null
@@ -133,11 +137,13 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'directDebitProcessorInformation',
         'distributor_code' => 'distributorCode',
         'distributor_password' => 'distributorPassword',
+        'enable_pre_auth' => 'enablePreAuth',
         'envelope_partition_id' => 'envelopePartitionId',
         'initial_user' => 'initialUser',
         'payment_method' => 'paymentMethod',
         'payment_processor_information' => 'paymentProcessorInformation',
         'plan_information' => 'planInformation',
+        'process_payment' => 'processPayment',
         'referral_information' => 'referralInformation',
         'social_account_information' => 'socialAccountInformation',
         'tax_exempt_id' => 'taxExemptId'
@@ -156,11 +162,13 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'setDirectDebitProcessorInformation',
         'distributor_code' => 'setDistributorCode',
         'distributor_password' => 'setDistributorPassword',
+        'enable_pre_auth' => 'setEnablePreAuth',
         'envelope_partition_id' => 'setEnvelopePartitionId',
         'initial_user' => 'setInitialUser',
         'payment_method' => 'setPaymentMethod',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
+        'process_payment' => 'setProcessPayment',
         'referral_information' => 'setReferralInformation',
         'social_account_information' => 'setSocialAccountInformation',
         'tax_exempt_id' => 'setTaxExemptId'
@@ -179,11 +187,13 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'getDirectDebitProcessorInformation',
         'distributor_code' => 'getDistributorCode',
         'distributor_password' => 'getDistributorPassword',
+        'enable_pre_auth' => 'getEnablePreAuth',
         'envelope_partition_id' => 'getEnvelopePartitionId',
         'initial_user' => 'getInitialUser',
         'payment_method' => 'getPaymentMethod',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
+        'process_payment' => 'getProcessPayment',
         'referral_information' => 'getReferralInformation',
         'social_account_information' => 'getSocialAccountInformation',
         'tax_exempt_id' => 'getTaxExemptId'
@@ -256,11 +266,13 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         $this->container['direct_debit_processor_information'] = isset($data['direct_debit_processor_information']) ? $data['direct_debit_processor_information'] : null;
         $this->container['distributor_code'] = isset($data['distributor_code']) ? $data['distributor_code'] : null;
         $this->container['distributor_password'] = isset($data['distributor_password']) ? $data['distributor_password'] : null;
+        $this->container['enable_pre_auth'] = isset($data['enable_pre_auth']) ? $data['enable_pre_auth'] : null;
         $this->container['envelope_partition_id'] = isset($data['envelope_partition_id']) ? $data['envelope_partition_id'] : null;
         $this->container['initial_user'] = isset($data['initial_user']) ? $data['initial_user'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
+        $this->container['process_payment'] = isset($data['process_payment']) ? $data['process_payment'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['social_account_information'] = isset($data['social_account_information']) ? $data['social_account_information'] : null;
         $this->container['tax_exempt_id'] = isset($data['tax_exempt_id']) ? $data['tax_exempt_id'] : null;
@@ -459,6 +471,30 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_pre_auth
+     *
+     * @return ?string
+     */
+    public function getEnablePreAuth()
+    {
+        return $this->container['enable_pre_auth'];
+    }
+
+    /**
+     * Sets enable_pre_auth
+     *
+     * @param ?string $enable_pre_auth 
+     *
+     * @return $this
+     */
+    public function setEnablePreAuth($enable_pre_auth)
+    {
+        $this->container['enable_pre_auth'] = $enable_pre_auth;
+
+        return $this;
+    }
+
+    /**
      * Gets envelope_partition_id
      *
      * @return ?string
@@ -574,6 +610,30 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     public function setPlanInformation($plan_information)
     {
         $this->container['plan_information'] = $plan_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets process_payment
+     *
+     * @return ?string
+     */
+    public function getProcessPayment()
+    {
+        return $this->container['process_payment'];
+    }
+
+    /**
+     * Sets process_payment
+     *
+     * @param ?string $process_payment 
+     *
+     * @return $this
+     */
+    public function setProcessPayment($process_payment)
+    {
+        $this->container['process_payment'] = $process_payment;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * BulkSendErrorStatus
+ * IdEvidenceResourceToken
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * BulkSendErrorStatus Class Doc Comment
+ * IdEvidenceResourceToken Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BulkSendErrorStatus implements ModelInterface, ArrayAccess
+class IdEvidenceResourceToken implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'bulkSendErrorStatus';
+    protected static $swaggerModelName = 'idEvidenceResourceToken';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,8 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created' => '?string',
-        'envelope_id' => '?string',
-        'error_message' => '?string',
-        'recipient_emails' => '?string[]'
+        'proof_base_uri' => '?string',
+        'resource_token' => '?string'
     ];
 
     /**
@@ -71,10 +69,8 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'created' => null,
-        'envelope_id' => null,
-        'error_message' => null,
-        'recipient_emails' => null
+        'proof_base_uri' => null,
+        'resource_token' => null
     ];
 
     /**
@@ -104,10 +100,8 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'created' => 'created',
-        'envelope_id' => 'envelopeId',
-        'error_message' => 'errorMessage',
-        'recipient_emails' => 'recipientEmails'
+        'proof_base_uri' => 'proofBaseURI',
+        'resource_token' => 'resourceToken'
     ];
 
     /**
@@ -116,10 +110,8 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'created' => 'setCreated',
-        'envelope_id' => 'setEnvelopeId',
-        'error_message' => 'setErrorMessage',
-        'recipient_emails' => 'setRecipientEmails'
+        'proof_base_uri' => 'setProofBaseUri',
+        'resource_token' => 'setResourceToken'
     ];
 
     /**
@@ -128,10 +120,8 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'created' => 'getCreated',
-        'envelope_id' => 'getEnvelopeId',
-        'error_message' => 'getErrorMessage',
-        'recipient_emails' => 'getRecipientEmails'
+        'proof_base_uri' => 'getProofBaseUri',
+        'resource_token' => 'getResourceToken'
     ];
 
     /**
@@ -194,10 +184,8 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
-        $this->container['error_message'] = isset($data['error_message']) ? $data['error_message'] : null;
-        $this->container['recipient_emails'] = isset($data['recipient_emails']) ? $data['recipient_emails'] : null;
+        $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
+        $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
     }
 
     /**
@@ -225,97 +213,49 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets created
+     * Gets proof_base_uri
      *
      * @return ?string
      */
-    public function getCreated()
+    public function getProofBaseUri()
     {
-        return $this->container['created'];
+        return $this->container['proof_base_uri'];
     }
 
     /**
-     * Sets created
+     * Sets proof_base_uri
      *
-     * @param ?string $created 
+     * @param ?string $proof_base_uri 
      *
      * @return $this
      */
-    public function setCreated($created)
+    public function setProofBaseUri($proof_base_uri)
     {
-        $this->container['created'] = $created;
+        $this->container['proof_base_uri'] = $proof_base_uri;
 
         return $this;
     }
 
     /**
-     * Gets envelope_id
+     * Gets resource_token
      *
      * @return ?string
      */
-    public function getEnvelopeId()
+    public function getResourceToken()
     {
-        return $this->container['envelope_id'];
+        return $this->container['resource_token'];
     }
 
     /**
-     * Sets envelope_id
+     * Sets resource_token
      *
-     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
+     * @param ?string $resource_token 
      *
      * @return $this
      */
-    public function setEnvelopeId($envelope_id)
+    public function setResourceToken($resource_token)
     {
-        $this->container['envelope_id'] = $envelope_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets error_message
-     *
-     * @return ?string
-     */
-    public function getErrorMessage()
-    {
-        return $this->container['error_message'];
-    }
-
-    /**
-     * Sets error_message
-     *
-     * @param ?string $error_message 
-     *
-     * @return $this
-     */
-    public function setErrorMessage($error_message)
-    {
-        $this->container['error_message'] = $error_message;
-
-        return $this;
-    }
-
-    /**
-     * Gets recipient_emails
-     *
-     * @return ?string[]
-     */
-    public function getRecipientEmails()
-    {
-        return $this->container['recipient_emails'];
-    }
-
-    /**
-     * Sets recipient_emails
-     *
-     * @param ?string[] $recipient_emails 
-     *
-     * @return $this
-     */
-    public function setRecipientEmails($recipient_emails)
-    {
-        $this->container['recipient_emails'] = $recipient_emails;
+        $this->container['resource_token'] = $resource_token;
 
         return $this;
     }

@@ -112,6 +112,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ds_pro' => '?string',
         'enable_ds_pro_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type' => '?string',
+        'enable_key_terms_suggestions_by_document_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sequential_signing_api' => '?string',
         'enable_sequential_signing_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sequential_signing_ui' => '?string',
@@ -243,6 +245,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => null,
         'enable_ds_pro' => null,
         'enable_ds_pro_metadata' => null,
+        'enable_key_terms_suggestions_by_document_type' => null,
+        'enable_key_terms_suggestions_by_document_type_metadata' => null,
         'enable_sequential_signing_api' => null,
         'enable_sequential_signing_api_metadata' => null,
         'enable_sequential_signing_ui' => null,
@@ -395,6 +399,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'disableOtherActionsMetadata',
         'enable_ds_pro' => 'enableDSPro',
         'enable_ds_pro_metadata' => 'enableDSProMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_sequential_signing_api' => 'enableSequentialSigningAPI',
         'enable_sequential_signing_api_metadata' => 'enableSequentialSigningAPIMetadata',
         'enable_sequential_signing_ui' => 'enableSequentialSigningUI',
@@ -526,6 +532,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'setDisableOtherActionsMetadata',
         'enable_ds_pro' => 'setEnableDsPro',
         'enable_ds_pro_metadata' => 'setEnableDsProMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'setEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_sequential_signing_api' => 'setEnableSequentialSigningApi',
         'enable_sequential_signing_api_metadata' => 'setEnableSequentialSigningApiMetadata',
         'enable_sequential_signing_ui' => 'setEnableSequentialSigningUi',
@@ -657,6 +665,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'getDisableOtherActionsMetadata',
         'enable_ds_pro' => 'getEnableDsPro',
         'enable_ds_pro_metadata' => 'getEnableDsProMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'getEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_sequential_signing_api' => 'getEnableSequentialSigningApi',
         'enable_sequential_signing_api_metadata' => 'getEnableSequentialSigningApiMetadata',
         'enable_sequential_signing_ui' => 'getEnableSequentialSigningUi',
@@ -842,6 +852,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['disable_other_actions_metadata'] = isset($data['disable_other_actions_metadata']) ? $data['disable_other_actions_metadata'] : null;
         $this->container['enable_ds_pro'] = isset($data['enable_ds_pro']) ? $data['enable_ds_pro'] : null;
         $this->container['enable_ds_pro_metadata'] = isset($data['enable_ds_pro_metadata']) ? $data['enable_ds_pro_metadata'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = isset($data['enable_key_terms_suggestions_by_document_type_metadata']) ? $data['enable_key_terms_suggestions_by_document_type_metadata'] : null;
         $this->container['enable_sequential_signing_api'] = isset($data['enable_sequential_signing_api']) ? $data['enable_sequential_signing_api'] : null;
         $this->container['enable_sequential_signing_api_metadata'] = isset($data['enable_sequential_signing_api_metadata']) ? $data['enable_sequential_signing_api_metadata'] : null;
         $this->container['enable_sequential_signing_ui'] = isset($data['enable_sequential_signing_ui']) ? $data['enable_sequential_signing_ui'] : null;
@@ -2206,6 +2218,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableDsProMetadata($enable_ds_pro_metadata)
     {
         $this->container['enable_ds_pro_metadata'] = $enable_ds_pro_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type
+     *
+     * @return ?string
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentType()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type
+     *
+     * @param ?string $enable_key_terms_suggestions_by_document_type 
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentType($enable_key_terms_suggestions_by_document_type)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type'] = $enable_key_terms_suggestions_by_document_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentTypeMetadata()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type_metadata'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentTypeMetadata($enable_key_terms_suggestions_by_document_type_metadata)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = $enable_key_terms_suggestions_by_document_type_metadata;
 
         return $this;
     }

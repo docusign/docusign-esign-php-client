@@ -5268,7 +5268,7 @@ class EnvelopesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      *
      * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ProofServiceViewLink
+     * @return \DocuSign\eSign\Model\IdEvidenceViewLink
      */
     public function createRecipientProofFileLink($account_id, $envelope_id, $recipient_id)
     {
@@ -5286,7 +5286,7 @@ class EnvelopesApi
      * @param ?string $recipient_id The ID of the recipient being accessed.
      *
      * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ProofServiceViewLink, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocuSign\eSign\Model\IdEvidenceViewLink, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRecipientProofFileLinkWithHttpInfo($account_id, $envelope_id, $recipient_id): array
     {
@@ -5344,15 +5344,15 @@ class EnvelopesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\ProofServiceViewLink',
+                '\DocuSign\eSign\Model\IdEvidenceViewLink',
                 '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/identity_proof'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ProofServiceViewLink', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\IdEvidenceViewLink', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ProofServiceViewLink', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\IdEvidenceViewLink', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -5376,7 +5376,7 @@ class EnvelopesApi
      * @param ?string $token_scopes 
      *
      * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ProofServiceResourceToken
+     * @return \DocuSign\eSign\Model\IdEvidenceResourceToken
      */
     public function createRecipientProofFileResourceToken($account_id, $envelope_id, $recipient_id, $token_scopes)
     {
@@ -5395,7 +5395,7 @@ class EnvelopesApi
      * @param ?string $token_scopes 
      *
      * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ProofServiceResourceToken, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocuSign\eSign\Model\IdEvidenceResourceToken, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRecipientProofFileResourceTokenWithHttpInfo($account_id, $envelope_id, $recipient_id, $token_scopes): array
     {
@@ -5461,15 +5461,15 @@ class EnvelopesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\ProofServiceResourceToken',
+                '\DocuSign\eSign\Model\IdEvidenceResourceToken',
                 '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/identity_proof_token'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ProofServiceResourceToken', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\IdEvidenceResourceToken', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ProofServiceResourceToken', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\IdEvidenceResourceToken', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

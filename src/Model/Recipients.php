@@ -69,6 +69,7 @@ class Recipients implements ModelInterface, ArrayAccess
         'in_person_signers' => '\DocuSign\eSign\Model\InPersonSigner[]',
         'intermediaries' => '\DocuSign\eSign\Model\Intermediary[]',
         'notaries' => '\DocuSign\eSign\Model\NotaryRecipient[]',
+        'participants' => '\DocuSign\eSign\Model\Participant[]',
         'recipient_count' => '?string',
         'seals' => '\DocuSign\eSign\Model\SealSign[]',
         'signers' => '\DocuSign\eSign\Model\Signer[]',
@@ -90,6 +91,7 @@ class Recipients implements ModelInterface, ArrayAccess
         'in_person_signers' => null,
         'intermediaries' => null,
         'notaries' => null,
+        'participants' => null,
         'recipient_count' => null,
         'seals' => null,
         'signers' => null,
@@ -132,6 +134,7 @@ class Recipients implements ModelInterface, ArrayAccess
         'in_person_signers' => 'inPersonSigners',
         'intermediaries' => 'intermediaries',
         'notaries' => 'notaries',
+        'participants' => 'participants',
         'recipient_count' => 'recipientCount',
         'seals' => 'seals',
         'signers' => 'signers',
@@ -153,6 +156,7 @@ class Recipients implements ModelInterface, ArrayAccess
         'in_person_signers' => 'setInPersonSigners',
         'intermediaries' => 'setIntermediaries',
         'notaries' => 'setNotaries',
+        'participants' => 'setParticipants',
         'recipient_count' => 'setRecipientCount',
         'seals' => 'setSeals',
         'signers' => 'setSigners',
@@ -174,6 +178,7 @@ class Recipients implements ModelInterface, ArrayAccess
         'in_person_signers' => 'getInPersonSigners',
         'intermediaries' => 'getIntermediaries',
         'notaries' => 'getNotaries',
+        'participants' => 'getParticipants',
         'recipient_count' => 'getRecipientCount',
         'seals' => 'getSeals',
         'signers' => 'getSigners',
@@ -249,6 +254,7 @@ class Recipients implements ModelInterface, ArrayAccess
         $this->container['in_person_signers'] = isset($data['in_person_signers']) ? $data['in_person_signers'] : null;
         $this->container['intermediaries'] = isset($data['intermediaries']) ? $data['intermediaries'] : null;
         $this->container['notaries'] = isset($data['notaries']) ? $data['notaries'] : null;
+        $this->container['participants'] = isset($data['participants']) ? $data['participants'] : null;
         $this->container['recipient_count'] = isset($data['recipient_count']) ? $data['recipient_count'] : null;
         $this->container['seals'] = isset($data['seals']) ? $data['seals'] : null;
         $this->container['signers'] = isset($data['signers']) ? $data['signers'] : null;
@@ -491,6 +497,30 @@ class Recipients implements ModelInterface, ArrayAccess
     public function setNotaries($notaries)
     {
         $this->container['notaries'] = $notaries;
+
+        return $this;
+    }
+
+    /**
+     * Gets participants
+     *
+     * @return \DocuSign\eSign\Model\Participant[]
+     */
+    public function getParticipants()
+    {
+        return $this->container['participants'];
+    }
+
+    /**
+     * Sets participants
+     *
+     * @param \DocuSign\eSign\Model\Participant[] $participants 
+     *
+     * @return $this
+     */
+    public function setParticipants($participants)
+    {
+        $this->container['participants'] = $participants;
 
         return $this;
     }

@@ -111,6 +111,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_api_request_logging' => '?string',
         'enable_api_request_logging_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type' => '?string',
+        'enable_key_terms_suggestions_by_document_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_recipient_viewing_notifications' => '?string',
         'enable_recipient_viewing_notifications_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sequential_signing_interface' => '?string',
@@ -196,6 +198,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => null,
         'enable_api_request_logging' => null,
         'enable_api_request_logging_metadata' => null,
+        'enable_key_terms_suggestions_by_document_type' => null,
+        'enable_key_terms_suggestions_by_document_type_metadata' => null,
         'enable_recipient_viewing_notifications' => null,
         'enable_recipient_viewing_notifications_metadata' => null,
         'enable_sequential_signing_interface' => null,
@@ -302,6 +306,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'disableOtherActionsMetadata',
         'enable_api_request_logging' => 'enableApiRequestLogging',
         'enable_api_request_logging_metadata' => 'enableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications' => 'enableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata' => 'enableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface' => 'enableSequentialSigningInterface',
@@ -387,6 +393,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'setDisableOtherActionsMetadata',
         'enable_api_request_logging' => 'setEnableApiRequestLogging',
         'enable_api_request_logging_metadata' => 'setEnableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'setEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications' => 'setEnableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata' => 'setEnableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface' => 'setEnableSequentialSigningInterface',
@@ -472,6 +480,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'getDisableOtherActionsMetadata',
         'enable_api_request_logging' => 'getEnableApiRequestLogging',
         'enable_api_request_logging_metadata' => 'getEnableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'getEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications' => 'getEnableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata' => 'getEnableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface' => 'getEnableSequentialSigningInterface',
@@ -611,6 +621,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['disable_other_actions_metadata'] = isset($data['disable_other_actions_metadata']) ? $data['disable_other_actions_metadata'] : null;
         $this->container['enable_api_request_logging'] = isset($data['enable_api_request_logging']) ? $data['enable_api_request_logging'] : null;
         $this->container['enable_api_request_logging_metadata'] = isset($data['enable_api_request_logging_metadata']) ? $data['enable_api_request_logging_metadata'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = isset($data['enable_key_terms_suggestions_by_document_type_metadata']) ? $data['enable_key_terms_suggestions_by_document_type_metadata'] : null;
         $this->container['enable_recipient_viewing_notifications'] = isset($data['enable_recipient_viewing_notifications']) ? $data['enable_recipient_viewing_notifications'] : null;
         $this->container['enable_recipient_viewing_notifications_metadata'] = isset($data['enable_recipient_viewing_notifications_metadata']) ? $data['enable_recipient_viewing_notifications_metadata'] : null;
         $this->container['enable_sequential_signing_interface'] = isset($data['enable_sequential_signing_interface']) ? $data['enable_sequential_signing_interface'] : null;
@@ -1906,6 +1918,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     public function setEnableApiRequestLoggingMetadata($enable_api_request_logging_metadata)
     {
         $this->container['enable_api_request_logging_metadata'] = $enable_api_request_logging_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type
+     *
+     * @return ?string
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentType()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type
+     *
+     * @param ?string $enable_key_terms_suggestions_by_document_type 
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentType($enable_key_terms_suggestions_by_document_type)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type'] = $enable_key_terms_suggestions_by_document_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentTypeMetadata()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type_metadata'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentTypeMetadata($enable_key_terms_suggestions_by_document_type_metadata)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = $enable_key_terms_suggestions_by_document_type_metadata;
 
         return $this;
     }

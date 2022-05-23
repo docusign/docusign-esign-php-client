@@ -73,6 +73,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'mailing_list_name' => '?string',
         'owner_user_id' => '?string',
         'queued' => '?string',
+        'resends_remaining' => '?string',
         'sender_user_id' => '?string',
         'sent' => '?string',
         'submitted_date' => '?string'
@@ -98,6 +99,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'mailing_list_name' => null,
         'owner_user_id' => null,
         'queued' => null,
+        'resends_remaining' => null,
         'sender_user_id' => null,
         'sent' => null,
         'submitted_date' => null
@@ -144,6 +146,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'mailing_list_name' => 'mailingListName',
         'owner_user_id' => 'ownerUserId',
         'queued' => 'queued',
+        'resends_remaining' => 'resendsRemaining',
         'sender_user_id' => 'senderUserId',
         'sent' => 'sent',
         'submitted_date' => 'submittedDate'
@@ -169,6 +172,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'mailing_list_name' => 'setMailingListName',
         'owner_user_id' => 'setOwnerUserId',
         'queued' => 'setQueued',
+        'resends_remaining' => 'setResendsRemaining',
         'sender_user_id' => 'setSenderUserId',
         'sent' => 'setSent',
         'submitted_date' => 'setSubmittedDate'
@@ -194,6 +198,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         'mailing_list_name' => 'getMailingListName',
         'owner_user_id' => 'getOwnerUserId',
         'queued' => 'getQueued',
+        'resends_remaining' => 'getResendsRemaining',
         'sender_user_id' => 'getSenderUserId',
         'sent' => 'getSent',
         'submitted_date' => 'getSubmittedDate'
@@ -273,6 +278,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
         $this->container['mailing_list_name'] = isset($data['mailing_list_name']) ? $data['mailing_list_name'] : null;
         $this->container['owner_user_id'] = isset($data['owner_user_id']) ? $data['owner_user_id'] : null;
         $this->container['queued'] = isset($data['queued']) ? $data['queued'] : null;
+        $this->container['resends_remaining'] = isset($data['resends_remaining']) ? $data['resends_remaining'] : null;
         $this->container['sender_user_id'] = isset($data['sender_user_id']) ? $data['sender_user_id'] : null;
         $this->container['sent'] = isset($data['sent']) ? $data['sent'] : null;
         $this->container['submitted_date'] = isset($data['submitted_date']) ? $data['submitted_date'] : null;
@@ -634,6 +640,30 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     public function setQueued($queued)
     {
         $this->container['queued'] = $queued;
+
+        return $this;
+    }
+
+    /**
+     * Gets resends_remaining
+     *
+     * @return ?string
+     */
+    public function getResendsRemaining()
+    {
+        return $this->container['resends_remaining'];
+    }
+
+    /**
+     * Sets resends_remaining
+     *
+     * @param ?string $resends_remaining 
+     *
+     * @return $this
+     */
+    public function setResendsRemaining($resends_remaining)
+    {
+        $this->container['resends_remaining'] = $resends_remaining;
 
         return $this;
     }
