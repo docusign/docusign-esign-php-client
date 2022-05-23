@@ -62,6 +62,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'allow_envelope_publish' => '?string',
         'allow_salesforce_publish' => '?string',
         'all_users' => '?string',
+        'all_users_except' => '?string',
         'configuration_type' => '?string',
         'connect_id' => '?string',
         'delivery_mode' => '?string',
@@ -71,6 +72,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'events' => '?string[]',
         'external_folder_id' => '?string',
         'external_folder_label' => '?string',
+        'group_ids' => '?string[]',
         'include_certificate_of_completion' => '?string',
         'include_cert_soap_header' => '?string',
         'include_document_fields' => '?string',
@@ -108,6 +110,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'allow_envelope_publish' => null,
         'allow_salesforce_publish' => null,
         'all_users' => null,
+        'all_users_except' => null,
         'configuration_type' => null,
         'connect_id' => null,
         'delivery_mode' => null,
@@ -117,6 +120,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'events' => null,
         'external_folder_id' => null,
         'external_folder_label' => null,
+        'group_ids' => null,
         'include_certificate_of_completion' => null,
         'include_cert_soap_header' => null,
         'include_document_fields' => null,
@@ -175,6 +179,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'allow_envelope_publish' => 'allowEnvelopePublish',
         'allow_salesforce_publish' => 'allowSalesforcePublish',
         'all_users' => 'allUsers',
+        'all_users_except' => 'allUsersExcept',
         'configuration_type' => 'configurationType',
         'connect_id' => 'connectId',
         'delivery_mode' => 'deliveryMode',
@@ -184,6 +189,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'events' => 'events',
         'external_folder_id' => 'externalFolderId',
         'external_folder_label' => 'externalFolderLabel',
+        'group_ids' => 'groupIds',
         'include_certificate_of_completion' => 'includeCertificateOfCompletion',
         'include_cert_soap_header' => 'includeCertSoapHeader',
         'include_document_fields' => 'includeDocumentFields',
@@ -221,6 +227,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'allow_envelope_publish' => 'setAllowEnvelopePublish',
         'allow_salesforce_publish' => 'setAllowSalesforcePublish',
         'all_users' => 'setAllUsers',
+        'all_users_except' => 'setAllUsersExcept',
         'configuration_type' => 'setConfigurationType',
         'connect_id' => 'setConnectId',
         'delivery_mode' => 'setDeliveryMode',
@@ -230,6 +237,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'events' => 'setEvents',
         'external_folder_id' => 'setExternalFolderId',
         'external_folder_label' => 'setExternalFolderLabel',
+        'group_ids' => 'setGroupIds',
         'include_certificate_of_completion' => 'setIncludeCertificateOfCompletion',
         'include_cert_soap_header' => 'setIncludeCertSoapHeader',
         'include_document_fields' => 'setIncludeDocumentFields',
@@ -267,6 +275,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'allow_envelope_publish' => 'getAllowEnvelopePublish',
         'allow_salesforce_publish' => 'getAllowSalesforcePublish',
         'all_users' => 'getAllUsers',
+        'all_users_except' => 'getAllUsersExcept',
         'configuration_type' => 'getConfigurationType',
         'connect_id' => 'getConnectId',
         'delivery_mode' => 'getDeliveryMode',
@@ -276,6 +285,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'events' => 'getEvents',
         'external_folder_id' => 'getExternalFolderId',
         'external_folder_label' => 'getExternalFolderLabel',
+        'group_ids' => 'getGroupIds',
         'include_certificate_of_completion' => 'getIncludeCertificateOfCompletion',
         'include_cert_soap_header' => 'getIncludeCertSoapHeader',
         'include_document_fields' => 'getIncludeDocumentFields',
@@ -367,6 +377,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['allow_envelope_publish'] = isset($data['allow_envelope_publish']) ? $data['allow_envelope_publish'] : null;
         $this->container['allow_salesforce_publish'] = isset($data['allow_salesforce_publish']) ? $data['allow_salesforce_publish'] : null;
         $this->container['all_users'] = isset($data['all_users']) ? $data['all_users'] : null;
+        $this->container['all_users_except'] = isset($data['all_users_except']) ? $data['all_users_except'] : null;
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['connect_id'] = isset($data['connect_id']) ? $data['connect_id'] : null;
         $this->container['delivery_mode'] = isset($data['delivery_mode']) ? $data['delivery_mode'] : null;
@@ -376,6 +387,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['events'] = isset($data['events']) ? $data['events'] : null;
         $this->container['external_folder_id'] = isset($data['external_folder_id']) ? $data['external_folder_id'] : null;
         $this->container['external_folder_label'] = isset($data['external_folder_label']) ? $data['external_folder_label'] : null;
+        $this->container['group_ids'] = isset($data['group_ids']) ? $data['group_ids'] : null;
         $this->container['include_certificate_of_completion'] = isset($data['include_certificate_of_completion']) ? $data['include_certificate_of_completion'] : null;
         $this->container['include_cert_soap_header'] = isset($data['include_cert_soap_header']) ? $data['include_cert_soap_header'] : null;
         $this->container['include_document_fields'] = isset($data['include_document_fields']) ? $data['include_document_fields'] : null;
@@ -496,6 +508,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     public function setAllUsers($all_users)
     {
         $this->container['all_users'] = $all_users;
+
+        return $this;
+    }
+
+    /**
+     * Gets all_users_except
+     *
+     * @return ?string
+     */
+    public function getAllUsersExcept()
+    {
+        return $this->container['all_users_except'];
+    }
+
+    /**
+     * Sets all_users_except
+     *
+     * @param ?string $all_users_except 
+     *
+     * @return $this
+     */
+    public function setAllUsersExcept($all_users_except)
+    {
+        $this->container['all_users_except'] = $all_users_except;
 
         return $this;
     }
@@ -712,6 +748,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     public function setExternalFolderLabel($external_folder_label)
     {
         $this->container['external_folder_label'] = $external_folder_label;
+
+        return $this;
+    }
+
+    /**
+     * Gets group_ids
+     *
+     * @return ?string[]
+     */
+    public function getGroupIds()
+    {
+        return $this->container['group_ids'];
+    }
+
+    /**
+     * Sets group_ids
+     *
+     * @param ?string[] $group_ids 
+     *
+     * @return $this
+     */
+    public function setGroupIds($group_ids)
+    {
+        $this->container['group_ids'] = $group_ids;
 
         return $this;
     }

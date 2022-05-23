@@ -79,6 +79,8 @@ class SmartSection implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_y_offset' => '?string',
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'caption' => '?string',
+        'caption_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'case_sensitive' => '?bool',
         'conditional_parent_label' => '?string',
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -171,6 +173,8 @@ class SmartSection implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => null,
         'anchor_y_offset' => null,
         'anchor_y_offset_metadata' => null,
+        'caption' => null,
+        'caption_metadata' => null,
         'case_sensitive' => null,
         'conditional_parent_label' => null,
         'conditional_parent_label_metadata' => null,
@@ -284,6 +288,8 @@ class SmartSection implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'anchorXOffsetMetadata',
         'anchor_y_offset' => 'anchorYOffset',
         'anchor_y_offset_metadata' => 'anchorYOffsetMetadata',
+        'caption' => 'caption',
+        'caption_metadata' => 'captionMetadata',
         'case_sensitive' => 'caseSensitive',
         'conditional_parent_label' => 'conditionalParentLabel',
         'conditional_parent_label_metadata' => 'conditionalParentLabelMetadata',
@@ -376,6 +382,8 @@ class SmartSection implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'setAnchorXOffsetMetadata',
         'anchor_y_offset' => 'setAnchorYOffset',
         'anchor_y_offset_metadata' => 'setAnchorYOffsetMetadata',
+        'caption' => 'setCaption',
+        'caption_metadata' => 'setCaptionMetadata',
         'case_sensitive' => 'setCaseSensitive',
         'conditional_parent_label' => 'setConditionalParentLabel',
         'conditional_parent_label_metadata' => 'setConditionalParentLabelMetadata',
@@ -468,6 +476,8 @@ class SmartSection implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'getAnchorXOffsetMetadata',
         'anchor_y_offset' => 'getAnchorYOffset',
         'anchor_y_offset_metadata' => 'getAnchorYOffsetMetadata',
+        'caption' => 'getCaption',
+        'caption_metadata' => 'getCaptionMetadata',
         'case_sensitive' => 'getCaseSensitive',
         'conditional_parent_label' => 'getConditionalParentLabel',
         'conditional_parent_label_metadata' => 'getConditionalParentLabelMetadata',
@@ -614,6 +624,8 @@ class SmartSection implements ModelInterface, ArrayAccess
         $this->container['anchor_x_offset_metadata'] = isset($data['anchor_x_offset_metadata']) ? $data['anchor_x_offset_metadata'] : null;
         $this->container['anchor_y_offset'] = isset($data['anchor_y_offset']) ? $data['anchor_y_offset'] : null;
         $this->container['anchor_y_offset_metadata'] = isset($data['anchor_y_offset_metadata']) ? $data['anchor_y_offset_metadata'] : null;
+        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
+        $this->container['caption_metadata'] = isset($data['caption_metadata']) ? $data['caption_metadata'] : null;
         $this->container['case_sensitive'] = isset($data['case_sensitive']) ? $data['case_sensitive'] : null;
         $this->container['conditional_parent_label'] = isset($data['conditional_parent_label']) ? $data['conditional_parent_label'] : null;
         $this->container['conditional_parent_label_metadata'] = isset($data['conditional_parent_label_metadata']) ? $data['conditional_parent_label_metadata'] : null;
@@ -1180,6 +1192,54 @@ class SmartSection implements ModelInterface, ArrayAccess
     public function setAnchorYOffsetMetadata($anchor_y_offset_metadata)
     {
         $this->container['anchor_y_offset_metadata'] = $anchor_y_offset_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption
+     *
+     * @return ?string
+     */
+    public function getCaption()
+    {
+        return $this->container['caption'];
+    }
+
+    /**
+     * Sets caption
+     *
+     * @param ?string $caption 
+     *
+     * @return $this
+     */
+    public function setCaption($caption)
+    {
+        $this->container['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getCaptionMetadata()
+    {
+        return $this->container['caption_metadata'];
+    }
+
+    /**
+     * Sets caption_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     *
+     * @return $this
+     */
+    public function setCaptionMetadata($caption_metadata)
+    {
+        $this->container['caption_metadata'] = $caption_metadata;
 
         return $this;
     }

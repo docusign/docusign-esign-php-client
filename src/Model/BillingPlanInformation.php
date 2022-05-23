@@ -64,12 +64,14 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'credit_card_information' => '\DocuSign\eSign\Model\CreditCardInformation',
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
         'downgrade_reason' => '?string',
+        'enable_pre_auth' => '?string',
         'enable_support' => '?string',
         'included_seats' => '?string',
         'incremental_seats' => '?string',
         'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
+        'process_payment' => '?string',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
         'renewal_status' => '?string',
         'sale_discount_amount' => '?string',
@@ -91,12 +93,14 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'credit_card_information' => null,
         'direct_debit_processor_information' => null,
         'downgrade_reason' => null,
+        'enable_pre_auth' => null,
         'enable_support' => null,
         'included_seats' => null,
         'incremental_seats' => null,
         'payment_method' => null,
         'payment_processor_information' => null,
         'plan_information' => null,
+        'process_payment' => null,
         'referral_information' => null,
         'renewal_status' => null,
         'sale_discount_amount' => null,
@@ -139,12 +143,14 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'credit_card_information' => 'creditCardInformation',
         'direct_debit_processor_information' => 'directDebitProcessorInformation',
         'downgrade_reason' => 'downgradeReason',
+        'enable_pre_auth' => 'enablePreAuth',
         'enable_support' => 'enableSupport',
         'included_seats' => 'includedSeats',
         'incremental_seats' => 'incrementalSeats',
         'payment_method' => 'paymentMethod',
         'payment_processor_information' => 'paymentProcessorInformation',
         'plan_information' => 'planInformation',
+        'process_payment' => 'processPayment',
         'referral_information' => 'referralInformation',
         'renewal_status' => 'renewalStatus',
         'sale_discount_amount' => 'saleDiscountAmount',
@@ -166,12 +172,14 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'credit_card_information' => 'setCreditCardInformation',
         'direct_debit_processor_information' => 'setDirectDebitProcessorInformation',
         'downgrade_reason' => 'setDowngradeReason',
+        'enable_pre_auth' => 'setEnablePreAuth',
         'enable_support' => 'setEnableSupport',
         'included_seats' => 'setIncludedSeats',
         'incremental_seats' => 'setIncrementalSeats',
         'payment_method' => 'setPaymentMethod',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
+        'process_payment' => 'setProcessPayment',
         'referral_information' => 'setReferralInformation',
         'renewal_status' => 'setRenewalStatus',
         'sale_discount_amount' => 'setSaleDiscountAmount',
@@ -193,12 +201,14 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'credit_card_information' => 'getCreditCardInformation',
         'direct_debit_processor_information' => 'getDirectDebitProcessorInformation',
         'downgrade_reason' => 'getDowngradeReason',
+        'enable_pre_auth' => 'getEnablePreAuth',
         'enable_support' => 'getEnableSupport',
         'included_seats' => 'getIncludedSeats',
         'incremental_seats' => 'getIncrementalSeats',
         'payment_method' => 'getPaymentMethod',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
+        'process_payment' => 'getProcessPayment',
         'referral_information' => 'getReferralInformation',
         'renewal_status' => 'getRenewalStatus',
         'sale_discount_amount' => 'getSaleDiscountAmount',
@@ -274,12 +284,14 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         $this->container['credit_card_information'] = isset($data['credit_card_information']) ? $data['credit_card_information'] : null;
         $this->container['direct_debit_processor_information'] = isset($data['direct_debit_processor_information']) ? $data['direct_debit_processor_information'] : null;
         $this->container['downgrade_reason'] = isset($data['downgrade_reason']) ? $data['downgrade_reason'] : null;
+        $this->container['enable_pre_auth'] = isset($data['enable_pre_auth']) ? $data['enable_pre_auth'] : null;
         $this->container['enable_support'] = isset($data['enable_support']) ? $data['enable_support'] : null;
         $this->container['included_seats'] = isset($data['included_seats']) ? $data['included_seats'] : null;
         $this->container['incremental_seats'] = isset($data['incremental_seats']) ? $data['incremental_seats'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
+        $this->container['process_payment'] = isset($data['process_payment']) ? $data['process_payment'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['renewal_status'] = isset($data['renewal_status']) ? $data['renewal_status'] : null;
         $this->container['sale_discount_amount'] = isset($data['sale_discount_amount']) ? $data['sale_discount_amount'] : null;
@@ -435,6 +447,30 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_pre_auth
+     *
+     * @return ?string
+     */
+    public function getEnablePreAuth()
+    {
+        return $this->container['enable_pre_auth'];
+    }
+
+    /**
+     * Sets enable_pre_auth
+     *
+     * @param ?string $enable_pre_auth 
+     *
+     * @return $this
+     */
+    public function setEnablePreAuth($enable_pre_auth)
+    {
+        $this->container['enable_pre_auth'] = $enable_pre_auth;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_support
      *
      * @return ?string
@@ -574,6 +610,30 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     public function setPlanInformation($plan_information)
     {
         $this->container['plan_information'] = $plan_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets process_payment
+     *
+     * @return ?string
+     */
+    public function getProcessPayment()
+    {
+        return $this->container['process_payment'];
+    }
+
+    /**
+     * Sets process_payment
+     *
+     * @param ?string $process_payment 
+     *
+     * @return $this
+     */
+    public function setProcessPayment($process_payment)
+    {
+        $this->container['process_payment'] = $process_payment;
 
         return $this;
     }

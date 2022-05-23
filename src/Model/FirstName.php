@@ -81,6 +81,8 @@ class FirstName implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'bold' => '?string',
         'bold_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'caption' => '?string',
+        'caption_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_label' => '?string',
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_value' => '?string',
@@ -177,6 +179,8 @@ class FirstName implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => null,
         'bold' => null,
         'bold_metadata' => null,
+        'caption' => null,
+        'caption_metadata' => null,
         'conditional_parent_label' => null,
         'conditional_parent_label_metadata' => null,
         'conditional_parent_value' => null,
@@ -294,6 +298,8 @@ class FirstName implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'anchorYOffsetMetadata',
         'bold' => 'bold',
         'bold_metadata' => 'boldMetadata',
+        'caption' => 'caption',
+        'caption_metadata' => 'captionMetadata',
         'conditional_parent_label' => 'conditionalParentLabel',
         'conditional_parent_label_metadata' => 'conditionalParentLabelMetadata',
         'conditional_parent_value' => 'conditionalParentValue',
@@ -390,6 +396,8 @@ class FirstName implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'setAnchorYOffsetMetadata',
         'bold' => 'setBold',
         'bold_metadata' => 'setBoldMetadata',
+        'caption' => 'setCaption',
+        'caption_metadata' => 'setCaptionMetadata',
         'conditional_parent_label' => 'setConditionalParentLabel',
         'conditional_parent_label_metadata' => 'setConditionalParentLabelMetadata',
         'conditional_parent_value' => 'setConditionalParentValue',
@@ -486,6 +494,8 @@ class FirstName implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'getAnchorYOffsetMetadata',
         'bold' => 'getBold',
         'bold_metadata' => 'getBoldMetadata',
+        'caption' => 'getCaption',
+        'caption_metadata' => 'getCaptionMetadata',
         'conditional_parent_label' => 'getConditionalParentLabel',
         'conditional_parent_label_metadata' => 'getConditionalParentLabelMetadata',
         'conditional_parent_value' => 'getConditionalParentValue',
@@ -636,6 +646,8 @@ class FirstName implements ModelInterface, ArrayAccess
         $this->container['anchor_y_offset_metadata'] = isset($data['anchor_y_offset_metadata']) ? $data['anchor_y_offset_metadata'] : null;
         $this->container['bold'] = isset($data['bold']) ? $data['bold'] : null;
         $this->container['bold_metadata'] = isset($data['bold_metadata']) ? $data['bold_metadata'] : null;
+        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
+        $this->container['caption_metadata'] = isset($data['caption_metadata']) ? $data['caption_metadata'] : null;
         $this->container['conditional_parent_label'] = isset($data['conditional_parent_label']) ? $data['conditional_parent_label'] : null;
         $this->container['conditional_parent_label_metadata'] = isset($data['conditional_parent_label_metadata']) ? $data['conditional_parent_label_metadata'] : null;
         $this->container['conditional_parent_value'] = isset($data['conditional_parent_value']) ? $data['conditional_parent_value'] : null;
@@ -1252,6 +1264,54 @@ class FirstName implements ModelInterface, ArrayAccess
     public function setBoldMetadata($bold_metadata)
     {
         $this->container['bold_metadata'] = $bold_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption
+     *
+     * @return ?string
+     */
+    public function getCaption()
+    {
+        return $this->container['caption'];
+    }
+
+    /**
+     * Sets caption
+     *
+     * @param ?string $caption 
+     *
+     * @return $this
+     */
+    public function setCaption($caption)
+    {
+        $this->container['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getCaptionMetadata()
+    {
+        return $this->container['caption_metadata'];
+    }
+
+    /**
+     * Sets caption_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     *
+     * @return $this
+     */
+    public function setCaptionMetadata($caption_metadata)
+    {
+        $this->container['caption_metadata'] = $caption_metadata;
 
         return $this;
     }

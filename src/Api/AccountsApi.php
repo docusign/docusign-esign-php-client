@@ -716,47 +716,6 @@ class GetPermissionProfileOptions
 
 
 /**
- * GetReservedDomainExistenceOptions Class Doc Comment
- *
- * @category Class
- * @package  DocuSign\eSign
- * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
- * @link     https://github.com/swagger-api/swagger-codegen
- */
-class GetReservedDomainExistenceOptions
-{
-    /**
-      * $email_domain 
-      * @var ?string
-      */
-    protected ?string $email_domain = null;
-
-    /**
-     * Gets email_domain
-     *
-     * @return ?string
-     */
-    public function getEmailDomain(): ?string
-    {
-        return $this->email_domain;
-    }
-
-    /**
-     * Sets email_domain
-     * @param ?string $email_domain 
-     *
-     * @return self
-     */
-    public function setEmailDomain(?string $email_domain): self
-    {
-        $this->email_domain = $email_domain;
-        return $this;
-    }
-}
-
-
-/**
  * ListBrandsOptions Class Doc Comment
  *
  * @category Class
@@ -1213,6 +1172,47 @@ class UpdateAccountSignatureImageOptions
     public function setTransparentPng(?string $transparent_png): self
     {
         $this->transparent_png = $transparent_png;
+        return $this;
+    }
+}
+
+
+/**
+ * UpdateBrandOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
+class UpdateBrandOptions
+{
+    /**
+      * $replace_brand 
+      * @var ?string
+      */
+    protected ?string $replace_brand = null;
+
+    /**
+     * Gets replace_brand
+     *
+     * @return ?string
+     */
+    public function getReplaceBrand(): ?string
+    {
+        return $this->replace_brand;
+    }
+
+    /**
+     * Sets replace_brand
+     * @param ?string $replace_brand 
+     *
+     * @return self
+     */
+    public function setReplaceBrand(?string $replace_brand): self
+    {
+        $this->replace_brand = $replace_brand;
         return $this;
     }
 }
@@ -5154,106 +5154,6 @@ class AccountsApi
     }
 
     /**
-     * Operation getReservedDomainExistence
-     *
-     * Returns whether or not the specified email domain is reserved/claimed.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\ReservedDomainExistence
-     */
-    public function getReservedDomainExistence($account_id, \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions $options = null)
-    {
-        list($response) = $this->getReservedDomainExistenceWithHttpInfo($account_id, $options);
-        return $response;
-    }
-
-    /**
-     * Operation getReservedDomainExistenceWithHttpInfo
-     *
-     * Returns whether or not the specified email domain is reserved/claimed.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\ReservedDomainExistence, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getReservedDomainExistenceWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetReservedDomainExistenceOptions $options = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getReservedDomainExistence');
-        }
-        // verify the required parameter 'email_domain' is set
-        if ($email_domain === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $email_domain when calling getReservedDomainExistence');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/reserved_domains";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-            // query params
-            if ($options->getEmailDomain() != 'null') {
-                $queryParams['email_domain'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailDomain());
-            }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\ReservedDomainExistence',
-                '/v2.1/accounts/{accountId}/reserved_domains'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\ReservedDomainExistence', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ReservedDomainExistence', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation getSupportedLanguages
      *
      * Gets list of supported languages for recipient language setting.
@@ -6796,13 +6696,14 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
-    public function updateBrand($account_id, $brand_id, $brand = null)
+    public function updateBrand($account_id, $brand_id, $brand = null, \DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions $options = null)
     {
-        list($response) = $this->updateBrandWithHttpInfo($account_id, $brand_id, $brand);
+        list($response) = $this->updateBrandWithHttpInfo($account_id, $brand_id, $brand, $options);
         return $response;
     }
 
@@ -6814,11 +6715,12 @@ class AccountsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $brand_id The unique identifier of a brand.
      * @param \DocuSign\eSign\Model\Brand $brand  (optional)
+     * @param  \DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBrandWithHttpInfo($account_id, $brand_id, $brand = null): array
+    public function updateBrandWithHttpInfo($account_id, $brand_id, $brand = null, \DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6835,6 +6737,13 @@ class AccountsApi
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        if ($options != null)
+        {
+            // query params
+            if ($options->getReplaceBrand() != 'null') {
+                $queryParams['replace_brand'] = $this->apiClient->getSerializer()->toQueryValue($options->getReplaceBrand());
+            }
+        }
 
         // path params
         if ($account_id !== null) {

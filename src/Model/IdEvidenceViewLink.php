@@ -1,6 +1,6 @@
 <?php
 /**
- * BulkSendErrorStatus
+ * IdEvidenceViewLink
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * BulkSendErrorStatus Class Doc Comment
+ * IdEvidenceViewLink Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BulkSendErrorStatus implements ModelInterface, ArrayAccess
+class IdEvidenceViewLink implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'bulkSendErrorStatus';
+    protected static $swaggerModelName = 'idEvidenceViewLink';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created' => '?string',
-        'envelope_id' => '?string',
-        'error_message' => '?string',
-        'recipient_emails' => '?string[]'
+        'view_link' => '?string'
     ];
 
     /**
@@ -71,10 +68,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'created' => null,
-        'envelope_id' => null,
-        'error_message' => null,
-        'recipient_emails' => null
+        'view_link' => null
     ];
 
     /**
@@ -104,10 +98,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'created' => 'created',
-        'envelope_id' => 'envelopeId',
-        'error_message' => 'errorMessage',
-        'recipient_emails' => 'recipientEmails'
+        'view_link' => 'ViewLink'
     ];
 
     /**
@@ -116,10 +107,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'created' => 'setCreated',
-        'envelope_id' => 'setEnvelopeId',
-        'error_message' => 'setErrorMessage',
-        'recipient_emails' => 'setRecipientEmails'
+        'view_link' => 'setViewLink'
     ];
 
     /**
@@ -128,10 +116,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'created' => 'getCreated',
-        'envelope_id' => 'getEnvelopeId',
-        'error_message' => 'getErrorMessage',
-        'recipient_emails' => 'getRecipientEmails'
+        'view_link' => 'getViewLink'
     ];
 
     /**
@@ -194,10 +179,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
-        $this->container['error_message'] = isset($data['error_message']) ? $data['error_message'] : null;
-        $this->container['recipient_emails'] = isset($data['recipient_emails']) ? $data['recipient_emails'] : null;
+        $this->container['view_link'] = isset($data['view_link']) ? $data['view_link'] : null;
     }
 
     /**
@@ -225,97 +207,25 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets created
+     * Gets view_link
      *
      * @return ?string
      */
-    public function getCreated()
+    public function getViewLink()
     {
-        return $this->container['created'];
+        return $this->container['view_link'];
     }
 
     /**
-     * Sets created
+     * Sets view_link
      *
-     * @param ?string $created 
+     * @param ?string $view_link 
      *
      * @return $this
      */
-    public function setCreated($created)
+    public function setViewLink($view_link)
     {
-        $this->container['created'] = $created;
-
-        return $this;
-    }
-
-    /**
-     * Gets envelope_id
-     *
-     * @return ?string
-     */
-    public function getEnvelopeId()
-    {
-        return $this->container['envelope_id'];
-    }
-
-    /**
-     * Sets envelope_id
-     *
-     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
-     *
-     * @return $this
-     */
-    public function setEnvelopeId($envelope_id)
-    {
-        $this->container['envelope_id'] = $envelope_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets error_message
-     *
-     * @return ?string
-     */
-    public function getErrorMessage()
-    {
-        return $this->container['error_message'];
-    }
-
-    /**
-     * Sets error_message
-     *
-     * @param ?string $error_message 
-     *
-     * @return $this
-     */
-    public function setErrorMessage($error_message)
-    {
-        $this->container['error_message'] = $error_message;
-
-        return $this;
-    }
-
-    /**
-     * Gets recipient_emails
-     *
-     * @return ?string[]
-     */
-    public function getRecipientEmails()
-    {
-        return $this->container['recipient_emails'];
-    }
-
-    /**
-     * Sets recipient_emails
-     *
-     * @param ?string[] $recipient_emails 
-     *
-     * @return $this
-     */
-    public function setRecipientEmails($recipient_emails)
-    {
-        $this->container['recipient_emails'] = $recipient_emails;
+        $this->container['view_link'] = $view_link;
 
         return $this;
     }
