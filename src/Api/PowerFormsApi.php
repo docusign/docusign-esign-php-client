@@ -262,6 +262,60 @@ class ListPowerFormsOptions
         return $this;
     }
     /**
+      * $search_fields 
+      * @var ?string
+      */
+    protected ?string $search_fields = null;
+
+    /**
+     * Gets search_fields
+     *
+     * @return ?string
+     */
+    public function getSearchFields(): ?string
+    {
+        return $this->search_fields;
+    }
+
+    /**
+     * Sets search_fields
+     * @param ?string $search_fields 
+     *
+     * @return self
+     */
+    public function setSearchFields(?string $search_fields): self
+    {
+        $this->search_fields = $search_fields;
+        return $this;
+    }
+    /**
+      * $search_text 
+      * @var ?string
+      */
+    protected ?string $search_text = null;
+
+    /**
+     * Gets search_text
+     *
+     * @return ?string
+     */
+    public function getSearchText(): ?string
+    {
+        return $this->search_text;
+    }
+
+    /**
+     * Sets search_text
+     * @param ?string $search_text 
+     *
+     * @return self
+     */
+    public function setSearchText(?string $search_text): self
+    {
+        $this->search_text = $search_text;
+        return $this;
+    }
+    /**
       * $to_date 
       * @var ?string
       */
@@ -1009,6 +1063,12 @@ class PowerFormsApi
             }
             if ($options->getOrderBy() != 'null') {
                 $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
+            }
+            if ($options->getSearchFields() != 'null') {
+                $queryParams['search_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchFields());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
             }
             if ($options->getToDate() != 'null') {
                 $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());

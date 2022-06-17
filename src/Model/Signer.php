@@ -72,6 +72,7 @@ class Signer implements ModelInterface, ArrayAccess
         'can_sign_offline' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
+        'consent_details_list' => '\DocuSign\eSign\Model\ConsentDetails[]',
         'creation_reason' => '?string',
         'custom_fields' => '?string[]',
         'declined_date_time' => '?string',
@@ -176,6 +177,7 @@ class Signer implements ModelInterface, ArrayAccess
         'can_sign_offline' => null,
         'client_user_id' => null,
         'completed_count' => null,
+        'consent_details_list' => null,
         'creation_reason' => null,
         'custom_fields' => null,
         'declined_date_time' => null,
@@ -301,6 +303,7 @@ class Signer implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'canSignOffline',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
+        'consent_details_list' => 'consentDetailsList',
         'creation_reason' => 'creationReason',
         'custom_fields' => 'customFields',
         'declined_date_time' => 'declinedDateTime',
@@ -405,6 +408,7 @@ class Signer implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'setCanSignOffline',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
+        'consent_details_list' => 'setConsentDetailsList',
         'creation_reason' => 'setCreationReason',
         'custom_fields' => 'setCustomFields',
         'declined_date_time' => 'setDeclinedDateTime',
@@ -509,6 +513,7 @@ class Signer implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'getCanSignOffline',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
+        'consent_details_list' => 'getConsentDetailsList',
         'creation_reason' => 'getCreationReason',
         'custom_fields' => 'getCustomFields',
         'declined_date_time' => 'getDeclinedDateTime',
@@ -667,6 +672,7 @@ class Signer implements ModelInterface, ArrayAccess
         $this->container['can_sign_offline'] = isset($data['can_sign_offline']) ? $data['can_sign_offline'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
+        $this->container['consent_details_list'] = isset($data['consent_details_list']) ? $data['consent_details_list'] : null;
         $this->container['creation_reason'] = isset($data['creation_reason']) ? $data['creation_reason'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
@@ -1084,6 +1090,30 @@ class Signer implements ModelInterface, ArrayAccess
     public function setCompletedCount($completed_count)
     {
         $this->container['completed_count'] = $completed_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets consent_details_list
+     *
+     * @return \DocuSign\eSign\Model\ConsentDetails[]
+     */
+    public function getConsentDetailsList()
+    {
+        return $this->container['consent_details_list'];
+    }
+
+    /**
+     * Sets consent_details_list
+     *
+     * @param \DocuSign\eSign\Model\ConsentDetails[] $consent_details_list 
+     *
+     * @return $this
+     */
+    public function setConsentDetailsList($consent_details_list)
+    {
+        $this->container['consent_details_list'] = $consent_details_list;
 
         return $this;
     }

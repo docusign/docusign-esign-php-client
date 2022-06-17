@@ -68,6 +68,7 @@ class Agent implements ModelInterface, ArrayAccess
         'auto_responded_reason' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
+        'consent_details_list' => '\DocuSign\eSign\Model\ConsentDetails[]',
         'custom_fields' => '?string[]',
         'declined_date_time' => '?string',
         'declined_reason' => '?string',
@@ -148,6 +149,7 @@ class Agent implements ModelInterface, ArrayAccess
         'auto_responded_reason' => null,
         'client_user_id' => null,
         'completed_count' => null,
+        'consent_details_list' => null,
         'custom_fields' => null,
         'declined_date_time' => null,
         'declined_reason' => null,
@@ -249,6 +251,7 @@ class Agent implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'autoRespondedReason',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
+        'consent_details_list' => 'consentDetailsList',
         'custom_fields' => 'customFields',
         'declined_date_time' => 'declinedDateTime',
         'declined_reason' => 'declinedReason',
@@ -329,6 +332,7 @@ class Agent implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'setAutoRespondedReason',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
+        'consent_details_list' => 'setConsentDetailsList',
         'custom_fields' => 'setCustomFields',
         'declined_date_time' => 'setDeclinedDateTime',
         'declined_reason' => 'setDeclinedReason',
@@ -409,6 +413,7 @@ class Agent implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'getAutoRespondedReason',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
+        'consent_details_list' => 'getConsentDetailsList',
         'custom_fields' => 'getCustomFields',
         'declined_date_time' => 'getDeclinedDateTime',
         'declined_reason' => 'getDeclinedReason',
@@ -543,6 +548,7 @@ class Agent implements ModelInterface, ArrayAccess
         $this->container['auto_responded_reason'] = isset($data['auto_responded_reason']) ? $data['auto_responded_reason'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
+        $this->container['consent_details_list'] = isset($data['consent_details_list']) ? $data['consent_details_list'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
         $this->container['declined_reason'] = isset($data['declined_reason']) ? $data['declined_reason'] : null;
@@ -821,6 +827,30 @@ class Agent implements ModelInterface, ArrayAccess
     public function setCompletedCount($completed_count)
     {
         $this->container['completed_count'] = $completed_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets consent_details_list
+     *
+     * @return \DocuSign\eSign\Model\ConsentDetails[]
+     */
+    public function getConsentDetailsList()
+    {
+        return $this->container['consent_details_list'];
+    }
+
+    /**
+     * Sets consent_details_list
+     *
+     * @param \DocuSign\eSign\Model\ConsentDetails[] $consent_details_list 
+     *
+     * @return $this
+     */
+    public function setConsentDetailsList($consent_details_list)
+    {
+        $this->container['consent_details_list'] = $consent_details_list;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ScheduledSending
+ * ConnectHistoricalEnvelopeRepublish
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ScheduledSending Class Doc Comment
+ * ConnectHistoricalEnvelopeRepublish Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ScheduledSending implements ModelInterface, ArrayAccess
+class ConnectHistoricalEnvelopeRepublish implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'scheduledSending';
+    protected static $swaggerModelName = 'connectHistoricalEnvelopeRepublish';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_list_id' => '?string',
-        'resume_date' => '?string',
-        'rules' => '\DocuSign\eSign\Model\EnvelopeDelayRule[]',
-        'status' => '?string'
+        'config' => '\DocuSign\eSign\Model\ConnectCustomConfiguration',
+        'envelopes' => '?string[]'
     ];
 
     /**
@@ -71,10 +69,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bulk_list_id' => null,
-        'resume_date' => null,
-        'rules' => null,
-        'status' => null
+        'config' => null,
+        'envelopes' => null
     ];
 
     /**
@@ -104,10 +100,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bulk_list_id' => 'bulkListId',
-        'resume_date' => 'resumeDate',
-        'rules' => 'rules',
-        'status' => 'status'
+        'config' => 'config',
+        'envelopes' => 'envelopes'
     ];
 
     /**
@@ -116,10 +110,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bulk_list_id' => 'setBulkListId',
-        'resume_date' => 'setResumeDate',
-        'rules' => 'setRules',
-        'status' => 'setStatus'
+        'config' => 'setConfig',
+        'envelopes' => 'setEnvelopes'
     ];
 
     /**
@@ -128,10 +120,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bulk_list_id' => 'getBulkListId',
-        'resume_date' => 'getResumeDate',
-        'rules' => 'getRules',
-        'status' => 'getStatus'
+        'config' => 'getConfig',
+        'envelopes' => 'getEnvelopes'
     ];
 
     /**
@@ -194,10 +184,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bulk_list_id'] = isset($data['bulk_list_id']) ? $data['bulk_list_id'] : null;
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
-        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
+        $this->container['envelopes'] = isset($data['envelopes']) ? $data['envelopes'] : null;
     }
 
     /**
@@ -225,97 +213,49 @@ class ScheduledSending implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bulk_list_id
+     * Gets config
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\ConnectCustomConfiguration
      */
-    public function getBulkListId()
+    public function getConfig()
     {
-        return $this->container['bulk_list_id'];
+        return $this->container['config'];
     }
 
     /**
-     * Sets bulk_list_id
+     * Sets config
      *
-     * @param ?string $bulk_list_id 
+     * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $config config
      *
      * @return $this
      */
-    public function setBulkListId($bulk_list_id)
+    public function setConfig($config)
     {
-        $this->container['bulk_list_id'] = $bulk_list_id;
+        $this->container['config'] = $config;
 
         return $this;
     }
 
     /**
-     * Gets resume_date
+     * Gets envelopes
      *
-     * @return ?string
+     * @return ?string[]
      */
-    public function getResumeDate()
+    public function getEnvelopes()
     {
-        return $this->container['resume_date'];
+        return $this->container['envelopes'];
     }
 
     /**
-     * Sets resume_date
+     * Sets envelopes
      *
-     * @param ?string $resume_date 
+     * @param ?string[] $envelopes 
      *
      * @return $this
      */
-    public function setResumeDate($resume_date)
+    public function setEnvelopes($envelopes)
     {
-        $this->container['resume_date'] = $resume_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets rules
-     *
-     * @return \DocuSign\eSign\Model\EnvelopeDelayRule[]
-     */
-    public function getRules()
-    {
-        return $this->container['rules'];
-    }
-
-    /**
-     * Sets rules
-     *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules 
-     *
-     * @return $this
-     */
-    public function setRules($rules)
-    {
-        $this->container['rules'] = $rules;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return ?string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
+        $this->container['envelopes'] = $envelopes;
 
         return $this;
     }

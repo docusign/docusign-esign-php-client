@@ -4935,6 +4935,100 @@ class EnvelopesApi
     }
 
     /**
+     * Operation createHistoricalEnvelopePublishTransaction
+     *
+     * Submits a batch of historical envelopes for republish to an adhoc config.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ConnectHistoricalEnvelopeRepublish $connect_historical_envelope_republish  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\EnvelopePublishTransaction
+     */
+    public function createHistoricalEnvelopePublishTransaction($account_id, $connect_historical_envelope_republish = null)
+    {
+        list($response) = $this->createHistoricalEnvelopePublishTransactionWithHttpInfo($account_id, $connect_historical_envelope_republish);
+        return $response;
+    }
+
+    /**
+     * Operation createHistoricalEnvelopePublishTransactionWithHttpInfo
+     *
+     * Submits a batch of historical envelopes for republish to an adhoc config.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\ConnectHistoricalEnvelopeRepublish $connect_historical_envelope_republish  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\EnvelopePublishTransaction, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createHistoricalEnvelopePublishTransactionWithHttpInfo($account_id, $connect_historical_envelope_republish = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createHistoricalEnvelopePublishTransaction');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/connect/envelopes/publish/historical";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($connect_historical_envelope_republish)) {
+            $_tempBody = $connect_historical_envelope_republish;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\EnvelopePublishTransaction',
+                '/v2.1/accounts/{accountId}/connect/envelopes/publish/historical'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\EnvelopePublishTransaction', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\EnvelopePublishTransaction', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation createLock
      *
      * Lock an envelope.
