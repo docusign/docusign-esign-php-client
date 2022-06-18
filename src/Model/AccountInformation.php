@@ -70,6 +70,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'billing_period_envelopes_sent' => '?string',
         'billing_period_start_date' => '?string',
         'billing_profile' => '?string',
+        'brands' => '\DocuSign\eSign\Model\BrandsResponse',
         'can_upgrade' => '?string',
         'connect_permission' => '?string',
         'created_date' => '?string',
@@ -115,6 +116,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'billing_period_envelopes_sent' => null,
         'billing_period_start_date' => null,
         'billing_profile' => null,
+        'brands' => null,
         'can_upgrade' => null,
         'connect_permission' => null,
         'created_date' => null,
@@ -181,6 +183,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'billing_period_envelopes_sent' => 'billingPeriodEnvelopesSent',
         'billing_period_start_date' => 'billingPeriodStartDate',
         'billing_profile' => 'billingProfile',
+        'brands' => 'brands',
         'can_upgrade' => 'canUpgrade',
         'connect_permission' => 'connectPermission',
         'created_date' => 'createdDate',
@@ -226,6 +229,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'billing_period_envelopes_sent' => 'setBillingPeriodEnvelopesSent',
         'billing_period_start_date' => 'setBillingPeriodStartDate',
         'billing_profile' => 'setBillingProfile',
+        'brands' => 'setBrands',
         'can_upgrade' => 'setCanUpgrade',
         'connect_permission' => 'setConnectPermission',
         'created_date' => 'setCreatedDate',
@@ -271,6 +275,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'billing_period_envelopes_sent' => 'getBillingPeriodEnvelopesSent',
         'billing_period_start_date' => 'getBillingPeriodStartDate',
         'billing_profile' => 'getBillingProfile',
+        'brands' => 'getBrands',
         'can_upgrade' => 'getCanUpgrade',
         'connect_permission' => 'getConnectPermission',
         'created_date' => 'getCreatedDate',
@@ -370,6 +375,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         $this->container['billing_period_envelopes_sent'] = isset($data['billing_period_envelopes_sent']) ? $data['billing_period_envelopes_sent'] : null;
         $this->container['billing_period_start_date'] = isset($data['billing_period_start_date']) ? $data['billing_period_start_date'] : null;
         $this->container['billing_profile'] = isset($data['billing_profile']) ? $data['billing_profile'] : null;
+        $this->container['brands'] = isset($data['brands']) ? $data['brands'] : null;
         $this->container['can_upgrade'] = isset($data['can_upgrade']) ? $data['can_upgrade'] : null;
         $this->container['connect_permission'] = isset($data['connect_permission']) ? $data['connect_permission'] : null;
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
@@ -659,6 +665,30 @@ class AccountInformation implements ModelInterface, ArrayAccess
     public function setBillingProfile($billing_profile)
     {
         $this->container['billing_profile'] = $billing_profile;
+
+        return $this;
+    }
+
+    /**
+     * Gets brands
+     *
+     * @return \DocuSign\eSign\Model\BrandsResponse
+     */
+    public function getBrands()
+    {
+        return $this->container['brands'];
+    }
+
+    /**
+     * Sets brands
+     *
+     * @param \DocuSign\eSign\Model\BrandsResponse $brands brands
+     *
+     * @return $this
+     */
+    public function setBrands($brands)
+    {
+        $this->container['brands'] = $brands;
 
         return $this;
     }

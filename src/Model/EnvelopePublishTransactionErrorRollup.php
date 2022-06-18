@@ -1,6 +1,6 @@
 <?php
 /**
- * ScheduledSending
+ * EnvelopePublishTransactionErrorRollup
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ScheduledSending Class Doc Comment
+ * EnvelopePublishTransactionErrorRollup Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ScheduledSending implements ModelInterface, ArrayAccess
+class EnvelopePublishTransactionErrorRollup implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'scheduledSending';
+    protected static $swaggerModelName = 'envelopePublishTransactionErrorRollup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_list_id' => '?string',
-        'resume_date' => '?string',
-        'rules' => '\DocuSign\eSign\Model\EnvelopeDelayRule[]',
-        'status' => '?string'
+        'count' => '?string',
+        'error_type' => '?string'
     ];
 
     /**
@@ -71,10 +69,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bulk_list_id' => null,
-        'resume_date' => null,
-        'rules' => null,
-        'status' => null
+        'count' => null,
+        'error_type' => null
     ];
 
     /**
@@ -104,10 +100,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bulk_list_id' => 'bulkListId',
-        'resume_date' => 'resumeDate',
-        'rules' => 'rules',
-        'status' => 'status'
+        'count' => 'count',
+        'error_type' => 'errorType'
     ];
 
     /**
@@ -116,10 +110,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bulk_list_id' => 'setBulkListId',
-        'resume_date' => 'setResumeDate',
-        'rules' => 'setRules',
-        'status' => 'setStatus'
+        'count' => 'setCount',
+        'error_type' => 'setErrorType'
     ];
 
     /**
@@ -128,10 +120,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bulk_list_id' => 'getBulkListId',
-        'resume_date' => 'getResumeDate',
-        'rules' => 'getRules',
-        'status' => 'getStatus'
+        'count' => 'getCount',
+        'error_type' => 'getErrorType'
     ];
 
     /**
@@ -194,10 +184,8 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bulk_list_id'] = isset($data['bulk_list_id']) ? $data['bulk_list_id'] : null;
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
-        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['error_type'] = isset($data['error_type']) ? $data['error_type'] : null;
     }
 
     /**
@@ -225,97 +213,49 @@ class ScheduledSending implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bulk_list_id
+     * Gets count
      *
      * @return ?string
      */
-    public function getBulkListId()
+    public function getCount()
     {
-        return $this->container['bulk_list_id'];
+        return $this->container['count'];
     }
 
     /**
-     * Sets bulk_list_id
+     * Sets count
      *
-     * @param ?string $bulk_list_id 
+     * @param ?string $count 
      *
      * @return $this
      */
-    public function setBulkListId($bulk_list_id)
+    public function setCount($count)
     {
-        $this->container['bulk_list_id'] = $bulk_list_id;
+        $this->container['count'] = $count;
 
         return $this;
     }
 
     /**
-     * Gets resume_date
+     * Gets error_type
      *
      * @return ?string
      */
-    public function getResumeDate()
+    public function getErrorType()
     {
-        return $this->container['resume_date'];
+        return $this->container['error_type'];
     }
 
     /**
-     * Sets resume_date
+     * Sets error_type
      *
-     * @param ?string $resume_date 
+     * @param ?string $error_type 
      *
      * @return $this
      */
-    public function setResumeDate($resume_date)
+    public function setErrorType($error_type)
     {
-        $this->container['resume_date'] = $resume_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets rules
-     *
-     * @return \DocuSign\eSign\Model\EnvelopeDelayRule[]
-     */
-    public function getRules()
-    {
-        return $this->container['rules'];
-    }
-
-    /**
-     * Sets rules
-     *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules 
-     *
-     * @return $this
-     */
-    public function setRules($rules)
-    {
-        $this->container['rules'] = $rules;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return ?string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
+        $this->container['error_type'] = $error_type;
 
         return $this;
     }

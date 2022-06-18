@@ -66,6 +66,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'configuration_type' => '?string',
         'connect_id' => '?string',
         'delivery_mode' => '?string',
+        'disabled_by' => '?string',
         'enable_log' => '?string',
         'envelope_events' => '?string[]',
         'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
@@ -114,6 +115,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'configuration_type' => null,
         'connect_id' => null,
         'delivery_mode' => null,
+        'disabled_by' => null,
         'enable_log' => null,
         'envelope_events' => null,
         'event_data' => null,
@@ -183,6 +185,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'configuration_type' => 'configurationType',
         'connect_id' => 'connectId',
         'delivery_mode' => 'deliveryMode',
+        'disabled_by' => 'disabledBy',
         'enable_log' => 'enableLog',
         'envelope_events' => 'envelopeEvents',
         'event_data' => 'eventData',
@@ -231,6 +234,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'configuration_type' => 'setConfigurationType',
         'connect_id' => 'setConnectId',
         'delivery_mode' => 'setDeliveryMode',
+        'disabled_by' => 'setDisabledBy',
         'enable_log' => 'setEnableLog',
         'envelope_events' => 'setEnvelopeEvents',
         'event_data' => 'setEventData',
@@ -279,6 +283,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'configuration_type' => 'getConfigurationType',
         'connect_id' => 'getConnectId',
         'delivery_mode' => 'getDeliveryMode',
+        'disabled_by' => 'getDisabledBy',
         'enable_log' => 'getEnableLog',
         'envelope_events' => 'getEnvelopeEvents',
         'event_data' => 'getEventData',
@@ -381,6 +386,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['connect_id'] = isset($data['connect_id']) ? $data['connect_id'] : null;
         $this->container['delivery_mode'] = isset($data['delivery_mode']) ? $data['delivery_mode'] : null;
+        $this->container['disabled_by'] = isset($data['disabled_by']) ? $data['disabled_by'] : null;
         $this->container['enable_log'] = isset($data['enable_log']) ? $data['enable_log'] : null;
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
         $this->container['event_data'] = isset($data['event_data']) ? $data['event_data'] : null;
@@ -604,6 +610,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     public function setDeliveryMode($delivery_mode)
     {
         $this->container['delivery_mode'] = $delivery_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets disabled_by
+     *
+     * @return ?string
+     */
+    public function getDisabledBy()
+    {
+        return $this->container['disabled_by'];
+    }
+
+    /**
+     * Sets disabled_by
+     *
+     * @param ?string $disabled_by 
+     *
+     * @return $this
+     */
+    public function setDisabledBy($disabled_by)
+    {
+        $this->container['disabled_by'] = $disabled_by;
 
         return $this;
     }

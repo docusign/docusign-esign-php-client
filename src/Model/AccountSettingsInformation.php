@@ -149,6 +149,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_in_person_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_managed_stamps' => '?string',
         'allow_managed_stamps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_managing_envelopes_on_behalf_of_others' => '?string',
+        'allow_managing_envelopes_on_behalf_of_others_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_markup' => '?string',
         'allow_markup_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_member_time_zone' => '?string',
@@ -179,6 +181,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organization_to_use_in_person_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_organization_to_use_remote_notary' => '?string',
         'allow_organization_to_use_remote_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_organization_to_use_third_party_electronic_notary' => '?string',
+        'allow_organization_to_use_third_party_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_payment_processing' => '?string',
         'allow_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_phone_authentication' => '?string',
@@ -201,6 +205,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_scheduled_sending_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_security_appliance' => '?string',
         'allow_security_appliance_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_sending_envelopes_on_behalf_of_others' => '?string',
+        'allow_sending_envelopes_on_behalf_of_others_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_send_to_certified_delivery' => '?string',
         'allow_send_to_certified_delivery_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_send_to_intermediary' => '?string',
@@ -235,6 +241,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_social_id_login_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_supplemental_documents' => '?string',
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_third_party_electronic_notary' => '?string',
+        'allow_third_party_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_users_to_access_directory' => '?string',
         'allow_users_to_access_directory_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_value_insights' => '?string',
@@ -758,6 +766,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_in_person_metadata' => null,
         'allow_managed_stamps' => null,
         'allow_managed_stamps_metadata' => null,
+        'allow_managing_envelopes_on_behalf_of_others' => null,
+        'allow_managing_envelopes_on_behalf_of_others_metadata' => null,
         'allow_markup' => null,
         'allow_markup_metadata' => null,
         'allow_member_time_zone' => null,
@@ -788,6 +798,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organization_to_use_in_person_electronic_notary_metadata' => null,
         'allow_organization_to_use_remote_notary' => null,
         'allow_organization_to_use_remote_notary_metadata' => null,
+        'allow_organization_to_use_third_party_electronic_notary' => null,
+        'allow_organization_to_use_third_party_electronic_notary_metadata' => null,
         'allow_payment_processing' => null,
         'allow_payment_processing_metadata' => null,
         'allow_phone_authentication' => null,
@@ -810,6 +822,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_scheduled_sending_metadata' => null,
         'allow_security_appliance' => null,
         'allow_security_appliance_metadata' => null,
+        'allow_sending_envelopes_on_behalf_of_others' => null,
+        'allow_sending_envelopes_on_behalf_of_others_metadata' => null,
         'allow_send_to_certified_delivery' => null,
         'allow_send_to_certified_delivery_metadata' => null,
         'allow_send_to_intermediary' => null,
@@ -844,6 +858,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_social_id_login_metadata' => null,
         'allow_supplemental_documents' => null,
         'allow_supplemental_documents_metadata' => null,
+        'allow_third_party_electronic_notary' => null,
+        'allow_third_party_electronic_notary_metadata' => null,
         'allow_users_to_access_directory' => null,
         'allow_users_to_access_directory_metadata' => null,
         'allow_value_insights' => null,
@@ -1388,6 +1404,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_in_person_metadata' => 'allowInPersonMetadata',
         'allow_managed_stamps' => 'allowManagedStamps',
         'allow_managed_stamps_metadata' => 'allowManagedStampsMetadata',
+        'allow_managing_envelopes_on_behalf_of_others' => 'allowManagingEnvelopesOnBehalfOfOthers',
+        'allow_managing_envelopes_on_behalf_of_others_metadata' => 'allowManagingEnvelopesOnBehalfOfOthersMetadata',
         'allow_markup' => 'allowMarkup',
         'allow_markup_metadata' => 'allowMarkupMetadata',
         'allow_member_time_zone' => 'allowMemberTimeZone',
@@ -1418,6 +1436,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organization_to_use_in_person_electronic_notary_metadata' => 'allowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary' => 'allowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata' => 'allowOrganizationToUseRemoteNotaryMetadata',
+        'allow_organization_to_use_third_party_electronic_notary' => 'allowOrganizationToUseThirdPartyElectronicNotary',
+        'allow_organization_to_use_third_party_electronic_notary_metadata' => 'allowOrganizationToUseThirdPartyElectronicNotaryMetadata',
         'allow_payment_processing' => 'allowPaymentProcessing',
         'allow_payment_processing_metadata' => 'allowPaymentProcessingMetadata',
         'allow_phone_authentication' => 'allowPhoneAuthentication',
@@ -1440,6 +1460,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_scheduled_sending_metadata' => 'allowScheduledSendingMetadata',
         'allow_security_appliance' => 'allowSecurityAppliance',
         'allow_security_appliance_metadata' => 'allowSecurityApplianceMetadata',
+        'allow_sending_envelopes_on_behalf_of_others' => 'allowSendingEnvelopesOnBehalfOfOthers',
+        'allow_sending_envelopes_on_behalf_of_others_metadata' => 'allowSendingEnvelopesOnBehalfOfOthersMetadata',
         'allow_send_to_certified_delivery' => 'allowSendToCertifiedDelivery',
         'allow_send_to_certified_delivery_metadata' => 'allowSendToCertifiedDeliveryMetadata',
         'allow_send_to_intermediary' => 'allowSendToIntermediary',
@@ -1474,6 +1496,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_social_id_login_metadata' => 'allowSocialIdLoginMetadata',
         'allow_supplemental_documents' => 'allowSupplementalDocuments',
         'allow_supplemental_documents_metadata' => 'allowSupplementalDocumentsMetadata',
+        'allow_third_party_electronic_notary' => 'allowThirdPartyElectronicNotary',
+        'allow_third_party_electronic_notary_metadata' => 'allowThirdPartyElectronicNotaryMetadata',
         'allow_users_to_access_directory' => 'allowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'allowValueInsights',
@@ -1997,6 +2021,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_in_person_metadata' => 'setAllowInPersonMetadata',
         'allow_managed_stamps' => 'setAllowManagedStamps',
         'allow_managed_stamps_metadata' => 'setAllowManagedStampsMetadata',
+        'allow_managing_envelopes_on_behalf_of_others' => 'setAllowManagingEnvelopesOnBehalfOfOthers',
+        'allow_managing_envelopes_on_behalf_of_others_metadata' => 'setAllowManagingEnvelopesOnBehalfOfOthersMetadata',
         'allow_markup' => 'setAllowMarkup',
         'allow_markup_metadata' => 'setAllowMarkupMetadata',
         'allow_member_time_zone' => 'setAllowMemberTimeZone',
@@ -2027,6 +2053,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organization_to_use_in_person_electronic_notary_metadata' => 'setAllowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary' => 'setAllowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata' => 'setAllowOrganizationToUseRemoteNotaryMetadata',
+        'allow_organization_to_use_third_party_electronic_notary' => 'setAllowOrganizationToUseThirdPartyElectronicNotary',
+        'allow_organization_to_use_third_party_electronic_notary_metadata' => 'setAllowOrganizationToUseThirdPartyElectronicNotaryMetadata',
         'allow_payment_processing' => 'setAllowPaymentProcessing',
         'allow_payment_processing_metadata' => 'setAllowPaymentProcessingMetadata',
         'allow_phone_authentication' => 'setAllowPhoneAuthentication',
@@ -2049,6 +2077,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_scheduled_sending_metadata' => 'setAllowScheduledSendingMetadata',
         'allow_security_appliance' => 'setAllowSecurityAppliance',
         'allow_security_appliance_metadata' => 'setAllowSecurityApplianceMetadata',
+        'allow_sending_envelopes_on_behalf_of_others' => 'setAllowSendingEnvelopesOnBehalfOfOthers',
+        'allow_sending_envelopes_on_behalf_of_others_metadata' => 'setAllowSendingEnvelopesOnBehalfOfOthersMetadata',
         'allow_send_to_certified_delivery' => 'setAllowSendToCertifiedDelivery',
         'allow_send_to_certified_delivery_metadata' => 'setAllowSendToCertifiedDeliveryMetadata',
         'allow_send_to_intermediary' => 'setAllowSendToIntermediary',
@@ -2083,6 +2113,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_social_id_login_metadata' => 'setAllowSocialIdLoginMetadata',
         'allow_supplemental_documents' => 'setAllowSupplementalDocuments',
         'allow_supplemental_documents_metadata' => 'setAllowSupplementalDocumentsMetadata',
+        'allow_third_party_electronic_notary' => 'setAllowThirdPartyElectronicNotary',
+        'allow_third_party_electronic_notary_metadata' => 'setAllowThirdPartyElectronicNotaryMetadata',
         'allow_users_to_access_directory' => 'setAllowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'setAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'setAllowValueInsights',
@@ -2606,6 +2638,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_in_person_metadata' => 'getAllowInPersonMetadata',
         'allow_managed_stamps' => 'getAllowManagedStamps',
         'allow_managed_stamps_metadata' => 'getAllowManagedStampsMetadata',
+        'allow_managing_envelopes_on_behalf_of_others' => 'getAllowManagingEnvelopesOnBehalfOfOthers',
+        'allow_managing_envelopes_on_behalf_of_others_metadata' => 'getAllowManagingEnvelopesOnBehalfOfOthersMetadata',
         'allow_markup' => 'getAllowMarkup',
         'allow_markup_metadata' => 'getAllowMarkupMetadata',
         'allow_member_time_zone' => 'getAllowMemberTimeZone',
@@ -2636,6 +2670,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_organization_to_use_in_person_electronic_notary_metadata' => 'getAllowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary' => 'getAllowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata' => 'getAllowOrganizationToUseRemoteNotaryMetadata',
+        'allow_organization_to_use_third_party_electronic_notary' => 'getAllowOrganizationToUseThirdPartyElectronicNotary',
+        'allow_organization_to_use_third_party_electronic_notary_metadata' => 'getAllowOrganizationToUseThirdPartyElectronicNotaryMetadata',
         'allow_payment_processing' => 'getAllowPaymentProcessing',
         'allow_payment_processing_metadata' => 'getAllowPaymentProcessingMetadata',
         'allow_phone_authentication' => 'getAllowPhoneAuthentication',
@@ -2658,6 +2694,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_scheduled_sending_metadata' => 'getAllowScheduledSendingMetadata',
         'allow_security_appliance' => 'getAllowSecurityAppliance',
         'allow_security_appliance_metadata' => 'getAllowSecurityApplianceMetadata',
+        'allow_sending_envelopes_on_behalf_of_others' => 'getAllowSendingEnvelopesOnBehalfOfOthers',
+        'allow_sending_envelopes_on_behalf_of_others_metadata' => 'getAllowSendingEnvelopesOnBehalfOfOthersMetadata',
         'allow_send_to_certified_delivery' => 'getAllowSendToCertifiedDelivery',
         'allow_send_to_certified_delivery_metadata' => 'getAllowSendToCertifiedDeliveryMetadata',
         'allow_send_to_intermediary' => 'getAllowSendToIntermediary',
@@ -2692,6 +2730,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_social_id_login_metadata' => 'getAllowSocialIdLoginMetadata',
         'allow_supplemental_documents' => 'getAllowSupplementalDocuments',
         'allow_supplemental_documents_metadata' => 'getAllowSupplementalDocumentsMetadata',
+        'allow_third_party_electronic_notary' => 'getAllowThirdPartyElectronicNotary',
+        'allow_third_party_electronic_notary_metadata' => 'getAllowThirdPartyElectronicNotaryMetadata',
         'allow_users_to_access_directory' => 'getAllowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'getAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'getAllowValueInsights',
@@ -3269,6 +3309,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_in_person_metadata'] = isset($data['allow_in_person_metadata']) ? $data['allow_in_person_metadata'] : null;
         $this->container['allow_managed_stamps'] = isset($data['allow_managed_stamps']) ? $data['allow_managed_stamps'] : null;
         $this->container['allow_managed_stamps_metadata'] = isset($data['allow_managed_stamps_metadata']) ? $data['allow_managed_stamps_metadata'] : null;
+        $this->container['allow_managing_envelopes_on_behalf_of_others'] = isset($data['allow_managing_envelopes_on_behalf_of_others']) ? $data['allow_managing_envelopes_on_behalf_of_others'] : null;
+        $this->container['allow_managing_envelopes_on_behalf_of_others_metadata'] = isset($data['allow_managing_envelopes_on_behalf_of_others_metadata']) ? $data['allow_managing_envelopes_on_behalf_of_others_metadata'] : null;
         $this->container['allow_markup'] = isset($data['allow_markup']) ? $data['allow_markup'] : null;
         $this->container['allow_markup_metadata'] = isset($data['allow_markup_metadata']) ? $data['allow_markup_metadata'] : null;
         $this->container['allow_member_time_zone'] = isset($data['allow_member_time_zone']) ? $data['allow_member_time_zone'] : null;
@@ -3299,6 +3341,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_organization_to_use_in_person_electronic_notary_metadata'] = isset($data['allow_organization_to_use_in_person_electronic_notary_metadata']) ? $data['allow_organization_to_use_in_person_electronic_notary_metadata'] : null;
         $this->container['allow_organization_to_use_remote_notary'] = isset($data['allow_organization_to_use_remote_notary']) ? $data['allow_organization_to_use_remote_notary'] : null;
         $this->container['allow_organization_to_use_remote_notary_metadata'] = isset($data['allow_organization_to_use_remote_notary_metadata']) ? $data['allow_organization_to_use_remote_notary_metadata'] : null;
+        $this->container['allow_organization_to_use_third_party_electronic_notary'] = isset($data['allow_organization_to_use_third_party_electronic_notary']) ? $data['allow_organization_to_use_third_party_electronic_notary'] : null;
+        $this->container['allow_organization_to_use_third_party_electronic_notary_metadata'] = isset($data['allow_organization_to_use_third_party_electronic_notary_metadata']) ? $data['allow_organization_to_use_third_party_electronic_notary_metadata'] : null;
         $this->container['allow_payment_processing'] = isset($data['allow_payment_processing']) ? $data['allow_payment_processing'] : null;
         $this->container['allow_payment_processing_metadata'] = isset($data['allow_payment_processing_metadata']) ? $data['allow_payment_processing_metadata'] : null;
         $this->container['allow_phone_authentication'] = isset($data['allow_phone_authentication']) ? $data['allow_phone_authentication'] : null;
@@ -3321,6 +3365,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_scheduled_sending_metadata'] = isset($data['allow_scheduled_sending_metadata']) ? $data['allow_scheduled_sending_metadata'] : null;
         $this->container['allow_security_appliance'] = isset($data['allow_security_appliance']) ? $data['allow_security_appliance'] : null;
         $this->container['allow_security_appliance_metadata'] = isset($data['allow_security_appliance_metadata']) ? $data['allow_security_appliance_metadata'] : null;
+        $this->container['allow_sending_envelopes_on_behalf_of_others'] = isset($data['allow_sending_envelopes_on_behalf_of_others']) ? $data['allow_sending_envelopes_on_behalf_of_others'] : null;
+        $this->container['allow_sending_envelopes_on_behalf_of_others_metadata'] = isset($data['allow_sending_envelopes_on_behalf_of_others_metadata']) ? $data['allow_sending_envelopes_on_behalf_of_others_metadata'] : null;
         $this->container['allow_send_to_certified_delivery'] = isset($data['allow_send_to_certified_delivery']) ? $data['allow_send_to_certified_delivery'] : null;
         $this->container['allow_send_to_certified_delivery_metadata'] = isset($data['allow_send_to_certified_delivery_metadata']) ? $data['allow_send_to_certified_delivery_metadata'] : null;
         $this->container['allow_send_to_intermediary'] = isset($data['allow_send_to_intermediary']) ? $data['allow_send_to_intermediary'] : null;
@@ -3355,6 +3401,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_social_id_login_metadata'] = isset($data['allow_social_id_login_metadata']) ? $data['allow_social_id_login_metadata'] : null;
         $this->container['allow_supplemental_documents'] = isset($data['allow_supplemental_documents']) ? $data['allow_supplemental_documents'] : null;
         $this->container['allow_supplemental_documents_metadata'] = isset($data['allow_supplemental_documents_metadata']) ? $data['allow_supplemental_documents_metadata'] : null;
+        $this->container['allow_third_party_electronic_notary'] = isset($data['allow_third_party_electronic_notary']) ? $data['allow_third_party_electronic_notary'] : null;
+        $this->container['allow_third_party_electronic_notary_metadata'] = isset($data['allow_third_party_electronic_notary_metadata']) ? $data['allow_third_party_electronic_notary_metadata'] : null;
         $this->container['allow_users_to_access_directory'] = isset($data['allow_users_to_access_directory']) ? $data['allow_users_to_access_directory'] : null;
         $this->container['allow_users_to_access_directory_metadata'] = isset($data['allow_users_to_access_directory_metadata']) ? $data['allow_users_to_access_directory_metadata'] : null;
         $this->container['allow_value_insights'] = isset($data['allow_value_insights']) ? $data['allow_value_insights'] : null;
@@ -5944,6 +5992,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_managing_envelopes_on_behalf_of_others
+     *
+     * @return ?string
+     */
+    public function getAllowManagingEnvelopesOnBehalfOfOthers()
+    {
+        return $this->container['allow_managing_envelopes_on_behalf_of_others'];
+    }
+
+    /**
+     * Sets allow_managing_envelopes_on_behalf_of_others
+     *
+     * @param ?string $allow_managing_envelopes_on_behalf_of_others 
+     *
+     * @return $this
+     */
+    public function setAllowManagingEnvelopesOnBehalfOfOthers($allow_managing_envelopes_on_behalf_of_others)
+    {
+        $this->container['allow_managing_envelopes_on_behalf_of_others'] = $allow_managing_envelopes_on_behalf_of_others;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_managing_envelopes_on_behalf_of_others_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowManagingEnvelopesOnBehalfOfOthersMetadata()
+    {
+        return $this->container['allow_managing_envelopes_on_behalf_of_others_metadata'];
+    }
+
+    /**
+     * Sets allow_managing_envelopes_on_behalf_of_others_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_managing_envelopes_on_behalf_of_others_metadata allow_managing_envelopes_on_behalf_of_others_metadata
+     *
+     * @return $this
+     */
+    public function setAllowManagingEnvelopesOnBehalfOfOthersMetadata($allow_managing_envelopes_on_behalf_of_others_metadata)
+    {
+        $this->container['allow_managing_envelopes_on_behalf_of_others_metadata'] = $allow_managing_envelopes_on_behalf_of_others_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_markup
      *
      * @return ?string
@@ -6664,6 +6760,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_organization_to_use_third_party_electronic_notary
+     *
+     * @return ?string
+     */
+    public function getAllowOrganizationToUseThirdPartyElectronicNotary()
+    {
+        return $this->container['allow_organization_to_use_third_party_electronic_notary'];
+    }
+
+    /**
+     * Sets allow_organization_to_use_third_party_electronic_notary
+     *
+     * @param ?string $allow_organization_to_use_third_party_electronic_notary 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationToUseThirdPartyElectronicNotary($allow_organization_to_use_third_party_electronic_notary)
+    {
+        $this->container['allow_organization_to_use_third_party_electronic_notary'] = $allow_organization_to_use_third_party_electronic_notary;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_to_use_third_party_electronic_notary_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowOrganizationToUseThirdPartyElectronicNotaryMetadata()
+    {
+        return $this->container['allow_organization_to_use_third_party_electronic_notary_metadata'];
+    }
+
+    /**
+     * Sets allow_organization_to_use_third_party_electronic_notary_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_third_party_electronic_notary_metadata allow_organization_to_use_third_party_electronic_notary_metadata
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationToUseThirdPartyElectronicNotaryMetadata($allow_organization_to_use_third_party_electronic_notary_metadata)
+    {
+        $this->container['allow_organization_to_use_third_party_electronic_notary_metadata'] = $allow_organization_to_use_third_party_electronic_notary_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_payment_processing
      *
      * @return ?string
@@ -7187,6 +7331,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowSecurityApplianceMetadata($allow_security_appliance_metadata)
     {
         $this->container['allow_security_appliance_metadata'] = $allow_security_appliance_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_sending_envelopes_on_behalf_of_others
+     *
+     * @return ?string
+     */
+    public function getAllowSendingEnvelopesOnBehalfOfOthers()
+    {
+        return $this->container['allow_sending_envelopes_on_behalf_of_others'];
+    }
+
+    /**
+     * Sets allow_sending_envelopes_on_behalf_of_others
+     *
+     * @param ?string $allow_sending_envelopes_on_behalf_of_others 
+     *
+     * @return $this
+     */
+    public function setAllowSendingEnvelopesOnBehalfOfOthers($allow_sending_envelopes_on_behalf_of_others)
+    {
+        $this->container['allow_sending_envelopes_on_behalf_of_others'] = $allow_sending_envelopes_on_behalf_of_others;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_sending_envelopes_on_behalf_of_others_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowSendingEnvelopesOnBehalfOfOthersMetadata()
+    {
+        return $this->container['allow_sending_envelopes_on_behalf_of_others_metadata'];
+    }
+
+    /**
+     * Sets allow_sending_envelopes_on_behalf_of_others_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_sending_envelopes_on_behalf_of_others_metadata allow_sending_envelopes_on_behalf_of_others_metadata
+     *
+     * @return $this
+     */
+    public function setAllowSendingEnvelopesOnBehalfOfOthersMetadata($allow_sending_envelopes_on_behalf_of_others_metadata)
+    {
+        $this->container['allow_sending_envelopes_on_behalf_of_others_metadata'] = $allow_sending_envelopes_on_behalf_of_others_metadata;
 
         return $this;
     }
@@ -8003,6 +8195,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowSupplementalDocumentsMetadata($allow_supplemental_documents_metadata)
     {
         $this->container['allow_supplemental_documents_metadata'] = $allow_supplemental_documents_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_third_party_electronic_notary
+     *
+     * @return ?string
+     */
+    public function getAllowThirdPartyElectronicNotary()
+    {
+        return $this->container['allow_third_party_electronic_notary'];
+    }
+
+    /**
+     * Sets allow_third_party_electronic_notary
+     *
+     * @param ?string $allow_third_party_electronic_notary 
+     *
+     * @return $this
+     */
+    public function setAllowThirdPartyElectronicNotary($allow_third_party_electronic_notary)
+    {
+        $this->container['allow_third_party_electronic_notary'] = $allow_third_party_electronic_notary;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_third_party_electronic_notary_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowThirdPartyElectronicNotaryMetadata()
+    {
+        return $this->container['allow_third_party_electronic_notary_metadata'];
+    }
+
+    /**
+     * Sets allow_third_party_electronic_notary_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_third_party_electronic_notary_metadata allow_third_party_electronic_notary_metadata
+     *
+     * @return $this
+     */
+    public function setAllowThirdPartyElectronicNotaryMetadata($allow_third_party_electronic_notary_metadata)
+    {
+        $this->container['allow_third_party_electronic_notary_metadata'] = $allow_third_party_electronic_notary_metadata;
 
         return $this;
     }

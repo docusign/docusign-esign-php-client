@@ -72,6 +72,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
+        'consent_details_list' => '\DocuSign\eSign\Model\ConsentDetails[]',
         'creation_reason' => '?string',
         'custom_fields' => '?string[]',
         'declined_date_time' => '?string',
@@ -115,6 +116,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_id' => '?string',
         'notary_signer_email_sent' => '?string',
         'notary_signers' => '?string[]',
+        'notary_source_type' => '?string',
         'notary_type' => '?string',
         'note' => '?string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -179,6 +181,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => null,
         'client_user_id' => null,
         'completed_count' => null,
+        'consent_details_list' => null,
         'creation_reason' => null,
         'custom_fields' => null,
         'declined_date_time' => null,
@@ -222,6 +225,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_id' => null,
         'notary_signer_email_sent' => null,
         'notary_signers' => null,
+        'notary_source_type' => null,
         'notary_type' => null,
         'note' => null,
         'note_metadata' => null,
@@ -307,6 +311,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'canSignOffline',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
+        'consent_details_list' => 'consentDetailsList',
         'creation_reason' => 'creationReason',
         'custom_fields' => 'customFields',
         'declined_date_time' => 'declinedDateTime',
@@ -350,6 +355,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_id' => 'notaryId',
         'notary_signer_email_sent' => 'notarySignerEmailSent',
         'notary_signers' => 'notarySigners',
+        'notary_source_type' => 'notarySourceType',
         'notary_type' => 'notaryType',
         'note' => 'note',
         'note_metadata' => 'noteMetadata',
@@ -414,6 +420,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'setCanSignOffline',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
+        'consent_details_list' => 'setConsentDetailsList',
         'creation_reason' => 'setCreationReason',
         'custom_fields' => 'setCustomFields',
         'declined_date_time' => 'setDeclinedDateTime',
@@ -457,6 +464,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_id' => 'setNotaryId',
         'notary_signer_email_sent' => 'setNotarySignerEmailSent',
         'notary_signers' => 'setNotarySigners',
+        'notary_source_type' => 'setNotarySourceType',
         'notary_type' => 'setNotaryType',
         'note' => 'setNote',
         'note_metadata' => 'setNoteMetadata',
@@ -521,6 +529,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'getCanSignOffline',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
+        'consent_details_list' => 'getConsentDetailsList',
         'creation_reason' => 'getCreationReason',
         'custom_fields' => 'getCustomFields',
         'declined_date_time' => 'getDeclinedDateTime',
@@ -564,6 +573,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_id' => 'getNotaryId',
         'notary_signer_email_sent' => 'getNotarySignerEmailSent',
         'notary_signers' => 'getNotarySigners',
+        'notary_source_type' => 'getNotarySourceType',
         'notary_type' => 'getNotaryType',
         'note' => 'getNote',
         'note_metadata' => 'getNoteMetadata',
@@ -682,6 +692,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['can_sign_offline'] = isset($data['can_sign_offline']) ? $data['can_sign_offline'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
+        $this->container['consent_details_list'] = isset($data['consent_details_list']) ? $data['consent_details_list'] : null;
         $this->container['creation_reason'] = isset($data['creation_reason']) ? $data['creation_reason'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
@@ -725,6 +736,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['notary_id'] = isset($data['notary_id']) ? $data['notary_id'] : null;
         $this->container['notary_signer_email_sent'] = isset($data['notary_signer_email_sent']) ? $data['notary_signer_email_sent'] : null;
         $this->container['notary_signers'] = isset($data['notary_signers']) ? $data['notary_signers'] : null;
+        $this->container['notary_source_type'] = isset($data['notary_source_type']) ? $data['notary_source_type'] : null;
         $this->container['notary_type'] = isset($data['notary_type']) ? $data['notary_type'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
@@ -1102,6 +1114,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setCompletedCount($completed_count)
     {
         $this->container['completed_count'] = $completed_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets consent_details_list
+     *
+     * @return \DocuSign\eSign\Model\ConsentDetails[]
+     */
+    public function getConsentDetailsList()
+    {
+        return $this->container['consent_details_list'];
+    }
+
+    /**
+     * Sets consent_details_list
+     *
+     * @param \DocuSign\eSign\Model\ConsentDetails[] $consent_details_list 
+     *
+     * @return $this
+     */
+    public function setConsentDetailsList($consent_details_list)
+    {
+        $this->container['consent_details_list'] = $consent_details_list;
 
         return $this;
     }
@@ -2134,6 +2170,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setNotarySigners($notary_signers)
     {
         $this->container['notary_signers'] = $notary_signers;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_source_type
+     *
+     * @return ?string
+     */
+    public function getNotarySourceType()
+    {
+        return $this->container['notary_source_type'];
+    }
+
+    /**
+     * Sets notary_source_type
+     *
+     * @param ?string $notary_source_type 
+     *
+     * @return $this
+     */
+    public function setNotarySourceType($notary_source_type)
+    {
+        $this->container['notary_source_type'] = $notary_source_type;
 
         return $this;
     }

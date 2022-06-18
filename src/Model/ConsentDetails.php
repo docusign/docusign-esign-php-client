@@ -1,6 +1,6 @@
 <?php
 /**
- * ScheduledSending
+ * ConsentDetails
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ScheduledSending Class Doc Comment
+ * ConsentDetails Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ScheduledSending implements ModelInterface, ArrayAccess
+class ConsentDetails implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'scheduledSending';
+    protected static $swaggerModelName = 'consentDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,9 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_list_id' => '?string',
-        'resume_date' => '?string',
-        'rules' => '\DocuSign\eSign\Model\EnvelopeDelayRule[]',
-        'status' => '?string'
+        'consent_key' => '?string',
+        'delivery_method' => '?string',
+        'signer_consent_status' => '?string'
     ];
 
     /**
@@ -71,10 +70,9 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bulk_list_id' => null,
-        'resume_date' => null,
-        'rules' => null,
-        'status' => null
+        'consent_key' => null,
+        'delivery_method' => null,
+        'signer_consent_status' => null
     ];
 
     /**
@@ -104,10 +102,9 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bulk_list_id' => 'bulkListId',
-        'resume_date' => 'resumeDate',
-        'rules' => 'rules',
-        'status' => 'status'
+        'consent_key' => 'consentKey',
+        'delivery_method' => 'deliveryMethod',
+        'signer_consent_status' => 'signerConsentStatus'
     ];
 
     /**
@@ -116,10 +113,9 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bulk_list_id' => 'setBulkListId',
-        'resume_date' => 'setResumeDate',
-        'rules' => 'setRules',
-        'status' => 'setStatus'
+        'consent_key' => 'setConsentKey',
+        'delivery_method' => 'setDeliveryMethod',
+        'signer_consent_status' => 'setSignerConsentStatus'
     ];
 
     /**
@@ -128,10 +124,9 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bulk_list_id' => 'getBulkListId',
-        'resume_date' => 'getResumeDate',
-        'rules' => 'getRules',
-        'status' => 'getStatus'
+        'consent_key' => 'getConsentKey',
+        'delivery_method' => 'getDeliveryMethod',
+        'signer_consent_status' => 'getSignerConsentStatus'
     ];
 
     /**
@@ -194,10 +189,9 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bulk_list_id'] = isset($data['bulk_list_id']) ? $data['bulk_list_id'] : null;
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
-        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['consent_key'] = isset($data['consent_key']) ? $data['consent_key'] : null;
+        $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
+        $this->container['signer_consent_status'] = isset($data['signer_consent_status']) ? $data['signer_consent_status'] : null;
     }
 
     /**
@@ -225,97 +219,73 @@ class ScheduledSending implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bulk_list_id
+     * Gets consent_key
      *
      * @return ?string
      */
-    public function getBulkListId()
+    public function getConsentKey()
     {
-        return $this->container['bulk_list_id'];
+        return $this->container['consent_key'];
     }
 
     /**
-     * Sets bulk_list_id
+     * Sets consent_key
      *
-     * @param ?string $bulk_list_id 
+     * @param ?string $consent_key 
      *
      * @return $this
      */
-    public function setBulkListId($bulk_list_id)
+    public function setConsentKey($consent_key)
     {
-        $this->container['bulk_list_id'] = $bulk_list_id;
+        $this->container['consent_key'] = $consent_key;
 
         return $this;
     }
 
     /**
-     * Gets resume_date
+     * Gets delivery_method
      *
      * @return ?string
      */
-    public function getResumeDate()
+    public function getDeliveryMethod()
     {
-        return $this->container['resume_date'];
+        return $this->container['delivery_method'];
     }
 
     /**
-     * Sets resume_date
+     * Sets delivery_method
      *
-     * @param ?string $resume_date 
+     * @param ?string $delivery_method Reserved: For DocuSign use only.
      *
      * @return $this
      */
-    public function setResumeDate($resume_date)
+    public function setDeliveryMethod($delivery_method)
     {
-        $this->container['resume_date'] = $resume_date;
+        $this->container['delivery_method'] = $delivery_method;
 
         return $this;
     }
 
     /**
-     * Gets rules
-     *
-     * @return \DocuSign\eSign\Model\EnvelopeDelayRule[]
-     */
-    public function getRules()
-    {
-        return $this->container['rules'];
-    }
-
-    /**
-     * Sets rules
-     *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules 
-     *
-     * @return $this
-     */
-    public function setRules($rules)
-    {
-        $this->container['rules'] = $rules;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
+     * Gets signer_consent_status
      *
      * @return ?string
      */
-    public function getStatus()
+    public function getSignerConsentStatus()
     {
-        return $this->container['status'];
+        return $this->container['signer_consent_status'];
     }
 
     /**
-     * Sets status
+     * Sets signer_consent_status
      *
-     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+     * @param ?string $signer_consent_status 
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setSignerConsentStatus($signer_consent_status)
     {
-        $this->container['status'] = $status;
+        $this->container['signer_consent_status'] = $signer_consent_status;
 
         return $this;
     }
