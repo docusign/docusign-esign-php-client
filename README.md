@@ -13,7 +13,7 @@
 This SDK is provided as open source, which enables you to customize its functionality to suit your particular use case. To do so, download or clone the repository. If the SDK’s given functionality meets your integration needs, or if you’re working through our [code examples](https://developers.docusign.com/docs/esign-rest-api/how-to/) from the [DocuSign Developer Center](https://developers.docusign.com/), you merely need to install it by following the instructions below.
 
 ### Composer:
-1. In your PHP console, type: **Composer require docusign/esign-client;**
+1. In your PHP console, type: `composer require docusign/esign-client`
 2. To use the package automatically, add to Composer's Autoload file: 
 `require_once('vendor/autoload.php');`
 
