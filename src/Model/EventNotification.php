@@ -736,7 +736,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets url
      *
-     * @param ?string $url Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.
+     * @param ?string $url Specifies the endpoint to which envelope updates are sent. Updates are sent as XML unless `useSoapInterface` property is set to **true**.
      *
      * @return $this
      */
