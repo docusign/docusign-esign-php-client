@@ -237,7 +237,7 @@ class TemplateNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets expirations
      *
-     * @param \DocuSign\eSign\Model\Expirations $expirations expirations
+     * @param \DocuSign\eSign\Model\Expirations $expirations A complex element that specifies the expiration settings for the envelope.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class TemplateNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets reminders
      *
-     * @param \DocuSign\eSign\Model\Reminders $reminders reminders
+     * @param \DocuSign\eSign\Model\Reminders $reminders A complex element that specifies reminder settings for the envelope.
      *
      * @return $this
      */

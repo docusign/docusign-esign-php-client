@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * NotaryJurisdiction Class Doc Comment
  *
  * @category    Class
+ * @description A notary jurisdiction.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -327,7 +328,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -351,7 +352,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets jurisdiction
      *
-     * @param \DocuSign\eSign\Model\Jurisdiction $jurisdiction jurisdiction
+     * @param \DocuSign\eSign\Model\Jurisdiction $jurisdiction Description of the jurisdiction for this notary. This is a read-only property.
      *
      * @return $this
      */

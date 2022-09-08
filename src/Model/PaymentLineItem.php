@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * PaymentLineItem Class Doc Comment
  *
  * @category    Class
+ * @description A line item describes details about an individual line item in a payment request.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

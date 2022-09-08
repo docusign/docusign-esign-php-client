@@ -1089,7 +1089,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param \DocuSign\eSign\Model\CustomFields $custom_fields custom_fields
+     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -1329,7 +1329,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets email_settings
      *
-     * @param \DocuSign\eSign\Model\EmailSettings $email_settings email_settings
+     * @param \DocuSign\eSign\Model\EmailSettings $email_settings A complex type that contains email settings.
      *
      * @return $this
      */
@@ -1449,7 +1449,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_custom_metadata
      *
-     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata envelope_custom_metadata
+     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata 
      *
      * @return $this
      */
@@ -1569,7 +1569,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_metadata
      *
-     * @param \DocuSign\eSign\Model\EnvelopeMetadata $envelope_metadata envelope_metadata
+     * @param \DocuSign\eSign\Model\EnvelopeMetadata $envelope_metadata Provides information about the features and services that are enabled for the envelope, including the Correct feature, the Advanced Correct feature, and DocuSign eNotary service.
      *
      * @return $this
      */
@@ -1977,7 +1977,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets lock_information
      *
-     * @param \DocuSign\eSign\Model\LockInformation $lock_information lock_information
+     * @param \DocuSign\eSign\Model\LockInformation $lock_information Provides lock information about an envelope that a user has locked.
      *
      * @return $this
      */
@@ -2025,7 +2025,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets notification
      *
-     * @param \DocuSign\eSign\Model\Notification $notification notification
+     * @param \DocuSign\eSign\Model\Notification $notification 
      *
      * @return $this
      */
@@ -2073,7 +2073,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets power_form
      *
-     * @param \DocuSign\eSign\Model\PowerForm $power_form power_form
+     * @param \DocuSign\eSign\Model\PowerForm $power_form Information about any PowerForms that are included in the envelope.
      *
      * @return $this
      */
@@ -2169,7 +2169,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients recipients
+     * @param \DocuSign\eSign\Model\Recipients $recipients An array of recipient objects that provides details about the recipients of the envelope.
      *
      * @return $this
      */
@@ -2241,7 +2241,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \DocuSign\eSign\Model\UserInfo $sender sender
+     * @param \DocuSign\eSign\Model\UserInfo $sender Information about the sender of the envelope.
      *
      * @return $this
      */
@@ -2529,7 +2529,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets workflow
      *
-     * @param \DocuSign\eSign\Model\Workflow $workflow workflow
+     * @param \DocuSign\eSign\Model\Workflow $workflow 
      *
      * @return $this
      */

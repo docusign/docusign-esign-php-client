@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConnectCustomConfiguration Class Doc Comment
  *
  * @category    Class
+ * @description The &#x60;connectCustomConfiguration&#x60; object describes how Connect is configured for your account.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -699,7 +700,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets event_data
      *
-     * @param \DocuSign\eSign\Model\ConnectEventData $event_data event_data
+     * @param \DocuSign\eSign\Model\ConnectEventData $event_data Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications)
      *
      * @return $this
      */

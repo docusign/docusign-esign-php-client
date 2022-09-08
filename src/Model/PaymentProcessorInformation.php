@@ -231,7 +231,7 @@ class PaymentProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \DocuSign\eSign\Model\AddressInformation $address address
+     * @param \DocuSign\eSign\Model\AddressInformation $address The mailing address associated with the payment processor.
      *
      * @return $this
      */

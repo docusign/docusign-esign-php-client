@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * UserAccountManagementGranularInformation Class Doc Comment
  *
  * @category    Class
+ * @description Describes which account management capabilities a user has.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -387,7 +388,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_security_settings_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_security_settings_metadata can_manage_account_security_settings_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_security_settings_metadata 
      *
      * @return $this
      */
@@ -435,7 +436,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_settings_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_settings_metadata can_manage_account_settings_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_settings_metadata 
      *
      * @return $this
      */
@@ -483,7 +484,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_admins_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_admins_metadata can_manage_admins_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_admins_metadata Metadata that indicates whether the `canManageAdmins` property is editable.
      *
      * @return $this
      */
@@ -531,7 +532,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_connect_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_connect_metadata can_manage_connect_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_connect_metadata 
      *
      * @return $this
      */
@@ -579,7 +580,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_document_retention_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_document_retention_metadata can_manage_document_retention_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_document_retention_metadata 
      *
      * @return $this
      */
@@ -627,7 +628,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_envelope_transfer_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_envelope_transfer_metadata can_manage_envelope_transfer_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_envelope_transfer_metadata 
      *
      * @return $this
      */
@@ -675,7 +676,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_groups_but_not_users_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_groups_but_not_users_metadata can_manage_groups_but_not_users_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_groups_but_not_users_metadata 
      *
      * @return $this
      */
@@ -723,7 +724,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_reporting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_reporting_metadata can_manage_reporting_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_reporting_metadata 
      *
      * @return $this
      */
@@ -771,7 +772,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_sharing_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_sharing_metadata can_manage_sharing_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_sharing_metadata Metadata that indicates whether the `canManageSharing` property is editable.
      *
      * @return $this
      */
@@ -819,7 +820,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_signing_groups_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_signing_groups_metadata can_manage_signing_groups_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_signing_groups_metadata 
      *
      * @return $this
      */
@@ -915,7 +916,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_users_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_users_metadata can_manage_users_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_users_metadata Metadata that indicates whether the `canManageUsers` property is editable.
      *
      * @return $this
      */

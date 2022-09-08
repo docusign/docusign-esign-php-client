@@ -273,7 +273,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Sets email_body_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $email_body_metadata email_body_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $email_body_metadata Metadata that indicates whether the `emailBody` property can be edited.
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Sets email_subject_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $email_subject_metadata email_subject_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $email_subject_metadata Metadata that indicates whether the `emailSubject` property can be edited.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
     /**
      * Sets supported_language_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $supported_language_metadata supported_language_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $supported_language_metadata Metadata that indicates whether the `supportedLanguage` property can be edited.
      *
      * @return $this
      */

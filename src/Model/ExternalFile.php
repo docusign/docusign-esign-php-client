@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ExternalFile Class Doc Comment
  *
  * @category    Class
+ * @description This object contains information about a file or folder in cloud storage.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

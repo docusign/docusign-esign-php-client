@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConnectConfigResults Class Doc Comment
  *
  * @category    Class
+ * @description This object contains the results of a ConnectConfigurations::GET method.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

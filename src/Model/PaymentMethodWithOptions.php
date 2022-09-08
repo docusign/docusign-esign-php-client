@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * PaymentMethodWithOptions Class Doc Comment
  *
  * @category    Class
+ * @description This object contains information about a payment method that the gateway accepts and the payment options that are compatible with it.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

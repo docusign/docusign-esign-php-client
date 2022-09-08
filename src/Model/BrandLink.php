@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BrandLink Class Doc Comment
  *
  * @category    Class
+ * @description Information about a link that a brand uses.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

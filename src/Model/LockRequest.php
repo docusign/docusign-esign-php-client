@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * LockRequest Class Doc Comment
  *
  * @category    Class
+ * @description This request object contains information about the lock that you want to create or update.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

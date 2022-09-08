@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ContactGetResponse Class Doc Comment
  *
  * @category    Class
+ * @description This response object contains information about the contacts associated with an account.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

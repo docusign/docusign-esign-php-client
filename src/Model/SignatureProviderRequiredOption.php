@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * SignatureProviderRequiredOption Class Doc Comment
  *
  * @category    Class
+ * @description Contains additional information that a specific signature provider requires.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

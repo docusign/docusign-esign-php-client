@@ -238,7 +238,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets address_information_input
      *
-     * @param \DocuSign\eSign\Model\AddressInformationInput $address_information_input address_information_input
+     * @param \DocuSign\eSign\Model\AddressInformationInput $address_information_input An object that specifies recipient address information and how it is displayed.
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets dob_information_input
      *
-     * @param \DocuSign\eSign\Model\DobInformationInput $dob_information_input dob_information_input
+     * @param \DocuSign\eSign\Model\DobInformationInput $dob_information_input An object that specifies recipient date of birth information and how it is displayed.
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets ssn4_information_input
      *
-     * @param \DocuSign\eSign\Model\Ssn4InformationInput $ssn4_information_input ssn4_information_input
+     * @param \DocuSign\eSign\Model\Ssn4InformationInput $ssn4_information_input An object that specifies the last four digits of the recipient's Social Security Number (SSN).
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets ssn9_information_input
      *
-     * @param \DocuSign\eSign\Model\Ssn9InformationInput $ssn9_information_input ssn9_information_input
+     * @param \DocuSign\eSign\Model\Ssn9InformationInput $ssn9_information_input An object that specifies the recipient's Social Security Number (SSN) information. Note that ssn9 information cannot be returned in a response.
      *
      * @return $this
      */

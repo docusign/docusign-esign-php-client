@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ChunkedUploadPart Class Doc Comment
  *
  * @category    Class
+ * @description An object that contains information about the chunked upload part.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

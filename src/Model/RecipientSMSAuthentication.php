@@ -250,7 +250,7 @@ class RecipientSMSAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets sender_provided_numbers_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_provided_numbers_metadata sender_provided_numbers_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_provided_numbers_metadata Metadata that indicates whether the `senderProvidedNumbers` property can be edited.
      *
      * @return $this
      */

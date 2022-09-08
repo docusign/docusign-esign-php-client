@@ -286,7 +286,7 @@ class WorkspaceFolderContents implements ModelInterface, ArrayAccess
     /**
      * Sets folder
      *
-     * @param \DocuSign\eSign\Model\WorkspaceItem $folder folder
+     * @param \DocuSign\eSign\Model\WorkspaceItem $folder The folder from which to return items. You can enter either the folder name or folder ID.
      *
      * @return $this
      */

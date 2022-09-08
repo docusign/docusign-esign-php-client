@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ListCustomField Class Doc Comment
  *
  * @category    Class
+ * @description This object represents a list custom field from which envelope creators and senders can select custom data.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -285,7 +286,7 @@ class ListCustomField implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */

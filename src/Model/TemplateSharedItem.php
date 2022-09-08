@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * TemplateSharedItem Class Doc Comment
  *
  * @category    Class
+ * @description Information about shared templates.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -261,7 +262,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -285,7 +286,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets owner
      *
-     * @param \DocuSign\eSign\Model\UserInfo $owner owner
+     * @param \DocuSign\eSign\Model\UserInfo $owner Information about the user who owns the template.
      *
      * @return $this
      */

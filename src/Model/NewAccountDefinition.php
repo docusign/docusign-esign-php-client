@@ -70,6 +70,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'envelope_partition_id' => '?string',
         'initial_user' => '\DocuSign\eSign\Model\UserInformation',
         'payment_method' => '?string',
+        'payment_processor' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
         'process_payment' => '?string',
@@ -95,6 +96,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'envelope_partition_id' => null,
         'initial_user' => null,
         'payment_method' => null,
+        'payment_processor' => null,
         'payment_processor_information' => null,
         'plan_information' => null,
         'process_payment' => null,
@@ -141,6 +143,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'envelope_partition_id' => 'envelopePartitionId',
         'initial_user' => 'initialUser',
         'payment_method' => 'paymentMethod',
+        'payment_processor' => 'paymentProcessor',
         'payment_processor_information' => 'paymentProcessorInformation',
         'plan_information' => 'planInformation',
         'process_payment' => 'processPayment',
@@ -166,6 +169,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'envelope_partition_id' => 'setEnvelopePartitionId',
         'initial_user' => 'setInitialUser',
         'payment_method' => 'setPaymentMethod',
+        'payment_processor' => 'setPaymentProcessor',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
         'process_payment' => 'setProcessPayment',
@@ -191,6 +195,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'envelope_partition_id' => 'getEnvelopePartitionId',
         'initial_user' => 'getInitialUser',
         'payment_method' => 'getPaymentMethod',
+        'payment_processor' => 'getPaymentProcessor',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
         'process_payment' => 'getProcessPayment',
@@ -270,6 +275,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         $this->container['envelope_partition_id'] = isset($data['envelope_partition_id']) ? $data['envelope_partition_id'] : null;
         $this->container['initial_user'] = isset($data['initial_user']) ? $data['initial_user'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
+        $this->container['payment_processor'] = isset($data['payment_processor']) ? $data['payment_processor'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
         $this->container['process_payment'] = isset($data['process_payment']) ? $data['process_payment'] : null;
@@ -339,7 +345,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets account_settings
      *
-     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings account_settings
+     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.
      *
      * @return $this
      */
@@ -363,7 +369,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets address_information
      *
-     * @param \DocuSign\eSign\Model\AccountAddress $address_information address_information
+     * @param \DocuSign\eSign\Model\AccountAddress $address_information A complex type that contains the following information for the new account: `Street1`, `Street2`, `City`, `State`, `Zip`, `Phone`, and `Fax`.
      *
      * @return $this
      */
@@ -387,7 +393,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets credit_card_information
      *
-     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information credit_card_information
+     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information A complex type that has information about the credit card used to pay for this account.
      *
      * @return $this
      */
@@ -411,7 +417,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets direct_debit_processor_information
      *
-     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information direct_debit_processor_information
+     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information Information about the bank that processes direct debits for the payment plan.
      *
      * @return $this
      */
@@ -531,7 +537,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets initial_user
      *
-     * @param \DocuSign\eSign\Model\UserInformation $initial_user initial_user
+     * @param \DocuSign\eSign\Model\UserInformation $initial_user A complex type with the initial user information for the new account. Note that some user information is set internally based on the plan and cannot be overridden.
      *
      * @return $this
      */
@@ -567,6 +573,30 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets payment_processor
+     *
+     * @return ?string
+     */
+    public function getPaymentProcessor()
+    {
+        return $this->container['payment_processor'];
+    }
+
+    /**
+     * Sets payment_processor
+     *
+     * @param ?string $payment_processor 
+     *
+     * @return $this
+     */
+    public function setPaymentProcessor($payment_processor)
+    {
+        $this->container['payment_processor'] = $payment_processor;
+
+        return $this;
+    }
+
+    /**
      * Gets payment_processor_information
      *
      * @return \DocuSign\eSign\Model\PaymentProcessorInformation
@@ -579,7 +609,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets payment_processor_information
      *
-     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information Information about the entity that processes payments for the billing plan.
      *
      * @return $this
      */
@@ -603,7 +633,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets plan_information
      *
-     * @param \DocuSign\eSign\Model\PlanInformation $plan_information plan_information
+     * @param \DocuSign\eSign\Model\PlanInformation $plan_information An object used to identify the features and attributes of the account being created.
      *
      * @return $this
      */
@@ -651,7 +681,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets referral_information
      *
-     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information referral_information
+     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information A complex type that contains properties for entering referral and discount information.
      *
      * @return $this
      */
@@ -675,7 +705,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets social_account_information
      *
-     * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information social_account_information
+     * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.
      *
      * @return $this
      */

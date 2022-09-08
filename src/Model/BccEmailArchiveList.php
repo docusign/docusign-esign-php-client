@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BccEmailArchiveList Class Doc Comment
  *
  * @category    Class
+ * @description Contains a list of BCC email archive configurations.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

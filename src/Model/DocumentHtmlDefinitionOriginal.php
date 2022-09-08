@@ -279,7 +279,7 @@ class DocumentHtmlDefinitionOriginal implements ModelInterface, ArrayAccess
     /**
      * Sets html_definition
      *
-     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $html_definition html_definition
+     * @param \DocuSign\eSign\Model\DocumentHtmlDefinition $html_definition Defines how to generate the responsive-formatted HTML for the document.
      *
      * @return $this
      */

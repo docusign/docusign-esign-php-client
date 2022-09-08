@@ -303,7 +303,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets country_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $country_code_metadata country_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $country_code_metadata Metadata that indicates if the `countryCode` property is editable.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets extension_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $extension_metadata extension_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $extension_metadata Metadata that indicates if the `extension` property is editable.
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $number_metadata number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $number_metadata Metadata that indicates if the `number` property is editable.
      *
      * @return $this
      */

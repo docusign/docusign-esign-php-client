@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientAdditionalNotification Class Doc Comment
  *
  * @category    Class
+ * @description Describes an additional notification method.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -237,7 +238,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number The phone number to receive the additional notifcation.
      *
      * @return $this
      */
@@ -285,7 +286,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Sets secondary_delivery_method_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $secondary_delivery_method_metadata secondary_delivery_method_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $secondary_delivery_method_metadata Metadata about the delivery method.
      *
      * @return $this
      */

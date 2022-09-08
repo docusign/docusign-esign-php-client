@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BrandResourceUrls Class Doc Comment
  *
  * @category    Class
+ * @description Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

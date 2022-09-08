@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientIdentityVerification Class Doc Comment
  *
  * @category    Class
+ * @description Specifies ID Verification applied on an envelope by workflow ID. See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -279,7 +280,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $workflow_id_metadata workflow_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $workflow_id_metadata 
      *
      * @return $this
      */

@@ -219,7 +219,7 @@ class BulkRecipientsUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets signer
      *
-     * @param \DocuSign\eSign\Model\Signer $signer signer
+     * @param \DocuSign\eSign\Model\Signer $signer 
      *
      * @return $this
      */

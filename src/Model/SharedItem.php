@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * SharedItem Class Doc Comment
  *
  * @category    Class
+ * @description Information about the shared item.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -231,7 +232,7 @@ class SharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -279,7 +280,7 @@ class SharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param \DocuSign\eSign\Model\UserInfo $user user
+     * @param \DocuSign\eSign\Model\UserInfo $user Information about the user who owns the shared item.
      *
      * @return $this
      */

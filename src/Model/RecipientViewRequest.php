@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientViewRequest Class Doc Comment
  *
  * @category    Class
+ * @description The request body for the [EnvelopeViews: createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/) and [EnvelopeViews: createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/) methods.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -387,7 +388,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets client_ur_ls
      *
-     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls client_ur_ls
+     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls 
      *
      * @return $this
      */

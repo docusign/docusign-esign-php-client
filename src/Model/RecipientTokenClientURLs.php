@@ -116,16 +116,16 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'on_access_code_failed' => 'OnAccessCodeFailed',
-        'on_cancel' => 'OnCancel',
-        'on_decline' => 'OnDecline',
-        'on_exception' => 'OnException',
-        'on_fax_pending' => 'OnFaxPending',
-        'on_id_check_failed' => 'OnIdCheckFailed',
-        'on_session_timeout' => 'OnSessionTimeout',
-        'on_signing_complete' => 'OnSigningComplete',
-        'on_ttl_expired' => 'OnTTLExpired',
-        'on_viewing_complete' => 'OnViewingComplete'
+        'on_access_code_failed' => 'onAccessCodeFailed',
+        'on_cancel' => 'onCancel',
+        'on_decline' => 'onDecline',
+        'on_exception' => 'onException',
+        'on_fax_pending' => 'onFaxPending',
+        'on_id_check_failed' => 'onIdCheckFailed',
+        'on_session_timeout' => 'onSessionTimeout',
+        'on_signing_complete' => 'onSigningComplete',
+        'on_ttl_expired' => 'onTTLExpired',
+        'on_viewing_complete' => 'onViewingComplete'
     ];
 
     /**

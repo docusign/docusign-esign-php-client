@@ -915,7 +915,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.
      *
      * @return $this
      */
@@ -963,7 +963,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata anchor_case_sensitive_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata Metadata that indicates whether the `anchorCaseSensitive` property is editable.
      *
      * @return $this
      */
@@ -1011,7 +1011,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata anchor_horizontal_alignment_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.
      *
      * @return $this
      */
@@ -1059,7 +1059,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata anchor_ignore_if_not_present_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.
      *
      * @return $this
      */
@@ -1107,7 +1107,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata anchor_match_whole_word_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata Metadata that indicates whether the `anchorMatchWholeWord` property is editable.
      *
      * @return $this
      */
@@ -1155,7 +1155,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata anchor_string_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata Metadata that indicates whether the `anchorString` property is editable.
      *
      * @return $this
      */
@@ -1203,7 +1203,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata anchor_tab_processor_version_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1251,7 +1251,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata anchor_units_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata Metadata that indicates whether the `anchorUnits` property is editable.
      *
      * @return $this
      */
@@ -1299,7 +1299,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata anchor_x_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata Metadata that indicates whether the `anchorXOffset` property is editable.
      *
      * @return $this
      */
@@ -1347,7 +1347,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata anchor_y_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata Metadata that indicates whether the `anchorYOffset` property is editable.
      *
      * @return $this
      */
@@ -1395,7 +1395,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets bold_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata bold_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata Metadata that indicates whether the `bold` property is editable.
      *
      * @return $this
      */
@@ -1491,7 +1491,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets conceal_value_on_document_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conceal_value_on_document_metadata conceal_value_on_document_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conceal_value_on_document_metadata Metadata that indicates whether the `concealValueOnDocument` property is editable.
      *
      * @return $this
      */
@@ -1539,7 +1539,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata conditional_parent_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata Metadata that indicates whether the `conditionalParentLabel` property is editable.
      *
      * @return $this
      */
@@ -1587,7 +1587,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata conditional_parent_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata Metadata that indicates whether the `conditionalParentValue` property is editable.
      *
      * @return $this
      */
@@ -1635,7 +1635,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata custom_tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata Metadata that indicates whether the `customTabId` property is editable.
      *
      * @return $this
      */
@@ -1683,7 +1683,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets disable_auto_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $disable_auto_size_metadata disable_auto_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $disable_auto_size_metadata Metadata that indicates whether the `disableAutoSize` property is editable.
      *
      * @return $this
      */
@@ -1731,7 +1731,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets document_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata document_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata Metadata that indicates whether the `documentId` property is editable.
      *
      * @return $this
      */
@@ -1755,7 +1755,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1827,7 +1827,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets font_color_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata font_color_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata Metadata that indicates whether the `fontColor` property is editable.
      *
      * @return $this
      */
@@ -1851,7 +1851,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets font_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata font_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata Metadata that indicates whether the `font` property is editable.
      *
      * @return $this
      */
@@ -1899,7 +1899,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets font_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata font_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata Metadata that indicates whether the `fontSize` property is editable.
      *
      * @return $this
      */
@@ -1947,7 +1947,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets form_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata form_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata Metadata that indicates whether the `formOrder` property is editable.
      *
      * @return $this
      */
@@ -1995,7 +1995,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata form_page_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata Metadata that indicates whether the `formPageLabel` property is editable.
      *
      * @return $this
      */
@@ -2043,7 +2043,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata form_page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata Metadata that indicates whether the `fromPageNumber` property is editable.
      *
      * @return $this
      */
@@ -2091,7 +2091,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets height_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata height_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata Metadata that indicates whether the `height` property is editable.
      *
      * @return $this
      */
@@ -2139,7 +2139,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets italic_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata italic_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata Metadata that indicates whether the `italic` property is editable.
      *
      * @return $this
      */
@@ -2163,7 +2163,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets locale_policy
      *
-     * @param \DocuSign\eSign\Model\LocalePolicyTab $locale_policy locale_policy
+     * @param \DocuSign\eSign\Model\LocalePolicyTab $locale_policy Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2211,7 +2211,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata Metadata that indicates whether the `locked` property is editable.
      *
      * @return $this
      */
@@ -2259,7 +2259,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets max_length_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $max_length_metadata max_length_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $max_length_metadata Metadata that indicates whether the `maxLength` property is editable.
      *
      * @return $this
      */
@@ -2307,7 +2307,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field
      *
-     * @param \DocuSign\eSign\Model\MergeField $merge_field merge_field
+     * @param \DocuSign\eSign\Model\MergeField $merge_field Contains the information necessary to map the tab to a field in SalesForce.
      *
      * @return $this
      */
@@ -2403,7 +2403,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates whether the `name` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2475,7 +2475,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets original_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata Metadata that indicates whether the `originalValue` property is editable.
      *
      * @return $this
      */
@@ -2523,7 +2523,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata Metadata that indicates whether the `pageNumber` property is editable.
      *
      * @return $this
      */
@@ -2595,7 +2595,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata recipient_id_guid_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata Metadata that indicates whether the `recipientIdGuid` property is editable.
      *
      * @return $this
      */
@@ -2619,7 +2619,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata recipient_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata Metadata that indicates whether the `recipientId` property is editable.
      *
      * @return $this
      */
@@ -2667,7 +2667,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets require_all_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata require_all_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata Metadata that indicates whether the `requireAll` property is editable.
      *
      * @return $this
      */
@@ -2715,7 +2715,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata Metadata that indicates whether the `required` property is editable.
      *
      * @return $this
      */
@@ -2763,7 +2763,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata require_initial_on_shared_change_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.
      *
      * @return $this
      */
@@ -2811,7 +2811,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets sender_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_required_metadata sender_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_required_metadata Metadata that indicates whether the `senderRequired` property is editable.
      *
      * @return $this
      */
@@ -2859,7 +2859,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets shared_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata shared_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata Metadata that indicates whether the `shared` property is editable.
      *
      * @return $this
      */
@@ -2883,7 +2883,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets smart_contract_information
      *
-     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2955,7 +2955,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets status_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata status_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata Metadata that indicates whether the `status` property is editable.
      *
      * @return $this
      */
@@ -3003,7 +3003,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata tab_group_labels_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata Metadata that indicates whether the `tabGroupLabels` property is editable.
      *
      * @return $this
      */
@@ -3051,7 +3051,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata Metadata that indicates whether the `tabId` property is editable.
      *
      * @return $this
      */
@@ -3099,7 +3099,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata tab_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata Metadata that indicates whether the `tabLabel` property is editable.
      *
      * @return $this
      */
@@ -3147,7 +3147,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata tab_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata Metadata that indicates whether the `tabOrder` property is editable.
      *
      * @return $this
      */
@@ -3195,7 +3195,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata tab_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata Metadata that indicates whether the `tabType` property is editable.
      *
      * @return $this
      */
@@ -3243,7 +3243,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata template_locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata Metadata that indicates whether the `templateLocked` property is editable.
      *
      * @return $this
      */
@@ -3291,7 +3291,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets template_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata template_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata Metadata that indicates whether the `templateRequired` property is editable.
      *
      * @return $this
      */
@@ -3339,7 +3339,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tool_tip_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata tool_tip_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata Metadata that indicates whether the `toolTip` property is editable.
      *
      * @return $this
      */
@@ -3387,7 +3387,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets underline_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata underline_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata Metadata that indicates whether the `underline` property is editable.
      *
      * @return $this
      */
@@ -3435,7 +3435,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata Metadata that indicates whether the `value` property is editable.
      *
      * @return $this
      */
@@ -3483,7 +3483,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets width_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata width_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata Metadata that indicates whether the `width` property is editable.
      *
      * @return $this
      */
@@ -3531,7 +3531,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets x_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata x_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata Metadata that indicates whether the `xPosition` property is editable.
      *
      * @return $this
      */
@@ -3579,7 +3579,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets y_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata y_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata Metadata that indicates whether the `yPosition` property is editable.
      *
      * @return $this
      */

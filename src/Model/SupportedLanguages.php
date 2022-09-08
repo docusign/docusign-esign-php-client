@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * SupportedLanguages Class Doc Comment
  *
  * @category    Class
+ * @description A list of supported languages.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

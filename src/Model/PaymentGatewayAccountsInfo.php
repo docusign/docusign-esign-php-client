@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * PaymentGatewayAccountsInfo Class Doc Comment
  *
  * @category    Class
+ * @description Holds information about connected payment accounts.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

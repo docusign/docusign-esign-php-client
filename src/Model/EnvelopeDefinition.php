@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeDefinition Class Doc Comment
  *
  * @category    Class
+ * @description Envelope object definition.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -1251,7 +1252,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param \DocuSign\eSign\Model\CustomFields $custom_fields custom_fields
+     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.   **Note:** Any custom fields you set with this API method will _replace_ custom fields you have defined with [Envelope Custom Fields in Admin](https://support.docusign.com/en/guides/ndse-admin-guide-document-labels), whether the **Show field to envelope creators** or **Make fields required for envelopes** options are checked or not.
      *
      * @return $this
      */
@@ -1515,7 +1516,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets email_settings
      *
-     * @param \DocuSign\eSign\Model\EmailSettings $email_settings email_settings
+     * @param \DocuSign\eSign\Model\EmailSettings $email_settings This optional complex element enables the sender to override some envelope email setting information. This can be used to override the Reply To email address and name associated with the envelope, as well as the BCC email addresses to which an envelope is sent. When the `emailSettings` information is used for an envelope, it only applies to that envelope.  **Important Note:** The `emailSettings` information is not returned in the GET method for envelope status. Use GET /email_settings to return information about the emailSettings.
      *
      * @return $this
      */
@@ -1635,7 +1636,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_custom_metadata
      *
-     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata envelope_custom_metadata
+     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata 
      *
      * @return $this
      */
@@ -1755,7 +1756,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_metadata
      *
-     * @param \DocuSign\eSign\Model\EnvelopeMetadata $envelope_metadata envelope_metadata
+     * @param \DocuSign\eSign\Model\EnvelopeMetadata $envelope_metadata Metadata about the features that are enabled for the envelope.
      *
      * @return $this
      */
@@ -1803,7 +1804,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets event_notification
      *
-     * @param \DocuSign\eSign\Model\EventNotification $event_notification event_notification
+     * @param \DocuSign\eSign\Model\EventNotification $event_notification This optional object is used to register a webhook that will receive status changes for this envelope.
      *
      * @return $this
      */
@@ -2211,7 +2212,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets lock_information
      *
-     * @param \DocuSign\eSign\Model\LockInformation $lock_information lock_information
+     * @param \DocuSign\eSign\Model\LockInformation $lock_information Provides lock information about an envelope that a user has locked.
      *
      * @return $this
      */
@@ -2259,7 +2260,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets notification
      *
-     * @param \DocuSign\eSign\Model\Notification $notification notification
+     * @param \DocuSign\eSign\Model\Notification $notification An optional complex element that specifies the notification options for the envelope.
      *
      * @return $this
      */
@@ -2331,7 +2332,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets power_form
      *
-     * @param \DocuSign\eSign\Model\PowerForm $power_form power_form
+     * @param \DocuSign\eSign\Model\PowerForm $power_form Information about any PowerForms that are included in the envelope.
      *
      * @return $this
      */
@@ -2427,7 +2428,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients recipients
+     * @param \DocuSign\eSign\Model\Recipients $recipients Specifies the envelope recipients.
      *
      * @return $this
      */
@@ -2499,7 +2500,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_view_request
      *
-     * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request recipient_view_request
+     * @param \DocuSign\eSign\Model\RecipientViewRequest $recipient_view_request 
      *
      * @return $this
      */
@@ -2523,7 +2524,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \DocuSign\eSign\Model\UserInfo $sender sender
+     * @param \DocuSign\eSign\Model\UserInfo $sender Information about the sender of the envelope.
      *
      * @return $this
      */
@@ -2859,7 +2860,7 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets workflow
      *
-     * @param \DocuSign\eSign\Model\Workflow $workflow workflow
+     * @param \DocuSign\eSign\Model\Workflow $workflow Describes the workflow for this envelope.
      *
      * @return $this
      */

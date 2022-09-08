@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * NotaryResult Class Doc Comment
  *
  * @category    Class
+ * @description Describes a single notary jurisdiction.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -249,7 +250,7 @@ class NotaryResult implements ModelInterface, ArrayAccess
     /**
      * Sets notary
      *
-     * @param \DocuSign\eSign\Model\Notary $notary notary
+     * @param \DocuSign\eSign\Model\Notary $notary 
      *
      * @return $this
      */

@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientRouting Class Doc Comment
  *
  * @category    Class
+ * @description Describes the recipient routing rules.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -219,7 +220,7 @@ class RecipientRouting implements ModelInterface, ArrayAccess
     /**
      * Sets rules
      *
-     * @param \DocuSign\eSign\Model\RecipientRules $rules rules
+     * @param \DocuSign\eSign\Model\RecipientRules $rules The recipient routing rules.
      *
      * @return $this
      */

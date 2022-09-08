@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * PermissionProfile Class Doc Comment
  *
  * @category    Class
+ * @description This object defines the account permissions for a profile that you can apply to a group of users.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -351,7 +352,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \DocuSign\eSign\Model\AccountRoleSettings $settings settings
+     * @param \DocuSign\eSign\Model\AccountRoleSettings $settings This object specifies the permissions that are associated with the account permission profile.
      *
      * @return $this
      */

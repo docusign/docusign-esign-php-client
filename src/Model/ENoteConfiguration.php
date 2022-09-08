@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ENoteConfiguration Class Doc Comment
  *
  * @category    Class
+ * @description This object contains information used to configure [eNote](https://www.docusign.com/products/enote) functionality. To use eNote, the Allow eNote for eOriginal account plan item must be on, and the Connect configuration for eOriginal must be set correctly.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

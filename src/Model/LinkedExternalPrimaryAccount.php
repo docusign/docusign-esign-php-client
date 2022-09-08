@@ -381,7 +381,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_auth_requirements
      *
-     * @param \DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements $recipient_auth_requirements recipient_auth_requirements
+     * @param \DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements $recipient_auth_requirements 
      *
      * @return $this
      */

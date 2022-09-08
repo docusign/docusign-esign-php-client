@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * TemplateSummary Class Doc Comment
  *
  * @category    Class
+ * @description Summary of a template request.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -333,7 +334,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -405,7 +406,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets template_match
      *
-     * @param \DocuSign\eSign\Model\TemplateMatch $template_match template_match
+     * @param \DocuSign\eSign\Model\TemplateMatch $template_match 
      *
      * @return $this
      */

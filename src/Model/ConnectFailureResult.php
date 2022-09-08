@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConnectFailureResult Class Doc Comment
  *
  * @category    Class
+ * @description This object contains details about a Connect failure result.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

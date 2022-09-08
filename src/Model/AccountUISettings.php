@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * AccountUISettings Class Doc Comment
  *
  * @category    Class
+ * @description An object that defines the options that are available to non-administrators in the UI.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -381,7 +382,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets admin_message
      *
-     * @param \DocuSign\eSign\Model\AdminMessage $admin_message admin_message
+     * @param \DocuSign\eSign\Model\AdminMessage $admin_message 
      *
      * @return $this
      */
@@ -405,7 +406,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets ask_an_admin
      *
-     * @param \DocuSign\eSign\Model\AskAnAdmin $ask_an_admin ask_an_admin
+     * @param \DocuSign\eSign\Model\AskAnAdmin $ask_an_admin 
      *
      * @return $this
      */
@@ -453,7 +454,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_admin_message_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_admin_message_metadata enable_admin_message_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_admin_message_metadata 
      *
      * @return $this
      */
@@ -501,7 +502,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_easy_sign_can_use_multi_template_apply_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_easy_sign_can_use_multi_template_apply_metadata enable_easy_sign_can_use_multi_template_apply_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_easy_sign_can_use_multi_template_apply_metadata 
      *
      * @return $this
      */
@@ -549,7 +550,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_easy_sign_template_upload_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_easy_sign_template_upload_metadata enable_easy_sign_template_upload_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_easy_sign_template_upload_metadata 
      *
      * @return $this
      */
@@ -597,7 +598,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_envelope_copy_with_data_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_envelope_copy_with_data_metadata enable_envelope_copy_with_data_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_envelope_copy_with_data_metadata 
      *
      * @return $this
      */
@@ -693,7 +694,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets has_external_linked_accounts_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $has_external_linked_accounts_metadata has_external_linked_accounts_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $has_external_linked_accounts_metadata 
      *
      * @return $this
      */
@@ -741,7 +742,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_send_an_envelope_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $hide_send_an_envelope_metadata hide_send_an_envelope_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $hide_send_an_envelope_metadata 
      *
      * @return $this
      */
@@ -813,7 +814,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_use_a_template_in_prepare_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $hide_use_a_template_in_prepare_metadata hide_use_a_template_in_prepare_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $hide_use_a_template_in_prepare_metadata 
      *
      * @return $this
      */
@@ -837,7 +838,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_use_a_template_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $hide_use_a_template_metadata hide_use_a_template_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $hide_use_a_template_metadata 
      *
      * @return $this
      */
@@ -885,7 +886,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets order_based_recipient_id_generation_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $order_based_recipient_id_generation_metadata order_based_recipient_id_generation_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $order_based_recipient_id_generation_metadata 
      *
      * @return $this
      */
@@ -933,7 +934,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets remove_envelope_forwarding_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $remove_envelope_forwarding_metadata remove_envelope_forwarding_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $remove_envelope_forwarding_metadata 
      *
      * @return $this
      */
@@ -981,7 +982,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets should_redact_access_code_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $should_redact_access_code_metadata should_redact_access_code_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $should_redact_access_code_metadata 
      *
      * @return $this
      */
@@ -1029,7 +1030,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets upload_new_image_to_sign_or_initial_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $upload_new_image_to_sign_or_initial_metadata upload_new_image_to_sign_or_initial_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $upload_new_image_to_sign_or_initial_metadata 
      *
      * @return $this
      */

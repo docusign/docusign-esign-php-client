@@ -297,7 +297,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets jurisdiction
      *
-     * @param \DocuSign\eSign\Model\Jurisdiction $jurisdiction jurisdiction
+     * @param \DocuSign\eSign\Model\Jurisdiction $jurisdiction The notary's jurisdiction.
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets notary_journal_meta_data
      *
-     * @param \DocuSign\eSign\Model\NotaryJournalMetaData $notary_journal_meta_data notary_journal_meta_data
+     * @param \DocuSign\eSign\Model\NotaryJournalMetaData $notary_journal_meta_data Additional journal data such as the witness list and signature image.
      *
      * @return $this
      */

@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientPreviewRequest Class Doc Comment
  *
  * @category    Class
+ * @description This request object contains the information necessary to create a recipient preview.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -351,7 +352,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets client_ur_ls
      *
-     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls client_ur_ls
+     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls 
      *
      * @return $this
      */

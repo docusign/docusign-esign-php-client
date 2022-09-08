@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientProofFile Class Doc Comment
  *
  * @category    Class
+ * @description The proof file of the recipient. [ID Evidence](/docs/idevidence-api/) uses proof files to store the identification data that recipients submit when verifying their ID with [ID Verification](/docs/esign-rest-api/esign101/concepts/documents/)
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

@@ -225,7 +225,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
     /**
      * Sets api_email_notifications
      *
-     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $api_email_notifications api_email_notifications
+     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $api_email_notifications The default notification settings for envelopes sent by using the console.
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
     /**
      * Sets email_notifications
      *
-     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $email_notifications email_notifications
+     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $email_notifications The default notification settings for envelopes sent by using the API.
      *
      * @return $this
      */

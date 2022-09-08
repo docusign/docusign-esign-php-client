@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ContactModRequest Class Doc Comment
  *
  * @category    Class
+ * @description The request object containing the new information for the contacts.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

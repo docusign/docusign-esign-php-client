@@ -328,7 +328,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $access_code_result access_code_result
+     * @param \DocuSign\eSign\Model\EventResult $access_code_result The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets age_verify_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $age_verify_result age_verify_result
+     * @param \DocuSign\eSign\Model\EventResult $age_verify_result The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets any_social_id_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $any_social_id_result any_social_id_result
+     * @param \DocuSign\eSign\Model\EventResult $any_social_id_result Deprecated.
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets facebook_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $facebook_result facebook_result
+     * @param \DocuSign\eSign\Model\EventResult $facebook_result Deprecated.
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets google_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $google_result google_result
+     * @param \DocuSign\eSign\Model\EventResult $google_result Deprecated.
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $identity_verification_result identity_verification_result
+     * @param \DocuSign\eSign\Model\EventResult $identity_verification_result The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets id_lookup_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $id_lookup_result id_lookup_result
+     * @param \DocuSign\eSign\Model\EventResult $id_lookup_result The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets id_questions_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $id_questions_result id_questions_result
+     * @param \DocuSign\eSign\Model\EventResult $id_questions_result The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets linkedin_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $linkedin_result linkedin_result
+     * @param \DocuSign\eSign\Model\EventResult $linkedin_result Deprecated.
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets live_id_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $live_id_result live_id_result
+     * @param \DocuSign\eSign\Model\EventResult $live_id_result Deprecated.
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets ofac_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $ofac_result ofac_result
+     * @param \DocuSign\eSign\Model\EventResult $ofac_result The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets open_id_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $open_id_result open_id_result
+     * @param \DocuSign\eSign\Model\EventResult $open_id_result Deprecated.
      *
      * @return $this
      */
@@ -616,7 +616,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets phone_auth_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $phone_auth_result phone_auth_result
+     * @param \DocuSign\eSign\Model\EventResult $phone_auth_result The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -640,7 +640,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $salesforce_result salesforce_result
+     * @param \DocuSign\eSign\Model\EventResult $salesforce_result Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -664,7 +664,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $signature_provider_result signature_provider_result
+     * @param \DocuSign\eSign\Model\EventResult $signature_provider_result The result of the user's attempt to authenticate by using a signature provider.
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets sms_auth_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $sms_auth_result sms_auth_result
+     * @param \DocuSign\eSign\Model\EventResult $sms_auth_result The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone.
      *
      * @return $this
      */
@@ -712,7 +712,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets s_tan_pin_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $s_tan_pin_result s_tan_pin_result
+     * @param \DocuSign\eSign\Model\EventResult $s_tan_pin_result The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.
      *
      * @return $this
      */
@@ -736,7 +736,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets twitter_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $twitter_result twitter_result
+     * @param \DocuSign\eSign\Model\EventResult $twitter_result Deprecated.
      *
      * @return $this
      */
@@ -760,7 +760,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets yahoo_result
      *
-     * @param \DocuSign\eSign\Model\EventResult $yahoo_result yahoo_result
+     * @param \DocuSign\eSign\Model\EventResult $yahoo_result Deprecated.
      *
      * @return $this
      */

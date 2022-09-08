@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Money Class Doc Comment
  *
  * @category    Class
+ * @description Describes information about the &#x60;total&#x60; of a payment.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

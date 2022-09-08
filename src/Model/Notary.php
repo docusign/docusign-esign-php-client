@@ -309,7 +309,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Sets user_info
      *
-     * @param \DocuSign\eSign\Model\UserInformation $user_info user_info
+     * @param \DocuSign\eSign\Model\UserInformation $user_info Information about the user registering to be a notary.
      *
      * @return $this
      */

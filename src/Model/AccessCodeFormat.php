@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * AccessCodeFormat Class Doc Comment
  *
  * @category    Class
+ * @description Object specifying the format of the string provided to a recipient in order to access an envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -297,7 +298,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets format_required_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $format_required_metadata format_required_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $format_required_metadata Metadata indicating whether the `formatRequired` property is editable.
      *
      * @return $this
      */
@@ -345,7 +346,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets letter_required_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $letter_required_metadata letter_required_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $letter_required_metadata Metadata indicating whether the `letterRequired` property is editable.
      *
      * @return $this
      */
@@ -393,7 +394,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_length_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $minimum_length_metadata minimum_length_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $minimum_length_metadata Metadata indicating whether the `minimumLength` property is editable.
      *
      * @return $this
      */
@@ -441,7 +442,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets number_required_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $number_required_metadata number_required_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $number_required_metadata Metadata indicating whether the `numberRequired` property is editable.
      *
      * @return $this
      */
@@ -489,7 +490,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets special_character_required_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $special_character_required_metadata special_character_required_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $special_character_required_metadata Metadata indicating whether the `specialCharacterRequired` property is editable.
      *
      * @return $this
      */

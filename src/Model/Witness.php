@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Witness Class Doc Comment
  *
  * @category    Class
+ * @description A complex type containing information about a witness recipient. Witnesses are recipients whose signatures affirm that the identified signers have signed the documents in the envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -831,7 +832,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata access_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata Metadata that indicates whether the `accessCode` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1263,7 +1264,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets delegated_by
      *
-     * @param \DocuSign\eSign\Model\DelegationInfo $delegated_by delegated_by
+     * @param \DocuSign\eSign\Model\DelegationInfo $delegated_by 
      *
      * @return $this
      */
@@ -1359,7 +1360,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata delivery_method_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1479,7 +1480,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets email_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata email_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata Metadata that indicates whether the `email` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1503,7 +1504,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification email_notification
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.
      *
      * @return $this
      */
@@ -1575,7 +1576,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1647,7 +1648,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata fax_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1695,7 +1696,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets first_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata first_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata Metadata that indicates whether the `firstName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1743,7 +1744,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets full_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata full_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1791,7 +1792,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata id_check_configuration_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1815,7 +1816,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_information_input
      *
-     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input id_check_information_input
+     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input An object that contains input information related to a recipient ID check.
      *
      * @return $this
      */
@@ -1839,7 +1840,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification identity_verification
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).
      *
      * @return $this
      */
@@ -1911,7 +1912,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets is_bulk_recipient_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $is_bulk_recipient_metadata is_bulk_recipient_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $is_bulk_recipient_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1959,7 +1960,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets last_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata last_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata Metadata that indicates whether the `lastName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2055,7 +2056,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates whether the `name` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2151,7 +2152,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets note_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata note_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata Metadata that indicates whether the `note` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2175,7 +2176,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets offline_attributes
      *
-     * @param \DocuSign\eSign\Model\OfflineAttributes $offline_attributes offline_attributes
+     * @param \DocuSign\eSign\Model\OfflineAttributes $offline_attributes Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2199,7 +2200,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets phone_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication phone_authentication
+     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2223,7 +2224,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number Describes the recipient phone number.
      *
      * @return $this
      */
@@ -2247,7 +2248,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets proof_file
      *
-     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file proof_file
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file The proof file of the recipient.
      *
      * @return $this
      */
@@ -2295,7 +2296,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_authentication_status
      *
-     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status recipient_authentication_status
+     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status Information about the recipient's authentication status. This property is read-only.
      *
      * @return $this
      */
@@ -2463,7 +2464,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata recipient_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata Metadata that indicates whether the `recipientType` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2511,7 +2512,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets require_id_lookup_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata require_id_lookup_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2655,7 +2656,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata routing_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2703,7 +2704,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets signature_info
      *
-     * @param \DocuSign\eSign\Model\RecipientSignatureInformation $signature_info signature_info
+     * @param \DocuSign\eSign\Model\RecipientSignatureInformation $signature_info Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.
      *
      * @return $this
      */
@@ -2775,7 +2776,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets sign_in_each_location_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sign_in_each_location_metadata sign_in_each_location_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sign_in_each_location_metadata Metadata that indicates whether the `signInEachLocation` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2823,7 +2824,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata signing_group_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2895,7 +2896,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets sms_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication sms_authentication
+     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.
      *
      * @return $this
      */
@@ -3015,7 +3016,7 @@ class Witness implements ModelInterface, ArrayAccess
     /**
      * Sets tabs
      *
-     * @param \DocuSign\eSign\Model\Tabs $tabs tabs
+     * @param \DocuSign\eSign\Model\Tabs $tabs A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.
      *
      * @return $this
      */

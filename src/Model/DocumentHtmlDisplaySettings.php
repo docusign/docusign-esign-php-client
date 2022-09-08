@@ -309,7 +309,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets collapsible_settings
      *
-     * @param \DocuSign\eSign\Model\DocumentHtmlCollapsibleDisplaySettings $collapsible_settings collapsible_settings
+     * @param \DocuSign\eSign\Model\DocumentHtmlCollapsibleDisplaySettings $collapsible_settings This object defines the appearance and function of a collapsible section or item.
      *
      * @return $this
      */

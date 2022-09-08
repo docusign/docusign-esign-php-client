@@ -424,7 +424,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_user_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $workspace_user_information workspace_user_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $workspace_user_information An object that provides details about the workspace user.
      *
      * @return $this
      */

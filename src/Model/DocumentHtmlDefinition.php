@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * DocumentHtmlDefinition Class Doc Comment
  *
  * @category    Class
+ * @description Holds the properties that define how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

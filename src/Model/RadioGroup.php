@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RadioGroup Class Doc Comment
  *
  * @category    Class
+ * @description This group tab is used to place radio buttons on a document. The &#x60;radios&#x60; property contains a list of [&#x60;radio&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) objects  associated with the group. Only one radio button can be selected in a group.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -435,7 +436,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata conditional_parent_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata Metadata that indicates whether the `conditionalParentLabel` property is editable.
      *
      * @return $this
      */
@@ -483,7 +484,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata conditional_parent_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata Metadata that indicates whether the `conditionalParentValue` property is editable.
      *
      * @return $this
      */
@@ -531,7 +532,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets document_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata document_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata Metadata that indicates whether the `documentId` property is editable.
      *
      * @return $this
      */
@@ -579,7 +580,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $group_name_metadata group_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $group_name_metadata Metadata that indicates whether the `groupName` property is editable.
      *
      * @return $this
      */
@@ -627,7 +628,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets original_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata Metadata that indicates whether the `originalValue` property is editable.
      *
      * @return $this
      */
@@ -723,7 +724,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata recipient_id_guid_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata Metadata that indicates whether the `recipientIdGuid` property is editable.
      *
      * @return $this
      */
@@ -747,7 +748,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata recipient_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata Metadata that indicates whether the `recipientId` property is editable.
      *
      * @return $this
      */
@@ -795,7 +796,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets require_all_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata require_all_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata Metadata that indicates whether the `requireAll` property is editable.
      *
      * @return $this
      */
@@ -843,7 +844,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata require_initial_on_shared_change_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.
      *
      * @return $this
      */
@@ -891,7 +892,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets shared_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata shared_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata Metadata that indicates whether the `shared` property is editable.
      *
      * @return $this
      */
@@ -939,7 +940,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets share_to_recipients_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata share_to_recipients_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -987,7 +988,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata tab_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata Metadata that indicates whether the `tabType` property is editable.
      *
      * @return $this
      */
@@ -1035,7 +1036,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata template_locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata Metadata that indicates whether the `templateLocked` property is editable.
      *
      * @return $this
      */
@@ -1083,7 +1084,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets template_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata template_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata Metadata that indicates whether the `templateRequired` property is editable.
      *
      * @return $this
      */
@@ -1131,7 +1132,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tooltip_metadata tooltip_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tooltip_metadata Metadata that indicates whether the `tooltip` property is editable.
      *
      * @return $this
      */
@@ -1179,7 +1180,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata Metadata that indicates whether the `value` property is editable.
      *
      * @return $this
      */

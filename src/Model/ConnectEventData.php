@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConnectEventData Class Doc Comment
  *
  * @category    Class
+ * @description This object lets you choose the data format of your Connect response. For  more information about using this object, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications).
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

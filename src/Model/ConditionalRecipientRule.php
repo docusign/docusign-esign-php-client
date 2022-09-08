@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConditionalRecipientRule Class Doc Comment
  *
  * @category    Class
+ * @description A rule that defines a set of recipients and the conditions under which they will be used for the envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -285,7 +286,7 @@ class ConditionalRecipientRule implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_group
      *
-     * @param \DocuSign\eSign\Model\RecipientGroup $recipient_group recipient_group
+     * @param \DocuSign\eSign\Model\RecipientGroup $recipient_group A set of recipients that may be used for the envelope, depending on the `conditions` defined.
      *
      * @return $this
      */

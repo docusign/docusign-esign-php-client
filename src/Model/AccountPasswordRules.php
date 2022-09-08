@@ -381,7 +381,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets expire_password_days_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountPasswordExpirePasswordDays $expire_password_days_metadata expire_password_days_metadata
+     * @param \DocuSign\eSign\Model\AccountPasswordExpirePasswordDays $expire_password_days_metadata Metadata that indicates whether the `expirePasswordDays` property is editable.
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets lockout_duration_minutes_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountPasswordLockoutDurationMinutes $lockout_duration_minutes_metadata lockout_duration_minutes_metadata
+     * @param \DocuSign\eSign\Model\AccountPasswordLockoutDurationMinutes $lockout_duration_minutes_metadata Metadata that indicates whether the `lockoutDurationMinutes` property is editable.
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets lockout_duration_type_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountPasswordLockoutDurationType $lockout_duration_type_metadata lockout_duration_type_metadata
+     * @param \DocuSign\eSign\Model\AccountPasswordLockoutDurationType $lockout_duration_type_metadata Metadata that indicates whether the `lockoutDurationType` property is editable.
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_password_age_days_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountPasswordMinimumPasswordAgeDays $minimum_password_age_days_metadata minimum_password_age_days_metadata
+     * @param \DocuSign\eSign\Model\AccountPasswordMinimumPasswordAgeDays $minimum_password_age_days_metadata Metadata that indicates whether the `minimumPasswordAgeDays` property is editable.
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_password_length_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountMinimumPasswordLength $minimum_password_length_metadata minimum_password_length_metadata
+     * @param \DocuSign\eSign\Model\AccountMinimumPasswordLength $minimum_password_length_metadata Metadata that indicates whether the `minimumPasswordLength` property is editable.
      *
      * @return $this
      */
@@ -741,7 +741,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_strength_type_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountPasswordStrengthType $password_strength_type_metadata password_strength_type_metadata
+     * @param \DocuSign\eSign\Model\AccountPasswordStrengthType $password_strength_type_metadata Metadata that indicates whether the `passwordStrengthType` property is editable.
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets questions_required_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountPasswordQuestionsRequired $questions_required_metadata questions_required_metadata
+     * @param \DocuSign\eSign\Model\AccountPasswordQuestionsRequired $questions_required_metadata Metadata that indicates whether the `questionsRequired` property is editable.
      *
      * @return $this
      */

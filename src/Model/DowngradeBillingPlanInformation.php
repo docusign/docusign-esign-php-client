@@ -273,7 +273,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_information
      *
-     * @param \DocuSign\eSign\Model\PlanInformation $plan_information plan_information
+     * @param \DocuSign\eSign\Model\PlanInformation $plan_information An object used to identify the features and attributes of the account being created.
      *
      * @return $this
      */

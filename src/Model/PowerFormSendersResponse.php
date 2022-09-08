@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * PowerFormSendersResponse Class Doc Comment
  *
  * @category    Class
+ * @description This object includes information about the users who have sent PowerForms.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

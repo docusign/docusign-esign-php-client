@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * SettingsMetadata Class Doc Comment
  *
  * @category    Class
+ * @description Metadata that indicates whether a property is editable and describes setting-specific options.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

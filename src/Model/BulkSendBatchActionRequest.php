@@ -255,7 +255,7 @@ class BulkSendBatchActionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets notification
      *
-     * @param \DocuSign\eSign\Model\Notification $notification notification
+     * @param \DocuSign\eSign\Model\Notification $notification 
      *
      * @return $this
      */

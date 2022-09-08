@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * AccountSignatureProvider Class Doc Comment
  *
  * @category    Class
+ * @description Contains information abotu the signature provider associated with the Identity Verification workflow.  If empty, then this specific workflow is not intended for signers.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

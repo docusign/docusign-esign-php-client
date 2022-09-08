@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * DirectDebitProcessorInformation Class Doc Comment
  *
  * @category    Class
+ * @description Contains information about a bank that processes a customer&#39;s direct debit payments.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

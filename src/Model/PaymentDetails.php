@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * PaymentDetails Class Doc Comment
  *
  * @category    Class
+ * @description When a formula tab has a &#x60;paymentDetails&#x60; property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -393,7 +394,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $currency_code_metadata currency_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $currency_code_metadata Metadata that indicates whether the `currencyCode` property is editable.
      *
      * @return $this
      */
@@ -513,7 +514,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_account_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $gateway_account_id_metadata gateway_account_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $gateway_account_id_metadata Metadata that indicates whether the `gatewayAccountId` property is editable.
      *
      * @return $this
      */
@@ -657,7 +658,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets signer_values
      *
-     * @param \DocuSign\eSign\Model\PaymentSignerValues $signer_values signer_values
+     * @param \DocuSign\eSign\Model\PaymentSignerValues $signer_values 
      *
      * @return $this
      */
@@ -729,7 +730,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets total
      *
-     * @param \DocuSign\eSign\Model\Money $total total
+     * @param \DocuSign\eSign\Model\Money $total This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields.
      *
      * @return $this
      */

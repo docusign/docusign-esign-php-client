@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConsumerDisclosure Class Doc Comment
  *
  * @category    Class
+ * @description Details about consumer disclosures.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -453,7 +454,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets allow_cd_withdraw_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_cd_withdraw_metadata allow_cd_withdraw_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_cd_withdraw_metadata Metadata that indicates whether the `allowCDWithdraw` property is editable.
      *
      * @return $this
      */
@@ -861,7 +862,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets use_consumer_disclosure_within_account_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_consumer_disclosure_within_account_metadata use_consumer_disclosure_within_account_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_consumer_disclosure_within_account_metadata Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable.
      *
      * @return $this
      */

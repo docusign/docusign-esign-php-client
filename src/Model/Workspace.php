@@ -316,7 +316,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets caller_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $caller_information caller_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $caller_information 
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information created_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information Details about the user who created the workspace.
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information last_modified_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information Details about the user who last modified the workspace.
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \DocuSign\eSign\Model\WorkspaceSettings $settings settings
+     * @param \DocuSign\eSign\Model\WorkspaceSettings $settings Information about the settings for the workspace.
      *
      * @return $this
      */

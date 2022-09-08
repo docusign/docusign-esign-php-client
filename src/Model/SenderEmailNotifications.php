@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * SenderEmailNotifications Class Doc Comment
  *
  * @category    Class
+ * @description Contains the settings for the email notifications that senders receive about the envelopes that they send.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

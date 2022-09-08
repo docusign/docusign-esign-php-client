@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * AccountPasswordQuestionsRequired Class Doc Comment
  *
  * @category    Class
+ * @description Information about the number of password questions required (0 to 4) to confirm a user&#39;s identity when a user needs to reset their password.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

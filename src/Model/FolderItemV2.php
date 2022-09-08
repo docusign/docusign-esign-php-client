@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * FolderItemV2 Class Doc Comment
  *
  * @category    Class
+ * @description Information about folder item results.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -579,7 +580,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients recipients
+     * @param \DocuSign\eSign\Model\Recipients $recipients An array of recipient objects that provides details about the recipients of the envelope.
      *
      * @return $this
      */
