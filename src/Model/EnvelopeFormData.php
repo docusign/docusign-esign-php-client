@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeFormData Class Doc Comment
  *
  * @category    Class
+ * @description Describes the form data of the envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -327,7 +328,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Sets prefill_form_data
      *
-     * @param \DocuSign\eSign\Model\PrefillFormData $prefill_form_data prefill_form_data
+     * @param \DocuSign\eSign\Model\PrefillFormData $prefill_form_data An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs).
      *
      * @return $this
      */

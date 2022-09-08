@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * MemberGroupSharedItem Class Doc Comment
  *
  * @category    Class
+ * @description Information about items shared among groups.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -231,7 +232,7 @@ class MemberGroupSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -255,7 +256,7 @@ class MemberGroupSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets group
      *
-     * @param \DocuSign\eSign\Model\Group $group group
+     * @param \DocuSign\eSign\Model\Group $group The group sharing the item.
      *
      * @return $this
      */

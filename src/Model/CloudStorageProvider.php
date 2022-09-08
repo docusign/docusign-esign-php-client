@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * CloudStorageProvider Class Doc Comment
  *
  * @category    Class
+ * @description Contains details about a specific cloud storage provider.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -267,7 +268,7 @@ class CloudStorageProvider implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */

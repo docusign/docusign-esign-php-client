@@ -226,7 +226,7 @@ class BillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_plan
      *
-     * @param \DocuSign\eSign\Model\BillingPlan $billing_plan billing_plan
+     * @param \DocuSign\eSign\Model\BillingPlan $billing_plan An object that contains details about the billing plan.
      *
      * @return $this
      */

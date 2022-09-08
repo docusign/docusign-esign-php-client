@@ -243,7 +243,7 @@ class InlineTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param \DocuSign\eSign\Model\CustomFields $custom_fields custom_fields
+     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class InlineTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets envelope
      *
-     * @param \DocuSign\eSign\Model\Envelope $envelope envelope
+     * @param \DocuSign\eSign\Model\Envelope $envelope A container used to send documents to recipients. The envelope carries information about the sender and timestamps to indicate the progress of the delivery procedure. It can contain collections of Documents, Tabs and Recipients.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class InlineTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients recipients
+     * @param \DocuSign\eSign\Model\Recipients $recipients An array of recipient objects that provides details about the recipients of the envelope.
      *
      * @return $this
      */

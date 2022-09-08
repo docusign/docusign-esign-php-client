@@ -273,7 +273,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
     /**
      * Sets display_settings
      *
-     * @param \DocuSign\eSign\Model\DocumentHtmlDisplaySettings $display_settings display_settings
+     * @param \DocuSign\eSign\Model\DocumentHtmlDisplaySettings $display_settings This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays.
      *
      * @return $this
      */

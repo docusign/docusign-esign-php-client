@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * UserPasswordRules Class Doc Comment
  *
  * @category    Class
+ * @description Contains details about the password rules for a user.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -225,7 +226,7 @@ class UserPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_rules
      *
-     * @param \DocuSign\eSign\Model\AccountPasswordRules $password_rules password_rules
+     * @param \DocuSign\eSign\Model\AccountPasswordRules $password_rules Contains details about the password rules for the user.
      *
      * @return $this
      */

@@ -286,7 +286,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_plan_preview
      *
-     * @param \DocuSign\eSign\Model\BillingPlanPreview $billing_plan_preview billing_plan_preview
+     * @param \DocuSign\eSign\Model\BillingPlanPreview $billing_plan_preview 
      *
      * @return $this
      */

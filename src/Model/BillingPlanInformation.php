@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BillingPlanInformation Class Doc Comment
  *
  * @category    Class
+ * @description This object contains details about a billing plan.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -69,6 +70,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'included_seats' => '?string',
         'incremental_seats' => '?string',
         'payment_method' => '?string',
+        'payment_processor' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
         'process_payment' => '?string',
@@ -98,6 +100,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'included_seats' => null,
         'incremental_seats' => null,
         'payment_method' => null,
+        'payment_processor' => null,
         'payment_processor_information' => null,
         'plan_information' => null,
         'process_payment' => null,
@@ -148,6 +151,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'included_seats' => 'includedSeats',
         'incremental_seats' => 'incrementalSeats',
         'payment_method' => 'paymentMethod',
+        'payment_processor' => 'paymentProcessor',
         'payment_processor_information' => 'paymentProcessorInformation',
         'plan_information' => 'planInformation',
         'process_payment' => 'processPayment',
@@ -177,6 +181,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'included_seats' => 'setIncludedSeats',
         'incremental_seats' => 'setIncrementalSeats',
         'payment_method' => 'setPaymentMethod',
+        'payment_processor' => 'setPaymentProcessor',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
         'process_payment' => 'setProcessPayment',
@@ -206,6 +211,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         'included_seats' => 'getIncludedSeats',
         'incremental_seats' => 'getIncrementalSeats',
         'payment_method' => 'getPaymentMethod',
+        'payment_processor' => 'getPaymentProcessor',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
         'process_payment' => 'getProcessPayment',
@@ -289,6 +295,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         $this->container['included_seats'] = isset($data['included_seats']) ? $data['included_seats'] : null;
         $this->container['incremental_seats'] = isset($data['incremental_seats']) ? $data['incremental_seats'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
+        $this->container['payment_processor'] = isset($data['payment_processor']) ? $data['payment_processor'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
         $this->container['process_payment'] = isset($data['process_payment']) ? $data['process_payment'] : null;
@@ -339,7 +346,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets app_store_receipt
      *
-     * @param \DocuSign\eSign\Model\AppStoreReceipt $app_store_receipt app_store_receipt
+     * @param \DocuSign\eSign\Model\AppStoreReceipt $app_store_receipt 
      *
      * @return $this
      */
@@ -363,7 +370,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \DocuSign\eSign\Model\AccountAddress $billing_address billing_address
+     * @param \DocuSign\eSign\Model\AccountAddress $billing_address The billing address for the account.
      *
      * @return $this
      */
@@ -387,7 +394,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets credit_card_information
      *
-     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information credit_card_information
+     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information A complex type that has information about the credit card used to pay for this account.
      *
      * @return $this
      */
@@ -411,7 +418,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets direct_debit_processor_information
      *
-     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information direct_debit_processor_information
+     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information Information about the bank that processes direct debits for the payment plan.
      *
      * @return $this
      */
@@ -567,6 +574,30 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets payment_processor
+     *
+     * @return ?string
+     */
+    public function getPaymentProcessor()
+    {
+        return $this->container['payment_processor'];
+    }
+
+    /**
+     * Sets payment_processor
+     *
+     * @param ?string $payment_processor 
+     *
+     * @return $this
+     */
+    public function setPaymentProcessor($payment_processor)
+    {
+        $this->container['payment_processor'] = $payment_processor;
+
+        return $this;
+    }
+
+    /**
      * Gets payment_processor_information
      *
      * @return \DocuSign\eSign\Model\PaymentProcessorInformation
@@ -579,7 +610,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets payment_processor_information
      *
-     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information Information about the entity that processes payments for the billing plan.
      *
      * @return $this
      */
@@ -603,7 +634,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_information
      *
-     * @param \DocuSign\eSign\Model\PlanInformation $plan_information plan_information
+     * @param \DocuSign\eSign\Model\PlanInformation $plan_information An object used to identify the features and attributes of the account being created.
      *
      * @return $this
      */
@@ -651,7 +682,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets referral_information
      *
-     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information referral_information
+     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information A complex type that contains properties for entering referral and discount information.
      *
      * @return $this
      */

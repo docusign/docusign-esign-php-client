@@ -274,7 +274,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets invoice
      *
-     * @param \DocuSign\eSign\Model\BillingInvoice $invoice invoice
+     * @param \DocuSign\eSign\Model\BillingInvoice $invoice 
      *
      * @return $this
      */

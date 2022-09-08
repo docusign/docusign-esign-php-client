@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientSignatureProviderOptions Class Doc Comment
  *
  * @category    Class
+ * @description Option settings for the signature provider. Different providers require or use different options. [The current provider list and the options they require.](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/)
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -285,7 +286,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets cpf_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $cpf_number_metadata cpf_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $cpf_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -333,7 +334,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets one_time_password_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $one_time_password_metadata one_time_password_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $one_time_password_metadata Metadata that indicates whether the `oneTimePassword` property is editable.
      *
      * @return $this
      */
@@ -381,7 +382,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets signer_role_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signer_role_metadata signer_role_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signer_role_metadata Metadata that indicates whether the `signerRole` property is editable.
      *
      * @return $this
      */
@@ -429,7 +430,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets sms_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sms_metadata sms_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sms_metadata Metadata that indicates whether the `sms` property is editable.
      *
      * @return $this
      */

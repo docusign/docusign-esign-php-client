@@ -358,7 +358,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets caller_authorization
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $caller_authorization caller_authorization
+     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $caller_authorization 
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information created_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information Details about the user who created the workspace item.
      *
      * @return $this
      */
@@ -646,7 +646,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information last_modified_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information Details about the user who last modified the workspace item.
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets thumbnail
      *
-     * @param \DocuSign\eSign\Model\Page $thumbnail thumbnail
+     * @param \DocuSign\eSign\Model\Page $thumbnail 
      *
      * @return $this
      */
@@ -910,7 +910,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets user_authorization
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $user_authorization user_authorization
+     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $user_authorization 
      *
      * @return $this
      */

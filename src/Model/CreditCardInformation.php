@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * CreditCardInformation Class Doc Comment
  *
  * @category    Class
+ * @description This object contains information about a credit card that is associated with an account.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -267,7 +268,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \DocuSign\eSign\Model\AddressInformation $address address
+     * @param \DocuSign\eSign\Model\AddressInformation $address A complex element containing the credit card billing address information.
      *
      * @return $this
      */

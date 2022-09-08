@@ -292,7 +292,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \DocuSign\eSign\Model\AccountAddress $billing_address billing_address
+     * @param \DocuSign\eSign\Model\AccountAddress $billing_address The billing address for the account.
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_plan
      *
-     * @param \DocuSign\eSign\Model\AccountBillingPlan $billing_plan billing_plan
+     * @param \DocuSign\eSign\Model\AccountBillingPlan $billing_plan An object that contains details about the billing plan.
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets credit_card_information
      *
-     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information credit_card_information
+     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information A complex type that has information about the credit card used to pay for this account.
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets direct_debit_processor_information
      *
-     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information direct_debit_processor_information
+     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information Information about the bank that processes direct debits for the payment plan.
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_information
      *
-     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information downgrade_plan_information
+     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information 
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_request_information
      *
-     * @param \DocuSign\eSign\Model\DowngradeRequestInformation $downgrade_request_information downgrade_request_information
+     * @param \DocuSign\eSign\Model\DowngradeRequestInformation $downgrade_request_information 
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets entity_information
      *
-     * @param \DocuSign\eSign\Model\BillingEntityInformationResponse $entity_information entity_information
+     * @param \DocuSign\eSign\Model\BillingEntityInformationResponse $entity_information 
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_processor_information
      *
-     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information Information about the entity that processes payments for the billing plan.
      *
      * @return $this
      */
@@ -532,7 +532,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets referral_information
      *
-     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information referral_information
+     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information A complex type that contains properties for entering referral and discount information.
      *
      * @return $this
      */

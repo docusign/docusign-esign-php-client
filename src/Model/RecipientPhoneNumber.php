@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientPhoneNumber Class Doc Comment
  *
  * @category    Class
+ * @description Describes the recipient phone number.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -261,7 +262,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets country_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $country_code_metadata country_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $country_code_metadata Metadata that indicates if the `countryCode` property is editable.
      *
      * @return $this
      */
@@ -309,7 +310,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $number_metadata number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $number_metadata Metadata that indicates if the `number` property is editable.
      *
      * @return $this
      */

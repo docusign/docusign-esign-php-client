@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ReturnUrlRequest Class Doc Comment
  *
  * @category    Class
+ * @description The request body for the [EnvelopeViews: createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/) method.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

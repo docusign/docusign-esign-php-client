@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientNamesResponse Class Doc Comment
  *
  * @category    Class
+ * @description This response object contains a list of recipients.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

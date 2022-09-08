@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * IdCheckConfiguration Class Doc Comment
  *
  * @category    Class
+ * @description A complex object specifying ID check configuration.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

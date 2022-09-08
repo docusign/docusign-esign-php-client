@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Brand Class Doc Comment
  *
  * @category    Class
+ * @description Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -471,7 +472,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -615,7 +616,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets logos
      *
-     * @param \DocuSign\eSign\Model\BrandLogos $logos logos
+     * @param \DocuSign\eSign\Model\BrandLogos $logos The URIs for retrieving the logos that are associated with the brand.
      *
      * @return $this
      */
@@ -639,7 +640,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets resources
      *
-     * @param \DocuSign\eSign\Model\BrandResourceUrls $resources resources
+     * @param \DocuSign\eSign\Model\BrandResourceUrls $resources An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`.
      *
      * @return $this
      */

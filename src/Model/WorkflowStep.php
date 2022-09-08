@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * WorkflowStep Class Doc Comment
  *
  * @category    Class
+ * @description Describes a single step in a workflow.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -315,7 +316,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets delayed_routing
      *
-     * @param \DocuSign\eSign\Model\DelayedRouting $delayed_routing delayed_routing
+     * @param \DocuSign\eSign\Model\DelayedRouting $delayed_routing A complex element that specifies the delayed routing settings for the workflow step.
      *
      * @return $this
      */
@@ -363,7 +364,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_routing
      *
-     * @param \DocuSign\eSign\Model\RecipientRouting $recipient_routing recipient_routing
+     * @param \DocuSign\eSign\Model\RecipientRouting $recipient_routing The rules for recipient routing.
      *
      * @return $this
      */

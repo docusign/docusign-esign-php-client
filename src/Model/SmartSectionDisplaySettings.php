@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * SmartSectionDisplaySettings Class Doc Comment
  *
  * @category    Class
+ * @description These properties define how a Smart Section displays. A Smart Section is a type of display section.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -309,7 +310,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets collapsible_settings
      *
-     * @param \DocuSign\eSign\Model\SmartSectionCollapsibleDisplaySettings $collapsible_settings collapsible_settings
+     * @param \DocuSign\eSign\Model\SmartSectionCollapsibleDisplaySettings $collapsible_settings This object defines the appearance and function of a collapsible section or item.
      *
      * @return $this
      */

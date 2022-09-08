@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BulkSendBatchStatus Class Doc Comment
  *
  * @category    Class
+ * @description Result of &#x60;getBulkSendBatchStatus&#x60;
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -489,7 +490,7 @@ class BulkSendBatchStatus implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes_info
      *
-     * @param \DocuSign\eSign\Model\BulkSendEnvelopesInfo $envelopes_info envelopes_info
+     * @param \DocuSign\eSign\Model\BulkSendEnvelopesInfo $envelopes_info 
      *
      * @return $this
      */

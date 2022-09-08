@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Jurisdiction Class Doc Comment
  *
  * @category    Class
+ * @description Describes the jurisdiction of a notary. This is read-only object.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

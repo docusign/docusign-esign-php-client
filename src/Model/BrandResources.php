@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BrandResources Class Doc Comment
  *
  * @category    Class
+ * @description Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -261,7 +262,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_user_info
      *
-     * @param \DocuSign\eSign\Model\UserInfo $created_by_user_info created_by_user_info
+     * @param \DocuSign\eSign\Model\UserInfo $created_by_user_info The user ID of the user who created the brand resource.
      *
      * @return $this
      */
@@ -333,7 +334,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by_user_info
      *
-     * @param \DocuSign\eSign\Model\UserInfo $modified_by_user_info modified_by_user_info
+     * @param \DocuSign\eSign\Model\UserInfo $modified_by_user_info Information about the user who last modified the brand resource.
      *
      * @return $this
      */

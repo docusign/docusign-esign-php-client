@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeEvent Class Doc Comment
  *
  * @category    Class
+ * @description For which envelope events should your webhook be called?
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

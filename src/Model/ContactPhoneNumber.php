@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ContactPhoneNumber Class Doc Comment
  *
  * @category    Class
+ * @description Details about the phone numbers associated with a specific contact.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

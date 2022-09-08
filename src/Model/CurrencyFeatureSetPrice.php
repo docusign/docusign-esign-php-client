@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * CurrencyFeatureSetPrice Class Doc Comment
  *
  * @category    Class
+ * @description Information about the price and currency associated with the feature set. Reserved for internal DocuSign use only.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

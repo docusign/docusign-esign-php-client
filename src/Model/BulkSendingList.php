@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BulkSendingList Class Doc Comment
  *
  * @category    Class
+ * @description This object contains the details for the bulk send list.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

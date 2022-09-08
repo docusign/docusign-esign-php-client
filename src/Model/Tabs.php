@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Tabs Class Doc Comment
  *
  * @category    Class
+ * @description Tabs indicate to recipients where they should sign, initial, or enter data on a document. They are represented graphically as symbols on documents at the time of signing. Tabs can also display data to the recipients.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -1119,7 +1120,7 @@ class Tabs implements ModelInterface, ArrayAccess
     /**
      * Sets prefill_tabs
      *
-     * @param \DocuSign\eSign\Model\PrefillTabs $prefill_tabs prefill_tabs
+     * @param \DocuSign\eSign\Model\PrefillTabs $prefill_tabs Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields
      *
      * @return $this
      */

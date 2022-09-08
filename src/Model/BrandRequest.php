@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BrandRequest Class Doc Comment
  *
  * @category    Class
+ * @description This request object contains information about a specific brand.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

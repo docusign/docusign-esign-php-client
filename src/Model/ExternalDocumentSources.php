@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ExternalDocumentSources Class Doc Comment
  *
  * @category    Class
+ * @description A complex object specifying the external document sources.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -297,7 +298,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets boxnet_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $boxnet_metadata boxnet_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $boxnet_metadata Metadata indicating whether the `boxnetEnabled` property is editable.
      *
      * @return $this
      */
@@ -345,7 +346,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets dropbox_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $dropbox_metadata dropbox_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $dropbox_metadata Metadata indicating whether the `dropboxEnabled` property is editable.
      *
      * @return $this
      */
@@ -393,7 +394,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets google_drive_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $google_drive_metadata google_drive_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $google_drive_metadata Metadata indicating whether the `googleDriveEnabled` property is editable.
      *
      * @return $this
      */
@@ -441,7 +442,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets one_drive_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $one_drive_metadata one_drive_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $one_drive_metadata Metadata indicating whether the `oneDriveEnabled` property is editable.
      *
      * @return $this
      */
@@ -489,7 +490,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $salesforce_metadata salesforce_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $salesforce_metadata Metadata indicating whether the `salesforceEnabled` property is editable.
      *
      * @return $this
      */

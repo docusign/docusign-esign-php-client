@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * NewUsersSummary Class Doc Comment
  *
  * @category    Class
+ * @description Object representing a summary of data for new users.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

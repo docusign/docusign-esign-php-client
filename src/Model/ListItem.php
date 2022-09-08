@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ListItem Class Doc Comment
  *
  * @category    Class
+ * @description One of the selectable items in the &#x60;listItems&#x60; property of a [&#x60;list&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) tab.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -273,7 +274,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Sets selected_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_metadata selected_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_metadata Metadata that indicates whether the `selected` property is editable.
      *
      * @return $this
      */
@@ -321,7 +322,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Sets text_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $text_metadata text_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $text_metadata 
      *
      * @return $this
      */
@@ -369,7 +370,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Sets value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata Metadata that indicates whether the `value` property is editable.
      *
      * @return $this
      */

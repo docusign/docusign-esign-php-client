@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Filter Class Doc Comment
  *
  * @category    Class
+ * @description Use this object to create a filtered view of the items in a folder.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

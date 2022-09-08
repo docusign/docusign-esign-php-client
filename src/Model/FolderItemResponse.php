@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * FolderItemResponse Class Doc Comment
  *
  * @category    Class
+ * @description Results from a folder item request.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

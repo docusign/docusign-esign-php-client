@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopesInformation Class Doc Comment
  *
  * @category    Class
+ * @description Result set for the Envelopes: listStatusChanges method
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

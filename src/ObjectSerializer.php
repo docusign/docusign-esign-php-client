@@ -276,7 +276,7 @@ class ObjectSerializer
             settype($data, $class);
             return $data;
         } elseif ($class === '\SplFileObject') {
-            /** @var \Psr\Http\Message\StreamInterface $data */
+            /** Description @var \Psr\Http\Message\StreamInterface $data **/
 
             // determine file name
             if (array_key_exists('Content-Disposition', $httpHeaders) &&
@@ -287,10 +287,9 @@ class ObjectSerializer
             }
 
             $file = fopen($filename, 'w');
-            if(is_string($data)){
+            if (is_string($data)){
                 fwrite($file, $data);
-            }
-            else{
+            } else {
                 while ($chunk = $data->read(200)) {
                     fwrite($file, $chunk);
                 } 

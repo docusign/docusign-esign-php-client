@@ -495,7 +495,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets address_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $address_format_metadata address_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $address_format_metadata 
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets calendar_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $calendar_type_metadata calendar_type_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $calendar_type_metadata 
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets culture_name_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $culture_name_metadata culture_name_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $culture_name_metadata 
      *
      * @return $this
      */
@@ -663,7 +663,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_code_metadata currency_code_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_code_metadata Metadata that indicates whether the `currencyCode` property is editable.
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_negative_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_negative_format_metadata currency_negative_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_negative_format_metadata 
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_positive_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_positive_format_metadata currency_positive_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_positive_format_metadata 
      *
      * @return $this
      */
@@ -903,7 +903,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets date_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $date_format_metadata date_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $date_format_metadata 
      *
      * @return $this
      */
@@ -1239,7 +1239,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets initial_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $initial_format_metadata initial_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $initial_format_metadata 
      *
      * @return $this
      */
@@ -1287,7 +1287,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets name_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $name_format_metadata name_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $name_format_metadata 
      *
      * @return $this
      */
@@ -1335,7 +1335,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_format_metadata sign_date_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_format_metadata Metadata that indicates whether the `signDateFormat` property is editable.
      *
      * @return $this
      */
@@ -1383,7 +1383,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets sign_time_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_time_format_metadata sign_time_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_time_format_metadata Metadata that indicates whether the `signTimeFormat` property is editable.
      *
      * @return $this
      */
@@ -1431,7 +1431,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $time_format_metadata time_format_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $time_format_metadata 
      *
      * @return $this
      */
@@ -1479,7 +1479,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_zone_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $time_zone_metadata time_zone_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $time_zone_metadata 
      *
      * @return $this
      */

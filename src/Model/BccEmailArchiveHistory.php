@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BccEmailArchiveHistory Class Doc Comment
  *
  * @category    Class
+ * @description Contains details about the history of the BCC email archive configuration.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -345,7 +346,7 @@ class BccEmailArchiveHistory implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by
      *
-     * @param \DocuSign\eSign\Model\UserInfo $modified_by modified_by
+     * @param \DocuSign\eSign\Model\UserInfo $modified_by Details about the user who last modified the BCC email archive configuration.
      *
      * @return $this
      */

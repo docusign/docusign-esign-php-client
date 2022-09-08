@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * UserInformation Class Doc Comment
  *
  * @category    Class
+ * @description User information.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -693,7 +694,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -741,7 +742,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_info
      *
-     * @param \DocuSign\eSign\Model\ForgottenPasswordInformation $forgotten_password_info forgotten_password_info
+     * @param \DocuSign\eSign\Model\ForgottenPasswordInformation $forgotten_password_info A complex element containing up to four Question/Answer pairs for forgotten password information.
      *
      * @return $this
      */
@@ -813,7 +814,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets home_address
      *
-     * @param \DocuSign\eSign\Model\AddressInformation $home_address home_address
+     * @param \DocuSign\eSign\Model\AddressInformation $home_address Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters.
      *
      * @return $this
      */
@@ -1437,7 +1438,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_settings
      *
-     * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings user_settings
+     * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.
      *
      * @return $this
      */
@@ -1509,7 +1510,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets work_address
      *
-     * @param \DocuSign\eSign\Model\AddressInformation $work_address work_address
+     * @param \DocuSign\eSign\Model\AddressInformation $work_address 
      *
      * @return $this
      */

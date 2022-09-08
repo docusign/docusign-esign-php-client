@@ -285,7 +285,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forgotten_password_info
      *
-     * @param \DocuSign\eSign\Model\ForgottenPasswordInformation $forgotten_password_info forgotten_password_info
+     * @param \DocuSign\eSign\Model\ForgottenPasswordInformation $forgotten_password_info A complex element containing up to four Question/Answer pairs for forgotten password information.
      *
      * @return $this
      */

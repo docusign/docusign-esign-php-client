@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Folder Class Doc Comment
  *
  * @category    Class
+ * @description This object contains details about a folder.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -303,7 +304,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -327,7 +328,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets filter
      *
-     * @param \DocuSign\eSign\Model\Filter $filter filter
+     * @param \DocuSign\eSign\Model\Filter $filter An object used to present a filtered view of the items in a folder.
      *
      * @return $this
      */
@@ -519,7 +520,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets owner
      *
-     * @param \DocuSign\eSign\Model\UserInfo $owner owner
+     * @param \DocuSign\eSign\Model\UserInfo $owner Information about the user who owns the folder.
      *
      * @return $this
      */

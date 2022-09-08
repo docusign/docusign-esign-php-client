@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConsoleViewRequest Class Doc Comment
  *
  * @category    Class
+ * @description The request object for the [EnvelopeViews: createConsole](/docs/esign-rest-api/reference/envelopes/envelopeviews/createconsole/) method.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeIdsRequest Class Doc Comment
  *
  * @category    Class
+ * @description Lists of envelope and transaction IDs to use in the results.  If you use this request body with Envelopes: listStatus, you must set one or both of the following query parameters to the special value &#x60;request_body&#x60;:  - &#x60;envelope_ids&#x3D;request_body&#x60; - &#x60;transaction_ids&#x3D;request_body&#x60;
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

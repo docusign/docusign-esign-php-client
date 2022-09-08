@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Checkbox Class Doc Comment
  *
  * @category    Class
+ * @description A tab that allows the recipient to select a yes/no (on/off) option.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -114,8 +115,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => '?string',
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'original_value' => '?string',
-        'original_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'page_number' => '?string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'recipient_id' => '?string',
@@ -156,8 +155,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'underline' => '?string',
         'underline_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
-        'value' => '?string',
-        'value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'width' => '?string',
         'width_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'x_position' => '?string',
@@ -227,8 +224,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => null,
         'name' => null,
         'name_metadata' => null,
-        'original_value' => null,
-        'original_value_metadata' => null,
         'page_number' => null,
         'page_number_metadata' => null,
         'recipient_id' => null,
@@ -269,8 +264,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => null,
         'underline' => null,
         'underline_metadata' => null,
-        'value' => null,
-        'value_metadata' => null,
         'width' => null,
         'width_metadata' => null,
         'x_position' => null,
@@ -361,8 +354,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => 'mergeFieldXml',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
-        'original_value' => 'originalValue',
-        'original_value_metadata' => 'originalValueMetadata',
         'page_number' => 'pageNumber',
         'page_number_metadata' => 'pageNumberMetadata',
         'recipient_id' => 'recipientId',
@@ -403,8 +394,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => 'toolTipMetadata',
         'underline' => 'underline',
         'underline_metadata' => 'underlineMetadata',
-        'value' => 'value',
-        'value_metadata' => 'valueMetadata',
         'width' => 'width',
         'width_metadata' => 'widthMetadata',
         'x_position' => 'xPosition',
@@ -474,8 +463,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => 'setMergeFieldXml',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
-        'original_value' => 'setOriginalValue',
-        'original_value_metadata' => 'setOriginalValueMetadata',
         'page_number' => 'setPageNumber',
         'page_number_metadata' => 'setPageNumberMetadata',
         'recipient_id' => 'setRecipientId',
@@ -516,8 +503,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => 'setToolTipMetadata',
         'underline' => 'setUnderline',
         'underline_metadata' => 'setUnderlineMetadata',
-        'value' => 'setValue',
-        'value_metadata' => 'setValueMetadata',
         'width' => 'setWidth',
         'width_metadata' => 'setWidthMetadata',
         'x_position' => 'setXPosition',
@@ -587,8 +572,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'merge_field_xml' => 'getMergeFieldXml',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
-        'original_value' => 'getOriginalValue',
-        'original_value_metadata' => 'getOriginalValueMetadata',
         'page_number' => 'getPageNumber',
         'page_number_metadata' => 'getPageNumberMetadata',
         'recipient_id' => 'getRecipientId',
@@ -629,8 +612,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         'tool_tip_metadata' => 'getToolTipMetadata',
         'underline' => 'getUnderline',
         'underline_metadata' => 'getUnderlineMetadata',
-        'value' => 'getValue',
-        'value_metadata' => 'getValueMetadata',
         'width' => 'getWidth',
         'width_metadata' => 'getWidthMetadata',
         'x_position' => 'getXPosition',
@@ -754,8 +735,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['merge_field_xml'] = isset($data['merge_field_xml']) ? $data['merge_field_xml'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
-        $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
-        $this->container['original_value_metadata'] = isset($data['original_value_metadata']) ? $data['original_value_metadata'] : null;
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
         $this->container['page_number_metadata'] = isset($data['page_number_metadata']) ? $data['page_number_metadata'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
@@ -796,8 +775,6 @@ class Checkbox implements ModelInterface, ArrayAccess
         $this->container['tool_tip_metadata'] = isset($data['tool_tip_metadata']) ? $data['tool_tip_metadata'] : null;
         $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
         $this->container['underline_metadata'] = isset($data['underline_metadata']) ? $data['underline_metadata'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['value_metadata'] = isset($data['value_metadata']) ? $data['value_metadata'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['width_metadata'] = isset($data['width_metadata']) ? $data['width_metadata'] : null;
         $this->container['x_position'] = isset($data['x_position']) ? $data['x_position'] : null;
@@ -867,7 +844,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.
      *
      * @return $this
      */
@@ -915,7 +892,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata anchor_case_sensitive_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata Metadata that indicates whether the `anchorCaseSensitive` property is editable.
      *
      * @return $this
      */
@@ -963,7 +940,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata anchor_horizontal_alignment_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.
      *
      * @return $this
      */
@@ -1011,7 +988,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata anchor_ignore_if_not_present_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.
      *
      * @return $this
      */
@@ -1059,7 +1036,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata anchor_match_whole_word_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata Metadata that indicates whether the `anchorMatchWholeWord` property is editable.
      *
      * @return $this
      */
@@ -1107,7 +1084,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata anchor_string_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata Metadata that indicates whether the `anchorString` property is editable.
      *
      * @return $this
      */
@@ -1155,7 +1132,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata anchor_tab_processor_version_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1203,7 +1180,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata anchor_units_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata Metadata that indicates whether the `anchorUnits` property is editable.
      *
      * @return $this
      */
@@ -1251,7 +1228,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata anchor_x_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata Metadata that indicates whether the `anchorXOffset` property is editable.
      *
      * @return $this
      */
@@ -1299,7 +1276,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata anchor_y_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata Metadata that indicates whether the `anchorYOffset` property is editable.
      *
      * @return $this
      */
@@ -1347,7 +1324,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets bold_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata bold_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata Metadata that indicates whether the `bold` property is editable.
      *
      * @return $this
      */
@@ -1443,7 +1420,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata conditional_parent_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata Metadata that indicates whether the `conditionalParentLabel` property is editable.
      *
      * @return $this
      */
@@ -1491,7 +1468,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata conditional_parent_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata Metadata that indicates whether the `conditionalParentValue` property is editable.
      *
      * @return $this
      */
@@ -1539,7 +1516,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata custom_tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata Metadata that indicates whether the `customTabId` property is editable.
      *
      * @return $this
      */
@@ -1587,7 +1564,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets document_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata document_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata Metadata that indicates whether the `documentId` property is editable.
      *
      * @return $this
      */
@@ -1611,7 +1588,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1683,7 +1660,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets font_color_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata font_color_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata Metadata that indicates whether the `fontColor` property is editable.
      *
      * @return $this
      */
@@ -1707,7 +1684,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets font_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata font_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata Metadata that indicates whether the `font` property is editable.
      *
      * @return $this
      */
@@ -1755,7 +1732,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets font_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata font_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata Metadata that indicates whether the `fontSize` property is editable.
      *
      * @return $this
      */
@@ -1803,7 +1780,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets form_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata form_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata Metadata that indicates whether the `formOrder` property is editable.
      *
      * @return $this
      */
@@ -1851,7 +1828,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata form_page_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata Metadata that indicates whether the `formPageLabel` property is editable.
      *
      * @return $this
      */
@@ -1899,7 +1876,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata form_page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata Metadata that indicates whether the `fromPageNumber` property is editable.
      *
      * @return $this
      */
@@ -1947,7 +1924,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets height_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata height_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata Metadata that indicates whether the `height` property is editable.
      *
      * @return $this
      */
@@ -1995,7 +1972,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets italic_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata italic_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata Metadata that indicates whether the `italic` property is editable.
      *
      * @return $this
      */
@@ -2043,7 +2020,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata Metadata that indicates whether the `locked` property is editable.
      *
      * @return $this
      */
@@ -2067,7 +2044,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field
      *
-     * @param \DocuSign\eSign\Model\MergeField $merge_field merge_field
+     * @param \DocuSign\eSign\Model\MergeField $merge_field Contains the information necessary to map the tab to a field in SalesForce.
      *
      * @return $this
      */
@@ -2139,61 +2116,13 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates whether the `name` property is editable. This property is read-only.
      *
      * @return $this
      */
     public function setNameMetadata($name_metadata)
     {
         $this->container['name_metadata'] = $name_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets original_value
-     *
-     * @return ?string
-     */
-    public function getOriginalValue()
-    {
-        return $this->container['original_value'];
-    }
-
-    /**
-     * Sets original_value
-     *
-     * @param ?string $original_value The initial value of the tab when it was sent to the recipient.
-     *
-     * @return $this
-     */
-    public function setOriginalValue($original_value)
-    {
-        $this->container['original_value'] = $original_value;
-
-        return $this;
-    }
-
-    /**
-     * Gets original_value_metadata
-     *
-     * @return \DocuSign\eSign\Model\PropertyMetadata
-     */
-    public function getOriginalValueMetadata()
-    {
-        return $this->container['original_value_metadata'];
-    }
-
-    /**
-     * Sets original_value_metadata
-     *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
-     *
-     * @return $this
-     */
-    public function setOriginalValueMetadata($original_value_metadata)
-    {
-        $this->container['original_value_metadata'] = $original_value_metadata;
 
         return $this;
     }
@@ -2235,7 +2164,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata Metadata that indicates whether the `pageNumber` property is editable.
      *
      * @return $this
      */
@@ -2307,7 +2236,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata recipient_id_guid_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata Metadata that indicates whether the `recipientIdGuid` property is editable.
      *
      * @return $this
      */
@@ -2331,7 +2260,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata recipient_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata Metadata that indicates whether the `recipientId` property is editable.
      *
      * @return $this
      */
@@ -2379,7 +2308,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata Metadata that indicates whether the `required` property is editable.
      *
      * @return $this
      */
@@ -2427,7 +2356,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata require_initial_on_shared_change_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.
      *
      * @return $this
      */
@@ -2475,7 +2404,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets selected_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_metadata selected_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_metadata Metadata that indicates whether the `selected` property is editable.
      *
      * @return $this
      */
@@ -2523,7 +2452,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets selected_original_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_original_metadata selected_original_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_original_metadata 
      *
      * @return $this
      */
@@ -2571,7 +2500,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets shared_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata shared_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata Metadata that indicates whether the `shared` property is editable.
      *
      * @return $this
      */
@@ -2619,7 +2548,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets share_to_recipients_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata share_to_recipients_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2643,7 +2572,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets smart_contract_information
      *
-     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2715,7 +2644,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets status_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata status_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata Metadata that indicates whether the `status` property is editable.
      *
      * @return $this
      */
@@ -2763,7 +2692,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata tab_group_labels_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata Metadata that indicates whether the `tabGroupLabels` property is editable.
      *
      * @return $this
      */
@@ -2811,7 +2740,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata Metadata that indicates whether the `tabId` property is editable.
      *
      * @return $this
      */
@@ -2859,7 +2788,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata tab_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata Metadata that indicates whether the `tabLabel` property is editable.
      *
      * @return $this
      */
@@ -2907,7 +2836,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata tab_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata Metadata that indicates whether the `tabOrder` property is editable.
      *
      * @return $this
      */
@@ -2955,7 +2884,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata tab_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata Metadata that indicates whether the `tabType` property is editable.
      *
      * @return $this
      */
@@ -3003,7 +2932,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata template_locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata Metadata that indicates whether the `templateLocked` property is editable.
      *
      * @return $this
      */
@@ -3051,7 +2980,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets template_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata template_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata Metadata that indicates whether the `templateRequired` property is editable.
      *
      * @return $this
      */
@@ -3099,7 +3028,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets tool_tip_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata tool_tip_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata Metadata that indicates whether the `toolTip` property is editable.
      *
      * @return $this
      */
@@ -3147,61 +3076,13 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets underline_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata underline_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata Metadata that indicates whether the `underline` property is editable.
      *
      * @return $this
      */
     public function setUnderlineMetadata($underline_metadata)
     {
         $this->container['underline_metadata'] = $underline_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return ?string
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param ?string $value Specifies the value of the tab.
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * Gets value_metadata
-     *
-     * @return \DocuSign\eSign\Model\PropertyMetadata
-     */
-    public function getValueMetadata()
-    {
-        return $this->container['value_metadata'];
-    }
-
-    /**
-     * Sets value_metadata
-     *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
-     *
-     * @return $this
-     */
-    public function setValueMetadata($value_metadata)
-    {
-        $this->container['value_metadata'] = $value_metadata;
 
         return $this;
     }
@@ -3243,7 +3124,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets width_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata width_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata Metadata that indicates whether the `width` property is editable.
      *
      * @return $this
      */
@@ -3291,7 +3172,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets x_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata x_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata Metadata that indicates whether the `xPosition` property is editable.
      *
      * @return $this
      */
@@ -3339,7 +3220,7 @@ class Checkbox implements ModelInterface, ArrayAccess
     /**
      * Sets y_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata y_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata Metadata that indicates whether the `yPosition` property is editable.
      *
      * @return $this
      */

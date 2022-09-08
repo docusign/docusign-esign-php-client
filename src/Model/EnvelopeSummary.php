@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeSummary Class Doc Comment
  *
  * @category    Class
+ * @description This object describes an envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -261,7 +262,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_envelope_status
      *
-     * @param \DocuSign\eSign\Model\BulkEnvelopeStatus $bulk_envelope_status bulk_envelope_status
+     * @param \DocuSign\eSign\Model\BulkEnvelopeStatus $bulk_envelope_status An object that describes the status of the bulk send envelopes.
      *
      * @return $this
      */
@@ -309,7 +310,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */

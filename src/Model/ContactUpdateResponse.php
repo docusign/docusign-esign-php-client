@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ContactUpdateResponse Class Doc Comment
  *
  * @category    Class
+ * @description This response objects shows the updated details for the contacts.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

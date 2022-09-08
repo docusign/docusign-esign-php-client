@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * FeatureSet Class Doc Comment
  *
  * @category    Class
+ * @description This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

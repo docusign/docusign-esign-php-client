@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BulkSendingCopy Class Doc Comment
  *
  * @category    Class
+ * @description This object contains the details to use for a specific copy, or instance, of the envelope. When you send an envelope by using a bulk send list, you can customize these properties for each instance.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

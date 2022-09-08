@@ -286,7 +286,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets recip_may_provide_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recip_may_provide_number_metadata recip_may_provide_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recip_may_provide_number_metadata Metadata that indicates whether the `recipMayProvideNumber` property can be edited.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets record_voice_print_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $record_voice_print_metadata record_voice_print_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $record_voice_print_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets sender_provided_numbers_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_provided_numbers_metadata sender_provided_numbers_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_provided_numbers_metadata Metadata that indicates whether the `senderProvidedNumbers` property can be edited.
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets validate_recip_provided_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $validate_recip_provided_number_metadata validate_recip_provided_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $validate_recip_provided_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */

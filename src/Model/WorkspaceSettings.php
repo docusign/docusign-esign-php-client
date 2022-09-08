@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * WorkspaceSettings Class Doc Comment
  *
  * @category    Class
+ * @description This object provides information about the settings for the workspace.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

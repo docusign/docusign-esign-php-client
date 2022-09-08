@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BccEmailArchive Class Doc Comment
  *
  * @category    Class
+ * @description This object contains information abut a BCC email archive configuration (a BCC email address used to archive DocuSign-generated emails).
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -345,7 +346,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets created_by
      *
-     * @param \DocuSign\eSign\Model\UserInfo $created_by created_by
+     * @param \DocuSign\eSign\Model\UserInfo $created_by Details about the user who created the BCC email archive configuration.
      *
      * @return $this
      */
@@ -441,7 +442,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by
      *
-     * @param \DocuSign\eSign\Model\UserInfo $modified_by modified_by
+     * @param \DocuSign\eSign\Model\UserInfo $modified_by Details about the user who last modified the BCC email archive configuration.
      *
      * @return $this
      */

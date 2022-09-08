@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientUpdateResponse Class Doc Comment
  *
  * @category    Class
+ * @description The recipient details that are returned after you update the recipient.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -267,7 +268,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -339,7 +340,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets tabs
      *
-     * @param \DocuSign\eSign\Model\Tabs $tabs tabs
+     * @param \DocuSign\eSign\Model\Tabs $tabs All of the tabs associated with the recipient.
      *
      * @return $this
      */

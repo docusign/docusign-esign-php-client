@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * BulkSendingListSummaries Class Doc Comment
  *
  * @category    Class
+ * @description This complex type contains summaries that provide basic information about the bulk send lists that belong to the current user.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

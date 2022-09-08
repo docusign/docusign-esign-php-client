@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * Workflow Class Doc Comment
  *
  * @category    Class
+ * @description Describes the workflow for an envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -321,7 +322,7 @@ class Workflow implements ModelInterface, ArrayAccess
     /**
      * Sets scheduled_sending
      *
-     * @param \DocuSign\eSign\Model\ScheduledSending $scheduled_sending scheduled_sending
+     * @param \DocuSign\eSign\Model\ScheduledSending $scheduled_sending An object that describes the settings for scheduled sending.
      *
      * @return $this
      */

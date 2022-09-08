@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientSignatureProvider Class Doc Comment
  *
  * @category    Class
+ * @description An Electronic or Standards Based Signature (digital signature) provider for the signer to use. [More information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/).
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -315,7 +316,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signature_provider_name_metadata signature_provider_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signature_provider_name_metadata Metadata that indicates whether the `signatureProviderName` property is editable.
      *
      * @return $this
      */
@@ -339,7 +340,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_options
      *
-     * @param \DocuSign\eSign\Model\RecipientSignatureProviderOptions $signature_provider_options signature_provider_options
+     * @param \DocuSign\eSign\Model\RecipientSignatureProviderOptions $signature_provider_options Not applicable for this object.
      *
      * @return $this
      */

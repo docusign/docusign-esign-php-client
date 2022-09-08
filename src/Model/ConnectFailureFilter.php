@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * ConnectFailureFilter Class Doc Comment
  *
  * @category    Class
+ * @description A list of failed envelope IDs to retry.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

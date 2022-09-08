@@ -261,7 +261,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class LockInformation implements ModelInterface, ArrayAccess
     /**
      * Sets locked_by_user
      *
-     * @param \DocuSign\eSign\Model\UserInfo $locked_by_user locked_by_user
+     * @param \DocuSign\eSign\Model\UserInfo $locked_by_user A complex type containing information about the user that has the envelope or template locked.
      *
      * @return $this
      */

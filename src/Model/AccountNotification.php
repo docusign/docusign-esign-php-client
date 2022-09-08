@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * AccountNotification Class Doc Comment
  *
  * @category    Class
+ * @description A complex element that specifies notifications (expirations and reminders) for the envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -231,7 +232,7 @@ class AccountNotification implements ModelInterface, ArrayAccess
     /**
      * Sets expirations
      *
-     * @param \DocuSign\eSign\Model\Expirations $expirations expirations
+     * @param \DocuSign\eSign\Model\Expirations $expirations A complex element that specifies the expiration settings for the envelope.
      *
      * @return $this
      */
@@ -255,7 +256,7 @@ class AccountNotification implements ModelInterface, ArrayAccess
     /**
      * Sets reminders
      *
-     * @param \DocuSign\eSign\Model\Reminders $reminders reminders
+     * @param \DocuSign\eSign\Model\Reminders $reminders A complex element that specifies reminder settings for the envelope.
      *
      * @return $this
      */

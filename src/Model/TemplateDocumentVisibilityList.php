@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * TemplateDocumentVisibilityList Class Doc Comment
  *
  * @category    Class
+ * @description A list of &#x60;documentVisibility&#x60; objects that specify whether the documents associated with a template are visible to recipients.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.

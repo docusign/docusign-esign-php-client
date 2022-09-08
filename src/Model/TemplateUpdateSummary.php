@@ -267,7 +267,7 @@ class TemplateUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_envelope_status
      *
-     * @param \DocuSign\eSign\Model\BulkEnvelopeStatus $bulk_envelope_status bulk_envelope_status
+     * @param \DocuSign\eSign\Model\BulkEnvelopeStatus $bulk_envelope_status An object that describes the status of the bulk send envelopes.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class TemplateUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class TemplateUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets lock_information
      *
-     * @param \DocuSign\eSign\Model\LockInformation $lock_information lock_information
+     * @param \DocuSign\eSign\Model\LockInformation $lock_information Provides lock information about an envelope that a user has locked.
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class TemplateUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets tab_update_results
      *
-     * @param \DocuSign\eSign\Model\Tabs $tab_update_results tab_update_results
+     * @param \DocuSign\eSign\Model\Tabs $tab_update_results 
      *
      * @return $this
      */
