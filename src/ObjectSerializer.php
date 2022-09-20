@@ -271,7 +271,11 @@ class ObjectSerializer
             } else {
                 return null;
             }
-        } elseif (in_array($class, ['?bool', '?int', '?string', 'DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+        } elseif ($class === 'DateTime' || in_array(strtolower($class), ['?bool', '?int', '?string', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'object', 'string', 'void'], true)) {
+            $class = $class !== 'DateTime' ? strtolower($class) : $class;
+            if ($class === 'void') {
+                $class = 'null';
+            }
             $class=trim($class,"?");
             settype($data, $class);
             return $data;
@@ -305,6 +309,9 @@ class ObjectSerializer
             return $data;
         } else {
             // If a discriminator is defined and points to a valid subclass, use it.
+            if (in_array($class, ['Number', 'Date'])) {
+                $class = '\DocuSign\eSign\Model\\' . $class;
+            }
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
                 $subclass = 'DocuSign\eSign\Model\\' . $data->{$discriminator};
