@@ -1,5 +1,7 @@
 <?php
 
+namespace DocuSign\eSign\Test;
+
 use DocuSign\eSign\Api\AccountsApi;
 use DocuSign\eSign\Api\ConnectApi;
 use DocuSign\eSign\Api\CustomTabsApi;
@@ -821,7 +823,7 @@ class UnitTests extends TestCase
         $addedDocument = $envelopesApi->getDocument($testConfig->getAccountId(), $document->getDocumentId(), $testConfig->getEnvelopeId());
 
         $this->assertNotEmpty($addedDocument);
-        $this->assertInstanceOf(SplFileObject::class, $addedDocument);
+        $this->assertInstanceOf(\SplFileObject::class, $addedDocument);
     }
 
     /**
@@ -1670,7 +1672,7 @@ class UnitTests extends TestCase
     {       
         $accountsApi = new AccountsApi($testConfig->getApiClient());
         $brandFile = "/Docs/brand.xml";
-        $brandResources = $accountsApi->updateBrandResourcesByContentType($testConfig->getAccountId(),$testConfig->getBrandId(),'email',new SplFileObject(__DIR__ . $brandFile));
+        $brandResources = $accountsApi->updateBrandResourcesByContentType($testConfig->getAccountId(),$testConfig->getBrandId(),'email',new \SplFileObject(__DIR__ . $brandFile));
 
         $this->assertNotEmpty($brandResources);
         $this->assertInstanceOf('DocuSign\eSign\Model\BrandResources', $brandResources);
@@ -1694,5 +1696,3 @@ class UnitTests extends TestCase
         return $testConfig;
     }
 }
-
-?>

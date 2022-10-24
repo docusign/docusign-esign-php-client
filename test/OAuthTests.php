@@ -1,6 +1,9 @@
 <?php
 
+namespace DocuSign\eSign\Test;
+
 use DocuSign\eSign\Client\ApiClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * User: Naveen Gopala
@@ -8,7 +11,7 @@ use DocuSign\eSign\Client\ApiClient;
  * Time: 4:58 PM
  */
 
-class OAuthTests extends PHPUnit_Framework_TestCase
+class OAuthTests extends TestCase
 {
 
     /**
@@ -18,39 +21,39 @@ class OAuthTests extends PHPUnit_Framework_TestCase
      */
     private $scope = null;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $testConfig = new TestConfig();
 
-        $testConfig->setApiClient(new DocuSign\eSign\Client\ApiClient());
+        $testConfig->setApiClient(new ApiClient());
 
         $this->config = $testConfig;
 
         $oAuth = $this->config->getApiClient()->getOAuth();
         $oAuth->setBasePath($testConfig->getHost());
         $this->scope = [
-            DocuSign\eSign\Client\ApiClient::$SCOPE_SIGNATURE,
-            DocuSign\eSign\Client\ApiClient::$SCOPE_IMPERSONATION
+            ApiClient::$SCOPE_SIGNATURE,
+            ApiClient::$SCOPE_IMPERSONATION
         ];
     }
 
     public function testOauthUri()
     {
         $uri = $this->config->getApiClient()->getAuthorizationURI($this->config->getIntegratorKey(), $this->scope, $this->config->getReturnUrl(), 'code');
-        $this->assertStringEndsWith($this->config->getReturnUrl(), $uri);
+        self::assertStringEndsWith($this->config->getReturnUrl(), $uri);
         echo $uri;
     }
 
     public function testJwtUser()
     {
         $token = $this->config->getApiClient()->requestJWTUserToken($this->config->getIntegratorKey(), $this->config->getUserId(), $this->config->getClientKey(), $this->scope);
-        $this->assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $token[0]);
+        self::assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $token[0]);
     }
 
     public function testJwtApplication()
     {
         $token = $this->config->getApiClient()->requestJWTApplicationToken($this->config->getIntegratorKey(), $this->config->getClientKey(), $this->scope);
-        $this->assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $token[0]);
+        self::assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $token[0]);
     }
 
     /**
@@ -68,13 +71,13 @@ class OAuthTests extends PHPUnit_Framework_TestCase
         # $code = '';
         # $token = $this->config->getApiClient()->generateAccessToken($this->config->getIntegratorKey(), $this->config->getClientSecret(), $code);
 
-        # $this->assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $token[0]);
+        # self::assertInstanceOf('DocuSign\eSign\Client\Auth\OAuthToken', $token[0]);
 
         # echo $token[0];
 
         # $user = $this->config->getApiClient()->getUserInfo($token[0]['access_token']);
-        # $this->assertInstanceOf('DocuSign\eSign\Client\Auth\UserInfo', $user[0]);
-        # $this->assertSame(200, $user[1]);
+        # self::assertInstanceOf('DocuSign\eSign\Client\Auth\UserInfo', $user[0]);
+        # self::assertSame(200, $user[1]);
 
         # $loginAccount = $user[0]['accounts'][0];
         # if (isset($loginInformation)) {
@@ -87,5 +90,3 @@ class OAuthTests extends PHPUnit_Framework_TestCase
 
 
 }
-
-?>
