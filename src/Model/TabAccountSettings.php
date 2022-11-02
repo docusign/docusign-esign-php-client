@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class TabAccountSettings implements ModelInterface, ArrayAccess
@@ -67,6 +67,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'checkbox_tabs_enabled' => '?string',
         'check_box_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'currency_tabs_enabled' => '?string',
+        'currency_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_field_regex_enabled' => '?string',
         'data_field_regex_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_field_size_enabled' => '?string',
@@ -117,6 +119,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => null,
         'checkbox_tabs_enabled' => null,
         'check_box_tabs_metadata' => null,
+        'currency_tabs_enabled' => null,
+        'currency_tabs_metadata' => null,
         'data_field_regex_enabled' => null,
         'data_field_regex_metadata' => null,
         'data_field_size_enabled' => null,
@@ -188,6 +192,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'calculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'checkboxTabsEnabled',
         'check_box_tabs_metadata' => 'checkBoxTabsMetadata',
+        'currency_tabs_enabled' => 'currencyTabsEnabled',
+        'currency_tabs_metadata' => 'currencyTabsMetadata',
         'data_field_regex_enabled' => 'dataFieldRegexEnabled',
         'data_field_regex_metadata' => 'dataFieldRegexMetadata',
         'data_field_size_enabled' => 'dataFieldSizeEnabled',
@@ -238,6 +244,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'setCalculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'setCheckboxTabsEnabled',
         'check_box_tabs_metadata' => 'setCheckBoxTabsMetadata',
+        'currency_tabs_enabled' => 'setCurrencyTabsEnabled',
+        'currency_tabs_metadata' => 'setCurrencyTabsMetadata',
         'data_field_regex_enabled' => 'setDataFieldRegexEnabled',
         'data_field_regex_metadata' => 'setDataFieldRegexMetadata',
         'data_field_size_enabled' => 'setDataFieldSizeEnabled',
@@ -288,6 +296,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'getCalculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'getCheckboxTabsEnabled',
         'check_box_tabs_metadata' => 'getCheckBoxTabsMetadata',
+        'currency_tabs_enabled' => 'getCurrencyTabsEnabled',
+        'currency_tabs_metadata' => 'getCurrencyTabsMetadata',
         'data_field_regex_enabled' => 'getDataFieldRegexEnabled',
         'data_field_regex_metadata' => 'getDataFieldRegexMetadata',
         'data_field_size_enabled' => 'getDataFieldSizeEnabled',
@@ -392,6 +402,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         $this->container['calculated_fields_metadata'] = isset($data['calculated_fields_metadata']) ? $data['calculated_fields_metadata'] : null;
         $this->container['checkbox_tabs_enabled'] = isset($data['checkbox_tabs_enabled']) ? $data['checkbox_tabs_enabled'] : null;
         $this->container['check_box_tabs_metadata'] = isset($data['check_box_tabs_metadata']) ? $data['check_box_tabs_metadata'] : null;
+        $this->container['currency_tabs_enabled'] = isset($data['currency_tabs_enabled']) ? $data['currency_tabs_enabled'] : null;
+        $this->container['currency_tabs_metadata'] = isset($data['currency_tabs_metadata']) ? $data['currency_tabs_metadata'] : null;
         $this->container['data_field_regex_enabled'] = isset($data['data_field_regex_enabled']) ? $data['data_field_regex_enabled'] : null;
         $this->container['data_field_regex_metadata'] = isset($data['data_field_regex_metadata']) ? $data['data_field_regex_metadata'] : null;
         $this->container['data_field_size_enabled'] = isset($data['data_field_size_enabled']) ? $data['data_field_size_enabled'] : null;
@@ -489,7 +501,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_tab_order_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_tab_order_metadata allow_tab_order_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_tab_order_metadata Metadata that indicates whether the `allowTabOrder` property is editable.
      *
      * @return $this
      */
@@ -537,7 +549,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets approve_decline_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $approve_decline_tabs_metadata approve_decline_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $approve_decline_tabs_metadata Metadata that indicates whether the `approveDeclineTabs` property is editable.
      *
      * @return $this
      */
@@ -585,7 +597,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets calculated_fields_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $calculated_fields_metadata calculated_fields_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $calculated_fields_metadata Metadata that indicates whether the `calculatedFields` property is editable.
      *
      * @return $this
      */
@@ -633,13 +645,61 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets check_box_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $check_box_tabs_metadata check_box_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $check_box_tabs_metadata Metadata that indicates whether the `checkBoxTabs` property is editable.
      *
      * @return $this
      */
     public function setCheckBoxTabsMetadata($check_box_tabs_metadata)
     {
         $this->container['check_box_tabs_metadata'] = $check_box_tabs_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_tabs_enabled
+     *
+     * @return ?string
+     */
+    public function getCurrencyTabsEnabled()
+    {
+        return $this->container['currency_tabs_enabled'];
+    }
+
+    /**
+     * Sets currency_tabs_enabled
+     *
+     * @param ?string $currency_tabs_enabled 
+     *
+     * @return $this
+     */
+    public function setCurrencyTabsEnabled($currency_tabs_enabled)
+    {
+        $this->container['currency_tabs_enabled'] = $currency_tabs_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_tabs_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCurrencyTabsMetadata()
+    {
+        return $this->container['currency_tabs_metadata'];
+    }
+
+    /**
+     * Sets currency_tabs_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_tabs_metadata 
+     *
+     * @return $this
+     */
+    public function setCurrencyTabsMetadata($currency_tabs_metadata)
+    {
+        $this->container['currency_tabs_metadata'] = $currency_tabs_metadata;
 
         return $this;
     }
@@ -681,7 +741,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets data_field_regex_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $data_field_regex_metadata data_field_regex_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $data_field_regex_metadata Metadata that indicates whether the `dataFieldRegex` property is editable.
      *
      * @return $this
      */
@@ -729,7 +789,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets data_field_size_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $data_field_size_metadata data_field_size_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $data_field_size_metadata Metadata that indicates whether the `dataFieldSize` property is editable.
      *
      * @return $this
      */
@@ -777,7 +837,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets draw_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $draw_tabs_metadata draw_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $draw_tabs_metadata 
      *
      * @return $this
      */
@@ -825,7 +885,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets first_last_email_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $first_last_email_tabs_metadata first_last_email_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $first_last_email_tabs_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -873,7 +933,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets list_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $list_tabs_metadata list_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $list_tabs_metadata Metadata that indicates whether the `listTabs` property is editable.
      *
      * @return $this
      */
@@ -921,7 +981,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets note_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $note_tabs_metadata note_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $note_tabs_metadata Metadata that indicates whether the `noteTabs` property is editable.
      *
      * @return $this
      */
@@ -969,7 +1029,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets prefill_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $prefill_tabs_metadata prefill_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $prefill_tabs_metadata 
      *
      * @return $this
      */
@@ -1017,7 +1077,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets radio_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $radio_tabs_metadata radio_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $radio_tabs_metadata Metadata that indicates whether the `radioTabs` property is editable.
      *
      * @return $this
      */
@@ -1065,7 +1125,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets saving_custom_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $saving_custom_tabs_metadata saving_custom_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $saving_custom_tabs_metadata Metadata that indicates whether the `savingCustomTabs` property is editable.
      *
      * @return $this
      */
@@ -1113,7 +1173,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets sender_to_change_tab_assignments_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $sender_to_change_tab_assignments_metadata sender_to_change_tab_assignments_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $sender_to_change_tab_assignments_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1161,7 +1221,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets shared_custom_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $shared_custom_tabs_metadata shared_custom_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $shared_custom_tabs_metadata Metadata that indicates whether the `sharedCustomTabs` property is editable.
      *
      * @return $this
      */
@@ -1209,7 +1269,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_data_label_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_data_label_metadata tab_data_label_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_data_label_metadata Metadata that indicates whether the `tabDataLabel` property is editable.
      *
      * @return $this
      */
@@ -1257,7 +1317,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_location_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_location_metadata tab_location_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_location_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1305,7 +1365,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_locking_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_locking_metadata tab_locking_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_locking_metadata Metadata that indicates whether the `tabLocking` property is editable.
      *
      * @return $this
      */
@@ -1353,7 +1413,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_scale_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_scale_metadata tab_scale_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_scale_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1401,7 +1461,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_text_formatting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_text_formatting_metadata tab_text_formatting_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $tab_text_formatting_metadata Metadata that indicates whether the `tabTextFormatting` property is editable.
      *
      * @return $this
      */
@@ -1449,7 +1509,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets text_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $text_tabs_metadata text_tabs_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $text_tabs_metadata Metadata that indicates whether the `textTabs` property is editable.
      *
      * @return $this
      */
@@ -1466,6 +1526,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1478,6 +1539,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1491,6 +1553,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1507,6 +1570,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

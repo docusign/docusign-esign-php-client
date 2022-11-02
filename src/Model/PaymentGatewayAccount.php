@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * PaymentGatewayAccount Class Doc Comment
  *
  * @category    Class
+ * @description This object contains details about a payment gateway account.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class PaymentGatewayAccount implements ModelInterface, ArrayAccess
@@ -321,7 +322,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets config
      *
-     * @param \DocuSign\eSign\Model\PaymentGatewayAccountSetting $config config
+     * @param \DocuSign\eSign\Model\PaymentGatewayAccountSetting $config This property contains metadata about the payment gateway account's configuration such as the API key, `userId`, and `merchantId` details.
      *
      * @return $this
      */
@@ -513,7 +514,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets pay_pal_legacy_settings
      *
-     * @param \DocuSign\eSign\Model\PayPalLegacySettings $pay_pal_legacy_settings pay_pal_legacy_settings
+     * @param \DocuSign\eSign\Model\PayPalLegacySettings $pay_pal_legacy_settings Reserved for DocuSign.
      *
      * @return $this
      */
@@ -626,6 +627,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -638,6 +640,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -651,6 +654,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -667,6 +671,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

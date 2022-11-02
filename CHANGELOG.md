@@ -3,6 +3,58 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.11.0] - eSignature API v2.1-22.3.00.00 - 2022-08-30
+### Changed
+- Added support for version v2.1-22.3.00.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+## [v6.10.0] - eSignature API v2.1-22.2.00.00 - 2022-06-17
+### Changed
+- Added support for version v2.1-22.2.00.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+## [v6.9.0] - eSignature API v2.1-22.1.02.00 - 2022-05-18
+### Changed
+- Added support for version v2.1-22.1.02.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+## [v6.8.0] - eSignature API v2.1-22.1.01.00 - 2022-04-07
+### Changed
+- Added support for version v2.1-22.1.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+### Breaking
+- Following models are renamed
+
+    - `ScheduledSendingApiModel` is renamed to `ScheduledSending`
+    - `DelayedRoutingApiModel` is renamed to `DelayedRouting`
+
+## [v6.7.1] - eSignature API v2.1-21.4.02.00 - 2022-03-15
+### Fixed
+- Issue - [`#165`](https://github.com/docusign/docusign-esign-php-client/issues/165):  Not working on php 8+ (DCM-7267)
+
+## [v6.7.0] - eSignature API v2.1-21.4.02.00 - 2022-02-08
+### Changed
+- Added support for version v2.1-21.4.02.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+## [v6.6.0] - eSignature API v2.1-21.4.01.00 - 2022-01-06
+### Changed
+- Added support for version v2.1-21.4.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+## [6.6.0-rc] - ESignature API v2.1-21.4.00.00 - 2021-12-13
+### Changed
+- Added support for version v2.1-21.4.00.00 of the DocuSign ESignature API.
+- Updated the SDK release version. 
+
+
+## [6.5.0] - ESignature API v2.1-21.3.02.00 - 2021-10-29
+### Changed
+- Added support for version v2.1-21.3.02.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+
 ## [6.5.0-rc] - ESignature API v2.1-21.3.00.00 - 2021-09-20
 ### Changed
 - Added support for version v2.1-21.3.00.00 of the DocuSign ESignature API.

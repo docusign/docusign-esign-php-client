@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description A complex element that contains input information related to a recipient ID check. It can include the following information.  addressInformationInput: Used to set recipient address information and consists of:  * addressInformation: consists of six elements, with stree2 and zipPlus4 being optional. The elements are: street1, street2, city, state, zip, zipPlus4. The maximum length of each element is: street1/street2 &#x3D; 150 characters, city &#x3D; 50 characters, state &#x3D; 2 characters, and zip/zipPlus4 &#x3D; 20 characters. * displayLevelCode: Specifies the display level for the recipient. Values are: ReadOnly, Editable, or DoNotDisplay. * receiveInResponse: A Boolean element that specifies if the information needs to be returned in the response.  dobInformationInput: Used to set recipient date of birth information and consists of:  * dateOfBirth: Specifies the recipient&#39;s date, month and year of birth. * displayLevelCode: Specifies the display level for the recipient. Values are: ReadOnly, Editable, or DoNotDisplay. * receiveInResponse: A Boolean element that specifies if the information needs to be returned in the response.  ssn4InformationInput: Used to set the last four digits of the recipient&#39;s SSN information and consists of:  * ssn4: Specifies the last four digits of the recipient&#39;s SSN. * displayLevelCode: Specifies the display level for the recipient. Values are: ReadOnly, Editable, or DoNotDisplay. * receiveInResponse: A Boolean element that specifies if the information needs to be returned in the response.  ssn9InformationInput: Used to set the recipient&#39;s SSN information. Note that the ssn9 information can never be returned in the response. The ssn9 input consists of:  * ssn9: Specifies the recipient&#39;s SSN. * displayLevelCode: Specifies the display level for the recipient. Values are: ReadOnly, Editable, or DoNotDisplay.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class IdCheckInformationInput implements ModelInterface, ArrayAccess
@@ -238,7 +238,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets address_information_input
      *
-     * @param \DocuSign\eSign\Model\AddressInformationInput $address_information_input address_information_input
+     * @param \DocuSign\eSign\Model\AddressInformationInput $address_information_input An object that specifies recipient address information and how it is displayed.
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets dob_information_input
      *
-     * @param \DocuSign\eSign\Model\DobInformationInput $dob_information_input dob_information_input
+     * @param \DocuSign\eSign\Model\DobInformationInput $dob_information_input An object that specifies recipient date of birth information and how it is displayed.
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets ssn4_information_input
      *
-     * @param \DocuSign\eSign\Model\Ssn4InformationInput $ssn4_information_input ssn4_information_input
+     * @param \DocuSign\eSign\Model\Ssn4InformationInput $ssn4_information_input An object that specifies the last four digits of the recipient's Social Security Number (SSN).
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
     /**
      * Sets ssn9_information_input
      *
-     * @param \DocuSign\eSign\Model\Ssn9InformationInput $ssn9_information_input ssn9_information_input
+     * @param \DocuSign\eSign\Model\Ssn9InformationInput $ssn9_information_input An object that specifies the recipient's Social Security Number (SSN) information. Note that ssn9 information cannot be returned in a response.
      *
      * @return $this
      */
@@ -327,6 +327,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -339,6 +340,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -352,6 +354,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -368,6 +371,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

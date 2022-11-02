@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientSignatureProvider Class Doc Comment
  *
  * @category    Class
+ * @description An Electronic or Standards Based Signature (digital signature) provider for the signer to use. [More information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/).
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientSignatureProvider implements ModelInterface, ArrayAccess
@@ -315,7 +316,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signature_provider_name_metadata signature_provider_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signature_provider_name_metadata Metadata that indicates whether the `signatureProviderName` property is editable.
      *
      * @return $this
      */
@@ -339,7 +340,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_options
      *
-     * @param \DocuSign\eSign\Model\RecipientSignatureProviderOptions $signature_provider_options signature_provider_options
+     * @param \DocuSign\eSign\Model\RecipientSignatureProviderOptions $signature_provider_options Not applicable for this object.
      *
      * @return $this
      */
@@ -356,6 +357,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -368,6 +370,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -381,6 +384,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -397,6 +401,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

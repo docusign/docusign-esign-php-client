@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -34,7 +35,8 @@ namespace DocuSign\eSign;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ObjectSerializer
@@ -229,7 +231,6 @@ class ObjectSerializer
      * @param mixed    $data          object or primitive to be deserialized
      * @param string   $class         class name is passed as a string
      * @param array $httpHeaders   HTTP headers
-     * @param string   $discriminator discriminator if polymorphism is used
      *
      * @return object|array|null an single or an array of $class instances
      */
@@ -275,7 +276,7 @@ class ObjectSerializer
             settype($data, $class);
             return $data;
         } elseif ($class === '\SplFileObject') {
-            /** @var \Psr\Http\Message\StreamInterface $data */
+            /** Description @var \Psr\Http\Message\StreamInterface $data **/
 
             // determine file name
             if (array_key_exists('Content-Disposition', $httpHeaders) &&
@@ -286,10 +287,9 @@ class ObjectSerializer
             }
 
             $file = fopen($filename, 'w');
-            if(is_string($data)){
+            if (is_string($data)){
                 fwrite($file, $data);
-            }
-            else{
+            } else {
                 while ($chunk = $data->read(200)) {
                     fwrite($file, $chunk);
                 } 

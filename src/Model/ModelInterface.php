@@ -6,7 +6,8 @@
  *
  * @category Class
  * @package  DocuSign\eSign\Model
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -34,7 +35,8 @@ namespace DocuSign\eSign\Model;
  *
  * @category Interface
  * @package DocuSign\eSign\Model
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 interface ModelInterface

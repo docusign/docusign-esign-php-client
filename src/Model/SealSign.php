@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * SealSign Class Doc Comment
  *
  * @category    Class
+ * @description Specifies one or more electronic seals to apply on documents. An electronic seal recipient is a legal entity rather than an actual person. Electronic Seals can be used by organizations and governments to show evidence of origin and integrity of documents. Even though electronic seals can be represented by a tab in a document, they do not require user interaction and apply automatically in the order specified by the sender. The sender is therefore the person authorizing usage of the electronic seal in the flow.  Example:   &#x60;&#x60;&#x60;json \&quot;recipients\&quot;: {       \&quot;seals\&quot;: [         {           \&quot;recipientId\&quot;: \&quot;1\&quot;,           \&quot;routingOrder\&quot; : 1,           \&quot;recipientSignatureProviders\&quot;: [             {               \&quot;sealName\&quot;: \&quot;52e9d968-xxxx-xxxx-xxxx-4682bc45c106\&quot;             }        ]      }    ]  },     .     .     . &#x60;&#x60;&#x60; For more information about Electronic Seals, see [Apply Electronic Seals to Your Documents](https://support.docusign.com/en/guides/ndse-user-guide-apply-electronic-seals).
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class SealSign implements ModelInterface, ArrayAccess
@@ -579,7 +580,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata access_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata Not applicable.
      *
      * @return $this
      */
@@ -843,7 +844,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata delivery_method_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -939,7 +940,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification email_notification
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification Not applicable.
      *
      * @return $this
      */
@@ -987,7 +988,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1035,7 +1036,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata fax_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1083,7 +1084,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata id_check_configuration_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata Not applicable.
      *
      * @return $this
      */
@@ -1107,7 +1108,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_information_input
      *
-     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input id_check_information_input
+     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input Not applicable.
      *
      * @return $this
      */
@@ -1131,7 +1132,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification identity_verification
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).
      *
      * @return $this
      */
@@ -1275,7 +1276,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets note_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata note_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata Not applicable.
      *
      * @return $this
      */
@@ -1299,7 +1300,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets phone_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication phone_authentication
+     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication Not applicable.
      *
      * @return $this
      */
@@ -1347,7 +1348,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_authentication_status
      *
-     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status recipient_authentication_status
+     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status Not applicable.
      *
      * @return $this
      */
@@ -1491,7 +1492,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata recipient_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata Metadata that indicates whether the `recipientType` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1539,7 +1540,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets require_id_lookup_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata require_id_lookup_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata Not applicable.
      *
      * @return $this
      */
@@ -1611,7 +1612,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata routing_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1683,7 +1684,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets sms_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication sms_authentication
+     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication Not applicable.
      *
      * @return $this
      */
@@ -1803,7 +1804,7 @@ class SealSign implements ModelInterface, ArrayAccess
     /**
      * Sets tabs
      *
-     * @param \DocuSign\eSign\Model\Tabs $tabs tabs
+     * @param \DocuSign\eSign\Model\Tabs $tabs A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.
      *
      * @return $this
      */
@@ -1916,6 +1917,7 @@ class SealSign implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1928,6 +1930,7 @@ class SealSign implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1941,6 +1944,7 @@ class SealSign implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1957,6 +1961,7 @@ class SealSign implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

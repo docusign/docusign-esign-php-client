@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * Radio Class Doc Comment
  *
  * @category    Class
+ * @description One of the selectable radio buttons in the &#x60;radios&#x60; property of a [&#x60;radioGroup&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) tab.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Radio implements ModelInterface, ArrayAccess
@@ -81,6 +82,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'bold' => '?string',
         'bold_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'caption' => '?string',
+        'caption_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'font' => '?string',
         'font_color' => '?string',
@@ -142,6 +145,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => null,
         'bold' => null,
         'bold_metadata' => null,
+        'caption' => null,
+        'caption_metadata' => null,
         'error_details' => null,
         'font' => null,
         'font_color' => null,
@@ -224,6 +229,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'anchorYOffsetMetadata',
         'bold' => 'bold',
         'bold_metadata' => 'boldMetadata',
+        'caption' => 'caption',
+        'caption_metadata' => 'captionMetadata',
         'error_details' => 'errorDetails',
         'font' => 'font',
         'font_color' => 'fontColor',
@@ -285,6 +292,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'setAnchorYOffsetMetadata',
         'bold' => 'setBold',
         'bold_metadata' => 'setBoldMetadata',
+        'caption' => 'setCaption',
+        'caption_metadata' => 'setCaptionMetadata',
         'error_details' => 'setErrorDetails',
         'font' => 'setFont',
         'font_color' => 'setFontColor',
@@ -346,6 +355,8 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'getAnchorYOffsetMetadata',
         'bold' => 'getBold',
         'bold_metadata' => 'getBoldMetadata',
+        'caption' => 'getCaption',
+        'caption_metadata' => 'getCaptionMetadata',
         'error_details' => 'getErrorDetails',
         'font' => 'getFont',
         'font_color' => 'getFontColor',
@@ -461,6 +472,8 @@ class Radio implements ModelInterface, ArrayAccess
         $this->container['anchor_y_offset_metadata'] = isset($data['anchor_y_offset_metadata']) ? $data['anchor_y_offset_metadata'] : null;
         $this->container['bold'] = isset($data['bold']) ? $data['bold'] : null;
         $this->container['bold_metadata'] = isset($data['bold_metadata']) ? $data['bold_metadata'] : null;
+        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
+        $this->container['caption_metadata'] = isset($data['caption_metadata']) ? $data['caption_metadata'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['font'] = isset($data['font']) ? $data['font'] : null;
         $this->container['font_color'] = isset($data['font_color']) ? $data['font_color'] : null;
@@ -555,7 +568,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.
      *
      * @return $this
      */
@@ -603,7 +616,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata anchor_case_sensitive_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata Metadata that indicates whether the `anchorCaseSensitive` property is editable.
      *
      * @return $this
      */
@@ -651,7 +664,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata anchor_horizontal_alignment_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.
      *
      * @return $this
      */
@@ -699,7 +712,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata anchor_ignore_if_not_present_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.
      *
      * @return $this
      */
@@ -747,7 +760,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata anchor_match_whole_word_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata Metadata that indicates whether the `anchorMatchWholeWord` property is editable.
      *
      * @return $this
      */
@@ -795,7 +808,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata anchor_string_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata Metadata that indicates whether the `anchorString` property is editable.
      *
      * @return $this
      */
@@ -843,7 +856,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata anchor_tab_processor_version_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -891,7 +904,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata anchor_units_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata Metadata that indicates whether the `anchorUnits` property is editable.
      *
      * @return $this
      */
@@ -939,7 +952,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata anchor_x_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata Metadata that indicates whether the `anchorXOffset` property is editable.
      *
      * @return $this
      */
@@ -987,7 +1000,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata anchor_y_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata Metadata that indicates whether the `anchorYOffset` property is editable.
      *
      * @return $this
      */
@@ -1035,13 +1048,61 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets bold_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata bold_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata Metadata that indicates whether the `bold` property is editable.
      *
      * @return $this
      */
     public function setBoldMetadata($bold_metadata)
     {
         $this->container['bold_metadata'] = $bold_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption
+     *
+     * @return ?string
+     */
+    public function getCaption()
+    {
+        return $this->container['caption'];
+    }
+
+    /**
+     * Sets caption
+     *
+     * @param ?string $caption 
+     *
+     * @return $this
+     */
+    public function setCaption($caption)
+    {
+        $this->container['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getCaptionMetadata()
+    {
+        return $this->container['caption_metadata'];
+    }
+
+    /**
+     * Sets caption_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     *
+     * @return $this
+     */
+    public function setCaptionMetadata($caption_metadata)
+    {
+        $this->container['caption_metadata'] = $caption_metadata;
 
         return $this;
     }
@@ -1059,7 +1120,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1131,7 +1192,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets font_color_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata font_color_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata Metadata that indicates whether the `fontColor` property is editable.
      *
      * @return $this
      */
@@ -1155,7 +1216,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets font_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata font_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata Metadata that indicates whether the `font` property is editable.
      *
      * @return $this
      */
@@ -1203,7 +1264,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets font_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata font_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata Metadata that indicates whether the `fontSize` property is editable.
      *
      * @return $this
      */
@@ -1251,7 +1312,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets italic_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata italic_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata Metadata that indicates whether the `italic` property is editable.
      *
      * @return $this
      */
@@ -1299,7 +1360,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata Metadata that indicates whether the `locked` property is editable.
      *
      * @return $this
      */
@@ -1347,7 +1408,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata Metadata that indicates whether the `pageNumber` property is editable.
      *
      * @return $this
      */
@@ -1395,7 +1456,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata Metadata that indicates whether the `required` property is editable.
      *
      * @return $this
      */
@@ -1443,7 +1504,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets selected_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_metadata selected_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $selected_metadata Metadata that indicates whether the `selected` property is editable.
      *
      * @return $this
      */
@@ -1491,7 +1552,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets status_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata status_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata Metadata that indicates whether the `status` property is editable.
      *
      * @return $this
      */
@@ -1539,7 +1600,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata Metadata that indicates whether the `tabId` property is editable.
      *
      * @return $this
      */
@@ -1587,7 +1648,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata tab_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata Metadata that indicates whether the `tabOrder` property is editable.
      *
      * @return $this
      */
@@ -1635,7 +1696,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets underline_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata underline_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata Metadata that indicates whether the `underline` property is editable.
      *
      * @return $this
      */
@@ -1683,7 +1744,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata Metadata that indicates whether the `value` property is editable.
      *
      * @return $this
      */
@@ -1731,7 +1792,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets x_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata x_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata Metadata that indicates whether the `xPosition` property is editable.
      *
      * @return $this
      */
@@ -1779,7 +1840,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets y_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata y_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata Metadata that indicates whether the `yPosition` property is editable.
      *
      * @return $this
      */
@@ -1796,6 +1857,7 @@ class Radio implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1808,6 +1870,7 @@ class Radio implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1821,6 +1884,7 @@ class Radio implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1837,6 +1901,7 @@ class Radio implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

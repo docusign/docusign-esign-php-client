@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * BulkSendBatchSummaries Class Doc Comment
  *
  * @category    Class
+ * @description A list of bulk send batch summaries.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
@@ -61,6 +62,8 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'batch_size_limit' => '?string',
         'bulk_batch_summaries' => '\DocuSign\eSign\Model\BulkSendBatchSummary[]',
+        'bulk_process_queue_limit' => '?string',
+        'bulk_process_total_queued' => '?string',
         'end_position' => '?string',
         'next_uri' => '?string',
         'previous_uri' => '?string',
@@ -79,6 +82,8 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'batch_size_limit' => null,
         'bulk_batch_summaries' => null,
+        'bulk_process_queue_limit' => null,
+        'bulk_process_total_queued' => null,
         'end_position' => null,
         'next_uri' => null,
         'previous_uri' => null,
@@ -118,6 +123,8 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'batch_size_limit' => 'batchSizeLimit',
         'bulk_batch_summaries' => 'bulkBatchSummaries',
+        'bulk_process_queue_limit' => 'bulkProcessQueueLimit',
+        'bulk_process_total_queued' => 'bulkProcessTotalQueued',
         'end_position' => 'endPosition',
         'next_uri' => 'nextUri',
         'previous_uri' => 'previousUri',
@@ -136,6 +143,8 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     protected static $setters = [
         'batch_size_limit' => 'setBatchSizeLimit',
         'bulk_batch_summaries' => 'setBulkBatchSummaries',
+        'bulk_process_queue_limit' => 'setBulkProcessQueueLimit',
+        'bulk_process_total_queued' => 'setBulkProcessTotalQueued',
         'end_position' => 'setEndPosition',
         'next_uri' => 'setNextUri',
         'previous_uri' => 'setPreviousUri',
@@ -154,6 +163,8 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     protected static $getters = [
         'batch_size_limit' => 'getBatchSizeLimit',
         'bulk_batch_summaries' => 'getBulkBatchSummaries',
+        'bulk_process_queue_limit' => 'getBulkProcessQueueLimit',
+        'bulk_process_total_queued' => 'getBulkProcessTotalQueued',
         'end_position' => 'getEndPosition',
         'next_uri' => 'getNextUri',
         'previous_uri' => 'getPreviousUri',
@@ -226,6 +237,8 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     {
         $this->container['batch_size_limit'] = isset($data['batch_size_limit']) ? $data['batch_size_limit'] : null;
         $this->container['bulk_batch_summaries'] = isset($data['bulk_batch_summaries']) ? $data['bulk_batch_summaries'] : null;
+        $this->container['bulk_process_queue_limit'] = isset($data['bulk_process_queue_limit']) ? $data['bulk_process_queue_limit'] : null;
+        $this->container['bulk_process_total_queued'] = isset($data['bulk_process_total_queued']) ? $data['bulk_process_total_queued'] : null;
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['next_uri'] = isset($data['next_uri']) ? $data['next_uri'] : null;
         $this->container['previous_uri'] = isset($data['previous_uri']) ? $data['previous_uri'] : null;
@@ -304,6 +317,54 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     public function setBulkBatchSummaries($bulk_batch_summaries)
     {
         $this->container['bulk_batch_summaries'] = $bulk_batch_summaries;
+
+        return $this;
+    }
+
+    /**
+     * Gets bulk_process_queue_limit
+     *
+     * @return ?string
+     */
+    public function getBulkProcessQueueLimit()
+    {
+        return $this->container['bulk_process_queue_limit'];
+    }
+
+    /**
+     * Sets bulk_process_queue_limit
+     *
+     * @param ?string $bulk_process_queue_limit 
+     *
+     * @return $this
+     */
+    public function setBulkProcessQueueLimit($bulk_process_queue_limit)
+    {
+        $this->container['bulk_process_queue_limit'] = $bulk_process_queue_limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets bulk_process_total_queued
+     *
+     * @return ?string
+     */
+    public function getBulkProcessTotalQueued()
+    {
+        return $this->container['bulk_process_total_queued'];
+    }
+
+    /**
+     * Sets bulk_process_total_queued
+     *
+     * @param ?string $bulk_process_total_queued 
+     *
+     * @return $this
+     */
+    public function setBulkProcessTotalQueued($bulk_process_total_queued)
+    {
+        $this->container['bulk_process_total_queued'] = $bulk_process_total_queued;
 
         return $this;
     }
@@ -506,6 +567,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -518,6 +580,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -531,6 +594,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -547,6 +611,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

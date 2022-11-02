@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * Workflow Class Doc Comment
  *
  * @category    Class
+ * @description Describes the workflow for an envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Workflow implements ModelInterface, ArrayAccess
@@ -60,6 +61,9 @@ class Workflow implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'current_workflow_step_id' => '?string',
+        'overwrite_update_mode' => '?string',
+        'resume_date' => '?string',
+        'scheduled_sending' => '\DocuSign\eSign\Model\ScheduledSending',
         'workflow_status' => '?string',
         'workflow_steps' => '\DocuSign\eSign\Model\WorkflowStep[]'
     ];
@@ -71,6 +75,9 @@ class Workflow implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'current_workflow_step_id' => null,
+        'overwrite_update_mode' => null,
+        'resume_date' => null,
+        'scheduled_sending' => null,
         'workflow_status' => null,
         'workflow_steps' => null
     ];
@@ -103,6 +110,9 @@ class Workflow implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'current_workflow_step_id' => 'currentWorkflowStepId',
+        'overwrite_update_mode' => 'overwriteUpdateMode',
+        'resume_date' => 'resumeDate',
+        'scheduled_sending' => 'scheduledSending',
         'workflow_status' => 'workflowStatus',
         'workflow_steps' => 'workflowSteps'
     ];
@@ -114,6 +124,9 @@ class Workflow implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'current_workflow_step_id' => 'setCurrentWorkflowStepId',
+        'overwrite_update_mode' => 'setOverwriteUpdateMode',
+        'resume_date' => 'setResumeDate',
+        'scheduled_sending' => 'setScheduledSending',
         'workflow_status' => 'setWorkflowStatus',
         'workflow_steps' => 'setWorkflowSteps'
     ];
@@ -125,6 +138,9 @@ class Workflow implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'current_workflow_step_id' => 'getCurrentWorkflowStepId',
+        'overwrite_update_mode' => 'getOverwriteUpdateMode',
+        'resume_date' => 'getResumeDate',
+        'scheduled_sending' => 'getScheduledSending',
         'workflow_status' => 'getWorkflowStatus',
         'workflow_steps' => 'getWorkflowSteps'
     ];
@@ -190,6 +206,9 @@ class Workflow implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['current_workflow_step_id'] = isset($data['current_workflow_step_id']) ? $data['current_workflow_step_id'] : null;
+        $this->container['overwrite_update_mode'] = isset($data['overwrite_update_mode']) ? $data['overwrite_update_mode'] : null;
+        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
+        $this->container['scheduled_sending'] = isset($data['scheduled_sending']) ? $data['scheduled_sending'] : null;
         $this->container['workflow_status'] = isset($data['workflow_status']) ? $data['workflow_status'] : null;
         $this->container['workflow_steps'] = isset($data['workflow_steps']) ? $data['workflow_steps'] : null;
     }
@@ -238,6 +257,78 @@ class Workflow implements ModelInterface, ArrayAccess
     public function setCurrentWorkflowStepId($current_workflow_step_id)
     {
         $this->container['current_workflow_step_id'] = $current_workflow_step_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets overwrite_update_mode
+     *
+     * @return ?string
+     */
+    public function getOverwriteUpdateMode()
+    {
+        return $this->container['overwrite_update_mode'];
+    }
+
+    /**
+     * Sets overwrite_update_mode
+     *
+     * @param ?string $overwrite_update_mode 
+     *
+     * @return $this
+     */
+    public function setOverwriteUpdateMode($overwrite_update_mode)
+    {
+        $this->container['overwrite_update_mode'] = $overwrite_update_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets resume_date
+     *
+     * @return ?string
+     */
+    public function getResumeDate()
+    {
+        return $this->container['resume_date'];
+    }
+
+    /**
+     * Sets resume_date
+     *
+     * @param ?string $resume_date 
+     *
+     * @return $this
+     */
+    public function setResumeDate($resume_date)
+    {
+        $this->container['resume_date'] = $resume_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets scheduled_sending
+     *
+     * @return \DocuSign\eSign\Model\ScheduledSending
+     */
+    public function getScheduledSending()
+    {
+        return $this->container['scheduled_sending'];
+    }
+
+    /**
+     * Sets scheduled_sending
+     *
+     * @param \DocuSign\eSign\Model\ScheduledSending $scheduled_sending An object that describes the settings for scheduled sending.
+     *
+     * @return $this
+     */
+    public function setScheduledSending($scheduled_sending)
+    {
+        $this->container['scheduled_sending'] = $scheduled_sending;
 
         return $this;
     }
@@ -296,6 +387,7 @@ class Workflow implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -308,6 +400,7 @@ class Workflow implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -321,6 +414,7 @@ class Workflow implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -337,6 +431,7 @@ class Workflow implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

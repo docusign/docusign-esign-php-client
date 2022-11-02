@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * AccountRoleSettings Class Doc Comment
  *
  * @category    Class
+ * @description This object defines account permissions for users who are associated with the account permission profile.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AccountRoleSettings implements ModelInterface, ArrayAccess
@@ -111,6 +112,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_api_request_logging' => '?string',
         'enable_api_request_logging_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type' => '?string',
+        'enable_key_terms_suggestions_by_document_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_recipient_viewing_notifications' => '?string',
         'enable_recipient_viewing_notifications_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sequential_signing_interface' => '?string',
@@ -133,7 +136,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => '?string',
         'use_new_sending_interface_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'vaulting_mode' => '?string',
-        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
+        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'web_forms' => '?string',
+        'web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
     /**
@@ -194,6 +199,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => null,
         'enable_api_request_logging' => null,
         'enable_api_request_logging_metadata' => null,
+        'enable_key_terms_suggestions_by_document_type' => null,
+        'enable_key_terms_suggestions_by_document_type_metadata' => null,
         'enable_recipient_viewing_notifications' => null,
         'enable_recipient_viewing_notifications_metadata' => null,
         'enable_sequential_signing_interface' => null,
@@ -216,7 +223,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => null,
         'use_new_sending_interface_metadata' => null,
         'vaulting_mode' => null,
-        'vaulting_mode_metadata' => null
+        'vaulting_mode_metadata' => null,
+        'web_forms' => null,
+        'web_forms_metadata' => null
     ];
 
     /**
@@ -298,6 +307,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'disableOtherActionsMetadata',
         'enable_api_request_logging' => 'enableApiRequestLogging',
         'enable_api_request_logging_metadata' => 'enableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications' => 'enableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata' => 'enableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface' => 'enableSequentialSigningInterface',
@@ -320,7 +331,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => 'useNewSendingInterface',
         'use_new_sending_interface_metadata' => 'useNewSendingInterfaceMetadata',
         'vaulting_mode' => 'vaultingMode',
-        'vaulting_mode_metadata' => 'vaultingModeMetadata'
+        'vaulting_mode_metadata' => 'vaultingModeMetadata',
+        'web_forms' => 'webForms',
+        'web_forms_metadata' => 'webFormsMetadata'
     ];
 
     /**
@@ -381,6 +394,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'setDisableOtherActionsMetadata',
         'enable_api_request_logging' => 'setEnableApiRequestLogging',
         'enable_api_request_logging_metadata' => 'setEnableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'setEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications' => 'setEnableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata' => 'setEnableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface' => 'setEnableSequentialSigningInterface',
@@ -403,7 +418,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => 'setUseNewSendingInterface',
         'use_new_sending_interface_metadata' => 'setUseNewSendingInterfaceMetadata',
         'vaulting_mode' => 'setVaultingMode',
-        'vaulting_mode_metadata' => 'setVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'setVaultingModeMetadata',
+        'web_forms' => 'setWebForms',
+        'web_forms_metadata' => 'setWebFormsMetadata'
     ];
 
     /**
@@ -464,6 +481,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'getDisableOtherActionsMetadata',
         'enable_api_request_logging' => 'getEnableApiRequestLogging',
         'enable_api_request_logging_metadata' => 'getEnableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'getEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications' => 'getEnableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata' => 'getEnableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface' => 'getEnableSequentialSigningInterface',
@@ -486,7 +505,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'use_new_sending_interface' => 'getUseNewSendingInterface',
         'use_new_sending_interface_metadata' => 'getUseNewSendingInterfaceMetadata',
         'vaulting_mode' => 'getVaultingMode',
-        'vaulting_mode_metadata' => 'getVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'getVaultingModeMetadata',
+        'web_forms' => 'getWebForms',
+        'web_forms_metadata' => 'getWebFormsMetadata'
     ];
 
     /**
@@ -601,6 +622,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['disable_other_actions_metadata'] = isset($data['disable_other_actions_metadata']) ? $data['disable_other_actions_metadata'] : null;
         $this->container['enable_api_request_logging'] = isset($data['enable_api_request_logging']) ? $data['enable_api_request_logging'] : null;
         $this->container['enable_api_request_logging_metadata'] = isset($data['enable_api_request_logging_metadata']) ? $data['enable_api_request_logging_metadata'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = isset($data['enable_key_terms_suggestions_by_document_type_metadata']) ? $data['enable_key_terms_suggestions_by_document_type_metadata'] : null;
         $this->container['enable_recipient_viewing_notifications'] = isset($data['enable_recipient_viewing_notifications']) ? $data['enable_recipient_viewing_notifications'] : null;
         $this->container['enable_recipient_viewing_notifications_metadata'] = isset($data['enable_recipient_viewing_notifications_metadata']) ? $data['enable_recipient_viewing_notifications_metadata'] : null;
         $this->container['enable_sequential_signing_interface'] = isset($data['enable_sequential_signing_interface']) ? $data['enable_sequential_signing_interface'] : null;
@@ -624,6 +647,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['use_new_sending_interface_metadata'] = isset($data['use_new_sending_interface_metadata']) ? $data['use_new_sending_interface_metadata'] : null;
         $this->container['vaulting_mode'] = isset($data['vaulting_mode']) ? $data['vaulting_mode'] : null;
         $this->container['vaulting_mode_metadata'] = isset($data['vaulting_mode_metadata']) ? $data['vaulting_mode_metadata'] : null;
+        $this->container['web_forms'] = isset($data['web_forms']) ? $data['web_forms'] : null;
+        $this->container['web_forms_metadata'] = isset($data['web_forms_metadata']) ? $data['web_forms_metadata'] : null;
     }
 
     /**
@@ -687,7 +712,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_account_management_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_account_management_metadata allow_account_management_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_account_management_metadata Metadata that indicates whether the `allowAccountManagement` property is editable.
      *
      * @return $this
      */
@@ -735,7 +760,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_access_metadata allow_api_access_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_access_metadata Metadata that indicates whether the `allowApiAccess` property is editable.
      *
      * @return $this
      */
@@ -783,7 +808,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_access_to_account_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_access_to_account_metadata allow_api_access_to_account_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_access_to_account_metadata Metadata that indicates whether the `allowApiAccessToAccount` property is editable.
      *
      * @return $this
      */
@@ -831,7 +856,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_sending_on_behalf_of_others_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_sending_on_behalf_of_others_metadata allow_api_sending_on_behalf_of_others_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_sending_on_behalf_of_others_metadata Metadata that indicates whether the `allowApiSendingOnBehalfOfOthers` property is editable.
      *
      * @return $this
      */
@@ -879,7 +904,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_sequential_signing_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_sequential_signing_metadata allow_api_sequential_signing_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_api_sequential_signing_metadata Metadata that indicates whether the `allowApiSequentialSigning` property is editable.
      *
      * @return $this
      */
@@ -927,7 +952,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_tagging_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_auto_tagging_metadata allow_auto_tagging_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_auto_tagging_metadata Metadata that indicates whether the `allowAutoTagging` property is editable.
      *
      * @return $this
      */
@@ -975,7 +1000,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_bulk_sending_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_bulk_sending_metadata allow_bulk_sending_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_bulk_sending_metadata Metadata that indicates whether the `allowBulkSending` property is editable.
      *
      * @return $this
      */
@@ -1023,7 +1048,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_docu_sign_desktop_client_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_docu_sign_desktop_client_metadata allow_docu_sign_desktop_client_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_docu_sign_desktop_client_metadata Metadata that indicates whether the `allowDocuSignDesktopClient` property is editable.
      *
      * @return $this
      */
@@ -1071,7 +1096,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_address_book_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_address_book_access_metadata allowed_address_book_access_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_address_book_access_metadata Metadata that indicates whether the `allowedAddressBookAccess` property is editable.
      *
      * @return $this
      */
@@ -1119,7 +1144,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_clickwraps_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_clickwraps_access_metadata allowed_clickwraps_access_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_clickwraps_access_metadata 
      *
      * @return $this
      */
@@ -1167,7 +1192,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_template_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_template_access_metadata allowed_template_access_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_template_access_metadata Metadata that indicates whether the `allowedTemplateAccess` property is editable.
      *
      * @return $this
      */
@@ -1215,7 +1240,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_to_be_envelope_transfer_recipient_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_to_be_envelope_transfer_recipient_metadata allowed_to_be_envelope_transfer_recipient_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_to_be_envelope_transfer_recipient_metadata Metadata that indicates whether the `allowedToBeEnvelopeTransferRecipient` property is editable.
      *
      * @return $this
      */
@@ -1263,7 +1288,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_sending_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_envelope_sending_metadata allow_envelope_sending_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_envelope_sending_metadata Metadata that indicates whether the `allowEnvelopeSending` property is editable.
      *
      * @return $this
      */
@@ -1311,7 +1336,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_e_seal_recipients_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_e_seal_recipients_metadata allow_e_seal_recipients_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_e_seal_recipients_metadata Metadata that indicates whether the `allowESealRecipients` property is editable.
      *
      * @return $this
      */
@@ -1359,7 +1384,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_power_forms_admin_to_access_all_power_form_envelopes_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_power_forms_admin_to_access_all_power_form_envelopes_metadata allow_power_forms_admin_to_access_all_power_form_envelopes_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_power_forms_admin_to_access_all_power_form_envelopes_metadata Metadata that indicates whether the `allowPowerFormsAdminToAccessAllPowerFormEnvelopes` property is editable.
      *
      * @return $this
      */
@@ -1407,7 +1432,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_senders_to_set_recipient_email_language_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_senders_to_set_recipient_email_language_metadata allow_senders_to_set_recipient_email_language_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_senders_to_set_recipient_email_language_metadata Metadata that indicates whether the `allowSendersToSetRecipientEmailLanguage` property is editable.
      *
      * @return $this
      */
@@ -1455,7 +1480,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_attachments_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_signer_attachments_metadata allow_signer_attachments_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_signer_attachments_metadata Metadata that indicates whether the `allowSignerAttachments` property is editable.
      *
      * @return $this
      */
@@ -1503,7 +1528,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_supplemental_documents_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_supplemental_documents_metadata allow_supplemental_documents_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_supplemental_documents_metadata Metadata that indicates whether the `allowSupplementalDocuments` property is editable.
      *
      * @return $this
      */
@@ -1551,7 +1576,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_tagging_in_send_and_correct_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_tagging_in_send_and_correct_metadata allow_tagging_in_send_and_correct_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_tagging_in_send_and_correct_metadata Metadata that indicates whether the `allowTaggingInSendAndCorrect` property is editable.
      *
      * @return $this
      */
@@ -1599,7 +1624,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_vaulting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_vaulting_metadata allow_vaulting_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_vaulting_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1647,7 +1672,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_wet_signing_override_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_wet_signing_override_metadata allow_wet_signing_override_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_wet_signing_override_metadata Metadata that indicates whether the `allowWetSigningOverride` property is editable.
      *
      * @return $this
      */
@@ -1695,7 +1720,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_create_workspaces_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_create_workspaces_metadata can_create_workspaces_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_create_workspaces_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1743,7 +1768,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_envelopes_via_sms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelopes_via_sms_metadata can_send_envelopes_via_sms_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelopes_via_sms_metadata 
      *
      * @return $this
      */
@@ -1791,7 +1816,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets disable_document_upload_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_document_upload_metadata disable_document_upload_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_document_upload_metadata Metadata that indicates whether the `disableDocumentUpload` property is editable.
      *
      * @return $this
      */
@@ -1839,7 +1864,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets disable_other_actions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_other_actions_metadata disable_other_actions_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_other_actions_metadata Metadata that indicates whether the `disableOtherActions` property is editable.
      *
      * @return $this
      */
@@ -1887,13 +1912,61 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_api_request_logging_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_api_request_logging_metadata enable_api_request_logging_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_api_request_logging_metadata Metadata that indicates whether the `enableApiRequestLogging` property is editable.
      *
      * @return $this
      */
     public function setEnableApiRequestLoggingMetadata($enable_api_request_logging_metadata)
     {
         $this->container['enable_api_request_logging_metadata'] = $enable_api_request_logging_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type
+     *
+     * @return ?string
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentType()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type
+     *
+     * @param ?string $enable_key_terms_suggestions_by_document_type 
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentType($enable_key_terms_suggestions_by_document_type)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type'] = $enable_key_terms_suggestions_by_document_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentTypeMetadata()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type_metadata'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentTypeMetadata($enable_key_terms_suggestions_by_document_type_metadata)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = $enable_key_terms_suggestions_by_document_type_metadata;
 
         return $this;
     }
@@ -1935,7 +2008,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_recipient_viewing_notifications_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_recipient_viewing_notifications_metadata enable_recipient_viewing_notifications_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_recipient_viewing_notifications_metadata Metadata that indicates whether the `enableRecipientViewingNotifications` property is editable.
      *
      * @return $this
      */
@@ -1983,7 +2056,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_interface_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sequential_signing_interface_metadata enable_sequential_signing_interface_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sequential_signing_interface_metadata Metadata that indicates whether the `enableSequentialSigningInterface` property is editable.
      *
      * @return $this
      */
@@ -2031,7 +2104,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_transaction_point_integration_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_transaction_point_integration_metadata enable_transaction_point_integration_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_transaction_point_integration_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2079,7 +2152,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets power_form_role_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $power_form_role_metadata power_form_role_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $power_form_role_metadata Metadata that indicates whether the `powerFormRole` property is editable.
      *
      * @return $this
      */
@@ -2127,7 +2200,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets receive_completed_self_signed_documents_as_email_links_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $receive_completed_self_signed_documents_as_email_links_metadata receive_completed_self_signed_documents_as_email_links_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $receive_completed_self_signed_documents_as_email_links_metadata Metadata that indicates whether the `receiveCompletedSelfSignedDocumentsAsEmailLinks` property is editable.
      *
      * @return $this
      */
@@ -2151,7 +2224,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets signing_ui_version_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $signing_ui_version_metadata signing_ui_version_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $signing_ui_version_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2199,7 +2272,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_accept_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_accept_metadata supplemental_documents_must_accept_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_accept_metadata Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.
      *
      * @return $this
      */
@@ -2247,7 +2320,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_read_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_read_metadata supplemental_documents_must_read_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_read_metadata Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.
      *
      * @return $this
      */
@@ -2295,7 +2368,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_view_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_view_metadata supplemental_documents_must_view_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_view_metadata Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.
      *
      * @return $this
      */
@@ -2343,7 +2416,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_docu_sign_experience_interface_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_docu_sign_experience_interface_metadata use_new_docu_sign_experience_interface_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_docu_sign_experience_interface_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2391,7 +2464,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_sending_interface_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_sending_interface_metadata use_new_sending_interface_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_sending_interface_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2439,13 +2512,61 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets vaulting_mode_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $vaulting_mode_metadata vaulting_mode_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $vaulting_mode_metadata Reserved for DocuSign.
      *
      * @return $this
      */
     public function setVaultingModeMetadata($vaulting_mode_metadata)
     {
         $this->container['vaulting_mode_metadata'] = $vaulting_mode_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms
+     *
+     * @return ?string
+     */
+    public function getWebForms()
+    {
+        return $this->container['web_forms'];
+    }
+
+    /**
+     * Sets web_forms
+     *
+     * @param ?string $web_forms 
+     *
+     * @return $this
+     */
+    public function setWebForms($web_forms)
+    {
+        $this->container['web_forms'] = $web_forms;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getWebFormsMetadata()
+    {
+        return $this->container['web_forms_metadata'];
+    }
+
+    /**
+     * Sets web_forms_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata web_forms_metadata
+     *
+     * @return $this
+     */
+    public function setWebFormsMetadata($web_forms_metadata)
+    {
+        $this->container['web_forms_metadata'] = $web_forms_metadata;
 
         return $this;
     }
@@ -2456,6 +2577,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2468,6 +2590,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -2481,6 +2604,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -2497,6 +2621,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Envelope implements ModelInterface, ArrayAccess
@@ -91,6 +91,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'enable_wet_sign' => '?string',
         'enforce_signer_visibility' => '?string',
         'envelope_attachments' => '\DocuSign\eSign\Model\Attachment[]',
+        'envelope_custom_metadata' => '\DocuSign\eSign\Model\EnvelopeCustomMetadata',
         'envelope_documents' => '\DocuSign\eSign\Model\EnvelopeDocument[]',
         'envelope_id' => '?string',
         'envelope_id_stamping' => '?string',
@@ -176,6 +177,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'enable_wet_sign' => null,
         'enforce_signer_visibility' => null,
         'envelope_attachments' => null,
+        'envelope_custom_metadata' => null,
         'envelope_documents' => null,
         'envelope_id' => null,
         'envelope_id_stamping' => null,
@@ -282,6 +284,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'enable_wet_sign' => 'enableWetSign',
         'enforce_signer_visibility' => 'enforceSignerVisibility',
         'envelope_attachments' => 'envelopeAttachments',
+        'envelope_custom_metadata' => 'envelopeCustomMetadata',
         'envelope_documents' => 'envelopeDocuments',
         'envelope_id' => 'envelopeId',
         'envelope_id_stamping' => 'envelopeIdStamping',
@@ -367,6 +370,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'enable_wet_sign' => 'setEnableWetSign',
         'enforce_signer_visibility' => 'setEnforceSignerVisibility',
         'envelope_attachments' => 'setEnvelopeAttachments',
+        'envelope_custom_metadata' => 'setEnvelopeCustomMetadata',
         'envelope_documents' => 'setEnvelopeDocuments',
         'envelope_id' => 'setEnvelopeId',
         'envelope_id_stamping' => 'setEnvelopeIdStamping',
@@ -452,6 +456,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'enable_wet_sign' => 'getEnableWetSign',
         'enforce_signer_visibility' => 'getEnforceSignerVisibility',
         'envelope_attachments' => 'getEnvelopeAttachments',
+        'envelope_custom_metadata' => 'getEnvelopeCustomMetadata',
         'envelope_documents' => 'getEnvelopeDocuments',
         'envelope_id' => 'getEnvelopeId',
         'envelope_id_stamping' => 'getEnvelopeIdStamping',
@@ -591,6 +596,7 @@ class Envelope implements ModelInterface, ArrayAccess
         $this->container['enable_wet_sign'] = isset($data['enable_wet_sign']) ? $data['enable_wet_sign'] : null;
         $this->container['enforce_signer_visibility'] = isset($data['enforce_signer_visibility']) ? $data['enforce_signer_visibility'] : null;
         $this->container['envelope_attachments'] = isset($data['envelope_attachments']) ? $data['envelope_attachments'] : null;
+        $this->container['envelope_custom_metadata'] = isset($data['envelope_custom_metadata']) ? $data['envelope_custom_metadata'] : null;
         $this->container['envelope_documents'] = isset($data['envelope_documents']) ? $data['envelope_documents'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['envelope_id_stamping'] = isset($data['envelope_id_stamping']) ? $data['envelope_id_stamping'] : null;
@@ -1083,7 +1089,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param \DocuSign\eSign\Model\CustomFields $custom_fields custom_fields
+     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -1323,7 +1329,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets email_settings
      *
-     * @param \DocuSign\eSign\Model\EmailSettings $email_settings email_settings
+     * @param \DocuSign\eSign\Model\EmailSettings $email_settings A complex type that contains email settings.
      *
      * @return $this
      */
@@ -1426,6 +1432,30 @@ class Envelope implements ModelInterface, ArrayAccess
     public function setEnvelopeAttachments($envelope_attachments)
     {
         $this->container['envelope_attachments'] = $envelope_attachments;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelope_custom_metadata
+     *
+     * @return \DocuSign\eSign\Model\EnvelopeCustomMetadata
+     */
+    public function getEnvelopeCustomMetadata()
+    {
+        return $this->container['envelope_custom_metadata'];
+    }
+
+    /**
+     * Sets envelope_custom_metadata
+     *
+     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata 
+     *
+     * @return $this
+     */
+    public function setEnvelopeCustomMetadata($envelope_custom_metadata)
+    {
+        $this->container['envelope_custom_metadata'] = $envelope_custom_metadata;
 
         return $this;
     }
@@ -1539,7 +1569,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_metadata
      *
-     * @param \DocuSign\eSign\Model\EnvelopeMetadata $envelope_metadata envelope_metadata
+     * @param \DocuSign\eSign\Model\EnvelopeMetadata $envelope_metadata Provides information about the features and services that are enabled for the envelope, including the Correct feature, the Advanced Correct feature, and DocuSign eNotary service.
      *
      * @return $this
      */
@@ -1947,7 +1977,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets lock_information
      *
-     * @param \DocuSign\eSign\Model\LockInformation $lock_information lock_information
+     * @param \DocuSign\eSign\Model\LockInformation $lock_information Provides lock information about an envelope that a user has locked.
      *
      * @return $this
      */
@@ -1995,7 +2025,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets notification
      *
-     * @param \DocuSign\eSign\Model\Notification $notification notification
+     * @param \DocuSign\eSign\Model\Notification $notification 
      *
      * @return $this
      */
@@ -2043,7 +2073,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets power_form
      *
-     * @param \DocuSign\eSign\Model\PowerForm $power_form power_form
+     * @param \DocuSign\eSign\Model\PowerForm $power_form Information about any PowerForms that are included in the envelope.
      *
      * @return $this
      */
@@ -2139,7 +2169,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients recipients
+     * @param \DocuSign\eSign\Model\Recipients $recipients An array of recipient objects that provides details about the recipients of the envelope.
      *
      * @return $this
      */
@@ -2211,7 +2241,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \DocuSign\eSign\Model\UserInfo $sender sender
+     * @param \DocuSign\eSign\Model\UserInfo $sender Information about the sender of the envelope.
      *
      * @return $this
      */
@@ -2499,7 +2529,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets workflow
      *
-     * @param \DocuSign\eSign\Model\Workflow $workflow workflow
+     * @param \DocuSign\eSign\Model\Workflow $workflow 
      *
      * @return $this
      */
@@ -2516,6 +2546,7 @@ class Envelope implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2528,6 +2559,7 @@ class Envelope implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -2541,6 +2573,7 @@ class Envelope implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -2557,6 +2590,7 @@ class Envelope implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

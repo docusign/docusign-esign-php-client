@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Defines an account billing plan response object.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
@@ -67,11 +67,12 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
         'downgrade_plan_information' => '\DocuSign\eSign\Model\DowngradePlanUpdateResponse',
         'downgrade_request_information' => '\DocuSign\eSign\Model\DowngradeRequestInformation',
-        'entity_name' => '?string',
+        'entity_information' => '\DocuSign\eSign\Model\BillingEntityInformationResponse',
         'payment_method' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
-        'successor_plans' => '\DocuSign\eSign\Model\BillingPlan[]'
+        'successor_plans' => '\DocuSign\eSign\Model\BillingPlan[]',
+        'tax_exempt_id' => '?string'
     ];
 
     /**
@@ -87,11 +88,12 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => null,
         'downgrade_plan_information' => null,
         'downgrade_request_information' => null,
-        'entity_name' => null,
+        'entity_information' => null,
         'payment_method' => null,
         'payment_processor_information' => null,
         'referral_information' => null,
-        'successor_plans' => null
+        'successor_plans' => null,
+        'tax_exempt_id' => null
     ];
 
     /**
@@ -128,11 +130,12 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'directDebitProcessorInformation',
         'downgrade_plan_information' => 'downgradePlanInformation',
         'downgrade_request_information' => 'downgradeRequestInformation',
-        'entity_name' => 'entityName',
+        'entity_information' => 'entityInformation',
         'payment_method' => 'paymentMethod',
         'payment_processor_information' => 'paymentProcessorInformation',
         'referral_information' => 'referralInformation',
-        'successor_plans' => 'successorPlans'
+        'successor_plans' => 'successorPlans',
+        'tax_exempt_id' => 'taxExemptId'
     ];
 
     /**
@@ -148,11 +151,12 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'setDirectDebitProcessorInformation',
         'downgrade_plan_information' => 'setDowngradePlanInformation',
         'downgrade_request_information' => 'setDowngradeRequestInformation',
-        'entity_name' => 'setEntityName',
+        'entity_information' => 'setEntityInformation',
         'payment_method' => 'setPaymentMethod',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'referral_information' => 'setReferralInformation',
-        'successor_plans' => 'setSuccessorPlans'
+        'successor_plans' => 'setSuccessorPlans',
+        'tax_exempt_id' => 'setTaxExemptId'
     ];
 
     /**
@@ -168,11 +172,12 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'getDirectDebitProcessorInformation',
         'downgrade_plan_information' => 'getDowngradePlanInformation',
         'downgrade_request_information' => 'getDowngradeRequestInformation',
-        'entity_name' => 'getEntityName',
+        'entity_information' => 'getEntityInformation',
         'payment_method' => 'getPaymentMethod',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'referral_information' => 'getReferralInformation',
-        'successor_plans' => 'getSuccessorPlans'
+        'successor_plans' => 'getSuccessorPlans',
+        'tax_exempt_id' => 'getTaxExemptId'
     ];
 
     /**
@@ -242,11 +247,12 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
         $this->container['direct_debit_processor_information'] = isset($data['direct_debit_processor_information']) ? $data['direct_debit_processor_information'] : null;
         $this->container['downgrade_plan_information'] = isset($data['downgrade_plan_information']) ? $data['downgrade_plan_information'] : null;
         $this->container['downgrade_request_information'] = isset($data['downgrade_request_information']) ? $data['downgrade_request_information'] : null;
-        $this->container['entity_name'] = isset($data['entity_name']) ? $data['entity_name'] : null;
+        $this->container['entity_information'] = isset($data['entity_information']) ? $data['entity_information'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['successor_plans'] = isset($data['successor_plans']) ? $data['successor_plans'] : null;
+        $this->container['tax_exempt_id'] = isset($data['tax_exempt_id']) ? $data['tax_exempt_id'] : null;
     }
 
     /**
@@ -286,7 +292,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \DocuSign\eSign\Model\AccountAddress $billing_address billing_address
+     * @param \DocuSign\eSign\Model\AccountAddress $billing_address The billing address for the account.
      *
      * @return $this
      */
@@ -334,7 +340,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_plan
      *
-     * @param \DocuSign\eSign\Model\AccountBillingPlan $billing_plan billing_plan
+     * @param \DocuSign\eSign\Model\AccountBillingPlan $billing_plan An object that contains details about the billing plan.
      *
      * @return $this
      */
@@ -358,7 +364,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets credit_card_information
      *
-     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information credit_card_information
+     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information A complex type that has information about the credit card used to pay for this account.
      *
      * @return $this
      */
@@ -382,7 +388,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets direct_debit_processor_information
      *
-     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information direct_debit_processor_information
+     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information Information about the bank that processes direct debits for the payment plan.
      *
      * @return $this
      */
@@ -406,7 +412,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_information
      *
-     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information downgrade_plan_information
+     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information 
      *
      * @return $this
      */
@@ -430,7 +436,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_request_information
      *
-     * @param \DocuSign\eSign\Model\DowngradeRequestInformation $downgrade_request_information downgrade_request_information
+     * @param \DocuSign\eSign\Model\DowngradeRequestInformation $downgrade_request_information 
      *
      * @return $this
      */
@@ -442,25 +448,25 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets entity_name
+     * Gets entity_information
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\BillingEntityInformationResponse
      */
-    public function getEntityName()
+    public function getEntityInformation()
     {
-        return $this->container['entity_name'];
+        return $this->container['entity_information'];
     }
 
     /**
-     * Sets entity_name
+     * Sets entity_information
      *
-     * @param ?string $entity_name 
+     * @param \DocuSign\eSign\Model\BillingEntityInformationResponse $entity_information 
      *
      * @return $this
      */
-    public function setEntityName($entity_name)
+    public function setEntityInformation($entity_information)
     {
-        $this->container['entity_name'] = $entity_name;
+        $this->container['entity_information'] = $entity_information;
 
         return $this;
     }
@@ -502,7 +508,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_processor_information
      *
-     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information Information about the entity that processes payments for the billing plan.
      *
      * @return $this
      */
@@ -526,7 +532,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets referral_information
      *
-     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information referral_information
+     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information A complex type that contains properties for entering referral and discount information.
      *
      * @return $this
      */
@@ -560,6 +566,30 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets tax_exempt_id
+     *
+     * @return ?string
+     */
+    public function getTaxExemptId()
+    {
+        return $this->container['tax_exempt_id'];
+    }
+
+    /**
+     * Sets tax_exempt_id
+     *
+     * @param ?string $tax_exempt_id 
+     *
+     * @return $this
+     */
+    public function setTaxExemptId($tax_exempt_id)
+    {
+        $this->container['tax_exempt_id'] = $tax_exempt_id;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -567,6 +597,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -579,6 +610,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -592,6 +624,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -608,6 +641,7 @@ class AccountBillingPlanResponse implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * TemplateRole Class Doc Comment
  *
  * @category    Class
+ * @description Information about a specific role.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class TemplateRole implements ModelInterface, ArrayAccess
@@ -423,7 +424,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification email_notification
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.
      *
      * @return $this
      */
@@ -519,7 +520,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number Describes the recipient phone number.
      *
      * @return $this
      */
@@ -639,7 +640,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
     /**
      * Sets tabs
      *
-     * @param \DocuSign\eSign\Model\Tabs $tabs tabs
+     * @param \DocuSign\eSign\Model\Tabs $tabs A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.
      *
      * @return $this
      */
@@ -656,6 +657,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -668,6 +670,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -681,6 +684,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -697,6 +701,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

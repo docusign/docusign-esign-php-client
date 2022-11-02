@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientAdditionalNotification Class Doc Comment
  *
  * @category    Class
+ * @description Describes an additional notification method.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
@@ -237,7 +238,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number The phone number to receive the additional notifcation.
      *
      * @return $this
      */
@@ -285,7 +286,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
     /**
      * Sets secondary_delivery_method_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $secondary_delivery_method_metadata secondary_delivery_method_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $secondary_delivery_method_metadata Metadata about the delivery method.
      *
      * @return $this
      */
@@ -326,6 +327,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -338,6 +340,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -351,6 +354,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -367,6 +371,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

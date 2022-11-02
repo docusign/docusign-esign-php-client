@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeTransferRuleRequest Class Doc Comment
  *
  * @category    Class
+ * @description This object contains details about the envelope transfer rule that you want to create.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
@@ -441,7 +442,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets modified_user
      *
-     * @param \DocuSign\eSign\Model\UserInformation $modified_user modified_user
+     * @param \DocuSign\eSign\Model\UserInformation $modified_user Information about the user who last modified the envelope transfer rule.
      *
      * @return $this
      */
@@ -465,7 +466,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets to_folder
      *
-     * @param \DocuSign\eSign\Model\Folder $to_folder to_folder
+     * @param \DocuSign\eSign\Model\Folder $to_folder Information about the destination folder to which the envelope is transferred.
      *
      * @return $this
      */
@@ -489,7 +490,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets to_user
      *
-     * @param \DocuSign\eSign\Model\UserInformation $to_user to_user
+     * @param \DocuSign\eSign\Model\UserInformation $to_user Information about the user to which the envelope is transferred.
      *
      * @return $this
      */
@@ -506,6 +507,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -518,6 +520,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -531,6 +534,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -547,6 +551,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

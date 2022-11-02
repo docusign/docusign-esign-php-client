@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeDocument Class Doc Comment
  *
  * @category    Class
+ * @description This object contains details about the envelope document.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class EnvelopeDocument implements ModelInterface, ArrayAccess
@@ -441,7 +442,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets authoritative_copy_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $authoritative_copy_metadata authoritative_copy_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $authoritative_copy_metadata Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents.
      *
      * @return $this
      */
@@ -537,7 +538,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets display_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $display_metadata display_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $display_metadata Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents.
      *
      * @return $this
      */
@@ -657,7 +658,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -705,7 +706,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets include_in_download_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $include_in_download_metadata include_in_download_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $include_in_download_metadata Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents.
      *
      * @return $this
      */
@@ -753,7 +754,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents.
      *
      * @return $this
      */
@@ -849,7 +850,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_acknowledge_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signer_must_acknowledge_metadata signer_must_acknowledge_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signer_must_acknowledge_metadata Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents.
      *
      * @return $this
      */
@@ -986,6 +987,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -998,6 +1000,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1011,6 +1014,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1027,6 +1031,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

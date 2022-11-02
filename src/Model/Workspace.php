@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Provides properties that describe a workspace.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Workspace implements ModelInterface, ArrayAccess
@@ -316,7 +316,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets caller_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $caller_information caller_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $caller_information 
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information created_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information Details about the user who created the workspace.
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information last_modified_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information Details about the user who last modified the workspace.
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class Workspace implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \DocuSign\eSign\Model\WorkspaceSettings $settings settings
+     * @param \DocuSign\eSign\Model\WorkspaceSettings $settings Information about the settings for the workspace.
      *
      * @return $this
      */
@@ -597,6 +597,7 @@ class Workspace implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -609,6 +610,7 @@ class Workspace implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -622,6 +624,7 @@ class Workspace implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -638,6 +641,7 @@ class Workspace implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

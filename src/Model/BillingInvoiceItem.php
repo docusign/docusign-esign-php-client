@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Contains information about an item on a billing invoice.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class BillingInvoiceItem implements ModelInterface, ArrayAccess
@@ -64,6 +64,8 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
         'charge_name' => '?string',
         'invoice_item_id' => '?string',
         'quantity' => '?string',
+        'tax_amount' => '?string',
+        'tax_exempt_amount' => '?string',
         'unit_price' => '?string'
     ];
 
@@ -77,6 +79,8 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
         'charge_name' => null,
         'invoice_item_id' => null,
         'quantity' => null,
+        'tax_amount' => null,
+        'tax_exempt_amount' => null,
         'unit_price' => null
     ];
 
@@ -111,6 +115,8 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
         'charge_name' => 'chargeName',
         'invoice_item_id' => 'invoiceItemId',
         'quantity' => 'quantity',
+        'tax_amount' => 'taxAmount',
+        'tax_exempt_amount' => 'taxExemptAmount',
         'unit_price' => 'unitPrice'
     ];
 
@@ -124,6 +130,8 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
         'charge_name' => 'setChargeName',
         'invoice_item_id' => 'setInvoiceItemId',
         'quantity' => 'setQuantity',
+        'tax_amount' => 'setTaxAmount',
+        'tax_exempt_amount' => 'setTaxExemptAmount',
         'unit_price' => 'setUnitPrice'
     ];
 
@@ -137,6 +145,8 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
         'charge_name' => 'getChargeName',
         'invoice_item_id' => 'getInvoiceItemId',
         'quantity' => 'getQuantity',
+        'tax_amount' => 'getTaxAmount',
+        'tax_exempt_amount' => 'getTaxExemptAmount',
         'unit_price' => 'getUnitPrice'
     ];
 
@@ -204,6 +214,8 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
         $this->container['charge_name'] = isset($data['charge_name']) ? $data['charge_name'] : null;
         $this->container['invoice_item_id'] = isset($data['invoice_item_id']) ? $data['invoice_item_id'] : null;
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['tax_amount'] = isset($data['tax_amount']) ? $data['tax_amount'] : null;
+        $this->container['tax_exempt_amount'] = isset($data['tax_exempt_amount']) ? $data['tax_exempt_amount'] : null;
         $this->container['unit_price'] = isset($data['unit_price']) ? $data['unit_price'] : null;
     }
 
@@ -328,6 +340,54 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets tax_amount
+     *
+     * @return ?string
+     */
+    public function getTaxAmount()
+    {
+        return $this->container['tax_amount'];
+    }
+
+    /**
+     * Sets tax_amount
+     *
+     * @param ?string $tax_amount 
+     *
+     * @return $this
+     */
+    public function setTaxAmount($tax_amount)
+    {
+        $this->container['tax_amount'] = $tax_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_exempt_amount
+     *
+     * @return ?string
+     */
+    public function getTaxExemptAmount()
+    {
+        return $this->container['tax_exempt_amount'];
+    }
+
+    /**
+     * Sets tax_exempt_amount
+     *
+     * @param ?string $tax_exempt_amount 
+     *
+     * @return $this
+     */
+    public function setTaxExemptAmount($tax_exempt_amount)
+    {
+        $this->container['tax_exempt_amount'] = $tax_exempt_amount;
+
+        return $this;
+    }
+
+    /**
      * Gets unit_price
      *
      * @return ?string
@@ -357,6 +417,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -369,6 +430,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -382,6 +444,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -398,6 +461,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

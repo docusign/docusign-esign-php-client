@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * BulkSendingCopyRecipient Class Doc Comment
  *
  * @category    Class
+ * @description This object contains details about a bulk send recipient.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
@@ -477,7 +478,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification email_notification
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.
      *
      * @return $this
      */
@@ -621,7 +622,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_information_input
      *
-     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input id_check_information_input
+     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input An object that contains input information related to a recipient ID check.
      *
      * @return $this
      */
@@ -717,7 +718,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets phone_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication phone_authentication
+     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.
      *
      * @return $this
      */
@@ -861,7 +862,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets sms_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication sms_authentication
+     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.
      *
      * @return $this
      */
@@ -926,6 +927,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -938,6 +940,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -951,6 +954,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -967,6 +971,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

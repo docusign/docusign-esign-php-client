@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class WorkspaceItem implements ModelInterface, ArrayAccess
@@ -358,7 +358,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets caller_authorization
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $caller_authorization caller_authorization
+     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $caller_authorization 
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information created_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $created_by_information Details about the user who created the workspace item.
      *
      * @return $this
      */
@@ -646,7 +646,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_information
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information last_modified_by_information
+     * @param \DocuSign\eSign\Model\WorkspaceUser $last_modified_by_information Details about the user who last modified the workspace item.
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets thumbnail
      *
-     * @param \DocuSign\eSign\Model\Page $thumbnail thumbnail
+     * @param \DocuSign\eSign\Model\Page $thumbnail 
      *
      * @return $this
      */
@@ -910,7 +910,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets user_authorization
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $user_authorization user_authorization
+     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $user_authorization 
      *
      * @return $this
      */
@@ -927,6 +927,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -939,6 +940,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -952,6 +954,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -968,6 +971,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

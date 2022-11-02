@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * Group Class Doc Comment
  *
  * @category    Class
+ * @description This object contains information about a group.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class Group implements ModelInterface, ArrayAccess
@@ -59,6 +60,7 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'ds_group_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'group_id' => '?string',
         'group_name' => '?string',
@@ -74,6 +76,7 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'ds_group_id' => null,
         'error_details' => null,
         'group_id' => null,
         'group_name' => null,
@@ -110,6 +113,7 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'ds_group_id' => 'dsGroupId',
         'error_details' => 'errorDetails',
         'group_id' => 'groupId',
         'group_name' => 'groupName',
@@ -125,6 +129,7 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'ds_group_id' => 'setDsGroupId',
         'error_details' => 'setErrorDetails',
         'group_id' => 'setGroupId',
         'group_name' => 'setGroupName',
@@ -140,6 +145,7 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'ds_group_id' => 'getDsGroupId',
         'error_details' => 'getErrorDetails',
         'group_id' => 'getGroupId',
         'group_name' => 'getGroupName',
@@ -209,6 +215,7 @@ class Group implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['ds_group_id'] = isset($data['ds_group_id']) ? $data['ds_group_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
@@ -243,6 +250,30 @@ class Group implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets ds_group_id
+     *
+     * @return ?string
+     */
+    public function getDsGroupId()
+    {
+        return $this->container['ds_group_id'];
+    }
+
+    /**
+     * Sets ds_group_id
+     *
+     * @param ?string $ds_group_id 
+     *
+     * @return $this
+     */
+    public function setDsGroupId($ds_group_id)
+    {
+        $this->container['ds_group_id'] = $ds_group_id;
+
+        return $this;
+    }
+
+    /**
      * Gets error_details
      *
      * @return \DocuSign\eSign\Model\ErrorDetails
@@ -255,7 +286,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -416,6 +447,7 @@ class Group implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -428,6 +460,7 @@ class Group implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -441,6 +474,7 @@ class Group implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -457,6 +491,7 @@ class Group implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

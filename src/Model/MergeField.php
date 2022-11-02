@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Contains information for transfering values between Salesforce data fields and DocuSign Tabs.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class MergeField implements ModelInterface, ArrayAccess
@@ -310,7 +310,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sender_to_edit_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $allow_sender_to_edit_metadata allow_sender_to_edit_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $allow_sender_to_edit_metadata Metadata that indicates if the sender can edit the `allowSenderToEdit` property.
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets configuration_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $configuration_type_metadata configuration_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $configuration_type_metadata Metadata that indicates if the sender can edit the `configurationType` property.
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets path_extended_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $path_extended_metadata path_extended_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $path_extended_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets path_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $path_metadata path_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $path_metadata Metadata that indicates whether the `path` property is editable.
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets row_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $row_metadata row_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $row_metadata Metadata that indicates whether the `row` property is editable.
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class MergeField implements ModelInterface, ArrayAccess
     /**
      * Sets write_back_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $write_back_metadata write_back_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $write_back_metadata Metadata that indicates if the sender can edit the `writeBack` property.
      *
      * @return $this
      */
@@ -567,6 +567,7 @@ class MergeField implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -579,6 +580,7 @@ class MergeField implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -592,6 +594,7 @@ class MergeField implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -608,6 +611,7 @@ class MergeField implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

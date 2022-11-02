@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeNotificationRequest Class Doc Comment
  *
  * @category    Class
+ * @description A complex element that specifies the notification settings for the envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
@@ -231,7 +232,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets expirations
      *
-     * @param \DocuSign\eSign\Model\Expirations $expirations expirations
+     * @param \DocuSign\eSign\Model\Expirations $expirations A complex element that specifies the expiration settings for the envelope.
      *
      * @return $this
      */
@@ -255,7 +256,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets reminders
      *
-     * @param \DocuSign\eSign\Model\Reminders $reminders reminders
+     * @param \DocuSign\eSign\Model\Reminders $reminders A complex element that specifies reminder settings for the envelope.
      *
      * @return $this
      */
@@ -296,6 +297,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -308,6 +310,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -321,6 +324,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -337,6 +341,7 @@ class EnvelopeNotificationRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

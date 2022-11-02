@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -32,6 +33,15 @@ declare(strict_types=1);
 namespace DocuSign\eSign\Api\NotaryApi;
 
 
+/**
+ * GetNotaryOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetNotaryOptions
 {
     /**
@@ -42,6 +52,7 @@ class GetNotaryOptions
 
     /**
      * Gets include_jurisdictions
+     *
      * @return ?string
      */
     public function getIncludeJurisdictions(): ?string
@@ -52,6 +63,7 @@ class GetNotaryOptions
     /**
      * Sets include_jurisdictions
      * @param ?string $include_jurisdictions 
+     *
      * @return self
      */
     public function setIncludeJurisdictions(?string $include_jurisdictions): self
@@ -62,6 +74,15 @@ class GetNotaryOptions
 }
 
 
+/**
+ * ListNotaryJournalsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListNotaryJournalsOptions
 {
     /**
@@ -72,6 +93,7 @@ class ListNotaryJournalsOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -82,6 +104,7 @@ class ListNotaryJournalsOptions
     /**
      * Sets count
      * @param ?string $count 
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -97,6 +120,7 @@ class ListNotaryJournalsOptions
 
     /**
      * Gets search_text
+     *
      * @return ?string
      */
     public function getSearchText(): ?string
@@ -107,6 +131,7 @@ class ListNotaryJournalsOptions
     /**
      * Sets search_text
      * @param ?string $search_text 
+     *
      * @return self
      */
     public function setSearchText(?string $search_text): self
@@ -122,6 +147,7 @@ class ListNotaryJournalsOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -132,6 +158,7 @@ class ListNotaryJournalsOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -155,7 +182,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class NotaryApi
@@ -171,6 +199,7 @@ class NotaryApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -204,9 +233,9 @@ class NotaryApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -226,6 +255,7 @@ class NotaryApi
      * Add a notary to the system
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notary
      */
@@ -241,6 +271,7 @@ class NotaryApi
      * Add a notary to the system
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -308,6 +339,7 @@ class NotaryApi
      * Add a notary jurisdiction to the system
      *
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
      */
@@ -323,6 +355,7 @@ class NotaryApi
      * Add a notary jurisdiction to the system
      *
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)
      */
@@ -390,6 +423,7 @@ class NotaryApi
      * Delete a notary jurisdiction a specified user.
      *
      * @param ?string $jurisdiction_id 
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -405,6 +439,7 @@ class NotaryApi
      * Delete a notary jurisdiction a specified user.
      *
      * @param ?string $jurisdiction_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -470,7 +505,8 @@ class NotaryApi
      *
      * Get notary settings for a user
      *
-     * @param  \DocuSign\eSign\Api\NotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\GetNotaryOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryResult
      */
@@ -485,7 +521,8 @@ class NotaryApi
      *
      * Get notary settings for a user
      *
-     * @param  \DocuSign\eSign\Api\NotaryApi\GetNotaryOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\GetNotaryOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryResult, HTTP status code, HTTP response headers (array of strings)
      */
@@ -555,6 +592,7 @@ class NotaryApi
      * Get notary a jurisdiction for a user
      *
      * @param ?string $jurisdiction_id 
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
      */
@@ -570,6 +608,7 @@ class NotaryApi
      * Get notary a jurisdiction for a user
      *
      * @param ?string $jurisdiction_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)
      */
@@ -640,6 +679,7 @@ class NotaryApi
      * Get notary seal for a jurisdiction
      *
      * @param ?string $jurisdiction_id 
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -655,6 +695,7 @@ class NotaryApi
      * Get notary seal for a jurisdiction
      *
      * @param ?string $jurisdiction_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -720,6 +761,7 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdictionList
      */
@@ -733,6 +775,7 @@ class NotaryApi
      * Operation getNotaryJurisdictionsWithHttpInfo
      *
      * Get notary jurisdictions for a user
+     *
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdictionList, HTTP status code, HTTP response headers (array of strings)
@@ -795,7 +838,8 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @param  \DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJournalList
      */
@@ -810,7 +854,8 @@ class NotaryApi
      *
      * Get notary jurisdictions for a user
      *
-     * @param  \DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJournalList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -886,6 +931,7 @@ class NotaryApi
      * Update a notary
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Notary
      */
@@ -901,6 +947,7 @@ class NotaryApi
      * Update a notary
      *
      * @param \DocuSign\eSign\Model\Notary $notary  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Notary, HTTP status code, HTTP response headers (array of strings)
      */
@@ -969,6 +1016,7 @@ class NotaryApi
      *
      * @param ?string $jurisdiction_id 
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJurisdiction
      */
@@ -985,6 +1033,7 @@ class NotaryApi
      *
      * @param ?string $jurisdiction_id 
      * @param \DocuSign\eSign\Model\NotaryJurisdiction $notary_jurisdiction  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJurisdiction, HTTP status code, HTTP response headers (array of strings)
      */

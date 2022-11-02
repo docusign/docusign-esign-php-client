@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class NewAccountDefinition implements ModelInterface, ArrayAccess
@@ -66,13 +66,17 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => '\DocuSign\eSign\Model\DirectDebitProcessorInformation',
         'distributor_code' => '?string',
         'distributor_password' => '?string',
+        'enable_pre_auth' => '?string',
         'envelope_partition_id' => '?string',
         'initial_user' => '\DocuSign\eSign\Model\UserInformation',
         'payment_method' => '?string',
+        'payment_processor' => '?string',
         'payment_processor_information' => '\DocuSign\eSign\Model\PaymentProcessorInformation',
         'plan_information' => '\DocuSign\eSign\Model\PlanInformation',
+        'process_payment' => '?string',
         'referral_information' => '\DocuSign\eSign\Model\ReferralInformation',
-        'social_account_information' => '\DocuSign\eSign\Model\SocialAccountInformation'
+        'social_account_information' => '\DocuSign\eSign\Model\SocialAccountInformation',
+        'tax_exempt_id' => '?string'
     ];
 
     /**
@@ -88,13 +92,17 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => null,
         'distributor_code' => null,
         'distributor_password' => null,
+        'enable_pre_auth' => null,
         'envelope_partition_id' => null,
         'initial_user' => null,
         'payment_method' => null,
+        'payment_processor' => null,
         'payment_processor_information' => null,
         'plan_information' => null,
+        'process_payment' => null,
         'referral_information' => null,
-        'social_account_information' => null
+        'social_account_information' => null,
+        'tax_exempt_id' => null
     ];
 
     /**
@@ -131,13 +139,17 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'directDebitProcessorInformation',
         'distributor_code' => 'distributorCode',
         'distributor_password' => 'distributorPassword',
+        'enable_pre_auth' => 'enablePreAuth',
         'envelope_partition_id' => 'envelopePartitionId',
         'initial_user' => 'initialUser',
         'payment_method' => 'paymentMethod',
+        'payment_processor' => 'paymentProcessor',
         'payment_processor_information' => 'paymentProcessorInformation',
         'plan_information' => 'planInformation',
+        'process_payment' => 'processPayment',
         'referral_information' => 'referralInformation',
-        'social_account_information' => 'socialAccountInformation'
+        'social_account_information' => 'socialAccountInformation',
+        'tax_exempt_id' => 'taxExemptId'
     ];
 
     /**
@@ -153,13 +165,17 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'setDirectDebitProcessorInformation',
         'distributor_code' => 'setDistributorCode',
         'distributor_password' => 'setDistributorPassword',
+        'enable_pre_auth' => 'setEnablePreAuth',
         'envelope_partition_id' => 'setEnvelopePartitionId',
         'initial_user' => 'setInitialUser',
         'payment_method' => 'setPaymentMethod',
+        'payment_processor' => 'setPaymentProcessor',
         'payment_processor_information' => 'setPaymentProcessorInformation',
         'plan_information' => 'setPlanInformation',
+        'process_payment' => 'setProcessPayment',
         'referral_information' => 'setReferralInformation',
-        'social_account_information' => 'setSocialAccountInformation'
+        'social_account_information' => 'setSocialAccountInformation',
+        'tax_exempt_id' => 'setTaxExemptId'
     ];
 
     /**
@@ -175,13 +191,17 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         'direct_debit_processor_information' => 'getDirectDebitProcessorInformation',
         'distributor_code' => 'getDistributorCode',
         'distributor_password' => 'getDistributorPassword',
+        'enable_pre_auth' => 'getEnablePreAuth',
         'envelope_partition_id' => 'getEnvelopePartitionId',
         'initial_user' => 'getInitialUser',
         'payment_method' => 'getPaymentMethod',
+        'payment_processor' => 'getPaymentProcessor',
         'payment_processor_information' => 'getPaymentProcessorInformation',
         'plan_information' => 'getPlanInformation',
+        'process_payment' => 'getProcessPayment',
         'referral_information' => 'getReferralInformation',
-        'social_account_information' => 'getSocialAccountInformation'
+        'social_account_information' => 'getSocialAccountInformation',
+        'tax_exempt_id' => 'getTaxExemptId'
     ];
 
     /**
@@ -251,13 +271,17 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         $this->container['direct_debit_processor_information'] = isset($data['direct_debit_processor_information']) ? $data['direct_debit_processor_information'] : null;
         $this->container['distributor_code'] = isset($data['distributor_code']) ? $data['distributor_code'] : null;
         $this->container['distributor_password'] = isset($data['distributor_password']) ? $data['distributor_password'] : null;
+        $this->container['enable_pre_auth'] = isset($data['enable_pre_auth']) ? $data['enable_pre_auth'] : null;
         $this->container['envelope_partition_id'] = isset($data['envelope_partition_id']) ? $data['envelope_partition_id'] : null;
         $this->container['initial_user'] = isset($data['initial_user']) ? $data['initial_user'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
+        $this->container['payment_processor'] = isset($data['payment_processor']) ? $data['payment_processor'] : null;
         $this->container['payment_processor_information'] = isset($data['payment_processor_information']) ? $data['payment_processor_information'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
+        $this->container['process_payment'] = isset($data['process_payment']) ? $data['process_payment'] : null;
         $this->container['referral_information'] = isset($data['referral_information']) ? $data['referral_information'] : null;
         $this->container['social_account_information'] = isset($data['social_account_information']) ? $data['social_account_information'] : null;
+        $this->container['tax_exempt_id'] = isset($data['tax_exempt_id']) ? $data['tax_exempt_id'] : null;
     }
 
     /**
@@ -321,7 +345,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets account_settings
      *
-     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings account_settings
+     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.
      *
      * @return $this
      */
@@ -345,7 +369,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets address_information
      *
-     * @param \DocuSign\eSign\Model\AccountAddress $address_information address_information
+     * @param \DocuSign\eSign\Model\AccountAddress $address_information A complex type that contains the following information for the new account: `Street1`, `Street2`, `City`, `State`, `Zip`, `Phone`, and `Fax`.
      *
      * @return $this
      */
@@ -369,7 +393,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets credit_card_information
      *
-     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information credit_card_information
+     * @param \DocuSign\eSign\Model\CreditCardInformation $credit_card_information A complex type that has information about the credit card used to pay for this account.
      *
      * @return $this
      */
@@ -393,7 +417,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets direct_debit_processor_information
      *
-     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information direct_debit_processor_information
+     * @param \DocuSign\eSign\Model\DirectDebitProcessorInformation $direct_debit_processor_information Information about the bank that processes direct debits for the payment plan.
      *
      * @return $this
      */
@@ -453,6 +477,30 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_pre_auth
+     *
+     * @return ?string
+     */
+    public function getEnablePreAuth()
+    {
+        return $this->container['enable_pre_auth'];
+    }
+
+    /**
+     * Sets enable_pre_auth
+     *
+     * @param ?string $enable_pre_auth 
+     *
+     * @return $this
+     */
+    public function setEnablePreAuth($enable_pre_auth)
+    {
+        $this->container['enable_pre_auth'] = $enable_pre_auth;
+
+        return $this;
+    }
+
+    /**
      * Gets envelope_partition_id
      *
      * @return ?string
@@ -489,7 +537,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets initial_user
      *
-     * @param \DocuSign\eSign\Model\UserInformation $initial_user initial_user
+     * @param \DocuSign\eSign\Model\UserInformation $initial_user A complex type with the initial user information for the new account. Note that some user information is set internally based on the plan and cannot be overridden.
      *
      * @return $this
      */
@@ -525,6 +573,30 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets payment_processor
+     *
+     * @return ?string
+     */
+    public function getPaymentProcessor()
+    {
+        return $this->container['payment_processor'];
+    }
+
+    /**
+     * Sets payment_processor
+     *
+     * @param ?string $payment_processor 
+     *
+     * @return $this
+     */
+    public function setPaymentProcessor($payment_processor)
+    {
+        $this->container['payment_processor'] = $payment_processor;
+
+        return $this;
+    }
+
+    /**
      * Gets payment_processor_information
      *
      * @return \DocuSign\eSign\Model\PaymentProcessorInformation
@@ -537,7 +609,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets payment_processor_information
      *
-     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information payment_processor_information
+     * @param \DocuSign\eSign\Model\PaymentProcessorInformation $payment_processor_information Information about the entity that processes payments for the billing plan.
      *
      * @return $this
      */
@@ -561,13 +633,37 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets plan_information
      *
-     * @param \DocuSign\eSign\Model\PlanInformation $plan_information plan_information
+     * @param \DocuSign\eSign\Model\PlanInformation $plan_information An object used to identify the features and attributes of the account being created.
      *
      * @return $this
      */
     public function setPlanInformation($plan_information)
     {
         $this->container['plan_information'] = $plan_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets process_payment
+     *
+     * @return ?string
+     */
+    public function getProcessPayment()
+    {
+        return $this->container['process_payment'];
+    }
+
+    /**
+     * Sets process_payment
+     *
+     * @param ?string $process_payment 
+     *
+     * @return $this
+     */
+    public function setProcessPayment($process_payment)
+    {
+        $this->container['process_payment'] = $process_payment;
 
         return $this;
     }
@@ -585,7 +681,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets referral_information
      *
-     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information referral_information
+     * @param \DocuSign\eSign\Model\ReferralInformation $referral_information A complex type that contains properties for entering referral and discount information.
      *
      * @return $this
      */
@@ -609,13 +705,37 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets social_account_information
      *
-     * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information social_account_information
+     * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.
      *
      * @return $this
      */
     public function setSocialAccountInformation($social_account_information)
     {
         $this->container['social_account_information'] = $social_account_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_exempt_id
+     *
+     * @return ?string
+     */
+    public function getTaxExemptId()
+    {
+        return $this->container['tax_exempt_id'];
+    }
+
+    /**
+     * Sets tax_exempt_id
+     *
+     * @param ?string $tax_exempt_id 
+     *
+     * @return $this
+     */
+    public function setTaxExemptId($tax_exempt_id)
+    {
+        $this->container['tax_exempt_id'] = $tax_exempt_id;
 
         return $this;
     }
@@ -626,6 +746,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -638,6 +759,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -651,6 +773,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -667,6 +790,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

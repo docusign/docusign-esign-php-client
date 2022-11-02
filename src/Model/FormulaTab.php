@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * FormulaTab Class Doc Comment
  *
  * @category    Class
+ * @description The value of a formula tab is calculated from the values of other number or date tabs in the document. When the recipient completes the underlying fields, the formula tab calculates and displays the result.  The &#x60;formula&#x60; property of the tab contains the references to the underlying tabs. See [Calculated Fields][calculatedfields] in the DocuSign Support Center to learn more about formulas.  If a formula tab contains a &#x60;paymentDetails&#x60; property, the tab is considered a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [calculatedfields]: https://support.docusign.com/en/guides/ndse-user-guide-calculated-fields [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class FormulaTab implements ModelInterface, ArrayAccess
@@ -81,6 +82,8 @@ class FormulaTab implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'bold' => '?string',
         'bold_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'caption' => '?string',
+        'caption_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conceal_value_on_document' => '?string',
         'conceal_value_on_document_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_label' => '?string',
@@ -212,6 +215,8 @@ class FormulaTab implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => null,
         'bold' => null,
         'bold_metadata' => null,
+        'caption' => null,
+        'caption_metadata' => null,
         'conceal_value_on_document' => null,
         'conceal_value_on_document_metadata' => null,
         'conditional_parent_label' => null,
@@ -364,6 +369,8 @@ class FormulaTab implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'anchorYOffsetMetadata',
         'bold' => 'bold',
         'bold_metadata' => 'boldMetadata',
+        'caption' => 'caption',
+        'caption_metadata' => 'captionMetadata',
         'conceal_value_on_document' => 'concealValueOnDocument',
         'conceal_value_on_document_metadata' => 'concealValueOnDocumentMetadata',
         'conditional_parent_label' => 'conditionalParentLabel',
@@ -495,6 +502,8 @@ class FormulaTab implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'setAnchorYOffsetMetadata',
         'bold' => 'setBold',
         'bold_metadata' => 'setBoldMetadata',
+        'caption' => 'setCaption',
+        'caption_metadata' => 'setCaptionMetadata',
         'conceal_value_on_document' => 'setConcealValueOnDocument',
         'conceal_value_on_document_metadata' => 'setConcealValueOnDocumentMetadata',
         'conditional_parent_label' => 'setConditionalParentLabel',
@@ -626,6 +635,8 @@ class FormulaTab implements ModelInterface, ArrayAccess
         'anchor_y_offset_metadata' => 'getAnchorYOffsetMetadata',
         'bold' => 'getBold',
         'bold_metadata' => 'getBoldMetadata',
+        'caption' => 'getCaption',
+        'caption_metadata' => 'getCaptionMetadata',
         'conceal_value_on_document' => 'getConcealValueOnDocument',
         'conceal_value_on_document_metadata' => 'getConcealValueOnDocumentMetadata',
         'conditional_parent_label' => 'getConditionalParentLabel',
@@ -811,6 +822,8 @@ class FormulaTab implements ModelInterface, ArrayAccess
         $this->container['anchor_y_offset_metadata'] = isset($data['anchor_y_offset_metadata']) ? $data['anchor_y_offset_metadata'] : null;
         $this->container['bold'] = isset($data['bold']) ? $data['bold'] : null;
         $this->container['bold_metadata'] = isset($data['bold_metadata']) ? $data['bold_metadata'] : null;
+        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
+        $this->container['caption_metadata'] = isset($data['caption_metadata']) ? $data['caption_metadata'] : null;
         $this->container['conceal_value_on_document'] = isset($data['conceal_value_on_document']) ? $data['conceal_value_on_document'] : null;
         $this->container['conceal_value_on_document_metadata'] = isset($data['conceal_value_on_document_metadata']) ? $data['conceal_value_on_document_metadata'] : null;
         $this->container['conditional_parent_label'] = isset($data['conditional_parent_label']) ? $data['conditional_parent_label'] : null;
@@ -975,7 +988,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.
      *
      * @return $this
      */
@@ -1023,7 +1036,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata anchor_case_sensitive_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata Metadata that indicates whether the `anchorCaseSensitive` property is editable.
      *
      * @return $this
      */
@@ -1071,7 +1084,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata anchor_horizontal_alignment_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.
      *
      * @return $this
      */
@@ -1119,7 +1132,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata anchor_ignore_if_not_present_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.
      *
      * @return $this
      */
@@ -1167,7 +1180,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata anchor_match_whole_word_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata Metadata that indicates whether the `anchorMatchWholeWord` property is editable.
      *
      * @return $this
      */
@@ -1215,7 +1228,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata anchor_string_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata Metadata that indicates whether the `anchorString` property is editable.
      *
      * @return $this
      */
@@ -1263,7 +1276,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata anchor_tab_processor_version_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1311,7 +1324,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata anchor_units_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata Metadata that indicates whether the `anchorUnits` property is editable.
      *
      * @return $this
      */
@@ -1359,7 +1372,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata anchor_x_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata Metadata that indicates whether the `anchorXOffset` property is editable.
      *
      * @return $this
      */
@@ -1407,7 +1420,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata anchor_y_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata Metadata that indicates whether the `anchorYOffset` property is editable.
      *
      * @return $this
      */
@@ -1455,13 +1468,61 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets bold_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata bold_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata Metadata that indicates whether the `bold` property is editable.
      *
      * @return $this
      */
     public function setBoldMetadata($bold_metadata)
     {
         $this->container['bold_metadata'] = $bold_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption
+     *
+     * @return ?string
+     */
+    public function getCaption()
+    {
+        return $this->container['caption'];
+    }
+
+    /**
+     * Sets caption
+     *
+     * @param ?string $caption 
+     *
+     * @return $this
+     */
+    public function setCaption($caption)
+    {
+        $this->container['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getCaptionMetadata()
+    {
+        return $this->container['caption_metadata'];
+    }
+
+    /**
+     * Sets caption_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     *
+     * @return $this
+     */
+    public function setCaptionMetadata($caption_metadata)
+    {
+        $this->container['caption_metadata'] = $caption_metadata;
 
         return $this;
     }
@@ -1503,7 +1564,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets conceal_value_on_document_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conceal_value_on_document_metadata conceal_value_on_document_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conceal_value_on_document_metadata Metadata that indicates whether the `concealValueOnDocument` property is editable.
      *
      * @return $this
      */
@@ -1551,7 +1612,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata conditional_parent_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata Metadata that indicates whether the `conditionalParentLabel` property is editable.
      *
      * @return $this
      */
@@ -1599,7 +1660,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata conditional_parent_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata Metadata that indicates whether the `conditionalParentValue` property is editable.
      *
      * @return $this
      */
@@ -1647,7 +1708,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata custom_tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata Metadata that indicates whether the `customTabId` property is editable.
      *
      * @return $this
      */
@@ -1695,7 +1756,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets disable_auto_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $disable_auto_size_metadata disable_auto_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $disable_auto_size_metadata Metadata that indicates whether the `disableAutoSize` property is editable.
      *
      * @return $this
      */
@@ -1743,7 +1804,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets document_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata document_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata Metadata that indicates whether the `documentId` property is editable.
      *
      * @return $this
      */
@@ -1767,7 +1828,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1839,7 +1900,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets font_color_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata font_color_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata Metadata that indicates whether the `fontColor` property is editable.
      *
      * @return $this
      */
@@ -1863,7 +1924,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets font_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata font_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata Metadata that indicates whether the `font` property is editable.
      *
      * @return $this
      */
@@ -1911,7 +1972,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets font_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata font_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata Metadata that indicates whether the `fontSize` property is editable.
      *
      * @return $this
      */
@@ -1959,7 +2020,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets form_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata form_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata Metadata that indicates whether the `formOrder` property is editable.
      *
      * @return $this
      */
@@ -2007,7 +2068,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata form_page_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata Metadata that indicates whether the `formPageLabel` property is editable.
      *
      * @return $this
      */
@@ -2055,7 +2116,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata form_page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata Metadata that indicates whether the `fromPageNumber` property is editable.
      *
      * @return $this
      */
@@ -2103,7 +2164,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets formula_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $formula_metadata formula_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $formula_metadata Metadata indicating if the sender can edit the `formula` property.
      *
      * @return $this
      */
@@ -2151,7 +2212,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets height_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata height_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata Metadata that indicates whether the `height` property is editable.
      *
      * @return $this
      */
@@ -2199,7 +2260,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets hidden_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $hidden_metadata hidden_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $hidden_metadata Metadata that indicates whether the `hidden` property is editable.
      *
      * @return $this
      */
@@ -2247,7 +2308,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets is_payment_amount_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $is_payment_amount_metadata is_payment_amount_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $is_payment_amount_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2295,7 +2356,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets italic_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata italic_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata Metadata that indicates whether the `italic` property is editable.
      *
      * @return $this
      */
@@ -2319,7 +2380,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets locale_policy
      *
-     * @param \DocuSign\eSign\Model\LocalePolicyTab $locale_policy locale_policy
+     * @param \DocuSign\eSign\Model\LocalePolicyTab $locale_policy Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2367,7 +2428,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata Metadata that indicates whether the `locked` property is editable.
      *
      * @return $this
      */
@@ -2415,7 +2476,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets max_length_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $max_length_metadata max_length_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $max_length_metadata Metadata that indicates whether the `maxLength` property is editable.
      *
      * @return $this
      */
@@ -2439,7 +2500,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field
      *
-     * @param \DocuSign\eSign\Model\MergeField $merge_field merge_field
+     * @param \DocuSign\eSign\Model\MergeField $merge_field Contains the information necessary to map the tab to a field in SalesForce.
      *
      * @return $this
      */
@@ -2511,7 +2572,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates whether the `name` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2559,7 +2620,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets original_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata Metadata that indicates whether the `originalValue` property is editable.
      *
      * @return $this
      */
@@ -2607,7 +2668,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata Metadata that indicates whether the `pageNumber` property is editable.
      *
      * @return $this
      */
@@ -2631,7 +2692,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets payment_details
      *
-     * @param \DocuSign\eSign\Model\PaymentDetails $payment_details payment_details
+     * @param \DocuSign\eSign\Model\PaymentDetails $payment_details This property indicates  that this formula tab  is a payment item.   See [Requesting Payments Along with Signatures][paymentguide]  in the DocuSign Support Center  to learn more about payments.   [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
      *
      * @return $this
      */
@@ -2703,7 +2764,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata recipient_id_guid_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata Metadata that indicates whether the `recipientIdGuid` property is editable.
      *
      * @return $this
      */
@@ -2727,7 +2788,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata recipient_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata Metadata that indicates whether the `recipientId` property is editable.
      *
      * @return $this
      */
@@ -2775,7 +2836,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets require_all_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata require_all_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata Metadata that indicates whether the `requireAll` property is editable.
      *
      * @return $this
      */
@@ -2823,7 +2884,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata Metadata that indicates whether the `required` property is editable.
      *
      * @return $this
      */
@@ -2871,7 +2932,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata require_initial_on_shared_change_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.
      *
      * @return $this
      */
@@ -2919,7 +2980,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets round_decimal_places_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $round_decimal_places_metadata round_decimal_places_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $round_decimal_places_metadata Metadata that indicates whether the `roundDecimalPlaces` property is editable.
      *
      * @return $this
      */
@@ -2967,7 +3028,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets sender_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_required_metadata sender_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_required_metadata Metadata that indicates whether the `senderRequired` property is editable.
      *
      * @return $this
      */
@@ -3015,7 +3076,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets shared_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata shared_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata Metadata that indicates whether the `shared` property is editable.
      *
      * @return $this
      */
@@ -3063,7 +3124,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets share_to_recipients_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata share_to_recipients_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -3087,7 +3148,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets smart_contract_information
      *
-     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information Reserved for DocuSign.
      *
      * @return $this
      */
@@ -3159,7 +3220,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets status_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata status_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata Metadata that indicates whether the `status` property is editable.
      *
      * @return $this
      */
@@ -3207,7 +3268,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata tab_group_labels_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata Metadata that indicates whether the `tabGroupLabels` property is editable.
      *
      * @return $this
      */
@@ -3255,7 +3316,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata Metadata that indicates whether the `tabId` property is editable.
      *
      * @return $this
      */
@@ -3303,7 +3364,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata tab_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata Metadata that indicates whether the `tabLabel` property is editable.
      *
      * @return $this
      */
@@ -3351,7 +3412,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata tab_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata Metadata that indicates whether the `tabOrder` property is editable.
      *
      * @return $this
      */
@@ -3399,7 +3460,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata tab_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata Metadata that indicates whether the `tabType` property is editable.
      *
      * @return $this
      */
@@ -3447,7 +3508,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata template_locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata Metadata that indicates whether the `templateLocked` property is editable.
      *
      * @return $this
      */
@@ -3495,7 +3556,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets template_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata template_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata Metadata that indicates whether the `templateRequired` property is editable.
      *
      * @return $this
      */
@@ -3543,7 +3604,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets tool_tip_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata tool_tip_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata Metadata that indicates whether the `toolTip` property is editable.
      *
      * @return $this
      */
@@ -3591,7 +3652,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets underline_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata underline_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata Metadata that indicates whether the `underline` property is editable.
      *
      * @return $this
      */
@@ -3639,7 +3700,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets validation_message_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $validation_message_metadata validation_message_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $validation_message_metadata Metadata that indicates whether the `validationMessage` property is editable.
      *
      * @return $this
      */
@@ -3687,7 +3748,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets validation_pattern_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $validation_pattern_metadata validation_pattern_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $validation_pattern_metadata Metadata that indicates whether the `validationPattern` property is editable.
      *
      * @return $this
      */
@@ -3735,7 +3796,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata Metadata that indicates whether the `value` property is editable.
      *
      * @return $this
      */
@@ -3783,7 +3844,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets width_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata width_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata Metadata that indicates whether the `width` property is editable.
      *
      * @return $this
      */
@@ -3831,7 +3892,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets x_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata x_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata Metadata that indicates whether the `xPosition` property is editable.
      *
      * @return $this
      */
@@ -3879,7 +3940,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
     /**
      * Sets y_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata y_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata Metadata that indicates whether the `yPosition` property is editable.
      *
      * @return $this
      */
@@ -3896,6 +3957,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -3908,6 +3970,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -3921,6 +3984,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -3937,6 +4001,7 @@ class FormulaTab implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

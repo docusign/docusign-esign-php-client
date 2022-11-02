@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * UserSettingsInformation Class Doc Comment
  *
  * @category    Class
+ * @description Properties that configure the settings for a user. Some elements of this object have a &#x60;metadata&#x60; property, which includes the following: - &#x60;rights&#x60;: The calling users permissions to edit this setting (can be &#x60;editable&#x60; or &#x60;read_only&#x60;) - &#x60;uiHint&#x60;: Internally used to build UIs (can be &#x60;available&#x60; or &#x60;hidden&#x60;) - &#x60;options&#x60;: The values supported for this setting (not all settings have this element)
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class UserSettingsInformation implements ModelInterface, ArrayAccess
@@ -112,6 +113,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ds_pro' => '?string',
         'enable_ds_pro_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type' => '?string',
+        'enable_key_terms_suggestions_by_document_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sequential_signing_api' => '?string',
         'enable_sequential_signing_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_sequential_signing_ui' => '?string',
@@ -179,7 +182,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => '?string',
         'transaction_point_user_name_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'vaulting_mode' => '?string',
-        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
+        'vaulting_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'web_forms' => '?string',
+        'web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
     /**
@@ -241,6 +246,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => null,
         'enable_ds_pro' => null,
         'enable_ds_pro_metadata' => null,
+        'enable_key_terms_suggestions_by_document_type' => null,
+        'enable_key_terms_suggestions_by_document_type_metadata' => null,
         'enable_sequential_signing_api' => null,
         'enable_sequential_signing_api_metadata' => null,
         'enable_sequential_signing_ui' => null,
@@ -308,7 +315,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => null,
         'transaction_point_user_name_metadata' => null,
         'vaulting_mode' => null,
-        'vaulting_mode_metadata' => null
+        'vaulting_mode_metadata' => null,
+        'web_forms' => null,
+        'web_forms_metadata' => null
     ];
 
     /**
@@ -391,6 +400,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'disableOtherActionsMetadata',
         'enable_ds_pro' => 'enableDSPro',
         'enable_ds_pro_metadata' => 'enableDSProMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_sequential_signing_api' => 'enableSequentialSigningAPI',
         'enable_sequential_signing_api_metadata' => 'enableSequentialSigningAPIMetadata',
         'enable_sequential_signing_ui' => 'enableSequentialSigningUI',
@@ -458,7 +469,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => 'transactionPointUserName',
         'transaction_point_user_name_metadata' => 'transactionPointUserNameMetadata',
         'vaulting_mode' => 'vaultingMode',
-        'vaulting_mode_metadata' => 'vaultingModeMetadata'
+        'vaulting_mode_metadata' => 'vaultingModeMetadata',
+        'web_forms' => 'webForms',
+        'web_forms_metadata' => 'webFormsMetadata'
     ];
 
     /**
@@ -520,6 +533,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'setDisableOtherActionsMetadata',
         'enable_ds_pro' => 'setEnableDsPro',
         'enable_ds_pro_metadata' => 'setEnableDsProMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'setEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_sequential_signing_api' => 'setEnableSequentialSigningApi',
         'enable_sequential_signing_api_metadata' => 'setEnableSequentialSigningApiMetadata',
         'enable_sequential_signing_ui' => 'setEnableSequentialSigningUi',
@@ -587,7 +602,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => 'setTransactionPointUserName',
         'transaction_point_user_name_metadata' => 'setTransactionPointUserNameMetadata',
         'vaulting_mode' => 'setVaultingMode',
-        'vaulting_mode_metadata' => 'setVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'setVaultingModeMetadata',
+        'web_forms' => 'setWebForms',
+        'web_forms_metadata' => 'setWebFormsMetadata'
     ];
 
     /**
@@ -649,6 +666,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'disable_other_actions_metadata' => 'getDisableOtherActionsMetadata',
         'enable_ds_pro' => 'getEnableDsPro',
         'enable_ds_pro_metadata' => 'getEnableDsProMetadata',
+        'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata' => 'getEnableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_sequential_signing_api' => 'getEnableSequentialSigningApi',
         'enable_sequential_signing_api_metadata' => 'getEnableSequentialSigningApiMetadata',
         'enable_sequential_signing_ui' => 'getEnableSequentialSigningUi',
@@ -716,7 +735,9 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'transaction_point_user_name' => 'getTransactionPointUserName',
         'transaction_point_user_name_metadata' => 'getTransactionPointUserNameMetadata',
         'vaulting_mode' => 'getVaultingMode',
-        'vaulting_mode_metadata' => 'getVaultingModeMetadata'
+        'vaulting_mode_metadata' => 'getVaultingModeMetadata',
+        'web_forms' => 'getWebForms',
+        'web_forms_metadata' => 'getWebFormsMetadata'
     ];
 
     /**
@@ -832,6 +853,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['disable_other_actions_metadata'] = isset($data['disable_other_actions_metadata']) ? $data['disable_other_actions_metadata'] : null;
         $this->container['enable_ds_pro'] = isset($data['enable_ds_pro']) ? $data['enable_ds_pro'] : null;
         $this->container['enable_ds_pro_metadata'] = isset($data['enable_ds_pro_metadata']) ? $data['enable_ds_pro_metadata'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = isset($data['enable_key_terms_suggestions_by_document_type_metadata']) ? $data['enable_key_terms_suggestions_by_document_type_metadata'] : null;
         $this->container['enable_sequential_signing_api'] = isset($data['enable_sequential_signing_api']) ? $data['enable_sequential_signing_api'] : null;
         $this->container['enable_sequential_signing_api_metadata'] = isset($data['enable_sequential_signing_api_metadata']) ? $data['enable_sequential_signing_api_metadata'] : null;
         $this->container['enable_sequential_signing_ui'] = isset($data['enable_sequential_signing_ui']) ? $data['enable_sequential_signing_ui'] : null;
@@ -900,6 +923,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['transaction_point_user_name_metadata'] = isset($data['transaction_point_user_name_metadata']) ? $data['transaction_point_user_name_metadata'] : null;
         $this->container['vaulting_mode'] = isset($data['vaulting_mode']) ? $data['vaulting_mode'] : null;
         $this->container['vaulting_mode_metadata'] = isset($data['vaulting_mode_metadata']) ? $data['vaulting_mode_metadata'] : null;
+        $this->container['web_forms'] = isset($data['web_forms']) ? $data['web_forms'] : null;
+        $this->container['web_forms_metadata'] = isset($data['web_forms_metadata']) ? $data['web_forms_metadata'] : null;
     }
 
     /**
@@ -939,7 +964,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_management_granular
      *
-     * @param \DocuSign\eSign\Model\UserAccountManagementGranularInformation $account_management_granular account_management_granular
+     * @param \DocuSign\eSign\Model\UserAccountManagementGranularInformation $account_management_granular Describes which account management capabilities a user has.
      *
      * @return $this
      */
@@ -987,7 +1012,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets admin_only_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $admin_only_metadata admin_only_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $admin_only_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1059,7 +1084,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_transfer_to_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_envelope_transfer_to_metadata allow_envelope_transfer_to_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_envelope_transfer_to_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1107,7 +1132,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_eseal_recipients_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_eseal_recipients_metadata allow_eseal_recipients_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_eseal_recipients_metadata Metadata about the `allowEsealRecipientsMetadata` property.
      *
      * @return $this
      */
@@ -1155,7 +1180,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_power_forms_admin_to_access_all_power_form_envelope_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_power_forms_admin_to_access_all_power_form_envelope_metadata allow_power_forms_admin_to_access_all_power_form_envelope_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_power_forms_admin_to_access_all_power_form_envelope_metadata Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata` property.
      *
      * @return $this
      */
@@ -1203,7 +1228,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_recipient_language_selection_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_recipient_language_selection_metadata allow_recipient_language_selection_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_recipient_language_selection_metadata Metadata for allowRecipientLanguageSelection.
      *
      * @return $this
      */
@@ -1251,7 +1276,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_send_on_behalf_of_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_send_on_behalf_of_metadata allow_send_on_behalf_of_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_send_on_behalf_of_metadata Metadata for allowSendOnBehalfOf.
      *
      * @return $this
      */
@@ -1299,7 +1324,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_supplemental_documents_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_supplemental_documents_metadata allow_supplemental_documents_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_supplemental_documents_metadata Metadata that indicates whether the `allowSupplementalDocuments` property is editable.
      *
      * @return $this
      */
@@ -1371,7 +1396,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_account_wide_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $api_account_wide_access_metadata api_account_wide_access_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $api_account_wide_access_metadata Metadata for apiAccountWideAccess.
      *
      * @return $this
      */
@@ -1419,7 +1444,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets api_can_export_ac_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $api_can_export_ac_metadata api_can_export_ac_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $api_can_export_ac_metadata Metadata about the `apiCanExportACMetadata` property.
      *
      * @return $this
      */
@@ -1467,7 +1492,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $bulk_send_metadata bulk_send_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $bulk_send_metadata Metadata that indicates whether the `bulkSend` property is editable.
      *
      * @return $this
      */
@@ -1515,7 +1540,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_charge_account_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_charge_account_metadata can_charge_account_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_charge_account_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1563,7 +1588,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_edit_shared_addressbook_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_edit_shared_addressbook_metadata can_edit_shared_addressbook_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_edit_shared_addressbook_metadata Metadata about the `canEditSharedAddressbookMetadata` property.
      *
      * @return $this
      */
@@ -1611,7 +1636,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_lock_envelopes_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_lock_envelopes_metadata can_lock_envelopes_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_lock_envelopes_metadata Metadata about the `canLockEnvelopes` property.
      *
      * @return $this
      */
@@ -1659,7 +1684,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_manage_account_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_metadata can_manage_account_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_metadata Metadata about the `canManageAccountMetadata` property.
      *
      * @return $this
      */
@@ -1707,7 +1732,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_manage_distributor_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_distributor_metadata can_manage_distributor_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_distributor_metadata Metadata about the `canManageDistributor` property.
      *
      * @return $this
      */
@@ -1755,7 +1780,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_manage_templates_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_templates_metadata can_manage_templates_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_templates_metadata Metadata about the `canManageTemplates` property.
      *
      * @return $this
      */
@@ -1803,7 +1828,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_api_requests_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_api_requests_metadata can_send_api_requests_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_api_requests_metadata Metadata about the `canSendAPIRequests` property.
      *
      * @return $this
      */
@@ -1851,7 +1876,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_envelope_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelope_metadata can_send_envelope_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelope_metadata Metadata about the `canSendEnvelope` property.
      *
      * @return $this
      */
@@ -1899,7 +1924,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_envelopes_via_sms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelopes_via_sms_metadata can_send_envelopes_via_sms_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelopes_via_sms_metadata 
      *
      * @return $this
      */
@@ -1947,7 +1972,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_sign_envelope_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_sign_envelope_metadata can_sign_envelope_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_sign_envelope_metadata Metadata about the `canSignEnvelope` property.
      *
      * @return $this
      */
@@ -1995,7 +2020,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_use_scratchpad_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_use_scratchpad_metadata can_use_scratchpad_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_use_scratchpad_metadata Metadata about the `canUseScratchpad` property.
      *
      * @return $this
      */
@@ -2043,7 +2068,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_use_smart_contracts_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_use_smart_contracts_metadata can_use_smart_contracts_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_use_smart_contracts_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2091,7 +2116,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_document_upload_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_document_upload_metadata disable_document_upload_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_document_upload_metadata Metadata that indicates whether the `disableDocumentUpload` property is editable.
      *
      * @return $this
      */
@@ -2139,7 +2164,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_other_actions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_other_actions_metadata disable_other_actions_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_other_actions_metadata Metadata that indicates whether the `disableOtherActions` property is editable.
      *
      * @return $this
      */
@@ -2187,13 +2212,61 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ds_pro_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ds_pro_metadata enable_ds_pro_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ds_pro_metadata Metadata that indicates whether the `enableDSPro` property is editable.
      *
      * @return $this
      */
     public function setEnableDsProMetadata($enable_ds_pro_metadata)
     {
         $this->container['enable_ds_pro_metadata'] = $enable_ds_pro_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type
+     *
+     * @return ?string
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentType()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type
+     *
+     * @param ?string $enable_key_terms_suggestions_by_document_type 
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentType($enable_key_terms_suggestions_by_document_type)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type'] = $enable_key_terms_suggestions_by_document_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableKeyTermsSuggestionsByDocumentTypeMetadata()
+    {
+        return $this->container['enable_key_terms_suggestions_by_document_type_metadata'];
+    }
+
+    /**
+     * Sets enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata enable_key_terms_suggestions_by_document_type_metadata
+     *
+     * @return $this
+     */
+    public function setEnableKeyTermsSuggestionsByDocumentTypeMetadata($enable_key_terms_suggestions_by_document_type_metadata)
+    {
+        $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = $enable_key_terms_suggestions_by_document_type_metadata;
 
         return $this;
     }
@@ -2235,7 +2308,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_api_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sequential_signing_api_metadata enable_sequential_signing_api_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sequential_signing_api_metadata Metadata that indicates whether the `enableSequentialSigningAPI` property is editable.
      *
      * @return $this
      */
@@ -2283,7 +2356,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_ui_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sequential_signing_ui_metadata enable_sequential_signing_ui_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sequential_signing_ui_metadata Metadata that indicates whether the `enableSequentialSigningUI` property is editable.
      *
      * @return $this
      */
@@ -2331,7 +2404,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signer_attachments_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signer_attachments_metadata enable_signer_attachments_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signer_attachments_metadata Metadata that indicates whether the `enableSignerAttachments` property is editable.
      *
      * @return $this
      */
@@ -2379,7 +2452,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_on_paper_override_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sign_on_paper_override_metadata enable_sign_on_paper_override_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sign_on_paper_override_metadata Metadata that indicates whether the `enableSignOnPaperOverride` property is editable.
      *
      * @return $this
      */
@@ -2427,7 +2500,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_transaction_point_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_transaction_point_metadata enable_transaction_point_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_transaction_point_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2475,7 +2548,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_vaulting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_vaulting_metadata enable_vaulting_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_vaulting_metadata Metadata that indicates whether the `enableVaulting` property is editable.
      *
      * @return $this
      */
@@ -2547,7 +2620,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets locale_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $locale_metadata locale_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $locale_metadata Metadata about the `locale` property.
      *
      * @return $this
      */
@@ -2571,7 +2644,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets locale_policy
      *
-     * @param \DocuSign\eSign\Model\LocalePolicy $locale_policy locale_policy
+     * @param \DocuSign\eSign\Model\LocalePolicy $locale_policy Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2619,7 +2692,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets manage_clickwraps_mode_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $manage_clickwraps_mode_metadata manage_clickwraps_mode_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $manage_clickwraps_mode_metadata Metadata about the `manageClickwrapsMode` property.
      *
      * @return $this
      */
@@ -2667,7 +2740,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $modified_by_metadata modified_by_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $modified_by_metadata Metadata about the `modifiedBy` property.
      *
      * @return $this
      */
@@ -2715,7 +2788,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $modified_date_metadata modified_date_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $modified_date_metadata Metadata about the `modifiedDate` property.
      *
      * @return $this
      */
@@ -2763,7 +2836,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets modified_page_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $modified_page_metadata modified_page_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $modified_page_metadata Metadata about the `modifiedPage` property.
      *
      * @return $this
      */
@@ -2811,7 +2884,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets new_send_ui_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $new_send_ui_metadata new_send_ui_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $new_send_ui_metadata Metadata about the `newSendUI` property.
      *
      * @return $this
      */
@@ -2859,7 +2932,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets power_form_mode_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $power_form_mode_metadata power_form_mode_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $power_form_mode_metadata Metadata about the `powerFormMode` property.
      *
      * @return $this
      */
@@ -2907,7 +2980,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_viewed_notification_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $recipient_viewed_notification_metadata recipient_viewed_notification_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $recipient_viewed_notification_metadata Metadata about the `recipientViewedNotification` property.
      *
      * @return $this
      */
@@ -2979,7 +3052,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets self_signed_recipient_email_document_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $self_signed_recipient_email_document_metadata self_signed_recipient_email_document_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $self_signed_recipient_email_document_metadata Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable.
      *
      * @return $this
      */
@@ -3003,7 +3076,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sender_email_notifications
      *
-     * @param \DocuSign\eSign\Model\SenderEmailNotifications $sender_email_notifications sender_email_notifications
+     * @param \DocuSign\eSign\Model\SenderEmailNotifications $sender_email_notifications An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed
      *
      * @return $this
      */
@@ -3027,7 +3100,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_email_notifications
      *
-     * @param \DocuSign\eSign\Model\SignerEmailNotifications $signer_email_notifications signer_email_notifications
+     * @param \DocuSign\eSign\Model\SignerEmailNotifications $signer_email_notifications An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created.
      *
      * @return $this
      */
@@ -3099,7 +3172,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_accept_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_accept_metadata supplemental_documents_must_accept_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_accept_metadata Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.
      *
      * @return $this
      */
@@ -3147,7 +3220,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_read_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_read_metadata supplemental_documents_must_read_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_read_metadata Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.
      *
      * @return $this
      */
@@ -3195,7 +3268,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_view_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_view_metadata supplemental_documents_must_view_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $supplemental_documents_must_view_metadata Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.
      *
      * @return $this
      */
@@ -3243,7 +3316,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_active_creation_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $template_active_creation_metadata template_active_creation_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $template_active_creation_metadata Metadata about the `templateActiveCreation` property.
      *
      * @return $this
      */
@@ -3291,7 +3364,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_apply_notify_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $template_apply_notify_metadata template_apply_notify_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $template_apply_notify_metadata Metadata about the `templateApplyNotify` property.
      *
      * @return $this
      */
@@ -3339,7 +3412,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_auto_matching_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $template_auto_matching_metadata template_auto_matching_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $template_auto_matching_metadata Metadata about the `templateAutoMatching` property.
      *
      * @return $this
      */
@@ -3387,7 +3460,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_matching_sensitivity_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $template_matching_sensitivity_metadata template_matching_sensitivity_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $template_matching_sensitivity_metadata Metadata about the `tempalteMatchingSensitivity` property.
      *
      * @return $this
      */
@@ -3435,7 +3508,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets template_page_level_matching_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $template_page_level_matching_metadata template_page_level_matching_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $template_page_level_matching_metadata Metadata about the `templatePageLevelMatching` property.
      *
      * @return $this
      */
@@ -3483,7 +3556,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_dst_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_dst_metadata timezone_dst_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_dst_metadata Metadata about the `timezoneDST` property.
      *
      * @return $this
      */
@@ -3531,7 +3604,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_mask_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_mask_metadata timezone_mask_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_mask_metadata Metadata about the `timezoneMask` property.
      *
      * @return $this
      */
@@ -3579,7 +3652,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_offset_metadata timezone_offset_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_offset_metadata Metadata about the `timezoneOffset` property.
      *
      * @return $this
      */
@@ -3627,7 +3700,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_sending_pref_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_sending_pref_metadata timezone_sending_pref_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_sending_pref_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -3675,7 +3748,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_signing_pref_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_signing_pref_metadata timezone_signing_pref_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $timezone_signing_pref_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -3723,7 +3796,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_point_site_name_url_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $transaction_point_site_name_url_metadata transaction_point_site_name_url_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $transaction_point_site_name_url_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -3771,7 +3844,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_point_user_name_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $transaction_point_user_name_metadata transaction_point_user_name_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $transaction_point_user_name_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -3819,13 +3892,61 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets vaulting_mode_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $vaulting_mode_metadata vaulting_mode_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $vaulting_mode_metadata Metadata about the `vaultingMode` property.
      *
      * @return $this
      */
     public function setVaultingModeMetadata($vaulting_mode_metadata)
     {
         $this->container['vaulting_mode_metadata'] = $vaulting_mode_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms
+     *
+     * @return ?string
+     */
+    public function getWebForms()
+    {
+        return $this->container['web_forms'];
+    }
+
+    /**
+     * Sets web_forms
+     *
+     * @param ?string $web_forms 
+     *
+     * @return $this
+     */
+    public function setWebForms($web_forms)
+    {
+        $this->container['web_forms'] = $web_forms;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_forms_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getWebFormsMetadata()
+    {
+        return $this->container['web_forms_metadata'];
+    }
+
+    /**
+     * Sets web_forms_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata web_forms_metadata
+     *
+     * @return $this
+     */
+    public function setWebFormsMetadata($web_forms_metadata)
+    {
+        $this->container['web_forms_metadata'] = $web_forms_metadata;
 
         return $this;
     }
@@ -3836,6 +3957,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -3848,6 +3970,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -3861,6 +3984,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -3877,6 +4001,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

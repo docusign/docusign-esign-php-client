@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * SignerAttachment Class Doc Comment
  *
  * @category    Class
+ * @description A tab that allows the recipient to attach supporting documents to an envelope.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class SignerAttachment implements ModelInterface, ArrayAccess
@@ -79,6 +80,8 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_y_offset' => '?string',
         'anchor_y_offset_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'caption' => '?string',
+        'caption_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_label' => '?string',
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_value' => '?string',
@@ -165,6 +168,8 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => null,
         'anchor_y_offset' => null,
         'anchor_y_offset_metadata' => null,
+        'caption' => null,
+        'caption_metadata' => null,
         'conditional_parent_label' => null,
         'conditional_parent_label_metadata' => null,
         'conditional_parent_value' => null,
@@ -272,6 +277,8 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'anchorXOffsetMetadata',
         'anchor_y_offset' => 'anchorYOffset',
         'anchor_y_offset_metadata' => 'anchorYOffsetMetadata',
+        'caption' => 'caption',
+        'caption_metadata' => 'captionMetadata',
         'conditional_parent_label' => 'conditionalParentLabel',
         'conditional_parent_label_metadata' => 'conditionalParentLabelMetadata',
         'conditional_parent_value' => 'conditionalParentValue',
@@ -358,6 +365,8 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'setAnchorXOffsetMetadata',
         'anchor_y_offset' => 'setAnchorYOffset',
         'anchor_y_offset_metadata' => 'setAnchorYOffsetMetadata',
+        'caption' => 'setCaption',
+        'caption_metadata' => 'setCaptionMetadata',
         'conditional_parent_label' => 'setConditionalParentLabel',
         'conditional_parent_label_metadata' => 'setConditionalParentLabelMetadata',
         'conditional_parent_value' => 'setConditionalParentValue',
@@ -444,6 +453,8 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         'anchor_x_offset_metadata' => 'getAnchorXOffsetMetadata',
         'anchor_y_offset' => 'getAnchorYOffset',
         'anchor_y_offset_metadata' => 'getAnchorYOffsetMetadata',
+        'caption' => 'getCaption',
+        'caption_metadata' => 'getCaptionMetadata',
         'conditional_parent_label' => 'getConditionalParentLabel',
         'conditional_parent_label_metadata' => 'getConditionalParentLabelMetadata',
         'conditional_parent_value' => 'getConditionalParentValue',
@@ -584,6 +595,8 @@ class SignerAttachment implements ModelInterface, ArrayAccess
         $this->container['anchor_x_offset_metadata'] = isset($data['anchor_x_offset_metadata']) ? $data['anchor_x_offset_metadata'] : null;
         $this->container['anchor_y_offset'] = isset($data['anchor_y_offset']) ? $data['anchor_y_offset'] : null;
         $this->container['anchor_y_offset_metadata'] = isset($data['anchor_y_offset_metadata']) ? $data['anchor_y_offset_metadata'] : null;
+        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
+        $this->container['caption_metadata'] = isset($data['caption_metadata']) ? $data['caption_metadata'] : null;
         $this->container['conditional_parent_label'] = isset($data['conditional_parent_label']) ? $data['conditional_parent_label'] : null;
         $this->container['conditional_parent_label_metadata'] = isset($data['conditional_parent_label_metadata']) ? $data['conditional_parent_label_metadata'] : null;
         $this->container['conditional_parent_value'] = isset($data['conditional_parent_value']) ? $data['conditional_parent_value'] : null;
@@ -705,7 +718,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.
      *
      * @return $this
      */
@@ -753,7 +766,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata anchor_case_sensitive_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata Metadata that indicates whether the `anchorCaseSensitive` property is editable.
      *
      * @return $this
      */
@@ -801,7 +814,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata anchor_horizontal_alignment_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.
      *
      * @return $this
      */
@@ -849,7 +862,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata anchor_ignore_if_not_present_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.
      *
      * @return $this
      */
@@ -897,7 +910,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata anchor_match_whole_word_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata Metadata that indicates whether the `anchorMatchWholeWord` property is editable.
      *
      * @return $this
      */
@@ -945,7 +958,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata anchor_string_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata Metadata that indicates whether the `anchorString` property is editable.
      *
      * @return $this
      */
@@ -993,7 +1006,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata anchor_tab_processor_version_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1041,7 +1054,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata anchor_units_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata Metadata that indicates whether the `anchorUnits` property is editable.
      *
      * @return $this
      */
@@ -1089,7 +1102,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata anchor_x_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata Metadata that indicates whether the `anchorXOffset` property is editable.
      *
      * @return $this
      */
@@ -1137,13 +1150,61 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata anchor_y_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata Metadata that indicates whether the `anchorYOffset` property is editable.
      *
      * @return $this
      */
     public function setAnchorYOffsetMetadata($anchor_y_offset_metadata)
     {
         $this->container['anchor_y_offset_metadata'] = $anchor_y_offset_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption
+     *
+     * @return ?string
+     */
+    public function getCaption()
+    {
+        return $this->container['caption'];
+    }
+
+    /**
+     * Sets caption
+     *
+     * @param ?string $caption 
+     *
+     * @return $this
+     */
+    public function setCaption($caption)
+    {
+        $this->container['caption'] = $caption;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getCaptionMetadata()
+    {
+        return $this->container['caption_metadata'];
+    }
+
+    /**
+     * Sets caption_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     *
+     * @return $this
+     */
+    public function setCaptionMetadata($caption_metadata)
+    {
+        $this->container['caption_metadata'] = $caption_metadata;
 
         return $this;
     }
@@ -1185,7 +1246,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata conditional_parent_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata Metadata that indicates whether the `conditionalParentLabel` property is editable.
      *
      * @return $this
      */
@@ -1233,7 +1294,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata conditional_parent_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata Metadata that indicates whether the `conditionalParentValue` property is editable.
      *
      * @return $this
      */
@@ -1281,7 +1342,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata custom_tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata Metadata that indicates whether the `customTabId` property is editable.
      *
      * @return $this
      */
@@ -1329,7 +1390,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets document_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata document_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata Metadata that indicates whether the `documentId` property is editable.
      *
      * @return $this
      */
@@ -1353,7 +1414,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1401,7 +1462,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets form_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata form_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata Metadata that indicates whether the `formOrder` property is editable.
      *
      * @return $this
      */
@@ -1449,7 +1510,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata form_page_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata Metadata that indicates whether the `formPageLabel` property is editable.
      *
      * @return $this
      */
@@ -1497,7 +1558,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata form_page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata Metadata that indicates whether the `fromPageNumber` property is editable.
      *
      * @return $this
      */
@@ -1569,7 +1630,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets height_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata height_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata Metadata that indicates whether the `height` property is editable.
      *
      * @return $this
      */
@@ -1593,7 +1654,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field
      *
-     * @param \DocuSign\eSign\Model\MergeField $merge_field merge_field
+     * @param \DocuSign\eSign\Model\MergeField $merge_field Contains the information necessary to map the tab to a field in SalesForce.
      *
      * @return $this
      */
@@ -1665,7 +1726,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates whether the `name` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1713,7 +1774,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets optional_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $optional_metadata optional_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $optional_metadata Metadata that indicates whether the `optional` property is editable.
      *
      * @return $this
      */
@@ -1761,7 +1822,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata Metadata that indicates whether the `pageNumber` property is editable.
      *
      * @return $this
      */
@@ -1833,7 +1894,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata recipient_id_guid_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata Metadata that indicates whether the `recipientIdGuid` property is editable.
      *
      * @return $this
      */
@@ -1857,7 +1918,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata recipient_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata Metadata that indicates whether the `recipientId` property is editable.
      *
      * @return $this
      */
@@ -1905,7 +1966,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets scale_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $scale_value_metadata scale_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $scale_value_metadata Metadata that indicates whether the `scaleValue` property is editable.
      *
      * @return $this
      */
@@ -1929,7 +1990,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets smart_contract_information
      *
-     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2001,7 +2062,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets status_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata status_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata Metadata that indicates whether the `status` property is editable.
      *
      * @return $this
      */
@@ -2049,7 +2110,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata tab_group_labels_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata Metadata that indicates whether the `tabGroupLabels` property is editable.
      *
      * @return $this
      */
@@ -2097,7 +2158,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata Metadata that indicates whether the `tabId` property is editable.
      *
      * @return $this
      */
@@ -2145,7 +2206,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata tab_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata Metadata that indicates whether the `tabLabel` property is editable.
      *
      * @return $this
      */
@@ -2193,7 +2254,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata tab_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata Metadata that indicates whether the `tabOrder` property is editable.
      *
      * @return $this
      */
@@ -2241,7 +2302,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata tab_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata Metadata that indicates whether the `tabType` property is editable.
      *
      * @return $this
      */
@@ -2289,7 +2350,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata template_locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata Metadata that indicates whether the `templateLocked` property is editable.
      *
      * @return $this
      */
@@ -2337,7 +2398,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets template_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata template_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata Metadata that indicates whether the `templateRequired` property is editable.
      *
      * @return $this
      */
@@ -2385,7 +2446,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets tool_tip_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata tool_tip_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata Metadata that indicates whether the `toolTip` property is editable.
      *
      * @return $this
      */
@@ -2433,7 +2494,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets width_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata width_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata Metadata that indicates whether the `width` property is editable.
      *
      * @return $this
      */
@@ -2481,7 +2542,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets x_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata x_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata Metadata that indicates whether the `xPosition` property is editable.
      *
      * @return $this
      */
@@ -2529,7 +2590,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets y_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata y_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata Metadata that indicates whether the `yPosition` property is editable.
      *
      * @return $this
      */
@@ -2546,6 +2607,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2558,6 +2620,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -2571,6 +2634,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -2587,6 +2651,7 @@ class SignerAttachment implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * PrefillTabs Class Doc Comment
  *
  * @category    Class
+ * @description Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.  Only the following tab types can be prefill tabs:  - text - check boxes - radio buttons    [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class PrefillTabs implements ModelInterface, ArrayAccess
@@ -60,11 +61,16 @@ class PrefillTabs implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'checkbox_tabs' => '\DocuSign\eSign\Model\Checkbox[]',
+        'date_tabs' => '\DocuSign\eSign\Model\Date[]',
+        'email_tabs' => '\DocuSign\eSign\Model\Email[]',
+        'number_tabs' => '\DocuSign\eSign\Model\Number[]',
         'radio_group_tabs' => '\DocuSign\eSign\Model\RadioGroup[]',
         'sender_company_tabs' => '\DocuSign\eSign\Model\SenderCompany[]',
         'sender_name_tabs' => '\DocuSign\eSign\Model\SenderName[]',
+        'ssn_tabs' => '\DocuSign\eSign\Model\Ssn[]',
         'tab_groups' => '\DocuSign\eSign\Model\TabGroup[]',
-        'text_tabs' => '\DocuSign\eSign\Model\Text[]'
+        'text_tabs' => '\DocuSign\eSign\Model\Text[]',
+        'zip_tabs' => '\DocuSign\eSign\Model\Zip[]'
     ];
 
     /**
@@ -74,11 +80,16 @@ class PrefillTabs implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'checkbox_tabs' => null,
+        'date_tabs' => null,
+        'email_tabs' => null,
+        'number_tabs' => null,
         'radio_group_tabs' => null,
         'sender_company_tabs' => null,
         'sender_name_tabs' => null,
+        'ssn_tabs' => null,
         'tab_groups' => null,
-        'text_tabs' => null
+        'text_tabs' => null,
+        'zip_tabs' => null
     ];
 
     /**
@@ -109,11 +120,16 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'checkbox_tabs' => 'checkboxTabs',
+        'date_tabs' => 'dateTabs',
+        'email_tabs' => 'emailTabs',
+        'number_tabs' => 'numberTabs',
         'radio_group_tabs' => 'radioGroupTabs',
         'sender_company_tabs' => 'senderCompanyTabs',
         'sender_name_tabs' => 'senderNameTabs',
+        'ssn_tabs' => 'ssnTabs',
         'tab_groups' => 'tabGroups',
-        'text_tabs' => 'textTabs'
+        'text_tabs' => 'textTabs',
+        'zip_tabs' => 'zipTabs'
     ];
 
     /**
@@ -123,11 +139,16 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'checkbox_tabs' => 'setCheckboxTabs',
+        'date_tabs' => 'setDateTabs',
+        'email_tabs' => 'setEmailTabs',
+        'number_tabs' => 'setNumberTabs',
         'radio_group_tabs' => 'setRadioGroupTabs',
         'sender_company_tabs' => 'setSenderCompanyTabs',
         'sender_name_tabs' => 'setSenderNameTabs',
+        'ssn_tabs' => 'setSsnTabs',
         'tab_groups' => 'setTabGroups',
-        'text_tabs' => 'setTextTabs'
+        'text_tabs' => 'setTextTabs',
+        'zip_tabs' => 'setZipTabs'
     ];
 
     /**
@@ -137,11 +158,16 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'checkbox_tabs' => 'getCheckboxTabs',
+        'date_tabs' => 'getDateTabs',
+        'email_tabs' => 'getEmailTabs',
+        'number_tabs' => 'getNumberTabs',
         'radio_group_tabs' => 'getRadioGroupTabs',
         'sender_company_tabs' => 'getSenderCompanyTabs',
         'sender_name_tabs' => 'getSenderNameTabs',
+        'ssn_tabs' => 'getSsnTabs',
         'tab_groups' => 'getTabGroups',
-        'text_tabs' => 'getTextTabs'
+        'text_tabs' => 'getTextTabs',
+        'zip_tabs' => 'getZipTabs'
     ];
 
     /**
@@ -205,11 +231,16 @@ class PrefillTabs implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['checkbox_tabs'] = isset($data['checkbox_tabs']) ? $data['checkbox_tabs'] : null;
+        $this->container['date_tabs'] = isset($data['date_tabs']) ? $data['date_tabs'] : null;
+        $this->container['email_tabs'] = isset($data['email_tabs']) ? $data['email_tabs'] : null;
+        $this->container['number_tabs'] = isset($data['number_tabs']) ? $data['number_tabs'] : null;
         $this->container['radio_group_tabs'] = isset($data['radio_group_tabs']) ? $data['radio_group_tabs'] : null;
         $this->container['sender_company_tabs'] = isset($data['sender_company_tabs']) ? $data['sender_company_tabs'] : null;
         $this->container['sender_name_tabs'] = isset($data['sender_name_tabs']) ? $data['sender_name_tabs'] : null;
+        $this->container['ssn_tabs'] = isset($data['ssn_tabs']) ? $data['ssn_tabs'] : null;
         $this->container['tab_groups'] = isset($data['tab_groups']) ? $data['tab_groups'] : null;
         $this->container['text_tabs'] = isset($data['text_tabs']) ? $data['text_tabs'] : null;
+        $this->container['zip_tabs'] = isset($data['zip_tabs']) ? $data['zip_tabs'] : null;
     }
 
     /**
@@ -256,6 +287,78 @@ class PrefillTabs implements ModelInterface, ArrayAccess
     public function setCheckboxTabs($checkbox_tabs)
     {
         $this->container['checkbox_tabs'] = $checkbox_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_tabs
+     *
+     * @return \DocuSign\eSign\Model\Date[]
+     */
+    public function getDateTabs()
+    {
+        return $this->container['date_tabs'];
+    }
+
+    /**
+     * Sets date_tabs
+     *
+     * @param \DocuSign\eSign\Model\Date[] $date_tabs Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.
+     *
+     * @return $this
+     */
+    public function setDateTabs($date_tabs)
+    {
+        $this->container['date_tabs'] = $date_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_tabs
+     *
+     * @return \DocuSign\eSign\Model\Email[]
+     */
+    public function getEmailTabs()
+    {
+        return $this->container['email_tabs'];
+    }
+
+    /**
+     * Sets email_tabs
+     *
+     * @param \DocuSign\eSign\Model\Email[] $email_tabs Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+     *
+     * @return $this
+     */
+    public function setEmailTabs($email_tabs)
+    {
+        $this->container['email_tabs'] = $email_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets number_tabs
+     *
+     * @return \DocuSign\eSign\Model\Number[]
+     */
+    public function getNumberTabs()
+    {
+        return $this->container['number_tabs'];
+    }
+
+    /**
+     * Sets number_tabs
+     *
+     * @param \DocuSign\eSign\Model\Number[] $number_tabs Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+     *
+     * @return $this
+     */
+    public function setNumberTabs($number_tabs)
+    {
+        $this->container['number_tabs'] = $number_tabs;
 
         return $this;
     }
@@ -333,6 +436,30 @@ class PrefillTabs implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets ssn_tabs
+     *
+     * @return \DocuSign\eSign\Model\Ssn[]
+     */
+    public function getSsnTabs()
+    {
+        return $this->container['ssn_tabs'];
+    }
+
+    /**
+     * Sets ssn_tabs
+     *
+     * @param \DocuSign\eSign\Model\Ssn[] $ssn_tabs Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+     *
+     * @return $this
+     */
+    public function setSsnTabs($ssn_tabs)
+    {
+        $this->container['ssn_tabs'] = $ssn_tabs;
+
+        return $this;
+    }
+
+    /**
      * Gets tab_groups
      *
      * @return \DocuSign\eSign\Model\TabGroup[]
@@ -379,6 +506,30 @@ class PrefillTabs implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets zip_tabs
+     *
+     * @return \DocuSign\eSign\Model\Zip[]
+     */
+    public function getZipTabs()
+    {
+        return $this->container['zip_tabs'];
+    }
+
+    /**
+     * Sets zip_tabs
+     *
+     * @param \DocuSign\eSign\Model\Zip[] $zip_tabs Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+     *
+     * @return $this
+     */
+    public function setZipTabs($zip_tabs)
+    {
+        $this->container['zip_tabs'] = $zip_tabs;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -386,6 +537,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -398,6 +550,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -411,6 +564,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -427,6 +581,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

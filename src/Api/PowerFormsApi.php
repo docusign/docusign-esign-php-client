@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -32,6 +33,15 @@ declare(strict_types=1);
 namespace DocuSign\eSign\Api\PowerFormsApi;
 
 
+/**
+ * GetPowerFormDataOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetPowerFormDataOptions
 {
     /**
@@ -42,6 +52,7 @@ class GetPowerFormDataOptions
 
     /**
      * Gets data_layout
+     *
      * @return ?string
      */
     public function getDataLayout(): ?string
@@ -52,6 +63,7 @@ class GetPowerFormDataOptions
     /**
      * Sets data_layout
      * @param ?string $data_layout 
+     *
      * @return self
      */
     public function setDataLayout(?string $data_layout): self
@@ -67,6 +79,7 @@ class GetPowerFormDataOptions
 
     /**
      * Gets from_date
+     *
      * @return ?string
      */
     public function getFromDate(): ?string
@@ -77,6 +90,7 @@ class GetPowerFormDataOptions
     /**
      * Sets from_date
      * @param ?string $from_date 
+     *
      * @return self
      */
     public function setFromDate(?string $from_date): self
@@ -92,6 +106,7 @@ class GetPowerFormDataOptions
 
     /**
      * Gets to_date
+     *
      * @return ?string
      */
     public function getToDate(): ?string
@@ -102,6 +117,7 @@ class GetPowerFormDataOptions
     /**
      * Sets to_date
      * @param ?string $to_date 
+     *
      * @return self
      */
     public function setToDate(?string $to_date): self
@@ -112,6 +128,15 @@ class GetPowerFormDataOptions
 }
 
 
+/**
+ * ListPowerFormSendersOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListPowerFormSendersOptions
 {
     /**
@@ -122,6 +147,7 @@ class ListPowerFormSendersOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -132,6 +158,7 @@ class ListPowerFormSendersOptions
     /**
      * Sets start_position
      * @param ?string $start_position 
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -142,6 +169,15 @@ class ListPowerFormSendersOptions
 }
 
 
+/**
+ * ListPowerFormsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListPowerFormsOptions
 {
     /**
@@ -152,6 +188,7 @@ class ListPowerFormsOptions
 
     /**
      * Gets from_date
+     *
      * @return ?string
      */
     public function getFromDate(): ?string
@@ -162,6 +199,7 @@ class ListPowerFormsOptions
     /**
      * Sets from_date
      * @param ?string $from_date 
+     *
      * @return self
      */
     public function setFromDate(?string $from_date): self
@@ -177,6 +215,7 @@ class ListPowerFormsOptions
 
     /**
      * Gets order
+     *
      * @return ?string
      */
     public function getOrder(): ?string
@@ -187,6 +226,7 @@ class ListPowerFormsOptions
     /**
      * Sets order
      * @param ?string $order 
+     *
      * @return self
      */
     public function setOrder(?string $order): self
@@ -202,6 +242,7 @@ class ListPowerFormsOptions
 
     /**
      * Gets order_by
+     *
      * @return ?string
      */
     public function getOrderBy(): ?string
@@ -212,11 +253,66 @@ class ListPowerFormsOptions
     /**
      * Sets order_by
      * @param ?string $order_by 
+     *
      * @return self
      */
     public function setOrderBy(?string $order_by): self
     {
         $this->order_by = $order_by;
+        return $this;
+    }
+    /**
+      * $search_fields 
+      * @var ?string
+      */
+    protected ?string $search_fields = null;
+
+    /**
+     * Gets search_fields
+     *
+     * @return ?string
+     */
+    public function getSearchFields(): ?string
+    {
+        return $this->search_fields;
+    }
+
+    /**
+     * Sets search_fields
+     * @param ?string $search_fields 
+     *
+     * @return self
+     */
+    public function setSearchFields(?string $search_fields): self
+    {
+        $this->search_fields = $search_fields;
+        return $this;
+    }
+    /**
+      * $search_text 
+      * @var ?string
+      */
+    protected ?string $search_text = null;
+
+    /**
+     * Gets search_text
+     *
+     * @return ?string
+     */
+    public function getSearchText(): ?string
+    {
+        return $this->search_text;
+    }
+
+    /**
+     * Sets search_text
+     * @param ?string $search_text 
+     *
+     * @return self
+     */
+    public function setSearchText(?string $search_text): self
+    {
+        $this->search_text = $search_text;
         return $this;
     }
     /**
@@ -227,6 +323,7 @@ class ListPowerFormsOptions
 
     /**
      * Gets to_date
+     *
      * @return ?string
      */
     public function getToDate(): ?string
@@ -237,6 +334,7 @@ class ListPowerFormsOptions
     /**
      * Sets to_date
      * @param ?string $to_date 
+     *
      * @return self
      */
     public function setToDate(?string $to_date): self
@@ -260,7 +358,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class PowerFormsApi
@@ -276,6 +375,7 @@ class PowerFormsApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -309,9 +409,9 @@ class PowerFormsApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -332,6 +432,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
@@ -348,6 +449,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
@@ -424,6 +526,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -440,6 +543,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -515,6 +619,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
@@ -531,6 +636,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\PowerFormsRequest $power_forms_request  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -607,6 +713,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
@@ -623,6 +730,7 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */
@@ -702,7 +810,8 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsFormDataResponse
      */
@@ -719,7 +828,8 @@ class PowerFormsApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsFormDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -811,7 +921,8 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormSendersResponse
      */
@@ -827,7 +938,8 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormSendersResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -905,7 +1017,8 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
@@ -921,7 +1034,8 @@ class PowerFormsApi
      * Returns the list of PowerForms available to the user.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -949,6 +1063,12 @@ class PowerFormsApi
             }
             if ($options->getOrderBy() != 'null') {
                 $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
+            }
+            if ($options->getSearchFields() != 'null') {
+                $queryParams['search_fields'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchFields());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
             }
             if ($options->getToDate() != 'null') {
                 $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
@@ -1010,6 +1130,7 @@ class PowerFormsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerForm
      */
@@ -1027,6 +1148,7 @@ class PowerFormsApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $power_form_id 
      * @param \DocuSign\eSign\Model\PowerForm $power_form  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerForm, HTTP status code, HTTP response headers (array of strings)
      */

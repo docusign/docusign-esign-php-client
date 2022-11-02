@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * SenderEmailNotifications Class Doc Comment
  *
  * @category    Class
+ * @description Contains the settings for the email notifications that senders receive about the envelopes that they send.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class SenderEmailNotifications implements ModelInterface, ArrayAccess
@@ -60,6 +61,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'changed_signer' => '?string',
+        'clickwrap_responses_limit_notification_email' => '?string',
         'comments_only_private_and_mention' => '?string',
         'comments_receive_all' => '?string',
         'delivery_failed' => '?string',
@@ -79,6 +81,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'changed_signer' => null,
+        'clickwrap_responses_limit_notification_email' => null,
         'comments_only_private_and_mention' => null,
         'comments_receive_all' => null,
         'delivery_failed' => null,
@@ -119,6 +122,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'changed_signer' => 'changedSigner',
+        'clickwrap_responses_limit_notification_email' => 'clickwrapResponsesLimitNotificationEmail',
         'comments_only_private_and_mention' => 'commentsOnlyPrivateAndMention',
         'comments_receive_all' => 'commentsReceiveAll',
         'delivery_failed' => 'deliveryFailed',
@@ -138,6 +142,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'changed_signer' => 'setChangedSigner',
+        'clickwrap_responses_limit_notification_email' => 'setClickwrapResponsesLimitNotificationEmail',
         'comments_only_private_and_mention' => 'setCommentsOnlyPrivateAndMention',
         'comments_receive_all' => 'setCommentsReceiveAll',
         'delivery_failed' => 'setDeliveryFailed',
@@ -157,6 +162,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'changed_signer' => 'getChangedSigner',
+        'clickwrap_responses_limit_notification_email' => 'getClickwrapResponsesLimitNotificationEmail',
         'comments_only_private_and_mention' => 'getCommentsOnlyPrivateAndMention',
         'comments_receive_all' => 'getCommentsReceiveAll',
         'delivery_failed' => 'getDeliveryFailed',
@@ -230,6 +236,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['changed_signer'] = isset($data['changed_signer']) ? $data['changed_signer'] : null;
+        $this->container['clickwrap_responses_limit_notification_email'] = isset($data['clickwrap_responses_limit_notification_email']) ? $data['clickwrap_responses_limit_notification_email'] : null;
         $this->container['comments_only_private_and_mention'] = isset($data['comments_only_private_and_mention']) ? $data['comments_only_private_and_mention'] : null;
         $this->container['comments_receive_all'] = isset($data['comments_receive_all']) ? $data['comments_receive_all'] : null;
         $this->container['delivery_failed'] = isset($data['delivery_failed']) ? $data['delivery_failed'] : null;
@@ -286,6 +293,30 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     public function setChangedSigner($changed_signer)
     {
         $this->container['changed_signer'] = $changed_signer;
+
+        return $this;
+    }
+
+    /**
+     * Gets clickwrap_responses_limit_notification_email
+     *
+     * @return ?string
+     */
+    public function getClickwrapResponsesLimitNotificationEmail()
+    {
+        return $this->container['clickwrap_responses_limit_notification_email'];
+    }
+
+    /**
+     * Sets clickwrap_responses_limit_notification_email
+     *
+     * @param ?string $clickwrap_responses_limit_notification_email 
+     *
+     * @return $this
+     */
+    public function setClickwrapResponsesLimitNotificationEmail($clickwrap_responses_limit_notification_email)
+    {
+        $this->container['clickwrap_responses_limit_notification_email'] = $clickwrap_responses_limit_notification_email;
 
         return $this;
     }
@@ -536,6 +567,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -548,6 +580,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -561,6 +594,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -577,6 +611,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

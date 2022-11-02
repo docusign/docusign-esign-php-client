@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * CorrectViewRequest Class Doc Comment
  *
  * @category    Class
+ * @description The request body for the [EnvelopeViews: createCorrect](/docs/esign-rest-api/reference/envelopes/envelopeviews/createcorrect/) method.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class CorrectViewRequest implements ModelInterface, ArrayAccess
@@ -59,6 +60,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'begin_on_tagger' => '?string',
         'return_url' => '?string',
         'suppress_navigation' => '?string',
         'view_url' => '?string'
@@ -70,6 +72,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'begin_on_tagger' => null,
         'return_url' => null,
         'suppress_navigation' => null,
         'view_url' => null
@@ -102,6 +105,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'begin_on_tagger' => 'beginOnTagger',
         'return_url' => 'returnUrl',
         'suppress_navigation' => 'suppressNavigation',
         'view_url' => 'viewUrl'
@@ -113,6 +117,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'begin_on_tagger' => 'setBeginOnTagger',
         'return_url' => 'setReturnUrl',
         'suppress_navigation' => 'setSuppressNavigation',
         'view_url' => 'setViewUrl'
@@ -124,6 +129,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'begin_on_tagger' => 'getBeginOnTagger',
         'return_url' => 'getReturnUrl',
         'suppress_navigation' => 'getSuppressNavigation',
         'view_url' => 'getViewUrl'
@@ -189,6 +195,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['begin_on_tagger'] = isset($data['begin_on_tagger']) ? $data['begin_on_tagger'] : null;
         $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
         $this->container['suppress_navigation'] = isset($data['suppress_navigation']) ? $data['suppress_navigation'] : null;
         $this->container['view_url'] = isset($data['view_url']) ? $data['view_url'] : null;
@@ -217,6 +224,30 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets begin_on_tagger
+     *
+     * @return ?string
+     */
+    public function getBeginOnTagger()
+    {
+        return $this->container['begin_on_tagger'];
+    }
+
+    /**
+     * Sets begin_on_tagger
+     *
+     * @param ?string $begin_on_tagger 
+     *
+     * @return $this
+     */
+    public function setBeginOnTagger($begin_on_tagger)
+    {
+        $this->container['begin_on_tagger'] = $begin_on_tagger;
+
+        return $this;
+    }
 
     /**
      * Gets return_url
@@ -296,6 +327,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -308,6 +340,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -321,6 +354,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -337,6 +371,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

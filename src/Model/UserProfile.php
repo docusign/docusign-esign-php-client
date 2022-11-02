@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class UserProfile implements ModelInterface, ArrayAccess
@@ -285,7 +285,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \DocuSign\eSign\Model\AddressInformation $address address
+     * @param \DocuSign\eSign\Model\AddressInformation $address The user's address.
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets usage_history
      *
-     * @param \DocuSign\eSign\Model\UsageHistory $usage_history usage_history
+     * @param \DocuSign\eSign\Model\UsageHistory $usage_history A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets user_details
      *
-     * @param \DocuSign\eSign\Model\UserInformation $user_details user_details
+     * @param \DocuSign\eSign\Model\UserInformation $user_details 
      *
      * @return $this
      */
@@ -566,6 +566,7 @@ class UserProfile implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -578,6 +579,7 @@ class UserProfile implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -591,6 +593,7 @@ class UserProfile implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -607,6 +610,7 @@ class UserProfile implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

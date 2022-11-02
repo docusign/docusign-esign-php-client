@@ -8,7 +8,8 @@ declare(strict_types=1);
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -32,6 +33,15 @@ declare(strict_types=1);
 namespace DocuSign\eSign\Api\WorkspacesApi;
 
 
+/**
+ * GetWorkspaceFileOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class GetWorkspaceFileOptions
 {
     /**
@@ -42,6 +52,7 @@ class GetWorkspaceFileOptions
 
     /**
      * Gets is_download
+     *
      * @return ?string
      */
     public function getIsDownload(): ?string
@@ -52,6 +63,7 @@ class GetWorkspaceFileOptions
     /**
      * Sets is_download
      * @param ?string $is_download When set to **true**, the Content-Disposition header is set in the response. The value of the header provides the filename of the file. Default is **false**.
+     *
      * @return self
      */
     public function setIsDownload(?string $is_download): self
@@ -67,6 +79,7 @@ class GetWorkspaceFileOptions
 
     /**
      * Gets pdf_version
+     *
      * @return ?string
      */
     public function getPdfVersion(): ?string
@@ -77,6 +90,7 @@ class GetWorkspaceFileOptions
     /**
      * Sets pdf_version
      * @param ?string $pdf_version When set to **true** the file returned as a PDF.
+     *
      * @return self
      */
     public function setPdfVersion(?string $pdf_version): self
@@ -87,6 +101,15 @@ class GetWorkspaceFileOptions
 }
 
 
+/**
+ * ListWorkspaceFilePagesOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListWorkspaceFilePagesOptions
 {
     /**
@@ -97,6 +120,7 @@ class ListWorkspaceFilePagesOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -107,6 +131,7 @@ class ListWorkspaceFilePagesOptions
     /**
      * Sets count
      * @param ?string $count The maximum number of results to be returned by this request.
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -122,6 +147,7 @@ class ListWorkspaceFilePagesOptions
 
     /**
      * Gets dpi
+     *
      * @return ?string
      */
     public function getDpi(): ?string
@@ -132,6 +158,7 @@ class ListWorkspaceFilePagesOptions
     /**
      * Sets dpi
      * @param ?string $dpi Number of dots per inch for the resulting image. The default if not used is 94. The range is 1-310.
+     *
      * @return self
      */
     public function setDpi(?string $dpi): self
@@ -147,6 +174,7 @@ class ListWorkspaceFilePagesOptions
 
     /**
      * Gets max_height
+     *
      * @return ?string
      */
     public function getMaxHeight(): ?string
@@ -157,6 +185,7 @@ class ListWorkspaceFilePagesOptions
     /**
      * Sets max_height
      * @param ?string $max_height Sets the maximum height (in pixels) of the returned image.
+     *
      * @return self
      */
     public function setMaxHeight(?string $max_height): self
@@ -172,6 +201,7 @@ class ListWorkspaceFilePagesOptions
 
     /**
      * Gets max_width
+     *
      * @return ?string
      */
     public function getMaxWidth(): ?string
@@ -182,6 +212,7 @@ class ListWorkspaceFilePagesOptions
     /**
      * Sets max_width
      * @param ?string $max_width Sets the maximum width (in pixels) of the returned image.
+     *
      * @return self
      */
     public function setMaxWidth(?string $max_width): self
@@ -197,6 +228,7 @@ class ListWorkspaceFilePagesOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -207,6 +239,7 @@ class ListWorkspaceFilePagesOptions
     /**
      * Sets start_position
      * @param ?string $start_position The position within the total result set from which to start returning values. The value **thumbnail** may be used to return the page image.
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -217,6 +250,15 @@ class ListWorkspaceFilePagesOptions
 }
 
 
+/**
+ * ListWorkspaceFolderItemsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
 class ListWorkspaceFolderItemsOptions
 {
     /**
@@ -227,6 +269,7 @@ class ListWorkspaceFolderItemsOptions
 
     /**
      * Gets count
+     *
      * @return ?string
      */
     public function getCount(): ?string
@@ -237,6 +280,7 @@ class ListWorkspaceFolderItemsOptions
     /**
      * Sets count
      * @param ?string $count The maximum number of results to be returned by this request.
+     *
      * @return self
      */
     public function setCount(?string $count): self
@@ -252,6 +296,7 @@ class ListWorkspaceFolderItemsOptions
 
     /**
      * Gets include_files
+     *
      * @return ?string
      */
     public function getIncludeFiles(): ?string
@@ -262,6 +307,7 @@ class ListWorkspaceFolderItemsOptions
     /**
      * Sets include_files
      * @param ?string $include_files When set to **true**, file information is returned in the response along with folder information. The default is **false**.
+     *
      * @return self
      */
     public function setIncludeFiles(?string $include_files): self
@@ -277,6 +323,7 @@ class ListWorkspaceFolderItemsOptions
 
     /**
      * Gets include_sub_folders
+     *
      * @return ?string
      */
     public function getIncludeSubFolders(): ?string
@@ -287,6 +334,7 @@ class ListWorkspaceFolderItemsOptions
     /**
      * Sets include_sub_folders
      * @param ?string $include_sub_folders When set to **true**, information about the sub-folders of the current folder is returned. The default is **false**.
+     *
      * @return self
      */
     public function setIncludeSubFolders(?string $include_sub_folders): self
@@ -302,6 +350,7 @@ class ListWorkspaceFolderItemsOptions
 
     /**
      * Gets include_thumbnails
+     *
      * @return ?string
      */
     public function getIncludeThumbnails(): ?string
@@ -312,6 +361,7 @@ class ListWorkspaceFolderItemsOptions
     /**
      * Sets include_thumbnails
      * @param ?string $include_thumbnails When set to **true**, thumbnails are returned as part of the response.  The default is **false**.
+     *
      * @return self
      */
     public function setIncludeThumbnails(?string $include_thumbnails): self
@@ -327,6 +377,7 @@ class ListWorkspaceFolderItemsOptions
 
     /**
      * Gets include_user_detail
+     *
      * @return ?string
      */
     public function getIncludeUserDetail(): ?string
@@ -337,6 +388,7 @@ class ListWorkspaceFolderItemsOptions
     /**
      * Sets include_user_detail
      * @param ?string $include_user_detail Set to **true** to return extended details about the user. The default is **false**.
+     *
      * @return self
      */
     public function setIncludeUserDetail(?string $include_user_detail): self
@@ -352,6 +404,7 @@ class ListWorkspaceFolderItemsOptions
 
     /**
      * Gets start_position
+     *
      * @return ?string
      */
     public function getStartPosition(): ?string
@@ -362,6 +415,7 @@ class ListWorkspaceFolderItemsOptions
     /**
      * Sets start_position
      * @param ?string $start_position The position within the total result set from which to start returning values.
+     *
      * @return self
      */
     public function setStartPosition(?string $start_position): self
@@ -377,6 +431,7 @@ class ListWorkspaceFolderItemsOptions
 
     /**
      * Gets workspace_user_id
+     *
      * @return ?string
      */
     public function getWorkspaceUserId(): ?string
@@ -387,6 +442,7 @@ class ListWorkspaceFolderItemsOptions
     /**
      * Sets workspace_user_id
      * @param ?string $workspace_user_id If set, then the results are filtered to those associated with the specified userId.
+     *
      * @return self
      */
     public function setWorkspaceUserId(?string $workspace_user_id): self
@@ -410,7 +466,8 @@ use DocuSign\eSign\ObjectSerializer;
  *
  * @category Class
  * @package  DocuSign\eSign
- * @author   Swagger Codegen team
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class WorkspacesApi
@@ -426,6 +483,7 @@ class WorkspacesApi
      * Constructor
      *
      * @param ApiClient|null $apiClient The api client to use
+     *
      * @return void
      */
     public function __construct(ApiClient $apiClient = null)
@@ -459,9 +517,9 @@ class WorkspacesApi
     /**
     * Update $resourcePath with $
     *
-    * @param string $resourcePath
-    * @param string $baseName
-    * @param string $paramName
+    * @param string $resourcePath the resource path to use
+    * @param string $baseName the base name param
+    * @param string $paramName the parameter name
     *
     * @return string
     */
@@ -482,6 +540,7 @@ class WorkspacesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
@@ -498,6 +557,7 @@ class WorkspacesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
@@ -575,6 +635,7 @@ class WorkspacesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
@@ -592,6 +653,7 @@ class WorkspacesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */
@@ -679,6 +741,7 @@ class WorkspacesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
@@ -695,6 +758,7 @@ class WorkspacesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
@@ -776,6 +840,7 @@ class WorkspacesApi
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -794,6 +859,7 @@ class WorkspacesApi
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\WorkspaceItemList $workspace_item_list  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -882,6 +948,7 @@ class WorkspacesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
@@ -898,6 +965,7 @@ class WorkspacesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
@@ -979,7 +1047,8 @@ class WorkspacesApi
      * @param ?string $file_id Specifies the room file ID GUID.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
@@ -998,7 +1067,8 @@ class WorkspacesApi
      * @param ?string $file_id Specifies the room file ID GUID.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1102,7 +1172,8 @@ class WorkspacesApi
      * @param ?string $file_id Specifies the room file ID GUID.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
@@ -1121,7 +1192,8 @@ class WorkspacesApi
      * @param ?string $file_id Specifies the room file ID GUID.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1237,7 +1309,8 @@ class WorkspacesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceFolderContents
      */
@@ -1255,7 +1328,8 @@ class WorkspacesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
-     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions for modifying the behavior of the function. (optional)
+     * @param  \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions  $options for modifying the behavior of the function. (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceFolderContents, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1367,6 +1441,7 @@ class WorkspacesApi
      * List Workspaces
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceList
      */
@@ -1382,6 +1457,7 @@ class WorkspacesApi
      * List Workspaces
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceList, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1454,6 +1530,7 @@ class WorkspacesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Workspace
      */
@@ -1471,6 +1548,7 @@ class WorkspacesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
      * @param \DocuSign\eSign\Model\Workspace $workspace  (optional)
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1557,6 +1635,7 @@ class WorkspacesApi
      * @param ?string $file_id Specifies the room file ID GUID.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceItem
      */
@@ -1575,6 +1654,7 @@ class WorkspacesApi
      * @param ?string $file_id Specifies the room file ID GUID.
      * @param ?string $folder_id The ID of the folder being accessed.
      * @param ?string $workspace_id Specifies the workspace ID GUID.
+     *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceItem, HTTP status code, HTTP response headers (array of strings)
      */

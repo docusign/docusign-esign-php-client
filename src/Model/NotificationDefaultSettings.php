@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * NotificationDefaultSettings Class Doc Comment
  *
  * @category    Class
+ * @description Contains details about the default notification settings for the envelope notifications that senders and signers receive.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class NotificationDefaultSettings implements ModelInterface, ArrayAccess
@@ -225,7 +226,7 @@ class NotificationDefaultSettings implements ModelInterface, ArrayAccess
     /**
      * Sets sender_email_notifications
      *
-     * @param \DocuSign\eSign\Model\SenderEmailNotifications $sender_email_notifications sender_email_notifications
+     * @param \DocuSign\eSign\Model\SenderEmailNotifications $sender_email_notifications An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed
      *
      * @return $this
      */
@@ -249,7 +250,7 @@ class NotificationDefaultSettings implements ModelInterface, ArrayAccess
     /**
      * Sets signer_email_notifications
      *
-     * @param \DocuSign\eSign\Model\SignerEmailNotifications $signer_email_notifications signer_email_notifications
+     * @param \DocuSign\eSign\Model\SignerEmailNotifications $signer_email_notifications An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created.
      *
      * @return $this
      */
@@ -266,6 +267,7 @@ class NotificationDefaultSettings implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -278,6 +280,7 @@ class NotificationDefaultSettings implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -291,6 +294,7 @@ class NotificationDefaultSettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -307,6 +311,7 @@ class NotificationDefaultSettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

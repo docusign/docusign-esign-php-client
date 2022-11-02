@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class NotaryRecipient implements ModelInterface, ArrayAccess
@@ -72,11 +72,14 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
+        'consent_details_list' => '\DocuSign\eSign\Model\ConsentDetails[]',
         'creation_reason' => '?string',
         'custom_fields' => '?string[]',
         'declined_date_time' => '?string',
         'declined_reason' => '?string',
         'default_recipient' => '?string',
+        'delegated_by' => '\DocuSign\eSign\Model\DelegationInfo',
+        'delegated_to' => '\DocuSign\eSign\Model\DelegationInfo[]',
         'delivered_date_time' => '?string',
         'delivery_method' => '?string',
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -86,6 +89,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'email' => '?string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
+        'email_recipient_post_signing_url' => '?string',
         'embedded_recipient_start_url' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'excluded_documents' => '?string[]',
@@ -110,7 +114,9 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'notary_id' => '?string',
+        'notary_signer_email_sent' => '?string',
         'notary_signers' => '?string[]',
+        'notary_source_type' => '?string',
         'notary_type' => '?string',
         'note' => '?string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -175,11 +181,14 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => null,
         'client_user_id' => null,
         'completed_count' => null,
+        'consent_details_list' => null,
         'creation_reason' => null,
         'custom_fields' => null,
         'declined_date_time' => null,
         'declined_reason' => null,
         'default_recipient' => null,
+        'delegated_by' => null,
+        'delegated_to' => null,
         'delivered_date_time' => null,
         'delivery_method' => null,
         'delivery_method_metadata' => null,
@@ -189,6 +198,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'email' => null,
         'email_metadata' => null,
         'email_notification' => null,
+        'email_recipient_post_signing_url' => null,
         'embedded_recipient_start_url' => null,
         'error_details' => null,
         'excluded_documents' => null,
@@ -213,7 +223,9 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => null,
         'name_metadata' => null,
         'notary_id' => null,
+        'notary_signer_email_sent' => null,
         'notary_signers' => null,
+        'notary_source_type' => null,
         'notary_type' => null,
         'note' => null,
         'note_metadata' => null,
@@ -299,11 +311,14 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'canSignOffline',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
+        'consent_details_list' => 'consentDetailsList',
         'creation_reason' => 'creationReason',
         'custom_fields' => 'customFields',
         'declined_date_time' => 'declinedDateTime',
         'declined_reason' => 'declinedReason',
         'default_recipient' => 'defaultRecipient',
+        'delegated_by' => 'delegatedBy',
+        'delegated_to' => 'delegatedTo',
         'delivered_date_time' => 'deliveredDateTime',
         'delivery_method' => 'deliveryMethod',
         'delivery_method_metadata' => 'deliveryMethodMetadata',
@@ -313,6 +328,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'email' => 'email',
         'email_metadata' => 'emailMetadata',
         'email_notification' => 'emailNotification',
+        'email_recipient_post_signing_url' => 'emailRecipientPostSigningURL',
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
         'error_details' => 'errorDetails',
         'excluded_documents' => 'excludedDocuments',
@@ -337,7 +353,9 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'notary_id' => 'notaryId',
+        'notary_signer_email_sent' => 'notarySignerEmailSent',
         'notary_signers' => 'notarySigners',
+        'notary_source_type' => 'notarySourceType',
         'notary_type' => 'notaryType',
         'note' => 'note',
         'note_metadata' => 'noteMetadata',
@@ -402,11 +420,14 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'setCanSignOffline',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
+        'consent_details_list' => 'setConsentDetailsList',
         'creation_reason' => 'setCreationReason',
         'custom_fields' => 'setCustomFields',
         'declined_date_time' => 'setDeclinedDateTime',
         'declined_reason' => 'setDeclinedReason',
         'default_recipient' => 'setDefaultRecipient',
+        'delegated_by' => 'setDelegatedBy',
+        'delegated_to' => 'setDelegatedTo',
         'delivered_date_time' => 'setDeliveredDateTime',
         'delivery_method' => 'setDeliveryMethod',
         'delivery_method_metadata' => 'setDeliveryMethodMetadata',
@@ -416,6 +437,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'email' => 'setEmail',
         'email_metadata' => 'setEmailMetadata',
         'email_notification' => 'setEmailNotification',
+        'email_recipient_post_signing_url' => 'setEmailRecipientPostSigningUrl',
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
         'error_details' => 'setErrorDetails',
         'excluded_documents' => 'setExcludedDocuments',
@@ -440,7 +462,9 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'notary_id' => 'setNotaryId',
+        'notary_signer_email_sent' => 'setNotarySignerEmailSent',
         'notary_signers' => 'setNotarySigners',
+        'notary_source_type' => 'setNotarySourceType',
         'notary_type' => 'setNotaryType',
         'note' => 'setNote',
         'note_metadata' => 'setNoteMetadata',
@@ -505,11 +529,14 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'can_sign_offline' => 'getCanSignOffline',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
+        'consent_details_list' => 'getConsentDetailsList',
         'creation_reason' => 'getCreationReason',
         'custom_fields' => 'getCustomFields',
         'declined_date_time' => 'getDeclinedDateTime',
         'declined_reason' => 'getDeclinedReason',
         'default_recipient' => 'getDefaultRecipient',
+        'delegated_by' => 'getDelegatedBy',
+        'delegated_to' => 'getDelegatedTo',
         'delivered_date_time' => 'getDeliveredDateTime',
         'delivery_method' => 'getDeliveryMethod',
         'delivery_method_metadata' => 'getDeliveryMethodMetadata',
@@ -519,6 +546,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'email' => 'getEmail',
         'email_metadata' => 'getEmailMetadata',
         'email_notification' => 'getEmailNotification',
+        'email_recipient_post_signing_url' => 'getEmailRecipientPostSigningUrl',
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
         'error_details' => 'getErrorDetails',
         'excluded_documents' => 'getExcludedDocuments',
@@ -543,7 +571,9 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'notary_id' => 'getNotaryId',
+        'notary_signer_email_sent' => 'getNotarySignerEmailSent',
         'notary_signers' => 'getNotarySigners',
+        'notary_source_type' => 'getNotarySourceType',
         'notary_type' => 'getNotaryType',
         'note' => 'getNote',
         'note_metadata' => 'getNoteMetadata',
@@ -662,11 +692,14 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['can_sign_offline'] = isset($data['can_sign_offline']) ? $data['can_sign_offline'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
+        $this->container['consent_details_list'] = isset($data['consent_details_list']) ? $data['consent_details_list'] : null;
         $this->container['creation_reason'] = isset($data['creation_reason']) ? $data['creation_reason'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
         $this->container['declined_reason'] = isset($data['declined_reason']) ? $data['declined_reason'] : null;
         $this->container['default_recipient'] = isset($data['default_recipient']) ? $data['default_recipient'] : null;
+        $this->container['delegated_by'] = isset($data['delegated_by']) ? $data['delegated_by'] : null;
+        $this->container['delegated_to'] = isset($data['delegated_to']) ? $data['delegated_to'] : null;
         $this->container['delivered_date_time'] = isset($data['delivered_date_time']) ? $data['delivered_date_time'] : null;
         $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
         $this->container['delivery_method_metadata'] = isset($data['delivery_method_metadata']) ? $data['delivery_method_metadata'] : null;
@@ -676,6 +709,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_metadata'] = isset($data['email_metadata']) ? $data['email_metadata'] : null;
         $this->container['email_notification'] = isset($data['email_notification']) ? $data['email_notification'] : null;
+        $this->container['email_recipient_post_signing_url'] = isset($data['email_recipient_post_signing_url']) ? $data['email_recipient_post_signing_url'] : null;
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['excluded_documents'] = isset($data['excluded_documents']) ? $data['excluded_documents'] : null;
@@ -700,7 +734,9 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['notary_id'] = isset($data['notary_id']) ? $data['notary_id'] : null;
+        $this->container['notary_signer_email_sent'] = isset($data['notary_signer_email_sent']) ? $data['notary_signer_email_sent'] : null;
         $this->container['notary_signers'] = isset($data['notary_signers']) ? $data['notary_signers'] : null;
+        $this->container['notary_source_type'] = isset($data['notary_source_type']) ? $data['notary_source_type'] : null;
         $this->container['notary_type'] = isset($data['notary_type']) ? $data['notary_type'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
@@ -807,7 +843,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata access_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata Metadata that indicates whether the `accessCode` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1083,6 +1119,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets consent_details_list
+     *
+     * @return \DocuSign\eSign\Model\ConsentDetails[]
+     */
+    public function getConsentDetailsList()
+    {
+        return $this->container['consent_details_list'];
+    }
+
+    /**
+     * Sets consent_details_list
+     *
+     * @param \DocuSign\eSign\Model\ConsentDetails[] $consent_details_list 
+     *
+     * @return $this
+     */
+    public function setConsentDetailsList($consent_details_list)
+    {
+        $this->container['consent_details_list'] = $consent_details_list;
+
+        return $this;
+    }
+
+    /**
      * Gets creation_reason
      *
      * @return ?string
@@ -1203,6 +1263,54 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets delegated_by
+     *
+     * @return \DocuSign\eSign\Model\DelegationInfo
+     */
+    public function getDelegatedBy()
+    {
+        return $this->container['delegated_by'];
+    }
+
+    /**
+     * Sets delegated_by
+     *
+     * @param \DocuSign\eSign\Model\DelegationInfo $delegated_by 
+     *
+     * @return $this
+     */
+    public function setDelegatedBy($delegated_by)
+    {
+        $this->container['delegated_by'] = $delegated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets delegated_to
+     *
+     * @return \DocuSign\eSign\Model\DelegationInfo[]
+     */
+    public function getDelegatedTo()
+    {
+        return $this->container['delegated_to'];
+    }
+
+    /**
+     * Sets delegated_to
+     *
+     * @param \DocuSign\eSign\Model\DelegationInfo[] $delegated_to 
+     *
+     * @return $this
+     */
+    public function setDelegatedTo($delegated_to)
+    {
+        $this->container['delegated_to'] = $delegated_to;
+
+        return $this;
+    }
+
+    /**
      * Gets delivered_date_time
      *
      * @return ?string
@@ -1263,7 +1371,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata delivery_method_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1383,7 +1491,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata email_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata Metadata that indicates whether the `email` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1407,13 +1515,37 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification email_notification
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.
      *
      * @return $this
      */
     public function setEmailNotification($email_notification)
     {
         $this->container['email_notification'] = $email_notification;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_recipient_post_signing_url
+     *
+     * @return ?string
+     */
+    public function getEmailRecipientPostSigningUrl()
+    {
+        return $this->container['email_recipient_post_signing_url'];
+    }
+
+    /**
+     * Sets email_recipient_post_signing_url
+     *
+     * @param ?string $email_recipient_post_signing_url 
+     *
+     * @return $this
+     */
+    public function setEmailRecipientPostSigningUrl($email_recipient_post_signing_url)
+    {
+        $this->container['email_recipient_post_signing_url'] = $email_recipient_post_signing_url;
 
         return $this;
     }
@@ -1455,7 +1587,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1527,7 +1659,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata fax_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1575,7 +1707,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets first_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata first_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata Metadata that indicates whether the `firstName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1623,7 +1755,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets full_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata full_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1671,7 +1803,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata id_check_configuration_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1695,7 +1827,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_information_input
      *
-     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input id_check_information_input
+     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input An object that contains input information related to a recipient ID check.
      *
      * @return $this
      */
@@ -1719,7 +1851,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification identity_verification
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).
      *
      * @return $this
      */
@@ -1791,7 +1923,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets is_bulk_recipient_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $is_bulk_recipient_metadata is_bulk_recipient_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $is_bulk_recipient_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1839,7 +1971,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets last_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata last_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata Metadata that indicates whether the `lastName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1959,7 +2091,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates whether the `name` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1995,6 +2127,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets notary_signer_email_sent
+     *
+     * @return ?string
+     */
+    public function getNotarySignerEmailSent()
+    {
+        return $this->container['notary_signer_email_sent'];
+    }
+
+    /**
+     * Sets notary_signer_email_sent
+     *
+     * @param ?string $notary_signer_email_sent 
+     *
+     * @return $this
+     */
+    public function setNotarySignerEmailSent($notary_signer_email_sent)
+    {
+        $this->container['notary_signer_email_sent'] = $notary_signer_email_sent;
+
+        return $this;
+    }
+
+    /**
      * Gets notary_signers
      *
      * @return ?string[]
@@ -2014,6 +2170,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setNotarySigners($notary_signers)
     {
         $this->container['notary_signers'] = $notary_signers;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_source_type
+     *
+     * @return ?string
+     */
+    public function getNotarySourceType()
+    {
+        return $this->container['notary_source_type'];
+    }
+
+    /**
+     * Sets notary_source_type
+     *
+     * @param ?string $notary_source_type 
+     *
+     * @return $this
+     */
+    public function setNotarySourceType($notary_source_type)
+    {
+        $this->container['notary_source_type'] = $notary_source_type;
 
         return $this;
     }
@@ -2079,7 +2259,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets note_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata note_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata Metadata that indicates whether the `note` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2103,7 +2283,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets offline_attributes
      *
-     * @param \DocuSign\eSign\Model\OfflineAttributes $offline_attributes offline_attributes
+     * @param \DocuSign\eSign\Model\OfflineAttributes $offline_attributes Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2127,7 +2307,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets phone_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication phone_authentication
+     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.
      *
      * @return $this
      */
@@ -2151,7 +2331,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number Describes the recipient phone number.
      *
      * @return $this
      */
@@ -2175,7 +2355,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets proof_file
      *
-     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file proof_file
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file 
      *
      * @return $this
      */
@@ -2223,7 +2403,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_authentication_status
      *
-     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status recipient_authentication_status
+     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status Information about the recipient's authentication status. This property is read-only.
      *
      * @return $this
      */
@@ -2391,7 +2571,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata recipient_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata Metadata that indicates whether the `recipientType` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2439,7 +2619,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets require_id_lookup_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata require_id_lookup_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2583,7 +2763,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata routing_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2631,7 +2811,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets signature_info
      *
-     * @param \DocuSign\eSign\Model\RecipientSignatureInformation $signature_info signature_info
+     * @param \DocuSign\eSign\Model\RecipientSignatureInformation $signature_info Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.
      *
      * @return $this
      */
@@ -2703,7 +2883,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets sign_in_each_location_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sign_in_each_location_metadata sign_in_each_location_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sign_in_each_location_metadata Metadata that indicates whether the `signInEachLocation` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2751,7 +2931,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata signing_group_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2823,7 +3003,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets sms_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication sms_authentication
+     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.
      *
      * @return $this
      */
@@ -2943,7 +3123,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets tabs
      *
-     * @param \DocuSign\eSign\Model\Tabs $tabs tabs
+     * @param \DocuSign\eSign\Model\Tabs $tabs A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.
      *
      * @return $this
      */
@@ -3056,6 +3236,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -3068,6 +3249,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -3081,6 +3263,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -3097,6 +3280,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

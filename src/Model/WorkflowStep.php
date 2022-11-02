@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * WorkflowStep Class Doc Comment
  *
  * @category    Class
+ * @description Describes a single step in a workflow.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class WorkflowStep implements ModelInterface, ArrayAccess
@@ -61,6 +62,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'action' => '?string',
         'completed_date' => '?string',
+        'delayed_routing' => '\DocuSign\eSign\Model\DelayedRouting',
         'item_id' => '?string',
         'recipient_routing' => '\DocuSign\eSign\Model\RecipientRouting',
         'status' => '?string',
@@ -77,6 +79,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'action' => null,
         'completed_date' => null,
+        'delayed_routing' => null,
         'item_id' => null,
         'recipient_routing' => null,
         'status' => null,
@@ -114,6 +117,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'action' => 'action',
         'completed_date' => 'completedDate',
+        'delayed_routing' => 'delayedRouting',
         'item_id' => 'itemId',
         'recipient_routing' => 'recipientRouting',
         'status' => 'status',
@@ -130,6 +134,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $setters = [
         'action' => 'setAction',
         'completed_date' => 'setCompletedDate',
+        'delayed_routing' => 'setDelayedRouting',
         'item_id' => 'setItemId',
         'recipient_routing' => 'setRecipientRouting',
         'status' => 'setStatus',
@@ -146,6 +151,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     protected static $getters = [
         'action' => 'getAction',
         'completed_date' => 'getCompletedDate',
+        'delayed_routing' => 'getDelayedRouting',
         'item_id' => 'getItemId',
         'recipient_routing' => 'getRecipientRouting',
         'status' => 'getStatus',
@@ -216,6 +222,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['completed_date'] = isset($data['completed_date']) ? $data['completed_date'] : null;
+        $this->container['delayed_routing'] = isset($data['delayed_routing']) ? $data['delayed_routing'] : null;
         $this->container['item_id'] = isset($data['item_id']) ? $data['item_id'] : null;
         $this->container['recipient_routing'] = isset($data['recipient_routing']) ? $data['recipient_routing'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -297,6 +304,30 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets delayed_routing
+     *
+     * @return \DocuSign\eSign\Model\DelayedRouting
+     */
+    public function getDelayedRouting()
+    {
+        return $this->container['delayed_routing'];
+    }
+
+    /**
+     * Sets delayed_routing
+     *
+     * @param \DocuSign\eSign\Model\DelayedRouting $delayed_routing A complex element that specifies the delayed routing settings for the workflow step.
+     *
+     * @return $this
+     */
+    public function setDelayedRouting($delayed_routing)
+    {
+        $this->container['delayed_routing'] = $delayed_routing;
+
+        return $this;
+    }
+
+    /**
      * Gets item_id
      *
      * @return ?string
@@ -333,7 +364,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_routing
      *
-     * @param \DocuSign\eSign\Model\RecipientRouting $recipient_routing recipient_routing
+     * @param \DocuSign\eSign\Model\RecipientRouting $recipient_routing The rules for recipient routing.
      *
      * @return $this
      */
@@ -446,6 +477,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -458,6 +490,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -471,6 +504,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -487,6 +521,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

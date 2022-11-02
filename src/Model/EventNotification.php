@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description This optional complex element allows a message to be sent a specified URL when the envelope or recipient changes status. It is similar to DocuSign Connect. For example, if an envelope changes from \&quot;Sent\&quot; to \&quot;Delivered\&quot;, a message containing the updated envelope status and optionally the documents is sent to the URL. When an eventNotification is attached to an envelope using the API, it only applies to the envelope (treating the envelope as the sender). This is different from envelopes created through the console user interface, where the user is treated as the sender.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class EventNotification implements ModelInterface, ArrayAccess
@@ -63,6 +63,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'delivery_mode' => '?string',
         'envelope_events' => '\DocuSign\eSign\Model\EnvelopeEvent[]',
         'event_data' => '\DocuSign\eSign\Model\ConnectEventData',
+        'events' => '?string[]',
         'include_certificate_of_completion' => '?string',
         'include_certificate_with_soap' => '?string',
         'include_document_fields' => '?string',
@@ -89,6 +90,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'delivery_mode' => null,
         'envelope_events' => null,
         'event_data' => null,
+        'events' => null,
         'include_certificate_of_completion' => null,
         'include_certificate_with_soap' => null,
         'include_document_fields' => null,
@@ -136,6 +138,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'delivery_mode' => 'deliveryMode',
         'envelope_events' => 'envelopeEvents',
         'event_data' => 'eventData',
+        'events' => 'events',
         'include_certificate_of_completion' => 'includeCertificateOfCompletion',
         'include_certificate_with_soap' => 'includeCertificateWithSoap',
         'include_document_fields' => 'includeDocumentFields',
@@ -162,6 +165,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'delivery_mode' => 'setDeliveryMode',
         'envelope_events' => 'setEnvelopeEvents',
         'event_data' => 'setEventData',
+        'events' => 'setEvents',
         'include_certificate_of_completion' => 'setIncludeCertificateOfCompletion',
         'include_certificate_with_soap' => 'setIncludeCertificateWithSoap',
         'include_document_fields' => 'setIncludeDocumentFields',
@@ -188,6 +192,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'delivery_mode' => 'getDeliveryMode',
         'envelope_events' => 'getEnvelopeEvents',
         'event_data' => 'getEventData',
+        'events' => 'getEvents',
         'include_certificate_of_completion' => 'getIncludeCertificateOfCompletion',
         'include_certificate_with_soap' => 'getIncludeCertificateWithSoap',
         'include_document_fields' => 'getIncludeDocumentFields',
@@ -268,6 +273,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         $this->container['delivery_mode'] = isset($data['delivery_mode']) ? $data['delivery_mode'] : null;
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
         $this->container['event_data'] = isset($data['event_data']) ? $data['event_data'] : null;
+        $this->container['events'] = isset($data['events']) ? $data['events'] : null;
         $this->container['include_certificate_of_completion'] = isset($data['include_certificate_of_completion']) ? $data['include_certificate_of_completion'] : null;
         $this->container['include_certificate_with_soap'] = isset($data['include_certificate_with_soap']) ? $data['include_certificate_with_soap'] : null;
         $this->container['include_document_fields'] = isset($data['include_document_fields']) ? $data['include_document_fields'] : null;
@@ -370,13 +376,37 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets event_data
      *
-     * @param \DocuSign\eSign\Model\ConnectEventData $event_data event_data
+     * @param \DocuSign\eSign\Model\ConnectEventData $event_data Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications)
      *
      * @return $this
      */
     public function setEventData($event_data)
     {
         $this->container['event_data'] = $event_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets events
+     *
+     * @return ?string[]
+     */
+    public function getEvents()
+    {
+        return $this->container['events'];
+    }
+
+    /**
+     * Sets events
+     *
+     * @param ?string[] $events 
+     *
+     * @return $this
+     */
+    public function setEvents($events)
+    {
+        $this->container['events'] = $events;
 
         return $this;
     }
@@ -747,6 +777,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -759,6 +790,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -772,6 +804,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -788,6 +821,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

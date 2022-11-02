@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * BulkSendErrorStatus Class Doc Comment
  *
  * @category    Class
+ * @description A single bulk send error report.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class BulkSendErrorStatus implements ModelInterface, ArrayAccess
@@ -60,6 +61,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'created' => '?string',
+        'envelope_id' => '?string',
         'error_message' => '?string',
         'recipient_emails' => '?string[]'
     ];
@@ -71,6 +73,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'created' => null,
+        'envelope_id' => null,
         'error_message' => null,
         'recipient_emails' => null
     ];
@@ -103,6 +106,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'created' => 'created',
+        'envelope_id' => 'envelopeId',
         'error_message' => 'errorMessage',
         'recipient_emails' => 'recipientEmails'
     ];
@@ -114,6 +118,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'created' => 'setCreated',
+        'envelope_id' => 'setEnvelopeId',
         'error_message' => 'setErrorMessage',
         'recipient_emails' => 'setRecipientEmails'
     ];
@@ -125,6 +130,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'created' => 'getCreated',
+        'envelope_id' => 'getEnvelopeId',
         'error_message' => 'getErrorMessage',
         'recipient_emails' => 'getRecipientEmails'
     ];
@@ -190,6 +196,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['error_message'] = isset($data['error_message']) ? $data['error_message'] : null;
         $this->container['recipient_emails'] = isset($data['recipient_emails']) ? $data['recipient_emails'] : null;
     }
@@ -238,6 +245,30 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
     public function setCreated($created)
     {
         $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelope_id
+     *
+     * @return ?string
+     */
+    public function getEnvelopeId()
+    {
+        return $this->container['envelope_id'];
+    }
+
+    /**
+     * Sets envelope_id
+     *
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
+     *
+     * @return $this
+     */
+    public function setEnvelopeId($envelope_id)
+    {
+        $this->container['envelope_id'] = $envelope_id;
 
         return $this;
     }
@@ -296,6 +327,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -308,6 +340,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -321,6 +354,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -337,6 +371,7 @@ class BulkSendErrorStatus implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

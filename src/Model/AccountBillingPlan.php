@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Contains information about an account billing plan.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class AccountBillingPlan implements ModelInterface, ArrayAccess
@@ -87,7 +87,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'seat_discounts' => '\DocuSign\eSign\Model\SeatDiscount[]',
         'subscription_start_date' => '?string',
         'support_incident_fee' => '?string',
-        'support_plan_fee' => '?string'
+        'support_plan_fee' => '?string',
+        'tax_exempt_id' => '?string'
     ];
 
     /**
@@ -123,7 +124,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'seat_discounts' => null,
         'subscription_start_date' => null,
         'support_incident_fee' => null,
-        'support_plan_fee' => null
+        'support_plan_fee' => null,
+        'tax_exempt_id' => null
     ];
 
     /**
@@ -180,7 +182,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'seat_discounts' => 'seatDiscounts',
         'subscription_start_date' => 'subscriptionStartDate',
         'support_incident_fee' => 'supportIncidentFee',
-        'support_plan_fee' => 'supportPlanFee'
+        'support_plan_fee' => 'supportPlanFee',
+        'tax_exempt_id' => 'taxExemptId'
     ];
 
     /**
@@ -216,7 +219,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'seat_discounts' => 'setSeatDiscounts',
         'subscription_start_date' => 'setSubscriptionStartDate',
         'support_incident_fee' => 'setSupportIncidentFee',
-        'support_plan_fee' => 'setSupportPlanFee'
+        'support_plan_fee' => 'setSupportPlanFee',
+        'tax_exempt_id' => 'setTaxExemptId'
     ];
 
     /**
@@ -252,7 +256,8 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         'seat_discounts' => 'getSeatDiscounts',
         'subscription_start_date' => 'getSubscriptionStartDate',
         'support_incident_fee' => 'getSupportIncidentFee',
-        'support_plan_fee' => 'getSupportPlanFee'
+        'support_plan_fee' => 'getSupportPlanFee',
+        'tax_exempt_id' => 'getTaxExemptId'
     ];
 
     /**
@@ -343,6 +348,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
         $this->container['subscription_start_date'] = isset($data['subscription_start_date']) ? $data['subscription_start_date'] : null;
         $this->container['support_incident_fee'] = isset($data['support_incident_fee']) ? $data['support_incident_fee'] : null;
         $this->container['support_plan_fee'] = isset($data['support_plan_fee']) ? $data['support_plan_fee'] : null;
+        $this->container['tax_exempt_id'] = isset($data['tax_exempt_id']) ? $data['tax_exempt_id'] : null;
     }
 
     /**
@@ -526,7 +532,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_information
      *
-     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information downgrade_plan_information
+     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information 
      *
      * @return $this
      */
@@ -1040,6 +1046,30 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets tax_exempt_id
+     *
+     * @return ?string
+     */
+    public function getTaxExemptId()
+    {
+        return $this->container['tax_exempt_id'];
+    }
+
+    /**
+     * Sets tax_exempt_id
+     *
+     * @param ?string $tax_exempt_id 
+     *
+     * @return $this
+     */
+    public function setTaxExemptId($tax_exempt_id)
+    {
+        $this->container['tax_exempt_id'] = $tax_exempt_id;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -1047,6 +1077,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1059,6 +1090,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1072,6 +1104,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1088,6 +1121,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

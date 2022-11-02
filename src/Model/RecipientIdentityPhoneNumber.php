@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
@@ -303,7 +303,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets country_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $country_code_metadata country_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $country_code_metadata Metadata that indicates if the `countryCode` property is editable.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets extension_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $extension_metadata extension_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $extension_metadata Metadata that indicates if the `extension` property is editable.
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $number_metadata number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $number_metadata Metadata that indicates if the `number` property is editable.
      *
      * @return $this
      */
@@ -416,6 +416,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -428,6 +429,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -441,6 +443,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -457,6 +460,7 @@ class RecipientIdentityPhoneNumber implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class NotificationDefaults implements ModelInterface, ArrayAccess
@@ -225,7 +225,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
     /**
      * Sets api_email_notifications
      *
-     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $api_email_notifications api_email_notifications
+     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $api_email_notifications The default notification settings for envelopes sent by using the console.
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
     /**
      * Sets email_notifications
      *
-     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $email_notifications email_notifications
+     * @param \DocuSign\eSign\Model\NotificationDefaultSettings $email_notifications The default notification settings for envelopes sent by using the API.
      *
      * @return $this
      */
@@ -266,6 +266,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -278,6 +279,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -291,6 +293,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -307,6 +310,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

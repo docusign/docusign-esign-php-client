@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
@@ -286,7 +286,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets recip_may_provide_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recip_may_provide_number_metadata recip_may_provide_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recip_may_provide_number_metadata Metadata that indicates whether the `recipMayProvideNumber` property can be edited.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets record_voice_print_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $record_voice_print_metadata record_voice_print_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $record_voice_print_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets sender_provided_numbers_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_provided_numbers_metadata sender_provided_numbers_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_provided_numbers_metadata Metadata that indicates whether the `senderProvidedNumbers` property can be edited.
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets validate_recip_provided_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $validate_recip_provided_number_metadata validate_recip_provided_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $validate_recip_provided_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -447,6 +447,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -459,6 +460,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -472,6 +474,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -488,6 +491,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

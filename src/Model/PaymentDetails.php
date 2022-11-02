@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * PaymentDetails Class Doc Comment
  *
  * @category    Class
+ * @description When a formula tab has a &#x60;paymentDetails&#x60; property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class PaymentDetails implements ModelInterface, ArrayAccess
@@ -75,6 +76,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => '?string',
         'signer_values' => '\DocuSign\eSign\Model\PaymentSignerValues',
         'status' => '?string',
+        'sub_gateway_name' => '?string',
         'total' => '\DocuSign\eSign\Model\Money'
     ];
 
@@ -100,6 +102,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => null,
         'signer_values' => null,
         'status' => null,
+        'sub_gateway_name' => null,
         'total' => null
     ];
 
@@ -146,6 +149,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => 'paymentSourceId',
         'signer_values' => 'signerValues',
         'status' => 'status',
+        'sub_gateway_name' => 'subGatewayName',
         'total' => 'total'
     ];
 
@@ -171,6 +175,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => 'setPaymentSourceId',
         'signer_values' => 'setSignerValues',
         'status' => 'setStatus',
+        'sub_gateway_name' => 'setSubGatewayName',
         'total' => 'setTotal'
     ];
 
@@ -196,6 +201,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         'payment_source_id' => 'getPaymentSourceId',
         'signer_values' => 'getSignerValues',
         'status' => 'getStatus',
+        'sub_gateway_name' => 'getSubGatewayName',
         'total' => 'getTotal'
     ];
 
@@ -275,6 +281,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         $this->container['payment_source_id'] = isset($data['payment_source_id']) ? $data['payment_source_id'] : null;
         $this->container['signer_values'] = isset($data['signer_values']) ? $data['signer_values'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['sub_gateway_name'] = isset($data['sub_gateway_name']) ? $data['sub_gateway_name'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
@@ -387,7 +394,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $currency_code_metadata currency_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $currency_code_metadata Metadata that indicates whether the `currencyCode` property is editable.
      *
      * @return $this
      */
@@ -507,7 +514,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_account_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $gateway_account_id_metadata gateway_account_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $gateway_account_id_metadata Metadata that indicates whether the `gatewayAccountId` property is editable.
      *
      * @return $this
      */
@@ -651,7 +658,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets signer_values
      *
-     * @param \DocuSign\eSign\Model\PaymentSignerValues $signer_values signer_values
+     * @param \DocuSign\eSign\Model\PaymentSignerValues $signer_values 
      *
      * @return $this
      */
@@ -687,6 +694,30 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets sub_gateway_name
+     *
+     * @return ?string
+     */
+    public function getSubGatewayName()
+    {
+        return $this->container['sub_gateway_name'];
+    }
+
+    /**
+     * Sets sub_gateway_name
+     *
+     * @param ?string $sub_gateway_name 
+     *
+     * @return $this
+     */
+    public function setSubGatewayName($sub_gateway_name)
+    {
+        $this->container['sub_gateway_name'] = $sub_gateway_name;
+
+        return $this;
+    }
+
+    /**
      * Gets total
      *
      * @return \DocuSign\eSign\Model\Money
@@ -699,7 +730,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets total
      *
-     * @param \DocuSign\eSign\Model\Money $total total
+     * @param \DocuSign\eSign\Model\Money $total This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields.
      *
      * @return $this
      */
@@ -716,6 +747,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -728,6 +760,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -741,6 +774,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -757,6 +791,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

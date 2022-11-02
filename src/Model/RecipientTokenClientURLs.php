@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
@@ -59,7 +59,16 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'on_access_code_failed' => '?string',
+        'on_cancel' => '?string',
+        'on_decline' => '?string',
+        'on_exception' => '?string',
+        'on_fax_pending' => '?string',
+        'on_id_check_failed' => '?string',
+        'on_session_timeout' => '?string',
+        'on_signing_complete' => '?string',
+        'on_ttl_expired' => '?string',
+        'on_viewing_complete' => '?string'
     ];
 
     /**
@@ -68,7 +77,16 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        
+        'on_access_code_failed' => null,
+        'on_cancel' => null,
+        'on_decline' => null,
+        'on_exception' => null,
+        'on_fax_pending' => null,
+        'on_id_check_failed' => null,
+        'on_session_timeout' => null,
+        'on_signing_complete' => null,
+        'on_ttl_expired' => null,
+        'on_viewing_complete' => null
     ];
 
     /**
@@ -98,7 +116,16 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'on_access_code_failed' => 'onAccessCodeFailed',
+        'on_cancel' => 'onCancel',
+        'on_decline' => 'onDecline',
+        'on_exception' => 'onException',
+        'on_fax_pending' => 'onFaxPending',
+        'on_id_check_failed' => 'onIdCheckFailed',
+        'on_session_timeout' => 'onSessionTimeout',
+        'on_signing_complete' => 'onSigningComplete',
+        'on_ttl_expired' => 'onTTLExpired',
+        'on_viewing_complete' => 'onViewingComplete'
     ];
 
     /**
@@ -107,7 +134,16 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'on_access_code_failed' => 'setOnAccessCodeFailed',
+        'on_cancel' => 'setOnCancel',
+        'on_decline' => 'setOnDecline',
+        'on_exception' => 'setOnException',
+        'on_fax_pending' => 'setOnFaxPending',
+        'on_id_check_failed' => 'setOnIdCheckFailed',
+        'on_session_timeout' => 'setOnSessionTimeout',
+        'on_signing_complete' => 'setOnSigningComplete',
+        'on_ttl_expired' => 'setOnTtlExpired',
+        'on_viewing_complete' => 'setOnViewingComplete'
     ];
 
     /**
@@ -116,7 +152,16 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'on_access_code_failed' => 'getOnAccessCodeFailed',
+        'on_cancel' => 'getOnCancel',
+        'on_decline' => 'getOnDecline',
+        'on_exception' => 'getOnException',
+        'on_fax_pending' => 'getOnFaxPending',
+        'on_id_check_failed' => 'getOnIdCheckFailed',
+        'on_session_timeout' => 'getOnSessionTimeout',
+        'on_signing_complete' => 'getOnSigningComplete',
+        'on_ttl_expired' => 'getOnTtlExpired',
+        'on_viewing_complete' => 'getOnViewingComplete'
     ];
 
     /**
@@ -179,6 +224,16 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['on_access_code_failed'] = isset($data['on_access_code_failed']) ? $data['on_access_code_failed'] : null;
+        $this->container['on_cancel'] = isset($data['on_cancel']) ? $data['on_cancel'] : null;
+        $this->container['on_decline'] = isset($data['on_decline']) ? $data['on_decline'] : null;
+        $this->container['on_exception'] = isset($data['on_exception']) ? $data['on_exception'] : null;
+        $this->container['on_fax_pending'] = isset($data['on_fax_pending']) ? $data['on_fax_pending'] : null;
+        $this->container['on_id_check_failed'] = isset($data['on_id_check_failed']) ? $data['on_id_check_failed'] : null;
+        $this->container['on_session_timeout'] = isset($data['on_session_timeout']) ? $data['on_session_timeout'] : null;
+        $this->container['on_signing_complete'] = isset($data['on_signing_complete']) ? $data['on_signing_complete'] : null;
+        $this->container['on_ttl_expired'] = isset($data['on_ttl_expired']) ? $data['on_ttl_expired'] : null;
+        $this->container['on_viewing_complete'] = isset($data['on_viewing_complete']) ? $data['on_viewing_complete'] : null;
     }
 
     /**
@@ -204,6 +259,246 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets on_access_code_failed
+     *
+     * @return ?string
+     */
+    public function getOnAccessCodeFailed()
+    {
+        return $this->container['on_access_code_failed'];
+    }
+
+    /**
+     * Sets on_access_code_failed
+     *
+     * @param ?string $on_access_code_failed 
+     *
+     * @return $this
+     */
+    public function setOnAccessCodeFailed($on_access_code_failed)
+    {
+        $this->container['on_access_code_failed'] = $on_access_code_failed;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_cancel
+     *
+     * @return ?string
+     */
+    public function getOnCancel()
+    {
+        return $this->container['on_cancel'];
+    }
+
+    /**
+     * Sets on_cancel
+     *
+     * @param ?string $on_cancel 
+     *
+     * @return $this
+     */
+    public function setOnCancel($on_cancel)
+    {
+        $this->container['on_cancel'] = $on_cancel;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_decline
+     *
+     * @return ?string
+     */
+    public function getOnDecline()
+    {
+        return $this->container['on_decline'];
+    }
+
+    /**
+     * Sets on_decline
+     *
+     * @param ?string $on_decline 
+     *
+     * @return $this
+     */
+    public function setOnDecline($on_decline)
+    {
+        $this->container['on_decline'] = $on_decline;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_exception
+     *
+     * @return ?string
+     */
+    public function getOnException()
+    {
+        return $this->container['on_exception'];
+    }
+
+    /**
+     * Sets on_exception
+     *
+     * @param ?string $on_exception 
+     *
+     * @return $this
+     */
+    public function setOnException($on_exception)
+    {
+        $this->container['on_exception'] = $on_exception;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_fax_pending
+     *
+     * @return ?string
+     */
+    public function getOnFaxPending()
+    {
+        return $this->container['on_fax_pending'];
+    }
+
+    /**
+     * Sets on_fax_pending
+     *
+     * @param ?string $on_fax_pending 
+     *
+     * @return $this
+     */
+    public function setOnFaxPending($on_fax_pending)
+    {
+        $this->container['on_fax_pending'] = $on_fax_pending;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_id_check_failed
+     *
+     * @return ?string
+     */
+    public function getOnIdCheckFailed()
+    {
+        return $this->container['on_id_check_failed'];
+    }
+
+    /**
+     * Sets on_id_check_failed
+     *
+     * @param ?string $on_id_check_failed 
+     *
+     * @return $this
+     */
+    public function setOnIdCheckFailed($on_id_check_failed)
+    {
+        $this->container['on_id_check_failed'] = $on_id_check_failed;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_session_timeout
+     *
+     * @return ?string
+     */
+    public function getOnSessionTimeout()
+    {
+        return $this->container['on_session_timeout'];
+    }
+
+    /**
+     * Sets on_session_timeout
+     *
+     * @param ?string $on_session_timeout 
+     *
+     * @return $this
+     */
+    public function setOnSessionTimeout($on_session_timeout)
+    {
+        $this->container['on_session_timeout'] = $on_session_timeout;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_signing_complete
+     *
+     * @return ?string
+     */
+    public function getOnSigningComplete()
+    {
+        return $this->container['on_signing_complete'];
+    }
+
+    /**
+     * Sets on_signing_complete
+     *
+     * @param ?string $on_signing_complete 
+     *
+     * @return $this
+     */
+    public function setOnSigningComplete($on_signing_complete)
+    {
+        $this->container['on_signing_complete'] = $on_signing_complete;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_ttl_expired
+     *
+     * @return ?string
+     */
+    public function getOnTtlExpired()
+    {
+        return $this->container['on_ttl_expired'];
+    }
+
+    /**
+     * Sets on_ttl_expired
+     *
+     * @param ?string $on_ttl_expired 
+     *
+     * @return $this
+     */
+    public function setOnTtlExpired($on_ttl_expired)
+    {
+        $this->container['on_ttl_expired'] = $on_ttl_expired;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_viewing_complete
+     *
+     * @return ?string
+     */
+    public function getOnViewingComplete()
+    {
+        return $this->container['on_viewing_complete'];
+    }
+
+    /**
+     * Sets on_viewing_complete
+     *
+     * @param ?string $on_viewing_complete 
+     *
+     * @return $this
+     */
+    public function setOnViewingComplete($on_viewing_complete)
+    {
+        $this->container['on_viewing_complete'] = $on_viewing_complete;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -211,6 +506,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -223,6 +519,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -236,6 +533,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -252,6 +550,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

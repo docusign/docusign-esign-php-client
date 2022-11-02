@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * RadioGroup Class Doc Comment
  *
  * @category    Class
+ * @description This group tab is used to place radio buttons on a document. The &#x60;radios&#x60; property contains a list of [&#x60;radio&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) objects  associated with the group. Only one radio button can be selected in a group.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RadioGroup implements ModelInterface, ArrayAccess
@@ -67,6 +68,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'group_name' => '?string',
         'group_name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'original_value' => '?string',
+        'original_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'radios' => '\DocuSign\eSign\Model\Radio[]',
         'recipient_id' => '?string',
         'recipient_id_guid' => '?string',
@@ -87,7 +90,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => '?string',
         'template_required_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tooltip' => '?string',
-        'tooltip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
+        'tooltip_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'value' => '?string',
+        'value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
     ];
 
     /**
@@ -104,6 +109,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => null,
         'group_name' => null,
         'group_name_metadata' => null,
+        'original_value' => null,
+        'original_value_metadata' => null,
         'radios' => null,
         'recipient_id' => null,
         'recipient_id_guid' => null,
@@ -124,7 +131,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => null,
         'template_required_metadata' => null,
         'tooltip' => null,
-        'tooltip_metadata' => null
+        'tooltip_metadata' => null,
+        'value' => null,
+        'value_metadata' => null
     ];
 
     /**
@@ -162,6 +171,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => 'documentIdMetadata',
         'group_name' => 'groupName',
         'group_name_metadata' => 'groupNameMetadata',
+        'original_value' => 'originalValue',
+        'original_value_metadata' => 'originalValueMetadata',
         'radios' => 'radios',
         'recipient_id' => 'recipientId',
         'recipient_id_guid' => 'recipientIdGuid',
@@ -182,7 +193,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => 'templateRequired',
         'template_required_metadata' => 'templateRequiredMetadata',
         'tooltip' => 'tooltip',
-        'tooltip_metadata' => 'tooltipMetadata'
+        'tooltip_metadata' => 'tooltipMetadata',
+        'value' => 'value',
+        'value_metadata' => 'valueMetadata'
     ];
 
     /**
@@ -199,6 +212,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => 'setDocumentIdMetadata',
         'group_name' => 'setGroupName',
         'group_name_metadata' => 'setGroupNameMetadata',
+        'original_value' => 'setOriginalValue',
+        'original_value_metadata' => 'setOriginalValueMetadata',
         'radios' => 'setRadios',
         'recipient_id' => 'setRecipientId',
         'recipient_id_guid' => 'setRecipientIdGuid',
@@ -219,7 +234,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => 'setTemplateRequired',
         'template_required_metadata' => 'setTemplateRequiredMetadata',
         'tooltip' => 'setTooltip',
-        'tooltip_metadata' => 'setTooltipMetadata'
+        'tooltip_metadata' => 'setTooltipMetadata',
+        'value' => 'setValue',
+        'value_metadata' => 'setValueMetadata'
     ];
 
     /**
@@ -236,6 +253,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'document_id_metadata' => 'getDocumentIdMetadata',
         'group_name' => 'getGroupName',
         'group_name_metadata' => 'getGroupNameMetadata',
+        'original_value' => 'getOriginalValue',
+        'original_value_metadata' => 'getOriginalValueMetadata',
         'radios' => 'getRadios',
         'recipient_id' => 'getRecipientId',
         'recipient_id_guid' => 'getRecipientIdGuid',
@@ -256,7 +275,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'template_required' => 'getTemplateRequired',
         'template_required_metadata' => 'getTemplateRequiredMetadata',
         'tooltip' => 'getTooltip',
-        'tooltip_metadata' => 'getTooltipMetadata'
+        'tooltip_metadata' => 'getTooltipMetadata',
+        'value' => 'getValue',
+        'value_metadata' => 'getValueMetadata'
     ];
 
     /**
@@ -327,6 +348,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         $this->container['document_id_metadata'] = isset($data['document_id_metadata']) ? $data['document_id_metadata'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
         $this->container['group_name_metadata'] = isset($data['group_name_metadata']) ? $data['group_name_metadata'] : null;
+        $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
+        $this->container['original_value_metadata'] = isset($data['original_value_metadata']) ? $data['original_value_metadata'] : null;
         $this->container['radios'] = isset($data['radios']) ? $data['radios'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;
         $this->container['recipient_id_guid'] = isset($data['recipient_id_guid']) ? $data['recipient_id_guid'] : null;
@@ -348,6 +371,8 @@ class RadioGroup implements ModelInterface, ArrayAccess
         $this->container['template_required_metadata'] = isset($data['template_required_metadata']) ? $data['template_required_metadata'] : null;
         $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
         $this->container['tooltip_metadata'] = isset($data['tooltip_metadata']) ? $data['tooltip_metadata'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['value_metadata'] = isset($data['value_metadata']) ? $data['value_metadata'] : null;
     }
 
     /**
@@ -411,7 +436,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata conditional_parent_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata Metadata that indicates whether the `conditionalParentLabel` property is editable.
      *
      * @return $this
      */
@@ -459,7 +484,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata conditional_parent_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata Metadata that indicates whether the `conditionalParentValue` property is editable.
      *
      * @return $this
      */
@@ -507,7 +532,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets document_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata document_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata Metadata that indicates whether the `documentId` property is editable.
      *
      * @return $this
      */
@@ -555,13 +580,61 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $group_name_metadata group_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $group_name_metadata Metadata that indicates whether the `groupName` property is editable.
      *
      * @return $this
      */
     public function setGroupNameMetadata($group_name_metadata)
     {
         $this->container['group_name_metadata'] = $group_name_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value
+     *
+     * @return ?string
+     */
+    public function getOriginalValue()
+    {
+        return $this->container['original_value'];
+    }
+
+    /**
+     * Sets original_value
+     *
+     * @param ?string $original_value The initial value of the tab when it was sent to the recipient.
+     *
+     * @return $this
+     */
+    public function setOriginalValue($original_value)
+    {
+        $this->container['original_value'] = $original_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getOriginalValueMetadata()
+    {
+        return $this->container['original_value_metadata'];
+    }
+
+    /**
+     * Sets original_value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata Metadata that indicates whether the `originalValue` property is editable.
+     *
+     * @return $this
+     */
+    public function setOriginalValueMetadata($original_value_metadata)
+    {
+        $this->container['original_value_metadata'] = $original_value_metadata;
 
         return $this;
     }
@@ -651,7 +724,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata recipient_id_guid_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata Metadata that indicates whether the `recipientIdGuid` property is editable.
      *
      * @return $this
      */
@@ -675,7 +748,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata recipient_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata Metadata that indicates whether the `recipientId` property is editable.
      *
      * @return $this
      */
@@ -723,7 +796,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets require_all_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata require_all_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata Metadata that indicates whether the `requireAll` property is editable.
      *
      * @return $this
      */
@@ -771,7 +844,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata require_initial_on_shared_change_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.
      *
      * @return $this
      */
@@ -819,7 +892,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets shared_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata shared_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata Metadata that indicates whether the `shared` property is editable.
      *
      * @return $this
      */
@@ -867,7 +940,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets share_to_recipients_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata share_to_recipients_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -915,7 +988,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata tab_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata Metadata that indicates whether the `tabType` property is editable.
      *
      * @return $this
      */
@@ -963,7 +1036,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata template_locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata Metadata that indicates whether the `templateLocked` property is editable.
      *
      * @return $this
      */
@@ -1011,7 +1084,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets template_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata template_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata Metadata that indicates whether the `templateRequired` property is editable.
      *
      * @return $this
      */
@@ -1059,13 +1132,61 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tooltip_metadata tooltip_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tooltip_metadata Metadata that indicates whether the `tooltip` property is editable.
      *
      * @return $this
      */
     public function setTooltipMetadata($tooltip_metadata)
     {
         $this->container['tooltip_metadata'] = $tooltip_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return ?string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param ?string $value Specifies the value of the tab.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets value_metadata
+     *
+     * @return \DocuSign\eSign\Model\PropertyMetadata
+     */
+    public function getValueMetadata()
+    {
+        return $this->container['value_metadata'];
+    }
+
+    /**
+     * Sets value_metadata
+     *
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata Metadata that indicates whether the `value` property is editable.
+     *
+     * @return $this
+     */
+    public function setValueMetadata($value_metadata)
+    {
+        $this->container['value_metadata'] = $value_metadata;
 
         return $this;
     }
@@ -1076,6 +1197,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1088,6 +1210,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1101,6 +1224,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1117,6 +1241,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

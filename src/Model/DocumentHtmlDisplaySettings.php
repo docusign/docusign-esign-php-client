@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category    Class
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
@@ -309,7 +309,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets collapsible_settings
      *
-     * @param \DocuSign\eSign\Model\DocumentHtmlCollapsibleDisplaySettings $collapsible_settings collapsible_settings
+     * @param \DocuSign\eSign\Model\DocumentHtmlCollapsibleDisplaySettings $collapsible_settings This object defines the appearance and function of a collapsible section or item.
      *
      * @return $this
      */
@@ -566,6 +566,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -578,6 +579,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -591,6 +593,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -607,6 +610,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

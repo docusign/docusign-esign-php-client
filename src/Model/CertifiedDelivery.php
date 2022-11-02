@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * CertifiedDelivery Class Doc Comment
  *
  * @category    Class
+ * @description Contains information about a certified delivery recipient. Certified delivery recipients must receive the completed documents for the envelope to be completed. However, they don&#39;t need to sign, initial, date or add information to any of the documents.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class CertifiedDelivery implements ModelInterface, ArrayAccess
@@ -69,6 +70,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'auto_responded_reason' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
+        'consent_details_list' => '\DocuSign\eSign\Model\ConsentDetails[]',
         'custom_fields' => '?string[]',
         'declined_date_time' => '?string',
         'declined_reason' => '?string',
@@ -81,6 +83,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'email' => '?string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
+        'email_recipient_post_signing_url' => '?string',
         'embedded_recipient_start_url' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'excluded_documents' => '?string[]',
@@ -151,6 +154,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'auto_responded_reason' => null,
         'client_user_id' => null,
         'completed_count' => null,
+        'consent_details_list' => null,
         'custom_fields' => null,
         'declined_date_time' => null,
         'declined_reason' => null,
@@ -163,6 +167,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'email' => null,
         'email_metadata' => null,
         'email_notification' => null,
+        'email_recipient_post_signing_url' => null,
         'embedded_recipient_start_url' => null,
         'error_details' => null,
         'excluded_documents' => null,
@@ -254,6 +259,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'autoRespondedReason',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
+        'consent_details_list' => 'consentDetailsList',
         'custom_fields' => 'customFields',
         'declined_date_time' => 'declinedDateTime',
         'declined_reason' => 'declinedReason',
@@ -266,6 +272,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'email' => 'email',
         'email_metadata' => 'emailMetadata',
         'email_notification' => 'emailNotification',
+        'email_recipient_post_signing_url' => 'emailRecipientPostSigningURL',
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
         'error_details' => 'errorDetails',
         'excluded_documents' => 'excludedDocuments',
@@ -336,6 +343,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'setAutoRespondedReason',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
+        'consent_details_list' => 'setConsentDetailsList',
         'custom_fields' => 'setCustomFields',
         'declined_date_time' => 'setDeclinedDateTime',
         'declined_reason' => 'setDeclinedReason',
@@ -348,6 +356,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'email' => 'setEmail',
         'email_metadata' => 'setEmailMetadata',
         'email_notification' => 'setEmailNotification',
+        'email_recipient_post_signing_url' => 'setEmailRecipientPostSigningUrl',
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
         'error_details' => 'setErrorDetails',
         'excluded_documents' => 'setExcludedDocuments',
@@ -418,6 +427,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'getAutoRespondedReason',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
+        'consent_details_list' => 'getConsentDetailsList',
         'custom_fields' => 'getCustomFields',
         'declined_date_time' => 'getDeclinedDateTime',
         'declined_reason' => 'getDeclinedReason',
@@ -430,6 +440,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         'email' => 'getEmail',
         'email_metadata' => 'getEmailMetadata',
         'email_notification' => 'getEmailNotification',
+        'email_recipient_post_signing_url' => 'getEmailRecipientPostSigningUrl',
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
         'error_details' => 'getErrorDetails',
         'excluded_documents' => 'getExcludedDocuments',
@@ -554,6 +565,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         $this->container['auto_responded_reason'] = isset($data['auto_responded_reason']) ? $data['auto_responded_reason'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
+        $this->container['consent_details_list'] = isset($data['consent_details_list']) ? $data['consent_details_list'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['declined_date_time'] = isset($data['declined_date_time']) ? $data['declined_date_time'] : null;
         $this->container['declined_reason'] = isset($data['declined_reason']) ? $data['declined_reason'] : null;
@@ -566,6 +578,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_metadata'] = isset($data['email_metadata']) ? $data['email_metadata'] : null;
         $this->container['email_notification'] = isset($data['email_notification']) ? $data['email_notification'] : null;
+        $this->container['email_recipient_post_signing_url'] = isset($data['email_recipient_post_signing_url']) ? $data['email_recipient_post_signing_url'] : null;
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['excluded_documents'] = isset($data['excluded_documents']) ? $data['excluded_documents'] : null;
@@ -681,7 +694,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata access_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata Metadata that indicates whether the `accessCode` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -885,6 +898,30 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets consent_details_list
+     *
+     * @return \DocuSign\eSign\Model\ConsentDetails[]
+     */
+    public function getConsentDetailsList()
+    {
+        return $this->container['consent_details_list'];
+    }
+
+    /**
+     * Sets consent_details_list
+     *
+     * @param \DocuSign\eSign\Model\ConsentDetails[] $consent_details_list 
+     *
+     * @return $this
+     */
+    public function setConsentDetailsList($consent_details_list)
+    {
+        $this->container['consent_details_list'] = $consent_details_list;
+
+        return $this;
+    }
+
+    /**
      * Gets custom_fields
      *
      * @return ?string[]
@@ -1017,7 +1054,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata delivery_method_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1137,7 +1174,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets email_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata email_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata Metadata that indicates whether the `email` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1161,13 +1198,37 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification email_notification
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.
      *
      * @return $this
      */
     public function setEmailNotification($email_notification)
     {
         $this->container['email_notification'] = $email_notification;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_recipient_post_signing_url
+     *
+     * @return ?string
+     */
+    public function getEmailRecipientPostSigningUrl()
+    {
+        return $this->container['email_recipient_post_signing_url'];
+    }
+
+    /**
+     * Sets email_recipient_post_signing_url
+     *
+     * @param ?string $email_recipient_post_signing_url 
+     *
+     * @return $this
+     */
+    public function setEmailRecipientPostSigningUrl($email_recipient_post_signing_url)
+    {
+        $this->container['email_recipient_post_signing_url'] = $email_recipient_post_signing_url;
 
         return $this;
     }
@@ -1209,7 +1270,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
      *
      * @return $this
      */
@@ -1281,7 +1342,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata fax_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1329,7 +1390,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets first_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata first_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata Metadata that indicates whether the `firstName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1377,7 +1438,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets full_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata full_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1425,7 +1486,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata id_check_configuration_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1449,7 +1510,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_information_input
      *
-     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input id_check_information_input
+     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input An object that contains input information related to a recipient ID check.
      *
      * @return $this
      */
@@ -1473,7 +1534,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification identity_verification
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).
      *
      * @return $this
      */
@@ -1545,7 +1606,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets last_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata last_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata Metadata that indicates whether the `lastName` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1641,7 +1702,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata Metadata that indicates whether the `name` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1689,7 +1750,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets note_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata note_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata Metadata that indicates whether the `note` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1713,7 +1774,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets phone_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication phone_authentication
+     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.
      *
      * @return $this
      */
@@ -1737,7 +1798,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number Describes the recipient phone number.
      *
      * @return $this
      */
@@ -1761,7 +1822,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets proof_file
      *
-     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file proof_file
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file The proof file of the recipient.
      *
      * @return $this
      */
@@ -1809,7 +1870,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_authentication_status
      *
-     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status recipient_authentication_status
+     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status Information about the recipient's authentication status. This property is read-only.
      *
      * @return $this
      */
@@ -1929,7 +1990,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata recipient_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata Metadata that indicates whether the `recipientType` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -1977,7 +2038,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets require_id_lookup_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata require_id_lookup_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2049,7 +2110,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata routing_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2145,7 +2206,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata signing_group_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.
      *
      * @return $this
      */
@@ -2217,7 +2278,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
     /**
      * Sets sms_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication sms_authentication
+     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.
      *
      * @return $this
      */
@@ -2426,6 +2487,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2438,6 +2500,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -2451,6 +2514,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -2467,6 +2531,7 @@ class CertifiedDelivery implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

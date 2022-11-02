@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -37,9 +37,10 @@ use DocuSign\eSign\ObjectSerializer;
  * RecipientSignatureProviderOptions Class Doc Comment
  *
  * @category    Class
+ * @description Option settings for the signature provider. Different providers require or use different options. [The current provider list and the options they require.](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/)
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign eSignature PHP Client SDK is licensed under the MIT License.
+ * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
@@ -285,7 +286,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets cpf_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $cpf_number_metadata cpf_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $cpf_number_metadata Reserved for DocuSign.
      *
      * @return $this
      */
@@ -333,7 +334,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets one_time_password_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $one_time_password_metadata one_time_password_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $one_time_password_metadata Metadata that indicates whether the `oneTimePassword` property is editable.
      *
      * @return $this
      */
@@ -381,7 +382,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets signer_role_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signer_role_metadata signer_role_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signer_role_metadata Metadata that indicates whether the `signerRole` property is editable.
      *
      * @return $this
      */
@@ -429,7 +430,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
     /**
      * Sets sms_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sms_metadata sms_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sms_metadata Metadata that indicates whether the `sms` property is editable.
      *
      * @return $this
      */
@@ -446,6 +447,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -458,6 +460,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -471,6 +474,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -487,6 +491,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
