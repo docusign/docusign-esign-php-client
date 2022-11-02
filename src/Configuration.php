@@ -184,8 +184,30 @@ class Configuration
     {
         $this->tempFolderPath = sys_get_temp_dir();
 
+        $allowedInputs = [
+            'apiKeys',
+            'apiKeyPrefixes',
+            'accessToken',
+            'username',
+            'password',
+            'defaultHeaders',
+            'host',
+            'curlTimeout',
+            'curlConnectTimeout',
+            'userAgent',
+            'debug',
+            'debugFile',
+            'tempFolderPath',
+            'sslVerification',
+            'proxyHost',
+            'proxyPort',
+            'proxyType',
+            'proxyUser',
+            'proxyPassword',
+        ];
+        
         foreach ($data as $key => $value) {
-            if (property_exists($this, $key)) {
+            if (property_exists($this, $key) && in_array($key, $allowedInputs)) {
                 $this->$key = $value;
             }
         }
