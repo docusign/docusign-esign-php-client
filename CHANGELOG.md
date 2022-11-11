@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.12.0-rc] - eSignature API v2.1-22.3.00.00 - 2022-11-08
+### Fixed
+- Issue - [`#172`](https://github.com/docusign/docusign-esign-php-client/issues/172):  Cannot install the last version due to the firebase/php-jwt version.
+- Issue - [`#174`](https://github.com/docusign/docusign-esign-php-client/issues/174):  Consider making firebase/php-jwt version requirement more relaxed.
+
 ## [v6.11.0] - eSignature API v2.1-22.3.00.00 - 2022-08-30
 ### Changed
 - Added support for version v2.1-22.3.00.00 of the DocuSign ESignature API.
