@@ -35,7 +35,6 @@ LICENSE
 .travis.yml
 .php_cs
 autoload.php
-composer.json
 
 # Specific src and test files
 phpunit.xml.dist
