@@ -68,6 +68,9 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => '?string',
         'display' => '?string',
         'display_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'doc_gen_document_status' => '?string',
+        'doc_gen_errors' => '\DocuSign\eSign\Model\DocGenSyntaxError[]',
+        'doc_gen_form_fields' => '\DocuSign\eSign\Model\DocGenFormField[]',
         'document_base64' => '?string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
         'document_id' => '?string',
@@ -75,6 +78,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'include_in_download' => '?string',
         'include_in_download_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'is_doc_gen_document' => '?string',
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'order' => '?string',
@@ -102,6 +106,9 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => null,
         'display' => null,
         'display_metadata' => null,
+        'doc_gen_document_status' => null,
+        'doc_gen_errors' => null,
+        'doc_gen_form_fields' => null,
         'document_base64' => null,
         'document_fields' => null,
         'document_id' => null,
@@ -109,6 +116,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => null,
         'include_in_download' => null,
         'include_in_download_metadata' => null,
+        'is_doc_gen_document' => null,
         'name' => null,
         'name_metadata' => null,
         'order' => null,
@@ -157,6 +165,9 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => 'containsPdfFormFields',
         'display' => 'display',
         'display_metadata' => 'displayMetadata',
+        'doc_gen_document_status' => 'docGenDocumentStatus',
+        'doc_gen_errors' => 'docGenErrors',
+        'doc_gen_form_fields' => 'docGenFormFields',
         'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
         'document_id' => 'documentId',
@@ -164,6 +175,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => 'errorDetails',
         'include_in_download' => 'includeInDownload',
         'include_in_download_metadata' => 'includeInDownloadMetadata',
+        'is_doc_gen_document' => 'isDocGenDocument',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'order' => 'order',
@@ -191,6 +203,9 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => 'setContainsPdfFormFields',
         'display' => 'setDisplay',
         'display_metadata' => 'setDisplayMetadata',
+        'doc_gen_document_status' => 'setDocGenDocumentStatus',
+        'doc_gen_errors' => 'setDocGenErrors',
+        'doc_gen_form_fields' => 'setDocGenFormFields',
         'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
         'document_id' => 'setDocumentId',
@@ -198,6 +213,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => 'setErrorDetails',
         'include_in_download' => 'setIncludeInDownload',
         'include_in_download_metadata' => 'setIncludeInDownloadMetadata',
+        'is_doc_gen_document' => 'setIsDocGenDocument',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'order' => 'setOrder',
@@ -225,6 +241,9 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'contains_pdf_form_fields' => 'getContainsPdfFormFields',
         'display' => 'getDisplay',
         'display_metadata' => 'getDisplayMetadata',
+        'doc_gen_document_status' => 'getDocGenDocumentStatus',
+        'doc_gen_errors' => 'getDocGenErrors',
+        'doc_gen_form_fields' => 'getDocGenFormFields',
         'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
         'document_id' => 'getDocumentId',
@@ -232,6 +251,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => 'getErrorDetails',
         'include_in_download' => 'getIncludeInDownload',
         'include_in_download_metadata' => 'getIncludeInDownloadMetadata',
+        'is_doc_gen_document' => 'getIsDocGenDocument',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'order' => 'getOrder',
@@ -313,6 +333,9 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         $this->container['contains_pdf_form_fields'] = isset($data['contains_pdf_form_fields']) ? $data['contains_pdf_form_fields'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['display_metadata'] = isset($data['display_metadata']) ? $data['display_metadata'] : null;
+        $this->container['doc_gen_document_status'] = isset($data['doc_gen_document_status']) ? $data['doc_gen_document_status'] : null;
+        $this->container['doc_gen_errors'] = isset($data['doc_gen_errors']) ? $data['doc_gen_errors'] : null;
+        $this->container['doc_gen_form_fields'] = isset($data['doc_gen_form_fields']) ? $data['doc_gen_form_fields'] : null;
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
@@ -320,6 +343,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
         $this->container['include_in_download_metadata'] = isset($data['include_in_download_metadata']) ? $data['include_in_download_metadata'] : null;
+        $this->container['is_doc_gen_document'] = isset($data['is_doc_gen_document']) ? $data['is_doc_gen_document'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
@@ -550,6 +574,78 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets doc_gen_document_status
+     *
+     * @return ?string
+     */
+    public function getDocGenDocumentStatus()
+    {
+        return $this->container['doc_gen_document_status'];
+    }
+
+    /**
+     * Sets doc_gen_document_status
+     *
+     * @param ?string $doc_gen_document_status 
+     *
+     * @return $this
+     */
+    public function setDocGenDocumentStatus($doc_gen_document_status)
+    {
+        $this->container['doc_gen_document_status'] = $doc_gen_document_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets doc_gen_errors
+     *
+     * @return \DocuSign\eSign\Model\DocGenSyntaxError[]
+     */
+    public function getDocGenErrors()
+    {
+        return $this->container['doc_gen_errors'];
+    }
+
+    /**
+     * Sets doc_gen_errors
+     *
+     * @param \DocuSign\eSign\Model\DocGenSyntaxError[] $doc_gen_errors 
+     *
+     * @return $this
+     */
+    public function setDocGenErrors($doc_gen_errors)
+    {
+        $this->container['doc_gen_errors'] = $doc_gen_errors;
+
+        return $this;
+    }
+
+    /**
+     * Gets doc_gen_form_fields
+     *
+     * @return \DocuSign\eSign\Model\DocGenFormField[]
+     */
+    public function getDocGenFormFields()
+    {
+        return $this->container['doc_gen_form_fields'];
+    }
+
+    /**
+     * Sets doc_gen_form_fields
+     *
+     * @param \DocuSign\eSign\Model\DocGenFormField[] $doc_gen_form_fields 
+     *
+     * @return $this
+     */
+    public function setDocGenFormFields($doc_gen_form_fields)
+    {
+        $this->container['doc_gen_form_fields'] = $doc_gen_form_fields;
+
+        return $this;
+    }
+
+    /**
      * Gets document_base64
      *
      * @return ?string
@@ -713,6 +809,30 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setIncludeInDownloadMetadata($include_in_download_metadata)
     {
         $this->container['include_in_download_metadata'] = $include_in_download_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_doc_gen_document
+     *
+     * @return ?string
+     */
+    public function getIsDocGenDocument()
+    {
+        return $this->container['is_doc_gen_document'];
+    }
+
+    /**
+     * Sets is_doc_gen_document
+     *
+     * @param ?string $is_doc_gen_document 
+     *
+     * @return $this
+     */
+    public function setIsDocGenDocument($is_doc_gen_document)
+    {
+        $this->container['is_doc_gen_document'] = $is_doc_gen_document;
 
         return $this;
     }

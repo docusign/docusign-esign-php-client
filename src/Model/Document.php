@@ -63,6 +63,7 @@ class Document implements ModelInterface, ArrayAccess
         'apply_anchor_tabs' => '?string',
         'assign_tabs_to_recipient_id' => '?string',
         'display' => '?string',
+        'doc_gen_form_fields' => '\DocuSign\eSign\Model\DocGenFormField[]',
         'document_base64' => '?string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
         'document_id' => '?string',
@@ -71,6 +72,7 @@ class Document implements ModelInterface, ArrayAccess
         'file_format_hint' => '?string',
         'html_definition' => '\DocuSign\eSign\Model\DocumentHtmlDefinition',
         'include_in_download' => '?string',
+        'is_doc_gen_document' => '?string',
         'match_boxes' => '\DocuSign\eSign\Model\MatchBox[]',
         'name' => '?string',
         'order' => '?string',
@@ -96,6 +98,7 @@ class Document implements ModelInterface, ArrayAccess
         'apply_anchor_tabs' => null,
         'assign_tabs_to_recipient_id' => null,
         'display' => null,
+        'doc_gen_form_fields' => null,
         'document_base64' => null,
         'document_fields' => null,
         'document_id' => null,
@@ -104,6 +107,7 @@ class Document implements ModelInterface, ArrayAccess
         'file_format_hint' => null,
         'html_definition' => null,
         'include_in_download' => null,
+        'is_doc_gen_document' => null,
         'match_boxes' => null,
         'name' => null,
         'order' => null,
@@ -150,6 +154,7 @@ class Document implements ModelInterface, ArrayAccess
         'apply_anchor_tabs' => 'applyAnchorTabs',
         'assign_tabs_to_recipient_id' => 'assignTabsToRecipientId',
         'display' => 'display',
+        'doc_gen_form_fields' => 'docGenFormFields',
         'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
         'document_id' => 'documentId',
@@ -158,6 +163,7 @@ class Document implements ModelInterface, ArrayAccess
         'file_format_hint' => 'fileFormatHint',
         'html_definition' => 'htmlDefinition',
         'include_in_download' => 'includeInDownload',
+        'is_doc_gen_document' => 'isDocGenDocument',
         'match_boxes' => 'matchBoxes',
         'name' => 'name',
         'order' => 'order',
@@ -183,6 +189,7 @@ class Document implements ModelInterface, ArrayAccess
         'apply_anchor_tabs' => 'setApplyAnchorTabs',
         'assign_tabs_to_recipient_id' => 'setAssignTabsToRecipientId',
         'display' => 'setDisplay',
+        'doc_gen_form_fields' => 'setDocGenFormFields',
         'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
         'document_id' => 'setDocumentId',
@@ -191,6 +198,7 @@ class Document implements ModelInterface, ArrayAccess
         'file_format_hint' => 'setFileFormatHint',
         'html_definition' => 'setHtmlDefinition',
         'include_in_download' => 'setIncludeInDownload',
+        'is_doc_gen_document' => 'setIsDocGenDocument',
         'match_boxes' => 'setMatchBoxes',
         'name' => 'setName',
         'order' => 'setOrder',
@@ -216,6 +224,7 @@ class Document implements ModelInterface, ArrayAccess
         'apply_anchor_tabs' => 'getApplyAnchorTabs',
         'assign_tabs_to_recipient_id' => 'getAssignTabsToRecipientId',
         'display' => 'getDisplay',
+        'doc_gen_form_fields' => 'getDocGenFormFields',
         'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
         'document_id' => 'getDocumentId',
@@ -224,6 +233,7 @@ class Document implements ModelInterface, ArrayAccess
         'file_format_hint' => 'getFileFormatHint',
         'html_definition' => 'getHtmlDefinition',
         'include_in_download' => 'getIncludeInDownload',
+        'is_doc_gen_document' => 'getIsDocGenDocument',
         'match_boxes' => 'getMatchBoxes',
         'name' => 'getName',
         'order' => 'getOrder',
@@ -303,6 +313,7 @@ class Document implements ModelInterface, ArrayAccess
         $this->container['apply_anchor_tabs'] = isset($data['apply_anchor_tabs']) ? $data['apply_anchor_tabs'] : null;
         $this->container['assign_tabs_to_recipient_id'] = isset($data['assign_tabs_to_recipient_id']) ? $data['assign_tabs_to_recipient_id'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
+        $this->container['doc_gen_form_fields'] = isset($data['doc_gen_form_fields']) ? $data['doc_gen_form_fields'] : null;
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
@@ -311,6 +322,7 @@ class Document implements ModelInterface, ArrayAccess
         $this->container['file_format_hint'] = isset($data['file_format_hint']) ? $data['file_format_hint'] : null;
         $this->container['html_definition'] = isset($data['html_definition']) ? $data['html_definition'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
+        $this->container['is_doc_gen_document'] = isset($data['is_doc_gen_document']) ? $data['is_doc_gen_document'] : null;
         $this->container['match_boxes'] = isset($data['match_boxes']) ? $data['match_boxes'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
@@ -419,6 +431,30 @@ class Document implements ModelInterface, ArrayAccess
     public function setDisplay($display)
     {
         $this->container['display'] = $display;
+
+        return $this;
+    }
+
+    /**
+     * Gets doc_gen_form_fields
+     *
+     * @return \DocuSign\eSign\Model\DocGenFormField[]
+     */
+    public function getDocGenFormFields()
+    {
+        return $this->container['doc_gen_form_fields'];
+    }
+
+    /**
+     * Sets doc_gen_form_fields
+     *
+     * @param \DocuSign\eSign\Model\DocGenFormField[] $doc_gen_form_fields 
+     *
+     * @return $this
+     */
+    public function setDocGenFormFields($doc_gen_form_fields)
+    {
+        $this->container['doc_gen_form_fields'] = $doc_gen_form_fields;
 
         return $this;
     }
@@ -611,6 +647,30 @@ class Document implements ModelInterface, ArrayAccess
     public function setIncludeInDownload($include_in_download)
     {
         $this->container['include_in_download'] = $include_in_download;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_doc_gen_document
+     *
+     * @return ?string
+     */
+    public function getIsDocGenDocument()
+    {
+        return $this->container['is_doc_gen_document'];
+    }
+
+    /**
+     * Sets is_doc_gen_document
+     *
+     * @param ?string $is_doc_gen_document 
+     *
+     * @return $this
+     */
+    public function setIsDocGenDocument($is_doc_gen_document)
+    {
+        $this->container['is_doc_gen_document'] = $is_doc_gen_document;
 
         return $this;
     }

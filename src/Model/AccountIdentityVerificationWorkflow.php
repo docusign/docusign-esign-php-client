@@ -66,6 +66,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'signature_provider' => '\DocuSign\eSign\Model\AccountSignatureProvider',
         'steps' => '\DocuSign\eSign\Model\AccountIdentityVerificationStep[]',
         'workflow_id' => '?string',
+        'workflow_label' => '?string',
         'workflow_resource_key' => '?string'
     ];
 
@@ -81,6 +82,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'signature_provider' => null,
         'steps' => null,
         'workflow_id' => null,
+        'workflow_label' => null,
         'workflow_resource_key' => null
     ];
 
@@ -117,6 +119,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'signature_provider' => 'signatureProvider',
         'steps' => 'steps',
         'workflow_id' => 'workflowId',
+        'workflow_label' => 'workflowLabel',
         'workflow_resource_key' => 'workflowResourceKey'
     ];
 
@@ -132,6 +135,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'signature_provider' => 'setSignatureProvider',
         'steps' => 'setSteps',
         'workflow_id' => 'setWorkflowId',
+        'workflow_label' => 'setWorkflowLabel',
         'workflow_resource_key' => 'setWorkflowResourceKey'
     ];
 
@@ -147,6 +151,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'signature_provider' => 'getSignatureProvider',
         'steps' => 'getSteps',
         'workflow_id' => 'getWorkflowId',
+        'workflow_label' => 'getWorkflowLabel',
         'workflow_resource_key' => 'getWorkflowResourceKey'
     ];
 
@@ -216,6 +221,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         $this->container['signature_provider'] = isset($data['signature_provider']) ? $data['signature_provider'] : null;
         $this->container['steps'] = isset($data['steps']) ? $data['steps'] : null;
         $this->container['workflow_id'] = isset($data['workflow_id']) ? $data['workflow_id'] : null;
+        $this->container['workflow_label'] = isset($data['workflow_label']) ? $data['workflow_label'] : null;
         $this->container['workflow_resource_key'] = isset($data['workflow_resource_key']) ? $data['workflow_resource_key'] : null;
     }
 
@@ -383,6 +389,30 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     public function setWorkflowId($workflow_id)
     {
         $this->container['workflow_id'] = $workflow_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflow_label
+     *
+     * @return ?string
+     */
+    public function getWorkflowLabel()
+    {
+        return $this->container['workflow_label'];
+    }
+
+    /**
+     * Sets workflow_label
+     *
+     * @param ?string $workflow_label 
+     *
+     * @return $this
+     */
+    public function setWorkflowLabel($workflow_label)
+    {
+        $this->container['workflow_label'] = $workflow_label;
 
         return $this;
     }

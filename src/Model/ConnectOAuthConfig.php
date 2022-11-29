@@ -62,6 +62,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         'authorization_server_url' => '?string',
         'client_id' => '?string',
         'client_secret' => '?string',
+        'custom_parameters' => '?string',
         'scope' => '?string'
     ];
 
@@ -74,6 +75,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         'authorization_server_url' => null,
         'client_id' => null,
         'client_secret' => null,
+        'custom_parameters' => null,
         'scope' => null
     ];
 
@@ -107,6 +109,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         'authorization_server_url' => 'authorizationServerUrl',
         'client_id' => 'clientId',
         'client_secret' => 'clientSecret',
+        'custom_parameters' => 'customParameters',
         'scope' => 'scope'
     ];
 
@@ -119,6 +122,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         'authorization_server_url' => 'setAuthorizationServerUrl',
         'client_id' => 'setClientId',
         'client_secret' => 'setClientSecret',
+        'custom_parameters' => 'setCustomParameters',
         'scope' => 'setScope'
     ];
 
@@ -131,6 +135,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         'authorization_server_url' => 'getAuthorizationServerUrl',
         'client_id' => 'getClientId',
         'client_secret' => 'getClientSecret',
+        'custom_parameters' => 'getCustomParameters',
         'scope' => 'getScope'
     ];
 
@@ -197,6 +202,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         $this->container['authorization_server_url'] = isset($data['authorization_server_url']) ? $data['authorization_server_url'] : null;
         $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
         $this->container['client_secret'] = isset($data['client_secret']) ? $data['client_secret'] : null;
+        $this->container['custom_parameters'] = isset($data['custom_parameters']) ? $data['custom_parameters'] : null;
         $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
@@ -292,6 +298,30 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     public function setClientSecret($client_secret)
     {
         $this->container['client_secret'] = $client_secret;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_parameters
+     *
+     * @return ?string
+     */
+    public function getCustomParameters()
+    {
+        return $this->container['custom_parameters'];
+    }
+
+    /**
+     * Sets custom_parameters
+     *
+     * @param ?string $custom_parameters 
+     *
+     * @return $this
+     */
+    public function setCustomParameters($custom_parameters)
+    {
+        $this->container['custom_parameters'] = $custom_parameters;
 
         return $this;
     }
