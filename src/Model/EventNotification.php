@@ -70,6 +70,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_documents' => '?string',
         'include_envelope_void_reason' => '?string',
         'include_hmac' => '?string',
+        'include_o_auth' => '?string',
         'include_sender_account_as_custom_field' => '?string',
         'include_time_zone' => '?string',
         'logging_enabled' => '?string',
@@ -97,6 +98,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_documents' => null,
         'include_envelope_void_reason' => null,
         'include_hmac' => null,
+        'include_o_auth' => null,
         'include_sender_account_as_custom_field' => null,
         'include_time_zone' => null,
         'logging_enabled' => null,
@@ -145,6 +147,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_documents' => 'includeDocuments',
         'include_envelope_void_reason' => 'includeEnvelopeVoidReason',
         'include_hmac' => 'includeHMAC',
+        'include_o_auth' => 'includeOAuth',
         'include_sender_account_as_custom_field' => 'includeSenderAccountAsCustomField',
         'include_time_zone' => 'includeTimeZone',
         'logging_enabled' => 'loggingEnabled',
@@ -172,6 +175,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_documents' => 'setIncludeDocuments',
         'include_envelope_void_reason' => 'setIncludeEnvelopeVoidReason',
         'include_hmac' => 'setIncludeHmac',
+        'include_o_auth' => 'setIncludeOAuth',
         'include_sender_account_as_custom_field' => 'setIncludeSenderAccountAsCustomField',
         'include_time_zone' => 'setIncludeTimeZone',
         'logging_enabled' => 'setLoggingEnabled',
@@ -199,6 +203,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_documents' => 'getIncludeDocuments',
         'include_envelope_void_reason' => 'getIncludeEnvelopeVoidReason',
         'include_hmac' => 'getIncludeHmac',
+        'include_o_auth' => 'getIncludeOAuth',
         'include_sender_account_as_custom_field' => 'getIncludeSenderAccountAsCustomField',
         'include_time_zone' => 'getIncludeTimeZone',
         'logging_enabled' => 'getLoggingEnabled',
@@ -280,6 +285,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         $this->container['include_documents'] = isset($data['include_documents']) ? $data['include_documents'] : null;
         $this->container['include_envelope_void_reason'] = isset($data['include_envelope_void_reason']) ? $data['include_envelope_void_reason'] : null;
         $this->container['include_hmac'] = isset($data['include_hmac']) ? $data['include_hmac'] : null;
+        $this->container['include_o_auth'] = isset($data['include_o_auth']) ? $data['include_o_auth'] : null;
         $this->container['include_sender_account_as_custom_field'] = isset($data['include_sender_account_as_custom_field']) ? $data['include_sender_account_as_custom_field'] : null;
         $this->container['include_time_zone'] = isset($data['include_time_zone']) ? $data['include_time_zone'] : null;
         $this->container['logging_enabled'] = isset($data['logging_enabled']) ? $data['logging_enabled'] : null;
@@ -551,6 +557,30 @@ class EventNotification implements ModelInterface, ArrayAccess
     public function setIncludeHmac($include_hmac)
     {
         $this->container['include_hmac'] = $include_hmac;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_o_auth
+     *
+     * @return ?string
+     */
+    public function getIncludeOAuth()
+    {
+        return $this->container['include_o_auth'];
+    }
+
+    /**
+     * Sets include_o_auth
+     *
+     * @param ?string $include_o_auth 
+     *
+     * @return $this
+     */
+    public function setIncludeOAuth($include_o_auth)
+    {
+        $this->container['include_o_auth'] = $include_o_auth;
 
         return $this;
     }

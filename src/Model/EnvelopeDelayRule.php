@@ -37,6 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * EnvelopeDelayRule Class Doc Comment
  *
  * @category    Class
+ * @description An envelope delay rule is a rule which determines how the envelope should be delayed either for sending or routing. It can expressed as either a delay in some number of days, hours, minutes and seconds or an exact resumeDate in the future.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -225,7 +226,7 @@ class EnvelopeDelayRule implements ModelInterface, ArrayAccess
     /**
      * Sets delay
      *
-     * @param ?string $delay 
+     * @param ?string $delay A string timespan duration represented as d.hh:mm:ss where the d component is days, hh is hours measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the expected delay for this envelope rule. The maximum delay is 30 days.
      *
      * @return $this
      */
@@ -249,7 +250,7 @@ class EnvelopeDelayRule implements ModelInterface, ArrayAccess
     /**
      * Sets resume_date
      *
-     * @param ?string $resume_date 
+     * @param ?string $resume_date A string formatted as an ISO 8601 DATETIME with TimeZone specified, indicating the expected resumeDate for this envelope rule. The specified datetime must occur in the future relative to the current UTC time hen the request is made. The maximum resumeDate must not exceed 30 days in the future.
      *
      * @return $this
      */

@@ -347,6 +347,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'email_template_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_access_code_generator' => '?string',
         'enable_access_code_generator_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_adm_healthcare' => '?string',
+        'enable_adm_healthcare_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_advanced_payments' => '?string',
         'enable_advanced_payments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_advanced_power_forms' => '?string',
@@ -361,6 +363,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_calculated_fields' => '?string',
         'enable_calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus' => '?string',
+        'enable_click_plus_conditional_content' => '?string',
+        'enable_click_plus_conditional_content_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_custom_fields' => '?string',
+        'enable_click_plus_custom_fields_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_custom_style' => '?string',
+        'enable_click_plus_custom_style_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_dynamic_content' => '?string',
+        'enable_click_plus_dynamic_content_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_clickwraps' => '?string',
         'enable_clickwraps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_combined_pdf_download_for_sbs' => '?string',
@@ -472,6 +484,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => '?string',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'envelope_search_mode' => '?string',
+        'envelope_search_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_stamping_default_value' => '?string',
         'envelope_stamping_default_value_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'exit_prompt' => '?string',
@@ -505,6 +519,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'identity_verification' => '\DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[]',
         'identity_verification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'idfx_kba_authentication_override' => '?string',
+        'idfx_kba_authentication_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'idfx_phone_authentication_override' => '?string',
         'idfx_phone_authentication_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'ignore_error_if_anchor_tab_not_found' => '?string',
@@ -523,6 +539,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'maximum_users_per_signing_group' => '?string',
         'maximum_users_per_signing_group_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'max_number_of_custom_stamps' => '?string',
+        'merge_mixed_mode_results' => '?string',
+        'merge_mixed_mode_results_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'mobile_session_timeout' => '?string',
         'mobile_session_timeout_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'number_of_active_custom_stamps' => '?string',
@@ -668,10 +686,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_docu_sign_express_signer_certificate' => '?string',
         'use_docu_sign_express_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'use_envelope_search_mixed_mode' => '?string',
+        'use_envelope_search_mixed_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_multi_app_groups_data' => '?string',
         'use_multi_app_groups_data_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_new_blob_for_pdf' => '?string',
         'use_new_blob_for_pdf_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'use_new_envelope_search' => '?string',
+        'use_new_envelope_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_safe_signer_certificates' => '?string',
         'use_safe_signer_certificates_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'uses_api' => '?string',
@@ -990,6 +1012,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'email_template_version_metadata' => null,
         'enable_access_code_generator' => null,
         'enable_access_code_generator_metadata' => null,
+        'enable_adm_healthcare' => null,
+        'enable_adm_healthcare_metadata' => null,
         'enable_advanced_payments' => null,
         'enable_advanced_payments_metadata' => null,
         'enable_advanced_power_forms' => null,
@@ -1004,6 +1028,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => null,
         'enable_calculated_fields' => null,
         'enable_calculated_fields_metadata' => null,
+        'enable_click_plus' => null,
+        'enable_click_plus_conditional_content' => null,
+        'enable_click_plus_conditional_content_meta_data' => null,
+        'enable_click_plus_custom_fields' => null,
+        'enable_click_plus_custom_fields_meta_data' => null,
+        'enable_click_plus_custom_style' => null,
+        'enable_click_plus_custom_style_meta_data' => null,
+        'enable_click_plus_dynamic_content' => null,
+        'enable_click_plus_dynamic_content_meta_data' => null,
+        'enable_click_plus_meta_data' => null,
         'enable_clickwraps' => null,
         'enable_clickwraps_metadata' => null,
         'enable_combined_pdf_download_for_sbs' => null,
@@ -1115,6 +1149,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => null,
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => null,
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => null,
+        'envelope_search_mode' => null,
+        'envelope_search_mode_metadata' => null,
         'envelope_stamping_default_value' => null,
         'envelope_stamping_default_value_metadata' => null,
         'exit_prompt' => null,
@@ -1148,6 +1184,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => null,
         'identity_verification' => null,
         'identity_verification_metadata' => null,
+        'idfx_kba_authentication_override' => null,
+        'idfx_kba_authentication_override_metadata' => null,
         'idfx_phone_authentication_override' => null,
         'idfx_phone_authentication_override_metadata' => null,
         'ignore_error_if_anchor_tab_not_found' => null,
@@ -1166,6 +1204,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'maximum_users_per_signing_group' => null,
         'maximum_users_per_signing_group_metadata' => null,
         'max_number_of_custom_stamps' => null,
+        'merge_mixed_mode_results' => null,
+        'merge_mixed_mode_results_metadata' => null,
         'mobile_session_timeout' => null,
         'mobile_session_timeout_metadata' => null,
         'number_of_active_custom_stamps' => null,
@@ -1311,10 +1351,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => null,
         'use_docu_sign_express_signer_certificate' => null,
         'use_docu_sign_express_signer_certificate_metadata' => null,
+        'use_envelope_search_mixed_mode' => null,
+        'use_envelope_search_mixed_mode_metadata' => null,
         'use_multi_app_groups_data' => null,
         'use_multi_app_groups_data_metadata' => null,
         'use_new_blob_for_pdf' => null,
         'use_new_blob_for_pdf_metadata' => null,
+        'use_new_envelope_search' => null,
+        'use_new_envelope_search_metadata' => null,
         'use_safe_signer_certificates' => null,
         'use_safe_signer_certificates_metadata' => null,
         'uses_api' => null,
@@ -1654,6 +1698,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'email_template_version_metadata' => 'emailTemplateVersionMetadata',
         'enable_access_code_generator' => 'enableAccessCodeGenerator',
         'enable_access_code_generator_metadata' => 'enableAccessCodeGeneratorMetadata',
+        'enable_adm_healthcare' => 'enableAdmHealthcare',
+        'enable_adm_healthcare_metadata' => 'enableAdmHealthcareMetadata',
         'enable_advanced_payments' => 'enableAdvancedPayments',
         'enable_advanced_payments_metadata' => 'enableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'enableAdvancedPowerForms',
@@ -1668,6 +1714,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'enableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'enableCalculatedFields',
         'enable_calculated_fields_metadata' => 'enableCalculatedFieldsMetadata',
+        'enable_click_plus' => 'enableClickPlus',
+        'enable_click_plus_conditional_content' => 'enableClickPlusConditionalContent',
+        'enable_click_plus_conditional_content_meta_data' => 'enableClickPlusConditionalContentMetaData',
+        'enable_click_plus_custom_fields' => 'enableClickPlusCustomFields',
+        'enable_click_plus_custom_fields_meta_data' => 'enableClickPlusCustomFieldsMetaData',
+        'enable_click_plus_custom_style' => 'enableClickPlusCustomStyle',
+        'enable_click_plus_custom_style_meta_data' => 'enableClickPlusCustomStyleMetaData',
+        'enable_click_plus_dynamic_content' => 'enableClickPlusDynamicContent',
+        'enable_click_plus_dynamic_content_meta_data' => 'enableClickPlusDynamicContentMetaData',
+        'enable_click_plus_meta_data' => 'enableClickPlusMetaData',
         'enable_clickwraps' => 'enableClickwraps',
         'enable_clickwraps_metadata' => 'enableClickwrapsMetadata',
         'enable_combined_pdf_download_for_sbs' => 'enableCombinedPDFDownloadForSBS',
@@ -1779,6 +1835,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
+        'envelope_search_mode' => 'envelopeSearchMode',
+        'envelope_search_mode_metadata' => 'envelopeSearchModeMetadata',
         'envelope_stamping_default_value' => 'envelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'envelopeStampingDefaultValueMetadata',
         'exit_prompt' => 'exitPrompt',
@@ -1812,6 +1870,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'idCheckRequiredMetadata',
         'identity_verification' => 'identityVerification',
         'identity_verification_metadata' => 'identityVerificationMetadata',
+        'idfx_kba_authentication_override' => 'idfxKBAAuthenticationOverride',
+        'idfx_kba_authentication_override_metadata' => 'idfxKBAAuthenticationOverrideMetadata',
         'idfx_phone_authentication_override' => 'idfxPhoneAuthenticationOverride',
         'idfx_phone_authentication_override_metadata' => 'idfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'ignoreErrorIfAnchorTabNotFound',
@@ -1830,6 +1890,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'maximum_users_per_signing_group' => 'maximumUsersPerSigningGroup',
         'maximum_users_per_signing_group_metadata' => 'maximumUsersPerSigningGroupMetadata',
         'max_number_of_custom_stamps' => 'maxNumberOfCustomStamps',
+        'merge_mixed_mode_results' => 'mergeMixedModeResults',
+        'merge_mixed_mode_results_metadata' => 'mergeMixedModeResultsMetadata',
         'mobile_session_timeout' => 'mobileSessionTimeout',
         'mobile_session_timeout_metadata' => 'mobileSessionTimeoutMetadata',
         'number_of_active_custom_stamps' => 'numberOfActiveCustomStamps',
@@ -1975,10 +2037,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => 'useDerivedKeysMetadata',
         'use_docu_sign_express_signer_certificate' => 'useDocuSignExpressSignerCertificate',
         'use_docu_sign_express_signer_certificate_metadata' => 'useDocuSignExpressSignerCertificateMetadata',
+        'use_envelope_search_mixed_mode' => 'useEnvelopeSearchMixedMode',
+        'use_envelope_search_mixed_mode_metadata' => 'useEnvelopeSearchMixedModeMetadata',
         'use_multi_app_groups_data' => 'useMultiAppGroupsData',
         'use_multi_app_groups_data_metadata' => 'useMultiAppGroupsDataMetadata',
         'use_new_blob_for_pdf' => 'useNewBlobForPdf',
         'use_new_blob_for_pdf_metadata' => 'useNewBlobForPdfMetadata',
+        'use_new_envelope_search' => 'useNewEnvelopeSearch',
+        'use_new_envelope_search_metadata' => 'useNewEnvelopeSearchMetadata',
         'use_safe_signer_certificates' => 'useSAFESignerCertificates',
         'use_safe_signer_certificates_metadata' => 'useSAFESignerCertificatesMetadata',
         'uses_api' => 'usesAPI',
@@ -2297,6 +2363,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'email_template_version_metadata' => 'setEmailTemplateVersionMetadata',
         'enable_access_code_generator' => 'setEnableAccessCodeGenerator',
         'enable_access_code_generator_metadata' => 'setEnableAccessCodeGeneratorMetadata',
+        'enable_adm_healthcare' => 'setEnableAdmHealthcare',
+        'enable_adm_healthcare_metadata' => 'setEnableAdmHealthcareMetadata',
         'enable_advanced_payments' => 'setEnableAdvancedPayments',
         'enable_advanced_payments_metadata' => 'setEnableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'setEnableAdvancedPowerForms',
@@ -2311,6 +2379,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'setEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'setEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'setEnableCalculatedFieldsMetadata',
+        'enable_click_plus' => 'setEnableClickPlus',
+        'enable_click_plus_conditional_content' => 'setEnableClickPlusConditionalContent',
+        'enable_click_plus_conditional_content_meta_data' => 'setEnableClickPlusConditionalContentMetaData',
+        'enable_click_plus_custom_fields' => 'setEnableClickPlusCustomFields',
+        'enable_click_plus_custom_fields_meta_data' => 'setEnableClickPlusCustomFieldsMetaData',
+        'enable_click_plus_custom_style' => 'setEnableClickPlusCustomStyle',
+        'enable_click_plus_custom_style_meta_data' => 'setEnableClickPlusCustomStyleMetaData',
+        'enable_click_plus_dynamic_content' => 'setEnableClickPlusDynamicContent',
+        'enable_click_plus_dynamic_content_meta_data' => 'setEnableClickPlusDynamicContentMetaData',
+        'enable_click_plus_meta_data' => 'setEnableClickPlusMetaData',
         'enable_clickwraps' => 'setEnableClickwraps',
         'enable_clickwraps_metadata' => 'setEnableClickwrapsMetadata',
         'enable_combined_pdf_download_for_sbs' => 'setEnableCombinedPdfDownloadForSbs',
@@ -2422,6 +2500,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'setEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabled',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'setEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabledMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'setEnvelopeLimitsTotalDocumentSizeAllowedInMbMetadata',
+        'envelope_search_mode' => 'setEnvelopeSearchMode',
+        'envelope_search_mode_metadata' => 'setEnvelopeSearchModeMetadata',
         'envelope_stamping_default_value' => 'setEnvelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'setEnvelopeStampingDefaultValueMetadata',
         'exit_prompt' => 'setExitPrompt',
@@ -2455,6 +2535,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'setIdCheckRequiredMetadata',
         'identity_verification' => 'setIdentityVerification',
         'identity_verification_metadata' => 'setIdentityVerificationMetadata',
+        'idfx_kba_authentication_override' => 'setIdfxKbaAuthenticationOverride',
+        'idfx_kba_authentication_override_metadata' => 'setIdfxKbaAuthenticationOverrideMetadata',
         'idfx_phone_authentication_override' => 'setIdfxPhoneAuthenticationOverride',
         'idfx_phone_authentication_override_metadata' => 'setIdfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'setIgnoreErrorIfAnchorTabNotFound',
@@ -2473,6 +2555,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'maximum_users_per_signing_group' => 'setMaximumUsersPerSigningGroup',
         'maximum_users_per_signing_group_metadata' => 'setMaximumUsersPerSigningGroupMetadata',
         'max_number_of_custom_stamps' => 'setMaxNumberOfCustomStamps',
+        'merge_mixed_mode_results' => 'setMergeMixedModeResults',
+        'merge_mixed_mode_results_metadata' => 'setMergeMixedModeResultsMetadata',
         'mobile_session_timeout' => 'setMobileSessionTimeout',
         'mobile_session_timeout_metadata' => 'setMobileSessionTimeoutMetadata',
         'number_of_active_custom_stamps' => 'setNumberOfActiveCustomStamps',
@@ -2618,10 +2702,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => 'setUseDerivedKeysMetadata',
         'use_docu_sign_express_signer_certificate' => 'setUseDocuSignExpressSignerCertificate',
         'use_docu_sign_express_signer_certificate_metadata' => 'setUseDocuSignExpressSignerCertificateMetadata',
+        'use_envelope_search_mixed_mode' => 'setUseEnvelopeSearchMixedMode',
+        'use_envelope_search_mixed_mode_metadata' => 'setUseEnvelopeSearchMixedModeMetadata',
         'use_multi_app_groups_data' => 'setUseMultiAppGroupsData',
         'use_multi_app_groups_data_metadata' => 'setUseMultiAppGroupsDataMetadata',
         'use_new_blob_for_pdf' => 'setUseNewBlobForPdf',
         'use_new_blob_for_pdf_metadata' => 'setUseNewBlobForPdfMetadata',
+        'use_new_envelope_search' => 'setUseNewEnvelopeSearch',
+        'use_new_envelope_search_metadata' => 'setUseNewEnvelopeSearchMetadata',
         'use_safe_signer_certificates' => 'setUseSafeSignerCertificates',
         'use_safe_signer_certificates_metadata' => 'setUseSafeSignerCertificatesMetadata',
         'uses_api' => 'setUsesApi',
@@ -2940,6 +3028,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'email_template_version_metadata' => 'getEmailTemplateVersionMetadata',
         'enable_access_code_generator' => 'getEnableAccessCodeGenerator',
         'enable_access_code_generator_metadata' => 'getEnableAccessCodeGeneratorMetadata',
+        'enable_adm_healthcare' => 'getEnableAdmHealthcare',
+        'enable_adm_healthcare_metadata' => 'getEnableAdmHealthcareMetadata',
         'enable_advanced_payments' => 'getEnableAdvancedPayments',
         'enable_advanced_payments_metadata' => 'getEnableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'getEnableAdvancedPowerForms',
@@ -2954,6 +3044,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'getEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'getEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'getEnableCalculatedFieldsMetadata',
+        'enable_click_plus' => 'getEnableClickPlus',
+        'enable_click_plus_conditional_content' => 'getEnableClickPlusConditionalContent',
+        'enable_click_plus_conditional_content_meta_data' => 'getEnableClickPlusConditionalContentMetaData',
+        'enable_click_plus_custom_fields' => 'getEnableClickPlusCustomFields',
+        'enable_click_plus_custom_fields_meta_data' => 'getEnableClickPlusCustomFieldsMetaData',
+        'enable_click_plus_custom_style' => 'getEnableClickPlusCustomStyle',
+        'enable_click_plus_custom_style_meta_data' => 'getEnableClickPlusCustomStyleMetaData',
+        'enable_click_plus_dynamic_content' => 'getEnableClickPlusDynamicContent',
+        'enable_click_plus_dynamic_content_meta_data' => 'getEnableClickPlusDynamicContentMetaData',
+        'enable_click_plus_meta_data' => 'getEnableClickPlusMetaData',
         'enable_clickwraps' => 'getEnableClickwraps',
         'enable_clickwraps_metadata' => 'getEnableClickwrapsMetadata',
         'enable_combined_pdf_download_for_sbs' => 'getEnableCombinedPdfDownloadForSbs',
@@ -3065,6 +3165,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'getEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabled',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'getEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabledMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'getEnvelopeLimitsTotalDocumentSizeAllowedInMbMetadata',
+        'envelope_search_mode' => 'getEnvelopeSearchMode',
+        'envelope_search_mode_metadata' => 'getEnvelopeSearchModeMetadata',
         'envelope_stamping_default_value' => 'getEnvelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'getEnvelopeStampingDefaultValueMetadata',
         'exit_prompt' => 'getExitPrompt',
@@ -3098,6 +3200,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'getIdCheckRequiredMetadata',
         'identity_verification' => 'getIdentityVerification',
         'identity_verification_metadata' => 'getIdentityVerificationMetadata',
+        'idfx_kba_authentication_override' => 'getIdfxKbaAuthenticationOverride',
+        'idfx_kba_authentication_override_metadata' => 'getIdfxKbaAuthenticationOverrideMetadata',
         'idfx_phone_authentication_override' => 'getIdfxPhoneAuthenticationOverride',
         'idfx_phone_authentication_override_metadata' => 'getIdfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'getIgnoreErrorIfAnchorTabNotFound',
@@ -3116,6 +3220,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'maximum_users_per_signing_group' => 'getMaximumUsersPerSigningGroup',
         'maximum_users_per_signing_group_metadata' => 'getMaximumUsersPerSigningGroupMetadata',
         'max_number_of_custom_stamps' => 'getMaxNumberOfCustomStamps',
+        'merge_mixed_mode_results' => 'getMergeMixedModeResults',
+        'merge_mixed_mode_results_metadata' => 'getMergeMixedModeResultsMetadata',
         'mobile_session_timeout' => 'getMobileSessionTimeout',
         'mobile_session_timeout_metadata' => 'getMobileSessionTimeoutMetadata',
         'number_of_active_custom_stamps' => 'getNumberOfActiveCustomStamps',
@@ -3261,10 +3367,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => 'getUseDerivedKeysMetadata',
         'use_docu_sign_express_signer_certificate' => 'getUseDocuSignExpressSignerCertificate',
         'use_docu_sign_express_signer_certificate_metadata' => 'getUseDocuSignExpressSignerCertificateMetadata',
+        'use_envelope_search_mixed_mode' => 'getUseEnvelopeSearchMixedMode',
+        'use_envelope_search_mixed_mode_metadata' => 'getUseEnvelopeSearchMixedModeMetadata',
         'use_multi_app_groups_data' => 'getUseMultiAppGroupsData',
         'use_multi_app_groups_data_metadata' => 'getUseMultiAppGroupsDataMetadata',
         'use_new_blob_for_pdf' => 'getUseNewBlobForPdf',
         'use_new_blob_for_pdf_metadata' => 'getUseNewBlobForPdfMetadata',
+        'use_new_envelope_search' => 'getUseNewEnvelopeSearch',
+        'use_new_envelope_search_metadata' => 'getUseNewEnvelopeSearchMetadata',
         'use_safe_signer_certificates' => 'getUseSafeSignerCertificates',
         'use_safe_signer_certificates_metadata' => 'getUseSafeSignerCertificatesMetadata',
         'uses_api' => 'getUsesApi',
@@ -3637,6 +3747,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['email_template_version_metadata'] = isset($data['email_template_version_metadata']) ? $data['email_template_version_metadata'] : null;
         $this->container['enable_access_code_generator'] = isset($data['enable_access_code_generator']) ? $data['enable_access_code_generator'] : null;
         $this->container['enable_access_code_generator_metadata'] = isset($data['enable_access_code_generator_metadata']) ? $data['enable_access_code_generator_metadata'] : null;
+        $this->container['enable_adm_healthcare'] = isset($data['enable_adm_healthcare']) ? $data['enable_adm_healthcare'] : null;
+        $this->container['enable_adm_healthcare_metadata'] = isset($data['enable_adm_healthcare_metadata']) ? $data['enable_adm_healthcare_metadata'] : null;
         $this->container['enable_advanced_payments'] = isset($data['enable_advanced_payments']) ? $data['enable_advanced_payments'] : null;
         $this->container['enable_advanced_payments_metadata'] = isset($data['enable_advanced_payments_metadata']) ? $data['enable_advanced_payments_metadata'] : null;
         $this->container['enable_advanced_power_forms'] = isset($data['enable_advanced_power_forms']) ? $data['enable_advanced_power_forms'] : null;
@@ -3651,6 +3763,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_bcc_dummy_link_metadata'] = isset($data['enable_bcc_dummy_link_metadata']) ? $data['enable_bcc_dummy_link_metadata'] : null;
         $this->container['enable_calculated_fields'] = isset($data['enable_calculated_fields']) ? $data['enable_calculated_fields'] : null;
         $this->container['enable_calculated_fields_metadata'] = isset($data['enable_calculated_fields_metadata']) ? $data['enable_calculated_fields_metadata'] : null;
+        $this->container['enable_click_plus'] = isset($data['enable_click_plus']) ? $data['enable_click_plus'] : null;
+        $this->container['enable_click_plus_conditional_content'] = isset($data['enable_click_plus_conditional_content']) ? $data['enable_click_plus_conditional_content'] : null;
+        $this->container['enable_click_plus_conditional_content_meta_data'] = isset($data['enable_click_plus_conditional_content_meta_data']) ? $data['enable_click_plus_conditional_content_meta_data'] : null;
+        $this->container['enable_click_plus_custom_fields'] = isset($data['enable_click_plus_custom_fields']) ? $data['enable_click_plus_custom_fields'] : null;
+        $this->container['enable_click_plus_custom_fields_meta_data'] = isset($data['enable_click_plus_custom_fields_meta_data']) ? $data['enable_click_plus_custom_fields_meta_data'] : null;
+        $this->container['enable_click_plus_custom_style'] = isset($data['enable_click_plus_custom_style']) ? $data['enable_click_plus_custom_style'] : null;
+        $this->container['enable_click_plus_custom_style_meta_data'] = isset($data['enable_click_plus_custom_style_meta_data']) ? $data['enable_click_plus_custom_style_meta_data'] : null;
+        $this->container['enable_click_plus_dynamic_content'] = isset($data['enable_click_plus_dynamic_content']) ? $data['enable_click_plus_dynamic_content'] : null;
+        $this->container['enable_click_plus_dynamic_content_meta_data'] = isset($data['enable_click_plus_dynamic_content_meta_data']) ? $data['enable_click_plus_dynamic_content_meta_data'] : null;
+        $this->container['enable_click_plus_meta_data'] = isset($data['enable_click_plus_meta_data']) ? $data['enable_click_plus_meta_data'] : null;
         $this->container['enable_clickwraps'] = isset($data['enable_clickwraps']) ? $data['enable_clickwraps'] : null;
         $this->container['enable_clickwraps_metadata'] = isset($data['enable_clickwraps_metadata']) ? $data['enable_clickwraps_metadata'] : null;
         $this->container['enable_combined_pdf_download_for_sbs'] = isset($data['enable_combined_pdf_download_for_sbs']) ? $data['enable_combined_pdf_download_for_sbs'] : null;
@@ -3762,6 +3884,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['envelope_limits_total_document_size_allowed_in_mb_enabled'] = isset($data['envelope_limits_total_document_size_allowed_in_mb_enabled']) ? $data['envelope_limits_total_document_size_allowed_in_mb_enabled'] : null;
         $this->container['envelope_limits_total_document_size_allowed_in_mb_enabled_metadata'] = isset($data['envelope_limits_total_document_size_allowed_in_mb_enabled_metadata']) ? $data['envelope_limits_total_document_size_allowed_in_mb_enabled_metadata'] : null;
         $this->container['envelope_limits_total_document_size_allowed_in_mb_metadata'] = isset($data['envelope_limits_total_document_size_allowed_in_mb_metadata']) ? $data['envelope_limits_total_document_size_allowed_in_mb_metadata'] : null;
+        $this->container['envelope_search_mode'] = isset($data['envelope_search_mode']) ? $data['envelope_search_mode'] : null;
+        $this->container['envelope_search_mode_metadata'] = isset($data['envelope_search_mode_metadata']) ? $data['envelope_search_mode_metadata'] : null;
         $this->container['envelope_stamping_default_value'] = isset($data['envelope_stamping_default_value']) ? $data['envelope_stamping_default_value'] : null;
         $this->container['envelope_stamping_default_value_metadata'] = isset($data['envelope_stamping_default_value_metadata']) ? $data['envelope_stamping_default_value_metadata'] : null;
         $this->container['exit_prompt'] = isset($data['exit_prompt']) ? $data['exit_prompt'] : null;
@@ -3795,6 +3919,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['id_check_required_metadata'] = isset($data['id_check_required_metadata']) ? $data['id_check_required_metadata'] : null;
         $this->container['identity_verification'] = isset($data['identity_verification']) ? $data['identity_verification'] : null;
         $this->container['identity_verification_metadata'] = isset($data['identity_verification_metadata']) ? $data['identity_verification_metadata'] : null;
+        $this->container['idfx_kba_authentication_override'] = isset($data['idfx_kba_authentication_override']) ? $data['idfx_kba_authentication_override'] : null;
+        $this->container['idfx_kba_authentication_override_metadata'] = isset($data['idfx_kba_authentication_override_metadata']) ? $data['idfx_kba_authentication_override_metadata'] : null;
         $this->container['idfx_phone_authentication_override'] = isset($data['idfx_phone_authentication_override']) ? $data['idfx_phone_authentication_override'] : null;
         $this->container['idfx_phone_authentication_override_metadata'] = isset($data['idfx_phone_authentication_override_metadata']) ? $data['idfx_phone_authentication_override_metadata'] : null;
         $this->container['ignore_error_if_anchor_tab_not_found'] = isset($data['ignore_error_if_anchor_tab_not_found']) ? $data['ignore_error_if_anchor_tab_not_found'] : null;
@@ -3813,6 +3939,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['maximum_users_per_signing_group'] = isset($data['maximum_users_per_signing_group']) ? $data['maximum_users_per_signing_group'] : null;
         $this->container['maximum_users_per_signing_group_metadata'] = isset($data['maximum_users_per_signing_group_metadata']) ? $data['maximum_users_per_signing_group_metadata'] : null;
         $this->container['max_number_of_custom_stamps'] = isset($data['max_number_of_custom_stamps']) ? $data['max_number_of_custom_stamps'] : null;
+        $this->container['merge_mixed_mode_results'] = isset($data['merge_mixed_mode_results']) ? $data['merge_mixed_mode_results'] : null;
+        $this->container['merge_mixed_mode_results_metadata'] = isset($data['merge_mixed_mode_results_metadata']) ? $data['merge_mixed_mode_results_metadata'] : null;
         $this->container['mobile_session_timeout'] = isset($data['mobile_session_timeout']) ? $data['mobile_session_timeout'] : null;
         $this->container['mobile_session_timeout_metadata'] = isset($data['mobile_session_timeout_metadata']) ? $data['mobile_session_timeout_metadata'] : null;
         $this->container['number_of_active_custom_stamps'] = isset($data['number_of_active_custom_stamps']) ? $data['number_of_active_custom_stamps'] : null;
@@ -3958,10 +4086,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['use_derived_keys_metadata'] = isset($data['use_derived_keys_metadata']) ? $data['use_derived_keys_metadata'] : null;
         $this->container['use_docu_sign_express_signer_certificate'] = isset($data['use_docu_sign_express_signer_certificate']) ? $data['use_docu_sign_express_signer_certificate'] : null;
         $this->container['use_docu_sign_express_signer_certificate_metadata'] = isset($data['use_docu_sign_express_signer_certificate_metadata']) ? $data['use_docu_sign_express_signer_certificate_metadata'] : null;
+        $this->container['use_envelope_search_mixed_mode'] = isset($data['use_envelope_search_mixed_mode']) ? $data['use_envelope_search_mixed_mode'] : null;
+        $this->container['use_envelope_search_mixed_mode_metadata'] = isset($data['use_envelope_search_mixed_mode_metadata']) ? $data['use_envelope_search_mixed_mode_metadata'] : null;
         $this->container['use_multi_app_groups_data'] = isset($data['use_multi_app_groups_data']) ? $data['use_multi_app_groups_data'] : null;
         $this->container['use_multi_app_groups_data_metadata'] = isset($data['use_multi_app_groups_data_metadata']) ? $data['use_multi_app_groups_data_metadata'] : null;
         $this->container['use_new_blob_for_pdf'] = isset($data['use_new_blob_for_pdf']) ? $data['use_new_blob_for_pdf'] : null;
         $this->container['use_new_blob_for_pdf_metadata'] = isset($data['use_new_blob_for_pdf_metadata']) ? $data['use_new_blob_for_pdf_metadata'] : null;
+        $this->container['use_new_envelope_search'] = isset($data['use_new_envelope_search']) ? $data['use_new_envelope_search'] : null;
+        $this->container['use_new_envelope_search_metadata'] = isset($data['use_new_envelope_search_metadata']) ? $data['use_new_envelope_search_metadata'] : null;
         $this->container['use_safe_signer_certificates'] = isset($data['use_safe_signer_certificates']) ? $data['use_safe_signer_certificates'] : null;
         $this->container['use_safe_signer_certificates_metadata'] = isset($data['use_safe_signer_certificates_metadata']) ? $data['use_safe_signer_certificates_metadata'] : null;
         $this->container['uses_api'] = isset($data['uses_api']) ? $data['uses_api'] : null;
@@ -5080,7 +5212,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_delayed_routing
      *
-     * @param ?string $allow_delayed_routing \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.
+     * @param ?string $allow_delayed_routing \\\"true\\\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \\\"false\\\" otherwise.
      *
      * @return $this
      */
@@ -7672,7 +7804,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_scheduled_sending
      *
-     * @param ?string $allow_scheduled_sending \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.
+     * @param ?string $allow_scheduled_sending \\\"true\\\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \\\"false\\\" otherwise.
      *
      * @return $this
      */
@@ -10900,6 +11032,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_adm_healthcare
+     *
+     * @return ?string
+     */
+    public function getEnableAdmHealthcare()
+    {
+        return $this->container['enable_adm_healthcare'];
+    }
+
+    /**
+     * Sets enable_adm_healthcare
+     *
+     * @param ?string $enable_adm_healthcare 
+     *
+     * @return $this
+     */
+    public function setEnableAdmHealthcare($enable_adm_healthcare)
+    {
+        $this->container['enable_adm_healthcare'] = $enable_adm_healthcare;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_adm_healthcare_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAdmHealthcareMetadata()
+    {
+        return $this->container['enable_adm_healthcare_metadata'];
+    }
+
+    /**
+     * Sets enable_adm_healthcare_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_adm_healthcare_metadata enable_adm_healthcare_metadata
+     *
+     * @return $this
+     */
+    public function setEnableAdmHealthcareMetadata($enable_adm_healthcare_metadata)
+    {
+        $this->container['enable_adm_healthcare_metadata'] = $enable_adm_healthcare_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_advanced_payments
      *
      * @return ?string
@@ -11231,6 +11411,246 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableCalculatedFieldsMetadata($enable_calculated_fields_metadata)
     {
         $this->container['enable_calculated_fields_metadata'] = $enable_calculated_fields_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlus()
+    {
+        return $this->container['enable_click_plus'];
+    }
+
+    /**
+     * Sets enable_click_plus
+     *
+     * @param ?string $enable_click_plus 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlus($enable_click_plus)
+    {
+        $this->container['enable_click_plus'] = $enable_click_plus;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_conditional_content
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusConditionalContent()
+    {
+        return $this->container['enable_click_plus_conditional_content'];
+    }
+
+    /**
+     * Sets enable_click_plus_conditional_content
+     *
+     * @param ?string $enable_click_plus_conditional_content 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusConditionalContent($enable_click_plus_conditional_content)
+    {
+        $this->container['enable_click_plus_conditional_content'] = $enable_click_plus_conditional_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_conditional_content_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusConditionalContentMetaData()
+    {
+        return $this->container['enable_click_plus_conditional_content_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_conditional_content_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_conditional_content_meta_data enable_click_plus_conditional_content_meta_data
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusConditionalContentMetaData($enable_click_plus_conditional_content_meta_data)
+    {
+        $this->container['enable_click_plus_conditional_content_meta_data'] = $enable_click_plus_conditional_content_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_fields
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusCustomFields()
+    {
+        return $this->container['enable_click_plus_custom_fields'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_fields
+     *
+     * @param ?string $enable_click_plus_custom_fields 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomFields($enable_click_plus_custom_fields)
+    {
+        $this->container['enable_click_plus_custom_fields'] = $enable_click_plus_custom_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_fields_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusCustomFieldsMetaData()
+    {
+        return $this->container['enable_click_plus_custom_fields_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_fields_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_fields_meta_data enable_click_plus_custom_fields_meta_data
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomFieldsMetaData($enable_click_plus_custom_fields_meta_data)
+    {
+        $this->container['enable_click_plus_custom_fields_meta_data'] = $enable_click_plus_custom_fields_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_style
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusCustomStyle()
+    {
+        return $this->container['enable_click_plus_custom_style'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_style
+     *
+     * @param ?string $enable_click_plus_custom_style 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomStyle($enable_click_plus_custom_style)
+    {
+        $this->container['enable_click_plus_custom_style'] = $enable_click_plus_custom_style;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_style_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusCustomStyleMetaData()
+    {
+        return $this->container['enable_click_plus_custom_style_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_style_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_style_meta_data enable_click_plus_custom_style_meta_data
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomStyleMetaData($enable_click_plus_custom_style_meta_data)
+    {
+        $this->container['enable_click_plus_custom_style_meta_data'] = $enable_click_plus_custom_style_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_dynamic_content
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusDynamicContent()
+    {
+        return $this->container['enable_click_plus_dynamic_content'];
+    }
+
+    /**
+     * Sets enable_click_plus_dynamic_content
+     *
+     * @param ?string $enable_click_plus_dynamic_content 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusDynamicContent($enable_click_plus_dynamic_content)
+    {
+        $this->container['enable_click_plus_dynamic_content'] = $enable_click_plus_dynamic_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_dynamic_content_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusDynamicContentMetaData()
+    {
+        return $this->container['enable_click_plus_dynamic_content_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_dynamic_content_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_dynamic_content_meta_data enable_click_plus_dynamic_content_meta_data
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusDynamicContentMetaData($enable_click_plus_dynamic_content_meta_data)
+    {
+        $this->container['enable_click_plus_dynamic_content_meta_data'] = $enable_click_plus_dynamic_content_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusMetaData()
+    {
+        return $this->container['enable_click_plus_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_meta_data enable_click_plus_meta_data
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusMetaData($enable_click_plus_meta_data)
+    {
+        $this->container['enable_click_plus_meta_data'] = $enable_click_plus_meta_data;
 
         return $this;
     }
@@ -13900,6 +14320,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets envelope_search_mode
+     *
+     * @return ?string
+     */
+    public function getEnvelopeSearchMode()
+    {
+        return $this->container['envelope_search_mode'];
+    }
+
+    /**
+     * Sets envelope_search_mode
+     *
+     * @param ?string $envelope_search_mode 
+     *
+     * @return $this
+     */
+    public function setEnvelopeSearchMode($envelope_search_mode)
+    {
+        $this->container['envelope_search_mode'] = $envelope_search_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelope_search_mode_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnvelopeSearchModeMetadata()
+    {
+        return $this->container['envelope_search_mode_metadata'];
+    }
+
+    /**
+     * Sets envelope_search_mode_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_search_mode_metadata envelope_search_mode_metadata
+     *
+     * @return $this
+     */
+    public function setEnvelopeSearchModeMetadata($envelope_search_mode_metadata)
+    {
+        $this->container['envelope_search_mode_metadata'] = $envelope_search_mode_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets envelope_stamping_default_value
      *
      * @return ?string
@@ -14692,6 +15160,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets idfx_kba_authentication_override
+     *
+     * @return ?string
+     */
+    public function getIdfxKbaAuthenticationOverride()
+    {
+        return $this->container['idfx_kba_authentication_override'];
+    }
+
+    /**
+     * Sets idfx_kba_authentication_override
+     *
+     * @param ?string $idfx_kba_authentication_override 
+     *
+     * @return $this
+     */
+    public function setIdfxKbaAuthenticationOverride($idfx_kba_authentication_override)
+    {
+        $this->container['idfx_kba_authentication_override'] = $idfx_kba_authentication_override;
+
+        return $this;
+    }
+
+    /**
+     * Gets idfx_kba_authentication_override_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getIdfxKbaAuthenticationOverrideMetadata()
+    {
+        return $this->container['idfx_kba_authentication_override_metadata'];
+    }
+
+    /**
+     * Sets idfx_kba_authentication_override_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $idfx_kba_authentication_override_metadata idfx_kba_authentication_override_metadata
+     *
+     * @return $this
+     */
+    public function setIdfxKbaAuthenticationOverrideMetadata($idfx_kba_authentication_override_metadata)
+    {
+        $this->container['idfx_kba_authentication_override_metadata'] = $idfx_kba_authentication_override_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets idfx_phone_authentication_override
      *
      * @return ?string
@@ -15119,6 +15635,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setMaxNumberOfCustomStamps($max_number_of_custom_stamps)
     {
         $this->container['max_number_of_custom_stamps'] = $max_number_of_custom_stamps;
+
+        return $this;
+    }
+
+    /**
+     * Gets merge_mixed_mode_results
+     *
+     * @return ?string
+     */
+    public function getMergeMixedModeResults()
+    {
+        return $this->container['merge_mixed_mode_results'];
+    }
+
+    /**
+     * Sets merge_mixed_mode_results
+     *
+     * @param ?string $merge_mixed_mode_results 
+     *
+     * @return $this
+     */
+    public function setMergeMixedModeResults($merge_mixed_mode_results)
+    {
+        $this->container['merge_mixed_mode_results'] = $merge_mixed_mode_results;
+
+        return $this;
+    }
+
+    /**
+     * Gets merge_mixed_mode_results_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getMergeMixedModeResultsMetadata()
+    {
+        return $this->container['merge_mixed_mode_results_metadata'];
+    }
+
+    /**
+     * Sets merge_mixed_mode_results_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $merge_mixed_mode_results_metadata merge_mixed_mode_results_metadata
+     *
+     * @return $this
+     */
+    public function setMergeMixedModeResultsMetadata($merge_mixed_mode_results_metadata)
+    {
+        $this->container['merge_mixed_mode_results_metadata'] = $merge_mixed_mode_results_metadata;
 
         return $this;
     }
@@ -18604,6 +19168,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets use_envelope_search_mixed_mode
+     *
+     * @return ?string
+     */
+    public function getUseEnvelopeSearchMixedMode()
+    {
+        return $this->container['use_envelope_search_mixed_mode'];
+    }
+
+    /**
+     * Sets use_envelope_search_mixed_mode
+     *
+     * @param ?string $use_envelope_search_mixed_mode 
+     *
+     * @return $this
+     */
+    public function setUseEnvelopeSearchMixedMode($use_envelope_search_mixed_mode)
+    {
+        $this->container['use_envelope_search_mixed_mode'] = $use_envelope_search_mixed_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_envelope_search_mixed_mode_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUseEnvelopeSearchMixedModeMetadata()
+    {
+        return $this->container['use_envelope_search_mixed_mode_metadata'];
+    }
+
+    /**
+     * Sets use_envelope_search_mixed_mode_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_envelope_search_mixed_mode_metadata use_envelope_search_mixed_mode_metadata
+     *
+     * @return $this
+     */
+    public function setUseEnvelopeSearchMixedModeMetadata($use_envelope_search_mixed_mode_metadata)
+    {
+        $this->container['use_envelope_search_mixed_mode_metadata'] = $use_envelope_search_mixed_mode_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets use_multi_app_groups_data
      *
      * @return ?string
@@ -18695,6 +19307,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setUseNewBlobForPdfMetadata($use_new_blob_for_pdf_metadata)
     {
         $this->container['use_new_blob_for_pdf_metadata'] = $use_new_blob_for_pdf_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search
+     *
+     * @return ?string
+     */
+    public function getUseNewEnvelopeSearch()
+    {
+        return $this->container['use_new_envelope_search'];
+    }
+
+    /**
+     * Sets use_new_envelope_search
+     *
+     * @param ?string $use_new_envelope_search 
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearch($use_new_envelope_search)
+    {
+        $this->container['use_new_envelope_search'] = $use_new_envelope_search;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUseNewEnvelopeSearchMetadata()
+    {
+        return $this->container['use_new_envelope_search_metadata'];
+    }
+
+    /**
+     * Sets use_new_envelope_search_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_metadata use_new_envelope_search_metadata
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearchMetadata($use_new_envelope_search_metadata)
+    {
+        $this->container['use_new_envelope_search_metadata'] = $use_new_envelope_search_metadata;
 
         return $this;
     }

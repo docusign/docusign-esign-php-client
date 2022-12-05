@@ -81,6 +81,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_documents' => '?string',
         'include_envelope_void_reason' => '?string',
         'include_hmac' => '?string',
+        'include_o_auth' => '?string',
         'include_sender_accountas_custom_field' => '?string',
         'include_time_zone_information' => '?string',
         'name' => '?string',
@@ -130,6 +131,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_documents' => null,
         'include_envelope_void_reason' => null,
         'include_hmac' => null,
+        'include_o_auth' => null,
         'include_sender_accountas_custom_field' => null,
         'include_time_zone_information' => null,
         'name' => null,
@@ -200,6 +202,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_documents' => 'includeDocuments',
         'include_envelope_void_reason' => 'includeEnvelopeVoidReason',
         'include_hmac' => 'includeHMAC',
+        'include_o_auth' => 'includeOAuth',
         'include_sender_accountas_custom_field' => 'includeSenderAccountasCustomField',
         'include_time_zone_information' => 'includeTimeZoneInformation',
         'name' => 'name',
@@ -249,6 +252,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_documents' => 'setIncludeDocuments',
         'include_envelope_void_reason' => 'setIncludeEnvelopeVoidReason',
         'include_hmac' => 'setIncludeHmac',
+        'include_o_auth' => 'setIncludeOAuth',
         'include_sender_accountas_custom_field' => 'setIncludeSenderAccountasCustomField',
         'include_time_zone_information' => 'setIncludeTimeZoneInformation',
         'name' => 'setName',
@@ -298,6 +302,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_documents' => 'getIncludeDocuments',
         'include_envelope_void_reason' => 'getIncludeEnvelopeVoidReason',
         'include_hmac' => 'getIncludeHmac',
+        'include_o_auth' => 'getIncludeOAuth',
         'include_sender_accountas_custom_field' => 'getIncludeSenderAccountasCustomField',
         'include_time_zone_information' => 'getIncludeTimeZoneInformation',
         'name' => 'getName',
@@ -401,6 +406,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['include_documents'] = isset($data['include_documents']) ? $data['include_documents'] : null;
         $this->container['include_envelope_void_reason'] = isset($data['include_envelope_void_reason']) ? $data['include_envelope_void_reason'] : null;
         $this->container['include_hmac'] = isset($data['include_hmac']) ? $data['include_hmac'] : null;
+        $this->container['include_o_auth'] = isset($data['include_o_auth']) ? $data['include_o_auth'] : null;
         $this->container['include_sender_accountas_custom_field'] = isset($data['include_sender_accountas_custom_field']) ? $data['include_sender_accountas_custom_field'] : null;
         $this->container['include_time_zone_information'] = isset($data['include_time_zone_information']) ? $data['include_time_zone_information'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -947,6 +953,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     public function setIncludeHmac($include_hmac)
     {
         $this->container['include_hmac'] = $include_hmac;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_o_auth
+     *
+     * @return ?string
+     */
+    public function getIncludeOAuth()
+    {
+        return $this->container['include_o_auth'];
+    }
+
+    /**
+     * Sets include_o_auth
+     *
+     * @param ?string $include_o_auth 
+     *
+     * @return $this
+     */
+    public function setIncludeOAuth($include_o_auth)
+    {
+        $this->container['include_o_auth'] = $include_o_auth;
 
         return $this;
     }
