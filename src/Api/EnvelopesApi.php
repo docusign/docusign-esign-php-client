@@ -399,7 +399,7 @@ class GetCommentsTranscriptOptions
 class GetConsumerDisclosureOptions
 {
     /**
-      * $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+      * $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
       * @var ?string
       */
     protected ?string $lang_code2 = null;
@@ -416,7 +416,7 @@ class GetConsumerDisclosureOptions
 
     /**
      * Sets lang_code2
-     * @param ?string $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      *
      * @return self
      */
@@ -16051,120 +16051,6 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentVisibilityList', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateRegenDocument
-     *
-     * Retrieves a PDF document from the envelope with no CoC.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $regen_document_id 
-     * @param \DocuSign\eSign\Model\Document $document  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \SplFileObject
-     */
-    public function updateRegenDocument($account_id, $envelope_id, $regen_document_id, $document = null)
-    {
-        list($response) = $this->updateRegenDocumentWithHttpInfo($account_id, $envelope_id, $regen_document_id, $document);
-        return $response;
-    }
-
-    /**
-     * Operation updateRegenDocumentWithHttpInfo
-     *
-     * Retrieves a PDF document from the envelope with no CoC.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $regen_document_id 
-     * @param \DocuSign\eSign\Model\Document $document  (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateRegenDocumentWithHttpInfo($account_id, $envelope_id, $regen_document_id, $document = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateRegenDocument');
-        }
-        // verify the required parameter 'envelope_id' is set
-        if ($envelope_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling updateRegenDocument');
-        }
-        // verify the required parameter 'regen_document_id' is set
-        if ($regen_document_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $regen_document_id when calling updateRegenDocument');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{regenDocumentId}/regen";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/pdf']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($envelope_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
-        }
-        // path params
-        if ($regen_document_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "regenDocumentId", $regen_document_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        // body params
-        $_tempBody = null;
-        if (isset($document)) {
-            $_tempBody = $document;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\SplFileObject',
-                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{regenDocumentId}/regen'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

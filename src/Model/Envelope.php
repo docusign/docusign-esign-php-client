@@ -72,6 +72,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'auto_navigation' => '?string',
         'brand_id' => '?string',
         'brand_lock' => '?string',
+        'burn_default_tab_data' => '?string',
         'certificate_uri' => '?string',
         'completed_date_time' => '?string',
         'copy_recipient_data' => '?string',
@@ -158,6 +159,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'auto_navigation' => null,
         'brand_id' => null,
         'brand_lock' => null,
+        'burn_default_tab_data' => null,
         'certificate_uri' => null,
         'completed_date_time' => null,
         'copy_recipient_data' => null,
@@ -265,6 +267,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'auto_navigation' => 'autoNavigation',
         'brand_id' => 'brandId',
         'brand_lock' => 'brandLock',
+        'burn_default_tab_data' => 'burnDefaultTabData',
         'certificate_uri' => 'certificateUri',
         'completed_date_time' => 'completedDateTime',
         'copy_recipient_data' => 'copyRecipientData',
@@ -351,6 +354,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'auto_navigation' => 'setAutoNavigation',
         'brand_id' => 'setBrandId',
         'brand_lock' => 'setBrandLock',
+        'burn_default_tab_data' => 'setBurnDefaultTabData',
         'certificate_uri' => 'setCertificateUri',
         'completed_date_time' => 'setCompletedDateTime',
         'copy_recipient_data' => 'setCopyRecipientData',
@@ -437,6 +441,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'auto_navigation' => 'getAutoNavigation',
         'brand_id' => 'getBrandId',
         'brand_lock' => 'getBrandLock',
+        'burn_default_tab_data' => 'getBurnDefaultTabData',
         'certificate_uri' => 'getCertificateUri',
         'completed_date_time' => 'getCompletedDateTime',
         'copy_recipient_data' => 'getCopyRecipientData',
@@ -577,6 +582,7 @@ class Envelope implements ModelInterface, ArrayAccess
         $this->container['auto_navigation'] = isset($data['auto_navigation']) ? $data['auto_navigation'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
         $this->container['brand_lock'] = isset($data['brand_lock']) ? $data['brand_lock'] : null;
+        $this->container['burn_default_tab_data'] = isset($data['burn_default_tab_data']) ? $data['burn_default_tab_data'] : null;
         $this->container['certificate_uri'] = isset($data['certificate_uri']) ? $data['certificate_uri'] : null;
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
         $this->container['copy_recipient_data'] = isset($data['copy_recipient_data']) ? $data['copy_recipient_data'] : null;
@@ -976,6 +982,30 @@ class Envelope implements ModelInterface, ArrayAccess
     public function setBrandLock($brand_lock)
     {
         $this->container['brand_lock'] = $brand_lock;
+
+        return $this;
+    }
+
+    /**
+     * Gets burn_default_tab_data
+     *
+     * @return ?string
+     */
+    public function getBurnDefaultTabData()
+    {
+        return $this->container['burn_default_tab_data'];
+    }
+
+    /**
+     * Sets burn_default_tab_data
+     *
+     * @param ?string $burn_default_tab_data 
+     *
+     * @return $this
+     */
+    public function setBurnDefaultTabData($burn_default_tab_data)
+    {
+        $this->container['burn_default_tab_data'] = $burn_default_tab_data;
 
         return $this;
     }

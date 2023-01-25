@@ -71,7 +71,8 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'initial_format' => '?string',
         'name_format' => '?string',
         'time_format' => '?string',
-        'time_zone' => '?string'
+        'time_zone' => '?string',
+        'use_long_currency_format' => '?string'
     ];
 
     /**
@@ -92,7 +93,8 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'initial_format' => null,
         'name_format' => null,
         'time_format' => null,
-        'time_zone' => null
+        'time_zone' => null,
+        'use_long_currency_format' => null
     ];
 
     /**
@@ -134,7 +136,8 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'initial_format' => 'initialFormat',
         'name_format' => 'nameFormat',
         'time_format' => 'timeFormat',
-        'time_zone' => 'timeZone'
+        'time_zone' => 'timeZone',
+        'use_long_currency_format' => 'useLongCurrencyFormat'
     ];
 
     /**
@@ -155,7 +158,8 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'initial_format' => 'setInitialFormat',
         'name_format' => 'setNameFormat',
         'time_format' => 'setTimeFormat',
-        'time_zone' => 'setTimeZone'
+        'time_zone' => 'setTimeZone',
+        'use_long_currency_format' => 'setUseLongCurrencyFormat'
     ];
 
     /**
@@ -176,7 +180,8 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         'initial_format' => 'getInitialFormat',
         'name_format' => 'getNameFormat',
         'time_format' => 'getTimeFormat',
-        'time_zone' => 'getTimeZone'
+        'time_zone' => 'getTimeZone',
+        'use_long_currency_format' => 'getUseLongCurrencyFormat'
     ];
 
     /**
@@ -252,6 +257,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
         $this->container['name_format'] = isset($data['name_format']) ? $data['name_format'] : null;
         $this->container['time_format'] = isset($data['time_format']) ? $data['time_format'] : null;
         $this->container['time_zone'] = isset($data['time_zone']) ? $data['time_zone'] : null;
+        $this->container['use_long_currency_format'] = isset($data['use_long_currency_format']) ? $data['use_long_currency_format'] : null;
     }
 
     /**
@@ -586,6 +592,30 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
     public function setTimeZone($time_zone)
     {
         $this->container['time_zone'] = $time_zone;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_long_currency_format
+     *
+     * @return ?string
+     */
+    public function getUseLongCurrencyFormat()
+    {
+        return $this->container['use_long_currency_format'];
+    }
+
+    /**
+     * Sets use_long_currency_format
+     *
+     * @param ?string $use_long_currency_format 
+     *
+     * @return $this
+     */
+    public function setUseLongCurrencyFormat($use_long_currency_format)
+    {
+        $this->container['use_long_currency_format'] = $use_long_currency_format;
 
         return $this;
     }

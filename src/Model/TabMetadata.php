@@ -111,6 +111,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'underline' => '?string',
         'validation_message' => '?string',
         'validation_pattern' => '?string',
+        'validation_type' => '?string',
         'width' => '?string'
     ];
 
@@ -172,6 +173,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'underline' => null,
         'validation_message' => null,
         'validation_pattern' => null,
+        'validation_type' => null,
         'width' => null
     ];
 
@@ -254,6 +256,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'underline' => 'underline',
         'validation_message' => 'validationMessage',
         'validation_pattern' => 'validationPattern',
+        'validation_type' => 'validationType',
         'width' => 'width'
     ];
 
@@ -315,6 +318,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'underline' => 'setUnderline',
         'validation_message' => 'setValidationMessage',
         'validation_pattern' => 'setValidationPattern',
+        'validation_type' => 'setValidationType',
         'width' => 'setWidth'
     ];
 
@@ -376,6 +380,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
         'underline' => 'getUnderline',
         'validation_message' => 'getValidationMessage',
         'validation_pattern' => 'getValidationPattern',
+        'validation_type' => 'getValidationType',
         'width' => 'getWidth'
     ];
 
@@ -491,6 +496,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
         $this->container['underline'] = isset($data['underline']) ? $data['underline'] : null;
         $this->container['validation_message'] = isset($data['validation_message']) ? $data['validation_message'] : null;
         $this->container['validation_pattern'] = isset($data['validation_pattern']) ? $data['validation_pattern'] : null;
+        $this->container['validation_type'] = isset($data['validation_type']) ? $data['validation_type'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
     }
 
@@ -1762,6 +1768,30 @@ class TabMetadata implements ModelInterface, ArrayAccess
     public function setValidationPattern($validation_pattern)
     {
         $this->container['validation_pattern'] = $validation_pattern;
+
+        return $this;
+    }
+
+    /**
+     * Gets validation_type
+     *
+     * @return ?string
+     */
+    public function getValidationType()
+    {
+        return $this->container['validation_type'];
+    }
+
+    /**
+     * Sets validation_type
+     *
+     * @param ?string $validation_type 
+     *
+     * @return $this
+     */
+    public function setValidationType($validation_type)
+    {
+        $this->container['validation_type'] = $validation_type;
 
         return $this;
     }
