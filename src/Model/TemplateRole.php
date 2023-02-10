@@ -64,6 +64,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'additional_notifications' => '\DocuSign\eSign\Model\RecipientAdditionalNotification[]',
         'client_user_id' => '?string',
         'default_recipient' => '?string',
+        'delivery_method' => '?string',
         'email' => '?string',
         'email_notification' => '\DocuSign\eSign\Model\RecipientEmailNotification',
         'embedded_recipient_start_url' => '?string',
@@ -87,6 +88,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'additional_notifications' => null,
         'client_user_id' => null,
         'default_recipient' => null,
+        'delivery_method' => null,
         'email' => null,
         'email_notification' => null,
         'embedded_recipient_start_url' => null,
@@ -131,6 +133,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'additional_notifications' => 'additionalNotifications',
         'client_user_id' => 'clientUserId',
         'default_recipient' => 'defaultRecipient',
+        'delivery_method' => 'deliveryMethod',
         'email' => 'email',
         'email_notification' => 'emailNotification',
         'embedded_recipient_start_url' => 'embeddedRecipientStartURL',
@@ -154,6 +157,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'additional_notifications' => 'setAdditionalNotifications',
         'client_user_id' => 'setClientUserId',
         'default_recipient' => 'setDefaultRecipient',
+        'delivery_method' => 'setDeliveryMethod',
         'email' => 'setEmail',
         'email_notification' => 'setEmailNotification',
         'embedded_recipient_start_url' => 'setEmbeddedRecipientStartUrl',
@@ -177,6 +181,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'additional_notifications' => 'getAdditionalNotifications',
         'client_user_id' => 'getClientUserId',
         'default_recipient' => 'getDefaultRecipient',
+        'delivery_method' => 'getDeliveryMethod',
         'email' => 'getEmail',
         'email_notification' => 'getEmailNotification',
         'embedded_recipient_start_url' => 'getEmbeddedRecipientStartUrl',
@@ -254,6 +259,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
         $this->container['additional_notifications'] = isset($data['additional_notifications']) ? $data['additional_notifications'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['default_recipient'] = isset($data['default_recipient']) ? $data['default_recipient'] : null;
+        $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_notification'] = isset($data['email_notification']) ? $data['email_notification'] : null;
         $this->container['embedded_recipient_start_url'] = isset($data['embedded_recipient_start_url']) ? $data['embedded_recipient_start_url'] : null;
@@ -383,6 +389,30 @@ class TemplateRole implements ModelInterface, ArrayAccess
     public function setDefaultRecipient($default_recipient)
     {
         $this->container['default_recipient'] = $default_recipient;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_method
+     *
+     * @return ?string
+     */
+    public function getDeliveryMethod()
+    {
+        return $this->container['delivery_method'];
+    }
+
+    /**
+     * Sets delivery_method
+     *
+     * @param ?string $delivery_method Reserved: For DocuSign use only.
+     *
+     * @return $this
+     */
+    public function setDeliveryMethod($delivery_method)
+    {
+        $this->container['delivery_method'] = $delivery_method;
 
         return $this;
     }
