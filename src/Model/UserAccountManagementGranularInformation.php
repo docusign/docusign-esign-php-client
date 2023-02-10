@@ -74,6 +74,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_envelope_transfer_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_groups_but_not_users' => '?string',
         'can_manage_groups_but_not_users_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_joint_agreements' => '?string',
+        'can_manage_joint_agreements_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_reporting' => '?string',
         'can_manage_reporting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_sharing' => '?string',
@@ -107,6 +109,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_envelope_transfer_metadata' => null,
         'can_manage_groups_but_not_users' => null,
         'can_manage_groups_but_not_users_metadata' => null,
+        'can_manage_joint_agreements' => null,
+        'can_manage_joint_agreements_metadata' => null,
         'can_manage_reporting' => null,
         'can_manage_reporting_metadata' => null,
         'can_manage_sharing' => null,
@@ -161,6 +165,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_envelope_transfer_metadata' => 'canManageEnvelopeTransferMetadata',
         'can_manage_groups_but_not_users' => 'canManageGroupsButNotUsers',
         'can_manage_groups_but_not_users_metadata' => 'canManageGroupsButNotUsersMetadata',
+        'can_manage_joint_agreements' => 'canManageJointAgreements',
+        'can_manage_joint_agreements_metadata' => 'canManageJointAgreementsMetadata',
         'can_manage_reporting' => 'canManageReporting',
         'can_manage_reporting_metadata' => 'canManageReportingMetadata',
         'can_manage_sharing' => 'canManageSharing',
@@ -194,6 +200,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_envelope_transfer_metadata' => 'setCanManageEnvelopeTransferMetadata',
         'can_manage_groups_but_not_users' => 'setCanManageGroupsButNotUsers',
         'can_manage_groups_but_not_users_metadata' => 'setCanManageGroupsButNotUsersMetadata',
+        'can_manage_joint_agreements' => 'setCanManageJointAgreements',
+        'can_manage_joint_agreements_metadata' => 'setCanManageJointAgreementsMetadata',
         'can_manage_reporting' => 'setCanManageReporting',
         'can_manage_reporting_metadata' => 'setCanManageReportingMetadata',
         'can_manage_sharing' => 'setCanManageSharing',
@@ -227,6 +235,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         'can_manage_envelope_transfer_metadata' => 'getCanManageEnvelopeTransferMetadata',
         'can_manage_groups_but_not_users' => 'getCanManageGroupsButNotUsers',
         'can_manage_groups_but_not_users_metadata' => 'getCanManageGroupsButNotUsersMetadata',
+        'can_manage_joint_agreements' => 'getCanManageJointAgreements',
+        'can_manage_joint_agreements_metadata' => 'getCanManageJointAgreementsMetadata',
         'can_manage_reporting' => 'getCanManageReporting',
         'can_manage_reporting_metadata' => 'getCanManageReportingMetadata',
         'can_manage_sharing' => 'getCanManageSharing',
@@ -314,6 +324,8 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         $this->container['can_manage_envelope_transfer_metadata'] = isset($data['can_manage_envelope_transfer_metadata']) ? $data['can_manage_envelope_transfer_metadata'] : null;
         $this->container['can_manage_groups_but_not_users'] = isset($data['can_manage_groups_but_not_users']) ? $data['can_manage_groups_but_not_users'] : null;
         $this->container['can_manage_groups_but_not_users_metadata'] = isset($data['can_manage_groups_but_not_users_metadata']) ? $data['can_manage_groups_but_not_users_metadata'] : null;
+        $this->container['can_manage_joint_agreements'] = isset($data['can_manage_joint_agreements']) ? $data['can_manage_joint_agreements'] : null;
+        $this->container['can_manage_joint_agreements_metadata'] = isset($data['can_manage_joint_agreements_metadata']) ? $data['can_manage_joint_agreements_metadata'] : null;
         $this->container['can_manage_reporting'] = isset($data['can_manage_reporting']) ? $data['can_manage_reporting'] : null;
         $this->container['can_manage_reporting_metadata'] = isset($data['can_manage_reporting_metadata']) ? $data['can_manage_reporting_metadata'] : null;
         $this->container['can_manage_sharing'] = isset($data['can_manage_sharing']) ? $data['can_manage_sharing'] : null;
@@ -683,6 +695,54 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     public function setCanManageGroupsButNotUsersMetadata($can_manage_groups_but_not_users_metadata)
     {
         $this->container['can_manage_groups_but_not_users_metadata'] = $can_manage_groups_but_not_users_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_joint_agreements
+     *
+     * @return ?string
+     */
+    public function getCanManageJointAgreements()
+    {
+        return $this->container['can_manage_joint_agreements'];
+    }
+
+    /**
+     * Sets can_manage_joint_agreements
+     *
+     * @param ?string $can_manage_joint_agreements 
+     *
+     * @return $this
+     */
+    public function setCanManageJointAgreements($can_manage_joint_agreements)
+    {
+        $this->container['can_manage_joint_agreements'] = $can_manage_joint_agreements;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_joint_agreements_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageJointAgreementsMetadata()
+    {
+        return $this->container['can_manage_joint_agreements_metadata'];
+    }
+
+    /**
+     * Sets can_manage_joint_agreements_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_joint_agreements_metadata can_manage_joint_agreements_metadata
+     *
+     * @return $this
+     */
+    public function setCanManageJointAgreementsMetadata($can_manage_joint_agreements_metadata)
+    {
+        $this->container['can_manage_joint_agreements_metadata'] = $can_manage_joint_agreements_metadata;
 
         return $this;
     }

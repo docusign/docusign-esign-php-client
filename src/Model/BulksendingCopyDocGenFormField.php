@@ -1,6 +1,6 @@
 <?php
 /**
- * IdEvidenceViewLink
+ * BulksendingCopyDocGenFormField
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * IdEvidenceViewLink Class Doc Comment
+ * BulksendingCopyDocGenFormField Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class IdEvidenceViewLink implements ModelInterface, ArrayAccess
+class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'idEvidenceViewLink';
+    protected static $swaggerModelName = 'bulksendingCopyDocGenFormField';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'view_link' => '?string'
+        'label' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -68,7 +69,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'view_link' => null
+        'label' => null,
+        'value' => null
     ];
 
     /**
@@ -98,7 +100,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'view_link' => 'viewLink'
+        'label' => 'label',
+        'value' => 'value'
     ];
 
     /**
@@ -107,7 +110,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'view_link' => 'setViewLink'
+        'label' => 'setLabel',
+        'value' => 'setValue'
     ];
 
     /**
@@ -116,7 +120,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'view_link' => 'getViewLink'
+        'label' => 'getLabel',
+        'value' => 'getValue'
     ];
 
     /**
@@ -179,7 +184,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['view_link'] = isset($data['view_link']) ? $data['view_link'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -207,25 +213,49 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets view_link
+     * Gets label
      *
      * @return ?string
      */
-    public function getViewLink()
+    public function getLabel()
     {
-        return $this->container['view_link'];
+        return $this->container['label'];
     }
 
     /**
-     * Sets view_link
+     * Sets label
      *
-     * @param ?string $view_link 
+     * @param ?string $label 
      *
      * @return $this
      */
-    public function setViewLink($view_link)
+    public function setLabel($label)
     {
-        $this->container['view_link'] = $view_link;
+        $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return ?string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param ?string $value Specifies the value of the tab.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
 
         return $this;
     }

@@ -61,6 +61,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'custom_fields' => '\DocuSign\eSign\Model\BulkSendingCopyCustomField[]',
+        'doc_gen_form_fields' => '\DocuSign\eSign\Model\BulksendingCopyDocGenFormField[]',
         'email_blurb' => '?string',
         'email_subject' => '?string',
         'recipients' => '\DocuSign\eSign\Model\BulkSendingCopyRecipient[]'
@@ -73,6 +74,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'custom_fields' => null,
+        'doc_gen_form_fields' => null,
         'email_blurb' => null,
         'email_subject' => null,
         'recipients' => null
@@ -106,6 +108,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'custom_fields' => 'customFields',
+        'doc_gen_form_fields' => 'docGenFormFields',
         'email_blurb' => 'emailBlurb',
         'email_subject' => 'emailSubject',
         'recipients' => 'recipients'
@@ -118,6 +121,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'custom_fields' => 'setCustomFields',
+        'doc_gen_form_fields' => 'setDocGenFormFields',
         'email_blurb' => 'setEmailBlurb',
         'email_subject' => 'setEmailSubject',
         'recipients' => 'setRecipients'
@@ -130,6 +134,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'custom_fields' => 'getCustomFields',
+        'doc_gen_form_fields' => 'getDocGenFormFields',
         'email_blurb' => 'getEmailBlurb',
         'email_subject' => 'getEmailSubject',
         'recipients' => 'getRecipients'
@@ -196,6 +201,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
+        $this->container['doc_gen_form_fields'] = isset($data['doc_gen_form_fields']) ? $data['doc_gen_form_fields'] : null;
         $this->container['email_blurb'] = isset($data['email_blurb']) ? $data['email_blurb'] : null;
         $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
         $this->container['recipients'] = isset($data['recipients']) ? $data['recipients'] : null;
@@ -245,6 +251,30 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     public function setCustomFields($custom_fields)
     {
         $this->container['custom_fields'] = $custom_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets doc_gen_form_fields
+     *
+     * @return \DocuSign\eSign\Model\BulksendingCopyDocGenFormField[]
+     */
+    public function getDocGenFormFields()
+    {
+        return $this->container['doc_gen_form_fields'];
+    }
+
+    /**
+     * Sets doc_gen_form_fields
+     *
+     * @param \DocuSign\eSign\Model\BulksendingCopyDocGenFormField[] $doc_gen_form_fields 
+     *
+     * @return $this
+     */
+    public function setDocGenFormFields($doc_gen_form_fields)
+    {
+        $this->container['doc_gen_form_fields'] = $doc_gen_form_fields;
 
         return $this;
     }

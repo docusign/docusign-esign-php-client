@@ -254,12 +254,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_third_party_electronic_notary' => '?string',
         'allow_third_party_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_transactions_workspace' => '?string',
+        'allow_transactions_workspace_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_users_to_access_directory' => '?string',
         'allow_users_to_access_directory_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_value_insights' => '?string',
         'allow_value_insights_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_web_forms' => '?string',
         'allow_web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_whats_app_delivery' => '?string',
+        'allow_whats_app_delivery_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'anchor_population_scope' => '?string',
         'anchor_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'anchor_tag_versioned_placement_enabled' => '?string',
@@ -384,6 +388,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_customer_satisfaction_metric_tracking_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ds_pro' => '?string',
         'enable_ds_pro_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_envelope_stamping_by_account_admin' => '?string',
         'enable_envelope_stamping_by_account_admin_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_envelope_stamping_by_ds_admin' => '?string',
@@ -398,6 +403,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_id_fx_phone_authentication' => '?string',
         'enable_id_fx_phone_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => '?string',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_in_browser_editor' => '?string',
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_key_terms_suggestions_by_document_type' => '?string',
@@ -476,6 +483,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_witnessing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enforce_template_name_uniqueness' => '?string',
         'enforce_template_name_uniqueness_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enforce_tls_emails' => '?string',
+        'enforce_tls_emails_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_integration_allowed' => '?string',
         'envelope_integration_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_integration_enabled' => '?string',
@@ -503,6 +512,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'guided_forms_html_allowed' => '?string',
         'guided_forms_html_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'guided_forms_html_conversion_policy' => '?string',
+        'guided_forms_html_conversion_policy_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'has_recipient_connect_claimed_domain' => '?string',
         'hide_account_address_in_co_c' => '?string',
         'hide_account_address_in_co_c_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -578,6 +589,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => '?string',
         'rsa_verid_ruleset' => '?string',
         'rsa_verid_user_id' => '?string',
+        'sbs_transaction_level' => '?string',
         'self_signed_recipient_email_document' => '?string',
         'self_signed_recipient_email_document_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'self_signed_recipient_email_document_user_override' => '?string',
@@ -919,12 +931,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => null,
         'allow_third_party_electronic_notary' => null,
         'allow_third_party_electronic_notary_metadata' => null,
+        'allow_transactions_workspace' => null,
+        'allow_transactions_workspace_metadata' => null,
         'allow_users_to_access_directory' => null,
         'allow_users_to_access_directory_metadata' => null,
         'allow_value_insights' => null,
         'allow_value_insights_metadata' => null,
         'allow_web_forms' => null,
         'allow_web_forms_metadata' => null,
+        'allow_whats_app_delivery' => null,
+        'allow_whats_app_delivery_metadata' => null,
         'anchor_population_scope' => null,
         'anchor_population_scope_metadata' => null,
         'anchor_tag_versioned_placement_enabled' => null,
@@ -1049,6 +1065,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_customer_satisfaction_metric_tracking_metadata' => null,
         'enable_ds_pro' => null,
         'enable_ds_pro_metadata' => null,
+        'enable_enforce_tls_emails_setting_metadata' => null,
         'enable_envelope_stamping_by_account_admin' => null,
         'enable_envelope_stamping_by_account_admin_metadata' => null,
         'enable_envelope_stamping_by_ds_admin' => null,
@@ -1063,6 +1080,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => null,
         'enable_id_fx_phone_authentication' => null,
         'enable_id_fx_phone_authentication_metadata' => null,
+        'enable_idfx_phone_auth_signature_auth_status' => null,
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => null,
         'enable_in_browser_editor' => null,
         'enable_in_browser_editor_metadata' => null,
         'enable_key_terms_suggestions_by_document_type' => null,
@@ -1141,6 +1160,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_witnessing_metadata' => null,
         'enforce_template_name_uniqueness' => null,
         'enforce_template_name_uniqueness_metadata' => null,
+        'enforce_tls_emails' => null,
+        'enforce_tls_emails_metadata' => null,
         'envelope_integration_allowed' => null,
         'envelope_integration_allowed_metadata' => null,
         'envelope_integration_enabled' => null,
@@ -1168,6 +1189,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => null,
         'guided_forms_html_allowed' => null,
         'guided_forms_html_allowed_metadata' => null,
+        'guided_forms_html_conversion_policy' => null,
+        'guided_forms_html_conversion_policy_metadata' => null,
         'has_recipient_connect_claimed_domain' => null,
         'hide_account_address_in_co_c' => null,
         'hide_account_address_in_co_c_metadata' => null,
@@ -1243,6 +1266,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => null,
         'rsa_verid_ruleset' => null,
         'rsa_verid_user_id' => null,
+        'sbs_transaction_level' => null,
         'self_signed_recipient_email_document' => null,
         'self_signed_recipient_email_document_metadata' => null,
         'self_signed_recipient_email_document_user_override' => null,
@@ -1605,12 +1629,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'allowSupplementalDocumentsMetadata',
         'allow_third_party_electronic_notary' => 'allowThirdPartyElectronicNotary',
         'allow_third_party_electronic_notary_metadata' => 'allowThirdPartyElectronicNotaryMetadata',
+        'allow_transactions_workspace' => 'allowTransactionsWorkspace',
+        'allow_transactions_workspace_metadata' => 'allowTransactionsWorkspaceMetadata',
         'allow_users_to_access_directory' => 'allowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'allowValueInsights',
         'allow_value_insights_metadata' => 'allowValueInsightsMetadata',
         'allow_web_forms' => 'allowWebForms',
         'allow_web_forms_metadata' => 'allowWebFormsMetadata',
+        'allow_whats_app_delivery' => 'allowWhatsAppDelivery',
+        'allow_whats_app_delivery_metadata' => 'allowWhatsAppDeliveryMetadata',
         'anchor_population_scope' => 'anchorPopulationScope',
         'anchor_population_scope_metadata' => 'anchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'anchorTagVersionedPlacementEnabled',
@@ -1735,6 +1763,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_customer_satisfaction_metric_tracking_metadata' => 'enableCustomerSatisfactionMetricTrackingMetadata',
         'enable_ds_pro' => 'enableDSPro',
         'enable_ds_pro_metadata' => 'enableDSProMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => 'enableEnforceTlsEmailsSettingMetadata',
         'enable_envelope_stamping_by_account_admin' => 'enableEnvelopeStampingByAccountAdmin',
         'enable_envelope_stamping_by_account_admin_metadata' => 'enableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin' => 'enableEnvelopeStampingByDSAdmin',
@@ -1749,6 +1778,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => 'enableIDFxIntuitKBAMetadata',
         'enable_id_fx_phone_authentication' => 'enableIDFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'enableIDFxPhoneAuthenticationMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => 'enableIdfxPhoneAuthSignatureAuthStatus',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => 'enableIdfxPhoneAuthSignatureAuthStatusMetadata',
         'enable_in_browser_editor' => 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'enableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
@@ -1827,14 +1858,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_witnessing_metadata' => 'enableWitnessingMetadata',
         'enforce_template_name_uniqueness' => 'enforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata' => 'enforceTemplateNameUniquenessMetadata',
+        'enforce_tls_emails' => 'enforceTlsEmails',
+        'enforce_tls_emails_metadata' => 'enforceTlsEmailsMetadata',
         'envelope_integration_allowed' => 'envelopeIntegrationAllowed',
         'envelope_integration_allowed_metadata' => 'envelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled' => 'envelopeIntegrationEnabled',
         'envelope_integration_enabled_metadata' => 'envelopeIntegrationEnabledMetadata',
-        'envelope_limits_total_document_size_allowed_in_mb' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMB',
-        'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
-        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
-        'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb' => 'envelopeLimitsTotalDocumentSizeAllowedInMB',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'envelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'envelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
         'envelope_search_mode' => 'envelopeSearchMode',
         'envelope_search_mode_metadata' => 'envelopeSearchModeMetadata',
         'envelope_stamping_default_value' => 'envelopeStampingDefaultValue',
@@ -1854,6 +1887,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => 'finishReminderMetadata',
         'guided_forms_html_allowed' => 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'guidedFormsHtmlAllowedMetadata',
+        'guided_forms_html_conversion_policy' => 'guidedFormsHtmlConversionPolicy',
+        'guided_forms_html_conversion_policy_metadata' => 'guidedFormsHtmlConversionPolicyMetadata',
         'has_recipient_connect_claimed_domain' => 'hasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'hideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'hideAccountAddressInCoCMetadata',
@@ -1929,6 +1964,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => 'rsaVeridPassword',
         'rsa_verid_ruleset' => 'rsaVeridRuleset',
         'rsa_verid_user_id' => 'rsaVeridUserId',
+        'sbs_transaction_level' => 'sbsTransactionLevel',
         'self_signed_recipient_email_document' => 'selfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata' => 'selfSignedRecipientEmailDocumentMetadata',
         'self_signed_recipient_email_document_user_override' => 'selfSignedRecipientEmailDocumentUserOverride',
@@ -2270,12 +2306,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'setAllowSupplementalDocumentsMetadata',
         'allow_third_party_electronic_notary' => 'setAllowThirdPartyElectronicNotary',
         'allow_third_party_electronic_notary_metadata' => 'setAllowThirdPartyElectronicNotaryMetadata',
+        'allow_transactions_workspace' => 'setAllowTransactionsWorkspace',
+        'allow_transactions_workspace_metadata' => 'setAllowTransactionsWorkspaceMetadata',
         'allow_users_to_access_directory' => 'setAllowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'setAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'setAllowValueInsights',
         'allow_value_insights_metadata' => 'setAllowValueInsightsMetadata',
         'allow_web_forms' => 'setAllowWebForms',
         'allow_web_forms_metadata' => 'setAllowWebFormsMetadata',
+        'allow_whats_app_delivery' => 'setAllowWhatsAppDelivery',
+        'allow_whats_app_delivery_metadata' => 'setAllowWhatsAppDeliveryMetadata',
         'anchor_population_scope' => 'setAnchorPopulationScope',
         'anchor_population_scope_metadata' => 'setAnchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'setAnchorTagVersionedPlacementEnabled',
@@ -2400,6 +2440,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_customer_satisfaction_metric_tracking_metadata' => 'setEnableCustomerSatisfactionMetricTrackingMetadata',
         'enable_ds_pro' => 'setEnableDsPro',
         'enable_ds_pro_metadata' => 'setEnableDsProMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => 'setEnableEnforceTlsEmailsSettingMetadata',
         'enable_envelope_stamping_by_account_admin' => 'setEnableEnvelopeStampingByAccountAdmin',
         'enable_envelope_stamping_by_account_admin_metadata' => 'setEnableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin' => 'setEnableEnvelopeStampingByDsAdmin',
@@ -2414,6 +2455,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => 'setEnableIdFxIntuitKbaMetadata',
         'enable_id_fx_phone_authentication' => 'setEnableIdFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'setEnableIdFxPhoneAuthenticationMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => 'setEnableIdfxPhoneAuthSignatureAuthStatus',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => 'setEnableIdfxPhoneAuthSignatureAuthStatusMetadata',
         'enable_in_browser_editor' => 'setEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'setEnableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
@@ -2492,6 +2535,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_witnessing_metadata' => 'setEnableWitnessingMetadata',
         'enforce_template_name_uniqueness' => 'setEnforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata' => 'setEnforceTemplateNameUniquenessMetadata',
+        'enforce_tls_emails' => 'setEnforceTlsEmails',
+        'enforce_tls_emails_metadata' => 'setEnforceTlsEmailsMetadata',
         'envelope_integration_allowed' => 'setEnvelopeIntegrationAllowed',
         'envelope_integration_allowed_metadata' => 'setEnvelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled' => 'setEnvelopeIntegrationEnabled',
@@ -2519,6 +2564,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => 'setFinishReminderMetadata',
         'guided_forms_html_allowed' => 'setGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'setGuidedFormsHtmlAllowedMetadata',
+        'guided_forms_html_conversion_policy' => 'setGuidedFormsHtmlConversionPolicy',
+        'guided_forms_html_conversion_policy_metadata' => 'setGuidedFormsHtmlConversionPolicyMetadata',
         'has_recipient_connect_claimed_domain' => 'setHasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'setHideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'setHideAccountAddressInCoCMetadata',
@@ -2594,6 +2641,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => 'setRsaVeridPassword',
         'rsa_verid_ruleset' => 'setRsaVeridRuleset',
         'rsa_verid_user_id' => 'setRsaVeridUserId',
+        'sbs_transaction_level' => 'setSbsTransactionLevel',
         'self_signed_recipient_email_document' => 'setSelfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata' => 'setSelfSignedRecipientEmailDocumentMetadata',
         'self_signed_recipient_email_document_user_override' => 'setSelfSignedRecipientEmailDocumentUserOverride',
@@ -2935,12 +2983,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'getAllowSupplementalDocumentsMetadata',
         'allow_third_party_electronic_notary' => 'getAllowThirdPartyElectronicNotary',
         'allow_third_party_electronic_notary_metadata' => 'getAllowThirdPartyElectronicNotaryMetadata',
+        'allow_transactions_workspace' => 'getAllowTransactionsWorkspace',
+        'allow_transactions_workspace_metadata' => 'getAllowTransactionsWorkspaceMetadata',
         'allow_users_to_access_directory' => 'getAllowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'getAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'getAllowValueInsights',
         'allow_value_insights_metadata' => 'getAllowValueInsightsMetadata',
         'allow_web_forms' => 'getAllowWebForms',
         'allow_web_forms_metadata' => 'getAllowWebFormsMetadata',
+        'allow_whats_app_delivery' => 'getAllowWhatsAppDelivery',
+        'allow_whats_app_delivery_metadata' => 'getAllowWhatsAppDeliveryMetadata',
         'anchor_population_scope' => 'getAnchorPopulationScope',
         'anchor_population_scope_metadata' => 'getAnchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'getAnchorTagVersionedPlacementEnabled',
@@ -3065,6 +3117,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_customer_satisfaction_metric_tracking_metadata' => 'getEnableCustomerSatisfactionMetricTrackingMetadata',
         'enable_ds_pro' => 'getEnableDsPro',
         'enable_ds_pro_metadata' => 'getEnableDsProMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => 'getEnableEnforceTlsEmailsSettingMetadata',
         'enable_envelope_stamping_by_account_admin' => 'getEnableEnvelopeStampingByAccountAdmin',
         'enable_envelope_stamping_by_account_admin_metadata' => 'getEnableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin' => 'getEnableEnvelopeStampingByDsAdmin',
@@ -3079,6 +3132,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => 'getEnableIdFxIntuitKbaMetadata',
         'enable_id_fx_phone_authentication' => 'getEnableIdFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'getEnableIdFxPhoneAuthenticationMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => 'getEnableIdfxPhoneAuthSignatureAuthStatus',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => 'getEnableIdfxPhoneAuthSignatureAuthStatusMetadata',
         'enable_in_browser_editor' => 'getEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'getEnableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
@@ -3157,6 +3212,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_witnessing_metadata' => 'getEnableWitnessingMetadata',
         'enforce_template_name_uniqueness' => 'getEnforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata' => 'getEnforceTemplateNameUniquenessMetadata',
+        'enforce_tls_emails' => 'getEnforceTlsEmails',
+        'enforce_tls_emails_metadata' => 'getEnforceTlsEmailsMetadata',
         'envelope_integration_allowed' => 'getEnvelopeIntegrationAllowed',
         'envelope_integration_allowed_metadata' => 'getEnvelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled' => 'getEnvelopeIntegrationEnabled',
@@ -3184,6 +3241,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => 'getFinishReminderMetadata',
         'guided_forms_html_allowed' => 'getGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'getGuidedFormsHtmlAllowedMetadata',
+        'guided_forms_html_conversion_policy' => 'getGuidedFormsHtmlConversionPolicy',
+        'guided_forms_html_conversion_policy_metadata' => 'getGuidedFormsHtmlConversionPolicyMetadata',
         'has_recipient_connect_claimed_domain' => 'getHasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'getHideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'getHideAccountAddressInCoCMetadata',
@@ -3259,6 +3318,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => 'getRsaVeridPassword',
         'rsa_verid_ruleset' => 'getRsaVeridRuleset',
         'rsa_verid_user_id' => 'getRsaVeridUserId',
+        'sbs_transaction_level' => 'getSbsTransactionLevel',
         'self_signed_recipient_email_document' => 'getSelfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata' => 'getSelfSignedRecipientEmailDocumentMetadata',
         'self_signed_recipient_email_document_user_override' => 'getSelfSignedRecipientEmailDocumentUserOverride',
@@ -3654,12 +3714,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_supplemental_documents_metadata'] = isset($data['allow_supplemental_documents_metadata']) ? $data['allow_supplemental_documents_metadata'] : null;
         $this->container['allow_third_party_electronic_notary'] = isset($data['allow_third_party_electronic_notary']) ? $data['allow_third_party_electronic_notary'] : null;
         $this->container['allow_third_party_electronic_notary_metadata'] = isset($data['allow_third_party_electronic_notary_metadata']) ? $data['allow_third_party_electronic_notary_metadata'] : null;
+        $this->container['allow_transactions_workspace'] = isset($data['allow_transactions_workspace']) ? $data['allow_transactions_workspace'] : null;
+        $this->container['allow_transactions_workspace_metadata'] = isset($data['allow_transactions_workspace_metadata']) ? $data['allow_transactions_workspace_metadata'] : null;
         $this->container['allow_users_to_access_directory'] = isset($data['allow_users_to_access_directory']) ? $data['allow_users_to_access_directory'] : null;
         $this->container['allow_users_to_access_directory_metadata'] = isset($data['allow_users_to_access_directory_metadata']) ? $data['allow_users_to_access_directory_metadata'] : null;
         $this->container['allow_value_insights'] = isset($data['allow_value_insights']) ? $data['allow_value_insights'] : null;
         $this->container['allow_value_insights_metadata'] = isset($data['allow_value_insights_metadata']) ? $data['allow_value_insights_metadata'] : null;
         $this->container['allow_web_forms'] = isset($data['allow_web_forms']) ? $data['allow_web_forms'] : null;
         $this->container['allow_web_forms_metadata'] = isset($data['allow_web_forms_metadata']) ? $data['allow_web_forms_metadata'] : null;
+        $this->container['allow_whats_app_delivery'] = isset($data['allow_whats_app_delivery']) ? $data['allow_whats_app_delivery'] : null;
+        $this->container['allow_whats_app_delivery_metadata'] = isset($data['allow_whats_app_delivery_metadata']) ? $data['allow_whats_app_delivery_metadata'] : null;
         $this->container['anchor_population_scope'] = isset($data['anchor_population_scope']) ? $data['anchor_population_scope'] : null;
         $this->container['anchor_population_scope_metadata'] = isset($data['anchor_population_scope_metadata']) ? $data['anchor_population_scope_metadata'] : null;
         $this->container['anchor_tag_versioned_placement_enabled'] = isset($data['anchor_tag_versioned_placement_enabled']) ? $data['anchor_tag_versioned_placement_enabled'] : null;
@@ -3784,6 +3848,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_customer_satisfaction_metric_tracking_metadata'] = isset($data['enable_customer_satisfaction_metric_tracking_metadata']) ? $data['enable_customer_satisfaction_metric_tracking_metadata'] : null;
         $this->container['enable_ds_pro'] = isset($data['enable_ds_pro']) ? $data['enable_ds_pro'] : null;
         $this->container['enable_ds_pro_metadata'] = isset($data['enable_ds_pro_metadata']) ? $data['enable_ds_pro_metadata'] : null;
+        $this->container['enable_enforce_tls_emails_setting_metadata'] = isset($data['enable_enforce_tls_emails_setting_metadata']) ? $data['enable_enforce_tls_emails_setting_metadata'] : null;
         $this->container['enable_envelope_stamping_by_account_admin'] = isset($data['enable_envelope_stamping_by_account_admin']) ? $data['enable_envelope_stamping_by_account_admin'] : null;
         $this->container['enable_envelope_stamping_by_account_admin_metadata'] = isset($data['enable_envelope_stamping_by_account_admin_metadata']) ? $data['enable_envelope_stamping_by_account_admin_metadata'] : null;
         $this->container['enable_envelope_stamping_by_ds_admin'] = isset($data['enable_envelope_stamping_by_ds_admin']) ? $data['enable_envelope_stamping_by_ds_admin'] : null;
@@ -3798,6 +3863,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_id_fx_intuit_kba_metadata'] = isset($data['enable_id_fx_intuit_kba_metadata']) ? $data['enable_id_fx_intuit_kba_metadata'] : null;
         $this->container['enable_id_fx_phone_authentication'] = isset($data['enable_id_fx_phone_authentication']) ? $data['enable_id_fx_phone_authentication'] : null;
         $this->container['enable_id_fx_phone_authentication_metadata'] = isset($data['enable_id_fx_phone_authentication_metadata']) ? $data['enable_id_fx_phone_authentication_metadata'] : null;
+        $this->container['enable_idfx_phone_auth_signature_auth_status'] = isset($data['enable_idfx_phone_auth_signature_auth_status']) ? $data['enable_idfx_phone_auth_signature_auth_status'] : null;
+        $this->container['enable_idfx_phone_auth_signature_auth_status_metadata'] = isset($data['enable_idfx_phone_auth_signature_auth_status_metadata']) ? $data['enable_idfx_phone_auth_signature_auth_status_metadata'] : null;
         $this->container['enable_in_browser_editor'] = isset($data['enable_in_browser_editor']) ? $data['enable_in_browser_editor'] : null;
         $this->container['enable_in_browser_editor_metadata'] = isset($data['enable_in_browser_editor_metadata']) ? $data['enable_in_browser_editor_metadata'] : null;
         $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
@@ -3876,6 +3943,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_witnessing_metadata'] = isset($data['enable_witnessing_metadata']) ? $data['enable_witnessing_metadata'] : null;
         $this->container['enforce_template_name_uniqueness'] = isset($data['enforce_template_name_uniqueness']) ? $data['enforce_template_name_uniqueness'] : null;
         $this->container['enforce_template_name_uniqueness_metadata'] = isset($data['enforce_template_name_uniqueness_metadata']) ? $data['enforce_template_name_uniqueness_metadata'] : null;
+        $this->container['enforce_tls_emails'] = isset($data['enforce_tls_emails']) ? $data['enforce_tls_emails'] : null;
+        $this->container['enforce_tls_emails_metadata'] = isset($data['enforce_tls_emails_metadata']) ? $data['enforce_tls_emails_metadata'] : null;
         $this->container['envelope_integration_allowed'] = isset($data['envelope_integration_allowed']) ? $data['envelope_integration_allowed'] : null;
         $this->container['envelope_integration_allowed_metadata'] = isset($data['envelope_integration_allowed_metadata']) ? $data['envelope_integration_allowed_metadata'] : null;
         $this->container['envelope_integration_enabled'] = isset($data['envelope_integration_enabled']) ? $data['envelope_integration_enabled'] : null;
@@ -3903,6 +3972,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['finish_reminder_metadata'] = isset($data['finish_reminder_metadata']) ? $data['finish_reminder_metadata'] : null;
         $this->container['guided_forms_html_allowed'] = isset($data['guided_forms_html_allowed']) ? $data['guided_forms_html_allowed'] : null;
         $this->container['guided_forms_html_allowed_metadata'] = isset($data['guided_forms_html_allowed_metadata']) ? $data['guided_forms_html_allowed_metadata'] : null;
+        $this->container['guided_forms_html_conversion_policy'] = isset($data['guided_forms_html_conversion_policy']) ? $data['guided_forms_html_conversion_policy'] : null;
+        $this->container['guided_forms_html_conversion_policy_metadata'] = isset($data['guided_forms_html_conversion_policy_metadata']) ? $data['guided_forms_html_conversion_policy_metadata'] : null;
         $this->container['has_recipient_connect_claimed_domain'] = isset($data['has_recipient_connect_claimed_domain']) ? $data['has_recipient_connect_claimed_domain'] : null;
         $this->container['hide_account_address_in_co_c'] = isset($data['hide_account_address_in_co_c']) ? $data['hide_account_address_in_co_c'] : null;
         $this->container['hide_account_address_in_co_c_metadata'] = isset($data['hide_account_address_in_co_c_metadata']) ? $data['hide_account_address_in_co_c_metadata'] : null;
@@ -3978,6 +4049,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['rsa_verid_password'] = isset($data['rsa_verid_password']) ? $data['rsa_verid_password'] : null;
         $this->container['rsa_verid_ruleset'] = isset($data['rsa_verid_ruleset']) ? $data['rsa_verid_ruleset'] : null;
         $this->container['rsa_verid_user_id'] = isset($data['rsa_verid_user_id']) ? $data['rsa_verid_user_id'] : null;
+        $this->container['sbs_transaction_level'] = isset($data['sbs_transaction_level']) ? $data['sbs_transaction_level'] : null;
         $this->container['self_signed_recipient_email_document'] = isset($data['self_signed_recipient_email_document']) ? $data['self_signed_recipient_email_document'] : null;
         $this->container['self_signed_recipient_email_document_metadata'] = isset($data['self_signed_recipient_email_document_metadata']) ? $data['self_signed_recipient_email_document_metadata'] : null;
         $this->container['self_signed_recipient_email_document_user_override'] = isset($data['self_signed_recipient_email_document_user_override']) ? $data['self_signed_recipient_email_document_user_override'] : null;
@@ -8800,6 +8872,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_transactions_workspace
+     *
+     * @return ?string
+     */
+    public function getAllowTransactionsWorkspace()
+    {
+        return $this->container['allow_transactions_workspace'];
+    }
+
+    /**
+     * Sets allow_transactions_workspace
+     *
+     * @param ?string $allow_transactions_workspace 
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsWorkspace($allow_transactions_workspace)
+    {
+        $this->container['allow_transactions_workspace'] = $allow_transactions_workspace;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_transactions_workspace_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowTransactionsWorkspaceMetadata()
+    {
+        return $this->container['allow_transactions_workspace_metadata'];
+    }
+
+    /**
+     * Sets allow_transactions_workspace_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_workspace_metadata allow_transactions_workspace_metadata
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsWorkspaceMetadata($allow_transactions_workspace_metadata)
+    {
+        $this->container['allow_transactions_workspace_metadata'] = $allow_transactions_workspace_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_users_to_access_directory
      *
      * @return ?string
@@ -8939,6 +9059,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowWebFormsMetadata($allow_web_forms_metadata)
     {
         $this->container['allow_web_forms_metadata'] = $allow_web_forms_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_whats_app_delivery
+     *
+     * @return ?string
+     */
+    public function getAllowWhatsAppDelivery()
+    {
+        return $this->container['allow_whats_app_delivery'];
+    }
+
+    /**
+     * Sets allow_whats_app_delivery
+     *
+     * @param ?string $allow_whats_app_delivery 
+     *
+     * @return $this
+     */
+    public function setAllowWhatsAppDelivery($allow_whats_app_delivery)
+    {
+        $this->container['allow_whats_app_delivery'] = $allow_whats_app_delivery;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_whats_app_delivery_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowWhatsAppDeliveryMetadata()
+    {
+        return $this->container['allow_whats_app_delivery_metadata'];
+    }
+
+    /**
+     * Sets allow_whats_app_delivery_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_whats_app_delivery_metadata allow_whats_app_delivery_metadata
+     *
+     * @return $this
+     */
+    public function setAllowWhatsAppDeliveryMetadata($allow_whats_app_delivery_metadata)
+    {
+        $this->container['allow_whats_app_delivery_metadata'] = $allow_whats_app_delivery_metadata;
 
         return $this;
     }
@@ -11920,6 +12088,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_enforce_tls_emails_setting_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableEnforceTlsEmailsSettingMetadata()
+    {
+        return $this->container['enable_enforce_tls_emails_setting_metadata'];
+    }
+
+    /**
+     * Sets enable_enforce_tls_emails_setting_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_enforce_tls_emails_setting_metadata enable_enforce_tls_emails_setting_metadata
+     *
+     * @return $this
+     */
+    public function setEnableEnforceTlsEmailsSettingMetadata($enable_enforce_tls_emails_setting_metadata)
+    {
+        $this->container['enable_enforce_tls_emails_setting_metadata'] = $enable_enforce_tls_emails_setting_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_envelope_stamping_by_account_admin
      *
      * @return ?string
@@ -12251,6 +12443,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableIdFxPhoneAuthenticationMetadata($enable_id_fx_phone_authentication_metadata)
     {
         $this->container['enable_id_fx_phone_authentication_metadata'] = $enable_id_fx_phone_authentication_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_idfx_phone_auth_signature_auth_status
+     *
+     * @return ?string
+     */
+    public function getEnableIdfxPhoneAuthSignatureAuthStatus()
+    {
+        return $this->container['enable_idfx_phone_auth_signature_auth_status'];
+    }
+
+    /**
+     * Sets enable_idfx_phone_auth_signature_auth_status
+     *
+     * @param ?string $enable_idfx_phone_auth_signature_auth_status 
+     *
+     * @return $this
+     */
+    public function setEnableIdfxPhoneAuthSignatureAuthStatus($enable_idfx_phone_auth_signature_auth_status)
+    {
+        $this->container['enable_idfx_phone_auth_signature_auth_status'] = $enable_idfx_phone_auth_signature_auth_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_idfx_phone_auth_signature_auth_status_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableIdfxPhoneAuthSignatureAuthStatusMetadata()
+    {
+        return $this->container['enable_idfx_phone_auth_signature_auth_status_metadata'];
+    }
+
+    /**
+     * Sets enable_idfx_phone_auth_signature_auth_status_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_idfx_phone_auth_signature_auth_status_metadata enable_idfx_phone_auth_signature_auth_status_metadata
+     *
+     * @return $this
+     */
+    public function setEnableIdfxPhoneAuthSignatureAuthStatusMetadata($enable_idfx_phone_auth_signature_auth_status_metadata)
+    {
+        $this->container['enable_idfx_phone_auth_signature_auth_status_metadata'] = $enable_idfx_phone_auth_signature_auth_status_metadata;
 
         return $this;
     }
@@ -14128,6 +14368,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enforce_tls_emails
+     *
+     * @return ?string
+     */
+    public function getEnforceTlsEmails()
+    {
+        return $this->container['enforce_tls_emails'];
+    }
+
+    /**
+     * Sets enforce_tls_emails
+     *
+     * @param ?string $enforce_tls_emails 
+     *
+     * @return $this
+     */
+    public function setEnforceTlsEmails($enforce_tls_emails)
+    {
+        $this->container['enforce_tls_emails'] = $enforce_tls_emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets enforce_tls_emails_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnforceTlsEmailsMetadata()
+    {
+        return $this->container['enforce_tls_emails_metadata'];
+    }
+
+    /**
+     * Sets enforce_tls_emails_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enforce_tls_emails_metadata enforce_tls_emails_metadata
+     *
+     * @return $this
+     */
+    public function setEnforceTlsEmailsMetadata($enforce_tls_emails_metadata)
+    {
+        $this->container['enforce_tls_emails_metadata'] = $enforce_tls_emails_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets envelope_integration_allowed
      *
      * @return ?string
@@ -14771,6 +15059,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setGuidedFormsHtmlAllowedMetadata($guided_forms_html_allowed_metadata)
     {
         $this->container['guided_forms_html_allowed_metadata'] = $guided_forms_html_allowed_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets guided_forms_html_conversion_policy
+     *
+     * @return ?string
+     */
+    public function getGuidedFormsHtmlConversionPolicy()
+    {
+        return $this->container['guided_forms_html_conversion_policy'];
+    }
+
+    /**
+     * Sets guided_forms_html_conversion_policy
+     *
+     * @param ?string $guided_forms_html_conversion_policy 
+     *
+     * @return $this
+     */
+    public function setGuidedFormsHtmlConversionPolicy($guided_forms_html_conversion_policy)
+    {
+        $this->container['guided_forms_html_conversion_policy'] = $guided_forms_html_conversion_policy;
+
+        return $this;
+    }
+
+    /**
+     * Gets guided_forms_html_conversion_policy_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getGuidedFormsHtmlConversionPolicyMetadata()
+    {
+        return $this->container['guided_forms_html_conversion_policy_metadata'];
+    }
+
+    /**
+     * Sets guided_forms_html_conversion_policy_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $guided_forms_html_conversion_policy_metadata guided_forms_html_conversion_policy_metadata
+     *
+     * @return $this
+     */
+    public function setGuidedFormsHtmlConversionPolicyMetadata($guided_forms_html_conversion_policy_metadata)
+    {
+        $this->container['guided_forms_html_conversion_policy_metadata'] = $guided_forms_html_conversion_policy_metadata;
 
         return $this;
     }
@@ -16571,6 +16907,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setRsaVeridUserId($rsa_verid_user_id)
     {
         $this->container['rsa_verid_user_id'] = $rsa_verid_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets sbs_transaction_level
+     *
+     * @return ?string
+     */
+    public function getSbsTransactionLevel()
+    {
+        return $this->container['sbs_transaction_level'];
+    }
+
+    /**
+     * Sets sbs_transaction_level
+     *
+     * @param ?string $sbs_transaction_level 
+     *
+     * @return $this
+     */
+    public function setSbsTransactionLevel($sbs_transaction_level)
+    {
+        $this->container['sbs_transaction_level'] = $sbs_transaction_level;
 
         return $this;
     }

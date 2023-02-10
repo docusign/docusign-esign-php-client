@@ -73,6 +73,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_o_auth' => '?string',
         'include_sender_account_as_custom_field' => '?string',
         'include_time_zone' => '?string',
+        'integrator_managed' => '?string',
         'logging_enabled' => '?string',
         'recipient_events' => '\DocuSign\eSign\Model\RecipientEvent[]',
         'require_acknowledgment' => '?string',
@@ -101,6 +102,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_o_auth' => null,
         'include_sender_account_as_custom_field' => null,
         'include_time_zone' => null,
+        'integrator_managed' => null,
         'logging_enabled' => null,
         'recipient_events' => null,
         'require_acknowledgment' => null,
@@ -150,6 +152,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_o_auth' => 'includeOAuth',
         'include_sender_account_as_custom_field' => 'includeSenderAccountAsCustomField',
         'include_time_zone' => 'includeTimeZone',
+        'integrator_managed' => 'integratorManaged',
         'logging_enabled' => 'loggingEnabled',
         'recipient_events' => 'recipientEvents',
         'require_acknowledgment' => 'requireAcknowledgment',
@@ -178,6 +181,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_o_auth' => 'setIncludeOAuth',
         'include_sender_account_as_custom_field' => 'setIncludeSenderAccountAsCustomField',
         'include_time_zone' => 'setIncludeTimeZone',
+        'integrator_managed' => 'setIntegratorManaged',
         'logging_enabled' => 'setLoggingEnabled',
         'recipient_events' => 'setRecipientEvents',
         'require_acknowledgment' => 'setRequireAcknowledgment',
@@ -206,6 +210,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         'include_o_auth' => 'getIncludeOAuth',
         'include_sender_account_as_custom_field' => 'getIncludeSenderAccountAsCustomField',
         'include_time_zone' => 'getIncludeTimeZone',
+        'integrator_managed' => 'getIntegratorManaged',
         'logging_enabled' => 'getLoggingEnabled',
         'recipient_events' => 'getRecipientEvents',
         'require_acknowledgment' => 'getRequireAcknowledgment',
@@ -288,6 +293,7 @@ class EventNotification implements ModelInterface, ArrayAccess
         $this->container['include_o_auth'] = isset($data['include_o_auth']) ? $data['include_o_auth'] : null;
         $this->container['include_sender_account_as_custom_field'] = isset($data['include_sender_account_as_custom_field']) ? $data['include_sender_account_as_custom_field'] : null;
         $this->container['include_time_zone'] = isset($data['include_time_zone']) ? $data['include_time_zone'] : null;
+        $this->container['integrator_managed'] = isset($data['integrator_managed']) ? $data['integrator_managed'] : null;
         $this->container['logging_enabled'] = isset($data['logging_enabled']) ? $data['logging_enabled'] : null;
         $this->container['recipient_events'] = isset($data['recipient_events']) ? $data['recipient_events'] : null;
         $this->container['require_acknowledgment'] = isset($data['require_acknowledgment']) ? $data['require_acknowledgment'] : null;
@@ -629,6 +635,30 @@ class EventNotification implements ModelInterface, ArrayAccess
     public function setIncludeTimeZone($include_time_zone)
     {
         $this->container['include_time_zone'] = $include_time_zone;
+
+        return $this;
+    }
+
+    /**
+     * Gets integrator_managed
+     *
+     * @return ?string
+     */
+    public function getIntegratorManaged()
+    {
+        return $this->container['integrator_managed'];
+    }
+
+    /**
+     * Sets integrator_managed
+     *
+     * @param ?string $integrator_managed 
+     *
+     * @return $this
+     */
+    public function setIntegratorManaged($integrator_managed)
+    {
+        $this->container['integrator_managed'] = $integrator_managed;
 
         return $this;
     }

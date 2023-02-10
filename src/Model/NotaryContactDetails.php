@@ -1,6 +1,6 @@
 <?php
 /**
- * IdEvidenceViewLink
+ * NotaryContactDetails
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * IdEvidenceViewLink Class Doc Comment
+ * NotaryContactDetails Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class IdEvidenceViewLink implements ModelInterface, ArrayAccess
+class NotaryContactDetails implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'idEvidenceViewLink';
+    protected static $swaggerModelName = 'notaryContactDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'view_link' => '?string'
+        'has_docusign_certificate' => '?string',
+        'jurisdictions' => '\DocuSign\eSign\Model\JurisdictionSummary[]'
     ];
 
     /**
@@ -68,7 +69,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'view_link' => null
+        'has_docusign_certificate' => null,
+        'jurisdictions' => null
     ];
 
     /**
@@ -98,7 +100,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'view_link' => 'viewLink'
+        'has_docusign_certificate' => 'hasDocusignCertificate',
+        'jurisdictions' => 'jurisdictions'
     ];
 
     /**
@@ -107,7 +110,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'view_link' => 'setViewLink'
+        'has_docusign_certificate' => 'setHasDocusignCertificate',
+        'jurisdictions' => 'setJurisdictions'
     ];
 
     /**
@@ -116,7 +120,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'view_link' => 'getViewLink'
+        'has_docusign_certificate' => 'getHasDocusignCertificate',
+        'jurisdictions' => 'getJurisdictions'
     ];
 
     /**
@@ -179,7 +184,8 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['view_link'] = isset($data['view_link']) ? $data['view_link'] : null;
+        $this->container['has_docusign_certificate'] = isset($data['has_docusign_certificate']) ? $data['has_docusign_certificate'] : null;
+        $this->container['jurisdictions'] = isset($data['jurisdictions']) ? $data['jurisdictions'] : null;
     }
 
     /**
@@ -207,25 +213,49 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets view_link
+     * Gets has_docusign_certificate
      *
      * @return ?string
      */
-    public function getViewLink()
+    public function getHasDocusignCertificate()
     {
-        return $this->container['view_link'];
+        return $this->container['has_docusign_certificate'];
     }
 
     /**
-     * Sets view_link
+     * Sets has_docusign_certificate
      *
-     * @param ?string $view_link 
+     * @param ?string $has_docusign_certificate 
      *
      * @return $this
      */
-    public function setViewLink($view_link)
+    public function setHasDocusignCertificate($has_docusign_certificate)
     {
-        $this->container['view_link'] = $view_link;
+        $this->container['has_docusign_certificate'] = $has_docusign_certificate;
+
+        return $this;
+    }
+
+    /**
+     * Gets jurisdictions
+     *
+     * @return \DocuSign\eSign\Model\JurisdictionSummary[]
+     */
+    public function getJurisdictions()
+    {
+        return $this->container['jurisdictions'];
+    }
+
+    /**
+     * Sets jurisdictions
+     *
+     * @param \DocuSign\eSign\Model\JurisdictionSummary[] $jurisdictions 
+     *
+     * @return $this
+     */
+    public function setJurisdictions($jurisdictions)
+    {
+        $this->container['jurisdictions'] = $jurisdictions;
 
         return $this;
     }

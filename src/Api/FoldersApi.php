@@ -45,6 +45,33 @@ namespace DocuSign\eSign\Api\FoldersApi;
 class ListOptions
 {
     /**
+      * $count 
+      * @var ?string
+      */
+    protected ?string $count = null;
+
+    /**
+     * Gets count
+     *
+     * @return ?string
+     */
+    public function getCount(): ?string
+    {
+        return $this->count;
+    }
+
+    /**
+     * Sets count
+     * @param ?string $count 
+     *
+     * @return self
+     */
+    public function setCount(?string $count): self
+    {
+        $this->count = $count;
+        return $this;
+    }
+    /**
       * $include 
       * @var ?string
       */
@@ -123,6 +150,33 @@ class ListOptions
     public function setStartPosition(?string $start_position): self
     {
         $this->start_position = $start_position;
+        return $this;
+    }
+    /**
+      * $sub_folder_depth 
+      * @var ?string
+      */
+    protected ?string $sub_folder_depth = null;
+
+    /**
+     * Gets sub_folder_depth
+     *
+     * @return ?string
+     */
+    public function getSubFolderDepth(): ?string
+    {
+        return $this->sub_folder_depth;
+    }
+
+    /**
+     * Sets sub_folder_depth
+     * @param ?string $sub_folder_depth 
+     *
+     * @return self
+     */
+    public function setSubFolderDepth(?string $sub_folder_depth): self
+    {
+        $this->sub_folder_depth = $sub_folder_depth;
         return $this;
     }
     /**
@@ -766,6 +820,9 @@ class FoldersApi
         if ($options != null)
         {
             // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
             if ($options->getInclude() != 'null') {
                 $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
             }
@@ -774,6 +831,9 @@ class FoldersApi
             }
             if ($options->getStartPosition() != 'null') {
                 $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getSubFolderDepth() != 'null') {
+                $queryParams['sub_folder_depth'] = $this->apiClient->getSerializer()->toQueryValue($options->getSubFolderDepth());
             }
             if ($options->getTemplate() != 'null') {
                 $queryParams['template'] = $this->apiClient->getSerializer()->toQueryValue($options->getTemplate());

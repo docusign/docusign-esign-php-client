@@ -1,6 +1,6 @@
 <?php
 /**
- * IdEvidenceViewLink
+ * JurisdictionSummary
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * IdEvidenceViewLink Class Doc Comment
+ * JurisdictionSummary Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class IdEvidenceViewLink implements ModelInterface, ArrayAccess
+class JurisdictionSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'idEvidenceViewLink';
+    protected static $swaggerModelName = 'jurisdictionSummary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,10 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'view_link' => '?string'
+        'authorized_for_i_pen' => '?string',
+        'authorized_for_ron' => '?string',
+        'jurisdiction_id' => '?string',
+        'jurisdiction_name' => '?string'
     ];
 
     /**
@@ -68,7 +71,10 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'view_link' => null
+        'authorized_for_i_pen' => null,
+        'authorized_for_ron' => null,
+        'jurisdiction_id' => null,
+        'jurisdiction_name' => null
     ];
 
     /**
@@ -98,7 +104,10 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'view_link' => 'viewLink'
+        'authorized_for_i_pen' => 'authorizedForIPen',
+        'authorized_for_ron' => 'authorizedForRon',
+        'jurisdiction_id' => 'jurisdictionId',
+        'jurisdiction_name' => 'jurisdictionName'
     ];
 
     /**
@@ -107,7 +116,10 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'view_link' => 'setViewLink'
+        'authorized_for_i_pen' => 'setAuthorizedForIPen',
+        'authorized_for_ron' => 'setAuthorizedForRon',
+        'jurisdiction_id' => 'setJurisdictionId',
+        'jurisdiction_name' => 'setJurisdictionName'
     ];
 
     /**
@@ -116,7 +128,10 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'view_link' => 'getViewLink'
+        'authorized_for_i_pen' => 'getAuthorizedForIPen',
+        'authorized_for_ron' => 'getAuthorizedForRon',
+        'jurisdiction_id' => 'getJurisdictionId',
+        'jurisdiction_name' => 'getJurisdictionName'
     ];
 
     /**
@@ -179,7 +194,10 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['view_link'] = isset($data['view_link']) ? $data['view_link'] : null;
+        $this->container['authorized_for_i_pen'] = isset($data['authorized_for_i_pen']) ? $data['authorized_for_i_pen'] : null;
+        $this->container['authorized_for_ron'] = isset($data['authorized_for_ron']) ? $data['authorized_for_ron'] : null;
+        $this->container['jurisdiction_id'] = isset($data['jurisdiction_id']) ? $data['jurisdiction_id'] : null;
+        $this->container['jurisdiction_name'] = isset($data['jurisdiction_name']) ? $data['jurisdiction_name'] : null;
     }
 
     /**
@@ -207,25 +225,97 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets view_link
+     * Gets authorized_for_i_pen
      *
      * @return ?string
      */
-    public function getViewLink()
+    public function getAuthorizedForIPen()
     {
-        return $this->container['view_link'];
+        return $this->container['authorized_for_i_pen'];
     }
 
     /**
-     * Sets view_link
+     * Sets authorized_for_i_pen
      *
-     * @param ?string $view_link 
+     * @param ?string $authorized_for_i_pen 
      *
      * @return $this
      */
-    public function setViewLink($view_link)
+    public function setAuthorizedForIPen($authorized_for_i_pen)
     {
-        $this->container['view_link'] = $view_link;
+        $this->container['authorized_for_i_pen'] = $authorized_for_i_pen;
+
+        return $this;
+    }
+
+    /**
+     * Gets authorized_for_ron
+     *
+     * @return ?string
+     */
+    public function getAuthorizedForRon()
+    {
+        return $this->container['authorized_for_ron'];
+    }
+
+    /**
+     * Sets authorized_for_ron
+     *
+     * @param ?string $authorized_for_ron 
+     *
+     * @return $this
+     */
+    public function setAuthorizedForRon($authorized_for_ron)
+    {
+        $this->container['authorized_for_ron'] = $authorized_for_ron;
+
+        return $this;
+    }
+
+    /**
+     * Gets jurisdiction_id
+     *
+     * @return ?string
+     */
+    public function getJurisdictionId()
+    {
+        return $this->container['jurisdiction_id'];
+    }
+
+    /**
+     * Sets jurisdiction_id
+     *
+     * @param ?string $jurisdiction_id 
+     *
+     * @return $this
+     */
+    public function setJurisdictionId($jurisdiction_id)
+    {
+        $this->container['jurisdiction_id'] = $jurisdiction_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets jurisdiction_name
+     *
+     * @return ?string
+     */
+    public function getJurisdictionName()
+    {
+        return $this->container['jurisdiction_name'];
+    }
+
+    /**
+     * Sets jurisdiction_name
+     *
+     * @param ?string $jurisdiction_name 
+     *
+     * @return $this
+     */
+    public function setJurisdictionName($jurisdiction_name)
+    {
+        $this->container['jurisdiction_name'] = $jurisdiction_name;
 
         return $this;
     }

@@ -84,6 +84,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_o_auth' => '?string',
         'include_sender_accountas_custom_field' => '?string',
         'include_time_zone_information' => '?string',
+        'integrator_managed' => '?string',
         'name' => '?string',
         'password' => '?string',
         'recipient_events' => '?string[]',
@@ -134,6 +135,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_o_auth' => null,
         'include_sender_accountas_custom_field' => null,
         'include_time_zone_information' => null,
+        'integrator_managed' => null,
         'name' => null,
         'password' => null,
         'recipient_events' => null,
@@ -205,6 +207,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_o_auth' => 'includeOAuth',
         'include_sender_accountas_custom_field' => 'includeSenderAccountasCustomField',
         'include_time_zone_information' => 'includeTimeZoneInformation',
+        'integrator_managed' => 'integratorManaged',
         'name' => 'name',
         'password' => 'password',
         'recipient_events' => 'recipientEvents',
@@ -255,6 +258,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_o_auth' => 'setIncludeOAuth',
         'include_sender_accountas_custom_field' => 'setIncludeSenderAccountasCustomField',
         'include_time_zone_information' => 'setIncludeTimeZoneInformation',
+        'integrator_managed' => 'setIntegratorManaged',
         'name' => 'setName',
         'password' => 'setPassword',
         'recipient_events' => 'setRecipientEvents',
@@ -305,6 +309,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'include_o_auth' => 'getIncludeOAuth',
         'include_sender_accountas_custom_field' => 'getIncludeSenderAccountasCustomField',
         'include_time_zone_information' => 'getIncludeTimeZoneInformation',
+        'integrator_managed' => 'getIntegratorManaged',
         'name' => 'getName',
         'password' => 'getPassword',
         'recipient_events' => 'getRecipientEvents',
@@ -409,6 +414,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['include_o_auth'] = isset($data['include_o_auth']) ? $data['include_o_auth'] : null;
         $this->container['include_sender_accountas_custom_field'] = isset($data['include_sender_accountas_custom_field']) ? $data['include_sender_accountas_custom_field'] : null;
         $this->container['include_time_zone_information'] = isset($data['include_time_zone_information']) ? $data['include_time_zone_information'] : null;
+        $this->container['integrator_managed'] = isset($data['integrator_managed']) ? $data['integrator_managed'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['recipient_events'] = isset($data['recipient_events']) ? $data['recipient_events'] : null;
@@ -1025,6 +1031,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     public function setIncludeTimeZoneInformation($include_time_zone_information)
     {
         $this->container['include_time_zone_information'] = $include_time_zone_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets integrator_managed
+     *
+     * @return ?string
+     */
+    public function getIntegratorManaged()
+    {
+        return $this->container['integrator_managed'];
+    }
+
+    /**
+     * Sets integrator_managed
+     *
+     * @param ?string $integrator_managed 
+     *
+     * @return $this
+     */
+    public function setIntegratorManaged($integrator_managed)
+    {
+        $this->container['integrator_managed'] = $integrator_managed;
 
         return $this;
     }
