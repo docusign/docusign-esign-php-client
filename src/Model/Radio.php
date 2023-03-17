@@ -95,6 +95,7 @@ class Radio implements ModelInterface, ArrayAccess
         'italic_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'locked' => '?string',
         'locked_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'merge_field_xml' => '?string',
         'page_number' => '?string',
         'page_number_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'required' => '?string',
@@ -158,6 +159,7 @@ class Radio implements ModelInterface, ArrayAccess
         'italic_metadata' => null,
         'locked' => null,
         'locked_metadata' => null,
+        'merge_field_xml' => null,
         'page_number' => null,
         'page_number_metadata' => null,
         'required' => null,
@@ -242,6 +244,7 @@ class Radio implements ModelInterface, ArrayAccess
         'italic_metadata' => 'italicMetadata',
         'locked' => 'locked',
         'locked_metadata' => 'lockedMetadata',
+        'merge_field_xml' => 'mergeFieldXml',
         'page_number' => 'pageNumber',
         'page_number_metadata' => 'pageNumberMetadata',
         'required' => 'required',
@@ -305,6 +308,7 @@ class Radio implements ModelInterface, ArrayAccess
         'italic_metadata' => 'setItalicMetadata',
         'locked' => 'setLocked',
         'locked_metadata' => 'setLockedMetadata',
+        'merge_field_xml' => 'setMergeFieldXml',
         'page_number' => 'setPageNumber',
         'page_number_metadata' => 'setPageNumberMetadata',
         'required' => 'setRequired',
@@ -368,6 +372,7 @@ class Radio implements ModelInterface, ArrayAccess
         'italic_metadata' => 'getItalicMetadata',
         'locked' => 'getLocked',
         'locked_metadata' => 'getLockedMetadata',
+        'merge_field_xml' => 'getMergeFieldXml',
         'page_number' => 'getPageNumber',
         'page_number_metadata' => 'getPageNumberMetadata',
         'required' => 'getRequired',
@@ -485,6 +490,7 @@ class Radio implements ModelInterface, ArrayAccess
         $this->container['italic_metadata'] = isset($data['italic_metadata']) ? $data['italic_metadata'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['locked_metadata'] = isset($data['locked_metadata']) ? $data['locked_metadata'] : null;
+        $this->container['merge_field_xml'] = isset($data['merge_field_xml']) ? $data['merge_field_xml'] : null;
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
         $this->container['page_number_metadata'] = isset($data['page_number_metadata']) ? $data['page_number_metadata'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
@@ -1096,7 +1102,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets caption_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata 
      *
      * @return $this
      */
@@ -1120,7 +1126,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -1367,6 +1373,30 @@ class Radio implements ModelInterface, ArrayAccess
     public function setLockedMetadata($locked_metadata)
     {
         $this->container['locked_metadata'] = $locked_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets merge_field_xml
+     *
+     * @return ?string
+     */
+    public function getMergeFieldXml()
+    {
+        return $this->container['merge_field_xml'];
+    }
+
+    /**
+     * Sets merge_field_xml
+     *
+     * @param ?string $merge_field_xml 
+     *
+     * @return $this
+     */
+    public function setMergeFieldXml($merge_field_xml)
+    {
+        $this->container['merge_field_xml'] = $merge_field_xml;
 
         return $this;
     }

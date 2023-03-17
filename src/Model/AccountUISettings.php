@@ -466,7 +466,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets clickwrap_schema_version_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $clickwrap_schema_version_metadata clickwrap_schema_version_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $clickwrap_schema_version_metadata 
      *
      * @return $this
      */
@@ -706,7 +706,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_legacy_sendflow_link_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_legacy_sendflow_link_metadata enable_legacy_sendflow_link_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_legacy_sendflow_link_metadata 
      *
      * @return $this
      */

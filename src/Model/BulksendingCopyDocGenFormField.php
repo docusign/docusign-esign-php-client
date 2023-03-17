@@ -59,7 +59,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'label' => '?string',
+        'name' => '?string',
         'value' => '?string'
     ];
 
@@ -69,7 +69,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'label' => null,
+        'name' => null,
         'value' => null
     ];
 
@@ -100,7 +100,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'label' => 'label',
+        'name' => 'name',
         'value' => 'value'
     ];
 
@@ -110,7 +110,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'label' => 'setLabel',
+        'name' => 'setName',
         'value' => 'setValue'
     ];
 
@@ -120,7 +120,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'label' => 'getLabel',
+        'name' => 'getName',
         'value' => 'getValue'
     ];
 
@@ -184,7 +184,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
@@ -213,25 +213,25 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets label
+     * Gets name
      *
      * @return ?string
      */
-    public function getLabel()
+    public function getName()
     {
-        return $this->container['label'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets label
+     * Sets name
      *
-     * @param ?string $label 
+     * @param ?string $name 
      *
      * @return $this
      */
-    public function setLabel($label)
+    public function setName($name)
     {
-        $this->container['label'] = $label;
+        $this->container['name'] = $name;
 
         return $this;
     }

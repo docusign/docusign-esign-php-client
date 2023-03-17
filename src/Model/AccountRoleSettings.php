@@ -1960,7 +1960,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_key_terms_suggestions_by_document_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata enable_key_terms_suggestions_by_document_type_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata 
      *
      * @return $this
      */
@@ -2560,7 +2560,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets web_forms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata web_forms_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata 
      *
      * @return $this
      */

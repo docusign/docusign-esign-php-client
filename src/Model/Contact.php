@@ -447,7 +447,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets notary_contact_details
      *
-     * @param \DocuSign\eSign\Model\NotaryContactDetails $notary_contact_details notary_contact_details
+     * @param \DocuSign\eSign\Model\NotaryContactDetails $notary_contact_details 
      *
      * @return $this
      */

@@ -1233,7 +1233,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets caption_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata 
      *
      * @return $this
      */
@@ -1521,7 +1521,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets end_position
      *
-     * @param \DocuSign\eSign\Model\SmartSectionAnchorPosition $end_position The last index position in the result set.
+     * @param \DocuSign\eSign\Model\SmartSectionAnchorPosition $end_position The last position in the result set.
      *
      * @return $this
      */
@@ -1545,7 +1545,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -2217,7 +2217,7 @@ class SmartSection implements ModelInterface, ArrayAccess
     /**
      * Sets start_position
      *
-     * @param \DocuSign\eSign\Model\SmartSectionAnchorPosition $start_position The starting index position of the current result set.
+     * @param \DocuSign\eSign\Model\SmartSectionAnchorPosition $start_position Starting position of the current result set.
      *
      * @return $this
      */

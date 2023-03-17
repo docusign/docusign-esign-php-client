@@ -64,6 +64,7 @@ class UserInfo implements ModelInterface, ArrayAccess
         'activation_access_code' => '?string',
         'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'ip_address' => '?string',
         'login_status' => '?string',
         'membership_id' => '?string',
         'send_activation_email' => '?string',
@@ -85,6 +86,7 @@ class UserInfo implements ModelInterface, ArrayAccess
         'activation_access_code' => null,
         'email' => null,
         'error_details' => null,
+        'ip_address' => null,
         'login_status' => null,
         'membership_id' => null,
         'send_activation_email' => null,
@@ -127,6 +129,7 @@ class UserInfo implements ModelInterface, ArrayAccess
         'activation_access_code' => 'activationAccessCode',
         'email' => 'email',
         'error_details' => 'errorDetails',
+        'ip_address' => 'ipAddress',
         'login_status' => 'loginStatus',
         'membership_id' => 'membershipId',
         'send_activation_email' => 'sendActivationEmail',
@@ -148,6 +151,7 @@ class UserInfo implements ModelInterface, ArrayAccess
         'activation_access_code' => 'setActivationAccessCode',
         'email' => 'setEmail',
         'error_details' => 'setErrorDetails',
+        'ip_address' => 'setIpAddress',
         'login_status' => 'setLoginStatus',
         'membership_id' => 'setMembershipId',
         'send_activation_email' => 'setSendActivationEmail',
@@ -169,6 +173,7 @@ class UserInfo implements ModelInterface, ArrayAccess
         'activation_access_code' => 'getActivationAccessCode',
         'email' => 'getEmail',
         'error_details' => 'getErrorDetails',
+        'ip_address' => 'getIpAddress',
         'login_status' => 'getLoginStatus',
         'membership_id' => 'getMembershipId',
         'send_activation_email' => 'getSendActivationEmail',
@@ -244,6 +249,7 @@ class UserInfo implements ModelInterface, ArrayAccess
         $this->container['activation_access_code'] = isset($data['activation_access_code']) ? $data['activation_access_code'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
         $this->container['login_status'] = isset($data['login_status']) ? $data['login_status'] : null;
         $this->container['membership_id'] = isset($data['membership_id']) ? $data['membership_id'] : null;
         $this->container['send_activation_email'] = isset($data['send_activation_email']) ? $data['send_activation_email'] : null;
@@ -387,13 +393,37 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets ip_address
+     *
+     * @return ?string
+     */
+    public function getIpAddress()
+    {
+        return $this->container['ip_address'];
+    }
+
+    /**
+     * Sets ip_address
+     *
+     * @param ?string $ip_address 
+     *
+     * @return $this
+     */
+    public function setIpAddress($ip_address)
+    {
+        $this->container['ip_address'] = $ip_address;
 
         return $this;
     }

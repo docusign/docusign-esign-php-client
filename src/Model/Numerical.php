@@ -124,6 +124,7 @@ class Numerical implements ModelInterface, ArrayAccess
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'numerical_value' => '?string',
+        'original_numerical_value' => '?string',
         'original_value' => '?string',
         'original_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'page_number' => '?string',
@@ -248,6 +249,7 @@ class Numerical implements ModelInterface, ArrayAccess
         'name' => null,
         'name_metadata' => null,
         'numerical_value' => null,
+        'original_numerical_value' => null,
         'original_value' => null,
         'original_value_metadata' => null,
         'page_number' => null,
@@ -393,6 +395,7 @@ class Numerical implements ModelInterface, ArrayAccess
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'numerical_value' => 'numericalValue',
+        'original_numerical_value' => 'originalNumericalValue',
         'original_value' => 'originalValue',
         'original_value_metadata' => 'originalValueMetadata',
         'page_number' => 'pageNumber',
@@ -517,6 +520,7 @@ class Numerical implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'numerical_value' => 'setNumericalValue',
+        'original_numerical_value' => 'setOriginalNumericalValue',
         'original_value' => 'setOriginalValue',
         'original_value_metadata' => 'setOriginalValueMetadata',
         'page_number' => 'setPageNumber',
@@ -641,6 +645,7 @@ class Numerical implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'numerical_value' => 'getNumericalValue',
+        'original_numerical_value' => 'getOriginalNumericalValue',
         'original_value' => 'getOriginalValue',
         'original_value_metadata' => 'getOriginalValueMetadata',
         'page_number' => 'getPageNumber',
@@ -819,6 +824,7 @@ class Numerical implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['numerical_value'] = isset($data['numerical_value']) ? $data['numerical_value'] : null;
+        $this->container['original_numerical_value'] = isset($data['original_numerical_value']) ? $data['original_numerical_value'] : null;
         $this->container['original_value'] = isset($data['original_value']) ? $data['original_value'] : null;
         $this->container['original_value_metadata'] = isset($data['original_value_metadata']) ? $data['original_value_metadata'] : null;
         $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
@@ -933,7 +939,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata anchor_allow_white_space_in_characters_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_allow_white_space_in_characters_metadata 
      *
      * @return $this
      */
@@ -981,7 +987,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_case_sensitive_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata anchor_case_sensitive_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_case_sensitive_metadata 
      *
      * @return $this
      */
@@ -1029,7 +1035,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_horizontal_alignment_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata anchor_horizontal_alignment_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_horizontal_alignment_metadata 
      *
      * @return $this
      */
@@ -1077,7 +1083,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_ignore_if_not_present_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata anchor_ignore_if_not_present_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_ignore_if_not_present_metadata 
      *
      * @return $this
      */
@@ -1125,7 +1131,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_match_whole_word_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata anchor_match_whole_word_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_match_whole_word_metadata 
      *
      * @return $this
      */
@@ -1173,7 +1179,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_string_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata anchor_string_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_string_metadata 
      *
      * @return $this
      */
@@ -1221,7 +1227,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata anchor_tab_processor_version_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_tab_processor_version_metadata 
      *
      * @return $this
      */
@@ -1269,7 +1275,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_units_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata anchor_units_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_units_metadata 
      *
      * @return $this
      */
@@ -1317,7 +1323,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_x_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata anchor_x_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_x_offset_metadata 
      *
      * @return $this
      */
@@ -1365,7 +1371,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_y_offset_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata anchor_y_offset_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $anchor_y_offset_metadata 
      *
      * @return $this
      */
@@ -1413,7 +1419,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets bold_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata bold_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $bold_metadata 
      *
      * @return $this
      */
@@ -1461,7 +1467,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets caption_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata 
      *
      * @return $this
      */
@@ -1509,7 +1515,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets conceal_value_on_document_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conceal_value_on_document_metadata conceal_value_on_document_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conceal_value_on_document_metadata 
      *
      * @return $this
      */
@@ -1557,7 +1563,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata conditional_parent_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_label_metadata 
      *
      * @return $this
      */
@@ -1605,7 +1611,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_parent_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata conditional_parent_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $conditional_parent_value_metadata 
      *
      * @return $this
      */
@@ -1653,7 +1659,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets custom_tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata custom_tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $custom_tab_id_metadata 
      *
      * @return $this
      */
@@ -1701,7 +1707,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets disable_auto_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $disable_auto_size_metadata disable_auto_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $disable_auto_size_metadata 
      *
      * @return $this
      */
@@ -1749,7 +1755,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets document_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata document_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $document_id_metadata 
      *
      * @return $this
      */
@@ -1773,7 +1779,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -1845,7 +1851,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets font_color_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata font_color_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_color_metadata 
      *
      * @return $this
      */
@@ -1869,7 +1875,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets font_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata font_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_metadata 
      *
      * @return $this
      */
@@ -1917,7 +1923,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets font_size_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata font_size_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $font_size_metadata 
      *
      * @return $this
      */
@@ -1965,7 +1971,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets form_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata form_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_order_metadata 
      *
      * @return $this
      */
@@ -2013,7 +2019,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata form_page_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_label_metadata 
      *
      * @return $this
      */
@@ -2061,7 +2067,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata form_page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $form_page_number_metadata 
      *
      * @return $this
      */
@@ -2109,7 +2115,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets height_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata height_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $height_metadata 
      *
      * @return $this
      */
@@ -2157,7 +2163,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets italic_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata italic_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $italic_metadata 
      *
      * @return $this
      */
@@ -2181,7 +2187,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets locale_policy
      *
-     * @param \DocuSign\eSign\Model\LocalePolicyTab $locale_policy locale_policy
+     * @param \DocuSign\eSign\Model\LocalePolicyTab $locale_policy 
      *
      * @return $this
      */
@@ -2229,7 +2235,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $locked_metadata 
      *
      * @return $this
      */
@@ -2277,7 +2283,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets max_length_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $max_length_metadata max_length_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $max_length_metadata 
      *
      * @return $this
      */
@@ -2325,7 +2331,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field
      *
-     * @param \DocuSign\eSign\Model\MergeField $merge_field merge_field
+     * @param \DocuSign\eSign\Model\MergeField $merge_field 
      *
      * @return $this
      */
@@ -2421,7 +2427,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata 
      *
      * @return $this
      */
@@ -2452,6 +2458,30 @@ class Numerical implements ModelInterface, ArrayAccess
     public function setNumericalValue($numerical_value)
     {
         $this->container['numerical_value'] = $numerical_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_numerical_value
+     *
+     * @return ?string
+     */
+    public function getOriginalNumericalValue()
+    {
+        return $this->container['original_numerical_value'];
+    }
+
+    /**
+     * Sets original_numerical_value
+     *
+     * @param ?string $original_numerical_value 
+     *
+     * @return $this
+     */
+    public function setOriginalNumericalValue($original_numerical_value)
+    {
+        $this->container['original_numerical_value'] = $original_numerical_value;
 
         return $this;
     }
@@ -2493,7 +2523,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets original_value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata original_value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $original_value_metadata 
      *
      * @return $this
      */
@@ -2541,7 +2571,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets page_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata page_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $page_number_metadata 
      *
      * @return $this
      */
@@ -2613,7 +2643,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata recipient_id_guid_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_guid_metadata 
      *
      * @return $this
      */
@@ -2637,7 +2667,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata recipient_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_id_metadata 
      *
      * @return $this
      */
@@ -2685,7 +2715,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets require_all_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata require_all_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_all_metadata 
      *
      * @return $this
      */
@@ -2733,7 +2763,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $required_metadata 
      *
      * @return $this
      */
@@ -2781,7 +2811,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets require_initial_on_shared_change_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata require_initial_on_shared_change_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_initial_on_shared_change_metadata 
      *
      * @return $this
      */
@@ -2829,7 +2859,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets sender_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_required_metadata sender_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $sender_required_metadata 
      *
      * @return $this
      */
@@ -2877,7 +2907,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets shared_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata shared_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $shared_metadata 
      *
      * @return $this
      */
@@ -2925,7 +2955,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets share_to_recipients_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata share_to_recipients_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $share_to_recipients_metadata 
      *
      * @return $this
      */
@@ -2949,7 +2979,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets smart_contract_information
      *
-     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information smart_contract_information
+     * @param \DocuSign\eSign\Model\SmartContractInformation $smart_contract_information 
      *
      * @return $this
      */
@@ -3021,7 +3051,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets status_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata status_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $status_metadata 
      *
      * @return $this
      */
@@ -3069,7 +3099,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata tab_group_labels_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_group_labels_metadata 
      *
      * @return $this
      */
@@ -3117,7 +3147,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets tab_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata tab_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_id_metadata 
      *
      * @return $this
      */
@@ -3165,7 +3195,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets tab_label_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata tab_label_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_label_metadata 
      *
      * @return $this
      */
@@ -3213,7 +3243,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata tab_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_order_metadata 
      *
      * @return $this
      */
@@ -3261,7 +3291,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata tab_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tab_type_metadata 
      *
      * @return $this
      */
@@ -3309,7 +3339,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets template_locked_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata template_locked_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_locked_metadata 
      *
      * @return $this
      */
@@ -3357,7 +3387,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets template_required_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata template_required_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $template_required_metadata 
      *
      * @return $this
      */
@@ -3405,7 +3435,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets tool_tip_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata tool_tip_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $tool_tip_metadata 
      *
      * @return $this
      */
@@ -3453,7 +3483,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets underline_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata underline_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $underline_metadata 
      *
      * @return $this
      */
@@ -3525,7 +3555,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets value_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata value_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $value_metadata 
      *
      * @return $this
      */
@@ -3573,7 +3603,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets width_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata width_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $width_metadata 
      *
      * @return $this
      */
@@ -3621,7 +3651,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets x_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata x_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $x_position_metadata 
      *
      * @return $this
      */
@@ -3669,7 +3699,7 @@ class Numerical implements ModelInterface, ArrayAccess
     /**
      * Sets y_position_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata y_position_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $y_position_metadata 
      *
      * @return $this
      */
