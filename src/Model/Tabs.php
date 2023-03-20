@@ -68,7 +68,6 @@ class Tabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => '\DocuSign\eSign\Model\CommissionNumber[]',
         'commission_state_tabs' => '\DocuSign\eSign\Model\CommissionState[]',
         'company_tabs' => '\DocuSign\eSign\Model\Company[]',
-        'currency_tabs' => '\DocuSign\eSign\Model\Currency[]',
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
         'date_tabs' => '\DocuSign\eSign\Model\Date[]',
         'decline_tabs' => '\DocuSign\eSign\Model\Decline[]',
@@ -116,7 +115,6 @@ class Tabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => null,
         'commission_state_tabs' => null,
         'company_tabs' => null,
-        'currency_tabs' => null,
         'date_signed_tabs' => null,
         'date_tabs' => null,
         'decline_tabs' => null,
@@ -185,7 +183,6 @@ class Tabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => 'commissionNumberTabs',
         'commission_state_tabs' => 'commissionStateTabs',
         'company_tabs' => 'companyTabs',
-        'currency_tabs' => 'currencyTabs',
         'date_signed_tabs' => 'dateSignedTabs',
         'date_tabs' => 'dateTabs',
         'decline_tabs' => 'declineTabs',
@@ -233,7 +230,6 @@ class Tabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => 'setCommissionNumberTabs',
         'commission_state_tabs' => 'setCommissionStateTabs',
         'company_tabs' => 'setCompanyTabs',
-        'currency_tabs' => 'setCurrencyTabs',
         'date_signed_tabs' => 'setDateSignedTabs',
         'date_tabs' => 'setDateTabs',
         'decline_tabs' => 'setDeclineTabs',
@@ -281,7 +277,6 @@ class Tabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => 'getCommissionNumberTabs',
         'commission_state_tabs' => 'getCommissionStateTabs',
         'company_tabs' => 'getCompanyTabs',
-        'currency_tabs' => 'getCurrencyTabs',
         'date_signed_tabs' => 'getDateSignedTabs',
         'date_tabs' => 'getDateTabs',
         'decline_tabs' => 'getDeclineTabs',
@@ -383,7 +378,6 @@ class Tabs implements ModelInterface, ArrayAccess
         $this->container['commission_number_tabs'] = isset($data['commission_number_tabs']) ? $data['commission_number_tabs'] : null;
         $this->container['commission_state_tabs'] = isset($data['commission_state_tabs']) ? $data['commission_state_tabs'] : null;
         $this->container['company_tabs'] = isset($data['company_tabs']) ? $data['company_tabs'] : null;
-        $this->container['currency_tabs'] = isset($data['currency_tabs']) ? $data['currency_tabs'] : null;
         $this->container['date_signed_tabs'] = isset($data['date_signed_tabs']) ? $data['date_signed_tabs'] : null;
         $this->container['date_tabs'] = isset($data['date_tabs']) ? $data['date_tabs'] : null;
         $this->container['decline_tabs'] = isset($data['decline_tabs']) ? $data['decline_tabs'] : null;
@@ -629,30 +623,6 @@ class Tabs implements ModelInterface, ArrayAccess
     public function setCompanyTabs($company_tabs)
     {
         $this->container['company_tabs'] = $company_tabs;
-
-        return $this;
-    }
-
-    /**
-     * Gets currency_tabs
-     *
-     * @return \DocuSign\eSign\Model\Currency[]
-     */
-    public function getCurrencyTabs()
-    {
-        return $this->container['currency_tabs'];
-    }
-
-    /**
-     * Sets currency_tabs
-     *
-     * @param \DocuSign\eSign\Model\Currency[] $currency_tabs 
-     *
-     * @return $this
-     */
-    public function setCurrencyTabs($currency_tabs)
-    {
-        $this->container['currency_tabs'] = $currency_tabs;
 
         return $this;
     }

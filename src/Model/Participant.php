@@ -65,6 +65,7 @@ class Participant implements ModelInterface, ArrayAccess
         'additional_notifications' => '\DocuSign\eSign\Model\RecipientAdditionalNotification[]',
         'allow_system_override_for_locked_recipient' => '?string',
         'auto_responded_reason' => '?string',
+        'bulk_send_v2_recipient' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
         'consent_details_list' => '\DocuSign\eSign\Model\ConsentDetails[]',
@@ -147,6 +148,7 @@ class Participant implements ModelInterface, ArrayAccess
         'additional_notifications' => null,
         'allow_system_override_for_locked_recipient' => null,
         'auto_responded_reason' => null,
+        'bulk_send_v2_recipient' => null,
         'client_user_id' => null,
         'completed_count' => null,
         'consent_details_list' => null,
@@ -250,6 +252,7 @@ class Participant implements ModelInterface, ArrayAccess
         'additional_notifications' => 'additionalNotifications',
         'allow_system_override_for_locked_recipient' => 'allowSystemOverrideForLockedRecipient',
         'auto_responded_reason' => 'autoRespondedReason',
+        'bulk_send_v2_recipient' => 'bulkSendV2Recipient',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
         'consent_details_list' => 'consentDetailsList',
@@ -332,6 +335,7 @@ class Participant implements ModelInterface, ArrayAccess
         'additional_notifications' => 'setAdditionalNotifications',
         'allow_system_override_for_locked_recipient' => 'setAllowSystemOverrideForLockedRecipient',
         'auto_responded_reason' => 'setAutoRespondedReason',
+        'bulk_send_v2_recipient' => 'setBulkSendV2Recipient',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
         'consent_details_list' => 'setConsentDetailsList',
@@ -414,6 +418,7 @@ class Participant implements ModelInterface, ArrayAccess
         'additional_notifications' => 'getAdditionalNotifications',
         'allow_system_override_for_locked_recipient' => 'getAllowSystemOverrideForLockedRecipient',
         'auto_responded_reason' => 'getAutoRespondedReason',
+        'bulk_send_v2_recipient' => 'getBulkSendV2Recipient',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
         'consent_details_list' => 'getConsentDetailsList',
@@ -550,6 +555,7 @@ class Participant implements ModelInterface, ArrayAccess
         $this->container['additional_notifications'] = isset($data['additional_notifications']) ? $data['additional_notifications'] : null;
         $this->container['allow_system_override_for_locked_recipient'] = isset($data['allow_system_override_for_locked_recipient']) ? $data['allow_system_override_for_locked_recipient'] : null;
         $this->container['auto_responded_reason'] = isset($data['auto_responded_reason']) ? $data['auto_responded_reason'] : null;
+        $this->container['bulk_send_v2_recipient'] = isset($data['bulk_send_v2_recipient']) ? $data['bulk_send_v2_recipient'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
         $this->container['consent_details_list'] = isset($data['consent_details_list']) ? $data['consent_details_list'] : null;
@@ -681,7 +687,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata access_code_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $access_code_metadata 
      *
      * @return $this
      */
@@ -784,6 +790,30 @@ class Participant implements ModelInterface, ArrayAccess
     public function setAutoRespondedReason($auto_responded_reason)
     {
         $this->container['auto_responded_reason'] = $auto_responded_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets bulk_send_v2_recipient
+     *
+     * @return ?string
+     */
+    public function getBulkSendV2Recipient()
+    {
+        return $this->container['bulk_send_v2_recipient'];
+    }
+
+    /**
+     * Sets bulk_send_v2_recipient
+     *
+     * @param ?string $bulk_send_v2_recipient 
+     *
+     * @return $this
+     */
+    public function setBulkSendV2Recipient($bulk_send_v2_recipient)
+    {
+        $this->container['bulk_send_v2_recipient'] = $bulk_send_v2_recipient;
 
         return $this;
     }
@@ -993,7 +1023,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_method_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata delivery_method_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $delivery_method_metadata 
      *
      * @return $this
      */
@@ -1113,7 +1143,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets email_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata email_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $email_metadata 
      *
      * @return $this
      */
@@ -1137,7 +1167,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification email_notification
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.
      *
      * @return $this
      */
@@ -1209,7 +1239,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details error_details
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -1257,7 +1287,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets fax_number_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata fax_number_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $fax_number_metadata 
      *
      * @return $this
      */
@@ -1305,7 +1335,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets first_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata first_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $first_name_metadata 
      *
      * @return $this
      */
@@ -1353,7 +1383,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets full_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata full_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $full_name_metadata 
      *
      * @return $this
      */
@@ -1401,7 +1431,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configuration_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata id_check_configuration_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $id_check_configuration_name_metadata 
      *
      * @return $this
      */
@@ -1425,7 +1455,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_information_input
      *
-     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input id_check_information_input
+     * @param \DocuSign\eSign\Model\IdCheckInformationInput $id_check_information_input 
      *
      * @return $this
      */
@@ -1449,7 +1479,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification identity_verification
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification 
      *
      * @return $this
      */
@@ -1521,7 +1551,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets last_name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata last_name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $last_name_metadata 
      *
      * @return $this
      */
@@ -1617,7 +1647,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets name_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata name_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $name_metadata 
      *
      * @return $this
      */
@@ -1665,7 +1695,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets note_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata note_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $note_metadata 
      *
      * @return $this
      */
@@ -1737,7 +1767,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets phone_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication phone_authentication
+     * @param \DocuSign\eSign\Model\RecipientPhoneAuthentication $phone_authentication 
      *
      * @return $this
      */
@@ -1761,7 +1791,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number
      *
-     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number phone_number
+     * @param \DocuSign\eSign\Model\RecipientPhoneNumber $phone_number 
      *
      * @return $this
      */
@@ -1809,7 +1839,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_authentication_status
      *
-     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status recipient_authentication_status
+     * @param \DocuSign\eSign\Model\AuthenticationStatus $recipient_authentication_status 
      *
      * @return $this
      */
@@ -1929,7 +1959,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata recipient_type_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $recipient_type_metadata 
      *
      * @return $this
      */
@@ -1977,7 +2007,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets require_id_lookup_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata require_id_lookup_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $require_id_lookup_metadata 
      *
      * @return $this
      */
@@ -2049,7 +2079,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets routing_order_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata routing_order_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $routing_order_metadata 
      *
      * @return $this
      */
@@ -2145,7 +2175,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata signing_group_id_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $signing_group_id_metadata 
      *
      * @return $this
      */
@@ -2217,7 +2247,7 @@ class Participant implements ModelInterface, ArrayAccess
     /**
      * Sets sms_authentication
      *
-     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication sms_authentication
+     * @param \DocuSign\eSign\Model\RecipientSMSAuthentication $sms_authentication 
      *
      * @return $this
      */

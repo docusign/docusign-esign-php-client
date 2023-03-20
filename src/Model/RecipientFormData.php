@@ -112,14 +112,14 @@ class RecipientFormData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'declined_time' => 'declinedTime',
-        'delivered_time' => 'deliveredTime',
+        'declined_time' => 'DeclinedTime',
+        'delivered_time' => 'DeliveredTime',
         'email' => 'email',
         'form_data' => 'formData',
         'name' => 'name',
         'recipient_id' => 'recipientId',
-        'sent_time' => 'sentTime',
-        'signed_time' => 'signedTime'
+        'sent_time' => 'SentTime',
+        'signed_time' => 'SignedTime'
     ];
 
     /**

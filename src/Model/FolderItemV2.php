@@ -580,7 +580,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients An array of recipient objects that provides details about the recipients of the envelope.
+     * @param \DocuSign\eSign\Model\Recipients $recipients An array of powerform recipients.
      *
      * @return $this
      */

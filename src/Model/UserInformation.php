@@ -694,7 +694,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -1438,7 +1438,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_settings
      *
-     * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.
+     * @param \DocuSign\eSign\Model\UserSettingsInformation $user_settings The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.
      *
      * @return $this
      */

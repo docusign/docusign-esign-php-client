@@ -1119,7 +1119,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.
+     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -2199,7 +2199,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients An array of recipient objects that provides details about the recipients of the envelope.
+     * @param \DocuSign\eSign\Model\Recipients $recipients An array of powerform recipients.
      *
      * @return $this
      */

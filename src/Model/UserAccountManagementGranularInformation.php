@@ -736,7 +736,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_joint_agreements_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_joint_agreements_metadata can_manage_joint_agreements_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_joint_agreements_metadata 
      *
      * @return $this
      */
@@ -928,7 +928,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_stamps_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_stamps_metadata can_manage_stamps_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_stamps_metadata 
      *
      * @return $this
      */

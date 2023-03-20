@@ -225,7 +225,7 @@ class ConnectHistoricalEnvelopeRepublish implements ModelInterface, ArrayAccess
     /**
      * Sets config
      *
-     * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $config config
+     * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $config 
      *
      * @return $this
      */

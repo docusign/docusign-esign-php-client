@@ -555,7 +555,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets submitted_by_user_info
      *
-     * @param \DocuSign\eSign\Model\UserInfo $submitted_by_user_info submitted_by_user_info
+     * @param \DocuSign\eSign\Model\UserInfo $submitted_by_user_info 
      *
      * @return $this
      */

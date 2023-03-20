@@ -1,6 +1,6 @@
 <?php
 /**
- * CaptiveRecipient
+ * DocGenFormFields
  *
  * PHP version 7.4
  *
@@ -34,16 +34,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * CaptiveRecipient Class Doc Comment
+ * DocGenFormFields Class Doc Comment
  *
  * @category    Class
- * @description This object contains details about a captive (embedded) recipient.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CaptiveRecipient implements ModelInterface, ArrayAccess
+class DocGenFormFields implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -52,7 +51,7 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'captiveRecipient';
+    protected static $swaggerModelName = 'docGenFormFields';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,10 +59,10 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'client_user_id' => '?string',
-        'email' => '?string',
-        'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'user_name' => '?string'
+        'doc_gen_document_status' => '?string',
+        'doc_gen_errors' => '\DocuSign\eSign\Model\DocGenSyntaxError[]',
+        'doc_gen_form_field_list' => '\DocuSign\eSign\Model\DocGenFormField[]',
+        'document_id' => '?string'
     ];
 
     /**
@@ -72,10 +71,10 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'client_user_id' => null,
-        'email' => null,
-        'error_details' => null,
-        'user_name' => null
+        'doc_gen_document_status' => null,
+        'doc_gen_errors' => null,
+        'doc_gen_form_field_list' => null,
+        'document_id' => null
     ];
 
     /**
@@ -105,10 +104,10 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'client_user_id' => 'clientUserId',
-        'email' => 'email',
-        'error_details' => 'errorDetails',
-        'user_name' => 'userName'
+        'doc_gen_document_status' => 'docGenDocumentStatus',
+        'doc_gen_errors' => 'docGenErrors',
+        'doc_gen_form_field_list' => 'docGenFormFieldList',
+        'document_id' => 'documentId'
     ];
 
     /**
@@ -117,10 +116,10 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'client_user_id' => 'setClientUserId',
-        'email' => 'setEmail',
-        'error_details' => 'setErrorDetails',
-        'user_name' => 'setUserName'
+        'doc_gen_document_status' => 'setDocGenDocumentStatus',
+        'doc_gen_errors' => 'setDocGenErrors',
+        'doc_gen_form_field_list' => 'setDocGenFormFieldList',
+        'document_id' => 'setDocumentId'
     ];
 
     /**
@@ -129,10 +128,10 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'client_user_id' => 'getClientUserId',
-        'email' => 'getEmail',
-        'error_details' => 'getErrorDetails',
-        'user_name' => 'getUserName'
+        'doc_gen_document_status' => 'getDocGenDocumentStatus',
+        'doc_gen_errors' => 'getDocGenErrors',
+        'doc_gen_form_field_list' => 'getDocGenFormFieldList',
+        'document_id' => 'getDocumentId'
     ];
 
     /**
@@ -195,10 +194,10 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
-        $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
+        $this->container['doc_gen_document_status'] = isset($data['doc_gen_document_status']) ? $data['doc_gen_document_status'] : null;
+        $this->container['doc_gen_errors'] = isset($data['doc_gen_errors']) ? $data['doc_gen_errors'] : null;
+        $this->container['doc_gen_form_field_list'] = isset($data['doc_gen_form_field_list']) ? $data['doc_gen_form_field_list'] : null;
+        $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
     }
 
     /**
@@ -226,97 +225,97 @@ class CaptiveRecipient implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets client_user_id
+     * Gets doc_gen_document_status
      *
      * @return ?string
      */
-    public function getClientUserId()
+    public function getDocGenDocumentStatus()
     {
-        return $this->container['client_user_id'];
+        return $this->container['doc_gen_document_status'];
     }
 
     /**
-     * Sets client_user_id
+     * Sets doc_gen_document_status
      *
-     * @param ?string $client_user_id Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.
+     * @param ?string $doc_gen_document_status 
      *
      * @return $this
      */
-    public function setClientUserId($client_user_id)
+    public function setDocGenDocumentStatus($doc_gen_document_status)
     {
-        $this->container['client_user_id'] = $client_user_id;
+        $this->container['doc_gen_document_status'] = $doc_gen_document_status;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets doc_gen_errors
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\DocGenSyntaxError[]
      */
-    public function getEmail()
+    public function getDocGenErrors()
     {
-        return $this->container['email'];
+        return $this->container['doc_gen_errors'];
     }
 
     /**
-     * Sets email
+     * Sets doc_gen_errors
      *
-     * @param ?string $email Specifies the email address associated with the captive recipient.
+     * @param \DocuSign\eSign\Model\DocGenSyntaxError[] $doc_gen_errors 
      *
      * @return $this
      */
-    public function setEmail($email)
+    public function setDocGenErrors($doc_gen_errors)
     {
-        $this->container['email'] = $email;
+        $this->container['doc_gen_errors'] = $doc_gen_errors;
 
         return $this;
     }
 
     /**
-     * Gets error_details
+     * Gets doc_gen_form_field_list
      *
-     * @return \DocuSign\eSign\Model\ErrorDetails
+     * @return \DocuSign\eSign\Model\DocGenFormField[]
      */
-    public function getErrorDetails()
+    public function getDocGenFormFieldList()
     {
-        return $this->container['error_details'];
+        return $this->container['doc_gen_form_field_list'];
     }
 
     /**
-     * Sets error_details
+     * Sets doc_gen_form_field_list
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
+     * @param \DocuSign\eSign\Model\DocGenFormField[] $doc_gen_form_field_list 
      *
      * @return $this
      */
-    public function setErrorDetails($error_details)
+    public function setDocGenFormFieldList($doc_gen_form_field_list)
     {
-        $this->container['error_details'] = $error_details;
+        $this->container['doc_gen_form_field_list'] = $doc_gen_form_field_list;
 
         return $this;
     }
 
     /**
-     * Gets user_name
+     * Gets document_id
      *
      * @return ?string
      */
-    public function getUserName()
+    public function getDocumentId()
     {
-        return $this->container['user_name'];
+        return $this->container['document_id'];
     }
 
     /**
-     * Sets user_name
+     * Sets document_id
      *
-     * @param ?string $user_name Specifies the user name associated with the captive recipient.
+     * @param ?string $document_id Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
      *
      * @return $this
      */
-    public function setUserName($user_name)
+    public function setDocumentId($document_id)
     {
-        $this->container['user_name'] = $user_name;
+        $this->container['document_id'] = $document_id;
 
         return $this;
     }
