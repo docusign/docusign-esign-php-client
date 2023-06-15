@@ -522,7 +522,7 @@ class GetAgentUserAuthorizationsOptions
         return $this;
     }
     /**
-      * $email_substring 
+      * $email_substring Part (substring) of email we are searching for.
       * @var ?string
       */
     protected ?string $email_substring = null;
@@ -539,13 +539,40 @@ class GetAgentUserAuthorizationsOptions
 
     /**
      * Sets email_substring
-     * @param ?string $email_substring 
+     * @param ?string $email_substring Part (substring) of email we are searching for.
      *
      * @return self
      */
     public function setEmailSubstring(?string $email_substring): self
     {
         $this->email_substring = $email_substring;
+        return $this;
+    }
+    /**
+      * $include_closed_users 
+      * @var ?string
+      */
+    protected ?string $include_closed_users = null;
+
+    /**
+     * Gets include_closed_users
+     *
+     * @return ?string
+     */
+    public function getIncludeClosedUsers(): ?string
+    {
+        return $this->include_closed_users;
+    }
+
+    /**
+     * Sets include_closed_users
+     * @param ?string $include_closed_users 
+     *
+     * @return self
+     */
+    public function setIncludeClosedUsers(?string $include_closed_users): self
+    {
+        $this->include_closed_users = $include_closed_users;
         return $this;
     }
     /**
@@ -957,7 +984,7 @@ class GetPrincipalUserAuthorizationsOptions
         return $this;
     }
     /**
-      * $email_substring 
+      * $email_substring Part (substring) of email we are searching for.
       * @var ?string
       */
     protected ?string $email_substring = null;
@@ -974,13 +1001,40 @@ class GetPrincipalUserAuthorizationsOptions
 
     /**
      * Sets email_substring
-     * @param ?string $email_substring 
+     * @param ?string $email_substring Part (substring) of email we are searching for.
      *
      * @return self
      */
     public function setEmailSubstring(?string $email_substring): self
     {
         $this->email_substring = $email_substring;
+        return $this;
+    }
+    /**
+      * $include_closed_users 
+      * @var ?string
+      */
+    protected ?string $include_closed_users = null;
+
+    /**
+     * Gets include_closed_users
+     *
+     * @return ?string
+     */
+    public function getIncludeClosedUsers(): ?string
+    {
+        return $this->include_closed_users;
+    }
+
+    /**
+     * Sets include_closed_users
+     * @param ?string $include_closed_users 
+     *
+     * @return self
+     */
+    public function setIncludeClosedUsers(?string $include_closed_users): self
+    {
+        $this->include_closed_users = $include_closed_users;
         return $this;
     }
     /**
@@ -4387,6 +4441,9 @@ class AccountsApi
             if ($options->getEmailSubstring() != 'null') {
                 $queryParams['email_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailSubstring());
             }
+            if ($options->getIncludeClosedUsers() != 'null') {
+                $queryParams['include_closed_users'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeClosedUsers());
+            }
             if ($options->getPermissions() != 'null') {
                 $queryParams['permissions'] = $this->apiClient->getSerializer()->toQueryValue($options->getPermissions());
             }
@@ -5159,7 +5216,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
@@ -5176,7 +5233,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
@@ -6022,6 +6079,9 @@ class AccountsApi
             }
             if ($options->getEmailSubstring() != 'null') {
                 $queryParams['email_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmailSubstring());
+            }
+            if ($options->getIncludeClosedUsers() != 'null') {
+                $queryParams['include_closed_users'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeClosedUsers());
             }
             if ($options->getPermissions() != 'null') {
                 $queryParams['permissions'] = $this->apiClient->getSerializer()->toQueryValue($options->getPermissions());
@@ -8160,7 +8220,7 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *
@@ -8179,7 +8239,7 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *
