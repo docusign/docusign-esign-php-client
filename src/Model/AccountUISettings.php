@@ -61,6 +61,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'admin_message' => '\DocuSign\eSign\Model\AdminMessage',
+        'allow_users_to_edit_shared_access' => '?string',
+        'allow_users_to_edit_shared_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'ask_an_admin' => '\DocuSign\eSign\Model\AskAnAdmin',
         'clickwrap_schema_version' => '?string',
         'clickwrap_schema_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -99,6 +101,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'admin_message' => null,
+        'allow_users_to_edit_shared_access' => null,
+        'allow_users_to_edit_shared_access_metadata' => null,
         'ask_an_admin' => null,
         'clickwrap_schema_version' => null,
         'clickwrap_schema_version_metadata' => null,
@@ -158,6 +162,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'admin_message' => 'adminMessage',
+        'allow_users_to_edit_shared_access' => 'allowUsersToEditSharedAccess',
+        'allow_users_to_edit_shared_access_metadata' => 'allowUsersToEditSharedAccessMetadata',
         'ask_an_admin' => 'askAnAdmin',
         'clickwrap_schema_version' => 'clickwrapSchemaVersion',
         'clickwrap_schema_version_metadata' => 'clickwrapSchemaVersionMetadata',
@@ -196,6 +202,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'admin_message' => 'setAdminMessage',
+        'allow_users_to_edit_shared_access' => 'setAllowUsersToEditSharedAccess',
+        'allow_users_to_edit_shared_access_metadata' => 'setAllowUsersToEditSharedAccessMetadata',
         'ask_an_admin' => 'setAskAnAdmin',
         'clickwrap_schema_version' => 'setClickwrapSchemaVersion',
         'clickwrap_schema_version_metadata' => 'setClickwrapSchemaVersionMetadata',
@@ -234,6 +242,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'admin_message' => 'getAdminMessage',
+        'allow_users_to_edit_shared_access' => 'getAllowUsersToEditSharedAccess',
+        'allow_users_to_edit_shared_access_metadata' => 'getAllowUsersToEditSharedAccessMetadata',
         'ask_an_admin' => 'getAskAnAdmin',
         'clickwrap_schema_version' => 'getClickwrapSchemaVersion',
         'clickwrap_schema_version_metadata' => 'getClickwrapSchemaVersionMetadata',
@@ -326,6 +336,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['admin_message'] = isset($data['admin_message']) ? $data['admin_message'] : null;
+        $this->container['allow_users_to_edit_shared_access'] = isset($data['allow_users_to_edit_shared_access']) ? $data['allow_users_to_edit_shared_access'] : null;
+        $this->container['allow_users_to_edit_shared_access_metadata'] = isset($data['allow_users_to_edit_shared_access_metadata']) ? $data['allow_users_to_edit_shared_access_metadata'] : null;
         $this->container['ask_an_admin'] = isset($data['ask_an_admin']) ? $data['ask_an_admin'] : null;
         $this->container['clickwrap_schema_version'] = isset($data['clickwrap_schema_version']) ? $data['clickwrap_schema_version'] : null;
         $this->container['clickwrap_schema_version_metadata'] = isset($data['clickwrap_schema_version_metadata']) ? $data['clickwrap_schema_version_metadata'] : null;
@@ -401,6 +413,54 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function setAdminMessage($admin_message)
     {
         $this->container['admin_message'] = $admin_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_users_to_edit_shared_access
+     *
+     * @return ?string
+     */
+    public function getAllowUsersToEditSharedAccess()
+    {
+        return $this->container['allow_users_to_edit_shared_access'];
+    }
+
+    /**
+     * Sets allow_users_to_edit_shared_access
+     *
+     * @param ?string $allow_users_to_edit_shared_access 
+     *
+     * @return $this
+     */
+    public function setAllowUsersToEditSharedAccess($allow_users_to_edit_shared_access)
+    {
+        $this->container['allow_users_to_edit_shared_access'] = $allow_users_to_edit_shared_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_users_to_edit_shared_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowUsersToEditSharedAccessMetadata()
+    {
+        return $this->container['allow_users_to_edit_shared_access_metadata'];
+    }
+
+    /**
+     * Sets allow_users_to_edit_shared_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_users_to_edit_shared_access_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowUsersToEditSharedAccessMetadata($allow_users_to_edit_shared_access_metadata)
+    {
+        $this->container['allow_users_to_edit_shared_access_metadata'] = $allow_users_to_edit_shared_access_metadata;
 
         return $this;
     }
