@@ -80,6 +80,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allowed_clickwraps_access' => '?string',
         'allowed_clickwraps_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allowed_orchestration_access' => '?string',
+        'allowed_orchestration_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allowed_template_access' => '?string',
         'allowed_template_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allowed_to_be_envelope_transfer_recipient' => '?string',
@@ -98,12 +100,20 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_tagging_in_send_and_correct' => '?string',
         'allow_tagging_in_send_and_correct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_transactions' => '?string',
+        'allow_transactions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_vaulting' => '?string',
         'allow_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_wet_signing_override' => '?string',
         'allow_wet_signing_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_create_transaction' => '?string',
+        'can_create_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_create_workspaces' => '?string',
         'can_create_workspaces_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_delete_documents_in_transaction' => '?string',
+        'can_delete_documents_in_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_delete_transaction' => '?string',
+        'can_delete_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_send_envelopes_via_sms' => '?string',
         'can_send_envelopes_via_sms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_document_upload' => '?string',
@@ -167,6 +177,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => null,
         'allowed_clickwraps_access' => null,
         'allowed_clickwraps_access_metadata' => null,
+        'allowed_orchestration_access' => null,
+        'allowed_orchestration_access_metadata' => null,
         'allowed_template_access' => null,
         'allowed_template_access_metadata' => null,
         'allowed_to_be_envelope_transfer_recipient' => null,
@@ -185,12 +197,20 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => null,
         'allow_tagging_in_send_and_correct' => null,
         'allow_tagging_in_send_and_correct_metadata' => null,
+        'allow_transactions' => null,
+        'allow_transactions_metadata' => null,
         'allow_vaulting' => null,
         'allow_vaulting_metadata' => null,
         'allow_wet_signing_override' => null,
         'allow_wet_signing_override_metadata' => null,
+        'can_create_transaction' => null,
+        'can_create_transaction_metadata' => null,
         'can_create_workspaces' => null,
         'can_create_workspaces_metadata' => null,
+        'can_delete_documents_in_transaction' => null,
+        'can_delete_documents_in_transaction_metadata' => null,
+        'can_delete_transaction' => null,
+        'can_delete_transaction_metadata' => null,
         'can_send_envelopes_via_sms' => null,
         'can_send_envelopes_via_sms_metadata' => null,
         'disable_document_upload' => null,
@@ -275,6 +295,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => 'allowedAddressBookAccessMetadata',
         'allowed_clickwraps_access' => 'allowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata' => 'allowedClickwrapsAccessMetadata',
+        'allowed_orchestration_access' => 'allowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata' => 'allowedOrchestrationAccessMetadata',
         'allowed_template_access' => 'allowedTemplateAccess',
         'allowed_template_access_metadata' => 'allowedTemplateAccessMetadata',
         'allowed_to_be_envelope_transfer_recipient' => 'allowedToBeEnvelopeTransferRecipient',
@@ -293,12 +315,20 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'allowSupplementalDocumentsMetadata',
         'allow_tagging_in_send_and_correct' => 'allowTaggingInSendAndCorrect',
         'allow_tagging_in_send_and_correct_metadata' => 'allowTaggingInSendAndCorrectMetadata',
+        'allow_transactions' => 'allowTransactions',
+        'allow_transactions_metadata' => 'allowTransactionsMetadata',
         'allow_vaulting' => 'allowVaulting',
         'allow_vaulting_metadata' => 'allowVaultingMetadata',
         'allow_wet_signing_override' => 'allowWetSigningOverride',
         'allow_wet_signing_override_metadata' => 'allowWetSigningOverrideMetadata',
+        'can_create_transaction' => 'canCreateTransaction',
+        'can_create_transaction_metadata' => 'canCreateTransactionMetadata',
         'can_create_workspaces' => 'canCreateWorkspaces',
         'can_create_workspaces_metadata' => 'canCreateWorkspacesMetadata',
+        'can_delete_documents_in_transaction' => 'canDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata' => 'canDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction' => 'canDeleteTransaction',
+        'can_delete_transaction_metadata' => 'canDeleteTransactionMetadata',
         'can_send_envelopes_via_sms' => 'canSendEnvelopesViaSMS',
         'can_send_envelopes_via_sms_metadata' => 'canSendEnvelopesViaSMSMetadata',
         'disable_document_upload' => 'disableDocumentUpload',
@@ -362,6 +392,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => 'setAllowedAddressBookAccessMetadata',
         'allowed_clickwraps_access' => 'setAllowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata' => 'setAllowedClickwrapsAccessMetadata',
+        'allowed_orchestration_access' => 'setAllowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata' => 'setAllowedOrchestrationAccessMetadata',
         'allowed_template_access' => 'setAllowedTemplateAccess',
         'allowed_template_access_metadata' => 'setAllowedTemplateAccessMetadata',
         'allowed_to_be_envelope_transfer_recipient' => 'setAllowedToBeEnvelopeTransferRecipient',
@@ -380,12 +412,20 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'setAllowSupplementalDocumentsMetadata',
         'allow_tagging_in_send_and_correct' => 'setAllowTaggingInSendAndCorrect',
         'allow_tagging_in_send_and_correct_metadata' => 'setAllowTaggingInSendAndCorrectMetadata',
+        'allow_transactions' => 'setAllowTransactions',
+        'allow_transactions_metadata' => 'setAllowTransactionsMetadata',
         'allow_vaulting' => 'setAllowVaulting',
         'allow_vaulting_metadata' => 'setAllowVaultingMetadata',
         'allow_wet_signing_override' => 'setAllowWetSigningOverride',
         'allow_wet_signing_override_metadata' => 'setAllowWetSigningOverrideMetadata',
+        'can_create_transaction' => 'setCanCreateTransaction',
+        'can_create_transaction_metadata' => 'setCanCreateTransactionMetadata',
         'can_create_workspaces' => 'setCanCreateWorkspaces',
         'can_create_workspaces_metadata' => 'setCanCreateWorkspacesMetadata',
+        'can_delete_documents_in_transaction' => 'setCanDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata' => 'setCanDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction' => 'setCanDeleteTransaction',
+        'can_delete_transaction_metadata' => 'setCanDeleteTransactionMetadata',
         'can_send_envelopes_via_sms' => 'setCanSendEnvelopesViaSms',
         'can_send_envelopes_via_sms_metadata' => 'setCanSendEnvelopesViaSmsMetadata',
         'disable_document_upload' => 'setDisableDocumentUpload',
@@ -449,6 +489,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => 'getAllowedAddressBookAccessMetadata',
         'allowed_clickwraps_access' => 'getAllowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata' => 'getAllowedClickwrapsAccessMetadata',
+        'allowed_orchestration_access' => 'getAllowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata' => 'getAllowedOrchestrationAccessMetadata',
         'allowed_template_access' => 'getAllowedTemplateAccess',
         'allowed_template_access_metadata' => 'getAllowedTemplateAccessMetadata',
         'allowed_to_be_envelope_transfer_recipient' => 'getAllowedToBeEnvelopeTransferRecipient',
@@ -467,12 +509,20 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'getAllowSupplementalDocumentsMetadata',
         'allow_tagging_in_send_and_correct' => 'getAllowTaggingInSendAndCorrect',
         'allow_tagging_in_send_and_correct_metadata' => 'getAllowTaggingInSendAndCorrectMetadata',
+        'allow_transactions' => 'getAllowTransactions',
+        'allow_transactions_metadata' => 'getAllowTransactionsMetadata',
         'allow_vaulting' => 'getAllowVaulting',
         'allow_vaulting_metadata' => 'getAllowVaultingMetadata',
         'allow_wet_signing_override' => 'getAllowWetSigningOverride',
         'allow_wet_signing_override_metadata' => 'getAllowWetSigningOverrideMetadata',
+        'can_create_transaction' => 'getCanCreateTransaction',
+        'can_create_transaction_metadata' => 'getCanCreateTransactionMetadata',
         'can_create_workspaces' => 'getCanCreateWorkspaces',
         'can_create_workspaces_metadata' => 'getCanCreateWorkspacesMetadata',
+        'can_delete_documents_in_transaction' => 'getCanDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata' => 'getCanDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction' => 'getCanDeleteTransaction',
+        'can_delete_transaction_metadata' => 'getCanDeleteTransactionMetadata',
         'can_send_envelopes_via_sms' => 'getCanSendEnvelopesViaSms',
         'can_send_envelopes_via_sms_metadata' => 'getCanSendEnvelopesViaSmsMetadata',
         'disable_document_upload' => 'getDisableDocumentUpload',
@@ -590,6 +640,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['allowed_address_book_access_metadata'] = isset($data['allowed_address_book_access_metadata']) ? $data['allowed_address_book_access_metadata'] : null;
         $this->container['allowed_clickwraps_access'] = isset($data['allowed_clickwraps_access']) ? $data['allowed_clickwraps_access'] : null;
         $this->container['allowed_clickwraps_access_metadata'] = isset($data['allowed_clickwraps_access_metadata']) ? $data['allowed_clickwraps_access_metadata'] : null;
+        $this->container['allowed_orchestration_access'] = isset($data['allowed_orchestration_access']) ? $data['allowed_orchestration_access'] : null;
+        $this->container['allowed_orchestration_access_metadata'] = isset($data['allowed_orchestration_access_metadata']) ? $data['allowed_orchestration_access_metadata'] : null;
         $this->container['allowed_template_access'] = isset($data['allowed_template_access']) ? $data['allowed_template_access'] : null;
         $this->container['allowed_template_access_metadata'] = isset($data['allowed_template_access_metadata']) ? $data['allowed_template_access_metadata'] : null;
         $this->container['allowed_to_be_envelope_transfer_recipient'] = isset($data['allowed_to_be_envelope_transfer_recipient']) ? $data['allowed_to_be_envelope_transfer_recipient'] : null;
@@ -608,12 +660,20 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['allow_supplemental_documents_metadata'] = isset($data['allow_supplemental_documents_metadata']) ? $data['allow_supplemental_documents_metadata'] : null;
         $this->container['allow_tagging_in_send_and_correct'] = isset($data['allow_tagging_in_send_and_correct']) ? $data['allow_tagging_in_send_and_correct'] : null;
         $this->container['allow_tagging_in_send_and_correct_metadata'] = isset($data['allow_tagging_in_send_and_correct_metadata']) ? $data['allow_tagging_in_send_and_correct_metadata'] : null;
+        $this->container['allow_transactions'] = isset($data['allow_transactions']) ? $data['allow_transactions'] : null;
+        $this->container['allow_transactions_metadata'] = isset($data['allow_transactions_metadata']) ? $data['allow_transactions_metadata'] : null;
         $this->container['allow_vaulting'] = isset($data['allow_vaulting']) ? $data['allow_vaulting'] : null;
         $this->container['allow_vaulting_metadata'] = isset($data['allow_vaulting_metadata']) ? $data['allow_vaulting_metadata'] : null;
         $this->container['allow_wet_signing_override'] = isset($data['allow_wet_signing_override']) ? $data['allow_wet_signing_override'] : null;
         $this->container['allow_wet_signing_override_metadata'] = isset($data['allow_wet_signing_override_metadata']) ? $data['allow_wet_signing_override_metadata'] : null;
+        $this->container['can_create_transaction'] = isset($data['can_create_transaction']) ? $data['can_create_transaction'] : null;
+        $this->container['can_create_transaction_metadata'] = isset($data['can_create_transaction_metadata']) ? $data['can_create_transaction_metadata'] : null;
         $this->container['can_create_workspaces'] = isset($data['can_create_workspaces']) ? $data['can_create_workspaces'] : null;
         $this->container['can_create_workspaces_metadata'] = isset($data['can_create_workspaces_metadata']) ? $data['can_create_workspaces_metadata'] : null;
+        $this->container['can_delete_documents_in_transaction'] = isset($data['can_delete_documents_in_transaction']) ? $data['can_delete_documents_in_transaction'] : null;
+        $this->container['can_delete_documents_in_transaction_metadata'] = isset($data['can_delete_documents_in_transaction_metadata']) ? $data['can_delete_documents_in_transaction_metadata'] : null;
+        $this->container['can_delete_transaction'] = isset($data['can_delete_transaction']) ? $data['can_delete_transaction'] : null;
+        $this->container['can_delete_transaction_metadata'] = isset($data['can_delete_transaction_metadata']) ? $data['can_delete_transaction_metadata'] : null;
         $this->container['can_send_envelopes_via_sms'] = isset($data['can_send_envelopes_via_sms']) ? $data['can_send_envelopes_via_sms'] : null;
         $this->container['can_send_envelopes_via_sms_metadata'] = isset($data['can_send_envelopes_via_sms_metadata']) ? $data['can_send_envelopes_via_sms_metadata'] : null;
         $this->container['disable_document_upload'] = isset($data['disable_document_upload']) ? $data['disable_document_upload'] : null;
@@ -1156,6 +1216,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allowed_orchestration_access
+     *
+     * @return ?string
+     */
+    public function getAllowedOrchestrationAccess()
+    {
+        return $this->container['allowed_orchestration_access'];
+    }
+
+    /**
+     * Sets allowed_orchestration_access
+     *
+     * @param ?string $allowed_orchestration_access 
+     *
+     * @return $this
+     */
+    public function setAllowedOrchestrationAccess($allowed_orchestration_access)
+    {
+        $this->container['allowed_orchestration_access'] = $allowed_orchestration_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_orchestration_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowedOrchestrationAccessMetadata()
+    {
+        return $this->container['allowed_orchestration_access_metadata'];
+    }
+
+    /**
+     * Sets allowed_orchestration_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_orchestration_access_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowedOrchestrationAccessMetadata($allowed_orchestration_access_metadata)
+    {
+        $this->container['allowed_orchestration_access_metadata'] = $allowed_orchestration_access_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allowed_template_access
      *
      * @return ?string
@@ -1588,6 +1696,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_transactions
+     *
+     * @return ?string
+     */
+    public function getAllowTransactions()
+    {
+        return $this->container['allow_transactions'];
+    }
+
+    /**
+     * Sets allow_transactions
+     *
+     * @param ?string $allow_transactions 
+     *
+     * @return $this
+     */
+    public function setAllowTransactions($allow_transactions)
+    {
+        $this->container['allow_transactions'] = $allow_transactions;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_transactions_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowTransactionsMetadata()
+    {
+        return $this->container['allow_transactions_metadata'];
+    }
+
+    /**
+     * Sets allow_transactions_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsMetadata($allow_transactions_metadata)
+    {
+        $this->container['allow_transactions_metadata'] = $allow_transactions_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_vaulting
      *
      * @return ?string
@@ -1684,6 +1840,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets can_create_transaction
+     *
+     * @return ?string
+     */
+    public function getCanCreateTransaction()
+    {
+        return $this->container['can_create_transaction'];
+    }
+
+    /**
+     * Sets can_create_transaction
+     *
+     * @param ?string $can_create_transaction 
+     *
+     * @return $this
+     */
+    public function setCanCreateTransaction($can_create_transaction)
+    {
+        $this->container['can_create_transaction'] = $can_create_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_create_transaction_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanCreateTransactionMetadata()
+    {
+        return $this->container['can_create_transaction_metadata'];
+    }
+
+    /**
+     * Sets can_create_transaction_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_create_transaction_metadata 
+     *
+     * @return $this
+     */
+    public function setCanCreateTransactionMetadata($can_create_transaction_metadata)
+    {
+        $this->container['can_create_transaction_metadata'] = $can_create_transaction_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets can_create_workspaces
      *
      * @return ?string
@@ -1727,6 +1931,102 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     public function setCanCreateWorkspacesMetadata($can_create_workspaces_metadata)
     {
         $this->container['can_create_workspaces_metadata'] = $can_create_workspaces_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_documents_in_transaction
+     *
+     * @return ?string
+     */
+    public function getCanDeleteDocumentsInTransaction()
+    {
+        return $this->container['can_delete_documents_in_transaction'];
+    }
+
+    /**
+     * Sets can_delete_documents_in_transaction
+     *
+     * @param ?string $can_delete_documents_in_transaction 
+     *
+     * @return $this
+     */
+    public function setCanDeleteDocumentsInTransaction($can_delete_documents_in_transaction)
+    {
+        $this->container['can_delete_documents_in_transaction'] = $can_delete_documents_in_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_documents_in_transaction_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanDeleteDocumentsInTransactionMetadata()
+    {
+        return $this->container['can_delete_documents_in_transaction_metadata'];
+    }
+
+    /**
+     * Sets can_delete_documents_in_transaction_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_documents_in_transaction_metadata 
+     *
+     * @return $this
+     */
+    public function setCanDeleteDocumentsInTransactionMetadata($can_delete_documents_in_transaction_metadata)
+    {
+        $this->container['can_delete_documents_in_transaction_metadata'] = $can_delete_documents_in_transaction_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_transaction
+     *
+     * @return ?string
+     */
+    public function getCanDeleteTransaction()
+    {
+        return $this->container['can_delete_transaction'];
+    }
+
+    /**
+     * Sets can_delete_transaction
+     *
+     * @param ?string $can_delete_transaction 
+     *
+     * @return $this
+     */
+    public function setCanDeleteTransaction($can_delete_transaction)
+    {
+        $this->container['can_delete_transaction'] = $can_delete_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_transaction_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanDeleteTransactionMetadata()
+    {
+        return $this->container['can_delete_transaction_metadata'];
+    }
+
+    /**
+     * Sets can_delete_transaction_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_transaction_metadata 
+     *
+     * @return $this
+     */
+    public function setCanDeleteTransactionMetadata($can_delete_transaction_metadata)
+    {
+        $this->container['can_delete_transaction_metadata'] = $can_delete_transaction_metadata;
 
         return $this;
     }

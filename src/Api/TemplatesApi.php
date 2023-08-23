@@ -154,6 +154,33 @@ class GetDocumentOptions
         return $this;
     }
     /**
+      * $file_type 
+      * @var ?string
+      */
+    protected ?string $file_type = null;
+
+    /**
+     * Gets file_type
+     *
+     * @return ?string
+     */
+    public function getFileType(): ?string
+    {
+        return $this->file_type;
+    }
+
+    /**
+     * Sets file_type
+     * @param ?string $file_type 
+     *
+     * @return self
+     */
+    public function setFileType(?string $file_type): self
+    {
+        $this->file_type = $file_type;
+        return $this;
+    }
+    /**
       * $show_changes 
       * @var ?string
       */
@@ -4003,6 +4030,9 @@ class TemplatesApi
             // query params
             if ($options->getEncrypt() != 'null') {
                 $queryParams['encrypt'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncrypt());
+            }
+            if ($options->getFileType() != 'null') {
+                $queryParams['file_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getFileType());
             }
             if ($options->getShowChanges() != 'null') {
                 $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
