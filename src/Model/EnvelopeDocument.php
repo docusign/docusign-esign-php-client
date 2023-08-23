@@ -78,6 +78,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'include_in_download' => '?string',
         'include_in_download_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'is_ace_gen_document' => '?string',
         'is_doc_gen_document' => '?string',
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -116,6 +117,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => null,
         'include_in_download' => null,
         'include_in_download_metadata' => null,
+        'is_ace_gen_document' => null,
         'is_doc_gen_document' => null,
         'name' => null,
         'name_metadata' => null,
@@ -175,6 +177,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => 'errorDetails',
         'include_in_download' => 'includeInDownload',
         'include_in_download_metadata' => 'includeInDownloadMetadata',
+        'is_ace_gen_document' => 'isAceGenDocument',
         'is_doc_gen_document' => 'isDocGenDocument',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
@@ -213,6 +216,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => 'setErrorDetails',
         'include_in_download' => 'setIncludeInDownload',
         'include_in_download_metadata' => 'setIncludeInDownloadMetadata',
+        'is_ace_gen_document' => 'setIsAceGenDocument',
         'is_doc_gen_document' => 'setIsDocGenDocument',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
@@ -251,6 +255,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'error_details' => 'getErrorDetails',
         'include_in_download' => 'getIncludeInDownload',
         'include_in_download_metadata' => 'getIncludeInDownloadMetadata',
+        'is_ace_gen_document' => 'getIsAceGenDocument',
         'is_doc_gen_document' => 'getIsDocGenDocument',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
@@ -343,6 +348,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
         $this->container['include_in_download_metadata'] = isset($data['include_in_download_metadata']) ? $data['include_in_download_metadata'] : null;
+        $this->container['is_ace_gen_document'] = isset($data['is_ace_gen_document']) ? $data['is_ace_gen_document'] : null;
         $this->container['is_doc_gen_document'] = isset($data['is_doc_gen_document']) ? $data['is_doc_gen_document'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
@@ -809,6 +815,30 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setIncludeInDownloadMetadata($include_in_download_metadata)
     {
         $this->container['include_in_download_metadata'] = $include_in_download_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_ace_gen_document
+     *
+     * @return ?string
+     */
+    public function getIsAceGenDocument()
+    {
+        return $this->container['is_ace_gen_document'];
+    }
+
+    /**
+     * Sets is_ace_gen_document
+     *
+     * @param ?string $is_ace_gen_document 
+     *
+     * @return $this
+     */
+    public function setIsAceGenDocument($is_ace_gen_document)
+    {
+        $this->container['is_ace_gen_document'] = $is_ace_gen_document;
 
         return $this;
     }

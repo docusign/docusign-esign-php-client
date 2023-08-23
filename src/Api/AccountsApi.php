@@ -198,6 +198,47 @@ class CreatePermissionProfileOptions
 
 
 /**
+ * DeleteOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
+class DeleteOptions
+{
+    /**
+      * $redact_user_data 
+      * @var ?string
+      */
+    protected ?string $redact_user_data = null;
+
+    /**
+     * Gets redact_user_data
+     *
+     * @return ?string
+     */
+    public function getRedactUserData(): ?string
+    {
+        return $this->redact_user_data;
+    }
+
+    /**
+     * Sets redact_user_data
+     * @param ?string $redact_user_data 
+     *
+     * @return self
+     */
+    public function setRedactUserData(?string $redact_user_data): self
+    {
+        $this->redact_user_data = $redact_user_data;
+        return $this;
+    }
+}
+
+
+/**
  * DeleteCustomFieldOptions Class Doc Comment
  *
  * @category Class
@@ -274,6 +315,47 @@ class DeletePermissionProfileOptions
     public function setMoveUsersTo(?string $move_users_to): self
     {
         $this->move_users_to = $move_users_to;
+        return $this;
+    }
+}
+
+
+/**
+ * GetAccountIdentityVerificationOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
+class GetAccountIdentityVerificationOptions
+{
+    /**
+      * $identity_verification_workflow_status 
+      * @var ?string
+      */
+    protected ?string $identity_verification_workflow_status = null;
+
+    /**
+     * Gets identity_verification_workflow_status
+     *
+     * @return ?string
+     */
+    public function getIdentityVerificationWorkflowStatus(): ?string
+    {
+        return $this->identity_verification_workflow_status;
+    }
+
+    /**
+     * Sets identity_verification_workflow_status
+     * @param ?string $identity_verification_workflow_status 
+     *
+     * @return self
+     */
+    public function setIdentityVerificationWorkflowStatus(?string $identity_verification_workflow_status): self
+    {
+        $this->identity_verification_workflow_status = $identity_verification_workflow_status;
         return $this;
     }
 }
@@ -2632,13 +2714,14 @@ class AccountsApi
      * Deletes the specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\AccountsApi\DeleteOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return mixed
      */
-    public function delete($account_id)
+    public function delete($account_id, \DocuSign\eSign\Api\AccountsApi\DeleteOptions $options = null)
     {
-        list($response) = $this->deleteWithHttpInfo($account_id);
+        list($response) = $this->deleteWithHttpInfo($account_id, $options);
         return $response;
     }
 
@@ -2648,11 +2731,12 @@ class AccountsApi
      * Deletes the specified account.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\AccountsApi\DeleteOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWithHttpInfo($account_id): array
+    public function deleteWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\DeleteOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2665,6 +2749,13 @@ class AccountsApi
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        if ($options != null)
+        {
+            // query params
+            if ($options->getRedactUserData() != 'null') {
+                $queryParams['redact_user_data'] = $this->apiClient->getSerializer()->toQueryValue($options->getRedactUserData());
+            }
+        }
 
         // path params
         if ($account_id !== null) {
@@ -3803,13 +3894,14 @@ class AccountsApi
      * Get the list of identity verification options for an account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountIdentityVerificationResponse
      */
-    public function getAccountIdentityVerification($account_id)
+    public function getAccountIdentityVerification($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions $options = null)
     {
-        list($response) = $this->getAccountIdentityVerificationWithHttpInfo($account_id);
+        list($response) = $this->getAccountIdentityVerificationWithHttpInfo($account_id, $options);
         return $response;
     }
 
@@ -3819,11 +3911,12 @@ class AccountsApi
      * Get the list of identity verification options for an account
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountIdentityVerificationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountIdentityVerificationWithHttpInfo($account_id): array
+    public function getAccountIdentityVerificationWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3836,6 +3929,13 @@ class AccountsApi
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        if ($options != null)
+        {
+            // query params
+            if ($options->getIdentityVerificationWorkflowStatus() != 'null') {
+                $queryParams['identity_verification_workflow_status'] = $this->apiClient->getSerializer()->toQueryValue($options->getIdentityVerificationWorkflowStatus());
+            }
+        }
 
         // path params
         if ($account_id !== null) {
@@ -5216,7 +5316,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
@@ -5233,7 +5333,7 @@ class AccountsApi
      * Gets the Electronic Record and Signature Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
@@ -8220,7 +8320,7 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *
@@ -8239,7 +8339,7 @@ class AccountsApi
      * Update Consumer Disclosure.
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param \DocuSign\eSign\Model\ConsumerDisclosure $consumer_disclosure  (optional)
      * @param  \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *

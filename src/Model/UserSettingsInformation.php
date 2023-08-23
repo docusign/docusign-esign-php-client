@@ -64,6 +64,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'admin_only' => '?string',
         'admin_only_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_auto_tagging' => '?string',
+        'allowed_orchestration_access' => '?string',
+        'allowed_orchestration_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_envelope_transfer_to' => '?string',
         'allow_envelope_transfer_to_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_eseal_recipients' => '?string',
@@ -76,6 +78,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_send_on_behalf_of_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_supplemental_documents' => '?string',
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_transactions' => '?string',
+        'allow_transactions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'anchor_tag_versioned_placement_enabled' => '?string',
         'api_account_wide_access' => '?string',
         'api_account_wide_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -85,6 +89,12 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'bulk_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_charge_account' => '?string',
         'can_charge_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_create_transaction' => '?string',
+        'can_create_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_delete_documents_in_transaction' => '?string',
+        'can_delete_documents_in_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_delete_transaction' => '?string',
+        'can_delete_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_edit_shared_addressbook' => '?string',
         'can_edit_shared_addressbook_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_lock_envelopes' => '?string',
@@ -197,6 +207,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'admin_only' => null,
         'admin_only_metadata' => null,
         'allow_auto_tagging' => null,
+        'allowed_orchestration_access' => null,
+        'allowed_orchestration_access_metadata' => null,
         'allow_envelope_transfer_to' => null,
         'allow_envelope_transfer_to_metadata' => null,
         'allow_eseal_recipients' => null,
@@ -209,6 +221,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_send_on_behalf_of_metadata' => null,
         'allow_supplemental_documents' => null,
         'allow_supplemental_documents_metadata' => null,
+        'allow_transactions' => null,
+        'allow_transactions_metadata' => null,
         'anchor_tag_versioned_placement_enabled' => null,
         'api_account_wide_access' => null,
         'api_account_wide_access_metadata' => null,
@@ -218,6 +232,12 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'bulk_send_metadata' => null,
         'can_charge_account' => null,
         'can_charge_account_metadata' => null,
+        'can_create_transaction' => null,
+        'can_create_transaction_metadata' => null,
+        'can_delete_documents_in_transaction' => null,
+        'can_delete_documents_in_transaction_metadata' => null,
+        'can_delete_transaction' => null,
+        'can_delete_transaction_metadata' => null,
         'can_edit_shared_addressbook' => null,
         'can_edit_shared_addressbook_metadata' => null,
         'can_lock_envelopes' => null,
@@ -351,6 +371,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'admin_only' => 'adminOnly',
         'admin_only_metadata' => 'adminOnlyMetadata',
         'allow_auto_tagging' => 'allowAutoTagging',
+        'allowed_orchestration_access' => 'allowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata' => 'allowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to' => 'allowEnvelopeTransferTo',
         'allow_envelope_transfer_to_metadata' => 'allowEnvelopeTransferToMetadata',
         'allow_eseal_recipients' => 'allowEsealRecipients',
@@ -363,6 +385,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_send_on_behalf_of_metadata' => 'allowSendOnBehalfOfMetadata',
         'allow_supplemental_documents' => 'allowSupplementalDocuments',
         'allow_supplemental_documents_metadata' => 'allowSupplementalDocumentsMetadata',
+        'allow_transactions' => 'allowTransactions',
+        'allow_transactions_metadata' => 'allowTransactionsMetadata',
         'anchor_tag_versioned_placement_enabled' => 'anchorTagVersionedPlacementEnabled',
         'api_account_wide_access' => 'apiAccountWideAccess',
         'api_account_wide_access_metadata' => 'apiAccountWideAccessMetadata',
@@ -372,6 +396,12 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'bulk_send_metadata' => 'bulkSendMetadata',
         'can_charge_account' => 'canChargeAccount',
         'can_charge_account_metadata' => 'canChargeAccountMetadata',
+        'can_create_transaction' => 'canCreateTransaction',
+        'can_create_transaction_metadata' => 'canCreateTransactionMetadata',
+        'can_delete_documents_in_transaction' => 'canDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata' => 'canDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction' => 'canDeleteTransaction',
+        'can_delete_transaction_metadata' => 'canDeleteTransactionMetadata',
         'can_edit_shared_addressbook' => 'canEditSharedAddressbook',
         'can_edit_shared_addressbook_metadata' => 'canEditSharedAddressbookMetadata',
         'can_lock_envelopes' => 'canLockEnvelopes',
@@ -484,6 +514,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'admin_only' => 'setAdminOnly',
         'admin_only_metadata' => 'setAdminOnlyMetadata',
         'allow_auto_tagging' => 'setAllowAutoTagging',
+        'allowed_orchestration_access' => 'setAllowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata' => 'setAllowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to' => 'setAllowEnvelopeTransferTo',
         'allow_envelope_transfer_to_metadata' => 'setAllowEnvelopeTransferToMetadata',
         'allow_eseal_recipients' => 'setAllowEsealRecipients',
@@ -496,6 +528,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_send_on_behalf_of_metadata' => 'setAllowSendOnBehalfOfMetadata',
         'allow_supplemental_documents' => 'setAllowSupplementalDocuments',
         'allow_supplemental_documents_metadata' => 'setAllowSupplementalDocumentsMetadata',
+        'allow_transactions' => 'setAllowTransactions',
+        'allow_transactions_metadata' => 'setAllowTransactionsMetadata',
         'anchor_tag_versioned_placement_enabled' => 'setAnchorTagVersionedPlacementEnabled',
         'api_account_wide_access' => 'setApiAccountWideAccess',
         'api_account_wide_access_metadata' => 'setApiAccountWideAccessMetadata',
@@ -505,6 +539,12 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'bulk_send_metadata' => 'setBulkSendMetadata',
         'can_charge_account' => 'setCanChargeAccount',
         'can_charge_account_metadata' => 'setCanChargeAccountMetadata',
+        'can_create_transaction' => 'setCanCreateTransaction',
+        'can_create_transaction_metadata' => 'setCanCreateTransactionMetadata',
+        'can_delete_documents_in_transaction' => 'setCanDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata' => 'setCanDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction' => 'setCanDeleteTransaction',
+        'can_delete_transaction_metadata' => 'setCanDeleteTransactionMetadata',
         'can_edit_shared_addressbook' => 'setCanEditSharedAddressbook',
         'can_edit_shared_addressbook_metadata' => 'setCanEditSharedAddressbookMetadata',
         'can_lock_envelopes' => 'setCanLockEnvelopes',
@@ -617,6 +657,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'admin_only' => 'getAdminOnly',
         'admin_only_metadata' => 'getAdminOnlyMetadata',
         'allow_auto_tagging' => 'getAllowAutoTagging',
+        'allowed_orchestration_access' => 'getAllowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata' => 'getAllowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to' => 'getAllowEnvelopeTransferTo',
         'allow_envelope_transfer_to_metadata' => 'getAllowEnvelopeTransferToMetadata',
         'allow_eseal_recipients' => 'getAllowEsealRecipients',
@@ -629,6 +671,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_send_on_behalf_of_metadata' => 'getAllowSendOnBehalfOfMetadata',
         'allow_supplemental_documents' => 'getAllowSupplementalDocuments',
         'allow_supplemental_documents_metadata' => 'getAllowSupplementalDocumentsMetadata',
+        'allow_transactions' => 'getAllowTransactions',
+        'allow_transactions_metadata' => 'getAllowTransactionsMetadata',
         'anchor_tag_versioned_placement_enabled' => 'getAnchorTagVersionedPlacementEnabled',
         'api_account_wide_access' => 'getApiAccountWideAccess',
         'api_account_wide_access_metadata' => 'getApiAccountWideAccessMetadata',
@@ -638,6 +682,12 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'bulk_send_metadata' => 'getBulkSendMetadata',
         'can_charge_account' => 'getCanChargeAccount',
         'can_charge_account_metadata' => 'getCanChargeAccountMetadata',
+        'can_create_transaction' => 'getCanCreateTransaction',
+        'can_create_transaction_metadata' => 'getCanCreateTransactionMetadata',
+        'can_delete_documents_in_transaction' => 'getCanDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata' => 'getCanDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction' => 'getCanDeleteTransaction',
+        'can_delete_transaction_metadata' => 'getCanDeleteTransactionMetadata',
         'can_edit_shared_addressbook' => 'getCanEditSharedAddressbook',
         'can_edit_shared_addressbook_metadata' => 'getCanEditSharedAddressbookMetadata',
         'can_lock_envelopes' => 'getCanLockEnvelopes',
@@ -804,6 +854,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['admin_only'] = isset($data['admin_only']) ? $data['admin_only'] : null;
         $this->container['admin_only_metadata'] = isset($data['admin_only_metadata']) ? $data['admin_only_metadata'] : null;
         $this->container['allow_auto_tagging'] = isset($data['allow_auto_tagging']) ? $data['allow_auto_tagging'] : null;
+        $this->container['allowed_orchestration_access'] = isset($data['allowed_orchestration_access']) ? $data['allowed_orchestration_access'] : null;
+        $this->container['allowed_orchestration_access_metadata'] = isset($data['allowed_orchestration_access_metadata']) ? $data['allowed_orchestration_access_metadata'] : null;
         $this->container['allow_envelope_transfer_to'] = isset($data['allow_envelope_transfer_to']) ? $data['allow_envelope_transfer_to'] : null;
         $this->container['allow_envelope_transfer_to_metadata'] = isset($data['allow_envelope_transfer_to_metadata']) ? $data['allow_envelope_transfer_to_metadata'] : null;
         $this->container['allow_eseal_recipients'] = isset($data['allow_eseal_recipients']) ? $data['allow_eseal_recipients'] : null;
@@ -816,6 +868,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_send_on_behalf_of_metadata'] = isset($data['allow_send_on_behalf_of_metadata']) ? $data['allow_send_on_behalf_of_metadata'] : null;
         $this->container['allow_supplemental_documents'] = isset($data['allow_supplemental_documents']) ? $data['allow_supplemental_documents'] : null;
         $this->container['allow_supplemental_documents_metadata'] = isset($data['allow_supplemental_documents_metadata']) ? $data['allow_supplemental_documents_metadata'] : null;
+        $this->container['allow_transactions'] = isset($data['allow_transactions']) ? $data['allow_transactions'] : null;
+        $this->container['allow_transactions_metadata'] = isset($data['allow_transactions_metadata']) ? $data['allow_transactions_metadata'] : null;
         $this->container['anchor_tag_versioned_placement_enabled'] = isset($data['anchor_tag_versioned_placement_enabled']) ? $data['anchor_tag_versioned_placement_enabled'] : null;
         $this->container['api_account_wide_access'] = isset($data['api_account_wide_access']) ? $data['api_account_wide_access'] : null;
         $this->container['api_account_wide_access_metadata'] = isset($data['api_account_wide_access_metadata']) ? $data['api_account_wide_access_metadata'] : null;
@@ -825,6 +879,12 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['bulk_send_metadata'] = isset($data['bulk_send_metadata']) ? $data['bulk_send_metadata'] : null;
         $this->container['can_charge_account'] = isset($data['can_charge_account']) ? $data['can_charge_account'] : null;
         $this->container['can_charge_account_metadata'] = isset($data['can_charge_account_metadata']) ? $data['can_charge_account_metadata'] : null;
+        $this->container['can_create_transaction'] = isset($data['can_create_transaction']) ? $data['can_create_transaction'] : null;
+        $this->container['can_create_transaction_metadata'] = isset($data['can_create_transaction_metadata']) ? $data['can_create_transaction_metadata'] : null;
+        $this->container['can_delete_documents_in_transaction'] = isset($data['can_delete_documents_in_transaction']) ? $data['can_delete_documents_in_transaction'] : null;
+        $this->container['can_delete_documents_in_transaction_metadata'] = isset($data['can_delete_documents_in_transaction_metadata']) ? $data['can_delete_documents_in_transaction_metadata'] : null;
+        $this->container['can_delete_transaction'] = isset($data['can_delete_transaction']) ? $data['can_delete_transaction'] : null;
+        $this->container['can_delete_transaction_metadata'] = isset($data['can_delete_transaction_metadata']) ? $data['can_delete_transaction_metadata'] : null;
         $this->container['can_edit_shared_addressbook'] = isset($data['can_edit_shared_addressbook']) ? $data['can_edit_shared_addressbook'] : null;
         $this->container['can_edit_shared_addressbook_metadata'] = isset($data['can_edit_shared_addressbook_metadata']) ? $data['can_edit_shared_addressbook_metadata'] : null;
         $this->container['can_lock_envelopes'] = isset($data['can_lock_envelopes']) ? $data['can_lock_envelopes'] : null;
@@ -1043,6 +1103,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowAutoTagging($allow_auto_tagging)
     {
         $this->container['allow_auto_tagging'] = $allow_auto_tagging;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_orchestration_access
+     *
+     * @return ?string
+     */
+    public function getAllowedOrchestrationAccess()
+    {
+        return $this->container['allowed_orchestration_access'];
+    }
+
+    /**
+     * Sets allowed_orchestration_access
+     *
+     * @param ?string $allowed_orchestration_access 
+     *
+     * @return $this
+     */
+    public function setAllowedOrchestrationAccess($allowed_orchestration_access)
+    {
+        $this->container['allowed_orchestration_access'] = $allowed_orchestration_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_orchestration_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowedOrchestrationAccessMetadata()
+    {
+        return $this->container['allowed_orchestration_access_metadata'];
+    }
+
+    /**
+     * Sets allowed_orchestration_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_orchestration_access_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowedOrchestrationAccessMetadata($allowed_orchestration_access_metadata)
+    {
+        $this->container['allowed_orchestration_access_metadata'] = $allowed_orchestration_access_metadata;
 
         return $this;
     }
@@ -1336,6 +1444,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_transactions
+     *
+     * @return ?string
+     */
+    public function getAllowTransactions()
+    {
+        return $this->container['allow_transactions'];
+    }
+
+    /**
+     * Sets allow_transactions
+     *
+     * @param ?string $allow_transactions 
+     *
+     * @return $this
+     */
+    public function setAllowTransactions($allow_transactions)
+    {
+        $this->container['allow_transactions'] = $allow_transactions;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_transactions_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowTransactionsMetadata()
+    {
+        return $this->container['allow_transactions_metadata'];
+    }
+
+    /**
+     * Sets allow_transactions_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsMetadata($allow_transactions_metadata)
+    {
+        $this->container['allow_transactions_metadata'] = $allow_transactions_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets anchor_tag_versioned_placement_enabled
      *
      * @return ?string
@@ -1547,6 +1703,150 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setCanChargeAccountMetadata($can_charge_account_metadata)
     {
         $this->container['can_charge_account_metadata'] = $can_charge_account_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_create_transaction
+     *
+     * @return ?string
+     */
+    public function getCanCreateTransaction()
+    {
+        return $this->container['can_create_transaction'];
+    }
+
+    /**
+     * Sets can_create_transaction
+     *
+     * @param ?string $can_create_transaction 
+     *
+     * @return $this
+     */
+    public function setCanCreateTransaction($can_create_transaction)
+    {
+        $this->container['can_create_transaction'] = $can_create_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_create_transaction_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanCreateTransactionMetadata()
+    {
+        return $this->container['can_create_transaction_metadata'];
+    }
+
+    /**
+     * Sets can_create_transaction_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_create_transaction_metadata 
+     *
+     * @return $this
+     */
+    public function setCanCreateTransactionMetadata($can_create_transaction_metadata)
+    {
+        $this->container['can_create_transaction_metadata'] = $can_create_transaction_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_documents_in_transaction
+     *
+     * @return ?string
+     */
+    public function getCanDeleteDocumentsInTransaction()
+    {
+        return $this->container['can_delete_documents_in_transaction'];
+    }
+
+    /**
+     * Sets can_delete_documents_in_transaction
+     *
+     * @param ?string $can_delete_documents_in_transaction 
+     *
+     * @return $this
+     */
+    public function setCanDeleteDocumentsInTransaction($can_delete_documents_in_transaction)
+    {
+        $this->container['can_delete_documents_in_transaction'] = $can_delete_documents_in_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_documents_in_transaction_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanDeleteDocumentsInTransactionMetadata()
+    {
+        return $this->container['can_delete_documents_in_transaction_metadata'];
+    }
+
+    /**
+     * Sets can_delete_documents_in_transaction_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_documents_in_transaction_metadata 
+     *
+     * @return $this
+     */
+    public function setCanDeleteDocumentsInTransactionMetadata($can_delete_documents_in_transaction_metadata)
+    {
+        $this->container['can_delete_documents_in_transaction_metadata'] = $can_delete_documents_in_transaction_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_transaction
+     *
+     * @return ?string
+     */
+    public function getCanDeleteTransaction()
+    {
+        return $this->container['can_delete_transaction'];
+    }
+
+    /**
+     * Sets can_delete_transaction
+     *
+     * @param ?string $can_delete_transaction 
+     *
+     * @return $this
+     */
+    public function setCanDeleteTransaction($can_delete_transaction)
+    {
+        $this->container['can_delete_transaction'] = $can_delete_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_delete_transaction_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanDeleteTransactionMetadata()
+    {
+        return $this->container['can_delete_transaction_metadata'];
+    }
+
+    /**
+     * Sets can_delete_transaction_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_transaction_metadata 
+     *
+     * @return $this
+     */
+    public function setCanDeleteTransactionMetadata($can_delete_transaction_metadata)
+    {
+        $this->container['can_delete_transaction_metadata'] = $can_delete_transaction_metadata;
 
         return $this;
     }

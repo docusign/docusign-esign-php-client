@@ -119,6 +119,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => '?string',
         'initial_sent_date_time' => '?string',
         'is21_cfr_part11' => '?string',
+        'is_ace_gen_template' => '?string',
         'is_doc_gen_template' => '?string',
         'is_dynamic_envelope' => '?string',
         'is_signature_provider_envelope' => '?string',
@@ -229,6 +230,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => null,
         'initial_sent_date_time' => null,
         'is21_cfr_part11' => null,
+        'is_ace_gen_template' => null,
         'is_doc_gen_template' => null,
         'is_dynamic_envelope' => null,
         'is_signature_provider_envelope' => null,
@@ -360,6 +362,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => 'holder',
         'initial_sent_date_time' => 'initialSentDateTime',
         'is21_cfr_part11' => 'is21CFRPart11',
+        'is_ace_gen_template' => 'isAceGenTemplate',
         'is_doc_gen_template' => 'isDocGenTemplate',
         'is_dynamic_envelope' => 'isDynamicEnvelope',
         'is_signature_provider_envelope' => 'isSignatureProviderEnvelope',
@@ -470,6 +473,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => 'setHolder',
         'initial_sent_date_time' => 'setInitialSentDateTime',
         'is21_cfr_part11' => 'setIs21CfrPart11',
+        'is_ace_gen_template' => 'setIsAceGenTemplate',
         'is_doc_gen_template' => 'setIsDocGenTemplate',
         'is_dynamic_envelope' => 'setIsDynamicEnvelope',
         'is_signature_provider_envelope' => 'setIsSignatureProviderEnvelope',
@@ -580,6 +584,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => 'getHolder',
         'initial_sent_date_time' => 'getInitialSentDateTime',
         'is21_cfr_part11' => 'getIs21CfrPart11',
+        'is_ace_gen_template' => 'getIsAceGenTemplate',
         'is_doc_gen_template' => 'getIsDocGenTemplate',
         'is_dynamic_envelope' => 'getIsDynamicEnvelope',
         'is_signature_provider_envelope' => 'getIsSignatureProviderEnvelope',
@@ -744,6 +749,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         $this->container['holder'] = isset($data['holder']) ? $data['holder'] : null;
         $this->container['initial_sent_date_time'] = isset($data['initial_sent_date_time']) ? $data['initial_sent_date_time'] : null;
         $this->container['is21_cfr_part11'] = isset($data['is21_cfr_part11']) ? $data['is21_cfr_part11'] : null;
+        $this->container['is_ace_gen_template'] = isset($data['is_ace_gen_template']) ? $data['is_ace_gen_template'] : null;
         $this->container['is_doc_gen_template'] = isset($data['is_doc_gen_template']) ? $data['is_doc_gen_template'] : null;
         $this->container['is_dynamic_envelope'] = isset($data['is_dynamic_envelope']) ? $data['is_dynamic_envelope'] : null;
         $this->container['is_signature_provider_envelope'] = isset($data['is_signature_provider_envelope']) ? $data['is_signature_provider_envelope'] : null;
@@ -2248,6 +2254,30 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     public function setIs21CfrPart11($is21_cfr_part11)
     {
         $this->container['is21_cfr_part11'] = $is21_cfr_part11;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_ace_gen_template
+     *
+     * @return ?string
+     */
+    public function getIsAceGenTemplate()
+    {
+        return $this->container['is_ace_gen_template'];
+    }
+
+    /**
+     * Sets is_ace_gen_template
+     *
+     * @param ?string $is_ace_gen_template 
+     *
+     * @return $this
+     */
+    public function setIsAceGenTemplate($is_ace_gen_template)
+    {
+        $this->container['is_ace_gen_template'] = $is_ace_gen_template;
 
         return $this;
     }

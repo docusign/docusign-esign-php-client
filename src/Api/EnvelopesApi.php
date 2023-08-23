@@ -2606,6 +2606,33 @@ class ListStatusChangesOptions
         return $this;
     }
     /**
+      * $search_mode 
+      * @var ?string
+      */
+    protected ?string $search_mode = null;
+
+    /**
+     * Gets search_mode
+     *
+     * @return ?string
+     */
+    public function getSearchMode(): ?string
+    {
+        return $this->search_mode;
+    }
+
+    /**
+     * Sets search_mode
+     * @param ?string $search_mode 
+     *
+     * @return self
+     */
+    public function setSearchMode(?string $search_mode): self
+    {
+        $this->search_mode = $search_mode;
+        return $this;
+    }
+    /**
       * $search_text 
       * @var ?string
       */
@@ -8647,7 +8674,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      *
      * @throws ApiException on non-2xx response
-     * @return mixed
+     * @return \SplFileObject
      */
     public function getAttachment($account_id, $attachment_id, $envelope_id)
     {
@@ -8665,7 +8692,7 @@ class EnvelopesApi
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      *
      * @throws ApiException on non-2xx response
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAttachmentWithHttpInfo($account_id, $attachment_id, $envelope_id): array
     {
@@ -8685,7 +8712,7 @@ class EnvelopesApi
         $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/octet-stream']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
 
@@ -8723,13 +8750,17 @@ class EnvelopesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                null,
+                '\SplFileObject',
                 '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}'
             );
 
-            return [null, $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);
@@ -9056,7 +9087,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *
@@ -9076,7 +9107,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *
@@ -13080,6 +13111,9 @@ class EnvelopesApi
             }
             if ($options->getRequesterDateFormat() != 'null') {
                 $queryParams['requester_date_format'] = $this->apiClient->getSerializer()->toQueryValue($options->getRequesterDateFormat());
+            }
+            if ($options->getSearchMode() != 'null') {
+                $queryParams['search_mode'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchMode());
             }
             if ($options->getSearchText() != 'null') {
                 $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());

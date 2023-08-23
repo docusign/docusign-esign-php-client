@@ -118,6 +118,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => '?string',
         'notary_signers' => '?string[]',
         'notary_source_type' => '?string',
+        'notary_third_party_partner' => '?string',
         'notary_type' => '?string',
         'note' => '?string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -228,6 +229,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => null,
         'notary_signers' => null,
         'notary_source_type' => null,
+        'notary_third_party_partner' => null,
         'notary_type' => null,
         'note' => null,
         'note_metadata' => null,
@@ -359,6 +361,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => 'notarySignerEmailSent',
         'notary_signers' => 'notarySigners',
         'notary_source_type' => 'notarySourceType',
+        'notary_third_party_partner' => 'notaryThirdPartyPartner',
         'notary_type' => 'notaryType',
         'note' => 'note',
         'note_metadata' => 'noteMetadata',
@@ -469,6 +472,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => 'setNotarySignerEmailSent',
         'notary_signers' => 'setNotarySigners',
         'notary_source_type' => 'setNotarySourceType',
+        'notary_third_party_partner' => 'setNotaryThirdPartyPartner',
         'notary_type' => 'setNotaryType',
         'note' => 'setNote',
         'note_metadata' => 'setNoteMetadata',
@@ -579,6 +583,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => 'getNotarySignerEmailSent',
         'notary_signers' => 'getNotarySigners',
         'notary_source_type' => 'getNotarySourceType',
+        'notary_third_party_partner' => 'getNotaryThirdPartyPartner',
         'notary_type' => 'getNotaryType',
         'note' => 'getNote',
         'note_metadata' => 'getNoteMetadata',
@@ -743,6 +748,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['notary_signer_email_sent'] = isset($data['notary_signer_email_sent']) ? $data['notary_signer_email_sent'] : null;
         $this->container['notary_signers'] = isset($data['notary_signers']) ? $data['notary_signers'] : null;
         $this->container['notary_source_type'] = isset($data['notary_source_type']) ? $data['notary_source_type'] : null;
+        $this->container['notary_third_party_partner'] = isset($data['notary_third_party_partner']) ? $data['notary_third_party_partner'] : null;
         $this->container['notary_type'] = isset($data['notary_type']) ? $data['notary_type'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
@@ -2224,6 +2230,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setNotarySourceType($notary_source_type)
     {
         $this->container['notary_source_type'] = $notary_source_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_third_party_partner
+     *
+     * @return ?string
+     */
+    public function getNotaryThirdPartyPartner()
+    {
+        return $this->container['notary_third_party_partner'];
+    }
+
+    /**
+     * Sets notary_third_party_partner
+     *
+     * @param ?string $notary_third_party_partner 
+     *
+     * @return $this
+     */
+    public function setNotaryThirdPartyPartner($notary_third_party_partner)
+    {
+        $this->container['notary_third_party_partner'] = $notary_third_party_partner;
 
         return $this;
     }
