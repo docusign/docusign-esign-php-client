@@ -100,7 +100,7 @@ class Brand implements ModelInterface, ArrayAccess
         'landing_pages' => null,
         'links' => null,
         'logos' => null,
-        'organization_brand_logo' => 'byte',
+        'organization_brand_logo' => null,
         'resources' => null
     ];
 
@@ -287,10 +287,6 @@ class Brand implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['organization_brand_logo']) && !preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $this->container['organization_brand_logo'])) {
-            $invalidProperties[] = "invalid value for 'organization_brand_logo', must be conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.";
-        }
 
         return $invalidProperties;
     }
@@ -686,11 +682,6 @@ class Brand implements ModelInterface, ArrayAccess
      */
     public function setOrganizationBrandLogo($organization_brand_logo)
     {
-
-        if (!is_null($organization_brand_logo) && (!preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $organization_brand_logo))) {
-            throw new \InvalidArgumentException("invalid value for $organization_brand_logo when calling Brand., must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.");
-        }
-
         $this->container['organization_brand_logo'] = $organization_brand_logo;
 
         return $this;
