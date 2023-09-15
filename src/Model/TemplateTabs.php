@@ -67,7 +67,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => '\DocuSign\eSign\Model\CommissionNumber[]',
         'commission_state_tabs' => '\DocuSign\eSign\Model\CommissionState[]',
         'company_tabs' => '\DocuSign\eSign\Model\Company[]',
-        'currency_tabs' => '\DocuSign\eSign\Model\Currency[]',
         'date_signed_tabs' => '\DocuSign\eSign\Model\DateSigned[]',
         'date_tabs' => '\DocuSign\eSign\Model\Date[]',
         'decline_tabs' => '\DocuSign\eSign\Model\Decline[]',
@@ -85,6 +84,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'notary_seal_tabs' => '\DocuSign\eSign\Model\NotarySeal[]',
         'note_tabs' => '\DocuSign\eSign\Model\Note[]',
         'number_tabs' => '\DocuSign\eSign\Model\Number[]',
+        'numerical_tabs' => '\DocuSign\eSign\Model\Numerical[]',
         'phone_number_tabs' => '\DocuSign\eSign\Model\PhoneNumber[]',
         'poly_line_overlay_tabs' => '\DocuSign\eSign\Model\PolyLineOverlay[]',
         'prefill_tabs' => '\DocuSign\eSign\Model\PrefillTabs',
@@ -114,7 +114,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => null,
         'commission_state_tabs' => null,
         'company_tabs' => null,
-        'currency_tabs' => null,
         'date_signed_tabs' => null,
         'date_tabs' => null,
         'decline_tabs' => null,
@@ -132,6 +131,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'notary_seal_tabs' => null,
         'note_tabs' => null,
         'number_tabs' => null,
+        'numerical_tabs' => null,
         'phone_number_tabs' => null,
         'poly_line_overlay_tabs' => null,
         'prefill_tabs' => null,
@@ -182,7 +182,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => 'commissionNumberTabs',
         'commission_state_tabs' => 'commissionStateTabs',
         'company_tabs' => 'companyTabs',
-        'currency_tabs' => 'currencyTabs',
         'date_signed_tabs' => 'dateSignedTabs',
         'date_tabs' => 'dateTabs',
         'decline_tabs' => 'declineTabs',
@@ -200,6 +199,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'notary_seal_tabs' => 'notarySealTabs',
         'note_tabs' => 'noteTabs',
         'number_tabs' => 'numberTabs',
+        'numerical_tabs' => 'numericalTabs',
         'phone_number_tabs' => 'phoneNumberTabs',
         'poly_line_overlay_tabs' => 'polyLineOverlayTabs',
         'prefill_tabs' => 'prefillTabs',
@@ -229,7 +229,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => 'setCommissionNumberTabs',
         'commission_state_tabs' => 'setCommissionStateTabs',
         'company_tabs' => 'setCompanyTabs',
-        'currency_tabs' => 'setCurrencyTabs',
         'date_signed_tabs' => 'setDateSignedTabs',
         'date_tabs' => 'setDateTabs',
         'decline_tabs' => 'setDeclineTabs',
@@ -247,6 +246,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'notary_seal_tabs' => 'setNotarySealTabs',
         'note_tabs' => 'setNoteTabs',
         'number_tabs' => 'setNumberTabs',
+        'numerical_tabs' => 'setNumericalTabs',
         'phone_number_tabs' => 'setPhoneNumberTabs',
         'poly_line_overlay_tabs' => 'setPolyLineOverlayTabs',
         'prefill_tabs' => 'setPrefillTabs',
@@ -276,7 +276,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'commission_number_tabs' => 'getCommissionNumberTabs',
         'commission_state_tabs' => 'getCommissionStateTabs',
         'company_tabs' => 'getCompanyTabs',
-        'currency_tabs' => 'getCurrencyTabs',
         'date_signed_tabs' => 'getDateSignedTabs',
         'date_tabs' => 'getDateTabs',
         'decline_tabs' => 'getDeclineTabs',
@@ -294,6 +293,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         'notary_seal_tabs' => 'getNotarySealTabs',
         'note_tabs' => 'getNoteTabs',
         'number_tabs' => 'getNumberTabs',
+        'numerical_tabs' => 'getNumericalTabs',
         'phone_number_tabs' => 'getPhoneNumberTabs',
         'poly_line_overlay_tabs' => 'getPolyLineOverlayTabs',
         'prefill_tabs' => 'getPrefillTabs',
@@ -377,7 +377,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         $this->container['commission_number_tabs'] = isset($data['commission_number_tabs']) ? $data['commission_number_tabs'] : null;
         $this->container['commission_state_tabs'] = isset($data['commission_state_tabs']) ? $data['commission_state_tabs'] : null;
         $this->container['company_tabs'] = isset($data['company_tabs']) ? $data['company_tabs'] : null;
-        $this->container['currency_tabs'] = isset($data['currency_tabs']) ? $data['currency_tabs'] : null;
         $this->container['date_signed_tabs'] = isset($data['date_signed_tabs']) ? $data['date_signed_tabs'] : null;
         $this->container['date_tabs'] = isset($data['date_tabs']) ? $data['date_tabs'] : null;
         $this->container['decline_tabs'] = isset($data['decline_tabs']) ? $data['decline_tabs'] : null;
@@ -395,6 +394,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         $this->container['notary_seal_tabs'] = isset($data['notary_seal_tabs']) ? $data['notary_seal_tabs'] : null;
         $this->container['note_tabs'] = isset($data['note_tabs']) ? $data['note_tabs'] : null;
         $this->container['number_tabs'] = isset($data['number_tabs']) ? $data['number_tabs'] : null;
+        $this->container['numerical_tabs'] = isset($data['numerical_tabs']) ? $data['numerical_tabs'] : null;
         $this->container['phone_number_tabs'] = isset($data['phone_number_tabs']) ? $data['phone_number_tabs'] : null;
         $this->container['poly_line_overlay_tabs'] = isset($data['poly_line_overlay_tabs']) ? $data['poly_line_overlay_tabs'] : null;
         $this->container['prefill_tabs'] = isset($data['prefill_tabs']) ? $data['prefill_tabs'] : null;
@@ -622,30 +622,6 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     public function setCompanyTabs($company_tabs)
     {
         $this->container['company_tabs'] = $company_tabs;
-
-        return $this;
-    }
-
-    /**
-     * Gets currency_tabs
-     *
-     * @return \DocuSign\eSign\Model\Currency[]
-     */
-    public function getCurrencyTabs()
-    {
-        return $this->container['currency_tabs'];
-    }
-
-    /**
-     * Sets currency_tabs
-     *
-     * @param \DocuSign\eSign\Model\Currency[] $currency_tabs 
-     *
-     * @return $this
-     */
-    public function setCurrencyTabs($currency_tabs)
-    {
-        $this->container['currency_tabs'] = $currency_tabs;
 
         return $this;
     }
@@ -1054,6 +1030,30 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     public function setNumberTabs($number_tabs)
     {
         $this->container['number_tabs'] = $number_tabs;
+
+        return $this;
+    }
+
+    /**
+     * Gets numerical_tabs
+     *
+     * @return \DocuSign\eSign\Model\Numerical[]
+     */
+    public function getNumericalTabs()
+    {
+        return $this->container['numerical_tabs'];
+    }
+
+    /**
+     * Sets numerical_tabs
+     *
+     * @param \DocuSign\eSign\Model\Numerical[] $numerical_tabs 
+     *
+     * @return $this
+     */
+    public function setNumericalTabs($numerical_tabs)
+    {
+        $this->container['numerical_tabs'] = $numerical_tabs;
 
         return $this;
     }

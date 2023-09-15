@@ -67,8 +67,6 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'checkbox_tabs_enabled' => '?string',
         'check_box_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'currency_tabs_enabled' => '?string',
-        'currency_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_field_regex_enabled' => '?string',
         'data_field_regex_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_field_size_enabled' => '?string',
@@ -81,6 +79,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'note_tabs_enabled' => '?string',
         'note_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'numerical_tabs_enabled' => '?string',
+        'numerical_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'prefill_tabs_enabled' => '?string',
         'prefill_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'radio_tabs_enabled' => '?string',
@@ -119,8 +119,6 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => null,
         'checkbox_tabs_enabled' => null,
         'check_box_tabs_metadata' => null,
-        'currency_tabs_enabled' => null,
-        'currency_tabs_metadata' => null,
         'data_field_regex_enabled' => null,
         'data_field_regex_metadata' => null,
         'data_field_size_enabled' => null,
@@ -133,6 +131,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => null,
         'note_tabs_enabled' => null,
         'note_tabs_metadata' => null,
+        'numerical_tabs_enabled' => null,
+        'numerical_tabs_metadata' => null,
         'prefill_tabs_enabled' => null,
         'prefill_tabs_metadata' => null,
         'radio_tabs_enabled' => null,
@@ -192,8 +192,6 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'calculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'checkboxTabsEnabled',
         'check_box_tabs_metadata' => 'checkBoxTabsMetadata',
-        'currency_tabs_enabled' => 'currencyTabsEnabled',
-        'currency_tabs_metadata' => 'currencyTabsMetadata',
         'data_field_regex_enabled' => 'dataFieldRegexEnabled',
         'data_field_regex_metadata' => 'dataFieldRegexMetadata',
         'data_field_size_enabled' => 'dataFieldSizeEnabled',
@@ -206,6 +204,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => 'listTabsMetadata',
         'note_tabs_enabled' => 'noteTabsEnabled',
         'note_tabs_metadata' => 'noteTabsMetadata',
+        'numerical_tabs_enabled' => 'numericalTabsEnabled',
+        'numerical_tabs_metadata' => 'numericalTabsMetadata',
         'prefill_tabs_enabled' => 'prefillTabsEnabled',
         'prefill_tabs_metadata' => 'prefillTabsMetadata',
         'radio_tabs_enabled' => 'radioTabsEnabled',
@@ -244,8 +244,6 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'setCalculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'setCheckboxTabsEnabled',
         'check_box_tabs_metadata' => 'setCheckBoxTabsMetadata',
-        'currency_tabs_enabled' => 'setCurrencyTabsEnabled',
-        'currency_tabs_metadata' => 'setCurrencyTabsMetadata',
         'data_field_regex_enabled' => 'setDataFieldRegexEnabled',
         'data_field_regex_metadata' => 'setDataFieldRegexMetadata',
         'data_field_size_enabled' => 'setDataFieldSizeEnabled',
@@ -258,6 +256,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => 'setListTabsMetadata',
         'note_tabs_enabled' => 'setNoteTabsEnabled',
         'note_tabs_metadata' => 'setNoteTabsMetadata',
+        'numerical_tabs_enabled' => 'setNumericalTabsEnabled',
+        'numerical_tabs_metadata' => 'setNumericalTabsMetadata',
         'prefill_tabs_enabled' => 'setPrefillTabsEnabled',
         'prefill_tabs_metadata' => 'setPrefillTabsMetadata',
         'radio_tabs_enabled' => 'setRadioTabsEnabled',
@@ -296,8 +296,6 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'calculated_fields_metadata' => 'getCalculatedFieldsMetadata',
         'checkbox_tabs_enabled' => 'getCheckboxTabsEnabled',
         'check_box_tabs_metadata' => 'getCheckBoxTabsMetadata',
-        'currency_tabs_enabled' => 'getCurrencyTabsEnabled',
-        'currency_tabs_metadata' => 'getCurrencyTabsMetadata',
         'data_field_regex_enabled' => 'getDataFieldRegexEnabled',
         'data_field_regex_metadata' => 'getDataFieldRegexMetadata',
         'data_field_size_enabled' => 'getDataFieldSizeEnabled',
@@ -310,6 +308,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'list_tabs_metadata' => 'getListTabsMetadata',
         'note_tabs_enabled' => 'getNoteTabsEnabled',
         'note_tabs_metadata' => 'getNoteTabsMetadata',
+        'numerical_tabs_enabled' => 'getNumericalTabsEnabled',
+        'numerical_tabs_metadata' => 'getNumericalTabsMetadata',
         'prefill_tabs_enabled' => 'getPrefillTabsEnabled',
         'prefill_tabs_metadata' => 'getPrefillTabsMetadata',
         'radio_tabs_enabled' => 'getRadioTabsEnabled',
@@ -402,8 +402,6 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         $this->container['calculated_fields_metadata'] = isset($data['calculated_fields_metadata']) ? $data['calculated_fields_metadata'] : null;
         $this->container['checkbox_tabs_enabled'] = isset($data['checkbox_tabs_enabled']) ? $data['checkbox_tabs_enabled'] : null;
         $this->container['check_box_tabs_metadata'] = isset($data['check_box_tabs_metadata']) ? $data['check_box_tabs_metadata'] : null;
-        $this->container['currency_tabs_enabled'] = isset($data['currency_tabs_enabled']) ? $data['currency_tabs_enabled'] : null;
-        $this->container['currency_tabs_metadata'] = isset($data['currency_tabs_metadata']) ? $data['currency_tabs_metadata'] : null;
         $this->container['data_field_regex_enabled'] = isset($data['data_field_regex_enabled']) ? $data['data_field_regex_enabled'] : null;
         $this->container['data_field_regex_metadata'] = isset($data['data_field_regex_metadata']) ? $data['data_field_regex_metadata'] : null;
         $this->container['data_field_size_enabled'] = isset($data['data_field_size_enabled']) ? $data['data_field_size_enabled'] : null;
@@ -416,6 +414,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         $this->container['list_tabs_metadata'] = isset($data['list_tabs_metadata']) ? $data['list_tabs_metadata'] : null;
         $this->container['note_tabs_enabled'] = isset($data['note_tabs_enabled']) ? $data['note_tabs_enabled'] : null;
         $this->container['note_tabs_metadata'] = isset($data['note_tabs_metadata']) ? $data['note_tabs_metadata'] : null;
+        $this->container['numerical_tabs_enabled'] = isset($data['numerical_tabs_enabled']) ? $data['numerical_tabs_enabled'] : null;
+        $this->container['numerical_tabs_metadata'] = isset($data['numerical_tabs_metadata']) ? $data['numerical_tabs_metadata'] : null;
         $this->container['prefill_tabs_enabled'] = isset($data['prefill_tabs_enabled']) ? $data['prefill_tabs_enabled'] : null;
         $this->container['prefill_tabs_metadata'] = isset($data['prefill_tabs_metadata']) ? $data['prefill_tabs_metadata'] : null;
         $this->container['radio_tabs_enabled'] = isset($data['radio_tabs_enabled']) ? $data['radio_tabs_enabled'] : null;
@@ -652,54 +652,6 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     public function setCheckBoxTabsMetadata($check_box_tabs_metadata)
     {
         $this->container['check_box_tabs_metadata'] = $check_box_tabs_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets currency_tabs_enabled
-     *
-     * @return ?string
-     */
-    public function getCurrencyTabsEnabled()
-    {
-        return $this->container['currency_tabs_enabled'];
-    }
-
-    /**
-     * Sets currency_tabs_enabled
-     *
-     * @param ?string $currency_tabs_enabled 
-     *
-     * @return $this
-     */
-    public function setCurrencyTabsEnabled($currency_tabs_enabled)
-    {
-        $this->container['currency_tabs_enabled'] = $currency_tabs_enabled;
-
-        return $this;
-    }
-
-    /**
-     * Gets currency_tabs_metadata
-     *
-     * @return \DocuSign\eSign\Model\SettingsMetadata
-     */
-    public function getCurrencyTabsMetadata()
-    {
-        return $this->container['currency_tabs_metadata'];
-    }
-
-    /**
-     * Sets currency_tabs_metadata
-     *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_tabs_metadata 
-     *
-     * @return $this
-     */
-    public function setCurrencyTabsMetadata($currency_tabs_metadata)
-    {
-        $this->container['currency_tabs_metadata'] = $currency_tabs_metadata;
 
         return $this;
     }
@@ -988,6 +940,54 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     public function setNoteTabsMetadata($note_tabs_metadata)
     {
         $this->container['note_tabs_metadata'] = $note_tabs_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets numerical_tabs_enabled
+     *
+     * @return ?string
+     */
+    public function getNumericalTabsEnabled()
+    {
+        return $this->container['numerical_tabs_enabled'];
+    }
+
+    /**
+     * Sets numerical_tabs_enabled
+     *
+     * @param ?string $numerical_tabs_enabled 
+     *
+     * @return $this
+     */
+    public function setNumericalTabsEnabled($numerical_tabs_enabled)
+    {
+        $this->container['numerical_tabs_enabled'] = $numerical_tabs_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets numerical_tabs_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getNumericalTabsMetadata()
+    {
+        return $this->container['numerical_tabs_metadata'];
+    }
+
+    /**
+     * Sets numerical_tabs_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $numerical_tabs_metadata 
+     *
+     * @return $this
+     */
+    public function setNumericalTabsMetadata($numerical_tabs_metadata)
+    {
+        $this->container['numerical_tabs_metadata'] = $numerical_tabs_metadata;
 
         return $this;
     }

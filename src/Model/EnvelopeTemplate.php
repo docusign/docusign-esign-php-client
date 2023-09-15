@@ -74,6 +74,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'auto_navigation' => '?string',
         'brand_id' => '?string',
         'brand_lock' => '?string',
+        'burn_default_tab_data' => '?string',
         'certificate_uri' => '?string',
         'completed_date_time' => '?string',
         'copy_recipient_data' => '?string',
@@ -118,6 +119,8 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => '?string',
         'initial_sent_date_time' => '?string',
         'is21_cfr_part11' => '?string',
+        'is_ace_gen_template' => '?string',
+        'is_doc_gen_template' => '?string',
         'is_dynamic_envelope' => '?string',
         'is_signature_provider_envelope' => '?string',
         'last_modified' => '?string',
@@ -182,6 +185,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'auto_navigation' => null,
         'brand_id' => null,
         'brand_lock' => null,
+        'burn_default_tab_data' => null,
         'certificate_uri' => null,
         'completed_date_time' => null,
         'copy_recipient_data' => null,
@@ -226,6 +230,8 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => null,
         'initial_sent_date_time' => null,
         'is21_cfr_part11' => null,
+        'is_ace_gen_template' => null,
+        'is_doc_gen_template' => null,
         'is_dynamic_envelope' => null,
         'is_signature_provider_envelope' => null,
         'last_modified' => null,
@@ -311,6 +317,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'auto_navigation' => 'autoNavigation',
         'brand_id' => 'brandId',
         'brand_lock' => 'brandLock',
+        'burn_default_tab_data' => 'burnDefaultTabData',
         'certificate_uri' => 'certificateUri',
         'completed_date_time' => 'completedDateTime',
         'copy_recipient_data' => 'copyRecipientData',
@@ -355,6 +362,8 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => 'holder',
         'initial_sent_date_time' => 'initialSentDateTime',
         'is21_cfr_part11' => 'is21CFRPart11',
+        'is_ace_gen_template' => 'isAceGenTemplate',
+        'is_doc_gen_template' => 'isDocGenTemplate',
         'is_dynamic_envelope' => 'isDynamicEnvelope',
         'is_signature_provider_envelope' => 'isSignatureProviderEnvelope',
         'last_modified' => 'lastModified',
@@ -419,6 +428,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'auto_navigation' => 'setAutoNavigation',
         'brand_id' => 'setBrandId',
         'brand_lock' => 'setBrandLock',
+        'burn_default_tab_data' => 'setBurnDefaultTabData',
         'certificate_uri' => 'setCertificateUri',
         'completed_date_time' => 'setCompletedDateTime',
         'copy_recipient_data' => 'setCopyRecipientData',
@@ -463,6 +473,8 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => 'setHolder',
         'initial_sent_date_time' => 'setInitialSentDateTime',
         'is21_cfr_part11' => 'setIs21CfrPart11',
+        'is_ace_gen_template' => 'setIsAceGenTemplate',
+        'is_doc_gen_template' => 'setIsDocGenTemplate',
         'is_dynamic_envelope' => 'setIsDynamicEnvelope',
         'is_signature_provider_envelope' => 'setIsSignatureProviderEnvelope',
         'last_modified' => 'setLastModified',
@@ -527,6 +539,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'auto_navigation' => 'getAutoNavigation',
         'brand_id' => 'getBrandId',
         'brand_lock' => 'getBrandLock',
+        'burn_default_tab_data' => 'getBurnDefaultTabData',
         'certificate_uri' => 'getCertificateUri',
         'completed_date_time' => 'getCompletedDateTime',
         'copy_recipient_data' => 'getCopyRecipientData',
@@ -571,6 +584,8 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'holder' => 'getHolder',
         'initial_sent_date_time' => 'getInitialSentDateTime',
         'is21_cfr_part11' => 'getIs21CfrPart11',
+        'is_ace_gen_template' => 'getIsAceGenTemplate',
+        'is_doc_gen_template' => 'getIsDocGenTemplate',
         'is_dynamic_envelope' => 'getIsDynamicEnvelope',
         'is_signature_provider_envelope' => 'getIsSignatureProviderEnvelope',
         'last_modified' => 'getLastModified',
@@ -689,6 +704,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         $this->container['auto_navigation'] = isset($data['auto_navigation']) ? $data['auto_navigation'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
         $this->container['brand_lock'] = isset($data['brand_lock']) ? $data['brand_lock'] : null;
+        $this->container['burn_default_tab_data'] = isset($data['burn_default_tab_data']) ? $data['burn_default_tab_data'] : null;
         $this->container['certificate_uri'] = isset($data['certificate_uri']) ? $data['certificate_uri'] : null;
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
         $this->container['copy_recipient_data'] = isset($data['copy_recipient_data']) ? $data['copy_recipient_data'] : null;
@@ -733,6 +749,8 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         $this->container['holder'] = isset($data['holder']) ? $data['holder'] : null;
         $this->container['initial_sent_date_time'] = isset($data['initial_sent_date_time']) ? $data['initial_sent_date_time'] : null;
         $this->container['is21_cfr_part11'] = isset($data['is21_cfr_part11']) ? $data['is21_cfr_part11'] : null;
+        $this->container['is_ace_gen_template'] = isset($data['is_ace_gen_template']) ? $data['is_ace_gen_template'] : null;
+        $this->container['is_doc_gen_template'] = isset($data['is_doc_gen_template']) ? $data['is_doc_gen_template'] : null;
         $this->container['is_dynamic_envelope'] = isset($data['is_dynamic_envelope']) ? $data['is_dynamic_envelope'] : null;
         $this->container['is_signature_provider_envelope'] = isset($data['is_signature_provider_envelope']) ? $data['is_signature_provider_envelope'] : null;
         $this->container['last_modified'] = isset($data['last_modified']) ? $data['last_modified'] : null;
@@ -1161,6 +1179,30 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets burn_default_tab_data
+     *
+     * @return ?string
+     */
+    public function getBurnDefaultTabData()
+    {
+        return $this->container['burn_default_tab_data'];
+    }
+
+    /**
+     * Sets burn_default_tab_data
+     *
+     * @param ?string $burn_default_tab_data 
+     *
+     * @return $this
+     */
+    public function setBurnDefaultTabData($burn_default_tab_data)
+    {
+        $this->container['burn_default_tab_data'] = $burn_default_tab_data;
+
+        return $this;
+    }
+
+    /**
      * Gets certificate_uri
      *
      * @return ?string
@@ -1293,7 +1335,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.
+     * @param \DocuSign\eSign\Model\CustomFields $custom_fields An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
      *
      * @return $this
      */
@@ -2217,6 +2259,54 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets is_ace_gen_template
+     *
+     * @return ?string
+     */
+    public function getIsAceGenTemplate()
+    {
+        return $this->container['is_ace_gen_template'];
+    }
+
+    /**
+     * Sets is_ace_gen_template
+     *
+     * @param ?string $is_ace_gen_template 
+     *
+     * @return $this
+     */
+    public function setIsAceGenTemplate($is_ace_gen_template)
+    {
+        $this->container['is_ace_gen_template'] = $is_ace_gen_template;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_doc_gen_template
+     *
+     * @return ?string
+     */
+    public function getIsDocGenTemplate()
+    {
+        return $this->container['is_doc_gen_template'];
+    }
+
+    /**
+     * Sets is_doc_gen_template
+     *
+     * @param ?string $is_doc_gen_template 
+     *
+     * @return $this
+     */
+    public function setIsDocGenTemplate($is_doc_gen_template)
+    {
+        $this->container['is_doc_gen_template'] = $is_doc_gen_template;
+
+        return $this;
+    }
+
+    /**
      * Gets is_dynamic_envelope
      *
      * @return ?string
@@ -2757,7 +2847,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \DocuSign\eSign\Model\Recipients $recipients An array of recipient objects that provides details about the recipients of the envelope.
+     * @param \DocuSign\eSign\Model\Recipients $recipients An array of powerform recipients.
      *
      * @return $this
      */

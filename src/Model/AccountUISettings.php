@@ -61,7 +61,11 @@ class AccountUISettings implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'admin_message' => '\DocuSign\eSign\Model\AdminMessage',
+        'allow_users_to_edit_shared_access' => '?string',
+        'allow_users_to_edit_shared_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'ask_an_admin' => '\DocuSign\eSign\Model\AskAnAdmin',
+        'clickwrap_schema_version' => '?string',
+        'clickwrap_schema_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_admin_message' => '?string',
         'enable_admin_message_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => '?string',
@@ -97,7 +101,11 @@ class AccountUISettings implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'admin_message' => null,
+        'allow_users_to_edit_shared_access' => null,
+        'allow_users_to_edit_shared_access_metadata' => null,
         'ask_an_admin' => null,
+        'clickwrap_schema_version' => null,
+        'clickwrap_schema_version_metadata' => null,
         'enable_admin_message' => null,
         'enable_admin_message_metadata' => null,
         'enable_easy_sign_can_use_multi_template_apply' => null,
@@ -154,7 +162,11 @@ class AccountUISettings implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'admin_message' => 'adminMessage',
+        'allow_users_to_edit_shared_access' => 'allowUsersToEditSharedAccess',
+        'allow_users_to_edit_shared_access_metadata' => 'allowUsersToEditSharedAccessMetadata',
         'ask_an_admin' => 'askAnAdmin',
+        'clickwrap_schema_version' => 'clickwrapSchemaVersion',
+        'clickwrap_schema_version_metadata' => 'clickwrapSchemaVersionMetadata',
         'enable_admin_message' => 'enableAdminMessage',
         'enable_admin_message_metadata' => 'enableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'enableEasySignCanUseMultiTemplateApply',
@@ -190,7 +202,11 @@ class AccountUISettings implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'admin_message' => 'setAdminMessage',
+        'allow_users_to_edit_shared_access' => 'setAllowUsersToEditSharedAccess',
+        'allow_users_to_edit_shared_access_metadata' => 'setAllowUsersToEditSharedAccessMetadata',
         'ask_an_admin' => 'setAskAnAdmin',
+        'clickwrap_schema_version' => 'setClickwrapSchemaVersion',
+        'clickwrap_schema_version_metadata' => 'setClickwrapSchemaVersionMetadata',
         'enable_admin_message' => 'setEnableAdminMessage',
         'enable_admin_message_metadata' => 'setEnableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'setEnableEasySignCanUseMultiTemplateApply',
@@ -226,7 +242,11 @@ class AccountUISettings implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'admin_message' => 'getAdminMessage',
+        'allow_users_to_edit_shared_access' => 'getAllowUsersToEditSharedAccess',
+        'allow_users_to_edit_shared_access_metadata' => 'getAllowUsersToEditSharedAccessMetadata',
         'ask_an_admin' => 'getAskAnAdmin',
+        'clickwrap_schema_version' => 'getClickwrapSchemaVersion',
+        'clickwrap_schema_version_metadata' => 'getClickwrapSchemaVersionMetadata',
         'enable_admin_message' => 'getEnableAdminMessage',
         'enable_admin_message_metadata' => 'getEnableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'getEnableEasySignCanUseMultiTemplateApply',
@@ -316,7 +336,11 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['admin_message'] = isset($data['admin_message']) ? $data['admin_message'] : null;
+        $this->container['allow_users_to_edit_shared_access'] = isset($data['allow_users_to_edit_shared_access']) ? $data['allow_users_to_edit_shared_access'] : null;
+        $this->container['allow_users_to_edit_shared_access_metadata'] = isset($data['allow_users_to_edit_shared_access_metadata']) ? $data['allow_users_to_edit_shared_access_metadata'] : null;
         $this->container['ask_an_admin'] = isset($data['ask_an_admin']) ? $data['ask_an_admin'] : null;
+        $this->container['clickwrap_schema_version'] = isset($data['clickwrap_schema_version']) ? $data['clickwrap_schema_version'] : null;
+        $this->container['clickwrap_schema_version_metadata'] = isset($data['clickwrap_schema_version_metadata']) ? $data['clickwrap_schema_version_metadata'] : null;
         $this->container['enable_admin_message'] = isset($data['enable_admin_message']) ? $data['enable_admin_message'] : null;
         $this->container['enable_admin_message_metadata'] = isset($data['enable_admin_message_metadata']) ? $data['enable_admin_message_metadata'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply'] = isset($data['enable_easy_sign_can_use_multi_template_apply']) ? $data['enable_easy_sign_can_use_multi_template_apply'] : null;
@@ -394,6 +418,54 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_users_to_edit_shared_access
+     *
+     * @return ?string
+     */
+    public function getAllowUsersToEditSharedAccess()
+    {
+        return $this->container['allow_users_to_edit_shared_access'];
+    }
+
+    /**
+     * Sets allow_users_to_edit_shared_access
+     *
+     * @param ?string $allow_users_to_edit_shared_access 
+     *
+     * @return $this
+     */
+    public function setAllowUsersToEditSharedAccess($allow_users_to_edit_shared_access)
+    {
+        $this->container['allow_users_to_edit_shared_access'] = $allow_users_to_edit_shared_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_users_to_edit_shared_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowUsersToEditSharedAccessMetadata()
+    {
+        return $this->container['allow_users_to_edit_shared_access_metadata'];
+    }
+
+    /**
+     * Sets allow_users_to_edit_shared_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_users_to_edit_shared_access_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowUsersToEditSharedAccessMetadata($allow_users_to_edit_shared_access_metadata)
+    {
+        $this->container['allow_users_to_edit_shared_access_metadata'] = $allow_users_to_edit_shared_access_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets ask_an_admin
      *
      * @return \DocuSign\eSign\Model\AskAnAdmin
@@ -413,6 +485,54 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function setAskAnAdmin($ask_an_admin)
     {
         $this->container['ask_an_admin'] = $ask_an_admin;
+
+        return $this;
+    }
+
+    /**
+     * Gets clickwrap_schema_version
+     *
+     * @return ?string
+     */
+    public function getClickwrapSchemaVersion()
+    {
+        return $this->container['clickwrap_schema_version'];
+    }
+
+    /**
+     * Sets clickwrap_schema_version
+     *
+     * @param ?string $clickwrap_schema_version 
+     *
+     * @return $this
+     */
+    public function setClickwrapSchemaVersion($clickwrap_schema_version)
+    {
+        $this->container['clickwrap_schema_version'] = $clickwrap_schema_version;
+
+        return $this;
+    }
+
+    /**
+     * Gets clickwrap_schema_version_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getClickwrapSchemaVersionMetadata()
+    {
+        return $this->container['clickwrap_schema_version_metadata'];
+    }
+
+    /**
+     * Sets clickwrap_schema_version_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $clickwrap_schema_version_metadata 
+     *
+     * @return $this
+     */
+    public function setClickwrapSchemaVersionMetadata($clickwrap_schema_version_metadata)
+    {
+        $this->container['clickwrap_schema_version_metadata'] = $clickwrap_schema_version_metadata;
 
         return $this;
     }
@@ -646,7 +766,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_legacy_sendflow_link_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_legacy_sendflow_link_metadata enable_legacy_sendflow_link_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_legacy_sendflow_link_metadata 
      *
      * @return $this
      */

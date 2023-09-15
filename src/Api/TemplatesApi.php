@@ -154,6 +154,33 @@ class GetDocumentOptions
         return $this;
     }
     /**
+      * $file_type 
+      * @var ?string
+      */
+    protected ?string $file_type = null;
+
+    /**
+     * Gets file_type
+     *
+     * @return ?string
+     */
+    public function getFileType(): ?string
+    {
+        return $this->file_type;
+    }
+
+    /**
+     * Sets file_type
+     * @param ?string $file_type 
+     *
+     * @return self
+     */
+    public function setFileType(?string $file_type): self
+    {
+        $this->file_type = $file_type;
+        return $this;
+    }
+    /**
       * $show_changes 
       * @var ?string
       */
@@ -517,74 +544,6 @@ class GetPagesOptions
     public function setShowChanges(?string $show_changes): self
     {
         $this->show_changes = $show_changes;
-        return $this;
-    }
-    /**
-      * $start_position 
-      * @var ?string
-      */
-    protected ?string $start_position = null;
-
-    /**
-     * Gets start_position
-     *
-     * @return ?string
-     */
-    public function getStartPosition(): ?string
-    {
-        return $this->start_position;
-    }
-
-    /**
-     * Sets start_position
-     * @param ?string $start_position 
-     *
-     * @return self
-     */
-    public function setStartPosition(?string $start_position): self
-    {
-        $this->start_position = $start_position;
-        return $this;
-    }
-}
-
-
-/**
- * ListBulkRecipientsOptions Class Doc Comment
- *
- * @category Class
- * @package  DocuSign\eSign
- * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
- * @link     https://github.com/swagger-api/swagger-codegen
- */
-class ListBulkRecipientsOptions
-{
-    /**
-      * $include_tabs 
-      * @var ?string
-      */
-    protected ?string $include_tabs = null;
-
-    /**
-     * Gets include_tabs
-     *
-     * @return ?string
-     */
-    public function getIncludeTabs(): ?string
-    {
-        return $this->include_tabs;
-    }
-
-    /**
-     * Sets include_tabs
-     * @param ?string $include_tabs 
-     *
-     * @return self
-     */
-    public function setIncludeTabs(?string $include_tabs): self
-    {
-        $this->include_tabs = $include_tabs;
         return $this;
     }
     /**
@@ -2802,113 +2761,6 @@ class TemplatesApi
     }
 
     /**
-     * Operation deleteBulkRecipients
-     *
-     * Deletes the bulk recipient list on a template.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param ?string $template_id The ID of the template being accessed.
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\BulkRecipientsUpdateResponse
-     */
-    public function deleteBulkRecipients($account_id, $recipient_id, $template_id)
-    {
-        list($response) = $this->deleteBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id);
-        return $response;
-    }
-
-    /**
-     * Operation deleteBulkRecipientsWithHttpInfo
-     *
-     * Deletes the bulk recipient list on a template.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param ?string $template_id The ID of the template being accessed.
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\BulkRecipientsUpdateResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteBulkRecipients');
-        }
-        // verify the required parameter 'recipient_id' is set
-        if ($recipient_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling deleteBulkRecipients');
-        }
-        // verify the required parameter 'template_id' is set
-        if ($template_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling deleteBulkRecipients');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($recipient_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
-        }
-        // path params
-        if ($template_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'DELETE',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\BulkRecipientsUpdateResponse',
-                '/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkRecipientsUpdateResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkRecipientsUpdateResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation deleteCustomFields
      *
      * Deletes envelope custom fields in a template.
@@ -4179,6 +4031,9 @@ class TemplatesApi
             if ($options->getEncrypt() != 'null') {
                 $queryParams['encrypt'] = $this->apiClient->getSerializer()->toQueryValue($options->getEncrypt());
             }
+            if ($options->getFileType() != 'null') {
+                $queryParams['file_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getFileType());
+            }
             if ($options->getShowChanges() != 'null') {
                 $queryParams['show_changes'] = $this->apiClient->getSerializer()->toQueryValue($options->getShowChanges());
             }
@@ -5127,125 +4982,6 @@ class TemplatesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\DocumentHtmlDefinitionOriginals', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation listBulkRecipients
-     *
-     * Gets the bulk recipient file from a template.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\BulkRecipientsResponse
-     */
-    public function listBulkRecipients($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions $options = null)
-    {
-        list($response) = $this->listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, $options);
-        return $response;
-    }
-
-    /**
-     * Operation listBulkRecipientsWithHttpInfo
-     *
-     * Gets the bulk recipient file from a template.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param ?string $template_id The ID of the template being accessed.
-     * @param  \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\BulkRecipientsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function listBulkRecipientsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListBulkRecipientsOptions $options = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling listBulkRecipients');
-        }
-        // verify the required parameter 'recipient_id' is set
-        if ($recipient_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling listBulkRecipients');
-        }
-        // verify the required parameter 'template_id' is set
-        if ($template_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling listBulkRecipients');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-            // query params
-            if ($options->getIncludeTabs() != 'null') {
-                $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
-            }
-            if ($options->getStartPosition() != 'null') {
-                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
-            }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-        // path params
-        if ($recipient_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
-        }
-        // path params
-        if ($template_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\BulkRecipientsResponse',
-                '/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\BulkRecipientsResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\BulkRecipientsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

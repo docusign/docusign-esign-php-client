@@ -63,9 +63,12 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'default_description' => '?string',
         'default_name' => '?string',
         'input_options' => '\DocuSign\eSign\Model\AccountIdentityInputOption[]',
+        'is_disabled' => '?string',
+        'owner_type' => '?string',
         'signature_provider' => '\DocuSign\eSign\Model\AccountSignatureProvider',
         'steps' => '\DocuSign\eSign\Model\AccountIdentityVerificationStep[]',
         'workflow_id' => '?string',
+        'workflow_label' => '?string',
         'workflow_resource_key' => '?string'
     ];
 
@@ -78,9 +81,12 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'default_description' => null,
         'default_name' => null,
         'input_options' => null,
+        'is_disabled' => null,
+        'owner_type' => null,
         'signature_provider' => null,
         'steps' => null,
         'workflow_id' => null,
+        'workflow_label' => null,
         'workflow_resource_key' => null
     ];
 
@@ -114,9 +120,12 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'default_description' => 'defaultDescription',
         'default_name' => 'defaultName',
         'input_options' => 'inputOptions',
+        'is_disabled' => 'isDisabled',
+        'owner_type' => 'ownerType',
         'signature_provider' => 'signatureProvider',
         'steps' => 'steps',
         'workflow_id' => 'workflowId',
+        'workflow_label' => 'workflowLabel',
         'workflow_resource_key' => 'workflowResourceKey'
     ];
 
@@ -129,9 +138,12 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'default_description' => 'setDefaultDescription',
         'default_name' => 'setDefaultName',
         'input_options' => 'setInputOptions',
+        'is_disabled' => 'setIsDisabled',
+        'owner_type' => 'setOwnerType',
         'signature_provider' => 'setSignatureProvider',
         'steps' => 'setSteps',
         'workflow_id' => 'setWorkflowId',
+        'workflow_label' => 'setWorkflowLabel',
         'workflow_resource_key' => 'setWorkflowResourceKey'
     ];
 
@@ -144,9 +156,12 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         'default_description' => 'getDefaultDescription',
         'default_name' => 'getDefaultName',
         'input_options' => 'getInputOptions',
+        'is_disabled' => 'getIsDisabled',
+        'owner_type' => 'getOwnerType',
         'signature_provider' => 'getSignatureProvider',
         'steps' => 'getSteps',
         'workflow_id' => 'getWorkflowId',
+        'workflow_label' => 'getWorkflowLabel',
         'workflow_resource_key' => 'getWorkflowResourceKey'
     ];
 
@@ -213,9 +228,12 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         $this->container['default_description'] = isset($data['default_description']) ? $data['default_description'] : null;
         $this->container['default_name'] = isset($data['default_name']) ? $data['default_name'] : null;
         $this->container['input_options'] = isset($data['input_options']) ? $data['input_options'] : null;
+        $this->container['is_disabled'] = isset($data['is_disabled']) ? $data['is_disabled'] : null;
+        $this->container['owner_type'] = isset($data['owner_type']) ? $data['owner_type'] : null;
         $this->container['signature_provider'] = isset($data['signature_provider']) ? $data['signature_provider'] : null;
         $this->container['steps'] = isset($data['steps']) ? $data['steps'] : null;
         $this->container['workflow_id'] = isset($data['workflow_id']) ? $data['workflow_id'] : null;
+        $this->container['workflow_label'] = isset($data['workflow_label']) ? $data['workflow_label'] : null;
         $this->container['workflow_resource_key'] = isset($data['workflow_resource_key']) ? $data['workflow_resource_key'] : null;
     }
 
@@ -316,6 +334,54 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets is_disabled
+     *
+     * @return ?string
+     */
+    public function getIsDisabled()
+    {
+        return $this->container['is_disabled'];
+    }
+
+    /**
+     * Sets is_disabled
+     *
+     * @param ?string $is_disabled 
+     *
+     * @return $this
+     */
+    public function setIsDisabled($is_disabled)
+    {
+        $this->container['is_disabled'] = $is_disabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_type
+     *
+     * @return ?string
+     */
+    public function getOwnerType()
+    {
+        return $this->container['owner_type'];
+    }
+
+    /**
+     * Sets owner_type
+     *
+     * @param ?string $owner_type 
+     *
+     * @return $this
+     */
+    public function setOwnerType($owner_type)
+    {
+        $this->container['owner_type'] = $owner_type;
+
+        return $this;
+    }
+
+    /**
      * Gets signature_provider
      *
      * @return \DocuSign\eSign\Model\AccountSignatureProvider
@@ -383,6 +449,30 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     public function setWorkflowId($workflow_id)
     {
         $this->container['workflow_id'] = $workflow_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflow_label
+     *
+     * @return ?string
+     */
+    public function getWorkflowLabel()
+    {
+        return $this->container['workflow_label'];
+    }
+
+    /**
+     * Sets workflow_label
+     *
+     * @param ?string $workflow_label 
+     *
+     * @return $this
+     */
+    public function setWorkflowLabel($workflow_label)
+    {
+        $this->container['workflow_label'] = $workflow_label;
 
         return $this;
     }

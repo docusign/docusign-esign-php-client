@@ -490,7 +490,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_settings
      *
-     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.
+     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
      *
      * @return $this
      */
@@ -682,7 +682,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
     /**
      * Sets brands
      *
-     * @param \DocuSign\eSign\Model\BrandsResponse $brands brands
+     * @param \DocuSign\eSign\Model\BrandsResponse $brands 
      *
      * @return $this
      */

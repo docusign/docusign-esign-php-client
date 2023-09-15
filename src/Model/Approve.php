@@ -1342,7 +1342,7 @@ class Approve implements ModelInterface, ArrayAccess
     /**
      * Sets caption_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata caption_metadata
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata 
      *
      * @return $this
      */
@@ -1558,7 +1558,7 @@ class Approve implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */

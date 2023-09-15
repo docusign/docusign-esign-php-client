@@ -73,20 +73,28 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'adopt_sig_config_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'advanced_correct' => '?string',
         'advanced_correct_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'advanced_search_enable_tab_field' => '?string',
+        'advanced_search_enable_tab_field_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'advanced_search_enable_template_id_field' => '?string',
+        'advanced_search_enable_template_id_field_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'advanced_search_enable_template_name_field' => '?string',
+        'advanced_search_enable_template_name_field_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_access_code_format' => '?string',
         'allow_access_code_format_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_account_management_granular' => '?string',
         'allow_account_management_granular_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_account_member_name_change' => '?string',
         'allow_account_member_name_change_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_ace' => '?string',
+        'allow_ace_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_advanced_recipient_routing_conditional' => '?string',
         'allow_advanced_recipient_routing_conditional_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_agent_name_email_edit' => '?string',
         'allow_agent_name_email_edit_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_agreement_actions' => '?string',
         'allow_agreement_actions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'allow_agreement_orchestration_workflows' => '?string',
-        'allow_agreement_orchestration_workflows_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_agreement_orchestrations' => '?string',
+        'allow_agreement_orchestrations_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_auto_nav_settings' => '?string',
         'allow_auto_nav_settings_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_auto_tagging' => '?string',
@@ -96,6 +104,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_cd_withdraw' => '?string',
         'allow_cd_withdraw_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_connect_http_listener_configs' => '?string',
+        'allow_connect_identity_verification_ui' => '?string',
         'allow_connect_o_auth_ui' => '?string',
         'allow_connect_send_finish_later' => '?string',
         'allow_connect_send_finish_later_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -116,6 +125,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_documents_on_signed_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_document_visibility' => '?string',
         'allow_document_visibility_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_editing_envelopes_on_behalf_of_others' => '?string',
+        'allow_editing_envelopes_on_behalf_of_others_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_e_hanko_stamps' => '?string',
         'allow_e_hanko_stamps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_e_note_e_original' => '?string',
@@ -144,6 +155,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_for_eu_qualified_signatures_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_idv_level1' => '?string',
         'allow_idv_level1_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_idv_level1_trial' => '?string',
+        'allow_idv_level1_trial_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_idv_level2' => '?string',
         'allow_idv_level2_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_idv_level3' => '?string',
@@ -177,6 +190,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_open_trust_signer_certificate' => '?string',
         'allow_open_trust_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_organization_docusign_monitor' => '?string',
+        'allow_organization_docusign_monitor_free' => '?string',
+        'allow_organization_docusign_monitor_free_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_organization_docusign_monitor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_organization_domain_user_management' => '?string',
         'allow_organization_domain_user_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -254,12 +269,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_third_party_electronic_notary' => '?string',
         'allow_third_party_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_transactions_workspace' => '?string',
+        'allow_transactions_workspace_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_transactions_workspace_original' => '?string',
+        'allow_transactions_workspace_original_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_users_to_access_directory' => '?string',
         'allow_users_to_access_directory_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_value_insights' => '?string',
         'allow_value_insights_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_web_forms' => '?string',
         'allow_web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_whats_app_delivery' => '?string',
+        'allow_whats_app_delivery_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'anchor_population_scope' => '?string',
         'anchor_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'anchor_tag_versioned_placement_enabled' => '?string',
@@ -311,6 +332,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_population_scope' => '?string',
         'data_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'default_to_advanced_envelopes_filter_form' => '?string',
+        'default_to_advanced_envelopes_filter_form_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_auto_template_matching' => '?string',
         'disable_auto_template_matching_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_mobile_app' => '?string',
@@ -341,12 +364,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => '?string',
         'document_visibility' => '?string',
         'document_visibility_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'draft_envelope_retention' => '?string',
+        'draft_envelope_retention_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'dss_enable_provisioning_pen_configuration_radmin_option' => '?string',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => '?string',
         'dss_sign_29182_slide_up_bar_radmin_option' => '?string',
         'email_template_version' => '?string',
         'email_template_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_access_code_generator' => '?string',
         'enable_access_code_generator_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_account_wide_search' => '?string',
+        'enable_account_wide_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_adm_healthcare' => '?string',
+        'enable_adm_healthcare_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_advanced_envelopes_search' => '?string',
+        'enable_advanced_envelopes_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_advanced_payments' => '?string',
         'enable_advanced_payments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_advanced_power_forms' => '?string',
@@ -361,6 +393,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_calculated_fields' => '?string',
         'enable_calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus' => '?string',
+        'enable_click_plus_conditional_content' => '?string',
+        'enable_click_plus_conditional_content_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_custom_fields' => '?string',
+        'enable_click_plus_custom_fields_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_custom_style' => '?string',
+        'enable_click_plus_custom_style_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_dynamic_content' => '?string',
+        'enable_click_plus_dynamic_content_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_click_plus_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_clickwraps' => '?string',
         'enable_clickwraps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_combined_pdf_download_for_sbs' => '?string',
@@ -370,8 +412,23 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking' => '?string',
         'enable_customer_satisfaction_metric_tracking_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_eu_advanced_pens' => '?string',
+        'enable_d_sig_eu_advanced_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_express_pens' => '?string',
+        'enable_d_sig_express_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_id_check_for_aes_pens' => '?string',
+        'enable_d_sig_id_check_for_aes_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_id_check_in_person_for_qes_pens' => '?string',
+        'enable_d_sig_id_check_in_person_for_qes_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_id_check_remote_for_qes_pens' => '?string',
+        'enable_d_sig_id_check_remote_for_qes_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_id_verification_pens' => '?string',
+        'enable_d_sig_id_verification_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_id_verification_premier_pens' => '?string',
+        'enable_d_sig_id_verification_premier_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ds_pro' => '?string',
         'enable_ds_pro_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_envelope_stamping_by_account_admin' => '?string',
         'enable_envelope_stamping_by_account_admin_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_envelope_stamping_by_ds_admin' => '?string',
@@ -386,6 +443,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_id_fx_phone_authentication' => '?string',
         'enable_id_fx_phone_authentication_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => '?string',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_inbox_browse_views_powered_by_elastic_search' => '?string',
+        'enable_inbox_browse_views_powered_by_elastic_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_inbox_relevance_sort' => '?string',
+        'enable_inbox_relevance_sort_for_recent_accounts' => '?string',
+        'enable_inbox_relevance_sort_for_recent_accounts_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_inbox_relevance_sort_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_in_browser_editor' => '?string',
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_key_terms_suggestions_by_document_type' => '?string',
@@ -415,6 +480,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_search' => '?string',
         'enable_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_search_service_azure_uri' => '?string',
+        'enable_search_service_azure_uri_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_search_site_specific_api' => '?string',
         'enable_search_site_specific_api_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_search_ui' => '?string',
@@ -460,10 +527,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_transaction_point_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_vaulting' => '?string',
         'enable_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_web_forms_separate_user_permissions' => '?string',
+        'enable_web_forms_separate_user_permissions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_witnessing' => '?string',
         'enable_witnessing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enforce_template_name_uniqueness' => '?string',
         'enforce_template_name_uniqueness_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enforce_tls_emails' => '?string',
+        'enforce_tls_emails_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_integration_allowed' => '?string',
         'envelope_integration_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_integration_enabled' => '?string',
@@ -472,6 +543,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => '?string',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'envelope_search_mode' => '?string',
+        'envelope_search_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'envelope_stamping_default_value' => '?string',
         'envelope_stamping_default_value_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'exit_prompt' => '?string',
@@ -489,6 +562,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'guided_forms_html_allowed' => '?string',
         'guided_forms_html_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'guided_forms_html_conversion_policy' => '?string',
+        'guided_forms_html_conversion_policy_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'has_recipient_connect_claimed_domain' => '?string',
         'hide_account_address_in_co_c' => '?string',
         'hide_account_address_in_co_c_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -505,6 +580,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'identity_verification' => '\DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[]',
         'identity_verification_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'idfx_kba_authentication_override' => '?string',
+        'idfx_kba_authentication_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'idfx_phone_authentication_override' => '?string',
         'idfx_phone_authentication_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'ignore_error_if_anchor_tab_not_found' => '?string',
@@ -517,17 +594,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'in_session_suppress_emails' => '?string',
         'in_session_suppress_emails_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'is_connect_document_fields_enabled' => '?string',
         'linked_external_primary_accounts' => '\DocuSign\eSign\Model\LinkedExternalPrimaryAccount[]',
         'maximum_signing_groups' => '?string',
         'maximum_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'maximum_users_per_signing_group' => '?string',
         'maximum_users_per_signing_group_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'max_number_of_custom_stamps' => '?string',
+        'merge_mixed_mode_results' => '?string',
+        'merge_mixed_mode_results_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'mobile_session_timeout' => '?string',
         'mobile_session_timeout_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'number_of_active_custom_stamps' => '?string',
         'opt_in_mobile_signing_v02' => '?string',
         'opt_in_mobile_signing_v02_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'opt_in_universal_signatures' => '?string',
         'opt_out_auto_nav_text_and_tab_color_updates' => '?string',
         'opt_out_auto_nav_text_and_tab_color_updates_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'opt_out_new_platform_seal' => '?string',
@@ -560,6 +641,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => '?string',
         'rsa_verid_ruleset' => '?string',
         'rsa_verid_user_id' => '?string',
+        'sbs_transaction_level' => '?string',
         'self_signed_recipient_email_document' => '?string',
         'self_signed_recipient_email_document_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'self_signed_recipient_email_document_user_override' => '?string',
@@ -668,10 +750,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_docu_sign_express_signer_certificate' => '?string',
         'use_docu_sign_express_signer_certificate_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'use_envelope_search_mixed_mode' => '?string',
+        'use_envelope_search_mixed_mode_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_multi_app_groups_data' => '?string',
         'use_multi_app_groups_data_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_new_blob_for_pdf' => '?string',
         'use_new_blob_for_pdf_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'use_new_envelope_search' => '?string',
+        'use_new_envelope_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'use_new_envelope_search_only_when_searching_after_date' => '?string',
+        'use_new_envelope_search_only_when_searching_after_date_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'use_new_envelope_search_only_with_search_term' => '?string',
+        'use_new_envelope_search_only_with_search_term_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'use_safe_signer_certificates' => '?string',
         'use_safe_signer_certificates_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'uses_api' => '?string',
@@ -716,20 +806,28 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'adopt_sig_config_metadata' => null,
         'advanced_correct' => null,
         'advanced_correct_metadata' => null,
+        'advanced_search_enable_tab_field' => null,
+        'advanced_search_enable_tab_field_metadata' => null,
+        'advanced_search_enable_template_id_field' => null,
+        'advanced_search_enable_template_id_field_metadata' => null,
+        'advanced_search_enable_template_name_field' => null,
+        'advanced_search_enable_template_name_field_metadata' => null,
         'allow_access_code_format' => null,
         'allow_access_code_format_metadata' => null,
         'allow_account_management_granular' => null,
         'allow_account_management_granular_metadata' => null,
         'allow_account_member_name_change' => null,
         'allow_account_member_name_change_metadata' => null,
+        'allow_ace' => null,
+        'allow_ace_metadata' => null,
         'allow_advanced_recipient_routing_conditional' => null,
         'allow_advanced_recipient_routing_conditional_metadata' => null,
         'allow_agent_name_email_edit' => null,
         'allow_agent_name_email_edit_metadata' => null,
         'allow_agreement_actions' => null,
         'allow_agreement_actions_metadata' => null,
-        'allow_agreement_orchestration_workflows' => null,
-        'allow_agreement_orchestration_workflows_metadata' => null,
+        'allow_agreement_orchestrations' => null,
+        'allow_agreement_orchestrations_metadata' => null,
         'allow_auto_nav_settings' => null,
         'allow_auto_nav_settings_metadata' => null,
         'allow_auto_tagging' => null,
@@ -739,6 +837,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_cd_withdraw' => null,
         'allow_cd_withdraw_metadata' => null,
         'allow_connect_http_listener_configs' => null,
+        'allow_connect_identity_verification_ui' => null,
         'allow_connect_o_auth_ui' => null,
         'allow_connect_send_finish_later' => null,
         'allow_connect_send_finish_later_metadata' => null,
@@ -759,6 +858,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_documents_on_signed_envelopes_metadata' => null,
         'allow_document_visibility' => null,
         'allow_document_visibility_metadata' => null,
+        'allow_editing_envelopes_on_behalf_of_others' => null,
+        'allow_editing_envelopes_on_behalf_of_others_metadata' => null,
         'allow_e_hanko_stamps' => null,
         'allow_e_hanko_stamps_metadata' => null,
         'allow_e_note_e_original' => null,
@@ -787,6 +888,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_for_eu_qualified_signatures_metadata' => null,
         'allow_idv_level1' => null,
         'allow_idv_level1_metadata' => null,
+        'allow_idv_level1_trial' => null,
+        'allow_idv_level1_trial_metadata' => null,
         'allow_idv_level2' => null,
         'allow_idv_level2_metadata' => null,
         'allow_idv_level3' => null,
@@ -820,6 +923,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_open_trust_signer_certificate' => null,
         'allow_open_trust_signer_certificate_metadata' => null,
         'allow_organization_docusign_monitor' => null,
+        'allow_organization_docusign_monitor_free' => null,
+        'allow_organization_docusign_monitor_free_metadata' => null,
         'allow_organization_docusign_monitor_metadata' => null,
         'allow_organization_domain_user_management' => null,
         'allow_organization_domain_user_management_metadata' => null,
@@ -897,12 +1002,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => null,
         'allow_third_party_electronic_notary' => null,
         'allow_third_party_electronic_notary_metadata' => null,
+        'allow_transactions_workspace' => null,
+        'allow_transactions_workspace_metadata' => null,
+        'allow_transactions_workspace_original' => null,
+        'allow_transactions_workspace_original_metadata' => null,
         'allow_users_to_access_directory' => null,
         'allow_users_to_access_directory_metadata' => null,
         'allow_value_insights' => null,
         'allow_value_insights_metadata' => null,
         'allow_web_forms' => null,
         'allow_web_forms_metadata' => null,
+        'allow_whats_app_delivery' => null,
+        'allow_whats_app_delivery_metadata' => null,
         'anchor_population_scope' => null,
         'anchor_population_scope_metadata' => null,
         'anchor_tag_versioned_placement_enabled' => null,
@@ -954,6 +1065,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => null,
         'data_population_scope' => null,
         'data_population_scope_metadata' => null,
+        'default_to_advanced_envelopes_filter_form' => null,
+        'default_to_advanced_envelopes_filter_form_metadata' => null,
         'disable_auto_template_matching' => null,
         'disable_auto_template_matching_metadata' => null,
         'disable_mobile_app' => null,
@@ -984,12 +1097,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => null,
         'document_visibility' => null,
         'document_visibility_metadata' => null,
+        'draft_envelope_retention' => null,
+        'draft_envelope_retention_metadata' => null,
+        'dss_enable_provisioning_pen_configuration_radmin_option' => null,
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => null,
         'dss_sign_29182_slide_up_bar_radmin_option' => null,
         'email_template_version' => null,
         'email_template_version_metadata' => null,
         'enable_access_code_generator' => null,
         'enable_access_code_generator_metadata' => null,
+        'enable_account_wide_search' => null,
+        'enable_account_wide_search_metadata' => null,
+        'enable_adm_healthcare' => null,
+        'enable_adm_healthcare_metadata' => null,
+        'enable_advanced_envelopes_search' => null,
+        'enable_advanced_envelopes_search_metadata' => null,
         'enable_advanced_payments' => null,
         'enable_advanced_payments_metadata' => null,
         'enable_advanced_power_forms' => null,
@@ -1004,6 +1126,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => null,
         'enable_calculated_fields' => null,
         'enable_calculated_fields_metadata' => null,
+        'enable_click_plus' => null,
+        'enable_click_plus_conditional_content' => null,
+        'enable_click_plus_conditional_content_meta_data' => null,
+        'enable_click_plus_custom_fields' => null,
+        'enable_click_plus_custom_fields_meta_data' => null,
+        'enable_click_plus_custom_style' => null,
+        'enable_click_plus_custom_style_meta_data' => null,
+        'enable_click_plus_dynamic_content' => null,
+        'enable_click_plus_dynamic_content_meta_data' => null,
+        'enable_click_plus_meta_data' => null,
         'enable_clickwraps' => null,
         'enable_clickwraps_metadata' => null,
         'enable_combined_pdf_download_for_sbs' => null,
@@ -1013,8 +1145,23 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => null,
         'enable_customer_satisfaction_metric_tracking' => null,
         'enable_customer_satisfaction_metric_tracking_metadata' => null,
+        'enable_d_sig_eu_advanced_pens' => null,
+        'enable_d_sig_eu_advanced_pens_metadata' => null,
+        'enable_d_sig_express_pens' => null,
+        'enable_d_sig_express_pens_metadata' => null,
+        'enable_d_sig_id_check_for_aes_pens' => null,
+        'enable_d_sig_id_check_for_aes_pens_metadata' => null,
+        'enable_d_sig_id_check_in_person_for_qes_pens' => null,
+        'enable_d_sig_id_check_in_person_for_qes_pens_metadata' => null,
+        'enable_d_sig_id_check_remote_for_qes_pens' => null,
+        'enable_d_sig_id_check_remote_for_qes_pens_metadata' => null,
+        'enable_d_sig_id_verification_pens' => null,
+        'enable_d_sig_id_verification_pens_metadata' => null,
+        'enable_d_sig_id_verification_premier_pens' => null,
+        'enable_d_sig_id_verification_premier_pens_metadata' => null,
         'enable_ds_pro' => null,
         'enable_ds_pro_metadata' => null,
+        'enable_enforce_tls_emails_setting_metadata' => null,
         'enable_envelope_stamping_by_account_admin' => null,
         'enable_envelope_stamping_by_account_admin_metadata' => null,
         'enable_envelope_stamping_by_ds_admin' => null,
@@ -1029,6 +1176,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => null,
         'enable_id_fx_phone_authentication' => null,
         'enable_id_fx_phone_authentication_metadata' => null,
+        'enable_idfx_phone_auth_signature_auth_status' => null,
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => null,
+        'enable_inbox_browse_views_powered_by_elastic_search' => null,
+        'enable_inbox_browse_views_powered_by_elastic_search_metadata' => null,
+        'enable_inbox_relevance_sort' => null,
+        'enable_inbox_relevance_sort_for_recent_accounts' => null,
+        'enable_inbox_relevance_sort_for_recent_accounts_metadata' => null,
+        'enable_inbox_relevance_sort_metadata' => null,
         'enable_in_browser_editor' => null,
         'enable_in_browser_editor_metadata' => null,
         'enable_key_terms_suggestions_by_document_type' => null,
@@ -1058,6 +1213,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => null,
         'enable_search' => null,
         'enable_search_metadata' => null,
+        'enable_search_service_azure_uri' => null,
+        'enable_search_service_azure_uri_metadata' => null,
         'enable_search_site_specific_api' => null,
         'enable_search_site_specific_api_metadata' => null,
         'enable_search_ui' => null,
@@ -1103,10 +1260,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_transaction_point_metadata' => null,
         'enable_vaulting' => null,
         'enable_vaulting_metadata' => null,
+        'enable_web_forms_separate_user_permissions' => null,
+        'enable_web_forms_separate_user_permissions_metadata' => null,
         'enable_witnessing' => null,
         'enable_witnessing_metadata' => null,
         'enforce_template_name_uniqueness' => null,
         'enforce_template_name_uniqueness_metadata' => null,
+        'enforce_tls_emails' => null,
+        'enforce_tls_emails_metadata' => null,
         'envelope_integration_allowed' => null,
         'envelope_integration_allowed_metadata' => null,
         'envelope_integration_enabled' => null,
@@ -1115,6 +1276,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => null,
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => null,
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => null,
+        'envelope_search_mode' => null,
+        'envelope_search_mode_metadata' => null,
         'envelope_stamping_default_value' => null,
         'envelope_stamping_default_value_metadata' => null,
         'exit_prompt' => null,
@@ -1132,6 +1295,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => null,
         'guided_forms_html_allowed' => null,
         'guided_forms_html_allowed_metadata' => null,
+        'guided_forms_html_conversion_policy' => null,
+        'guided_forms_html_conversion_policy_metadata' => null,
         'has_recipient_connect_claimed_domain' => null,
         'hide_account_address_in_co_c' => null,
         'hide_account_address_in_co_c_metadata' => null,
@@ -1148,6 +1313,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => null,
         'identity_verification' => null,
         'identity_verification_metadata' => null,
+        'idfx_kba_authentication_override' => null,
+        'idfx_kba_authentication_override_metadata' => null,
         'idfx_phone_authentication_override' => null,
         'idfx_phone_authentication_override_metadata' => null,
         'ignore_error_if_anchor_tab_not_found' => null,
@@ -1160,17 +1327,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => null,
         'in_session_suppress_emails' => null,
         'in_session_suppress_emails_metadata' => null,
+        'is_connect_document_fields_enabled' => null,
         'linked_external_primary_accounts' => null,
         'maximum_signing_groups' => null,
         'maximum_signing_groups_metadata' => null,
         'maximum_users_per_signing_group' => null,
         'maximum_users_per_signing_group_metadata' => null,
         'max_number_of_custom_stamps' => null,
+        'merge_mixed_mode_results' => null,
+        'merge_mixed_mode_results_metadata' => null,
         'mobile_session_timeout' => null,
         'mobile_session_timeout_metadata' => null,
         'number_of_active_custom_stamps' => null,
         'opt_in_mobile_signing_v02' => null,
         'opt_in_mobile_signing_v02_metadata' => null,
+        'opt_in_universal_signatures' => null,
         'opt_out_auto_nav_text_and_tab_color_updates' => null,
         'opt_out_auto_nav_text_and_tab_color_updates_metadata' => null,
         'opt_out_new_platform_seal' => null,
@@ -1203,6 +1374,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => null,
         'rsa_verid_ruleset' => null,
         'rsa_verid_user_id' => null,
+        'sbs_transaction_level' => null,
         'self_signed_recipient_email_document' => null,
         'self_signed_recipient_email_document_metadata' => null,
         'self_signed_recipient_email_document_user_override' => null,
@@ -1311,10 +1483,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => null,
         'use_docu_sign_express_signer_certificate' => null,
         'use_docu_sign_express_signer_certificate_metadata' => null,
+        'use_envelope_search_mixed_mode' => null,
+        'use_envelope_search_mixed_mode_metadata' => null,
         'use_multi_app_groups_data' => null,
         'use_multi_app_groups_data_metadata' => null,
         'use_new_blob_for_pdf' => null,
         'use_new_blob_for_pdf_metadata' => null,
+        'use_new_envelope_search' => null,
+        'use_new_envelope_search_metadata' => null,
+        'use_new_envelope_search_only_when_searching_after_date' => null,
+        'use_new_envelope_search_only_when_searching_after_date_metadata' => null,
+        'use_new_envelope_search_only_with_search_term' => null,
+        'use_new_envelope_search_only_with_search_term_metadata' => null,
         'use_safe_signer_certificates' => null,
         'use_safe_signer_certificates_metadata' => null,
         'uses_api' => null,
@@ -1380,20 +1560,28 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'adopt_sig_config_metadata' => 'adoptSigConfigMetadata',
         'advanced_correct' => 'advancedCorrect',
         'advanced_correct_metadata' => 'advancedCorrectMetadata',
+        'advanced_search_enable_tab_field' => 'advancedSearchEnableTabField',
+        'advanced_search_enable_tab_field_metadata' => 'advancedSearchEnableTabFieldMetadata',
+        'advanced_search_enable_template_id_field' => 'advancedSearchEnableTemplateIdField',
+        'advanced_search_enable_template_id_field_metadata' => 'advancedSearchEnableTemplateIdFieldMetadata',
+        'advanced_search_enable_template_name_field' => 'advancedSearchEnableTemplateNameField',
+        'advanced_search_enable_template_name_field_metadata' => 'advancedSearchEnableTemplateNameFieldMetadata',
         'allow_access_code_format' => 'allowAccessCodeFormat',
         'allow_access_code_format_metadata' => 'allowAccessCodeFormatMetadata',
         'allow_account_management_granular' => 'allowAccountManagementGranular',
         'allow_account_management_granular_metadata' => 'allowAccountManagementGranularMetadata',
         'allow_account_member_name_change' => 'allowAccountMemberNameChange',
         'allow_account_member_name_change_metadata' => 'allowAccountMemberNameChangeMetadata',
+        'allow_ace' => 'allowACE',
+        'allow_ace_metadata' => 'allowACEMetadata',
         'allow_advanced_recipient_routing_conditional' => 'allowAdvancedRecipientRoutingConditional',
         'allow_advanced_recipient_routing_conditional_metadata' => 'allowAdvancedRecipientRoutingConditionalMetadata',
         'allow_agent_name_email_edit' => 'allowAgentNameEmailEdit',
         'allow_agent_name_email_edit_metadata' => 'allowAgentNameEmailEditMetadata',
         'allow_agreement_actions' => 'allowAgreementActions',
         'allow_agreement_actions_metadata' => 'allowAgreementActionsMetadata',
-        'allow_agreement_orchestration_workflows' => 'allowAgreementOrchestrationWorkflows',
-        'allow_agreement_orchestration_workflows_metadata' => 'allowAgreementOrchestrationWorkflowsMetadata',
+        'allow_agreement_orchestrations' => 'allowAgreementOrchestrations',
+        'allow_agreement_orchestrations_metadata' => 'allowAgreementOrchestrationsMetadata',
         'allow_auto_nav_settings' => 'allowAutoNavSettings',
         'allow_auto_nav_settings_metadata' => 'allowAutoNavSettingsMetadata',
         'allow_auto_tagging' => 'allowAutoTagging',
@@ -1403,6 +1591,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_cd_withdraw' => 'allowCDWithdraw',
         'allow_cd_withdraw_metadata' => 'allowCDWithdrawMetadata',
         'allow_connect_http_listener_configs' => 'allowConnectHttpListenerConfigs',
+        'allow_connect_identity_verification_ui' => 'AllowConnectIdentityVerificationUI',
         'allow_connect_o_auth_ui' => 'allowConnectOAuthUI',
         'allow_connect_send_finish_later' => 'allowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata' => 'allowConnectSendFinishLaterMetadata',
@@ -1423,6 +1612,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_documents_on_signed_envelopes_metadata' => 'allowDocumentsOnSignedEnvelopesMetadata',
         'allow_document_visibility' => 'allowDocumentVisibility',
         'allow_document_visibility_metadata' => 'allowDocumentVisibilityMetadata',
+        'allow_editing_envelopes_on_behalf_of_others' => 'allowEditingEnvelopesOnBehalfOfOthers',
+        'allow_editing_envelopes_on_behalf_of_others_metadata' => 'allowEditingEnvelopesOnBehalfOfOthersMetadata',
         'allow_e_hanko_stamps' => 'allowEHankoStamps',
         'allow_e_hanko_stamps_metadata' => 'allowEHankoStampsMetadata',
         'allow_e_note_e_original' => 'allowENoteEOriginal',
@@ -1451,6 +1642,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_for_eu_qualified_signatures_metadata' => 'allowIDVForEUQualifiedSignaturesMetadata',
         'allow_idv_level1' => 'allowIDVLevel1',
         'allow_idv_level1_metadata' => 'allowIDVLevel1Metadata',
+        'allow_idv_level1_trial' => 'allowIDVLevel1Trial',
+        'allow_idv_level1_trial_metadata' => 'allowIDVLevel1TrialMetadata',
         'allow_idv_level2' => 'allowIDVLevel2',
         'allow_idv_level2_metadata' => 'allowIDVLevel2Metadata',
         'allow_idv_level3' => 'allowIDVLevel3',
@@ -1484,6 +1677,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_open_trust_signer_certificate' => 'allowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata' => 'allowOpenTrustSignerCertificateMetadata',
         'allow_organization_docusign_monitor' => 'allowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_free' => 'allowOrganizationDocusignMonitorFree',
+        'allow_organization_docusign_monitor_free_metadata' => 'allowOrganizationDocusignMonitorFreeMetadata',
         'allow_organization_docusign_monitor_metadata' => 'allowOrganizationDocusignMonitorMetadata',
         'allow_organization_domain_user_management' => 'allowOrganizationDomainUserManagement',
         'allow_organization_domain_user_management_metadata' => 'allowOrganizationDomainUserManagementMetadata',
@@ -1561,12 +1756,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'allowSupplementalDocumentsMetadata',
         'allow_third_party_electronic_notary' => 'allowThirdPartyElectronicNotary',
         'allow_third_party_electronic_notary_metadata' => 'allowThirdPartyElectronicNotaryMetadata',
+        'allow_transactions_workspace' => 'allowTransactionsWorkspace',
+        'allow_transactions_workspace_metadata' => 'allowTransactionsWorkspaceMetadata',
+        'allow_transactions_workspace_original' => 'allowTransactionsWorkspaceOriginal',
+        'allow_transactions_workspace_original_metadata' => 'allowTransactionsWorkspaceOriginalMetadata',
         'allow_users_to_access_directory' => 'allowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'allowValueInsights',
         'allow_value_insights_metadata' => 'allowValueInsightsMetadata',
         'allow_web_forms' => 'allowWebForms',
         'allow_web_forms_metadata' => 'allowWebFormsMetadata',
+        'allow_whats_app_delivery' => 'allowWhatsAppDelivery',
+        'allow_whats_app_delivery_metadata' => 'allowWhatsAppDeliveryMetadata',
         'anchor_population_scope' => 'anchorPopulationScope',
         'anchor_population_scope_metadata' => 'anchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'anchorTagVersionedPlacementEnabled',
@@ -1618,6 +1819,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => 'convertPdfFieldsMetadata',
         'data_population_scope' => 'dataPopulationScope',
         'data_population_scope_metadata' => 'dataPopulationScopeMetadata',
+        'default_to_advanced_envelopes_filter_form' => 'defaultToAdvancedEnvelopesFilterForm',
+        'default_to_advanced_envelopes_filter_form_metadata' => 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'disableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'disableAutoTemplateMatchingMetadata',
         'disable_mobile_app' => 'disableMobileApp',
@@ -1648,12 +1851,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => 'documentRetentionPurgeTabs',
         'document_visibility' => 'documentVisibility',
         'document_visibility_metadata' => 'documentVisibilityMetadata',
+        'draft_envelope_retention' => 'draftEnvelopeRetention',
+        'draft_envelope_retention_metadata' => 'draftEnvelopeRetentionMetadata',
+        'dss_enable_provisioning_pen_configuration_radmin_option' => 'dss_EnableProvisioningPenConfiguration_RadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version' => 'emailTemplateVersion',
         'email_template_version_metadata' => 'emailTemplateVersionMetadata',
         'enable_access_code_generator' => 'enableAccessCodeGenerator',
         'enable_access_code_generator_metadata' => 'enableAccessCodeGeneratorMetadata',
+        'enable_account_wide_search' => 'enableAccountWideSearch',
+        'enable_account_wide_search_metadata' => 'enableAccountWideSearchMetadata',
+        'enable_adm_healthcare' => 'enableAdmHealthcare',
+        'enable_adm_healthcare_metadata' => 'enableAdmHealthcareMetadata',
+        'enable_advanced_envelopes_search' => 'enableAdvancedEnvelopesSearch',
+        'enable_advanced_envelopes_search_metadata' => 'enableAdvancedEnvelopesSearchMetadata',
         'enable_advanced_payments' => 'enableAdvancedPayments',
         'enable_advanced_payments_metadata' => 'enableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'enableAdvancedPowerForms',
@@ -1668,6 +1880,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'enableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'enableCalculatedFields',
         'enable_calculated_fields_metadata' => 'enableCalculatedFieldsMetadata',
+        'enable_click_plus' => 'enableClickPlus',
+        'enable_click_plus_conditional_content' => 'enableClickPlusConditionalContent',
+        'enable_click_plus_conditional_content_meta_data' => 'enableClickPlusConditionalContentMetaData',
+        'enable_click_plus_custom_fields' => 'enableClickPlusCustomFields',
+        'enable_click_plus_custom_fields_meta_data' => 'enableClickPlusCustomFieldsMetaData',
+        'enable_click_plus_custom_style' => 'enableClickPlusCustomStyle',
+        'enable_click_plus_custom_style_meta_data' => 'enableClickPlusCustomStyleMetaData',
+        'enable_click_plus_dynamic_content' => 'enableClickPlusDynamicContent',
+        'enable_click_plus_dynamic_content_meta_data' => 'enableClickPlusDynamicContentMetaData',
+        'enable_click_plus_meta_data' => 'enableClickPlusMetaData',
         'enable_clickwraps' => 'enableClickwraps',
         'enable_clickwraps_metadata' => 'enableClickwrapsMetadata',
         'enable_combined_pdf_download_for_sbs' => 'enableCombinedPDFDownloadForSBS',
@@ -1677,8 +1899,23 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'enableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'enableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata' => 'enableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_d_sig_eu_advanced_pens' => 'enableDSigEUAdvancedPens',
+        'enable_d_sig_eu_advanced_pens_metadata' => 'enableDSigEUAdvancedPensMetadata',
+        'enable_d_sig_express_pens' => 'enableDSigExpressPens',
+        'enable_d_sig_express_pens_metadata' => 'enableDSigExpressPensMetadata',
+        'enable_d_sig_id_check_for_aes_pens' => 'enableDSigIDCheckForAESPens',
+        'enable_d_sig_id_check_for_aes_pens_metadata' => 'enableDSigIDCheckForAESPensMetadata',
+        'enable_d_sig_id_check_in_person_for_qes_pens' => 'enableDSigIDCheckInPersonForQESPens',
+        'enable_d_sig_id_check_in_person_for_qes_pens_metadata' => 'enableDSigIDCheckInPersonForQESPensMetadata',
+        'enable_d_sig_id_check_remote_for_qes_pens' => 'enableDSigIDCheckRemoteForQESPens',
+        'enable_d_sig_id_check_remote_for_qes_pens_metadata' => 'enableDSigIDCheckRemoteForQESPensMetadata',
+        'enable_d_sig_id_verification_pens' => 'enableDSigIDVerificationPens',
+        'enable_d_sig_id_verification_pens_metadata' => 'enableDSigIDVerificationPensMetadata',
+        'enable_d_sig_id_verification_premier_pens' => 'enableDSigIDVerificationPremierPens',
+        'enable_d_sig_id_verification_premier_pens_metadata' => 'enableDSigIDVerificationPremierPensMetadata',
         'enable_ds_pro' => 'enableDSPro',
         'enable_ds_pro_metadata' => 'enableDSProMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => 'enableEnforceTlsEmailsSettingMetadata',
         'enable_envelope_stamping_by_account_admin' => 'enableEnvelopeStampingByAccountAdmin',
         'enable_envelope_stamping_by_account_admin_metadata' => 'enableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin' => 'enableEnvelopeStampingByDSAdmin',
@@ -1693,6 +1930,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => 'enableIDFxIntuitKBAMetadata',
         'enable_id_fx_phone_authentication' => 'enableIDFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'enableIDFxPhoneAuthenticationMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => 'enableIdfxPhoneAuthSignatureAuthStatus',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => 'enableIdfxPhoneAuthSignatureAuthStatusMetadata',
+        'enable_inbox_browse_views_powered_by_elastic_search' => 'enableInboxBrowseViewsPoweredByElasticSearch',
+        'enable_inbox_browse_views_powered_by_elastic_search_metadata' => 'enableInboxBrowseViewsPoweredByElasticSearchMetadata',
+        'enable_inbox_relevance_sort' => 'enableInboxRelevanceSort',
+        'enable_inbox_relevance_sort_for_recent_accounts' => 'enableInboxRelevanceSortForRecentAccounts',
+        'enable_inbox_relevance_sort_for_recent_accounts_metadata' => 'enableInboxRelevanceSortForRecentAccountsMetadata',
+        'enable_inbox_relevance_sort_metadata' => 'enableInboxRelevanceSortMetadata',
         'enable_in_browser_editor' => 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'enableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
@@ -1722,6 +1967,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => 'enableScheduledReleaseMetadata',
         'enable_search' => 'enableSearch',
         'enable_search_metadata' => 'enableSearchMetadata',
+        'enable_search_service_azure_uri' => 'enableSearchServiceAzureUri',
+        'enable_search_service_azure_uri_metadata' => 'enableSearchServiceAzureUriMetadata',
         'enable_search_site_specific_api' => 'enableSearchSiteSpecificApi',
         'enable_search_site_specific_api_metadata' => 'enableSearchSiteSpecificApiMetadata',
         'enable_search_ui' => 'enableSearchUI',
@@ -1767,10 +2014,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_transaction_point_metadata' => 'enableTransactionPointMetadata',
         'enable_vaulting' => 'enableVaulting',
         'enable_vaulting_metadata' => 'enableVaultingMetadata',
+        'enable_web_forms_separate_user_permissions' => 'enableWebFormsSeparateUserPermissions',
+        'enable_web_forms_separate_user_permissions_metadata' => 'enableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing' => 'enableWitnessing',
         'enable_witnessing_metadata' => 'enableWitnessingMetadata',
         'enforce_template_name_uniqueness' => 'enforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata' => 'enforceTemplateNameUniquenessMetadata',
+        'enforce_tls_emails' => 'enforceTlsEmails',
+        'enforce_tls_emails_metadata' => 'enforceTlsEmailsMetadata',
         'envelope_integration_allowed' => 'envelopeIntegrationAllowed',
         'envelope_integration_allowed_metadata' => 'envelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled' => 'envelopeIntegrationEnabled',
@@ -1779,6 +2030,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
+        'envelope_search_mode' => 'envelopeSearchMode',
+        'envelope_search_mode_metadata' => 'envelopeSearchModeMetadata',
         'envelope_stamping_default_value' => 'envelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'envelopeStampingDefaultValueMetadata',
         'exit_prompt' => 'exitPrompt',
@@ -1796,6 +2049,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => 'finishReminderMetadata',
         'guided_forms_html_allowed' => 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'guidedFormsHtmlAllowedMetadata',
+        'guided_forms_html_conversion_policy' => 'guidedFormsHtmlConversionPolicy',
+        'guided_forms_html_conversion_policy_metadata' => 'guidedFormsHtmlConversionPolicyMetadata',
         'has_recipient_connect_claimed_domain' => 'hasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'hideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'hideAccountAddressInCoCMetadata',
@@ -1812,6 +2067,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'idCheckRequiredMetadata',
         'identity_verification' => 'identityVerification',
         'identity_verification_metadata' => 'identityVerificationMetadata',
+        'idfx_kba_authentication_override' => 'idfxKBAAuthenticationOverride',
+        'idfx_kba_authentication_override_metadata' => 'idfxKBAAuthenticationOverrideMetadata',
         'idfx_phone_authentication_override' => 'idfxPhoneAuthenticationOverride',
         'idfx_phone_authentication_override_metadata' => 'idfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'ignoreErrorIfAnchorTabNotFound',
@@ -1824,17 +2081,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => 'inSessionEnabledMetadata',
         'in_session_suppress_emails' => 'inSessionSuppressEmails',
         'in_session_suppress_emails_metadata' => 'inSessionSuppressEmailsMetadata',
+        'is_connect_document_fields_enabled' => 'isConnectDocumentFieldsEnabled',
         'linked_external_primary_accounts' => 'linkedExternalPrimaryAccounts',
         'maximum_signing_groups' => 'maximumSigningGroups',
         'maximum_signing_groups_metadata' => 'maximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'maximumUsersPerSigningGroup',
         'maximum_users_per_signing_group_metadata' => 'maximumUsersPerSigningGroupMetadata',
         'max_number_of_custom_stamps' => 'maxNumberOfCustomStamps',
+        'merge_mixed_mode_results' => 'mergeMixedModeResults',
+        'merge_mixed_mode_results_metadata' => 'mergeMixedModeResultsMetadata',
         'mobile_session_timeout' => 'mobileSessionTimeout',
         'mobile_session_timeout_metadata' => 'mobileSessionTimeoutMetadata',
         'number_of_active_custom_stamps' => 'numberOfActiveCustomStamps',
         'opt_in_mobile_signing_v02' => 'optInMobileSigningV02',
         'opt_in_mobile_signing_v02_metadata' => 'optInMobileSigningV02Metadata',
+        'opt_in_universal_signatures' => 'optInUniversalSignatures',
         'opt_out_auto_nav_text_and_tab_color_updates' => 'optOutAutoNavTextAndTabColorUpdates',
         'opt_out_auto_nav_text_and_tab_color_updates_metadata' => 'optOutAutoNavTextAndTabColorUpdatesMetadata',
         'opt_out_new_platform_seal' => 'optOutNewPlatformSeal',
@@ -1867,6 +2128,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => 'rsaVeridPassword',
         'rsa_verid_ruleset' => 'rsaVeridRuleset',
         'rsa_verid_user_id' => 'rsaVeridUserId',
+        'sbs_transaction_level' => 'sbsTransactionLevel',
         'self_signed_recipient_email_document' => 'selfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata' => 'selfSignedRecipientEmailDocumentMetadata',
         'self_signed_recipient_email_document_user_override' => 'selfSignedRecipientEmailDocumentUserOverride',
@@ -1975,10 +2237,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => 'useDerivedKeysMetadata',
         'use_docu_sign_express_signer_certificate' => 'useDocuSignExpressSignerCertificate',
         'use_docu_sign_express_signer_certificate_metadata' => 'useDocuSignExpressSignerCertificateMetadata',
+        'use_envelope_search_mixed_mode' => 'useEnvelopeSearchMixedMode',
+        'use_envelope_search_mixed_mode_metadata' => 'useEnvelopeSearchMixedModeMetadata',
         'use_multi_app_groups_data' => 'useMultiAppGroupsData',
         'use_multi_app_groups_data_metadata' => 'useMultiAppGroupsDataMetadata',
         'use_new_blob_for_pdf' => 'useNewBlobForPdf',
         'use_new_blob_for_pdf_metadata' => 'useNewBlobForPdfMetadata',
+        'use_new_envelope_search' => 'useNewEnvelopeSearch',
+        'use_new_envelope_search_metadata' => 'useNewEnvelopeSearchMetadata',
+        'use_new_envelope_search_only_when_searching_after_date' => 'useNewEnvelopeSearchOnlyWhenSearchingAfterDate',
+        'use_new_envelope_search_only_when_searching_after_date_metadata' => 'useNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata',
+        'use_new_envelope_search_only_with_search_term' => 'useNewEnvelopeSearchOnlyWithSearchTerm',
+        'use_new_envelope_search_only_with_search_term_metadata' => 'useNewEnvelopeSearchOnlyWithSearchTermMetadata',
         'use_safe_signer_certificates' => 'useSAFESignerCertificates',
         'use_safe_signer_certificates_metadata' => 'useSAFESignerCertificatesMetadata',
         'uses_api' => 'usesAPI',
@@ -2023,20 +2293,28 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'adopt_sig_config_metadata' => 'setAdoptSigConfigMetadata',
         'advanced_correct' => 'setAdvancedCorrect',
         'advanced_correct_metadata' => 'setAdvancedCorrectMetadata',
+        'advanced_search_enable_tab_field' => 'setAdvancedSearchEnableTabField',
+        'advanced_search_enable_tab_field_metadata' => 'setAdvancedSearchEnableTabFieldMetadata',
+        'advanced_search_enable_template_id_field' => 'setAdvancedSearchEnableTemplateIdField',
+        'advanced_search_enable_template_id_field_metadata' => 'setAdvancedSearchEnableTemplateIdFieldMetadata',
+        'advanced_search_enable_template_name_field' => 'setAdvancedSearchEnableTemplateNameField',
+        'advanced_search_enable_template_name_field_metadata' => 'setAdvancedSearchEnableTemplateNameFieldMetadata',
         'allow_access_code_format' => 'setAllowAccessCodeFormat',
         'allow_access_code_format_metadata' => 'setAllowAccessCodeFormatMetadata',
         'allow_account_management_granular' => 'setAllowAccountManagementGranular',
         'allow_account_management_granular_metadata' => 'setAllowAccountManagementGranularMetadata',
         'allow_account_member_name_change' => 'setAllowAccountMemberNameChange',
         'allow_account_member_name_change_metadata' => 'setAllowAccountMemberNameChangeMetadata',
+        'allow_ace' => 'setAllowAce',
+        'allow_ace_metadata' => 'setAllowAceMetadata',
         'allow_advanced_recipient_routing_conditional' => 'setAllowAdvancedRecipientRoutingConditional',
         'allow_advanced_recipient_routing_conditional_metadata' => 'setAllowAdvancedRecipientRoutingConditionalMetadata',
         'allow_agent_name_email_edit' => 'setAllowAgentNameEmailEdit',
         'allow_agent_name_email_edit_metadata' => 'setAllowAgentNameEmailEditMetadata',
         'allow_agreement_actions' => 'setAllowAgreementActions',
         'allow_agreement_actions_metadata' => 'setAllowAgreementActionsMetadata',
-        'allow_agreement_orchestration_workflows' => 'setAllowAgreementOrchestrationWorkflows',
-        'allow_agreement_orchestration_workflows_metadata' => 'setAllowAgreementOrchestrationWorkflowsMetadata',
+        'allow_agreement_orchestrations' => 'setAllowAgreementOrchestrations',
+        'allow_agreement_orchestrations_metadata' => 'setAllowAgreementOrchestrationsMetadata',
         'allow_auto_nav_settings' => 'setAllowAutoNavSettings',
         'allow_auto_nav_settings_metadata' => 'setAllowAutoNavSettingsMetadata',
         'allow_auto_tagging' => 'setAllowAutoTagging',
@@ -2046,6 +2324,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_cd_withdraw' => 'setAllowCdWithdraw',
         'allow_cd_withdraw_metadata' => 'setAllowCdWithdrawMetadata',
         'allow_connect_http_listener_configs' => 'setAllowConnectHttpListenerConfigs',
+        'allow_connect_identity_verification_ui' => 'setAllowConnectIdentityVerificationUi',
         'allow_connect_o_auth_ui' => 'setAllowConnectOAuthUi',
         'allow_connect_send_finish_later' => 'setAllowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata' => 'setAllowConnectSendFinishLaterMetadata',
@@ -2066,6 +2345,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_documents_on_signed_envelopes_metadata' => 'setAllowDocumentsOnSignedEnvelopesMetadata',
         'allow_document_visibility' => 'setAllowDocumentVisibility',
         'allow_document_visibility_metadata' => 'setAllowDocumentVisibilityMetadata',
+        'allow_editing_envelopes_on_behalf_of_others' => 'setAllowEditingEnvelopesOnBehalfOfOthers',
+        'allow_editing_envelopes_on_behalf_of_others_metadata' => 'setAllowEditingEnvelopesOnBehalfOfOthersMetadata',
         'allow_e_hanko_stamps' => 'setAllowEHankoStamps',
         'allow_e_hanko_stamps_metadata' => 'setAllowEHankoStampsMetadata',
         'allow_e_note_e_original' => 'setAllowENoteEOriginal',
@@ -2094,6 +2375,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_for_eu_qualified_signatures_metadata' => 'setAllowIdvForEuQualifiedSignaturesMetadata',
         'allow_idv_level1' => 'setAllowIdvLevel1',
         'allow_idv_level1_metadata' => 'setAllowIdvLevel1Metadata',
+        'allow_idv_level1_trial' => 'setAllowIdvLevel1Trial',
+        'allow_idv_level1_trial_metadata' => 'setAllowIdvLevel1TrialMetadata',
         'allow_idv_level2' => 'setAllowIdvLevel2',
         'allow_idv_level2_metadata' => 'setAllowIdvLevel2Metadata',
         'allow_idv_level3' => 'setAllowIdvLevel3',
@@ -2127,6 +2410,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_open_trust_signer_certificate' => 'setAllowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata' => 'setAllowOpenTrustSignerCertificateMetadata',
         'allow_organization_docusign_monitor' => 'setAllowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_free' => 'setAllowOrganizationDocusignMonitorFree',
+        'allow_organization_docusign_monitor_free_metadata' => 'setAllowOrganizationDocusignMonitorFreeMetadata',
         'allow_organization_docusign_monitor_metadata' => 'setAllowOrganizationDocusignMonitorMetadata',
         'allow_organization_domain_user_management' => 'setAllowOrganizationDomainUserManagement',
         'allow_organization_domain_user_management_metadata' => 'setAllowOrganizationDomainUserManagementMetadata',
@@ -2204,12 +2489,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'setAllowSupplementalDocumentsMetadata',
         'allow_third_party_electronic_notary' => 'setAllowThirdPartyElectronicNotary',
         'allow_third_party_electronic_notary_metadata' => 'setAllowThirdPartyElectronicNotaryMetadata',
+        'allow_transactions_workspace' => 'setAllowTransactionsWorkspace',
+        'allow_transactions_workspace_metadata' => 'setAllowTransactionsWorkspaceMetadata',
+        'allow_transactions_workspace_original' => 'setAllowTransactionsWorkspaceOriginal',
+        'allow_transactions_workspace_original_metadata' => 'setAllowTransactionsWorkspaceOriginalMetadata',
         'allow_users_to_access_directory' => 'setAllowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'setAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'setAllowValueInsights',
         'allow_value_insights_metadata' => 'setAllowValueInsightsMetadata',
         'allow_web_forms' => 'setAllowWebForms',
         'allow_web_forms_metadata' => 'setAllowWebFormsMetadata',
+        'allow_whats_app_delivery' => 'setAllowWhatsAppDelivery',
+        'allow_whats_app_delivery_metadata' => 'setAllowWhatsAppDeliveryMetadata',
         'anchor_population_scope' => 'setAnchorPopulationScope',
         'anchor_population_scope_metadata' => 'setAnchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'setAnchorTagVersionedPlacementEnabled',
@@ -2261,6 +2552,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => 'setConvertPdfFieldsMetadata',
         'data_population_scope' => 'setDataPopulationScope',
         'data_population_scope_metadata' => 'setDataPopulationScopeMetadata',
+        'default_to_advanced_envelopes_filter_form' => 'setDefaultToAdvancedEnvelopesFilterForm',
+        'default_to_advanced_envelopes_filter_form_metadata' => 'setDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'setDisableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'setDisableAutoTemplateMatchingMetadata',
         'disable_mobile_app' => 'setDisableMobileApp',
@@ -2291,12 +2584,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => 'setDocumentRetentionPurgeTabs',
         'document_visibility' => 'setDocumentVisibility',
         'document_visibility_metadata' => 'setDocumentVisibilityMetadata',
+        'draft_envelope_retention' => 'setDraftEnvelopeRetention',
+        'draft_envelope_retention_metadata' => 'setDraftEnvelopeRetentionMetadata',
+        'dss_enable_provisioning_pen_configuration_radmin_option' => 'setDssEnableProvisioningPenConfigurationRadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'setDssSign28411EnableLeavePagePromptRadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'setDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'setEmailTemplateVersion',
         'email_template_version_metadata' => 'setEmailTemplateVersionMetadata',
         'enable_access_code_generator' => 'setEnableAccessCodeGenerator',
         'enable_access_code_generator_metadata' => 'setEnableAccessCodeGeneratorMetadata',
+        'enable_account_wide_search' => 'setEnableAccountWideSearch',
+        'enable_account_wide_search_metadata' => 'setEnableAccountWideSearchMetadata',
+        'enable_adm_healthcare' => 'setEnableAdmHealthcare',
+        'enable_adm_healthcare_metadata' => 'setEnableAdmHealthcareMetadata',
+        'enable_advanced_envelopes_search' => 'setEnableAdvancedEnvelopesSearch',
+        'enable_advanced_envelopes_search_metadata' => 'setEnableAdvancedEnvelopesSearchMetadata',
         'enable_advanced_payments' => 'setEnableAdvancedPayments',
         'enable_advanced_payments_metadata' => 'setEnableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'setEnableAdvancedPowerForms',
@@ -2311,6 +2613,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'setEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'setEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'setEnableCalculatedFieldsMetadata',
+        'enable_click_plus' => 'setEnableClickPlus',
+        'enable_click_plus_conditional_content' => 'setEnableClickPlusConditionalContent',
+        'enable_click_plus_conditional_content_meta_data' => 'setEnableClickPlusConditionalContentMetaData',
+        'enable_click_plus_custom_fields' => 'setEnableClickPlusCustomFields',
+        'enable_click_plus_custom_fields_meta_data' => 'setEnableClickPlusCustomFieldsMetaData',
+        'enable_click_plus_custom_style' => 'setEnableClickPlusCustomStyle',
+        'enable_click_plus_custom_style_meta_data' => 'setEnableClickPlusCustomStyleMetaData',
+        'enable_click_plus_dynamic_content' => 'setEnableClickPlusDynamicContent',
+        'enable_click_plus_dynamic_content_meta_data' => 'setEnableClickPlusDynamicContentMetaData',
+        'enable_click_plus_meta_data' => 'setEnableClickPlusMetaData',
         'enable_clickwraps' => 'setEnableClickwraps',
         'enable_clickwraps_metadata' => 'setEnableClickwrapsMetadata',
         'enable_combined_pdf_download_for_sbs' => 'setEnableCombinedPdfDownloadForSbs',
@@ -2320,8 +2632,23 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'setEnableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'setEnableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata' => 'setEnableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_d_sig_eu_advanced_pens' => 'setEnableDSigEuAdvancedPens',
+        'enable_d_sig_eu_advanced_pens_metadata' => 'setEnableDSigEuAdvancedPensMetadata',
+        'enable_d_sig_express_pens' => 'setEnableDSigExpressPens',
+        'enable_d_sig_express_pens_metadata' => 'setEnableDSigExpressPensMetadata',
+        'enable_d_sig_id_check_for_aes_pens' => 'setEnableDSigIdCheckForAesPens',
+        'enable_d_sig_id_check_for_aes_pens_metadata' => 'setEnableDSigIdCheckForAesPensMetadata',
+        'enable_d_sig_id_check_in_person_for_qes_pens' => 'setEnableDSigIdCheckInPersonForQesPens',
+        'enable_d_sig_id_check_in_person_for_qes_pens_metadata' => 'setEnableDSigIdCheckInPersonForQesPensMetadata',
+        'enable_d_sig_id_check_remote_for_qes_pens' => 'setEnableDSigIdCheckRemoteForQesPens',
+        'enable_d_sig_id_check_remote_for_qes_pens_metadata' => 'setEnableDSigIdCheckRemoteForQesPensMetadata',
+        'enable_d_sig_id_verification_pens' => 'setEnableDSigIdVerificationPens',
+        'enable_d_sig_id_verification_pens_metadata' => 'setEnableDSigIdVerificationPensMetadata',
+        'enable_d_sig_id_verification_premier_pens' => 'setEnableDSigIdVerificationPremierPens',
+        'enable_d_sig_id_verification_premier_pens_metadata' => 'setEnableDSigIdVerificationPremierPensMetadata',
         'enable_ds_pro' => 'setEnableDsPro',
         'enable_ds_pro_metadata' => 'setEnableDsProMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => 'setEnableEnforceTlsEmailsSettingMetadata',
         'enable_envelope_stamping_by_account_admin' => 'setEnableEnvelopeStampingByAccountAdmin',
         'enable_envelope_stamping_by_account_admin_metadata' => 'setEnableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin' => 'setEnableEnvelopeStampingByDsAdmin',
@@ -2336,6 +2663,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => 'setEnableIdFxIntuitKbaMetadata',
         'enable_id_fx_phone_authentication' => 'setEnableIdFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'setEnableIdFxPhoneAuthenticationMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => 'setEnableIdfxPhoneAuthSignatureAuthStatus',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => 'setEnableIdfxPhoneAuthSignatureAuthStatusMetadata',
+        'enable_inbox_browse_views_powered_by_elastic_search' => 'setEnableInboxBrowseViewsPoweredByElasticSearch',
+        'enable_inbox_browse_views_powered_by_elastic_search_metadata' => 'setEnableInboxBrowseViewsPoweredByElasticSearchMetadata',
+        'enable_inbox_relevance_sort' => 'setEnableInboxRelevanceSort',
+        'enable_inbox_relevance_sort_for_recent_accounts' => 'setEnableInboxRelevanceSortForRecentAccounts',
+        'enable_inbox_relevance_sort_for_recent_accounts_metadata' => 'setEnableInboxRelevanceSortForRecentAccountsMetadata',
+        'enable_inbox_relevance_sort_metadata' => 'setEnableInboxRelevanceSortMetadata',
         'enable_in_browser_editor' => 'setEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'setEnableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
@@ -2365,6 +2700,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => 'setEnableScheduledReleaseMetadata',
         'enable_search' => 'setEnableSearch',
         'enable_search_metadata' => 'setEnableSearchMetadata',
+        'enable_search_service_azure_uri' => 'setEnableSearchServiceAzureUri',
+        'enable_search_service_azure_uri_metadata' => 'setEnableSearchServiceAzureUriMetadata',
         'enable_search_site_specific_api' => 'setEnableSearchSiteSpecificApi',
         'enable_search_site_specific_api_metadata' => 'setEnableSearchSiteSpecificApiMetadata',
         'enable_search_ui' => 'setEnableSearchUi',
@@ -2410,10 +2747,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_transaction_point_metadata' => 'setEnableTransactionPointMetadata',
         'enable_vaulting' => 'setEnableVaulting',
         'enable_vaulting_metadata' => 'setEnableVaultingMetadata',
+        'enable_web_forms_separate_user_permissions' => 'setEnableWebFormsSeparateUserPermissions',
+        'enable_web_forms_separate_user_permissions_metadata' => 'setEnableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing' => 'setEnableWitnessing',
         'enable_witnessing_metadata' => 'setEnableWitnessingMetadata',
         'enforce_template_name_uniqueness' => 'setEnforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata' => 'setEnforceTemplateNameUniquenessMetadata',
+        'enforce_tls_emails' => 'setEnforceTlsEmails',
+        'enforce_tls_emails_metadata' => 'setEnforceTlsEmailsMetadata',
         'envelope_integration_allowed' => 'setEnvelopeIntegrationAllowed',
         'envelope_integration_allowed_metadata' => 'setEnvelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled' => 'setEnvelopeIntegrationEnabled',
@@ -2422,6 +2763,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'setEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabled',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'setEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabledMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'setEnvelopeLimitsTotalDocumentSizeAllowedInMbMetadata',
+        'envelope_search_mode' => 'setEnvelopeSearchMode',
+        'envelope_search_mode_metadata' => 'setEnvelopeSearchModeMetadata',
         'envelope_stamping_default_value' => 'setEnvelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'setEnvelopeStampingDefaultValueMetadata',
         'exit_prompt' => 'setExitPrompt',
@@ -2439,6 +2782,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => 'setFinishReminderMetadata',
         'guided_forms_html_allowed' => 'setGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'setGuidedFormsHtmlAllowedMetadata',
+        'guided_forms_html_conversion_policy' => 'setGuidedFormsHtmlConversionPolicy',
+        'guided_forms_html_conversion_policy_metadata' => 'setGuidedFormsHtmlConversionPolicyMetadata',
         'has_recipient_connect_claimed_domain' => 'setHasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'setHideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'setHideAccountAddressInCoCMetadata',
@@ -2455,6 +2800,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'setIdCheckRequiredMetadata',
         'identity_verification' => 'setIdentityVerification',
         'identity_verification_metadata' => 'setIdentityVerificationMetadata',
+        'idfx_kba_authentication_override' => 'setIdfxKbaAuthenticationOverride',
+        'idfx_kba_authentication_override_metadata' => 'setIdfxKbaAuthenticationOverrideMetadata',
         'idfx_phone_authentication_override' => 'setIdfxPhoneAuthenticationOverride',
         'idfx_phone_authentication_override_metadata' => 'setIdfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'setIgnoreErrorIfAnchorTabNotFound',
@@ -2467,17 +2814,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => 'setInSessionEnabledMetadata',
         'in_session_suppress_emails' => 'setInSessionSuppressEmails',
         'in_session_suppress_emails_metadata' => 'setInSessionSuppressEmailsMetadata',
+        'is_connect_document_fields_enabled' => 'setIsConnectDocumentFieldsEnabled',
         'linked_external_primary_accounts' => 'setLinkedExternalPrimaryAccounts',
         'maximum_signing_groups' => 'setMaximumSigningGroups',
         'maximum_signing_groups_metadata' => 'setMaximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'setMaximumUsersPerSigningGroup',
         'maximum_users_per_signing_group_metadata' => 'setMaximumUsersPerSigningGroupMetadata',
         'max_number_of_custom_stamps' => 'setMaxNumberOfCustomStamps',
+        'merge_mixed_mode_results' => 'setMergeMixedModeResults',
+        'merge_mixed_mode_results_metadata' => 'setMergeMixedModeResultsMetadata',
         'mobile_session_timeout' => 'setMobileSessionTimeout',
         'mobile_session_timeout_metadata' => 'setMobileSessionTimeoutMetadata',
         'number_of_active_custom_stamps' => 'setNumberOfActiveCustomStamps',
         'opt_in_mobile_signing_v02' => 'setOptInMobileSigningV02',
         'opt_in_mobile_signing_v02_metadata' => 'setOptInMobileSigningV02Metadata',
+        'opt_in_universal_signatures' => 'setOptInUniversalSignatures',
         'opt_out_auto_nav_text_and_tab_color_updates' => 'setOptOutAutoNavTextAndTabColorUpdates',
         'opt_out_auto_nav_text_and_tab_color_updates_metadata' => 'setOptOutAutoNavTextAndTabColorUpdatesMetadata',
         'opt_out_new_platform_seal' => 'setOptOutNewPlatformSeal',
@@ -2510,6 +2861,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => 'setRsaVeridPassword',
         'rsa_verid_ruleset' => 'setRsaVeridRuleset',
         'rsa_verid_user_id' => 'setRsaVeridUserId',
+        'sbs_transaction_level' => 'setSbsTransactionLevel',
         'self_signed_recipient_email_document' => 'setSelfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata' => 'setSelfSignedRecipientEmailDocumentMetadata',
         'self_signed_recipient_email_document_user_override' => 'setSelfSignedRecipientEmailDocumentUserOverride',
@@ -2618,10 +2970,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => 'setUseDerivedKeysMetadata',
         'use_docu_sign_express_signer_certificate' => 'setUseDocuSignExpressSignerCertificate',
         'use_docu_sign_express_signer_certificate_metadata' => 'setUseDocuSignExpressSignerCertificateMetadata',
+        'use_envelope_search_mixed_mode' => 'setUseEnvelopeSearchMixedMode',
+        'use_envelope_search_mixed_mode_metadata' => 'setUseEnvelopeSearchMixedModeMetadata',
         'use_multi_app_groups_data' => 'setUseMultiAppGroupsData',
         'use_multi_app_groups_data_metadata' => 'setUseMultiAppGroupsDataMetadata',
         'use_new_blob_for_pdf' => 'setUseNewBlobForPdf',
         'use_new_blob_for_pdf_metadata' => 'setUseNewBlobForPdfMetadata',
+        'use_new_envelope_search' => 'setUseNewEnvelopeSearch',
+        'use_new_envelope_search_metadata' => 'setUseNewEnvelopeSearchMetadata',
+        'use_new_envelope_search_only_when_searching_after_date' => 'setUseNewEnvelopeSearchOnlyWhenSearchingAfterDate',
+        'use_new_envelope_search_only_when_searching_after_date_metadata' => 'setUseNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata',
+        'use_new_envelope_search_only_with_search_term' => 'setUseNewEnvelopeSearchOnlyWithSearchTerm',
+        'use_new_envelope_search_only_with_search_term_metadata' => 'setUseNewEnvelopeSearchOnlyWithSearchTermMetadata',
         'use_safe_signer_certificates' => 'setUseSafeSignerCertificates',
         'use_safe_signer_certificates_metadata' => 'setUseSafeSignerCertificatesMetadata',
         'uses_api' => 'setUsesApi',
@@ -2666,20 +3026,28 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'adopt_sig_config_metadata' => 'getAdoptSigConfigMetadata',
         'advanced_correct' => 'getAdvancedCorrect',
         'advanced_correct_metadata' => 'getAdvancedCorrectMetadata',
+        'advanced_search_enable_tab_field' => 'getAdvancedSearchEnableTabField',
+        'advanced_search_enable_tab_field_metadata' => 'getAdvancedSearchEnableTabFieldMetadata',
+        'advanced_search_enable_template_id_field' => 'getAdvancedSearchEnableTemplateIdField',
+        'advanced_search_enable_template_id_field_metadata' => 'getAdvancedSearchEnableTemplateIdFieldMetadata',
+        'advanced_search_enable_template_name_field' => 'getAdvancedSearchEnableTemplateNameField',
+        'advanced_search_enable_template_name_field_metadata' => 'getAdvancedSearchEnableTemplateNameFieldMetadata',
         'allow_access_code_format' => 'getAllowAccessCodeFormat',
         'allow_access_code_format_metadata' => 'getAllowAccessCodeFormatMetadata',
         'allow_account_management_granular' => 'getAllowAccountManagementGranular',
         'allow_account_management_granular_metadata' => 'getAllowAccountManagementGranularMetadata',
         'allow_account_member_name_change' => 'getAllowAccountMemberNameChange',
         'allow_account_member_name_change_metadata' => 'getAllowAccountMemberNameChangeMetadata',
+        'allow_ace' => 'getAllowAce',
+        'allow_ace_metadata' => 'getAllowAceMetadata',
         'allow_advanced_recipient_routing_conditional' => 'getAllowAdvancedRecipientRoutingConditional',
         'allow_advanced_recipient_routing_conditional_metadata' => 'getAllowAdvancedRecipientRoutingConditionalMetadata',
         'allow_agent_name_email_edit' => 'getAllowAgentNameEmailEdit',
         'allow_agent_name_email_edit_metadata' => 'getAllowAgentNameEmailEditMetadata',
         'allow_agreement_actions' => 'getAllowAgreementActions',
         'allow_agreement_actions_metadata' => 'getAllowAgreementActionsMetadata',
-        'allow_agreement_orchestration_workflows' => 'getAllowAgreementOrchestrationWorkflows',
-        'allow_agreement_orchestration_workflows_metadata' => 'getAllowAgreementOrchestrationWorkflowsMetadata',
+        'allow_agreement_orchestrations' => 'getAllowAgreementOrchestrations',
+        'allow_agreement_orchestrations_metadata' => 'getAllowAgreementOrchestrationsMetadata',
         'allow_auto_nav_settings' => 'getAllowAutoNavSettings',
         'allow_auto_nav_settings_metadata' => 'getAllowAutoNavSettingsMetadata',
         'allow_auto_tagging' => 'getAllowAutoTagging',
@@ -2689,6 +3057,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_cd_withdraw' => 'getAllowCdWithdraw',
         'allow_cd_withdraw_metadata' => 'getAllowCdWithdrawMetadata',
         'allow_connect_http_listener_configs' => 'getAllowConnectHttpListenerConfigs',
+        'allow_connect_identity_verification_ui' => 'getAllowConnectIdentityVerificationUi',
         'allow_connect_o_auth_ui' => 'getAllowConnectOAuthUi',
         'allow_connect_send_finish_later' => 'getAllowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata' => 'getAllowConnectSendFinishLaterMetadata',
@@ -2709,6 +3078,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_documents_on_signed_envelopes_metadata' => 'getAllowDocumentsOnSignedEnvelopesMetadata',
         'allow_document_visibility' => 'getAllowDocumentVisibility',
         'allow_document_visibility_metadata' => 'getAllowDocumentVisibilityMetadata',
+        'allow_editing_envelopes_on_behalf_of_others' => 'getAllowEditingEnvelopesOnBehalfOfOthers',
+        'allow_editing_envelopes_on_behalf_of_others_metadata' => 'getAllowEditingEnvelopesOnBehalfOfOthersMetadata',
         'allow_e_hanko_stamps' => 'getAllowEHankoStamps',
         'allow_e_hanko_stamps_metadata' => 'getAllowEHankoStampsMetadata',
         'allow_e_note_e_original' => 'getAllowENoteEOriginal',
@@ -2737,6 +3108,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_for_eu_qualified_signatures_metadata' => 'getAllowIdvForEuQualifiedSignaturesMetadata',
         'allow_idv_level1' => 'getAllowIdvLevel1',
         'allow_idv_level1_metadata' => 'getAllowIdvLevel1Metadata',
+        'allow_idv_level1_trial' => 'getAllowIdvLevel1Trial',
+        'allow_idv_level1_trial_metadata' => 'getAllowIdvLevel1TrialMetadata',
         'allow_idv_level2' => 'getAllowIdvLevel2',
         'allow_idv_level2_metadata' => 'getAllowIdvLevel2Metadata',
         'allow_idv_level3' => 'getAllowIdvLevel3',
@@ -2770,6 +3143,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_open_trust_signer_certificate' => 'getAllowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata' => 'getAllowOpenTrustSignerCertificateMetadata',
         'allow_organization_docusign_monitor' => 'getAllowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_free' => 'getAllowOrganizationDocusignMonitorFree',
+        'allow_organization_docusign_monitor_free_metadata' => 'getAllowOrganizationDocusignMonitorFreeMetadata',
         'allow_organization_docusign_monitor_metadata' => 'getAllowOrganizationDocusignMonitorMetadata',
         'allow_organization_domain_user_management' => 'getAllowOrganizationDomainUserManagement',
         'allow_organization_domain_user_management_metadata' => 'getAllowOrganizationDomainUserManagementMetadata',
@@ -2847,12 +3222,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_supplemental_documents_metadata' => 'getAllowSupplementalDocumentsMetadata',
         'allow_third_party_electronic_notary' => 'getAllowThirdPartyElectronicNotary',
         'allow_third_party_electronic_notary_metadata' => 'getAllowThirdPartyElectronicNotaryMetadata',
+        'allow_transactions_workspace' => 'getAllowTransactionsWorkspace',
+        'allow_transactions_workspace_metadata' => 'getAllowTransactionsWorkspaceMetadata',
+        'allow_transactions_workspace_original' => 'getAllowTransactionsWorkspaceOriginal',
+        'allow_transactions_workspace_original_metadata' => 'getAllowTransactionsWorkspaceOriginalMetadata',
         'allow_users_to_access_directory' => 'getAllowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata' => 'getAllowUsersToAccessDirectoryMetadata',
         'allow_value_insights' => 'getAllowValueInsights',
         'allow_value_insights_metadata' => 'getAllowValueInsightsMetadata',
         'allow_web_forms' => 'getAllowWebForms',
         'allow_web_forms_metadata' => 'getAllowWebFormsMetadata',
+        'allow_whats_app_delivery' => 'getAllowWhatsAppDelivery',
+        'allow_whats_app_delivery_metadata' => 'getAllowWhatsAppDeliveryMetadata',
         'anchor_population_scope' => 'getAnchorPopulationScope',
         'anchor_population_scope_metadata' => 'getAnchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled' => 'getAnchorTagVersionedPlacementEnabled',
@@ -2904,6 +3285,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => 'getConvertPdfFieldsMetadata',
         'data_population_scope' => 'getDataPopulationScope',
         'data_population_scope_metadata' => 'getDataPopulationScopeMetadata',
+        'default_to_advanced_envelopes_filter_form' => 'getDefaultToAdvancedEnvelopesFilterForm',
+        'default_to_advanced_envelopes_filter_form_metadata' => 'getDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'getDisableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'getDisableAutoTemplateMatchingMetadata',
         'disable_mobile_app' => 'getDisableMobileApp',
@@ -2934,12 +3317,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'document_retention_purge_tabs' => 'getDocumentRetentionPurgeTabs',
         'document_visibility' => 'getDocumentVisibility',
         'document_visibility_metadata' => 'getDocumentVisibilityMetadata',
+        'draft_envelope_retention' => 'getDraftEnvelopeRetention',
+        'draft_envelope_retention_metadata' => 'getDraftEnvelopeRetentionMetadata',
+        'dss_enable_provisioning_pen_configuration_radmin_option' => 'getDssEnableProvisioningPenConfigurationRadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'getDssSign28411EnableLeavePagePromptRadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'getDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'getEmailTemplateVersion',
         'email_template_version_metadata' => 'getEmailTemplateVersionMetadata',
         'enable_access_code_generator' => 'getEnableAccessCodeGenerator',
         'enable_access_code_generator_metadata' => 'getEnableAccessCodeGeneratorMetadata',
+        'enable_account_wide_search' => 'getEnableAccountWideSearch',
+        'enable_account_wide_search_metadata' => 'getEnableAccountWideSearchMetadata',
+        'enable_adm_healthcare' => 'getEnableAdmHealthcare',
+        'enable_adm_healthcare_metadata' => 'getEnableAdmHealthcareMetadata',
+        'enable_advanced_envelopes_search' => 'getEnableAdvancedEnvelopesSearch',
+        'enable_advanced_envelopes_search_metadata' => 'getEnableAdvancedEnvelopesSearchMetadata',
         'enable_advanced_payments' => 'getEnableAdvancedPayments',
         'enable_advanced_payments_metadata' => 'getEnableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms' => 'getEnableAdvancedPowerForms',
@@ -2954,6 +3346,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'getEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'getEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'getEnableCalculatedFieldsMetadata',
+        'enable_click_plus' => 'getEnableClickPlus',
+        'enable_click_plus_conditional_content' => 'getEnableClickPlusConditionalContent',
+        'enable_click_plus_conditional_content_meta_data' => 'getEnableClickPlusConditionalContentMetaData',
+        'enable_click_plus_custom_fields' => 'getEnableClickPlusCustomFields',
+        'enable_click_plus_custom_fields_meta_data' => 'getEnableClickPlusCustomFieldsMetaData',
+        'enable_click_plus_custom_style' => 'getEnableClickPlusCustomStyle',
+        'enable_click_plus_custom_style_meta_data' => 'getEnableClickPlusCustomStyleMetaData',
+        'enable_click_plus_dynamic_content' => 'getEnableClickPlusDynamicContent',
+        'enable_click_plus_dynamic_content_meta_data' => 'getEnableClickPlusDynamicContentMetaData',
+        'enable_click_plus_meta_data' => 'getEnableClickPlusMetaData',
         'enable_clickwraps' => 'getEnableClickwraps',
         'enable_clickwraps_metadata' => 'getEnableClickwrapsMetadata',
         'enable_combined_pdf_download_for_sbs' => 'getEnableCombinedPdfDownloadForSbs',
@@ -2963,8 +3365,23 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'getEnableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'getEnableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata' => 'getEnableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_d_sig_eu_advanced_pens' => 'getEnableDSigEuAdvancedPens',
+        'enable_d_sig_eu_advanced_pens_metadata' => 'getEnableDSigEuAdvancedPensMetadata',
+        'enable_d_sig_express_pens' => 'getEnableDSigExpressPens',
+        'enable_d_sig_express_pens_metadata' => 'getEnableDSigExpressPensMetadata',
+        'enable_d_sig_id_check_for_aes_pens' => 'getEnableDSigIdCheckForAesPens',
+        'enable_d_sig_id_check_for_aes_pens_metadata' => 'getEnableDSigIdCheckForAesPensMetadata',
+        'enable_d_sig_id_check_in_person_for_qes_pens' => 'getEnableDSigIdCheckInPersonForQesPens',
+        'enable_d_sig_id_check_in_person_for_qes_pens_metadata' => 'getEnableDSigIdCheckInPersonForQesPensMetadata',
+        'enable_d_sig_id_check_remote_for_qes_pens' => 'getEnableDSigIdCheckRemoteForQesPens',
+        'enable_d_sig_id_check_remote_for_qes_pens_metadata' => 'getEnableDSigIdCheckRemoteForQesPensMetadata',
+        'enable_d_sig_id_verification_pens' => 'getEnableDSigIdVerificationPens',
+        'enable_d_sig_id_verification_pens_metadata' => 'getEnableDSigIdVerificationPensMetadata',
+        'enable_d_sig_id_verification_premier_pens' => 'getEnableDSigIdVerificationPremierPens',
+        'enable_d_sig_id_verification_premier_pens_metadata' => 'getEnableDSigIdVerificationPremierPensMetadata',
         'enable_ds_pro' => 'getEnableDsPro',
         'enable_ds_pro_metadata' => 'getEnableDsProMetadata',
+        'enable_enforce_tls_emails_setting_metadata' => 'getEnableEnforceTlsEmailsSettingMetadata',
         'enable_envelope_stamping_by_account_admin' => 'getEnableEnvelopeStampingByAccountAdmin',
         'enable_envelope_stamping_by_account_admin_metadata' => 'getEnableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin' => 'getEnableEnvelopeStampingByDsAdmin',
@@ -2979,6 +3396,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_id_fx_intuit_kba_metadata' => 'getEnableIdFxIntuitKbaMetadata',
         'enable_id_fx_phone_authentication' => 'getEnableIdFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata' => 'getEnableIdFxPhoneAuthenticationMetadata',
+        'enable_idfx_phone_auth_signature_auth_status' => 'getEnableIdfxPhoneAuthSignatureAuthStatus',
+        'enable_idfx_phone_auth_signature_auth_status_metadata' => 'getEnableIdfxPhoneAuthSignatureAuthStatusMetadata',
+        'enable_inbox_browse_views_powered_by_elastic_search' => 'getEnableInboxBrowseViewsPoweredByElasticSearch',
+        'enable_inbox_browse_views_powered_by_elastic_search_metadata' => 'getEnableInboxBrowseViewsPoweredByElasticSearchMetadata',
+        'enable_inbox_relevance_sort' => 'getEnableInboxRelevanceSort',
+        'enable_inbox_relevance_sort_for_recent_accounts' => 'getEnableInboxRelevanceSortForRecentAccounts',
+        'enable_inbox_relevance_sort_for_recent_accounts_metadata' => 'getEnableInboxRelevanceSortForRecentAccountsMetadata',
+        'enable_inbox_relevance_sort_metadata' => 'getEnableInboxRelevanceSortMetadata',
         'enable_in_browser_editor' => 'getEnableInBrowserEditor',
         'enable_in_browser_editor_metadata' => 'getEnableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
@@ -3008,6 +3433,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_scheduled_release_metadata' => 'getEnableScheduledReleaseMetadata',
         'enable_search' => 'getEnableSearch',
         'enable_search_metadata' => 'getEnableSearchMetadata',
+        'enable_search_service_azure_uri' => 'getEnableSearchServiceAzureUri',
+        'enable_search_service_azure_uri_metadata' => 'getEnableSearchServiceAzureUriMetadata',
         'enable_search_site_specific_api' => 'getEnableSearchSiteSpecificApi',
         'enable_search_site_specific_api_metadata' => 'getEnableSearchSiteSpecificApiMetadata',
         'enable_search_ui' => 'getEnableSearchUi',
@@ -3053,10 +3480,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_transaction_point_metadata' => 'getEnableTransactionPointMetadata',
         'enable_vaulting' => 'getEnableVaulting',
         'enable_vaulting_metadata' => 'getEnableVaultingMetadata',
+        'enable_web_forms_separate_user_permissions' => 'getEnableWebFormsSeparateUserPermissions',
+        'enable_web_forms_separate_user_permissions_metadata' => 'getEnableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing' => 'getEnableWitnessing',
         'enable_witnessing_metadata' => 'getEnableWitnessingMetadata',
         'enforce_template_name_uniqueness' => 'getEnforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata' => 'getEnforceTemplateNameUniquenessMetadata',
+        'enforce_tls_emails' => 'getEnforceTlsEmails',
+        'enforce_tls_emails_metadata' => 'getEnforceTlsEmailsMetadata',
         'envelope_integration_allowed' => 'getEnvelopeIntegrationAllowed',
         'envelope_integration_allowed_metadata' => 'getEnvelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled' => 'getEnvelopeIntegrationEnabled',
@@ -3065,6 +3496,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'envelope_limits_total_document_size_allowed_in_mb_enabled' => 'getEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabled',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata' => 'getEnvelopeLimitsTotalDocumentSizeAllowedInMbEnabledMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata' => 'getEnvelopeLimitsTotalDocumentSizeAllowedInMbMetadata',
+        'envelope_search_mode' => 'getEnvelopeSearchMode',
+        'envelope_search_mode_metadata' => 'getEnvelopeSearchModeMetadata',
         'envelope_stamping_default_value' => 'getEnvelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata' => 'getEnvelopeStampingDefaultValueMetadata',
         'exit_prompt' => 'getExitPrompt',
@@ -3082,6 +3515,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'finish_reminder_metadata' => 'getFinishReminderMetadata',
         'guided_forms_html_allowed' => 'getGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'getGuidedFormsHtmlAllowedMetadata',
+        'guided_forms_html_conversion_policy' => 'getGuidedFormsHtmlConversionPolicy',
+        'guided_forms_html_conversion_policy_metadata' => 'getGuidedFormsHtmlConversionPolicyMetadata',
         'has_recipient_connect_claimed_domain' => 'getHasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c' => 'getHideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata' => 'getHideAccountAddressInCoCMetadata',
@@ -3098,6 +3533,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'id_check_required_metadata' => 'getIdCheckRequiredMetadata',
         'identity_verification' => 'getIdentityVerification',
         'identity_verification_metadata' => 'getIdentityVerificationMetadata',
+        'idfx_kba_authentication_override' => 'getIdfxKbaAuthenticationOverride',
+        'idfx_kba_authentication_override_metadata' => 'getIdfxKbaAuthenticationOverrideMetadata',
         'idfx_phone_authentication_override' => 'getIdfxPhoneAuthenticationOverride',
         'idfx_phone_authentication_override_metadata' => 'getIdfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found' => 'getIgnoreErrorIfAnchorTabNotFound',
@@ -3110,17 +3547,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'in_session_enabled_metadata' => 'getInSessionEnabledMetadata',
         'in_session_suppress_emails' => 'getInSessionSuppressEmails',
         'in_session_suppress_emails_metadata' => 'getInSessionSuppressEmailsMetadata',
+        'is_connect_document_fields_enabled' => 'getIsConnectDocumentFieldsEnabled',
         'linked_external_primary_accounts' => 'getLinkedExternalPrimaryAccounts',
         'maximum_signing_groups' => 'getMaximumSigningGroups',
         'maximum_signing_groups_metadata' => 'getMaximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'getMaximumUsersPerSigningGroup',
         'maximum_users_per_signing_group_metadata' => 'getMaximumUsersPerSigningGroupMetadata',
         'max_number_of_custom_stamps' => 'getMaxNumberOfCustomStamps',
+        'merge_mixed_mode_results' => 'getMergeMixedModeResults',
+        'merge_mixed_mode_results_metadata' => 'getMergeMixedModeResultsMetadata',
         'mobile_session_timeout' => 'getMobileSessionTimeout',
         'mobile_session_timeout_metadata' => 'getMobileSessionTimeoutMetadata',
         'number_of_active_custom_stamps' => 'getNumberOfActiveCustomStamps',
         'opt_in_mobile_signing_v02' => 'getOptInMobileSigningV02',
         'opt_in_mobile_signing_v02_metadata' => 'getOptInMobileSigningV02Metadata',
+        'opt_in_universal_signatures' => 'getOptInUniversalSignatures',
         'opt_out_auto_nav_text_and_tab_color_updates' => 'getOptOutAutoNavTextAndTabColorUpdates',
         'opt_out_auto_nav_text_and_tab_color_updates_metadata' => 'getOptOutAutoNavTextAndTabColorUpdatesMetadata',
         'opt_out_new_platform_seal' => 'getOptOutNewPlatformSeal',
@@ -3153,6 +3594,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'rsa_verid_password' => 'getRsaVeridPassword',
         'rsa_verid_ruleset' => 'getRsaVeridRuleset',
         'rsa_verid_user_id' => 'getRsaVeridUserId',
+        'sbs_transaction_level' => 'getSbsTransactionLevel',
         'self_signed_recipient_email_document' => 'getSelfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata' => 'getSelfSignedRecipientEmailDocumentMetadata',
         'self_signed_recipient_email_document_user_override' => 'getSelfSignedRecipientEmailDocumentUserOverride',
@@ -3261,10 +3703,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'use_derived_keys_metadata' => 'getUseDerivedKeysMetadata',
         'use_docu_sign_express_signer_certificate' => 'getUseDocuSignExpressSignerCertificate',
         'use_docu_sign_express_signer_certificate_metadata' => 'getUseDocuSignExpressSignerCertificateMetadata',
+        'use_envelope_search_mixed_mode' => 'getUseEnvelopeSearchMixedMode',
+        'use_envelope_search_mixed_mode_metadata' => 'getUseEnvelopeSearchMixedModeMetadata',
         'use_multi_app_groups_data' => 'getUseMultiAppGroupsData',
         'use_multi_app_groups_data_metadata' => 'getUseMultiAppGroupsDataMetadata',
         'use_new_blob_for_pdf' => 'getUseNewBlobForPdf',
         'use_new_blob_for_pdf_metadata' => 'getUseNewBlobForPdfMetadata',
+        'use_new_envelope_search' => 'getUseNewEnvelopeSearch',
+        'use_new_envelope_search_metadata' => 'getUseNewEnvelopeSearchMetadata',
+        'use_new_envelope_search_only_when_searching_after_date' => 'getUseNewEnvelopeSearchOnlyWhenSearchingAfterDate',
+        'use_new_envelope_search_only_when_searching_after_date_metadata' => 'getUseNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata',
+        'use_new_envelope_search_only_with_search_term' => 'getUseNewEnvelopeSearchOnlyWithSearchTerm',
+        'use_new_envelope_search_only_with_search_term_metadata' => 'getUseNewEnvelopeSearchOnlyWithSearchTermMetadata',
         'use_safe_signer_certificates' => 'getUseSafeSignerCertificates',
         'use_safe_signer_certificates_metadata' => 'getUseSafeSignerCertificatesMetadata',
         'uses_api' => 'getUsesApi',
@@ -3363,20 +3813,28 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['adopt_sig_config_metadata'] = isset($data['adopt_sig_config_metadata']) ? $data['adopt_sig_config_metadata'] : null;
         $this->container['advanced_correct'] = isset($data['advanced_correct']) ? $data['advanced_correct'] : null;
         $this->container['advanced_correct_metadata'] = isset($data['advanced_correct_metadata']) ? $data['advanced_correct_metadata'] : null;
+        $this->container['advanced_search_enable_tab_field'] = isset($data['advanced_search_enable_tab_field']) ? $data['advanced_search_enable_tab_field'] : null;
+        $this->container['advanced_search_enable_tab_field_metadata'] = isset($data['advanced_search_enable_tab_field_metadata']) ? $data['advanced_search_enable_tab_field_metadata'] : null;
+        $this->container['advanced_search_enable_template_id_field'] = isset($data['advanced_search_enable_template_id_field']) ? $data['advanced_search_enable_template_id_field'] : null;
+        $this->container['advanced_search_enable_template_id_field_metadata'] = isset($data['advanced_search_enable_template_id_field_metadata']) ? $data['advanced_search_enable_template_id_field_metadata'] : null;
+        $this->container['advanced_search_enable_template_name_field'] = isset($data['advanced_search_enable_template_name_field']) ? $data['advanced_search_enable_template_name_field'] : null;
+        $this->container['advanced_search_enable_template_name_field_metadata'] = isset($data['advanced_search_enable_template_name_field_metadata']) ? $data['advanced_search_enable_template_name_field_metadata'] : null;
         $this->container['allow_access_code_format'] = isset($data['allow_access_code_format']) ? $data['allow_access_code_format'] : null;
         $this->container['allow_access_code_format_metadata'] = isset($data['allow_access_code_format_metadata']) ? $data['allow_access_code_format_metadata'] : null;
         $this->container['allow_account_management_granular'] = isset($data['allow_account_management_granular']) ? $data['allow_account_management_granular'] : null;
         $this->container['allow_account_management_granular_metadata'] = isset($data['allow_account_management_granular_metadata']) ? $data['allow_account_management_granular_metadata'] : null;
         $this->container['allow_account_member_name_change'] = isset($data['allow_account_member_name_change']) ? $data['allow_account_member_name_change'] : null;
         $this->container['allow_account_member_name_change_metadata'] = isset($data['allow_account_member_name_change_metadata']) ? $data['allow_account_member_name_change_metadata'] : null;
+        $this->container['allow_ace'] = isset($data['allow_ace']) ? $data['allow_ace'] : null;
+        $this->container['allow_ace_metadata'] = isset($data['allow_ace_metadata']) ? $data['allow_ace_metadata'] : null;
         $this->container['allow_advanced_recipient_routing_conditional'] = isset($data['allow_advanced_recipient_routing_conditional']) ? $data['allow_advanced_recipient_routing_conditional'] : null;
         $this->container['allow_advanced_recipient_routing_conditional_metadata'] = isset($data['allow_advanced_recipient_routing_conditional_metadata']) ? $data['allow_advanced_recipient_routing_conditional_metadata'] : null;
         $this->container['allow_agent_name_email_edit'] = isset($data['allow_agent_name_email_edit']) ? $data['allow_agent_name_email_edit'] : null;
         $this->container['allow_agent_name_email_edit_metadata'] = isset($data['allow_agent_name_email_edit_metadata']) ? $data['allow_agent_name_email_edit_metadata'] : null;
         $this->container['allow_agreement_actions'] = isset($data['allow_agreement_actions']) ? $data['allow_agreement_actions'] : null;
         $this->container['allow_agreement_actions_metadata'] = isset($data['allow_agreement_actions_metadata']) ? $data['allow_agreement_actions_metadata'] : null;
-        $this->container['allow_agreement_orchestration_workflows'] = isset($data['allow_agreement_orchestration_workflows']) ? $data['allow_agreement_orchestration_workflows'] : null;
-        $this->container['allow_agreement_orchestration_workflows_metadata'] = isset($data['allow_agreement_orchestration_workflows_metadata']) ? $data['allow_agreement_orchestration_workflows_metadata'] : null;
+        $this->container['allow_agreement_orchestrations'] = isset($data['allow_agreement_orchestrations']) ? $data['allow_agreement_orchestrations'] : null;
+        $this->container['allow_agreement_orchestrations_metadata'] = isset($data['allow_agreement_orchestrations_metadata']) ? $data['allow_agreement_orchestrations_metadata'] : null;
         $this->container['allow_auto_nav_settings'] = isset($data['allow_auto_nav_settings']) ? $data['allow_auto_nav_settings'] : null;
         $this->container['allow_auto_nav_settings_metadata'] = isset($data['allow_auto_nav_settings_metadata']) ? $data['allow_auto_nav_settings_metadata'] : null;
         $this->container['allow_auto_tagging'] = isset($data['allow_auto_tagging']) ? $data['allow_auto_tagging'] : null;
@@ -3386,6 +3844,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_cd_withdraw'] = isset($data['allow_cd_withdraw']) ? $data['allow_cd_withdraw'] : null;
         $this->container['allow_cd_withdraw_metadata'] = isset($data['allow_cd_withdraw_metadata']) ? $data['allow_cd_withdraw_metadata'] : null;
         $this->container['allow_connect_http_listener_configs'] = isset($data['allow_connect_http_listener_configs']) ? $data['allow_connect_http_listener_configs'] : null;
+        $this->container['allow_connect_identity_verification_ui'] = isset($data['allow_connect_identity_verification_ui']) ? $data['allow_connect_identity_verification_ui'] : null;
         $this->container['allow_connect_o_auth_ui'] = isset($data['allow_connect_o_auth_ui']) ? $data['allow_connect_o_auth_ui'] : null;
         $this->container['allow_connect_send_finish_later'] = isset($data['allow_connect_send_finish_later']) ? $data['allow_connect_send_finish_later'] : null;
         $this->container['allow_connect_send_finish_later_metadata'] = isset($data['allow_connect_send_finish_later_metadata']) ? $data['allow_connect_send_finish_later_metadata'] : null;
@@ -3406,6 +3865,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_documents_on_signed_envelopes_metadata'] = isset($data['allow_documents_on_signed_envelopes_metadata']) ? $data['allow_documents_on_signed_envelopes_metadata'] : null;
         $this->container['allow_document_visibility'] = isset($data['allow_document_visibility']) ? $data['allow_document_visibility'] : null;
         $this->container['allow_document_visibility_metadata'] = isset($data['allow_document_visibility_metadata']) ? $data['allow_document_visibility_metadata'] : null;
+        $this->container['allow_editing_envelopes_on_behalf_of_others'] = isset($data['allow_editing_envelopes_on_behalf_of_others']) ? $data['allow_editing_envelopes_on_behalf_of_others'] : null;
+        $this->container['allow_editing_envelopes_on_behalf_of_others_metadata'] = isset($data['allow_editing_envelopes_on_behalf_of_others_metadata']) ? $data['allow_editing_envelopes_on_behalf_of_others_metadata'] : null;
         $this->container['allow_e_hanko_stamps'] = isset($data['allow_e_hanko_stamps']) ? $data['allow_e_hanko_stamps'] : null;
         $this->container['allow_e_hanko_stamps_metadata'] = isset($data['allow_e_hanko_stamps_metadata']) ? $data['allow_e_hanko_stamps_metadata'] : null;
         $this->container['allow_e_note_e_original'] = isset($data['allow_e_note_e_original']) ? $data['allow_e_note_e_original'] : null;
@@ -3434,6 +3895,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_idv_for_eu_qualified_signatures_metadata'] = isset($data['allow_idv_for_eu_qualified_signatures_metadata']) ? $data['allow_idv_for_eu_qualified_signatures_metadata'] : null;
         $this->container['allow_idv_level1'] = isset($data['allow_idv_level1']) ? $data['allow_idv_level1'] : null;
         $this->container['allow_idv_level1_metadata'] = isset($data['allow_idv_level1_metadata']) ? $data['allow_idv_level1_metadata'] : null;
+        $this->container['allow_idv_level1_trial'] = isset($data['allow_idv_level1_trial']) ? $data['allow_idv_level1_trial'] : null;
+        $this->container['allow_idv_level1_trial_metadata'] = isset($data['allow_idv_level1_trial_metadata']) ? $data['allow_idv_level1_trial_metadata'] : null;
         $this->container['allow_idv_level2'] = isset($data['allow_idv_level2']) ? $data['allow_idv_level2'] : null;
         $this->container['allow_idv_level2_metadata'] = isset($data['allow_idv_level2_metadata']) ? $data['allow_idv_level2_metadata'] : null;
         $this->container['allow_idv_level3'] = isset($data['allow_idv_level3']) ? $data['allow_idv_level3'] : null;
@@ -3467,6 +3930,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_open_trust_signer_certificate'] = isset($data['allow_open_trust_signer_certificate']) ? $data['allow_open_trust_signer_certificate'] : null;
         $this->container['allow_open_trust_signer_certificate_metadata'] = isset($data['allow_open_trust_signer_certificate_metadata']) ? $data['allow_open_trust_signer_certificate_metadata'] : null;
         $this->container['allow_organization_docusign_monitor'] = isset($data['allow_organization_docusign_monitor']) ? $data['allow_organization_docusign_monitor'] : null;
+        $this->container['allow_organization_docusign_monitor_free'] = isset($data['allow_organization_docusign_monitor_free']) ? $data['allow_organization_docusign_monitor_free'] : null;
+        $this->container['allow_organization_docusign_monitor_free_metadata'] = isset($data['allow_organization_docusign_monitor_free_metadata']) ? $data['allow_organization_docusign_monitor_free_metadata'] : null;
         $this->container['allow_organization_docusign_monitor_metadata'] = isset($data['allow_organization_docusign_monitor_metadata']) ? $data['allow_organization_docusign_monitor_metadata'] : null;
         $this->container['allow_organization_domain_user_management'] = isset($data['allow_organization_domain_user_management']) ? $data['allow_organization_domain_user_management'] : null;
         $this->container['allow_organization_domain_user_management_metadata'] = isset($data['allow_organization_domain_user_management_metadata']) ? $data['allow_organization_domain_user_management_metadata'] : null;
@@ -3544,12 +4009,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_supplemental_documents_metadata'] = isset($data['allow_supplemental_documents_metadata']) ? $data['allow_supplemental_documents_metadata'] : null;
         $this->container['allow_third_party_electronic_notary'] = isset($data['allow_third_party_electronic_notary']) ? $data['allow_third_party_electronic_notary'] : null;
         $this->container['allow_third_party_electronic_notary_metadata'] = isset($data['allow_third_party_electronic_notary_metadata']) ? $data['allow_third_party_electronic_notary_metadata'] : null;
+        $this->container['allow_transactions_workspace'] = isset($data['allow_transactions_workspace']) ? $data['allow_transactions_workspace'] : null;
+        $this->container['allow_transactions_workspace_metadata'] = isset($data['allow_transactions_workspace_metadata']) ? $data['allow_transactions_workspace_metadata'] : null;
+        $this->container['allow_transactions_workspace_original'] = isset($data['allow_transactions_workspace_original']) ? $data['allow_transactions_workspace_original'] : null;
+        $this->container['allow_transactions_workspace_original_metadata'] = isset($data['allow_transactions_workspace_original_metadata']) ? $data['allow_transactions_workspace_original_metadata'] : null;
         $this->container['allow_users_to_access_directory'] = isset($data['allow_users_to_access_directory']) ? $data['allow_users_to_access_directory'] : null;
         $this->container['allow_users_to_access_directory_metadata'] = isset($data['allow_users_to_access_directory_metadata']) ? $data['allow_users_to_access_directory_metadata'] : null;
         $this->container['allow_value_insights'] = isset($data['allow_value_insights']) ? $data['allow_value_insights'] : null;
         $this->container['allow_value_insights_metadata'] = isset($data['allow_value_insights_metadata']) ? $data['allow_value_insights_metadata'] : null;
         $this->container['allow_web_forms'] = isset($data['allow_web_forms']) ? $data['allow_web_forms'] : null;
         $this->container['allow_web_forms_metadata'] = isset($data['allow_web_forms_metadata']) ? $data['allow_web_forms_metadata'] : null;
+        $this->container['allow_whats_app_delivery'] = isset($data['allow_whats_app_delivery']) ? $data['allow_whats_app_delivery'] : null;
+        $this->container['allow_whats_app_delivery_metadata'] = isset($data['allow_whats_app_delivery_metadata']) ? $data['allow_whats_app_delivery_metadata'] : null;
         $this->container['anchor_population_scope'] = isset($data['anchor_population_scope']) ? $data['anchor_population_scope'] : null;
         $this->container['anchor_population_scope_metadata'] = isset($data['anchor_population_scope_metadata']) ? $data['anchor_population_scope_metadata'] : null;
         $this->container['anchor_tag_versioned_placement_enabled'] = isset($data['anchor_tag_versioned_placement_enabled']) ? $data['anchor_tag_versioned_placement_enabled'] : null;
@@ -3601,6 +4072,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['convert_pdf_fields_metadata'] = isset($data['convert_pdf_fields_metadata']) ? $data['convert_pdf_fields_metadata'] : null;
         $this->container['data_population_scope'] = isset($data['data_population_scope']) ? $data['data_population_scope'] : null;
         $this->container['data_population_scope_metadata'] = isset($data['data_population_scope_metadata']) ? $data['data_population_scope_metadata'] : null;
+        $this->container['default_to_advanced_envelopes_filter_form'] = isset($data['default_to_advanced_envelopes_filter_form']) ? $data['default_to_advanced_envelopes_filter_form'] : null;
+        $this->container['default_to_advanced_envelopes_filter_form_metadata'] = isset($data['default_to_advanced_envelopes_filter_form_metadata']) ? $data['default_to_advanced_envelopes_filter_form_metadata'] : null;
         $this->container['disable_auto_template_matching'] = isset($data['disable_auto_template_matching']) ? $data['disable_auto_template_matching'] : null;
         $this->container['disable_auto_template_matching_metadata'] = isset($data['disable_auto_template_matching_metadata']) ? $data['disable_auto_template_matching_metadata'] : null;
         $this->container['disable_mobile_app'] = isset($data['disable_mobile_app']) ? $data['disable_mobile_app'] : null;
@@ -3631,12 +4104,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['document_retention_purge_tabs'] = isset($data['document_retention_purge_tabs']) ? $data['document_retention_purge_tabs'] : null;
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
         $this->container['document_visibility_metadata'] = isset($data['document_visibility_metadata']) ? $data['document_visibility_metadata'] : null;
+        $this->container['draft_envelope_retention'] = isset($data['draft_envelope_retention']) ? $data['draft_envelope_retention'] : null;
+        $this->container['draft_envelope_retention_metadata'] = isset($data['draft_envelope_retention_metadata']) ? $data['draft_envelope_retention_metadata'] : null;
+        $this->container['dss_enable_provisioning_pen_configuration_radmin_option'] = isset($data['dss_enable_provisioning_pen_configuration_radmin_option']) ? $data['dss_enable_provisioning_pen_configuration_radmin_option'] : null;
         $this->container['dss_sign_28411_enable_leave_page_prompt_radmin_option'] = isset($data['dss_sign_28411_enable_leave_page_prompt_radmin_option']) ? $data['dss_sign_28411_enable_leave_page_prompt_radmin_option'] : null;
         $this->container['dss_sign_29182_slide_up_bar_radmin_option'] = isset($data['dss_sign_29182_slide_up_bar_radmin_option']) ? $data['dss_sign_29182_slide_up_bar_radmin_option'] : null;
         $this->container['email_template_version'] = isset($data['email_template_version']) ? $data['email_template_version'] : null;
         $this->container['email_template_version_metadata'] = isset($data['email_template_version_metadata']) ? $data['email_template_version_metadata'] : null;
         $this->container['enable_access_code_generator'] = isset($data['enable_access_code_generator']) ? $data['enable_access_code_generator'] : null;
         $this->container['enable_access_code_generator_metadata'] = isset($data['enable_access_code_generator_metadata']) ? $data['enable_access_code_generator_metadata'] : null;
+        $this->container['enable_account_wide_search'] = isset($data['enable_account_wide_search']) ? $data['enable_account_wide_search'] : null;
+        $this->container['enable_account_wide_search_metadata'] = isset($data['enable_account_wide_search_metadata']) ? $data['enable_account_wide_search_metadata'] : null;
+        $this->container['enable_adm_healthcare'] = isset($data['enable_adm_healthcare']) ? $data['enable_adm_healthcare'] : null;
+        $this->container['enable_adm_healthcare_metadata'] = isset($data['enable_adm_healthcare_metadata']) ? $data['enable_adm_healthcare_metadata'] : null;
+        $this->container['enable_advanced_envelopes_search'] = isset($data['enable_advanced_envelopes_search']) ? $data['enable_advanced_envelopes_search'] : null;
+        $this->container['enable_advanced_envelopes_search_metadata'] = isset($data['enable_advanced_envelopes_search_metadata']) ? $data['enable_advanced_envelopes_search_metadata'] : null;
         $this->container['enable_advanced_payments'] = isset($data['enable_advanced_payments']) ? $data['enable_advanced_payments'] : null;
         $this->container['enable_advanced_payments_metadata'] = isset($data['enable_advanced_payments_metadata']) ? $data['enable_advanced_payments_metadata'] : null;
         $this->container['enable_advanced_power_forms'] = isset($data['enable_advanced_power_forms']) ? $data['enable_advanced_power_forms'] : null;
@@ -3651,6 +4133,16 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_bcc_dummy_link_metadata'] = isset($data['enable_bcc_dummy_link_metadata']) ? $data['enable_bcc_dummy_link_metadata'] : null;
         $this->container['enable_calculated_fields'] = isset($data['enable_calculated_fields']) ? $data['enable_calculated_fields'] : null;
         $this->container['enable_calculated_fields_metadata'] = isset($data['enable_calculated_fields_metadata']) ? $data['enable_calculated_fields_metadata'] : null;
+        $this->container['enable_click_plus'] = isset($data['enable_click_plus']) ? $data['enable_click_plus'] : null;
+        $this->container['enable_click_plus_conditional_content'] = isset($data['enable_click_plus_conditional_content']) ? $data['enable_click_plus_conditional_content'] : null;
+        $this->container['enable_click_plus_conditional_content_meta_data'] = isset($data['enable_click_plus_conditional_content_meta_data']) ? $data['enable_click_plus_conditional_content_meta_data'] : null;
+        $this->container['enable_click_plus_custom_fields'] = isset($data['enable_click_plus_custom_fields']) ? $data['enable_click_plus_custom_fields'] : null;
+        $this->container['enable_click_plus_custom_fields_meta_data'] = isset($data['enable_click_plus_custom_fields_meta_data']) ? $data['enable_click_plus_custom_fields_meta_data'] : null;
+        $this->container['enable_click_plus_custom_style'] = isset($data['enable_click_plus_custom_style']) ? $data['enable_click_plus_custom_style'] : null;
+        $this->container['enable_click_plus_custom_style_meta_data'] = isset($data['enable_click_plus_custom_style_meta_data']) ? $data['enable_click_plus_custom_style_meta_data'] : null;
+        $this->container['enable_click_plus_dynamic_content'] = isset($data['enable_click_plus_dynamic_content']) ? $data['enable_click_plus_dynamic_content'] : null;
+        $this->container['enable_click_plus_dynamic_content_meta_data'] = isset($data['enable_click_plus_dynamic_content_meta_data']) ? $data['enable_click_plus_dynamic_content_meta_data'] : null;
+        $this->container['enable_click_plus_meta_data'] = isset($data['enable_click_plus_meta_data']) ? $data['enable_click_plus_meta_data'] : null;
         $this->container['enable_clickwraps'] = isset($data['enable_clickwraps']) ? $data['enable_clickwraps'] : null;
         $this->container['enable_clickwraps_metadata'] = isset($data['enable_clickwraps_metadata']) ? $data['enable_clickwraps_metadata'] : null;
         $this->container['enable_combined_pdf_download_for_sbs'] = isset($data['enable_combined_pdf_download_for_sbs']) ? $data['enable_combined_pdf_download_for_sbs'] : null;
@@ -3660,8 +4152,23 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_contact_suggestions_metadata'] = isset($data['enable_contact_suggestions_metadata']) ? $data['enable_contact_suggestions_metadata'] : null;
         $this->container['enable_customer_satisfaction_metric_tracking'] = isset($data['enable_customer_satisfaction_metric_tracking']) ? $data['enable_customer_satisfaction_metric_tracking'] : null;
         $this->container['enable_customer_satisfaction_metric_tracking_metadata'] = isset($data['enable_customer_satisfaction_metric_tracking_metadata']) ? $data['enable_customer_satisfaction_metric_tracking_metadata'] : null;
+        $this->container['enable_d_sig_eu_advanced_pens'] = isset($data['enable_d_sig_eu_advanced_pens']) ? $data['enable_d_sig_eu_advanced_pens'] : null;
+        $this->container['enable_d_sig_eu_advanced_pens_metadata'] = isset($data['enable_d_sig_eu_advanced_pens_metadata']) ? $data['enable_d_sig_eu_advanced_pens_metadata'] : null;
+        $this->container['enable_d_sig_express_pens'] = isset($data['enable_d_sig_express_pens']) ? $data['enable_d_sig_express_pens'] : null;
+        $this->container['enable_d_sig_express_pens_metadata'] = isset($data['enable_d_sig_express_pens_metadata']) ? $data['enable_d_sig_express_pens_metadata'] : null;
+        $this->container['enable_d_sig_id_check_for_aes_pens'] = isset($data['enable_d_sig_id_check_for_aes_pens']) ? $data['enable_d_sig_id_check_for_aes_pens'] : null;
+        $this->container['enable_d_sig_id_check_for_aes_pens_metadata'] = isset($data['enable_d_sig_id_check_for_aes_pens_metadata']) ? $data['enable_d_sig_id_check_for_aes_pens_metadata'] : null;
+        $this->container['enable_d_sig_id_check_in_person_for_qes_pens'] = isset($data['enable_d_sig_id_check_in_person_for_qes_pens']) ? $data['enable_d_sig_id_check_in_person_for_qes_pens'] : null;
+        $this->container['enable_d_sig_id_check_in_person_for_qes_pens_metadata'] = isset($data['enable_d_sig_id_check_in_person_for_qes_pens_metadata']) ? $data['enable_d_sig_id_check_in_person_for_qes_pens_metadata'] : null;
+        $this->container['enable_d_sig_id_check_remote_for_qes_pens'] = isset($data['enable_d_sig_id_check_remote_for_qes_pens']) ? $data['enable_d_sig_id_check_remote_for_qes_pens'] : null;
+        $this->container['enable_d_sig_id_check_remote_for_qes_pens_metadata'] = isset($data['enable_d_sig_id_check_remote_for_qes_pens_metadata']) ? $data['enable_d_sig_id_check_remote_for_qes_pens_metadata'] : null;
+        $this->container['enable_d_sig_id_verification_pens'] = isset($data['enable_d_sig_id_verification_pens']) ? $data['enable_d_sig_id_verification_pens'] : null;
+        $this->container['enable_d_sig_id_verification_pens_metadata'] = isset($data['enable_d_sig_id_verification_pens_metadata']) ? $data['enable_d_sig_id_verification_pens_metadata'] : null;
+        $this->container['enable_d_sig_id_verification_premier_pens'] = isset($data['enable_d_sig_id_verification_premier_pens']) ? $data['enable_d_sig_id_verification_premier_pens'] : null;
+        $this->container['enable_d_sig_id_verification_premier_pens_metadata'] = isset($data['enable_d_sig_id_verification_premier_pens_metadata']) ? $data['enable_d_sig_id_verification_premier_pens_metadata'] : null;
         $this->container['enable_ds_pro'] = isset($data['enable_ds_pro']) ? $data['enable_ds_pro'] : null;
         $this->container['enable_ds_pro_metadata'] = isset($data['enable_ds_pro_metadata']) ? $data['enable_ds_pro_metadata'] : null;
+        $this->container['enable_enforce_tls_emails_setting_metadata'] = isset($data['enable_enforce_tls_emails_setting_metadata']) ? $data['enable_enforce_tls_emails_setting_metadata'] : null;
         $this->container['enable_envelope_stamping_by_account_admin'] = isset($data['enable_envelope_stamping_by_account_admin']) ? $data['enable_envelope_stamping_by_account_admin'] : null;
         $this->container['enable_envelope_stamping_by_account_admin_metadata'] = isset($data['enable_envelope_stamping_by_account_admin_metadata']) ? $data['enable_envelope_stamping_by_account_admin_metadata'] : null;
         $this->container['enable_envelope_stamping_by_ds_admin'] = isset($data['enable_envelope_stamping_by_ds_admin']) ? $data['enable_envelope_stamping_by_ds_admin'] : null;
@@ -3676,6 +4183,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_id_fx_intuit_kba_metadata'] = isset($data['enable_id_fx_intuit_kba_metadata']) ? $data['enable_id_fx_intuit_kba_metadata'] : null;
         $this->container['enable_id_fx_phone_authentication'] = isset($data['enable_id_fx_phone_authentication']) ? $data['enable_id_fx_phone_authentication'] : null;
         $this->container['enable_id_fx_phone_authentication_metadata'] = isset($data['enable_id_fx_phone_authentication_metadata']) ? $data['enable_id_fx_phone_authentication_metadata'] : null;
+        $this->container['enable_idfx_phone_auth_signature_auth_status'] = isset($data['enable_idfx_phone_auth_signature_auth_status']) ? $data['enable_idfx_phone_auth_signature_auth_status'] : null;
+        $this->container['enable_idfx_phone_auth_signature_auth_status_metadata'] = isset($data['enable_idfx_phone_auth_signature_auth_status_metadata']) ? $data['enable_idfx_phone_auth_signature_auth_status_metadata'] : null;
+        $this->container['enable_inbox_browse_views_powered_by_elastic_search'] = isset($data['enable_inbox_browse_views_powered_by_elastic_search']) ? $data['enable_inbox_browse_views_powered_by_elastic_search'] : null;
+        $this->container['enable_inbox_browse_views_powered_by_elastic_search_metadata'] = isset($data['enable_inbox_browse_views_powered_by_elastic_search_metadata']) ? $data['enable_inbox_browse_views_powered_by_elastic_search_metadata'] : null;
+        $this->container['enable_inbox_relevance_sort'] = isset($data['enable_inbox_relevance_sort']) ? $data['enable_inbox_relevance_sort'] : null;
+        $this->container['enable_inbox_relevance_sort_for_recent_accounts'] = isset($data['enable_inbox_relevance_sort_for_recent_accounts']) ? $data['enable_inbox_relevance_sort_for_recent_accounts'] : null;
+        $this->container['enable_inbox_relevance_sort_for_recent_accounts_metadata'] = isset($data['enable_inbox_relevance_sort_for_recent_accounts_metadata']) ? $data['enable_inbox_relevance_sort_for_recent_accounts_metadata'] : null;
+        $this->container['enable_inbox_relevance_sort_metadata'] = isset($data['enable_inbox_relevance_sort_metadata']) ? $data['enable_inbox_relevance_sort_metadata'] : null;
         $this->container['enable_in_browser_editor'] = isset($data['enable_in_browser_editor']) ? $data['enable_in_browser_editor'] : null;
         $this->container['enable_in_browser_editor_metadata'] = isset($data['enable_in_browser_editor_metadata']) ? $data['enable_in_browser_editor_metadata'] : null;
         $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
@@ -3705,6 +4220,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_scheduled_release_metadata'] = isset($data['enable_scheduled_release_metadata']) ? $data['enable_scheduled_release_metadata'] : null;
         $this->container['enable_search'] = isset($data['enable_search']) ? $data['enable_search'] : null;
         $this->container['enable_search_metadata'] = isset($data['enable_search_metadata']) ? $data['enable_search_metadata'] : null;
+        $this->container['enable_search_service_azure_uri'] = isset($data['enable_search_service_azure_uri']) ? $data['enable_search_service_azure_uri'] : null;
+        $this->container['enable_search_service_azure_uri_metadata'] = isset($data['enable_search_service_azure_uri_metadata']) ? $data['enable_search_service_azure_uri_metadata'] : null;
         $this->container['enable_search_site_specific_api'] = isset($data['enable_search_site_specific_api']) ? $data['enable_search_site_specific_api'] : null;
         $this->container['enable_search_site_specific_api_metadata'] = isset($data['enable_search_site_specific_api_metadata']) ? $data['enable_search_site_specific_api_metadata'] : null;
         $this->container['enable_search_ui'] = isset($data['enable_search_ui']) ? $data['enable_search_ui'] : null;
@@ -3750,10 +4267,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_transaction_point_metadata'] = isset($data['enable_transaction_point_metadata']) ? $data['enable_transaction_point_metadata'] : null;
         $this->container['enable_vaulting'] = isset($data['enable_vaulting']) ? $data['enable_vaulting'] : null;
         $this->container['enable_vaulting_metadata'] = isset($data['enable_vaulting_metadata']) ? $data['enable_vaulting_metadata'] : null;
+        $this->container['enable_web_forms_separate_user_permissions'] = isset($data['enable_web_forms_separate_user_permissions']) ? $data['enable_web_forms_separate_user_permissions'] : null;
+        $this->container['enable_web_forms_separate_user_permissions_metadata'] = isset($data['enable_web_forms_separate_user_permissions_metadata']) ? $data['enable_web_forms_separate_user_permissions_metadata'] : null;
         $this->container['enable_witnessing'] = isset($data['enable_witnessing']) ? $data['enable_witnessing'] : null;
         $this->container['enable_witnessing_metadata'] = isset($data['enable_witnessing_metadata']) ? $data['enable_witnessing_metadata'] : null;
         $this->container['enforce_template_name_uniqueness'] = isset($data['enforce_template_name_uniqueness']) ? $data['enforce_template_name_uniqueness'] : null;
         $this->container['enforce_template_name_uniqueness_metadata'] = isset($data['enforce_template_name_uniqueness_metadata']) ? $data['enforce_template_name_uniqueness_metadata'] : null;
+        $this->container['enforce_tls_emails'] = isset($data['enforce_tls_emails']) ? $data['enforce_tls_emails'] : null;
+        $this->container['enforce_tls_emails_metadata'] = isset($data['enforce_tls_emails_metadata']) ? $data['enforce_tls_emails_metadata'] : null;
         $this->container['envelope_integration_allowed'] = isset($data['envelope_integration_allowed']) ? $data['envelope_integration_allowed'] : null;
         $this->container['envelope_integration_allowed_metadata'] = isset($data['envelope_integration_allowed_metadata']) ? $data['envelope_integration_allowed_metadata'] : null;
         $this->container['envelope_integration_enabled'] = isset($data['envelope_integration_enabled']) ? $data['envelope_integration_enabled'] : null;
@@ -3762,6 +4283,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['envelope_limits_total_document_size_allowed_in_mb_enabled'] = isset($data['envelope_limits_total_document_size_allowed_in_mb_enabled']) ? $data['envelope_limits_total_document_size_allowed_in_mb_enabled'] : null;
         $this->container['envelope_limits_total_document_size_allowed_in_mb_enabled_metadata'] = isset($data['envelope_limits_total_document_size_allowed_in_mb_enabled_metadata']) ? $data['envelope_limits_total_document_size_allowed_in_mb_enabled_metadata'] : null;
         $this->container['envelope_limits_total_document_size_allowed_in_mb_metadata'] = isset($data['envelope_limits_total_document_size_allowed_in_mb_metadata']) ? $data['envelope_limits_total_document_size_allowed_in_mb_metadata'] : null;
+        $this->container['envelope_search_mode'] = isset($data['envelope_search_mode']) ? $data['envelope_search_mode'] : null;
+        $this->container['envelope_search_mode_metadata'] = isset($data['envelope_search_mode_metadata']) ? $data['envelope_search_mode_metadata'] : null;
         $this->container['envelope_stamping_default_value'] = isset($data['envelope_stamping_default_value']) ? $data['envelope_stamping_default_value'] : null;
         $this->container['envelope_stamping_default_value_metadata'] = isset($data['envelope_stamping_default_value_metadata']) ? $data['envelope_stamping_default_value_metadata'] : null;
         $this->container['exit_prompt'] = isset($data['exit_prompt']) ? $data['exit_prompt'] : null;
@@ -3779,6 +4302,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['finish_reminder_metadata'] = isset($data['finish_reminder_metadata']) ? $data['finish_reminder_metadata'] : null;
         $this->container['guided_forms_html_allowed'] = isset($data['guided_forms_html_allowed']) ? $data['guided_forms_html_allowed'] : null;
         $this->container['guided_forms_html_allowed_metadata'] = isset($data['guided_forms_html_allowed_metadata']) ? $data['guided_forms_html_allowed_metadata'] : null;
+        $this->container['guided_forms_html_conversion_policy'] = isset($data['guided_forms_html_conversion_policy']) ? $data['guided_forms_html_conversion_policy'] : null;
+        $this->container['guided_forms_html_conversion_policy_metadata'] = isset($data['guided_forms_html_conversion_policy_metadata']) ? $data['guided_forms_html_conversion_policy_metadata'] : null;
         $this->container['has_recipient_connect_claimed_domain'] = isset($data['has_recipient_connect_claimed_domain']) ? $data['has_recipient_connect_claimed_domain'] : null;
         $this->container['hide_account_address_in_co_c'] = isset($data['hide_account_address_in_co_c']) ? $data['hide_account_address_in_co_c'] : null;
         $this->container['hide_account_address_in_co_c_metadata'] = isset($data['hide_account_address_in_co_c_metadata']) ? $data['hide_account_address_in_co_c_metadata'] : null;
@@ -3795,6 +4320,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['id_check_required_metadata'] = isset($data['id_check_required_metadata']) ? $data['id_check_required_metadata'] : null;
         $this->container['identity_verification'] = isset($data['identity_verification']) ? $data['identity_verification'] : null;
         $this->container['identity_verification_metadata'] = isset($data['identity_verification_metadata']) ? $data['identity_verification_metadata'] : null;
+        $this->container['idfx_kba_authentication_override'] = isset($data['idfx_kba_authentication_override']) ? $data['idfx_kba_authentication_override'] : null;
+        $this->container['idfx_kba_authentication_override_metadata'] = isset($data['idfx_kba_authentication_override_metadata']) ? $data['idfx_kba_authentication_override_metadata'] : null;
         $this->container['idfx_phone_authentication_override'] = isset($data['idfx_phone_authentication_override']) ? $data['idfx_phone_authentication_override'] : null;
         $this->container['idfx_phone_authentication_override_metadata'] = isset($data['idfx_phone_authentication_override_metadata']) ? $data['idfx_phone_authentication_override_metadata'] : null;
         $this->container['ignore_error_if_anchor_tab_not_found'] = isset($data['ignore_error_if_anchor_tab_not_found']) ? $data['ignore_error_if_anchor_tab_not_found'] : null;
@@ -3807,17 +4334,21 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['in_session_enabled_metadata'] = isset($data['in_session_enabled_metadata']) ? $data['in_session_enabled_metadata'] : null;
         $this->container['in_session_suppress_emails'] = isset($data['in_session_suppress_emails']) ? $data['in_session_suppress_emails'] : null;
         $this->container['in_session_suppress_emails_metadata'] = isset($data['in_session_suppress_emails_metadata']) ? $data['in_session_suppress_emails_metadata'] : null;
+        $this->container['is_connect_document_fields_enabled'] = isset($data['is_connect_document_fields_enabled']) ? $data['is_connect_document_fields_enabled'] : null;
         $this->container['linked_external_primary_accounts'] = isset($data['linked_external_primary_accounts']) ? $data['linked_external_primary_accounts'] : null;
         $this->container['maximum_signing_groups'] = isset($data['maximum_signing_groups']) ? $data['maximum_signing_groups'] : null;
         $this->container['maximum_signing_groups_metadata'] = isset($data['maximum_signing_groups_metadata']) ? $data['maximum_signing_groups_metadata'] : null;
         $this->container['maximum_users_per_signing_group'] = isset($data['maximum_users_per_signing_group']) ? $data['maximum_users_per_signing_group'] : null;
         $this->container['maximum_users_per_signing_group_metadata'] = isset($data['maximum_users_per_signing_group_metadata']) ? $data['maximum_users_per_signing_group_metadata'] : null;
         $this->container['max_number_of_custom_stamps'] = isset($data['max_number_of_custom_stamps']) ? $data['max_number_of_custom_stamps'] : null;
+        $this->container['merge_mixed_mode_results'] = isset($data['merge_mixed_mode_results']) ? $data['merge_mixed_mode_results'] : null;
+        $this->container['merge_mixed_mode_results_metadata'] = isset($data['merge_mixed_mode_results_metadata']) ? $data['merge_mixed_mode_results_metadata'] : null;
         $this->container['mobile_session_timeout'] = isset($data['mobile_session_timeout']) ? $data['mobile_session_timeout'] : null;
         $this->container['mobile_session_timeout_metadata'] = isset($data['mobile_session_timeout_metadata']) ? $data['mobile_session_timeout_metadata'] : null;
         $this->container['number_of_active_custom_stamps'] = isset($data['number_of_active_custom_stamps']) ? $data['number_of_active_custom_stamps'] : null;
         $this->container['opt_in_mobile_signing_v02'] = isset($data['opt_in_mobile_signing_v02']) ? $data['opt_in_mobile_signing_v02'] : null;
         $this->container['opt_in_mobile_signing_v02_metadata'] = isset($data['opt_in_mobile_signing_v02_metadata']) ? $data['opt_in_mobile_signing_v02_metadata'] : null;
+        $this->container['opt_in_universal_signatures'] = isset($data['opt_in_universal_signatures']) ? $data['opt_in_universal_signatures'] : null;
         $this->container['opt_out_auto_nav_text_and_tab_color_updates'] = isset($data['opt_out_auto_nav_text_and_tab_color_updates']) ? $data['opt_out_auto_nav_text_and_tab_color_updates'] : null;
         $this->container['opt_out_auto_nav_text_and_tab_color_updates_metadata'] = isset($data['opt_out_auto_nav_text_and_tab_color_updates_metadata']) ? $data['opt_out_auto_nav_text_and_tab_color_updates_metadata'] : null;
         $this->container['opt_out_new_platform_seal'] = isset($data['opt_out_new_platform_seal']) ? $data['opt_out_new_platform_seal'] : null;
@@ -3850,6 +4381,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['rsa_verid_password'] = isset($data['rsa_verid_password']) ? $data['rsa_verid_password'] : null;
         $this->container['rsa_verid_ruleset'] = isset($data['rsa_verid_ruleset']) ? $data['rsa_verid_ruleset'] : null;
         $this->container['rsa_verid_user_id'] = isset($data['rsa_verid_user_id']) ? $data['rsa_verid_user_id'] : null;
+        $this->container['sbs_transaction_level'] = isset($data['sbs_transaction_level']) ? $data['sbs_transaction_level'] : null;
         $this->container['self_signed_recipient_email_document'] = isset($data['self_signed_recipient_email_document']) ? $data['self_signed_recipient_email_document'] : null;
         $this->container['self_signed_recipient_email_document_metadata'] = isset($data['self_signed_recipient_email_document_metadata']) ? $data['self_signed_recipient_email_document_metadata'] : null;
         $this->container['self_signed_recipient_email_document_user_override'] = isset($data['self_signed_recipient_email_document_user_override']) ? $data['self_signed_recipient_email_document_user_override'] : null;
@@ -3958,10 +4490,18 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['use_derived_keys_metadata'] = isset($data['use_derived_keys_metadata']) ? $data['use_derived_keys_metadata'] : null;
         $this->container['use_docu_sign_express_signer_certificate'] = isset($data['use_docu_sign_express_signer_certificate']) ? $data['use_docu_sign_express_signer_certificate'] : null;
         $this->container['use_docu_sign_express_signer_certificate_metadata'] = isset($data['use_docu_sign_express_signer_certificate_metadata']) ? $data['use_docu_sign_express_signer_certificate_metadata'] : null;
+        $this->container['use_envelope_search_mixed_mode'] = isset($data['use_envelope_search_mixed_mode']) ? $data['use_envelope_search_mixed_mode'] : null;
+        $this->container['use_envelope_search_mixed_mode_metadata'] = isset($data['use_envelope_search_mixed_mode_metadata']) ? $data['use_envelope_search_mixed_mode_metadata'] : null;
         $this->container['use_multi_app_groups_data'] = isset($data['use_multi_app_groups_data']) ? $data['use_multi_app_groups_data'] : null;
         $this->container['use_multi_app_groups_data_metadata'] = isset($data['use_multi_app_groups_data_metadata']) ? $data['use_multi_app_groups_data_metadata'] : null;
         $this->container['use_new_blob_for_pdf'] = isset($data['use_new_blob_for_pdf']) ? $data['use_new_blob_for_pdf'] : null;
         $this->container['use_new_blob_for_pdf_metadata'] = isset($data['use_new_blob_for_pdf_metadata']) ? $data['use_new_blob_for_pdf_metadata'] : null;
+        $this->container['use_new_envelope_search'] = isset($data['use_new_envelope_search']) ? $data['use_new_envelope_search'] : null;
+        $this->container['use_new_envelope_search_metadata'] = isset($data['use_new_envelope_search_metadata']) ? $data['use_new_envelope_search_metadata'] : null;
+        $this->container['use_new_envelope_search_only_when_searching_after_date'] = isset($data['use_new_envelope_search_only_when_searching_after_date']) ? $data['use_new_envelope_search_only_when_searching_after_date'] : null;
+        $this->container['use_new_envelope_search_only_when_searching_after_date_metadata'] = isset($data['use_new_envelope_search_only_when_searching_after_date_metadata']) ? $data['use_new_envelope_search_only_when_searching_after_date_metadata'] : null;
+        $this->container['use_new_envelope_search_only_with_search_term'] = isset($data['use_new_envelope_search_only_with_search_term']) ? $data['use_new_envelope_search_only_with_search_term'] : null;
+        $this->container['use_new_envelope_search_only_with_search_term_metadata'] = isset($data['use_new_envelope_search_only_with_search_term_metadata']) ? $data['use_new_envelope_search_only_with_search_term_metadata'] : null;
         $this->container['use_safe_signer_certificates'] = isset($data['use_safe_signer_certificates']) ? $data['use_safe_signer_certificates'] : null;
         $this->container['use_safe_signer_certificates_metadata'] = isset($data['use_safe_signer_certificates_metadata']) ? $data['use_safe_signer_certificates_metadata'] : null;
         $this->container['uses_api'] = isset($data['uses_api']) ? $data['uses_api'] : null;
@@ -4324,6 +4864,150 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets advanced_search_enable_tab_field
+     *
+     * @return ?string
+     */
+    public function getAdvancedSearchEnableTabField()
+    {
+        return $this->container['advanced_search_enable_tab_field'];
+    }
+
+    /**
+     * Sets advanced_search_enable_tab_field
+     *
+     * @param ?string $advanced_search_enable_tab_field 
+     *
+     * @return $this
+     */
+    public function setAdvancedSearchEnableTabField($advanced_search_enable_tab_field)
+    {
+        $this->container['advanced_search_enable_tab_field'] = $advanced_search_enable_tab_field;
+
+        return $this;
+    }
+
+    /**
+     * Gets advanced_search_enable_tab_field_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAdvancedSearchEnableTabFieldMetadata()
+    {
+        return $this->container['advanced_search_enable_tab_field_metadata'];
+    }
+
+    /**
+     * Sets advanced_search_enable_tab_field_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_tab_field_metadata 
+     *
+     * @return $this
+     */
+    public function setAdvancedSearchEnableTabFieldMetadata($advanced_search_enable_tab_field_metadata)
+    {
+        $this->container['advanced_search_enable_tab_field_metadata'] = $advanced_search_enable_tab_field_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets advanced_search_enable_template_id_field
+     *
+     * @return ?string
+     */
+    public function getAdvancedSearchEnableTemplateIdField()
+    {
+        return $this->container['advanced_search_enable_template_id_field'];
+    }
+
+    /**
+     * Sets advanced_search_enable_template_id_field
+     *
+     * @param ?string $advanced_search_enable_template_id_field 
+     *
+     * @return $this
+     */
+    public function setAdvancedSearchEnableTemplateIdField($advanced_search_enable_template_id_field)
+    {
+        $this->container['advanced_search_enable_template_id_field'] = $advanced_search_enable_template_id_field;
+
+        return $this;
+    }
+
+    /**
+     * Gets advanced_search_enable_template_id_field_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAdvancedSearchEnableTemplateIdFieldMetadata()
+    {
+        return $this->container['advanced_search_enable_template_id_field_metadata'];
+    }
+
+    /**
+     * Sets advanced_search_enable_template_id_field_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_template_id_field_metadata 
+     *
+     * @return $this
+     */
+    public function setAdvancedSearchEnableTemplateIdFieldMetadata($advanced_search_enable_template_id_field_metadata)
+    {
+        $this->container['advanced_search_enable_template_id_field_metadata'] = $advanced_search_enable_template_id_field_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets advanced_search_enable_template_name_field
+     *
+     * @return ?string
+     */
+    public function getAdvancedSearchEnableTemplateNameField()
+    {
+        return $this->container['advanced_search_enable_template_name_field'];
+    }
+
+    /**
+     * Sets advanced_search_enable_template_name_field
+     *
+     * @param ?string $advanced_search_enable_template_name_field 
+     *
+     * @return $this
+     */
+    public function setAdvancedSearchEnableTemplateNameField($advanced_search_enable_template_name_field)
+    {
+        $this->container['advanced_search_enable_template_name_field'] = $advanced_search_enable_template_name_field;
+
+        return $this;
+    }
+
+    /**
+     * Gets advanced_search_enable_template_name_field_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAdvancedSearchEnableTemplateNameFieldMetadata()
+    {
+        return $this->container['advanced_search_enable_template_name_field_metadata'];
+    }
+
+    /**
+     * Sets advanced_search_enable_template_name_field_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_template_name_field_metadata 
+     *
+     * @return $this
+     */
+    public function setAdvancedSearchEnableTemplateNameFieldMetadata($advanced_search_enable_template_name_field_metadata)
+    {
+        $this->container['advanced_search_enable_template_name_field_metadata'] = $advanced_search_enable_template_name_field_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_access_code_format
      *
      * @return ?string
@@ -4463,6 +5147,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowAccountMemberNameChangeMetadata($allow_account_member_name_change_metadata)
     {
         $this->container['allow_account_member_name_change_metadata'] = $allow_account_member_name_change_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_ace
+     *
+     * @return ?string
+     */
+    public function getAllowAce()
+    {
+        return $this->container['allow_ace'];
+    }
+
+    /**
+     * Sets allow_ace
+     *
+     * @param ?string $allow_ace 
+     *
+     * @return $this
+     */
+    public function setAllowAce($allow_ace)
+    {
+        $this->container['allow_ace'] = $allow_ace;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_ace_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowAceMetadata()
+    {
+        return $this->container['allow_ace_metadata'];
+    }
+
+    /**
+     * Sets allow_ace_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_ace_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowAceMetadata($allow_ace_metadata)
+    {
+        $this->container['allow_ace_metadata'] = $allow_ace_metadata;
 
         return $this;
     }
@@ -4612,49 +5344,49 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets allow_agreement_orchestration_workflows
+     * Gets allow_agreement_orchestrations
      *
      * @return ?string
      */
-    public function getAllowAgreementOrchestrationWorkflows()
+    public function getAllowAgreementOrchestrations()
     {
-        return $this->container['allow_agreement_orchestration_workflows'];
+        return $this->container['allow_agreement_orchestrations'];
     }
 
     /**
-     * Sets allow_agreement_orchestration_workflows
+     * Sets allow_agreement_orchestrations
      *
-     * @param ?string $allow_agreement_orchestration_workflows 
+     * @param ?string $allow_agreement_orchestrations 
      *
      * @return $this
      */
-    public function setAllowAgreementOrchestrationWorkflows($allow_agreement_orchestration_workflows)
+    public function setAllowAgreementOrchestrations($allow_agreement_orchestrations)
     {
-        $this->container['allow_agreement_orchestration_workflows'] = $allow_agreement_orchestration_workflows;
+        $this->container['allow_agreement_orchestrations'] = $allow_agreement_orchestrations;
 
         return $this;
     }
 
     /**
-     * Gets allow_agreement_orchestration_workflows_metadata
+     * Gets allow_agreement_orchestrations_metadata
      *
      * @return \DocuSign\eSign\Model\SettingsMetadata
      */
-    public function getAllowAgreementOrchestrationWorkflowsMetadata()
+    public function getAllowAgreementOrchestrationsMetadata()
     {
-        return $this->container['allow_agreement_orchestration_workflows_metadata'];
+        return $this->container['allow_agreement_orchestrations_metadata'];
     }
 
     /**
-     * Sets allow_agreement_orchestration_workflows_metadata
+     * Sets allow_agreement_orchestrations_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_agreement_orchestration_workflows_metadata allow_agreement_orchestration_workflows_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_agreement_orchestrations_metadata 
      *
      * @return $this
      */
-    public function setAllowAgreementOrchestrationWorkflowsMetadata($allow_agreement_orchestration_workflows_metadata)
+    public function setAllowAgreementOrchestrationsMetadata($allow_agreement_orchestrations_metadata)
     {
-        $this->container['allow_agreement_orchestration_workflows_metadata'] = $allow_agreement_orchestration_workflows_metadata;
+        $this->container['allow_agreement_orchestrations_metadata'] = $allow_agreement_orchestrations_metadata;
 
         return $this;
     }
@@ -4876,6 +5608,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_connect_identity_verification_ui
+     *
+     * @return ?string
+     */
+    public function getAllowConnectIdentityVerificationUi()
+    {
+        return $this->container['allow_connect_identity_verification_ui'];
+    }
+
+    /**
+     * Sets allow_connect_identity_verification_ui
+     *
+     * @param ?string $allow_connect_identity_verification_ui 
+     *
+     * @return $this
+     */
+    public function setAllowConnectIdentityVerificationUi($allow_connect_identity_verification_ui)
+    {
+        $this->container['allow_connect_identity_verification_ui'] = $allow_connect_identity_verification_ui;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_connect_o_auth_ui
      *
      * @return ?string
@@ -5080,7 +5836,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_delayed_routing
      *
-     * @param ?string $allow_delayed_routing \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.
+     * @param ?string $allow_delayed_routing \\\"true\\\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \\\"false\\\" otherwise.
      *
      * @return $this
      */
@@ -5200,7 +5956,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_doc_gen_documents_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_doc_gen_documents_metadata allow_doc_gen_documents_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_doc_gen_documents_metadata 
      *
      * @return $this
      */
@@ -5351,6 +6107,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowDocumentVisibilityMetadata($allow_document_visibility_metadata)
     {
         $this->container['allow_document_visibility_metadata'] = $allow_document_visibility_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_editing_envelopes_on_behalf_of_others
+     *
+     * @return ?string
+     */
+    public function getAllowEditingEnvelopesOnBehalfOfOthers()
+    {
+        return $this->container['allow_editing_envelopes_on_behalf_of_others'];
+    }
+
+    /**
+     * Sets allow_editing_envelopes_on_behalf_of_others
+     *
+     * @param ?string $allow_editing_envelopes_on_behalf_of_others 
+     *
+     * @return $this
+     */
+    public function setAllowEditingEnvelopesOnBehalfOfOthers($allow_editing_envelopes_on_behalf_of_others)
+    {
+        $this->container['allow_editing_envelopes_on_behalf_of_others'] = $allow_editing_envelopes_on_behalf_of_others;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_editing_envelopes_on_behalf_of_others_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowEditingEnvelopesOnBehalfOfOthersMetadata()
+    {
+        return $this->container['allow_editing_envelopes_on_behalf_of_others_metadata'];
+    }
+
+    /**
+     * Sets allow_editing_envelopes_on_behalf_of_others_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_editing_envelopes_on_behalf_of_others_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowEditingEnvelopesOnBehalfOfOthersMetadata($allow_editing_envelopes_on_behalf_of_others_metadata)
+    {
+        $this->container['allow_editing_envelopes_on_behalf_of_others_metadata'] = $allow_editing_envelopes_on_behalf_of_others_metadata;
 
         return $this;
     }
@@ -5968,7 +6772,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_for_eu_qualified_signatures_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_for_eu_qualified_signatures_metadata allow_idv_for_eu_qualified_signatures_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_for_eu_qualified_signatures_metadata 
      *
      * @return $this
      */
@@ -6023,6 +6827,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowIdvLevel1Metadata($allow_idv_level1_metadata)
     {
         $this->container['allow_idv_level1_metadata'] = $allow_idv_level1_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_idv_level1_trial
+     *
+     * @return ?string
+     */
+    public function getAllowIdvLevel1Trial()
+    {
+        return $this->container['allow_idv_level1_trial'];
+    }
+
+    /**
+     * Sets allow_idv_level1_trial
+     *
+     * @param ?string $allow_idv_level1_trial 
+     *
+     * @return $this
+     */
+    public function setAllowIdvLevel1Trial($allow_idv_level1_trial)
+    {
+        $this->container['allow_idv_level1_trial'] = $allow_idv_level1_trial;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_idv_level1_trial_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowIdvLevel1TrialMetadata()
+    {
+        return $this->container['allow_idv_level1_trial_metadata'];
+    }
+
+    /**
+     * Sets allow_idv_level1_trial_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_level1_trial_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowIdvLevel1TrialMetadata($allow_idv_level1_trial_metadata)
+    {
+        $this->container['allow_idv_level1_trial_metadata'] = $allow_idv_level1_trial_metadata;
 
         return $this;
     }
@@ -6232,7 +7084,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_in_person_electronic_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_in_person_electronic_notary_metadata MetaData for the allowInPersonElectronicNotary flag
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_in_person_electronic_notary_metadata MetaData for the Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions
      *
      * @return $this
      */
@@ -6352,7 +7204,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_managing_envelopes_on_behalf_of_others_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_managing_envelopes_on_behalf_of_others_metadata allow_managing_envelopes_on_behalf_of_others_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_managing_envelopes_on_behalf_of_others_metadata 
      *
      * @return $this
      */
@@ -6820,6 +7672,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets allow_organization_docusign_monitor_free
+     *
+     * @return ?string
+     */
+    public function getAllowOrganizationDocusignMonitorFree()
+    {
+        return $this->container['allow_organization_docusign_monitor_free'];
+    }
+
+    /**
+     * Sets allow_organization_docusign_monitor_free
+     *
+     * @param ?string $allow_organization_docusign_monitor_free 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationDocusignMonitorFree($allow_organization_docusign_monitor_free)
+    {
+        $this->container['allow_organization_docusign_monitor_free'] = $allow_organization_docusign_monitor_free;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_organization_docusign_monitor_free_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowOrganizationDocusignMonitorFreeMetadata()
+    {
+        return $this->container['allow_organization_docusign_monitor_free_metadata'];
+    }
+
+    /**
+     * Sets allow_organization_docusign_monitor_free_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_docusign_monitor_free_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowOrganizationDocusignMonitorFreeMetadata($allow_organization_docusign_monitor_free_metadata)
+    {
+        $this->container['allow_organization_docusign_monitor_free_metadata'] = $allow_organization_docusign_monitor_free_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets allow_organization_docusign_monitor_metadata
      *
      * @return \DocuSign\eSign\Model\SettingsMetadata
@@ -7024,7 +7924,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_to_use_in_person_electronic_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_in_person_electronic_notary_metadata MetaData for the allowOrganizationToUseInPersonElectronicNotary flag
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_in_person_electronic_notary_metadata MetaData for the Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions
      *
      * @return $this
      */
@@ -7120,7 +8020,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_to_use_third_party_electronic_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_third_party_electronic_notary_metadata allow_organization_to_use_third_party_electronic_notary_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_third_party_electronic_notary_metadata Metadata for the org level flag that dtermines the availablity to perform Third Party Notary (3PN) actions.
      *
      * @return $this
      */
@@ -7168,7 +8068,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_participant_recipient_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_participant_recipient_type_metadata allow_participant_recipient_type_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_participant_recipient_type_metadata 
      *
      * @return $this
      */
@@ -7264,7 +8164,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_performance_analytics_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_performance_analytics_metadata allow_performance_analytics_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_performance_analytics_metadata 
      *
      * @return $this
      */
@@ -7672,7 +8572,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_scheduled_sending
      *
-     * @param ?string $allow_scheduled_sending \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.
+     * @param ?string $allow_scheduled_sending \\\"true\\\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \\\"false\\\" otherwise.
      *
      * @return $this
      */
@@ -7792,7 +8692,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sending_envelopes_on_behalf_of_others_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_sending_envelopes_on_behalf_of_others_metadata allow_sending_envelopes_on_behalf_of_others_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_sending_envelopes_on_behalf_of_others_metadata 
      *
      * @return $this
      */
@@ -8656,13 +9556,109 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_third_party_electronic_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_third_party_electronic_notary_metadata allow_third_party_electronic_notary_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_third_party_electronic_notary_metadata 
      *
      * @return $this
      */
     public function setAllowThirdPartyElectronicNotaryMetadata($allow_third_party_electronic_notary_metadata)
     {
         $this->container['allow_third_party_electronic_notary_metadata'] = $allow_third_party_electronic_notary_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_transactions_workspace
+     *
+     * @return ?string
+     */
+    public function getAllowTransactionsWorkspace()
+    {
+        return $this->container['allow_transactions_workspace'];
+    }
+
+    /**
+     * Sets allow_transactions_workspace
+     *
+     * @param ?string $allow_transactions_workspace 
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsWorkspace($allow_transactions_workspace)
+    {
+        $this->container['allow_transactions_workspace'] = $allow_transactions_workspace;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_transactions_workspace_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowTransactionsWorkspaceMetadata()
+    {
+        return $this->container['allow_transactions_workspace_metadata'];
+    }
+
+    /**
+     * Sets allow_transactions_workspace_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_workspace_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsWorkspaceMetadata($allow_transactions_workspace_metadata)
+    {
+        $this->container['allow_transactions_workspace_metadata'] = $allow_transactions_workspace_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_transactions_workspace_original
+     *
+     * @return ?string
+     */
+    public function getAllowTransactionsWorkspaceOriginal()
+    {
+        return $this->container['allow_transactions_workspace_original'];
+    }
+
+    /**
+     * Sets allow_transactions_workspace_original
+     *
+     * @param ?string $allow_transactions_workspace_original 
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsWorkspaceOriginal($allow_transactions_workspace_original)
+    {
+        $this->container['allow_transactions_workspace_original'] = $allow_transactions_workspace_original;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_transactions_workspace_original_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowTransactionsWorkspaceOriginalMetadata()
+    {
+        return $this->container['allow_transactions_workspace_original_metadata'];
+    }
+
+    /**
+     * Sets allow_transactions_workspace_original_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_workspace_original_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowTransactionsWorkspaceOriginalMetadata($allow_transactions_workspace_original_metadata)
+    {
+        $this->container['allow_transactions_workspace_original_metadata'] = $allow_transactions_workspace_original_metadata;
 
         return $this;
     }
@@ -8800,13 +9796,61 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_web_forms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_web_forms_metadata allow_web_forms_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_web_forms_metadata 
      *
      * @return $this
      */
     public function setAllowWebFormsMetadata($allow_web_forms_metadata)
     {
         $this->container['allow_web_forms_metadata'] = $allow_web_forms_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_whats_app_delivery
+     *
+     * @return ?string
+     */
+    public function getAllowWhatsAppDelivery()
+    {
+        return $this->container['allow_whats_app_delivery'];
+    }
+
+    /**
+     * Sets allow_whats_app_delivery
+     *
+     * @param ?string $allow_whats_app_delivery 
+     *
+     * @return $this
+     */
+    public function setAllowWhatsAppDelivery($allow_whats_app_delivery)
+    {
+        $this->container['allow_whats_app_delivery'] = $allow_whats_app_delivery;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_whats_app_delivery_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowWhatsAppDeliveryMetadata()
+    {
+        return $this->container['allow_whats_app_delivery_metadata'];
+    }
+
+    /**
+     * Sets allow_whats_app_delivery_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_whats_app_delivery_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowWhatsAppDeliveryMetadata($allow_whats_app_delivery_metadata)
+    {
+        $this->container['allow_whats_app_delivery_metadata'] = $allow_whats_app_delivery_metadata;
 
         return $this;
     }
@@ -10036,6 +11080,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets default_to_advanced_envelopes_filter_form
+     *
+     * @return ?string
+     */
+    public function getDefaultToAdvancedEnvelopesFilterForm()
+    {
+        return $this->container['default_to_advanced_envelopes_filter_form'];
+    }
+
+    /**
+     * Sets default_to_advanced_envelopes_filter_form
+     *
+     * @param ?string $default_to_advanced_envelopes_filter_form 
+     *
+     * @return $this
+     */
+    public function setDefaultToAdvancedEnvelopesFilterForm($default_to_advanced_envelopes_filter_form)
+    {
+        $this->container['default_to_advanced_envelopes_filter_form'] = $default_to_advanced_envelopes_filter_form;
+
+        return $this;
+    }
+
+    /**
+     * Gets default_to_advanced_envelopes_filter_form_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDefaultToAdvancedEnvelopesFilterFormMetadata()
+    {
+        return $this->container['default_to_advanced_envelopes_filter_form_metadata'];
+    }
+
+    /**
+     * Sets default_to_advanced_envelopes_filter_form_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $default_to_advanced_envelopes_filter_form_metadata 
+     *
+     * @return $this
+     */
+    public function setDefaultToAdvancedEnvelopesFilterFormMetadata($default_to_advanced_envelopes_filter_form_metadata)
+    {
+        $this->container['default_to_advanced_envelopes_filter_form_metadata'] = $default_to_advanced_envelopes_filter_form_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets disable_auto_template_matching
      *
      * @return ?string
@@ -10756,6 +11848,78 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets draft_envelope_retention
+     *
+     * @return ?string
+     */
+    public function getDraftEnvelopeRetention()
+    {
+        return $this->container['draft_envelope_retention'];
+    }
+
+    /**
+     * Sets draft_envelope_retention
+     *
+     * @param ?string $draft_envelope_retention 
+     *
+     * @return $this
+     */
+    public function setDraftEnvelopeRetention($draft_envelope_retention)
+    {
+        $this->container['draft_envelope_retention'] = $draft_envelope_retention;
+
+        return $this;
+    }
+
+    /**
+     * Gets draft_envelope_retention_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDraftEnvelopeRetentionMetadata()
+    {
+        return $this->container['draft_envelope_retention_metadata'];
+    }
+
+    /**
+     * Sets draft_envelope_retention_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $draft_envelope_retention_metadata 
+     *
+     * @return $this
+     */
+    public function setDraftEnvelopeRetentionMetadata($draft_envelope_retention_metadata)
+    {
+        $this->container['draft_envelope_retention_metadata'] = $draft_envelope_retention_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets dss_enable_provisioning_pen_configuration_radmin_option
+     *
+     * @return ?string
+     */
+    public function getDssEnableProvisioningPenConfigurationRadminOption()
+    {
+        return $this->container['dss_enable_provisioning_pen_configuration_radmin_option'];
+    }
+
+    /**
+     * Sets dss_enable_provisioning_pen_configuration_radmin_option
+     *
+     * @param ?string $dss_enable_provisioning_pen_configuration_radmin_option 
+     *
+     * @return $this
+     */
+    public function setDssEnableProvisioningPenConfigurationRadminOption($dss_enable_provisioning_pen_configuration_radmin_option)
+    {
+        $this->container['dss_enable_provisioning_pen_configuration_radmin_option'] = $dss_enable_provisioning_pen_configuration_radmin_option;
+
+        return $this;
+    }
+
+    /**
      * Gets dss_sign_28411_enable_leave_page_prompt_radmin_option
      *
      * @return ?string
@@ -10895,6 +12059,150 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableAccessCodeGeneratorMetadata($enable_access_code_generator_metadata)
     {
         $this->container['enable_access_code_generator_metadata'] = $enable_access_code_generator_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_account_wide_search
+     *
+     * @return ?string
+     */
+    public function getEnableAccountWideSearch()
+    {
+        return $this->container['enable_account_wide_search'];
+    }
+
+    /**
+     * Sets enable_account_wide_search
+     *
+     * @param ?string $enable_account_wide_search 
+     *
+     * @return $this
+     */
+    public function setEnableAccountWideSearch($enable_account_wide_search)
+    {
+        $this->container['enable_account_wide_search'] = $enable_account_wide_search;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_account_wide_search_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAccountWideSearchMetadata()
+    {
+        return $this->container['enable_account_wide_search_metadata'];
+    }
+
+    /**
+     * Sets enable_account_wide_search_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_account_wide_search_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableAccountWideSearchMetadata($enable_account_wide_search_metadata)
+    {
+        $this->container['enable_account_wide_search_metadata'] = $enable_account_wide_search_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_adm_healthcare
+     *
+     * @return ?string
+     */
+    public function getEnableAdmHealthcare()
+    {
+        return $this->container['enable_adm_healthcare'];
+    }
+
+    /**
+     * Sets enable_adm_healthcare
+     *
+     * @param ?string $enable_adm_healthcare Account Level Flag that determines the availability to use ADM Healthcare fields
+     *
+     * @return $this
+     */
+    public function setEnableAdmHealthcare($enable_adm_healthcare)
+    {
+        $this->container['enable_adm_healthcare'] = $enable_adm_healthcare;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_adm_healthcare_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAdmHealthcareMetadata()
+    {
+        return $this->container['enable_adm_healthcare_metadata'];
+    }
+
+    /**
+     * Sets enable_adm_healthcare_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_adm_healthcare_metadata Metadata for account Level Flag that determines the availability to use ADM Healthcare fields
+     *
+     * @return $this
+     */
+    public function setEnableAdmHealthcareMetadata($enable_adm_healthcare_metadata)
+    {
+        $this->container['enable_adm_healthcare_metadata'] = $enable_adm_healthcare_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_advanced_envelopes_search
+     *
+     * @return ?string
+     */
+    public function getEnableAdvancedEnvelopesSearch()
+    {
+        return $this->container['enable_advanced_envelopes_search'];
+    }
+
+    /**
+     * Sets enable_advanced_envelopes_search
+     *
+     * @param ?string $enable_advanced_envelopes_search 
+     *
+     * @return $this
+     */
+    public function setEnableAdvancedEnvelopesSearch($enable_advanced_envelopes_search)
+    {
+        $this->container['enable_advanced_envelopes_search'] = $enable_advanced_envelopes_search;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_advanced_envelopes_search_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAdvancedEnvelopesSearchMetadata()
+    {
+        return $this->container['enable_advanced_envelopes_search_metadata'];
+    }
+
+    /**
+     * Sets enable_advanced_envelopes_search_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_advanced_envelopes_search_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableAdvancedEnvelopesSearchMetadata($enable_advanced_envelopes_search_metadata)
+    {
+        $this->container['enable_advanced_envelopes_search_metadata'] = $enable_advanced_envelopes_search_metadata;
 
         return $this;
     }
@@ -11236,6 +12544,246 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_click_plus
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlus()
+    {
+        return $this->container['enable_click_plus'];
+    }
+
+    /**
+     * Sets enable_click_plus
+     *
+     * @param ?string $enable_click_plus 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlus($enable_click_plus)
+    {
+        $this->container['enable_click_plus'] = $enable_click_plus;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_conditional_content
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusConditionalContent()
+    {
+        return $this->container['enable_click_plus_conditional_content'];
+    }
+
+    /**
+     * Sets enable_click_plus_conditional_content
+     *
+     * @param ?string $enable_click_plus_conditional_content 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusConditionalContent($enable_click_plus_conditional_content)
+    {
+        $this->container['enable_click_plus_conditional_content'] = $enable_click_plus_conditional_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_conditional_content_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusConditionalContentMetaData()
+    {
+        return $this->container['enable_click_plus_conditional_content_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_conditional_content_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_conditional_content_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusConditionalContentMetaData($enable_click_plus_conditional_content_meta_data)
+    {
+        $this->container['enable_click_plus_conditional_content_meta_data'] = $enable_click_plus_conditional_content_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_fields
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusCustomFields()
+    {
+        return $this->container['enable_click_plus_custom_fields'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_fields
+     *
+     * @param ?string $enable_click_plus_custom_fields 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomFields($enable_click_plus_custom_fields)
+    {
+        $this->container['enable_click_plus_custom_fields'] = $enable_click_plus_custom_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_fields_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusCustomFieldsMetaData()
+    {
+        return $this->container['enable_click_plus_custom_fields_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_fields_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_fields_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomFieldsMetaData($enable_click_plus_custom_fields_meta_data)
+    {
+        $this->container['enable_click_plus_custom_fields_meta_data'] = $enable_click_plus_custom_fields_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_style
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusCustomStyle()
+    {
+        return $this->container['enable_click_plus_custom_style'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_style
+     *
+     * @param ?string $enable_click_plus_custom_style 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomStyle($enable_click_plus_custom_style)
+    {
+        $this->container['enable_click_plus_custom_style'] = $enable_click_plus_custom_style;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_custom_style_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusCustomStyleMetaData()
+    {
+        return $this->container['enable_click_plus_custom_style_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_custom_style_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_style_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusCustomStyleMetaData($enable_click_plus_custom_style_meta_data)
+    {
+        $this->container['enable_click_plus_custom_style_meta_data'] = $enable_click_plus_custom_style_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_dynamic_content
+     *
+     * @return ?string
+     */
+    public function getEnableClickPlusDynamicContent()
+    {
+        return $this->container['enable_click_plus_dynamic_content'];
+    }
+
+    /**
+     * Sets enable_click_plus_dynamic_content
+     *
+     * @param ?string $enable_click_plus_dynamic_content 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusDynamicContent($enable_click_plus_dynamic_content)
+    {
+        $this->container['enable_click_plus_dynamic_content'] = $enable_click_plus_dynamic_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_dynamic_content_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusDynamicContentMetaData()
+    {
+        return $this->container['enable_click_plus_dynamic_content_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_dynamic_content_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_dynamic_content_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusDynamicContentMetaData($enable_click_plus_dynamic_content_meta_data)
+    {
+        $this->container['enable_click_plus_dynamic_content_meta_data'] = $enable_click_plus_dynamic_content_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_click_plus_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableClickPlusMetaData()
+    {
+        return $this->container['enable_click_plus_meta_data'];
+    }
+
+    /**
+     * Sets enable_click_plus_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableClickPlusMetaData($enable_click_plus_meta_data)
+    {
+        $this->container['enable_click_plus_meta_data'] = $enable_click_plus_meta_data;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_clickwraps
      *
      * @return ?string
@@ -11392,7 +12940,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_contact_suggestions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_contact_suggestions_metadata enable_contact_suggestions_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_contact_suggestions_metadata 
      *
      * @return $this
      */
@@ -11452,6 +13000,342 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_d_sig_eu_advanced_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigEuAdvancedPens()
+    {
+        return $this->container['enable_d_sig_eu_advanced_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_eu_advanced_pens
+     *
+     * @param ?string $enable_d_sig_eu_advanced_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigEuAdvancedPens($enable_d_sig_eu_advanced_pens)
+    {
+        $this->container['enable_d_sig_eu_advanced_pens'] = $enable_d_sig_eu_advanced_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_eu_advanced_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigEuAdvancedPensMetadata()
+    {
+        return $this->container['enable_d_sig_eu_advanced_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_eu_advanced_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_eu_advanced_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigEuAdvancedPensMetadata($enable_d_sig_eu_advanced_pens_metadata)
+    {
+        $this->container['enable_d_sig_eu_advanced_pens_metadata'] = $enable_d_sig_eu_advanced_pens_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_express_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigExpressPens()
+    {
+        return $this->container['enable_d_sig_express_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_express_pens
+     *
+     * @param ?string $enable_d_sig_express_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigExpressPens($enable_d_sig_express_pens)
+    {
+        $this->container['enable_d_sig_express_pens'] = $enable_d_sig_express_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_express_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigExpressPensMetadata()
+    {
+        return $this->container['enable_d_sig_express_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_express_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_express_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigExpressPensMetadata($enable_d_sig_express_pens_metadata)
+    {
+        $this->container['enable_d_sig_express_pens_metadata'] = $enable_d_sig_express_pens_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_check_for_aes_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigIdCheckForAesPens()
+    {
+        return $this->container['enable_d_sig_id_check_for_aes_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_check_for_aes_pens
+     *
+     * @param ?string $enable_d_sig_id_check_for_aes_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdCheckForAesPens($enable_d_sig_id_check_for_aes_pens)
+    {
+        $this->container['enable_d_sig_id_check_for_aes_pens'] = $enable_d_sig_id_check_for_aes_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_check_for_aes_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigIdCheckForAesPensMetadata()
+    {
+        return $this->container['enable_d_sig_id_check_for_aes_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_check_for_aes_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_for_aes_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdCheckForAesPensMetadata($enable_d_sig_id_check_for_aes_pens_metadata)
+    {
+        $this->container['enable_d_sig_id_check_for_aes_pens_metadata'] = $enable_d_sig_id_check_for_aes_pens_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_check_in_person_for_qes_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigIdCheckInPersonForQesPens()
+    {
+        return $this->container['enable_d_sig_id_check_in_person_for_qes_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_check_in_person_for_qes_pens
+     *
+     * @param ?string $enable_d_sig_id_check_in_person_for_qes_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdCheckInPersonForQesPens($enable_d_sig_id_check_in_person_for_qes_pens)
+    {
+        $this->container['enable_d_sig_id_check_in_person_for_qes_pens'] = $enable_d_sig_id_check_in_person_for_qes_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_check_in_person_for_qes_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigIdCheckInPersonForQesPensMetadata()
+    {
+        return $this->container['enable_d_sig_id_check_in_person_for_qes_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_check_in_person_for_qes_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_in_person_for_qes_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdCheckInPersonForQesPensMetadata($enable_d_sig_id_check_in_person_for_qes_pens_metadata)
+    {
+        $this->container['enable_d_sig_id_check_in_person_for_qes_pens_metadata'] = $enable_d_sig_id_check_in_person_for_qes_pens_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_check_remote_for_qes_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigIdCheckRemoteForQesPens()
+    {
+        return $this->container['enable_d_sig_id_check_remote_for_qes_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_check_remote_for_qes_pens
+     *
+     * @param ?string $enable_d_sig_id_check_remote_for_qes_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdCheckRemoteForQesPens($enable_d_sig_id_check_remote_for_qes_pens)
+    {
+        $this->container['enable_d_sig_id_check_remote_for_qes_pens'] = $enable_d_sig_id_check_remote_for_qes_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_check_remote_for_qes_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigIdCheckRemoteForQesPensMetadata()
+    {
+        return $this->container['enable_d_sig_id_check_remote_for_qes_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_check_remote_for_qes_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_remote_for_qes_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdCheckRemoteForQesPensMetadata($enable_d_sig_id_check_remote_for_qes_pens_metadata)
+    {
+        $this->container['enable_d_sig_id_check_remote_for_qes_pens_metadata'] = $enable_d_sig_id_check_remote_for_qes_pens_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_verification_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigIdVerificationPens()
+    {
+        return $this->container['enable_d_sig_id_verification_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_verification_pens
+     *
+     * @param ?string $enable_d_sig_id_verification_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdVerificationPens($enable_d_sig_id_verification_pens)
+    {
+        $this->container['enable_d_sig_id_verification_pens'] = $enable_d_sig_id_verification_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_verification_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigIdVerificationPensMetadata()
+    {
+        return $this->container['enable_d_sig_id_verification_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_verification_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_verification_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdVerificationPensMetadata($enable_d_sig_id_verification_pens_metadata)
+    {
+        $this->container['enable_d_sig_id_verification_pens_metadata'] = $enable_d_sig_id_verification_pens_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_verification_premier_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigIdVerificationPremierPens()
+    {
+        return $this->container['enable_d_sig_id_verification_premier_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_verification_premier_pens
+     *
+     * @param ?string $enable_d_sig_id_verification_premier_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdVerificationPremierPens($enable_d_sig_id_verification_premier_pens)
+    {
+        $this->container['enable_d_sig_id_verification_premier_pens'] = $enable_d_sig_id_verification_premier_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_id_verification_premier_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigIdVerificationPremierPensMetadata()
+    {
+        return $this->container['enable_d_sig_id_verification_premier_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_id_verification_premier_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_verification_premier_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigIdVerificationPremierPensMetadata($enable_d_sig_id_verification_premier_pens_metadata)
+    {
+        $this->container['enable_d_sig_id_verification_premier_pens_metadata'] = $enable_d_sig_id_verification_premier_pens_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_ds_pro
      *
      * @return ?string
@@ -11495,6 +13379,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableDsProMetadata($enable_ds_pro_metadata)
     {
         $this->container['enable_ds_pro_metadata'] = $enable_ds_pro_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_enforce_tls_emails_setting_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableEnforceTlsEmailsSettingMetadata()
+    {
+        return $this->container['enable_enforce_tls_emails_setting_metadata'];
+    }
+
+    /**
+     * Sets enable_enforce_tls_emails_setting_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_enforce_tls_emails_setting_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableEnforceTlsEmailsSettingMetadata($enable_enforce_tls_emails_setting_metadata)
+    {
+        $this->container['enable_enforce_tls_emails_setting_metadata'] = $enable_enforce_tls_emails_setting_metadata;
 
         return $this;
     }
@@ -11632,7 +13540,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_e_sign_api_hourly_limit_management_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_e_sign_api_hourly_limit_management_metadata enable_e_sign_api_hourly_limit_management_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_e_sign_api_hourly_limit_management_metadata 
      *
      * @return $this
      */
@@ -11728,7 +13636,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_id_fx_accountless_sms_auth_for_part11_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_accountless_sms_auth_for_part11_metadata enable_id_fx_accountless_sms_auth_for_part11_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_accountless_sms_auth_for_part11_metadata 
      *
      * @return $this
      */
@@ -11836,6 +13744,198 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_idfx_phone_auth_signature_auth_status
+     *
+     * @return ?string
+     */
+    public function getEnableIdfxPhoneAuthSignatureAuthStatus()
+    {
+        return $this->container['enable_idfx_phone_auth_signature_auth_status'];
+    }
+
+    /**
+     * Sets enable_idfx_phone_auth_signature_auth_status
+     *
+     * @param ?string $enable_idfx_phone_auth_signature_auth_status 
+     *
+     * @return $this
+     */
+    public function setEnableIdfxPhoneAuthSignatureAuthStatus($enable_idfx_phone_auth_signature_auth_status)
+    {
+        $this->container['enable_idfx_phone_auth_signature_auth_status'] = $enable_idfx_phone_auth_signature_auth_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_idfx_phone_auth_signature_auth_status_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableIdfxPhoneAuthSignatureAuthStatusMetadata()
+    {
+        return $this->container['enable_idfx_phone_auth_signature_auth_status_metadata'];
+    }
+
+    /**
+     * Sets enable_idfx_phone_auth_signature_auth_status_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_idfx_phone_auth_signature_auth_status_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableIdfxPhoneAuthSignatureAuthStatusMetadata($enable_idfx_phone_auth_signature_auth_status_metadata)
+    {
+        $this->container['enable_idfx_phone_auth_signature_auth_status_metadata'] = $enable_idfx_phone_auth_signature_auth_status_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_inbox_browse_views_powered_by_elastic_search
+     *
+     * @return ?string
+     */
+    public function getEnableInboxBrowseViewsPoweredByElasticSearch()
+    {
+        return $this->container['enable_inbox_browse_views_powered_by_elastic_search'];
+    }
+
+    /**
+     * Sets enable_inbox_browse_views_powered_by_elastic_search
+     *
+     * @param ?string $enable_inbox_browse_views_powered_by_elastic_search 
+     *
+     * @return $this
+     */
+    public function setEnableInboxBrowseViewsPoweredByElasticSearch($enable_inbox_browse_views_powered_by_elastic_search)
+    {
+        $this->container['enable_inbox_browse_views_powered_by_elastic_search'] = $enable_inbox_browse_views_powered_by_elastic_search;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_inbox_browse_views_powered_by_elastic_search_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableInboxBrowseViewsPoweredByElasticSearchMetadata()
+    {
+        return $this->container['enable_inbox_browse_views_powered_by_elastic_search_metadata'];
+    }
+
+    /**
+     * Sets enable_inbox_browse_views_powered_by_elastic_search_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_inbox_browse_views_powered_by_elastic_search_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableInboxBrowseViewsPoweredByElasticSearchMetadata($enable_inbox_browse_views_powered_by_elastic_search_metadata)
+    {
+        $this->container['enable_inbox_browse_views_powered_by_elastic_search_metadata'] = $enable_inbox_browse_views_powered_by_elastic_search_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_inbox_relevance_sort
+     *
+     * @return ?string
+     */
+    public function getEnableInboxRelevanceSort()
+    {
+        return $this->container['enable_inbox_relevance_sort'];
+    }
+
+    /**
+     * Sets enable_inbox_relevance_sort
+     *
+     * @param ?string $enable_inbox_relevance_sort 
+     *
+     * @return $this
+     */
+    public function setEnableInboxRelevanceSort($enable_inbox_relevance_sort)
+    {
+        $this->container['enable_inbox_relevance_sort'] = $enable_inbox_relevance_sort;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_inbox_relevance_sort_for_recent_accounts
+     *
+     * @return ?string
+     */
+    public function getEnableInboxRelevanceSortForRecentAccounts()
+    {
+        return $this->container['enable_inbox_relevance_sort_for_recent_accounts'];
+    }
+
+    /**
+     * Sets enable_inbox_relevance_sort_for_recent_accounts
+     *
+     * @param ?string $enable_inbox_relevance_sort_for_recent_accounts 
+     *
+     * @return $this
+     */
+    public function setEnableInboxRelevanceSortForRecentAccounts($enable_inbox_relevance_sort_for_recent_accounts)
+    {
+        $this->container['enable_inbox_relevance_sort_for_recent_accounts'] = $enable_inbox_relevance_sort_for_recent_accounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_inbox_relevance_sort_for_recent_accounts_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableInboxRelevanceSortForRecentAccountsMetadata()
+    {
+        return $this->container['enable_inbox_relevance_sort_for_recent_accounts_metadata'];
+    }
+
+    /**
+     * Sets enable_inbox_relevance_sort_for_recent_accounts_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_inbox_relevance_sort_for_recent_accounts_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableInboxRelevanceSortForRecentAccountsMetadata($enable_inbox_relevance_sort_for_recent_accounts_metadata)
+    {
+        $this->container['enable_inbox_relevance_sort_for_recent_accounts_metadata'] = $enable_inbox_relevance_sort_for_recent_accounts_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_inbox_relevance_sort_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableInboxRelevanceSortMetadata()
+    {
+        return $this->container['enable_inbox_relevance_sort_metadata'];
+    }
+
+    /**
+     * Sets enable_inbox_relevance_sort_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_inbox_relevance_sort_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableInboxRelevanceSortMetadata($enable_inbox_relevance_sort_metadata)
+    {
+        $this->container['enable_inbox_relevance_sort_metadata'] = $enable_inbox_relevance_sort_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_in_browser_editor
      *
      * @return ?string
@@ -11920,7 +14020,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_key_terms_suggestions_by_document_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata enable_key_terms_suggestions_by_document_type_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata 
      *
      * @return $this
      */
@@ -11944,7 +14044,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_participant_recipient_setting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_participant_recipient_setting_metadata enable_participant_recipient_setting_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_participant_recipient_setting_metadata 
      *
      * @return $this
      */
@@ -12532,6 +14632,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_search_service_azure_uri
+     *
+     * @return ?string
+     */
+    public function getEnableSearchServiceAzureUri()
+    {
+        return $this->container['enable_search_service_azure_uri'];
+    }
+
+    /**
+     * Sets enable_search_service_azure_uri
+     *
+     * @param ?string $enable_search_service_azure_uri 
+     *
+     * @return $this
+     */
+    public function setEnableSearchServiceAzureUri($enable_search_service_azure_uri)
+    {
+        $this->container['enable_search_service_azure_uri'] = $enable_search_service_azure_uri;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_search_service_azure_uri_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableSearchServiceAzureUriMetadata()
+    {
+        return $this->container['enable_search_service_azure_uri_metadata'];
+    }
+
+    /**
+     * Sets enable_search_service_azure_uri_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_service_azure_uri_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableSearchServiceAzureUriMetadata($enable_search_service_azure_uri_metadata)
+    {
+        $this->container['enable_search_service_azure_uri_metadata'] = $enable_search_service_azure_uri_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_search_site_specific_api
      *
      * @return ?string
@@ -12568,7 +14716,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_search_site_specific_api_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_site_specific_api_metadata enable_search_site_specific_api_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_site_specific_api_metadata 
      *
      * @return $this
      */
@@ -13612,6 +15760,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_web_forms_separate_user_permissions
+     *
+     * @return ?string
+     */
+    public function getEnableWebFormsSeparateUserPermissions()
+    {
+        return $this->container['enable_web_forms_separate_user_permissions'];
+    }
+
+    /**
+     * Sets enable_web_forms_separate_user_permissions
+     *
+     * @param ?string $enable_web_forms_separate_user_permissions 
+     *
+     * @return $this
+     */
+    public function setEnableWebFormsSeparateUserPermissions($enable_web_forms_separate_user_permissions)
+    {
+        $this->container['enable_web_forms_separate_user_permissions'] = $enable_web_forms_separate_user_permissions;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_web_forms_separate_user_permissions_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableWebFormsSeparateUserPermissionsMetadata()
+    {
+        return $this->container['enable_web_forms_separate_user_permissions_metadata'];
+    }
+
+    /**
+     * Sets enable_web_forms_separate_user_permissions_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_web_forms_separate_user_permissions_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableWebFormsSeparateUserPermissionsMetadata($enable_web_forms_separate_user_permissions_metadata)
+    {
+        $this->container['enable_web_forms_separate_user_permissions_metadata'] = $enable_web_forms_separate_user_permissions_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_witnessing
      *
      * @return ?string
@@ -13703,6 +15899,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnforceTemplateNameUniquenessMetadata($enforce_template_name_uniqueness_metadata)
     {
         $this->container['enforce_template_name_uniqueness_metadata'] = $enforce_template_name_uniqueness_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enforce_tls_emails
+     *
+     * @return ?string
+     */
+    public function getEnforceTlsEmails()
+    {
+        return $this->container['enforce_tls_emails'];
+    }
+
+    /**
+     * Sets enforce_tls_emails
+     *
+     * @param ?string $enforce_tls_emails 
+     *
+     * @return $this
+     */
+    public function setEnforceTlsEmails($enforce_tls_emails)
+    {
+        $this->container['enforce_tls_emails'] = $enforce_tls_emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets enforce_tls_emails_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnforceTlsEmailsMetadata()
+    {
+        return $this->container['enforce_tls_emails_metadata'];
+    }
+
+    /**
+     * Sets enforce_tls_emails_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enforce_tls_emails_metadata 
+     *
+     * @return $this
+     */
+    public function setEnforceTlsEmailsMetadata($enforce_tls_emails_metadata)
+    {
+        $this->container['enforce_tls_emails_metadata'] = $enforce_tls_emails_metadata;
 
         return $this;
     }
@@ -13864,7 +16108,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_limits_total_document_size_allowed_in_mb_enabled_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_enabled_metadata envelope_limits_total_document_size_allowed_in_mb_enabled_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_enabled_metadata 
      *
      * @return $this
      */
@@ -13888,13 +16132,61 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_limits_total_document_size_allowed_in_mb_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_metadata envelope_limits_total_document_size_allowed_in_mb_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_metadata 
      *
      * @return $this
      */
     public function setEnvelopeLimitsTotalDocumentSizeAllowedInMbMetadata($envelope_limits_total_document_size_allowed_in_mb_metadata)
     {
         $this->container['envelope_limits_total_document_size_allowed_in_mb_metadata'] = $envelope_limits_total_document_size_allowed_in_mb_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelope_search_mode
+     *
+     * @return ?string
+     */
+    public function getEnvelopeSearchMode()
+    {
+        return $this->container['envelope_search_mode'];
+    }
+
+    /**
+     * Sets envelope_search_mode
+     *
+     * @param ?string $envelope_search_mode 
+     *
+     * @return $this
+     */
+    public function setEnvelopeSearchMode($envelope_search_mode)
+    {
+        $this->container['envelope_search_mode'] = $envelope_search_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelope_search_mode_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnvelopeSearchModeMetadata()
+    {
+        return $this->container['envelope_search_mode_metadata'];
+    }
+
+    /**
+     * Sets envelope_search_mode_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_search_mode_metadata 
+     *
+     * @return $this
+     */
+    public function setEnvelopeSearchModeMetadata($envelope_search_mode_metadata)
+    {
+        $this->container['envelope_search_mode_metadata'] = $envelope_search_mode_metadata;
 
         return $this;
     }
@@ -14308,6 +16600,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets guided_forms_html_conversion_policy
+     *
+     * @return ?string
+     */
+    public function getGuidedFormsHtmlConversionPolicy()
+    {
+        return $this->container['guided_forms_html_conversion_policy'];
+    }
+
+    /**
+     * Sets guided_forms_html_conversion_policy
+     *
+     * @param ?string $guided_forms_html_conversion_policy 
+     *
+     * @return $this
+     */
+    public function setGuidedFormsHtmlConversionPolicy($guided_forms_html_conversion_policy)
+    {
+        $this->container['guided_forms_html_conversion_policy'] = $guided_forms_html_conversion_policy;
+
+        return $this;
+    }
+
+    /**
+     * Gets guided_forms_html_conversion_policy_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getGuidedFormsHtmlConversionPolicyMetadata()
+    {
+        return $this->container['guided_forms_html_conversion_policy_metadata'];
+    }
+
+    /**
+     * Sets guided_forms_html_conversion_policy_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $guided_forms_html_conversion_policy_metadata 
+     *
+     * @return $this
+     */
+    public function setGuidedFormsHtmlConversionPolicyMetadata($guided_forms_html_conversion_policy_metadata)
+    {
+        $this->container['guided_forms_html_conversion_policy_metadata'] = $guided_forms_html_conversion_policy_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets has_recipient_connect_claimed_domain
      *
      * @return ?string
@@ -14692,6 +17032,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets idfx_kba_authentication_override
+     *
+     * @return ?string
+     */
+    public function getIdfxKbaAuthenticationOverride()
+    {
+        return $this->container['idfx_kba_authentication_override'];
+    }
+
+    /**
+     * Sets idfx_kba_authentication_override
+     *
+     * @param ?string $idfx_kba_authentication_override 
+     *
+     * @return $this
+     */
+    public function setIdfxKbaAuthenticationOverride($idfx_kba_authentication_override)
+    {
+        $this->container['idfx_kba_authentication_override'] = $idfx_kba_authentication_override;
+
+        return $this;
+    }
+
+    /**
+     * Gets idfx_kba_authentication_override_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getIdfxKbaAuthenticationOverrideMetadata()
+    {
+        return $this->container['idfx_kba_authentication_override_metadata'];
+    }
+
+    /**
+     * Sets idfx_kba_authentication_override_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $idfx_kba_authentication_override_metadata 
+     *
+     * @return $this
+     */
+    public function setIdfxKbaAuthenticationOverrideMetadata($idfx_kba_authentication_override_metadata)
+    {
+        $this->container['idfx_kba_authentication_override_metadata'] = $idfx_kba_authentication_override_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets idfx_phone_authentication_override
      *
      * @return ?string
@@ -14980,6 +17368,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets is_connect_document_fields_enabled
+     *
+     * @return ?string
+     */
+    public function getIsConnectDocumentFieldsEnabled()
+    {
+        return $this->container['is_connect_document_fields_enabled'];
+    }
+
+    /**
+     * Sets is_connect_document_fields_enabled
+     *
+     * @param ?string $is_connect_document_fields_enabled 
+     *
+     * @return $this
+     */
+    public function setIsConnectDocumentFieldsEnabled($is_connect_document_fields_enabled)
+    {
+        $this->container['is_connect_document_fields_enabled'] = $is_connect_document_fields_enabled;
+
+        return $this;
+    }
+
+    /**
      * Gets linked_external_primary_accounts
      *
      * @return \DocuSign\eSign\Model\LinkedExternalPrimaryAccount[]
@@ -15124,6 +17536,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets merge_mixed_mode_results
+     *
+     * @return ?string
+     */
+    public function getMergeMixedModeResults()
+    {
+        return $this->container['merge_mixed_mode_results'];
+    }
+
+    /**
+     * Sets merge_mixed_mode_results
+     *
+     * @param ?string $merge_mixed_mode_results 
+     *
+     * @return $this
+     */
+    public function setMergeMixedModeResults($merge_mixed_mode_results)
+    {
+        $this->container['merge_mixed_mode_results'] = $merge_mixed_mode_results;
+
+        return $this;
+    }
+
+    /**
+     * Gets merge_mixed_mode_results_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getMergeMixedModeResultsMetadata()
+    {
+        return $this->container['merge_mixed_mode_results_metadata'];
+    }
+
+    /**
+     * Sets merge_mixed_mode_results_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $merge_mixed_mode_results_metadata 
+     *
+     * @return $this
+     */
+    public function setMergeMixedModeResultsMetadata($merge_mixed_mode_results_metadata)
+    {
+        $this->container['merge_mixed_mode_results_metadata'] = $merge_mixed_mode_results_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets mobile_session_timeout
      *
      * @return ?string
@@ -15239,6 +17699,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setOptInMobileSigningV02Metadata($opt_in_mobile_signing_v02_metadata)
     {
         $this->container['opt_in_mobile_signing_v02_metadata'] = $opt_in_mobile_signing_v02_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets opt_in_universal_signatures
+     *
+     * @return ?string
+     */
+    public function getOptInUniversalSignatures()
+    {
+        return $this->container['opt_in_universal_signatures'];
+    }
+
+    /**
+     * Sets opt_in_universal_signatures
+     *
+     * @param ?string $opt_in_universal_signatures 
+     *
+     * @return $this
+     */
+    public function setOptInUniversalSignatures($opt_in_universal_signatures)
+    {
+        $this->container['opt_in_universal_signatures'] = $opt_in_universal_signatures;
 
         return $this;
     }
@@ -15376,7 +17860,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_chunked_upload_part_size_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_part_size_metadata pdf_max_chunked_upload_part_size_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_part_size_metadata 
      *
      * @return $this
      */
@@ -15424,7 +17908,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_chunked_upload_total_size_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_total_size_metadata pdf_max_chunked_upload_total_size_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_total_size_metadata 
      *
      * @return $this
      */
@@ -15472,7 +17956,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_individual_upload_size_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_individual_upload_size_metadata pdf_max_individual_upload_size_metadata
+     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_individual_upload_size_metadata 
      *
      * @return $this
      */
@@ -16007,6 +18491,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setRsaVeridUserId($rsa_verid_user_id)
     {
         $this->container['rsa_verid_user_id'] = $rsa_verid_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets sbs_transaction_level
+     *
+     * @return ?string
+     */
+    public function getSbsTransactionLevel()
+    {
+        return $this->container['sbs_transaction_level'];
+    }
+
+    /**
+     * Sets sbs_transaction_level
+     *
+     * @param ?string $sbs_transaction_level 
+     *
+     * @return $this
+     */
+    public function setSbsTransactionLevel($sbs_transaction_level)
+    {
+        $this->container['sbs_transaction_level'] = $sbs_transaction_level;
 
         return $this;
     }
@@ -18604,6 +21112,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets use_envelope_search_mixed_mode
+     *
+     * @return ?string
+     */
+    public function getUseEnvelopeSearchMixedMode()
+    {
+        return $this->container['use_envelope_search_mixed_mode'];
+    }
+
+    /**
+     * Sets use_envelope_search_mixed_mode
+     *
+     * @param ?string $use_envelope_search_mixed_mode 
+     *
+     * @return $this
+     */
+    public function setUseEnvelopeSearchMixedMode($use_envelope_search_mixed_mode)
+    {
+        $this->container['use_envelope_search_mixed_mode'] = $use_envelope_search_mixed_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_envelope_search_mixed_mode_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUseEnvelopeSearchMixedModeMetadata()
+    {
+        return $this->container['use_envelope_search_mixed_mode_metadata'];
+    }
+
+    /**
+     * Sets use_envelope_search_mixed_mode_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_envelope_search_mixed_mode_metadata 
+     *
+     * @return $this
+     */
+    public function setUseEnvelopeSearchMixedModeMetadata($use_envelope_search_mixed_mode_metadata)
+    {
+        $this->container['use_envelope_search_mixed_mode_metadata'] = $use_envelope_search_mixed_mode_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets use_multi_app_groups_data
      *
      * @return ?string
@@ -18695,6 +21251,150 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setUseNewBlobForPdfMetadata($use_new_blob_for_pdf_metadata)
     {
         $this->container['use_new_blob_for_pdf_metadata'] = $use_new_blob_for_pdf_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search
+     *
+     * @return ?string
+     */
+    public function getUseNewEnvelopeSearch()
+    {
+        return $this->container['use_new_envelope_search'];
+    }
+
+    /**
+     * Sets use_new_envelope_search
+     *
+     * @param ?string $use_new_envelope_search 
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearch($use_new_envelope_search)
+    {
+        $this->container['use_new_envelope_search'] = $use_new_envelope_search;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUseNewEnvelopeSearchMetadata()
+    {
+        return $this->container['use_new_envelope_search_metadata'];
+    }
+
+    /**
+     * Sets use_new_envelope_search_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_metadata 
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearchMetadata($use_new_envelope_search_metadata)
+    {
+        $this->container['use_new_envelope_search_metadata'] = $use_new_envelope_search_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search_only_when_searching_after_date
+     *
+     * @return ?string
+     */
+    public function getUseNewEnvelopeSearchOnlyWhenSearchingAfterDate()
+    {
+        return $this->container['use_new_envelope_search_only_when_searching_after_date'];
+    }
+
+    /**
+     * Sets use_new_envelope_search_only_when_searching_after_date
+     *
+     * @param ?string $use_new_envelope_search_only_when_searching_after_date 
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearchOnlyWhenSearchingAfterDate($use_new_envelope_search_only_when_searching_after_date)
+    {
+        $this->container['use_new_envelope_search_only_when_searching_after_date'] = $use_new_envelope_search_only_when_searching_after_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search_only_when_searching_after_date_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUseNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata()
+    {
+        return $this->container['use_new_envelope_search_only_when_searching_after_date_metadata'];
+    }
+
+    /**
+     * Sets use_new_envelope_search_only_when_searching_after_date_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_only_when_searching_after_date_metadata 
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata($use_new_envelope_search_only_when_searching_after_date_metadata)
+    {
+        $this->container['use_new_envelope_search_only_when_searching_after_date_metadata'] = $use_new_envelope_search_only_when_searching_after_date_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search_only_with_search_term
+     *
+     * @return ?string
+     */
+    public function getUseNewEnvelopeSearchOnlyWithSearchTerm()
+    {
+        return $this->container['use_new_envelope_search_only_with_search_term'];
+    }
+
+    /**
+     * Sets use_new_envelope_search_only_with_search_term
+     *
+     * @param ?string $use_new_envelope_search_only_with_search_term 
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearchOnlyWithSearchTerm($use_new_envelope_search_only_with_search_term)
+    {
+        $this->container['use_new_envelope_search_only_with_search_term'] = $use_new_envelope_search_only_with_search_term;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_new_envelope_search_only_with_search_term_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUseNewEnvelopeSearchOnlyWithSearchTermMetadata()
+    {
+        return $this->container['use_new_envelope_search_only_with_search_term_metadata'];
+    }
+
+    /**
+     * Sets use_new_envelope_search_only_with_search_term_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_only_with_search_term_metadata 
+     *
+     * @return $this
+     */
+    public function setUseNewEnvelopeSearchOnlyWithSearchTermMetadata($use_new_envelope_search_only_with_search_term_metadata)
+    {
+        $this->container['use_new_envelope_search_only_with_search_term_metadata'] = $use_new_envelope_search_only_with_search_term_metadata;
 
         return $this;
     }

@@ -68,12 +68,14 @@ class Brand implements ModelInterface, ArrayAccess
         'default_brand_language' => '?string',
         'email_content' => '\DocuSign\eSign\Model\BrandEmailContent[]',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'is_organization_brand' => '?string',
         'is_overriding_company_name' => '?bool',
         'is_sending_default' => '?bool',
         'is_signing_default' => '?bool',
         'landing_pages' => '\DocuSign\eSign\Model\NameValue[]',
         'links' => '\DocuSign\eSign\Model\BrandLink[]',
         'logos' => '\DocuSign\eSign\Model\BrandLogos',
+        'organization_brand_logo' => '?string',
         'resources' => '\DocuSign\eSign\Model\BrandResourceUrls'
     ];
 
@@ -91,12 +93,14 @@ class Brand implements ModelInterface, ArrayAccess
         'default_brand_language' => null,
         'email_content' => null,
         'error_details' => null,
+        'is_organization_brand' => null,
         'is_overriding_company_name' => null,
         'is_sending_default' => null,
         'is_signing_default' => null,
         'landing_pages' => null,
         'links' => null,
         'logos' => null,
+        'organization_brand_logo' => null,
         'resources' => null
     ];
 
@@ -135,12 +139,14 @@ class Brand implements ModelInterface, ArrayAccess
         'default_brand_language' => 'defaultBrandLanguage',
         'email_content' => 'emailContent',
         'error_details' => 'errorDetails',
+        'is_organization_brand' => 'isOrganizationBrand',
         'is_overriding_company_name' => 'isOverridingCompanyName',
         'is_sending_default' => 'isSendingDefault',
         'is_signing_default' => 'isSigningDefault',
         'landing_pages' => 'landingPages',
         'links' => 'links',
         'logos' => 'logos',
+        'organization_brand_logo' => 'organizationBrandLogo',
         'resources' => 'resources'
     ];
 
@@ -158,12 +164,14 @@ class Brand implements ModelInterface, ArrayAccess
         'default_brand_language' => 'setDefaultBrandLanguage',
         'email_content' => 'setEmailContent',
         'error_details' => 'setErrorDetails',
+        'is_organization_brand' => 'setIsOrganizationBrand',
         'is_overriding_company_name' => 'setIsOverridingCompanyName',
         'is_sending_default' => 'setIsSendingDefault',
         'is_signing_default' => 'setIsSigningDefault',
         'landing_pages' => 'setLandingPages',
         'links' => 'setLinks',
         'logos' => 'setLogos',
+        'organization_brand_logo' => 'setOrganizationBrandLogo',
         'resources' => 'setResources'
     ];
 
@@ -181,12 +189,14 @@ class Brand implements ModelInterface, ArrayAccess
         'default_brand_language' => 'getDefaultBrandLanguage',
         'email_content' => 'getEmailContent',
         'error_details' => 'getErrorDetails',
+        'is_organization_brand' => 'getIsOrganizationBrand',
         'is_overriding_company_name' => 'getIsOverridingCompanyName',
         'is_sending_default' => 'getIsSendingDefault',
         'is_signing_default' => 'getIsSigningDefault',
         'landing_pages' => 'getLandingPages',
         'links' => 'getLinks',
         'logos' => 'getLogos',
+        'organization_brand_logo' => 'getOrganizationBrandLogo',
         'resources' => 'getResources'
     ];
 
@@ -258,12 +268,14 @@ class Brand implements ModelInterface, ArrayAccess
         $this->container['default_brand_language'] = isset($data['default_brand_language']) ? $data['default_brand_language'] : null;
         $this->container['email_content'] = isset($data['email_content']) ? $data['email_content'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['is_organization_brand'] = isset($data['is_organization_brand']) ? $data['is_organization_brand'] : null;
         $this->container['is_overriding_company_name'] = isset($data['is_overriding_company_name']) ? $data['is_overriding_company_name'] : null;
         $this->container['is_sending_default'] = isset($data['is_sending_default']) ? $data['is_sending_default'] : null;
         $this->container['is_signing_default'] = isset($data['is_signing_default']) ? $data['is_signing_default'] : null;
         $this->container['landing_pages'] = isset($data['landing_pages']) ? $data['landing_pages'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['logos'] = isset($data['logos']) ? $data['logos'] : null;
+        $this->container['organization_brand_logo'] = isset($data['organization_brand_logo']) ? $data['organization_brand_logo'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
@@ -472,13 +484,37 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_organization_brand
+     *
+     * @return ?string
+     */
+    public function getIsOrganizationBrand()
+    {
+        return $this->container['is_organization_brand'];
+    }
+
+    /**
+     * Sets is_organization_brand
+     *
+     * @param ?string $is_organization_brand 
+     *
+     * @return $this
+     */
+    public function setIsOrganizationBrand($is_organization_brand)
+    {
+        $this->container['is_organization_brand'] = $is_organization_brand;
 
         return $this;
     }
@@ -623,6 +659,30 @@ class Brand implements ModelInterface, ArrayAccess
     public function setLogos($logos)
     {
         $this->container['logos'] = $logos;
+
+        return $this;
+    }
+
+    /**
+     * Gets organization_brand_logo
+     *
+     * @return ?string
+     */
+    public function getOrganizationBrandLogo()
+    {
+        return $this->container['organization_brand_logo'];
+    }
+
+    /**
+     * Sets organization_brand_logo
+     *
+     * @param ?string $organization_brand_logo 
+     *
+     * @return $this
+     */
+    public function setOrganizationBrandLogo($organization_brand_logo)
+    {
+        $this->container['organization_brand_logo'] = $organization_brand_logo;
 
         return $this;
     }

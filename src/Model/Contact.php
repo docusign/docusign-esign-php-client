@@ -68,6 +68,7 @@ class Contact implements ModelInterface, ArrayAccess
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'is_owner' => '?bool',
         'name' => '?string',
+        'notary_contact_details' => '\DocuSign\eSign\Model\NotaryContactDetails',
         'organization' => '?string',
         'room_contact_type' => '?string',
         'shared' => '?string',
@@ -90,6 +91,7 @@ class Contact implements ModelInterface, ArrayAccess
         'error_details' => null,
         'is_owner' => null,
         'name' => null,
+        'notary_contact_details' => null,
         'organization' => null,
         'room_contact_type' => null,
         'shared' => null,
@@ -133,6 +135,7 @@ class Contact implements ModelInterface, ArrayAccess
         'error_details' => 'errorDetails',
         'is_owner' => 'isOwner',
         'name' => 'name',
+        'notary_contact_details' => 'notaryContactDetails',
         'organization' => 'organization',
         'room_contact_type' => 'roomContactType',
         'shared' => 'shared',
@@ -155,6 +158,7 @@ class Contact implements ModelInterface, ArrayAccess
         'error_details' => 'setErrorDetails',
         'is_owner' => 'setIsOwner',
         'name' => 'setName',
+        'notary_contact_details' => 'setNotaryContactDetails',
         'organization' => 'setOrganization',
         'room_contact_type' => 'setRoomContactType',
         'shared' => 'setShared',
@@ -177,6 +181,7 @@ class Contact implements ModelInterface, ArrayAccess
         'error_details' => 'getErrorDetails',
         'is_owner' => 'getIsOwner',
         'name' => 'getName',
+        'notary_contact_details' => 'getNotaryContactDetails',
         'organization' => 'getOrganization',
         'room_contact_type' => 'getRoomContactType',
         'shared' => 'getShared',
@@ -253,6 +258,7 @@ class Contact implements ModelInterface, ArrayAccess
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['is_owner'] = isset($data['is_owner']) ? $data['is_owner'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['notary_contact_details'] = isset($data['notary_contact_details']) ? $data['notary_contact_details'] : null;
         $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
         $this->container['room_contact_type'] = isset($data['room_contact_type']) ? $data['room_contact_type'] : null;
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
@@ -441,7 +447,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -496,6 +502,30 @@ class Contact implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_contact_details
+     *
+     * @return \DocuSign\eSign\Model\NotaryContactDetails
+     */
+    public function getNotaryContactDetails()
+    {
+        return $this->container['notary_contact_details'];
+    }
+
+    /**
+     * Sets notary_contact_details
+     *
+     * @param \DocuSign\eSign\Model\NotaryContactDetails $notary_contact_details 
+     *
+     * @return $this
+     */
+    public function setNotaryContactDetails($notary_contact_details)
+    {
+        $this->container['notary_contact_details'] = $notary_contact_details;
 
         return $this;
     }

@@ -63,6 +63,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
         'continuation_token' => '?string',
         'end_position' => '?string',
         'envelopes' => '\DocuSign\eSign\Model\Envelope[]',
+        'envelope_search_source' => '?string',
         'envelope_transaction_statuses' => '\DocuSign\eSign\Model\EnvelopeTransactionStatus[]',
         'folders' => '\DocuSign\eSign\Model\Folder[]',
         'last_queried_date_time' => '?string',
@@ -82,6 +83,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
         'continuation_token' => null,
         'end_position' => null,
         'envelopes' => null,
+        'envelope_search_source' => null,
         'envelope_transaction_statuses' => null,
         'folders' => null,
         'last_queried_date_time' => null,
@@ -122,6 +124,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
         'continuation_token' => 'continuationToken',
         'end_position' => 'endPosition',
         'envelopes' => 'envelopes',
+        'envelope_search_source' => 'envelopeSearchSource',
         'envelope_transaction_statuses' => 'envelopeTransactionStatuses',
         'folders' => 'folders',
         'last_queried_date_time' => 'lastQueriedDateTime',
@@ -141,6 +144,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
         'continuation_token' => 'setContinuationToken',
         'end_position' => 'setEndPosition',
         'envelopes' => 'setEnvelopes',
+        'envelope_search_source' => 'setEnvelopeSearchSource',
         'envelope_transaction_statuses' => 'setEnvelopeTransactionStatuses',
         'folders' => 'setFolders',
         'last_queried_date_time' => 'setLastQueriedDateTime',
@@ -160,6 +164,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
         'continuation_token' => 'getContinuationToken',
         'end_position' => 'getEndPosition',
         'envelopes' => 'getEnvelopes',
+        'envelope_search_source' => 'getEnvelopeSearchSource',
         'envelope_transaction_statuses' => 'getEnvelopeTransactionStatuses',
         'folders' => 'getFolders',
         'last_queried_date_time' => 'getLastQueriedDateTime',
@@ -233,6 +238,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
         $this->container['continuation_token'] = isset($data['continuation_token']) ? $data['continuation_token'] : null;
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['envelopes'] = isset($data['envelopes']) ? $data['envelopes'] : null;
+        $this->container['envelope_search_source'] = isset($data['envelope_search_source']) ? $data['envelope_search_source'] : null;
         $this->container['envelope_transaction_statuses'] = isset($data['envelope_transaction_statuses']) ? $data['envelope_transaction_statuses'] : null;
         $this->container['folders'] = isset($data['folders']) ? $data['folders'] : null;
         $this->container['last_queried_date_time'] = isset($data['last_queried_date_time']) ? $data['last_queried_date_time'] : null;
@@ -335,6 +341,30 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
     public function setEnvelopes($envelopes)
     {
         $this->container['envelopes'] = $envelopes;
+
+        return $this;
+    }
+
+    /**
+     * Gets envelope_search_source
+     *
+     * @return ?string
+     */
+    public function getEnvelopeSearchSource()
+    {
+        return $this->container['envelope_search_source'];
+    }
+
+    /**
+     * Sets envelope_search_source
+     *
+     * @param ?string $envelope_search_source 
+     *
+     * @return $this
+     */
+    public function setEnvelopeSearchSource($envelope_search_source)
+    {
+        $this->container['envelope_search_source'] = $envelope_search_source;
 
         return $this;
     }

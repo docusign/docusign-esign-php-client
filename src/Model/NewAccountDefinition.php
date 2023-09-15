@@ -345,7 +345,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets account_settings
      *
-     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.
+     * @param \DocuSign\eSign\Model\AccountSettingsInformation $account_settings The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets social_account_information
      *
-     * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.
+     * @param \DocuSign\eSign\Model\SocialAccountInformation $social_account_information Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)
      *
      * @return $this
      */

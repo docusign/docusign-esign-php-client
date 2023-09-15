@@ -98,7 +98,7 @@ class IdEvidenceViewLink implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'view_link' => 'ViewLink'
+        'view_link' => 'viewLink'
     ];
 
     /**

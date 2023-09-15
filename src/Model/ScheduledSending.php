@@ -261,7 +261,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
     /**
      * Sets resume_date
      *
-     * @param ?string $resume_date 
+     * @param ?string $resume_date An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
     /**
      * Sets rules
      *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules 
+     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.
      *
      * @return $this
      */

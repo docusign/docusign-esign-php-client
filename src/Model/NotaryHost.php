@@ -65,6 +65,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
         'add_access_code_to_email' => '?string',
         'allow_system_override_for_locked_recipient' => '?string',
         'auto_responded_reason' => '?string',
+        'bulk_send_v2_recipient' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
         'custom_fields' => '?string[]',
@@ -137,6 +138,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
         'add_access_code_to_email' => null,
         'allow_system_override_for_locked_recipient' => null,
         'auto_responded_reason' => null,
+        'bulk_send_v2_recipient' => null,
         'client_user_id' => null,
         'completed_count' => null,
         'custom_fields' => null,
@@ -230,6 +232,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
         'add_access_code_to_email' => 'addAccessCodeToEmail',
         'allow_system_override_for_locked_recipient' => 'allowSystemOverrideForLockedRecipient',
         'auto_responded_reason' => 'autoRespondedReason',
+        'bulk_send_v2_recipient' => 'bulkSendV2Recipient',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
         'custom_fields' => 'customFields',
@@ -302,6 +305,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
         'add_access_code_to_email' => 'setAddAccessCodeToEmail',
         'allow_system_override_for_locked_recipient' => 'setAllowSystemOverrideForLockedRecipient',
         'auto_responded_reason' => 'setAutoRespondedReason',
+        'bulk_send_v2_recipient' => 'setBulkSendV2Recipient',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
         'custom_fields' => 'setCustomFields',
@@ -374,6 +378,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
         'add_access_code_to_email' => 'getAddAccessCodeToEmail',
         'allow_system_override_for_locked_recipient' => 'getAllowSystemOverrideForLockedRecipient',
         'auto_responded_reason' => 'getAutoRespondedReason',
+        'bulk_send_v2_recipient' => 'getBulkSendV2Recipient',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
         'custom_fields' => 'getCustomFields',
@@ -500,6 +505,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
         $this->container['add_access_code_to_email'] = isset($data['add_access_code_to_email']) ? $data['add_access_code_to_email'] : null;
         $this->container['allow_system_override_for_locked_recipient'] = isset($data['allow_system_override_for_locked_recipient']) ? $data['allow_system_override_for_locked_recipient'] : null;
         $this->container['auto_responded_reason'] = isset($data['auto_responded_reason']) ? $data['auto_responded_reason'] : null;
+        $this->container['bulk_send_v2_recipient'] = isset($data['bulk_send_v2_recipient']) ? $data['bulk_send_v2_recipient'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
@@ -701,6 +707,30 @@ class NotaryHost implements ModelInterface, ArrayAccess
     public function setAutoRespondedReason($auto_responded_reason)
     {
         $this->container['auto_responded_reason'] = $auto_responded_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets bulk_send_v2_recipient
+     *
+     * @return ?string
+     */
+    public function getBulkSendV2Recipient()
+    {
+        return $this->container['bulk_send_v2_recipient'];
+    }
+
+    /**
+     * Sets bulk_send_v2_recipient
+     *
+     * @param ?string $bulk_send_v2_recipient 
+     *
+     * @return $this
+     */
+    public function setBulkSendV2Recipient($bulk_send_v2_recipient)
+    {
+        $this->container['bulk_send_v2_recipient'] = $bulk_send_v2_recipient;
 
         return $this;
     }
@@ -1030,7 +1060,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.
      *
      * @return $this
      */
@@ -1078,7 +1108,7 @@ class NotaryHost implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */

@@ -69,6 +69,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_navigation' => '?string',
         'auto_responded_reason' => '?string',
         'bulk_recipients_uri' => '?string',
+        'bulk_send_v2_recipient' => '?string',
         'can_sign_offline' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
@@ -117,6 +118,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => '?string',
         'notary_signers' => '?string[]',
         'notary_source_type' => '?string',
+        'notary_third_party_partner' => '?string',
         'notary_type' => '?string',
         'note' => '?string',
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -178,6 +180,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_navigation' => null,
         'auto_responded_reason' => null,
         'bulk_recipients_uri' => null,
+        'bulk_send_v2_recipient' => null,
         'can_sign_offline' => null,
         'client_user_id' => null,
         'completed_count' => null,
@@ -226,6 +229,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => null,
         'notary_signers' => null,
         'notary_source_type' => null,
+        'notary_third_party_partner' => null,
         'notary_type' => null,
         'note' => null,
         'note_metadata' => null,
@@ -308,6 +312,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_navigation' => 'autoNavigation',
         'auto_responded_reason' => 'autoRespondedReason',
         'bulk_recipients_uri' => 'bulkRecipientsUri',
+        'bulk_send_v2_recipient' => 'bulkSendV2Recipient',
         'can_sign_offline' => 'canSignOffline',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
@@ -356,6 +361,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => 'notarySignerEmailSent',
         'notary_signers' => 'notarySigners',
         'notary_source_type' => 'notarySourceType',
+        'notary_third_party_partner' => 'notaryThirdPartyPartner',
         'notary_type' => 'notaryType',
         'note' => 'note',
         'note_metadata' => 'noteMetadata',
@@ -417,6 +423,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_navigation' => 'setAutoNavigation',
         'auto_responded_reason' => 'setAutoRespondedReason',
         'bulk_recipients_uri' => 'setBulkRecipientsUri',
+        'bulk_send_v2_recipient' => 'setBulkSendV2Recipient',
         'can_sign_offline' => 'setCanSignOffline',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
@@ -465,6 +472,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => 'setNotarySignerEmailSent',
         'notary_signers' => 'setNotarySigners',
         'notary_source_type' => 'setNotarySourceType',
+        'notary_third_party_partner' => 'setNotaryThirdPartyPartner',
         'notary_type' => 'setNotaryType',
         'note' => 'setNote',
         'note_metadata' => 'setNoteMetadata',
@@ -526,6 +534,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_navigation' => 'getAutoNavigation',
         'auto_responded_reason' => 'getAutoRespondedReason',
         'bulk_recipients_uri' => 'getBulkRecipientsUri',
+        'bulk_send_v2_recipient' => 'getBulkSendV2Recipient',
         'can_sign_offline' => 'getCanSignOffline',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
@@ -574,6 +583,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'notary_signer_email_sent' => 'getNotarySignerEmailSent',
         'notary_signers' => 'getNotarySigners',
         'notary_source_type' => 'getNotarySourceType',
+        'notary_third_party_partner' => 'getNotaryThirdPartyPartner',
         'notary_type' => 'getNotaryType',
         'note' => 'getNote',
         'note_metadata' => 'getNoteMetadata',
@@ -689,6 +699,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['auto_navigation'] = isset($data['auto_navigation']) ? $data['auto_navigation'] : null;
         $this->container['auto_responded_reason'] = isset($data['auto_responded_reason']) ? $data['auto_responded_reason'] : null;
         $this->container['bulk_recipients_uri'] = isset($data['bulk_recipients_uri']) ? $data['bulk_recipients_uri'] : null;
+        $this->container['bulk_send_v2_recipient'] = isset($data['bulk_send_v2_recipient']) ? $data['bulk_send_v2_recipient'] : null;
         $this->container['can_sign_offline'] = isset($data['can_sign_offline']) ? $data['can_sign_offline'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
@@ -737,6 +748,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['notary_signer_email_sent'] = isset($data['notary_signer_email_sent']) ? $data['notary_signer_email_sent'] : null;
         $this->container['notary_signers'] = isset($data['notary_signers']) ? $data['notary_signers'] : null;
         $this->container['notary_source_type'] = isset($data['notary_source_type']) ? $data['notary_source_type'] : null;
+        $this->container['notary_third_party_partner'] = isset($data['notary_third_party_partner']) ? $data['notary_third_party_partner'] : null;
         $this->container['notary_type'] = isset($data['notary_type']) ? $data['notary_type'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
@@ -1042,6 +1054,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setBulkRecipientsUri($bulk_recipients_uri)
     {
         $this->container['bulk_recipients_uri'] = $bulk_recipients_uri;
+
+        return $this;
+    }
+
+    /**
+     * Gets bulk_send_v2_recipient
+     *
+     * @return ?string
+     */
+    public function getBulkSendV2Recipient()
+    {
+        return $this->container['bulk_send_v2_recipient'];
+    }
+
+    /**
+     * Sets bulk_send_v2_recipient
+     *
+     * @param ?string $bulk_send_v2_recipient 
+     *
+     * @return $this
+     */
+    public function setBulkSendV2Recipient($bulk_send_v2_recipient)
+    {
+        $this->container['bulk_send_v2_recipient'] = $bulk_send_v2_recipient;
 
         return $this;
     }
@@ -1515,7 +1551,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.
+     * @param \DocuSign\eSign\Model\RecipientEmailNotification $email_notification A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.
      *
      * @return $this
      */
@@ -1587,7 +1623,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets error_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $error_details This object describes errors that occur. It is only valid for responses and ignored in requests.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
@@ -2194,6 +2230,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setNotarySourceType($notary_source_type)
     {
         $this->container['notary_source_type'] = $notary_source_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets notary_third_party_partner
+     *
+     * @return ?string
+     */
+    public function getNotaryThirdPartyPartner()
+    {
+        return $this->container['notary_third_party_partner'];
+    }
+
+    /**
+     * Sets notary_third_party_partner
+     *
+     * @param ?string $notary_third_party_partner 
+     *
+     * @return $this
+     */
+    public function setNotaryThirdPartyPartner($notary_third_party_partner)
+    {
+        $this->container['notary_third_party_partner'] = $notary_third_party_partner;
 
         return $this;
     }

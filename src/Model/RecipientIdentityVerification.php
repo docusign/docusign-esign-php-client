@@ -62,7 +62,8 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'input_options' => '\DocuSign\eSign\Model\RecipientIdentityInputOption[]',
         'workflow_id' => '?string',
-        'workflow_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata'
+        'workflow_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'workflow_label' => '?string'
     ];
 
     /**
@@ -73,7 +74,8 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'input_options' => null,
         'workflow_id' => null,
-        'workflow_id_metadata' => null
+        'workflow_id_metadata' => null,
+        'workflow_label' => null
     ];
 
     /**
@@ -105,7 +107,8 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'input_options' => 'inputOptions',
         'workflow_id' => 'workflowId',
-        'workflow_id_metadata' => 'workflowIdMetadata'
+        'workflow_id_metadata' => 'workflowIdMetadata',
+        'workflow_label' => 'workflowLabel'
     ];
 
     /**
@@ -116,7 +119,8 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     protected static $setters = [
         'input_options' => 'setInputOptions',
         'workflow_id' => 'setWorkflowId',
-        'workflow_id_metadata' => 'setWorkflowIdMetadata'
+        'workflow_id_metadata' => 'setWorkflowIdMetadata',
+        'workflow_label' => 'setWorkflowLabel'
     ];
 
     /**
@@ -127,7 +131,8 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     protected static $getters = [
         'input_options' => 'getInputOptions',
         'workflow_id' => 'getWorkflowId',
-        'workflow_id_metadata' => 'getWorkflowIdMetadata'
+        'workflow_id_metadata' => 'getWorkflowIdMetadata',
+        'workflow_label' => 'getWorkflowLabel'
     ];
 
     /**
@@ -193,6 +198,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
         $this->container['input_options'] = isset($data['input_options']) ? $data['input_options'] : null;
         $this->container['workflow_id'] = isset($data['workflow_id']) ? $data['workflow_id'] : null;
         $this->container['workflow_id_metadata'] = isset($data['workflow_id_metadata']) ? $data['workflow_id_metadata'] : null;
+        $this->container['workflow_label'] = isset($data['workflow_label']) ? $data['workflow_label'] : null;
     }
 
     /**
@@ -287,6 +293,30 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     public function setWorkflowIdMetadata($workflow_id_metadata)
     {
         $this->container['workflow_id_metadata'] = $workflow_id_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflow_label
+     *
+     * @return ?string
+     */
+    public function getWorkflowLabel()
+    {
+        return $this->container['workflow_label'];
+    }
+
+    /**
+     * Sets workflow_label
+     *
+     * @param ?string $workflow_label 
+     *
+     * @return $this
+     */
+    public function setWorkflowLabel($workflow_label)
+    {
+        $this->container['workflow_label'] = $workflow_label;
 
         return $this;
     }
