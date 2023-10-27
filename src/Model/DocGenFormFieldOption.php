@@ -1,6 +1,6 @@
 <?php
 /**
- * ScheduledSending
+ * DocGenFormFieldOption
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ScheduledSending Class Doc Comment
+ * DocGenFormFieldOption Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ScheduledSending implements ModelInterface, ArrayAccess
+class DocGenFormFieldOption implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'scheduledSending';
+    protected static $swaggerModelName = 'docGenFormFieldOption';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,10 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_list_id' => '?string',
-        'resume_date' => '?string',
-        'rules' => '\DocuSign\eSign\Model\EnvelopeDelayRule[]',
-        'status' => '?string'
+        'description' => '?string',
+        'label' => '?string',
+        'selected' => '?string',
+        'value' => '?string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bulk_list_id' => null,
-        'resume_date' => null,
-        'rules' => null,
-        'status' => null
+        'description' => null,
+        'label' => null,
+        'selected' => null,
+        'value' => null
     ];
 
     /**
@@ -104,10 +104,10 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bulk_list_id' => 'bulkListId',
-        'resume_date' => 'resumeDate',
-        'rules' => 'rules',
-        'status' => 'status'
+        'description' => 'description',
+        'label' => 'label',
+        'selected' => 'selected',
+        'value' => 'value'
     ];
 
     /**
@@ -116,10 +116,10 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bulk_list_id' => 'setBulkListId',
-        'resume_date' => 'setResumeDate',
-        'rules' => 'setRules',
-        'status' => 'setStatus'
+        'description' => 'setDescription',
+        'label' => 'setLabel',
+        'selected' => 'setSelected',
+        'value' => 'setValue'
     ];
 
     /**
@@ -128,10 +128,10 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bulk_list_id' => 'getBulkListId',
-        'resume_date' => 'getResumeDate',
-        'rules' => 'getRules',
-        'status' => 'getStatus'
+        'description' => 'getDescription',
+        'label' => 'getLabel',
+        'selected' => 'getSelected',
+        'value' => 'getValue'
     ];
 
     /**
@@ -194,10 +194,10 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bulk_list_id'] = isset($data['bulk_list_id']) ? $data['bulk_list_id'] : null;
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
-        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -225,97 +225,97 @@ class ScheduledSending implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bulk_list_id
+     * Gets description
      *
      * @return ?string
      */
-    public function getBulkListId()
+    public function getDescription()
     {
-        return $this->container['bulk_list_id'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets bulk_list_id
+     * Sets description
      *
-     * @param ?string $bulk_list_id 
+     * @param ?string $description 
      *
      * @return $this
      */
-    public function setBulkListId($bulk_list_id)
+    public function setDescription($description)
     {
-        $this->container['bulk_list_id'] = $bulk_list_id;
+        $this->container['description'] = $description;
 
         return $this;
     }
 
     /**
-     * Gets resume_date
+     * Gets label
      *
      * @return ?string
      */
-    public function getResumeDate()
+    public function getLabel()
     {
-        return $this->container['resume_date'];
+        return $this->container['label'];
     }
 
     /**
-     * Sets resume_date
+     * Sets label
      *
-     * @param ?string $resume_date An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.
+     * @param ?string $label 
      *
      * @return $this
      */
-    public function setResumeDate($resume_date)
+    public function setLabel($label)
     {
-        $this->container['resume_date'] = $resume_date;
+        $this->container['label'] = $label;
 
         return $this;
     }
 
     /**
-     * Gets rules
+     * Gets selected
      *
-     * @return \DocuSign\eSign\Model\EnvelopeDelayRule[]
+     * @return ?string
      */
-    public function getRules()
+    public function getSelected()
     {
-        return $this->container['rules'];
+        return $this->container['selected'];
     }
 
     /**
-     * Sets rules
+     * Sets selected
      *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.
+     * @param ?string $selected 
      *
      * @return $this
      */
-    public function setRules($rules)
+    public function setSelected($selected)
     {
-        $this->container['rules'] = $rules;
+        $this->container['selected'] = $selected;
 
         return $this;
     }
 
     /**
-     * Gets status
+     * Gets value
      *
      * @return ?string
      */
-    public function getStatus()
+    public function getValue()
     {
-        return $this->container['status'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets status
+     * Sets value
      *
-     * @param ?string $status \\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent.
+     * @param ?string $value Specifies the value of the tab.
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setValue($value)
     {
-        $this->container['status'] = $status;
+        $this->container['value'] = $value;
 
         return $this;
     }

@@ -3674,14 +3674,15 @@ class UsersApi
      * @param ?string $image_type One of **signature_image** or **initials_image**.
      * @param ?string $signature_id The ID of the signature being accessed.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param ?string $image_bytes Image content. (required)
      * @param  \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserSignature
      */
-    public function updateSignatureImage($account_id, $image_type, $signature_id, $user_id, \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions $options = null)
+    public function updateSignatureImage($account_id, $image_type, $signature_id, $user_id, $image_bytes, \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions $options = null)
     {
-        list($response) = $this->updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, $options);
+        list($response) = $this->updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, $image_bytes, $options);
         return $response;
     }
 
@@ -3694,12 +3695,13 @@ class UsersApi
      * @param ?string $image_type One of **signature_image** or **initials_image**.
      * @param ?string $signature_id The ID of the signature being accessed.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
+     * @param ?string $image_bytes Image content. (required)
      * @param  \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions $options = null): array
+    public function updateSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $user_id, $image_bytes, \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3716,6 +3718,10 @@ class UsersApi
         // verify the required parameter 'user_id' is set
         if ($user_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $user_id when calling updateSignatureImage');
+        }
+        // verify the required parameter 'image_bytes' is set
+        if ($image_bytes === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $image_bytes when calling updateSignatureImage');
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}";
@@ -3751,7 +3757,12 @@ class UsersApi
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
+        // body params
+        $_tempBody = null;
+        if (isset($image_bytes)) {
+            $_tempBody = $image_bytes;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present

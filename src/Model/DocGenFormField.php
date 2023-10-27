@@ -59,10 +59,14 @@ class DocGenFormField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'description' => '?string',
         'label' => '?string',
         'name' => '?string',
+        'options' => '\DocuSign\eSign\Model\DocGenFormFieldOption[]',
+        'predefined_validation' => '?string',
         'required' => '?string',
         'type' => '?string',
+        'validation' => '\DocuSign\eSign\Model\DocGenFormFieldValidation',
         'value' => '?string'
     ];
 
@@ -72,10 +76,14 @@ class DocGenFormField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'description' => null,
         'label' => null,
         'name' => null,
+        'options' => null,
+        'predefined_validation' => null,
         'required' => null,
         'type' => null,
+        'validation' => null,
         'value' => null
     ];
 
@@ -106,10 +114,14 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'description' => 'description',
         'label' => 'label',
         'name' => 'name',
+        'options' => 'options',
+        'predefined_validation' => 'predefinedValidation',
         'required' => 'required',
         'type' => 'type',
+        'validation' => 'validation',
         'value' => 'value'
     ];
 
@@ -119,10 +131,14 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'description' => 'setDescription',
         'label' => 'setLabel',
         'name' => 'setName',
+        'options' => 'setOptions',
+        'predefined_validation' => 'setPredefinedValidation',
         'required' => 'setRequired',
         'type' => 'setType',
+        'validation' => 'setValidation',
         'value' => 'setValue'
     ];
 
@@ -132,10 +148,14 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'description' => 'getDescription',
         'label' => 'getLabel',
         'name' => 'getName',
+        'options' => 'getOptions',
+        'predefined_validation' => 'getPredefinedValidation',
         'required' => 'getRequired',
         'type' => 'getType',
+        'validation' => 'getValidation',
         'value' => 'getValue'
     ];
 
@@ -199,10 +219,14 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        $this->container['predefined_validation'] = isset($data['predefined_validation']) ? $data['predefined_validation'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['validation'] = isset($data['validation']) ? $data['validation'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
@@ -229,6 +253,30 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets description
+     *
+     * @return ?string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param ?string $description 
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
 
     /**
      * Gets label
@@ -279,6 +327,54 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets options
+     *
+     * @return \DocuSign\eSign\Model\DocGenFormFieldOption[]
+     */
+    public function getOptions()
+    {
+        return $this->container['options'];
+    }
+
+    /**
+     * Sets options
+     *
+     * @param \DocuSign\eSign\Model\DocGenFormFieldOption[] $options 
+     *
+     * @return $this
+     */
+    public function setOptions($options)
+    {
+        $this->container['options'] = $options;
+
+        return $this;
+    }
+
+    /**
+     * Gets predefined_validation
+     *
+     * @return ?string
+     */
+    public function getPredefinedValidation()
+    {
+        return $this->container['predefined_validation'];
+    }
+
+    /**
+     * Sets predefined_validation
+     *
+     * @param ?string $predefined_validation 
+     *
+     * @return $this
+     */
+    public function setPredefinedValidation($predefined_validation)
+    {
+        $this->container['predefined_validation'] = $predefined_validation;
+
+        return $this;
+    }
+
+    /**
      * Gets required
      *
      * @return ?string
@@ -322,6 +418,30 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets validation
+     *
+     * @return \DocuSign\eSign\Model\DocGenFormFieldValidation
+     */
+    public function getValidation()
+    {
+        return $this->container['validation'];
+    }
+
+    /**
+     * Sets validation
+     *
+     * @param \DocuSign\eSign\Model\DocGenFormFieldValidation $validation 
+     *
+     * @return $this
+     */
+    public function setValidation($validation)
+    {
+        $this->container['validation'] = $validation;
 
         return $this;
     }

@@ -62,6 +62,7 @@ class Document implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'apply_anchor_tabs' => '?string',
         'assign_tabs_to_recipient_id' => '?string',
+        'authoritative_copy' => '?bool',
         'display' => '?string',
         'doc_gen_form_fields' => '\DocuSign\eSign\Model\DocGenFormField[]',
         'document_base64' => '?string',
@@ -97,6 +98,7 @@ class Document implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'apply_anchor_tabs' => null,
         'assign_tabs_to_recipient_id' => null,
+        'authoritative_copy' => null,
         'display' => null,
         'doc_gen_form_fields' => null,
         'document_base64' => null,
@@ -153,6 +155,7 @@ class Document implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'apply_anchor_tabs' => 'applyAnchorTabs',
         'assign_tabs_to_recipient_id' => 'assignTabsToRecipientId',
+        'authoritative_copy' => 'authoritativeCopy',
         'display' => 'display',
         'doc_gen_form_fields' => 'docGenFormFields',
         'document_base64' => 'documentBase64',
@@ -188,6 +191,7 @@ class Document implements ModelInterface, ArrayAccess
     protected static $setters = [
         'apply_anchor_tabs' => 'setApplyAnchorTabs',
         'assign_tabs_to_recipient_id' => 'setAssignTabsToRecipientId',
+        'authoritative_copy' => 'setAuthoritativeCopy',
         'display' => 'setDisplay',
         'doc_gen_form_fields' => 'setDocGenFormFields',
         'document_base64' => 'setDocumentBase64',
@@ -223,6 +227,7 @@ class Document implements ModelInterface, ArrayAccess
     protected static $getters = [
         'apply_anchor_tabs' => 'getApplyAnchorTabs',
         'assign_tabs_to_recipient_id' => 'getAssignTabsToRecipientId',
+        'authoritative_copy' => 'getAuthoritativeCopy',
         'display' => 'getDisplay',
         'doc_gen_form_fields' => 'getDocGenFormFields',
         'document_base64' => 'getDocumentBase64',
@@ -312,6 +317,7 @@ class Document implements ModelInterface, ArrayAccess
     {
         $this->container['apply_anchor_tabs'] = isset($data['apply_anchor_tabs']) ? $data['apply_anchor_tabs'] : null;
         $this->container['assign_tabs_to_recipient_id'] = isset($data['assign_tabs_to_recipient_id']) ? $data['assign_tabs_to_recipient_id'] : null;
+        $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
         $this->container['doc_gen_form_fields'] = isset($data['doc_gen_form_fields']) ? $data['doc_gen_form_fields'] : null;
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
@@ -407,6 +413,30 @@ class Document implements ModelInterface, ArrayAccess
     public function setAssignTabsToRecipientId($assign_tabs_to_recipient_id)
     {
         $this->container['assign_tabs_to_recipient_id'] = $assign_tabs_to_recipient_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets authoritative_copy
+     *
+     * @return ?bool
+     */
+    public function getAuthoritativeCopy()
+    {
+        return $this->container['authoritative_copy'];
+    }
+
+    /**
+     * Sets authoritative_copy
+     *
+     * @param ?bool $authoritative_copy Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+     *
+     * @return $this
+     */
+    public function setAuthoritativeCopy($authoritative_copy)
+    {
+        $this->container['authoritative_copy'] = $authoritative_copy;
 
         return $this;
     }
