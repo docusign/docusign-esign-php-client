@@ -367,6 +367,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention' => '?string',
         'draft_envelope_retention_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => '?string',
+        'dss_enable_signature_type_custom_tag_radmin_radmin_option' => '?string',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => '?string',
         'dss_sign_29182_slide_up_bar_radmin_option' => '?string',
         'email_template_version' => '?string',
@@ -455,6 +456,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_key_terms_suggestions_by_document_type' => '?string',
         'enable_key_terms_suggestions_by_document_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_large_file_support' => '?string',
+        'enable_large_file_support_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_participant_recipient_setting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_payment_processing' => '?string',
         'enable_payment_processing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -1100,6 +1103,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention' => null,
         'draft_envelope_retention_metadata' => null,
         'dss_enable_provisioning_pen_configuration_radmin_option' => null,
+        'dss_enable_signature_type_custom_tag_radmin_radmin_option' => null,
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => null,
         'dss_sign_29182_slide_up_bar_radmin_option' => null,
         'email_template_version' => null,
@@ -1188,6 +1192,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => null,
         'enable_key_terms_suggestions_by_document_type' => null,
         'enable_key_terms_suggestions_by_document_type_metadata' => null,
+        'enable_large_file_support' => null,
+        'enable_large_file_support_metadata' => null,
         'enable_participant_recipient_setting_metadata' => null,
         'enable_payment_processing' => null,
         'enable_payment_processing_metadata' => null,
@@ -1854,6 +1860,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention' => 'draftEnvelopeRetention',
         'draft_envelope_retention_metadata' => 'draftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => 'dss_EnableProvisioningPenConfiguration_RadminOption',
+        'dss_enable_signature_type_custom_tag_radmin_radmin_option' => 'dss_EnableSignatureTypeCustomTagRadmin_RadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version' => 'emailTemplateVersion',
@@ -1942,6 +1949,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => 'enableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'enableKeyTermsSuggestionsByDocumentType',
         'enable_key_terms_suggestions_by_document_type_metadata' => 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
+        'enable_large_file_support' => 'enableLargeFileSupport',
+        'enable_large_file_support_metadata' => 'enableLargeFileSupportMetadata',
         'enable_participant_recipient_setting_metadata' => 'enableParticipantRecipientSettingMetadata',
         'enable_payment_processing' => 'enablePaymentProcessing',
         'enable_payment_processing_metadata' => 'enablePaymentProcessingMetadata',
@@ -2587,6 +2596,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention' => 'setDraftEnvelopeRetention',
         'draft_envelope_retention_metadata' => 'setDraftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => 'setDssEnableProvisioningPenConfigurationRadminOption',
+        'dss_enable_signature_type_custom_tag_radmin_radmin_option' => 'setDssEnableSignatureTypeCustomTagRadminRadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'setDssSign28411EnableLeavePagePromptRadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'setDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'setEmailTemplateVersion',
@@ -2675,6 +2685,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => 'setEnableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'setEnableKeyTermsSuggestionsByDocumentType',
         'enable_key_terms_suggestions_by_document_type_metadata' => 'setEnableKeyTermsSuggestionsByDocumentTypeMetadata',
+        'enable_large_file_support' => 'setEnableLargeFileSupport',
+        'enable_large_file_support_metadata' => 'setEnableLargeFileSupportMetadata',
         'enable_participant_recipient_setting_metadata' => 'setEnableParticipantRecipientSettingMetadata',
         'enable_payment_processing' => 'setEnablePaymentProcessing',
         'enable_payment_processing_metadata' => 'setEnablePaymentProcessingMetadata',
@@ -3320,6 +3332,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention' => 'getDraftEnvelopeRetention',
         'draft_envelope_retention_metadata' => 'getDraftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => 'getDssEnableProvisioningPenConfigurationRadminOption',
+        'dss_enable_signature_type_custom_tag_radmin_radmin_option' => 'getDssEnableSignatureTypeCustomTagRadminRadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'getDssSign28411EnableLeavePagePromptRadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'getDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'getEmailTemplateVersion',
@@ -3408,6 +3421,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_in_browser_editor_metadata' => 'getEnableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type' => 'getEnableKeyTermsSuggestionsByDocumentType',
         'enable_key_terms_suggestions_by_document_type_metadata' => 'getEnableKeyTermsSuggestionsByDocumentTypeMetadata',
+        'enable_large_file_support' => 'getEnableLargeFileSupport',
+        'enable_large_file_support_metadata' => 'getEnableLargeFileSupportMetadata',
         'enable_participant_recipient_setting_metadata' => 'getEnableParticipantRecipientSettingMetadata',
         'enable_payment_processing' => 'getEnablePaymentProcessing',
         'enable_payment_processing_metadata' => 'getEnablePaymentProcessingMetadata',
@@ -4107,6 +4122,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['draft_envelope_retention'] = isset($data['draft_envelope_retention']) ? $data['draft_envelope_retention'] : null;
         $this->container['draft_envelope_retention_metadata'] = isset($data['draft_envelope_retention_metadata']) ? $data['draft_envelope_retention_metadata'] : null;
         $this->container['dss_enable_provisioning_pen_configuration_radmin_option'] = isset($data['dss_enable_provisioning_pen_configuration_radmin_option']) ? $data['dss_enable_provisioning_pen_configuration_radmin_option'] : null;
+        $this->container['dss_enable_signature_type_custom_tag_radmin_radmin_option'] = isset($data['dss_enable_signature_type_custom_tag_radmin_radmin_option']) ? $data['dss_enable_signature_type_custom_tag_radmin_radmin_option'] : null;
         $this->container['dss_sign_28411_enable_leave_page_prompt_radmin_option'] = isset($data['dss_sign_28411_enable_leave_page_prompt_radmin_option']) ? $data['dss_sign_28411_enable_leave_page_prompt_radmin_option'] : null;
         $this->container['dss_sign_29182_slide_up_bar_radmin_option'] = isset($data['dss_sign_29182_slide_up_bar_radmin_option']) ? $data['dss_sign_29182_slide_up_bar_radmin_option'] : null;
         $this->container['email_template_version'] = isset($data['email_template_version']) ? $data['email_template_version'] : null;
@@ -4195,6 +4211,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_in_browser_editor_metadata'] = isset($data['enable_in_browser_editor_metadata']) ? $data['enable_in_browser_editor_metadata'] : null;
         $this->container['enable_key_terms_suggestions_by_document_type'] = isset($data['enable_key_terms_suggestions_by_document_type']) ? $data['enable_key_terms_suggestions_by_document_type'] : null;
         $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = isset($data['enable_key_terms_suggestions_by_document_type_metadata']) ? $data['enable_key_terms_suggestions_by_document_type_metadata'] : null;
+        $this->container['enable_large_file_support'] = isset($data['enable_large_file_support']) ? $data['enable_large_file_support'] : null;
+        $this->container['enable_large_file_support_metadata'] = isset($data['enable_large_file_support_metadata']) ? $data['enable_large_file_support_metadata'] : null;
         $this->container['enable_participant_recipient_setting_metadata'] = isset($data['enable_participant_recipient_setting_metadata']) ? $data['enable_participant_recipient_setting_metadata'] : null;
         $this->container['enable_payment_processing'] = isset($data['enable_payment_processing']) ? $data['enable_payment_processing'] : null;
         $this->container['enable_payment_processing_metadata'] = isset($data['enable_payment_processing_metadata']) ? $data['enable_payment_processing_metadata'] : null;
@@ -11920,6 +11938,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets dss_enable_signature_type_custom_tag_radmin_radmin_option
+     *
+     * @return ?string
+     */
+    public function getDssEnableSignatureTypeCustomTagRadminRadminOption()
+    {
+        return $this->container['dss_enable_signature_type_custom_tag_radmin_radmin_option'];
+    }
+
+    /**
+     * Sets dss_enable_signature_type_custom_tag_radmin_radmin_option
+     *
+     * @param ?string $dss_enable_signature_type_custom_tag_radmin_radmin_option 
+     *
+     * @return $this
+     */
+    public function setDssEnableSignatureTypeCustomTagRadminRadminOption($dss_enable_signature_type_custom_tag_radmin_radmin_option)
+    {
+        $this->container['dss_enable_signature_type_custom_tag_radmin_radmin_option'] = $dss_enable_signature_type_custom_tag_radmin_radmin_option;
+
+        return $this;
+    }
+
+    /**
      * Gets dss_sign_28411_enable_leave_page_prompt_radmin_option
      *
      * @return ?string
@@ -14027,6 +14069,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableKeyTermsSuggestionsByDocumentTypeMetadata($enable_key_terms_suggestions_by_document_type_metadata)
     {
         $this->container['enable_key_terms_suggestions_by_document_type_metadata'] = $enable_key_terms_suggestions_by_document_type_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_large_file_support
+     *
+     * @return ?string
+     */
+    public function getEnableLargeFileSupport()
+    {
+        return $this->container['enable_large_file_support'];
+    }
+
+    /**
+     * Sets enable_large_file_support
+     *
+     * @param ?string $enable_large_file_support 
+     *
+     * @return $this
+     */
+    public function setEnableLargeFileSupport($enable_large_file_support)
+    {
+        $this->container['enable_large_file_support'] = $enable_large_file_support;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_large_file_support_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableLargeFileSupportMetadata()
+    {
+        return $this->container['enable_large_file_support_metadata'];
+    }
+
+    /**
+     * Sets enable_large_file_support_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_large_file_support_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableLargeFileSupportMetadata($enable_large_file_support_metadata)
+    {
+        $this->container['enable_large_file_support_metadata'] = $enable_large_file_support_metadata;
 
         return $this;
     }

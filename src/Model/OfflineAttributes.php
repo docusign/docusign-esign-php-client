@@ -37,7 +37,7 @@ use DocuSign\eSign\ObjectSerializer;
  * OfflineAttributes Class Doc Comment
  *
  * @category    Class
- * @description Reserved for DocuSign use.
+ * @description DocuSign internal use, but it is needed for swagger tools (go lang, Elixir/OTP) to generate client library.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
