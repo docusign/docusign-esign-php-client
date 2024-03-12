@@ -60,6 +60,7 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'access_type' => '?string',
         'ds_group_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'group_id' => '?string',
@@ -76,6 +77,7 @@ class Group implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'access_type' => null,
         'ds_group_id' => null,
         'error_details' => null,
         'group_id' => null,
@@ -113,6 +115,7 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'access_type' => 'accessType',
         'ds_group_id' => 'dsGroupId',
         'error_details' => 'errorDetails',
         'group_id' => 'groupId',
@@ -129,6 +132,7 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'access_type' => 'setAccessType',
         'ds_group_id' => 'setDsGroupId',
         'error_details' => 'setErrorDetails',
         'group_id' => 'setGroupId',
@@ -145,6 +149,7 @@ class Group implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'access_type' => 'getAccessType',
         'ds_group_id' => 'getDsGroupId',
         'error_details' => 'getErrorDetails',
         'group_id' => 'getGroupId',
@@ -215,6 +220,7 @@ class Group implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['access_type'] = isset($data['access_type']) ? $data['access_type'] : null;
         $this->container['ds_group_id'] = isset($data['ds_group_id']) ? $data['ds_group_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
@@ -248,6 +254,30 @@ class Group implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets access_type
+     *
+     * @return ?string
+     */
+    public function getAccessType()
+    {
+        return $this->container['access_type'];
+    }
+
+    /**
+     * Sets access_type
+     *
+     * @param ?string $access_type 
+     *
+     * @return $this
+     */
+    public function setAccessType($access_type)
+    {
+        $this->container['access_type'] = $access_type;
+
+        return $this;
+    }
 
     /**
      * Gets ds_group_id

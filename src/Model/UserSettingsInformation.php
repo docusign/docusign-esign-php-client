@@ -63,6 +63,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'account_management_granular' => '\DocuSign\eSign\Model\UserAccountManagementGranularInformation',
         'admin_only' => '?string',
         'admin_only_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_access_to_all_account_agreements' => '?string',
+        'allow_access_to_all_account_agreements_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_auto_tagging' => '?string',
         'allowed_orchestration_access' => '?string',
         'allowed_orchestration_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -206,6 +208,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'account_management_granular' => null,
         'admin_only' => null,
         'admin_only_metadata' => null,
+        'allow_access_to_all_account_agreements' => null,
+        'allow_access_to_all_account_agreements_metadata' => null,
         'allow_auto_tagging' => null,
         'allowed_orchestration_access' => null,
         'allowed_orchestration_access_metadata' => null,
@@ -370,6 +374,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'account_management_granular' => 'accountManagementGranular',
         'admin_only' => 'adminOnly',
         'admin_only_metadata' => 'adminOnlyMetadata',
+        'allow_access_to_all_account_agreements' => 'allowAccessToAllAccountAgreements',
+        'allow_access_to_all_account_agreements_metadata' => 'allowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging' => 'allowAutoTagging',
         'allowed_orchestration_access' => 'allowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'allowedOrchestrationAccessMetadata',
@@ -513,6 +519,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'account_management_granular' => 'setAccountManagementGranular',
         'admin_only' => 'setAdminOnly',
         'admin_only_metadata' => 'setAdminOnlyMetadata',
+        'allow_access_to_all_account_agreements' => 'setAllowAccessToAllAccountAgreements',
+        'allow_access_to_all_account_agreements_metadata' => 'setAllowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging' => 'setAllowAutoTagging',
         'allowed_orchestration_access' => 'setAllowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'setAllowedOrchestrationAccessMetadata',
@@ -656,6 +664,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'account_management_granular' => 'getAccountManagementGranular',
         'admin_only' => 'getAdminOnly',
         'admin_only_metadata' => 'getAdminOnlyMetadata',
+        'allow_access_to_all_account_agreements' => 'getAllowAccessToAllAccountAgreements',
+        'allow_access_to_all_account_agreements_metadata' => 'getAllowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging' => 'getAllowAutoTagging',
         'allowed_orchestration_access' => 'getAllowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'getAllowedOrchestrationAccessMetadata',
@@ -853,6 +863,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['account_management_granular'] = isset($data['account_management_granular']) ? $data['account_management_granular'] : null;
         $this->container['admin_only'] = isset($data['admin_only']) ? $data['admin_only'] : null;
         $this->container['admin_only_metadata'] = isset($data['admin_only_metadata']) ? $data['admin_only_metadata'] : null;
+        $this->container['allow_access_to_all_account_agreements'] = isset($data['allow_access_to_all_account_agreements']) ? $data['allow_access_to_all_account_agreements'] : null;
+        $this->container['allow_access_to_all_account_agreements_metadata'] = isset($data['allow_access_to_all_account_agreements_metadata']) ? $data['allow_access_to_all_account_agreements_metadata'] : null;
         $this->container['allow_auto_tagging'] = isset($data['allow_auto_tagging']) ? $data['allow_auto_tagging'] : null;
         $this->container['allowed_orchestration_access'] = isset($data['allowed_orchestration_access']) ? $data['allowed_orchestration_access'] : null;
         $this->container['allowed_orchestration_access_metadata'] = isset($data['allowed_orchestration_access_metadata']) ? $data['allowed_orchestration_access_metadata'] : null;
@@ -1079,6 +1091,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setAdminOnlyMetadata($admin_only_metadata)
     {
         $this->container['admin_only_metadata'] = $admin_only_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_access_to_all_account_agreements
+     *
+     * @return ?string
+     */
+    public function getAllowAccessToAllAccountAgreements()
+    {
+        return $this->container['allow_access_to_all_account_agreements'];
+    }
+
+    /**
+     * Sets allow_access_to_all_account_agreements
+     *
+     * @param ?string $allow_access_to_all_account_agreements 
+     *
+     * @return $this
+     */
+    public function setAllowAccessToAllAccountAgreements($allow_access_to_all_account_agreements)
+    {
+        $this->container['allow_access_to_all_account_agreements'] = $allow_access_to_all_account_agreements;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_access_to_all_account_agreements_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowAccessToAllAccountAgreementsMetadata()
+    {
+        return $this->container['allow_access_to_all_account_agreements_metadata'];
+    }
+
+    /**
+     * Sets allow_access_to_all_account_agreements_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_access_to_all_account_agreements_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowAccessToAllAccountAgreementsMetadata($allow_access_to_all_account_agreements_metadata)
+    {
+        $this->container['allow_access_to_all_account_agreements_metadata'] = $allow_access_to_all_account_agreements_metadata;
 
         return $this;
     }

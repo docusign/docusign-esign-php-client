@@ -1,6 +1,6 @@
 <?php
 /**
- * DelayedRouting
+ * DocGenFormFieldRowValue
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * DelayedRouting Class Doc Comment
+ * DocGenFormFieldRowValue Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DelayedRouting implements ModelInterface, ArrayAccess
+class DocGenFormFieldRowValue implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class DelayedRouting implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'delayedRouting';
+    protected static $swaggerModelName = 'docGenFormFieldRowValue';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,7 @@ class DelayedRouting implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'resume_date' => '?string',
-        'rules' => '\DocuSign\eSign\Model\EnvelopeDelayRule[]',
-        'status' => '?string'
+        'doc_gen_form_field_list' => '\DocuSign\eSign\Model\DocGenFormField[]'
     ];
 
     /**
@@ -70,9 +68,7 @@ class DelayedRouting implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'resume_date' => null,
-        'rules' => null,
-        'status' => null
+        'doc_gen_form_field_list' => null
     ];
 
     /**
@@ -102,9 +98,7 @@ class DelayedRouting implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'resume_date' => 'resumeDate',
-        'rules' => 'rules',
-        'status' => 'status'
+        'doc_gen_form_field_list' => 'docGenFormFieldList'
     ];
 
     /**
@@ -113,9 +107,7 @@ class DelayedRouting implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'resume_date' => 'setResumeDate',
-        'rules' => 'setRules',
-        'status' => 'setStatus'
+        'doc_gen_form_field_list' => 'setDocGenFormFieldList'
     ];
 
     /**
@@ -124,9 +116,7 @@ class DelayedRouting implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'resume_date' => 'getResumeDate',
-        'rules' => 'getRules',
-        'status' => 'getStatus'
+        'doc_gen_form_field_list' => 'getDocGenFormFieldList'
     ];
 
     /**
@@ -189,9 +179,7 @@ class DelayedRouting implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
-        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['doc_gen_form_field_list'] = isset($data['doc_gen_form_field_list']) ? $data['doc_gen_form_field_list'] : null;
     }
 
     /**
@@ -219,73 +207,25 @@ class DelayedRouting implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets resume_date
+     * Gets doc_gen_form_field_list
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\DocGenFormField[]
      */
-    public function getResumeDate()
+    public function getDocGenFormFieldList()
     {
-        return $this->container['resume_date'];
+        return $this->container['doc_gen_form_field_list'];
     }
 
     /**
-     * Sets resume_date
+     * Sets doc_gen_form_field_list
      *
-     * @param ?string $resume_date An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.
+     * @param \DocuSign\eSign\Model\DocGenFormField[] $doc_gen_form_field_list 
      *
      * @return $this
      */
-    public function setResumeDate($resume_date)
+    public function setDocGenFormFieldList($doc_gen_form_field_list)
     {
-        $this->container['resume_date'] = $resume_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets rules
-     *
-     * @return \DocuSign\eSign\Model\EnvelopeDelayRule[]
-     */
-    public function getRules()
-    {
-        return $this->container['rules'];
-    }
-
-    /**
-     * Sets rules
-     *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.
-     *
-     * @return $this
-     */
-    public function setRules($rules)
-    {
-        $this->container['rules'] = $rules;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return ?string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param ?string $status Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
+        $this->container['doc_gen_form_field_list'] = $doc_gen_form_field_list;
 
         return $this;
     }

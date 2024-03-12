@@ -65,6 +65,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         'options' => '\DocuSign\eSign\Model\DocGenFormFieldOption[]',
         'predefined_validation' => '?string',
         'required' => '?string',
+        'row_values' => '\DocuSign\eSign\Model\DocGenFormFieldRowValue[]',
         'type' => '?string',
         'validation' => '\DocuSign\eSign\Model\DocGenFormFieldValidation',
         'value' => '?string'
@@ -82,6 +83,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         'options' => null,
         'predefined_validation' => null,
         'required' => null,
+        'row_values' => null,
         'type' => null,
         'validation' => null,
         'value' => null
@@ -120,6 +122,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         'options' => 'options',
         'predefined_validation' => 'predefinedValidation',
         'required' => 'required',
+        'row_values' => 'rowValues',
         'type' => 'type',
         'validation' => 'validation',
         'value' => 'value'
@@ -137,6 +140,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         'options' => 'setOptions',
         'predefined_validation' => 'setPredefinedValidation',
         'required' => 'setRequired',
+        'row_values' => 'setRowValues',
         'type' => 'setType',
         'validation' => 'setValidation',
         'value' => 'setValue'
@@ -154,6 +158,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         'options' => 'getOptions',
         'predefined_validation' => 'getPredefinedValidation',
         'required' => 'getRequired',
+        'row_values' => 'getRowValues',
         'type' => 'getType',
         'validation' => 'getValidation',
         'value' => 'getValue'
@@ -225,6 +230,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['predefined_validation'] = isset($data['predefined_validation']) ? $data['predefined_validation'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['row_values'] = isset($data['row_values']) ? $data['row_values'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['validation'] = isset($data['validation']) ? $data['validation'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
@@ -394,6 +400,30 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     public function setRequired($required)
     {
         $this->container['required'] = $required;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_values
+     *
+     * @return \DocuSign\eSign\Model\DocGenFormFieldRowValue[]
+     */
+    public function getRowValues()
+    {
+        return $this->container['row_values'];
+    }
+
+    /**
+     * Sets row_values
+     *
+     * @param \DocuSign\eSign\Model\DocGenFormFieldRowValue[] $row_values 
+     *
+     * @return $this
+     */
+    public function setRowValues($row_values)
+    {
+        $this->container['row_values'] = $row_values;
 
         return $this;
     }
