@@ -413,6 +413,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking' => '?string',
         'enable_customer_satisfaction_metric_tracking_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_data_verification_extensions' => '?string',
+        'enable_data_verification_extensions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_d_sig_eu_advanced_pens' => '?string',
         'enable_d_sig_eu_advanced_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_d_sig_express_pens' => '?string',
@@ -528,8 +530,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_strike_through_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_transaction_point' => '?string',
         'enable_transaction_point_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_unified_repository' => '?string',
+        'enable_unified_repository_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_vaulting' => '?string',
         'enable_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_web_forms_runtime_ap_is' => '?string',
+        'enable_web_forms_runtime_ap_is_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_web_forms_separate_user_permissions' => '?string',
         'enable_web_forms_separate_user_permissions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_witnessing' => '?string',
@@ -563,6 +569,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'finish_reminder' => '?string',
         'finish_reminder_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'forbid_adding_user_stamps' => '?string',
+        'forbid_adding_user_stamps_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'guided_forms_html_allowed' => '?string',
         'guided_forms_html_allowed_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'guided_forms_html_conversion_policy' => '?string',
@@ -1149,6 +1157,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => null,
         'enable_customer_satisfaction_metric_tracking' => null,
         'enable_customer_satisfaction_metric_tracking_metadata' => null,
+        'enable_data_verification_extensions' => null,
+        'enable_data_verification_extensions_metadata' => null,
         'enable_d_sig_eu_advanced_pens' => null,
         'enable_d_sig_eu_advanced_pens_metadata' => null,
         'enable_d_sig_express_pens' => null,
@@ -1264,8 +1274,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_strike_through_metadata' => null,
         'enable_transaction_point' => null,
         'enable_transaction_point_metadata' => null,
+        'enable_unified_repository' => null,
+        'enable_unified_repository_metadata' => null,
         'enable_vaulting' => null,
         'enable_vaulting_metadata' => null,
+        'enable_web_forms_runtime_ap_is' => null,
+        'enable_web_forms_runtime_ap_is_metadata' => null,
         'enable_web_forms_separate_user_permissions' => null,
         'enable_web_forms_separate_user_permissions_metadata' => null,
         'enable_witnessing' => null,
@@ -1299,6 +1313,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => null,
         'finish_reminder' => null,
         'finish_reminder_metadata' => null,
+        'forbid_adding_user_stamps' => null,
+        'forbid_adding_user_stamps_metadata' => null,
         'guided_forms_html_allowed' => null,
         'guided_forms_html_allowed_metadata' => null,
         'guided_forms_html_conversion_policy' => null,
@@ -1906,6 +1922,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'enableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'enableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata' => 'enableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_data_verification_extensions' => 'enableDataVerificationExtensions',
+        'enable_data_verification_extensions_metadata' => 'enableDataVerificationExtensionsMetadata',
         'enable_d_sig_eu_advanced_pens' => 'enableDSigEUAdvancedPens',
         'enable_d_sig_eu_advanced_pens_metadata' => 'enableDSigEUAdvancedPensMetadata',
         'enable_d_sig_express_pens' => 'enableDSigExpressPens',
@@ -2021,8 +2039,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_strike_through_metadata' => 'enableStrikeThroughMetadata',
         'enable_transaction_point' => 'enableTransactionPoint',
         'enable_transaction_point_metadata' => 'enableTransactionPointMetadata',
+        'enable_unified_repository' => 'enableUnifiedRepository',
+        'enable_unified_repository_metadata' => 'enableUnifiedRepositoryMetadata',
         'enable_vaulting' => 'enableVaulting',
         'enable_vaulting_metadata' => 'enableVaultingMetadata',
+        'enable_web_forms_runtime_ap_is' => 'enableWebFormsRuntimeAPIs',
+        'enable_web_forms_runtime_ap_is_metadata' => 'enableWebFormsRuntimeAPIsMetadata',
         'enable_web_forms_separate_user_permissions' => 'enableWebFormsSeparateUserPermissions',
         'enable_web_forms_separate_user_permissions_metadata' => 'enableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing' => 'enableWitnessing',
@@ -2056,6 +2078,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => 'faxOutEnabledMetadata',
         'finish_reminder' => 'finishReminder',
         'finish_reminder_metadata' => 'finishReminderMetadata',
+        'forbid_adding_user_stamps' => 'forbidAddingUserStamps',
+        'forbid_adding_user_stamps_metadata' => 'forbidAddingUserStampsMetadata',
         'guided_forms_html_allowed' => 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'guidedFormsHtmlAllowedMetadata',
         'guided_forms_html_conversion_policy' => 'guidedFormsHtmlConversionPolicy',
@@ -2642,6 +2666,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'setEnableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'setEnableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata' => 'setEnableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_data_verification_extensions' => 'setEnableDataVerificationExtensions',
+        'enable_data_verification_extensions_metadata' => 'setEnableDataVerificationExtensionsMetadata',
         'enable_d_sig_eu_advanced_pens' => 'setEnableDSigEuAdvancedPens',
         'enable_d_sig_eu_advanced_pens_metadata' => 'setEnableDSigEuAdvancedPensMetadata',
         'enable_d_sig_express_pens' => 'setEnableDSigExpressPens',
@@ -2757,8 +2783,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_strike_through_metadata' => 'setEnableStrikeThroughMetadata',
         'enable_transaction_point' => 'setEnableTransactionPoint',
         'enable_transaction_point_metadata' => 'setEnableTransactionPointMetadata',
+        'enable_unified_repository' => 'setEnableUnifiedRepository',
+        'enable_unified_repository_metadata' => 'setEnableUnifiedRepositoryMetadata',
         'enable_vaulting' => 'setEnableVaulting',
         'enable_vaulting_metadata' => 'setEnableVaultingMetadata',
+        'enable_web_forms_runtime_ap_is' => 'setEnableWebFormsRuntimeApIs',
+        'enable_web_forms_runtime_ap_is_metadata' => 'setEnableWebFormsRuntimeApIsMetadata',
         'enable_web_forms_separate_user_permissions' => 'setEnableWebFormsSeparateUserPermissions',
         'enable_web_forms_separate_user_permissions_metadata' => 'setEnableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing' => 'setEnableWitnessing',
@@ -2792,6 +2822,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => 'setFaxOutEnabledMetadata',
         'finish_reminder' => 'setFinishReminder',
         'finish_reminder_metadata' => 'setFinishReminderMetadata',
+        'forbid_adding_user_stamps' => 'setForbidAddingUserStamps',
+        'forbid_adding_user_stamps_metadata' => 'setForbidAddingUserStampsMetadata',
         'guided_forms_html_allowed' => 'setGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'setGuidedFormsHtmlAllowedMetadata',
         'guided_forms_html_conversion_policy' => 'setGuidedFormsHtmlConversionPolicy',
@@ -3378,6 +3410,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'getEnableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'getEnableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata' => 'getEnableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_data_verification_extensions' => 'getEnableDataVerificationExtensions',
+        'enable_data_verification_extensions_metadata' => 'getEnableDataVerificationExtensionsMetadata',
         'enable_d_sig_eu_advanced_pens' => 'getEnableDSigEuAdvancedPens',
         'enable_d_sig_eu_advanced_pens_metadata' => 'getEnableDSigEuAdvancedPensMetadata',
         'enable_d_sig_express_pens' => 'getEnableDSigExpressPens',
@@ -3493,8 +3527,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_strike_through_metadata' => 'getEnableStrikeThroughMetadata',
         'enable_transaction_point' => 'getEnableTransactionPoint',
         'enable_transaction_point_metadata' => 'getEnableTransactionPointMetadata',
+        'enable_unified_repository' => 'getEnableUnifiedRepository',
+        'enable_unified_repository_metadata' => 'getEnableUnifiedRepositoryMetadata',
         'enable_vaulting' => 'getEnableVaulting',
         'enable_vaulting_metadata' => 'getEnableVaultingMetadata',
+        'enable_web_forms_runtime_ap_is' => 'getEnableWebFormsRuntimeApIs',
+        'enable_web_forms_runtime_ap_is_metadata' => 'getEnableWebFormsRuntimeApIsMetadata',
         'enable_web_forms_separate_user_permissions' => 'getEnableWebFormsSeparateUserPermissions',
         'enable_web_forms_separate_user_permissions_metadata' => 'getEnableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing' => 'getEnableWitnessing',
@@ -3528,6 +3566,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'fax_out_enabled_metadata' => 'getFaxOutEnabledMetadata',
         'finish_reminder' => 'getFinishReminder',
         'finish_reminder_metadata' => 'getFinishReminderMetadata',
+        'forbid_adding_user_stamps' => 'getForbidAddingUserStamps',
+        'forbid_adding_user_stamps_metadata' => 'getForbidAddingUserStampsMetadata',
         'guided_forms_html_allowed' => 'getGuidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata' => 'getGuidedFormsHtmlAllowedMetadata',
         'guided_forms_html_conversion_policy' => 'getGuidedFormsHtmlConversionPolicy',
@@ -4168,6 +4208,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_contact_suggestions_metadata'] = isset($data['enable_contact_suggestions_metadata']) ? $data['enable_contact_suggestions_metadata'] : null;
         $this->container['enable_customer_satisfaction_metric_tracking'] = isset($data['enable_customer_satisfaction_metric_tracking']) ? $data['enable_customer_satisfaction_metric_tracking'] : null;
         $this->container['enable_customer_satisfaction_metric_tracking_metadata'] = isset($data['enable_customer_satisfaction_metric_tracking_metadata']) ? $data['enable_customer_satisfaction_metric_tracking_metadata'] : null;
+        $this->container['enable_data_verification_extensions'] = isset($data['enable_data_verification_extensions']) ? $data['enable_data_verification_extensions'] : null;
+        $this->container['enable_data_verification_extensions_metadata'] = isset($data['enable_data_verification_extensions_metadata']) ? $data['enable_data_verification_extensions_metadata'] : null;
         $this->container['enable_d_sig_eu_advanced_pens'] = isset($data['enable_d_sig_eu_advanced_pens']) ? $data['enable_d_sig_eu_advanced_pens'] : null;
         $this->container['enable_d_sig_eu_advanced_pens_metadata'] = isset($data['enable_d_sig_eu_advanced_pens_metadata']) ? $data['enable_d_sig_eu_advanced_pens_metadata'] : null;
         $this->container['enable_d_sig_express_pens'] = isset($data['enable_d_sig_express_pens']) ? $data['enable_d_sig_express_pens'] : null;
@@ -4283,8 +4325,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_strike_through_metadata'] = isset($data['enable_strike_through_metadata']) ? $data['enable_strike_through_metadata'] : null;
         $this->container['enable_transaction_point'] = isset($data['enable_transaction_point']) ? $data['enable_transaction_point'] : null;
         $this->container['enable_transaction_point_metadata'] = isset($data['enable_transaction_point_metadata']) ? $data['enable_transaction_point_metadata'] : null;
+        $this->container['enable_unified_repository'] = isset($data['enable_unified_repository']) ? $data['enable_unified_repository'] : null;
+        $this->container['enable_unified_repository_metadata'] = isset($data['enable_unified_repository_metadata']) ? $data['enable_unified_repository_metadata'] : null;
         $this->container['enable_vaulting'] = isset($data['enable_vaulting']) ? $data['enable_vaulting'] : null;
         $this->container['enable_vaulting_metadata'] = isset($data['enable_vaulting_metadata']) ? $data['enable_vaulting_metadata'] : null;
+        $this->container['enable_web_forms_runtime_ap_is'] = isset($data['enable_web_forms_runtime_ap_is']) ? $data['enable_web_forms_runtime_ap_is'] : null;
+        $this->container['enable_web_forms_runtime_ap_is_metadata'] = isset($data['enable_web_forms_runtime_ap_is_metadata']) ? $data['enable_web_forms_runtime_ap_is_metadata'] : null;
         $this->container['enable_web_forms_separate_user_permissions'] = isset($data['enable_web_forms_separate_user_permissions']) ? $data['enable_web_forms_separate_user_permissions'] : null;
         $this->container['enable_web_forms_separate_user_permissions_metadata'] = isset($data['enable_web_forms_separate_user_permissions_metadata']) ? $data['enable_web_forms_separate_user_permissions_metadata'] : null;
         $this->container['enable_witnessing'] = isset($data['enable_witnessing']) ? $data['enable_witnessing'] : null;
@@ -4318,6 +4364,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['fax_out_enabled_metadata'] = isset($data['fax_out_enabled_metadata']) ? $data['fax_out_enabled_metadata'] : null;
         $this->container['finish_reminder'] = isset($data['finish_reminder']) ? $data['finish_reminder'] : null;
         $this->container['finish_reminder_metadata'] = isset($data['finish_reminder_metadata']) ? $data['finish_reminder_metadata'] : null;
+        $this->container['forbid_adding_user_stamps'] = isset($data['forbid_adding_user_stamps']) ? $data['forbid_adding_user_stamps'] : null;
+        $this->container['forbid_adding_user_stamps_metadata'] = isset($data['forbid_adding_user_stamps_metadata']) ? $data['forbid_adding_user_stamps_metadata'] : null;
         $this->container['guided_forms_html_allowed'] = isset($data['guided_forms_html_allowed']) ? $data['guided_forms_html_allowed'] : null;
         $this->container['guided_forms_html_allowed_metadata'] = isset($data['guided_forms_html_allowed_metadata']) ? $data['guided_forms_html_allowed_metadata'] : null;
         $this->container['guided_forms_html_conversion_policy'] = isset($data['guided_forms_html_conversion_policy']) ? $data['guided_forms_html_conversion_policy'] : null;
@@ -13042,6 +13090,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_data_verification_extensions
+     *
+     * @return ?string
+     */
+    public function getEnableDataVerificationExtensions()
+    {
+        return $this->container['enable_data_verification_extensions'];
+    }
+
+    /**
+     * Sets enable_data_verification_extensions
+     *
+     * @param ?string $enable_data_verification_extensions 
+     *
+     * @return $this
+     */
+    public function setEnableDataVerificationExtensions($enable_data_verification_extensions)
+    {
+        $this->container['enable_data_verification_extensions'] = $enable_data_verification_extensions;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_data_verification_extensions_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDataVerificationExtensionsMetadata()
+    {
+        return $this->container['enable_data_verification_extensions_metadata'];
+    }
+
+    /**
+     * Sets enable_data_verification_extensions_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_data_verification_extensions_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDataVerificationExtensionsMetadata($enable_data_verification_extensions_metadata)
+    {
+        $this->container['enable_data_verification_extensions_metadata'] = $enable_data_verification_extensions_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_d_sig_eu_advanced_pens
      *
      * @return ?string
@@ -15802,6 +15898,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_unified_repository
+     *
+     * @return ?string
+     */
+    public function getEnableUnifiedRepository()
+    {
+        return $this->container['enable_unified_repository'];
+    }
+
+    /**
+     * Sets enable_unified_repository
+     *
+     * @param ?string $enable_unified_repository 
+     *
+     * @return $this
+     */
+    public function setEnableUnifiedRepository($enable_unified_repository)
+    {
+        $this->container['enable_unified_repository'] = $enable_unified_repository;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_unified_repository_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableUnifiedRepositoryMetadata()
+    {
+        return $this->container['enable_unified_repository_metadata'];
+    }
+
+    /**
+     * Sets enable_unified_repository_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_unified_repository_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableUnifiedRepositoryMetadata($enable_unified_repository_metadata)
+    {
+        $this->container['enable_unified_repository_metadata'] = $enable_unified_repository_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_vaulting
      *
      * @return ?string
@@ -15845,6 +15989,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableVaultingMetadata($enable_vaulting_metadata)
     {
         $this->container['enable_vaulting_metadata'] = $enable_vaulting_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_web_forms_runtime_ap_is
+     *
+     * @return ?string
+     */
+    public function getEnableWebFormsRuntimeApIs()
+    {
+        return $this->container['enable_web_forms_runtime_ap_is'];
+    }
+
+    /**
+     * Sets enable_web_forms_runtime_ap_is
+     *
+     * @param ?string $enable_web_forms_runtime_ap_is 
+     *
+     * @return $this
+     */
+    public function setEnableWebFormsRuntimeApIs($enable_web_forms_runtime_ap_is)
+    {
+        $this->container['enable_web_forms_runtime_ap_is'] = $enable_web_forms_runtime_ap_is;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_web_forms_runtime_ap_is_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableWebFormsRuntimeApIsMetadata()
+    {
+        return $this->container['enable_web_forms_runtime_ap_is_metadata'];
+    }
+
+    /**
+     * Sets enable_web_forms_runtime_ap_is_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_web_forms_runtime_ap_is_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableWebFormsRuntimeApIsMetadata($enable_web_forms_runtime_ap_is_metadata)
+    {
+        $this->container['enable_web_forms_runtime_ap_is_metadata'] = $enable_web_forms_runtime_ap_is_metadata;
 
         return $this;
     }
@@ -16637,6 +16829,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setFinishReminderMetadata($finish_reminder_metadata)
     {
         $this->container['finish_reminder_metadata'] = $finish_reminder_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets forbid_adding_user_stamps
+     *
+     * @return ?string
+     */
+    public function getForbidAddingUserStamps()
+    {
+        return $this->container['forbid_adding_user_stamps'];
+    }
+
+    /**
+     * Sets forbid_adding_user_stamps
+     *
+     * @param ?string $forbid_adding_user_stamps 
+     *
+     * @return $this
+     */
+    public function setForbidAddingUserStamps($forbid_adding_user_stamps)
+    {
+        $this->container['forbid_adding_user_stamps'] = $forbid_adding_user_stamps;
+
+        return $this;
+    }
+
+    /**
+     * Gets forbid_adding_user_stamps_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getForbidAddingUserStampsMetadata()
+    {
+        return $this->container['forbid_adding_user_stamps_metadata'];
+    }
+
+    /**
+     * Sets forbid_adding_user_stamps_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $forbid_adding_user_stamps_metadata 
+     *
+     * @return $this
+     */
+    public function setForbidAddingUserStampsMetadata($forbid_adding_user_stamps_metadata)
+    {
+        $this->container['forbid_adding_user_stamps_metadata'] = $forbid_adding_user_stamps_metadata;
 
         return $this;
     }
