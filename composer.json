@@ -1,6 +1,6 @@
 {
     "name": "docusign/esign-client",
-    "description": "The DocuSign PHP library makes integrating DocuSign into your websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-php-client repository. Join the eSign revolution!",
+    "description": "The DocuSign PHP library makes integrating DocuSign into your apps and websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-esign-php-client repository. Join the eSign revolution!",
     "keywords": [
         "DocuSign",
         "Agreement",
@@ -22,7 +22,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "firebase/php-jwt": "^5.0 || ^6.0"
+        "firebase/php-jwt": "^6.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.8",

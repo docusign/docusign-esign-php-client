@@ -3674,7 +3674,7 @@ class UsersApi
      * @param ?string $image_type One of **signature_image** or **initials_image**.
      * @param ?string $signature_id The ID of the signature being accessed.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param ?string $image_bytes Image content. (required)
+     * @param ?string $image_bytes Updated image content. (required)
      * @param  \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
@@ -3695,7 +3695,7 @@ class UsersApi
      * @param ?string $image_type One of **signature_image** or **initials_image**.
      * @param ?string $signature_id The ID of the signature being accessed.
      * @param ?string $user_id The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-     * @param ?string $image_bytes Image content. (required)
+     * @param ?string $image_bytes Updated image content. (required)
      * @param  \DocuSign\eSign\Api\UsersApi\UpdateSignatureImageOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response

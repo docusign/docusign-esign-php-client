@@ -223,23 +223,6 @@ class UnitTests extends TestCase
     }
 
     /**
-     * @depends testCreateEnvelope
-     */
-    public function testListTabs($testConfig)
-    { 
-        $envelopesApi = new EnvelopesApi($testConfig->getApiClient());
-        $createdEnvelope = $envelopesApi->getEnvelope($testConfig->getAccountId(), $testConfig->getEnvelopeId());
-        $recipients = $envelopesApi->listRecipients($testConfig->getAccountId(), $createdEnvelope->getEnvelopeId());
-        $tabs = $envelopesApi->listTabs($testConfig->getAccountId(), $testConfig->getEnvelopeId(), $recipients->getSigners()[1]->getRecipientId());
-        $listTabs = $tabs->getListTabs();
-
-        $this->assertNotNull($listTabs);
-        $this->assertContainsOnlyInstancesOf('DocuSign\eSign\Model\ModelList', $listTabs);
-
-        return $testConfig;
-    }
-
-    /**
      * @depends testLogin
      */
     public function testGetFolders($testConfig)
@@ -398,13 +381,44 @@ class UnitTests extends TestCase
         $envelop_summary = $envelopeApi->createEnvelope($testConfig->getAccountId(), $envelop_definition, $options);
         if(!empty($envelop_summary))
         {
-//				$testConfig->setEnvelopeId($envelop_summary->getEnvelopeId());
+            // $testConfig->setEnvelopeId($envelop_summary->getEnvelopeId());
         }
 
 		$this->assertNotEmpty($envelop_summary);
 
 		return $testConfig;
 	}
+
+    /**
+     * @depends testSignatureRequestOnDocument
+     */
+    public function testDateTabs($testConfig)
+    { 
+        $envelopesApi = new EnvelopesApi($testConfig->getApiClient());
+        $createdEnvelope = $envelopesApi->getEnvelope($testConfig->getAccountId(), $testConfig->getEnvelopeId());
+        $recipients = $envelopesApi->listRecipients($testConfig->getAccountId(), $createdEnvelope->getEnvelopeId());
+
+        // Initialize a flag to check if at least one recipient has non-null date tabs
+        $atLeastOneDateTabNotNull = false;
+
+        // Iterate over all recipients
+        foreach ($recipients->getSigners() as $signer) {
+            $recipientId = $signer->getRecipientId();
+            $tabs = $envelopesApi->listTabs($testConfig->getAccountId(), $testConfig->getEnvelopeId(), $recipientId);
+            $dateTabs = $tabs->getDateTabs();
+
+            // Check if dateTabs is not null for the current recipient
+            if (!empty($dateTabs)) {
+                $this->assertContainsOnlyInstancesOf('DocuSign\eSign\Model\Date', $dateTabs);
+                $atLeastOneDateTabNotNull = true;
+            }
+        }
+
+        // Assert that at least one recipient has non-null date tabs
+        $this->assertTrue($atLeastOneDateTabNotNull);
+
+        return $testConfig;
+    }
 
 	/**
      * @depends testSignatureRequestOnDocument
@@ -968,14 +982,13 @@ class UnitTests extends TestCase
     {
         // new signer
         $recipientId = '123';
-        $firstName = 'TestSignerFirstName';
-        $lastName = 'TestSignerLastName';
+        $name = 'TestSignerName';
         $signer = new Signer([
             'role_name' => 'signer', 
             'recipient_id' => $recipientId, 
             'routing_order' => '1',
-            'first_name' => $firstName,
-            'last_name' => $lastName,
+            'name' => $name,
+            'email' => $testConfig-> getRecipientEmail()
         ]);
         $sign_here = new SignHere(['document_id' => '1', 'page_number' => '1',
             'x_position' => '191', 'y_position' => '148']);
@@ -1040,8 +1053,7 @@ class UnitTests extends TestCase
         $signersAfter = $recipientsAfter->getSigners();
         $lastSignerKey = array_key_last($signersAfter);
         $this->assertEquals($recipientId, $signersAfter[$lastSignerKey]->getRecipientId());       
-        $this->assertEquals($firstName, $signersAfter[$lastSignerKey]->getFirstName());       
-        $this->assertEquals($lastName, $signersAfter[$lastSignerKey]->getLastName());       
+        $this->assertEquals($name, $signersAfter[$lastSignerKey]->getName());       
     }
 
     /**
