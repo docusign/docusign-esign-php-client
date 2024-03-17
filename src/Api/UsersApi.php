@@ -2004,14 +2004,17 @@ class UsersApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $contact_id The unique identifier of a person in the contacts address book.
+     * @param ?array $queryParams (optional) GET-parameters to HTTP request.
+              2-dimensional representation of "keys (parameter names)" => "values".\
+              (If the value has "object" type, it's considered as $options, for backward compatibility.)
      * @param  \DocuSign\eSign\Api\UsersApi\GetContactByIdOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ContactGetResponse
      */
-    public function getContactById($account_id, $contact_id, \DocuSign\eSign\Api\UsersApi\GetContactByIdOptions $options = null)
+    public function getContactById($account_id, $contact_id, $queryParams = [], \DocuSign\eSign\Api\UsersApi\GetContactByIdOptions $options = null)
     {
-        list($response) = $this->getContactByIdWithHttpInfo($account_id, $contact_id, $options);
+        list($response) = $this->getContactByIdWithHttpInfo($account_id, $contact_id, $queryParams, $options);
         return $response;
     }
 
@@ -2022,12 +2025,15 @@ class UsersApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $contact_id The unique identifier of a person in the contacts address book.
+     * @param ?array $queryParams (optional) GET-parameters to HTTP request.
+              2-dimensional representation of "keys (parameter names)" => "values".\
+              (If the value has "object" type, it's considered as $options, for backward compatibility.)
      * @param  \DocuSign\eSign\Api\UsersApi\GetContactByIdOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ContactGetResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getContactByIdWithHttpInfo($account_id, $contact_id, \DocuSign\eSign\Api\UsersApi\GetContactByIdOptions $options = null): array
+    public function getContactByIdWithHttpInfo($account_id, $contact_id, $queryParams = [], \DocuSign\eSign\Api\UsersApi\GetContactByIdOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2037,19 +2043,21 @@ class UsersApi
         if ($contact_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $contact_id when calling getContactById');
         }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/contacts/{contactId}";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
-        if ($options != null)
-        {
-            // query params
-            if ($options->getCloudProvider() != 'null') {
-                $queryParams['cloud_provider'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloudProvider());
+        // parse inputs
+        $resourcePath = '/v2.1/accounts/{accountId}/contacts/{contactId}';
+        //$httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present // AK 2022-04-10: odd.
+        // $headerParams = $formParams = []; // AK 2022-04-10: odd.
+
+        if ($options === null) {
+            if ('object' === gettype($queryParams)) { // if $queryParams is 'object', consider it as $options, for backward compatibility.
+                $options = $queryParams;
+                $queryParams = [];
             }
+
+        }elseif ($options->getCloudProvider() !== 'null') {
+            if (empty($queryParams)) $queryParams = [];
+            $queryParams['cloud_provider'] = $this->apiClient->getSerializer()->toQueryValue($options->getCloudProvider());
         }
 
         // path params
@@ -2061,26 +2069,32 @@ class UsersApi
             $resourcePath = self::updateResourcePath($resourcePath, "contactId", $contact_id);
         }
 
+        /* // AK 2022-04-10: something odd and impossible here, so commented out.
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
+        }*/
+
+        $headerParams = [
+            'Accept'       => $this->apiClient->selectHeaderAccept(['application/json']),
+            // 'Content-Type' => $this->apiClient->selectHeaderContentType([]), // AK 2022-04-10: no need to include empty value, so commented out.
+        ];
+        if ($token = $this->apiClient->getConfig()->getAccessToken()) { // this endpoint requires OAuth (access token)
+            $headerParams['Authorization'] = 'Bearer ' . $token;
         }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
+
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
                 'GET',
                 $queryParams,
-                $httpBody,
+                '', // $httpBody,
                 $headerParams,
                 '\DocuSign\eSign\Model\ContactGetResponse',
                 '/v2.1/accounts/{accountId}/contacts/{contactId}'
