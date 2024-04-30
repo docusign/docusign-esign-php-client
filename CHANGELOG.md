@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.19.0] - eSignature API v2.1-23.4.02.00 - 2024-04-30
+### Changed
+- Added support for version v2.1-23.4.02.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+- Adjusted the minimum required firebase/php-jwt package version to 6.0.
+
 ## [v6.19.0-rc2] - eSignature API v2.1-23.4.02.00 - 2024-03-15
 ### Changed
 - Added support for version v2.1-23.4.02.00 of the DocuSign ESignature API.
