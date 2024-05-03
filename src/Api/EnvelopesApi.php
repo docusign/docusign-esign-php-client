@@ -306,6 +306,47 @@ class CreateRecipientOptions
 
 
 /**
+ * CreateRecipientProofFileResourceTokenOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
+class CreateRecipientProofFileResourceTokenOptions
+{
+    /**
+      * $token_scopes 
+      * @var ?string
+      */
+    protected ?string $token_scopes = null;
+
+    /**
+     * Gets token_scopes
+     *
+     * @return ?string
+     */
+    public function getTokenScopes(): ?string
+    {
+        return $this->token_scopes;
+    }
+
+    /**
+     * Sets token_scopes
+     * @param ?string $token_scopes 
+     *
+     * @return self
+     */
+    public function setTokenScopes(?string $token_scopes): self
+    {
+        $this->token_scopes = $token_scopes;
+        return $this;
+    }
+}
+
+
+/**
  * GetChunkedUploadOptions Class Doc Comment
  *
  * @category Class
@@ -399,7 +440,7 @@ class GetCommentsTranscriptOptions
 class GetConsumerDisclosureOptions
 {
     /**
-      * $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+      * $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
       * @var ?string
       */
     protected ?string $lang_code2 = null;
@@ -416,7 +457,7 @@ class GetConsumerDisclosureOptions
 
     /**
      * Sets lang_code2
-     * @param ?string $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code2 The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      *
      * @return self
      */
@@ -4307,14 +4348,14 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     * @param \DocuSign\eSign\Model\EnvelopeViewRequest $envelope_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
-    public function createEditView($account_id, $envelope_id, $return_url_request = null)
+    public function createEditView($account_id, $envelope_id, $envelope_view_request = null)
     {
-        list($response) = $this->createEditViewWithHttpInfo($account_id, $envelope_id, $return_url_request);
+        list($response) = $this->createEditViewWithHttpInfo($account_id, $envelope_id, $envelope_view_request);
         return $response;
     }
 
@@ -4325,12 +4366,12 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     * @param \DocuSign\eSign\Model\EnvelopeViewRequest $envelope_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createEditViewWithHttpInfo($account_id, $envelope_id, $return_url_request = null): array
+    public function createEditViewWithHttpInfo($account_id, $envelope_id, $envelope_view_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4361,8 +4402,8 @@ class EnvelopesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
         // body params
         $_tempBody = null;
-        if (isset($return_url_request)) {
-            $_tempBody = $return_url_request;
+        if (isset($envelope_view_request)) {
+            $_tempBody = $envelope_view_request;
         }
 
         // for model (json/xml)
@@ -5666,14 +5707,14 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param ?string $token_scopes 
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientProofFileResourceTokenOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\IdEvidenceResourceToken
      */
-    public function createRecipientProofFileResourceToken($account_id, $envelope_id, $recipient_id, $token_scopes)
+    public function createRecipientProofFileResourceToken($account_id, $envelope_id, $recipient_id, \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientProofFileResourceTokenOptions $options = null)
     {
-        list($response) = $this->createRecipientProofFileResourceTokenWithHttpInfo($account_id, $envelope_id, $recipient_id, $token_scopes);
+        list($response) = $this->createRecipientProofFileResourceTokenWithHttpInfo($account_id, $envelope_id, $recipient_id, $options);
         return $response;
     }
 
@@ -5685,12 +5726,12 @@ class EnvelopesApi
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
      * @param ?string $recipient_id The ID of the recipient being accessed.
-     * @param ?string $token_scopes 
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientProofFileResourceTokenOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\IdEvidenceResourceToken, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createRecipientProofFileResourceTokenWithHttpInfo($account_id, $envelope_id, $recipient_id, $token_scopes): array
+    public function createRecipientProofFileResourceTokenWithHttpInfo($account_id, $envelope_id, $recipient_id, \DocuSign\eSign\Api\EnvelopesApi\CreateRecipientProofFileResourceTokenOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5704,10 +5745,6 @@ class EnvelopesApi
         if ($recipient_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $recipient_id when calling createRecipientProofFileResourceToken');
         }
-        // verify the required parameter 'token_scopes' is set
-        if ($token_scopes === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $token_scopes when calling createRecipientProofFileResourceToken');
-        }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/identity_proof_token";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
@@ -5715,6 +5752,13 @@ class EnvelopesApi
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        if ($options != null)
+        {
+            // query params
+            if ($options->getTokenScopes() != 'null') {
+                $queryParams['token_scopes'] = $this->apiClient->getSerializer()->toQueryValue($options->getTokenScopes());
+            }
+        }
 
         // path params
         if ($account_id !== null) {
@@ -5727,10 +5771,6 @@ class EnvelopesApi
         // path params
         if ($recipient_id !== null) {
             $resourcePath = self::updateResourcePath($resourcePath, "recipientId", $recipient_id);
-        }
-        // path params
-        if ($token_scopes !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "token_scopes", $token_scopes);
         }
 
         // default format to json
@@ -5990,14 +6030,14 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     * @param \DocuSign\eSign\Model\EnvelopeViewRequest $envelope_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
-    public function createSenderView($account_id, $envelope_id, $return_url_request = null)
+    public function createSenderView($account_id, $envelope_id, $envelope_view_request = null)
     {
-        list($response) = $this->createSenderViewWithHttpInfo($account_id, $envelope_id, $return_url_request);
+        list($response) = $this->createSenderViewWithHttpInfo($account_id, $envelope_id, $envelope_view_request);
         return $response;
     }
 
@@ -6008,12 +6048,12 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     * @param \DocuSign\eSign\Model\EnvelopeViewRequest $envelope_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createSenderViewWithHttpInfo($account_id, $envelope_id, $return_url_request = null): array
+    public function createSenderViewWithHttpInfo($account_id, $envelope_id, $envelope_view_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6044,8 +6084,8 @@ class EnvelopesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
         // body params
         $_tempBody = null;
-        if (isset($return_url_request)) {
-            $_tempBody = $return_url_request;
+        if (isset($envelope_view_request)) {
+            $_tempBody = $envelope_view_request;
         }
 
         // for model (json/xml)

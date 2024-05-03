@@ -60,6 +60,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'account_agreements_access_type' => '?string',
+        'account_agreements_access_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'account_management_granular' => '\DocuSign\eSign\Model\UserAccountManagementGranularInformation',
         'admin_only' => '?string',
         'admin_only_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -89,6 +91,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'api_can_export_ac_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'bulk_send' => '?string',
         'bulk_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_bulk_upload_agreements' => '?string',
+        'can_bulk_upload_agreements_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_charge_account' => '?string',
         'can_charge_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_create_transaction' => '?string',
@@ -103,6 +107,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_lock_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_account' => '?string',
         'can_manage_account_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_agreement_parties' => '?string',
+        'can_manage_agreement_parties_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_distributor' => '?string',
         'can_manage_distributor_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_manage_templates' => '?string',
@@ -205,6 +211,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'account_agreements_access_type' => null,
+        'account_agreements_access_type_metadata' => null,
         'account_management_granular' => null,
         'admin_only' => null,
         'admin_only_metadata' => null,
@@ -234,6 +242,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'api_can_export_ac_metadata' => null,
         'bulk_send' => null,
         'bulk_send_metadata' => null,
+        'can_bulk_upload_agreements' => null,
+        'can_bulk_upload_agreements_metadata' => null,
         'can_charge_account' => null,
         'can_charge_account_metadata' => null,
         'can_create_transaction' => null,
@@ -248,6 +258,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_lock_envelopes_metadata' => null,
         'can_manage_account' => null,
         'can_manage_account_metadata' => null,
+        'can_manage_agreement_parties' => null,
+        'can_manage_agreement_parties_metadata' => null,
         'can_manage_distributor' => null,
         'can_manage_distributor_metadata' => null,
         'can_manage_templates' => null,
@@ -371,6 +383,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'account_agreements_access_type' => 'accountAgreementsAccessType',
+        'account_agreements_access_type_metadata' => 'accountAgreementsAccessTypeMetadata',
         'account_management_granular' => 'accountManagementGranular',
         'admin_only' => 'adminOnly',
         'admin_only_metadata' => 'adminOnlyMetadata',
@@ -400,6 +414,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'api_can_export_ac_metadata' => 'apiCanExportACMetadata',
         'bulk_send' => 'bulkSend',
         'bulk_send_metadata' => 'bulkSendMetadata',
+        'can_bulk_upload_agreements' => 'canBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata' => 'canBulkUploadAgreementsMetadata',
         'can_charge_account' => 'canChargeAccount',
         'can_charge_account_metadata' => 'canChargeAccountMetadata',
         'can_create_transaction' => 'canCreateTransaction',
@@ -414,6 +430,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_lock_envelopes_metadata' => 'canLockEnvelopesMetadata',
         'can_manage_account' => 'canManageAccount',
         'can_manage_account_metadata' => 'canManageAccountMetadata',
+        'can_manage_agreement_parties' => 'canManageAgreementParties',
+        'can_manage_agreement_parties_metadata' => 'canManageAgreementPartiesMetadata',
         'can_manage_distributor' => 'canManageDistributor',
         'can_manage_distributor_metadata' => 'canManageDistributorMetadata',
         'can_manage_templates' => 'canManageTemplates',
@@ -516,6 +534,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'account_agreements_access_type' => 'setAccountAgreementsAccessType',
+        'account_agreements_access_type_metadata' => 'setAccountAgreementsAccessTypeMetadata',
         'account_management_granular' => 'setAccountManagementGranular',
         'admin_only' => 'setAdminOnly',
         'admin_only_metadata' => 'setAdminOnlyMetadata',
@@ -545,6 +565,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'api_can_export_ac_metadata' => 'setApiCanExportAcMetadata',
         'bulk_send' => 'setBulkSend',
         'bulk_send_metadata' => 'setBulkSendMetadata',
+        'can_bulk_upload_agreements' => 'setCanBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata' => 'setCanBulkUploadAgreementsMetadata',
         'can_charge_account' => 'setCanChargeAccount',
         'can_charge_account_metadata' => 'setCanChargeAccountMetadata',
         'can_create_transaction' => 'setCanCreateTransaction',
@@ -559,6 +581,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_lock_envelopes_metadata' => 'setCanLockEnvelopesMetadata',
         'can_manage_account' => 'setCanManageAccount',
         'can_manage_account_metadata' => 'setCanManageAccountMetadata',
+        'can_manage_agreement_parties' => 'setCanManageAgreementParties',
+        'can_manage_agreement_parties_metadata' => 'setCanManageAgreementPartiesMetadata',
         'can_manage_distributor' => 'setCanManageDistributor',
         'can_manage_distributor_metadata' => 'setCanManageDistributorMetadata',
         'can_manage_templates' => 'setCanManageTemplates',
@@ -661,6 +685,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'account_agreements_access_type' => 'getAccountAgreementsAccessType',
+        'account_agreements_access_type_metadata' => 'getAccountAgreementsAccessTypeMetadata',
         'account_management_granular' => 'getAccountManagementGranular',
         'admin_only' => 'getAdminOnly',
         'admin_only_metadata' => 'getAdminOnlyMetadata',
@@ -690,6 +716,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'api_can_export_ac_metadata' => 'getApiCanExportAcMetadata',
         'bulk_send' => 'getBulkSend',
         'bulk_send_metadata' => 'getBulkSendMetadata',
+        'can_bulk_upload_agreements' => 'getCanBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata' => 'getCanBulkUploadAgreementsMetadata',
         'can_charge_account' => 'getCanChargeAccount',
         'can_charge_account_metadata' => 'getCanChargeAccountMetadata',
         'can_create_transaction' => 'getCanCreateTransaction',
@@ -704,6 +732,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'can_lock_envelopes_metadata' => 'getCanLockEnvelopesMetadata',
         'can_manage_account' => 'getCanManageAccount',
         'can_manage_account_metadata' => 'getCanManageAccountMetadata',
+        'can_manage_agreement_parties' => 'getCanManageAgreementParties',
+        'can_manage_agreement_parties_metadata' => 'getCanManageAgreementPartiesMetadata',
         'can_manage_distributor' => 'getCanManageDistributor',
         'can_manage_distributor_metadata' => 'getCanManageDistributorMetadata',
         'can_manage_templates' => 'getCanManageTemplates',
@@ -860,6 +890,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['account_agreements_access_type'] = isset($data['account_agreements_access_type']) ? $data['account_agreements_access_type'] : null;
+        $this->container['account_agreements_access_type_metadata'] = isset($data['account_agreements_access_type_metadata']) ? $data['account_agreements_access_type_metadata'] : null;
         $this->container['account_management_granular'] = isset($data['account_management_granular']) ? $data['account_management_granular'] : null;
         $this->container['admin_only'] = isset($data['admin_only']) ? $data['admin_only'] : null;
         $this->container['admin_only_metadata'] = isset($data['admin_only_metadata']) ? $data['admin_only_metadata'] : null;
@@ -889,6 +921,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['api_can_export_ac_metadata'] = isset($data['api_can_export_ac_metadata']) ? $data['api_can_export_ac_metadata'] : null;
         $this->container['bulk_send'] = isset($data['bulk_send']) ? $data['bulk_send'] : null;
         $this->container['bulk_send_metadata'] = isset($data['bulk_send_metadata']) ? $data['bulk_send_metadata'] : null;
+        $this->container['can_bulk_upload_agreements'] = isset($data['can_bulk_upload_agreements']) ? $data['can_bulk_upload_agreements'] : null;
+        $this->container['can_bulk_upload_agreements_metadata'] = isset($data['can_bulk_upload_agreements_metadata']) ? $data['can_bulk_upload_agreements_metadata'] : null;
         $this->container['can_charge_account'] = isset($data['can_charge_account']) ? $data['can_charge_account'] : null;
         $this->container['can_charge_account_metadata'] = isset($data['can_charge_account_metadata']) ? $data['can_charge_account_metadata'] : null;
         $this->container['can_create_transaction'] = isset($data['can_create_transaction']) ? $data['can_create_transaction'] : null;
@@ -903,6 +937,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['can_lock_envelopes_metadata'] = isset($data['can_lock_envelopes_metadata']) ? $data['can_lock_envelopes_metadata'] : null;
         $this->container['can_manage_account'] = isset($data['can_manage_account']) ? $data['can_manage_account'] : null;
         $this->container['can_manage_account_metadata'] = isset($data['can_manage_account_metadata']) ? $data['can_manage_account_metadata'] : null;
+        $this->container['can_manage_agreement_parties'] = isset($data['can_manage_agreement_parties']) ? $data['can_manage_agreement_parties'] : null;
+        $this->container['can_manage_agreement_parties_metadata'] = isset($data['can_manage_agreement_parties_metadata']) ? $data['can_manage_agreement_parties_metadata'] : null;
         $this->container['can_manage_distributor'] = isset($data['can_manage_distributor']) ? $data['can_manage_distributor'] : null;
         $this->container['can_manage_distributor_metadata'] = isset($data['can_manage_distributor_metadata']) ? $data['can_manage_distributor_metadata'] : null;
         $this->container['can_manage_templates'] = isset($data['can_manage_templates']) ? $data['can_manage_templates'] : null;
@@ -1022,6 +1058,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets account_agreements_access_type
+     *
+     * @return ?string
+     */
+    public function getAccountAgreementsAccessType()
+    {
+        return $this->container['account_agreements_access_type'];
+    }
+
+    /**
+     * Sets account_agreements_access_type
+     *
+     * @param ?string $account_agreements_access_type 
+     *
+     * @return $this
+     */
+    public function setAccountAgreementsAccessType($account_agreements_access_type)
+    {
+        $this->container['account_agreements_access_type'] = $account_agreements_access_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_agreements_access_type_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAccountAgreementsAccessTypeMetadata()
+    {
+        return $this->container['account_agreements_access_type_metadata'];
+    }
+
+    /**
+     * Sets account_agreements_access_type_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $account_agreements_access_type_metadata 
+     *
+     * @return $this
+     */
+    public function setAccountAgreementsAccessTypeMetadata($account_agreements_access_type_metadata)
+    {
+        $this->container['account_agreements_access_type_metadata'] = $account_agreements_access_type_metadata;
+
+        return $this;
+    }
 
     /**
      * Gets account_management_granular
@@ -1720,6 +1804,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets can_bulk_upload_agreements
+     *
+     * @return ?string
+     */
+    public function getCanBulkUploadAgreements()
+    {
+        return $this->container['can_bulk_upload_agreements'];
+    }
+
+    /**
+     * Sets can_bulk_upload_agreements
+     *
+     * @param ?string $can_bulk_upload_agreements 
+     *
+     * @return $this
+     */
+    public function setCanBulkUploadAgreements($can_bulk_upload_agreements)
+    {
+        $this->container['can_bulk_upload_agreements'] = $can_bulk_upload_agreements;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_bulk_upload_agreements_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanBulkUploadAgreementsMetadata()
+    {
+        return $this->container['can_bulk_upload_agreements_metadata'];
+    }
+
+    /**
+     * Sets can_bulk_upload_agreements_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_bulk_upload_agreements_metadata 
+     *
+     * @return $this
+     */
+    public function setCanBulkUploadAgreementsMetadata($can_bulk_upload_agreements_metadata)
+    {
+        $this->container['can_bulk_upload_agreements_metadata'] = $can_bulk_upload_agreements_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets can_charge_account
      *
      * @return ?string
@@ -2051,6 +2183,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setCanManageAccountMetadata($can_manage_account_metadata)
     {
         $this->container['can_manage_account_metadata'] = $can_manage_account_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_agreement_parties
+     *
+     * @return ?string
+     */
+    public function getCanManageAgreementParties()
+    {
+        return $this->container['can_manage_agreement_parties'];
+    }
+
+    /**
+     * Sets can_manage_agreement_parties
+     *
+     * @param ?string $can_manage_agreement_parties 
+     *
+     * @return $this
+     */
+    public function setCanManageAgreementParties($can_manage_agreement_parties)
+    {
+        $this->container['can_manage_agreement_parties'] = $can_manage_agreement_parties;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_agreement_parties_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageAgreementPartiesMetadata()
+    {
+        return $this->container['can_manage_agreement_parties_metadata'];
+    }
+
+    /**
+     * Sets can_manage_agreement_parties_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_agreement_parties_metadata 
+     *
+     * @return $this
+     */
+    public function setCanManageAgreementPartiesMetadata($can_manage_agreement_parties_metadata)
+    {
+        $this->container['can_manage_agreement_parties_metadata'] = $can_manage_agreement_parties_metadata;
 
         return $this;
     }
