@@ -74,6 +74,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_envelope_copy_with_data' => '?string',
         'enable_envelope_copy_with_data_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_envelope_types' => '?string',
+        'enable_envelope_types_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_legacy_sendflow_link' => '?string',
         'enable_legacy_sendflow_link_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'has_external_linked_accounts' => '?string',
@@ -114,6 +116,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => null,
         'enable_envelope_copy_with_data' => null,
         'enable_envelope_copy_with_data_metadata' => null,
+        'enable_envelope_types' => null,
+        'enable_envelope_types_metadata' => null,
         'enable_legacy_sendflow_link' => null,
         'enable_legacy_sendflow_link_metadata' => null,
         'has_external_linked_accounts' => null,
@@ -175,6 +179,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => 'enableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data' => 'enableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata' => 'enableEnvelopeCopyWithDataMetadata',
+        'enable_envelope_types' => 'enableEnvelopeTypes',
+        'enable_envelope_types_metadata' => 'enableEnvelopeTypesMetadata',
         'enable_legacy_sendflow_link' => 'enableLegacySendflowLink',
         'enable_legacy_sendflow_link_metadata' => 'enableLegacySendflowLinkMetadata',
         'has_external_linked_accounts' => 'hasExternalLinkedAccounts',
@@ -215,6 +221,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => 'setEnableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data' => 'setEnableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata' => 'setEnableEnvelopeCopyWithDataMetadata',
+        'enable_envelope_types' => 'setEnableEnvelopeTypes',
+        'enable_envelope_types_metadata' => 'setEnableEnvelopeTypesMetadata',
         'enable_legacy_sendflow_link' => 'setEnableLegacySendflowLink',
         'enable_legacy_sendflow_link_metadata' => 'setEnableLegacySendflowLinkMetadata',
         'has_external_linked_accounts' => 'setHasExternalLinkedAccounts',
@@ -255,6 +263,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'enable_easy_sign_template_upload_metadata' => 'getEnableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data' => 'getEnableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata' => 'getEnableEnvelopeCopyWithDataMetadata',
+        'enable_envelope_types' => 'getEnableEnvelopeTypes',
+        'enable_envelope_types_metadata' => 'getEnableEnvelopeTypesMetadata',
         'enable_legacy_sendflow_link' => 'getEnableLegacySendflowLink',
         'enable_legacy_sendflow_link_metadata' => 'getEnableLegacySendflowLinkMetadata',
         'has_external_linked_accounts' => 'getHasExternalLinkedAccounts',
@@ -349,6 +359,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         $this->container['enable_easy_sign_template_upload_metadata'] = isset($data['enable_easy_sign_template_upload_metadata']) ? $data['enable_easy_sign_template_upload_metadata'] : null;
         $this->container['enable_envelope_copy_with_data'] = isset($data['enable_envelope_copy_with_data']) ? $data['enable_envelope_copy_with_data'] : null;
         $this->container['enable_envelope_copy_with_data_metadata'] = isset($data['enable_envelope_copy_with_data_metadata']) ? $data['enable_envelope_copy_with_data_metadata'] : null;
+        $this->container['enable_envelope_types'] = isset($data['enable_envelope_types']) ? $data['enable_envelope_types'] : null;
+        $this->container['enable_envelope_types_metadata'] = isset($data['enable_envelope_types_metadata']) ? $data['enable_envelope_types_metadata'] : null;
         $this->container['enable_legacy_sendflow_link'] = isset($data['enable_legacy_sendflow_link']) ? $data['enable_legacy_sendflow_link'] : null;
         $this->container['enable_legacy_sendflow_link_metadata'] = isset($data['enable_legacy_sendflow_link_metadata']) ? $data['enable_legacy_sendflow_link_metadata'] : null;
         $this->container['has_external_linked_accounts'] = isset($data['has_external_linked_accounts']) ? $data['has_external_linked_accounts'] : null;
@@ -725,6 +737,54 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function setEnableEnvelopeCopyWithDataMetadata($enable_envelope_copy_with_data_metadata)
     {
         $this->container['enable_envelope_copy_with_data_metadata'] = $enable_envelope_copy_with_data_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_envelope_types
+     *
+     * @return ?string
+     */
+    public function getEnableEnvelopeTypes()
+    {
+        return $this->container['enable_envelope_types'];
+    }
+
+    /**
+     * Sets enable_envelope_types
+     *
+     * @param ?string $enable_envelope_types 
+     *
+     * @return $this
+     */
+    public function setEnableEnvelopeTypes($enable_envelope_types)
+    {
+        $this->container['enable_envelope_types'] = $enable_envelope_types;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_envelope_types_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableEnvelopeTypesMetadata()
+    {
+        return $this->container['enable_envelope_types_metadata'];
+    }
+
+    /**
+     * Sets enable_envelope_types_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_envelope_types_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableEnvelopeTypesMetadata($enable_envelope_types_metadata)
+    {
+        $this->container['enable_envelope_types_metadata'] = $enable_envelope_types_metadata;
 
         return $this;
     }

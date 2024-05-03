@@ -65,6 +65,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
         'authentication_method' => '?string',
         'client_ur_ls' => '\DocuSign\eSign\Model\RecipientTokenClientURLs',
         'client_user_id' => '?string',
+        'display_format' => '?string',
         'email' => '?string',
         'frame_ancestors' => '?string[]',
         'message_origins' => '?string[]',
@@ -90,6 +91,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
         'authentication_method' => null,
         'client_ur_ls' => null,
         'client_user_id' => null,
+        'display_format' => null,
         'email' => null,
         'frame_ancestors' => null,
         'message_origins' => null,
@@ -136,6 +138,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
         'authentication_method' => 'authenticationMethod',
         'client_ur_ls' => 'clientURLs',
         'client_user_id' => 'clientUserId',
+        'display_format' => 'displayFormat',
         'email' => 'email',
         'frame_ancestors' => 'frameAncestors',
         'message_origins' => 'messageOrigins',
@@ -161,6 +164,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
         'authentication_method' => 'setAuthenticationMethod',
         'client_ur_ls' => 'setClientUrLs',
         'client_user_id' => 'setClientUserId',
+        'display_format' => 'setDisplayFormat',
         'email' => 'setEmail',
         'frame_ancestors' => 'setFrameAncestors',
         'message_origins' => 'setMessageOrigins',
@@ -186,6 +190,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
         'authentication_method' => 'getAuthenticationMethod',
         'client_ur_ls' => 'getClientUrLs',
         'client_user_id' => 'getClientUserId',
+        'display_format' => 'getDisplayFormat',
         'email' => 'getEmail',
         'frame_ancestors' => 'getFrameAncestors',
         'message_origins' => 'getMessageOrigins',
@@ -265,6 +270,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
         $this->container['authentication_method'] = isset($data['authentication_method']) ? $data['authentication_method'] : null;
         $this->container['client_ur_ls'] = isset($data['client_ur_ls']) ? $data['client_ur_ls'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
+        $this->container['display_format'] = isset($data['display_format']) ? $data['display_format'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['frame_ancestors'] = isset($data['frame_ancestors']) ? $data['frame_ancestors'] : null;
         $this->container['message_origins'] = isset($data['message_origins']) ? $data['message_origins'] : null;
@@ -419,6 +425,30 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     public function setClientUserId($client_user_id)
     {
         $this->container['client_user_id'] = $client_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_format
+     *
+     * @return ?string
+     */
+    public function getDisplayFormat()
+    {
+        return $this->container['display_format'];
+    }
+
+    /**
+     * Sets display_format
+     *
+     * @param ?string $display_format 
+     *
+     * @return $this
+     */
+    public function setDisplayFormat($display_format)
+    {
+        $this->container['display_format'] = $display_format;
 
         return $this;
     }

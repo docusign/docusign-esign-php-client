@@ -1802,14 +1802,14 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     * @param \DocuSign\eSign\Model\TemplateViewRequest $template_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
-    public function createEditView($account_id, $template_id, $return_url_request = null)
+    public function createEditView($account_id, $template_id, $template_view_request = null)
     {
-        list($response) = $this->createEditViewWithHttpInfo($account_id, $template_id, $return_url_request);
+        list($response) = $this->createEditViewWithHttpInfo($account_id, $template_id, $template_view_request);
         return $response;
     }
 
@@ -1820,12 +1820,12 @@ class TemplatesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $template_id The ID of the template being accessed.
-     * @param \DocuSign\eSign\Model\ReturnUrlRequest $return_url_request  (optional)
+     * @param \DocuSign\eSign\Model\TemplateViewRequest $template_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createEditViewWithHttpInfo($account_id, $template_id, $return_url_request = null): array
+    public function createEditViewWithHttpInfo($account_id, $template_id, $template_view_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1856,8 +1856,8 @@ class TemplatesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
         // body params
         $_tempBody = null;
-        if (isset($return_url_request)) {
-            $_tempBody = $return_url_request;
+        if (isset($template_view_request)) {
+            $_tempBody = $template_view_request;
         }
 
         // for model (json/xml)

@@ -159,6 +159,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'transaction_id' => '?string',
         'uri' => '?string',
         'use_disclosure' => '?string',
+        'u_sig_state' => '?string',
         'voided_date_time' => '?string',
         'voided_reason' => '?string',
         'workflow' => '\DocuSign\eSign\Model\Workflow'
@@ -270,6 +271,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'transaction_id' => null,
         'uri' => null,
         'use_disclosure' => null,
+        'u_sig_state' => null,
         'voided_date_time' => null,
         'voided_reason' => null,
         'workflow' => null
@@ -402,6 +404,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'transaction_id' => 'transactionId',
         'uri' => 'uri',
         'use_disclosure' => 'useDisclosure',
+        'u_sig_state' => 'uSigState',
         'voided_date_time' => 'voidedDateTime',
         'voided_reason' => 'voidedReason',
         'workflow' => 'workflow'
@@ -513,6 +516,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'transaction_id' => 'setTransactionId',
         'uri' => 'setUri',
         'use_disclosure' => 'setUseDisclosure',
+        'u_sig_state' => 'setUSigState',
         'voided_date_time' => 'setVoidedDateTime',
         'voided_reason' => 'setVoidedReason',
         'workflow' => 'setWorkflow'
@@ -624,6 +628,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'transaction_id' => 'getTransactionId',
         'uri' => 'getUri',
         'use_disclosure' => 'getUseDisclosure',
+        'u_sig_state' => 'getUSigState',
         'voided_date_time' => 'getVoidedDateTime',
         'voided_reason' => 'getVoidedReason',
         'workflow' => 'getWorkflow'
@@ -789,6 +794,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         $this->container['transaction_id'] = isset($data['transaction_id']) ? $data['transaction_id'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
         $this->container['use_disclosure'] = isset($data['use_disclosure']) ? $data['use_disclosure'] : null;
+        $this->container['u_sig_state'] = isset($data['u_sig_state']) ? $data['u_sig_state'] : null;
         $this->container['voided_date_time'] = isset($data['voided_date_time']) ? $data['voided_date_time'] : null;
         $this->container['voided_reason'] = isset($data['voided_reason']) ? $data['voided_reason'] : null;
         $this->container['workflow'] = isset($data['workflow']) ? $data['workflow'] : null;
@@ -3214,6 +3220,30 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     public function setUseDisclosure($use_disclosure)
     {
         $this->container['use_disclosure'] = $use_disclosure;
+
+        return $this;
+    }
+
+    /**
+     * Gets u_sig_state
+     *
+     * @return ?string
+     */
+    public function getUSigState()
+    {
+        return $this->container['u_sig_state'];
+    }
+
+    /**
+     * Sets u_sig_state
+     *
+     * @param ?string $u_sig_state 
+     *
+     * @return $this
+     */
+    public function setUSigState($u_sig_state)
+    {
+        $this->container['u_sig_state'] = $u_sig_state;
 
         return $this;
     }

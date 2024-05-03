@@ -66,6 +66,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => '?string',
         'group_name' => '?string',
         'group_type' => '?string',
+        'last_modified_on' => '?string',
         'permission_profile_id' => '?string',
         'users' => '\DocuSign\eSign\Model\UserInfo[]',
         'users_count' => '?string'
@@ -83,6 +84,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => null,
         'group_name' => null,
         'group_type' => null,
+        'last_modified_on' => null,
         'permission_profile_id' => null,
         'users' => null,
         'users_count' => null
@@ -121,6 +123,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => 'groupId',
         'group_name' => 'groupName',
         'group_type' => 'groupType',
+        'last_modified_on' => 'lastModifiedOn',
         'permission_profile_id' => 'permissionProfileId',
         'users' => 'users',
         'users_count' => 'usersCount'
@@ -138,6 +141,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => 'setGroupId',
         'group_name' => 'setGroupName',
         'group_type' => 'setGroupType',
+        'last_modified_on' => 'setLastModifiedOn',
         'permission_profile_id' => 'setPermissionProfileId',
         'users' => 'setUsers',
         'users_count' => 'setUsersCount'
@@ -155,6 +159,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => 'getGroupId',
         'group_name' => 'getGroupName',
         'group_type' => 'getGroupType',
+        'last_modified_on' => 'getLastModifiedOn',
         'permission_profile_id' => 'getPermissionProfileId',
         'users' => 'getUsers',
         'users_count' => 'getUsersCount'
@@ -226,6 +231,7 @@ class Group implements ModelInterface, ArrayAccess
         $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
         $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
+        $this->container['last_modified_on'] = isset($data['last_modified_on']) ? $data['last_modified_on'] : null;
         $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
         $this->container['users_count'] = isset($data['users_count']) ? $data['users_count'] : null;
@@ -395,6 +401,30 @@ class Group implements ModelInterface, ArrayAccess
     public function setGroupType($group_type)
     {
         $this->container['group_type'] = $group_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_modified_on
+     *
+     * @return ?string
+     */
+    public function getLastModifiedOn()
+    {
+        return $this->container['last_modified_on'];
+    }
+
+    /**
+     * Sets last_modified_on
+     *
+     * @param ?string $last_modified_on 
+     *
+     * @return $this
+     */
+    public function setLastModifiedOn($last_modified_on)
+    {
+        $this->container['last_modified_on'] = $last_modified_on;
 
         return $this;
     }
