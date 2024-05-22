@@ -3,6 +3,111 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v7.0.0] - eSignature API v2.1-24.1.01.00 - 2024-05-22
+## Endpoint-Specific Changes
+
+### Updated [EnvelopeRecipients: createRecipientProofFileResourceToken](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/enveloperecipients/createrecipientprooffileresourcetoken/)
+The `"token_scopes"` parameter has been moved from path parameters to query parameters for the above mentioned endpoint.
+
+### Updated [EnvelopeView:CreateSender](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/) and [EnvelopeView:CreateEdit](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createedit/)
+The body parameter `returnUrlRequest` has been changed to `envelopeViewRequest`.
+`envelopeViewRequest` has the same properties as the previous `returnUrlRequest` but now includes additional `viewAccess` and `settings` properties, where settings is a complex object with several UI controls for the view experience.
+
+### Updated [TemplateViews: createEdit](https://developers.docusign.com/docs/esign-rest-api/reference/templates/templateviews/createedit/)
+The body parameter `returnUrlRequest` has been changed to `templateViewRequest`.
+`templateViewRequest` has the same properties as the previous `returnUrlRequest` but now includes an additional `viewAccess` string.
+
+## Model Changes
+
+- Updated existing models
+
+### `accountSettingsInformation`
+
+- **Added fields:**
+  - `allowConnectEnvelopeRemovedEvent`
+  - `allowOrganizationBranding`
+  - `allowOrganizationBrandingMetadata`
+  - `allowPendingDestinationUrlEdition`
+  - `allowPendingDestinationUrlEditionMetadata`
+  - `disableBulkSendRecipientLimit`
+  - `disableBulkSendRecipientLimitMetaData`
+  - `enableAdvancedSearch`
+  - `enableAdvancedSearchMetadata`
+  - `enableContentSearch`
+  - `enableContentSearchMetadata`
+  - `enableMultiUserRepositoryFeatures`
+  - `enableMultiUserRepositoryFeaturesMetadata`
+  - `enablePremiumDataVerificationExtensions`
+  - `enablePremiumDataVerificationExtensionsMetadata`
+  - `enableSaveAsEnvelopeCustomFieldInWebForms`
+  - `enableSaveAsEnvelopeCustomFieldInWebFormsMetadata`
+  - `enableScheduledRelease`
+  - `enableScheduledReleaseMetadata`
+  - `isvOemEmbed`
+  - `isvOemEmbedMetaData`
+
+- **Removed fields:**
+  - `enableInboxRelevanceSortForRecentAccounts`
+  - `enableInboxRelevanceSortForRecentAccountsMetadata`
+  - `enableScheduledRelease`
+  - `enableScheduledReleaseMetadata`
+  - `enableSearch`
+  - `enableSearchMetadata`
+  - `enableSearchUI`
+  - `enableSearchUIMetadata`
+
+### `accountUISettings`
+
+- **Added fields:**
+  - `enableEnvelopeTypes`
+  - `enableEnvelopeTypesMetadata`
+
+### `envelopDefinitions`
+
+- **Added field:**
+  - `uSigState`
+
+### `envelopTemplate`
+
+- **Added field:**
+  - `uSigState`
+
+### `group`
+
+- **Added property:**
+  - `lastModifiedOn`
+
+### `receipientViewRequest`
+
+- **Added property:**
+  - `displayFormat`
+
+### `userSettingsInformation`
+
+- **Added properties:**
+  - `accountAgreementsAccessType`
+  - `accountAgreementsAccessTypeMetadata`
+  - `canBulkUploadAgreements`
+  - `canBulkUploadAgreementsMetadata`
+  - `canManageAgreementParties`
+  - `canManageAgreementPartiesMetadata`
+
+### Newly added Models
+
+- `envelopeViewDocumentSettings`
+- `envelopeViewEnvelopeCustomFieldSettings`
+- `envelopeViewRecipientSettings`
+- `envelopeViewRequest`
+- `envelopeViewSettings`
+- `envelopeViewTaggerSettings`
+- `envelopeViewTemplateSettings`
+- `paletteItemSettings`
+- `paletteSettings`
+- `templateViewRequest`
+
+### Removed Models
+- `returnUrlRequest`
+
 ## [v7.0.0-rc1] - eSignature API v2.1-24.1.01.00 - 2024-05-02
 ### Changed
 - Added support for version v2.1-24.1.01.00 of the DocuSign ESignature API.
