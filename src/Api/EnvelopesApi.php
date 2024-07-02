@@ -14,9 +14,9 @@ declare(strict_types=1);
  */
 
 /**
- * DocuSign REST API
+ * Docusign eSignature REST API
  *
- * The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+ * The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.
  *
  * OpenAPI spec version: v2.1
  * Contact: devcenter@docusign.com
@@ -1020,6 +1020,33 @@ class GetEnvelopeOptions
     public function setInclude(?string $include): self
     {
         $this->include = $include;
+        return $this;
+    }
+    /**
+      * $include_anchor_tab_locations 
+      * @var ?string
+      */
+    protected ?string $include_anchor_tab_locations = null;
+
+    /**
+     * Gets include_anchor_tab_locations
+     *
+     * @return ?string
+     */
+    public function getIncludeAnchorTabLocations(): ?string
+    {
+        return $this->include_anchor_tab_locations;
+    }
+
+    /**
+     * Sets include_anchor_tab_locations
+     * @param ?string $include_anchor_tab_locations 
+     *
+     * @return self
+     */
+    public function setIncludeAnchorTabLocations(?string $include_anchor_tab_locations): self
+    {
+        $this->include_anchor_tab_locations = $include_anchor_tab_locations;
         return $this;
     }
 }
@@ -3081,6 +3108,33 @@ class UpdateOptions
         return $this;
     }
     /**
+      * $recycle_on_void 
+      * @var ?string
+      */
+    protected ?string $recycle_on_void = null;
+
+    /**
+     * Gets recycle_on_void
+     *
+     * @return ?string
+     */
+    public function getRecycleOnVoid(): ?string
+    {
+        return $this->recycle_on_void;
+    }
+
+    /**
+     * Sets recycle_on_void
+     * @param ?string $recycle_on_void 
+     *
+     * @return self
+     */
+    public function setRecycleOnVoid(?string $recycle_on_void): self
+    {
+        $this->recycle_on_void = $recycle_on_void;
+        return $this;
+    }
+    /**
       * $resend_envelope When set to **true**, sends the specified envelope again.
       * @var ?string
       */
@@ -3798,14 +3852,14 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\CorrectViewRequest $correct_view_request  (optional)
+     * @param \DocuSign\eSign\Model\EnvelopeViewRequest $envelope_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ViewUrl
      */
-    public function createCorrectView($account_id, $envelope_id, $correct_view_request = null)
+    public function createCorrectView($account_id, $envelope_id, $envelope_view_request = null)
     {
-        list($response) = $this->createCorrectViewWithHttpInfo($account_id, $envelope_id, $correct_view_request);
+        list($response) = $this->createCorrectViewWithHttpInfo($account_id, $envelope_id, $envelope_view_request);
         return $response;
     }
 
@@ -3816,12 +3870,12 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param \DocuSign\eSign\Model\CorrectViewRequest $correct_view_request  (optional)
+     * @param \DocuSign\eSign\Model\EnvelopeViewRequest $envelope_view_request  (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ViewUrl, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCorrectViewWithHttpInfo($account_id, $envelope_id, $correct_view_request = null): array
+    public function createCorrectViewWithHttpInfo($account_id, $envelope_id, $envelope_view_request = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3852,8 +3906,8 @@ class EnvelopesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
         // body params
         $_tempBody = null;
-        if (isset($correct_view_request)) {
-            $_tempBody = $correct_view_request;
+        if (isset($envelope_view_request)) {
+            $_tempBody = $envelope_view_request;
         }
 
         // for model (json/xml)
@@ -9909,6 +9963,9 @@ class EnvelopesApi
             if ($options->getInclude() != 'null') {
                 $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
             }
+            if ($options->getIncludeAnchorTabLocations() != 'null') {
+                $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
+            }
         }
 
         // path params
@@ -13961,6 +14018,9 @@ class EnvelopesApi
             // query params
             if ($options->getAdvancedUpdate() != 'null') {
                 $queryParams['advanced_update'] = $this->apiClient->getSerializer()->toQueryValue($options->getAdvancedUpdate());
+            }
+            if ($options->getRecycleOnVoid() != 'null') {
+                $queryParams['recycle_on_void'] = $this->apiClient->getSerializer()->toQueryValue($options->getRecycleOnVoid());
             }
             if ($options->getResendEnvelope() != 'null') {
                 $queryParams['resend_envelope'] = $this->apiClient->getSerializer()->toQueryValue($options->getResendEnvelope());
