@@ -12,9 +12,9 @@
  */
 
 /**
- * DocuSign REST API
+ * Docusign eSignature REST API
  *
- * The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+ * The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.
  *
  * OpenAPI spec version: v2.1
  * Contact: devcenter@docusign.com
@@ -85,6 +85,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'envelope_unit_price' => '?string',
         'external_account_id' => '?string',
         'forgotten_password_questions_count' => '?string',
+        'free_envelope_sends_remaining_for_advanced_doc_gen' => '?int',
         'is_downgrade' => '?string',
         'payment_method' => '?string',
         'plan_classification' => '?string',
@@ -131,6 +132,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'envelope_unit_price' => null,
         'external_account_id' => null,
         'forgotten_password_questions_count' => null,
+        'free_envelope_sends_remaining_for_advanced_doc_gen' => 'int32',
         'is_downgrade' => null,
         'payment_method' => null,
         'plan_classification' => null,
@@ -198,6 +200,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'envelope_unit_price' => 'envelopeUnitPrice',
         'external_account_id' => 'externalAccountId',
         'forgotten_password_questions_count' => 'forgottenPasswordQuestionsCount',
+        'free_envelope_sends_remaining_for_advanced_doc_gen' => 'freeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade' => 'isDowngrade',
         'payment_method' => 'paymentMethod',
         'plan_classification' => 'planClassification',
@@ -244,6 +247,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'envelope_unit_price' => 'setEnvelopeUnitPrice',
         'external_account_id' => 'setExternalAccountId',
         'forgotten_password_questions_count' => 'setForgottenPasswordQuestionsCount',
+        'free_envelope_sends_remaining_for_advanced_doc_gen' => 'setFreeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade' => 'setIsDowngrade',
         'payment_method' => 'setPaymentMethod',
         'plan_classification' => 'setPlanClassification',
@@ -290,6 +294,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'envelope_unit_price' => 'getEnvelopeUnitPrice',
         'external_account_id' => 'getExternalAccountId',
         'forgotten_password_questions_count' => 'getForgottenPasswordQuestionsCount',
+        'free_envelope_sends_remaining_for_advanced_doc_gen' => 'getFreeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade' => 'getIsDowngrade',
         'payment_method' => 'getPaymentMethod',
         'plan_classification' => 'getPlanClassification',
@@ -390,6 +395,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         $this->container['envelope_unit_price'] = isset($data['envelope_unit_price']) ? $data['envelope_unit_price'] : null;
         $this->container['external_account_id'] = isset($data['external_account_id']) ? $data['external_account_id'] : null;
         $this->container['forgotten_password_questions_count'] = isset($data['forgotten_password_questions_count']) ? $data['forgotten_password_questions_count'] : null;
+        $this->container['free_envelope_sends_remaining_for_advanced_doc_gen'] = isset($data['free_envelope_sends_remaining_for_advanced_doc_gen']) ? $data['free_envelope_sends_remaining_for_advanced_doc_gen'] : null;
         $this->container['is_downgrade'] = isset($data['is_downgrade']) ? $data['is_downgrade'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['plan_classification'] = isset($data['plan_classification']) ? $data['plan_classification'] : null;
@@ -1025,6 +1031,30 @@ class AccountInformation implements ModelInterface, ArrayAccess
     public function setForgottenPasswordQuestionsCount($forgotten_password_questions_count)
     {
         $this->container['forgotten_password_questions_count'] = $forgotten_password_questions_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets free_envelope_sends_remaining_for_advanced_doc_gen
+     *
+     * @return ?int
+     */
+    public function getFreeEnvelopeSendsRemainingForAdvancedDocGen()
+    {
+        return $this->container['free_envelope_sends_remaining_for_advanced_doc_gen'];
+    }
+
+    /**
+     * Sets free_envelope_sends_remaining_for_advanced_doc_gen
+     *
+     * @param ?int $free_envelope_sends_remaining_for_advanced_doc_gen 
+     *
+     * @return $this
+     */
+    public function setFreeEnvelopeSendsRemainingForAdvancedDocGen($free_envelope_sends_remaining_for_advanced_doc_gen)
+    {
+        $this->container['free_envelope_sends_remaining_for_advanced_doc_gen'] = $free_envelope_sends_remaining_for_advanced_doc_gen;
 
         return $this;
     }

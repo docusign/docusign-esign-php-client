@@ -12,9 +12,9 @@
  */
 
 /**
- * DocuSign REST API
+ * Docusign eSignature REST API
  *
- * The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+ * The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.
  *
  * OpenAPI spec version: v2.1
  * Contact: devcenter@docusign.com
@@ -73,6 +73,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'data_field_size_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'draw_tabs_enabled' => '?string',
         'draw_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_tab_agreement_details' => '?string',
+        'enable_tab_agreement_details_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'first_last_email_tabs_enabled' => '?string',
         'first_last_email_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'list_tabs_enabled' => '?string',
@@ -125,6 +127,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'data_field_size_metadata' => null,
         'draw_tabs_enabled' => null,
         'draw_tabs_metadata' => null,
+        'enable_tab_agreement_details' => null,
+        'enable_tab_agreement_details_metadata' => null,
         'first_last_email_tabs_enabled' => null,
         'first_last_email_tabs_metadata' => null,
         'list_tabs_enabled' => null,
@@ -198,6 +202,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'data_field_size_metadata' => 'dataFieldSizeMetadata',
         'draw_tabs_enabled' => 'drawTabsEnabled',
         'draw_tabs_metadata' => 'drawTabsMetadata',
+        'enable_tab_agreement_details' => 'enableTabAgreementDetails',
+        'enable_tab_agreement_details_metadata' => 'enableTabAgreementDetailsMetadata',
         'first_last_email_tabs_enabled' => 'firstLastEmailTabsEnabled',
         'first_last_email_tabs_metadata' => 'firstLastEmailTabsMetadata',
         'list_tabs_enabled' => 'listTabsEnabled',
@@ -250,6 +256,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'data_field_size_metadata' => 'setDataFieldSizeMetadata',
         'draw_tabs_enabled' => 'setDrawTabsEnabled',
         'draw_tabs_metadata' => 'setDrawTabsMetadata',
+        'enable_tab_agreement_details' => 'setEnableTabAgreementDetails',
+        'enable_tab_agreement_details_metadata' => 'setEnableTabAgreementDetailsMetadata',
         'first_last_email_tabs_enabled' => 'setFirstLastEmailTabsEnabled',
         'first_last_email_tabs_metadata' => 'setFirstLastEmailTabsMetadata',
         'list_tabs_enabled' => 'setListTabsEnabled',
@@ -302,6 +310,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'data_field_size_metadata' => 'getDataFieldSizeMetadata',
         'draw_tabs_enabled' => 'getDrawTabsEnabled',
         'draw_tabs_metadata' => 'getDrawTabsMetadata',
+        'enable_tab_agreement_details' => 'getEnableTabAgreementDetails',
+        'enable_tab_agreement_details_metadata' => 'getEnableTabAgreementDetailsMetadata',
         'first_last_email_tabs_enabled' => 'getFirstLastEmailTabsEnabled',
         'first_last_email_tabs_metadata' => 'getFirstLastEmailTabsMetadata',
         'list_tabs_enabled' => 'getListTabsEnabled',
@@ -408,6 +418,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         $this->container['data_field_size_metadata'] = isset($data['data_field_size_metadata']) ? $data['data_field_size_metadata'] : null;
         $this->container['draw_tabs_enabled'] = isset($data['draw_tabs_enabled']) ? $data['draw_tabs_enabled'] : null;
         $this->container['draw_tabs_metadata'] = isset($data['draw_tabs_metadata']) ? $data['draw_tabs_metadata'] : null;
+        $this->container['enable_tab_agreement_details'] = isset($data['enable_tab_agreement_details']) ? $data['enable_tab_agreement_details'] : null;
+        $this->container['enable_tab_agreement_details_metadata'] = isset($data['enable_tab_agreement_details_metadata']) ? $data['enable_tab_agreement_details_metadata'] : null;
         $this->container['first_last_email_tabs_enabled'] = isset($data['first_last_email_tabs_enabled']) ? $data['first_last_email_tabs_enabled'] : null;
         $this->container['first_last_email_tabs_metadata'] = isset($data['first_last_email_tabs_metadata']) ? $data['first_last_email_tabs_metadata'] : null;
         $this->container['list_tabs_enabled'] = isset($data['list_tabs_enabled']) ? $data['list_tabs_enabled'] : null;
@@ -796,6 +808,54 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     public function setDrawTabsMetadata($draw_tabs_metadata)
     {
         $this->container['draw_tabs_metadata'] = $draw_tabs_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_tab_agreement_details
+     *
+     * @return ?string
+     */
+    public function getEnableTabAgreementDetails()
+    {
+        return $this->container['enable_tab_agreement_details'];
+    }
+
+    /**
+     * Sets enable_tab_agreement_details
+     *
+     * @param ?string $enable_tab_agreement_details 
+     *
+     * @return $this
+     */
+    public function setEnableTabAgreementDetails($enable_tab_agreement_details)
+    {
+        $this->container['enable_tab_agreement_details'] = $enable_tab_agreement_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_tab_agreement_details_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableTabAgreementDetailsMetadata()
+    {
+        return $this->container['enable_tab_agreement_details_metadata'];
+    }
+
+    /**
+     * Sets enable_tab_agreement_details_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_tab_agreement_details_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableTabAgreementDetailsMetadata($enable_tab_agreement_details_metadata)
+    {
+        $this->container['enable_tab_agreement_details_metadata'] = $enable_tab_agreement_details_metadata;
 
         return $this;
     }

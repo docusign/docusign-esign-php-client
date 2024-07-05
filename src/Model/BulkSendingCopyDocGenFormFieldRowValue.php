@@ -1,6 +1,6 @@
 <?php
 /**
- * PayPalLegacySettings
+ * BulkSendingCopyDocGenFormFieldRowValue
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * PayPalLegacySettings Class Doc Comment
+ * BulkSendingCopyDocGenFormFieldRowValue Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayPalLegacySettings implements ModelInterface, ArrayAccess
+class BulkSendingCopyDocGenFormFieldRowValue implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'payPalLegacySettings';
+    protected static $swaggerModelName = 'bulkSendingCopyDocGenFormFieldRowValue';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,11 +59,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'currency' => '?string',
-        'partner' => '?string',
-        'password' => '?string',
-        'user_name' => '?string',
-        'vendor' => '?string'
+        'doc_gen_form_field_list' => '\DocuSign\eSign\Model\BulksendingCopyDocGenFormField[]'
     ];
 
     /**
@@ -72,11 +68,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'currency' => null,
-        'partner' => null,
-        'password' => null,
-        'user_name' => null,
-        'vendor' => null
+        'doc_gen_form_field_list' => null
     ];
 
     /**
@@ -106,11 +98,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'currency' => 'currency',
-        'partner' => 'partner',
-        'password' => 'password',
-        'user_name' => 'userName',
-        'vendor' => 'vendor'
+        'doc_gen_form_field_list' => 'docGenFormFieldList'
     ];
 
     /**
@@ -119,11 +107,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'currency' => 'setCurrency',
-        'partner' => 'setPartner',
-        'password' => 'setPassword',
-        'user_name' => 'setUserName',
-        'vendor' => 'setVendor'
+        'doc_gen_form_field_list' => 'setDocGenFormFieldList'
     ];
 
     /**
@@ -132,11 +116,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'currency' => 'getCurrency',
-        'partner' => 'getPartner',
-        'password' => 'getPassword',
-        'user_name' => 'getUserName',
-        'vendor' => 'getVendor'
+        'doc_gen_form_field_list' => 'getDocGenFormFieldList'
     ];
 
     /**
@@ -199,11 +179,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
-        $this->container['vendor'] = isset($data['vendor']) ? $data['vendor'] : null;
+        $this->container['doc_gen_form_field_list'] = isset($data['doc_gen_form_field_list']) ? $data['doc_gen_form_field_list'] : null;
     }
 
     /**
@@ -231,121 +207,25 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets currency
+     * Gets doc_gen_form_field_list
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\BulksendingCopyDocGenFormField[]
      */
-    public function getCurrency()
+    public function getDocGenFormFieldList()
     {
-        return $this->container['currency'];
+        return $this->container['doc_gen_form_field_list'];
     }
 
     /**
-     * Sets currency
+     * Sets doc_gen_form_field_list
      *
-     * @param ?string $currency 
+     * @param \DocuSign\eSign\Model\BulksendingCopyDocGenFormField[] $doc_gen_form_field_list 
      *
      * @return $this
      */
-    public function setCurrency($currency)
+    public function setDocGenFormFieldList($doc_gen_form_field_list)
     {
-        $this->container['currency'] = $currency;
-
-        return $this;
-    }
-
-    /**
-     * Gets partner
-     *
-     * @return ?string
-     */
-    public function getPartner()
-    {
-        return $this->container['partner'];
-    }
-
-    /**
-     * Sets partner
-     *
-     * @param ?string $partner 
-     *
-     * @return $this
-     */
-    public function setPartner($partner)
-    {
-        $this->container['partner'] = $partner;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
-     *
-     * @return ?string
-     */
-    public function getPassword()
-    {
-        return $this->container['password'];
-    }
-
-    /**
-     * Sets password
-     *
-     * @param ?string $password 
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        $this->container['password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * Gets user_name
-     *
-     * @return ?string
-     */
-    public function getUserName()
-    {
-        return $this->container['user_name'];
-    }
-
-    /**
-     * Sets user_name
-     *
-     * @param ?string $user_name 
-     *
-     * @return $this
-     */
-    public function setUserName($user_name)
-    {
-        $this->container['user_name'] = $user_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets vendor
-     *
-     * @return ?string
-     */
-    public function getVendor()
-    {
-        return $this->container['vendor'];
-    }
-
-    /**
-     * Sets vendor
-     *
-     * @param ?string $vendor 
-     *
-     * @return $this
-     */
-    public function setVendor($vendor)
-    {
-        $this->container['vendor'] = $vendor;
+        $this->container['doc_gen_form_field_list'] = $doc_gen_form_field_list;
 
         return $this;
     }

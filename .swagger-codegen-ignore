@@ -25,7 +25,6 @@
 .swagger-codegen-ignore
 git_push.sh
 .gitignore
-README.md
 CHANGELOG.md
 best_practices.md
 

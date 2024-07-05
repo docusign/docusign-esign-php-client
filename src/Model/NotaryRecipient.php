@@ -12,9 +12,9 @@
  */
 
 /**
- * DocuSign REST API
+ * Docusign eSignature REST API
  *
- * The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+ * The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.
  *
  * OpenAPI spec version: v2.1
  * Contact: devcenter@docusign.com
@@ -70,6 +70,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_responded_reason' => '?string',
         'bulk_recipients_uri' => '?string',
         'bulk_send_v2_recipient' => '?string',
+        'can_notary_correct_envelope' => '?string',
         'can_sign_offline' => '?string',
         'client_user_id' => '?string',
         'completed_count' => '?string',
@@ -181,6 +182,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_responded_reason' => null,
         'bulk_recipients_uri' => null,
         'bulk_send_v2_recipient' => null,
+        'can_notary_correct_envelope' => null,
         'can_sign_offline' => null,
         'client_user_id' => null,
         'completed_count' => null,
@@ -313,6 +315,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'autoRespondedReason',
         'bulk_recipients_uri' => 'bulkRecipientsUri',
         'bulk_send_v2_recipient' => 'bulkSendV2Recipient',
+        'can_notary_correct_envelope' => 'canNotaryCorrectEnvelope',
         'can_sign_offline' => 'canSignOffline',
         'client_user_id' => 'clientUserId',
         'completed_count' => 'completedCount',
@@ -424,6 +427,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'setAutoRespondedReason',
         'bulk_recipients_uri' => 'setBulkRecipientsUri',
         'bulk_send_v2_recipient' => 'setBulkSendV2Recipient',
+        'can_notary_correct_envelope' => 'setCanNotaryCorrectEnvelope',
         'can_sign_offline' => 'setCanSignOffline',
         'client_user_id' => 'setClientUserId',
         'completed_count' => 'setCompletedCount',
@@ -535,6 +539,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         'auto_responded_reason' => 'getAutoRespondedReason',
         'bulk_recipients_uri' => 'getBulkRecipientsUri',
         'bulk_send_v2_recipient' => 'getBulkSendV2Recipient',
+        'can_notary_correct_envelope' => 'getCanNotaryCorrectEnvelope',
         'can_sign_offline' => 'getCanSignOffline',
         'client_user_id' => 'getClientUserId',
         'completed_count' => 'getCompletedCount',
@@ -700,6 +705,7 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
         $this->container['auto_responded_reason'] = isset($data['auto_responded_reason']) ? $data['auto_responded_reason'] : null;
         $this->container['bulk_recipients_uri'] = isset($data['bulk_recipients_uri']) ? $data['bulk_recipients_uri'] : null;
         $this->container['bulk_send_v2_recipient'] = isset($data['bulk_send_v2_recipient']) ? $data['bulk_send_v2_recipient'] : null;
+        $this->container['can_notary_correct_envelope'] = isset($data['can_notary_correct_envelope']) ? $data['can_notary_correct_envelope'] : null;
         $this->container['can_sign_offline'] = isset($data['can_sign_offline']) ? $data['can_sign_offline'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
         $this->container['completed_count'] = isset($data['completed_count']) ? $data['completed_count'] : null;
@@ -1078,6 +1084,30 @@ class NotaryRecipient implements ModelInterface, ArrayAccess
     public function setBulkSendV2Recipient($bulk_send_v2_recipient)
     {
         $this->container['bulk_send_v2_recipient'] = $bulk_send_v2_recipient;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_notary_correct_envelope
+     *
+     * @return ?string
+     */
+    public function getCanNotaryCorrectEnvelope()
+    {
+        return $this->container['can_notary_correct_envelope'];
+    }
+
+    /**
+     * Sets can_notary_correct_envelope
+     *
+     * @param ?string $can_notary_correct_envelope 
+     *
+     * @return $this
+     */
+    public function setCanNotaryCorrectEnvelope($can_notary_correct_envelope)
+    {
+        $this->container['can_notary_correct_envelope'] = $can_notary_correct_envelope;
 
         return $this;
     }

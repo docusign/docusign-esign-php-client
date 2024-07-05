@@ -12,9 +12,9 @@
  */
 
 /**
- * DocuSign REST API
+ * Docusign eSignature REST API
  *
- * The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+ * The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.
  *
  * OpenAPI spec version: v2.1
  * Contact: devcenter@docusign.com
@@ -337,6 +337,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_population_scope' => '?string',
         'data_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'default_signing_responsive_view' => '?string',
+        'default_signing_responsive_view_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'default_to_advanced_envelopes_filter_form' => '?string',
         'default_to_advanced_envelopes_filter_form_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_auto_template_matching' => '?string',
@@ -375,6 +377,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => '?string',
         'dss_enable_signature_type_custom_tag_radmin_radmin_option' => '?string',
+        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb' => '?string',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => '?string',
         'dss_sign_29182_slide_up_bar_radmin_option' => '?string',
         'email_template_version' => '?string',
@@ -383,6 +386,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_access_code_generator_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_account_wide_search' => '?string',
         'enable_account_wide_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_additional_advanced_web_forms_features' => '?string',
+        'enable_additional_advanced_web_forms_features_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_adm_healthcare' => '?string',
         'enable_adm_healthcare_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_advanced_envelopes_search' => '?string',
@@ -494,8 +499,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_responsive_signing' => '?string',
         'enable_responsive_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_save_as_envelope_custom_field_in_web_forms' => '?string',
-        'enable_save_as_envelope_custom_field_in_web_forms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_scheduled_release' => '?string',
         'enable_scheduled_release_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_search_service_azure_uri' => '?string',
@@ -1094,6 +1097,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => null,
         'data_population_scope' => null,
         'data_population_scope_metadata' => null,
+        'default_signing_responsive_view' => null,
+        'default_signing_responsive_view_metadata' => null,
         'default_to_advanced_envelopes_filter_form' => null,
         'default_to_advanced_envelopes_filter_form_metadata' => null,
         'disable_auto_template_matching' => null,
@@ -1132,6 +1137,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention_metadata' => null,
         'dss_enable_provisioning_pen_configuration_radmin_option' => null,
         'dss_enable_signature_type_custom_tag_radmin_radmin_option' => null,
+        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb' => null,
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => null,
         'dss_sign_29182_slide_up_bar_radmin_option' => null,
         'email_template_version' => null,
@@ -1140,6 +1146,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_access_code_generator_metadata' => null,
         'enable_account_wide_search' => null,
         'enable_account_wide_search_metadata' => null,
+        'enable_additional_advanced_web_forms_features' => null,
+        'enable_additional_advanced_web_forms_features_metadata' => null,
         'enable_adm_healthcare' => null,
         'enable_adm_healthcare_metadata' => null,
         'enable_advanced_envelopes_search' => null,
@@ -1251,8 +1259,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => null,
         'enable_responsive_signing' => null,
         'enable_responsive_signing_metadata' => null,
-        'enable_save_as_envelope_custom_field_in_web_forms' => null,
-        'enable_save_as_envelope_custom_field_in_web_forms_metadata' => null,
         'enable_scheduled_release' => null,
         'enable_scheduled_release_metadata' => null,
         'enable_search_service_azure_uri' => null,
@@ -1872,6 +1878,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => 'convertPdfFieldsMetadata',
         'data_population_scope' => 'dataPopulationScope',
         'data_population_scope_metadata' => 'dataPopulationScopeMetadata',
+        'default_signing_responsive_view' => 'defaultSigningResponsiveView',
+        'default_signing_responsive_view_metadata' => 'defaultSigningResponsiveViewMetadata',
         'default_to_advanced_envelopes_filter_form' => 'defaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata' => 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'disableAutoTemplateMatching',
@@ -1910,6 +1918,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention_metadata' => 'draftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => 'dss_EnableProvisioningPenConfiguration_RadminOption',
         'dss_enable_signature_type_custom_tag_radmin_radmin_option' => 'dss_EnableSignatureTypeCustomTagRadmin_RadminOption',
+        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb' => 'dss_SCOREFDN_196_Rebrand_DocuSignIsNotAVerb',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version' => 'emailTemplateVersion',
@@ -1918,6 +1927,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_access_code_generator_metadata' => 'enableAccessCodeGeneratorMetadata',
         'enable_account_wide_search' => 'enableAccountWideSearch',
         'enable_account_wide_search_metadata' => 'enableAccountWideSearchMetadata',
+        'enable_additional_advanced_web_forms_features' => 'enableAdditionalAdvancedWebFormsFeatures',
+        'enable_additional_advanced_web_forms_features_metadata' => 'enableAdditionalAdvancedWebFormsFeaturesMetadata',
         'enable_adm_healthcare' => 'enableAdmHealthcare',
         'enable_adm_healthcare_metadata' => 'enableAdmHealthcareMetadata',
         'enable_advanced_envelopes_search' => 'enableAdvancedEnvelopesSearch',
@@ -2029,8 +2040,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => 'enableReservedDomainMetadata',
         'enable_responsive_signing' => 'enableResponsiveSigning',
         'enable_responsive_signing_metadata' => 'enableResponsiveSigningMetadata',
-        'enable_save_as_envelope_custom_field_in_web_forms' => 'enableSaveAsEnvelopeCustomFieldInWebForms',
-        'enable_save_as_envelope_custom_field_in_web_forms_metadata' => 'enableSaveAsEnvelopeCustomFieldInWebFormsMetadata',
         'enable_scheduled_release' => 'enableScheduledRelease',
         'enable_scheduled_release_metadata' => 'enableScheduledReleaseMetadata',
         'enable_search_service_azure_uri' => 'enableSearchServiceAzureUri',
@@ -2629,6 +2638,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => 'setConvertPdfFieldsMetadata',
         'data_population_scope' => 'setDataPopulationScope',
         'data_population_scope_metadata' => 'setDataPopulationScopeMetadata',
+        'default_signing_responsive_view' => 'setDefaultSigningResponsiveView',
+        'default_signing_responsive_view_metadata' => 'setDefaultSigningResponsiveViewMetadata',
         'default_to_advanced_envelopes_filter_form' => 'setDefaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata' => 'setDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'setDisableAutoTemplateMatching',
@@ -2667,6 +2678,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention_metadata' => 'setDraftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => 'setDssEnableProvisioningPenConfigurationRadminOption',
         'dss_enable_signature_type_custom_tag_radmin_radmin_option' => 'setDssEnableSignatureTypeCustomTagRadminRadminOption',
+        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb' => 'setDssScorefdn196RebrandDocuSignIsNotAVerb',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'setDssSign28411EnableLeavePagePromptRadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'setDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'setEmailTemplateVersion',
@@ -2675,6 +2687,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_access_code_generator_metadata' => 'setEnableAccessCodeGeneratorMetadata',
         'enable_account_wide_search' => 'setEnableAccountWideSearch',
         'enable_account_wide_search_metadata' => 'setEnableAccountWideSearchMetadata',
+        'enable_additional_advanced_web_forms_features' => 'setEnableAdditionalAdvancedWebFormsFeatures',
+        'enable_additional_advanced_web_forms_features_metadata' => 'setEnableAdditionalAdvancedWebFormsFeaturesMetadata',
         'enable_adm_healthcare' => 'setEnableAdmHealthcare',
         'enable_adm_healthcare_metadata' => 'setEnableAdmHealthcareMetadata',
         'enable_advanced_envelopes_search' => 'setEnableAdvancedEnvelopesSearch',
@@ -2786,8 +2800,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => 'setEnableReservedDomainMetadata',
         'enable_responsive_signing' => 'setEnableResponsiveSigning',
         'enable_responsive_signing_metadata' => 'setEnableResponsiveSigningMetadata',
-        'enable_save_as_envelope_custom_field_in_web_forms' => 'setEnableSaveAsEnvelopeCustomFieldInWebForms',
-        'enable_save_as_envelope_custom_field_in_web_forms_metadata' => 'setEnableSaveAsEnvelopeCustomFieldInWebFormsMetadata',
         'enable_scheduled_release' => 'setEnableScheduledRelease',
         'enable_scheduled_release_metadata' => 'setEnableScheduledReleaseMetadata',
         'enable_search_service_azure_uri' => 'setEnableSearchServiceAzureUri',
@@ -3386,6 +3398,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'convert_pdf_fields_metadata' => 'getConvertPdfFieldsMetadata',
         'data_population_scope' => 'getDataPopulationScope',
         'data_population_scope_metadata' => 'getDataPopulationScopeMetadata',
+        'default_signing_responsive_view' => 'getDefaultSigningResponsiveView',
+        'default_signing_responsive_view_metadata' => 'getDefaultSigningResponsiveViewMetadata',
         'default_to_advanced_envelopes_filter_form' => 'getDefaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata' => 'getDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'getDisableAutoTemplateMatching',
@@ -3424,6 +3438,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'draft_envelope_retention_metadata' => 'getDraftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option' => 'getDssEnableProvisioningPenConfigurationRadminOption',
         'dss_enable_signature_type_custom_tag_radmin_radmin_option' => 'getDssEnableSignatureTypeCustomTagRadminRadminOption',
+        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb' => 'getDssScorefdn196RebrandDocuSignIsNotAVerb',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option' => 'getDssSign28411EnableLeavePagePromptRadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option' => 'getDssSign29182SlideUpBarRadminOption',
         'email_template_version' => 'getEmailTemplateVersion',
@@ -3432,6 +3447,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_access_code_generator_metadata' => 'getEnableAccessCodeGeneratorMetadata',
         'enable_account_wide_search' => 'getEnableAccountWideSearch',
         'enable_account_wide_search_metadata' => 'getEnableAccountWideSearchMetadata',
+        'enable_additional_advanced_web_forms_features' => 'getEnableAdditionalAdvancedWebFormsFeatures',
+        'enable_additional_advanced_web_forms_features_metadata' => 'getEnableAdditionalAdvancedWebFormsFeaturesMetadata',
         'enable_adm_healthcare' => 'getEnableAdmHealthcare',
         'enable_adm_healthcare_metadata' => 'getEnableAdmHealthcareMetadata',
         'enable_advanced_envelopes_search' => 'getEnableAdvancedEnvelopesSearch',
@@ -3543,8 +3560,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => 'getEnableReservedDomainMetadata',
         'enable_responsive_signing' => 'getEnableResponsiveSigning',
         'enable_responsive_signing_metadata' => 'getEnableResponsiveSigningMetadata',
-        'enable_save_as_envelope_custom_field_in_web_forms' => 'getEnableSaveAsEnvelopeCustomFieldInWebForms',
-        'enable_save_as_envelope_custom_field_in_web_forms_metadata' => 'getEnableSaveAsEnvelopeCustomFieldInWebFormsMetadata',
         'enable_scheduled_release' => 'getEnableScheduledRelease',
         'enable_scheduled_release_metadata' => 'getEnableScheduledReleaseMetadata',
         'enable_search_service_azure_uri' => 'getEnableSearchServiceAzureUri',
@@ -4197,6 +4212,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['convert_pdf_fields_metadata'] = isset($data['convert_pdf_fields_metadata']) ? $data['convert_pdf_fields_metadata'] : null;
         $this->container['data_population_scope'] = isset($data['data_population_scope']) ? $data['data_population_scope'] : null;
         $this->container['data_population_scope_metadata'] = isset($data['data_population_scope_metadata']) ? $data['data_population_scope_metadata'] : null;
+        $this->container['default_signing_responsive_view'] = isset($data['default_signing_responsive_view']) ? $data['default_signing_responsive_view'] : null;
+        $this->container['default_signing_responsive_view_metadata'] = isset($data['default_signing_responsive_view_metadata']) ? $data['default_signing_responsive_view_metadata'] : null;
         $this->container['default_to_advanced_envelopes_filter_form'] = isset($data['default_to_advanced_envelopes_filter_form']) ? $data['default_to_advanced_envelopes_filter_form'] : null;
         $this->container['default_to_advanced_envelopes_filter_form_metadata'] = isset($data['default_to_advanced_envelopes_filter_form_metadata']) ? $data['default_to_advanced_envelopes_filter_form_metadata'] : null;
         $this->container['disable_auto_template_matching'] = isset($data['disable_auto_template_matching']) ? $data['disable_auto_template_matching'] : null;
@@ -4235,6 +4252,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['draft_envelope_retention_metadata'] = isset($data['draft_envelope_retention_metadata']) ? $data['draft_envelope_retention_metadata'] : null;
         $this->container['dss_enable_provisioning_pen_configuration_radmin_option'] = isset($data['dss_enable_provisioning_pen_configuration_radmin_option']) ? $data['dss_enable_provisioning_pen_configuration_radmin_option'] : null;
         $this->container['dss_enable_signature_type_custom_tag_radmin_radmin_option'] = isset($data['dss_enable_signature_type_custom_tag_radmin_radmin_option']) ? $data['dss_enable_signature_type_custom_tag_radmin_radmin_option'] : null;
+        $this->container['dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb'] = isset($data['dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb']) ? $data['dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb'] : null;
         $this->container['dss_sign_28411_enable_leave_page_prompt_radmin_option'] = isset($data['dss_sign_28411_enable_leave_page_prompt_radmin_option']) ? $data['dss_sign_28411_enable_leave_page_prompt_radmin_option'] : null;
         $this->container['dss_sign_29182_slide_up_bar_radmin_option'] = isset($data['dss_sign_29182_slide_up_bar_radmin_option']) ? $data['dss_sign_29182_slide_up_bar_radmin_option'] : null;
         $this->container['email_template_version'] = isset($data['email_template_version']) ? $data['email_template_version'] : null;
@@ -4243,6 +4261,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_access_code_generator_metadata'] = isset($data['enable_access_code_generator_metadata']) ? $data['enable_access_code_generator_metadata'] : null;
         $this->container['enable_account_wide_search'] = isset($data['enable_account_wide_search']) ? $data['enable_account_wide_search'] : null;
         $this->container['enable_account_wide_search_metadata'] = isset($data['enable_account_wide_search_metadata']) ? $data['enable_account_wide_search_metadata'] : null;
+        $this->container['enable_additional_advanced_web_forms_features'] = isset($data['enable_additional_advanced_web_forms_features']) ? $data['enable_additional_advanced_web_forms_features'] : null;
+        $this->container['enable_additional_advanced_web_forms_features_metadata'] = isset($data['enable_additional_advanced_web_forms_features_metadata']) ? $data['enable_additional_advanced_web_forms_features_metadata'] : null;
         $this->container['enable_adm_healthcare'] = isset($data['enable_adm_healthcare']) ? $data['enable_adm_healthcare'] : null;
         $this->container['enable_adm_healthcare_metadata'] = isset($data['enable_adm_healthcare_metadata']) ? $data['enable_adm_healthcare_metadata'] : null;
         $this->container['enable_advanced_envelopes_search'] = isset($data['enable_advanced_envelopes_search']) ? $data['enable_advanced_envelopes_search'] : null;
@@ -4354,8 +4374,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_reserved_domain_metadata'] = isset($data['enable_reserved_domain_metadata']) ? $data['enable_reserved_domain_metadata'] : null;
         $this->container['enable_responsive_signing'] = isset($data['enable_responsive_signing']) ? $data['enable_responsive_signing'] : null;
         $this->container['enable_responsive_signing_metadata'] = isset($data['enable_responsive_signing_metadata']) ? $data['enable_responsive_signing_metadata'] : null;
-        $this->container['enable_save_as_envelope_custom_field_in_web_forms'] = isset($data['enable_save_as_envelope_custom_field_in_web_forms']) ? $data['enable_save_as_envelope_custom_field_in_web_forms'] : null;
-        $this->container['enable_save_as_envelope_custom_field_in_web_forms_metadata'] = isset($data['enable_save_as_envelope_custom_field_in_web_forms_metadata']) ? $data['enable_save_as_envelope_custom_field_in_web_forms_metadata'] : null;
         $this->container['enable_scheduled_release'] = isset($data['enable_scheduled_release']) ? $data['enable_scheduled_release'] : null;
         $this->container['enable_scheduled_release_metadata'] = isset($data['enable_scheduled_release_metadata']) ? $data['enable_scheduled_release_metadata'] : null;
         $this->container['enable_search_service_azure_uri'] = isset($data['enable_search_service_azure_uri']) ? $data['enable_search_service_azure_uri'] : null;
@@ -11344,6 +11362,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets default_signing_responsive_view
+     *
+     * @return ?string
+     */
+    public function getDefaultSigningResponsiveView()
+    {
+        return $this->container['default_signing_responsive_view'];
+    }
+
+    /**
+     * Sets default_signing_responsive_view
+     *
+     * @param ?string $default_signing_responsive_view 
+     *
+     * @return $this
+     */
+    public function setDefaultSigningResponsiveView($default_signing_responsive_view)
+    {
+        $this->container['default_signing_responsive_view'] = $default_signing_responsive_view;
+
+        return $this;
+    }
+
+    /**
+     * Gets default_signing_responsive_view_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDefaultSigningResponsiveViewMetadata()
+    {
+        return $this->container['default_signing_responsive_view_metadata'];
+    }
+
+    /**
+     * Sets default_signing_responsive_view_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $default_signing_responsive_view_metadata 
+     *
+     * @return $this
+     */
+    public function setDefaultSigningResponsiveViewMetadata($default_signing_responsive_view_metadata)
+    {
+        $this->container['default_signing_responsive_view_metadata'] = $default_signing_responsive_view_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets default_to_advanced_envelopes_filter_form
      *
      * @return ?string
@@ -12256,6 +12322,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
+     *
+     * @return ?string
+     */
+    public function getDssScorefdn196RebrandDocuSignIsNotAVerb()
+    {
+        return $this->container['dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb'];
+    }
+
+    /**
+     * Sets dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
+     *
+     * @param ?string $dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb 
+     *
+     * @return $this
+     */
+    public function setDssScorefdn196RebrandDocuSignIsNotAVerb($dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb)
+    {
+        $this->container['dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb'] = $dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb;
+
+        return $this;
+    }
+
+    /**
      * Gets dss_sign_28411_enable_leave_page_prompt_radmin_option
      *
      * @return ?string
@@ -12443,6 +12533,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableAccountWideSearchMetadata($enable_account_wide_search_metadata)
     {
         $this->container['enable_account_wide_search_metadata'] = $enable_account_wide_search_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_additional_advanced_web_forms_features
+     *
+     * @return ?string
+     */
+    public function getEnableAdditionalAdvancedWebFormsFeatures()
+    {
+        return $this->container['enable_additional_advanced_web_forms_features'];
+    }
+
+    /**
+     * Sets enable_additional_advanced_web_forms_features
+     *
+     * @param ?string $enable_additional_advanced_web_forms_features 
+     *
+     * @return $this
+     */
+    public function setEnableAdditionalAdvancedWebFormsFeatures($enable_additional_advanced_web_forms_features)
+    {
+        $this->container['enable_additional_advanced_web_forms_features'] = $enable_additional_advanced_web_forms_features;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_additional_advanced_web_forms_features_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAdditionalAdvancedWebFormsFeaturesMetadata()
+    {
+        return $this->container['enable_additional_advanced_web_forms_features_metadata'];
+    }
+
+    /**
+     * Sets enable_additional_advanced_web_forms_features_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_additional_advanced_web_forms_features_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableAdditionalAdvancedWebFormsFeaturesMetadata($enable_additional_advanced_web_forms_features_metadata)
+    {
+        $this->container['enable_additional_advanced_web_forms_features_metadata'] = $enable_additional_advanced_web_forms_features_metadata;
 
         return $this;
     }
@@ -15107,54 +15245,6 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableResponsiveSigningMetadata($enable_responsive_signing_metadata)
     {
         $this->container['enable_responsive_signing_metadata'] = $enable_responsive_signing_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets enable_save_as_envelope_custom_field_in_web_forms
-     *
-     * @return ?string
-     */
-    public function getEnableSaveAsEnvelopeCustomFieldInWebForms()
-    {
-        return $this->container['enable_save_as_envelope_custom_field_in_web_forms'];
-    }
-
-    /**
-     * Sets enable_save_as_envelope_custom_field_in_web_forms
-     *
-     * @param ?string $enable_save_as_envelope_custom_field_in_web_forms 
-     *
-     * @return $this
-     */
-    public function setEnableSaveAsEnvelopeCustomFieldInWebForms($enable_save_as_envelope_custom_field_in_web_forms)
-    {
-        $this->container['enable_save_as_envelope_custom_field_in_web_forms'] = $enable_save_as_envelope_custom_field_in_web_forms;
-
-        return $this;
-    }
-
-    /**
-     * Gets enable_save_as_envelope_custom_field_in_web_forms_metadata
-     *
-     * @return \DocuSign\eSign\Model\SettingsMetadata
-     */
-    public function getEnableSaveAsEnvelopeCustomFieldInWebFormsMetadata()
-    {
-        return $this->container['enable_save_as_envelope_custom_field_in_web_forms_metadata'];
-    }
-
-    /**
-     * Sets enable_save_as_envelope_custom_field_in_web_forms_metadata
-     *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_save_as_envelope_custom_field_in_web_forms_metadata 
-     *
-     * @return $this
-     */
-    public function setEnableSaveAsEnvelopeCustomFieldInWebFormsMetadata($enable_save_as_envelope_custom_field_in_web_forms_metadata)
-    {
-        $this->container['enable_save_as_envelope_custom_field_in_web_forms_metadata'] = $enable_save_as_envelope_custom_field_in_web_forms_metadata;
 
         return $this;
     }

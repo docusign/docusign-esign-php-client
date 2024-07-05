@@ -12,9 +12,9 @@
  */
 
 /**
- * DocuSign REST API
+ * Docusign eSignature REST API
  *
- * The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+ * The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.
  *
  * OpenAPI spec version: v2.1
  * Contact: devcenter@docusign.com
@@ -60,6 +60,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => '?string',
+        'row_values' => '\DocuSign\eSign\Model\BulkSendingCopyDocGenFormFieldRowValue[]',
         'value' => '?string'
     ];
 
@@ -70,6 +71,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'name' => null,
+        'row_values' => null,
         'value' => null
     ];
 
@@ -101,6 +103,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'name' => 'name',
+        'row_values' => 'rowValues',
         'value' => 'value'
     ];
 
@@ -111,6 +114,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'name' => 'setName',
+        'row_values' => 'setRowValues',
         'value' => 'setValue'
     ];
 
@@ -121,6 +125,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'name' => 'getName',
+        'row_values' => 'getRowValues',
         'value' => 'getValue'
     ];
 
@@ -185,6 +190,7 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['row_values'] = isset($data['row_values']) ? $data['row_values'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
@@ -232,6 +238,30 @@ class BulksendingCopyDocGenFormField implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_values
+     *
+     * @return \DocuSign\eSign\Model\BulkSendingCopyDocGenFormFieldRowValue[]
+     */
+    public function getRowValues()
+    {
+        return $this->container['row_values'];
+    }
+
+    /**
+     * Sets row_values
+     *
+     * @param \DocuSign\eSign\Model\BulkSendingCopyDocGenFormFieldRowValue[] $row_values 
+     *
+     * @return $this
+     */
+    public function setRowValues($row_values)
+    {
+        $this->container['row_values'] = $row_values;
 
         return $this;
     }
