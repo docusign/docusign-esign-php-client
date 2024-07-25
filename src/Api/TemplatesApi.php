@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -39,7 +39,7 @@ namespace DocuSign\eSign\Api\TemplatesApi;
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class CreateRecipientsOptions
@@ -80,7 +80,7 @@ class CreateRecipientsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetOptions
@@ -121,7 +121,7 @@ class GetOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetDocumentOptions
@@ -216,7 +216,7 @@ class GetDocumentOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetDocumentPageImageOptions
@@ -338,7 +338,7 @@ class GetDocumentPageImageOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetDocumentTabsOptions
@@ -379,7 +379,7 @@ class GetDocumentTabsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class GetPagesOptions
@@ -582,7 +582,7 @@ class GetPagesOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListDocumentsOptions
@@ -623,7 +623,7 @@ class ListDocumentsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListRecipientsOptions
@@ -718,7 +718,7 @@ class ListRecipientsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListTabsOptions
@@ -786,7 +786,7 @@ class ListTabsOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class ListTemplatesOptions
@@ -1421,7 +1421,7 @@ class ListTemplatesOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdateDocumentOptions
@@ -1462,7 +1462,7 @@ class UpdateDocumentOptions
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class UpdateRecipientsOptions
@@ -1511,7 +1511,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 class TemplatesApi

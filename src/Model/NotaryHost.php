@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description This object is used only when &#x60;inPersonSigningType&#x60; in the &#x60;inPersonSigner&#x60; object is &#x60;notary&#x60;.  It describes information about the notary host. The following information is required when using the eNotary in-person signing flow:  * &#x60;name&#x60;: Specifies the notary&#39;s full legal name. * &#x60;email&#x60;: Specifies the notary&#39;s email address. * &#x60;recipientId&#x60;: A unique ID number for the notary signing host.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class NotaryHost implements ModelInterface, ArrayAccess

@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description This object contains the results of a ConnectConfigurations::GET method.
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class ConnectConfigResults implements ModelInterface, ArrayAccess

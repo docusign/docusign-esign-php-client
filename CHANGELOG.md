@@ -3,6 +3,79 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v8.0.0] - eSignature API v2.1-24.2.00.00 - 2024-07-23
+### Breaking Changes
+
+<details>
+<summary>API Changes (Click to expand)</summary>
+
+<div style="margin-left: 20px;">
+
+<br/>
+Added support for version v2.1-24.2.00.00 of the Docusign ESignature API.
+
+  ## Endpoint-Specific Changes
+
+  ### Updated [Envelopes: get](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/get/)
+  Added new optional query parameter named `include_anchor_tab_locations` of type string.
+
+  ### Updated [Envelopes: update](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/update/)
+  Added new optional query parameter named `recycle_on_void` of type string.
+
+  ### Updated [EnvelopeViews : createCorrect](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createcorrect/)
+  Request body object `correctViewRequest` has been changed to `envelopeViewRequest`.
+
+  ## Model Changes
+
+  ### Updated existing models
+
+  ### `accountInformation`
+
+  - **Added fields:**
+    - `freeEnvelopeSendsRemainingForAdvancedDocGen`
+
+  ### `accountSettingsInformation`
+
+  - **Added fields:**
+    - `defaultSigningResponsiveView`
+    - `defaultSigningResponsiveViewMetadata`
+    - `dss_SCOREFDN_196_Rebrand_DocuSignIsNotAVerb`
+    - `enableAdditionalAdvancedWebFormsFeatures`
+    - `enableAdditionalAdvancedWebFormsFeaturesMetadata`
+
+- **Removed fields:**
+    - `enableSaveAsEnvelopeCustomFieldInWebForms`
+    - `enableSaveAsEnvelopeCustomFieldInWebFormsMetadata`
+
+### `bulksendingCopyDocGenFormField`
+
+- **Added field:**
+  - `rowValues`
+
+### `notaryRecipient`
+
+- **Added field:**
+  - `canNotaryCorrectEnvelope`
+
+### `tabAccountSettings`
+
+- **Added field:**
+  - `enableTabAgreementDetails`
+  - `enableTabAgreementDetailsMetadata`
+
+
+### Newly added Models
+
+- `bulkSendingCopyDocGenFormFieldRowValue`
+
+</div>
+</details>
+
+
+### Other Changes
+- Updated the SDK release version.
+
+
 ## [v8.0.0-rc1] - eSignature API v2.1-24.2.00.00 - 2024-07-02
 ### Breaking Changes
 
