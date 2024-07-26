@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Contains information about an in-person recipient. This is a DocuSign user, acting as a Signing Host, who is in the same physical location as the signer. To learn about the fields used for the eNotary feature, see the [recipients resource][resource].  [resource]: /docs/esign-rest-api/reference/envelopes/enveloperecipients/#in-person-signer-recipient
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class InPersonSigner implements ModelInterface, ArrayAccess

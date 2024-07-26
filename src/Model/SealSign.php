@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\eSign
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @description Specifies one or more electronic seals to apply on documents. An electronic seal recipient is a legal entity rather than an actual person. Electronic Seals can be used by organizations and governments to show evidence of origin and integrity of documents. Even though electronic seals can be represented by a tab in a document, they do not require user interaction and apply automatically in the order specified by the sender. The sender is therefore the person authorizing usage of the electronic seal in the flow.  Example:   &#x60;&#x60;&#x60;json \&quot;recipients\&quot;: {       \&quot;seals\&quot;: [         {           \&quot;recipientId\&quot;: \&quot;1\&quot;,           \&quot;routingOrder\&quot; : 1,           \&quot;recipientSignatureProviders\&quot;: [             {               \&quot;sealName\&quot;: \&quot;52e9d968-xxxx-xxxx-xxxx-4682bc45c106\&quot;             }        ]      }    ]  },     .     .     . &#x60;&#x60;&#x60; For more information about Electronic Seals, see [Apply Electronic Seals to Your Documents](https://support.docusign.com/en/guides/ndse-user-guide-apply-electronic-seals).
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class SealSign implements ModelInterface, ArrayAccess
