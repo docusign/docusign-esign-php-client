@@ -66,6 +66,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => '\DocuSign\eSign\Model\AskAnAdmin',
         'clickwrap_schema_version' => '?string',
         'clickwrap_schema_version_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'disable_web_app_access' => '?string',
+        'disable_web_app_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_admin_message' => '?string',
         'enable_admin_message_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => '?string',
@@ -108,6 +110,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => null,
         'clickwrap_schema_version' => null,
         'clickwrap_schema_version_metadata' => null,
+        'disable_web_app_access' => null,
+        'disable_web_app_access_metadata' => null,
         'enable_admin_message' => null,
         'enable_admin_message_metadata' => null,
         'enable_easy_sign_can_use_multi_template_apply' => null,
@@ -171,6 +175,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'askAnAdmin',
         'clickwrap_schema_version' => 'clickwrapSchemaVersion',
         'clickwrap_schema_version_metadata' => 'clickwrapSchemaVersionMetadata',
+        'disable_web_app_access' => 'disableWebAppAccess',
+        'disable_web_app_access_metadata' => 'disableWebAppAccessMetadata',
         'enable_admin_message' => 'enableAdminMessage',
         'enable_admin_message_metadata' => 'enableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'enableEasySignCanUseMultiTemplateApply',
@@ -213,6 +219,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'setAskAnAdmin',
         'clickwrap_schema_version' => 'setClickwrapSchemaVersion',
         'clickwrap_schema_version_metadata' => 'setClickwrapSchemaVersionMetadata',
+        'disable_web_app_access' => 'setDisableWebAppAccess',
+        'disable_web_app_access_metadata' => 'setDisableWebAppAccessMetadata',
         'enable_admin_message' => 'setEnableAdminMessage',
         'enable_admin_message_metadata' => 'setEnableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'setEnableEasySignCanUseMultiTemplateApply',
@@ -255,6 +263,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         'ask_an_admin' => 'getAskAnAdmin',
         'clickwrap_schema_version' => 'getClickwrapSchemaVersion',
         'clickwrap_schema_version_metadata' => 'getClickwrapSchemaVersionMetadata',
+        'disable_web_app_access' => 'getDisableWebAppAccess',
+        'disable_web_app_access_metadata' => 'getDisableWebAppAccessMetadata',
         'enable_admin_message' => 'getEnableAdminMessage',
         'enable_admin_message_metadata' => 'getEnableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply' => 'getEnableEasySignCanUseMultiTemplateApply',
@@ -351,6 +361,8 @@ class AccountUISettings implements ModelInterface, ArrayAccess
         $this->container['ask_an_admin'] = isset($data['ask_an_admin']) ? $data['ask_an_admin'] : null;
         $this->container['clickwrap_schema_version'] = isset($data['clickwrap_schema_version']) ? $data['clickwrap_schema_version'] : null;
         $this->container['clickwrap_schema_version_metadata'] = isset($data['clickwrap_schema_version_metadata']) ? $data['clickwrap_schema_version_metadata'] : null;
+        $this->container['disable_web_app_access'] = isset($data['disable_web_app_access']) ? $data['disable_web_app_access'] : null;
+        $this->container['disable_web_app_access_metadata'] = isset($data['disable_web_app_access_metadata']) ? $data['disable_web_app_access_metadata'] : null;
         $this->container['enable_admin_message'] = isset($data['enable_admin_message']) ? $data['enable_admin_message'] : null;
         $this->container['enable_admin_message_metadata'] = isset($data['enable_admin_message_metadata']) ? $data['enable_admin_message_metadata'] : null;
         $this->container['enable_easy_sign_can_use_multi_template_apply'] = isset($data['enable_easy_sign_can_use_multi_template_apply']) ? $data['enable_easy_sign_can_use_multi_template_apply'] : null;
@@ -545,6 +557,54 @@ class AccountUISettings implements ModelInterface, ArrayAccess
     public function setClickwrapSchemaVersionMetadata($clickwrap_schema_version_metadata)
     {
         $this->container['clickwrap_schema_version_metadata'] = $clickwrap_schema_version_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets disable_web_app_access
+     *
+     * @return ?string
+     */
+    public function getDisableWebAppAccess()
+    {
+        return $this->container['disable_web_app_access'];
+    }
+
+    /**
+     * Sets disable_web_app_access
+     *
+     * @param ?string $disable_web_app_access 
+     *
+     * @return $this
+     */
+    public function setDisableWebAppAccess($disable_web_app_access)
+    {
+        $this->container['disable_web_app_access'] = $disable_web_app_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets disable_web_app_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDisableWebAppAccessMetadata()
+    {
+        return $this->container['disable_web_app_access_metadata'];
+    }
+
+    /**
+     * Sets disable_web_app_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_web_app_access_metadata 
+     *
+     * @return $this
+     */
+    public function setDisableWebAppAccessMetadata($disable_web_app_access_metadata)
+    {
+        $this->container['disable_web_app_access_metadata'] = $disable_web_app_access_metadata;
 
         return $this;
     }

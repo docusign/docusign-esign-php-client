@@ -84,7 +84,9 @@ class Radio implements ModelInterface, ArrayAccess
         'bold_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'caption' => '?string',
         'caption_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'connected_object_details' => '\DocuSign\eSign\Model\ConnectedObjectDetails',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'extension_data' => '\DocuSign\eSign\Model\ExtensionData',
         'font' => '?string',
         'font_color' => '?string',
         'font_color_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -104,6 +106,7 @@ class Radio implements ModelInterface, ArrayAccess
         'selected_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'tab_fully_qualified_path' => '?string',
         'tab_id' => '?string',
         'tab_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_order' => '?string',
@@ -148,7 +151,9 @@ class Radio implements ModelInterface, ArrayAccess
         'bold_metadata' => null,
         'caption' => null,
         'caption_metadata' => null,
+        'connected_object_details' => null,
         'error_details' => null,
+        'extension_data' => null,
         'font' => null,
         'font_color' => null,
         'font_color_metadata' => null,
@@ -168,6 +173,7 @@ class Radio implements ModelInterface, ArrayAccess
         'selected_metadata' => null,
         'status' => null,
         'status_metadata' => null,
+        'tab_fully_qualified_path' => null,
         'tab_id' => null,
         'tab_id_metadata' => null,
         'tab_order' => null,
@@ -233,7 +239,9 @@ class Radio implements ModelInterface, ArrayAccess
         'bold_metadata' => 'boldMetadata',
         'caption' => 'caption',
         'caption_metadata' => 'captionMetadata',
+        'connected_object_details' => 'connectedObjectDetails',
         'error_details' => 'errorDetails',
+        'extension_data' => 'extensionData',
         'font' => 'font',
         'font_color' => 'fontColor',
         'font_color_metadata' => 'fontColorMetadata',
@@ -253,6 +261,7 @@ class Radio implements ModelInterface, ArrayAccess
         'selected_metadata' => 'selectedMetadata',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
+        'tab_fully_qualified_path' => 'tabFullyQualifiedPath',
         'tab_id' => 'tabId',
         'tab_id_metadata' => 'tabIdMetadata',
         'tab_order' => 'tabOrder',
@@ -297,7 +306,9 @@ class Radio implements ModelInterface, ArrayAccess
         'bold_metadata' => 'setBoldMetadata',
         'caption' => 'setCaption',
         'caption_metadata' => 'setCaptionMetadata',
+        'connected_object_details' => 'setConnectedObjectDetails',
         'error_details' => 'setErrorDetails',
+        'extension_data' => 'setExtensionData',
         'font' => 'setFont',
         'font_color' => 'setFontColor',
         'font_color_metadata' => 'setFontColorMetadata',
@@ -317,6 +328,7 @@ class Radio implements ModelInterface, ArrayAccess
         'selected_metadata' => 'setSelectedMetadata',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
+        'tab_fully_qualified_path' => 'setTabFullyQualifiedPath',
         'tab_id' => 'setTabId',
         'tab_id_metadata' => 'setTabIdMetadata',
         'tab_order' => 'setTabOrder',
@@ -361,7 +373,9 @@ class Radio implements ModelInterface, ArrayAccess
         'bold_metadata' => 'getBoldMetadata',
         'caption' => 'getCaption',
         'caption_metadata' => 'getCaptionMetadata',
+        'connected_object_details' => 'getConnectedObjectDetails',
         'error_details' => 'getErrorDetails',
+        'extension_data' => 'getExtensionData',
         'font' => 'getFont',
         'font_color' => 'getFontColor',
         'font_color_metadata' => 'getFontColorMetadata',
@@ -381,6 +395,7 @@ class Radio implements ModelInterface, ArrayAccess
         'selected_metadata' => 'getSelectedMetadata',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
+        'tab_fully_qualified_path' => 'getTabFullyQualifiedPath',
         'tab_id' => 'getTabId',
         'tab_id_metadata' => 'getTabIdMetadata',
         'tab_order' => 'getTabOrder',
@@ -479,7 +494,9 @@ class Radio implements ModelInterface, ArrayAccess
         $this->container['bold_metadata'] = isset($data['bold_metadata']) ? $data['bold_metadata'] : null;
         $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
         $this->container['caption_metadata'] = isset($data['caption_metadata']) ? $data['caption_metadata'] : null;
+        $this->container['connected_object_details'] = isset($data['connected_object_details']) ? $data['connected_object_details'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['extension_data'] = isset($data['extension_data']) ? $data['extension_data'] : null;
         $this->container['font'] = isset($data['font']) ? $data['font'] : null;
         $this->container['font_color'] = isset($data['font_color']) ? $data['font_color'] : null;
         $this->container['font_color_metadata'] = isset($data['font_color_metadata']) ? $data['font_color_metadata'] : null;
@@ -499,6 +516,7 @@ class Radio implements ModelInterface, ArrayAccess
         $this->container['selected_metadata'] = isset($data['selected_metadata']) ? $data['selected_metadata'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
+        $this->container['tab_fully_qualified_path'] = isset($data['tab_fully_qualified_path']) ? $data['tab_fully_qualified_path'] : null;
         $this->container['tab_id'] = isset($data['tab_id']) ? $data['tab_id'] : null;
         $this->container['tab_id_metadata'] = isset($data['tab_id_metadata']) ? $data['tab_id_metadata'] : null;
         $this->container['tab_order'] = isset($data['tab_order']) ? $data['tab_order'] : null;
@@ -1114,6 +1132,30 @@ class Radio implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets connected_object_details
+     *
+     * @return \DocuSign\eSign\Model\ConnectedObjectDetails
+     */
+    public function getConnectedObjectDetails()
+    {
+        return $this->container['connected_object_details'];
+    }
+
+    /**
+     * Sets connected_object_details
+     *
+     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details 
+     *
+     * @return $this
+     */
+    public function setConnectedObjectDetails($connected_object_details)
+    {
+        $this->container['connected_object_details'] = $connected_object_details;
+
+        return $this;
+    }
+
+    /**
      * Gets error_details
      *
      * @return \DocuSign\eSign\Model\ErrorDetails
@@ -1133,6 +1175,30 @@ class Radio implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets extension_data
+     *
+     * @return \DocuSign\eSign\Model\ExtensionData
+     */
+    public function getExtensionData()
+    {
+        return $this->container['extension_data'];
+    }
+
+    /**
+     * Sets extension_data
+     *
+     * @param \DocuSign\eSign\Model\ExtensionData $extension_data 
+     *
+     * @return $this
+     */
+    public function setExtensionData($extension_data)
+    {
+        $this->container['extension_data'] = $extension_data;
 
         return $this;
     }
@@ -1589,6 +1655,30 @@ class Radio implements ModelInterface, ArrayAccess
     public function setStatusMetadata($status_metadata)
     {
         $this->container['status_metadata'] = $status_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets tab_fully_qualified_path
+     *
+     * @return ?string
+     */
+    public function getTabFullyQualifiedPath()
+    {
+        return $this->container['tab_fully_qualified_path'];
+    }
+
+    /**
+     * Sets tab_fully_qualified_path
+     *
+     * @param ?string $tab_fully_qualified_path 
+     *
+     * @return $this
+     */
+    public function setTabFullyQualifiedPath($tab_fully_qualified_path)
+    {
+        $this->container['tab_fully_qualified_path'] = $tab_fully_qualified_path;
 
         return $this;
     }

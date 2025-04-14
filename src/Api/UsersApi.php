@@ -234,6 +234,33 @@ class ListOptions
         return $this;
     }
     /**
+      * $include_license 
+      * @var ?string
+      */
+    protected ?string $include_license = null;
+
+    /**
+     * Gets include_license
+     *
+     * @return ?string
+     */
+    public function getIncludeLicense(): ?string
+    {
+        return $this->include_license;
+    }
+
+    /**
+     * Sets include_license
+     * @param ?string $include_license 
+     *
+     * @return self
+     */
+    public function setIncludeLicense(?string $include_license): self
+    {
+        $this->include_license = $include_license;
+        return $this;
+    }
+    /**
       * $include_usersettings_for_csv 
       * @var ?string
       */
@@ -543,6 +570,33 @@ class GetInformationOptions
     public function setEmail(?string $email): self
     {
         $this->email = $email;
+        return $this;
+    }
+    /**
+      * $include_license 
+      * @var ?string
+      */
+    protected ?string $include_license = null;
+
+    /**
+     * Gets include_license
+     *
+     * @return ?string
+     */
+    public function getIncludeLicense(): ?string
+    {
+        return $this->include_license;
+    }
+
+    /**
+     * Sets include_license
+     * @param ?string $include_license 
+     *
+     * @return self
+     */
+    public function setIncludeLicense(?string $include_license): self
+    {
+        $this->include_license = $include_license;
         return $this;
     }
 }
@@ -1020,6 +1074,9 @@ class UsersApi
             }
             if ($options->getGroupId() != 'null') {
                 $queryParams['group_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getGroupId());
+            }
+            if ($options->getIncludeLicense() != 'null') {
+                $queryParams['include_license'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeLicense());
             }
             if ($options->getIncludeUsersettingsForCsv() != 'null') {
                 $queryParams['include_usersettings_for_csv'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeUsersettingsForCsv());
@@ -2158,6 +2215,9 @@ class UsersApi
             }
             if ($options->getEmail() != 'null') {
                 $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
+            }
+            if ($options->getIncludeLicense() != 'null') {
+                $queryParams['include_license'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeLicense());
             }
         }
 

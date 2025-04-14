@@ -78,6 +78,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'delivery_method_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'designator_id' => '?string',
         'designator_id_guid' => '?string',
+        'document_template_id' => '?string',
         'document_visibility' => '\DocuSign\eSign\Model\DocumentVisibility[]',
         'email' => '?string',
         'email_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -133,7 +134,8 @@ class Intermediary implements ModelInterface, ArrayAccess
         'template_locked' => '?string',
         'template_required' => '?string',
         'total_tab_count' => '?string',
-        'user_id' => '?string'
+        'user_id' => '?string',
+        'web_form_recipient_view_id' => '?string'
     ];
 
     /**
@@ -160,6 +162,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'delivery_method_metadata' => null,
         'designator_id' => null,
         'designator_id_guid' => null,
+        'document_template_id' => null,
         'document_visibility' => null,
         'email' => null,
         'email_metadata' => null,
@@ -215,7 +218,8 @@ class Intermediary implements ModelInterface, ArrayAccess
         'template_locked' => null,
         'template_required' => null,
         'total_tab_count' => null,
-        'user_id' => null
+        'user_id' => null,
+        'web_form_recipient_view_id' => null
     ];
 
     /**
@@ -263,6 +267,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'delivery_method_metadata' => 'deliveryMethodMetadata',
         'designator_id' => 'designatorId',
         'designator_id_guid' => 'designatorIdGuid',
+        'document_template_id' => 'documentTemplateId',
         'document_visibility' => 'documentVisibility',
         'email' => 'email',
         'email_metadata' => 'emailMetadata',
@@ -318,7 +323,8 @@ class Intermediary implements ModelInterface, ArrayAccess
         'template_locked' => 'templateLocked',
         'template_required' => 'templateRequired',
         'total_tab_count' => 'totalTabCount',
-        'user_id' => 'userId'
+        'user_id' => 'userId',
+        'web_form_recipient_view_id' => 'webFormRecipientViewId'
     ];
 
     /**
@@ -345,6 +351,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'delivery_method_metadata' => 'setDeliveryMethodMetadata',
         'designator_id' => 'setDesignatorId',
         'designator_id_guid' => 'setDesignatorIdGuid',
+        'document_template_id' => 'setDocumentTemplateId',
         'document_visibility' => 'setDocumentVisibility',
         'email' => 'setEmail',
         'email_metadata' => 'setEmailMetadata',
@@ -400,7 +407,8 @@ class Intermediary implements ModelInterface, ArrayAccess
         'template_locked' => 'setTemplateLocked',
         'template_required' => 'setTemplateRequired',
         'total_tab_count' => 'setTotalTabCount',
-        'user_id' => 'setUserId'
+        'user_id' => 'setUserId',
+        'web_form_recipient_view_id' => 'setWebFormRecipientViewId'
     ];
 
     /**
@@ -427,6 +435,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'delivery_method_metadata' => 'getDeliveryMethodMetadata',
         'designator_id' => 'getDesignatorId',
         'designator_id_guid' => 'getDesignatorIdGuid',
+        'document_template_id' => 'getDocumentTemplateId',
         'document_visibility' => 'getDocumentVisibility',
         'email' => 'getEmail',
         'email_metadata' => 'getEmailMetadata',
@@ -482,7 +491,8 @@ class Intermediary implements ModelInterface, ArrayAccess
         'template_locked' => 'getTemplateLocked',
         'template_required' => 'getTemplateRequired',
         'total_tab_count' => 'getTotalTabCount',
-        'user_id' => 'getUserId'
+        'user_id' => 'getUserId',
+        'web_form_recipient_view_id' => 'getWebFormRecipientViewId'
     ];
 
     /**
@@ -563,6 +573,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         $this->container['delivery_method_metadata'] = isset($data['delivery_method_metadata']) ? $data['delivery_method_metadata'] : null;
         $this->container['designator_id'] = isset($data['designator_id']) ? $data['designator_id'] : null;
         $this->container['designator_id_guid'] = isset($data['designator_id_guid']) ? $data['designator_id_guid'] : null;
+        $this->container['document_template_id'] = isset($data['document_template_id']) ? $data['document_template_id'] : null;
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['email_metadata'] = isset($data['email_metadata']) ? $data['email_metadata'] : null;
@@ -619,6 +630,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         $this->container['template_required'] = isset($data['template_required']) ? $data['template_required'] : null;
         $this->container['total_tab_count'] = isset($data['total_tab_count']) ? $data['total_tab_count'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['web_form_recipient_view_id'] = isset($data['web_form_recipient_view_id']) ? $data['web_form_recipient_view_id'] : null;
     }
 
     /**
@@ -1073,6 +1085,30 @@ class Intermediary implements ModelInterface, ArrayAccess
     public function setDesignatorIdGuid($designator_id_guid)
     {
         $this->container['designator_id_guid'] = $designator_id_guid;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_template_id
+     *
+     * @return ?string
+     */
+    public function getDocumentTemplateId()
+    {
+        return $this->container['document_template_id'];
+    }
+
+    /**
+     * Sets document_template_id
+     *
+     * @param ?string $document_template_id 
+     *
+     * @return $this
+     */
+    public function setDocumentTemplateId($document_template_id)
+    {
+        $this->container['document_template_id'] = $document_template_id;
 
         return $this;
     }
@@ -2417,6 +2453,30 @@ class Intermediary implements ModelInterface, ArrayAccess
     public function setUserId($user_id)
     {
         $this->container['user_id'] = $user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_form_recipient_view_id
+     *
+     * @return ?string
+     */
+    public function getWebFormRecipientViewId()
+    {
+        return $this->container['web_form_recipient_view_id'];
+    }
+
+    /**
+     * Sets web_form_recipient_view_id
+     *
+     * @param ?string $web_form_recipient_view_id 
+     *
+     * @return $this
+     */
+    public function setWebFormRecipientViewId($web_form_recipient_view_id)
+    {
+        $this->container['web_form_recipient_view_id'] = $web_form_recipient_view_id;
 
         return $this;
     }

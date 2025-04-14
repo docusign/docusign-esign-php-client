@@ -60,6 +60,8 @@ class Text implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'agreement_attribute' => '?string',
+        'agreement_attribute_locked' => '?string',
         'anchor_allow_white_space_in_characters' => '?string',
         'anchor_allow_white_space_in_characters_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_case_sensitive' => '?string',
@@ -90,6 +92,7 @@ class Text implements ModelInterface, ArrayAccess
         'conditional_parent_label_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'conditional_parent_value' => '?string',
         'conditional_parent_value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'connected_object_details' => '\DocuSign\eSign\Model\ConnectedObjectDetails',
         'custom_tab_id' => '?string',
         'custom_tab_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'disable_auto_size' => '?string',
@@ -97,6 +100,7 @@ class Text implements ModelInterface, ArrayAccess
         'document_id' => '?string',
         'document_id_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'extension_data' => '\DocuSign\eSign\Model\ExtensionData',
         'font' => '?string',
         'font_color' => '?string',
         'font_color_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -150,6 +154,7 @@ class Text implements ModelInterface, ArrayAccess
         'source' => '?string',
         'status' => '?string',
         'status_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'tab_fully_qualified_path' => '?string',
         'tab_group_labels' => '?string[]',
         'tab_group_labels_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'tab_id' => '?string',
@@ -174,6 +179,7 @@ class Text implements ModelInterface, ArrayAccess
         'validation_pattern_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'value' => '?string',
         'value_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'warning_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'width' => '?string',
         'width_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'x_position' => '?string',
@@ -188,6 +194,8 @@ class Text implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'agreement_attribute' => null,
+        'agreement_attribute_locked' => null,
         'anchor_allow_white_space_in_characters' => null,
         'anchor_allow_white_space_in_characters_metadata' => null,
         'anchor_case_sensitive' => null,
@@ -218,6 +226,7 @@ class Text implements ModelInterface, ArrayAccess
         'conditional_parent_label_metadata' => null,
         'conditional_parent_value' => null,
         'conditional_parent_value_metadata' => null,
+        'connected_object_details' => null,
         'custom_tab_id' => null,
         'custom_tab_id_metadata' => null,
         'disable_auto_size' => null,
@@ -225,6 +234,7 @@ class Text implements ModelInterface, ArrayAccess
         'document_id' => null,
         'document_id_metadata' => null,
         'error_details' => null,
+        'extension_data' => null,
         'font' => null,
         'font_color' => null,
         'font_color_metadata' => null,
@@ -278,6 +288,7 @@ class Text implements ModelInterface, ArrayAccess
         'source' => null,
         'status' => null,
         'status_metadata' => null,
+        'tab_fully_qualified_path' => null,
         'tab_group_labels' => null,
         'tab_group_labels_metadata' => null,
         'tab_id' => null,
@@ -302,6 +313,7 @@ class Text implements ModelInterface, ArrayAccess
         'validation_pattern_metadata' => null,
         'value' => null,
         'value_metadata' => null,
+        'warning_details' => null,
         'width' => null,
         'width_metadata' => null,
         'x_position' => null,
@@ -337,6 +349,8 @@ class Text implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'agreement_attribute' => 'agreementAttribute',
+        'agreement_attribute_locked' => 'agreementAttributeLocked',
         'anchor_allow_white_space_in_characters' => 'anchorAllowWhiteSpaceInCharacters',
         'anchor_allow_white_space_in_characters_metadata' => 'anchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'anchorCaseSensitive',
@@ -367,6 +381,7 @@ class Text implements ModelInterface, ArrayAccess
         'conditional_parent_label_metadata' => 'conditionalParentLabelMetadata',
         'conditional_parent_value' => 'conditionalParentValue',
         'conditional_parent_value_metadata' => 'conditionalParentValueMetadata',
+        'connected_object_details' => 'connectedObjectDetails',
         'custom_tab_id' => 'customTabId',
         'custom_tab_id_metadata' => 'customTabIdMetadata',
         'disable_auto_size' => 'disableAutoSize',
@@ -374,6 +389,7 @@ class Text implements ModelInterface, ArrayAccess
         'document_id' => 'documentId',
         'document_id_metadata' => 'documentIdMetadata',
         'error_details' => 'errorDetails',
+        'extension_data' => 'extensionData',
         'font' => 'font',
         'font_color' => 'fontColor',
         'font_color_metadata' => 'fontColorMetadata',
@@ -427,6 +443,7 @@ class Text implements ModelInterface, ArrayAccess
         'source' => 'source',
         'status' => 'status',
         'status_metadata' => 'statusMetadata',
+        'tab_fully_qualified_path' => 'tabFullyQualifiedPath',
         'tab_group_labels' => 'tabGroupLabels',
         'tab_group_labels_metadata' => 'tabGroupLabelsMetadata',
         'tab_id' => 'tabId',
@@ -451,6 +468,7 @@ class Text implements ModelInterface, ArrayAccess
         'validation_pattern_metadata' => 'validationPatternMetadata',
         'value' => 'value',
         'value_metadata' => 'valueMetadata',
+        'warning_details' => 'warningDetails',
         'width' => 'width',
         'width_metadata' => 'widthMetadata',
         'x_position' => 'xPosition',
@@ -465,6 +483,8 @@ class Text implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'agreement_attribute' => 'setAgreementAttribute',
+        'agreement_attribute_locked' => 'setAgreementAttributeLocked',
         'anchor_allow_white_space_in_characters' => 'setAnchorAllowWhiteSpaceInCharacters',
         'anchor_allow_white_space_in_characters_metadata' => 'setAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'setAnchorCaseSensitive',
@@ -495,6 +515,7 @@ class Text implements ModelInterface, ArrayAccess
         'conditional_parent_label_metadata' => 'setConditionalParentLabelMetadata',
         'conditional_parent_value' => 'setConditionalParentValue',
         'conditional_parent_value_metadata' => 'setConditionalParentValueMetadata',
+        'connected_object_details' => 'setConnectedObjectDetails',
         'custom_tab_id' => 'setCustomTabId',
         'custom_tab_id_metadata' => 'setCustomTabIdMetadata',
         'disable_auto_size' => 'setDisableAutoSize',
@@ -502,6 +523,7 @@ class Text implements ModelInterface, ArrayAccess
         'document_id' => 'setDocumentId',
         'document_id_metadata' => 'setDocumentIdMetadata',
         'error_details' => 'setErrorDetails',
+        'extension_data' => 'setExtensionData',
         'font' => 'setFont',
         'font_color' => 'setFontColor',
         'font_color_metadata' => 'setFontColorMetadata',
@@ -555,6 +577,7 @@ class Text implements ModelInterface, ArrayAccess
         'source' => 'setSource',
         'status' => 'setStatus',
         'status_metadata' => 'setStatusMetadata',
+        'tab_fully_qualified_path' => 'setTabFullyQualifiedPath',
         'tab_group_labels' => 'setTabGroupLabels',
         'tab_group_labels_metadata' => 'setTabGroupLabelsMetadata',
         'tab_id' => 'setTabId',
@@ -579,6 +602,7 @@ class Text implements ModelInterface, ArrayAccess
         'validation_pattern_metadata' => 'setValidationPatternMetadata',
         'value' => 'setValue',
         'value_metadata' => 'setValueMetadata',
+        'warning_details' => 'setWarningDetails',
         'width' => 'setWidth',
         'width_metadata' => 'setWidthMetadata',
         'x_position' => 'setXPosition',
@@ -593,6 +617,8 @@ class Text implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'agreement_attribute' => 'getAgreementAttribute',
+        'agreement_attribute_locked' => 'getAgreementAttributeLocked',
         'anchor_allow_white_space_in_characters' => 'getAnchorAllowWhiteSpaceInCharacters',
         'anchor_allow_white_space_in_characters_metadata' => 'getAnchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive' => 'getAnchorCaseSensitive',
@@ -623,6 +649,7 @@ class Text implements ModelInterface, ArrayAccess
         'conditional_parent_label_metadata' => 'getConditionalParentLabelMetadata',
         'conditional_parent_value' => 'getConditionalParentValue',
         'conditional_parent_value_metadata' => 'getConditionalParentValueMetadata',
+        'connected_object_details' => 'getConnectedObjectDetails',
         'custom_tab_id' => 'getCustomTabId',
         'custom_tab_id_metadata' => 'getCustomTabIdMetadata',
         'disable_auto_size' => 'getDisableAutoSize',
@@ -630,6 +657,7 @@ class Text implements ModelInterface, ArrayAccess
         'document_id' => 'getDocumentId',
         'document_id_metadata' => 'getDocumentIdMetadata',
         'error_details' => 'getErrorDetails',
+        'extension_data' => 'getExtensionData',
         'font' => 'getFont',
         'font_color' => 'getFontColor',
         'font_color_metadata' => 'getFontColorMetadata',
@@ -683,6 +711,7 @@ class Text implements ModelInterface, ArrayAccess
         'source' => 'getSource',
         'status' => 'getStatus',
         'status_metadata' => 'getStatusMetadata',
+        'tab_fully_qualified_path' => 'getTabFullyQualifiedPath',
         'tab_group_labels' => 'getTabGroupLabels',
         'tab_group_labels_metadata' => 'getTabGroupLabelsMetadata',
         'tab_id' => 'getTabId',
@@ -707,6 +736,7 @@ class Text implements ModelInterface, ArrayAccess
         'validation_pattern_metadata' => 'getValidationPatternMetadata',
         'value' => 'getValue',
         'value_metadata' => 'getValueMetadata',
+        'warning_details' => 'getWarningDetails',
         'width' => 'getWidth',
         'width_metadata' => 'getWidthMetadata',
         'x_position' => 'getXPosition',
@@ -775,6 +805,8 @@ class Text implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['agreement_attribute'] = isset($data['agreement_attribute']) ? $data['agreement_attribute'] : null;
+        $this->container['agreement_attribute_locked'] = isset($data['agreement_attribute_locked']) ? $data['agreement_attribute_locked'] : null;
         $this->container['anchor_allow_white_space_in_characters'] = isset($data['anchor_allow_white_space_in_characters']) ? $data['anchor_allow_white_space_in_characters'] : null;
         $this->container['anchor_allow_white_space_in_characters_metadata'] = isset($data['anchor_allow_white_space_in_characters_metadata']) ? $data['anchor_allow_white_space_in_characters_metadata'] : null;
         $this->container['anchor_case_sensitive'] = isset($data['anchor_case_sensitive']) ? $data['anchor_case_sensitive'] : null;
@@ -805,6 +837,7 @@ class Text implements ModelInterface, ArrayAccess
         $this->container['conditional_parent_label_metadata'] = isset($data['conditional_parent_label_metadata']) ? $data['conditional_parent_label_metadata'] : null;
         $this->container['conditional_parent_value'] = isset($data['conditional_parent_value']) ? $data['conditional_parent_value'] : null;
         $this->container['conditional_parent_value_metadata'] = isset($data['conditional_parent_value_metadata']) ? $data['conditional_parent_value_metadata'] : null;
+        $this->container['connected_object_details'] = isset($data['connected_object_details']) ? $data['connected_object_details'] : null;
         $this->container['custom_tab_id'] = isset($data['custom_tab_id']) ? $data['custom_tab_id'] : null;
         $this->container['custom_tab_id_metadata'] = isset($data['custom_tab_id_metadata']) ? $data['custom_tab_id_metadata'] : null;
         $this->container['disable_auto_size'] = isset($data['disable_auto_size']) ? $data['disable_auto_size'] : null;
@@ -812,6 +845,7 @@ class Text implements ModelInterface, ArrayAccess
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_id_metadata'] = isset($data['document_id_metadata']) ? $data['document_id_metadata'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['extension_data'] = isset($data['extension_data']) ? $data['extension_data'] : null;
         $this->container['font'] = isset($data['font']) ? $data['font'] : null;
         $this->container['font_color'] = isset($data['font_color']) ? $data['font_color'] : null;
         $this->container['font_color_metadata'] = isset($data['font_color_metadata']) ? $data['font_color_metadata'] : null;
@@ -865,6 +899,7 @@ class Text implements ModelInterface, ArrayAccess
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_metadata'] = isset($data['status_metadata']) ? $data['status_metadata'] : null;
+        $this->container['tab_fully_qualified_path'] = isset($data['tab_fully_qualified_path']) ? $data['tab_fully_qualified_path'] : null;
         $this->container['tab_group_labels'] = isset($data['tab_group_labels']) ? $data['tab_group_labels'] : null;
         $this->container['tab_group_labels_metadata'] = isset($data['tab_group_labels_metadata']) ? $data['tab_group_labels_metadata'] : null;
         $this->container['tab_id'] = isset($data['tab_id']) ? $data['tab_id'] : null;
@@ -889,6 +924,7 @@ class Text implements ModelInterface, ArrayAccess
         $this->container['validation_pattern_metadata'] = isset($data['validation_pattern_metadata']) ? $data['validation_pattern_metadata'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['value_metadata'] = isset($data['value_metadata']) ? $data['value_metadata'] : null;
+        $this->container['warning_details'] = isset($data['warning_details']) ? $data['warning_details'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['width_metadata'] = isset($data['width_metadata']) ? $data['width_metadata'] : null;
         $this->container['x_position'] = isset($data['x_position']) ? $data['x_position'] : null;
@@ -920,6 +956,54 @@ class Text implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets agreement_attribute
+     *
+     * @return ?string
+     */
+    public function getAgreementAttribute()
+    {
+        return $this->container['agreement_attribute'];
+    }
+
+    /**
+     * Sets agreement_attribute
+     *
+     * @param ?string $agreement_attribute 
+     *
+     * @return $this
+     */
+    public function setAgreementAttribute($agreement_attribute)
+    {
+        $this->container['agreement_attribute'] = $agreement_attribute;
+
+        return $this;
+    }
+
+    /**
+     * Gets agreement_attribute_locked
+     *
+     * @return ?string
+     */
+    public function getAgreementAttributeLocked()
+    {
+        return $this->container['agreement_attribute_locked'];
+    }
+
+    /**
+     * Sets agreement_attribute_locked
+     *
+     * @param ?string $agreement_attribute_locked 
+     *
+     * @return $this
+     */
+    public function setAgreementAttributeLocked($agreement_attribute_locked)
+    {
+        $this->container['agreement_attribute_locked'] = $agreement_attribute_locked;
+
+        return $this;
+    }
 
     /**
      * Gets anchor_allow_white_space_in_characters
@@ -1642,6 +1726,30 @@ class Text implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets connected_object_details
+     *
+     * @return \DocuSign\eSign\Model\ConnectedObjectDetails
+     */
+    public function getConnectedObjectDetails()
+    {
+        return $this->container['connected_object_details'];
+    }
+
+    /**
+     * Sets connected_object_details
+     *
+     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details 
+     *
+     * @return $this
+     */
+    public function setConnectedObjectDetails($connected_object_details)
+    {
+        $this->container['connected_object_details'] = $connected_object_details;
+
+        return $this;
+    }
+
+    /**
      * Gets custom_tab_id
      *
      * @return ?string
@@ -1805,6 +1913,30 @@ class Text implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets extension_data
+     *
+     * @return \DocuSign\eSign\Model\ExtensionData
+     */
+    public function getExtensionData()
+    {
+        return $this->container['extension_data'];
+    }
+
+    /**
+     * Sets extension_data
+     *
+     * @param \DocuSign\eSign\Model\ExtensionData $extension_data 
+     *
+     * @return $this
+     */
+    public function setExtensionData($extension_data)
+    {
+        $this->container['extension_data'] = $extension_data;
 
         return $this;
     }
@@ -3082,6 +3214,30 @@ class Text implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets tab_fully_qualified_path
+     *
+     * @return ?string
+     */
+    public function getTabFullyQualifiedPath()
+    {
+        return $this->container['tab_fully_qualified_path'];
+    }
+
+    /**
+     * Sets tab_fully_qualified_path
+     *
+     * @param ?string $tab_fully_qualified_path 
+     *
+     * @return $this
+     */
+    public function setTabFullyQualifiedPath($tab_fully_qualified_path)
+    {
+        $this->container['tab_fully_qualified_path'] = $tab_fully_qualified_path;
+
+        return $this;
+    }
+
+    /**
      * Gets tab_group_labels
      *
      * @return ?string[]
@@ -3653,6 +3809,30 @@ class Text implements ModelInterface, ArrayAccess
     public function setValueMetadata($value_metadata)
     {
         $this->container['value_metadata'] = $value_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets warning_details
+     *
+     * @return \DocuSign\eSign\Model\ErrorDetails
+     */
+    public function getWarningDetails()
+    {
+        return $this->container['warning_details'];
+    }
+
+    /**
+     * Sets warning_details
+     *
+     * @param \DocuSign\eSign\Model\ErrorDetails $warning_details 
+     *
+     * @return $this
+     */
+    public function setWarningDetails($warning_details)
+    {
+        $this->container['warning_details'] = $warning_details;
 
         return $this;
     }

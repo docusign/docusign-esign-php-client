@@ -67,6 +67,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
         'next_uri' => '?string',
         'previous_uri' => '?string',
         'result_set_size' => '?string',
+        'sky_drive_skip_token' => '?string',
         'start_position' => '?string',
         'total_set_size' => '?string'
     ];
@@ -85,6 +86,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
         'next_uri' => null,
         'previous_uri' => null,
         'result_set_size' => null,
+        'sky_drive_skip_token' => null,
         'start_position' => null,
         'total_set_size' => null
     ];
@@ -124,6 +126,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
         'next_uri' => 'nextUri',
         'previous_uri' => 'previousUri',
         'result_set_size' => 'resultSetSize',
+        'sky_drive_skip_token' => 'skyDriveSkipToken',
         'start_position' => 'startPosition',
         'total_set_size' => 'totalSetSize'
     ];
@@ -142,6 +145,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
         'next_uri' => 'setNextUri',
         'previous_uri' => 'setPreviousUri',
         'result_set_size' => 'setResultSetSize',
+        'sky_drive_skip_token' => 'setSkyDriveSkipToken',
         'start_position' => 'setStartPosition',
         'total_set_size' => 'setTotalSetSize'
     ];
@@ -160,6 +164,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
         'next_uri' => 'getNextUri',
         'previous_uri' => 'getPreviousUri',
         'result_set_size' => 'getResultSetSize',
+        'sky_drive_skip_token' => 'getSkyDriveSkipToken',
         'start_position' => 'getStartPosition',
         'total_set_size' => 'getTotalSetSize'
     ];
@@ -232,6 +237,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
         $this->container['next_uri'] = isset($data['next_uri']) ? $data['next_uri'] : null;
         $this->container['previous_uri'] = isset($data['previous_uri']) ? $data['previous_uri'] : null;
         $this->container['result_set_size'] = isset($data['result_set_size']) ? $data['result_set_size'] : null;
+        $this->container['sky_drive_skip_token'] = isset($data['sky_drive_skip_token']) ? $data['sky_drive_skip_token'] : null;
         $this->container['start_position'] = isset($data['start_position']) ? $data['start_position'] : null;
         $this->container['total_set_size'] = isset($data['total_set_size']) ? $data['total_set_size'] : null;
     }
@@ -448,6 +454,30 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     public function setResultSetSize($result_set_size)
     {
         $this->container['result_set_size'] = $result_set_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets sky_drive_skip_token
+     *
+     * @return ?string
+     */
+    public function getSkyDriveSkipToken()
+    {
+        return $this->container['sky_drive_skip_token'];
+    }
+
+    /**
+     * Sets sky_drive_skip_token
+     *
+     * @param ?string $sky_drive_skip_token 
+     *
+     * @return $this
+     */
+    public function setSkyDriveSkipToken($sky_drive_skip_token)
+    {
+        $this->container['sky_drive_skip_token'] = $sky_drive_skip_token;
 
         return $this;
     }

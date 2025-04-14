@@ -69,6 +69,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
         'show_back_button' => '?string',
         'show_discard_action' => '?string',
         'show_header_actions' => '?string',
+        'show_sign_now' => '?string',
         'starting_screen' => '?string',
         'tagger_settings' => '\DocuSign\eSign\Model\EnvelopeViewTaggerSettings',
         'template_settings' => '\DocuSign\eSign\Model\EnvelopeViewTemplateSettings'
@@ -90,6 +91,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
         'show_back_button' => null,
         'show_discard_action' => null,
         'show_header_actions' => null,
+        'show_sign_now' => null,
         'starting_screen' => null,
         'tagger_settings' => null,
         'template_settings' => null
@@ -132,6 +134,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
         'show_back_button' => 'showBackButton',
         'show_discard_action' => 'showDiscardAction',
         'show_header_actions' => 'showHeaderActions',
+        'show_sign_now' => 'showSignNow',
         'starting_screen' => 'startingScreen',
         'tagger_settings' => 'taggerSettings',
         'template_settings' => 'templateSettings'
@@ -153,6 +156,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
         'show_back_button' => 'setShowBackButton',
         'show_discard_action' => 'setShowDiscardAction',
         'show_header_actions' => 'setShowHeaderActions',
+        'show_sign_now' => 'setShowSignNow',
         'starting_screen' => 'setStartingScreen',
         'tagger_settings' => 'setTaggerSettings',
         'template_settings' => 'setTemplateSettings'
@@ -174,6 +178,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
         'show_back_button' => 'getShowBackButton',
         'show_discard_action' => 'getShowDiscardAction',
         'show_header_actions' => 'getShowHeaderActions',
+        'show_sign_now' => 'getShowSignNow',
         'starting_screen' => 'getStartingScreen',
         'tagger_settings' => 'getTaggerSettings',
         'template_settings' => 'getTemplateSettings'
@@ -249,6 +254,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
         $this->container['show_back_button'] = isset($data['show_back_button']) ? $data['show_back_button'] : null;
         $this->container['show_discard_action'] = isset($data['show_discard_action']) ? $data['show_discard_action'] : null;
         $this->container['show_header_actions'] = isset($data['show_header_actions']) ? $data['show_header_actions'] : null;
+        $this->container['show_sign_now'] = isset($data['show_sign_now']) ? $data['show_sign_now'] : null;
         $this->container['starting_screen'] = isset($data['starting_screen']) ? $data['starting_screen'] : null;
         $this->container['tagger_settings'] = isset($data['tagger_settings']) ? $data['tagger_settings'] : null;
         $this->container['template_settings'] = isset($data['template_settings']) ? $data['template_settings'] : null;
@@ -514,6 +520,30 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     public function setShowHeaderActions($show_header_actions)
     {
         $this->container['show_header_actions'] = $show_header_actions;
+
+        return $this;
+    }
+
+    /**
+     * Gets show_sign_now
+     *
+     * @return ?string
+     */
+    public function getShowSignNow()
+    {
+        return $this->container['show_sign_now'];
+    }
+
+    /**
+     * Sets show_sign_now
+     *
+     * @param ?string $show_sign_now 
+     *
+     * @return $this
+     */
+    public function setShowSignNow($show_sign_now)
+    {
+        $this->container['show_sign_now'] = $show_sign_now;
 
         return $this;
     }

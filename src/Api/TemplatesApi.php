@@ -7028,4 +7028,192 @@ class TemplatesApi
             throw $e;
         }
     }
+
+    /**
+     * Operation updateTemplates
+     *
+     * Update template autoMatch setting.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\TemplateAutoMatchList $template_auto_match_list  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\TemplateAutoMatchList
+     */
+    public function updateTemplates($account_id, $template_auto_match_list = null)
+    {
+        list($response) = $this->updateTemplatesWithHttpInfo($account_id, $template_auto_match_list);
+        return $response;
+    }
+
+    /**
+     * Operation updateTemplatesWithHttpInfo
+     *
+     * Update template autoMatch setting.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\TemplateAutoMatchList $template_auto_match_list  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\TemplateAutoMatchList, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateTemplatesWithHttpInfo($account_id, $template_auto_match_list = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateTemplates');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/templates";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($template_auto_match_list)) {
+            $_tempBody = $template_auto_match_list;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\TemplateAutoMatchList',
+                '/v2.1/accounts/{accountId}/templates'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\TemplateAutoMatchList', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TemplateAutoMatchList', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateTemplatesAutoMatch
+     *
+     * Update template autoMatch setting.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\TemplateAutoMatchList $template_auto_match_list  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\TemplateAutoMatchList
+     */
+    public function updateTemplatesAutoMatch($account_id, $template_auto_match_list = null)
+    {
+        list($response) = $this->updateTemplatesAutoMatchWithHttpInfo($account_id, $template_auto_match_list);
+        return $response;
+    }
+
+    /**
+     * Operation updateTemplatesAutoMatchWithHttpInfo
+     *
+     * Update template autoMatch setting.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param \DocuSign\eSign\Model\TemplateAutoMatchList $template_auto_match_list  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\TemplateAutoMatchList, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateTemplatesAutoMatchWithHttpInfo($account_id, $template_auto_match_list = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateTemplatesAutoMatch');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/templates/auto_match";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($template_auto_match_list)) {
+            $_tempBody = $template_auto_match_list;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\TemplateAutoMatchList',
+                '/v2.1/accounts/{accountId}/templates/auto_match'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\TemplateAutoMatchList', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TemplateAutoMatchList', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

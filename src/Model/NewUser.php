@@ -64,6 +64,8 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => '?string',
         'email' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'license_status' => '?string',
+        'license_type' => '?string',
         'membership_id' => '?string',
         'permission_profile_id' => '?string',
         'permission_profile_name' => '?string',
@@ -83,6 +85,8 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => null,
         'email' => null,
         'error_details' => null,
+        'license_status' => null,
+        'license_type' => null,
         'membership_id' => null,
         'permission_profile_id' => null,
         'permission_profile_name' => null,
@@ -123,6 +127,8 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => 'createdDateTime',
         'email' => 'email',
         'error_details' => 'errorDetails',
+        'license_status' => 'licenseStatus',
+        'license_type' => 'licenseType',
         'membership_id' => 'membershipId',
         'permission_profile_id' => 'permissionProfileId',
         'permission_profile_name' => 'permissionProfileName',
@@ -142,6 +148,8 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => 'setCreatedDateTime',
         'email' => 'setEmail',
         'error_details' => 'setErrorDetails',
+        'license_status' => 'setLicenseStatus',
+        'license_type' => 'setLicenseType',
         'membership_id' => 'setMembershipId',
         'permission_profile_id' => 'setPermissionProfileId',
         'permission_profile_name' => 'setPermissionProfileName',
@@ -161,6 +169,8 @@ class NewUser implements ModelInterface, ArrayAccess
         'created_date_time' => 'getCreatedDateTime',
         'email' => 'getEmail',
         'error_details' => 'getErrorDetails',
+        'license_status' => 'getLicenseStatus',
+        'license_type' => 'getLicenseType',
         'membership_id' => 'getMembershipId',
         'permission_profile_id' => 'getPermissionProfileId',
         'permission_profile_name' => 'getPermissionProfileName',
@@ -234,6 +244,8 @@ class NewUser implements ModelInterface, ArrayAccess
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['license_status'] = isset($data['license_status']) ? $data['license_status'] : null;
+        $this->container['license_type'] = isset($data['license_type']) ? $data['license_type'] : null;
         $this->container['membership_id'] = isset($data['membership_id']) ? $data['membership_id'] : null;
         $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
         $this->container['permission_profile_name'] = isset($data['permission_profile_name']) ? $data['permission_profile_name'] : null;
@@ -359,6 +371,54 @@ class NewUser implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets license_status
+     *
+     * @return ?string
+     */
+    public function getLicenseStatus()
+    {
+        return $this->container['license_status'];
+    }
+
+    /**
+     * Sets license_status
+     *
+     * @param ?string $license_status 
+     *
+     * @return $this
+     */
+    public function setLicenseStatus($license_status)
+    {
+        $this->container['license_status'] = $license_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets license_type
+     *
+     * @return ?string
+     */
+    public function getLicenseType()
+    {
+        return $this->container['license_type'];
+    }
+
+    /**
+     * Sets license_type
+     *
+     * @param ?string $license_type 
+     *
+     * @return $this
+     */
+    public function setLicenseType($license_type)
+    {
+        $this->container['license_type'] = $license_type;
 
         return $this;
     }

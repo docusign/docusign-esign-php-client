@@ -62,8 +62,12 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'account_name' => '?string',
         'configuration_id' => '?string',
         'email' => '?string',
+        'exempt_members_of_same_account_from_auth' => '?string',
         'link_id' => '?string',
         'pdf_field_handling_option' => '?string',
+        'pdf_field_handling_prefill_tab_permission' => '?string',
+        'pdf_field_handling_standard_input_tab_permission' => '?string',
+        'pdf_field_handling_standard_tab_permission' => '?string',
         'recipient_auth_requirements' => '\DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements',
         'status' => '?string',
         'user_id' => '?string'
@@ -78,8 +82,12 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'account_name' => null,
         'configuration_id' => null,
         'email' => null,
+        'exempt_members_of_same_account_from_auth' => null,
         'link_id' => null,
         'pdf_field_handling_option' => null,
+        'pdf_field_handling_prefill_tab_permission' => null,
+        'pdf_field_handling_standard_input_tab_permission' => null,
+        'pdf_field_handling_standard_tab_permission' => null,
         'recipient_auth_requirements' => null,
         'status' => null,
         'user_id' => null
@@ -115,8 +123,12 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'account_name' => 'accountName',
         'configuration_id' => 'configurationId',
         'email' => 'email',
+        'exempt_members_of_same_account_from_auth' => 'exemptMembersOfSameAccountFromAuth',
         'link_id' => 'linkId',
         'pdf_field_handling_option' => 'pdfFieldHandlingOption',
+        'pdf_field_handling_prefill_tab_permission' => 'pdfFieldHandlingPrefillTabPermission',
+        'pdf_field_handling_standard_input_tab_permission' => 'pdfFieldHandlingStandardInputTabPermission',
+        'pdf_field_handling_standard_tab_permission' => 'pdfFieldHandlingStandardTabPermission',
         'recipient_auth_requirements' => 'recipientAuthRequirements',
         'status' => 'status',
         'user_id' => 'userId'
@@ -131,8 +143,12 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'account_name' => 'setAccountName',
         'configuration_id' => 'setConfigurationId',
         'email' => 'setEmail',
+        'exempt_members_of_same_account_from_auth' => 'setExemptMembersOfSameAccountFromAuth',
         'link_id' => 'setLinkId',
         'pdf_field_handling_option' => 'setPdfFieldHandlingOption',
+        'pdf_field_handling_prefill_tab_permission' => 'setPdfFieldHandlingPrefillTabPermission',
+        'pdf_field_handling_standard_input_tab_permission' => 'setPdfFieldHandlingStandardInputTabPermission',
+        'pdf_field_handling_standard_tab_permission' => 'setPdfFieldHandlingStandardTabPermission',
         'recipient_auth_requirements' => 'setRecipientAuthRequirements',
         'status' => 'setStatus',
         'user_id' => 'setUserId'
@@ -147,8 +163,12 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         'account_name' => 'getAccountName',
         'configuration_id' => 'getConfigurationId',
         'email' => 'getEmail',
+        'exempt_members_of_same_account_from_auth' => 'getExemptMembersOfSameAccountFromAuth',
         'link_id' => 'getLinkId',
         'pdf_field_handling_option' => 'getPdfFieldHandlingOption',
+        'pdf_field_handling_prefill_tab_permission' => 'getPdfFieldHandlingPrefillTabPermission',
+        'pdf_field_handling_standard_input_tab_permission' => 'getPdfFieldHandlingStandardInputTabPermission',
+        'pdf_field_handling_standard_tab_permission' => 'getPdfFieldHandlingStandardTabPermission',
         'recipient_auth_requirements' => 'getRecipientAuthRequirements',
         'status' => 'getStatus',
         'user_id' => 'getUserId'
@@ -217,8 +237,12 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
         $this->container['configuration_id'] = isset($data['configuration_id']) ? $data['configuration_id'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['exempt_members_of_same_account_from_auth'] = isset($data['exempt_members_of_same_account_from_auth']) ? $data['exempt_members_of_same_account_from_auth'] : null;
         $this->container['link_id'] = isset($data['link_id']) ? $data['link_id'] : null;
         $this->container['pdf_field_handling_option'] = isset($data['pdf_field_handling_option']) ? $data['pdf_field_handling_option'] : null;
+        $this->container['pdf_field_handling_prefill_tab_permission'] = isset($data['pdf_field_handling_prefill_tab_permission']) ? $data['pdf_field_handling_prefill_tab_permission'] : null;
+        $this->container['pdf_field_handling_standard_input_tab_permission'] = isset($data['pdf_field_handling_standard_input_tab_permission']) ? $data['pdf_field_handling_standard_input_tab_permission'] : null;
+        $this->container['pdf_field_handling_standard_tab_permission'] = isset($data['pdf_field_handling_standard_tab_permission']) ? $data['pdf_field_handling_standard_tab_permission'] : null;
         $this->container['recipient_auth_requirements'] = isset($data['recipient_auth_requirements']) ? $data['recipient_auth_requirements'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
@@ -321,6 +345,30 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets exempt_members_of_same_account_from_auth
+     *
+     * @return ?string
+     */
+    public function getExemptMembersOfSameAccountFromAuth()
+    {
+        return $this->container['exempt_members_of_same_account_from_auth'];
+    }
+
+    /**
+     * Sets exempt_members_of_same_account_from_auth
+     *
+     * @param ?string $exempt_members_of_same_account_from_auth 
+     *
+     * @return $this
+     */
+    public function setExemptMembersOfSameAccountFromAuth($exempt_members_of_same_account_from_auth)
+    {
+        $this->container['exempt_members_of_same_account_from_auth'] = $exempt_members_of_same_account_from_auth;
+
+        return $this;
+    }
+
+    /**
      * Gets link_id
      *
      * @return ?string
@@ -364,6 +412,78 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     public function setPdfFieldHandlingOption($pdf_field_handling_option)
     {
         $this->container['pdf_field_handling_option'] = $pdf_field_handling_option;
+
+        return $this;
+    }
+
+    /**
+     * Gets pdf_field_handling_prefill_tab_permission
+     *
+     * @return ?string
+     */
+    public function getPdfFieldHandlingPrefillTabPermission()
+    {
+        return $this->container['pdf_field_handling_prefill_tab_permission'];
+    }
+
+    /**
+     * Sets pdf_field_handling_prefill_tab_permission
+     *
+     * @param ?string $pdf_field_handling_prefill_tab_permission 
+     *
+     * @return $this
+     */
+    public function setPdfFieldHandlingPrefillTabPermission($pdf_field_handling_prefill_tab_permission)
+    {
+        $this->container['pdf_field_handling_prefill_tab_permission'] = $pdf_field_handling_prefill_tab_permission;
+
+        return $this;
+    }
+
+    /**
+     * Gets pdf_field_handling_standard_input_tab_permission
+     *
+     * @return ?string
+     */
+    public function getPdfFieldHandlingStandardInputTabPermission()
+    {
+        return $this->container['pdf_field_handling_standard_input_tab_permission'];
+    }
+
+    /**
+     * Sets pdf_field_handling_standard_input_tab_permission
+     *
+     * @param ?string $pdf_field_handling_standard_input_tab_permission 
+     *
+     * @return $this
+     */
+    public function setPdfFieldHandlingStandardInputTabPermission($pdf_field_handling_standard_input_tab_permission)
+    {
+        $this->container['pdf_field_handling_standard_input_tab_permission'] = $pdf_field_handling_standard_input_tab_permission;
+
+        return $this;
+    }
+
+    /**
+     * Gets pdf_field_handling_standard_tab_permission
+     *
+     * @return ?string
+     */
+    public function getPdfFieldHandlingStandardTabPermission()
+    {
+        return $this->container['pdf_field_handling_standard_tab_permission'];
+    }
+
+    /**
+     * Sets pdf_field_handling_standard_tab_permission
+     *
+     * @param ?string $pdf_field_handling_standard_tab_permission 
+     *
+     * @return $this
+     */
+    public function setPdfFieldHandlingStandardTabPermission($pdf_field_handling_standard_tab_permission)
+    {
+        $this->container['pdf_field_handling_standard_tab_permission'] = $pdf_field_handling_standard_tab_permission;
 
         return $this;
     }

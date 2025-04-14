@@ -75,11 +75,16 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
         'document_id' => '?string',
         'document_id_guid' => '?string',
+        'document_template_agreement_type_id' => '?string',
+        'document_template_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'has_digital_signature' => '?string',
         'include_in_download' => '?string',
         'include_in_download_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'is_ace_gen_document' => '?string',
         'is_doc_gen_document' => '?string',
+        'is_externally_available' => '?string',
+        'is_flattened' => '?string',
         'name' => '?string',
         'name_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'order' => '?string',
@@ -114,11 +119,16 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => null,
         'document_id' => null,
         'document_id_guid' => null,
+        'document_template_agreement_type_id' => null,
+        'document_template_id' => null,
         'error_details' => null,
+        'has_digital_signature' => null,
         'include_in_download' => null,
         'include_in_download_metadata' => null,
         'is_ace_gen_document' => null,
         'is_doc_gen_document' => null,
+        'is_externally_available' => null,
+        'is_flattened' => null,
         'name' => null,
         'name_metadata' => null,
         'order' => null,
@@ -174,11 +184,16 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => 'documentFields',
         'document_id' => 'documentId',
         'document_id_guid' => 'documentIdGuid',
+        'document_template_agreement_type_id' => 'documentTemplateAgreementTypeId',
+        'document_template_id' => 'documentTemplateId',
         'error_details' => 'errorDetails',
+        'has_digital_signature' => 'hasDigitalSignature',
         'include_in_download' => 'includeInDownload',
         'include_in_download_metadata' => 'includeInDownloadMetadata',
         'is_ace_gen_document' => 'isAceGenDocument',
         'is_doc_gen_document' => 'isDocGenDocument',
+        'is_externally_available' => 'isExternallyAvailable',
+        'is_flattened' => 'isFlattened',
         'name' => 'name',
         'name_metadata' => 'nameMetadata',
         'order' => 'order',
@@ -213,11 +228,16 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => 'setDocumentFields',
         'document_id' => 'setDocumentId',
         'document_id_guid' => 'setDocumentIdGuid',
+        'document_template_agreement_type_id' => 'setDocumentTemplateAgreementTypeId',
+        'document_template_id' => 'setDocumentTemplateId',
         'error_details' => 'setErrorDetails',
+        'has_digital_signature' => 'setHasDigitalSignature',
         'include_in_download' => 'setIncludeInDownload',
         'include_in_download_metadata' => 'setIncludeInDownloadMetadata',
         'is_ace_gen_document' => 'setIsAceGenDocument',
         'is_doc_gen_document' => 'setIsDocGenDocument',
+        'is_externally_available' => 'setIsExternallyAvailable',
+        'is_flattened' => 'setIsFlattened',
         'name' => 'setName',
         'name_metadata' => 'setNameMetadata',
         'order' => 'setOrder',
@@ -252,11 +272,16 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => 'getDocumentFields',
         'document_id' => 'getDocumentId',
         'document_id_guid' => 'getDocumentIdGuid',
+        'document_template_agreement_type_id' => 'getDocumentTemplateAgreementTypeId',
+        'document_template_id' => 'getDocumentTemplateId',
         'error_details' => 'getErrorDetails',
+        'has_digital_signature' => 'getHasDigitalSignature',
         'include_in_download' => 'getIncludeInDownload',
         'include_in_download_metadata' => 'getIncludeInDownloadMetadata',
         'is_ace_gen_document' => 'getIsAceGenDocument',
         'is_doc_gen_document' => 'getIsDocGenDocument',
+        'is_externally_available' => 'getIsExternallyAvailable',
+        'is_flattened' => 'getIsFlattened',
         'name' => 'getName',
         'name_metadata' => 'getNameMetadata',
         'order' => 'getOrder',
@@ -345,11 +370,16 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_id_guid'] = isset($data['document_id_guid']) ? $data['document_id_guid'] : null;
+        $this->container['document_template_agreement_type_id'] = isset($data['document_template_agreement_type_id']) ? $data['document_template_agreement_type_id'] : null;
+        $this->container['document_template_id'] = isset($data['document_template_id']) ? $data['document_template_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['has_digital_signature'] = isset($data['has_digital_signature']) ? $data['has_digital_signature'] : null;
         $this->container['include_in_download'] = isset($data['include_in_download']) ? $data['include_in_download'] : null;
         $this->container['include_in_download_metadata'] = isset($data['include_in_download_metadata']) ? $data['include_in_download_metadata'] : null;
         $this->container['is_ace_gen_document'] = isset($data['is_ace_gen_document']) ? $data['is_ace_gen_document'] : null;
         $this->container['is_doc_gen_document'] = isset($data['is_doc_gen_document']) ? $data['is_doc_gen_document'] : null;
+        $this->container['is_externally_available'] = isset($data['is_externally_available']) ? $data['is_externally_available'] : null;
+        $this->container['is_flattened'] = isset($data['is_flattened']) ? $data['is_flattened'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['name_metadata'] = isset($data['name_metadata']) ? $data['name_metadata'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
@@ -748,6 +778,54 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets document_template_agreement_type_id
+     *
+     * @return ?string
+     */
+    public function getDocumentTemplateAgreementTypeId()
+    {
+        return $this->container['document_template_agreement_type_id'];
+    }
+
+    /**
+     * Sets document_template_agreement_type_id
+     *
+     * @param ?string $document_template_agreement_type_id 
+     *
+     * @return $this
+     */
+    public function setDocumentTemplateAgreementTypeId($document_template_agreement_type_id)
+    {
+        $this->container['document_template_agreement_type_id'] = $document_template_agreement_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_template_id
+     *
+     * @return ?string
+     */
+    public function getDocumentTemplateId()
+    {
+        return $this->container['document_template_id'];
+    }
+
+    /**
+     * Sets document_template_id
+     *
+     * @param ?string $document_template_id 
+     *
+     * @return $this
+     */
+    public function setDocumentTemplateId($document_template_id)
+    {
+        $this->container['document_template_id'] = $document_template_id;
+
+        return $this;
+    }
+
+    /**
      * Gets error_details
      *
      * @return \DocuSign\eSign\Model\ErrorDetails
@@ -767,6 +845,30 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_digital_signature
+     *
+     * @return ?string
+     */
+    public function getHasDigitalSignature()
+    {
+        return $this->container['has_digital_signature'];
+    }
+
+    /**
+     * Sets has_digital_signature
+     *
+     * @param ?string $has_digital_signature 
+     *
+     * @return $this
+     */
+    public function setHasDigitalSignature($has_digital_signature)
+    {
+        $this->container['has_digital_signature'] = $has_digital_signature;
 
         return $this;
     }
@@ -863,6 +965,54 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setIsDocGenDocument($is_doc_gen_document)
     {
         $this->container['is_doc_gen_document'] = $is_doc_gen_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_externally_available
+     *
+     * @return ?string
+     */
+    public function getIsExternallyAvailable()
+    {
+        return $this->container['is_externally_available'];
+    }
+
+    /**
+     * Sets is_externally_available
+     *
+     * @param ?string $is_externally_available 
+     *
+     * @return $this
+     */
+    public function setIsExternallyAvailable($is_externally_available)
+    {
+        $this->container['is_externally_available'] = $is_externally_available;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_flattened
+     *
+     * @return ?string
+     */
+    public function getIsFlattened()
+    {
+        return $this->container['is_flattened'];
+    }
+
+    /**
+     * Sets is_flattened
+     *
+     * @param ?string $is_flattened 
+     *
+     * @return $this
+     */
+    public function setIsFlattened($is_flattened)
+    {
+        $this->container['is_flattened'] = $is_flattened;
 
         return $this;
     }

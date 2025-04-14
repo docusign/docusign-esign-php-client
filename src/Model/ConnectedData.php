@@ -1,6 +1,6 @@
 <?php
 /**
- * ScheduledSending
+ * ConnectedData
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ScheduledSending Class Doc Comment
+ * ConnectedData Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ScheduledSending implements ModelInterface, ArrayAccess
+class ConnectedData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'scheduledSending';
+    protected static $swaggerModelName = 'connectedData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,11 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_list_id' => '?string',
-        'resume_date' => '?string',
-        'rules' => '\DocuSign\eSign\Model\EnvelopeDelayRule[]',
-        'status' => '?string'
+        'property_name' => '?string',
+        'supported_operation' => '?string',
+        'supported_uri' => '?string',
+        'type_name' => '?string',
+        'type_system_namespace' => '?string'
     ];
 
     /**
@@ -71,10 +72,11 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bulk_list_id' => null,
-        'resume_date' => null,
-        'rules' => null,
-        'status' => null
+        'property_name' => null,
+        'supported_operation' => null,
+        'supported_uri' => null,
+        'type_name' => null,
+        'type_system_namespace' => null
     ];
 
     /**
@@ -104,10 +106,11 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bulk_list_id' => 'bulkListId',
-        'resume_date' => 'resumeDate',
-        'rules' => 'rules',
-        'status' => 'status'
+        'property_name' => 'propertyName',
+        'supported_operation' => 'supportedOperation',
+        'supported_uri' => 'supportedUri',
+        'type_name' => 'typeName',
+        'type_system_namespace' => 'typeSystemNamespace'
     ];
 
     /**
@@ -116,10 +119,11 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bulk_list_id' => 'setBulkListId',
-        'resume_date' => 'setResumeDate',
-        'rules' => 'setRules',
-        'status' => 'setStatus'
+        'property_name' => 'setPropertyName',
+        'supported_operation' => 'setSupportedOperation',
+        'supported_uri' => 'setSupportedUri',
+        'type_name' => 'setTypeName',
+        'type_system_namespace' => 'setTypeSystemNamespace'
     ];
 
     /**
@@ -128,10 +132,11 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bulk_list_id' => 'getBulkListId',
-        'resume_date' => 'getResumeDate',
-        'rules' => 'getRules',
-        'status' => 'getStatus'
+        'property_name' => 'getPropertyName',
+        'supported_operation' => 'getSupportedOperation',
+        'supported_uri' => 'getSupportedUri',
+        'type_name' => 'getTypeName',
+        'type_system_namespace' => 'getTypeSystemNamespace'
     ];
 
     /**
@@ -194,10 +199,11 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bulk_list_id'] = isset($data['bulk_list_id']) ? $data['bulk_list_id'] : null;
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
-        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['property_name'] = isset($data['property_name']) ? $data['property_name'] : null;
+        $this->container['supported_operation'] = isset($data['supported_operation']) ? $data['supported_operation'] : null;
+        $this->container['supported_uri'] = isset($data['supported_uri']) ? $data['supported_uri'] : null;
+        $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
+        $this->container['type_system_namespace'] = isset($data['type_system_namespace']) ? $data['type_system_namespace'] : null;
     }
 
     /**
@@ -225,97 +231,121 @@ class ScheduledSending implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bulk_list_id
+     * Gets property_name
      *
      * @return ?string
      */
-    public function getBulkListId()
+    public function getPropertyName()
     {
-        return $this->container['bulk_list_id'];
+        return $this->container['property_name'];
     }
 
     /**
-     * Sets bulk_list_id
+     * Sets property_name
      *
-     * @param ?string $bulk_list_id 
+     * @param ?string $property_name 
      *
      * @return $this
      */
-    public function setBulkListId($bulk_list_id)
+    public function setPropertyName($property_name)
     {
-        $this->container['bulk_list_id'] = $bulk_list_id;
+        $this->container['property_name'] = $property_name;
 
         return $this;
     }
 
     /**
-     * Gets resume_date
+     * Gets supported_operation
      *
      * @return ?string
      */
-    public function getResumeDate()
+    public function getSupportedOperation()
     {
-        return $this->container['resume_date'];
+        return $this->container['supported_operation'];
     }
 
     /**
-     * Sets resume_date
+     * Sets supported_operation
      *
-     * @param ?string $resume_date An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.
+     * @param ?string $supported_operation 
      *
      * @return $this
      */
-    public function setResumeDate($resume_date)
+    public function setSupportedOperation($supported_operation)
     {
-        $this->container['resume_date'] = $resume_date;
+        $this->container['supported_operation'] = $supported_operation;
 
         return $this;
     }
 
     /**
-     * Gets rules
+     * Gets supported_uri
      *
-     * @return \DocuSign\eSign\Model\EnvelopeDelayRule[]
+     * @return ?string
      */
-    public function getRules()
+    public function getSupportedUri()
     {
-        return $this->container['rules'];
+        return $this->container['supported_uri'];
     }
 
     /**
-     * Sets rules
+     * Sets supported_uri
      *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.
+     * @param ?string $supported_uri 
      *
      * @return $this
      */
-    public function setRules($rules)
+    public function setSupportedUri($supported_uri)
     {
-        $this->container['rules'] = $rules;
+        $this->container['supported_uri'] = $supported_uri;
 
         return $this;
     }
 
     /**
-     * Gets status
+     * Gets type_name
      *
      * @return ?string
      */
-    public function getStatus()
+    public function getTypeName()
     {
-        return $this->container['status'];
+        return $this->container['type_name'];
     }
 
     /**
-     * Sets status
+     * Sets type_name
      *
-     * @param ?string $status \\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent.
+     * @param ?string $type_name 
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setTypeName($type_name)
     {
-        $this->container['status'] = $status;
+        $this->container['type_name'] = $type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets type_system_namespace
+     *
+     * @return ?string
+     */
+    public function getTypeSystemNamespace()
+    {
+        return $this->container['type_system_namespace'];
+    }
+
+    /**
+     * Sets type_system_namespace
+     *
+     * @param ?string $type_system_namespace 
+     *
+     * @return $this
+     */
+    public function setTypeSystemNamespace($type_system_namespace)
+    {
+        $this->container['type_system_namespace'] = $type_system_namespace;
 
         return $this;
     }

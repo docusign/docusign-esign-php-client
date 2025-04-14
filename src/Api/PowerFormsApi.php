@@ -181,6 +181,33 @@ class ListPowerFormSendersOptions
 class ListPowerFormsOptions
 {
     /**
+      * $count 
+      * @var ?string
+      */
+    protected ?string $count = null;
+
+    /**
+     * Gets count
+     *
+     * @return ?string
+     */
+    public function getCount(): ?string
+    {
+        return $this->count;
+    }
+
+    /**
+     * Sets count
+     * @param ?string $count 
+     *
+     * @return self
+     */
+    public function setCount(?string $count): self
+    {
+        $this->count = $count;
+        return $this;
+    }
+    /**
       * $from_date 
       * @var ?string
       */
@@ -313,6 +340,33 @@ class ListPowerFormsOptions
     public function setSearchText(?string $search_text): self
     {
         $this->search_text = $search_text;
+        return $this;
+    }
+    /**
+      * $start_position 
+      * @var ?string
+      */
+    protected ?string $start_position = null;
+
+    /**
+     * Gets start_position
+     *
+     * @return ?string
+     */
+    public function getStartPosition(): ?string
+    {
+        return $this->start_position;
+    }
+
+    /**
+     * Sets start_position
+     * @param ?string $start_position 
+     *
+     * @return self
+     */
+    public function setStartPosition(?string $start_position): self
+    {
+        $this->start_position = $start_position;
         return $this;
     }
     /**
@@ -1055,6 +1109,9 @@ class PowerFormsApi
         if ($options != null)
         {
             // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
             if ($options->getFromDate() != 'null') {
                 $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
             }
@@ -1069,6 +1126,9 @@ class PowerFormsApi
             }
             if ($options->getSearchText() != 'null') {
                 $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
             }
             if ($options->getToDate() != 'null') {
                 $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
