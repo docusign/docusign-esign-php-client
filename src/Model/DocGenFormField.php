@@ -59,10 +59,13 @@ class DocGenFormField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'connected_object_details' => '\DocuSign\eSign\Model\ConnectedObjectDetails',
         'description' => '?string',
+        'fully_qualified_path' => '?string',
         'label' => '?string',
         'name' => '?string',
         'options' => '\DocuSign\eSign\Model\DocGenFormFieldOption[]',
+        'order' => '?string',
         'predefined_validation' => '?string',
         'required' => '?string',
         'row_values' => '\DocuSign\eSign\Model\DocGenFormFieldRowValue[]',
@@ -77,10 +80,13 @@ class DocGenFormField implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'connected_object_details' => null,
         'description' => null,
+        'fully_qualified_path' => null,
         'label' => null,
         'name' => null,
         'options' => null,
+        'order' => null,
         'predefined_validation' => null,
         'required' => null,
         'row_values' => null,
@@ -116,10 +122,13 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'connected_object_details' => 'connectedObjectDetails',
         'description' => 'description',
+        'fully_qualified_path' => 'fullyQualifiedPath',
         'label' => 'label',
         'name' => 'name',
         'options' => 'options',
+        'order' => 'order',
         'predefined_validation' => 'predefinedValidation',
         'required' => 'required',
         'row_values' => 'rowValues',
@@ -134,10 +143,13 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'connected_object_details' => 'setConnectedObjectDetails',
         'description' => 'setDescription',
+        'fully_qualified_path' => 'setFullyQualifiedPath',
         'label' => 'setLabel',
         'name' => 'setName',
         'options' => 'setOptions',
+        'order' => 'setOrder',
         'predefined_validation' => 'setPredefinedValidation',
         'required' => 'setRequired',
         'row_values' => 'setRowValues',
@@ -152,10 +164,13 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'connected_object_details' => 'getConnectedObjectDetails',
         'description' => 'getDescription',
+        'fully_qualified_path' => 'getFullyQualifiedPath',
         'label' => 'getLabel',
         'name' => 'getName',
         'options' => 'getOptions',
+        'order' => 'getOrder',
         'predefined_validation' => 'getPredefinedValidation',
         'required' => 'getRequired',
         'row_values' => 'getRowValues',
@@ -224,10 +239,13 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['connected_object_details'] = isset($data['connected_object_details']) ? $data['connected_object_details'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['fully_qualified_path'] = isset($data['fully_qualified_path']) ? $data['fully_qualified_path'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['predefined_validation'] = isset($data['predefined_validation']) ? $data['predefined_validation'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['row_values'] = isset($data['row_values']) ? $data['row_values'] : null;
@@ -261,6 +279,30 @@ class DocGenFormField implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets connected_object_details
+     *
+     * @return \DocuSign\eSign\Model\ConnectedObjectDetails
+     */
+    public function getConnectedObjectDetails()
+    {
+        return $this->container['connected_object_details'];
+    }
+
+    /**
+     * Sets connected_object_details
+     *
+     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details 
+     *
+     * @return $this
+     */
+    public function setConnectedObjectDetails($connected_object_details)
+    {
+        $this->container['connected_object_details'] = $connected_object_details;
+
+        return $this;
+    }
+
+    /**
      * Gets description
      *
      * @return ?string
@@ -280,6 +322,30 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets fully_qualified_path
+     *
+     * @return ?string
+     */
+    public function getFullyQualifiedPath()
+    {
+        return $this->container['fully_qualified_path'];
+    }
+
+    /**
+     * Sets fully_qualified_path
+     *
+     * @param ?string $fully_qualified_path 
+     *
+     * @return $this
+     */
+    public function setFullyQualifiedPath($fully_qualified_path)
+    {
+        $this->container['fully_qualified_path'] = $fully_qualified_path;
 
         return $this;
     }
@@ -352,6 +418,30 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     public function setOptions($options)
     {
         $this->container['options'] = $options;
+
+        return $this;
+    }
+
+    /**
+     * Gets order
+     *
+     * @return ?string
+     */
+    public function getOrder()
+    {
+        return $this->container['order'];
+    }
+
+    /**
+     * Sets order
+     *
+     * @param ?string $order 
+     *
+     * @return $this
+     */
+    public function setOrder($order)
+    {
+        $this->container['order'] = $order;
 
         return $this;
     }

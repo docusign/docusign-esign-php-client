@@ -1,6 +1,6 @@
 <?php
 /**
- * ScheduledSending
+ * TemplateAutoMatchList
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ScheduledSending Class Doc Comment
+ * TemplateAutoMatchList Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ScheduledSending implements ModelInterface, ArrayAccess
+class TemplateAutoMatchList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'scheduledSending';
+    protected static $swaggerModelName = 'templateAutoMatchList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bulk_list_id' => '?string',
-        'resume_date' => '?string',
-        'rules' => '\DocuSign\eSign\Model\EnvelopeDelayRule[]',
-        'status' => '?string'
+        'templates' => '\DocuSign\eSign\Model\TemplateAutoMatch[]'
     ];
 
     /**
@@ -71,10 +68,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bulk_list_id' => null,
-        'resume_date' => null,
-        'rules' => null,
-        'status' => null
+        'templates' => null
     ];
 
     /**
@@ -104,10 +98,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bulk_list_id' => 'bulkListId',
-        'resume_date' => 'resumeDate',
-        'rules' => 'rules',
-        'status' => 'status'
+        'templates' => 'templates'
     ];
 
     /**
@@ -116,10 +107,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bulk_list_id' => 'setBulkListId',
-        'resume_date' => 'setResumeDate',
-        'rules' => 'setRules',
-        'status' => 'setStatus'
+        'templates' => 'setTemplates'
     ];
 
     /**
@@ -128,10 +116,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bulk_list_id' => 'getBulkListId',
-        'resume_date' => 'getResumeDate',
-        'rules' => 'getRules',
-        'status' => 'getStatus'
+        'templates' => 'getTemplates'
     ];
 
     /**
@@ -194,10 +179,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bulk_list_id'] = isset($data['bulk_list_id']) ? $data['bulk_list_id'] : null;
-        $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
-        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
     }
 
     /**
@@ -225,97 +207,25 @@ class ScheduledSending implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bulk_list_id
+     * Gets templates
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\TemplateAutoMatch[]
      */
-    public function getBulkListId()
+    public function getTemplates()
     {
-        return $this->container['bulk_list_id'];
+        return $this->container['templates'];
     }
 
     /**
-     * Sets bulk_list_id
+     * Sets templates
      *
-     * @param ?string $bulk_list_id 
+     * @param \DocuSign\eSign\Model\TemplateAutoMatch[] $templates 
      *
      * @return $this
      */
-    public function setBulkListId($bulk_list_id)
+    public function setTemplates($templates)
     {
-        $this->container['bulk_list_id'] = $bulk_list_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets resume_date
-     *
-     * @return ?string
-     */
-    public function getResumeDate()
-    {
-        return $this->container['resume_date'];
-    }
-
-    /**
-     * Sets resume_date
-     *
-     * @param ?string $resume_date An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.
-     *
-     * @return $this
-     */
-    public function setResumeDate($resume_date)
-    {
-        $this->container['resume_date'] = $resume_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets rules
-     *
-     * @return \DocuSign\eSign\Model\EnvelopeDelayRule[]
-     */
-    public function getRules()
-    {
-        return $this->container['rules'];
-    }
-
-    /**
-     * Sets rules
-     *
-     * @param \DocuSign\eSign\Model\EnvelopeDelayRule[] $rules A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.
-     *
-     * @return $this
-     */
-    public function setRules($rules)
-    {
-        $this->container['rules'] = $rules;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return ?string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param ?string $status \\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent.
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
+        $this->container['templates'] = $templates;
 
         return $this;
     }

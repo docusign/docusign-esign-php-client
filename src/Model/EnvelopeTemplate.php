@@ -114,6 +114,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'folder_name' => '?string',
         'folders' => '\DocuSign\eSign\Model\Folder[]',
         'has_comments' => '?string',
+        'has_document_template_library' => '?string',
         'has_form_data_changed' => '?string',
         'has_wav_file' => '?string',
         'holder' => '?string',
@@ -226,6 +227,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'folder_name' => null,
         'folders' => null,
         'has_comments' => null,
+        'has_document_template_library' => null,
         'has_form_data_changed' => null,
         'has_wav_file' => null,
         'holder' => null,
@@ -359,6 +361,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'folder_name' => 'folderName',
         'folders' => 'folders',
         'has_comments' => 'hasComments',
+        'has_document_template_library' => 'hasDocumentTemplateLibrary',
         'has_form_data_changed' => 'hasFormDataChanged',
         'has_wav_file' => 'hasWavFile',
         'holder' => 'holder',
@@ -471,6 +474,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'folder_name' => 'setFolderName',
         'folders' => 'setFolders',
         'has_comments' => 'setHasComments',
+        'has_document_template_library' => 'setHasDocumentTemplateLibrary',
         'has_form_data_changed' => 'setHasFormDataChanged',
         'has_wav_file' => 'setHasWavFile',
         'holder' => 'setHolder',
@@ -583,6 +587,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'folder_name' => 'getFolderName',
         'folders' => 'getFolders',
         'has_comments' => 'getHasComments',
+        'has_document_template_library' => 'getHasDocumentTemplateLibrary',
         'has_form_data_changed' => 'getHasFormDataChanged',
         'has_wav_file' => 'getHasWavFile',
         'holder' => 'getHolder',
@@ -749,6 +754,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         $this->container['folder_name'] = isset($data['folder_name']) ? $data['folder_name'] : null;
         $this->container['folders'] = isset($data['folders']) ? $data['folders'] : null;
         $this->container['has_comments'] = isset($data['has_comments']) ? $data['has_comments'] : null;
+        $this->container['has_document_template_library'] = isset($data['has_document_template_library']) ? $data['has_document_template_library'] : null;
         $this->container['has_form_data_changed'] = isset($data['has_form_data_changed']) ? $data['has_form_data_changed'] : null;
         $this->container['has_wav_file'] = isset($data['has_wav_file']) ? $data['has_wav_file'] : null;
         $this->container['holder'] = isset($data['holder']) ? $data['holder'] : null;
@@ -2140,6 +2146,30 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     public function setHasComments($has_comments)
     {
         $this->container['has_comments'] = $has_comments;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_document_template_library
+     *
+     * @return ?string
+     */
+    public function getHasDocumentTemplateLibrary()
+    {
+        return $this->container['has_document_template_library'];
+    }
+
+    /**
+     * Sets has_document_template_library
+     *
+     * @param ?string $has_document_template_library 
+     *
+     * @return $this
+     */
+    public function setHasDocumentTemplateLibrary($has_document_template_library)
+    {
+        $this->container['has_document_template_library'] = $has_document_template_library;
 
         return $this;
     }

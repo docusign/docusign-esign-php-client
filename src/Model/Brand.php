@@ -73,7 +73,7 @@ class Brand implements ModelInterface, ArrayAccess
         'is_sending_default' => '?bool',
         'is_signing_default' => '?bool',
         'landing_pages' => '\DocuSign\eSign\Model\NameValue[]',
-        'links' => '\DocuSign\eSign\Model\BrandLink[]',
+        'links' => '?string',
         'logos' => '\DocuSign\eSign\Model\BrandLogos',
         'organization_brand_logo' => '?string',
         'resources' => '\DocuSign\eSign\Model\BrandResourceUrls'
@@ -618,7 +618,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \DocuSign\eSign\Model\BrandLink[]
+     * @return ?string
      */
     public function getLinks()
     {
@@ -628,7 +628,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \DocuSign\eSign\Model\BrandLink[] $links 
+     * @param ?string $links 
      *
      * @return $this
      */

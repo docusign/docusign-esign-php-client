@@ -68,6 +68,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_access_to_all_account_agreements' => '?string',
         'allow_access_to_all_account_agreements_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_auto_tagging' => '?string',
+        'allowed_document_template_library_access' => '?string',
+        'allowed_document_template_library_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allowed_orchestration_access' => '?string',
         'allowed_orchestration_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_envelope_transfer_to' => '?string',
@@ -146,6 +148,10 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'enable_vaulting' => '?string',
         'enable_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'express_send_only' => '?string',
+        'is_managed_by_scim' => '?string',
+        'is_managed_by_scim_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'is_membership_managed_by_scim' => '?string',
+        'is_membership_managed_by_scim_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'locale' => '?string',
         'locale_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'locale_policy' => '\DocuSign\eSign\Model\LocalePolicy',
@@ -219,6 +225,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_access_to_all_account_agreements' => null,
         'allow_access_to_all_account_agreements_metadata' => null,
         'allow_auto_tagging' => null,
+        'allowed_document_template_library_access' => null,
+        'allowed_document_template_library_access_metadata' => null,
         'allowed_orchestration_access' => null,
         'allowed_orchestration_access_metadata' => null,
         'allow_envelope_transfer_to' => null,
@@ -297,6 +305,10 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'enable_vaulting' => null,
         'enable_vaulting_metadata' => null,
         'express_send_only' => null,
+        'is_managed_by_scim' => null,
+        'is_managed_by_scim_metadata' => null,
+        'is_membership_managed_by_scim' => null,
+        'is_membership_managed_by_scim_metadata' => null,
         'locale' => null,
         'locale_metadata' => null,
         'locale_policy' => null,
@@ -391,6 +403,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_access_to_all_account_agreements' => 'allowAccessToAllAccountAgreements',
         'allow_access_to_all_account_agreements_metadata' => 'allowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging' => 'allowAutoTagging',
+        'allowed_document_template_library_access' => 'allowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata' => 'allowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access' => 'allowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'allowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to' => 'allowEnvelopeTransferTo',
@@ -469,6 +483,10 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'enable_vaulting' => 'enableVaulting',
         'enable_vaulting_metadata' => 'enableVaultingMetadata',
         'express_send_only' => 'expressSendOnly',
+        'is_managed_by_scim' => 'isManagedByScim',
+        'is_managed_by_scim_metadata' => 'isManagedByScimMetadata',
+        'is_membership_managed_by_scim' => 'isMembershipManagedByScim',
+        'is_membership_managed_by_scim_metadata' => 'isMembershipManagedByScimMetadata',
         'locale' => 'locale',
         'locale_metadata' => 'localeMetadata',
         'locale_policy' => 'localePolicy',
@@ -542,6 +560,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_access_to_all_account_agreements' => 'setAllowAccessToAllAccountAgreements',
         'allow_access_to_all_account_agreements_metadata' => 'setAllowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging' => 'setAllowAutoTagging',
+        'allowed_document_template_library_access' => 'setAllowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata' => 'setAllowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access' => 'setAllowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'setAllowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to' => 'setAllowEnvelopeTransferTo',
@@ -620,6 +640,10 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'enable_vaulting' => 'setEnableVaulting',
         'enable_vaulting_metadata' => 'setEnableVaultingMetadata',
         'express_send_only' => 'setExpressSendOnly',
+        'is_managed_by_scim' => 'setIsManagedByScim',
+        'is_managed_by_scim_metadata' => 'setIsManagedByScimMetadata',
+        'is_membership_managed_by_scim' => 'setIsMembershipManagedByScim',
+        'is_membership_managed_by_scim_metadata' => 'setIsMembershipManagedByScimMetadata',
         'locale' => 'setLocale',
         'locale_metadata' => 'setLocaleMetadata',
         'locale_policy' => 'setLocalePolicy',
@@ -693,6 +717,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'allow_access_to_all_account_agreements' => 'getAllowAccessToAllAccountAgreements',
         'allow_access_to_all_account_agreements_metadata' => 'getAllowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging' => 'getAllowAutoTagging',
+        'allowed_document_template_library_access' => 'getAllowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata' => 'getAllowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access' => 'getAllowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'getAllowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to' => 'getAllowEnvelopeTransferTo',
@@ -771,6 +797,10 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         'enable_vaulting' => 'getEnableVaulting',
         'enable_vaulting_metadata' => 'getEnableVaultingMetadata',
         'express_send_only' => 'getExpressSendOnly',
+        'is_managed_by_scim' => 'getIsManagedByScim',
+        'is_managed_by_scim_metadata' => 'getIsManagedByScimMetadata',
+        'is_membership_managed_by_scim' => 'getIsMembershipManagedByScim',
+        'is_membership_managed_by_scim_metadata' => 'getIsMembershipManagedByScimMetadata',
         'locale' => 'getLocale',
         'locale_metadata' => 'getLocaleMetadata',
         'locale_policy' => 'getLocalePolicy',
@@ -898,6 +928,8 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_access_to_all_account_agreements'] = isset($data['allow_access_to_all_account_agreements']) ? $data['allow_access_to_all_account_agreements'] : null;
         $this->container['allow_access_to_all_account_agreements_metadata'] = isset($data['allow_access_to_all_account_agreements_metadata']) ? $data['allow_access_to_all_account_agreements_metadata'] : null;
         $this->container['allow_auto_tagging'] = isset($data['allow_auto_tagging']) ? $data['allow_auto_tagging'] : null;
+        $this->container['allowed_document_template_library_access'] = isset($data['allowed_document_template_library_access']) ? $data['allowed_document_template_library_access'] : null;
+        $this->container['allowed_document_template_library_access_metadata'] = isset($data['allowed_document_template_library_access_metadata']) ? $data['allowed_document_template_library_access_metadata'] : null;
         $this->container['allowed_orchestration_access'] = isset($data['allowed_orchestration_access']) ? $data['allowed_orchestration_access'] : null;
         $this->container['allowed_orchestration_access_metadata'] = isset($data['allowed_orchestration_access_metadata']) ? $data['allowed_orchestration_access_metadata'] : null;
         $this->container['allow_envelope_transfer_to'] = isset($data['allow_envelope_transfer_to']) ? $data['allow_envelope_transfer_to'] : null;
@@ -976,6 +1008,10 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_vaulting'] = isset($data['enable_vaulting']) ? $data['enable_vaulting'] : null;
         $this->container['enable_vaulting_metadata'] = isset($data['enable_vaulting_metadata']) ? $data['enable_vaulting_metadata'] : null;
         $this->container['express_send_only'] = isset($data['express_send_only']) ? $data['express_send_only'] : null;
+        $this->container['is_managed_by_scim'] = isset($data['is_managed_by_scim']) ? $data['is_managed_by_scim'] : null;
+        $this->container['is_managed_by_scim_metadata'] = isset($data['is_managed_by_scim_metadata']) ? $data['is_managed_by_scim_metadata'] : null;
+        $this->container['is_membership_managed_by_scim'] = isset($data['is_membership_managed_by_scim']) ? $data['is_membership_managed_by_scim'] : null;
+        $this->container['is_membership_managed_by_scim_metadata'] = isset($data['is_membership_managed_by_scim_metadata']) ? $data['is_membership_managed_by_scim_metadata'] : null;
         $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
         $this->container['locale_metadata'] = isset($data['locale_metadata']) ? $data['locale_metadata'] : null;
         $this->container['locale_policy'] = isset($data['locale_policy']) ? $data['locale_policy'] : null;
@@ -1247,6 +1283,54 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowAutoTagging($allow_auto_tagging)
     {
         $this->container['allow_auto_tagging'] = $allow_auto_tagging;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_document_template_library_access
+     *
+     * @return ?string
+     */
+    public function getAllowedDocumentTemplateLibraryAccess()
+    {
+        return $this->container['allowed_document_template_library_access'];
+    }
+
+    /**
+     * Sets allowed_document_template_library_access
+     *
+     * @param ?string $allowed_document_template_library_access 
+     *
+     * @return $this
+     */
+    public function setAllowedDocumentTemplateLibraryAccess($allowed_document_template_library_access)
+    {
+        $this->container['allowed_document_template_library_access'] = $allowed_document_template_library_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_document_template_library_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowedDocumentTemplateLibraryAccessMetadata()
+    {
+        return $this->container['allowed_document_template_library_access_metadata'];
+    }
+
+    /**
+     * Sets allowed_document_template_library_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_document_template_library_access_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowedDocumentTemplateLibraryAccessMetadata($allowed_document_template_library_access_metadata)
+    {
+        $this->container['allowed_document_template_library_access_metadata'] = $allowed_document_template_library_access_metadata;
 
         return $this;
     }
@@ -3119,6 +3203,102 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
     public function setExpressSendOnly($express_send_only)
     {
         $this->container['express_send_only'] = $express_send_only;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_managed_by_scim
+     *
+     * @return ?string
+     */
+    public function getIsManagedByScim()
+    {
+        return $this->container['is_managed_by_scim'];
+    }
+
+    /**
+     * Sets is_managed_by_scim
+     *
+     * @param ?string $is_managed_by_scim 
+     *
+     * @return $this
+     */
+    public function setIsManagedByScim($is_managed_by_scim)
+    {
+        $this->container['is_managed_by_scim'] = $is_managed_by_scim;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_managed_by_scim_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getIsManagedByScimMetadata()
+    {
+        return $this->container['is_managed_by_scim_metadata'];
+    }
+
+    /**
+     * Sets is_managed_by_scim_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $is_managed_by_scim_metadata 
+     *
+     * @return $this
+     */
+    public function setIsManagedByScimMetadata($is_managed_by_scim_metadata)
+    {
+        $this->container['is_managed_by_scim_metadata'] = $is_managed_by_scim_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_membership_managed_by_scim
+     *
+     * @return ?string
+     */
+    public function getIsMembershipManagedByScim()
+    {
+        return $this->container['is_membership_managed_by_scim'];
+    }
+
+    /**
+     * Sets is_membership_managed_by_scim
+     *
+     * @param ?string $is_membership_managed_by_scim 
+     *
+     * @return $this
+     */
+    public function setIsMembershipManagedByScim($is_membership_managed_by_scim)
+    {
+        $this->container['is_membership_managed_by_scim'] = $is_membership_managed_by_scim;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_membership_managed_by_scim_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getIsMembershipManagedByScimMetadata()
+    {
+        return $this->container['is_membership_managed_by_scim_metadata'];
+    }
+
+    /**
+     * Sets is_membership_managed_by_scim_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $is_membership_managed_by_scim_metadata 
+     *
+     * @return $this
+     */
+    public function setIsMembershipManagedByScimMetadata($is_membership_managed_by_scim_metadata)
+    {
+        $this->container['is_membership_managed_by_scim_metadata'] = $is_membership_managed_by_scim_metadata;
 
         return $this;
     }

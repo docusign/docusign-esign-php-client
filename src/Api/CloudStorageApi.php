@@ -207,6 +207,33 @@ class ListOptions
         return $this;
     }
     /**
+      * $sky_drive_skip_token 
+      * @var ?string
+      */
+    protected ?string $sky_drive_skip_token = null;
+
+    /**
+     * Gets sky_drive_skip_token
+     *
+     * @return ?string
+     */
+    public function getSkyDriveSkipToken(): ?string
+    {
+        return $this->sky_drive_skip_token;
+    }
+
+    /**
+     * Sets sky_drive_skip_token
+     * @param ?string $sky_drive_skip_token 
+     *
+     * @return self
+     */
+    public function setSkyDriveSkipToken(?string $sky_drive_skip_token): self
+    {
+        $this->sky_drive_skip_token = $sky_drive_skip_token;
+        return $this;
+    }
+    /**
       * $start_position Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.
       * @var ?string
       */
@@ -653,6 +680,9 @@ class CloudStorageApi
             }
             if ($options->getSearchText() != 'null') {
                 $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
+            }
+            if ($options->getSkyDriveSkipToken() != 'null') {
+                $queryParams['sky_drive_skip_token'] = $this->apiClient->getSerializer()->toQueryValue($options->getSkyDriveSkipToken());
             }
             if ($options->getStartPosition() != 'null') {
                 $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());

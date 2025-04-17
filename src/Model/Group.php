@@ -66,6 +66,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => '?string',
         'group_name' => '?string',
         'group_type' => '?string',
+        'is_managed_by_scim' => '?string',
         'last_modified_on' => '?string',
         'permission_profile_id' => '?string',
         'users' => '\DocuSign\eSign\Model\UserInfo[]',
@@ -84,6 +85,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => null,
         'group_name' => null,
         'group_type' => null,
+        'is_managed_by_scim' => null,
         'last_modified_on' => null,
         'permission_profile_id' => null,
         'users' => null,
@@ -123,6 +125,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => 'groupId',
         'group_name' => 'groupName',
         'group_type' => 'groupType',
+        'is_managed_by_scim' => 'isManagedByScim',
         'last_modified_on' => 'lastModifiedOn',
         'permission_profile_id' => 'permissionProfileId',
         'users' => 'users',
@@ -141,6 +144,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => 'setGroupId',
         'group_name' => 'setGroupName',
         'group_type' => 'setGroupType',
+        'is_managed_by_scim' => 'setIsManagedByScim',
         'last_modified_on' => 'setLastModifiedOn',
         'permission_profile_id' => 'setPermissionProfileId',
         'users' => 'setUsers',
@@ -159,6 +163,7 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => 'getGroupId',
         'group_name' => 'getGroupName',
         'group_type' => 'getGroupType',
+        'is_managed_by_scim' => 'getIsManagedByScim',
         'last_modified_on' => 'getLastModifiedOn',
         'permission_profile_id' => 'getPermissionProfileId',
         'users' => 'getUsers',
@@ -231,6 +236,7 @@ class Group implements ModelInterface, ArrayAccess
         $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
         $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
+        $this->container['is_managed_by_scim'] = isset($data['is_managed_by_scim']) ? $data['is_managed_by_scim'] : null;
         $this->container['last_modified_on'] = isset($data['last_modified_on']) ? $data['last_modified_on'] : null;
         $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
@@ -401,6 +407,30 @@ class Group implements ModelInterface, ArrayAccess
     public function setGroupType($group_type)
     {
         $this->container['group_type'] = $group_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_managed_by_scim
+     *
+     * @return ?string
+     */
+    public function getIsManagedByScim()
+    {
+        return $this->container['is_managed_by_scim'];
+    }
+
+    /**
+     * Sets is_managed_by_scim
+     *
+     * @param ?string $is_managed_by_scim 
+     *
+     * @return $this
+     */
+    public function setIsManagedByScim($is_managed_by_scim)
+    {
+        $this->container['is_managed_by_scim'] = $is_managed_by_scim;
 
         return $this;
     }

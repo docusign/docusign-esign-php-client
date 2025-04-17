@@ -78,10 +78,14 @@ class UserInformation implements ModelInterface, ArrayAccess
         'initials_image_uri' => '?string',
         'is_admin' => '?string',
         'is_alternate_admin' => '?string',
+        'is_managed_by_scim' => '?string',
+        'is_membership_managed_by_scim' => '?string',
         'is_nar_enabled' => '?string',
         'job_title' => '?string',
         'last_login' => '?string',
         'last_name' => '?string',
+        'license_status' => '?string',
+        'license_type' => '?string',
         'login_status' => '?string',
         'middle_name' => '?string',
         'password' => '?string',
@@ -130,10 +134,14 @@ class UserInformation implements ModelInterface, ArrayAccess
         'initials_image_uri' => null,
         'is_admin' => null,
         'is_alternate_admin' => null,
+        'is_managed_by_scim' => null,
+        'is_membership_managed_by_scim' => null,
         'is_nar_enabled' => null,
         'job_title' => null,
         'last_login' => null,
         'last_name' => null,
+        'license_status' => null,
+        'license_type' => null,
         'login_status' => null,
         'middle_name' => null,
         'password' => null,
@@ -203,10 +211,14 @@ class UserInformation implements ModelInterface, ArrayAccess
         'initials_image_uri' => 'initialsImageUri',
         'is_admin' => 'isAdmin',
         'is_alternate_admin' => 'isAlternateAdmin',
+        'is_managed_by_scim' => 'isManagedByScim',
+        'is_membership_managed_by_scim' => 'isMembershipManagedByScim',
         'is_nar_enabled' => 'isNAREnabled',
         'job_title' => 'jobTitle',
         'last_login' => 'lastLogin',
         'last_name' => 'lastName',
+        'license_status' => 'licenseStatus',
+        'license_type' => 'licenseType',
         'login_status' => 'loginStatus',
         'middle_name' => 'middleName',
         'password' => 'password',
@@ -255,10 +267,14 @@ class UserInformation implements ModelInterface, ArrayAccess
         'initials_image_uri' => 'setInitialsImageUri',
         'is_admin' => 'setIsAdmin',
         'is_alternate_admin' => 'setIsAlternateAdmin',
+        'is_managed_by_scim' => 'setIsManagedByScim',
+        'is_membership_managed_by_scim' => 'setIsMembershipManagedByScim',
         'is_nar_enabled' => 'setIsNarEnabled',
         'job_title' => 'setJobTitle',
         'last_login' => 'setLastLogin',
         'last_name' => 'setLastName',
+        'license_status' => 'setLicenseStatus',
+        'license_type' => 'setLicenseType',
         'login_status' => 'setLoginStatus',
         'middle_name' => 'setMiddleName',
         'password' => 'setPassword',
@@ -307,10 +323,14 @@ class UserInformation implements ModelInterface, ArrayAccess
         'initials_image_uri' => 'getInitialsImageUri',
         'is_admin' => 'getIsAdmin',
         'is_alternate_admin' => 'getIsAlternateAdmin',
+        'is_managed_by_scim' => 'getIsManagedByScim',
+        'is_membership_managed_by_scim' => 'getIsMembershipManagedByScim',
         'is_nar_enabled' => 'getIsNarEnabled',
         'job_title' => 'getJobTitle',
         'last_login' => 'getLastLogin',
         'last_name' => 'getLastName',
+        'license_status' => 'getLicenseStatus',
+        'license_type' => 'getLicenseType',
         'login_status' => 'getLoginStatus',
         'middle_name' => 'getMiddleName',
         'password' => 'getPassword',
@@ -413,10 +433,14 @@ class UserInformation implements ModelInterface, ArrayAccess
         $this->container['initials_image_uri'] = isset($data['initials_image_uri']) ? $data['initials_image_uri'] : null;
         $this->container['is_admin'] = isset($data['is_admin']) ? $data['is_admin'] : null;
         $this->container['is_alternate_admin'] = isset($data['is_alternate_admin']) ? $data['is_alternate_admin'] : null;
+        $this->container['is_managed_by_scim'] = isset($data['is_managed_by_scim']) ? $data['is_managed_by_scim'] : null;
+        $this->container['is_membership_managed_by_scim'] = isset($data['is_membership_managed_by_scim']) ? $data['is_membership_managed_by_scim'] : null;
         $this->container['is_nar_enabled'] = isset($data['is_nar_enabled']) ? $data['is_nar_enabled'] : null;
         $this->container['job_title'] = isset($data['job_title']) ? $data['job_title'] : null;
         $this->container['last_login'] = isset($data['last_login']) ? $data['last_login'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['license_status'] = isset($data['license_status']) ? $data['license_status'] : null;
+        $this->container['license_type'] = isset($data['license_type']) ? $data['license_type'] : null;
         $this->container['login_status'] = isset($data['login_status']) ? $data['login_status'] : null;
         $this->container['middle_name'] = isset($data['middle_name']) ? $data['middle_name'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
@@ -898,6 +922,54 @@ class UserInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets is_managed_by_scim
+     *
+     * @return ?string
+     */
+    public function getIsManagedByScim()
+    {
+        return $this->container['is_managed_by_scim'];
+    }
+
+    /**
+     * Sets is_managed_by_scim
+     *
+     * @param ?string $is_managed_by_scim 
+     *
+     * @return $this
+     */
+    public function setIsManagedByScim($is_managed_by_scim)
+    {
+        $this->container['is_managed_by_scim'] = $is_managed_by_scim;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_membership_managed_by_scim
+     *
+     * @return ?string
+     */
+    public function getIsMembershipManagedByScim()
+    {
+        return $this->container['is_membership_managed_by_scim'];
+    }
+
+    /**
+     * Sets is_membership_managed_by_scim
+     *
+     * @param ?string $is_membership_managed_by_scim 
+     *
+     * @return $this
+     */
+    public function setIsMembershipManagedByScim($is_membership_managed_by_scim)
+    {
+        $this->container['is_membership_managed_by_scim'] = $is_membership_managed_by_scim;
+
+        return $this;
+    }
+
+    /**
      * Gets is_nar_enabled
      *
      * @return ?string
@@ -989,6 +1061,54 @@ class UserInformation implements ModelInterface, ArrayAccess
     public function setLastName($last_name)
     {
         $this->container['last_name'] = $last_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets license_status
+     *
+     * @return ?string
+     */
+    public function getLicenseStatus()
+    {
+        return $this->container['license_status'];
+    }
+
+    /**
+     * Sets license_status
+     *
+     * @param ?string $license_status 
+     *
+     * @return $this
+     */
+    public function setLicenseStatus($license_status)
+    {
+        $this->container['license_status'] = $license_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets license_type
+     *
+     * @return ?string
+     */
+    public function getLicenseType()
+    {
+        return $this->container['license_type'];
+    }
+
+    /**
+     * Sets license_type
+     *
+     * @param ?string $license_type 
+     *
+     * @return $this
+     */
+    public function setLicenseType($license_type)
+    {
+        $this->container['license_type'] = $license_type;
 
         return $this;
     }

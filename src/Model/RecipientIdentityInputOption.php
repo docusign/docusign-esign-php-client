@@ -61,6 +61,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => '?string',
         'phone_number_list' => '\DocuSign\eSign\Model\RecipientIdentityPhoneNumber[]',
+        'string_value' => '?string',
         'value_type' => '?string'
     ];
 
@@ -72,6 +73,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'name' => null,
         'phone_number_list' => null,
+        'string_value' => null,
         'value_type' => null
     ];
 
@@ -104,6 +106,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'name' => 'name',
         'phone_number_list' => 'phoneNumberList',
+        'string_value' => 'stringValue',
         'value_type' => 'valueType'
     ];
 
@@ -115,6 +118,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     protected static $setters = [
         'name' => 'setName',
         'phone_number_list' => 'setPhoneNumberList',
+        'string_value' => 'setStringValue',
         'value_type' => 'setValueType'
     ];
 
@@ -126,6 +130,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     protected static $getters = [
         'name' => 'getName',
         'phone_number_list' => 'getPhoneNumberList',
+        'string_value' => 'getStringValue',
         'value_type' => 'getValueType'
     ];
 
@@ -191,6 +196,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['phone_number_list'] = isset($data['phone_number_list']) ? $data['phone_number_list'] : null;
+        $this->container['string_value'] = isset($data['string_value']) ? $data['string_value'] : null;
         $this->container['value_type'] = isset($data['value_type']) ? $data['value_type'] : null;
     }
 
@@ -262,6 +268,30 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     public function setPhoneNumberList($phone_number_list)
     {
         $this->container['phone_number_list'] = $phone_number_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets string_value
+     *
+     * @return ?string
+     */
+    public function getStringValue()
+    {
+        return $this->container['string_value'];
+    }
+
+    /**
+     * Sets string_value
+     *
+     * @param ?string $string_value 
+     *
+     * @return $this
+     */
+    public function setStringValue($string_value)
+    {
+        $this->container['string_value'] = $string_value;
 
         return $this;
     }

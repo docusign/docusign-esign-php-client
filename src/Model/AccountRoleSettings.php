@@ -80,6 +80,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allowed_clickwraps_access' => '?string',
         'allowed_clickwraps_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allowed_document_template_library_access' => '?string',
+        'allowed_document_template_library_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allowed_orchestration_access' => '?string',
         'allowed_orchestration_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allowed_template_access' => '?string',
@@ -177,6 +179,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => null,
         'allowed_clickwraps_access' => null,
         'allowed_clickwraps_access_metadata' => null,
+        'allowed_document_template_library_access' => null,
+        'allowed_document_template_library_access_metadata' => null,
         'allowed_orchestration_access' => null,
         'allowed_orchestration_access_metadata' => null,
         'allowed_template_access' => null,
@@ -295,6 +299,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => 'allowedAddressBookAccessMetadata',
         'allowed_clickwraps_access' => 'allowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata' => 'allowedClickwrapsAccessMetadata',
+        'allowed_document_template_library_access' => 'allowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata' => 'allowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access' => 'allowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'allowedOrchestrationAccessMetadata',
         'allowed_template_access' => 'allowedTemplateAccess',
@@ -392,6 +398,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => 'setAllowedAddressBookAccessMetadata',
         'allowed_clickwraps_access' => 'setAllowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata' => 'setAllowedClickwrapsAccessMetadata',
+        'allowed_document_template_library_access' => 'setAllowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata' => 'setAllowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access' => 'setAllowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'setAllowedOrchestrationAccessMetadata',
         'allowed_template_access' => 'setAllowedTemplateAccess',
@@ -489,6 +497,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allowed_address_book_access_metadata' => 'getAllowedAddressBookAccessMetadata',
         'allowed_clickwraps_access' => 'getAllowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata' => 'getAllowedClickwrapsAccessMetadata',
+        'allowed_document_template_library_access' => 'getAllowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata' => 'getAllowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access' => 'getAllowedOrchestrationAccess',
         'allowed_orchestration_access_metadata' => 'getAllowedOrchestrationAccessMetadata',
         'allowed_template_access' => 'getAllowedTemplateAccess',
@@ -640,6 +650,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['allowed_address_book_access_metadata'] = isset($data['allowed_address_book_access_metadata']) ? $data['allowed_address_book_access_metadata'] : null;
         $this->container['allowed_clickwraps_access'] = isset($data['allowed_clickwraps_access']) ? $data['allowed_clickwraps_access'] : null;
         $this->container['allowed_clickwraps_access_metadata'] = isset($data['allowed_clickwraps_access_metadata']) ? $data['allowed_clickwraps_access_metadata'] : null;
+        $this->container['allowed_document_template_library_access'] = isset($data['allowed_document_template_library_access']) ? $data['allowed_document_template_library_access'] : null;
+        $this->container['allowed_document_template_library_access_metadata'] = isset($data['allowed_document_template_library_access_metadata']) ? $data['allowed_document_template_library_access_metadata'] : null;
         $this->container['allowed_orchestration_access'] = isset($data['allowed_orchestration_access']) ? $data['allowed_orchestration_access'] : null;
         $this->container['allowed_orchestration_access_metadata'] = isset($data['allowed_orchestration_access_metadata']) ? $data['allowed_orchestration_access_metadata'] : null;
         $this->container['allowed_template_access'] = isset($data['allowed_template_access']) ? $data['allowed_template_access'] : null;
@@ -1211,6 +1223,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     public function setAllowedClickwrapsAccessMetadata($allowed_clickwraps_access_metadata)
     {
         $this->container['allowed_clickwraps_access_metadata'] = $allowed_clickwraps_access_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_document_template_library_access
+     *
+     * @return ?string
+     */
+    public function getAllowedDocumentTemplateLibraryAccess()
+    {
+        return $this->container['allowed_document_template_library_access'];
+    }
+
+    /**
+     * Sets allowed_document_template_library_access
+     *
+     * @param ?string $allowed_document_template_library_access 
+     *
+     * @return $this
+     */
+    public function setAllowedDocumentTemplateLibraryAccess($allowed_document_template_library_access)
+    {
+        $this->container['allowed_document_template_library_access'] = $allowed_document_template_library_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_document_template_library_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowedDocumentTemplateLibraryAccessMetadata()
+    {
+        return $this->container['allowed_document_template_library_access_metadata'];
+    }
+
+    /**
+     * Sets allowed_document_template_library_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_document_template_library_access_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowedDocumentTemplateLibraryAccessMetadata($allowed_document_template_library_access_metadata)
+    {
+        $this->container['allowed_document_template_library_access_metadata'] = $allowed_document_template_library_access_metadata;
 
         return $this;
     }

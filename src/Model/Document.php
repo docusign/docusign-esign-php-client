@@ -68,6 +68,8 @@ class Document implements ModelInterface, ArrayAccess
         'document_base64' => '?string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
         'document_id' => '?string',
+        'document_template_agreement_type_id' => '?string',
+        'document_template_id' => '?string',
         'encrypted_with_key_manager' => '?string',
         'file_extension' => '?string',
         'file_format_hint' => '?string',
@@ -104,6 +106,8 @@ class Document implements ModelInterface, ArrayAccess
         'document_base64' => null,
         'document_fields' => null,
         'document_id' => null,
+        'document_template_agreement_type_id' => null,
+        'document_template_id' => null,
         'encrypted_with_key_manager' => null,
         'file_extension' => null,
         'file_format_hint' => null,
@@ -161,6 +165,8 @@ class Document implements ModelInterface, ArrayAccess
         'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
         'document_id' => 'documentId',
+        'document_template_agreement_type_id' => 'documentTemplateAgreementTypeId',
+        'document_template_id' => 'documentTemplateId',
         'encrypted_with_key_manager' => 'encryptedWithKeyManager',
         'file_extension' => 'fileExtension',
         'file_format_hint' => 'fileFormatHint',
@@ -197,6 +203,8 @@ class Document implements ModelInterface, ArrayAccess
         'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
         'document_id' => 'setDocumentId',
+        'document_template_agreement_type_id' => 'setDocumentTemplateAgreementTypeId',
+        'document_template_id' => 'setDocumentTemplateId',
         'encrypted_with_key_manager' => 'setEncryptedWithKeyManager',
         'file_extension' => 'setFileExtension',
         'file_format_hint' => 'setFileFormatHint',
@@ -233,6 +241,8 @@ class Document implements ModelInterface, ArrayAccess
         'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
         'document_id' => 'getDocumentId',
+        'document_template_agreement_type_id' => 'getDocumentTemplateAgreementTypeId',
+        'document_template_id' => 'getDocumentTemplateId',
         'encrypted_with_key_manager' => 'getEncryptedWithKeyManager',
         'file_extension' => 'getFileExtension',
         'file_format_hint' => 'getFileFormatHint',
@@ -323,6 +333,8 @@ class Document implements ModelInterface, ArrayAccess
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
+        $this->container['document_template_agreement_type_id'] = isset($data['document_template_agreement_type_id']) ? $data['document_template_agreement_type_id'] : null;
+        $this->container['document_template_id'] = isset($data['document_template_id']) ? $data['document_template_id'] : null;
         $this->container['encrypted_with_key_manager'] = isset($data['encrypted_with_key_manager']) ? $data['encrypted_with_key_manager'] : null;
         $this->container['file_extension'] = isset($data['file_extension']) ? $data['file_extension'] : null;
         $this->container['file_format_hint'] = isset($data['file_format_hint']) ? $data['file_format_hint'] : null;
@@ -557,6 +569,54 @@ class Document implements ModelInterface, ArrayAccess
     public function setDocumentId($document_id)
     {
         $this->container['document_id'] = $document_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_template_agreement_type_id
+     *
+     * @return ?string
+     */
+    public function getDocumentTemplateAgreementTypeId()
+    {
+        return $this->container['document_template_agreement_type_id'];
+    }
+
+    /**
+     * Sets document_template_agreement_type_id
+     *
+     * @param ?string $document_template_agreement_type_id 
+     *
+     * @return $this
+     */
+    public function setDocumentTemplateAgreementTypeId($document_template_agreement_type_id)
+    {
+        $this->container['document_template_agreement_type_id'] = $document_template_agreement_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_template_id
+     *
+     * @return ?string
+     */
+    public function getDocumentTemplateId()
+    {
+        return $this->container['document_template_id'];
+    }
+
+    /**
+     * Sets document_template_id
+     *
+     * @param ?string $document_template_id 
+     *
+     * @return $this
+     */
+    public function setDocumentTemplateId($document_template_id)
+    {
+        $this->container['document_template_id'] = $document_template_id;
 
         return $this;
     }
