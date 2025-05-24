@@ -187,7 +187,7 @@ class Ssn4InformationInput implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['display_level_code'] = isset($data['display_level_code']) ? $data['display_level_code'] : null;
         $this->container['receive_in_response'] = isset($data['receive_in_response']) ? $data['receive_in_response'] : null;

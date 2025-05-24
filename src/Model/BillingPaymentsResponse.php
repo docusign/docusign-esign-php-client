@@ -188,7 +188,7 @@ class BillingPaymentsResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['billing_payments'] = isset($data['billing_payments']) ? $data['billing_payments'] : null;
         $this->container['next_uri'] = isset($data['next_uri']) ? $data['next_uri'] : null;

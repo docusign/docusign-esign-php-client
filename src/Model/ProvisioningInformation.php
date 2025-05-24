@@ -207,7 +207,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['default_connection_id'] = isset($data['default_connection_id']) ? $data['default_connection_id'] : null;
         $this->container['default_plan_id'] = isset($data['default_plan_id']) ? $data['default_plan_id'] : null;

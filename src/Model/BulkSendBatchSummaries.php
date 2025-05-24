@@ -233,7 +233,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['batch_size_limit'] = isset($data['batch_size_limit']) ? $data['batch_size_limit'] : null;
         $this->container['bulk_batch_summaries'] = isset($data['bulk_batch_summaries']) ? $data['bulk_batch_summaries'] : null;

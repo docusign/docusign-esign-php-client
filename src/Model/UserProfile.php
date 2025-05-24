@@ -232,7 +232,7 @@ class UserProfile implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['authentication_methods'] = isset($data['authentication_methods']) ? $data['authentication_methods'] : null;

@@ -193,7 +193,7 @@ class RecipientAdditionalNotification implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['secondary_delivery_method'] = isset($data['secondary_delivery_method']) ? $data['secondary_delivery_method'] : null;

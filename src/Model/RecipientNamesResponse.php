@@ -188,7 +188,7 @@ class RecipientNamesResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['multiple_users'] = isset($data['multiple_users']) ? $data['multiple_users'] : null;
         $this->container['recipient_names'] = isset($data['recipient_names']) ? $data['recipient_names'] : null;

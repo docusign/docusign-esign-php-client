@@ -377,7 +377,7 @@ class EnvelopeTemplateResult implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_markup'] = isset($data['allow_markup']) ? $data['allow_markup'] : null;
         $this->container['allow_reassign'] = isset($data['allow_reassign']) ? $data['allow_reassign'] : null;
@@ -1860,7 +1860,7 @@ class EnvelopeTemplateResult implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -1870,7 +1870,7 @@ class EnvelopeTemplateResult implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -1881,7 +1881,7 @@ class EnvelopeTemplateResult implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -1895,7 +1895,7 @@ class EnvelopeTemplateResult implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

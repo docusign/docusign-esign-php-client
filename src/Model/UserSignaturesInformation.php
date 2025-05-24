@@ -177,7 +177,7 @@ class UserSignaturesInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['user_signatures'] = isset($data['user_signatures']) ? $data['user_signatures'] : null;
     }

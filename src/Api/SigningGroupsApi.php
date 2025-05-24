@@ -134,7 +134,7 @@ class SigningGroupsApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -192,7 +192,7 @@ class SigningGroupsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\SigningGroupInformation
      */
-    public function callList($account_id, \DocuSign\eSign\Api\SigningGroupsApi\ListOptions $options = null)
+    public function callList($account_id, ?\DocuSign\eSign\Api\SigningGroupsApi\ListOptions $options = null)
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -209,7 +209,7 @@ class SigningGroupsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\SigningGroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, \DocuSign\eSign\Api\SigningGroupsApi\ListOptions $options = null): array
+    public function callListWithHttpInfo($account_id, ?\DocuSign\eSign\Api\SigningGroupsApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

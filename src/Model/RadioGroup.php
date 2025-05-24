@@ -338,7 +338,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['conditional_parent_label'] = isset($data['conditional_parent_label']) ? $data['conditional_parent_label'] : null;
         $this->container['conditional_parent_label_metadata'] = isset($data['conditional_parent_label_metadata']) ? $data['conditional_parent_label_metadata'] : null;

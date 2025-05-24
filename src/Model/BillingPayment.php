@@ -188,7 +188,7 @@ class BillingPayment implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['invoice_id'] = isset($data['invoice_id']) ? $data['invoice_id'] : null;

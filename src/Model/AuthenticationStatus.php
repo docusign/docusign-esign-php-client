@@ -268,7 +268,7 @@ class AuthenticationStatus implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code_result'] = isset($data['access_code_result']) ? $data['access_code_result'] : null;
         $this->container['age_verify_result'] = isset($data['age_verify_result']) ? $data['age_verify_result'] : null;

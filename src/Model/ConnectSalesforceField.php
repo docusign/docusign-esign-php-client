@@ -213,7 +213,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['ds_attribute'] = isset($data['ds_attribute']) ? $data['ds_attribute'] : null;
         $this->container['ds_link'] = isset($data['ds_link']) ? $data['ds_link'] : null;

@@ -178,7 +178,7 @@ class ApiRequestLogsResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['api_request_logs'] = isset($data['api_request_logs']) ? $data['api_request_logs'] : null;
     }

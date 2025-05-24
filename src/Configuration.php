@@ -182,7 +182,7 @@ class Configuration
     /**
      * Constructor
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->tempFolderPath = sys_get_temp_dir();
         if(isset($data["apiKeys"]))

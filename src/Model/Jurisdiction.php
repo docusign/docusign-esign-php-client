@@ -223,7 +223,7 @@ class Jurisdiction implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_system_created_seal'] = isset($data['allow_system_created_seal']) ? $data['allow_system_created_seal'] : null;
         $this->container['allow_user_uploaded_seal'] = isset($data['allow_user_uploaded_seal']) ? $data['allow_user_uploaded_seal'] : null;

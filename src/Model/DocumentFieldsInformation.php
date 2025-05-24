@@ -177,7 +177,7 @@ class DocumentFieldsInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
     }

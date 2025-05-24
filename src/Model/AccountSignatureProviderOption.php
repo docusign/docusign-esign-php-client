@@ -188,7 +188,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['signature_provider_option_display_name'] = isset($data['signature_provider_option_display_name']) ? $data['signature_provider_option_display_name'] : null;
         $this->container['signature_provider_option_id'] = isset($data['signature_provider_option_id']) ? $data['signature_provider_option_id'] : null;

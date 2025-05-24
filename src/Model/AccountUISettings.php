@@ -353,7 +353,7 @@ class AccountUISettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['admin_message'] = isset($data['admin_message']) ? $data['admin_message'] : null;
         $this->container['allow_users_to_edit_shared_access'] = isset($data['allow_users_to_edit_shared_access']) ? $data['allow_users_to_edit_shared_access'] : null;

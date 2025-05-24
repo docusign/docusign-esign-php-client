@@ -208,7 +208,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['modified_by_username'] = isset($data['modified_by_username']) ? $data['modified_by_username'] : null;
         $this->container['modified_date_time'] = isset($data['modified_date_time']) ? $data['modified_date_time'] : null;

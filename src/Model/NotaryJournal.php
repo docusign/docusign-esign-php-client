@@ -202,7 +202,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
         $this->container['document_name'] = isset($data['document_name']) ? $data['document_name'] : null;

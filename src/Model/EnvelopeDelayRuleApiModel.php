@@ -183,7 +183,7 @@ class EnvelopeDelayRuleApiModel implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
         $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;

@@ -192,7 +192,7 @@ class ScheduledSending implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_list_id'] = isset($data['bulk_list_id']) ? $data['bulk_list_id'] : null;
         $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;

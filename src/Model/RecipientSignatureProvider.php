@@ -198,7 +198,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['seal_documents_with_tabs_only'] = isset($data['seal_documents_with_tabs_only']) ? $data['seal_documents_with_tabs_only'] : null;
         $this->container['seal_name'] = isset($data['seal_name']) ? $data['seal_name'] : null;

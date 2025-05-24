@@ -202,7 +202,7 @@ class EnvelopeAttachment implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_control'] = isset($data['access_control']) ? $data['access_control'] : null;
         $this->container['attachment_id'] = isset($data['attachment_id']) ? $data['attachment_id'] : null;

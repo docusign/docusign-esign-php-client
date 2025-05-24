@@ -88,7 +88,7 @@ class ApiClient
      * @param Configuration $config Rest API config for this ApiClient
      * @param OAuth $oAuth OAuth config for this ApiClient
      */
-    public function __construct(Configuration $config = null, OAuth $oAuth = null)
+    public function __construct(?Configuration $config = null, ?OAuth $oAuth = null)
     {
         if ($config === null) {
             $config = Configuration::getDefaultConfiguration();

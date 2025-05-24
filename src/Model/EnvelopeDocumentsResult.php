@@ -182,7 +182,7 @@ class EnvelopeDocumentsResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['envelope_documents'] = isset($data['envelope_documents']) ? $data['envelope_documents'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
