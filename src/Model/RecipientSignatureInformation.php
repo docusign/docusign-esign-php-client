@@ -188,7 +188,7 @@ class RecipientSignatureInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['font_style'] = isset($data['font_style']) ? $data['font_style'] : null;
         $this->container['signature_initials'] = isset($data['signature_initials']) ? $data['signature_initials'] : null;

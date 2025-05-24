@@ -202,7 +202,7 @@ class ServiceInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['build_branch'] = isset($data['build_branch']) ? $data['build_branch'] : null;
         $this->container['build_branch_deployed_date_time'] = isset($data['build_branch_deployed_date_time']) ? $data['build_branch_deployed_date_time'] : null;

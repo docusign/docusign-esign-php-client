@@ -193,7 +193,7 @@ class AuthenticationMethod implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authentication_type'] = isset($data['authentication_type']) ? $data['authentication_type'] : null;
         $this->container['last_provider'] = isset($data['last_provider']) ? $data['last_provider'] : null;

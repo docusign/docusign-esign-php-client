@@ -248,7 +248,7 @@ class Folder implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;

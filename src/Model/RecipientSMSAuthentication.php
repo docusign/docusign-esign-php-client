@@ -183,7 +183,7 @@ class RecipientSMSAuthentication implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['sender_provided_numbers'] = isset($data['sender_provided_numbers']) ? $data['sender_provided_numbers'] : null;
         $this->container['sender_provided_numbers_metadata'] = isset($data['sender_provided_numbers_metadata']) ? $data['sender_provided_numbers_metadata'] : null;

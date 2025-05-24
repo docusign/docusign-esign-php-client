@@ -188,7 +188,7 @@ class Expirations implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['expire_after'] = isset($data['expire_after']) ? $data['expire_after'] : null;
         $this->container['expire_enabled'] = isset($data['expire_enabled']) ? $data['expire_enabled'] : null;

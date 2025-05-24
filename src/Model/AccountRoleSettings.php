@@ -628,7 +628,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_account_management'] = isset($data['allow_account_management']) ? $data['allow_account_management'] : null;
         $this->container['allow_account_management_metadata'] = isset($data['allow_account_management_metadata']) ? $data['allow_account_management_metadata'] : null;

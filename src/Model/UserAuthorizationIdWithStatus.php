@@ -187,7 +187,7 @@ class UserAuthorizationIdWithStatus implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authorization_id'] = isset($data['authorization_id']) ? $data['authorization_id'] : null;
         $this->container['error_message'] = isset($data['error_message']) ? $data['error_message'] : null;

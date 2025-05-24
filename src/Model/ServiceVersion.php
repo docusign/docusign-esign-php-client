@@ -182,7 +182,7 @@ class ServiceVersion implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['version_url'] = isset($data['version_url']) ? $data['version_url'] : null;

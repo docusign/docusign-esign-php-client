@@ -253,7 +253,7 @@ class TemplateRole implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['additional_notifications'] = isset($data['additional_notifications']) ? $data['additional_notifications'] : null;

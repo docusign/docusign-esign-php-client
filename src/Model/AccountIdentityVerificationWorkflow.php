@@ -223,7 +223,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['default_description'] = isset($data['default_description']) ? $data['default_description'] : null;
         $this->container['default_name'] = isset($data['default_name']) ? $data['default_name'] : null;

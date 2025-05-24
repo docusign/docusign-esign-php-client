@@ -173,7 +173,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['add_demo_stamp'] = isset($data['add_demo_stamp']) ? $data['add_demo_stamp'] : null;
         $this->container['allow_multiple_attachments'] = isset($data['allow_multiple_attachments']) ? $data['allow_multiple_attachments'] : null;
@@ -534,7 +534,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -544,7 +544,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -555,7 +555,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -569,7 +569,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

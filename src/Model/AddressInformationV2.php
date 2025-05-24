@@ -145,7 +145,7 @@ class AddressInformationV2 implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
         $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
@@ -352,7 +352,7 @@ class AddressInformationV2 implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -362,7 +362,7 @@ class AddressInformationV2 implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): bool
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -373,7 +373,7 @@ class AddressInformationV2 implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void 
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -387,7 +387,7 @@ class AddressInformationV2 implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
     }

@@ -228,7 +228,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['display_anchor_prefix'] = isset($data['display_anchor_prefix']) ? $data['display_anchor_prefix'] : null;
         $this->container['display_anchors'] = isset($data['display_anchors']) ? $data['display_anchors'] : null;

@@ -193,7 +193,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['amount_reference'] = isset($data['amount_reference']) ? $data['amount_reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;

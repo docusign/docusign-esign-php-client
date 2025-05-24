@@ -188,7 +188,7 @@ class SeatDiscount implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['begin_seat_count'] = isset($data['begin_seat_count']) ? $data['begin_seat_count'] : null;
         $this->container['discount_percent'] = isset($data['discount_percent']) ? $data['discount_percent'] : null;

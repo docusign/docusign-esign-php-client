@@ -197,7 +197,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_balance'] = isset($data['account_balance']) ? $data['account_balance'] : null;
         $this->container['billing_invoices'] = isset($data['billing_invoices']) ? $data['billing_invoices'] : null;

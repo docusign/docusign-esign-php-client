@@ -182,7 +182,7 @@ class ConnectionInstance implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['connection_key'] = isset($data['connection_key']) ? $data['connection_key'] : null;
         $this->container['connection_value'] = isset($data['connection_value']) ? $data['connection_value'] : null;

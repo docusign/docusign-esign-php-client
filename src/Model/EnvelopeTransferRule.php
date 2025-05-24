@@ -223,7 +223,7 @@ class EnvelopeTransferRule implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['carbon_copy_original_owner'] = isset($data['carbon_copy_original_owner']) ? $data['carbon_copy_original_owner'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;

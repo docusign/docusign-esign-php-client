@@ -192,7 +192,7 @@ class EnvelopeViewDocumentSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['show_edit_documents'] = isset($data['show_edit_documents']) ? $data['show_edit_documents'] : null;
         $this->container['show_edit_document_visibility'] = isset($data['show_edit_document_visibility']) ? $data['show_edit_document_visibility'] : null;

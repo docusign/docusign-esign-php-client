@@ -217,7 +217,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_recipient_row'] = isset($data['bulk_recipient_row']) ? $data['bulk_recipient_row'] : null;
         $this->container['bulk_status'] = isset($data['bulk_status']) ? $data['bulk_status'] : null;

@@ -213,7 +213,7 @@ class BulkSendResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
         $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;

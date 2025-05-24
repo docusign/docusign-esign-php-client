@@ -192,7 +192,7 @@ class EnvelopeViewRecipientSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['show_bulk_send'] = isset($data['show_bulk_send']) ? $data['show_bulk_send'] : null;
         $this->container['show_contacts_list'] = isset($data['show_contacts_list']) ? $data['show_contacts_list'] : null;

@@ -237,7 +237,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['action_contract'] = isset($data['action_contract']) ? $data['action_contract'] : null;
         $this->container['action_input_key'] = isset($data['action_input_key']) ? $data['action_input_key'] : null;

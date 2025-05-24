@@ -177,7 +177,7 @@ class ConnectedObjectDetails implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['record_id'] = isset($data['record_id']) ? $data['record_id'] : null;
     }

@@ -323,7 +323,7 @@ class Document implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['apply_anchor_tabs'] = isset($data['apply_anchor_tabs']) ? $data['apply_anchor_tabs'] : null;
         $this->container['assign_tabs_to_recipient_id'] = isset($data['assign_tabs_to_recipient_id']) ? $data['assign_tabs_to_recipient_id'] : null;

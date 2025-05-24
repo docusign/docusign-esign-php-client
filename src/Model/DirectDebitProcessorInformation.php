@@ -233,7 +233,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bank_branch_code'] = isset($data['bank_branch_code']) ? $data['bank_branch_code'] : null;
         $this->container['bank_check_digit'] = isset($data['bank_check_digit']) ? $data['bank_check_digit'] : null;

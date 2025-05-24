@@ -188,7 +188,7 @@ class Money implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['amount_in_base_unit'] = isset($data['amount_in_base_unit']) ? $data['amount_in_base_unit'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;

@@ -197,7 +197,7 @@ class ConnectedData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['property_name'] = isset($data['property_name']) ? $data['property_name'] : null;
         $this->container['supported_operation'] = isset($data['supported_operation']) ? $data['supported_operation'] : null;

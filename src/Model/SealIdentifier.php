@@ -182,7 +182,7 @@ class SealIdentifier implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['seal_display_name'] = isset($data['seal_display_name']) ? $data['seal_display_name'] : null;
         $this->container['seal_name'] = isset($data['seal_name']) ? $data['seal_name'] : null;

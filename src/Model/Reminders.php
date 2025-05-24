@@ -188,7 +188,7 @@ class Reminders implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['reminder_delay'] = isset($data['reminder_delay']) ? $data['reminder_delay'] : null;
         $this->container['reminder_enabled'] = isset($data['reminder_enabled']) ? $data['reminder_enabled'] : null;

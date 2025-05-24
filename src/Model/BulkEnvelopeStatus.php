@@ -242,7 +242,7 @@ class BulkEnvelopeStatus implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
         $this->container['batch_size'] = isset($data['batch_size']) ? $data['batch_size'] : null;

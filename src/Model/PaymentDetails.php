@@ -263,7 +263,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allowed_payment_methods'] = isset($data['allowed_payment_methods']) ? $data['allowed_payment_methods'] : null;
         $this->container['charge_id'] = isset($data['charge_id']) ? $data['charge_id'] : null;

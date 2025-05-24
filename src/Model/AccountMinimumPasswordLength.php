@@ -182,7 +182,7 @@ class AccountMinimumPasswordLength implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['maximum_length'] = isset($data['maximum_length']) ? $data['maximum_length'] : null;
         $this->container['minimum_length'] = isset($data['minimum_length']) ? $data['minimum_length'] : null;

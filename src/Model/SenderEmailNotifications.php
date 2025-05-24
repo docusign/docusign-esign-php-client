@@ -233,7 +233,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['changed_signer'] = isset($data['changed_signer']) ? $data['changed_signer'] : null;
         $this->container['clickwrap_responses_limit_notification_email'] = isset($data['clickwrap_responses_limit_notification_email']) ? $data['clickwrap_responses_limit_notification_email'] : null;

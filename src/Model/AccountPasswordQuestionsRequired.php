@@ -183,7 +183,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['maximum_questions'] = isset($data['maximum_questions']) ? $data['maximum_questions'] : null;
         $this->container['minimum_questions'] = isset($data['minimum_questions']) ? $data['minimum_questions'] : null;

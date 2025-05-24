@@ -188,7 +188,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['supported_currencies'] = isset($data['supported_currencies']) ? $data['supported_currencies'] : null;
         $this->container['supported_options'] = isset($data['supported_options']) ? $data['supported_options'] : null;

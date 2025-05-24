@@ -223,7 +223,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['boxnet_enabled'] = isset($data['boxnet_enabled']) ? $data['boxnet_enabled'] : null;
         $this->container['boxnet_metadata'] = isset($data['boxnet_metadata']) ? $data['boxnet_metadata'] : null;

@@ -183,7 +183,7 @@ class BillingPlanResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['billing_plan'] = isset($data['billing_plan']) ? $data['billing_plan'] : null;
         $this->container['successor_plans'] = isset($data['successor_plans']) ? $data['successor_plans'] : null;

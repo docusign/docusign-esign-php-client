@@ -193,7 +193,7 @@ class BrandLink implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['link_text'] = isset($data['link_text']) ? $data['link_text'] : null;
         $this->container['link_type'] = isset($data['link_type']) ? $data['link_type'] : null;

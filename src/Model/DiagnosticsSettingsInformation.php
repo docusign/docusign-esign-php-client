@@ -187,7 +187,7 @@ class DiagnosticsSettingsInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['api_request_logging'] = isset($data['api_request_logging']) ? $data['api_request_logging'] : null;
         $this->container['api_request_log_max_entries'] = isset($data['api_request_log_max_entries']) ? $data['api_request_log_max_entries'] : null;

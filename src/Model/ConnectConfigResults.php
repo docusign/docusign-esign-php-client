@@ -183,7 +183,7 @@ class ConnectConfigResults implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['configurations'] = isset($data['configurations']) ? $data['configurations'] : null;
         $this->container['total_records'] = isset($data['total_records']) ? $data['total_records'] : null;

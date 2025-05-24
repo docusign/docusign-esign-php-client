@@ -193,7 +193,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['downgrade_product_id'] = isset($data['downgrade_product_id']) ? $data['downgrade_product_id'] : null;
         $this->container['is_downgrade_cancellation'] = isset($data['is_downgrade_cancellation']) ? $data['is_downgrade_cancellation'] : null;

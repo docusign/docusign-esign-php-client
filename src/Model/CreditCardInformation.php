@@ -218,7 +218,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['card_last_digits'] = isset($data['card_last_digits']) ? $data['card_last_digits'] : null;

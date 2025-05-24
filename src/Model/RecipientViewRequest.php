@@ -263,7 +263,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['assertion_id'] = isset($data['assertion_id']) ? $data['assertion_id'] : null;
         $this->container['authentication_instant'] = isset($data['authentication_instant']) ? $data['authentication_instant'] : null;

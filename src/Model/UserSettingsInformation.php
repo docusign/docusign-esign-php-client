@@ -918,7 +918,7 @@ class UserSettingsInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_agreements_access_type'] = isset($data['account_agreements_access_type']) ? $data['account_agreements_access_type'] : null;
         $this->container['account_agreements_access_type_metadata'] = isset($data['account_agreements_access_type_metadata']) ? $data['account_agreements_access_type_metadata'] : null;

@@ -223,7 +223,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['format_required'] = isset($data['format_required']) ? $data['format_required'] : null;
         $this->container['format_required_metadata'] = isset($data['format_required_metadata']) ? $data['format_required_metadata'] : null;

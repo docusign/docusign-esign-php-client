@@ -237,7 +237,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_payment_method'] = isset($data['account_payment_method']) ? $data['account_payment_method'] : null;
         $this->container['discount_applied'] = isset($data['discount_applied']) ? $data['discount_applied'] : null;

@@ -198,7 +198,7 @@ class ConnectFailureResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['config_id'] = isset($data['config_id']) ? $data['config_id'] : null;
         $this->container['config_url'] = isset($data['config_url']) ? $data['config_url'] : null;

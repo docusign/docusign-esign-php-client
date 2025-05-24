@@ -197,7 +197,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authorization_server_url'] = isset($data['authorization_server_url']) ? $data['authorization_server_url'] : null;
         $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;

@@ -217,7 +217,7 @@ class TemplateUpdateSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_envelope_status'] = isset($data['bulk_envelope_status']) ? $data['bulk_envelope_status'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;

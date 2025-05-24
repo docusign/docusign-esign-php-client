@@ -182,7 +182,7 @@ class RecipientEvent implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_documents'] = isset($data['include_documents']) ? $data['include_documents'] : null;
         $this->container['recipient_event_status_code'] = isset($data['recipient_event_status_code']) ? $data['recipient_event_status_code'] : null;
