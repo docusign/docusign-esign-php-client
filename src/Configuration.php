@@ -185,82 +185,34 @@ class Configuration
     public function __construct(array $data = null)
     {
         $this->tempFolderPath = sys_get_temp_dir();
-        if(isset($data["apiKeys"]))
-        {
-            $this->apiKeys = $data["apiKeys"];
-        } 
-        if(isset($data["apiKeyPrefixes"]))
-        {
-            $this->apiKeyPrefixes = $data["apiKeyPrefixes"];
-        } 
-        if(isset($data["accessToken"]))
-        {
-            $this->accessToken = $data["accessToken"];
-        } 
-        if(isset($data["username"]))
-        {
-            $this->username = $data["username"];
-        } 
-        if(isset($data["password"]))
-        {
-            $this->password = $data["password"];
-        } 
-        if(isset($data["defaultHeaders"]))
-        {
-            $this->defaultHeaders = $data["defaultHeaders"];
-        } 
-        if(isset($data["host"]))
-        {
-            $this->host = $data["host"];
-        } 
-        if(isset($data["curlTimeout"]))
-        {
-            $this->curlTimeout = $data["curlTimeout"];
-        } 
-        if(isset($data["curlConnectTimeout"]))
-        {
-            $this->curlConnectTimeout = $data["curlConnectTimeout"];
-        } 
-        if(isset($data["userAgent"]))
-        {
-            $this->userAgent = $data["userAgent"];
-        } 
-        if(isset($data["debug"]))
-        {
-            $this->debug = $data["debug"];
-        } 
-        if(isset($data["debugFile"]))
-        {
-            $this->debugFile = $data["debugFile"];
-        } 
-        if(isset($data["tempFolderPath"]))
-        {
-            $this->tempFolderPath = $data["tempFolderPath"];
-        } 
-        if(isset($data["sslVerification"]))
-        {
-            $this->sslVerification = $data["sslVerification"];
-        } 
-        if(isset($data["proxyHost"]))
-        {
-            $this->proxyHost = $data["proxyHost"];
-        } 
-        if(isset($data["proxyPort"]))
-        {
-            $this->proxyPort = $data["proxyPort"];
-        } 
-        if(isset($data["proxyType"]))
-        {
-            $this->proxyType = $data["proxyType"];
-        } 
-        if(isset($data["proxyUser"]))
-        {
-            $this->proxyUser = $data["proxyUser"];
-        } 
-        if(isset($data["proxyPassword"]))
-        {
-            $this->proxyPassword = $data["proxyPassword"];
-        } 
+
+        $allowedInputs = [
+            'apiKeys',
+            'apiKeyPrefixes',
+            'accessToken',
+            'username',
+            'password',
+            'defaultHeaders',
+            'host',
+            'curlTimeout',
+            'curlConnectTimeout',
+            'userAgent',
+            'debug',
+            'debugFile',
+            'tempFolderPath',
+            'sslVerification',
+            'proxyHost',
+            'proxyPort',
+            'proxyType',
+            'proxyUser',
+            'proxyPassword',
+        ];
+        
+        foreach ($data as $key => $value) {
+            if (property_exists($this, $key) && in_array($key, $allowedInputs)) {
+                $this->$key = $value;
+            }
+        }
     }
 
     /**
