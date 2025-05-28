@@ -66,9 +66,10 @@ class Group implements ModelInterface, ArrayAccess
         'group_id' => '?string',
         'group_name' => '?string',
         'group_type' => '?string',
-        'is_managed_by_scim' => '?string',
+        'is_managed_by_scim' => '?bool',
         'last_modified_on' => '?string',
         'permission_profile_id' => '?string',
+        'user_group_type' => '?string',
         'users' => '\DocuSign\eSign\Model\UserInfo[]',
         'users_count' => '?string'
     ];
@@ -88,6 +89,7 @@ class Group implements ModelInterface, ArrayAccess
         'is_managed_by_scim' => null,
         'last_modified_on' => null,
         'permission_profile_id' => null,
+        'user_group_type' => null,
         'users' => null,
         'users_count' => null
     ];
@@ -128,6 +130,7 @@ class Group implements ModelInterface, ArrayAccess
         'is_managed_by_scim' => 'isManagedByScim',
         'last_modified_on' => 'lastModifiedOn',
         'permission_profile_id' => 'permissionProfileId',
+        'user_group_type' => 'userGroupType',
         'users' => 'users',
         'users_count' => 'usersCount'
     ];
@@ -147,6 +150,7 @@ class Group implements ModelInterface, ArrayAccess
         'is_managed_by_scim' => 'setIsManagedByScim',
         'last_modified_on' => 'setLastModifiedOn',
         'permission_profile_id' => 'setPermissionProfileId',
+        'user_group_type' => 'setUserGroupType',
         'users' => 'setUsers',
         'users_count' => 'setUsersCount'
     ];
@@ -166,6 +170,7 @@ class Group implements ModelInterface, ArrayAccess
         'is_managed_by_scim' => 'getIsManagedByScim',
         'last_modified_on' => 'getLastModifiedOn',
         'permission_profile_id' => 'getPermissionProfileId',
+        'user_group_type' => 'getUserGroupType',
         'users' => 'getUsers',
         'users_count' => 'getUsersCount'
     ];
@@ -239,6 +244,7 @@ class Group implements ModelInterface, ArrayAccess
         $this->container['is_managed_by_scim'] = isset($data['is_managed_by_scim']) ? $data['is_managed_by_scim'] : null;
         $this->container['last_modified_on'] = isset($data['last_modified_on']) ? $data['last_modified_on'] : null;
         $this->container['permission_profile_id'] = isset($data['permission_profile_id']) ? $data['permission_profile_id'] : null;
+        $this->container['user_group_type'] = isset($data['user_group_type']) ? $data['user_group_type'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
         $this->container['users_count'] = isset($data['users_count']) ? $data['users_count'] : null;
     }
@@ -414,7 +420,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Gets is_managed_by_scim
      *
-     * @return ?string
+     * @return ?bool
      */
     public function getIsManagedByScim()
     {
@@ -424,7 +430,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets is_managed_by_scim
      *
-     * @param ?string $is_managed_by_scim 
+     * @param ?bool $is_managed_by_scim 
      *
      * @return $this
      */
@@ -479,6 +485,30 @@ class Group implements ModelInterface, ArrayAccess
     public function setPermissionProfileId($permission_profile_id)
     {
         $this->container['permission_profile_id'] = $permission_profile_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_group_type
+     *
+     * @return ?string
+     */
+    public function getUserGroupType()
+    {
+        return $this->container['user_group_type'];
+    }
+
+    /**
+     * Sets user_group_type
+     *
+     * @param ?string $user_group_type 
+     *
+     * @return $this
+     */
+    public function setUserGroupType($user_group_type)
+    {
+        $this->container['user_group_type'] = $user_group_type;
 
         return $this;
     }

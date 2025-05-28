@@ -104,10 +104,10 @@ class DelegationInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email' => 'Email',
-        'name' => 'Name',
-        'user_authorization_id' => 'UserAuthorizationId',
-        'user_id' => 'UserId'
+        'email' => 'email',
+        'name' => 'name',
+        'user_authorization_id' => 'userAuthorizationId',
+        'user_id' => 'userId'
     ];
 
     /**

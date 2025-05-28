@@ -103,6 +103,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_bulk_send_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_cd_withdraw' => '?string',
         'allow_cd_withdraw_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_connect_agreement_ui' => '?string',
+        'allow_connect_agreement_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => '?string',
         'allow_connect_envelope_removed_event' => '?string',
         'allow_connect_extension_ui' => '?string',
@@ -340,6 +342,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'consumer_disclosure_frequency_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'convert_pdf_fields' => '?string',
         'convert_pdf_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'custom_extraction_plan_levels' => '?string',
+        'custom_extraction_plan_levels_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'data_population_scope' => '?string',
         'data_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'default_signing_responsive_view' => '?string',
@@ -348,6 +352,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_auto_template_matching' => '?string',
         'disable_auto_template_matching_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'disable_legacy_shared_envelopes' => '?string',
+        'disable_legacy_shared_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_mobile_app' => '?string',
         'disable_mobile_app_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_mobile_push_notifications' => '?string',
@@ -403,8 +409,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_clm_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_agreement_actions_for_e_sign' => '?string',
         'enable_agreement_actions_for_e_sign_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_agreement_desk_advanced' => '?string',
+        'enable_agreement_desk_advanced_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ai_contract_review' => '?string',
         'enable_ai_contract_review_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_ai_suggested_fields_advanced' => '?string',
+        'enable_ai_suggested_fields_advanced_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_ai_suggested_fields_basic' => '?string',
+        'enable_ai_suggested_fields_basic_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_auto_nav' => '?string',
         'enable_auto_nav_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_batch_update_envelope_types' => '?string',
@@ -432,8 +444,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_content_search' => '?string',
         'enable_content_search_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_coupa_core' => '?string',
-        'enable_coupa_core_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_coupa_core_extension' => '?string',
+        'enable_coupa_core_extension_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_custom_data_verification_extensions' => '?string',
         'enable_custom_data_verification_extensions_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking' => '?string',
@@ -467,6 +479,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_e_sign_api_hourly_limit_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_esign_communities' => '?string',
         'enable_esign_communities_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_esign_task_list' => '?string',
+        'enable_esign_task_list_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_generation_with3_p_integration' => '?string',
+        'enable_generation_with3_p_integration_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11' => '?string',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_id_fx_intuit_kba' => '?string',
@@ -489,8 +505,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_legacy_shared_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_license_management' => '?string',
         'enable_license_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_microsoft_dynamics365_extension' => '?string',
+        'enable_microsoft_dynamics365_extension_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_multi_user_repository_features' => '?string',
         'enable_multi_user_repository_features_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_navigator_for_hr' => '?string',
+        'enable_navigator_for_hr_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_navigator_partial_ingestion' => '?string',
         'enable_navigator_partial_ingestion_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_navigator_trial' => '?string',
@@ -520,6 +540,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_responsive_signing' => '?string',
         'enable_responsive_signing_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_sap_ariba_extension' => '?string',
+        'enable_sap_ariba_extension_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_scheduled_release' => '?string',
         'enable_scheduled_release_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_search_service_azure_uri' => '?string',
@@ -540,6 +562,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sequential_signing_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_signer_attachments' => '?string',
         'enable_signer_attachments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_signing_ai_features_plan' => '?string',
+        'enable_signing_ai_features_plan_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_signing_ai_features_setting' => '?string',
+        'enable_signing_ai_features_setting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_signing_extension_comments' => '?string',
         'enable_signing_extension_comments_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_signing_extension_conversations' => '?string',
@@ -565,6 +591,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_social_id_login_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_strike_through' => '?string',
         'enable_strike_through_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_tickets' => '?string',
+        'enable_tickets_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_transaction_point' => '?string',
         'enable_transaction_point_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_unified_repository' => '?string',
@@ -650,6 +678,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'isv_oem_embed' => '?string',
         'isv_oem_embed_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'linked_external_primary_accounts' => '\DocuSign\eSign\Model\LinkedExternalPrimaryAccount[]',
+        'maestro_plan_levels' => '?string',
+        'maestro_plan_levels_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'maximum_signing_groups' => '?string',
         'maximum_signing_groups_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'maximum_users_per_signing_group' => '?string',
@@ -896,6 +926,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_bulk_send_metadata' => null,
         'allow_cd_withdraw' => null,
         'allow_cd_withdraw_metadata' => null,
+        'allow_connect_agreement_ui' => null,
+        'allow_connect_agreement_ui_metadata' => null,
         'allow_connect_authoritative_copy_ready_event_ui' => null,
         'allow_connect_envelope_removed_event' => null,
         'allow_connect_extension_ui' => null,
@@ -1133,6 +1165,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'consumer_disclosure_frequency_metadata' => null,
         'convert_pdf_fields' => null,
         'convert_pdf_fields_metadata' => null,
+        'custom_extraction_plan_levels' => null,
+        'custom_extraction_plan_levels_metadata' => null,
         'data_population_scope' => null,
         'data_population_scope_metadata' => null,
         'default_signing_responsive_view' => null,
@@ -1141,6 +1175,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => null,
         'disable_auto_template_matching' => null,
         'disable_auto_template_matching_metadata' => null,
+        'disable_legacy_shared_envelopes' => null,
+        'disable_legacy_shared_envelopes_metadata' => null,
         'disable_mobile_app' => null,
         'disable_mobile_app_metadata' => null,
         'disable_mobile_push_notifications' => null,
@@ -1196,8 +1232,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_clm_metadata' => null,
         'enable_agreement_actions_for_e_sign' => null,
         'enable_agreement_actions_for_e_sign_metadata' => null,
+        'enable_agreement_desk_advanced' => null,
+        'enable_agreement_desk_advanced_meta_data' => null,
         'enable_ai_contract_review' => null,
         'enable_ai_contract_review_metadata' => null,
+        'enable_ai_suggested_fields_advanced' => null,
+        'enable_ai_suggested_fields_advanced_metadata' => null,
+        'enable_ai_suggested_fields_basic' => null,
+        'enable_ai_suggested_fields_basic_metadata' => null,
         'enable_auto_nav' => null,
         'enable_auto_nav_metadata' => null,
         'enable_batch_update_envelope_types' => null,
@@ -1225,8 +1267,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => null,
         'enable_content_search' => null,
         'enable_content_search_metadata' => null,
-        'enable_coupa_core' => null,
-        'enable_coupa_core_meta_data' => null,
+        'enable_coupa_core_extension' => null,
+        'enable_coupa_core_extension_metadata' => null,
         'enable_custom_data_verification_extensions' => null,
         'enable_custom_data_verification_extensions_metadata' => null,
         'enable_customer_satisfaction_metric_tracking' => null,
@@ -1260,6 +1302,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_e_sign_api_hourly_limit_management_metadata' => null,
         'enable_esign_communities' => null,
         'enable_esign_communities_metadata' => null,
+        'enable_esign_task_list' => null,
+        'enable_esign_task_list_metadata' => null,
+        'enable_generation_with3_p_integration' => null,
+        'enable_generation_with3_p_integration_meta_data' => null,
         'enable_id_fx_accountless_sms_auth_for_part11' => null,
         'enable_id_fx_accountless_sms_auth_for_part11_metadata' => null,
         'enable_id_fx_intuit_kba' => null,
@@ -1282,8 +1328,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_legacy_shared_envelopes_metadata' => null,
         'enable_license_management' => null,
         'enable_license_management_metadata' => null,
+        'enable_microsoft_dynamics365_extension' => null,
+        'enable_microsoft_dynamics365_extension_metadata' => null,
         'enable_multi_user_repository_features' => null,
         'enable_multi_user_repository_features_metadata' => null,
+        'enable_navigator_for_hr' => null,
+        'enable_navigator_for_hr_metadata' => null,
         'enable_navigator_partial_ingestion' => null,
         'enable_navigator_partial_ingestion_metadata' => null,
         'enable_navigator_trial' => null,
@@ -1313,6 +1363,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => null,
         'enable_responsive_signing' => null,
         'enable_responsive_signing_metadata' => null,
+        'enable_sap_ariba_extension' => null,
+        'enable_sap_ariba_extension_meta_data' => null,
         'enable_scheduled_release' => null,
         'enable_scheduled_release_metadata' => null,
         'enable_search_service_azure_uri' => null,
@@ -1333,6 +1385,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sequential_signing_ui_metadata' => null,
         'enable_signer_attachments' => null,
         'enable_signer_attachments_metadata' => null,
+        'enable_signing_ai_features_plan' => null,
+        'enable_signing_ai_features_plan_metadata' => null,
+        'enable_signing_ai_features_setting' => null,
+        'enable_signing_ai_features_setting_metadata' => null,
         'enable_signing_extension_comments' => null,
         'enable_signing_extension_comments_metadata' => null,
         'enable_signing_extension_conversations' => null,
@@ -1358,6 +1414,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_social_id_login_metadata' => null,
         'enable_strike_through' => null,
         'enable_strike_through_metadata' => null,
+        'enable_tickets' => null,
+        'enable_tickets_meta_data' => null,
         'enable_transaction_point' => null,
         'enable_transaction_point_metadata' => null,
         'enable_unified_repository' => null,
@@ -1443,6 +1501,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'isv_oem_embed' => null,
         'isv_oem_embed_meta_data' => null,
         'linked_external_primary_accounts' => null,
+        'maestro_plan_levels' => null,
+        'maestro_plan_levels_metadata' => null,
         'maximum_signing_groups' => null,
         'maximum_signing_groups_metadata' => null,
         'maximum_users_per_signing_group' => null,
@@ -1710,6 +1770,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_bulk_send_metadata' => 'allowBulkSendMetadata',
         'allow_cd_withdraw' => 'allowCDWithdraw',
         'allow_cd_withdraw_metadata' => 'allowCDWithdrawMetadata',
+        'allow_connect_agreement_ui' => 'allowConnectAgreementUI',
+        'allow_connect_agreement_ui_metadata' => 'allowConnectAgreementUIMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => 'allowConnectAuthoritativeCopyReadyEventUI',
         'allow_connect_envelope_removed_event' => 'allowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui' => 'allowConnectExtensionUI',
@@ -1947,6 +2009,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'consumer_disclosure_frequency_metadata' => 'consumerDisclosureFrequencyMetadata',
         'convert_pdf_fields' => 'convertPdfFields',
         'convert_pdf_fields_metadata' => 'convertPdfFieldsMetadata',
+        'custom_extraction_plan_levels' => 'customExtractionPlanLevels',
+        'custom_extraction_plan_levels_metadata' => 'customExtractionPlanLevelsMetadata',
         'data_population_scope' => 'dataPopulationScope',
         'data_population_scope_metadata' => 'dataPopulationScopeMetadata',
         'default_signing_responsive_view' => 'defaultSigningResponsiveView',
@@ -1955,6 +2019,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'disableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'disableAutoTemplateMatchingMetadata',
+        'disable_legacy_shared_envelopes' => 'disableLegacySharedEnvelopes',
+        'disable_legacy_shared_envelopes_metadata' => 'disableLegacySharedEnvelopesMetadata',
         'disable_mobile_app' => 'disableMobileApp',
         'disable_mobile_app_metadata' => 'disableMobileAppMetadata',
         'disable_mobile_push_notifications' => 'disableMobilePushNotifications',
@@ -2010,8 +2076,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_clm_metadata' => 'enableAgreementActionsForCLMMetadata',
         'enable_agreement_actions_for_e_sign' => 'enableAgreementActionsForESign',
         'enable_agreement_actions_for_e_sign_metadata' => 'enableAgreementActionsForESignMetadata',
+        'enable_agreement_desk_advanced' => 'enableAgreementDeskAdvanced',
+        'enable_agreement_desk_advanced_meta_data' => 'enableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review' => 'enableAIContractReview',
         'enable_ai_contract_review_metadata' => 'enableAIContractReviewMetadata',
+        'enable_ai_suggested_fields_advanced' => 'enableAISuggestedFieldsAdvanced',
+        'enable_ai_suggested_fields_advanced_metadata' => 'enableAISuggestedFieldsAdvancedMetadata',
+        'enable_ai_suggested_fields_basic' => 'enableAISuggestedFieldsBasic',
+        'enable_ai_suggested_fields_basic_metadata' => 'enableAISuggestedFieldsBasicMetadata',
         'enable_auto_nav' => 'enableAutoNav',
         'enable_auto_nav_metadata' => 'enableAutoNavMetadata',
         'enable_batch_update_envelope_types' => 'enableBatchUpdateEnvelopeTypes',
@@ -2039,8 +2111,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'enableContactSuggestionsMetadata',
         'enable_content_search' => 'enableContentSearch',
         'enable_content_search_metadata' => 'enableContentSearchMetadata',
-        'enable_coupa_core' => 'enableCoupaCore',
-        'enable_coupa_core_meta_data' => 'enableCoupaCoreMetaData',
+        'enable_coupa_core_extension' => 'enableCoupaCoreExtension',
+        'enable_coupa_core_extension_metadata' => 'enableCoupaCoreExtensionMetadata',
         'enable_custom_data_verification_extensions' => 'enableCustomDataVerificationExtensions',
         'enable_custom_data_verification_extensions_metadata' => 'enableCustomDataVerificationExtensionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'enableCustomerSatisfactionMetricTracking',
@@ -2074,6 +2146,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_e_sign_api_hourly_limit_management_metadata' => 'enableESignAPIHourlyLimitManagementMetadata',
         'enable_esign_communities' => 'enableEsignCommunities',
         'enable_esign_communities_metadata' => 'enableEsignCommunitiesMetadata',
+        'enable_esign_task_list' => 'enableEsignTaskList',
+        'enable_esign_task_list_metadata' => 'enableEsignTaskListMetadata',
+        'enable_generation_with3_p_integration' => 'enableGenerationWith3PIntegration',
+        'enable_generation_with3_p_integration_meta_data' => 'enableGenerationWith3PIntegrationMetaData',
         'enable_id_fx_accountless_sms_auth_for_part11' => 'enableIDFxAccountlessSMSAuthForPart11',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata' => 'enableIDFxAccountlessSMSAuthForPart11Metadata',
         'enable_id_fx_intuit_kba' => 'enableIDFxIntuitKBA',
@@ -2096,8 +2172,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_legacy_shared_envelopes_metadata' => 'enableLegacySharedEnvelopesMetadata',
         'enable_license_management' => 'enableLicenseManagement',
         'enable_license_management_metadata' => 'enableLicenseManagementMetadata',
+        'enable_microsoft_dynamics365_extension' => 'enableMicrosoftDynamics365Extension',
+        'enable_microsoft_dynamics365_extension_metadata' => 'enableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features' => 'enableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata' => 'enableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_for_hr' => 'enableNavigatorForHR',
+        'enable_navigator_for_hr_metadata' => 'enableNavigatorForHRMetadata',
         'enable_navigator_partial_ingestion' => 'enableNavigatorPartialIngestion',
         'enable_navigator_partial_ingestion_metadata' => 'enableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial' => 'enableNavigatorTrial',
@@ -2127,6 +2207,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => 'enableReservedDomainMetadata',
         'enable_responsive_signing' => 'enableResponsiveSigning',
         'enable_responsive_signing_metadata' => 'enableResponsiveSigningMetadata',
+        'enable_sap_ariba_extension' => 'enableSAPAribaExtension',
+        'enable_sap_ariba_extension_meta_data' => 'enableSAPAribaExtensionMetaData',
         'enable_scheduled_release' => 'enableScheduledRelease',
         'enable_scheduled_release_metadata' => 'enableScheduledReleaseMetadata',
         'enable_search_service_azure_uri' => 'enableSearchServiceAzureUri',
@@ -2147,6 +2229,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sequential_signing_ui_metadata' => 'enableSequentialSigningUIMetadata',
         'enable_signer_attachments' => 'enableSignerAttachments',
         'enable_signer_attachments_metadata' => 'enableSignerAttachmentsMetadata',
+        'enable_signing_ai_features_plan' => 'EnableSigningAIFeaturesPlan',
+        'enable_signing_ai_features_plan_metadata' => 'EnableSigningAIFeaturesPlanMetadata',
+        'enable_signing_ai_features_setting' => 'enableSigningAIFeaturesSetting',
+        'enable_signing_ai_features_setting_metadata' => 'enableSigningAIFeaturesSettingMetadata',
         'enable_signing_extension_comments' => 'enableSigningExtensionComments',
         'enable_signing_extension_comments_metadata' => 'enableSigningExtensionCommentsMetadata',
         'enable_signing_extension_conversations' => 'enableSigningExtensionConversations',
@@ -2172,6 +2258,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_social_id_login_metadata' => 'enableSocialIdLoginMetadata',
         'enable_strike_through' => 'enableStrikeThrough',
         'enable_strike_through_metadata' => 'enableStrikeThroughMetadata',
+        'enable_tickets' => 'enableTickets',
+        'enable_tickets_meta_data' => 'enableTicketsMetaData',
         'enable_transaction_point' => 'enableTransactionPoint',
         'enable_transaction_point_metadata' => 'enableTransactionPointMetadata',
         'enable_unified_repository' => 'enableUnifiedRepository',
@@ -2257,6 +2345,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'isv_oem_embed' => 'isvOemEmbed',
         'isv_oem_embed_meta_data' => 'isvOemEmbedMetaData',
         'linked_external_primary_accounts' => 'linkedExternalPrimaryAccounts',
+        'maestro_plan_levels' => 'maestroPlanLevels',
+        'maestro_plan_levels_metadata' => 'maestroPlanLevelsMetadata',
         'maximum_signing_groups' => 'maximumSigningGroups',
         'maximum_signing_groups_metadata' => 'maximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'maximumUsersPerSigningGroup',
@@ -2503,6 +2593,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_bulk_send_metadata' => 'setAllowBulkSendMetadata',
         'allow_cd_withdraw' => 'setAllowCdWithdraw',
         'allow_cd_withdraw_metadata' => 'setAllowCdWithdrawMetadata',
+        'allow_connect_agreement_ui' => 'setAllowConnectAgreementUi',
+        'allow_connect_agreement_ui_metadata' => 'setAllowConnectAgreementUiMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => 'setAllowConnectAuthoritativeCopyReadyEventUi',
         'allow_connect_envelope_removed_event' => 'setAllowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui' => 'setAllowConnectExtensionUi',
@@ -2740,6 +2832,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'consumer_disclosure_frequency_metadata' => 'setConsumerDisclosureFrequencyMetadata',
         'convert_pdf_fields' => 'setConvertPdfFields',
         'convert_pdf_fields_metadata' => 'setConvertPdfFieldsMetadata',
+        'custom_extraction_plan_levels' => 'setCustomExtractionPlanLevels',
+        'custom_extraction_plan_levels_metadata' => 'setCustomExtractionPlanLevelsMetadata',
         'data_population_scope' => 'setDataPopulationScope',
         'data_population_scope_metadata' => 'setDataPopulationScopeMetadata',
         'default_signing_responsive_view' => 'setDefaultSigningResponsiveView',
@@ -2748,6 +2842,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => 'setDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'setDisableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'setDisableAutoTemplateMatchingMetadata',
+        'disable_legacy_shared_envelopes' => 'setDisableLegacySharedEnvelopes',
+        'disable_legacy_shared_envelopes_metadata' => 'setDisableLegacySharedEnvelopesMetadata',
         'disable_mobile_app' => 'setDisableMobileApp',
         'disable_mobile_app_metadata' => 'setDisableMobileAppMetadata',
         'disable_mobile_push_notifications' => 'setDisableMobilePushNotifications',
@@ -2803,8 +2899,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_clm_metadata' => 'setEnableAgreementActionsForClmMetadata',
         'enable_agreement_actions_for_e_sign' => 'setEnableAgreementActionsForESign',
         'enable_agreement_actions_for_e_sign_metadata' => 'setEnableAgreementActionsForESignMetadata',
+        'enable_agreement_desk_advanced' => 'setEnableAgreementDeskAdvanced',
+        'enable_agreement_desk_advanced_meta_data' => 'setEnableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review' => 'setEnableAiContractReview',
         'enable_ai_contract_review_metadata' => 'setEnableAiContractReviewMetadata',
+        'enable_ai_suggested_fields_advanced' => 'setEnableAiSuggestedFieldsAdvanced',
+        'enable_ai_suggested_fields_advanced_metadata' => 'setEnableAiSuggestedFieldsAdvancedMetadata',
+        'enable_ai_suggested_fields_basic' => 'setEnableAiSuggestedFieldsBasic',
+        'enable_ai_suggested_fields_basic_metadata' => 'setEnableAiSuggestedFieldsBasicMetadata',
         'enable_auto_nav' => 'setEnableAutoNav',
         'enable_auto_nav_metadata' => 'setEnableAutoNavMetadata',
         'enable_batch_update_envelope_types' => 'setEnableBatchUpdateEnvelopeTypes',
@@ -2832,8 +2934,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'setEnableContactSuggestionsMetadata',
         'enable_content_search' => 'setEnableContentSearch',
         'enable_content_search_metadata' => 'setEnableContentSearchMetadata',
-        'enable_coupa_core' => 'setEnableCoupaCore',
-        'enable_coupa_core_meta_data' => 'setEnableCoupaCoreMetaData',
+        'enable_coupa_core_extension' => 'setEnableCoupaCoreExtension',
+        'enable_coupa_core_extension_metadata' => 'setEnableCoupaCoreExtensionMetadata',
         'enable_custom_data_verification_extensions' => 'setEnableCustomDataVerificationExtensions',
         'enable_custom_data_verification_extensions_metadata' => 'setEnableCustomDataVerificationExtensionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'setEnableCustomerSatisfactionMetricTracking',
@@ -2867,6 +2969,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_e_sign_api_hourly_limit_management_metadata' => 'setEnableESignApiHourlyLimitManagementMetadata',
         'enable_esign_communities' => 'setEnableEsignCommunities',
         'enable_esign_communities_metadata' => 'setEnableEsignCommunitiesMetadata',
+        'enable_esign_task_list' => 'setEnableEsignTaskList',
+        'enable_esign_task_list_metadata' => 'setEnableEsignTaskListMetadata',
+        'enable_generation_with3_p_integration' => 'setEnableGenerationWith3PIntegration',
+        'enable_generation_with3_p_integration_meta_data' => 'setEnableGenerationWith3PIntegrationMetaData',
         'enable_id_fx_accountless_sms_auth_for_part11' => 'setEnableIdFxAccountlessSmsAuthForPart11',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata' => 'setEnableIdFxAccountlessSmsAuthForPart11Metadata',
         'enable_id_fx_intuit_kba' => 'setEnableIdFxIntuitKba',
@@ -2889,8 +2995,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_legacy_shared_envelopes_metadata' => 'setEnableLegacySharedEnvelopesMetadata',
         'enable_license_management' => 'setEnableLicenseManagement',
         'enable_license_management_metadata' => 'setEnableLicenseManagementMetadata',
+        'enable_microsoft_dynamics365_extension' => 'setEnableMicrosoftDynamics365Extension',
+        'enable_microsoft_dynamics365_extension_metadata' => 'setEnableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features' => 'setEnableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata' => 'setEnableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_for_hr' => 'setEnableNavigatorForHr',
+        'enable_navigator_for_hr_metadata' => 'setEnableNavigatorForHrMetadata',
         'enable_navigator_partial_ingestion' => 'setEnableNavigatorPartialIngestion',
         'enable_navigator_partial_ingestion_metadata' => 'setEnableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial' => 'setEnableNavigatorTrial',
@@ -2920,6 +3030,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => 'setEnableReservedDomainMetadata',
         'enable_responsive_signing' => 'setEnableResponsiveSigning',
         'enable_responsive_signing_metadata' => 'setEnableResponsiveSigningMetadata',
+        'enable_sap_ariba_extension' => 'setEnableSapAribaExtension',
+        'enable_sap_ariba_extension_meta_data' => 'setEnableSapAribaExtensionMetaData',
         'enable_scheduled_release' => 'setEnableScheduledRelease',
         'enable_scheduled_release_metadata' => 'setEnableScheduledReleaseMetadata',
         'enable_search_service_azure_uri' => 'setEnableSearchServiceAzureUri',
@@ -2940,6 +3052,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sequential_signing_ui_metadata' => 'setEnableSequentialSigningUiMetadata',
         'enable_signer_attachments' => 'setEnableSignerAttachments',
         'enable_signer_attachments_metadata' => 'setEnableSignerAttachmentsMetadata',
+        'enable_signing_ai_features_plan' => 'setEnableSigningAiFeaturesPlan',
+        'enable_signing_ai_features_plan_metadata' => 'setEnableSigningAiFeaturesPlanMetadata',
+        'enable_signing_ai_features_setting' => 'setEnableSigningAiFeaturesSetting',
+        'enable_signing_ai_features_setting_metadata' => 'setEnableSigningAiFeaturesSettingMetadata',
         'enable_signing_extension_comments' => 'setEnableSigningExtensionComments',
         'enable_signing_extension_comments_metadata' => 'setEnableSigningExtensionCommentsMetadata',
         'enable_signing_extension_conversations' => 'setEnableSigningExtensionConversations',
@@ -2965,6 +3081,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_social_id_login_metadata' => 'setEnableSocialIdLoginMetadata',
         'enable_strike_through' => 'setEnableStrikeThrough',
         'enable_strike_through_metadata' => 'setEnableStrikeThroughMetadata',
+        'enable_tickets' => 'setEnableTickets',
+        'enable_tickets_meta_data' => 'setEnableTicketsMetaData',
         'enable_transaction_point' => 'setEnableTransactionPoint',
         'enable_transaction_point_metadata' => 'setEnableTransactionPointMetadata',
         'enable_unified_repository' => 'setEnableUnifiedRepository',
@@ -3050,6 +3168,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'isv_oem_embed' => 'setIsvOemEmbed',
         'isv_oem_embed_meta_data' => 'setIsvOemEmbedMetaData',
         'linked_external_primary_accounts' => 'setLinkedExternalPrimaryAccounts',
+        'maestro_plan_levels' => 'setMaestroPlanLevels',
+        'maestro_plan_levels_metadata' => 'setMaestroPlanLevelsMetadata',
         'maximum_signing_groups' => 'setMaximumSigningGroups',
         'maximum_signing_groups_metadata' => 'setMaximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'setMaximumUsersPerSigningGroup',
@@ -3296,6 +3416,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_bulk_send_metadata' => 'getAllowBulkSendMetadata',
         'allow_cd_withdraw' => 'getAllowCdWithdraw',
         'allow_cd_withdraw_metadata' => 'getAllowCdWithdrawMetadata',
+        'allow_connect_agreement_ui' => 'getAllowConnectAgreementUi',
+        'allow_connect_agreement_ui_metadata' => 'getAllowConnectAgreementUiMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => 'getAllowConnectAuthoritativeCopyReadyEventUi',
         'allow_connect_envelope_removed_event' => 'getAllowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui' => 'getAllowConnectExtensionUi',
@@ -3533,6 +3655,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'consumer_disclosure_frequency_metadata' => 'getConsumerDisclosureFrequencyMetadata',
         'convert_pdf_fields' => 'getConvertPdfFields',
         'convert_pdf_fields_metadata' => 'getConvertPdfFieldsMetadata',
+        'custom_extraction_plan_levels' => 'getCustomExtractionPlanLevels',
+        'custom_extraction_plan_levels_metadata' => 'getCustomExtractionPlanLevelsMetadata',
         'data_population_scope' => 'getDataPopulationScope',
         'data_population_scope_metadata' => 'getDataPopulationScopeMetadata',
         'default_signing_responsive_view' => 'getDefaultSigningResponsiveView',
@@ -3541,6 +3665,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => 'getDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'getDisableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'getDisableAutoTemplateMatchingMetadata',
+        'disable_legacy_shared_envelopes' => 'getDisableLegacySharedEnvelopes',
+        'disable_legacy_shared_envelopes_metadata' => 'getDisableLegacySharedEnvelopesMetadata',
         'disable_mobile_app' => 'getDisableMobileApp',
         'disable_mobile_app_metadata' => 'getDisableMobileAppMetadata',
         'disable_mobile_push_notifications' => 'getDisableMobilePushNotifications',
@@ -3596,8 +3722,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_actions_for_clm_metadata' => 'getEnableAgreementActionsForClmMetadata',
         'enable_agreement_actions_for_e_sign' => 'getEnableAgreementActionsForESign',
         'enable_agreement_actions_for_e_sign_metadata' => 'getEnableAgreementActionsForESignMetadata',
+        'enable_agreement_desk_advanced' => 'getEnableAgreementDeskAdvanced',
+        'enable_agreement_desk_advanced_meta_data' => 'getEnableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review' => 'getEnableAiContractReview',
         'enable_ai_contract_review_metadata' => 'getEnableAiContractReviewMetadata',
+        'enable_ai_suggested_fields_advanced' => 'getEnableAiSuggestedFieldsAdvanced',
+        'enable_ai_suggested_fields_advanced_metadata' => 'getEnableAiSuggestedFieldsAdvancedMetadata',
+        'enable_ai_suggested_fields_basic' => 'getEnableAiSuggestedFieldsBasic',
+        'enable_ai_suggested_fields_basic_metadata' => 'getEnableAiSuggestedFieldsBasicMetadata',
         'enable_auto_nav' => 'getEnableAutoNav',
         'enable_auto_nav_metadata' => 'getEnableAutoNavMetadata',
         'enable_batch_update_envelope_types' => 'getEnableBatchUpdateEnvelopeTypes',
@@ -3625,8 +3757,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_contact_suggestions_metadata' => 'getEnableContactSuggestionsMetadata',
         'enable_content_search' => 'getEnableContentSearch',
         'enable_content_search_metadata' => 'getEnableContentSearchMetadata',
-        'enable_coupa_core' => 'getEnableCoupaCore',
-        'enable_coupa_core_meta_data' => 'getEnableCoupaCoreMetaData',
+        'enable_coupa_core_extension' => 'getEnableCoupaCoreExtension',
+        'enable_coupa_core_extension_metadata' => 'getEnableCoupaCoreExtensionMetadata',
         'enable_custom_data_verification_extensions' => 'getEnableCustomDataVerificationExtensions',
         'enable_custom_data_verification_extensions_metadata' => 'getEnableCustomDataVerificationExtensionsMetadata',
         'enable_customer_satisfaction_metric_tracking' => 'getEnableCustomerSatisfactionMetricTracking',
@@ -3660,6 +3792,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_e_sign_api_hourly_limit_management_metadata' => 'getEnableESignApiHourlyLimitManagementMetadata',
         'enable_esign_communities' => 'getEnableEsignCommunities',
         'enable_esign_communities_metadata' => 'getEnableEsignCommunitiesMetadata',
+        'enable_esign_task_list' => 'getEnableEsignTaskList',
+        'enable_esign_task_list_metadata' => 'getEnableEsignTaskListMetadata',
+        'enable_generation_with3_p_integration' => 'getEnableGenerationWith3PIntegration',
+        'enable_generation_with3_p_integration_meta_data' => 'getEnableGenerationWith3PIntegrationMetaData',
         'enable_id_fx_accountless_sms_auth_for_part11' => 'getEnableIdFxAccountlessSmsAuthForPart11',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata' => 'getEnableIdFxAccountlessSmsAuthForPart11Metadata',
         'enable_id_fx_intuit_kba' => 'getEnableIdFxIntuitKba',
@@ -3682,8 +3818,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_legacy_shared_envelopes_metadata' => 'getEnableLegacySharedEnvelopesMetadata',
         'enable_license_management' => 'getEnableLicenseManagement',
         'enable_license_management_metadata' => 'getEnableLicenseManagementMetadata',
+        'enable_microsoft_dynamics365_extension' => 'getEnableMicrosoftDynamics365Extension',
+        'enable_microsoft_dynamics365_extension_metadata' => 'getEnableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features' => 'getEnableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata' => 'getEnableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_for_hr' => 'getEnableNavigatorForHr',
+        'enable_navigator_for_hr_metadata' => 'getEnableNavigatorForHrMetadata',
         'enable_navigator_partial_ingestion' => 'getEnableNavigatorPartialIngestion',
         'enable_navigator_partial_ingestion_metadata' => 'getEnableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial' => 'getEnableNavigatorTrial',
@@ -3713,6 +3853,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_reserved_domain_metadata' => 'getEnableReservedDomainMetadata',
         'enable_responsive_signing' => 'getEnableResponsiveSigning',
         'enable_responsive_signing_metadata' => 'getEnableResponsiveSigningMetadata',
+        'enable_sap_ariba_extension' => 'getEnableSapAribaExtension',
+        'enable_sap_ariba_extension_meta_data' => 'getEnableSapAribaExtensionMetaData',
         'enable_scheduled_release' => 'getEnableScheduledRelease',
         'enable_scheduled_release_metadata' => 'getEnableScheduledReleaseMetadata',
         'enable_search_service_azure_uri' => 'getEnableSearchServiceAzureUri',
@@ -3733,6 +3875,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sequential_signing_ui_metadata' => 'getEnableSequentialSigningUiMetadata',
         'enable_signer_attachments' => 'getEnableSignerAttachments',
         'enable_signer_attachments_metadata' => 'getEnableSignerAttachmentsMetadata',
+        'enable_signing_ai_features_plan' => 'getEnableSigningAiFeaturesPlan',
+        'enable_signing_ai_features_plan_metadata' => 'getEnableSigningAiFeaturesPlanMetadata',
+        'enable_signing_ai_features_setting' => 'getEnableSigningAiFeaturesSetting',
+        'enable_signing_ai_features_setting_metadata' => 'getEnableSigningAiFeaturesSettingMetadata',
         'enable_signing_extension_comments' => 'getEnableSigningExtensionComments',
         'enable_signing_extension_comments_metadata' => 'getEnableSigningExtensionCommentsMetadata',
         'enable_signing_extension_conversations' => 'getEnableSigningExtensionConversations',
@@ -3758,6 +3904,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_social_id_login_metadata' => 'getEnableSocialIdLoginMetadata',
         'enable_strike_through' => 'getEnableStrikeThrough',
         'enable_strike_through_metadata' => 'getEnableStrikeThroughMetadata',
+        'enable_tickets' => 'getEnableTickets',
+        'enable_tickets_meta_data' => 'getEnableTicketsMetaData',
         'enable_transaction_point' => 'getEnableTransactionPoint',
         'enable_transaction_point_metadata' => 'getEnableTransactionPointMetadata',
         'enable_unified_repository' => 'getEnableUnifiedRepository',
@@ -3843,6 +3991,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'isv_oem_embed' => 'getIsvOemEmbed',
         'isv_oem_embed_meta_data' => 'getIsvOemEmbedMetaData',
         'linked_external_primary_accounts' => 'getLinkedExternalPrimaryAccounts',
+        'maestro_plan_levels' => 'getMaestroPlanLevels',
+        'maestro_plan_levels_metadata' => 'getMaestroPlanLevelsMetadata',
         'maximum_signing_groups' => 'getMaximumSigningGroups',
         'maximum_signing_groups_metadata' => 'getMaximumSigningGroupsMetadata',
         'maximum_users_per_signing_group' => 'getMaximumUsersPerSigningGroup',
@@ -4143,6 +4293,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_bulk_send_metadata'] = isset($data['allow_bulk_send_metadata']) ? $data['allow_bulk_send_metadata'] : null;
         $this->container['allow_cd_withdraw'] = isset($data['allow_cd_withdraw']) ? $data['allow_cd_withdraw'] : null;
         $this->container['allow_cd_withdraw_metadata'] = isset($data['allow_cd_withdraw_metadata']) ? $data['allow_cd_withdraw_metadata'] : null;
+        $this->container['allow_connect_agreement_ui'] = isset($data['allow_connect_agreement_ui']) ? $data['allow_connect_agreement_ui'] : null;
+        $this->container['allow_connect_agreement_ui_metadata'] = isset($data['allow_connect_agreement_ui_metadata']) ? $data['allow_connect_agreement_ui_metadata'] : null;
         $this->container['allow_connect_authoritative_copy_ready_event_ui'] = isset($data['allow_connect_authoritative_copy_ready_event_ui']) ? $data['allow_connect_authoritative_copy_ready_event_ui'] : null;
         $this->container['allow_connect_envelope_removed_event'] = isset($data['allow_connect_envelope_removed_event']) ? $data['allow_connect_envelope_removed_event'] : null;
         $this->container['allow_connect_extension_ui'] = isset($data['allow_connect_extension_ui']) ? $data['allow_connect_extension_ui'] : null;
@@ -4380,6 +4532,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['consumer_disclosure_frequency_metadata'] = isset($data['consumer_disclosure_frequency_metadata']) ? $data['consumer_disclosure_frequency_metadata'] : null;
         $this->container['convert_pdf_fields'] = isset($data['convert_pdf_fields']) ? $data['convert_pdf_fields'] : null;
         $this->container['convert_pdf_fields_metadata'] = isset($data['convert_pdf_fields_metadata']) ? $data['convert_pdf_fields_metadata'] : null;
+        $this->container['custom_extraction_plan_levels'] = isset($data['custom_extraction_plan_levels']) ? $data['custom_extraction_plan_levels'] : null;
+        $this->container['custom_extraction_plan_levels_metadata'] = isset($data['custom_extraction_plan_levels_metadata']) ? $data['custom_extraction_plan_levels_metadata'] : null;
         $this->container['data_population_scope'] = isset($data['data_population_scope']) ? $data['data_population_scope'] : null;
         $this->container['data_population_scope_metadata'] = isset($data['data_population_scope_metadata']) ? $data['data_population_scope_metadata'] : null;
         $this->container['default_signing_responsive_view'] = isset($data['default_signing_responsive_view']) ? $data['default_signing_responsive_view'] : null;
@@ -4388,6 +4542,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['default_to_advanced_envelopes_filter_form_metadata'] = isset($data['default_to_advanced_envelopes_filter_form_metadata']) ? $data['default_to_advanced_envelopes_filter_form_metadata'] : null;
         $this->container['disable_auto_template_matching'] = isset($data['disable_auto_template_matching']) ? $data['disable_auto_template_matching'] : null;
         $this->container['disable_auto_template_matching_metadata'] = isset($data['disable_auto_template_matching_metadata']) ? $data['disable_auto_template_matching_metadata'] : null;
+        $this->container['disable_legacy_shared_envelopes'] = isset($data['disable_legacy_shared_envelopes']) ? $data['disable_legacy_shared_envelopes'] : null;
+        $this->container['disable_legacy_shared_envelopes_metadata'] = isset($data['disable_legacy_shared_envelopes_metadata']) ? $data['disable_legacy_shared_envelopes_metadata'] : null;
         $this->container['disable_mobile_app'] = isset($data['disable_mobile_app']) ? $data['disable_mobile_app'] : null;
         $this->container['disable_mobile_app_metadata'] = isset($data['disable_mobile_app_metadata']) ? $data['disable_mobile_app_metadata'] : null;
         $this->container['disable_mobile_push_notifications'] = isset($data['disable_mobile_push_notifications']) ? $data['disable_mobile_push_notifications'] : null;
@@ -4443,8 +4599,14 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_agreement_actions_for_clm_metadata'] = isset($data['enable_agreement_actions_for_clm_metadata']) ? $data['enable_agreement_actions_for_clm_metadata'] : null;
         $this->container['enable_agreement_actions_for_e_sign'] = isset($data['enable_agreement_actions_for_e_sign']) ? $data['enable_agreement_actions_for_e_sign'] : null;
         $this->container['enable_agreement_actions_for_e_sign_metadata'] = isset($data['enable_agreement_actions_for_e_sign_metadata']) ? $data['enable_agreement_actions_for_e_sign_metadata'] : null;
+        $this->container['enable_agreement_desk_advanced'] = isset($data['enable_agreement_desk_advanced']) ? $data['enable_agreement_desk_advanced'] : null;
+        $this->container['enable_agreement_desk_advanced_meta_data'] = isset($data['enable_agreement_desk_advanced_meta_data']) ? $data['enable_agreement_desk_advanced_meta_data'] : null;
         $this->container['enable_ai_contract_review'] = isset($data['enable_ai_contract_review']) ? $data['enable_ai_contract_review'] : null;
         $this->container['enable_ai_contract_review_metadata'] = isset($data['enable_ai_contract_review_metadata']) ? $data['enable_ai_contract_review_metadata'] : null;
+        $this->container['enable_ai_suggested_fields_advanced'] = isset($data['enable_ai_suggested_fields_advanced']) ? $data['enable_ai_suggested_fields_advanced'] : null;
+        $this->container['enable_ai_suggested_fields_advanced_metadata'] = isset($data['enable_ai_suggested_fields_advanced_metadata']) ? $data['enable_ai_suggested_fields_advanced_metadata'] : null;
+        $this->container['enable_ai_suggested_fields_basic'] = isset($data['enable_ai_suggested_fields_basic']) ? $data['enable_ai_suggested_fields_basic'] : null;
+        $this->container['enable_ai_suggested_fields_basic_metadata'] = isset($data['enable_ai_suggested_fields_basic_metadata']) ? $data['enable_ai_suggested_fields_basic_metadata'] : null;
         $this->container['enable_auto_nav'] = isset($data['enable_auto_nav']) ? $data['enable_auto_nav'] : null;
         $this->container['enable_auto_nav_metadata'] = isset($data['enable_auto_nav_metadata']) ? $data['enable_auto_nav_metadata'] : null;
         $this->container['enable_batch_update_envelope_types'] = isset($data['enable_batch_update_envelope_types']) ? $data['enable_batch_update_envelope_types'] : null;
@@ -4472,8 +4634,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_contact_suggestions_metadata'] = isset($data['enable_contact_suggestions_metadata']) ? $data['enable_contact_suggestions_metadata'] : null;
         $this->container['enable_content_search'] = isset($data['enable_content_search']) ? $data['enable_content_search'] : null;
         $this->container['enable_content_search_metadata'] = isset($data['enable_content_search_metadata']) ? $data['enable_content_search_metadata'] : null;
-        $this->container['enable_coupa_core'] = isset($data['enable_coupa_core']) ? $data['enable_coupa_core'] : null;
-        $this->container['enable_coupa_core_meta_data'] = isset($data['enable_coupa_core_meta_data']) ? $data['enable_coupa_core_meta_data'] : null;
+        $this->container['enable_coupa_core_extension'] = isset($data['enable_coupa_core_extension']) ? $data['enable_coupa_core_extension'] : null;
+        $this->container['enable_coupa_core_extension_metadata'] = isset($data['enable_coupa_core_extension_metadata']) ? $data['enable_coupa_core_extension_metadata'] : null;
         $this->container['enable_custom_data_verification_extensions'] = isset($data['enable_custom_data_verification_extensions']) ? $data['enable_custom_data_verification_extensions'] : null;
         $this->container['enable_custom_data_verification_extensions_metadata'] = isset($data['enable_custom_data_verification_extensions_metadata']) ? $data['enable_custom_data_verification_extensions_metadata'] : null;
         $this->container['enable_customer_satisfaction_metric_tracking'] = isset($data['enable_customer_satisfaction_metric_tracking']) ? $data['enable_customer_satisfaction_metric_tracking'] : null;
@@ -4507,6 +4669,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_e_sign_api_hourly_limit_management_metadata'] = isset($data['enable_e_sign_api_hourly_limit_management_metadata']) ? $data['enable_e_sign_api_hourly_limit_management_metadata'] : null;
         $this->container['enable_esign_communities'] = isset($data['enable_esign_communities']) ? $data['enable_esign_communities'] : null;
         $this->container['enable_esign_communities_metadata'] = isset($data['enable_esign_communities_metadata']) ? $data['enable_esign_communities_metadata'] : null;
+        $this->container['enable_esign_task_list'] = isset($data['enable_esign_task_list']) ? $data['enable_esign_task_list'] : null;
+        $this->container['enable_esign_task_list_metadata'] = isset($data['enable_esign_task_list_metadata']) ? $data['enable_esign_task_list_metadata'] : null;
+        $this->container['enable_generation_with3_p_integration'] = isset($data['enable_generation_with3_p_integration']) ? $data['enable_generation_with3_p_integration'] : null;
+        $this->container['enable_generation_with3_p_integration_meta_data'] = isset($data['enable_generation_with3_p_integration_meta_data']) ? $data['enable_generation_with3_p_integration_meta_data'] : null;
         $this->container['enable_id_fx_accountless_sms_auth_for_part11'] = isset($data['enable_id_fx_accountless_sms_auth_for_part11']) ? $data['enable_id_fx_accountless_sms_auth_for_part11'] : null;
         $this->container['enable_id_fx_accountless_sms_auth_for_part11_metadata'] = isset($data['enable_id_fx_accountless_sms_auth_for_part11_metadata']) ? $data['enable_id_fx_accountless_sms_auth_for_part11_metadata'] : null;
         $this->container['enable_id_fx_intuit_kba'] = isset($data['enable_id_fx_intuit_kba']) ? $data['enable_id_fx_intuit_kba'] : null;
@@ -4529,8 +4695,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_legacy_shared_envelopes_metadata'] = isset($data['enable_legacy_shared_envelopes_metadata']) ? $data['enable_legacy_shared_envelopes_metadata'] : null;
         $this->container['enable_license_management'] = isset($data['enable_license_management']) ? $data['enable_license_management'] : null;
         $this->container['enable_license_management_metadata'] = isset($data['enable_license_management_metadata']) ? $data['enable_license_management_metadata'] : null;
+        $this->container['enable_microsoft_dynamics365_extension'] = isset($data['enable_microsoft_dynamics365_extension']) ? $data['enable_microsoft_dynamics365_extension'] : null;
+        $this->container['enable_microsoft_dynamics365_extension_metadata'] = isset($data['enable_microsoft_dynamics365_extension_metadata']) ? $data['enable_microsoft_dynamics365_extension_metadata'] : null;
         $this->container['enable_multi_user_repository_features'] = isset($data['enable_multi_user_repository_features']) ? $data['enable_multi_user_repository_features'] : null;
         $this->container['enable_multi_user_repository_features_metadata'] = isset($data['enable_multi_user_repository_features_metadata']) ? $data['enable_multi_user_repository_features_metadata'] : null;
+        $this->container['enable_navigator_for_hr'] = isset($data['enable_navigator_for_hr']) ? $data['enable_navigator_for_hr'] : null;
+        $this->container['enable_navigator_for_hr_metadata'] = isset($data['enable_navigator_for_hr_metadata']) ? $data['enable_navigator_for_hr_metadata'] : null;
         $this->container['enable_navigator_partial_ingestion'] = isset($data['enable_navigator_partial_ingestion']) ? $data['enable_navigator_partial_ingestion'] : null;
         $this->container['enable_navigator_partial_ingestion_metadata'] = isset($data['enable_navigator_partial_ingestion_metadata']) ? $data['enable_navigator_partial_ingestion_metadata'] : null;
         $this->container['enable_navigator_trial'] = isset($data['enable_navigator_trial']) ? $data['enable_navigator_trial'] : null;
@@ -4560,6 +4730,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_reserved_domain_metadata'] = isset($data['enable_reserved_domain_metadata']) ? $data['enable_reserved_domain_metadata'] : null;
         $this->container['enable_responsive_signing'] = isset($data['enable_responsive_signing']) ? $data['enable_responsive_signing'] : null;
         $this->container['enable_responsive_signing_metadata'] = isset($data['enable_responsive_signing_metadata']) ? $data['enable_responsive_signing_metadata'] : null;
+        $this->container['enable_sap_ariba_extension'] = isset($data['enable_sap_ariba_extension']) ? $data['enable_sap_ariba_extension'] : null;
+        $this->container['enable_sap_ariba_extension_meta_data'] = isset($data['enable_sap_ariba_extension_meta_data']) ? $data['enable_sap_ariba_extension_meta_data'] : null;
         $this->container['enable_scheduled_release'] = isset($data['enable_scheduled_release']) ? $data['enable_scheduled_release'] : null;
         $this->container['enable_scheduled_release_metadata'] = isset($data['enable_scheduled_release_metadata']) ? $data['enable_scheduled_release_metadata'] : null;
         $this->container['enable_search_service_azure_uri'] = isset($data['enable_search_service_azure_uri']) ? $data['enable_search_service_azure_uri'] : null;
@@ -4580,6 +4752,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_sequential_signing_ui_metadata'] = isset($data['enable_sequential_signing_ui_metadata']) ? $data['enable_sequential_signing_ui_metadata'] : null;
         $this->container['enable_signer_attachments'] = isset($data['enable_signer_attachments']) ? $data['enable_signer_attachments'] : null;
         $this->container['enable_signer_attachments_metadata'] = isset($data['enable_signer_attachments_metadata']) ? $data['enable_signer_attachments_metadata'] : null;
+        $this->container['enable_signing_ai_features_plan'] = isset($data['enable_signing_ai_features_plan']) ? $data['enable_signing_ai_features_plan'] : null;
+        $this->container['enable_signing_ai_features_plan_metadata'] = isset($data['enable_signing_ai_features_plan_metadata']) ? $data['enable_signing_ai_features_plan_metadata'] : null;
+        $this->container['enable_signing_ai_features_setting'] = isset($data['enable_signing_ai_features_setting']) ? $data['enable_signing_ai_features_setting'] : null;
+        $this->container['enable_signing_ai_features_setting_metadata'] = isset($data['enable_signing_ai_features_setting_metadata']) ? $data['enable_signing_ai_features_setting_metadata'] : null;
         $this->container['enable_signing_extension_comments'] = isset($data['enable_signing_extension_comments']) ? $data['enable_signing_extension_comments'] : null;
         $this->container['enable_signing_extension_comments_metadata'] = isset($data['enable_signing_extension_comments_metadata']) ? $data['enable_signing_extension_comments_metadata'] : null;
         $this->container['enable_signing_extension_conversations'] = isset($data['enable_signing_extension_conversations']) ? $data['enable_signing_extension_conversations'] : null;
@@ -4605,6 +4781,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_social_id_login_metadata'] = isset($data['enable_social_id_login_metadata']) ? $data['enable_social_id_login_metadata'] : null;
         $this->container['enable_strike_through'] = isset($data['enable_strike_through']) ? $data['enable_strike_through'] : null;
         $this->container['enable_strike_through_metadata'] = isset($data['enable_strike_through_metadata']) ? $data['enable_strike_through_metadata'] : null;
+        $this->container['enable_tickets'] = isset($data['enable_tickets']) ? $data['enable_tickets'] : null;
+        $this->container['enable_tickets_meta_data'] = isset($data['enable_tickets_meta_data']) ? $data['enable_tickets_meta_data'] : null;
         $this->container['enable_transaction_point'] = isset($data['enable_transaction_point']) ? $data['enable_transaction_point'] : null;
         $this->container['enable_transaction_point_metadata'] = isset($data['enable_transaction_point_metadata']) ? $data['enable_transaction_point_metadata'] : null;
         $this->container['enable_unified_repository'] = isset($data['enable_unified_repository']) ? $data['enable_unified_repository'] : null;
@@ -4690,6 +4868,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['isv_oem_embed'] = isset($data['isv_oem_embed']) ? $data['isv_oem_embed'] : null;
         $this->container['isv_oem_embed_meta_data'] = isset($data['isv_oem_embed_meta_data']) ? $data['isv_oem_embed_meta_data'] : null;
         $this->container['linked_external_primary_accounts'] = isset($data['linked_external_primary_accounts']) ? $data['linked_external_primary_accounts'] : null;
+        $this->container['maestro_plan_levels'] = isset($data['maestro_plan_levels']) ? $data['maestro_plan_levels'] : null;
+        $this->container['maestro_plan_levels_metadata'] = isset($data['maestro_plan_levels_metadata']) ? $data['maestro_plan_levels_metadata'] : null;
         $this->container['maximum_signing_groups'] = isset($data['maximum_signing_groups']) ? $data['maximum_signing_groups'] : null;
         $this->container['maximum_signing_groups_metadata'] = isset($data['maximum_signing_groups_metadata']) ? $data['maximum_signing_groups_metadata'] : null;
         $this->container['maximum_users_per_signing_group'] = isset($data['maximum_users_per_signing_group']) ? $data['maximum_users_per_signing_group'] : null;
@@ -5939,6 +6119,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowCdWithdrawMetadata($allow_cd_withdraw_metadata)
     {
         $this->container['allow_cd_withdraw_metadata'] = $allow_cd_withdraw_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_connect_agreement_ui
+     *
+     * @return ?string
+     */
+    public function getAllowConnectAgreementUi()
+    {
+        return $this->container['allow_connect_agreement_ui'];
+    }
+
+    /**
+     * Sets allow_connect_agreement_ui
+     *
+     * @param ?string $allow_connect_agreement_ui 
+     *
+     * @return $this
+     */
+    public function setAllowConnectAgreementUi($allow_connect_agreement_ui)
+    {
+        $this->container['allow_connect_agreement_ui'] = $allow_connect_agreement_ui;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_connect_agreement_ui_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowConnectAgreementUiMetadata()
+    {
+        return $this->container['allow_connect_agreement_ui_metadata'];
+    }
+
+    /**
+     * Sets allow_connect_agreement_ui_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_connect_agreement_ui_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowConnectAgreementUiMetadata($allow_connect_agreement_ui_metadata)
+    {
+        $this->container['allow_connect_agreement_ui_metadata'] = $allow_connect_agreement_ui_metadata;
 
         return $this;
     }
@@ -11632,6 +11860,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets custom_extraction_plan_levels
+     *
+     * @return ?string
+     */
+    public function getCustomExtractionPlanLevels()
+    {
+        return $this->container['custom_extraction_plan_levels'];
+    }
+
+    /**
+     * Sets custom_extraction_plan_levels
+     *
+     * @param ?string $custom_extraction_plan_levels 
+     *
+     * @return $this
+     */
+    public function setCustomExtractionPlanLevels($custom_extraction_plan_levels)
+    {
+        $this->container['custom_extraction_plan_levels'] = $custom_extraction_plan_levels;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_extraction_plan_levels_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCustomExtractionPlanLevelsMetadata()
+    {
+        return $this->container['custom_extraction_plan_levels_metadata'];
+    }
+
+    /**
+     * Sets custom_extraction_plan_levels_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $custom_extraction_plan_levels_metadata 
+     *
+     * @return $this
+     */
+    public function setCustomExtractionPlanLevelsMetadata($custom_extraction_plan_levels_metadata)
+    {
+        $this->container['custom_extraction_plan_levels_metadata'] = $custom_extraction_plan_levels_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets data_population_scope
      *
      * @return ?string
@@ -11819,6 +12095,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setDisableAutoTemplateMatchingMetadata($disable_auto_template_matching_metadata)
     {
         $this->container['disable_auto_template_matching_metadata'] = $disable_auto_template_matching_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets disable_legacy_shared_envelopes
+     *
+     * @return ?string
+     */
+    public function getDisableLegacySharedEnvelopes()
+    {
+        return $this->container['disable_legacy_shared_envelopes'];
+    }
+
+    /**
+     * Sets disable_legacy_shared_envelopes
+     *
+     * @param ?string $disable_legacy_shared_envelopes 
+     *
+     * @return $this
+     */
+    public function setDisableLegacySharedEnvelopes($disable_legacy_shared_envelopes)
+    {
+        $this->container['disable_legacy_shared_envelopes'] = $disable_legacy_shared_envelopes;
+
+        return $this;
+    }
+
+    /**
+     * Gets disable_legacy_shared_envelopes_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDisableLegacySharedEnvelopesMetadata()
+    {
+        return $this->container['disable_legacy_shared_envelopes_metadata'];
+    }
+
+    /**
+     * Sets disable_legacy_shared_envelopes_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_legacy_shared_envelopes_metadata 
+     *
+     * @return $this
+     */
+    public function setDisableLegacySharedEnvelopesMetadata($disable_legacy_shared_envelopes_metadata)
+    {
+        $this->container['disable_legacy_shared_envelopes_metadata'] = $disable_legacy_shared_envelopes_metadata;
 
         return $this;
     }
@@ -13144,6 +13468,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_agreement_desk_advanced
+     *
+     * @return ?string
+     */
+    public function getEnableAgreementDeskAdvanced()
+    {
+        return $this->container['enable_agreement_desk_advanced'];
+    }
+
+    /**
+     * Sets enable_agreement_desk_advanced
+     *
+     * @param ?string $enable_agreement_desk_advanced 
+     *
+     * @return $this
+     */
+    public function setEnableAgreementDeskAdvanced($enable_agreement_desk_advanced)
+    {
+        $this->container['enable_agreement_desk_advanced'] = $enable_agreement_desk_advanced;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_agreement_desk_advanced_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAgreementDeskAdvancedMetaData()
+    {
+        return $this->container['enable_agreement_desk_advanced_meta_data'];
+    }
+
+    /**
+     * Sets enable_agreement_desk_advanced_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_desk_advanced_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableAgreementDeskAdvancedMetaData($enable_agreement_desk_advanced_meta_data)
+    {
+        $this->container['enable_agreement_desk_advanced_meta_data'] = $enable_agreement_desk_advanced_meta_data;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_ai_contract_review
      *
      * @return ?string
@@ -13187,6 +13559,102 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableAiContractReviewMetadata($enable_ai_contract_review_metadata)
     {
         $this->container['enable_ai_contract_review_metadata'] = $enable_ai_contract_review_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_ai_suggested_fields_advanced
+     *
+     * @return ?string
+     */
+    public function getEnableAiSuggestedFieldsAdvanced()
+    {
+        return $this->container['enable_ai_suggested_fields_advanced'];
+    }
+
+    /**
+     * Sets enable_ai_suggested_fields_advanced
+     *
+     * @param ?string $enable_ai_suggested_fields_advanced 
+     *
+     * @return $this
+     */
+    public function setEnableAiSuggestedFieldsAdvanced($enable_ai_suggested_fields_advanced)
+    {
+        $this->container['enable_ai_suggested_fields_advanced'] = $enable_ai_suggested_fields_advanced;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_ai_suggested_fields_advanced_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAiSuggestedFieldsAdvancedMetadata()
+    {
+        return $this->container['enable_ai_suggested_fields_advanced_metadata'];
+    }
+
+    /**
+     * Sets enable_ai_suggested_fields_advanced_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_advanced_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableAiSuggestedFieldsAdvancedMetadata($enable_ai_suggested_fields_advanced_metadata)
+    {
+        $this->container['enable_ai_suggested_fields_advanced_metadata'] = $enable_ai_suggested_fields_advanced_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_ai_suggested_fields_basic
+     *
+     * @return ?string
+     */
+    public function getEnableAiSuggestedFieldsBasic()
+    {
+        return $this->container['enable_ai_suggested_fields_basic'];
+    }
+
+    /**
+     * Sets enable_ai_suggested_fields_basic
+     *
+     * @param ?string $enable_ai_suggested_fields_basic 
+     *
+     * @return $this
+     */
+    public function setEnableAiSuggestedFieldsBasic($enable_ai_suggested_fields_basic)
+    {
+        $this->container['enable_ai_suggested_fields_basic'] = $enable_ai_suggested_fields_basic;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_ai_suggested_fields_basic_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAiSuggestedFieldsBasicMetadata()
+    {
+        return $this->container['enable_ai_suggested_fields_basic_metadata'];
+    }
+
+    /**
+     * Sets enable_ai_suggested_fields_basic_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_basic_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableAiSuggestedFieldsBasicMetadata($enable_ai_suggested_fields_basic_metadata)
+    {
+        $this->container['enable_ai_suggested_fields_basic_metadata'] = $enable_ai_suggested_fields_basic_metadata;
 
         return $this;
     }
@@ -13840,49 +14308,49 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets enable_coupa_core
+     * Gets enable_coupa_core_extension
      *
      * @return ?string
      */
-    public function getEnableCoupaCore()
+    public function getEnableCoupaCoreExtension()
     {
-        return $this->container['enable_coupa_core'];
+        return $this->container['enable_coupa_core_extension'];
     }
 
     /**
-     * Sets enable_coupa_core
+     * Sets enable_coupa_core_extension
      *
-     * @param ?string $enable_coupa_core 
+     * @param ?string $enable_coupa_core_extension 
      *
      * @return $this
      */
-    public function setEnableCoupaCore($enable_coupa_core)
+    public function setEnableCoupaCoreExtension($enable_coupa_core_extension)
     {
-        $this->container['enable_coupa_core'] = $enable_coupa_core;
+        $this->container['enable_coupa_core_extension'] = $enable_coupa_core_extension;
 
         return $this;
     }
 
     /**
-     * Gets enable_coupa_core_meta_data
+     * Gets enable_coupa_core_extension_metadata
      *
      * @return \DocuSign\eSign\Model\SettingsMetadata
      */
-    public function getEnableCoupaCoreMetaData()
+    public function getEnableCoupaCoreExtensionMetadata()
     {
-        return $this->container['enable_coupa_core_meta_data'];
+        return $this->container['enable_coupa_core_extension_metadata'];
     }
 
     /**
-     * Sets enable_coupa_core_meta_data
+     * Sets enable_coupa_core_extension_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_coupa_core_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_coupa_core_extension_metadata 
      *
      * @return $this
      */
-    public function setEnableCoupaCoreMetaData($enable_coupa_core_meta_data)
+    public function setEnableCoupaCoreExtensionMetadata($enable_coupa_core_extension_metadata)
     {
-        $this->container['enable_coupa_core_meta_data'] = $enable_coupa_core_meta_data;
+        $this->container['enable_coupa_core_extension_metadata'] = $enable_coupa_core_extension_metadata;
 
         return $this;
     }
@@ -14680,6 +15148,102 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_esign_task_list
+     *
+     * @return ?string
+     */
+    public function getEnableEsignTaskList()
+    {
+        return $this->container['enable_esign_task_list'];
+    }
+
+    /**
+     * Sets enable_esign_task_list
+     *
+     * @param ?string $enable_esign_task_list 
+     *
+     * @return $this
+     */
+    public function setEnableEsignTaskList($enable_esign_task_list)
+    {
+        $this->container['enable_esign_task_list'] = $enable_esign_task_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_esign_task_list_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableEsignTaskListMetadata()
+    {
+        return $this->container['enable_esign_task_list_metadata'];
+    }
+
+    /**
+     * Sets enable_esign_task_list_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_esign_task_list_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableEsignTaskListMetadata($enable_esign_task_list_metadata)
+    {
+        $this->container['enable_esign_task_list_metadata'] = $enable_esign_task_list_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_generation_with3_p_integration
+     *
+     * @return ?string
+     */
+    public function getEnableGenerationWith3PIntegration()
+    {
+        return $this->container['enable_generation_with3_p_integration'];
+    }
+
+    /**
+     * Sets enable_generation_with3_p_integration
+     *
+     * @param ?string $enable_generation_with3_p_integration 
+     *
+     * @return $this
+     */
+    public function setEnableGenerationWith3PIntegration($enable_generation_with3_p_integration)
+    {
+        $this->container['enable_generation_with3_p_integration'] = $enable_generation_with3_p_integration;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_generation_with3_p_integration_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableGenerationWith3PIntegrationMetaData()
+    {
+        return $this->container['enable_generation_with3_p_integration_meta_data'];
+    }
+
+    /**
+     * Sets enable_generation_with3_p_integration_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_generation_with3_p_integration_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableGenerationWith3PIntegrationMetaData($enable_generation_with3_p_integration_meta_data)
+    {
+        $this->container['enable_generation_with3_p_integration_meta_data'] = $enable_generation_with3_p_integration_meta_data;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_id_fx_accountless_sms_auth_for_part11
      *
      * @return ?string
@@ -15208,6 +15772,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_microsoft_dynamics365_extension
+     *
+     * @return ?string
+     */
+    public function getEnableMicrosoftDynamics365Extension()
+    {
+        return $this->container['enable_microsoft_dynamics365_extension'];
+    }
+
+    /**
+     * Sets enable_microsoft_dynamics365_extension
+     *
+     * @param ?string $enable_microsoft_dynamics365_extension 
+     *
+     * @return $this
+     */
+    public function setEnableMicrosoftDynamics365Extension($enable_microsoft_dynamics365_extension)
+    {
+        $this->container['enable_microsoft_dynamics365_extension'] = $enable_microsoft_dynamics365_extension;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_microsoft_dynamics365_extension_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableMicrosoftDynamics365ExtensionMetadata()
+    {
+        return $this->container['enable_microsoft_dynamics365_extension_metadata'];
+    }
+
+    /**
+     * Sets enable_microsoft_dynamics365_extension_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_microsoft_dynamics365_extension_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableMicrosoftDynamics365ExtensionMetadata($enable_microsoft_dynamics365_extension_metadata)
+    {
+        $this->container['enable_microsoft_dynamics365_extension_metadata'] = $enable_microsoft_dynamics365_extension_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_multi_user_repository_features
      *
      * @return ?string
@@ -15251,6 +15863,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableMultiUserRepositoryFeaturesMetadata($enable_multi_user_repository_features_metadata)
     {
         $this->container['enable_multi_user_repository_features_metadata'] = $enable_multi_user_repository_features_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_for_hr
+     *
+     * @return ?string
+     */
+    public function getEnableNavigatorForHr()
+    {
+        return $this->container['enable_navigator_for_hr'];
+    }
+
+    /**
+     * Sets enable_navigator_for_hr
+     *
+     * @param ?string $enable_navigator_for_hr 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorForHr($enable_navigator_for_hr)
+    {
+        $this->container['enable_navigator_for_hr'] = $enable_navigator_for_hr;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_for_hr_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableNavigatorForHrMetadata()
+    {
+        return $this->container['enable_navigator_for_hr_metadata'];
+    }
+
+    /**
+     * Sets enable_navigator_for_hr_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_for_hr_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorForHrMetadata($enable_navigator_for_hr_metadata)
+    {
+        $this->container['enable_navigator_for_hr_metadata'] = $enable_navigator_for_hr_metadata;
 
         return $this;
     }
@@ -15952,6 +16612,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets enable_sap_ariba_extension
+     *
+     * @return ?string
+     */
+    public function getEnableSapAribaExtension()
+    {
+        return $this->container['enable_sap_ariba_extension'];
+    }
+
+    /**
+     * Sets enable_sap_ariba_extension
+     *
+     * @param ?string $enable_sap_ariba_extension 
+     *
+     * @return $this
+     */
+    public function setEnableSapAribaExtension($enable_sap_ariba_extension)
+    {
+        $this->container['enable_sap_ariba_extension'] = $enable_sap_ariba_extension;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_sap_ariba_extension_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableSapAribaExtensionMetaData()
+    {
+        return $this->container['enable_sap_ariba_extension_meta_data'];
+    }
+
+    /**
+     * Sets enable_sap_ariba_extension_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sap_ariba_extension_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableSapAribaExtensionMetaData($enable_sap_ariba_extension_meta_data)
+    {
+        $this->container['enable_sap_ariba_extension_meta_data'] = $enable_sap_ariba_extension_meta_data;
+
+        return $this;
+    }
+
+    /**
      * Gets enable_scheduled_release
      *
      * @return ?string
@@ -16427,6 +17135,102 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableSignerAttachmentsMetadata($enable_signer_attachments_metadata)
     {
         $this->container['enable_signer_attachments_metadata'] = $enable_signer_attachments_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_signing_ai_features_plan
+     *
+     * @return ?string
+     */
+    public function getEnableSigningAiFeaturesPlan()
+    {
+        return $this->container['enable_signing_ai_features_plan'];
+    }
+
+    /**
+     * Sets enable_signing_ai_features_plan
+     *
+     * @param ?string $enable_signing_ai_features_plan 
+     *
+     * @return $this
+     */
+    public function setEnableSigningAiFeaturesPlan($enable_signing_ai_features_plan)
+    {
+        $this->container['enable_signing_ai_features_plan'] = $enable_signing_ai_features_plan;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_signing_ai_features_plan_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableSigningAiFeaturesPlanMetadata()
+    {
+        return $this->container['enable_signing_ai_features_plan_metadata'];
+    }
+
+    /**
+     * Sets enable_signing_ai_features_plan_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_ai_features_plan_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableSigningAiFeaturesPlanMetadata($enable_signing_ai_features_plan_metadata)
+    {
+        $this->container['enable_signing_ai_features_plan_metadata'] = $enable_signing_ai_features_plan_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_signing_ai_features_setting
+     *
+     * @return ?string
+     */
+    public function getEnableSigningAiFeaturesSetting()
+    {
+        return $this->container['enable_signing_ai_features_setting'];
+    }
+
+    /**
+     * Sets enable_signing_ai_features_setting
+     *
+     * @param ?string $enable_signing_ai_features_setting 
+     *
+     * @return $this
+     */
+    public function setEnableSigningAiFeaturesSetting($enable_signing_ai_features_setting)
+    {
+        $this->container['enable_signing_ai_features_setting'] = $enable_signing_ai_features_setting;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_signing_ai_features_setting_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableSigningAiFeaturesSettingMetadata()
+    {
+        return $this->container['enable_signing_ai_features_setting_metadata'];
+    }
+
+    /**
+     * Sets enable_signing_ai_features_setting_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_ai_features_setting_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableSigningAiFeaturesSettingMetadata($enable_signing_ai_features_setting_metadata)
+    {
+        $this->container['enable_signing_ai_features_setting_metadata'] = $enable_signing_ai_features_setting_metadata;
 
         return $this;
     }
@@ -17027,6 +17831,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableStrikeThroughMetadata($enable_strike_through_metadata)
     {
         $this->container['enable_strike_through_metadata'] = $enable_strike_through_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_tickets
+     *
+     * @return ?string
+     */
+    public function getEnableTickets()
+    {
+        return $this->container['enable_tickets'];
+    }
+
+    /**
+     * Sets enable_tickets
+     *
+     * @param ?string $enable_tickets 
+     *
+     * @return $this
+     */
+    public function setEnableTickets($enable_tickets)
+    {
+        $this->container['enable_tickets'] = $enable_tickets;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_tickets_meta_data
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableTicketsMetaData()
+    {
+        return $this->container['enable_tickets_meta_data'];
+    }
+
+    /**
+     * Sets enable_tickets_meta_data
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_tickets_meta_data 
+     *
+     * @return $this
+     */
+    public function setEnableTicketsMetaData($enable_tickets_meta_data)
+    {
+        $this->container['enable_tickets_meta_data'] = $enable_tickets_meta_data;
 
         return $this;
     }
@@ -19067,6 +19919,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setLinkedExternalPrimaryAccounts($linked_external_primary_accounts)
     {
         $this->container['linked_external_primary_accounts'] = $linked_external_primary_accounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets maestro_plan_levels
+     *
+     * @return ?string
+     */
+    public function getMaestroPlanLevels()
+    {
+        return $this->container['maestro_plan_levels'];
+    }
+
+    /**
+     * Sets maestro_plan_levels
+     *
+     * @param ?string $maestro_plan_levels 
+     *
+     * @return $this
+     */
+    public function setMaestroPlanLevels($maestro_plan_levels)
+    {
+        $this->container['maestro_plan_levels'] = $maestro_plan_levels;
+
+        return $this;
+    }
+
+    /**
+     * Gets maestro_plan_levels_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getMaestroPlanLevelsMetadata()
+    {
+        return $this->container['maestro_plan_levels_metadata'];
+    }
+
+    /**
+     * Sets maestro_plan_levels_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $maestro_plan_levels_metadata 
+     *
+     * @return $this
+     */
+    public function setMaestroPlanLevelsMetadata($maestro_plan_levels_metadata)
+    {
+        $this->container['maestro_plan_levels_metadata'] = $maestro_plan_levels_metadata;
 
         return $this;
     }

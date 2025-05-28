@@ -64,7 +64,6 @@ class TemplateSummary implements ModelInterface, ArrayAccess
         'document_id' => '?string',
         'document_name' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
-        'has_document_template_library' => '?string',
         'name' => '?string',
         'template_id' => '?string',
         'template_match' => '\DocuSign\eSign\Model\TemplateMatch',
@@ -81,7 +80,6 @@ class TemplateSummary implements ModelInterface, ArrayAccess
         'document_id' => null,
         'document_name' => null,
         'error_details' => null,
-        'has_document_template_library' => null,
         'name' => null,
         'template_id' => null,
         'template_match' => null,
@@ -119,7 +117,6 @@ class TemplateSummary implements ModelInterface, ArrayAccess
         'document_id' => 'documentId',
         'document_name' => 'documentName',
         'error_details' => 'errorDetails',
-        'has_document_template_library' => 'hasDocumentTemplateLibrary',
         'name' => 'name',
         'template_id' => 'templateId',
         'template_match' => 'templateMatch',
@@ -136,7 +133,6 @@ class TemplateSummary implements ModelInterface, ArrayAccess
         'document_id' => 'setDocumentId',
         'document_name' => 'setDocumentName',
         'error_details' => 'setErrorDetails',
-        'has_document_template_library' => 'setHasDocumentTemplateLibrary',
         'name' => 'setName',
         'template_id' => 'setTemplateId',
         'template_match' => 'setTemplateMatch',
@@ -153,7 +149,6 @@ class TemplateSummary implements ModelInterface, ArrayAccess
         'document_id' => 'getDocumentId',
         'document_name' => 'getDocumentName',
         'error_details' => 'getErrorDetails',
-        'has_document_template_library' => 'getHasDocumentTemplateLibrary',
         'name' => 'getName',
         'template_id' => 'getTemplateId',
         'template_match' => 'getTemplateMatch',
@@ -224,7 +219,6 @@ class TemplateSummary implements ModelInterface, ArrayAccess
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_name'] = isset($data['document_name']) ? $data['document_name'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
-        $this->container['has_document_template_library'] = isset($data['has_document_template_library']) ? $data['has_document_template_library'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;
         $this->container['template_match'] = isset($data['template_match']) ? $data['template_match'] : null;
@@ -347,30 +341,6 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     public function setErrorDetails($error_details)
     {
         $this->container['error_details'] = $error_details;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_document_template_library
-     *
-     * @return ?string
-     */
-    public function getHasDocumentTemplateLibrary()
-    {
-        return $this->container['has_document_template_library'];
-    }
-
-    /**
-     * Sets has_document_template_library
-     *
-     * @param ?string $has_document_template_library 
-     *
-     * @return $this
-     */
-    public function setHasDocumentTemplateLibrary($has_document_template_library)
-    {
-        $this->container['has_document_template_library'] = $has_document_template_library;
 
         return $this;
     }

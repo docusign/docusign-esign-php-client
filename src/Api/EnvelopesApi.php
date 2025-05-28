@@ -1406,6 +1406,47 @@ class GetRecipientSignatureImageOptions
 
 
 /**
+ * ListAuditEventsOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
+class ListAuditEventsOptions
+{
+    /**
+      * $locale Locale setting for the response, e.g., 'en-US'.
+      * @var ?string
+      */
+    protected ?string $locale = null;
+
+    /**
+     * Gets locale
+     *
+     * @return ?string
+     */
+    public function getLocale(): ?string
+    {
+        return $this->locale;
+    }
+
+    /**
+     * Sets locale
+     * @param ?string $locale Locale setting for the response, e.g., 'en-US'.
+     *
+     * @return self
+     */
+    public function setLocale(?string $locale): self
+    {
+        $this->locale = $locale;
+        return $this;
+    }
+}
+
+
+/**
  * ListDocumentsOptions Class Doc Comment
  *
  * @category Class
@@ -1441,6 +1482,33 @@ class ListDocumentsOptions
     public function setDocumentsByUserid(?string $documents_by_userid): self
     {
         $this->documents_by_userid = $documents_by_userid;
+        return $this;
+    }
+    /**
+      * $include_agreement_type 
+      * @var ?string
+      */
+    protected ?string $include_agreement_type = null;
+
+    /**
+     * Gets include_agreement_type
+     *
+     * @return ?string
+     */
+    public function getIncludeAgreementType(): ?string
+    {
+        return $this->include_agreement_type;
+    }
+
+    /**
+     * Sets include_agreement_type
+     * @param ?string $include_agreement_type 
+     *
+     * @return self
+     */
+    public function setIncludeAgreementType(?string $include_agreement_type): self
+    {
+        $this->include_agreement_type = $include_agreement_type;
         return $this;
     }
     /**
@@ -9181,7 +9249,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *
@@ -9201,7 +9269,7 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
-     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+     * @param ?string $lang_code The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
      * @param ?string $recipient_id The ID of the recipient being accessed.
      * @param  \DocuSign\eSign\Api\EnvelopesApi\GetConsumerDisclosureOptions  $options for modifying the behavior of the function. (optional)
      *
@@ -12430,13 +12498,14 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListAuditEventsOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeAuditEventResponse
      */
-    public function listAuditEvents($account_id, $envelope_id)
+    public function listAuditEvents($account_id, $envelope_id, \DocuSign\eSign\Api\EnvelopesApi\ListAuditEventsOptions $options = null)
     {
-        list($response) = $this->listAuditEventsWithHttpInfo($account_id, $envelope_id);
+        list($response) = $this->listAuditEventsWithHttpInfo($account_id, $envelope_id, $options);
         return $response;
     }
 
@@ -12447,11 +12516,12 @@ class EnvelopesApi
      *
      * @param ?string $account_id The external account number (int) or account ID Guid.
      * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\ListAuditEventsOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeAuditEventResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listAuditEventsWithHttpInfo($account_id, $envelope_id): array
+    public function listAuditEventsWithHttpInfo($account_id, $envelope_id, \DocuSign\eSign\Api\EnvelopesApi\ListAuditEventsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -12468,6 +12538,13 @@ class EnvelopesApi
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        if ($options != null)
+        {
+            // query params
+            if ($options->getLocale() != 'null') {
+                $queryParams['locale'] = $this->apiClient->getSerializer()->toQueryValue($options->getLocale());
+            }
+        }
 
         // path params
         if ($account_id !== null) {
@@ -12776,6 +12853,9 @@ class EnvelopesApi
             // query params
             if ($options->getDocumentsByUserid() != 'null') {
                 $queryParams['documents_by_userid'] = $this->apiClient->getSerializer()->toQueryValue($options->getDocumentsByUserid());
+            }
+            if ($options->getIncludeAgreementType() != 'null') {
+                $queryParams['include_agreement_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAgreementType());
             }
             if ($options->getIncludeDocgenFormfields() != 'null') {
                 $queryParams['include_docgen_formfields'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeDocgenFormfields());

@@ -64,11 +64,11 @@ class Document implements ModelInterface, ArrayAccess
         'assign_tabs_to_recipient_id' => '?string',
         'authoritative_copy' => '?bool',
         'display' => '?string',
+        'doc_gen_document_status' => '?string',
         'doc_gen_form_fields' => '\DocuSign\eSign\Model\DocGenFormField[]',
         'document_base64' => '?string',
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
         'document_id' => '?string',
-        'document_template_agreement_type_id' => '?string',
         'document_template_id' => '?string',
         'encrypted_with_key_manager' => '?string',
         'file_extension' => '?string',
@@ -102,11 +102,11 @@ class Document implements ModelInterface, ArrayAccess
         'assign_tabs_to_recipient_id' => null,
         'authoritative_copy' => null,
         'display' => null,
+        'doc_gen_document_status' => null,
         'doc_gen_form_fields' => null,
         'document_base64' => null,
         'document_fields' => null,
         'document_id' => null,
-        'document_template_agreement_type_id' => null,
         'document_template_id' => null,
         'encrypted_with_key_manager' => null,
         'file_extension' => null,
@@ -161,11 +161,11 @@ class Document implements ModelInterface, ArrayAccess
         'assign_tabs_to_recipient_id' => 'assignTabsToRecipientId',
         'authoritative_copy' => 'authoritativeCopy',
         'display' => 'display',
+        'doc_gen_document_status' => 'docGenDocumentStatus',
         'doc_gen_form_fields' => 'docGenFormFields',
         'document_base64' => 'documentBase64',
         'document_fields' => 'documentFields',
         'document_id' => 'documentId',
-        'document_template_agreement_type_id' => 'documentTemplateAgreementTypeId',
         'document_template_id' => 'documentTemplateId',
         'encrypted_with_key_manager' => 'encryptedWithKeyManager',
         'file_extension' => 'fileExtension',
@@ -199,11 +199,11 @@ class Document implements ModelInterface, ArrayAccess
         'assign_tabs_to_recipient_id' => 'setAssignTabsToRecipientId',
         'authoritative_copy' => 'setAuthoritativeCopy',
         'display' => 'setDisplay',
+        'doc_gen_document_status' => 'setDocGenDocumentStatus',
         'doc_gen_form_fields' => 'setDocGenFormFields',
         'document_base64' => 'setDocumentBase64',
         'document_fields' => 'setDocumentFields',
         'document_id' => 'setDocumentId',
-        'document_template_agreement_type_id' => 'setDocumentTemplateAgreementTypeId',
         'document_template_id' => 'setDocumentTemplateId',
         'encrypted_with_key_manager' => 'setEncryptedWithKeyManager',
         'file_extension' => 'setFileExtension',
@@ -237,11 +237,11 @@ class Document implements ModelInterface, ArrayAccess
         'assign_tabs_to_recipient_id' => 'getAssignTabsToRecipientId',
         'authoritative_copy' => 'getAuthoritativeCopy',
         'display' => 'getDisplay',
+        'doc_gen_document_status' => 'getDocGenDocumentStatus',
         'doc_gen_form_fields' => 'getDocGenFormFields',
         'document_base64' => 'getDocumentBase64',
         'document_fields' => 'getDocumentFields',
         'document_id' => 'getDocumentId',
-        'document_template_agreement_type_id' => 'getDocumentTemplateAgreementTypeId',
         'document_template_id' => 'getDocumentTemplateId',
         'encrypted_with_key_manager' => 'getEncryptedWithKeyManager',
         'file_extension' => 'getFileExtension',
@@ -329,11 +329,11 @@ class Document implements ModelInterface, ArrayAccess
         $this->container['assign_tabs_to_recipient_id'] = isset($data['assign_tabs_to_recipient_id']) ? $data['assign_tabs_to_recipient_id'] : null;
         $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['display'] = isset($data['display']) ? $data['display'] : null;
+        $this->container['doc_gen_document_status'] = isset($data['doc_gen_document_status']) ? $data['doc_gen_document_status'] : null;
         $this->container['doc_gen_form_fields'] = isset($data['doc_gen_form_fields']) ? $data['doc_gen_form_fields'] : null;
         $this->container['document_base64'] = isset($data['document_base64']) ? $data['document_base64'] : null;
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
-        $this->container['document_template_agreement_type_id'] = isset($data['document_template_agreement_type_id']) ? $data['document_template_agreement_type_id'] : null;
         $this->container['document_template_id'] = isset($data['document_template_id']) ? $data['document_template_id'] : null;
         $this->container['encrypted_with_key_manager'] = isset($data['encrypted_with_key_manager']) ? $data['encrypted_with_key_manager'] : null;
         $this->container['file_extension'] = isset($data['file_extension']) ? $data['file_extension'] : null;
@@ -478,6 +478,30 @@ class Document implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets doc_gen_document_status
+     *
+     * @return ?string
+     */
+    public function getDocGenDocumentStatus()
+    {
+        return $this->container['doc_gen_document_status'];
+    }
+
+    /**
+     * Sets doc_gen_document_status
+     *
+     * @param ?string $doc_gen_document_status 
+     *
+     * @return $this
+     */
+    public function setDocGenDocumentStatus($doc_gen_document_status)
+    {
+        $this->container['doc_gen_document_status'] = $doc_gen_document_status;
+
+        return $this;
+    }
+
+    /**
      * Gets doc_gen_form_fields
      *
      * @return \DocuSign\eSign\Model\DocGenFormField[]
@@ -569,30 +593,6 @@ class Document implements ModelInterface, ArrayAccess
     public function setDocumentId($document_id)
     {
         $this->container['document_id'] = $document_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets document_template_agreement_type_id
-     *
-     * @return ?string
-     */
-    public function getDocumentTemplateAgreementTypeId()
-    {
-        return $this->container['document_template_agreement_type_id'];
-    }
-
-    /**
-     * Sets document_template_agreement_type_id
-     *
-     * @param ?string $document_template_agreement_type_id 
-     *
-     * @return $this
-     */
-    public function setDocumentTemplateAgreementTypeId($document_template_agreement_type_id)
-    {
-        $this->container['document_template_agreement_type_id'] = $document_template_agreement_type_id;
 
         return $this;
     }
