@@ -104,7 +104,9 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'tab_text_formatting_enabled' => '?string',
         'tab_text_formatting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'text_tabs_enabled' => '?string',
-        'text_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
+        'text_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'uri_tabs_enabled' => '?string',
+        'uri_tabs_metadata' => '\DocuSign\eSign\Model\SettingsMetadata'
     ];
 
     /**
@@ -158,7 +160,9 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'tab_text_formatting_enabled' => null,
         'tab_text_formatting_metadata' => null,
         'text_tabs_enabled' => null,
-        'text_tabs_metadata' => null
+        'text_tabs_metadata' => null,
+        'uri_tabs_enabled' => null,
+        'uri_tabs_metadata' => null
     ];
 
     /**
@@ -233,7 +237,9 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'tab_text_formatting_enabled' => 'tabTextFormattingEnabled',
         'tab_text_formatting_metadata' => 'tabTextFormattingMetadata',
         'text_tabs_enabled' => 'textTabsEnabled',
-        'text_tabs_metadata' => 'textTabsMetadata'
+        'text_tabs_metadata' => 'textTabsMetadata',
+        'uri_tabs_enabled' => 'uriTabsEnabled',
+        'uri_tabs_metadata' => 'uriTabsMetadata'
     ];
 
     /**
@@ -287,7 +293,9 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'tab_text_formatting_enabled' => 'setTabTextFormattingEnabled',
         'tab_text_formatting_metadata' => 'setTabTextFormattingMetadata',
         'text_tabs_enabled' => 'setTextTabsEnabled',
-        'text_tabs_metadata' => 'setTextTabsMetadata'
+        'text_tabs_metadata' => 'setTextTabsMetadata',
+        'uri_tabs_enabled' => 'setUriTabsEnabled',
+        'uri_tabs_metadata' => 'setUriTabsMetadata'
     ];
 
     /**
@@ -341,7 +349,9 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         'tab_text_formatting_enabled' => 'getTabTextFormattingEnabled',
         'tab_text_formatting_metadata' => 'getTabTextFormattingMetadata',
         'text_tabs_enabled' => 'getTextTabsEnabled',
-        'text_tabs_metadata' => 'getTextTabsMetadata'
+        'text_tabs_metadata' => 'getTextTabsMetadata',
+        'uri_tabs_enabled' => 'getUriTabsEnabled',
+        'uri_tabs_metadata' => 'getUriTabsMetadata'
     ];
 
     /**
@@ -450,6 +460,8 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         $this->container['tab_text_formatting_metadata'] = isset($data['tab_text_formatting_metadata']) ? $data['tab_text_formatting_metadata'] : null;
         $this->container['text_tabs_enabled'] = isset($data['text_tabs_enabled']) ? $data['text_tabs_enabled'] : null;
         $this->container['text_tabs_metadata'] = isset($data['text_tabs_metadata']) ? $data['text_tabs_metadata'] : null;
+        $this->container['uri_tabs_enabled'] = isset($data['uri_tabs_enabled']) ? $data['uri_tabs_enabled'] : null;
+        $this->container['uri_tabs_metadata'] = isset($data['uri_tabs_metadata']) ? $data['uri_tabs_metadata'] : null;
     }
 
     /**
@@ -1576,6 +1588,54 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     public function setTextTabsMetadata($text_tabs_metadata)
     {
         $this->container['text_tabs_metadata'] = $text_tabs_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets uri_tabs_enabled
+     *
+     * @return ?string
+     */
+    public function getUriTabsEnabled()
+    {
+        return $this->container['uri_tabs_enabled'];
+    }
+
+    /**
+     * Sets uri_tabs_enabled
+     *
+     * @param ?string $uri_tabs_enabled 
+     *
+     * @return $this
+     */
+    public function setUriTabsEnabled($uri_tabs_enabled)
+    {
+        $this->container['uri_tabs_enabled'] = $uri_tabs_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets uri_tabs_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getUriTabsMetadata()
+    {
+        return $this->container['uri_tabs_metadata'];
+    }
+
+    /**
+     * Sets uri_tabs_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $uri_tabs_metadata 
+     *
+     * @return $this
+     */
+    public function setUriTabsMetadata($uri_tabs_metadata)
+    {
+        $this->container['uri_tabs_metadata'] = $uri_tabs_metadata;
 
         return $this;
     }

@@ -87,6 +87,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'forgotten_password_questions_count' => '?string',
         'free_envelope_sends_remaining_for_advanced_doc_gen' => '?int',
         'is_downgrade' => '?string',
+        'is_free_to_trial_eligible' => '?string',
         'payment_method' => '?string',
         'plan_classification' => '?string',
         'plan_end_date' => '?string',
@@ -134,6 +135,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'forgotten_password_questions_count' => null,
         'free_envelope_sends_remaining_for_advanced_doc_gen' => 'int32',
         'is_downgrade' => null,
+        'is_free_to_trial_eligible' => null,
         'payment_method' => null,
         'plan_classification' => null,
         'plan_end_date' => null,
@@ -202,6 +204,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'forgotten_password_questions_count' => 'forgottenPasswordQuestionsCount',
         'free_envelope_sends_remaining_for_advanced_doc_gen' => 'freeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade' => 'isDowngrade',
+        'is_free_to_trial_eligible' => 'isFreeToTrialEligible',
         'payment_method' => 'paymentMethod',
         'plan_classification' => 'planClassification',
         'plan_end_date' => 'planEndDate',
@@ -249,6 +252,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'forgotten_password_questions_count' => 'setForgottenPasswordQuestionsCount',
         'free_envelope_sends_remaining_for_advanced_doc_gen' => 'setFreeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade' => 'setIsDowngrade',
+        'is_free_to_trial_eligible' => 'setIsFreeToTrialEligible',
         'payment_method' => 'setPaymentMethod',
         'plan_classification' => 'setPlanClassification',
         'plan_end_date' => 'setPlanEndDate',
@@ -296,6 +300,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         'forgotten_password_questions_count' => 'getForgottenPasswordQuestionsCount',
         'free_envelope_sends_remaining_for_advanced_doc_gen' => 'getFreeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade' => 'getIsDowngrade',
+        'is_free_to_trial_eligible' => 'getIsFreeToTrialEligible',
         'payment_method' => 'getPaymentMethod',
         'plan_classification' => 'getPlanClassification',
         'plan_end_date' => 'getPlanEndDate',
@@ -397,6 +402,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
         $this->container['forgotten_password_questions_count'] = isset($data['forgotten_password_questions_count']) ? $data['forgotten_password_questions_count'] : null;
         $this->container['free_envelope_sends_remaining_for_advanced_doc_gen'] = isset($data['free_envelope_sends_remaining_for_advanced_doc_gen']) ? $data['free_envelope_sends_remaining_for_advanced_doc_gen'] : null;
         $this->container['is_downgrade'] = isset($data['is_downgrade']) ? $data['is_downgrade'] : null;
+        $this->container['is_free_to_trial_eligible'] = isset($data['is_free_to_trial_eligible']) ? $data['is_free_to_trial_eligible'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['plan_classification'] = isset($data['plan_classification']) ? $data['plan_classification'] : null;
         $this->container['plan_end_date'] = isset($data['plan_end_date']) ? $data['plan_end_date'] : null;
@@ -1079,6 +1085,30 @@ class AccountInformation implements ModelInterface, ArrayAccess
     public function setIsDowngrade($is_downgrade)
     {
         $this->container['is_downgrade'] = $is_downgrade;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_free_to_trial_eligible
+     *
+     * @return ?string
+     */
+    public function getIsFreeToTrialEligible()
+    {
+        return $this->container['is_free_to_trial_eligible'];
+    }
+
+    /**
+     * Sets is_free_to_trial_eligible
+     *
+     * @param ?string $is_free_to_trial_eligible 
+     *
+     * @return $this
+     */
+    public function setIsFreeToTrialEligible($is_free_to_trial_eligible)
+    {
+        $this->container['is_free_to_trial_eligible'] = $is_free_to_trial_eligible;
 
         return $this;
     }

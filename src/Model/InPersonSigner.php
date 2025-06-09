@@ -111,6 +111,7 @@ class InPersonSigner implements ModelInterface, ArrayAccess
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'offline_attributes' => '\DocuSign\eSign\Model\OfflineAttributes',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
+        'proof_file' => '\DocuSign\eSign\Model\RecipientProofFile',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_feature_metadata' => '\DocuSign\eSign\Model\FeatureAvailableMetadata[]',
@@ -215,6 +216,7 @@ class InPersonSigner implements ModelInterface, ArrayAccess
         'note_metadata' => null,
         'offline_attributes' => null,
         'phone_authentication' => null,
+        'proof_file' => null,
         'recipient_attachments' => null,
         'recipient_authentication_status' => null,
         'recipient_feature_metadata' => null,
@@ -340,6 +342,7 @@ class InPersonSigner implements ModelInterface, ArrayAccess
         'note_metadata' => 'noteMetadata',
         'offline_attributes' => 'offlineAttributes',
         'phone_authentication' => 'phoneAuthentication',
+        'proof_file' => 'proofFile',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
         'recipient_feature_metadata' => 'recipientFeatureMetadata',
@@ -444,6 +447,7 @@ class InPersonSigner implements ModelInterface, ArrayAccess
         'note_metadata' => 'setNoteMetadata',
         'offline_attributes' => 'setOfflineAttributes',
         'phone_authentication' => 'setPhoneAuthentication',
+        'proof_file' => 'setProofFile',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'setRecipientFeatureMetadata',
@@ -548,6 +552,7 @@ class InPersonSigner implements ModelInterface, ArrayAccess
         'note_metadata' => 'getNoteMetadata',
         'offline_attributes' => 'getOfflineAttributes',
         'phone_authentication' => 'getPhoneAuthentication',
+        'proof_file' => 'getProofFile',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'getRecipientFeatureMetadata',
@@ -706,6 +711,7 @@ class InPersonSigner implements ModelInterface, ArrayAccess
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
         $this->container['offline_attributes'] = isset($data['offline_attributes']) ? $data['offline_attributes'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
+        $this->container['proof_file'] = isset($data['proof_file']) ? $data['proof_file'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
         $this->container['recipient_feature_metadata'] = isset($data['recipient_feature_metadata']) ? $data['recipient_feature_metadata'] : null;
@@ -1997,6 +2003,30 @@ class InPersonSigner implements ModelInterface, ArrayAccess
     public function setPhoneAuthentication($phone_authentication)
     {
         $this->container['phone_authentication'] = $phone_authentication;
+
+        return $this;
+    }
+
+    /**
+     * Gets proof_file
+     *
+     * @return \DocuSign\eSign\Model\RecipientProofFile
+     */
+    public function getProofFile()
+    {
+        return $this->container['proof_file'];
+    }
+
+    /**
+     * Sets proof_file
+     *
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file 
+     *
+     * @return $this
+     */
+    public function setProofFile($proof_file)
+    {
+        $this->container['proof_file'] = $proof_file;
 
         return $this;
     }

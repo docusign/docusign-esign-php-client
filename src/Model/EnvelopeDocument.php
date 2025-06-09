@@ -61,6 +61,8 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'added_recipient_ids' => '?string[]',
+        'agreement_type' => '?string',
+        'agreement_type_source' => '?string',
         'attachment_tab_id' => '?string',
         'authoritative_copy' => '?string',
         'authoritative_copy_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
@@ -75,7 +77,6 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => '\DocuSign\eSign\Model\NameValue[]',
         'document_id' => '?string',
         'document_id_guid' => '?string',
-        'document_template_agreement_type_id' => '?string',
         'document_template_id' => '?string',
         'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
         'has_digital_signature' => '?string',
@@ -105,6 +106,8 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'added_recipient_ids' => null,
+        'agreement_type' => null,
+        'agreement_type_source' => null,
         'attachment_tab_id' => null,
         'authoritative_copy' => null,
         'authoritative_copy_metadata' => null,
@@ -119,7 +122,6 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => null,
         'document_id' => null,
         'document_id_guid' => null,
-        'document_template_agreement_type_id' => null,
         'document_template_id' => null,
         'error_details' => null,
         'has_digital_signature' => null,
@@ -170,6 +172,8 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'added_recipient_ids' => 'addedRecipientIds',
+        'agreement_type' => 'agreementType',
+        'agreement_type_source' => 'agreementTypeSource',
         'attachment_tab_id' => 'attachmentTabId',
         'authoritative_copy' => 'authoritativeCopy',
         'authoritative_copy_metadata' => 'authoritativeCopyMetadata',
@@ -184,7 +188,6 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => 'documentFields',
         'document_id' => 'documentId',
         'document_id_guid' => 'documentIdGuid',
-        'document_template_agreement_type_id' => 'documentTemplateAgreementTypeId',
         'document_template_id' => 'documentTemplateId',
         'error_details' => 'errorDetails',
         'has_digital_signature' => 'hasDigitalSignature',
@@ -214,6 +217,8 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'added_recipient_ids' => 'setAddedRecipientIds',
+        'agreement_type' => 'setAgreementType',
+        'agreement_type_source' => 'setAgreementTypeSource',
         'attachment_tab_id' => 'setAttachmentTabId',
         'authoritative_copy' => 'setAuthoritativeCopy',
         'authoritative_copy_metadata' => 'setAuthoritativeCopyMetadata',
@@ -228,7 +233,6 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => 'setDocumentFields',
         'document_id' => 'setDocumentId',
         'document_id_guid' => 'setDocumentIdGuid',
-        'document_template_agreement_type_id' => 'setDocumentTemplateAgreementTypeId',
         'document_template_id' => 'setDocumentTemplateId',
         'error_details' => 'setErrorDetails',
         'has_digital_signature' => 'setHasDigitalSignature',
@@ -258,6 +262,8 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'added_recipient_ids' => 'getAddedRecipientIds',
+        'agreement_type' => 'getAgreementType',
+        'agreement_type_source' => 'getAgreementTypeSource',
         'attachment_tab_id' => 'getAttachmentTabId',
         'authoritative_copy' => 'getAuthoritativeCopy',
         'authoritative_copy_metadata' => 'getAuthoritativeCopyMetadata',
@@ -272,7 +278,6 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'document_fields' => 'getDocumentFields',
         'document_id' => 'getDocumentId',
         'document_id_guid' => 'getDocumentIdGuid',
-        'document_template_agreement_type_id' => 'getDocumentTemplateAgreementTypeId',
         'document_template_id' => 'getDocumentTemplateId',
         'error_details' => 'getErrorDetails',
         'has_digital_signature' => 'getHasDigitalSignature',
@@ -356,6 +361,8 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['added_recipient_ids'] = isset($data['added_recipient_ids']) ? $data['added_recipient_ids'] : null;
+        $this->container['agreement_type'] = isset($data['agreement_type']) ? $data['agreement_type'] : null;
+        $this->container['agreement_type_source'] = isset($data['agreement_type_source']) ? $data['agreement_type_source'] : null;
         $this->container['attachment_tab_id'] = isset($data['attachment_tab_id']) ? $data['attachment_tab_id'] : null;
         $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['authoritative_copy_metadata'] = isset($data['authoritative_copy_metadata']) ? $data['authoritative_copy_metadata'] : null;
@@ -370,7 +377,6 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         $this->container['document_fields'] = isset($data['document_fields']) ? $data['document_fields'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_id_guid'] = isset($data['document_id_guid']) ? $data['document_id_guid'] : null;
-        $this->container['document_template_agreement_type_id'] = isset($data['document_template_agreement_type_id']) ? $data['document_template_agreement_type_id'] : null;
         $this->container['document_template_id'] = isset($data['document_template_id']) ? $data['document_template_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['has_digital_signature'] = isset($data['has_digital_signature']) ? $data['has_digital_signature'] : null;
@@ -437,6 +443,54 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setAddedRecipientIds($added_recipient_ids)
     {
         $this->container['added_recipient_ids'] = $added_recipient_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets agreement_type
+     *
+     * @return ?string
+     */
+    public function getAgreementType()
+    {
+        return $this->container['agreement_type'];
+    }
+
+    /**
+     * Sets agreement_type
+     *
+     * @param ?string $agreement_type 
+     *
+     * @return $this
+     */
+    public function setAgreementType($agreement_type)
+    {
+        $this->container['agreement_type'] = $agreement_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets agreement_type_source
+     *
+     * @return ?string
+     */
+    public function getAgreementTypeSource()
+    {
+        return $this->container['agreement_type_source'];
+    }
+
+    /**
+     * Sets agreement_type_source
+     *
+     * @param ?string $agreement_type_source 
+     *
+     * @return $this
+     */
+    public function setAgreementTypeSource($agreement_type_source)
+    {
+        $this->container['agreement_type_source'] = $agreement_type_source;
 
         return $this;
     }
@@ -773,30 +827,6 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setDocumentIdGuid($document_id_guid)
     {
         $this->container['document_id_guid'] = $document_id_guid;
-
-        return $this;
-    }
-
-    /**
-     * Gets document_template_agreement_type_id
-     *
-     * @return ?string
-     */
-    public function getDocumentTemplateAgreementTypeId()
-    {
-        return $this->container['document_template_agreement_type_id'];
-    }
-
-    /**
-     * Sets document_template_agreement_type_id
-     *
-     * @param ?string $document_template_agreement_type_id 
-     *
-     * @return $this
-     */
-    public function setDocumentTemplateAgreementTypeId($document_template_agreement_type_id)
-    {
-        $this->container['document_template_agreement_type_id'] = $document_template_agreement_type_id;
 
         return $this;
     }
