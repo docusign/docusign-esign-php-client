@@ -413,6 +413,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_desk_advanced_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ai_contract_review' => '?string',
         'enable_ai_contract_review_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_ai_sender_message' => '?string',
+        'enable_ai_sender_message_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ai_suggested_fields_advanced' => '?string',
         'enable_ai_suggested_fields_advanced_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ai_suggested_fields_basic' => '?string',
@@ -1236,6 +1238,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_desk_advanced_meta_data' => null,
         'enable_ai_contract_review' => null,
         'enable_ai_contract_review_metadata' => null,
+        'enable_ai_sender_message' => null,
+        'enable_ai_sender_message_metadata' => null,
         'enable_ai_suggested_fields_advanced' => null,
         'enable_ai_suggested_fields_advanced_metadata' => null,
         'enable_ai_suggested_fields_basic' => null,
@@ -2080,6 +2084,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_desk_advanced_meta_data' => 'enableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review' => 'enableAIContractReview',
         'enable_ai_contract_review_metadata' => 'enableAIContractReviewMetadata',
+        'enable_ai_sender_message' => 'enableAISenderMessage',
+        'enable_ai_sender_message_metadata' => 'enableAISenderMessageMetadata',
         'enable_ai_suggested_fields_advanced' => 'enableAISuggestedFieldsAdvanced',
         'enable_ai_suggested_fields_advanced_metadata' => 'enableAISuggestedFieldsAdvancedMetadata',
         'enable_ai_suggested_fields_basic' => 'enableAISuggestedFieldsBasic',
@@ -2903,6 +2909,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_desk_advanced_meta_data' => 'setEnableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review' => 'setEnableAiContractReview',
         'enable_ai_contract_review_metadata' => 'setEnableAiContractReviewMetadata',
+        'enable_ai_sender_message' => 'setEnableAiSenderMessage',
+        'enable_ai_sender_message_metadata' => 'setEnableAiSenderMessageMetadata',
         'enable_ai_suggested_fields_advanced' => 'setEnableAiSuggestedFieldsAdvanced',
         'enable_ai_suggested_fields_advanced_metadata' => 'setEnableAiSuggestedFieldsAdvancedMetadata',
         'enable_ai_suggested_fields_basic' => 'setEnableAiSuggestedFieldsBasic',
@@ -3726,6 +3734,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_agreement_desk_advanced_meta_data' => 'getEnableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review' => 'getEnableAiContractReview',
         'enable_ai_contract_review_metadata' => 'getEnableAiContractReviewMetadata',
+        'enable_ai_sender_message' => 'getEnableAiSenderMessage',
+        'enable_ai_sender_message_metadata' => 'getEnableAiSenderMessageMetadata',
         'enable_ai_suggested_fields_advanced' => 'getEnableAiSuggestedFieldsAdvanced',
         'enable_ai_suggested_fields_advanced_metadata' => 'getEnableAiSuggestedFieldsAdvancedMetadata',
         'enable_ai_suggested_fields_basic' => 'getEnableAiSuggestedFieldsBasic',
@@ -4603,6 +4613,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_agreement_desk_advanced_meta_data'] = isset($data['enable_agreement_desk_advanced_meta_data']) ? $data['enable_agreement_desk_advanced_meta_data'] : null;
         $this->container['enable_ai_contract_review'] = isset($data['enable_ai_contract_review']) ? $data['enable_ai_contract_review'] : null;
         $this->container['enable_ai_contract_review_metadata'] = isset($data['enable_ai_contract_review_metadata']) ? $data['enable_ai_contract_review_metadata'] : null;
+        $this->container['enable_ai_sender_message'] = isset($data['enable_ai_sender_message']) ? $data['enable_ai_sender_message'] : null;
+        $this->container['enable_ai_sender_message_metadata'] = isset($data['enable_ai_sender_message_metadata']) ? $data['enable_ai_sender_message_metadata'] : null;
         $this->container['enable_ai_suggested_fields_advanced'] = isset($data['enable_ai_suggested_fields_advanced']) ? $data['enable_ai_suggested_fields_advanced'] : null;
         $this->container['enable_ai_suggested_fields_advanced_metadata'] = isset($data['enable_ai_suggested_fields_advanced_metadata']) ? $data['enable_ai_suggested_fields_advanced_metadata'] : null;
         $this->container['enable_ai_suggested_fields_basic'] = isset($data['enable_ai_suggested_fields_basic']) ? $data['enable_ai_suggested_fields_basic'] : null;
@@ -13559,6 +13571,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableAiContractReviewMetadata($enable_ai_contract_review_metadata)
     {
         $this->container['enable_ai_contract_review_metadata'] = $enable_ai_contract_review_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_ai_sender_message
+     *
+     * @return ?string
+     */
+    public function getEnableAiSenderMessage()
+    {
+        return $this->container['enable_ai_sender_message'];
+    }
+
+    /**
+     * Sets enable_ai_sender_message
+     *
+     * @param ?string $enable_ai_sender_message 
+     *
+     * @return $this
+     */
+    public function setEnableAiSenderMessage($enable_ai_sender_message)
+    {
+        $this->container['enable_ai_sender_message'] = $enable_ai_sender_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_ai_sender_message_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAiSenderMessageMetadata()
+    {
+        return $this->container['enable_ai_sender_message_metadata'];
+    }
+
+    /**
+     * Sets enable_ai_sender_message_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_sender_message_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableAiSenderMessageMetadata($enable_ai_sender_message_metadata)
+    {
+        $this->container['enable_ai_sender_message_metadata'] = $enable_ai_sender_message_metadata;
 
         return $this;
     }
