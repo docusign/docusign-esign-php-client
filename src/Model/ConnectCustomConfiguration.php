@@ -87,6 +87,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'integrator_managed' => '?string',
         'name' => '?string',
         'password' => '?string',
+        'pause_publish' => '?string',
         'recipient_events' => '?string[]',
         'require_mutual_tls' => '?string',
         'requires_acknowledgement' => '?string',
@@ -138,6 +139,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'integrator_managed' => null,
         'name' => null,
         'password' => null,
+        'pause_publish' => null,
         'recipient_events' => null,
         'require_mutual_tls' => null,
         'requires_acknowledgement' => null,
@@ -210,6 +212,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'integrator_managed' => 'integratorManaged',
         'name' => 'name',
         'password' => 'password',
+        'pause_publish' => 'pausePublish',
         'recipient_events' => 'recipientEvents',
         'require_mutual_tls' => 'requireMutualTls',
         'requires_acknowledgement' => 'requiresAcknowledgement',
@@ -261,6 +264,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'integrator_managed' => 'setIntegratorManaged',
         'name' => 'setName',
         'password' => 'setPassword',
+        'pause_publish' => 'setPausePublish',
         'recipient_events' => 'setRecipientEvents',
         'require_mutual_tls' => 'setRequireMutualTls',
         'requires_acknowledgement' => 'setRequiresAcknowledgement',
@@ -312,6 +316,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         'integrator_managed' => 'getIntegratorManaged',
         'name' => 'getName',
         'password' => 'getPassword',
+        'pause_publish' => 'getPausePublish',
         'recipient_events' => 'getRecipientEvents',
         'require_mutual_tls' => 'getRequireMutualTls',
         'requires_acknowledgement' => 'getRequiresAcknowledgement',
@@ -417,6 +422,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         $this->container['integrator_managed'] = isset($data['integrator_managed']) ? $data['integrator_managed'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['pause_publish'] = isset($data['pause_publish']) ? $data['pause_publish'] : null;
         $this->container['recipient_events'] = isset($data['recipient_events']) ? $data['recipient_events'] : null;
         $this->container['require_mutual_tls'] = isset($data['require_mutual_tls']) ? $data['require_mutual_tls'] : null;
         $this->container['requires_acknowledgement'] = isset($data['requires_acknowledgement']) ? $data['requires_acknowledgement'] : null;
@@ -1103,6 +1109,30 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets pause_publish
+     *
+     * @return ?string
+     */
+    public function getPausePublish()
+    {
+        return $this->container['pause_publish'];
+    }
+
+    /**
+     * Sets pause_publish
+     *
+     * @param ?string $pause_publish 
+     *
+     * @return $this
+     */
+    public function setPausePublish($pause_publish)
+    {
+        $this->container['pause_publish'] = $pause_publish;
 
         return $this;
     }

@@ -348,6 +348,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'data_population_scope_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'default_signing_responsive_view' => '?string',
         'default_signing_responsive_view_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'default_signing_responsive_view_use_grade' => '?string',
+        'default_signing_responsive_view_use_grade_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'default_to_advanced_envelopes_filter_form' => '?string',
         'default_to_advanced_envelopes_filter_form_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_auto_template_matching' => '?string',
@@ -470,6 +472,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_d_sig_id_verification_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_d_sig_id_verification_premier_pens' => '?string',
         'enable_d_sig_id_verification_premier_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_pen_group_eu_qes' => '?string',
+        'enable_d_sig_pen_group_eu_qes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_d_sig_plg_eu_qes_pens' => '?string',
+        'enable_d_sig_plg_eu_qes_pens_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ds_pro' => '?string',
         'enable_ds_pro_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_enforce_tls_emails_setting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -1173,6 +1179,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'data_population_scope_metadata' => null,
         'default_signing_responsive_view' => null,
         'default_signing_responsive_view_metadata' => null,
+        'default_signing_responsive_view_use_grade' => null,
+        'default_signing_responsive_view_use_grade_metadata' => null,
         'default_to_advanced_envelopes_filter_form' => null,
         'default_to_advanced_envelopes_filter_form_metadata' => null,
         'disable_auto_template_matching' => null,
@@ -1295,6 +1303,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_d_sig_id_verification_pens_metadata' => null,
         'enable_d_sig_id_verification_premier_pens' => null,
         'enable_d_sig_id_verification_premier_pens_metadata' => null,
+        'enable_d_sig_pen_group_eu_qes' => null,
+        'enable_d_sig_pen_group_eu_qes_metadata' => null,
+        'enable_d_sig_plg_eu_qes_pens' => null,
+        'enable_d_sig_plg_eu_qes_pens_metadata' => null,
         'enable_ds_pro' => null,
         'enable_ds_pro_metadata' => null,
         'enable_enforce_tls_emails_setting_metadata' => null,
@@ -2019,6 +2031,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'data_population_scope_metadata' => 'dataPopulationScopeMetadata',
         'default_signing_responsive_view' => 'defaultSigningResponsiveView',
         'default_signing_responsive_view_metadata' => 'defaultSigningResponsiveViewMetadata',
+        'default_signing_responsive_view_use_grade' => 'defaultSigningResponsiveViewUseGrade',
+        'default_signing_responsive_view_use_grade_metadata' => 'defaultSigningResponsiveViewUseGradeMetadata',
         'default_to_advanced_envelopes_filter_form' => 'defaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata' => 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'disableAutoTemplateMatching',
@@ -2141,6 +2155,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_d_sig_id_verification_pens_metadata' => 'enableDSigIDVerificationPensMetadata',
         'enable_d_sig_id_verification_premier_pens' => 'enableDSigIDVerificationPremierPens',
         'enable_d_sig_id_verification_premier_pens_metadata' => 'enableDSigIDVerificationPremierPensMetadata',
+        'enable_d_sig_pen_group_eu_qes' => 'enableDSigPenGroupEuQes',
+        'enable_d_sig_pen_group_eu_qes_metadata' => 'enableDSigPenGroupEuQesMetadata',
+        'enable_d_sig_plg_eu_qes_pens' => 'enableDSigPlgEuQesPens',
+        'enable_d_sig_plg_eu_qes_pens_metadata' => 'enableDSigPlgEuQesPensMetadata',
         'enable_ds_pro' => 'enableDSPro',
         'enable_ds_pro_metadata' => 'enableDSProMetadata',
         'enable_enforce_tls_emails_setting_metadata' => 'enableEnforceTlsEmailsSettingMetadata',
@@ -2235,8 +2253,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sequential_signing_ui_metadata' => 'enableSequentialSigningUIMetadata',
         'enable_signer_attachments' => 'enableSignerAttachments',
         'enable_signer_attachments_metadata' => 'enableSignerAttachmentsMetadata',
-        'enable_signing_ai_features_plan' => 'EnableSigningAIFeaturesPlan',
-        'enable_signing_ai_features_plan_metadata' => 'EnableSigningAIFeaturesPlanMetadata',
+        'enable_signing_ai_features_plan' => 'enableSigningAIFeaturesPlan',
+        'enable_signing_ai_features_plan_metadata' => 'enableSigningAIFeaturesPlanMetadata',
         'enable_signing_ai_features_setting' => 'enableSigningAIFeaturesSetting',
         'enable_signing_ai_features_setting_metadata' => 'enableSigningAIFeaturesSettingMetadata',
         'enable_signing_extension_comments' => 'enableSigningExtensionComments',
@@ -2844,6 +2862,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'data_population_scope_metadata' => 'setDataPopulationScopeMetadata',
         'default_signing_responsive_view' => 'setDefaultSigningResponsiveView',
         'default_signing_responsive_view_metadata' => 'setDefaultSigningResponsiveViewMetadata',
+        'default_signing_responsive_view_use_grade' => 'setDefaultSigningResponsiveViewUseGrade',
+        'default_signing_responsive_view_use_grade_metadata' => 'setDefaultSigningResponsiveViewUseGradeMetadata',
         'default_to_advanced_envelopes_filter_form' => 'setDefaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata' => 'setDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'setDisableAutoTemplateMatching',
@@ -2966,6 +2986,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_d_sig_id_verification_pens_metadata' => 'setEnableDSigIdVerificationPensMetadata',
         'enable_d_sig_id_verification_premier_pens' => 'setEnableDSigIdVerificationPremierPens',
         'enable_d_sig_id_verification_premier_pens_metadata' => 'setEnableDSigIdVerificationPremierPensMetadata',
+        'enable_d_sig_pen_group_eu_qes' => 'setEnableDSigPenGroupEuQes',
+        'enable_d_sig_pen_group_eu_qes_metadata' => 'setEnableDSigPenGroupEuQesMetadata',
+        'enable_d_sig_plg_eu_qes_pens' => 'setEnableDSigPlgEuQesPens',
+        'enable_d_sig_plg_eu_qes_pens_metadata' => 'setEnableDSigPlgEuQesPensMetadata',
         'enable_ds_pro' => 'setEnableDsPro',
         'enable_ds_pro_metadata' => 'setEnableDsProMetadata',
         'enable_enforce_tls_emails_setting_metadata' => 'setEnableEnforceTlsEmailsSettingMetadata',
@@ -3669,6 +3693,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'data_population_scope_metadata' => 'getDataPopulationScopeMetadata',
         'default_signing_responsive_view' => 'getDefaultSigningResponsiveView',
         'default_signing_responsive_view_metadata' => 'getDefaultSigningResponsiveViewMetadata',
+        'default_signing_responsive_view_use_grade' => 'getDefaultSigningResponsiveViewUseGrade',
+        'default_signing_responsive_view_use_grade_metadata' => 'getDefaultSigningResponsiveViewUseGradeMetadata',
         'default_to_advanced_envelopes_filter_form' => 'getDefaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata' => 'getDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'getDisableAutoTemplateMatching',
@@ -3791,6 +3817,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_d_sig_id_verification_pens_metadata' => 'getEnableDSigIdVerificationPensMetadata',
         'enable_d_sig_id_verification_premier_pens' => 'getEnableDSigIdVerificationPremierPens',
         'enable_d_sig_id_verification_premier_pens_metadata' => 'getEnableDSigIdVerificationPremierPensMetadata',
+        'enable_d_sig_pen_group_eu_qes' => 'getEnableDSigPenGroupEuQes',
+        'enable_d_sig_pen_group_eu_qes_metadata' => 'getEnableDSigPenGroupEuQesMetadata',
+        'enable_d_sig_plg_eu_qes_pens' => 'getEnableDSigPlgEuQesPens',
+        'enable_d_sig_plg_eu_qes_pens_metadata' => 'getEnableDSigPlgEuQesPensMetadata',
         'enable_ds_pro' => 'getEnableDsPro',
         'enable_ds_pro_metadata' => 'getEnableDsProMetadata',
         'enable_enforce_tls_emails_setting_metadata' => 'getEnableEnforceTlsEmailsSettingMetadata',
@@ -4548,6 +4578,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['data_population_scope_metadata'] = isset($data['data_population_scope_metadata']) ? $data['data_population_scope_metadata'] : null;
         $this->container['default_signing_responsive_view'] = isset($data['default_signing_responsive_view']) ? $data['default_signing_responsive_view'] : null;
         $this->container['default_signing_responsive_view_metadata'] = isset($data['default_signing_responsive_view_metadata']) ? $data['default_signing_responsive_view_metadata'] : null;
+        $this->container['default_signing_responsive_view_use_grade'] = isset($data['default_signing_responsive_view_use_grade']) ? $data['default_signing_responsive_view_use_grade'] : null;
+        $this->container['default_signing_responsive_view_use_grade_metadata'] = isset($data['default_signing_responsive_view_use_grade_metadata']) ? $data['default_signing_responsive_view_use_grade_metadata'] : null;
         $this->container['default_to_advanced_envelopes_filter_form'] = isset($data['default_to_advanced_envelopes_filter_form']) ? $data['default_to_advanced_envelopes_filter_form'] : null;
         $this->container['default_to_advanced_envelopes_filter_form_metadata'] = isset($data['default_to_advanced_envelopes_filter_form_metadata']) ? $data['default_to_advanced_envelopes_filter_form_metadata'] : null;
         $this->container['disable_auto_template_matching'] = isset($data['disable_auto_template_matching']) ? $data['disable_auto_template_matching'] : null;
@@ -4670,6 +4702,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_d_sig_id_verification_pens_metadata'] = isset($data['enable_d_sig_id_verification_pens_metadata']) ? $data['enable_d_sig_id_verification_pens_metadata'] : null;
         $this->container['enable_d_sig_id_verification_premier_pens'] = isset($data['enable_d_sig_id_verification_premier_pens']) ? $data['enable_d_sig_id_verification_premier_pens'] : null;
         $this->container['enable_d_sig_id_verification_premier_pens_metadata'] = isset($data['enable_d_sig_id_verification_premier_pens_metadata']) ? $data['enable_d_sig_id_verification_premier_pens_metadata'] : null;
+        $this->container['enable_d_sig_pen_group_eu_qes'] = isset($data['enable_d_sig_pen_group_eu_qes']) ? $data['enable_d_sig_pen_group_eu_qes'] : null;
+        $this->container['enable_d_sig_pen_group_eu_qes_metadata'] = isset($data['enable_d_sig_pen_group_eu_qes_metadata']) ? $data['enable_d_sig_pen_group_eu_qes_metadata'] : null;
+        $this->container['enable_d_sig_plg_eu_qes_pens'] = isset($data['enable_d_sig_plg_eu_qes_pens']) ? $data['enable_d_sig_plg_eu_qes_pens'] : null;
+        $this->container['enable_d_sig_plg_eu_qes_pens_metadata'] = isset($data['enable_d_sig_plg_eu_qes_pens_metadata']) ? $data['enable_d_sig_plg_eu_qes_pens_metadata'] : null;
         $this->container['enable_ds_pro'] = isset($data['enable_ds_pro']) ? $data['enable_ds_pro'] : null;
         $this->container['enable_ds_pro_metadata'] = isset($data['enable_ds_pro_metadata']) ? $data['enable_ds_pro_metadata'] : null;
         $this->container['enable_enforce_tls_emails_setting_metadata'] = isset($data['enable_enforce_tls_emails_setting_metadata']) ? $data['enable_enforce_tls_emails_setting_metadata'] : null;
@@ -12016,6 +12052,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets default_signing_responsive_view_use_grade
+     *
+     * @return ?string
+     */
+    public function getDefaultSigningResponsiveViewUseGrade()
+    {
+        return $this->container['default_signing_responsive_view_use_grade'];
+    }
+
+    /**
+     * Sets default_signing_responsive_view_use_grade
+     *
+     * @param ?string $default_signing_responsive_view_use_grade 
+     *
+     * @return $this
+     */
+    public function setDefaultSigningResponsiveViewUseGrade($default_signing_responsive_view_use_grade)
+    {
+        $this->container['default_signing_responsive_view_use_grade'] = $default_signing_responsive_view_use_grade;
+
+        return $this;
+    }
+
+    /**
+     * Gets default_signing_responsive_view_use_grade_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDefaultSigningResponsiveViewUseGradeMetadata()
+    {
+        return $this->container['default_signing_responsive_view_use_grade_metadata'];
+    }
+
+    /**
+     * Sets default_signing_responsive_view_use_grade_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $default_signing_responsive_view_use_grade_metadata 
+     *
+     * @return $this
+     */
+    public function setDefaultSigningResponsiveViewUseGradeMetadata($default_signing_responsive_view_use_grade_metadata)
+    {
+        $this->container['default_signing_responsive_view_use_grade_metadata'] = $default_signing_responsive_view_use_grade_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets default_to_advanced_envelopes_filter_form
      *
      * @return ?string
@@ -14939,6 +15023,102 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableDSigIdVerificationPremierPensMetadata($enable_d_sig_id_verification_premier_pens_metadata)
     {
         $this->container['enable_d_sig_id_verification_premier_pens_metadata'] = $enable_d_sig_id_verification_premier_pens_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_pen_group_eu_qes
+     *
+     * @return ?string
+     */
+    public function getEnableDSigPenGroupEuQes()
+    {
+        return $this->container['enable_d_sig_pen_group_eu_qes'];
+    }
+
+    /**
+     * Sets enable_d_sig_pen_group_eu_qes
+     *
+     * @param ?string $enable_d_sig_pen_group_eu_qes 
+     *
+     * @return $this
+     */
+    public function setEnableDSigPenGroupEuQes($enable_d_sig_pen_group_eu_qes)
+    {
+        $this->container['enable_d_sig_pen_group_eu_qes'] = $enable_d_sig_pen_group_eu_qes;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_pen_group_eu_qes_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigPenGroupEuQesMetadata()
+    {
+        return $this->container['enable_d_sig_pen_group_eu_qes_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_pen_group_eu_qes_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_pen_group_eu_qes_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigPenGroupEuQesMetadata($enable_d_sig_pen_group_eu_qes_metadata)
+    {
+        $this->container['enable_d_sig_pen_group_eu_qes_metadata'] = $enable_d_sig_pen_group_eu_qes_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_plg_eu_qes_pens
+     *
+     * @return ?string
+     */
+    public function getEnableDSigPlgEuQesPens()
+    {
+        return $this->container['enable_d_sig_plg_eu_qes_pens'];
+    }
+
+    /**
+     * Sets enable_d_sig_plg_eu_qes_pens
+     *
+     * @param ?string $enable_d_sig_plg_eu_qes_pens 
+     *
+     * @return $this
+     */
+    public function setEnableDSigPlgEuQesPens($enable_d_sig_plg_eu_qes_pens)
+    {
+        $this->container['enable_d_sig_plg_eu_qes_pens'] = $enable_d_sig_plg_eu_qes_pens;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_d_sig_plg_eu_qes_pens_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableDSigPlgEuQesPensMetadata()
+    {
+        return $this->container['enable_d_sig_plg_eu_qes_pens_metadata'];
+    }
+
+    /**
+     * Sets enable_d_sig_plg_eu_qes_pens_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_plg_eu_qes_pens_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableDSigPlgEuQesPensMetadata($enable_d_sig_plg_eu_qes_pens_metadata)
+    {
+        $this->container['enable_d_sig_plg_eu_qes_pens_metadata'] = $enable_d_sig_plg_eu_qes_pens_metadata;
 
         return $this;
     }

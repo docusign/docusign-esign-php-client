@@ -60,6 +60,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'return_url' => '?string',
+        'settings' => '\DocuSign\eSign\Model\TemplateViewSettings',
         'view_access' => '?string'
     ];
 
@@ -70,6 +71,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'return_url' => null,
+        'settings' => null,
         'view_access' => null
     ];
 
@@ -101,6 +103,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'return_url' => 'returnUrl',
+        'settings' => 'settings',
         'view_access' => 'viewAccess'
     ];
 
@@ -111,6 +114,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'return_url' => 'setReturnUrl',
+        'settings' => 'setSettings',
         'view_access' => 'setViewAccess'
     ];
 
@@ -121,6 +125,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'return_url' => 'getReturnUrl',
+        'settings' => 'getSettings',
         'view_access' => 'getViewAccess'
     ];
 
@@ -185,6 +190,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
+        $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
         $this->container['view_access'] = isset($data['view_access']) ? $data['view_access'] : null;
     }
 
@@ -232,6 +238,30 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
     public function setReturnUrl($return_url)
     {
         $this->container['return_url'] = $return_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets settings
+     *
+     * @return \DocuSign\eSign\Model\TemplateViewSettings
+     */
+    public function getSettings()
+    {
+        return $this->container['settings'];
+    }
+
+    /**
+     * Sets settings
+     *
+     * @param \DocuSign\eSign\Model\TemplateViewSettings $settings 
+     *
+     * @return $this
+     */
+    public function setSettings($settings)
+    {
+        $this->container['settings'] = $settings;
 
         return $this;
     }
