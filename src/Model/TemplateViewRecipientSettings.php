@@ -1,6 +1,6 @@
 <?php
 /**
- * ConnectOAuthConfig
+ * TemplateViewRecipientSettings
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * ConnectOAuthConfig Class Doc Comment
+ * TemplateViewRecipientSettings Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConnectOAuthConfig implements ModelInterface, ArrayAccess
+class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'connectOAuthConfig';
+    protected static $swaggerModelName = 'templateViewRecipientSettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,11 +59,9 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authorization_server_url' => '?string',
-        'client_id' => '?string',
-        'client_secret' => '?string',
-        'custom_parameters' => 'map[string,?string]',
-        'scope' => '?string'
+        'show_contacts_list' => '?string',
+        'show_edit_message' => '?string',
+        'show_edit_recipients' => '?string'
     ];
 
     /**
@@ -72,11 +70,9 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'authorization_server_url' => null,
-        'client_id' => null,
-        'client_secret' => null,
-        'custom_parameters' => null,
-        'scope' => null
+        'show_contacts_list' => null,
+        'show_edit_message' => null,
+        'show_edit_recipients' => null
     ];
 
     /**
@@ -106,11 +102,9 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'authorization_server_url' => 'authorizationServerUrl',
-        'client_id' => 'clientId',
-        'client_secret' => 'clientSecret',
-        'custom_parameters' => 'customParameters',
-        'scope' => 'scope'
+        'show_contacts_list' => 'showContactsList',
+        'show_edit_message' => 'showEditMessage',
+        'show_edit_recipients' => 'showEditRecipients'
     ];
 
     /**
@@ -119,11 +113,9 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'authorization_server_url' => 'setAuthorizationServerUrl',
-        'client_id' => 'setClientId',
-        'client_secret' => 'setClientSecret',
-        'custom_parameters' => 'setCustomParameters',
-        'scope' => 'setScope'
+        'show_contacts_list' => 'setShowContactsList',
+        'show_edit_message' => 'setShowEditMessage',
+        'show_edit_recipients' => 'setShowEditRecipients'
     ];
 
     /**
@@ -132,11 +124,9 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'authorization_server_url' => 'getAuthorizationServerUrl',
-        'client_id' => 'getClientId',
-        'client_secret' => 'getClientSecret',
-        'custom_parameters' => 'getCustomParameters',
-        'scope' => 'getScope'
+        'show_contacts_list' => 'getShowContactsList',
+        'show_edit_message' => 'getShowEditMessage',
+        'show_edit_recipients' => 'getShowEditRecipients'
     ];
 
     /**
@@ -199,11 +189,9 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['authorization_server_url'] = isset($data['authorization_server_url']) ? $data['authorization_server_url'] : null;
-        $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
-        $this->container['client_secret'] = isset($data['client_secret']) ? $data['client_secret'] : null;
-        $this->container['custom_parameters'] = isset($data['custom_parameters']) ? $data['custom_parameters'] : null;
-        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['show_contacts_list'] = isset($data['show_contacts_list']) ? $data['show_contacts_list'] : null;
+        $this->container['show_edit_message'] = isset($data['show_edit_message']) ? $data['show_edit_message'] : null;
+        $this->container['show_edit_recipients'] = isset($data['show_edit_recipients']) ? $data['show_edit_recipients'] : null;
     }
 
     /**
@@ -231,121 +219,73 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets authorization_server_url
+     * Gets show_contacts_list
      *
      * @return ?string
      */
-    public function getAuthorizationServerUrl()
+    public function getShowContactsList()
     {
-        return $this->container['authorization_server_url'];
+        return $this->container['show_contacts_list'];
     }
 
     /**
-     * Sets authorization_server_url
+     * Sets show_contacts_list
      *
-     * @param ?string $authorization_server_url 
+     * @param ?string $show_contacts_list 
      *
      * @return $this
      */
-    public function setAuthorizationServerUrl($authorization_server_url)
+    public function setShowContactsList($show_contacts_list)
     {
-        $this->container['authorization_server_url'] = $authorization_server_url;
+        $this->container['show_contacts_list'] = $show_contacts_list;
 
         return $this;
     }
 
     /**
-     * Gets client_id
+     * Gets show_edit_message
      *
      * @return ?string
      */
-    public function getClientId()
+    public function getShowEditMessage()
     {
-        return $this->container['client_id'];
+        return $this->container['show_edit_message'];
     }
 
     /**
-     * Sets client_id
+     * Sets show_edit_message
      *
-     * @param ?string $client_id 
+     * @param ?string $show_edit_message 
      *
      * @return $this
      */
-    public function setClientId($client_id)
+    public function setShowEditMessage($show_edit_message)
     {
-        $this->container['client_id'] = $client_id;
+        $this->container['show_edit_message'] = $show_edit_message;
 
         return $this;
     }
 
     /**
-     * Gets client_secret
+     * Gets show_edit_recipients
      *
      * @return ?string
      */
-    public function getClientSecret()
+    public function getShowEditRecipients()
     {
-        return $this->container['client_secret'];
+        return $this->container['show_edit_recipients'];
     }
 
     /**
-     * Sets client_secret
+     * Sets show_edit_recipients
      *
-     * @param ?string $client_secret 
+     * @param ?string $show_edit_recipients 
      *
      * @return $this
      */
-    public function setClientSecret($client_secret)
+    public function setShowEditRecipients($show_edit_recipients)
     {
-        $this->container['client_secret'] = $client_secret;
-
-        return $this;
-    }
-
-    /**
-     * Gets custom_parameters
-     *
-     * @return map[string,?string]
-     */
-    public function getCustomParameters()
-    {
-        return $this->container['custom_parameters'];
-    }
-
-    /**
-     * Sets custom_parameters
-     *
-     * @param map[string,?string] $custom_parameters 
-     *
-     * @return $this
-     */
-    public function setCustomParameters($custom_parameters)
-    {
-        $this->container['custom_parameters'] = $custom_parameters;
-
-        return $this;
-    }
-
-    /**
-     * Gets scope
-     *
-     * @return ?string
-     */
-    public function getScope()
-    {
-        return $this->container['scope'];
-    }
-
-    /**
-     * Sets scope
-     *
-     * @param ?string $scope 
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        $this->container['scope'] = $scope;
+        $this->container['show_edit_recipients'] = $show_edit_recipients;
 
         return $this;
     }
