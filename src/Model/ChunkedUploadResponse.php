@@ -218,7 +218,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['checksum'] = isset($data['checksum']) ? $data['checksum'] : null;
         $this->container['chunked_upload_id'] = isset($data['chunked_upload_id']) ? $data['chunked_upload_id'] : null;

@@ -208,7 +208,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['charge_amount'] = isset($data['charge_amount']) ? $data['charge_amount'] : null;
         $this->container['charge_name'] = isset($data['charge_name']) ? $data['charge_name'] : null;

@@ -233,7 +233,7 @@ class Group implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_type'] = isset($data['access_type']) ? $data['access_type'] : null;
         $this->container['ds_group_id'] = isset($data['ds_group_id']) ? $data['ds_group_id'] : null;

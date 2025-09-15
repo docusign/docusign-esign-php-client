@@ -223,7 +223,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['arrow_closed'] = isset($data['arrow_closed']) ? $data['arrow_closed'] : null;
         $this->container['arrow_color'] = isset($data['arrow_color']) ? $data['arrow_color'] : null;

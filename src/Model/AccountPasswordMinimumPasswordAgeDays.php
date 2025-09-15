@@ -182,7 +182,7 @@ class AccountPasswordMinimumPasswordAgeDays implements ModelInterface, ArrayAcce
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['maximum_age'] = isset($data['maximum_age']) ? $data['maximum_age'] : null;
         $this->container['minimum_age'] = isset($data['minimum_age']) ? $data['minimum_age'] : null;

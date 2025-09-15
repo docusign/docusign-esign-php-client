@@ -213,7 +213,7 @@ class RecipientPhoneAuthentication implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['recip_may_provide_number'] = isset($data['recip_may_provide_number']) ? $data['recip_may_provide_number'] : null;
         $this->container['recip_may_provide_number_metadata'] = isset($data['recip_may_provide_number_metadata']) ? $data['recip_may_provide_number_metadata'] : null;

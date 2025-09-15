@@ -202,7 +202,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['attachment_id'] = isset($data['attachment_id']) ? $data['attachment_id'] : null;
         $this->container['attachment_type'] = isset($data['attachment_type']) ? $data['attachment_type'] : null;

@@ -197,7 +197,7 @@ class ConnectUserObject implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['configurationtype'] = isset($data['configurationtype']) ? $data['configurationtype'] : null;
         $this->container['connect_id'] = isset($data['connect_id']) ? $data['connect_id'] : null;

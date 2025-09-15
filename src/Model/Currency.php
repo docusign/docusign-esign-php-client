@@ -737,7 +737,7 @@ class Currency implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['anchor_allow_white_space_in_characters'] = isset($data['anchor_allow_white_space_in_characters']) ? $data['anchor_allow_white_space_in_characters'] : null;
         $this->container['anchor_allow_white_space_in_characters_metadata'] = isset($data['anchor_allow_white_space_in_characters_metadata']) ? $data['anchor_allow_white_space_in_characters_metadata'] : null;

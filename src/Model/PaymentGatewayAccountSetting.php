@@ -192,7 +192,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['api_fields'] = isset($data['api_fields']) ? $data['api_fields'] : null;
         $this->container['authorization_code'] = isset($data['authorization_code']) ? $data['authorization_code'] : null;

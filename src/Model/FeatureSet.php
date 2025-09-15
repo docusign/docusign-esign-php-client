@@ -218,7 +218,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['currency_feature_set_prices'] = isset($data['currency_feature_set_prices']) ? $data['currency_feature_set_prices'] : null;
         $this->container['envelope_fee'] = isset($data['envelope_fee']) ? $data['envelope_fee'] : null;

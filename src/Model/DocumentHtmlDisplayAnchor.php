@@ -202,7 +202,7 @@ class DocumentHtmlDisplayAnchor implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['case_sensitive'] = isset($data['case_sensitive']) ? $data['case_sensitive'] : null;
         $this->container['display_settings'] = isset($data['display_settings']) ? $data['display_settings'] : null;

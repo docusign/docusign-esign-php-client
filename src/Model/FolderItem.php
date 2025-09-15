@@ -197,7 +197,7 @@ class FolderItem implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
@@ -690,7 +690,7 @@ class FolderItem implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -700,7 +700,7 @@ class FolderItem implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -711,7 +711,7 @@ class FolderItem implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -725,7 +725,7 @@ class FolderItem implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

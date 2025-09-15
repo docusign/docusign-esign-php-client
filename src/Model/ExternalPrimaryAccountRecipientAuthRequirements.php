@@ -192,7 +192,7 @@ class ExternalPrimaryAccountRecipientAuthRequirements implements ModelInterface,
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['id_verification'] = isset($data['id_verification']) ? $data['id_verification'] : null;

@@ -182,7 +182,7 @@ class AccountPasswordLockoutDurationMinutes implements ModelInterface, ArrayAcce
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['maximum_minutes'] = isset($data['maximum_minutes']) ? $data['maximum_minutes'] : null;
         $this->container['minimum_minutes'] = isset($data['minimum_minutes']) ? $data['minimum_minutes'] : null;

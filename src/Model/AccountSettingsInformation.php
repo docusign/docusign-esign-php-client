@@ -4288,7 +4288,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code_format'] = isset($data['access_code_format']) ? $data['access_code_format'] : null;
         $this->container['account_date_time_format'] = isset($data['account_date_time_format']) ? $data['account_date_time_format'] : null;

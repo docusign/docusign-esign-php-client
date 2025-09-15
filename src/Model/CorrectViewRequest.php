@@ -193,7 +193,7 @@ class CorrectViewRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['begin_on_tagger'] = isset($data['begin_on_tagger']) ? $data['begin_on_tagger'] : null;
         $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;

@@ -253,7 +253,7 @@ class SignerEmailNotifications implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agent_notification'] = isset($data['agent_notification']) ? $data['agent_notification'] : null;
         $this->container['carbon_copy_notification'] = isset($data['carbon_copy_notification']) ? $data['carbon_copy_notification'] : null;

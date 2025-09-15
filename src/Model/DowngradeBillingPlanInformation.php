@@ -202,7 +202,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['downgrade_event_type'] = isset($data['downgrade_event_type']) ? $data['downgrade_event_type'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;

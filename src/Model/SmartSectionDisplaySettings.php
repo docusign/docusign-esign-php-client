@@ -233,7 +233,7 @@ class SmartSectionDisplaySettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cell_style'] = isset($data['cell_style']) ? $data['cell_style'] : null;
         $this->container['collapsible_settings'] = isset($data['collapsible_settings']) ? $data['collapsible_settings'] : null;

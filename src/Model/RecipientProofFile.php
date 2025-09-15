@@ -183,7 +183,7 @@ class RecipientProofFile implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['has_identity_attempts'] = isset($data['has_identity_attempts']) ? $data['has_identity_attempts'] : null;
         $this->container['is_in_proof_file'] = isset($data['is_in_proof_file']) ? $data['is_in_proof_file'] : null;

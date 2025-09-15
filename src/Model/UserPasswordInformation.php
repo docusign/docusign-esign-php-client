@@ -192,7 +192,7 @@ class UserPasswordInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['current_password'] = isset($data['current_password']) ? $data['current_password'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;

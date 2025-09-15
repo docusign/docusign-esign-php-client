@@ -182,7 +182,7 @@ class AccountPasswordExpirePasswordDays implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['maximum_days'] = isset($data['maximum_days']) ? $data['maximum_days'] : null;
         $this->container['minimum_days'] = isset($data['minimum_days']) ? $data['minimum_days'] : null;

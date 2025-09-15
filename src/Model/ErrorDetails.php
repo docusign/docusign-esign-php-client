@@ -183,7 +183,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_code'] = isset($data['error_code']) ? $data['error_code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;

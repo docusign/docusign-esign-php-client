@@ -187,7 +187,7 @@ class ConsentDetails implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['consent_key'] = isset($data['consent_key']) ? $data['consent_key'] : null;
         $this->container['delivery_method'] = isset($data['delivery_method']) ? $data['delivery_method'] : null;

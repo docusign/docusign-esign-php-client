@@ -213,7 +213,7 @@ class ForgottenPasswordInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['forgotten_password_answer1'] = isset($data['forgotten_password_answer1']) ? $data['forgotten_password_answer1'] : null;
         $this->container['forgotten_password_answer2'] = isset($data['forgotten_password_answer2']) ? $data['forgotten_password_answer2'] : null;

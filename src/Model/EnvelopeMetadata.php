@@ -187,7 +187,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_advanced_correct'] = isset($data['allow_advanced_correct']) ? $data['allow_advanced_correct'] : null;
         $this->container['allow_correct'] = isset($data['allow_correct']) ? $data['allow_correct'] : null;

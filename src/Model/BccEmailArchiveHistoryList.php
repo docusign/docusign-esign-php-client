@@ -207,7 +207,7 @@ class BccEmailArchiveHistoryList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bcc_email_archive_history'] = isset($data['bcc_email_archive_history']) ? $data['bcc_email_archive_history'] : null;
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;

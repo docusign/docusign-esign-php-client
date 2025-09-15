@@ -188,7 +188,7 @@ class EmailSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bcc_email_addresses'] = isset($data['bcc_email_addresses']) ? $data['bcc_email_addresses'] : null;
         $this->container['reply_email_address_override'] = isset($data['reply_email_address_override']) ? $data['reply_email_address_override'] : null;

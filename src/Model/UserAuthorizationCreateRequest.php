@@ -192,7 +192,7 @@ class UserAuthorizationCreateRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
         $this->container['end_date'] = isset($data['end_date']) ? $data['end_date'] : null;

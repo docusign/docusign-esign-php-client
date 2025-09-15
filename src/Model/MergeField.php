@@ -233,7 +233,7 @@ class MergeField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_sender_to_edit'] = isset($data['allow_sender_to_edit']) ? $data['allow_sender_to_edit'] : null;
         $this->container['allow_sender_to_edit_metadata'] = isset($data['allow_sender_to_edit_metadata']) ? $data['allow_sender_to_edit_metadata'] : null;

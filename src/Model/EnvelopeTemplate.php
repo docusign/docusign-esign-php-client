@@ -692,7 +692,7 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_control_list_base64'] = isset($data['access_control_list_base64']) ? $data['access_control_list_base64'] : null;
         $this->container['allow_comments'] = isset($data['allow_comments']) ? $data['allow_comments'] : null;

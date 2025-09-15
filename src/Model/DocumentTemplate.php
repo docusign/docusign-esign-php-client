@@ -197,7 +197,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_end_page'] = isset($data['document_end_page']) ? $data['document_end_page'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;

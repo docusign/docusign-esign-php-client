@@ -242,7 +242,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agents'] = isset($data['agents']) ? $data['agents'] : null;
         $this->container['carbon_copies'] = isset($data['carbon_copies']) ? $data['carbon_copies'] : null;

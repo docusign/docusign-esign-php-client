@@ -207,7 +207,7 @@ class ConditionalRecipientRuleFilter implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['operator'] = isset($data['operator']) ? $data['operator'] : null;
         $this->container['recipient_id'] = isset($data['recipient_id']) ? $data['recipient_id'] : null;

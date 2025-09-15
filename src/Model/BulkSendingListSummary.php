@@ -193,7 +193,7 @@ class BulkSendingListSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_send_list_id'] = isset($data['bulk_send_list_id']) ? $data['bulk_send_list_id'] : null;
         $this->container['created_by_user'] = isset($data['created_by_user']) ? $data['created_by_user'] : null;

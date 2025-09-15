@@ -393,7 +393,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_envelope_publish'] = isset($data['allow_envelope_publish']) ? $data['allow_envelope_publish'] : null;
         $this->container['allow_salesforce_publish'] = isset($data['allow_salesforce_publish']) ? $data['allow_salesforce_publish'] : null;

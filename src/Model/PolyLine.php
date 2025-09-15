@@ -192,7 +192,7 @@ class PolyLine implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['x1'] = isset($data['x1']) ? $data['x1'] : null;
         $this->container['x2'] = isset($data['x2']) ? $data['x2'] : null;

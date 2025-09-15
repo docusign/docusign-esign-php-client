@@ -333,7 +333,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_esign_id'] = isset($data['account_esign_id']) ? $data['account_esign_id'] : null;
         $this->container['allow_cd_withdraw'] = isset($data['allow_cd_withdraw']) ? $data['allow_cd_withdraw'] : null;

@@ -193,7 +193,7 @@ class IdCheckInformationInput implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address_information_input'] = isset($data['address_information_input']) ? $data['address_information_input'] : null;
         $this->container['dob_information_input'] = isset($data['dob_information_input']) ? $data['dob_information_input'] : null;
