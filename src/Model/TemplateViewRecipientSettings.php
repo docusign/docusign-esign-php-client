@@ -1,6 +1,6 @@
 <?php
 /**
- * TemplateViewRequest
+ * TemplateViewRecipientSettings
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * TemplateViewRequest Class Doc Comment
+ * TemplateViewRecipientSettings Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TemplateViewRequest implements ModelInterface, ArrayAccess
+class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'templateViewRequest';
+    protected static $swaggerModelName = 'templateViewRecipientSettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,9 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'return_url' => '?string',
-        'settings' => '\DocuSign\eSign\Model\TemplateViewSettings',
-        'view_access' => '?string'
+        'show_contacts_list' => '?string',
+        'show_edit_message' => '?string',
+        'show_edit_recipients' => '?string'
     ];
 
     /**
@@ -70,9 +70,9 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'return_url' => null,
-        'settings' => null,
-        'view_access' => null
+        'show_contacts_list' => null,
+        'show_edit_message' => null,
+        'show_edit_recipients' => null
     ];
 
     /**
@@ -102,9 +102,9 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'return_url' => 'returnUrl',
-        'settings' => 'settings',
-        'view_access' => 'viewAccess'
+        'show_contacts_list' => 'showContactsList',
+        'show_edit_message' => 'showEditMessage',
+        'show_edit_recipients' => 'showEditRecipients'
     ];
 
     /**
@@ -113,9 +113,9 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'return_url' => 'setReturnUrl',
-        'settings' => 'setSettings',
-        'view_access' => 'setViewAccess'
+        'show_contacts_list' => 'setShowContactsList',
+        'show_edit_message' => 'setShowEditMessage',
+        'show_edit_recipients' => 'setShowEditRecipients'
     ];
 
     /**
@@ -124,9 +124,9 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'return_url' => 'getReturnUrl',
-        'settings' => 'getSettings',
-        'view_access' => 'getViewAccess'
+        'show_contacts_list' => 'getShowContactsList',
+        'show_edit_message' => 'getShowEditMessage',
+        'show_edit_recipients' => 'getShowEditRecipients'
     ];
 
     /**
@@ -187,11 +187,11 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
-        $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
-        $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
-        $this->container['view_access'] = isset($data['view_access']) ? $data['view_access'] : null;
+        $this->container['show_contacts_list'] = isset($data['show_contacts_list']) ? $data['show_contacts_list'] : null;
+        $this->container['show_edit_message'] = isset($data['show_edit_message']) ? $data['show_edit_message'] : null;
+        $this->container['show_edit_recipients'] = isset($data['show_edit_recipients']) ? $data['show_edit_recipients'] : null;
     }
 
     /**
@@ -219,73 +219,73 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets return_url
+     * Gets show_contacts_list
      *
      * @return ?string
      */
-    public function getReturnUrl()
+    public function getShowContactsList()
     {
-        return $this->container['return_url'];
+        return $this->container['show_contacts_list'];
     }
 
     /**
-     * Sets return_url
+     * Sets show_contacts_list
      *
-     * @param ?string $return_url 
+     * @param ?string $show_contacts_list 
      *
      * @return $this
      */
-    public function setReturnUrl($return_url)
+    public function setShowContactsList($show_contacts_list)
     {
-        $this->container['return_url'] = $return_url;
+        $this->container['show_contacts_list'] = $show_contacts_list;
 
         return $this;
     }
 
     /**
-     * Gets settings
+     * Gets show_edit_message
      *
-     * @return \DocuSign\eSign\Model\TemplateViewSettings
+     * @return ?string
      */
-    public function getSettings()
+    public function getShowEditMessage()
     {
-        return $this->container['settings'];
+        return $this->container['show_edit_message'];
     }
 
     /**
-     * Sets settings
+     * Sets show_edit_message
      *
-     * @param \DocuSign\eSign\Model\TemplateViewSettings $settings 
+     * @param ?string $show_edit_message 
      *
      * @return $this
      */
-    public function setSettings($settings)
+    public function setShowEditMessage($show_edit_message)
     {
-        $this->container['settings'] = $settings;
+        $this->container['show_edit_message'] = $show_edit_message;
 
         return $this;
     }
 
     /**
-     * Gets view_access
+     * Gets show_edit_recipients
      *
      * @return ?string
      */
-    public function getViewAccess()
+    public function getShowEditRecipients()
     {
-        return $this->container['view_access'];
+        return $this->container['show_edit_recipients'];
     }
 
     /**
-     * Sets view_access
+     * Sets show_edit_recipients
      *
-     * @param ?string $view_access 
+     * @param ?string $show_edit_recipients 
      *
      * @return $this
      */
-    public function setViewAccess($view_access)
+    public function setShowEditRecipients($show_edit_recipients)
     {
-        $this->container['view_access'] = $view_access;
+        $this->container['show_edit_recipients'] = $show_edit_recipients;
 
         return $this;
     }

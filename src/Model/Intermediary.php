@@ -108,6 +108,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'note_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'phone_authentication' => '\DocuSign\eSign\Model\RecipientPhoneAuthentication',
         'phone_number' => '\DocuSign\eSign\Model\RecipientPhoneNumber',
+        'proof_file' => '\DocuSign\eSign\Model\RecipientProofFile',
         'recipient_attachments' => '\DocuSign\eSign\Model\RecipientAttachment[]',
         'recipient_authentication_status' => '\DocuSign\eSign\Model\AuthenticationStatus',
         'recipient_feature_metadata' => '\DocuSign\eSign\Model\FeatureAvailableMetadata[]',
@@ -192,6 +193,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'note_metadata' => null,
         'phone_authentication' => null,
         'phone_number' => null,
+        'proof_file' => null,
         'recipient_attachments' => null,
         'recipient_authentication_status' => null,
         'recipient_feature_metadata' => null,
@@ -297,6 +299,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'note_metadata' => 'noteMetadata',
         'phone_authentication' => 'phoneAuthentication',
         'phone_number' => 'phoneNumber',
+        'proof_file' => 'proofFile',
         'recipient_attachments' => 'recipientAttachments',
         'recipient_authentication_status' => 'recipientAuthenticationStatus',
         'recipient_feature_metadata' => 'recipientFeatureMetadata',
@@ -381,6 +384,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'note_metadata' => 'setNoteMetadata',
         'phone_authentication' => 'setPhoneAuthentication',
         'phone_number' => 'setPhoneNumber',
+        'proof_file' => 'setProofFile',
         'recipient_attachments' => 'setRecipientAttachments',
         'recipient_authentication_status' => 'setRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'setRecipientFeatureMetadata',
@@ -465,6 +469,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         'note_metadata' => 'getNoteMetadata',
         'phone_authentication' => 'getPhoneAuthentication',
         'phone_number' => 'getPhoneNumber',
+        'proof_file' => 'getProofFile',
         'recipient_attachments' => 'getRecipientAttachments',
         'recipient_authentication_status' => 'getRecipientAuthenticationStatus',
         'recipient_feature_metadata' => 'getRecipientFeatureMetadata',
@@ -603,6 +608,7 @@ class Intermediary implements ModelInterface, ArrayAccess
         $this->container['note_metadata'] = isset($data['note_metadata']) ? $data['note_metadata'] : null;
         $this->container['phone_authentication'] = isset($data['phone_authentication']) ? $data['phone_authentication'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
+        $this->container['proof_file'] = isset($data['proof_file']) ? $data['proof_file'] : null;
         $this->container['recipient_attachments'] = isset($data['recipient_attachments']) ? $data['recipient_attachments'] : null;
         $this->container['recipient_authentication_status'] = isset($data['recipient_authentication_status']) ? $data['recipient_authentication_status'] : null;
         $this->container['recipient_feature_metadata'] = isset($data['recipient_feature_metadata']) ? $data['recipient_feature_metadata'] : null;
@@ -1805,6 +1811,30 @@ class Intermediary implements ModelInterface, ArrayAccess
     public function setPhoneNumber($phone_number)
     {
         $this->container['phone_number'] = $phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets proof_file
+     *
+     * @return \DocuSign\eSign\Model\RecipientProofFile
+     */
+    public function getProofFile()
+    {
+        return $this->container['proof_file'];
+    }
+
+    /**
+     * Sets proof_file
+     *
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file 
+     *
+     * @return $this
+     */
+    public function setProofFile($proof_file)
+    {
+        $this->container['proof_file'] = $proof_file;
 
         return $this;
     }

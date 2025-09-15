@@ -588,6 +588,33 @@ class GetPagesOptions
 class ListDocumentsOptions
 {
     /**
+      * $include_agreement_type 
+      * @var ?string
+      */
+    protected ?string $include_agreement_type = null;
+
+    /**
+     * Gets include_agreement_type
+     *
+     * @return ?string
+     */
+    public function getIncludeAgreementType(): ?string
+    {
+        return $this->include_agreement_type;
+    }
+
+    /**
+     * Sets include_agreement_type
+     * @param ?string $include_agreement_type 
+     *
+     * @return self
+     */
+    public function setIncludeAgreementType(?string $include_agreement_type): self
+    {
+        $this->include_agreement_type = $include_agreement_type;
+        return $this;
+    }
+    /**
       * $include_tabs 
       * @var ?string
       */
@@ -5248,6 +5275,9 @@ class TemplatesApi
         if ($options != null)
         {
             // query params
+            if ($options->getIncludeAgreementType() != 'null') {
+                $queryParams['include_agreement_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAgreementType());
+            }
             if ($options->getIncludeTabs() != 'null') {
                 $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
             }

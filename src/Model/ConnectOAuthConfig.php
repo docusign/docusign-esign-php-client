@@ -62,7 +62,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         'authorization_server_url' => '?string',
         'client_id' => '?string',
         'client_secret' => '?string',
-        'custom_parameters' => '?string',
+        'custom_parameters' => 'map[string,?string]',
         'scope' => '?string'
     ];
 
@@ -305,7 +305,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     /**
      * Gets custom_parameters
      *
-     * @return ?string
+     * @return map[string,?string]
      */
     public function getCustomParameters()
     {
@@ -315,7 +315,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     /**
      * Sets custom_parameters
      *
-     * @param ?string $custom_parameters 
+     * @param map[string,?string] $custom_parameters 
      *
      * @return $this
      */
