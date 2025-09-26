@@ -165,9 +165,9 @@ class BulkSendBatchError implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class BulkSendBatchError implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error'] = isset($data['error']) ? $data['error'] : null;
         $this->container['error_detail'] = isset($data['error_detail']) ? $data['error_detail'] : null;
@@ -225,7 +225,7 @@ class BulkSendBatchError implements ModelInterface, ArrayAccess
     /**
      * Sets error
      *
-     * @param ?string $error 
+     * @param ?string $error
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class BulkSendBatchError implements ModelInterface, ArrayAccess
     /**
      * Sets error_detail
      *
-     * @param ?string $error_detail 
+     * @param ?string $error_detail
      *
      * @return $this
      */

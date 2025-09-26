@@ -127,9 +127,9 @@ class CustomFieldV2 implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -141,7 +141,7 @@ class CustomFieldV2 implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -228,7 +228,7 @@ class CustomFieldV2 implements ArrayAccess
 
     /**
      * Sets field_id
-     * @param string $field_id 
+     * @param string $field_id
      * @return $this
      */
     public function setFieldId($field_id)
@@ -249,7 +249,7 @@ class CustomFieldV2 implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name 
+     * @param string $name
      * @return $this
      */
     public function setName($name)
@@ -291,7 +291,7 @@ class CustomFieldV2 implements ArrayAccess
 
     /**
      * Sets show
-     * @param string $show 
+     * @param string $show
      * @return $this
      */
     public function setShow($show)

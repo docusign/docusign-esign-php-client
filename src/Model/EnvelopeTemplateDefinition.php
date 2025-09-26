@@ -164,9 +164,9 @@ class EnvelopeTemplateDefinition implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -178,7 +178,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -232,7 +232,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets created
-     * @param string $created 
+     * @param string $created
      * @return $this
      */
     public function setCreated($created)
@@ -253,7 +253,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets description
-     * @param string $description 
+     * @param string $description
      * @return $this
      */
     public function setDescription($description)
@@ -337,7 +337,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets last_modified
-     * @param string $last_modified 
+     * @param string $last_modified
      * @return $this
      */
     public function setLastModified($last_modified)
@@ -379,7 +379,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name 
+     * @param string $name
      * @return $this
      */
     public function setName($name)
@@ -400,7 +400,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets new_password
-     * @param string $new_password 
+     * @param string $new_password
      * @return $this
      */
     public function setNewPassword($new_password)
@@ -463,7 +463,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets parent_folder_uri
-     * @param string $parent_folder_uri 
+     * @param string $parent_folder_uri
      * @return $this
      */
     public function setParentFolderUri($parent_folder_uri)
@@ -484,7 +484,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets password
-     * @param string $password 
+     * @param string $password
      * @return $this
      */
     public function setPassword($password)
@@ -547,7 +547,7 @@ class EnvelopeTemplateDefinition implements ArrayAccess
 
     /**
      * Sets uri
-     * @param string $uri 
+     * @param string $uri
      * @return $this
      */
     public function setUri($uri)

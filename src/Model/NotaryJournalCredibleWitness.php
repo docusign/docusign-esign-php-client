@@ -170,9 +170,9 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -231,7 +231,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param ?string $address 
+     * @param ?string $address
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class NotaryJournalCredibleWitness implements ModelInterface, ArrayAccess
     /**
      * Sets signature_image
      *
-     * @param ?string $signature_image 
+     * @param ?string $signature_image
      *
      * @return $this
      */

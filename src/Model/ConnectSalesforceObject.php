@@ -201,9 +201,9 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -218,7 +218,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -268,7 +268,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param ?string $active 
+     * @param ?string $active
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param ?string $description 
+     * @param ?string $description
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param ?string $id 
+     * @param ?string $id
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets insert
      *
-     * @param ?string $insert 
+     * @param ?string $insert
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets on_complete_only
      *
-     * @param ?string $on_complete_only 
+     * @param ?string $on_complete_only
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets select_fields
      *
-     * @param \DocuSign\eSign\Model\ConnectSalesforceField[] $select_fields 
+     * @param \DocuSign\eSign\Model\ConnectSalesforceField[] $select_fields
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets sf_object
      *
-     * @param ?string $sf_object 
+     * @param ?string $sf_object
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets sf_object_name
      *
-     * @param ?string $sf_object_name 
+     * @param ?string $sf_object_name
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class ConnectSalesforceObject implements ModelInterface, ArrayAccess
     /**
      * Sets update_fields
      *
-     * @param \DocuSign\eSign\Model\ConnectSalesforceField[] $update_fields 
+     * @param \DocuSign\eSign\Model\ConnectSalesforceField[] $update_fields
      *
      * @return $this
      */

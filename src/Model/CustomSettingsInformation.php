@@ -160,9 +160,9 @@ class CustomSettingsInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class CustomSettingsInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['custom_settings'] = isset($data['custom_settings']) ? $data['custom_settings'] : null;
     }
@@ -219,7 +219,7 @@ class CustomSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets custom_settings
      *
-     * @param \DocuSign\eSign\Model\NameValue[] $custom_settings 
+     * @param \DocuSign\eSign\Model\NameValue[] $custom_settings
      *
      * @return $this
      */

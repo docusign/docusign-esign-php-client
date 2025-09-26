@@ -276,9 +276,9 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -293,7 +293,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['caller_authorization'] = isset($data['caller_authorization']) ? $data['caller_authorization'] : null;
         $this->container['content_type'] = isset($data['content_type']) ? $data['content_type'] : null;
@@ -358,7 +358,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets caller_authorization
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $caller_authorization 
+     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $caller_authorization
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets content_type
      *
-     * @param ?string $content_type 
+     * @param ?string $content_type
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_id
      *
-     * @param ?string $created_by_id 
+     * @param ?string $created_by_id
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets extension
      *
-     * @param ?string $extension 
+     * @param ?string $extension
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets file_size
      *
-     * @param ?string $file_size 
+     * @param ?string $file_size
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets file_uri
      *
-     * @param ?string $file_uri 
+     * @param ?string $file_uri
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param ?string $id 
+     * @param ?string $id
      *
      * @return $this
      */
@@ -598,7 +598,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param ?string $last_modified 
+     * @param ?string $last_modified
      *
      * @return $this
      */
@@ -694,7 +694,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets page_count
      *
-     * @param ?string $page_count 
+     * @param ?string $page_count
      *
      * @return $this
      */
@@ -742,7 +742,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_uri
      *
-     * @param ?string $parent_folder_uri 
+     * @param ?string $parent_folder_uri
      *
      * @return $this
      */
@@ -766,7 +766,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets sha256
      *
-     * @param ?string $sha256 
+     * @param ?string $sha256
      *
      * @return $this
      */
@@ -790,7 +790,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets thumb_height
      *
-     * @param ?string $thumb_height 
+     * @param ?string $thumb_height
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets thumbnail
      *
-     * @param \DocuSign\eSign\Model\Page $thumbnail 
+     * @param \DocuSign\eSign\Model\Page $thumbnail
      *
      * @return $this
      */
@@ -838,7 +838,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets thumb_width
      *
-     * @param ?string $thumb_width 
+     * @param ?string $thumb_width
      *
      * @return $this
      */
@@ -886,7 +886,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */
@@ -910,7 +910,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
     /**
      * Sets user_authorization
      *
-     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $user_authorization 
+     * @param \DocuSign\eSign\Model\WorkspaceUserAuthorization $user_authorization
      *
      * @return $this
      */

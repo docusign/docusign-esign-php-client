@@ -168,9 +168,9 @@ class TimeStampField implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -185,7 +185,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_security_store'] = isset($data['document_security_store']) ? $data['document_security_store'] : null;
         $this->container['max_time_stamp_signature_length'] = isset($data['max_time_stamp_signature_length']) ? $data['max_time_stamp_signature_length'] : null;
@@ -253,7 +253,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
     /**
      * Sets max_time_stamp_signature_length
      *
-     * @param ?string $max_time_stamp_signature_length 
+     * @param ?string $max_time_stamp_signature_length
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
     /**
      * Sets time_stamp_field_name
      *
-     * @param ?string $time_stamp_field_name 
+     * @param ?string $time_stamp_field_name
      *
      * @return $this
      */

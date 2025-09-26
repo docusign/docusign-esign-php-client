@@ -215,9 +215,9 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -232,7 +232,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
         $this->container['configuration_id'] = isset($data['configuration_id']) ? $data['configuration_id'] : null;
@@ -285,7 +285,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param ?string $account_name 
+     * @param ?string $account_name
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets configuration_id
      *
-     * @param ?string $configuration_id 
+     * @param ?string $configuration_id
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets exempt_members_of_same_account_from_auth
      *
-     * @param ?string $exempt_members_of_same_account_from_auth 
+     * @param ?string $exempt_members_of_same_account_from_auth
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets link_id
      *
-     * @param ?string $link_id 
+     * @param ?string $link_id
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_field_handling_option
      *
-     * @param ?string $pdf_field_handling_option 
+     * @param ?string $pdf_field_handling_option
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_field_handling_prefill_tab_permission
      *
-     * @param ?string $pdf_field_handling_prefill_tab_permission 
+     * @param ?string $pdf_field_handling_prefill_tab_permission
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_field_handling_standard_input_tab_permission
      *
-     * @param ?string $pdf_field_handling_standard_input_tab_permission 
+     * @param ?string $pdf_field_handling_standard_input_tab_permission
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_field_handling_standard_tab_permission
      *
-     * @param ?string $pdf_field_handling_standard_tab_permission 
+     * @param ?string $pdf_field_handling_standard_tab_permission
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_auth_requirements
      *
-     * @param \DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements $recipient_auth_requirements 
+     * @param \DocuSign\eSign\Model\ExternalPrimaryAccountRecipientAuthRequirements $recipient_auth_requirements
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class LinkedExternalPrimaryAccount implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */

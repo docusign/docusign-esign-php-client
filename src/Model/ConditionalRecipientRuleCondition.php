@@ -170,9 +170,9 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
@@ -231,7 +231,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \DocuSign\eSign\Model\ConditionalRecipientRuleFilter[] $filters 
+     * @param \DocuSign\eSign\Model\ConditionalRecipientRuleFilter[] $filters
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param ?string $order 
+     * @param ?string $order
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ConditionalRecipientRuleCondition implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_label
      *
-     * @param ?string $recipient_label 
+     * @param ?string $recipient_label
      *
      * @return $this
      */

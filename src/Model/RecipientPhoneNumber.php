@@ -176,9 +176,9 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
         $this->container['country_code_metadata'] = isset($data['country_code_metadata']) ? $data['country_code_metadata'] : null;
@@ -238,7 +238,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param ?string $country_code 
+     * @param ?string $country_code
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class RecipientPhoneNumber implements ModelInterface, ArrayAccess
     /**
      * Sets number
      *
-     * @param ?string $number 
+     * @param ?string $number
      *
      * @return $this
      */

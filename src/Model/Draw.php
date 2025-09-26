@@ -586,9 +586,9 @@ class Draw implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -603,7 +603,7 @@ class Draw implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agreement_attribute'] = isset($data['agreement_attribute']) ? $data['agreement_attribute'] : null;
         $this->container['agreement_attribute_locked'] = isset($data['agreement_attribute_locked']) ? $data['agreement_attribute_locked'] : null;
@@ -730,7 +730,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets agreement_attribute
      *
-     * @param ?string $agreement_attribute 
+     * @param ?string $agreement_attribute
      *
      * @return $this
      */
@@ -754,7 +754,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets agreement_attribute_locked
      *
-     * @param ?string $agreement_attribute_locked 
+     * @param ?string $agreement_attribute_locked
      *
      * @return $this
      */
@@ -778,7 +778,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_upload
      *
-     * @param ?string $allow_signer_upload 
+     * @param ?string $allow_signer_upload
      *
      * @return $this
      */
@@ -802,7 +802,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters
      *
-     * @param ?string $anchor_allow_white_space_in_characters 
+     * @param ?string $anchor_allow_white_space_in_characters
      *
      * @return $this
      */
@@ -1090,7 +1090,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version
      *
-     * @param ?string $anchor_tab_processor_version 
+     * @param ?string $anchor_tab_processor_version
      *
      * @return $this
      */
@@ -1282,7 +1282,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets caption
      *
-     * @param ?string $caption 
+     * @param ?string $caption
      *
      * @return $this
      */
@@ -1306,7 +1306,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets caption_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata 
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata
      *
      * @return $this
      */
@@ -1426,7 +1426,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets connected_object_details
      *
-     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details 
+     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details
      *
      * @return $this
      */
@@ -1570,7 +1570,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets extension_data
      *
-     * @param \DocuSign\eSign\Model\ExtensionData $extension_data 
+     * @param \DocuSign\eSign\Model\ExtensionData $extension_data
      *
      * @return $this
      */
@@ -1594,7 +1594,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets form_order
      *
-     * @param ?string $form_order 
+     * @param ?string $form_order
      *
      * @return $this
      */
@@ -1642,7 +1642,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label
      *
-     * @param ?string $form_page_label 
+     * @param ?string $form_page_label
      *
      * @return $this
      */
@@ -1690,7 +1690,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number
      *
-     * @param ?string $form_page_number 
+     * @param ?string $form_page_number
      *
      * @return $this
      */
@@ -1858,7 +1858,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field_xml
      *
-     * @param ?string $merge_field_xml 
+     * @param ?string $merge_field_xml
      *
      * @return $this
      */
@@ -1954,7 +1954,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param ?string $recipient_id_guid 
+     * @param ?string $recipient_id_guid
      *
      * @return $this
      */
@@ -2146,7 +2146,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param ?string $source 
+     * @param ?string $source
      *
      * @return $this
      */
@@ -2218,7 +2218,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets tab_fully_qualified_path
      *
-     * @param ?string $tab_fully_qualified_path 
+     * @param ?string $tab_fully_qualified_path
      *
      * @return $this
      */
@@ -2242,7 +2242,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels
      *
-     * @param ?string[] $tab_group_labels 
+     * @param ?string[] $tab_group_labels
      *
      * @return $this
      */
@@ -2362,7 +2362,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order
      *
-     * @param ?string $tab_order 
+     * @param ?string $tab_order
      *
      * @return $this
      */
@@ -2410,7 +2410,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type
      *
-     * @param ?string $tab_type 
+     * @param ?string $tab_type
      *
      * @return $this
      */
@@ -2554,7 +2554,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param ?string $tooltip 
+     * @param ?string $tooltip
      *
      * @return $this
      */
@@ -2602,7 +2602,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets use_background_as_canvas
      *
-     * @param ?string $use_background_as_canvas 
+     * @param ?string $use_background_as_canvas
      *
      * @return $this
      */
@@ -2626,7 +2626,7 @@ class Draw implements ModelInterface, ArrayAccess
     /**
      * Sets warning_details
      *
-     * @param \DocuSign\eSign\Model\ErrorDetails $warning_details 
+     * @param \DocuSign\eSign\Model\ErrorDetails $warning_details
      *
      * @return $this
      */

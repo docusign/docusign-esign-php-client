@@ -175,9 +175,9 @@ class ReportInProductField implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['field_version'] = isset($data['field_version']) ? $data['field_version'] : null;
@@ -237,7 +237,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets display_order
      *
-     * @param ?string $display_order 
+     * @param ?string $display_order
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets field_version
      *
-     * @param ?string $field_version 
+     * @param ?string $field_version
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
     /**
      * Sets selected
      *
-     * @param ?string $selected 
+     * @param ?string $selected
      *
      * @return $this
      */

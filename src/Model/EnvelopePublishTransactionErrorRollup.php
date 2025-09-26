@@ -165,9 +165,9 @@ class EnvelopePublishTransactionErrorRollup implements ModelInterface, ArrayAcce
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class EnvelopePublishTransactionErrorRollup implements ModelInterface, ArrayAcce
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['error_type'] = isset($data['error_type']) ? $data['error_type'] : null;
@@ -225,7 +225,7 @@ class EnvelopePublishTransactionErrorRollup implements ModelInterface, ArrayAcce
     /**
      * Sets count
      *
-     * @param ?string $count 
+     * @param ?string $count
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class EnvelopePublishTransactionErrorRollup implements ModelInterface, ArrayAcce
     /**
      * Sets error_type
      *
-     * @param ?string $error_type 
+     * @param ?string $error_type
      *
      * @return $this
      */

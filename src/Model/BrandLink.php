@@ -176,9 +176,9 @@ class BrandLink implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class BrandLink implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['link_text'] = isset($data['link_text']) ? $data['link_text'] : null;
         $this->container['link_type'] = isset($data['link_type']) ? $data['link_type'] : null;
@@ -238,7 +238,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets link_text
      *
-     * @param ?string $link_text 
+     * @param ?string $link_text
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets link_type
      *
-     * @param ?string $link_type 
+     * @param ?string $link_type
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets show_link
      *
-     * @param ?string $show_link 
+     * @param ?string $show_link
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class BrandLink implements ModelInterface, ArrayAccess
     /**
      * Sets url_or_mail_to
      *
-     * @param ?string $url_or_mail_to 
+     * @param ?string $url_or_mail_to
      *
      * @return $this
      */

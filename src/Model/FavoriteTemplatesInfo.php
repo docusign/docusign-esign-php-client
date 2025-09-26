@@ -170,9 +170,9 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['favorite_templates'] = isset($data['favorite_templates']) ? $data['favorite_templates'] : null;
@@ -255,7 +255,7 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets favorite_templates
      *
-     * @param \DocuSign\eSign\Model\FavoriteTemplatesContentItem[] $favorite_templates 
+     * @param \DocuSign\eSign\Model\FavoriteTemplatesContentItem[] $favorite_templates
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets templates_updated_count
      *
-     * @param ?int $templates_updated_count 
+     * @param ?int $templates_updated_count
      *
      * @return $this
      */

@@ -176,9 +176,9 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['input_options'] = isset($data['input_options']) ? $data['input_options'] : null;
         $this->container['workflow_id'] = isset($data['workflow_id']) ? $data['workflow_id'] : null;
@@ -238,7 +238,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     /**
      * Sets input_options
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityInputOption[] $input_options 
+     * @param \DocuSign\eSign\Model\RecipientIdentityInputOption[] $input_options
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_id
      *
-     * @param ?string $workflow_id 
+     * @param ?string $workflow_id
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_id_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $workflow_id_metadata 
+     * @param \DocuSign\eSign\Model\PropertyMetadata $workflow_id_metadata
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class RecipientIdentityVerification implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_label
      *
-     * @param ?string $workflow_label 
+     * @param ?string $workflow_label
      *
      * @return $this
      */

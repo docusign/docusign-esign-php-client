@@ -261,9 +261,9 @@ class EventNotification implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -278,7 +278,7 @@ class EventNotification implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['delivery_mode'] = isset($data['delivery_mode']) ? $data['delivery_mode'] : null;
         $this->container['envelope_events'] = isset($data['envelope_events']) ? $data['envelope_events'] : null;
@@ -340,7 +340,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_mode
      *
-     * @param ?string $delivery_mode 
+     * @param ?string $delivery_mode
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets events
      *
-     * @param ?string[] $events 
+     * @param ?string[] $events
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_hmac
      *
-     * @param ?string $include_hmac 
+     * @param ?string $include_hmac
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets include_o_auth
      *
-     * @param ?string $include_o_auth 
+     * @param ?string $include_o_auth
      *
      * @return $this
      */
@@ -652,7 +652,7 @@ class EventNotification implements ModelInterface, ArrayAccess
     /**
      * Sets integrator_managed
      *
-     * @param ?string $integrator_managed 
+     * @param ?string $integrator_managed
      *
      * @return $this
      */

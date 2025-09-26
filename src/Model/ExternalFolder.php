@@ -210,9 +210,9 @@ class ExternalFolder implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -227,7 +227,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -327,7 +327,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param ?string $id 
+     * @param ?string $id
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \DocuSign\eSign\Model\ExternalFile[] $items 
+     * @param \DocuSign\eSign\Model\ExternalFile[] $items
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class ExternalFolder implements ModelInterface, ArrayAccess
     /**
      * Sets sky_drive_skip_token
      *
-     * @param ?string $sky_drive_skip_token 
+     * @param ?string $sky_drive_skip_token
      *
      * @return $this
      */

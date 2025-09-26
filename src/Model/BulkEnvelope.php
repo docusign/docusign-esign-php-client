@@ -200,9 +200,9 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -217,7 +217,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_recipient_row'] = isset($data['bulk_recipient_row']) ? $data['bulk_recipient_row'] : null;
         $this->container['bulk_status'] = isset($data['bulk_status']) ? $data['bulk_status'] : null;
@@ -315,7 +315,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class BulkEnvelope implements ModelInterface, ArrayAccess
     /**
      * Sets submitted_date_time
      *
-     * @param ?string $submitted_date_time 
+     * @param ?string $submitted_date_time
      *
      * @return $this
      */

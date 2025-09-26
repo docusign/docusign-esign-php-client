@@ -190,9 +190,9 @@ class EnvelopeTransferRuleInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -207,7 +207,7 @@ class EnvelopeTransferRuleInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['envelope_transfer_rules'] = isset($data['envelope_transfer_rules']) ? $data['envelope_transfer_rules'] : null;
@@ -279,7 +279,7 @@ class EnvelopeTransferRuleInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_transfer_rules
      *
-     * @param \DocuSign\eSign\Model\EnvelopeTransferRule[] $envelope_transfer_rules 
+     * @param \DocuSign\eSign\Model\EnvelopeTransferRule[] $envelope_transfer_rules
      *
      * @return $this
      */

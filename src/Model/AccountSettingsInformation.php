@@ -4271,9 +4271,9 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -4288,7 +4288,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code_format'] = isset($data['access_code_format']) ? $data['access_code_format'] : null;
         $this->container['account_date_time_format'] = isset($data['account_date_time_format']) ? $data['account_date_time_format'] : null;
@@ -5176,7 +5176,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_date_time_format
      *
-     * @param ?string $account_date_time_format 
+     * @param ?string $account_date_time_format
      *
      * @return $this
      */
@@ -5224,7 +5224,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_default_language
      *
-     * @param ?string $account_default_language 
+     * @param ?string $account_default_language
      *
      * @return $this
      */
@@ -5248,7 +5248,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_default_language_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $account_default_language_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $account_default_language_metadata
      *
      * @return $this
      */
@@ -5272,7 +5272,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param ?string $account_name 
+     * @param ?string $account_name
      *
      * @return $this
      */
@@ -5368,7 +5368,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets adopt_sig_config
      *
-     * @param ?string $adopt_sig_config 
+     * @param ?string $adopt_sig_config
      *
      * @return $this
      */
@@ -5416,7 +5416,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_correct
      *
-     * @param ?string $advanced_correct 
+     * @param ?string $advanced_correct
      *
      * @return $this
      */
@@ -5464,7 +5464,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_search_enable_tab_field
      *
-     * @param ?string $advanced_search_enable_tab_field 
+     * @param ?string $advanced_search_enable_tab_field
      *
      * @return $this
      */
@@ -5488,7 +5488,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_search_enable_tab_field_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_tab_field_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_tab_field_metadata
      *
      * @return $this
      */
@@ -5512,7 +5512,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_search_enable_template_id_field
      *
-     * @param ?string $advanced_search_enable_template_id_field 
+     * @param ?string $advanced_search_enable_template_id_field
      *
      * @return $this
      */
@@ -5536,7 +5536,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_search_enable_template_id_field_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_template_id_field_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_template_id_field_metadata
      *
      * @return $this
      */
@@ -5560,7 +5560,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_search_enable_template_name_field
      *
-     * @param ?string $advanced_search_enable_template_name_field 
+     * @param ?string $advanced_search_enable_template_name_field
      *
      * @return $this
      */
@@ -5584,7 +5584,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets advanced_search_enable_template_name_field_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_template_name_field_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $advanced_search_enable_template_name_field_metadata
      *
      * @return $this
      */
@@ -5608,7 +5608,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_access_code_format
      *
-     * @param ?string $allow_access_code_format 
+     * @param ?string $allow_access_code_format
      *
      * @return $this
      */
@@ -5656,7 +5656,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_account_management_granular
      *
-     * @param ?string $allow_account_management_granular 
+     * @param ?string $allow_account_management_granular
      *
      * @return $this
      */
@@ -5704,7 +5704,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_account_member_name_change
      *
-     * @param ?string $allow_account_member_name_change 
+     * @param ?string $allow_account_member_name_change
      *
      * @return $this
      */
@@ -5752,7 +5752,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_ace
      *
-     * @param ?string $allow_ace 
+     * @param ?string $allow_ace
      *
      * @return $this
      */
@@ -5776,7 +5776,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_ace_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_ace_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_ace_metadata
      *
      * @return $this
      */
@@ -5800,7 +5800,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_advanced_recipient_routing_conditional
      *
-     * @param ?string $allow_advanced_recipient_routing_conditional 
+     * @param ?string $allow_advanced_recipient_routing_conditional
      *
      * @return $this
      */
@@ -5848,7 +5848,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_agent_name_email_edit
      *
-     * @param ?string $allow_agent_name_email_edit 
+     * @param ?string $allow_agent_name_email_edit
      *
      * @return $this
      */
@@ -5896,7 +5896,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_agreement_actions
      *
-     * @param ?string $allow_agreement_actions 
+     * @param ?string $allow_agreement_actions
      *
      * @return $this
      */
@@ -5944,7 +5944,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_agreement_orchestrations
      *
-     * @param ?string $allow_agreement_orchestrations 
+     * @param ?string $allow_agreement_orchestrations
      *
      * @return $this
      */
@@ -5968,7 +5968,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_agreement_orchestrations_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_agreement_orchestrations_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_agreement_orchestrations_metadata
      *
      * @return $this
      */
@@ -5992,7 +5992,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_nav_settings
      *
-     * @param ?string $allow_auto_nav_settings 
+     * @param ?string $allow_auto_nav_settings
      *
      * @return $this
      */
@@ -6040,7 +6040,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_tagging
      *
-     * @param ?string $allow_auto_tagging 
+     * @param ?string $allow_auto_tagging
      *
      * @return $this
      */
@@ -6088,7 +6088,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_bulk_send
      *
-     * @param ?string $allow_bulk_send 
+     * @param ?string $allow_bulk_send
      *
      * @return $this
      */
@@ -6136,7 +6136,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_cd_withdraw
      *
-     * @param ?string $allow_cd_withdraw 
+     * @param ?string $allow_cd_withdraw
      *
      * @return $this
      */
@@ -6184,7 +6184,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_agreement_ui
      *
-     * @param ?string $allow_connect_agreement_ui 
+     * @param ?string $allow_connect_agreement_ui
      *
      * @return $this
      */
@@ -6208,7 +6208,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_agreement_ui_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_connect_agreement_ui_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_connect_agreement_ui_metadata
      *
      * @return $this
      */
@@ -6232,7 +6232,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_authoritative_copy_ready_event_ui
      *
-     * @param ?string $allow_connect_authoritative_copy_ready_event_ui 
+     * @param ?string $allow_connect_authoritative_copy_ready_event_ui
      *
      * @return $this
      */
@@ -6256,7 +6256,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_envelope_removed_event
      *
-     * @param ?string $allow_connect_envelope_removed_event 
+     * @param ?string $allow_connect_envelope_removed_event
      *
      * @return $this
      */
@@ -6280,7 +6280,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_extension_ui
      *
-     * @param ?string $allow_connect_extension_ui 
+     * @param ?string $allow_connect_extension_ui
      *
      * @return $this
      */
@@ -6304,7 +6304,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_http_listener_configs
      *
-     * @param ?string $allow_connect_http_listener_configs 
+     * @param ?string $allow_connect_http_listener_configs
      *
      * @return $this
      */
@@ -6328,7 +6328,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_identity_verification_ui
      *
-     * @param ?string $allow_connect_identity_verification_ui 
+     * @param ?string $allow_connect_identity_verification_ui
      *
      * @return $this
      */
@@ -6352,7 +6352,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_o_auth_ui
      *
-     * @param ?string $allow_connect_o_auth_ui 
+     * @param ?string $allow_connect_o_auth_ui
      *
      * @return $this
      */
@@ -6376,7 +6376,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_send_finish_later
      *
-     * @param ?string $allow_connect_send_finish_later 
+     * @param ?string $allow_connect_send_finish_later
      *
      * @return $this
      */
@@ -6424,7 +6424,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_connect_unified_payload_ui
      *
-     * @param ?string $allow_connect_unified_payload_ui 
+     * @param ?string $allow_connect_unified_payload_ui
      *
      * @return $this
      */
@@ -6448,7 +6448,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_consumer_disclosure_override
      *
-     * @param ?string $allow_consumer_disclosure_override 
+     * @param ?string $allow_consumer_disclosure_override
      *
      * @return $this
      */
@@ -6496,7 +6496,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_data_download
      *
-     * @param ?string $allow_data_download 
+     * @param ?string $allow_data_download
      *
      * @return $this
      */
@@ -6568,7 +6568,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_delayed_routing_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_delayed_routing_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_delayed_routing_metadata
      *
      * @return $this
      */
@@ -6592,7 +6592,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_delegated_signing
      *
-     * @param ?string $allow_delegated_signing 
+     * @param ?string $allow_delegated_signing
      *
      * @return $this
      */
@@ -6616,7 +6616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_delegated_signing_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_delegated_signing_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_delegated_signing_metadata
      *
      * @return $this
      */
@@ -6640,7 +6640,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_doc_gen_documents
      *
-     * @param ?string $allow_doc_gen_documents 
+     * @param ?string $allow_doc_gen_documents
      *
      * @return $this
      */
@@ -6664,7 +6664,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_doc_gen_documents_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_doc_gen_documents_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_doc_gen_documents_metadata
      *
      * @return $this
      */
@@ -6688,7 +6688,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_document_disclosures
      *
-     * @param ?string $allow_document_disclosures 
+     * @param ?string $allow_document_disclosures
      *
      * @return $this
      */
@@ -6736,7 +6736,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_documents_on_signed_envelopes
      *
-     * @param ?string $allow_documents_on_signed_envelopes 
+     * @param ?string $allow_documents_on_signed_envelopes
      *
      * @return $this
      */
@@ -6784,7 +6784,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_document_visibility
      *
-     * @param ?string $allow_document_visibility 
+     * @param ?string $allow_document_visibility
      *
      * @return $this
      */
@@ -6832,7 +6832,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_editing_envelopes_on_behalf_of_others
      *
-     * @param ?string $allow_editing_envelopes_on_behalf_of_others 
+     * @param ?string $allow_editing_envelopes_on_behalf_of_others
      *
      * @return $this
      */
@@ -6856,7 +6856,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_editing_envelopes_on_behalf_of_others_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_editing_envelopes_on_behalf_of_others_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_editing_envelopes_on_behalf_of_others_metadata
      *
      * @return $this
      */
@@ -6880,7 +6880,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_e_hanko_stamps
      *
-     * @param ?string $allow_e_hanko_stamps 
+     * @param ?string $allow_e_hanko_stamps
      *
      * @return $this
      */
@@ -6928,7 +6928,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_e_note_e_original
      *
-     * @param ?string $allow_e_note_e_original 
+     * @param ?string $allow_e_note_e_original
      *
      * @return $this
      */
@@ -6976,7 +6976,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_correct
      *
-     * @param ?string $allow_envelope_correct 
+     * @param ?string $allow_envelope_correct
      *
      * @return $this
      */
@@ -7024,7 +7024,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_custody_transfer
      *
-     * @param ?string $allow_envelope_custody_transfer 
+     * @param ?string $allow_envelope_custody_transfer
      *
      * @return $this
      */
@@ -7072,7 +7072,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_custom_fields
      *
-     * @param ?string $allow_envelope_custom_fields 
+     * @param ?string $allow_envelope_custom_fields
      *
      * @return $this
      */
@@ -7120,7 +7120,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_publish_reporting
      *
-     * @param ?string $allow_envelope_publish_reporting 
+     * @param ?string $allow_envelope_publish_reporting
      *
      * @return $this
      */
@@ -7168,7 +7168,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_reporting
      *
-     * @param ?string $allow_envelope_reporting 
+     * @param ?string $allow_envelope_reporting
      *
      * @return $this
      */
@@ -7216,7 +7216,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_expression
      *
-     * @param ?string $allow_expression 
+     * @param ?string $allow_expression
      *
      * @return $this
      */
@@ -7264,7 +7264,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_express_signer_certificate
      *
-     * @param ?string $allow_express_signer_certificate 
+     * @param ?string $allow_express_signer_certificate
      *
      * @return $this
      */
@@ -7312,7 +7312,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_extended_sending_resource_file
      *
-     * @param ?string $allow_extended_sending_resource_file 
+     * @param ?string $allow_extended_sending_resource_file
      *
      * @return $this
      */
@@ -7360,7 +7360,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_external_linked_accounts
      *
-     * @param ?string $allow_external_linked_accounts 
+     * @param ?string $allow_external_linked_accounts
      *
      * @return $this
      */
@@ -7384,7 +7384,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_external_linked_accounts_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_external_linked_accounts_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_external_linked_accounts_metadata
      *
      * @return $this
      */
@@ -7408,7 +7408,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_external_signature_pad
      *
-     * @param ?string $allow_external_signature_pad 
+     * @param ?string $allow_external_signature_pad
      *
      * @return $this
      */
@@ -7456,7 +7456,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_for_eu_qualified_signatures
      *
-     * @param ?string $allow_idv_for_eu_qualified_signatures 
+     * @param ?string $allow_idv_for_eu_qualified_signatures
      *
      * @return $this
      */
@@ -7480,7 +7480,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_for_eu_qualified_signatures_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_for_eu_qualified_signatures_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_for_eu_qualified_signatures_metadata
      *
      * @return $this
      */
@@ -7504,7 +7504,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level1
      *
-     * @param ?string $allow_idv_level1 
+     * @param ?string $allow_idv_level1
      *
      * @return $this
      */
@@ -7552,7 +7552,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level1_trial
      *
-     * @param ?string $allow_idv_level1_trial 
+     * @param ?string $allow_idv_level1_trial
      *
      * @return $this
      */
@@ -7576,7 +7576,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level1_trial_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_level1_trial_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_level1_trial_metadata
      *
      * @return $this
      */
@@ -7600,7 +7600,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level2
      *
-     * @param ?string $allow_idv_level2 
+     * @param ?string $allow_idv_level2
      *
      * @return $this
      */
@@ -7624,7 +7624,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level2_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_level2_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_level2_metadata
      *
      * @return $this
      */
@@ -7648,7 +7648,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level3
      *
-     * @param ?string $allow_idv_level3 
+     * @param ?string $allow_idv_level3
      *
      * @return $this
      */
@@ -7672,7 +7672,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_level3_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_level3_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_level3_metadata
      *
      * @return $this
      */
@@ -7696,7 +7696,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_idv_platform
      *
-     * @param ?string $allow_idv_platform 
+     * @param ?string $allow_idv_platform
      *
      * @return $this
      */
@@ -7744,7 +7744,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_in_person
      *
-     * @param ?string $allow_in_person 
+     * @param ?string $allow_in_person
      *
      * @return $this
      */
@@ -7840,7 +7840,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_managed_stamps
      *
-     * @param ?string $allow_managed_stamps 
+     * @param ?string $allow_managed_stamps
      *
      * @return $this
      */
@@ -7888,7 +7888,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_managing_envelopes_on_behalf_of_others
      *
-     * @param ?string $allow_managing_envelopes_on_behalf_of_others 
+     * @param ?string $allow_managing_envelopes_on_behalf_of_others
      *
      * @return $this
      */
@@ -7912,7 +7912,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_managing_envelopes_on_behalf_of_others_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_managing_envelopes_on_behalf_of_others_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_managing_envelopes_on_behalf_of_others_metadata
      *
      * @return $this
      */
@@ -7984,7 +7984,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_member_time_zone
      *
-     * @param ?string $allow_member_time_zone 
+     * @param ?string $allow_member_time_zone
      *
      * @return $this
      */
@@ -8032,7 +8032,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_merge_fields
      *
-     * @param ?string $allow_merge_fields 
+     * @param ?string $allow_merge_fields
      *
      * @return $this
      */
@@ -8080,7 +8080,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_multiple_brand_profiles
      *
-     * @param ?string $allow_multiple_brand_profiles 
+     * @param ?string $allow_multiple_brand_profiles
      *
      * @return $this
      */
@@ -8128,7 +8128,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_multiple_signer_attachments
      *
-     * @param ?string $allow_multiple_signer_attachments 
+     * @param ?string $allow_multiple_signer_attachments
      *
      * @return $this
      */
@@ -8176,7 +8176,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_non_us_phone_auth
      *
-     * @param ?string $allow_non_us_phone_auth 
+     * @param ?string $allow_non_us_phone_auth
      *
      * @return $this
      */
@@ -8224,7 +8224,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_ocr_of_envelope_documents
      *
-     * @param ?string $allow_ocr_of_envelope_documents 
+     * @param ?string $allow_ocr_of_envelope_documents
      *
      * @return $this
      */
@@ -8248,7 +8248,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_ocr_of_envelope_documents_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_ocr_of_envelope_documents_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_ocr_of_envelope_documents_metadata
      *
      * @return $this
      */
@@ -8272,7 +8272,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_offline_signing
      *
-     * @param ?string $allow_offline_signing 
+     * @param ?string $allow_offline_signing
      *
      * @return $this
      */
@@ -8320,7 +8320,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_only_standalone_web_forms
      *
-     * @param ?string $allow_only_standalone_web_forms 
+     * @param ?string $allow_only_standalone_web_forms
      *
      * @return $this
      */
@@ -8344,7 +8344,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_only_standalone_web_forms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_only_standalone_web_forms_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_only_standalone_web_forms_metadata
      *
      * @return $this
      */
@@ -8368,7 +8368,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_open_trust_signer_certificate
      *
-     * @param ?string $allow_open_trust_signer_certificate 
+     * @param ?string $allow_open_trust_signer_certificate
      *
      * @return $this
      */
@@ -8416,7 +8416,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_branding
      *
-     * @param ?string $allow_organization_branding 
+     * @param ?string $allow_organization_branding
      *
      * @return $this
      */
@@ -8440,7 +8440,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_branding_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_branding_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_branding_metadata
      *
      * @return $this
      */
@@ -8464,7 +8464,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_docusign_monitor
      *
-     * @param ?string $allow_organization_docusign_monitor 
+     * @param ?string $allow_organization_docusign_monitor
      *
      * @return $this
      */
@@ -8488,7 +8488,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_docusign_monitor_free
      *
-     * @param ?string $allow_organization_docusign_monitor_free 
+     * @param ?string $allow_organization_docusign_monitor_free
      *
      * @return $this
      */
@@ -8512,7 +8512,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_docusign_monitor_free_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_docusign_monitor_free_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_docusign_monitor_free_metadata
      *
      * @return $this
      */
@@ -8536,7 +8536,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_docusign_monitor_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_docusign_monitor_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_docusign_monitor_metadata
      *
      * @return $this
      */
@@ -8560,7 +8560,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_domain_user_management
      *
-     * @param ?string $allow_organization_domain_user_management 
+     * @param ?string $allow_organization_domain_user_management
      *
      * @return $this
      */
@@ -8584,7 +8584,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_domain_user_management_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_domain_user_management_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_domain_user_management_metadata
      *
      * @return $this
      */
@@ -8608,7 +8608,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organizations
      *
-     * @param ?string $allow_organizations 
+     * @param ?string $allow_organizations
      *
      * @return $this
      */
@@ -8656,7 +8656,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_sso_management
      *
-     * @param ?string $allow_organization_sso_management 
+     * @param ?string $allow_organization_sso_management
      *
      * @return $this
      */
@@ -8680,7 +8680,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_sso_management_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_sso_management_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_sso_management_metadata
      *
      * @return $this
      */
@@ -8752,7 +8752,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_to_use_remote_notary
      *
-     * @param ?string $allow_organization_to_use_remote_notary 
+     * @param ?string $allow_organization_to_use_remote_notary
      *
      * @return $this
      */
@@ -8776,7 +8776,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_organization_to_use_remote_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_remote_notary_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_organization_to_use_remote_notary_metadata
      *
      * @return $this
      */
@@ -8848,7 +8848,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_participant_recipient_type
      *
-     * @param ?string $allow_participant_recipient_type 
+     * @param ?string $allow_participant_recipient_type
      *
      * @return $this
      */
@@ -8872,7 +8872,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_participant_recipient_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_participant_recipient_type_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_participant_recipient_type_metadata
      *
      * @return $this
      */
@@ -8896,7 +8896,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_payment_processing
      *
-     * @param ?string $allow_payment_processing 
+     * @param ?string $allow_payment_processing
      *
      * @return $this
      */
@@ -8944,7 +8944,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_pending_destination_url_edition
      *
-     * @param ?string $allow_pending_destination_url_edition 
+     * @param ?string $allow_pending_destination_url_edition
      *
      * @return $this
      */
@@ -8968,7 +8968,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_pending_destination_url_edition_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_pending_destination_url_edition_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_pending_destination_url_edition_metadata
      *
      * @return $this
      */
@@ -8992,7 +8992,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_performance_analytics
      *
-     * @param ?string $allow_performance_analytics 
+     * @param ?string $allow_performance_analytics
      *
      * @return $this
      */
@@ -9016,7 +9016,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_performance_analytics_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_performance_analytics_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_performance_analytics_metadata
      *
      * @return $this
      */
@@ -9040,7 +9040,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_phone_authentication
      *
-     * @param ?string $allow_phone_authentication 
+     * @param ?string $allow_phone_authentication
      *
      * @return $this
      */
@@ -9088,7 +9088,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_phone_auth_override
      *
-     * @param ?string $allow_phone_auth_override 
+     * @param ?string $allow_phone_auth_override
      *
      * @return $this
      */
@@ -9136,7 +9136,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_private_signing_groups
      *
-     * @param ?string $allow_private_signing_groups 
+     * @param ?string $allow_private_signing_groups
      *
      * @return $this
      */
@@ -9184,7 +9184,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_recipient_connect
      *
-     * @param ?string $allow_recipient_connect 
+     * @param ?string $allow_recipient_connect
      *
      * @return $this
      */
@@ -9208,7 +9208,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_recipient_connect_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_recipient_connect_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_recipient_connect_metadata
      *
      * @return $this
      */
@@ -9232,7 +9232,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_reminders
      *
-     * @param ?string $allow_reminders 
+     * @param ?string $allow_reminders
      *
      * @return $this
      */
@@ -9280,7 +9280,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_remote_notary
      *
-     * @param ?string $allow_remote_notary 
+     * @param ?string $allow_remote_notary
      *
      * @return $this
      */
@@ -9304,7 +9304,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_remote_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_remote_notary_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_remote_notary_metadata
      *
      * @return $this
      */
@@ -9328,7 +9328,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_resource_file_branding
      *
-     * @param ?string $allow_resource_file_branding 
+     * @param ?string $allow_resource_file_branding
      *
      * @return $this
      */
@@ -9376,7 +9376,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_safe_bio_pharma_signer_certificate
      *
-     * @param ?string $allow_safe_bio_pharma_signer_certificate 
+     * @param ?string $allow_safe_bio_pharma_signer_certificate
      *
      * @return $this
      */
@@ -9448,7 +9448,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_scheduled_sending_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_scheduled_sending_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_scheduled_sending_metadata
      *
      * @return $this
      */
@@ -9472,7 +9472,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_security_appliance
      *
-     * @param ?string $allow_security_appliance 
+     * @param ?string $allow_security_appliance
      *
      * @return $this
      */
@@ -9520,7 +9520,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sending_envelopes_on_behalf_of_others
      *
-     * @param ?string $allow_sending_envelopes_on_behalf_of_others 
+     * @param ?string $allow_sending_envelopes_on_behalf_of_others
      *
      * @return $this
      */
@@ -9544,7 +9544,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sending_envelopes_on_behalf_of_others_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_sending_envelopes_on_behalf_of_others_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_sending_envelopes_on_behalf_of_others_metadata
      *
      * @return $this
      */
@@ -9568,7 +9568,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_send_to_certified_delivery
      *
-     * @param ?string $allow_send_to_certified_delivery 
+     * @param ?string $allow_send_to_certified_delivery
      *
      * @return $this
      */
@@ -9616,7 +9616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_send_to_intermediary
      *
-     * @param ?string $allow_send_to_intermediary 
+     * @param ?string $allow_send_to_intermediary
      *
      * @return $this
      */
@@ -9664,7 +9664,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_server_templates
      *
-     * @param ?string $allow_server_templates 
+     * @param ?string $allow_server_templates
      *
      * @return $this
      */
@@ -9712,7 +9712,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_set_embedded_recipient_start_url
      *
-     * @param ?string $allow_set_embedded_recipient_start_url 
+     * @param ?string $allow_set_embedded_recipient_start_url
      *
      * @return $this
      */
@@ -9736,7 +9736,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_set_embedded_recipient_start_url_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_set_embedded_recipient_start_url_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_set_embedded_recipient_start_url_metadata
      *
      * @return $this
      */
@@ -9760,7 +9760,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_shared_tabs
      *
-     * @param ?string $allow_shared_tabs 
+     * @param ?string $allow_shared_tabs
      *
      * @return $this
      */
@@ -9808,7 +9808,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signature_stamps
      *
-     * @param ?string $allow_signature_stamps 
+     * @param ?string $allow_signature_stamps
      *
      * @return $this
      */
@@ -9856,7 +9856,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sign_document_from_home_page
      *
-     * @param ?string $allow_sign_document_from_home_page 
+     * @param ?string $allow_sign_document_from_home_page
      *
      * @return $this
      */
@@ -9904,7 +9904,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_reassign
      *
-     * @param ?string $allow_signer_reassign 
+     * @param ?string $allow_signer_reassign
      *
      * @return $this
      */
@@ -9952,7 +9952,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_reassign_override
      *
-     * @param ?string $allow_signer_reassign_override 
+     * @param ?string $allow_signer_reassign_override
      *
      * @return $this
      */
@@ -10000,7 +10000,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_extensions
      *
-     * @param ?string $allow_signing_extensions 
+     * @param ?string $allow_signing_extensions
      *
      * @return $this
      */
@@ -10048,7 +10048,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_groups
      *
-     * @param ?string $allow_signing_groups 
+     * @param ?string $allow_signing_groups
      *
      * @return $this
      */
@@ -10096,7 +10096,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_insights
      *
-     * @param ?string $allow_signing_insights 
+     * @param ?string $allow_signing_insights
      *
      * @return $this
      */
@@ -10120,7 +10120,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_insights_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_signing_insights_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_signing_insights_metadata
      *
      * @return $this
      */
@@ -10144,7 +10144,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signing_radio_deselect
      *
-     * @param ?string $allow_signing_radio_deselect 
+     * @param ?string $allow_signing_radio_deselect
      *
      * @return $this
      */
@@ -10192,7 +10192,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sign_now
      *
-     * @param ?string $allow_sign_now 
+     * @param ?string $allow_sign_now
      *
      * @return $this
      */
@@ -10216,7 +10216,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sign_now_metadata
      *
-     * @param ?string $allow_sign_now_metadata 
+     * @param ?string $allow_sign_now_metadata
      *
      * @return $this
      */
@@ -10240,7 +10240,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sms_delivery
      *
-     * @param ?string $allow_sms_delivery 
+     * @param ?string $allow_sms_delivery
      *
      * @return $this
      */
@@ -10264,7 +10264,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_sms_delivery_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_sms_delivery_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_sms_delivery_metadata
      *
      * @return $this
      */
@@ -10288,7 +10288,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_social_id_login
      *
-     * @param ?string $allow_social_id_login 
+     * @param ?string $allow_social_id_login
      *
      * @return $this
      */
@@ -10336,7 +10336,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_supplemental_documents
      *
-     * @param ?string $allow_supplemental_documents 
+     * @param ?string $allow_supplemental_documents
      *
      * @return $this
      */
@@ -10408,7 +10408,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_third_party_electronic_notary_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_third_party_electronic_notary_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_third_party_electronic_notary_metadata
      *
      * @return $this
      */
@@ -10432,7 +10432,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_transactions_workspace
      *
-     * @param ?string $allow_transactions_workspace 
+     * @param ?string $allow_transactions_workspace
      *
      * @return $this
      */
@@ -10456,7 +10456,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_transactions_workspace_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_workspace_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_workspace_metadata
      *
      * @return $this
      */
@@ -10480,7 +10480,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_transactions_workspace_original
      *
-     * @param ?string $allow_transactions_workspace_original 
+     * @param ?string $allow_transactions_workspace_original
      *
      * @return $this
      */
@@ -10504,7 +10504,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_transactions_workspace_original_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_workspace_original_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_workspace_original_metadata
      *
      * @return $this
      */
@@ -10528,7 +10528,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_users_to_access_directory
      *
-     * @param ?string $allow_users_to_access_directory 
+     * @param ?string $allow_users_to_access_directory
      *
      * @return $this
      */
@@ -10552,7 +10552,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_users_to_access_directory_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_users_to_access_directory_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_users_to_access_directory_metadata
      *
      * @return $this
      */
@@ -10576,7 +10576,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_value_insights
      *
-     * @param ?string $allow_value_insights 
+     * @param ?string $allow_value_insights
      *
      * @return $this
      */
@@ -10600,7 +10600,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_value_insights_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_value_insights_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_value_insights_metadata
      *
      * @return $this
      */
@@ -10624,7 +10624,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_web_forms
      *
-     * @param ?string $allow_web_forms 
+     * @param ?string $allow_web_forms
      *
      * @return $this
      */
@@ -10648,7 +10648,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_web_forms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_web_forms_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_web_forms_metadata
      *
      * @return $this
      */
@@ -10672,7 +10672,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_whats_app_delivery
      *
-     * @param ?string $allow_whats_app_delivery 
+     * @param ?string $allow_whats_app_delivery
      *
      * @return $this
      */
@@ -10696,7 +10696,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets allow_whats_app_delivery_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_whats_app_delivery_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_whats_app_delivery_metadata
      *
      * @return $this
      */
@@ -10720,7 +10720,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_population_scope
      *
-     * @param ?string $anchor_population_scope 
+     * @param ?string $anchor_population_scope
      *
      * @return $this
      */
@@ -10768,7 +10768,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tag_versioned_placement_enabled
      *
-     * @param ?string $anchor_tag_versioned_placement_enabled 
+     * @param ?string $anchor_tag_versioned_placement_enabled
      *
      * @return $this
      */
@@ -10792,7 +10792,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tag_versioned_placement_metadata_enabled
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $anchor_tag_versioned_placement_metadata_enabled 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $anchor_tag_versioned_placement_metadata_enabled
      *
      * @return $this
      */
@@ -10816,7 +10816,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets attach_completed_envelope
      *
-     * @param ?string $attach_completed_envelope 
+     * @param ?string $attach_completed_envelope
      *
      * @return $this
      */
@@ -10864,7 +10864,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_check
      *
-     * @param ?string $authentication_check 
+     * @param ?string $authentication_check
      *
      * @return $this
      */
@@ -10912,7 +10912,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets auto_nav_rule
      *
-     * @param ?string $auto_nav_rule 
+     * @param ?string $auto_nav_rule
      *
      * @return $this
      */
@@ -10960,7 +10960,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets auto_provision_signer_account
      *
-     * @param ?string $auto_provision_signer_account 
+     * @param ?string $auto_provision_signer_account
      *
      * @return $this
      */
@@ -11008,7 +11008,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bcc_email_archive
      *
-     * @param ?string $bcc_email_archive 
+     * @param ?string $bcc_email_archive
      *
      * @return $this
      */
@@ -11056,7 +11056,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets beta_switch_configuration
      *
-     * @param ?string $beta_switch_configuration 
+     * @param ?string $beta_switch_configuration
      *
      * @return $this
      */
@@ -11152,7 +11152,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send
      *
-     * @param ?string $bulk_send 
+     * @param ?string $bulk_send
      *
      * @return $this
      */
@@ -11176,7 +11176,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_action_resend_limit
      *
-     * @param ?string $bulk_send_action_resend_limit 
+     * @param ?string $bulk_send_action_resend_limit
      *
      * @return $this
      */
@@ -11200,7 +11200,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_max_copies_in_batch
      *
-     * @param ?string $bulk_send_max_copies_in_batch 
+     * @param ?string $bulk_send_max_copies_in_batch
      *
      * @return $this
      */
@@ -11224,7 +11224,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_max_unprocessed_envelopes_count
      *
-     * @param ?string $bulk_send_max_unprocessed_envelopes_count 
+     * @param ?string $bulk_send_max_unprocessed_envelopes_count
      *
      * @return $this
      */
@@ -11272,7 +11272,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_self_brand_send
      *
-     * @param ?string $can_self_brand_send 
+     * @param ?string $can_self_brand_send
      *
      * @return $this
      */
@@ -11320,7 +11320,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_self_brand_sign
      *
-     * @param ?string $can_self_brand_sign 
+     * @param ?string $can_self_brand_sign
      *
      * @return $this
      */
@@ -11368,7 +11368,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_use_salesforce_o_auth
      *
-     * @param ?string $can_use_salesforce_o_auth 
+     * @param ?string $can_use_salesforce_o_auth
      *
      * @return $this
      */
@@ -11392,7 +11392,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets can_use_salesforce_o_auth_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_use_salesforce_o_auth_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_use_salesforce_o_auth_metadata
      *
      * @return $this
      */
@@ -11416,7 +11416,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets capture_voice_recording
      *
-     * @param ?string $capture_voice_recording 
+     * @param ?string $capture_voice_recording
      *
      * @return $this
      */
@@ -11464,7 +11464,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets cfr21_simplified_signing_enabled
      *
-     * @param ?string $cfr21_simplified_signing_enabled 
+     * @param ?string $cfr21_simplified_signing_enabled
      *
      * @return $this
      */
@@ -11488,7 +11488,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets cfr21_simplified_signing_enabled_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $cfr21_simplified_signing_enabled_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $cfr21_simplified_signing_enabled_metadata
      *
      * @return $this
      */
@@ -11512,7 +11512,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets cfr_use_wide_image
      *
-     * @param ?string $cfr_use_wide_image 
+     * @param ?string $cfr_use_wide_image
      *
      * @return $this
      */
@@ -11560,7 +11560,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets check_for_multiple_admins_on_account
      *
-     * @param ?string $check_for_multiple_admins_on_account 
+     * @param ?string $check_for_multiple_admins_on_account
      *
      * @return $this
      */
@@ -11608,7 +11608,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets chrome_signature_enabled
      *
-     * @param ?string $chrome_signature_enabled 
+     * @param ?string $chrome_signature_enabled
      *
      * @return $this
      */
@@ -11656,7 +11656,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets cloud_ready
      *
-     * @param ?string $cloud_ready 
+     * @param ?string $cloud_ready
      *
      * @return $this
      */
@@ -11680,7 +11680,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets comment_email_show_message_text
      *
-     * @param ?string $comment_email_show_message_text 
+     * @param ?string $comment_email_show_message_text
      *
      * @return $this
      */
@@ -11728,7 +11728,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets comments_allow_envelope_override
      *
-     * @param ?string $comments_allow_envelope_override 
+     * @param ?string $comments_allow_envelope_override
      *
      * @return $this
      */
@@ -11776,7 +11776,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_fields_enabled
      *
-     * @param ?string $conditional_fields_enabled 
+     * @param ?string $conditional_fields_enabled
      *
      * @return $this
      */
@@ -11824,7 +11824,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets consumer_disclosure_frequency
      *
-     * @param ?string $consumer_disclosure_frequency 
+     * @param ?string $consumer_disclosure_frequency
      *
      * @return $this
      */
@@ -11872,7 +11872,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets convert_pdf_fields
      *
-     * @param ?string $convert_pdf_fields 
+     * @param ?string $convert_pdf_fields
      *
      * @return $this
      */
@@ -11920,7 +11920,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets custom_extraction_plan_levels
      *
-     * @param ?string $custom_extraction_plan_levels 
+     * @param ?string $custom_extraction_plan_levels
      *
      * @return $this
      */
@@ -11944,7 +11944,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets custom_extraction_plan_levels_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $custom_extraction_plan_levels_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $custom_extraction_plan_levels_metadata
      *
      * @return $this
      */
@@ -11968,7 +11968,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets data_population_scope
      *
-     * @param ?string $data_population_scope 
+     * @param ?string $data_population_scope
      *
      * @return $this
      */
@@ -12016,7 +12016,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_signing_responsive_view
      *
-     * @param ?string $default_signing_responsive_view 
+     * @param ?string $default_signing_responsive_view
      *
      * @return $this
      */
@@ -12040,7 +12040,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_signing_responsive_view_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $default_signing_responsive_view_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $default_signing_responsive_view_metadata
      *
      * @return $this
      */
@@ -12064,7 +12064,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_signing_responsive_view_use_grade
      *
-     * @param ?string $default_signing_responsive_view_use_grade 
+     * @param ?string $default_signing_responsive_view_use_grade
      *
      * @return $this
      */
@@ -12088,7 +12088,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_signing_responsive_view_use_grade_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $default_signing_responsive_view_use_grade_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $default_signing_responsive_view_use_grade_metadata
      *
      * @return $this
      */
@@ -12112,7 +12112,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_to_advanced_envelopes_filter_form
      *
-     * @param ?string $default_to_advanced_envelopes_filter_form 
+     * @param ?string $default_to_advanced_envelopes_filter_form
      *
      * @return $this
      */
@@ -12136,7 +12136,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_to_advanced_envelopes_filter_form_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $default_to_advanced_envelopes_filter_form_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $default_to_advanced_envelopes_filter_form_metadata
      *
      * @return $this
      */
@@ -12160,7 +12160,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_auto_template_matching
      *
-     * @param ?string $disable_auto_template_matching 
+     * @param ?string $disable_auto_template_matching
      *
      * @return $this
      */
@@ -12184,7 +12184,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_auto_template_matching_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_auto_template_matching_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_auto_template_matching_metadata
      *
      * @return $this
      */
@@ -12208,7 +12208,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_legacy_shared_envelopes
      *
-     * @param ?string $disable_legacy_shared_envelopes 
+     * @param ?string $disable_legacy_shared_envelopes
      *
      * @return $this
      */
@@ -12232,7 +12232,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_legacy_shared_envelopes_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_legacy_shared_envelopes_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_legacy_shared_envelopes_metadata
      *
      * @return $this
      */
@@ -12256,7 +12256,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_mobile_app
      *
-     * @param ?string $disable_mobile_app 
+     * @param ?string $disable_mobile_app
      *
      * @return $this
      */
@@ -12304,7 +12304,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_mobile_push_notifications
      *
-     * @param ?string $disable_mobile_push_notifications 
+     * @param ?string $disable_mobile_push_notifications
      *
      * @return $this
      */
@@ -12352,7 +12352,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_mobile_sending
      *
-     * @param ?string $disable_mobile_sending 
+     * @param ?string $disable_mobile_sending
      *
      * @return $this
      */
@@ -12400,7 +12400,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_multiple_sessions
      *
-     * @param ?string $disable_multiple_sessions 
+     * @param ?string $disable_multiple_sessions
      *
      * @return $this
      */
@@ -12472,7 +12472,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_signer_cert_view
      *
-     * @param ?string $disable_signer_cert_view 
+     * @param ?string $disable_signer_cert_view
      *
      * @return $this
      */
@@ -12520,7 +12520,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_signer_history_view
      *
-     * @param ?string $disable_signer_history_view 
+     * @param ?string $disable_signer_history_view
      *
      * @return $this
      */
@@ -12568,7 +12568,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_style_signature
      *
-     * @param ?string $disable_style_signature 
+     * @param ?string $disable_style_signature
      *
      * @return $this
      */
@@ -12616,7 +12616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_upload_signature
      *
-     * @param ?string $disable_upload_signature 
+     * @param ?string $disable_upload_signature
      *
      * @return $this
      */
@@ -12664,7 +12664,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets disable_user_sharing
      *
-     * @param ?string $disable_user_sharing 
+     * @param ?string $disable_user_sharing
      *
      * @return $this
      */
@@ -12712,7 +12712,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets display_beta_switch
      *
-     * @param ?string $display_beta_switch 
+     * @param ?string $display_beta_switch
      *
      * @return $this
      */
@@ -12760,7 +12760,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_conversion_restrictions
      *
-     * @param ?string $document_conversion_restrictions 
+     * @param ?string $document_conversion_restrictions
      *
      * @return $this
      */
@@ -12808,7 +12808,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_retention
      *
-     * @param ?string $document_retention 
+     * @param ?string $document_retention
      *
      * @return $this
      */
@@ -12856,7 +12856,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_retention_purge_tabs
      *
-     * @param ?string $document_retention_purge_tabs 
+     * @param ?string $document_retention_purge_tabs
      *
      * @return $this
      */
@@ -12880,7 +12880,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets document_visibility
      *
-     * @param ?string $document_visibility 
+     * @param ?string $document_visibility
      *
      * @return $this
      */
@@ -12928,7 +12928,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets draft_envelope_retention
      *
-     * @param ?string $draft_envelope_retention 
+     * @param ?string $draft_envelope_retention
      *
      * @return $this
      */
@@ -12952,7 +12952,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets draft_envelope_retention_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $draft_envelope_retention_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $draft_envelope_retention_metadata
      *
      * @return $this
      */
@@ -12976,7 +12976,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
      *
-     * @param ?string $dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb 
+     * @param ?string $dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
      *
      * @return $this
      */
@@ -13000,7 +13000,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets dss_sign_28411_enable_leave_page_prompt_radmin_option
      *
-     * @param ?string $dss_sign_28411_enable_leave_page_prompt_radmin_option 
+     * @param ?string $dss_sign_28411_enable_leave_page_prompt_radmin_option
      *
      * @return $this
      */
@@ -13024,7 +13024,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets dss_sign_29182_slide_up_bar_radmin_option
      *
-     * @param ?string $dss_sign_29182_slide_up_bar_radmin_option 
+     * @param ?string $dss_sign_29182_slide_up_bar_radmin_option
      *
      * @return $this
      */
@@ -13048,7 +13048,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email_template_version
      *
-     * @param ?string $email_template_version 
+     * @param ?string $email_template_version
      *
      * @return $this
      */
@@ -13096,7 +13096,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_access_code_generator
      *
-     * @param ?string $enable_access_code_generator 
+     * @param ?string $enable_access_code_generator
      *
      * @return $this
      */
@@ -13144,7 +13144,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_account_wide_search
      *
-     * @param ?string $enable_account_wide_search 
+     * @param ?string $enable_account_wide_search
      *
      * @return $this
      */
@@ -13168,7 +13168,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_account_wide_search_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_account_wide_search_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_account_wide_search_metadata
      *
      * @return $this
      */
@@ -13192,7 +13192,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_additional_advanced_web_forms_features
      *
-     * @param ?string $enable_additional_advanced_web_forms_features 
+     * @param ?string $enable_additional_advanced_web_forms_features
      *
      * @return $this
      */
@@ -13216,7 +13216,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_additional_advanced_web_forms_features_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_additional_advanced_web_forms_features_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_additional_advanced_web_forms_features_metadata
      *
      * @return $this
      */
@@ -13288,7 +13288,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_envelopes_search
      *
-     * @param ?string $enable_advanced_envelopes_search 
+     * @param ?string $enable_advanced_envelopes_search
      *
      * @return $this
      */
@@ -13312,7 +13312,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_envelopes_search_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_advanced_envelopes_search_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_advanced_envelopes_search_metadata
      *
      * @return $this
      */
@@ -13336,7 +13336,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_payments
      *
-     * @param ?string $enable_advanced_payments 
+     * @param ?string $enable_advanced_payments
      *
      * @return $this
      */
@@ -13384,7 +13384,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_power_forms
      *
-     * @param ?string $enable_advanced_power_forms 
+     * @param ?string $enable_advanced_power_forms
      *
      * @return $this
      */
@@ -13432,7 +13432,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_search
      *
-     * @param ?string $enable_advanced_search 
+     * @param ?string $enable_advanced_search
      *
      * @return $this
      */
@@ -13456,7 +13456,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_advanced_search_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_advanced_search_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_advanced_search_metadata
      *
      * @return $this
      */
@@ -13480,7 +13480,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_actions_for_clm
      *
-     * @param ?string $enable_agreement_actions_for_clm 
+     * @param ?string $enable_agreement_actions_for_clm
      *
      * @return $this
      */
@@ -13504,7 +13504,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_actions_for_clm_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_actions_for_clm_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_actions_for_clm_metadata
      *
      * @return $this
      */
@@ -13528,7 +13528,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_actions_for_e_sign
      *
-     * @param ?string $enable_agreement_actions_for_e_sign 
+     * @param ?string $enable_agreement_actions_for_e_sign
      *
      * @return $this
      */
@@ -13552,7 +13552,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_actions_for_e_sign_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_actions_for_e_sign_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_actions_for_e_sign_metadata
      *
      * @return $this
      */
@@ -13576,7 +13576,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_desk_advanced
      *
-     * @param ?string $enable_agreement_desk_advanced 
+     * @param ?string $enable_agreement_desk_advanced
      *
      * @return $this
      */
@@ -13600,7 +13600,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_agreement_desk_advanced_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_desk_advanced_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_agreement_desk_advanced_meta_data
      *
      * @return $this
      */
@@ -13624,7 +13624,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_contract_review
      *
-     * @param ?string $enable_ai_contract_review 
+     * @param ?string $enable_ai_contract_review
      *
      * @return $this
      */
@@ -13648,7 +13648,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_contract_review_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_contract_review_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_contract_review_metadata
      *
      * @return $this
      */
@@ -13672,7 +13672,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_sender_message
      *
-     * @param ?string $enable_ai_sender_message 
+     * @param ?string $enable_ai_sender_message
      *
      * @return $this
      */
@@ -13696,7 +13696,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_sender_message_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_sender_message_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_sender_message_metadata
      *
      * @return $this
      */
@@ -13720,7 +13720,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_suggested_fields_advanced
      *
-     * @param ?string $enable_ai_suggested_fields_advanced 
+     * @param ?string $enable_ai_suggested_fields_advanced
      *
      * @return $this
      */
@@ -13744,7 +13744,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_suggested_fields_advanced_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_advanced_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_advanced_metadata
      *
      * @return $this
      */
@@ -13768,7 +13768,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_suggested_fields_basic
      *
-     * @param ?string $enable_ai_suggested_fields_basic 
+     * @param ?string $enable_ai_suggested_fields_basic
      *
      * @return $this
      */
@@ -13792,7 +13792,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ai_suggested_fields_basic_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_basic_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_basic_metadata
      *
      * @return $this
      */
@@ -13816,7 +13816,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_auto_nav
      *
-     * @param ?string $enable_auto_nav 
+     * @param ?string $enable_auto_nav
      *
      * @return $this
      */
@@ -13864,7 +13864,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_batch_update_envelope_types
      *
-     * @param ?string $enable_batch_update_envelope_types 
+     * @param ?string $enable_batch_update_envelope_types
      *
      * @return $this
      */
@@ -13888,7 +13888,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_batch_update_envelope_types_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_batch_update_envelope_types_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_batch_update_envelope_types_metadata
      *
      * @return $this
      */
@@ -13912,7 +13912,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_bcc_dummy_link
      *
-     * @param ?string $enable_bcc_dummy_link 
+     * @param ?string $enable_bcc_dummy_link
      *
      * @return $this
      */
@@ -13936,7 +13936,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_bcc_dummy_link_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_bcc_dummy_link_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_bcc_dummy_link_metadata
      *
      * @return $this
      */
@@ -13960,7 +13960,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_calculated_fields
      *
-     * @param ?string $enable_calculated_fields 
+     * @param ?string $enable_calculated_fields
      *
      * @return $this
      */
@@ -14008,7 +14008,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus
      *
-     * @param ?string $enable_click_plus 
+     * @param ?string $enable_click_plus
      *
      * @return $this
      */
@@ -14032,7 +14032,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_conditional_content
      *
-     * @param ?string $enable_click_plus_conditional_content 
+     * @param ?string $enable_click_plus_conditional_content
      *
      * @return $this
      */
@@ -14056,7 +14056,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_conditional_content_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_conditional_content_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_conditional_content_meta_data
      *
      * @return $this
      */
@@ -14080,7 +14080,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_custom_fields
      *
-     * @param ?string $enable_click_plus_custom_fields 
+     * @param ?string $enable_click_plus_custom_fields
      *
      * @return $this
      */
@@ -14104,7 +14104,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_custom_fields_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_fields_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_fields_meta_data
      *
      * @return $this
      */
@@ -14128,7 +14128,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_custom_style
      *
-     * @param ?string $enable_click_plus_custom_style 
+     * @param ?string $enable_click_plus_custom_style
      *
      * @return $this
      */
@@ -14152,7 +14152,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_custom_style_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_style_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_custom_style_meta_data
      *
      * @return $this
      */
@@ -14176,7 +14176,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_dynamic_content
      *
-     * @param ?string $enable_click_plus_dynamic_content 
+     * @param ?string $enable_click_plus_dynamic_content
      *
      * @return $this
      */
@@ -14200,7 +14200,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_dynamic_content_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_dynamic_content_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_dynamic_content_meta_data
      *
      * @return $this
      */
@@ -14224,7 +14224,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_click_plus_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_click_plus_meta_data
      *
      * @return $this
      */
@@ -14248,7 +14248,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_clickwraps
      *
-     * @param ?string $enable_clickwraps 
+     * @param ?string $enable_clickwraps
      *
      * @return $this
      */
@@ -14296,7 +14296,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_combined_pdf_download_for_sbs
      *
-     * @param ?string $enable_combined_pdf_download_for_sbs 
+     * @param ?string $enable_combined_pdf_download_for_sbs
      *
      * @return $this
      */
@@ -14320,7 +14320,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_comments_history_download_in_signing
      *
-     * @param ?string $enable_comments_history_download_in_signing 
+     * @param ?string $enable_comments_history_download_in_signing
      *
      * @return $this
      */
@@ -14344,7 +14344,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_comments_history_download_in_signing_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_comments_history_download_in_signing_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_comments_history_download_in_signing_metadata
      *
      * @return $this
      */
@@ -14368,7 +14368,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_contact_suggestions
      *
-     * @param ?string $enable_contact_suggestions 
+     * @param ?string $enable_contact_suggestions
      *
      * @return $this
      */
@@ -14392,7 +14392,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_contact_suggestions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_contact_suggestions_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_contact_suggestions_metadata
      *
      * @return $this
      */
@@ -14416,7 +14416,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_content_search
      *
-     * @param ?string $enable_content_search 
+     * @param ?string $enable_content_search
      *
      * @return $this
      */
@@ -14440,7 +14440,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_content_search_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_content_search_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_content_search_metadata
      *
      * @return $this
      */
@@ -14464,7 +14464,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_coupa_core_extension
      *
-     * @param ?string $enable_coupa_core_extension 
+     * @param ?string $enable_coupa_core_extension
      *
      * @return $this
      */
@@ -14488,7 +14488,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_coupa_core_extension_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_coupa_core_extension_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_coupa_core_extension_metadata
      *
      * @return $this
      */
@@ -14512,7 +14512,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_custom_data_verification_extensions
      *
-     * @param ?string $enable_custom_data_verification_extensions 
+     * @param ?string $enable_custom_data_verification_extensions
      *
      * @return $this
      */
@@ -14536,7 +14536,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_custom_data_verification_extensions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_custom_data_verification_extensions_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_custom_data_verification_extensions_metadata
      *
      * @return $this
      */
@@ -14560,7 +14560,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_customer_satisfaction_metric_tracking
      *
-     * @param ?string $enable_customer_satisfaction_metric_tracking 
+     * @param ?string $enable_customer_satisfaction_metric_tracking
      *
      * @return $this
      */
@@ -14608,7 +14608,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_data_verification_extensions
      *
-     * @param ?string $enable_data_verification_extensions 
+     * @param ?string $enable_data_verification_extensions
      *
      * @return $this
      */
@@ -14632,7 +14632,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_data_verification_extensions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_data_verification_extensions_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_data_verification_extensions_metadata
      *
      * @return $this
      */
@@ -14656,7 +14656,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_document_template_library
      *
-     * @param ?string $enable_document_template_library 
+     * @param ?string $enable_document_template_library
      *
      * @return $this
      */
@@ -14680,7 +14680,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_document_template_library_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_document_template_library_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_document_template_library_metadata
      *
      * @return $this
      */
@@ -14704,7 +14704,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_eu_advanced_pens
      *
-     * @param ?string $enable_d_sig_eu_advanced_pens 
+     * @param ?string $enable_d_sig_eu_advanced_pens
      *
      * @return $this
      */
@@ -14728,7 +14728,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_eu_advanced_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_eu_advanced_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_eu_advanced_pens_metadata
      *
      * @return $this
      */
@@ -14752,7 +14752,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_express_pens
      *
-     * @param ?string $enable_d_sig_express_pens 
+     * @param ?string $enable_d_sig_express_pens
      *
      * @return $this
      */
@@ -14776,7 +14776,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_express_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_express_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_express_pens_metadata
      *
      * @return $this
      */
@@ -14800,7 +14800,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_check_for_aes_pens
      *
-     * @param ?string $enable_d_sig_id_check_for_aes_pens 
+     * @param ?string $enable_d_sig_id_check_for_aes_pens
      *
      * @return $this
      */
@@ -14824,7 +14824,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_check_for_aes_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_for_aes_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_for_aes_pens_metadata
      *
      * @return $this
      */
@@ -14848,7 +14848,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_check_in_person_for_qes_pens
      *
-     * @param ?string $enable_d_sig_id_check_in_person_for_qes_pens 
+     * @param ?string $enable_d_sig_id_check_in_person_for_qes_pens
      *
      * @return $this
      */
@@ -14872,7 +14872,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_check_in_person_for_qes_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_in_person_for_qes_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_in_person_for_qes_pens_metadata
      *
      * @return $this
      */
@@ -14896,7 +14896,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_check_remote_for_qes_pens
      *
-     * @param ?string $enable_d_sig_id_check_remote_for_qes_pens 
+     * @param ?string $enable_d_sig_id_check_remote_for_qes_pens
      *
      * @return $this
      */
@@ -14920,7 +14920,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_check_remote_for_qes_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_remote_for_qes_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_check_remote_for_qes_pens_metadata
      *
      * @return $this
      */
@@ -14944,7 +14944,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_verification_pens
      *
-     * @param ?string $enable_d_sig_id_verification_pens 
+     * @param ?string $enable_d_sig_id_verification_pens
      *
      * @return $this
      */
@@ -14968,7 +14968,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_verification_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_verification_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_verification_pens_metadata
      *
      * @return $this
      */
@@ -14992,7 +14992,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_verification_premier_pens
      *
-     * @param ?string $enable_d_sig_id_verification_premier_pens 
+     * @param ?string $enable_d_sig_id_verification_premier_pens
      *
      * @return $this
      */
@@ -15016,7 +15016,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_id_verification_premier_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_verification_premier_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_id_verification_premier_pens_metadata
      *
      * @return $this
      */
@@ -15040,7 +15040,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_pen_group_eu_qes
      *
-     * @param ?string $enable_d_sig_pen_group_eu_qes 
+     * @param ?string $enable_d_sig_pen_group_eu_qes
      *
      * @return $this
      */
@@ -15064,7 +15064,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_pen_group_eu_qes_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_pen_group_eu_qes_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_pen_group_eu_qes_metadata
      *
      * @return $this
      */
@@ -15088,7 +15088,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_plg_eu_qes_pens
      *
-     * @param ?string $enable_d_sig_plg_eu_qes_pens 
+     * @param ?string $enable_d_sig_plg_eu_qes_pens
      *
      * @return $this
      */
@@ -15112,7 +15112,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_d_sig_plg_eu_qes_pens_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_plg_eu_qes_pens_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_d_sig_plg_eu_qes_pens_metadata
      *
      * @return $this
      */
@@ -15136,7 +15136,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_ds_pro
      *
-     * @param ?string $enable_ds_pro 
+     * @param ?string $enable_ds_pro
      *
      * @return $this
      */
@@ -15184,7 +15184,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_enforce_tls_emails_setting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_enforce_tls_emails_setting_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_enforce_tls_emails_setting_metadata
      *
      * @return $this
      */
@@ -15208,7 +15208,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_envelope_stamping_by_account_admin
      *
-     * @param ?string $enable_envelope_stamping_by_account_admin 
+     * @param ?string $enable_envelope_stamping_by_account_admin
      *
      * @return $this
      */
@@ -15256,7 +15256,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_envelope_stamping_by_ds_admin
      *
-     * @param ?string $enable_envelope_stamping_by_ds_admin 
+     * @param ?string $enable_envelope_stamping_by_ds_admin
      *
      * @return $this
      */
@@ -15304,7 +15304,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_e_sign_api_hourly_limit_management
      *
-     * @param ?string $enable_e_sign_api_hourly_limit_management 
+     * @param ?string $enable_e_sign_api_hourly_limit_management
      *
      * @return $this
      */
@@ -15328,7 +15328,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_e_sign_api_hourly_limit_management_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_e_sign_api_hourly_limit_management_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_e_sign_api_hourly_limit_management_metadata
      *
      * @return $this
      */
@@ -15352,7 +15352,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_esign_communities
      *
-     * @param ?string $enable_esign_communities 
+     * @param ?string $enable_esign_communities
      *
      * @return $this
      */
@@ -15376,7 +15376,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_esign_communities_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_esign_communities_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_esign_communities_metadata
      *
      * @return $this
      */
@@ -15400,7 +15400,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_esign_task_list
      *
-     * @param ?string $enable_esign_task_list 
+     * @param ?string $enable_esign_task_list
      *
      * @return $this
      */
@@ -15424,7 +15424,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_esign_task_list_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_esign_task_list_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_esign_task_list_metadata
      *
      * @return $this
      */
@@ -15448,7 +15448,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_generation_with3_p_integration
      *
-     * @param ?string $enable_generation_with3_p_integration 
+     * @param ?string $enable_generation_with3_p_integration
      *
      * @return $this
      */
@@ -15472,7 +15472,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_generation_with3_p_integration_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_generation_with3_p_integration_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_generation_with3_p_integration_meta_data
      *
      * @return $this
      */
@@ -15496,7 +15496,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_id_fx_accountless_sms_auth_for_part11
      *
-     * @param ?string $enable_id_fx_accountless_sms_auth_for_part11 
+     * @param ?string $enable_id_fx_accountless_sms_auth_for_part11
      *
      * @return $this
      */
@@ -15520,7 +15520,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_id_fx_accountless_sms_auth_for_part11_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_accountless_sms_auth_for_part11_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_accountless_sms_auth_for_part11_metadata
      *
      * @return $this
      */
@@ -15544,7 +15544,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_id_fx_intuit_kba
      *
-     * @param ?string $enable_id_fx_intuit_kba 
+     * @param ?string $enable_id_fx_intuit_kba
      *
      * @return $this
      */
@@ -15568,7 +15568,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_id_fx_intuit_kba_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_intuit_kba_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_intuit_kba_metadata
      *
      * @return $this
      */
@@ -15592,7 +15592,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_id_fx_phone_authentication
      *
-     * @param ?string $enable_id_fx_phone_authentication 
+     * @param ?string $enable_id_fx_phone_authentication
      *
      * @return $this
      */
@@ -15616,7 +15616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_id_fx_phone_authentication_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_phone_authentication_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_id_fx_phone_authentication_metadata
      *
      * @return $this
      */
@@ -15640,7 +15640,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_idfx_phone_auth_signature_auth_status
      *
-     * @param ?string $enable_idfx_phone_auth_signature_auth_status 
+     * @param ?string $enable_idfx_phone_auth_signature_auth_status
      *
      * @return $this
      */
@@ -15664,7 +15664,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_idfx_phone_auth_signature_auth_status_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_idfx_phone_auth_signature_auth_status_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_idfx_phone_auth_signature_auth_status_metadata
      *
      * @return $this
      */
@@ -15688,7 +15688,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_inbox_browse_views_powered_by_elastic_search
      *
-     * @param ?string $enable_inbox_browse_views_powered_by_elastic_search 
+     * @param ?string $enable_inbox_browse_views_powered_by_elastic_search
      *
      * @return $this
      */
@@ -15712,7 +15712,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_inbox_browse_views_powered_by_elastic_search_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_inbox_browse_views_powered_by_elastic_search_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_inbox_browse_views_powered_by_elastic_search_metadata
      *
      * @return $this
      */
@@ -15736,7 +15736,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_inbox_relevance_sort
      *
-     * @param ?string $enable_inbox_relevance_sort 
+     * @param ?string $enable_inbox_relevance_sort
      *
      * @return $this
      */
@@ -15760,7 +15760,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_inbox_relevance_sort_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_inbox_relevance_sort_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_inbox_relevance_sort_metadata
      *
      * @return $this
      */
@@ -15784,7 +15784,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_in_browser_editor
      *
-     * @param ?string $enable_in_browser_editor 
+     * @param ?string $enable_in_browser_editor
      *
      * @return $this
      */
@@ -15808,7 +15808,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_in_browser_editor_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_in_browser_editor_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_in_browser_editor_metadata
      *
      * @return $this
      */
@@ -15832,7 +15832,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_key_terms_suggestions_by_document_type
      *
-     * @param ?string $enable_key_terms_suggestions_by_document_type 
+     * @param ?string $enable_key_terms_suggestions_by_document_type
      *
      * @return $this
      */
@@ -15856,7 +15856,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_key_terms_suggestions_by_document_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata
      *
      * @return $this
      */
@@ -15880,7 +15880,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_large_file_support
      *
-     * @param ?string $enable_large_file_support 
+     * @param ?string $enable_large_file_support
      *
      * @return $this
      */
@@ -15904,7 +15904,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_large_file_support_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_large_file_support_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_large_file_support_metadata
      *
      * @return $this
      */
@@ -15928,7 +15928,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_legacy_shared_envelopes
      *
-     * @param ?string $enable_legacy_shared_envelopes 
+     * @param ?string $enable_legacy_shared_envelopes
      *
      * @return $this
      */
@@ -15952,7 +15952,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_legacy_shared_envelopes_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_legacy_shared_envelopes_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_legacy_shared_envelopes_metadata
      *
      * @return $this
      */
@@ -15976,7 +15976,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_license_management
      *
-     * @param ?string $enable_license_management 
+     * @param ?string $enable_license_management
      *
      * @return $this
      */
@@ -16000,7 +16000,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_license_management_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_license_management_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_license_management_metadata
      *
      * @return $this
      */
@@ -16024,7 +16024,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_microsoft_dynamics365_extension
      *
-     * @param ?string $enable_microsoft_dynamics365_extension 
+     * @param ?string $enable_microsoft_dynamics365_extension
      *
      * @return $this
      */
@@ -16048,7 +16048,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_microsoft_dynamics365_extension_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_microsoft_dynamics365_extension_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_microsoft_dynamics365_extension_metadata
      *
      * @return $this
      */
@@ -16072,7 +16072,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_multi_user_repository_features
      *
-     * @param ?string $enable_multi_user_repository_features 
+     * @param ?string $enable_multi_user_repository_features
      *
      * @return $this
      */
@@ -16096,7 +16096,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_multi_user_repository_features_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_multi_user_repository_features_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_multi_user_repository_features_metadata
      *
      * @return $this
      */
@@ -16120,7 +16120,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_navigator_for_hr
      *
-     * @param ?string $enable_navigator_for_hr 
+     * @param ?string $enable_navigator_for_hr
      *
      * @return $this
      */
@@ -16144,7 +16144,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_navigator_for_hr_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_for_hr_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_for_hr_metadata
      *
      * @return $this
      */
@@ -16168,7 +16168,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_navigator_partial_ingestion
      *
-     * @param ?string $enable_navigator_partial_ingestion 
+     * @param ?string $enable_navigator_partial_ingestion
      *
      * @return $this
      */
@@ -16192,7 +16192,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_navigator_partial_ingestion_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_partial_ingestion_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_partial_ingestion_metadata
      *
      * @return $this
      */
@@ -16216,7 +16216,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_navigator_trial
      *
-     * @param ?string $enable_navigator_trial 
+     * @param ?string $enable_navigator_trial
      *
      * @return $this
      */
@@ -16240,7 +16240,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_navigator_trial_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_trial_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_trial_metadata
      *
      * @return $this
      */
@@ -16264,7 +16264,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_obligation_management
      *
-     * @param ?string $enable_obligation_management 
+     * @param ?string $enable_obligation_management
      *
      * @return $this
      */
@@ -16288,7 +16288,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_obligation_management_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_obligation_management_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_obligation_management_metadata
      *
      * @return $this
      */
@@ -16312,7 +16312,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_participant_recipient_setting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_participant_recipient_setting_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_participant_recipient_setting_metadata
      *
      * @return $this
      */
@@ -16336,7 +16336,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_payment_processing
      *
-     * @param ?string $enable_payment_processing 
+     * @param ?string $enable_payment_processing
      *
      * @return $this
      */
@@ -16384,7 +16384,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_pdfa_conversion
      *
-     * @param ?string $enable_pdfa_conversion 
+     * @param ?string $enable_pdfa_conversion
      *
      * @return $this
      */
@@ -16408,7 +16408,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_pdfa_conversion_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_pdfa_conversion_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_pdfa_conversion_metadata
      *
      * @return $this
      */
@@ -16432,7 +16432,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_power_form
      *
-     * @param ?string $enable_power_form 
+     * @param ?string $enable_power_form
      *
      * @return $this
      */
@@ -16456,7 +16456,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_power_form_direct
      *
-     * @param ?string $enable_power_form_direct 
+     * @param ?string $enable_power_form_direct
      *
      * @return $this
      */
@@ -16528,7 +16528,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_premium_data_verification_extensions
      *
-     * @param ?string $enable_premium_data_verification_extensions 
+     * @param ?string $enable_premium_data_verification_extensions
      *
      * @return $this
      */
@@ -16552,7 +16552,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_premium_data_verification_extensions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_premium_data_verification_extensions_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_premium_data_verification_extensions_metadata
      *
      * @return $this
      */
@@ -16576,7 +16576,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_recipient_domain_validation
      *
-     * @param ?string $enable_recipient_domain_validation 
+     * @param ?string $enable_recipient_domain_validation
      *
      * @return $this
      */
@@ -16624,7 +16624,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_recipient_may_provide_phone_number
      *
-     * @param ?string $enable_recipient_may_provide_phone_number 
+     * @param ?string $enable_recipient_may_provide_phone_number
      *
      * @return $this
      */
@@ -16648,7 +16648,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_recipient_may_provide_phone_number_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_recipient_may_provide_phone_number_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_recipient_may_provide_phone_number_metadata
      *
      * @return $this
      */
@@ -16672,7 +16672,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_report_links
      *
-     * @param ?string $enable_report_links 
+     * @param ?string $enable_report_links
      *
      * @return $this
      */
@@ -16720,7 +16720,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_require_sign_on_paper
      *
-     * @param ?string $enable_require_sign_on_paper 
+     * @param ?string $enable_require_sign_on_paper
      *
      * @return $this
      */
@@ -16768,7 +16768,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_reserved_domain
      *
-     * @param ?string $enable_reserved_domain 
+     * @param ?string $enable_reserved_domain
      *
      * @return $this
      */
@@ -16816,7 +16816,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_responsive_signing
      *
-     * @param ?string $enable_responsive_signing 
+     * @param ?string $enable_responsive_signing
      *
      * @return $this
      */
@@ -16864,7 +16864,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sap_ariba_extension
      *
-     * @param ?string $enable_sap_ariba_extension 
+     * @param ?string $enable_sap_ariba_extension
      *
      * @return $this
      */
@@ -16888,7 +16888,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sap_ariba_extension_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sap_ariba_extension_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sap_ariba_extension_meta_data
      *
      * @return $this
      */
@@ -16912,7 +16912,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_scheduled_release
      *
-     * @param ?string $enable_scheduled_release 
+     * @param ?string $enable_scheduled_release
      *
      * @return $this
      */
@@ -16960,7 +16960,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_search_service_azure_uri
      *
-     * @param ?string $enable_search_service_azure_uri 
+     * @param ?string $enable_search_service_azure_uri
      *
      * @return $this
      */
@@ -16984,7 +16984,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_search_service_azure_uri_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_service_azure_uri_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_service_azure_uri_metadata
      *
      * @return $this
      */
@@ -17008,7 +17008,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_search_site_specific_api
      *
-     * @param ?string $enable_search_site_specific_api 
+     * @param ?string $enable_search_site_specific_api
      *
      * @return $this
      */
@@ -17032,7 +17032,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_search_site_specific_api_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_site_specific_api_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_search_site_specific_api_metadata
      *
      * @return $this
      */
@@ -17056,7 +17056,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sending_tags_font_settings
      *
-     * @param ?string $enable_sending_tags_font_settings 
+     * @param ?string $enable_sending_tags_font_settings
      *
      * @return $this
      */
@@ -17104,7 +17104,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_send_to_agent
      *
-     * @param ?string $enable_send_to_agent 
+     * @param ?string $enable_send_to_agent
      *
      * @return $this
      */
@@ -17152,7 +17152,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_send_to_intermediary
      *
-     * @param ?string $enable_send_to_intermediary 
+     * @param ?string $enable_send_to_intermediary
      *
      * @return $this
      */
@@ -17200,7 +17200,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_send_to_manage
      *
-     * @param ?string $enable_send_to_manage 
+     * @param ?string $enable_send_to_manage
      *
      * @return $this
      */
@@ -17248,7 +17248,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_api
      *
-     * @param ?string $enable_sequential_signing_api 
+     * @param ?string $enable_sequential_signing_api
      *
      * @return $this
      */
@@ -17296,7 +17296,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_ui
      *
-     * @param ?string $enable_sequential_signing_ui 
+     * @param ?string $enable_sequential_signing_ui
      *
      * @return $this
      */
@@ -17344,7 +17344,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signer_attachments
      *
-     * @param ?string $enable_signer_attachments 
+     * @param ?string $enable_signer_attachments
      *
      * @return $this
      */
@@ -17392,7 +17392,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_ai_features_plan
      *
-     * @param ?string $enable_signing_ai_features_plan 
+     * @param ?string $enable_signing_ai_features_plan
      *
      * @return $this
      */
@@ -17416,7 +17416,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_ai_features_plan_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_ai_features_plan_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_ai_features_plan_metadata
      *
      * @return $this
      */
@@ -17440,7 +17440,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_ai_features_setting
      *
-     * @param ?string $enable_signing_ai_features_setting 
+     * @param ?string $enable_signing_ai_features_setting
      *
      * @return $this
      */
@@ -17464,7 +17464,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_ai_features_setting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_ai_features_setting_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_ai_features_setting_metadata
      *
      * @return $this
      */
@@ -17488,7 +17488,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_extension_comments
      *
-     * @param ?string $enable_signing_extension_comments 
+     * @param ?string $enable_signing_extension_comments
      *
      * @return $this
      */
@@ -17536,7 +17536,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_extension_conversations
      *
-     * @param ?string $enable_signing_extension_conversations 
+     * @param ?string $enable_signing_extension_conversations
      *
      * @return $this
      */
@@ -17584,7 +17584,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_group_continue_page_setting
      *
-     * @param ?string $enable_signing_group_continue_page_setting 
+     * @param ?string $enable_signing_group_continue_page_setting
      *
      * @return $this
      */
@@ -17608,7 +17608,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_group_continue_page_setting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_group_continue_page_setting_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_signing_group_continue_page_setting_metadata
      *
      * @return $this
      */
@@ -17632,7 +17632,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_signing_order_settings_for_account
      *
-     * @param ?string $enable_signing_order_settings_for_account 
+     * @param ?string $enable_signing_order_settings_for_account
      *
      * @return $this
      */
@@ -17680,7 +17680,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_on_paper
      *
-     * @param ?string $enable_sign_on_paper 
+     * @param ?string $enable_sign_on_paper
      *
      * @return $this
      */
@@ -17728,7 +17728,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_on_paper_override
      *
-     * @param ?string $enable_sign_on_paper_override 
+     * @param ?string $enable_sign_on_paper_override
      *
      * @return $this
      */
@@ -17776,7 +17776,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_with_notary
      *
-     * @param ?string $enable_sign_with_notary 
+     * @param ?string $enable_sign_with_notary
      *
      * @return $this
      */
@@ -17824,7 +17824,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_smart_contracts
      *
-     * @param ?string $enable_smart_contracts 
+     * @param ?string $enable_smart_contracts
      *
      * @return $this
      */
@@ -17872,7 +17872,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sms_authentication
      *
-     * @param ?string $enable_sms_authentication 
+     * @param ?string $enable_sms_authentication
      *
      * @return $this
      */
@@ -17920,7 +17920,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sms_delivery_additional_notification
      *
-     * @param ?string $enable_sms_delivery_additional_notification 
+     * @param ?string $enable_sms_delivery_additional_notification
      *
      * @return $this
      */
@@ -17944,7 +17944,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sms_delivery_additional_notification_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sms_delivery_additional_notification_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_sms_delivery_additional_notification_metadata
      *
      * @return $this
      */
@@ -17968,7 +17968,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sms_delivery_primary
      *
-     * @param ?string $enable_sms_delivery_primary 
+     * @param ?string $enable_sms_delivery_primary
      *
      * @return $this
      */
@@ -17992,7 +17992,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_social_id_login
      *
-     * @param ?string $enable_social_id_login 
+     * @param ?string $enable_social_id_login
      *
      * @return $this
      */
@@ -18040,7 +18040,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_strike_through
      *
-     * @param ?string $enable_strike_through 
+     * @param ?string $enable_strike_through
      *
      * @return $this
      */
@@ -18088,7 +18088,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_tickets
      *
-     * @param ?string $enable_tickets 
+     * @param ?string $enable_tickets
      *
      * @return $this
      */
@@ -18112,7 +18112,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_tickets_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_tickets_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_tickets_meta_data
      *
      * @return $this
      */
@@ -18136,7 +18136,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_transaction_point
      *
-     * @param ?string $enable_transaction_point 
+     * @param ?string $enable_transaction_point
      *
      * @return $this
      */
@@ -18184,7 +18184,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_unified_repository
      *
-     * @param ?string $enable_unified_repository 
+     * @param ?string $enable_unified_repository
      *
      * @return $this
      */
@@ -18208,7 +18208,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_unified_repository_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_unified_repository_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_unified_repository_metadata
      *
      * @return $this
      */
@@ -18232,7 +18232,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_vaulting
      *
-     * @param ?string $enable_vaulting 
+     * @param ?string $enable_vaulting
      *
      * @return $this
      */
@@ -18280,7 +18280,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_web_forms_runtime_ap_is
      *
-     * @param ?string $enable_web_forms_runtime_ap_is 
+     * @param ?string $enable_web_forms_runtime_ap_is
      *
      * @return $this
      */
@@ -18304,7 +18304,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_web_forms_runtime_ap_is_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_web_forms_runtime_ap_is_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_web_forms_runtime_ap_is_metadata
      *
      * @return $this
      */
@@ -18328,7 +18328,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_web_forms_separate_user_permissions
      *
-     * @param ?string $enable_web_forms_separate_user_permissions 
+     * @param ?string $enable_web_forms_separate_user_permissions
      *
      * @return $this
      */
@@ -18352,7 +18352,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_web_forms_separate_user_permissions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_web_forms_separate_user_permissions_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_web_forms_separate_user_permissions_metadata
      *
      * @return $this
      */
@@ -18376,7 +18376,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_witnessing
      *
-     * @param ?string $enable_witnessing 
+     * @param ?string $enable_witnessing
      *
      * @return $this
      */
@@ -18424,7 +18424,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_workday_financials_extension
      *
-     * @param ?string $enable_workday_financials_extension 
+     * @param ?string $enable_workday_financials_extension
      *
      * @return $this
      */
@@ -18448,7 +18448,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_workday_financials_extension_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_workday_financials_extension_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_workday_financials_extension_meta_data
      *
      * @return $this
      */
@@ -18472,7 +18472,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enforce_template_name_uniqueness
      *
-     * @param ?string $enforce_template_name_uniqueness 
+     * @param ?string $enforce_template_name_uniqueness
      *
      * @return $this
      */
@@ -18520,7 +18520,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enforce_tls_emails
      *
-     * @param ?string $enforce_tls_emails 
+     * @param ?string $enforce_tls_emails
      *
      * @return $this
      */
@@ -18544,7 +18544,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enforce_tls_emails_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enforce_tls_emails_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enforce_tls_emails_metadata
      *
      * @return $this
      */
@@ -18568,7 +18568,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_integration_allowed
      *
-     * @param ?string $envelope_integration_allowed 
+     * @param ?string $envelope_integration_allowed
      *
      * @return $this
      */
@@ -18616,7 +18616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_integration_enabled
      *
-     * @param ?string $envelope_integration_enabled 
+     * @param ?string $envelope_integration_enabled
      *
      * @return $this
      */
@@ -18664,7 +18664,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_limits_total_document_size_allowed_in_mb
      *
-     * @param ?string $envelope_limits_total_document_size_allowed_in_mb 
+     * @param ?string $envelope_limits_total_document_size_allowed_in_mb
      *
      * @return $this
      */
@@ -18688,7 +18688,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_limits_total_document_size_allowed_in_mb_enabled
      *
-     * @param ?string $envelope_limits_total_document_size_allowed_in_mb_enabled 
+     * @param ?string $envelope_limits_total_document_size_allowed_in_mb_enabled
      *
      * @return $this
      */
@@ -18712,7 +18712,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_limits_total_document_size_allowed_in_mb_enabled_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_enabled_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_enabled_metadata
      *
      * @return $this
      */
@@ -18736,7 +18736,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_limits_total_document_size_allowed_in_mb_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_limits_total_document_size_allowed_in_mb_metadata
      *
      * @return $this
      */
@@ -18760,7 +18760,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_search_mode
      *
-     * @param ?string $envelope_search_mode 
+     * @param ?string $envelope_search_mode
      *
      * @return $this
      */
@@ -18784,7 +18784,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_search_mode_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_search_mode_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $envelope_search_mode_metadata
      *
      * @return $this
      */
@@ -18808,7 +18808,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_stamping_default_value
      *
-     * @param ?string $envelope_stamping_default_value 
+     * @param ?string $envelope_stamping_default_value
      *
      * @return $this
      */
@@ -18856,7 +18856,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets exit_prompt
      *
-     * @param ?string $exit_prompt 
+     * @param ?string $exit_prompt
      *
      * @return $this
      */
@@ -18880,7 +18880,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets exit_prompt_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $exit_prompt_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $exit_prompt_metadata
      *
      * @return $this
      */
@@ -18904,7 +18904,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets express_send
      *
-     * @param ?string $express_send 
+     * @param ?string $express_send
      *
      * @return $this
      */
@@ -18928,7 +18928,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets express_send_allow_tabs
      *
-     * @param ?string $express_send_allow_tabs 
+     * @param ?string $express_send_allow_tabs
      *
      * @return $this
      */
@@ -19024,7 +19024,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets external_signature_pad_type
      *
-     * @param ?string $external_signature_pad_type 
+     * @param ?string $external_signature_pad_type
      *
      * @return $this
      */
@@ -19072,7 +19072,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets fax_out_enabled
      *
-     * @param ?string $fax_out_enabled 
+     * @param ?string $fax_out_enabled
      *
      * @return $this
      */
@@ -19120,7 +19120,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets finish_reminder
      *
-     * @param ?string $finish_reminder 
+     * @param ?string $finish_reminder
      *
      * @return $this
      */
@@ -19144,7 +19144,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets finish_reminder_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $finish_reminder_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $finish_reminder_metadata
      *
      * @return $this
      */
@@ -19168,7 +19168,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forbid_adding_user_stamps
      *
-     * @param ?string $forbid_adding_user_stamps 
+     * @param ?string $forbid_adding_user_stamps
      *
      * @return $this
      */
@@ -19192,7 +19192,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets forbid_adding_user_stamps_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $forbid_adding_user_stamps_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $forbid_adding_user_stamps_metadata
      *
      * @return $this
      */
@@ -19216,7 +19216,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets guided_forms_html_allowed
      *
-     * @param ?string $guided_forms_html_allowed 
+     * @param ?string $guided_forms_html_allowed
      *
      * @return $this
      */
@@ -19240,7 +19240,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets guided_forms_html_allowed_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $guided_forms_html_allowed_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $guided_forms_html_allowed_metadata
      *
      * @return $this
      */
@@ -19264,7 +19264,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets guided_forms_html_conversion_policy
      *
-     * @param ?string $guided_forms_html_conversion_policy 
+     * @param ?string $guided_forms_html_conversion_policy
      *
      * @return $this
      */
@@ -19288,7 +19288,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets guided_forms_html_conversion_policy_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $guided_forms_html_conversion_policy_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $guided_forms_html_conversion_policy_metadata
      *
      * @return $this
      */
@@ -19312,7 +19312,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets has_recipient_connect_claimed_domain
      *
-     * @param ?string $has_recipient_connect_claimed_domain 
+     * @param ?string $has_recipient_connect_claimed_domain
      *
      * @return $this
      */
@@ -19336,7 +19336,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets hide_account_address_in_co_c
      *
-     * @param ?string $hide_account_address_in_co_c 
+     * @param ?string $hide_account_address_in_co_c
      *
      * @return $this
      */
@@ -19384,7 +19384,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets hide_pricing
      *
-     * @param ?string $hide_pricing 
+     * @param ?string $hide_pricing
      *
      * @return $this
      */
@@ -19432,7 +19432,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_configurations
      *
-     * @param \DocuSign\eSign\Model\IdCheckConfiguration[] $id_check_configurations 
+     * @param \DocuSign\eSign\Model\IdCheckConfiguration[] $id_check_configurations
      *
      * @return $this
      */
@@ -19456,7 +19456,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_expire
      *
-     * @param ?string $id_check_expire 
+     * @param ?string $id_check_expire
      *
      * @return $this
      */
@@ -19480,7 +19480,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_expire_days
      *
-     * @param ?string $id_check_expire_days 
+     * @param ?string $id_check_expire_days
      *
      * @return $this
      */
@@ -19552,7 +19552,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_expire_minutes
      *
-     * @param ?string $id_check_expire_minutes 
+     * @param ?string $id_check_expire_minutes
      *
      * @return $this
      */
@@ -19600,7 +19600,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_required
      *
-     * @param ?string $id_check_required 
+     * @param ?string $id_check_required
      *
      * @return $this
      */
@@ -19648,7 +19648,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[] $identity_verification 
+     * @param \DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[] $identity_verification
      *
      * @return $this
      */
@@ -19696,7 +19696,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets idfx_kba_authentication_override
      *
-     * @param ?string $idfx_kba_authentication_override 
+     * @param ?string $idfx_kba_authentication_override
      *
      * @return $this
      */
@@ -19720,7 +19720,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets idfx_kba_authentication_override_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $idfx_kba_authentication_override_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $idfx_kba_authentication_override_metadata
      *
      * @return $this
      */
@@ -19744,7 +19744,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets idfx_phone_authentication_override
      *
-     * @param ?string $idfx_phone_authentication_override 
+     * @param ?string $idfx_phone_authentication_override
      *
      * @return $this
      */
@@ -19768,7 +19768,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets idfx_phone_authentication_override_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $idfx_phone_authentication_override_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $idfx_phone_authentication_override_metadata
      *
      * @return $this
      */
@@ -19792,7 +19792,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets ignore_error_if_anchor_tab_not_found
      *
-     * @param ?string $ignore_error_if_anchor_tab_not_found 
+     * @param ?string $ignore_error_if_anchor_tab_not_found
      *
      * @return $this
      */
@@ -19840,7 +19840,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_person_id_check_question
      *
-     * @param ?string $in_person_id_check_question 
+     * @param ?string $in_person_id_check_question
      *
      * @return $this
      */
@@ -19888,7 +19888,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_person_signing_enabled
      *
-     * @param ?string $in_person_signing_enabled 
+     * @param ?string $in_person_signing_enabled
      *
      * @return $this
      */
@@ -19936,7 +19936,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_session_enabled
      *
-     * @param ?string $in_session_enabled 
+     * @param ?string $in_session_enabled
      *
      * @return $this
      */
@@ -19984,7 +19984,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets in_session_suppress_emails
      *
-     * @param ?string $in_session_suppress_emails 
+     * @param ?string $in_session_suppress_emails
      *
      * @return $this
      */
@@ -20032,7 +20032,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets is_connect_document_fields_enabled
      *
-     * @param ?string $is_connect_document_fields_enabled 
+     * @param ?string $is_connect_document_fields_enabled
      *
      * @return $this
      */
@@ -20056,7 +20056,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets isv_embed
      *
-     * @param ?string $isv_embed 
+     * @param ?string $isv_embed
      *
      * @return $this
      */
@@ -20080,7 +20080,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets isv_embed_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $isv_embed_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $isv_embed_meta_data
      *
      * @return $this
      */
@@ -20104,7 +20104,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets isv_oem_embed
      *
-     * @param ?string $isv_oem_embed 
+     * @param ?string $isv_oem_embed
      *
      * @return $this
      */
@@ -20128,7 +20128,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets isv_oem_embed_meta_data
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $isv_oem_embed_meta_data 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $isv_oem_embed_meta_data
      *
      * @return $this
      */
@@ -20152,7 +20152,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets linked_external_primary_accounts
      *
-     * @param \DocuSign\eSign\Model\LinkedExternalPrimaryAccount[] $linked_external_primary_accounts 
+     * @param \DocuSign\eSign\Model\LinkedExternalPrimaryAccount[] $linked_external_primary_accounts
      *
      * @return $this
      */
@@ -20176,7 +20176,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets maestro_plan_levels
      *
-     * @param ?string $maestro_plan_levels 
+     * @param ?string $maestro_plan_levels
      *
      * @return $this
      */
@@ -20200,7 +20200,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets maestro_plan_levels_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $maestro_plan_levels_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $maestro_plan_levels_metadata
      *
      * @return $this
      */
@@ -20224,7 +20224,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_signing_groups
      *
-     * @param ?string $maximum_signing_groups 
+     * @param ?string $maximum_signing_groups
      *
      * @return $this
      */
@@ -20272,7 +20272,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_users_per_signing_group
      *
-     * @param ?string $maximum_users_per_signing_group 
+     * @param ?string $maximum_users_per_signing_group
      *
      * @return $this
      */
@@ -20320,7 +20320,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets max_number_of_custom_stamps
      *
-     * @param ?string $max_number_of_custom_stamps 
+     * @param ?string $max_number_of_custom_stamps
      *
      * @return $this
      */
@@ -20344,7 +20344,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets merge_mixed_mode_results
      *
-     * @param ?string $merge_mixed_mode_results 
+     * @param ?string $merge_mixed_mode_results
      *
      * @return $this
      */
@@ -20368,7 +20368,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets merge_mixed_mode_results_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $merge_mixed_mode_results_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $merge_mixed_mode_results_metadata
      *
      * @return $this
      */
@@ -20392,7 +20392,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets mobile_session_timeout
      *
-     * @param ?string $mobile_session_timeout 
+     * @param ?string $mobile_session_timeout
      *
      * @return $this
      */
@@ -20440,7 +20440,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_active_custom_stamps
      *
-     * @param ?string $number_of_active_custom_stamps 
+     * @param ?string $number_of_active_custom_stamps
      *
      * @return $this
      */
@@ -20464,7 +20464,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets opt_in_mobile_signing_v02
      *
-     * @param ?string $opt_in_mobile_signing_v02 
+     * @param ?string $opt_in_mobile_signing_v02
      *
      * @return $this
      */
@@ -20512,7 +20512,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets opt_in_universal_signatures
      *
-     * @param ?string $opt_in_universal_signatures 
+     * @param ?string $opt_in_universal_signatures
      *
      * @return $this
      */
@@ -20536,7 +20536,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets opt_out_auto_nav_text_and_tab_color_updates
      *
-     * @param ?string $opt_out_auto_nav_text_and_tab_color_updates 
+     * @param ?string $opt_out_auto_nav_text_and_tab_color_updates
      *
      * @return $this
      */
@@ -20584,7 +20584,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets opt_out_new_platform_seal
      *
-     * @param ?string $opt_out_new_platform_seal 
+     * @param ?string $opt_out_new_platform_seal
      *
      * @return $this
      */
@@ -20632,7 +20632,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets original_account_site
      *
-     * @param ?string $original_account_site 
+     * @param ?string $original_account_site
      *
      * @return $this
      */
@@ -20656,7 +20656,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets participant_copy_opt_out
      *
-     * @param ?string $participant_copy_opt_out 
+     * @param ?string $participant_copy_opt_out
      *
      * @return $this
      */
@@ -20680,7 +20680,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets participant_copy_opt_out_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $participant_copy_opt_out_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $participant_copy_opt_out_metadata
      *
      * @return $this
      */
@@ -20704,7 +20704,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_chunked_upload_part_size
      *
-     * @param ?string $pdf_max_chunked_upload_part_size 
+     * @param ?string $pdf_max_chunked_upload_part_size
      *
      * @return $this
      */
@@ -20728,7 +20728,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_chunked_upload_part_size_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_part_size_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_part_size_metadata
      *
      * @return $this
      */
@@ -20752,7 +20752,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_chunked_upload_total_size
      *
-     * @param ?string $pdf_max_chunked_upload_total_size 
+     * @param ?string $pdf_max_chunked_upload_total_size
      *
      * @return $this
      */
@@ -20776,7 +20776,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_chunked_upload_total_size_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_total_size_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_chunked_upload_total_size_metadata
      *
      * @return $this
      */
@@ -20800,7 +20800,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_individual_upload_size
      *
-     * @param ?string $pdf_max_individual_upload_size 
+     * @param ?string $pdf_max_individual_upload_size
      *
      * @return $this
      */
@@ -20824,7 +20824,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_max_individual_upload_size_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_individual_upload_size_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $pdf_max_individual_upload_size_metadata
      *
      * @return $this
      */
@@ -20848,7 +20848,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets phone_auth_recipient_may_provide_phone_number
      *
-     * @param ?string $phone_auth_recipient_may_provide_phone_number 
+     * @param ?string $phone_auth_recipient_may_provide_phone_number
      *
      * @return $this
      */
@@ -20896,7 +20896,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pki_sign_downloaded_pdf_docs
      *
-     * @param ?string $pki_sign_downloaded_pdf_docs 
+     * @param ?string $pki_sign_downloaded_pdf_docs
      *
      * @return $this
      */
@@ -20944,7 +20944,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets read_only_mode
      *
-     * @param ?string $read_only_mode 
+     * @param ?string $read_only_mode
      *
      * @return $this
      */
@@ -20968,7 +20968,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets read_only_mode_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $read_only_mode_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $read_only_mode_metadata
      *
      * @return $this
      */
@@ -20992,7 +20992,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recipients_can_sign_offline
      *
-     * @param ?string $recipients_can_sign_offline 
+     * @param ?string $recipients_can_sign_offline
      *
      * @return $this
      */
@@ -21040,7 +21040,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_signing_auto_navigation_control
      *
-     * @param ?string $recipient_signing_auto_navigation_control 
+     * @param ?string $recipient_signing_auto_navigation_control
      *
      * @return $this
      */
@@ -21088,7 +21088,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recycle_bin_envelope_retention
      *
-     * @param ?string $recycle_bin_envelope_retention 
+     * @param ?string $recycle_bin_envelope_retention
      *
      * @return $this
      */
@@ -21112,7 +21112,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets recycle_bin_envelope_retention_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $recycle_bin_envelope_retention_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $recycle_bin_envelope_retention_metadata
      *
      * @return $this
      */
@@ -21136,7 +21136,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require21_cf_rpt11_compliance
      *
-     * @param ?string $require21_cf_rpt11_compliance 
+     * @param ?string $require21_cf_rpt11_compliance
      *
      * @return $this
      */
@@ -21184,7 +21184,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require_decline_reason
      *
-     * @param ?string $require_decline_reason 
+     * @param ?string $require_decline_reason
      *
      * @return $this
      */
@@ -21232,7 +21232,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require_external_user_management
      *
-     * @param ?string $require_external_user_management 
+     * @param ?string $require_external_user_management
      *
      * @return $this
      */
@@ -21280,7 +21280,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets require_signer_certificate_type
      *
-     * @param ?string $require_signer_certificate_type 
+     * @param ?string $require_signer_certificate_type
      *
      * @return $this
      */
@@ -21328,7 +21328,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_account_name
      *
-     * @param ?string $rsa_verid_account_name 
+     * @param ?string $rsa_verid_account_name
      *
      * @return $this
      */
@@ -21352,7 +21352,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_password
      *
-     * @param ?string $rsa_verid_password 
+     * @param ?string $rsa_verid_password
      *
      * @return $this
      */
@@ -21376,7 +21376,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_ruleset
      *
-     * @param ?string $rsa_verid_ruleset 
+     * @param ?string $rsa_verid_ruleset
      *
      * @return $this
      */
@@ -21400,7 +21400,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets rsa_verid_user_id
      *
-     * @param ?string $rsa_verid_user_id 
+     * @param ?string $rsa_verid_user_id
      *
      * @return $this
      */
@@ -21424,7 +21424,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets self_signed_recipient_email_document
      *
-     * @param ?string $self_signed_recipient_email_document 
+     * @param ?string $self_signed_recipient_email_document
      *
      * @return $this
      */
@@ -21472,7 +21472,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets self_signed_recipient_email_document_user_override
      *
-     * @param ?string $self_signed_recipient_email_document_user_override 
+     * @param ?string $self_signed_recipient_email_document_user_override
      *
      * @return $this
      */
@@ -21520,7 +21520,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sender_can_sign_in_each_location
      *
-     * @param ?string $sender_can_sign_in_each_location 
+     * @param ?string $sender_can_sign_in_each_location
      *
      * @return $this
      */
@@ -21568,7 +21568,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sender_must_authenticate_signing
      *
-     * @param ?string $sender_must_authenticate_signing 
+     * @param ?string $sender_must_authenticate_signing
      *
      * @return $this
      */
@@ -21616,7 +21616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sending_tags_font_color
      *
-     * @param ?string $sending_tags_font_color 
+     * @param ?string $sending_tags_font_color
      *
      * @return $this
      */
@@ -21664,7 +21664,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sending_tags_font_name
      *
-     * @param ?string $sending_tags_font_name 
+     * @param ?string $sending_tags_font_name
      *
      * @return $this
      */
@@ -21712,7 +21712,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sending_tags_font_size
      *
-     * @param ?string $sending_tags_font_size 
+     * @param ?string $sending_tags_font_size
      *
      * @return $this
      */
@@ -21760,7 +21760,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets send_lockout_recipient_notification
      *
-     * @param ?string $send_lockout_recipient_notification 
+     * @param ?string $send_lockout_recipient_notification
      *
      * @return $this
      */
@@ -21784,7 +21784,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets send_lockout_recipient_notification_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $send_lockout_recipient_notification_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $send_lockout_recipient_notification_metadata
      *
      * @return $this
      */
@@ -21808,7 +21808,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets send_to_certified_delivery_enabled
      *
-     * @param ?string $send_to_certified_delivery_enabled 
+     * @param ?string $send_to_certified_delivery_enabled
      *
      * @return $this
      */
@@ -21856,7 +21856,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets session_timeout
      *
-     * @param ?string $session_timeout 
+     * @param ?string $session_timeout
      *
      * @return $this
      */
@@ -21904,7 +21904,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets set_recip_email_lang
      *
-     * @param ?string $set_recip_email_lang 
+     * @param ?string $set_recip_email_lang
      *
      * @return $this
      */
@@ -21952,7 +21952,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets set_recip_sign_lang
      *
-     * @param ?string $set_recip_sign_lang 
+     * @param ?string $set_recip_sign_lang
      *
      * @return $this
      */
@@ -22000,7 +22000,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets shared_template_folders
      *
-     * @param ?string $shared_template_folders 
+     * @param ?string $shared_template_folders
      *
      * @return $this
      */
@@ -22048,7 +22048,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_complete_dialog_in_embedded_session
      *
-     * @param ?string $show_complete_dialog_in_embedded_session 
+     * @param ?string $show_complete_dialog_in_embedded_session
      *
      * @return $this
      */
@@ -22096,7 +22096,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_conditional_routing_on_send
      *
-     * @param ?string $show_conditional_routing_on_send 
+     * @param ?string $show_conditional_routing_on_send
      *
      * @return $this
      */
@@ -22120,7 +22120,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_conditional_routing_on_send_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $show_conditional_routing_on_send_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $show_conditional_routing_on_send_metadata
      *
      * @return $this
      */
@@ -22144,7 +22144,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_initial_conditional_fields
      *
-     * @param ?string $show_initial_conditional_fields 
+     * @param ?string $show_initial_conditional_fields
      *
      * @return $this
      */
@@ -22192,7 +22192,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_localized_watermarks
      *
-     * @param ?string $show_localized_watermarks 
+     * @param ?string $show_localized_watermarks
      *
      * @return $this
      */
@@ -22240,7 +22240,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_masked_fields_when_downloading_document_as_sender
      *
-     * @param ?string $show_masked_fields_when_downloading_document_as_sender 
+     * @param ?string $show_masked_fields_when_downloading_document_as_sender
      *
      * @return $this
      */
@@ -22264,7 +22264,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_masked_fields_when_downloading_document_as_sender_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $show_masked_fields_when_downloading_document_as_sender_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $show_masked_fields_when_downloading_document_as_sender_metadata
      *
      * @return $this
      */
@@ -22288,7 +22288,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets show_tutorials
      *
-     * @param ?string $show_tutorials 
+     * @param ?string $show_tutorials
      *
      * @return $this
      */
@@ -22336,7 +22336,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signature_providers
      *
-     * @param ?string[] $signature_providers 
+     * @param ?string[] $signature_providers
      *
      * @return $this
      */
@@ -22384,7 +22384,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_format
      *
-     * @param ?string $sign_date_format 
+     * @param ?string $sign_date_format
      *
      * @return $this
      */
@@ -22432,7 +22432,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_time_account_language_override
      *
-     * @param ?string $sign_date_time_account_language_override 
+     * @param ?string $sign_date_time_account_language_override
      *
      * @return $this
      */
@@ -22456,7 +22456,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_time_account_language_override_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_time_account_language_override_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_time_account_language_override_metadata
      *
      * @return $this
      */
@@ -22480,7 +22480,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_time_account_timezone_override
      *
-     * @param ?string $sign_date_time_account_timezone_override 
+     * @param ?string $sign_date_time_account_timezone_override
      *
      * @return $this
      */
@@ -22504,7 +22504,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_time_account_timezone_override_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_time_account_timezone_override_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $sign_date_time_account_timezone_override_metadata
      *
      * @return $this
      */
@@ -22528,7 +22528,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_attach_certificate_to_envelope_pdf
      *
-     * @param ?string $signer_attach_certificate_to_envelope_pdf 
+     * @param ?string $signer_attach_certificate_to_envelope_pdf
      *
      * @return $this
      */
@@ -22576,7 +22576,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_attach_concat
      *
-     * @param ?string $signer_attach_concat 
+     * @param ?string $signer_attach_concat
      *
      * @return $this
      */
@@ -22624,7 +22624,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_can_create_account
      *
-     * @param ?string $signer_can_create_account 
+     * @param ?string $signer_can_create_account
      *
      * @return $this
      */
@@ -22672,7 +22672,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_can_sign_on_mobile
      *
-     * @param ?string $signer_can_sign_on_mobile 
+     * @param ?string $signer_can_sign_on_mobile
      *
      * @return $this
      */
@@ -22720,7 +22720,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_in_session_use_envelope_complete_email
      *
-     * @param ?string $signer_in_session_use_envelope_complete_email 
+     * @param ?string $signer_in_session_use_envelope_complete_email
      *
      * @return $this
      */
@@ -22768,7 +22768,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_login_requirements
      *
-     * @param ?string $signer_login_requirements 
+     * @param ?string $signer_login_requirements
      *
      * @return $this
      */
@@ -22816,7 +22816,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_have_account
      *
-     * @param ?string $signer_must_have_account 
+     * @param ?string $signer_must_have_account
      *
      * @return $this
      */
@@ -22864,7 +22864,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_login_to_sign
      *
-     * @param ?string $signer_must_login_to_sign 
+     * @param ?string $signer_must_login_to_sign
      *
      * @return $this
      */
@@ -22912,7 +22912,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signer_show_secure_field_initial_values
      *
-     * @param ?string $signer_show_secure_field_initial_values 
+     * @param ?string $signer_show_secure_field_initial_values
      *
      * @return $this
      */
@@ -22960,7 +22960,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signing_session_timeout
      *
-     * @param ?string $signing_session_timeout 
+     * @param ?string $signing_session_timeout
      *
      * @return $this
      */
@@ -23008,7 +23008,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets signing_ui_version
      *
-     * @param ?string $signing_ui_version 
+     * @param ?string $signing_ui_version
      *
      * @return $this
      */
@@ -23056,7 +23056,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_time_format
      *
-     * @param ?string $sign_time_format 
+     * @param ?string $sign_time_format
      *
      * @return $this
      */
@@ -23104,7 +23104,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sign_time_show_am_pm
      *
-     * @param ?string $sign_time_show_am_pm 
+     * @param ?string $sign_time_show_am_pm
      *
      * @return $this
      */
@@ -23152,7 +23152,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets simplified_sending_enabled
      *
-     * @param ?string $simplified_sending_enabled 
+     * @param ?string $simplified_sending_enabled
      *
      * @return $this
      */
@@ -23200,7 +23200,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets single_sign_on_enabled
      *
-     * @param ?string $single_sign_on_enabled 
+     * @param ?string $single_sign_on_enabled
      *
      * @return $this
      */
@@ -23248,7 +23248,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets skip_auth_completed_envelopes
      *
-     * @param ?string $skip_auth_completed_envelopes 
+     * @param ?string $skip_auth_completed_envelopes
      *
      * @return $this
      */
@@ -23296,7 +23296,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets social_id_recip_auth
      *
-     * @param ?string $social_id_recip_auth 
+     * @param ?string $social_id_recip_auth
      *
      * @return $this
      */
@@ -23344,7 +23344,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets specify_document_visibility
      *
-     * @param ?string $specify_document_visibility 
+     * @param ?string $specify_document_visibility
      *
      * @return $this
      */
@@ -23392,7 +23392,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets start_in_advanced_correct
      *
-     * @param ?string $start_in_advanced_correct 
+     * @param ?string $start_in_advanced_correct
      *
      * @return $this
      */
@@ -23440,7 +23440,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_accept
      *
-     * @param ?string $supplemental_documents_must_accept 
+     * @param ?string $supplemental_documents_must_accept
      *
      * @return $this
      */
@@ -23488,7 +23488,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_read
      *
-     * @param ?string $supplemental_documents_must_read 
+     * @param ?string $supplemental_documents_must_read
      *
      * @return $this
      */
@@ -23536,7 +23536,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_view
      *
-     * @param ?string $supplemental_documents_must_view 
+     * @param ?string $supplemental_documents_must_view
      *
      * @return $this
      */
@@ -23584,7 +23584,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets suppress_certificate_enforcement
      *
-     * @param ?string $suppress_certificate_enforcement 
+     * @param ?string $suppress_certificate_enforcement
      *
      * @return $this
      */
@@ -23656,7 +23656,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_offset_api
      *
-     * @param ?string $timezone_offset_api 
+     * @param ?string $timezone_offset_api
      *
      * @return $this
      */
@@ -23704,7 +23704,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets timezone_offset_ui
      *
-     * @param ?string $timezone_offset_ui 
+     * @param ?string $timezone_offset_ui
      *
      * @return $this
      */
@@ -23752,7 +23752,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets universal_signature_opt_in
      *
-     * @param ?string $universal_signature_opt_in 
+     * @param ?string $universal_signature_opt_in
      *
      * @return $this
      */
@@ -23776,7 +23776,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets universal_signature_skip_platform_signature
      *
-     * @param ?string $universal_signature_skip_platform_signature 
+     * @param ?string $universal_signature_skip_platform_signature
      *
      * @return $this
      */
@@ -23800,7 +23800,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets universal_signature_skip_platform_signature_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $universal_signature_skip_platform_signature_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $universal_signature_skip_platform_signature_metadata
      *
      * @return $this
      */
@@ -23824,7 +23824,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_account_level_email
      *
-     * @param ?string $use_account_level_email 
+     * @param ?string $use_account_level_email
      *
      * @return $this
      */
@@ -23872,7 +23872,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_consumer_disclosure
      *
-     * @param ?string $use_consumer_disclosure 
+     * @param ?string $use_consumer_disclosure
      *
      * @return $this
      */
@@ -23920,7 +23920,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_consumer_disclosure_within_account
      *
-     * @param ?string $use_consumer_disclosure_within_account 
+     * @param ?string $use_consumer_disclosure_within_account
      *
      * @return $this
      */
@@ -23968,7 +23968,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_derived_keys
      *
-     * @param ?string $use_derived_keys 
+     * @param ?string $use_derived_keys
      *
      * @return $this
      */
@@ -24016,7 +24016,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_docu_sign_express_signer_certificate
      *
-     * @param ?string $use_docu_sign_express_signer_certificate 
+     * @param ?string $use_docu_sign_express_signer_certificate
      *
      * @return $this
      */
@@ -24064,7 +24064,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_envelope_search_mixed_mode
      *
-     * @param ?string $use_envelope_search_mixed_mode 
+     * @param ?string $use_envelope_search_mixed_mode
      *
      * @return $this
      */
@@ -24088,7 +24088,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_envelope_search_mixed_mode_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_envelope_search_mixed_mode_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_envelope_search_mixed_mode_metadata
      *
      * @return $this
      */
@@ -24112,7 +24112,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_multi_app_groups_data
      *
-     * @param ?string $use_multi_app_groups_data 
+     * @param ?string $use_multi_app_groups_data
      *
      * @return $this
      */
@@ -24136,7 +24136,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_multi_app_groups_data_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_multi_app_groups_data_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_multi_app_groups_data_metadata
      *
      * @return $this
      */
@@ -24160,7 +24160,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_blob_for_pdf
      *
-     * @param ?string $use_new_blob_for_pdf 
+     * @param ?string $use_new_blob_for_pdf
      *
      * @return $this
      */
@@ -24208,7 +24208,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_envelope_search
      *
-     * @param ?string $use_new_envelope_search 
+     * @param ?string $use_new_envelope_search
      *
      * @return $this
      */
@@ -24232,7 +24232,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_envelope_search_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_metadata
      *
      * @return $this
      */
@@ -24256,7 +24256,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_envelope_search_only_when_searching_after_date
      *
-     * @param ?string $use_new_envelope_search_only_when_searching_after_date 
+     * @param ?string $use_new_envelope_search_only_when_searching_after_date
      *
      * @return $this
      */
@@ -24280,7 +24280,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_envelope_search_only_when_searching_after_date_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_only_when_searching_after_date_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_only_when_searching_after_date_metadata
      *
      * @return $this
      */
@@ -24304,7 +24304,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_envelope_search_only_with_search_term
      *
-     * @param ?string $use_new_envelope_search_only_with_search_term 
+     * @param ?string $use_new_envelope_search_only_with_search_term
      *
      * @return $this
      */
@@ -24328,7 +24328,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_envelope_search_only_with_search_term_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_only_with_search_term_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $use_new_envelope_search_only_with_search_term_metadata
      *
      * @return $this
      */
@@ -24352,7 +24352,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_safe_signer_certificates
      *
-     * @param ?string $use_safe_signer_certificates 
+     * @param ?string $use_safe_signer_certificates
      *
      * @return $this
      */
@@ -24400,7 +24400,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets uses_api
      *
-     * @param ?string $uses_api 
+     * @param ?string $uses_api
      *
      * @return $this
      */
@@ -24448,7 +24448,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_signature_provider_platform
      *
-     * @param ?string $use_signature_provider_platform 
+     * @param ?string $use_signature_provider_platform
      *
      * @return $this
      */
@@ -24496,7 +24496,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets use_smart_contracts_v1
      *
-     * @param ?string $use_smart_contracts_v1 
+     * @param ?string $use_smart_contracts_v1
      *
      * @return $this
      */
@@ -24520,7 +24520,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_allowed
      *
-     * @param ?string $validations_allowed 
+     * @param ?string $validations_allowed
      *
      * @return $this
      */
@@ -24568,7 +24568,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_brand
      *
-     * @param ?string $validations_brand 
+     * @param ?string $validations_brand
      *
      * @return $this
      */
@@ -24616,7 +24616,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_cadence
      *
-     * @param ?string $validations_cadence 
+     * @param ?string $validations_cadence
      *
      * @return $this
      */
@@ -24664,7 +24664,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_enabled
      *
-     * @param ?string $validations_enabled 
+     * @param ?string $validations_enabled
      *
      * @return $this
      */
@@ -24712,7 +24712,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets validations_report
      *
-     * @param ?string $validations_report 
+     * @param ?string $validations_report
      *
      * @return $this
      */
@@ -24760,7 +24760,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets water_mark_enabled
      *
-     * @param ?string $water_mark_enabled 
+     * @param ?string $water_mark_enabled
      *
      * @return $this
      */
@@ -24808,7 +24808,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets write_reminder_to_envelope_history
      *
-     * @param ?string $write_reminder_to_envelope_history 
+     * @param ?string $write_reminder_to_envelope_history
      *
      * @return $this
      */
@@ -24856,7 +24856,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     /**
      * Sets wurfl_min_allowable_screen_size
      *
-     * @param ?string $wurfl_min_allowable_screen_size 
+     * @param ?string $wurfl_min_allowable_screen_size
      *
      * @return $this
      */

@@ -395,9 +395,9 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -412,7 +412,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_tab_order'] = isset($data['allow_tab_order']) ? $data['allow_tab_order'] : null;
         $this->container['allow_tab_order_metadata'] = isset($data['allow_tab_order_metadata']) ? $data['allow_tab_order_metadata'] : null;
@@ -501,7 +501,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_tab_order
      *
-     * @param ?string $allow_tab_order 
+     * @param ?string $allow_tab_order
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets approve_decline_tabs_enabled
      *
-     * @param ?string $approve_decline_tabs_enabled 
+     * @param ?string $approve_decline_tabs_enabled
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets calculated_fields_enabled
      *
-     * @param ?string $calculated_fields_enabled 
+     * @param ?string $calculated_fields_enabled
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets checkbox_tabs_enabled
      *
-     * @param ?string $checkbox_tabs_enabled 
+     * @param ?string $checkbox_tabs_enabled
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets data_field_regex_enabled
      *
-     * @param ?string $data_field_regex_enabled 
+     * @param ?string $data_field_regex_enabled
      *
      * @return $this
      */
@@ -741,7 +741,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets data_field_size_enabled
      *
-     * @param ?string $data_field_size_enabled 
+     * @param ?string $data_field_size_enabled
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets draw_tabs_enabled
      *
-     * @param ?string $draw_tabs_enabled 
+     * @param ?string $draw_tabs_enabled
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets draw_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $draw_tabs_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $draw_tabs_metadata
      *
      * @return $this
      */
@@ -837,7 +837,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_tab_agreement_details
      *
-     * @param ?string $enable_tab_agreement_details 
+     * @param ?string $enable_tab_agreement_details
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_tab_agreement_details_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_tab_agreement_details_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_tab_agreement_details_metadata
      *
      * @return $this
      */
@@ -885,7 +885,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets first_last_email_tabs_enabled
      *
-     * @param ?string $first_last_email_tabs_enabled 
+     * @param ?string $first_last_email_tabs_enabled
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets list_tabs_enabled
      *
-     * @param ?string $list_tabs_enabled 
+     * @param ?string $list_tabs_enabled
      *
      * @return $this
      */
@@ -981,7 +981,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets note_tabs_enabled
      *
-     * @param ?string $note_tabs_enabled 
+     * @param ?string $note_tabs_enabled
      *
      * @return $this
      */
@@ -1029,7 +1029,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets numerical_tabs_enabled
      *
-     * @param ?string $numerical_tabs_enabled 
+     * @param ?string $numerical_tabs_enabled
      *
      * @return $this
      */
@@ -1053,7 +1053,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets numerical_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $numerical_tabs_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $numerical_tabs_metadata
      *
      * @return $this
      */
@@ -1077,7 +1077,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets prefill_tabs_enabled
      *
-     * @param ?string $prefill_tabs_enabled 
+     * @param ?string $prefill_tabs_enabled
      *
      * @return $this
      */
@@ -1101,7 +1101,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets prefill_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $prefill_tabs_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $prefill_tabs_metadata
      *
      * @return $this
      */
@@ -1125,7 +1125,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets radio_tabs_enabled
      *
-     * @param ?string $radio_tabs_enabled 
+     * @param ?string $radio_tabs_enabled
      *
      * @return $this
      */
@@ -1173,7 +1173,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets saving_custom_tabs_enabled
      *
-     * @param ?string $saving_custom_tabs_enabled 
+     * @param ?string $saving_custom_tabs_enabled
      *
      * @return $this
      */
@@ -1221,7 +1221,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets sender_to_change_tab_assignments_enabled
      *
-     * @param ?string $sender_to_change_tab_assignments_enabled 
+     * @param ?string $sender_to_change_tab_assignments_enabled
      *
      * @return $this
      */
@@ -1269,7 +1269,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets shared_custom_tabs_enabled
      *
-     * @param ?string $shared_custom_tabs_enabled 
+     * @param ?string $shared_custom_tabs_enabled
      *
      * @return $this
      */
@@ -1317,7 +1317,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_data_label_enabled
      *
-     * @param ?string $tab_data_label_enabled 
+     * @param ?string $tab_data_label_enabled
      *
      * @return $this
      */
@@ -1365,7 +1365,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_location_enabled
      *
-     * @param ?string $tab_location_enabled 
+     * @param ?string $tab_location_enabled
      *
      * @return $this
      */
@@ -1413,7 +1413,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_locking_enabled
      *
-     * @param ?string $tab_locking_enabled 
+     * @param ?string $tab_locking_enabled
      *
      * @return $this
      */
@@ -1461,7 +1461,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_scale_enabled
      *
-     * @param ?string $tab_scale_enabled 
+     * @param ?string $tab_scale_enabled
      *
      * @return $this
      */
@@ -1509,7 +1509,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tab_text_formatting_enabled
      *
-     * @param ?string $tab_text_formatting_enabled 
+     * @param ?string $tab_text_formatting_enabled
      *
      * @return $this
      */
@@ -1557,7 +1557,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets text_tabs_enabled
      *
-     * @param ?string $text_tabs_enabled 
+     * @param ?string $text_tabs_enabled
      *
      * @return $this
      */
@@ -1605,7 +1605,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets uri_tabs_enabled
      *
-     * @param ?string $uri_tabs_enabled 
+     * @param ?string $uri_tabs_enabled
      *
      * @return $this
      */
@@ -1629,7 +1629,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets uri_tabs_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $uri_tabs_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $uri_tabs_metadata
      *
      * @return $this
      */

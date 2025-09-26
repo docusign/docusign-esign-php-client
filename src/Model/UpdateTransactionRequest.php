@@ -168,9 +168,9 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -185,7 +185,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
@@ -229,7 +229,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param ?string $code 
+     * @param ?string $code
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class UpdateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param ?string $message 
+     * @param ?string $message
      *
      * @return $this
      */

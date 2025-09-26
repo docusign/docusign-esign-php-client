@@ -191,9 +191,9 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
@@ -304,7 +304,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Sets form_data
      *
-     * @param \DocuSign\eSign\Model\FormDataItem[] $form_data 
+     * @param \DocuSign\eSign\Model\FormDataItem[] $form_data
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class EnvelopeFormData implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_form_data
      *
-     * @param \DocuSign\eSign\Model\RecipientFormData[] $recipient_form_data 
+     * @param \DocuSign\eSign\Model\RecipientFormData[] $recipient_form_data
      *
      * @return $this
      */

@@ -306,9 +306,9 @@ class Document implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -323,7 +323,7 @@ class Document implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['apply_anchor_tabs'] = isset($data['apply_anchor_tabs']) ? $data['apply_anchor_tabs'] : null;
         $this->container['assign_tabs_to_recipient_id'] = isset($data['assign_tabs_to_recipient_id']) ? $data['assign_tabs_to_recipient_id'] : null;
@@ -418,7 +418,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets assign_tabs_to_recipient_id
      *
-     * @param ?string $assign_tabs_to_recipient_id 
+     * @param ?string $assign_tabs_to_recipient_id
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets display
      *
-     * @param ?string $display 
+     * @param ?string $display
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets doc_gen_document_status
      *
-     * @param ?string $doc_gen_document_status 
+     * @param ?string $doc_gen_document_status
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets doc_gen_form_fields
      *
-     * @param \DocuSign\eSign\Model\DocGenFormField[] $doc_gen_form_fields 
+     * @param \DocuSign\eSign\Model\DocGenFormField[] $doc_gen_form_fields
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets document_fields
      *
-     * @param \DocuSign\eSign\Model\NameValue[] $document_fields 
+     * @param \DocuSign\eSign\Model\NameValue[] $document_fields
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets document_template_id
      *
-     * @param ?string $document_template_id 
+     * @param ?string $document_template_id
      *
      * @return $this
      */
@@ -682,7 +682,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets file_format_hint
      *
-     * @param ?string $file_format_hint 
+     * @param ?string $file_format_hint
      *
      * @return $this
      */
@@ -730,7 +730,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets include_in_download
      *
-     * @param ?string $include_in_download 
+     * @param ?string $include_in_download
      *
      * @return $this
      */
@@ -754,7 +754,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets is_doc_gen_document
      *
-     * @param ?string $is_doc_gen_document 
+     * @param ?string $is_doc_gen_document
      *
      * @return $this
      */
@@ -802,7 +802,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -826,7 +826,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param ?string $order 
+     * @param ?string $order
      *
      * @return $this
      */
@@ -850,7 +850,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets pages
      *
-     * @param ?string $pages 
+     * @param ?string $pages
      *
      * @return $this
      */
@@ -874,7 +874,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param ?string $password 
+     * @param ?string $password
      *
      * @return $this
      */
@@ -898,7 +898,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_form_field_option
      *
-     * @param ?string $pdf_form_field_option 
+     * @param ?string $pdf_form_field_option
      *
      * @return $this
      */
@@ -946,7 +946,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_acknowledge
      *
-     * @param ?string $signer_must_acknowledge 
+     * @param ?string $signer_must_acknowledge
      *
      * @return $this
      */
@@ -970,7 +970,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets signer_must_acknowledge_use_account_default
      *
-     * @param ?bool $signer_must_acknowledge_use_account_default 
+     * @param ?bool $signer_must_acknowledge_use_account_default
      *
      * @return $this
      */
@@ -1090,7 +1090,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */

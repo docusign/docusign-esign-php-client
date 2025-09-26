@@ -180,9 +180,9 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -197,7 +197,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_balance'] = isset($data['account_balance']) ? $data['account_balance'] : null;
         $this->container['billing_invoices'] = isset($data['billing_invoices']) ? $data['billing_invoices'] : null;
@@ -243,7 +243,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Sets account_balance
      *
-     * @param ?string $account_balance 
+     * @param ?string $account_balance
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param ?string $currency_code 
+     * @param ?string $currency_code
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Sets past_due_balance
      *
-     * @param ?string $past_due_balance 
+     * @param ?string $past_due_balance
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class BillingInvoicesSummary implements ModelInterface, ArrayAccess
     /**
      * Sets payment_allowed
      *
-     * @param ?string $payment_allowed 
+     * @param ?string $payment_allowed
      *
      * @return $this
      */

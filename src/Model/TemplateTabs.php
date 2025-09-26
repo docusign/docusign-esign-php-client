@@ -350,9 +350,9 @@ class TemplateTabs implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -367,7 +367,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['approve_tabs'] = isset($data['approve_tabs']) ? $data['approve_tabs'] : null;
         $this->container['checkbox_tabs'] = isset($data['checkbox_tabs']) ? $data['checkbox_tabs'] : null;
@@ -495,7 +495,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets comment_thread_tabs
      *
-     * @param \DocuSign\eSign\Model\CommentThread[] $comment_thread_tabs 
+     * @param \DocuSign\eSign\Model\CommentThread[] $comment_thread_tabs
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets commission_county_tabs
      *
-     * @param \DocuSign\eSign\Model\CommissionCounty[] $commission_county_tabs 
+     * @param \DocuSign\eSign\Model\CommissionCounty[] $commission_county_tabs
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets commission_expiration_tabs
      *
-     * @param \DocuSign\eSign\Model\CommissionExpiration[] $commission_expiration_tabs 
+     * @param \DocuSign\eSign\Model\CommissionExpiration[] $commission_expiration_tabs
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets commission_number_tabs
      *
-     * @param \DocuSign\eSign\Model\CommissionNumber[] $commission_number_tabs 
+     * @param \DocuSign\eSign\Model\CommissionNumber[] $commission_number_tabs
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets commission_state_tabs
      *
-     * @param \DocuSign\eSign\Model\CommissionState[] $commission_state_tabs 
+     * @param \DocuSign\eSign\Model\CommissionState[] $commission_state_tabs
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets draw_tabs
      *
-     * @param \DocuSign\eSign\Model\Draw[] $draw_tabs 
+     * @param \DocuSign\eSign\Model\Draw[] $draw_tabs
      *
      * @return $this
      */
@@ -951,7 +951,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets notarize_tabs
      *
-     * @param \DocuSign\eSign\Model\Notarize[] $notarize_tabs 
+     * @param \DocuSign\eSign\Model\Notarize[] $notarize_tabs
      *
      * @return $this
      */
@@ -975,7 +975,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets notary_seal_tabs
      *
-     * @param \DocuSign\eSign\Model\NotarySeal[] $notary_seal_tabs 
+     * @param \DocuSign\eSign\Model\NotarySeal[] $notary_seal_tabs
      *
      * @return $this
      */
@@ -1047,7 +1047,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets numerical_tabs
      *
-     * @param \DocuSign\eSign\Model\Numerical[] $numerical_tabs 
+     * @param \DocuSign\eSign\Model\Numerical[] $numerical_tabs
      *
      * @return $this
      */
@@ -1071,7 +1071,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number_tabs
      *
-     * @param \DocuSign\eSign\Model\PhoneNumber[] $phone_number_tabs 
+     * @param \DocuSign\eSign\Model\PhoneNumber[] $phone_number_tabs
      *
      * @return $this
      */
@@ -1095,7 +1095,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets poly_line_overlay_tabs
      *
-     * @param \DocuSign\eSign\Model\PolyLineOverlay[] $poly_line_overlay_tabs 
+     * @param \DocuSign\eSign\Model\PolyLineOverlay[] $poly_line_overlay_tabs
      *
      * @return $this
      */
@@ -1215,7 +1215,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets smart_section_tabs
      *
-     * @param \DocuSign\eSign\Model\SmartSection[] $smart_section_tabs 
+     * @param \DocuSign\eSign\Model\SmartSection[] $smart_section_tabs
      *
      * @return $this
      */
@@ -1263,7 +1263,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets tab_groups
      *
-     * @param \DocuSign\eSign\Model\TabGroup[] $tab_groups 
+     * @param \DocuSign\eSign\Model\TabGroup[] $tab_groups
      *
      * @return $this
      */
@@ -1335,7 +1335,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
     /**
      * Sets view_tabs
      *
-     * @param \DocuSign\eSign\Model\View[] $view_tabs 
+     * @param \DocuSign\eSign\Model\View[] $view_tabs
      *
      * @return $this
      */

@@ -160,9 +160,9 @@ class NewUsersDefinition implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class NewUsersDefinition implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['new_users'] = isset($data['new_users']) ? $data['new_users'] : null;
     }
@@ -219,7 +219,7 @@ class NewUsersDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets new_users
      *
-     * @param \DocuSign\eSign\Model\UserInformation[] $new_users 
+     * @param \DocuSign\eSign\Model\UserInformation[] $new_users
      *
      * @return $this
      */

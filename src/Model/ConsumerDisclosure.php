@@ -316,9 +316,9 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -333,7 +333,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_esign_id'] = isset($data['account_esign_id']) ? $data['account_esign_id'] : null;
         $this->container['allow_cd_withdraw'] = isset($data['allow_cd_withdraw']) ? $data['allow_cd_withdraw'] : null;
@@ -478,7 +478,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets change_email
      *
-     * @param ?string $change_email 
+     * @param ?string $change_email
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets change_email_other
      *
-     * @param ?string $change_email_other 
+     * @param ?string $change_email_other
      *
      * @return $this
      */
@@ -574,7 +574,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets copy_cost_per_page
      *
-     * @param ?string $copy_cost_per_page 
+     * @param ?string $copy_cost_per_page
      *
      * @return $this
      */
@@ -622,7 +622,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets copy_request_email
      *
-     * @param ?string $copy_request_email 
+     * @param ?string $copy_request_email
      *
      * @return $this
      */
@@ -646,7 +646,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets custom
      *
-     * @param ?string $custom 
+     * @param ?string $custom
      *
      * @return $this
      */
@@ -670,7 +670,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets enable_esign
      *
-     * @param ?string $enable_esign 
+     * @param ?string $enable_esign
      *
      * @return $this
      */
@@ -718,7 +718,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets esign_text
      *
-     * @param ?string $esign_text 
+     * @param ?string $esign_text
      *
      * @return $this
      */
@@ -742,7 +742,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets language_code
      *
-     * @param ?string $language_code 
+     * @param ?string $language_code
      *
      * @return $this
      */
@@ -766,7 +766,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets must_agree_to_esign
      *
-     * @param ?string $must_agree_to_esign 
+     * @param ?string $must_agree_to_esign
      *
      * @return $this
      */
@@ -790,7 +790,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_id
      *
-     * @param ?string $pdf_id 
+     * @param ?string $pdf_id
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets use_brand
      *
-     * @param ?string $use_brand 
+     * @param ?string $use_brand
      *
      * @return $this
      */
@@ -838,7 +838,7 @@ class ConsumerDisclosure implements ModelInterface, ArrayAccess
     /**
      * Sets use_consumer_disclosure_within_account
      *
-     * @param ?string $use_consumer_disclosure_within_account 
+     * @param ?string $use_consumer_disclosure_within_account
      *
      * @return $this
      */

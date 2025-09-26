@@ -201,9 +201,9 @@ class AddressInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -218,7 +218,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
         $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
@@ -412,7 +412,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets postal_code
      *
-     * @param ?string $postal_code 
+     * @param ?string $postal_code
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets state_or_province
      *
-     * @param ?string $state_or_province 
+     * @param ?string $state_or_province
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class AddressInformation implements ModelInterface, ArrayAccess
     /**
      * Sets zip_plus4
      *
-     * @param ?string $zip_plus4 
+     * @param ?string $zip_plus4
      *
      * @return $this
      */

@@ -216,9 +216,9 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -233,7 +233,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bank_branch_code'] = isset($data['bank_branch_code']) ? $data['bank_branch_code'] : null;
         $this->container['bank_check_digit'] = isset($data['bank_check_digit']) ? $data['bank_check_digit'] : null;
@@ -286,7 +286,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_branch_code
      *
-     * @param ?string $bank_branch_code 
+     * @param ?string $bank_branch_code
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_check_digit
      *
-     * @param ?string $bank_check_digit 
+     * @param ?string $bank_check_digit
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_code
      *
-     * @param ?string $bank_code 
+     * @param ?string $bank_code
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_name
      *
-     * @param ?string $bank_name 
+     * @param ?string $bank_name
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_transfer_account_name
      *
-     * @param ?string $bank_transfer_account_name 
+     * @param ?string $bank_transfer_account_name
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_transfer_account_number
      *
-     * @param ?string $bank_transfer_account_number 
+     * @param ?string $bank_transfer_account_number
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets bank_transfer_type
      *
-     * @param ?string $bank_transfer_type 
+     * @param ?string $bank_transfer_type
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets i_ban
      *
-     * @param ?string $i_ban 
+     * @param ?string $i_ban
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class DirectDebitProcessorInformation implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param ?string $last_name 
+     * @param ?string $last_name
      *
      * @return $this
      */

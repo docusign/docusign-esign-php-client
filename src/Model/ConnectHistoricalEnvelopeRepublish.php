@@ -165,9 +165,9 @@ class ConnectHistoricalEnvelopeRepublish implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class ConnectHistoricalEnvelopeRepublish implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['config'] = isset($data['config']) ? $data['config'] : null;
         $this->container['envelopes'] = isset($data['envelopes']) ? $data['envelopes'] : null;
@@ -225,7 +225,7 @@ class ConnectHistoricalEnvelopeRepublish implements ModelInterface, ArrayAccess
     /**
      * Sets config
      *
-     * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $config 
+     * @param \DocuSign\eSign\Model\ConnectCustomConfiguration $config
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class ConnectHistoricalEnvelopeRepublish implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes
      *
-     * @param ?string[] $envelopes 
+     * @param ?string[] $envelopes
      *
      * @return $this
      */

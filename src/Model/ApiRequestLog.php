@@ -176,9 +176,9 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -262,7 +262,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param ?string $description 
+     * @param ?string $description
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class ApiRequestLog implements ModelInterface, ArrayAccess
     /**
      * Sets request_log_id
      *
-     * @param ?string $request_log_id 
+     * @param ?string $request_log_id
      *
      * @return $this
      */

@@ -175,9 +175,9 @@ class RecipientDomain implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['domain_code'] = isset($data['domain_code']) ? $data['domain_code'] : null;
@@ -237,7 +237,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param ?string $active 
+     * @param ?string $active
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets domain_code
      *
-     * @param ?string $domain_code 
+     * @param ?string $domain_code
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets domain_name
      *
-     * @param ?string $domain_name 
+     * @param ?string $domain_name
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class RecipientDomain implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_domain_id
      *
-     * @param ?string $recipient_domain_id 
+     * @param ?string $recipient_domain_id
      *
      * @return $this
      */

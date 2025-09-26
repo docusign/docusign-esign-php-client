@@ -240,9 +240,9 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -257,7 +257,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['date_stamp_properties'] = isset($data['date_stamp_properties']) ? $data['date_stamp_properties'] : null;
         $this->container['disallow_user_resize_stamp'] = isset($data['disallow_user_resize_stamp']) ? $data['disallow_user_resize_stamp'] : null;
@@ -339,7 +339,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets disallow_user_resize_stamp
      *
-     * @param ?string $disallow_user_resize_stamp 
+     * @param ?string $disallow_user_resize_stamp
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets external_id
      *
-     * @param ?string $external_id 
+     * @param ?string $external_id
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets image_type
      *
-     * @param ?string $image_type 
+     * @param ?string $image_type
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param ?string $is_default 
+     * @param ?string $is_default
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_id
      *
-     * @param ?string $nrds_id 
+     * @param ?string $nrds_id
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_last_name
      *
-     * @param ?string $nrds_last_name 
+     * @param ?string $nrds_last_name
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets phonetic_name
      *
-     * @param ?string $phonetic_name 
+     * @param ?string $phonetic_name
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_font
      *
-     * @param ?string $signature_font 
+     * @param ?string $signature_font
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_groups
      *
-     * @param \DocuSign\eSign\Model\SignatureGroupDef[] $signature_groups 
+     * @param \DocuSign\eSign\Model\SignatureGroupDef[] $signature_groups
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_initials
      *
-     * @param ?string $signature_initials 
+     * @param ?string $signature_initials
      *
      * @return $this
      */
@@ -627,7 +627,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_type
      *
-     * @param ?string $signature_type 
+     * @param ?string $signature_type
      *
      * @return $this
      */
@@ -651,7 +651,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets signature_users
      *
-     * @param \DocuSign\eSign\Model\SignatureUserDef[] $signature_users 
+     * @param \DocuSign\eSign\Model\SignatureUserDef[] $signature_users
      *
      * @return $this
      */
@@ -675,7 +675,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_format
      *
-     * @param ?string $stamp_format 
+     * @param ?string $stamp_format
      *
      * @return $this
      */
@@ -699,7 +699,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_size_mm
      *
-     * @param ?string $stamp_size_mm 
+     * @param ?string $stamp_size_mm
      *
      * @return $this
      */

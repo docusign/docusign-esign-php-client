@@ -175,9 +175,9 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['phone_number_list'] = isset($data['phone_number_list']) ? $data['phone_number_list'] : null;
@@ -237,7 +237,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets phone_number_list
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityPhoneNumber[] $phone_number_list 
+     * @param \DocuSign\eSign\Model\RecipientIdentityPhoneNumber[] $phone_number_list
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets string_value
      *
-     * @param ?string $string_value 
+     * @param ?string $string_value
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class RecipientIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets value_type
      *
-     * @param ?string $value_type 
+     * @param ?string $value_type
      *
      * @return $this
      */

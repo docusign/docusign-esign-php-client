@@ -175,9 +175,9 @@ class Notary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class Notary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
@@ -237,7 +237,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param ?string $created_date 
+     * @param ?string $created_date
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Sets enabled
      *
-     * @param ?string $enabled 
+     * @param ?string $enabled
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class Notary implements ModelInterface, ArrayAccess
     /**
      * Sets searchable
      *
-     * @param ?string $searchable 
+     * @param ?string $searchable
      *
      * @return $this
      */

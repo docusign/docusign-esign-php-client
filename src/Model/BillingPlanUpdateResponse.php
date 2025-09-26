@@ -196,9 +196,9 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_payment_method'] = isset($data['account_payment_method']) ? $data['account_payment_method'] : null;
         $this->container['billing_plan_preview'] = isset($data['billing_plan_preview']) ? $data['billing_plan_preview'] : null;
@@ -262,7 +262,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets account_payment_method
      *
-     * @param ?string $account_payment_method 
+     * @param ?string $account_payment_method
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets billing_plan_preview
      *
-     * @param \DocuSign\eSign\Model\BillingPlanPreview $billing_plan_preview 
+     * @param \DocuSign\eSign\Model\BillingPlanPreview $billing_plan_preview
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_cycle
      *
-     * @param ?string $payment_cycle 
+     * @param ?string $payment_cycle
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param ?string $payment_method 
+     * @param ?string $payment_method
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets plan_id
      *
-     * @param ?string $plan_id 
+     * @param ?string $plan_id
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class BillingPlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets plan_name
      *
-     * @param ?string $plan_name 
+     * @param ?string $plan_name
      *
      * @return $this
      */

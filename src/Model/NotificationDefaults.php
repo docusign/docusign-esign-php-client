@@ -165,9 +165,9 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class NotificationDefaults implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['api_email_notifications'] = isset($data['api_email_notifications']) ? $data['api_email_notifications'] : null;
         $this->container['email_notifications'] = isset($data['email_notifications']) ? $data['email_notifications'] : null;

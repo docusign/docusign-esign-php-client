@@ -205,9 +205,9 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -222,7 +222,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['on_access_code_failed'] = isset($data['on_access_code_failed']) ? $data['on_access_code_failed'] : null;
         $this->container['on_cancel'] = isset($data['on_cancel']) ? $data['on_cancel'] : null;
@@ -273,7 +273,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_access_code_failed
      *
-     * @param ?string $on_access_code_failed 
+     * @param ?string $on_access_code_failed
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_cancel
      *
-     * @param ?string $on_cancel 
+     * @param ?string $on_cancel
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_decline
      *
-     * @param ?string $on_decline 
+     * @param ?string $on_decline
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_exception
      *
-     * @param ?string $on_exception 
+     * @param ?string $on_exception
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_fax_pending
      *
-     * @param ?string $on_fax_pending 
+     * @param ?string $on_fax_pending
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_id_check_failed
      *
-     * @param ?string $on_id_check_failed 
+     * @param ?string $on_id_check_failed
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_session_timeout
      *
-     * @param ?string $on_session_timeout 
+     * @param ?string $on_session_timeout
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_signing_complete
      *
-     * @param ?string $on_signing_complete 
+     * @param ?string $on_signing_complete
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_ttl_expired
      *
-     * @param ?string $on_ttl_expired 
+     * @param ?string $on_ttl_expired
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
     /**
      * Sets on_viewing_complete
      *
-     * @param ?string $on_viewing_complete 
+     * @param ?string $on_viewing_complete
      *
      * @return $this
      */

@@ -175,9 +175,9 @@ class UserAuthorizationCreateRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class UserAuthorizationCreateRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
         $this->container['end_date'] = isset($data['end_date']) ? $data['end_date'] : null;
@@ -237,7 +237,7 @@ class UserAuthorizationCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets agent_user
      *
-     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user 
+     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class UserAuthorizationCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets end_date
      *
-     * @param ?string $end_date 
+     * @param ?string $end_date
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class UserAuthorizationCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets permission
      *
-     * @param ?string $permission 
+     * @param ?string $permission
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class UserAuthorizationCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets start_date
      *
-     * @param ?string $start_date 
+     * @param ?string $start_date
      *
      * @return $this
      */

@@ -321,9 +321,9 @@ class RadioGroup implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -338,7 +338,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['conditional_parent_label'] = isset($data['conditional_parent_label']) ? $data['conditional_parent_label'] : null;
         $this->container['conditional_parent_label_metadata'] = isset($data['conditional_parent_label_metadata']) ? $data['conditional_parent_label_metadata'] : null;
@@ -700,7 +700,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param ?string $recipient_id_guid 
+     * @param ?string $recipient_id_guid
      *
      * @return $this
      */
@@ -916,7 +916,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets share_to_recipients
      *
-     * @param ?string $share_to_recipients 
+     * @param ?string $share_to_recipients
      *
      * @return $this
      */
@@ -964,7 +964,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type
      *
-     * @param ?string $tab_type 
+     * @param ?string $tab_type
      *
      * @return $this
      */
@@ -1108,7 +1108,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param ?string $tooltip 
+     * @param ?string $tooltip
      *
      * @return $this
      */

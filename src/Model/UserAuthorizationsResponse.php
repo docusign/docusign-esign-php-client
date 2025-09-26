@@ -160,9 +160,9 @@ class UserAuthorizationsResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class UserAuthorizationsResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['results'] = isset($data['results']) ? $data['results'] : null;
     }
@@ -219,7 +219,7 @@ class UserAuthorizationsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \DocuSign\eSign\Model\UserAuthorizationWithStatus[] $results 
+     * @param \DocuSign\eSign\Model\UserAuthorizationWithStatus[] $results
      *
      * @return $this
      */

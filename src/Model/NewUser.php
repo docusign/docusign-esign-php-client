@@ -221,9 +221,9 @@ class NewUser implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -238,7 +238,7 @@ class NewUser implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['api_password'] = isset($data['api_password']) ? $data['api_password'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
@@ -340,7 +340,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets license_status
      *
-     * @param ?string $license_status 
+     * @param ?string $license_status
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets license_type
      *
-     * @param ?string $license_type 
+     * @param ?string $license_type
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets membership_id
      *
-     * @param ?string $membership_id 
+     * @param ?string $membership_id
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_id
      *
-     * @param ?string $permission_profile_id 
+     * @param ?string $permission_profile_id
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_name
      *
-     * @param ?string $permission_profile_name 
+     * @param ?string $permission_profile_name
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param ?string $user_name 
+     * @param ?string $user_name
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class NewUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_status
      *
-     * @param ?string $user_status 
+     * @param ?string $user_status
      *
      * @return $this
      */

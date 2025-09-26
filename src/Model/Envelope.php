@@ -555,9 +555,9 @@ class Envelope implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -572,7 +572,7 @@ class Envelope implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_control_list_base64'] = isset($data['access_control_list_base64']) ? $data['access_control_list_base64'] : null;
         $this->container['allow_comments'] = isset($data['allow_comments']) ? $data['allow_comments'] : null;
@@ -693,7 +693,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets access_control_list_base64
      *
-     * @param ?string $access_control_list_base64 
+     * @param ?string $access_control_list_base64
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets allow_comments
      *
-     * @param ?string $allow_comments 
+     * @param ?string $allow_comments
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets allow_view_history
      *
-     * @param ?string $allow_view_history 
+     * @param ?string $allow_view_history
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets any_signer
      *
-     * @param ?string $any_signer 
+     * @param ?string $any_signer
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets attachments_uri
      *
-     * @param ?string $attachments_uri 
+     * @param ?string $attachments_uri
      *
      * @return $this
      */
@@ -909,7 +909,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets authoritative_copy_default
      *
-     * @param ?string $authoritative_copy_default 
+     * @param ?string $authoritative_copy_default
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets auto_navigation
      *
-     * @param ?string $auto_navigation 
+     * @param ?string $auto_navigation
      *
      * @return $this
      */
@@ -957,7 +957,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets brand_id
      *
-     * @param ?string $brand_id 
+     * @param ?string $brand_id
      *
      * @return $this
      */
@@ -981,7 +981,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets brand_lock
      *
-     * @param ?string $brand_lock 
+     * @param ?string $brand_lock
      *
      * @return $this
      */
@@ -1005,7 +1005,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets burn_default_tab_data
      *
-     * @param ?string $burn_default_tab_data 
+     * @param ?string $burn_default_tab_data
      *
      * @return $this
      */
@@ -1077,7 +1077,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets copy_recipient_data
      *
-     * @param ?string $copy_recipient_data 
+     * @param ?string $copy_recipient_data
      *
      * @return $this
      */
@@ -1245,7 +1245,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets disable_responsive_document
      *
-     * @param ?string $disable_responsive_document 
+     * @param ?string $disable_responsive_document
      *
      * @return $this
      */
@@ -1269,7 +1269,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets document_base64
      *
-     * @param ?string $document_base64 
+     * @param ?string $document_base64
      *
      * @return $this
      */
@@ -1293,7 +1293,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets documents_combined_uri
      *
-     * @param ?string $documents_combined_uri 
+     * @param ?string $documents_combined_uri
      *
      * @return $this
      */
@@ -1461,7 +1461,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_attachments
      *
-     * @param \DocuSign\eSign\Model\Attachment[] $envelope_attachments 
+     * @param \DocuSign\eSign\Model\Attachment[] $envelope_attachments
      *
      * @return $this
      */
@@ -1485,7 +1485,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_custom_metadata
      *
-     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata 
+     * @param \DocuSign\eSign\Model\EnvelopeCustomMetadata $envelope_custom_metadata
      *
      * @return $this
      */
@@ -1509,7 +1509,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_documents
      *
-     * @param \DocuSign\eSign\Model\EnvelopeDocument[] $envelope_documents 
+     * @param \DocuSign\eSign\Model\EnvelopeDocument[] $envelope_documents
      *
      * @return $this
      */
@@ -1581,7 +1581,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_location
      *
-     * @param ?string $envelope_location 
+     * @param ?string $envelope_location
      *
      * @return $this
      */
@@ -1653,7 +1653,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets expire_after
      *
-     * @param ?string $expire_after 
+     * @param ?string $expire_after
      *
      * @return $this
      */
@@ -1677,7 +1677,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets expire_date_time
      *
-     * @param ?string $expire_date_time 
+     * @param ?string $expire_date_time
      *
      * @return $this
      */
@@ -1701,7 +1701,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets expire_enabled
      *
-     * @param ?string $expire_enabled 
+     * @param ?string $expire_enabled
      *
      * @return $this
      */
@@ -1725,7 +1725,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets external_envelope_id
      *
-     * @param ?string $external_envelope_id 
+     * @param ?string $external_envelope_id
      *
      * @return $this
      */
@@ -1749,7 +1749,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets folders
      *
-     * @param \DocuSign\eSign\Model\Folder[] $folders 
+     * @param \DocuSign\eSign\Model\Folder[] $folders
      *
      * @return $this
      */
@@ -1773,7 +1773,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets has_comments
      *
-     * @param ?string $has_comments 
+     * @param ?string $has_comments
      *
      * @return $this
      */
@@ -1797,7 +1797,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets has_form_data_changed
      *
-     * @param ?string $has_form_data_changed 
+     * @param ?string $has_form_data_changed
      *
      * @return $this
      */
@@ -1821,7 +1821,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets has_wav_file
      *
-     * @param ?string $has_wav_file 
+     * @param ?string $has_wav_file
      *
      * @return $this
      */
@@ -1845,7 +1845,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets holder
      *
-     * @param ?string $holder 
+     * @param ?string $holder
      *
      * @return $this
      */
@@ -1869,7 +1869,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets initial_sent_date_time
      *
-     * @param ?string $initial_sent_date_time 
+     * @param ?string $initial_sent_date_time
      *
      * @return $this
      */
@@ -1917,7 +1917,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets is_dynamic_envelope
      *
-     * @param ?string $is_dynamic_envelope 
+     * @param ?string $is_dynamic_envelope
      *
      * @return $this
      */
@@ -1941,7 +1941,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets is_signature_provider_envelope
      *
-     * @param ?string $is_signature_provider_envelope 
+     * @param ?string $is_signature_provider_envelope
      *
      * @return $this
      */
@@ -1989,7 +1989,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param ?string $location 
+     * @param ?string $location
      *
      * @return $this
      */
@@ -2061,7 +2061,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets notification
      *
-     * @param \DocuSign\eSign\Model\Notification $notification 
+     * @param \DocuSign\eSign\Model\Notification $notification
      *
      * @return $this
      */
@@ -2133,7 +2133,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets purge_completed_date
      *
-     * @param ?string $purge_completed_date 
+     * @param ?string $purge_completed_date
      *
      * @return $this
      */
@@ -2157,7 +2157,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets purge_request_date
      *
-     * @param ?string $purge_request_date 
+     * @param ?string $purge_request_date
      *
      * @return $this
      */
@@ -2181,7 +2181,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets purge_state
      *
-     * @param ?string $purge_state 
+     * @param ?string $purge_state
      *
      * @return $this
      */
@@ -2325,7 +2325,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets signer_can_sign_on_mobile
      *
-     * @param ?string $signer_can_sign_on_mobile 
+     * @param ?string $signer_can_sign_on_mobile
      *
      * @return $this
      */
@@ -2421,7 +2421,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets status_date_time
      *
-     * @param ?string $status_date_time 
+     * @param ?string $status_date_time
      *
      * @return $this
      */
@@ -2517,7 +2517,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets u_sig_state
      *
-     * @param ?string $u_sig_state 
+     * @param ?string $u_sig_state
      *
      * @return $this
      */
@@ -2589,7 +2589,7 @@ class Envelope implements ModelInterface, ArrayAccess
     /**
      * Sets workflow
      *
-     * @param \DocuSign\eSign\Model\Workflow $workflow 
+     * @param \DocuSign\eSign\Model\Workflow $workflow
      *
      * @return $this
      */

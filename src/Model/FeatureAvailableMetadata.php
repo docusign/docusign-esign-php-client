@@ -165,9 +165,9 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['availabilty'] = isset($data['availabilty']) ? $data['availabilty'] : null;
         $this->container['feature_name'] = isset($data['feature_name']) ? $data['feature_name'] : null;
@@ -225,7 +225,7 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets availabilty
      *
-     * @param ?string $availabilty 
+     * @param ?string $availabilty
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class FeatureAvailableMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets feature_name
      *
-     * @param ?string $feature_name 
+     * @param ?string $feature_name
      *
      * @return $this
      */

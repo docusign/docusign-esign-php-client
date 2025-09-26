@@ -161,9 +161,9 @@ class TemplateDocumentVisibilityList implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -178,7 +178,7 @@ class TemplateDocumentVisibilityList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_visibility'] = isset($data['document_visibility']) ? $data['document_visibility'] : null;
     }
@@ -220,7 +220,7 @@ class TemplateDocumentVisibilityList implements ModelInterface, ArrayAccess
     /**
      * Sets document_visibility
      *
-     * @param \DocuSign\eSign\Model\DocumentVisibility[] $document_visibility 
+     * @param \DocuSign\eSign\Model\DocumentVisibility[] $document_visibility
      *
      * @return $this
      */

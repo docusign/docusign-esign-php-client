@@ -206,9 +206,9 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['format_required'] = isset($data['format_required']) ? $data['format_required'] : null;
         $this->container['format_required_metadata'] = isset($data['format_required_metadata']) ? $data['format_required_metadata'] : null;
@@ -274,7 +274,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets format_required
      *
-     * @param ?string $format_required 
+     * @param ?string $format_required
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets letter_required
      *
-     * @param ?string $letter_required 
+     * @param ?string $letter_required
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_length
      *
-     * @param ?string $minimum_length 
+     * @param ?string $minimum_length
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets number_required
      *
-     * @param ?string $number_required 
+     * @param ?string $number_required
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class AccessCodeFormat implements ModelInterface, ArrayAccess
     /**
      * Sets special_character_required
      *
-     * @param ?string $special_character_required 
+     * @param ?string $special_character_required
      *
      * @return $this
      */

@@ -181,9 +181,9 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -198,7 +198,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['seal_documents_with_tabs_only'] = isset($data['seal_documents_with_tabs_only']) ? $data['seal_documents_with_tabs_only'] : null;
         $this->container['seal_name'] = isset($data['seal_name']) ? $data['seal_name'] : null;
@@ -244,7 +244,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets seal_documents_with_tabs_only
      *
-     * @param ?string $seal_documents_with_tabs_only 
+     * @param ?string $seal_documents_with_tabs_only
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets seal_name
      *
-     * @param ?string $seal_name 
+     * @param ?string $seal_name
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class RecipientSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_name
      *
-     * @param ?string $signature_provider_name 
+     * @param ?string $signature_provider_name
      *
      * @return $this
      */

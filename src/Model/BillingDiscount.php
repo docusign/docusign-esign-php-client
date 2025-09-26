@@ -170,9 +170,9 @@ class BillingDiscount implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['begin_quantity'] = isset($data['begin_quantity']) ? $data['begin_quantity'] : null;
         $this->container['discount'] = isset($data['discount']) ? $data['discount'] : null;
@@ -255,7 +255,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets discount
      *
-     * @param ?string $discount 
+     * @param ?string $discount
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets end_quantity
      *
-     * @param ?string $end_quantity 
+     * @param ?string $end_quantity
      *
      * @return $this
      */

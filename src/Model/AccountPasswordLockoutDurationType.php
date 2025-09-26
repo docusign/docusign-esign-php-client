@@ -160,9 +160,9 @@ class AccountPasswordLockoutDurationType implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class AccountPasswordLockoutDurationType implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
     }
@@ -219,7 +219,7 @@ class AccountPasswordLockoutDurationType implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param ?string[] $options 
+     * @param ?string[] $options
      *
      * @return $this
      */

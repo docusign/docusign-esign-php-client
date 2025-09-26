@@ -175,9 +175,9 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['comments'] = isset($data['comments']) ? $data['comments'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
@@ -237,7 +237,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets comments
      *
-     * @param \DocuSign\eSign\Model\Comment[] $comments 
+     * @param \DocuSign\eSign\Model\Comment[] $comments
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets count
      *
-     * @param ?int $count 
+     * @param ?int $count
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets end_timetoken
      *
-     * @param ?string $end_timetoken 
+     * @param ?string $end_timetoken
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class CommentHistoryResult implements ModelInterface, ArrayAccess
     /**
      * Sets start_timetoken
      *
-     * @param ?string $start_timetoken 
+     * @param ?string $start_timetoken
      *
      * @return $this
      */

@@ -245,9 +245,9 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -262,7 +262,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
         $this->container['account_settings'] = isset($data['account_settings']) ? $data['account_settings'] : null;
@@ -489,7 +489,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets enable_pre_auth
      *
-     * @param ?string $enable_pre_auth 
+     * @param ?string $enable_pre_auth
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_partition_id
      *
-     * @param ?string $envelope_partition_id 
+     * @param ?string $envelope_partition_id
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param ?string $payment_method 
+     * @param ?string $payment_method
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets payment_processor
      *
-     * @param ?string $payment_processor 
+     * @param ?string $payment_processor
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets process_payment
      *
-     * @param ?string $process_payment 
+     * @param ?string $process_payment
      *
      * @return $this
      */
@@ -729,7 +729,7 @@ class NewAccountDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets tax_exempt_id
      *
-     * @param ?string $tax_exempt_id 
+     * @param ?string $tax_exempt_id
      *
      * @return $this
      */

@@ -231,9 +231,9 @@ class Folder implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -248,7 +248,7 @@ class Folder implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
@@ -352,7 +352,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets folder_id
      *
-     * @param ?string $folder_id 
+     * @param ?string $folder_id
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets has_access
      *
-     * @param ?string $has_access 
+     * @param ?string $has_access
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets has_sub_folders
      *
-     * @param ?string $has_sub_folders 
+     * @param ?string $has_sub_folders
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets item_count
      *
-     * @param ?string $item_count 
+     * @param ?string $item_count
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_id
      *
-     * @param ?string $parent_folder_id 
+     * @param ?string $parent_folder_id
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets parent_folder_uri
      *
-     * @param ?string $parent_folder_uri 
+     * @param ?string $parent_folder_uri
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets sub_folder_count
      *
-     * @param ?string $sub_folder_count 
+     * @param ?string $sub_folder_count
      *
      * @return $this
      */
@@ -616,7 +616,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param ?string $type 
+     * @param ?string $type
      *
      * @return $this
      */
@@ -640,7 +640,7 @@ class Folder implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */

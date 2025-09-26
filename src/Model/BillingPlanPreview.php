@@ -186,9 +186,9 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -203,7 +203,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['invoice'] = isset($data['invoice']) ? $data['invoice'] : null;
@@ -274,7 +274,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets invoice
      *
-     * @param \DocuSign\eSign\Model\BillingInvoice $invoice 
+     * @param \DocuSign\eSign\Model\BillingInvoice $invoice
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets is_prorated
      *
-     * @param ?string $is_prorated 
+     * @param ?string $is_prorated
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets subtotal_amount
      *
-     * @param ?string $subtotal_amount 
+     * @param ?string $subtotal_amount
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets tax_amount
      *
-     * @param ?string $tax_amount 
+     * @param ?string $tax_amount
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class BillingPlanPreview implements ModelInterface, ArrayAccess
     /**
      * Sets total_amount
      *
-     * @param ?string $total_amount 
+     * @param ?string $total_amount
      *
      * @return $this
      */

@@ -176,9 +176,9 @@ class EventResult implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class EventResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['event_timestamp'] = isset($data['event_timestamp']) ? $data['event_timestamp'] : null;
         $this->container['failure_description'] = isset($data['failure_description']) ? $data['failure_description'] : null;
@@ -238,7 +238,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Sets event_timestamp
      *
-     * @param ?string $event_timestamp 
+     * @param ?string $event_timestamp
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Sets failure_description
      *
-     * @param ?string $failure_description 
+     * @param ?string $failure_description
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class EventResult implements ModelInterface, ArrayAccess
     /**
      * Sets vendor_failure_status_code
      *
-     * @param ?string $vendor_failure_status_code 
+     * @param ?string $vendor_failure_status_code
      *
      * @return $this
      */

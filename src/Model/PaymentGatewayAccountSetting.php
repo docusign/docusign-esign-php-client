@@ -175,9 +175,9 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['api_fields'] = isset($data['api_fields']) ? $data['api_fields'] : null;
         $this->container['authorization_code'] = isset($data['authorization_code']) ? $data['authorization_code'] : null;
@@ -237,7 +237,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets api_fields
      *
-     * @param ?string $api_fields 
+     * @param ?string $api_fields
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets authorization_code
      *
-     * @param ?string $authorization_code 
+     * @param ?string $authorization_code
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets credential_status
      *
-     * @param ?string $credential_status 
+     * @param ?string $credential_status
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class PaymentGatewayAccountSetting implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_id
      *
-     * @param ?string $merchant_id 
+     * @param ?string $merchant_id
      *
      * @return $this
      */

@@ -171,9 +171,9 @@ class BrandLogos implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
@@ -232,7 +232,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Sets primary
      *
-     * @param ?string $primary 
+     * @param ?string $primary
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class BrandLogos implements ModelInterface, ArrayAccess
     /**
      * Sets secondary
      *
-     * @param ?string $secondary 
+     * @param ?string $secondary
      *
      * @return $this
      */

@@ -215,9 +215,9 @@ class UserProfile implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -232,7 +232,7 @@ class UserProfile implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['authentication_methods'] = isset($data['authentication_methods']) ? $data['authentication_methods'] : null;
@@ -453,7 +453,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets profile_image_uri
      *
-     * @param ?string $profile_image_uri 
+     * @param ?string $profile_image_uri
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets title
      *
-     * @param ?string $title 
+     * @param ?string $title
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets user_details
      *
-     * @param \DocuSign\eSign\Model\UserInformation $user_details 
+     * @param \DocuSign\eSign\Model\UserInformation $user_details
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class UserProfile implements ModelInterface, ArrayAccess
     /**
      * Sets user_profile_last_modified_date
      *
-     * @param ?string $user_profile_last_modified_date 
+     * @param ?string $user_profile_last_modified_date
      *
      * @return $this
      */

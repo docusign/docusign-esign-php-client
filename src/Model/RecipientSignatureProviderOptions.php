@@ -213,7 +213,7 @@ class RecipientSignatureProviderOptions implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cpf_number'] = isset($data['cpf_number']) ? $data['cpf_number'] : null;
         $this->container['cpf_number_metadata'] = isset($data['cpf_number_metadata']) ? $data['cpf_number_metadata'] : null;

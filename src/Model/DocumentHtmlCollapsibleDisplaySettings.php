@@ -206,9 +206,9 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['arrow_closed'] = isset($data['arrow_closed']) ? $data['arrow_closed'] : null;
         $this->container['arrow_color'] = isset($data['arrow_color']) ? $data['arrow_color'] : null;
@@ -274,7 +274,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_closed
      *
-     * @param ?string $arrow_closed 
+     * @param ?string $arrow_closed
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_color
      *
-     * @param ?string $arrow_color 
+     * @param ?string $arrow_color
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_location
      *
-     * @param ?string $arrow_location 
+     * @param ?string $arrow_location
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_open
      *
-     * @param ?string $arrow_open 
+     * @param ?string $arrow_open
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_size
      *
-     * @param ?string $arrow_size 
+     * @param ?string $arrow_size
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets arrow_style
      *
-     * @param ?string $arrow_style 
+     * @param ?string $arrow_style
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets container_style
      *
-     * @param ?string $container_style 
+     * @param ?string $container_style
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets label_style
      *
-     * @param ?string $label_style 
+     * @param ?string $label_style
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets only_arrow_is_clickable
      *
-     * @param ?bool $only_arrow_is_clickable 
+     * @param ?bool $only_arrow_is_clickable
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class DocumentHtmlCollapsibleDisplaySettings implements ModelInterface, ArrayAcc
     /**
      * Sets outer_label_and_arrow_style
      *
-     * @param ?string $outer_label_and_arrow_style 
+     * @param ?string $outer_label_and_arrow_style
      *
      * @return $this
      */

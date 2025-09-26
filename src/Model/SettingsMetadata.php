@@ -186,9 +186,9 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -203,7 +203,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['is21_cfr_part11'] = isset($data['is21_cfr_part11']) ? $data['is21_cfr_part11'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
@@ -274,7 +274,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param ?string[] $options 
+     * @param ?string[] $options
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param ?string $rights 
+     * @param ?string $rights
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets ui_hint
      *
-     * @param ?string $ui_hint 
+     * @param ?string $ui_hint
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets ui_order
      *
-     * @param ?string $ui_order 
+     * @param ?string $ui_order
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class SettingsMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets ui_type
      *
-     * @param ?string $ui_type 
+     * @param ?string $ui_type
      *
      * @return $this
      */

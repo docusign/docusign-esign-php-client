@@ -206,9 +206,9 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['default_description'] = isset($data['default_description']) ? $data['default_description'] : null;
         $this->container['default_name'] = isset($data['default_name']) ? $data['default_name'] : null;
@@ -274,7 +274,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets default_description
      *
-     * @param ?string $default_description 
+     * @param ?string $default_description
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets default_name
      *
-     * @param ?string $default_name 
+     * @param ?string $default_name
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets input_options
      *
-     * @param \DocuSign\eSign\Model\AccountIdentityInputOption[] $input_options 
+     * @param \DocuSign\eSign\Model\AccountIdentityInputOption[] $input_options
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets is_disabled
      *
-     * @param ?string $is_disabled 
+     * @param ?string $is_disabled
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets owner_type
      *
-     * @param ?string $owner_type 
+     * @param ?string $owner_type
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets steps
      *
-     * @param \DocuSign\eSign\Model\AccountIdentityVerificationStep[] $steps 
+     * @param \DocuSign\eSign\Model\AccountIdentityVerificationStep[] $steps
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_id
      *
-     * @param ?string $workflow_id 
+     * @param ?string $workflow_id
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_label
      *
-     * @param ?string $workflow_label 
+     * @param ?string $workflow_label
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_resource_key
      *
-     * @param ?string $workflow_resource_key 
+     * @param ?string $workflow_resource_key
      *
      * @return $this
      */

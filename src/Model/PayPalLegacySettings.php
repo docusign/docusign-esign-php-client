@@ -180,9 +180,9 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -197,7 +197,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
@@ -243,7 +243,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets currency
      *
-     * @param ?string $currency 
+     * @param ?string $currency
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets partner
      *
-     * @param ?string $partner 
+     * @param ?string $partner
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param ?string $password 
+     * @param ?string $password
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param ?string $user_name 
+     * @param ?string $user_name
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class PayPalLegacySettings implements ModelInterface, ArrayAccess
     /**
      * Sets vendor
      *
-     * @param ?string $vendor 
+     * @param ?string $vendor
      *
      * @return $this
      */

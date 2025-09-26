@@ -195,9 +195,9 @@ class FoldersResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -212,7 +212,7 @@ class FoldersResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['envelopes'] = isset($data['envelopes']) ? $data['envelopes'] : null;
@@ -285,7 +285,7 @@ class FoldersResponse implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes
      *
-     * @param \DocuSign\eSign\Model\EnvelopeSummary[] $envelopes 
+     * @param \DocuSign\eSign\Model\EnvelopeSummary[] $envelopes
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class FoldersResponse implements ModelInterface, ArrayAccess
     /**
      * Sets folders
      *
-     * @param \DocuSign\eSign\Model\Folder[] $folders 
+     * @param \DocuSign\eSign\Model\Folder[] $folders
      *
      * @return $this
      */

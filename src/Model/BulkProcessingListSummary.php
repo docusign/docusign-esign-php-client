@@ -175,9 +175,9 @@ class BulkProcessingListSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class BulkProcessingListSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_process_list_id'] = isset($data['bulk_process_list_id']) ? $data['bulk_process_list_id'] : null;
         $this->container['created_by_user'] = isset($data['created_by_user']) ? $data['created_by_user'] : null;
@@ -237,7 +237,7 @@ class BulkProcessingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_process_list_id
      *
-     * @param ?string $bulk_process_list_id 
+     * @param ?string $bulk_process_list_id
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class BulkProcessingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_user
      *
-     * @param ?string $created_by_user 
+     * @param ?string $created_by_user
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class BulkProcessingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param ?string $created_date 
+     * @param ?string $created_date
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class BulkProcessingListSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */

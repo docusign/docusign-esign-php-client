@@ -170,9 +170,9 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authentication_url'] = isset($data['authentication_url']) ? $data['authentication_url'] : null;
         $this->container['error_code'] = isset($data['error_code']) ? $data['error_code'] : null;
@@ -255,7 +255,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets error_code
      *
-     * @param ?string $error_code 
+     * @param ?string $error_code
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ExternalDocServiceErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param ?string $message 
+     * @param ?string $message
      *
      * @return $this
      */

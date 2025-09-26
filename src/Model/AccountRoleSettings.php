@@ -611,9 +611,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -628,7 +628,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_account_management'] = isset($data['allow_account_management']) ? $data['allow_account_management'] : null;
         $this->container['allow_account_management_metadata'] = isset($data['allow_account_management_metadata']) ? $data['allow_account_management_metadata'] : null;
@@ -760,7 +760,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_account_management
      *
-     * @param ?string $allow_account_management 
+     * @param ?string $allow_account_management
      *
      * @return $this
      */
@@ -808,7 +808,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_access
      *
-     * @param ?string $allow_api_access 
+     * @param ?string $allow_api_access
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_access_to_account
      *
-     * @param ?string $allow_api_access_to_account 
+     * @param ?string $allow_api_access_to_account
      *
      * @return $this
      */
@@ -904,7 +904,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_sending_on_behalf_of_others
      *
-     * @param ?string $allow_api_sending_on_behalf_of_others 
+     * @param ?string $allow_api_sending_on_behalf_of_others
      *
      * @return $this
      */
@@ -952,7 +952,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_api_sequential_signing
      *
-     * @param ?string $allow_api_sequential_signing 
+     * @param ?string $allow_api_sequential_signing
      *
      * @return $this
      */
@@ -1000,7 +1000,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_auto_tagging
      *
-     * @param ?string $allow_auto_tagging 
+     * @param ?string $allow_auto_tagging
      *
      * @return $this
      */
@@ -1048,7 +1048,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_bulk_sending
      *
-     * @param ?string $allow_bulk_sending 
+     * @param ?string $allow_bulk_sending
      *
      * @return $this
      */
@@ -1096,7 +1096,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_docu_sign_desktop_client
      *
-     * @param ?string $allow_docu_sign_desktop_client 
+     * @param ?string $allow_docu_sign_desktop_client
      *
      * @return $this
      */
@@ -1144,7 +1144,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_address_book_access
      *
-     * @param ?string $allowed_address_book_access 
+     * @param ?string $allowed_address_book_access
      *
      * @return $this
      */
@@ -1192,7 +1192,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_clickwraps_access
      *
-     * @param ?string $allowed_clickwraps_access 
+     * @param ?string $allowed_clickwraps_access
      *
      * @return $this
      */
@@ -1216,7 +1216,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_clickwraps_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_clickwraps_access_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_clickwraps_access_metadata
      *
      * @return $this
      */
@@ -1240,7 +1240,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_document_template_library_access
      *
-     * @param ?string $allowed_document_template_library_access 
+     * @param ?string $allowed_document_template_library_access
      *
      * @return $this
      */
@@ -1264,7 +1264,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_document_template_library_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_document_template_library_access_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_document_template_library_access_metadata
      *
      * @return $this
      */
@@ -1288,7 +1288,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_orchestration_access
      *
-     * @param ?string $allowed_orchestration_access 
+     * @param ?string $allowed_orchestration_access
      *
      * @return $this
      */
@@ -1312,7 +1312,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_orchestration_access_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_orchestration_access_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allowed_orchestration_access_metadata
      *
      * @return $this
      */
@@ -1336,7 +1336,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_template_access
      *
-     * @param ?string $allowed_template_access 
+     * @param ?string $allowed_template_access
      *
      * @return $this
      */
@@ -1384,7 +1384,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_to_be_envelope_transfer_recipient
      *
-     * @param ?string $allowed_to_be_envelope_transfer_recipient 
+     * @param ?string $allowed_to_be_envelope_transfer_recipient
      *
      * @return $this
      */
@@ -1432,7 +1432,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_envelope_sending
      *
-     * @param ?string $allow_envelope_sending 
+     * @param ?string $allow_envelope_sending
      *
      * @return $this
      */
@@ -1480,7 +1480,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_e_seal_recipients
      *
-     * @param ?string $allow_e_seal_recipients 
+     * @param ?string $allow_e_seal_recipients
      *
      * @return $this
      */
@@ -1528,7 +1528,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_power_forms_admin_to_access_all_power_form_envelopes
      *
-     * @param ?string $allow_power_forms_admin_to_access_all_power_form_envelopes 
+     * @param ?string $allow_power_forms_admin_to_access_all_power_form_envelopes
      *
      * @return $this
      */
@@ -1576,7 +1576,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_senders_to_set_recipient_email_language
      *
-     * @param ?string $allow_senders_to_set_recipient_email_language 
+     * @param ?string $allow_senders_to_set_recipient_email_language
      *
      * @return $this
      */
@@ -1624,7 +1624,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_signer_attachments
      *
-     * @param ?string $allow_signer_attachments 
+     * @param ?string $allow_signer_attachments
      *
      * @return $this
      */
@@ -1672,7 +1672,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_supplemental_documents
      *
-     * @param ?string $allow_supplemental_documents 
+     * @param ?string $allow_supplemental_documents
      *
      * @return $this
      */
@@ -1720,7 +1720,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_tagging_in_send_and_correct
      *
-     * @param ?string $allow_tagging_in_send_and_correct 
+     * @param ?string $allow_tagging_in_send_and_correct
      *
      * @return $this
      */
@@ -1768,7 +1768,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_transactions
      *
-     * @param ?string $allow_transactions 
+     * @param ?string $allow_transactions
      *
      * @return $this
      */
@@ -1792,7 +1792,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_transactions_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_transactions_metadata
      *
      * @return $this
      */
@@ -1816,7 +1816,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_vaulting
      *
-     * @param ?string $allow_vaulting 
+     * @param ?string $allow_vaulting
      *
      * @return $this
      */
@@ -1864,7 +1864,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets allow_wet_signing_override
      *
-     * @param ?string $allow_wet_signing_override 
+     * @param ?string $allow_wet_signing_override
      *
      * @return $this
      */
@@ -1912,7 +1912,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_create_transaction
      *
-     * @param ?string $can_create_transaction 
+     * @param ?string $can_create_transaction
      *
      * @return $this
      */
@@ -1936,7 +1936,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_create_transaction_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_create_transaction_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_create_transaction_metadata
      *
      * @return $this
      */
@@ -1960,7 +1960,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_create_workspaces
      *
-     * @param ?string $can_create_workspaces 
+     * @param ?string $can_create_workspaces
      *
      * @return $this
      */
@@ -2008,7 +2008,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_delete_documents_in_transaction
      *
-     * @param ?string $can_delete_documents_in_transaction 
+     * @param ?string $can_delete_documents_in_transaction
      *
      * @return $this
      */
@@ -2032,7 +2032,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_delete_documents_in_transaction_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_documents_in_transaction_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_documents_in_transaction_metadata
      *
      * @return $this
      */
@@ -2056,7 +2056,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_delete_transaction
      *
-     * @param ?string $can_delete_transaction 
+     * @param ?string $can_delete_transaction
      *
      * @return $this
      */
@@ -2080,7 +2080,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_delete_transaction_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_transaction_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_delete_transaction_metadata
      *
      * @return $this
      */
@@ -2104,7 +2104,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_envelopes_via_sms
      *
-     * @param ?string $can_send_envelopes_via_sms 
+     * @param ?string $can_send_envelopes_via_sms
      *
      * @return $this
      */
@@ -2128,7 +2128,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets can_send_envelopes_via_sms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelopes_via_sms_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_send_envelopes_via_sms_metadata
      *
      * @return $this
      */
@@ -2152,7 +2152,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets disable_document_upload
      *
-     * @param ?string $disable_document_upload 
+     * @param ?string $disable_document_upload
      *
      * @return $this
      */
@@ -2200,7 +2200,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets disable_other_actions
      *
-     * @param ?string $disable_other_actions 
+     * @param ?string $disable_other_actions
      *
      * @return $this
      */
@@ -2248,7 +2248,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_api_request_logging
      *
-     * @param ?string $enable_api_request_logging 
+     * @param ?string $enable_api_request_logging
      *
      * @return $this
      */
@@ -2296,7 +2296,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_key_terms_suggestions_by_document_type
      *
-     * @param ?string $enable_key_terms_suggestions_by_document_type 
+     * @param ?string $enable_key_terms_suggestions_by_document_type
      *
      * @return $this
      */
@@ -2320,7 +2320,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_key_terms_suggestions_by_document_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_key_terms_suggestions_by_document_type_metadata
      *
      * @return $this
      */
@@ -2344,7 +2344,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_recipient_viewing_notifications
      *
-     * @param ?string $enable_recipient_viewing_notifications 
+     * @param ?string $enable_recipient_viewing_notifications
      *
      * @return $this
      */
@@ -2392,7 +2392,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sequential_signing_interface
      *
-     * @param ?string $enable_sequential_signing_interface 
+     * @param ?string $enable_sequential_signing_interface
      *
      * @return $this
      */
@@ -2440,7 +2440,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets enable_transaction_point_integration
      *
-     * @param ?string $enable_transaction_point_integration 
+     * @param ?string $enable_transaction_point_integration
      *
      * @return $this
      */
@@ -2488,7 +2488,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets power_form_role
      *
-     * @param ?string $power_form_role 
+     * @param ?string $power_form_role
      *
      * @return $this
      */
@@ -2536,7 +2536,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets receive_completed_self_signed_documents_as_email_links
      *
-     * @param ?string $receive_completed_self_signed_documents_as_email_links 
+     * @param ?string $receive_completed_self_signed_documents_as_email_links
      *
      * @return $this
      */
@@ -2608,7 +2608,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_accept
      *
-     * @param ?string $supplemental_documents_must_accept 
+     * @param ?string $supplemental_documents_must_accept
      *
      * @return $this
      */
@@ -2656,7 +2656,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_read
      *
-     * @param ?string $supplemental_documents_must_read 
+     * @param ?string $supplemental_documents_must_read
      *
      * @return $this
      */
@@ -2704,7 +2704,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets supplemental_documents_must_view
      *
-     * @param ?string $supplemental_documents_must_view 
+     * @param ?string $supplemental_documents_must_view
      *
      * @return $this
      */
@@ -2752,7 +2752,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_docu_sign_experience_interface
      *
-     * @param ?string $use_new_docu_sign_experience_interface 
+     * @param ?string $use_new_docu_sign_experience_interface
      *
      * @return $this
      */
@@ -2800,7 +2800,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets use_new_sending_interface
      *
-     * @param ?string $use_new_sending_interface 
+     * @param ?string $use_new_sending_interface
      *
      * @return $this
      */
@@ -2848,7 +2848,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets vaulting_mode
      *
-     * @param ?string $vaulting_mode 
+     * @param ?string $vaulting_mode
      *
      * @return $this
      */
@@ -2896,7 +2896,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets web_forms
      *
-     * @param ?string $web_forms 
+     * @param ?string $web_forms
      *
      * @return $this
      */
@@ -2920,7 +2920,7 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     /**
      * Sets web_forms_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $web_forms_metadata
      *
      * @return $this
      */

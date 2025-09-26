@@ -206,9 +206,9 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['boxnet_enabled'] = isset($data['boxnet_enabled']) ? $data['boxnet_enabled'] : null;
         $this->container['boxnet_metadata'] = isset($data['boxnet_metadata']) ? $data['boxnet_metadata'] : null;
@@ -274,7 +274,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets boxnet_enabled
      *
-     * @param ?string $boxnet_enabled 
+     * @param ?string $boxnet_enabled
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets dropbox_enabled
      *
-     * @param ?string $dropbox_enabled 
+     * @param ?string $dropbox_enabled
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets google_drive_enabled
      *
-     * @param ?string $google_drive_enabled 
+     * @param ?string $google_drive_enabled
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets one_drive_enabled
      *
-     * @param ?string $one_drive_enabled 
+     * @param ?string $one_drive_enabled
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class ExternalDocumentSources implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_enabled
      *
-     * @param ?string $salesforce_enabled 
+     * @param ?string $salesforce_enabled
      *
      * @return $this
      */

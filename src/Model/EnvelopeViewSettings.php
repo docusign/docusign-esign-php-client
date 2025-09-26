@@ -225,9 +225,9 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -242,7 +242,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['back_button_action'] = isset($data['back_button_action']) ? $data['back_button_action'] : null;
         $this->container['document_settings'] = isset($data['document_settings']) ? $data['document_settings'] : null;
@@ -297,7 +297,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets back_button_action
      *
-     * @param ?string $back_button_action 
+     * @param ?string $back_button_action
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets document_settings
      *
-     * @param \DocuSign\eSign\Model\EnvelopeViewDocumentSettings $document_settings 
+     * @param \DocuSign\eSign\Model\EnvelopeViewDocumentSettings $document_settings
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_custom_field_settings
      *
-     * @param \DocuSign\eSign\Model\EnvelopeViewEnvelopeCustomFieldSettings $envelope_custom_field_settings 
+     * @param \DocuSign\eSign\Model\EnvelopeViewEnvelopeCustomFieldSettings $envelope_custom_field_settings
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets lock_token
      *
-     * @param ?string $lock_token 
+     * @param ?string $lock_token
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_settings
      *
-     * @param \DocuSign\eSign\Model\EnvelopeViewRecipientSettings $recipient_settings 
+     * @param \DocuSign\eSign\Model\EnvelopeViewRecipientSettings $recipient_settings
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets send_button_action
      *
-     * @param ?string $send_button_action 
+     * @param ?string $send_button_action
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_advanced_options
      *
-     * @param ?string $show_advanced_options 
+     * @param ?string $show_advanced_options
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_back_button
      *
-     * @param ?string $show_back_button 
+     * @param ?string $show_back_button
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_discard_action
      *
-     * @param ?string $show_discard_action 
+     * @param ?string $show_discard_action
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_header_actions
      *
-     * @param ?string $show_header_actions 
+     * @param ?string $show_header_actions
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_sign_now
      *
-     * @param ?string $show_sign_now 
+     * @param ?string $show_sign_now
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets starting_screen
      *
-     * @param ?string $starting_screen 
+     * @param ?string $starting_screen
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tagger_settings
      *
-     * @param \DocuSign\eSign\Model\EnvelopeViewTaggerSettings $tagger_settings 
+     * @param \DocuSign\eSign\Model\EnvelopeViewTaggerSettings $tagger_settings
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class EnvelopeViewSettings implements ModelInterface, ArrayAccess
     /**
      * Sets template_settings
      *
-     * @param \DocuSign\eSign\Model\EnvelopeViewTemplateSettings $template_settings 
+     * @param \DocuSign\eSign\Model\EnvelopeViewTemplateSettings $template_settings
      *
      * @return $this
      */

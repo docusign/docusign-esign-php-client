@@ -170,9 +170,9 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['is_required'] = isset($data['is_required']) ? $data['is_required'] : null;
         $this->container['option_name'] = isset($data['option_name']) ? $data['option_name'] : null;
@@ -231,7 +231,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets is_required
      *
-     * @param ?bool $is_required 
+     * @param ?bool $is_required
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets option_name
      *
-     * @param ?string $option_name 
+     * @param ?string $option_name
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class AccountIdentityInputOption implements ModelInterface, ArrayAccess
     /**
      * Sets value_type
      *
-     * @param ?string $value_type 
+     * @param ?string $value_type
      *
      * @return $this
      */

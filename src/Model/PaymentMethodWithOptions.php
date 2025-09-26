@@ -171,9 +171,9 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['supported_currencies'] = isset($data['supported_currencies']) ? $data['supported_currencies'] : null;
         $this->container['supported_options'] = isset($data['supported_options']) ? $data['supported_options'] : null;
@@ -232,7 +232,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
     /**
      * Sets supported_currencies
      *
-     * @param ?string[] $supported_currencies 
+     * @param ?string[] $supported_currencies
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
     /**
      * Sets supported_options
      *
-     * @param ?string[] $supported_options 
+     * @param ?string[] $supported_options
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class PaymentMethodWithOptions implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param ?string $type 
+     * @param ?string $type
      *
      * @return $this
      */

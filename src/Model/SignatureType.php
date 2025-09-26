@@ -166,9 +166,9 @@ class SignatureType implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -183,7 +183,7 @@ class SignatureType implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['is_default'] = isset($data['is_default']) ? $data['is_default'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -226,7 +226,7 @@ class SignatureType implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param ?string $is_default 
+     * @param ?string $is_default
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class SignatureType implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param ?string $type 
+     * @param ?string $type
      *
      * @return $this
      */

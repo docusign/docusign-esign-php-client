@@ -160,9 +160,9 @@ class EnvelopeAttachmentsRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class EnvelopeAttachmentsRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['attachments'] = isset($data['attachments']) ? $data['attachments'] : null;
     }
@@ -219,7 +219,7 @@ class EnvelopeAttachmentsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets attachments
      *
-     * @param \DocuSign\eSign\Model\Attachment[] $attachments 
+     * @param \DocuSign\eSign\Model\Attachment[] $attachments
      *
      * @return $this
      */

@@ -202,7 +202,7 @@ class RecipientEmailNotification implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email_body'] = isset($data['email_body']) ? $data['email_body'] : null;
         $this->container['email_body_metadata'] = isset($data['email_body_metadata']) ? $data['email_body_metadata'] : null;

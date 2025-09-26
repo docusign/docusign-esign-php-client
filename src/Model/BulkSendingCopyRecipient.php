@@ -281,9 +281,9 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -298,7 +298,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['client_user_id'] = isset($data['client_user_id']) ? $data['client_user_id'] : null;
@@ -460,7 +460,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets host_email
      *
-     * @param ?string $host_email 
+     * @param ?string $host_email
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets host_name
      *
-     * @param ?string $host_name 
+     * @param ?string $host_name
      *
      * @return $this
      */
@@ -652,7 +652,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets identification_method
      *
-     * @param ?string $identification_method 
+     * @param ?string $identification_method
      *
      * @return $this
      */
@@ -676,7 +676,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification 
+     * @param \DocuSign\eSign\Model\RecipientIdentityVerification $identity_verification
      *
      * @return $this
      */
@@ -700,7 +700,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -796,7 +796,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_signature_providers
      *
-     * @param \DocuSign\eSign\Model\RecipientSignatureProvider[] $recipient_signature_providers 
+     * @param \DocuSign\eSign\Model\RecipientSignatureProvider[] $recipient_signature_providers
      *
      * @return $this
      */
@@ -844,7 +844,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets signer_name
      *
-     * @param ?string $signer_name 
+     * @param ?string $signer_name
      *
      * @return $this
      */
@@ -940,7 +940,7 @@ class BulkSendingCopyRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets tabs
      *
-     * @param \DocuSign\eSign\Model\BulkSendingCopyTab[] $tabs 
+     * @param \DocuSign\eSign\Model\BulkSendingCopyTab[] $tabs
      *
      * @return $this
      */

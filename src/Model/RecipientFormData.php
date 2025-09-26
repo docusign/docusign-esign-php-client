@@ -195,9 +195,9 @@ class RecipientFormData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -212,7 +212,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['declined_time'] = isset($data['declined_time']) ? $data['declined_time'] : null;
         $this->container['delivered_time'] = isset($data['delivered_time']) ? $data['delivered_time'] : null;
@@ -261,7 +261,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets declined_time
      *
-     * @param ?string $declined_time 
+     * @param ?string $declined_time
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets delivered_time
      *
-     * @param ?string $delivered_time 
+     * @param ?string $delivered_time
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets form_data
      *
-     * @param \DocuSign\eSign\Model\FormDataItem[] $form_data 
+     * @param \DocuSign\eSign\Model\FormDataItem[] $form_data
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets sent_time
      *
-     * @param ?string $sent_time 
+     * @param ?string $sent_time
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class RecipientFormData implements ModelInterface, ArrayAccess
     /**
      * Sets signed_time
      *
-     * @param ?string $signed_time 
+     * @param ?string $signed_time
      *
      * @return $this
      */

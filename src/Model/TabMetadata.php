@@ -425,9 +425,9 @@ class TabMetadata implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -442,7 +442,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['anchor'] = isset($data['anchor']) ? $data['anchor'] : null;
         $this->container['anchor_case_sensitive'] = isset($data['anchor_case_sensitive']) ? $data['anchor_case_sensitive'] : null;
@@ -753,7 +753,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets collaborative
      *
-     * @param ?string $collaborative 
+     * @param ?string $collaborative
      *
      * @return $this
      */
@@ -1257,7 +1257,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets max_numerical_value
      *
-     * @param ?string $max_numerical_value 
+     * @param ?string $max_numerical_value
      *
      * @return $this
      */
@@ -1305,7 +1305,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets min_numerical_value
      *
-     * @param ?string $min_numerical_value 
+     * @param ?string $min_numerical_value
      *
      * @return $this
      */
@@ -1329,7 +1329,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -1353,7 +1353,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets numerical_value
      *
-     * @param ?string $numerical_value 
+     * @param ?string $numerical_value
      *
      * @return $this
      */
@@ -1377,7 +1377,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets payment_item_code
      *
-     * @param ?string $payment_item_code 
+     * @param ?string $payment_item_code
      *
      * @return $this
      */
@@ -1401,7 +1401,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets payment_item_description
      *
-     * @param ?string $payment_item_description 
+     * @param ?string $payment_item_description
      *
      * @return $this
      */
@@ -1425,7 +1425,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets payment_item_name
      *
-     * @param ?string $payment_item_name 
+     * @param ?string $payment_item_name
      *
      * @return $this
      */
@@ -1521,7 +1521,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets scale_value
      *
-     * @param ?string $scale_value 
+     * @param ?string $scale_value
      *
      * @return $this
      */
@@ -1545,7 +1545,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets selected
      *
-     * @param ?string $selected 
+     * @param ?string $selected
      *
      * @return $this
      */
@@ -1593,7 +1593,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_id
      *
-     * @param ?string $signature_provider_id 
+     * @param ?string $signature_provider_id
      *
      * @return $this
      */
@@ -1617,7 +1617,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_type
      *
-     * @param ?string $stamp_type 
+     * @param ?string $stamp_type
      *
      * @return $this
      */
@@ -1785,7 +1785,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets validation_type
      *
-     * @param ?string $validation_type 
+     * @param ?string $validation_type
      *
      * @return $this
      */

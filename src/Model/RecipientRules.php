@@ -160,9 +160,9 @@ class RecipientRules implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class RecipientRules implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['conditional_recipients'] = isset($data['conditional_recipients']) ? $data['conditional_recipients'] : null;
     }
@@ -219,7 +219,7 @@ class RecipientRules implements ModelInterface, ArrayAccess
     /**
      * Sets conditional_recipients
      *
-     * @param \DocuSign\eSign\Model\ConditionalRecipientRule[] $conditional_recipients 
+     * @param \DocuSign\eSign\Model\ConditionalRecipientRule[] $conditional_recipients
      *
      * @return $this
      */

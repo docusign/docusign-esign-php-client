@@ -171,9 +171,9 @@ class FoldersRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class FoldersRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['envelope_ids'] = isset($data['envelope_ids']) ? $data['envelope_ids'] : null;
         $this->container['folders'] = isset($data['folders']) ? $data['folders'] : null;
@@ -232,7 +232,7 @@ class FoldersRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_ids
      *
-     * @param ?string[] $envelope_ids 
+     * @param ?string[] $envelope_ids
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class FoldersRequest implements ModelInterface, ArrayAccess
     /**
      * Sets folders
      *
-     * @param \DocuSign\eSign\Model\Folder[] $folders 
+     * @param \DocuSign\eSign\Model\Folder[] $folders
      *
      * @return $this
      */

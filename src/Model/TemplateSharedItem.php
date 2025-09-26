@@ -196,9 +196,9 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
@@ -310,7 +310,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param ?string $password 
+     * @param ?string $password
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets shared_groups
      *
-     * @param \DocuSign\eSign\Model\MemberGroupSharedItem[] $shared_groups 
+     * @param \DocuSign\eSign\Model\MemberGroupSharedItem[] $shared_groups
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets shared_users
      *
-     * @param \DocuSign\eSign\Model\UserSharedItem[] $shared_users 
+     * @param \DocuSign\eSign\Model\UserSharedItem[] $shared_users
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class TemplateSharedItem implements ModelInterface, ArrayAccess
     /**
      * Sets template_name
      *
-     * @param ?string $template_name 
+     * @param ?string $template_name
      *
      * @return $this
      */

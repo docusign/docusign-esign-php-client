@@ -176,9 +176,9 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['sending'] = isset($data['sending']) ? $data['sending'] : null;
@@ -238,7 +238,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets sending
      *
-     * @param ?string $sending 
+     * @param ?string $sending
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets signing
      *
-     * @param ?string $signing 
+     * @param ?string $signing
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class BrandResourceUrls implements ModelInterface, ArrayAccess
     /**
      * Sets signing_captive
      *
-     * @param ?string $signing_captive 
+     * @param ?string $signing_captive
      *
      * @return $this
      */

@@ -318,7 +318,7 @@ class AccountBillingPlan implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['add_ons'] = isset($data['add_ons']) ? $data['add_ons'] : null;
         $this->container['app_store_receipt_expiration_date'] = isset($data['app_store_receipt_expiration_date']) ? $data['app_store_receipt_expiration_date'] : null;

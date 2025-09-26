@@ -175,9 +175,9 @@ class DelegationInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class DelegationInfo implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -237,7 +237,7 @@ class DelegationInfo implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class DelegationInfo implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class DelegationInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_authorization_id
      *
-     * @param ?string $user_authorization_id 
+     * @param ?string $user_authorization_id
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class DelegationInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */

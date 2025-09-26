@@ -171,9 +171,9 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['can_be_sent'] = isset($data['can_be_sent']) ? $data['can_be_sent'] : null;
         $this->container['validation_error_details'] = isset($data['validation_error_details']) ? $data['validation_error_details'] : null;
@@ -232,7 +232,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Sets can_be_sent
      *
-     * @param ?bool $can_be_sent 
+     * @param ?bool $can_be_sent
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Sets validation_error_details
      *
-     * @param ?string[] $validation_error_details 
+     * @param ?string[] $validation_error_details
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
     /**
      * Sets validation_errors
      *
-     * @param ?string[] $validation_errors 
+     * @param ?string[] $validation_errors
      *
      * @return $this
      */

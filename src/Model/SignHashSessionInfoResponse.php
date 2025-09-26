@@ -193,9 +193,9 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -210,7 +210,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
@@ -307,7 +307,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets language
      *
-     * @param ?string $language 
+     * @param ?string $language
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets redirection_url
      *
-     * @param ?string $redirection_url 
+     * @param ?string $redirection_url
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class SignHashSessionInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets remaining_signature_requests
      *
-     * @param int $remaining_signature_requests 
+     * @param int $remaining_signature_requests
      *
      * @return $this
      */

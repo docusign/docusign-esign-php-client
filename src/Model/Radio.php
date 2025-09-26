@@ -451,9 +451,9 @@ class Radio implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -468,7 +468,7 @@ class Radio implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['anchor_allow_white_space_in_characters'] = isset($data['anchor_allow_white_space_in_characters']) ? $data['anchor_allow_white_space_in_characters'] : null;
         $this->container['anchor_allow_white_space_in_characters_metadata'] = isset($data['anchor_allow_white_space_in_characters_metadata']) ? $data['anchor_allow_white_space_in_characters_metadata'] : null;
@@ -568,7 +568,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters
      *
-     * @param ?string $anchor_allow_white_space_in_characters 
+     * @param ?string $anchor_allow_white_space_in_characters
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version
      *
-     * @param ?string $anchor_tab_processor_version 
+     * @param ?string $anchor_tab_processor_version
      *
      * @return $this
      */
@@ -1096,7 +1096,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets caption
      *
-     * @param ?string $caption 
+     * @param ?string $caption
      *
      * @return $this
      */
@@ -1120,7 +1120,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets caption_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata 
+     * @param \DocuSign\eSign\Model\PropertyMetadata $caption_metadata
      *
      * @return $this
      */
@@ -1144,7 +1144,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets connected_object_details
      *
-     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details 
+     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details
      *
      * @return $this
      */
@@ -1192,7 +1192,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets extension_data
      *
-     * @param \DocuSign\eSign\Model\ExtensionData $extension_data 
+     * @param \DocuSign\eSign\Model\ExtensionData $extension_data
      *
      * @return $this
      */
@@ -1456,7 +1456,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field_xml
      *
-     * @param ?string $merge_field_xml 
+     * @param ?string $merge_field_xml
      *
      * @return $this
      */
@@ -1672,7 +1672,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets tab_fully_qualified_path
      *
-     * @param ?string $tab_fully_qualified_path 
+     * @param ?string $tab_fully_qualified_path
      *
      * @return $this
      */
@@ -1744,7 +1744,7 @@ class Radio implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order
      *
-     * @param ?string $tab_order 
+     * @param ?string $tab_order
      *
      * @return $this
      */

@@ -190,9 +190,9 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -207,7 +207,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['exceeded_max_results'] = isset($data['exceeded_max_results']) ? $data['exceeded_max_results'] : null;
@@ -279,7 +279,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets exceeded_max_results
      *
-     * @param ?string $exceeded_max_results 
+     * @param ?string $exceeded_max_results
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets last_warehouse_refresh_date_time
      *
-     * @param ?string $last_warehouse_refresh_date_time 
+     * @param ?string $last_warehouse_refresh_date_time
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class ReportInProductRunResponse implements ModelInterface, ArrayAccess
     /**
      * Sets rows
      *
-     * @param \DocuSign\eSign\Model\ReportInProductRunResponseRow[] $rows 
+     * @param \DocuSign\eSign\Model\ReportInProductRunResponseRow[] $rows
      *
      * @return $this
      */

@@ -166,9 +166,9 @@ class BillingPlanResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -183,7 +183,7 @@ class BillingPlanResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['billing_plan'] = isset($data['billing_plan']) ? $data['billing_plan'] : null;
         $this->container['successor_plans'] = isset($data['successor_plans']) ? $data['successor_plans'] : null;
@@ -250,7 +250,7 @@ class BillingPlanResponse implements ModelInterface, ArrayAccess
     /**
      * Sets successor_plans
      *
-     * @param \DocuSign\eSign\Model\BillingPlan[] $successor_plans 
+     * @param \DocuSign\eSign\Model\BillingPlan[] $successor_plans
      *
      * @return $this
      */

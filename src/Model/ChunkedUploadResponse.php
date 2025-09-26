@@ -201,9 +201,9 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -218,7 +218,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['checksum'] = isset($data['checksum']) ? $data['checksum'] : null;
         $this->container['chunked_upload_id'] = isset($data['chunked_upload_id']) ? $data['chunked_upload_id'] : null;
@@ -268,7 +268,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets checksum
      *
-     * @param ?string $checksum 
+     * @param ?string $checksum
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets chunked_upload_id
      *
-     * @param ?string $chunked_upload_id 
+     * @param ?string $chunked_upload_id
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets chunked_upload_parts
      *
-     * @param \DocuSign\eSign\Model\ChunkedUploadPart[] $chunked_upload_parts 
+     * @param \DocuSign\eSign\Model\ChunkedUploadPart[] $chunked_upload_parts
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets chunked_upload_uri
      *
-     * @param ?string $chunked_upload_uri 
+     * @param ?string $chunked_upload_uri
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets committed
      *
-     * @param ?string $committed 
+     * @param ?string $committed
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets expiration_date_time
      *
-     * @param ?string $expiration_date_time 
+     * @param ?string $expiration_date_time
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets max_chunked_upload_parts
      *
-     * @param ?string $max_chunked_upload_parts 
+     * @param ?string $max_chunked_upload_parts
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets max_total_size
      *
-     * @param ?string $max_total_size 
+     * @param ?string $max_total_size
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class ChunkedUploadResponse implements ModelInterface, ArrayAccess
     /**
      * Sets total_size
      *
-     * @param ?string $total_size 
+     * @param ?string $total_size
      *
      * @return $this
      */

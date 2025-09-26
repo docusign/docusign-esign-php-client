@@ -205,9 +205,9 @@ class UserAuthorization implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -222,7 +222,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
         $this->container['authorization_id'] = isset($data['authorization_id']) ? $data['authorization_id'] : null;
@@ -273,7 +273,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets agent_user
      *
-     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user 
+     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets authorization_id
      *
-     * @param ?string $authorization_id 
+     * @param ?string $authorization_id
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param ?string $created 
+     * @param ?string $created
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets created_by
      *
-     * @param ?string $created_by 
+     * @param ?string $created_by
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets end_date
      *
-     * @param ?string $end_date 
+     * @param ?string $end_date
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param ?string $modified 
+     * @param ?string $modified
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by
      *
-     * @param ?string $modified_by 
+     * @param ?string $modified_by
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets permission
      *
-     * @param ?string $permission 
+     * @param ?string $permission
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets principal_user
      *
-     * @param \DocuSign\eSign\Model\AuthorizationUser $principal_user 
+     * @param \DocuSign\eSign\Model\AuthorizationUser $principal_user
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets start_date
      *
-     * @param ?string $start_date 
+     * @param ?string $start_date
      *
      * @return $this
      */

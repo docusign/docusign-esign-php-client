@@ -201,9 +201,9 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -218,7 +218,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['card_last_digits'] = isset($data['card_last_digits']) ? $data['card_last_digits'] : null;
@@ -292,7 +292,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets card_last_digits
      *
-     * @param ?string $card_last_digits 
+     * @param ?string $card_last_digits
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets cv_number
      *
-     * @param ?string $cv_number 
+     * @param ?string $cv_number
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class CreditCardInformation implements ModelInterface, ArrayAccess
     /**
      * Sets tokenized_card
      *
-     * @param ?string $tokenized_card 
+     * @param ?string $tokenized_card
      *
      * @return $this
      */

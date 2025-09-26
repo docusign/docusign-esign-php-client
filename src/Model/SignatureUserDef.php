@@ -170,9 +170,9 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['is_default'] = isset($data['is_default']) ? $data['is_default'] : null;
         $this->container['rights'] = isset($data['rights']) ? $data['rights'] : null;
@@ -231,7 +231,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param ?string $is_default 
+     * @param ?string $is_default
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param ?string $rights 
+     * @param ?string $rights
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class SignatureUserDef implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */

@@ -165,9 +165,9 @@ class IdEvidenceResourceToken implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class IdEvidenceResourceToken implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['proof_base_uri'] = isset($data['proof_base_uri']) ? $data['proof_base_uri'] : null;
         $this->container['resource_token'] = isset($data['resource_token']) ? $data['resource_token'] : null;
@@ -225,7 +225,7 @@ class IdEvidenceResourceToken implements ModelInterface, ArrayAccess
     /**
      * Sets proof_base_uri
      *
-     * @param ?string $proof_base_uri 
+     * @param ?string $proof_base_uri
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class IdEvidenceResourceToken implements ModelInterface, ArrayAccess
     /**
      * Sets resource_token
      *
-     * @param ?string $resource_token 
+     * @param ?string $resource_token
      *
      * @return $this
      */

@@ -211,9 +211,9 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -228,7 +228,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['can_delete'] = isset($data['can_delete']) ? $data['can_delete'] : null;
         $this->container['can_move'] = isset($data['can_move']) ? $data['can_move'] : null;
@@ -280,7 +280,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_delete
      *
-     * @param ?string $can_delete 
+     * @param ?string $can_delete
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_move
      *
-     * @param ?string $can_move 
+     * @param ?string $can_move
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_transact
      *
-     * @param ?string $can_transact 
+     * @param ?string $can_transact
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets can_view
      *
-     * @param ?string $can_view 
+     * @param ?string $can_view
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_id
      *
-     * @param ?string $created_by_id 
+     * @param ?string $created_by_id
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param ?string $modified 
+     * @param ?string $modified
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by_id
      *
-     * @param ?string $modified_by_id 
+     * @param ?string $modified_by_id
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_user_id
      *
-     * @param ?string $workspace_user_id 
+     * @param ?string $workspace_user_id
      *
      * @return $this
      */

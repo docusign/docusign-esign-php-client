@@ -191,9 +191,9 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['commission_expiration'] = isset($data['commission_expiration']) ? $data['commission_expiration'] : null;
         $this->container['commission_id'] = isset($data['commission_id']) ? $data['commission_id'] : null;
@@ -256,7 +256,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets commission_expiration
      *
-     * @param ?string $commission_expiration 
+     * @param ?string $commission_expiration
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets commission_id
      *
-     * @param ?string $commission_id 
+     * @param ?string $commission_id
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets county
      *
-     * @param ?string $county 
+     * @param ?string $county
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets registered_name
      *
-     * @param ?string $registered_name 
+     * @param ?string $registered_name
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
     /**
      * Sets seal_type
      *
-     * @param ?string $seal_type 
+     * @param ?string $seal_type
      *
      * @return $this
      */

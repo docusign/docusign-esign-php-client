@@ -291,9 +291,9 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -308,7 +308,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['can_manage_account_security_settings'] = isset($data['can_manage_account_security_settings']) ? $data['can_manage_account_security_settings'] : null;
         $this->container['can_manage_account_security_settings_metadata'] = isset($data['can_manage_account_security_settings_metadata']) ? $data['can_manage_account_security_settings_metadata'] : null;
@@ -376,7 +376,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_security_settings
      *
-     * @param ?string $can_manage_account_security_settings 
+     * @param ?string $can_manage_account_security_settings
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_security_settings_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_security_settings_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_security_settings_metadata
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_settings
      *
-     * @param ?string $can_manage_account_settings 
+     * @param ?string $can_manage_account_settings
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_account_settings_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_settings_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_account_settings_metadata
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_admins
      *
-     * @param ?string $can_manage_admins 
+     * @param ?string $can_manage_admins
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_connect
      *
-     * @param ?string $can_manage_connect 
+     * @param ?string $can_manage_connect
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_connect_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_connect_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_connect_metadata
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_document_retention
      *
-     * @param ?string $can_manage_document_retention 
+     * @param ?string $can_manage_document_retention
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_document_retention_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_document_retention_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_document_retention_metadata
      *
      * @return $this
      */
@@ -616,7 +616,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_envelope_transfer
      *
-     * @param ?string $can_manage_envelope_transfer 
+     * @param ?string $can_manage_envelope_transfer
      *
      * @return $this
      */
@@ -640,7 +640,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_envelope_transfer_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_envelope_transfer_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_envelope_transfer_metadata
      *
      * @return $this
      */
@@ -664,7 +664,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_groups_but_not_users
      *
-     * @param ?string $can_manage_groups_but_not_users 
+     * @param ?string $can_manage_groups_but_not_users
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_groups_but_not_users_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_groups_but_not_users_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_groups_but_not_users_metadata
      *
      * @return $this
      */
@@ -712,7 +712,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_joint_agreements
      *
-     * @param ?string $can_manage_joint_agreements 
+     * @param ?string $can_manage_joint_agreements
      *
      * @return $this
      */
@@ -736,7 +736,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_joint_agreements_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_joint_agreements_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_joint_agreements_metadata
      *
      * @return $this
      */
@@ -760,7 +760,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_reporting
      *
-     * @param ?string $can_manage_reporting 
+     * @param ?string $can_manage_reporting
      *
      * @return $this
      */
@@ -784,7 +784,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_reporting_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_reporting_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_reporting_metadata
      *
      * @return $this
      */
@@ -808,7 +808,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_sharing
      *
-     * @param ?string $can_manage_sharing 
+     * @param ?string $can_manage_sharing
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_signing_groups
      *
-     * @param ?string $can_manage_signing_groups 
+     * @param ?string $can_manage_signing_groups
      *
      * @return $this
      */
@@ -880,7 +880,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_signing_groups_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_signing_groups_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_signing_groups_metadata
      *
      * @return $this
      */
@@ -904,7 +904,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_stamps
      *
-     * @param ?string $can_manage_stamps 
+     * @param ?string $can_manage_stamps
      *
      * @return $this
      */
@@ -928,7 +928,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_stamps_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_stamps_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_stamps_metadata
      *
      * @return $this
      */
@@ -952,7 +952,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_manage_users
      *
-     * @param ?string $can_manage_users 
+     * @param ?string $can_manage_users
      *
      * @return $this
      */
@@ -1000,7 +1000,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
     /**
      * Sets can_view_users
      *
-     * @param ?string $can_view_users 
+     * @param ?string $can_view_users
      *
      * @return $this
      */

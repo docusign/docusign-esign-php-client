@@ -170,9 +170,9 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['device_id'] = isset($data['device_id']) ? $data['device_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -231,7 +231,7 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets device_id
      *
-     * @param ?string $device_id 
+     * @param ?string $device_id
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class MobileNotifierConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets platform
      *
-     * @param ?string $platform 
+     * @param ?string $platform
      *
      * @return $this
      */

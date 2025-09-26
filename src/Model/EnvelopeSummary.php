@@ -196,9 +196,9 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_envelope_status'] = isset($data['bulk_envelope_status']) ? $data['bulk_envelope_status'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
@@ -334,7 +334,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_signing_uri
      *
-     * @param ?string $recipient_signing_uri 
+     * @param ?string $recipient_signing_uri
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_signing_uri_error
      *
-     * @param ?string $recipient_signing_uri_error 
+     * @param ?string $recipient_signing_uri_error
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class EnvelopeSummary implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */

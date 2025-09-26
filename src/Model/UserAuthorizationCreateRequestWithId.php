@@ -180,9 +180,9 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -197,7 +197,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
         $this->container['authorization_id'] = isset($data['authorization_id']) ? $data['authorization_id'] : null;
@@ -243,7 +243,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
     /**
      * Sets agent_user
      *
-     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user 
+     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
     /**
      * Sets authorization_id
      *
-     * @param ?string $authorization_id 
+     * @param ?string $authorization_id
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
     /**
      * Sets end_date
      *
-     * @param ?string $end_date 
+     * @param ?string $end_date
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
     /**
      * Sets permission
      *
-     * @param ?string $permission 
+     * @param ?string $permission
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
     /**
      * Sets start_date
      *
-     * @param ?string $start_date 
+     * @param ?string $start_date
      *
      * @return $this
      */

@@ -185,9 +185,9 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -202,7 +202,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['currency_symbol'] = isset($data['currency_symbol']) ? $data['currency_symbol'] : null;
@@ -297,7 +297,7 @@ class CurrencyPlanPrice implements ModelInterface, ArrayAccess
     /**
      * Sets per_seat_price
      *
-     * @param ?string $per_seat_price 
+     * @param ?string $per_seat_price
      *
      * @return $this
      */

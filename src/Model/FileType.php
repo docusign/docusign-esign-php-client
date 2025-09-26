@@ -182,7 +182,7 @@ class FileType implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['file_extension'] = isset($data['file_extension']) ? $data['file_extension'] : null;
         $this->container['mime_type'] = isset($data['mime_type']) ? $data['mime_type'] : null;

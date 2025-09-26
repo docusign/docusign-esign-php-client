@@ -206,9 +206,9 @@ class ExternalFile implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
         $this->container['has_composite_template'] = isset($data['has_composite_template']) ? $data['has_composite_template'] : null;
@@ -274,7 +274,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets date
      *
-     * @param ?string $date 
+     * @param ?string $date
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets has_composite_template
      *
-     * @param ?string $has_composite_template 
+     * @param ?string $has_composite_template
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param ?string $id 
+     * @param ?string $id
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets img
      *
-     * @param ?string $img 
+     * @param ?string $img
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets owner_name
      *
-     * @param ?string $owner_name 
+     * @param ?string $owner_name
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets supported
      *
-     * @param ?string $supported 
+     * @param ?string $supported
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param ?string $type 
+     * @param ?string $type
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class ExternalFile implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */

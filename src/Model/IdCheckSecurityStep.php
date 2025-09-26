@@ -160,9 +160,9 @@ class IdCheckSecurityStep implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class IdCheckSecurityStep implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['auth_type'] = isset($data['auth_type']) ? $data['auth_type'] : null;
     }
@@ -219,7 +219,7 @@ class IdCheckSecurityStep implements ModelInterface, ArrayAccess
     /**
      * Sets auth_type
      *
-     * @param ?string $auth_type 
+     * @param ?string $auth_type
      *
      * @return $this
      */

@@ -196,9 +196,9 @@ class CustomField implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class CustomField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['custom_field_type'] = isset($data['custom_field_type']) ? $data['custom_field_type'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -262,7 +262,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets custom_field_type
      *
-     * @param ?string $custom_field_type 
+     * @param ?string $custom_field_type
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets field_id
      *
-     * @param ?string $field_id 
+     * @param ?string $field_id
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets list_items
      *
-     * @param ?string[] $list_items 
+     * @param ?string[] $list_items
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class CustomField implements ModelInterface, ArrayAccess
     /**
      * Sets show
      *
-     * @param ?string $show 
+     * @param ?string $show
      *
      * @return $this
      */

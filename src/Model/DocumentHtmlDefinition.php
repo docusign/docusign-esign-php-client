@@ -211,9 +211,9 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -228,7 +228,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['display_anchor_prefix'] = isset($data['display_anchor_prefix']) ? $data['display_anchor_prefix'] : null;
         $this->container['display_anchors'] = isset($data['display_anchors']) ? $data['display_anchors'] : null;
@@ -280,7 +280,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets display_anchor_prefix
      *
-     * @param ?string $display_anchor_prefix 
+     * @param ?string $display_anchor_prefix
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets display_anchors
      *
-     * @param \DocuSign\eSign\Model\DocumentHtmlDisplayAnchor[] $display_anchors 
+     * @param \DocuSign\eSign\Model\DocumentHtmlDisplayAnchor[] $display_anchors
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets display_order
      *
-     * @param ?string $display_order 
+     * @param ?string $display_order
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets display_page_number
      *
-     * @param ?string $display_page_number 
+     * @param ?string $display_page_number
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets document_guid
      *
-     * @param ?string $document_guid 
+     * @param ?string $document_guid
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets header_label
      *
-     * @param ?string $header_label 
+     * @param ?string $header_label
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets max_screen_width
      *
-     * @param ?string $max_screen_width 
+     * @param ?string $max_screen_width
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets remove_empty_tags
      *
-     * @param ?string $remove_empty_tags 
+     * @param ?string $remove_empty_tags
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets show_mobile_optimized_toggle
      *
-     * @param ?string $show_mobile_optimized_toggle 
+     * @param ?string $show_mobile_optimized_toggle
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class DocumentHtmlDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param ?string $source 
+     * @param ?string $source
      *
      * @return $this
      */

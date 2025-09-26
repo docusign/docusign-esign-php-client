@@ -220,9 +220,9 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -237,7 +237,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['apply_connect_settings'] = isset($data['apply_connect_settings']) ? $data['apply_connect_settings'] : null;
         $this->container['envelope_count'] = isset($data['envelope_count']) ? $data['envelope_count'] : null;
@@ -291,7 +291,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets apply_connect_settings
      *
-     * @param ?string $apply_connect_settings 
+     * @param ?string $apply_connect_settings
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_count
      *
-     * @param ?string $envelope_count 
+     * @param ?string $envelope_count
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_level_error_rollups
      *
-     * @param \DocuSign\eSign\Model\EnvelopePublishTransactionErrorRollup[] $envelope_level_error_rollups 
+     * @param \DocuSign\eSign\Model\EnvelopePublishTransactionErrorRollup[] $envelope_level_error_rollups
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_publish_transaction_id
      *
-     * @param ?string $envelope_publish_transaction_id 
+     * @param ?string $envelope_publish_transaction_id
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets error_count
      *
-     * @param ?string $error_count 
+     * @param ?string $error_count
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets file_level_errors
      *
-     * @param ?string[] $file_level_errors 
+     * @param ?string[] $file_level_errors
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets no_action_required_envelope_count
      *
-     * @param ?string $no_action_required_envelope_count 
+     * @param ?string $no_action_required_envelope_count
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets processed_envelope_count
      *
-     * @param ?string $processed_envelope_count 
+     * @param ?string $processed_envelope_count
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets processing_status
      *
-     * @param ?string $processing_status 
+     * @param ?string $processing_status
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets results_uri
      *
-     * @param ?string $results_uri 
+     * @param ?string $results_uri
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets submission_date
      *
-     * @param ?string $submission_date 
+     * @param ?string $submission_date
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets submitted_by_user_info
      *
-     * @param \DocuSign\eSign\Model\UserInfo $submitted_by_user_info 
+     * @param \DocuSign\eSign\Model\UserInfo $submitted_by_user_info
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class EnvelopePublishTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets submitted_for_publishing_envelope_count
      *
-     * @param ?string $submitted_for_publishing_envelope_count 
+     * @param ?string $submitted_for_publishing_envelope_count
      *
      * @return $this
      */

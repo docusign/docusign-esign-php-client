@@ -170,9 +170,9 @@ class TemplateMatch implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_end_page'] = isset($data['document_end_page']) ? $data['document_end_page'] : null;
         $this->container['document_start_page'] = isset($data['document_start_page']) ? $data['document_start_page'] : null;
@@ -231,7 +231,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Sets document_end_page
      *
-     * @param ?string $document_end_page 
+     * @param ?string $document_end_page
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Sets document_start_page
      *
-     * @param ?string $document_start_page 
+     * @param ?string $document_start_page
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class TemplateMatch implements ModelInterface, ArrayAccess
     /**
      * Sets match_percentage
      *
-     * @param ?string $match_percentage 
+     * @param ?string $match_percentage
      *
      * @return $this
      */

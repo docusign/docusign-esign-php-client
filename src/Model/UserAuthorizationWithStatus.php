@@ -170,9 +170,9 @@ class UserAuthorizationWithStatus implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class UserAuthorizationWithStatus implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['error_message'] = isset($data['error_message']) ? $data['error_message'] : null;
@@ -231,7 +231,7 @@ class UserAuthorizationWithStatus implements ModelInterface, ArrayAccess
     /**
      * Sets authorization
      *
-     * @param \DocuSign\eSign\Model\UserAuthorization $authorization 
+     * @param \DocuSign\eSign\Model\UserAuthorization $authorization
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class UserAuthorizationWithStatus implements ModelInterface, ArrayAccess
     /**
      * Sets error_message
      *
-     * @param ?string $error_message 
+     * @param ?string $error_message
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class UserAuthorizationWithStatus implements ModelInterface, ArrayAccess
     /**
      * Sets success
      *
-     * @param ?string $success 
+     * @param ?string $success
      *
      * @return $this
      */

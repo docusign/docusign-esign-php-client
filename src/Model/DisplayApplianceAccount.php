@@ -178,9 +178,9 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -195,7 +195,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
         $this->container['opt_out_auto_nav_text_and_tab_color_updates'] = isset($data['opt_out_auto_nav_text_and_tab_color_updates']) ? $data['opt_out_auto_nav_text_and_tab_color_updates'] : null;
@@ -265,7 +265,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets opt_out_auto_nav_text_and_tab_color_updates
      *
-     * @param ?bool $opt_out_auto_nav_text_and_tab_color_updates 
+     * @param ?bool $opt_out_auto_nav_text_and_tab_color_updates
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets show_initial_conditional_fields
      *
-     * @param ?bool $show_initial_conditional_fields 
+     * @param ?bool $show_initial_conditional_fields
      *
      * @return $this
      */
@@ -313,7 +313,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets signing_version
      *
-     * @param ?string $signing_version 
+     * @param ?string $signing_version
      *
      * @return $this
      */
@@ -337,7 +337,7 @@ class DisplayApplianceAccount implements ModelInterface, ArrayAccess
     /**
      * Sets tag_has_sig_block
      *
-     * @param ?bool $tag_has_sig_block 
+     * @param ?bool $tag_has_sig_block
      *
      * @return $this
      */

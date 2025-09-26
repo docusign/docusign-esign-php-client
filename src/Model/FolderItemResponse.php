@@ -191,9 +191,9 @@ class FolderItemResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class FolderItemResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['folder_items'] = isset($data['folder_items']) ? $data['folder_items'] : null;
@@ -400,7 +400,7 @@ class FolderItemResponse implements ModelInterface, ArrayAccess
     /**
      * Sets total_rows
      *
-     * @param ?string $total_rows 
+     * @param ?string $total_rows
      *
      * @return $this
      */

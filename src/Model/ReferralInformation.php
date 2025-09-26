@@ -246,9 +246,9 @@ class ReferralInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -263,7 +263,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['advertisement_id'] = isset($data['advertisement_id']) ? $data['advertisement_id'] : null;
         $this->container['enable_support'] = isset($data['enable_support']) ? $data['enable_support'] : null;
@@ -370,7 +370,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets external_org_id
      *
-     * @param ?string $external_org_id 
+     * @param ?string $external_org_id
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets group_member_id
      *
-     * @param ?string $group_member_id 
+     * @param ?string $group_member_id
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets id_type
      *
-     * @param ?string $id_type 
+     * @param ?string $id_type
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets industry
      *
-     * @param ?string $industry 
+     * @param ?string $industry
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_start_month
      *
-     * @param ?string $plan_start_month 
+     * @param ?string $plan_start_month
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets promo_code
      *
-     * @param ?string $promo_code 
+     * @param ?string $promo_code
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets publisher_id
      *
-     * @param ?string $publisher_id 
+     * @param ?string $publisher_id
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets referral_code
      *
-     * @param ?string $referral_code 
+     * @param ?string $referral_code
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets referrer_name
      *
-     * @param ?string $referrer_name 
+     * @param ?string $referrer_name
      *
      * @return $this
      */
@@ -730,7 +730,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
     /**
      * Sets shopper_id
      *
-     * @param ?string $shopper_id 
+     * @param ?string $shopper_id
      *
      * @return $this
      */

@@ -175,9 +175,9 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['form_data'] = isset($data['form_data']) ? $data['form_data'] : null;
@@ -237,7 +237,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets form_data
      *
-     * @param \DocuSign\eSign\Model\NameValue[] $form_data 
+     * @param \DocuSign\eSign\Model\NameValue[] $form_data
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class PowerFormFormDataRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */

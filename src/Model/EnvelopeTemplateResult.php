@@ -363,9 +363,9 @@ class EnvelopeTemplateResult implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -377,7 +377,7 @@ class EnvelopeTemplateResult implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_markup'] = isset($data['allow_markup']) ? $data['allow_markup'] : null;
         $this->container['allow_reassign'] = isset($data['allow_reassign']) ? $data['allow_reassign'] : null;
@@ -523,7 +523,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets allow_view_history
-     * @param string $allow_view_history 
+     * @param string $allow_view_history
      * @return $this
      */
     public function setAllowViewHistory($allow_view_history)
@@ -565,7 +565,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets attachments_uri
-     * @param string $attachments_uri 
+     * @param string $attachments_uri
      * @return $this
      */
     public function setAttachmentsUri($attachments_uri)
@@ -607,7 +607,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets authoritative_copy_default
-     * @param string $authoritative_copy_default 
+     * @param string $authoritative_copy_default
      * @return $this
      */
     public function setAuthoritativeCopyDefault($authoritative_copy_default)
@@ -628,7 +628,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets auto_navigation
-     * @param string $auto_navigation 
+     * @param string $auto_navigation
      * @return $this
      */
     public function setAutoNavigation($auto_navigation)
@@ -649,7 +649,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets brand_id
-     * @param string $brand_id 
+     * @param string $brand_id
      * @return $this
      */
     public function setBrandId($brand_id)
@@ -670,7 +670,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets brand_lock
-     * @param string $brand_lock 
+     * @param string $brand_lock
      * @return $this
      */
     public function setBrandLock($brand_lock)
@@ -733,7 +733,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets created
-     * @param string $created 
+     * @param string $created
      * @return $this
      */
     public function setCreated($created)
@@ -880,7 +880,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets description
-     * @param string $description 
+     * @param string $description
      * @return $this
      */
     public function setDescription($description)
@@ -901,7 +901,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets disable_responsive_document
-     * @param string $disable_responsive_document 
+     * @param string $disable_responsive_document
      * @return $this
      */
     public function setDisableResponsiveDocument($disable_responsive_document)
@@ -943,7 +943,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets documents_combined_uri
-     * @param string $documents_combined_uri 
+     * @param string $documents_combined_uri
      * @return $this
      */
     public function setDocumentsCombinedUri($documents_combined_uri)
@@ -985,7 +985,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets email_blurb
-     * @param string $email_blurb 
+     * @param string $email_blurb
      * @return $this
      */
     public function setEmailBlurb($email_blurb)
@@ -1153,7 +1153,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets folder_id
-     * @param string $folder_id 
+     * @param string $folder_id
      * @return $this
      */
     public function setFolderId($folder_id)
@@ -1174,7 +1174,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets folder_name
-     * @param string $folder_name 
+     * @param string $folder_name
      * @return $this
      */
     public function setFolderName($folder_name)
@@ -1195,7 +1195,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets folder_uri
-     * @param string $folder_uri 
+     * @param string $folder_uri
      * @return $this
      */
     public function setFolderUri($folder_uri)
@@ -1216,7 +1216,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets initial_sent_date_time
-     * @param string $initial_sent_date_time 
+     * @param string $initial_sent_date_time
      * @return $this
      */
     public function setInitialSentDateTime($initial_sent_date_time)
@@ -1258,7 +1258,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets is_signature_provider_envelope
-     * @param string $is_signature_provider_envelope 
+     * @param string $is_signature_provider_envelope
      * @return $this
      */
     public function setIsSignatureProviderEnvelope($is_signature_provider_envelope)
@@ -1279,7 +1279,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets last_modified
-     * @param string $last_modified 
+     * @param string $last_modified
      * @return $this
      */
     public function setLastModified($last_modified)
@@ -1363,7 +1363,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name 
+     * @param string $name
      * @return $this
      */
     public function setName($name)
@@ -1447,7 +1447,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets page_count
-     * @param int $page_count 
+     * @param int $page_count
      * @return $this
      */
     public function setPageCount($page_count)
@@ -1468,7 +1468,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets parent_folder_uri
-     * @param string $parent_folder_uri 
+     * @param string $parent_folder_uri
      * @return $this
      */
     public function setParentFolderUri($parent_folder_uri)
@@ -1489,7 +1489,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets password
-     * @param string $password 
+     * @param string $password
      * @return $this
      */
     public function setPassword($password)
@@ -1510,7 +1510,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets purge_state
-     * @param string $purge_state 
+     * @param string $purge_state
      * @return $this
      */
     public function setPurgeState($purge_state)
@@ -1636,7 +1636,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets signer_can_sign_on_mobile
-     * @param string $signer_can_sign_on_mobile 
+     * @param string $signer_can_sign_on_mobile
      * @return $this
      */
     public function setSignerCanSignOnMobile($signer_can_sign_on_mobile)
@@ -1783,7 +1783,7 @@ class EnvelopeTemplateResult implements ArrayAccess
 
     /**
      * Sets uri
-     * @param string $uri 
+     * @param string $uri
      * @return $this
      */
     public function setUri($uri)

@@ -180,9 +180,9 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -197,7 +197,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authorization_server_url'] = isset($data['authorization_server_url']) ? $data['authorization_server_url'] : null;
         $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
@@ -243,7 +243,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     /**
      * Sets authorization_server_url
      *
-     * @param ?string $authorization_server_url 
+     * @param ?string $authorization_server_url
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     /**
      * Sets client_id
      *
-     * @param ?string $client_id 
+     * @param ?string $client_id
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     /**
      * Sets client_secret
      *
-     * @param ?string $client_secret 
+     * @param ?string $client_secret
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     /**
      * Sets custom_parameters
      *
-     * @param map[string,?string] $custom_parameters 
+     * @param map[string,?string] $custom_parameters
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class ConnectOAuthConfig implements ModelInterface, ArrayAccess
     /**
      * Sets scope
      *
-     * @param ?string $scope 
+     * @param ?string $scope
      *
      * @return $this
      */

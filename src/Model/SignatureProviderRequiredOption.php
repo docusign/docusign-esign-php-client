@@ -166,9 +166,9 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -183,7 +183,7 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['required_signature_provider_option_ids'] = isset($data['required_signature_provider_option_ids']) ? $data['required_signature_provider_option_ids'] : null;
         $this->container['signer_type'] = isset($data['signer_type']) ? $data['signer_type'] : null;
@@ -226,7 +226,7 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
     /**
      * Sets required_signature_provider_option_ids
      *
-     * @param ?string[] $required_signature_provider_option_ids 
+     * @param ?string[] $required_signature_provider_option_ids
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class SignatureProviderRequiredOption implements ModelInterface, ArrayAccess
     /**
      * Sets signer_type
      *
-     * @param ?string $signer_type 
+     * @param ?string $signer_type
      *
      * @return $this
      */

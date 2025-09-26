@@ -171,9 +171,9 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['auth_steps'] = isset($data['auth_steps']) ? $data['auth_steps'] : null;
         $this->container['is_default'] = isset($data['is_default']) ? $data['is_default'] : null;
@@ -232,7 +232,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets auth_steps
      *
-     * @param \DocuSign\eSign\Model\IdCheckSecurityStep[] $auth_steps 
+     * @param \DocuSign\eSign\Model\IdCheckSecurityStep[] $auth_steps
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param ?string $is_default 
+     * @param ?string $is_default
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class IdCheckConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */

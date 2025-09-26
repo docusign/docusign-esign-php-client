@@ -226,9 +226,9 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -243,7 +243,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_custom_metadata'] = isset($data['allow_custom_metadata']) ? $data['allow_custom_metadata'] : null;
         $this->container['config'] = isset($data['config']) ? $data['config'] : null;
@@ -298,7 +298,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets allow_custom_metadata
      *
-     * @param ?bool $allow_custom_metadata 
+     * @param ?bool $allow_custom_metadata
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets display_name
      *
-     * @param ?string $display_name 
+     * @param ?string $display_name
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets is_enabled
      *
-     * @param ?string $is_enabled 
+     * @param ?string $is_enabled
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets is_legacy
      *
-     * @param ?string $is_legacy 
+     * @param ?string $is_legacy
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param ?string $last_modified 
+     * @param ?string $last_modified
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets payment_gateway
      *
-     * @param ?string $payment_gateway 
+     * @param ?string $payment_gateway
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets payment_gateway_account_id
      *
-     * @param ?string $payment_gateway_account_id 
+     * @param ?string $payment_gateway_account_id
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets payment_gateway_display_name
      *
-     * @param ?string $payment_gateway_display_name 
+     * @param ?string $payment_gateway_display_name
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets supported_currencies
      *
-     * @param ?string[] $supported_currencies 
+     * @param ?string[] $supported_currencies
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets supported_payment_methods
      *
-     * @param ?string[] $supported_payment_methods 
+     * @param ?string[] $supported_payment_methods
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets supported_payment_methods_with_options
      *
-     * @param \DocuSign\eSign\Model\PaymentMethodWithOptions[] $supported_payment_methods_with_options 
+     * @param \DocuSign\eSign\Model\PaymentMethodWithOptions[] $supported_payment_methods_with_options
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class PaymentGatewayAccount implements ModelInterface, ArrayAccess
     /**
      * Sets zero_decimal_currencies
      *
-     * @param ?string[] $zero_decimal_currencies 
+     * @param ?string[] $zero_decimal_currencies
      *
      * @return $this
      */

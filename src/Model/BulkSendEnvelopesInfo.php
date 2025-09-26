@@ -220,9 +220,9 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -237,7 +237,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authoritative_copy'] = isset($data['authoritative_copy']) ? $data['authoritative_copy'] : null;
         $this->container['completed'] = isset($data['completed']) ? $data['completed'] : null;
@@ -315,7 +315,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets completed
      *
-     * @param ?string $completed 
+     * @param ?string $completed
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets correct
      *
-     * @param ?string $correct 
+     * @param ?string $correct
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param ?string $created 
+     * @param ?string $created
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets declined
      *
-     * @param ?string $declined 
+     * @param ?string $declined
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets deleted
      *
-     * @param ?string $deleted 
+     * @param ?string $deleted
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets delivered
      *
-     * @param ?string $delivered 
+     * @param ?string $delivered
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets digital_signatures_pending
      *
-     * @param ?string $digital_signatures_pending 
+     * @param ?string $digital_signatures_pending
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets sent
      *
-     * @param ?string $sent 
+     * @param ?string $sent
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets signed
      *
-     * @param ?string $signed 
+     * @param ?string $signed
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets timed_out
      *
-     * @param ?string $timed_out 
+     * @param ?string $timed_out
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets transfer_completed
      *
-     * @param ?string $transfer_completed 
+     * @param ?string $transfer_completed
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class BulkSendEnvelopesInfo implements ModelInterface, ArrayAccess
     /**
      * Sets voided
      *
-     * @param ?string $voided 
+     * @param ?string $voided
      *
      * @return $this
      */

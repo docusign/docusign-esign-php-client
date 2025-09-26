@@ -181,9 +181,9 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -198,7 +198,7 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['composite_template_id'] = isset($data['composite_template_id']) ? $data['composite_template_id'] : null;
         $this->container['document'] = isset($data['document']) ? $data['document'] : null;
@@ -316,7 +316,7 @@ class CompositeTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets pdf_meta_data_template_sequence
      *
-     * @param ?string $pdf_meta_data_template_sequence 
+     * @param ?string $pdf_meta_data_template_sequence
      *
      * @return $this
      */

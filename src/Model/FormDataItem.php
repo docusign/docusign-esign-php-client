@@ -190,9 +190,9 @@ class FormDataItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -207,7 +207,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['list_selected_value'] = isset($data['list_selected_value']) ? $data['list_selected_value'] : null;
@@ -279,7 +279,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets list_selected_value
      *
-     * @param ?string $list_selected_value 
+     * @param ?string $list_selected_value
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets numerical_value
      *
-     * @param ?string $numerical_value 
+     * @param ?string $numerical_value
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class FormDataItem implements ModelInterface, ArrayAccess
     /**
      * Sets original_numerical_value
      *
-     * @param ?string $original_numerical_value 
+     * @param ?string $original_numerical_value
      *
      * @return $this
      */

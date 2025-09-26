@@ -720,9 +720,9 @@ class Currency implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -737,7 +737,7 @@ class Currency implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['anchor_allow_white_space_in_characters'] = isset($data['anchor_allow_white_space_in_characters']) ? $data['anchor_allow_white_space_in_characters'] : null;
         $this->container['anchor_allow_white_space_in_characters_metadata'] = isset($data['anchor_allow_white_space_in_characters_metadata']) ? $data['anchor_allow_white_space_in_characters_metadata'] : null;
@@ -891,7 +891,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_allow_white_space_in_characters
      *
-     * @param ?string $anchor_allow_white_space_in_characters 
+     * @param ?string $anchor_allow_white_space_in_characters
      *
      * @return $this
      */
@@ -1179,7 +1179,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets anchor_tab_processor_version
      *
-     * @param ?string $anchor_tab_processor_version 
+     * @param ?string $anchor_tab_processor_version
      *
      * @return $this
      */
@@ -1419,7 +1419,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets caption
      *
-     * @param ?string $caption 
+     * @param ?string $caption
      *
      * @return $this
      */
@@ -1923,7 +1923,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets form_order
      *
-     * @param ?string $form_order 
+     * @param ?string $form_order
      *
      * @return $this
      */
@@ -1971,7 +1971,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_label
      *
-     * @param ?string $form_page_label 
+     * @param ?string $form_page_label
      *
      * @return $this
      */
@@ -2019,7 +2019,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets form_page_number
      *
-     * @param ?string $form_page_number 
+     * @param ?string $form_page_number
      *
      * @return $this
      */
@@ -2283,7 +2283,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets max_numerical_value
      *
-     * @param ?string $max_numerical_value 
+     * @param ?string $max_numerical_value
      *
      * @return $this
      */
@@ -2331,7 +2331,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets merge_field_xml
      *
-     * @param ?string $merge_field_xml 
+     * @param ?string $merge_field_xml
      *
      * @return $this
      */
@@ -2355,7 +2355,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets min_numerical_value
      *
-     * @param ?string $min_numerical_value 
+     * @param ?string $min_numerical_value
      *
      * @return $this
      */
@@ -2379,7 +2379,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -2427,7 +2427,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets numerical_value
      *
-     * @param ?string $numerical_value 
+     * @param ?string $numerical_value
      *
      * @return $this
      */
@@ -2571,7 +2571,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param ?string $recipient_id_guid 
+     * @param ?string $recipient_id_guid
      *
      * @return $this
      */
@@ -2907,7 +2907,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param ?string $source 
+     * @param ?string $source
      *
      * @return $this
      */
@@ -2979,7 +2979,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_group_labels
      *
-     * @param ?string[] $tab_group_labels 
+     * @param ?string[] $tab_group_labels
      *
      * @return $this
      */
@@ -3123,7 +3123,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_order
      *
-     * @param ?string $tab_order 
+     * @param ?string $tab_order
      *
      * @return $this
      */
@@ -3171,7 +3171,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tab_type
      *
-     * @param ?string $tab_type 
+     * @param ?string $tab_type
      *
      * @return $this
      */
@@ -3315,7 +3315,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param ?string $tooltip 
+     * @param ?string $tooltip
      *
      * @return $this
      */

@@ -160,9 +160,9 @@ class BulkSendBatchRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class BulkSendBatchRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
     }
@@ -219,7 +219,7 @@ class BulkSendBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Sets batch_name
      *
-     * @param ?string $batch_name 
+     * @param ?string $batch_name
      *
      * @return $this
      */

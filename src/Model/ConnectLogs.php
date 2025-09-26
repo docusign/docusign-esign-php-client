@@ -175,9 +175,9 @@ class ConnectLogs implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class ConnectLogs implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['failures'] = isset($data['failures']) ? $data['failures'] : null;
         $this->container['logs'] = isset($data['logs']) ? $data['logs'] : null;
@@ -285,7 +285,7 @@ class ConnectLogs implements ModelInterface, ArrayAccess
     /**
      * Sets total_records
      *
-     * @param ?string $total_records 
+     * @param ?string $total_records
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class ConnectLogs implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param ?string $type 
+     * @param ?string $type
      *
      * @return $this
      */

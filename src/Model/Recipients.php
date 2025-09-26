@@ -226,9 +226,9 @@ class Recipients implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -243,7 +243,7 @@ class Recipients implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agents'] = isset($data['agents']) ? $data['agents'] : null;
         $this->container['carbon_copies'] = isset($data['carbon_copies']) ? $data['carbon_copies'] : null;
@@ -370,7 +370,7 @@ class Recipients implements ModelInterface, ArrayAccess
     /**
      * Sets current_routing_order
      *
-     * @param ?string $current_routing_order 
+     * @param ?string $current_routing_order
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class Recipients implements ModelInterface, ArrayAccess
     /**
      * Sets notaries
      *
-     * @param \DocuSign\eSign\Model\NotaryRecipient[] $notaries 
+     * @param \DocuSign\eSign\Model\NotaryRecipient[] $notaries
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class Recipients implements ModelInterface, ArrayAccess
     /**
      * Sets participants
      *
-     * @param \DocuSign\eSign\Model\Participant[] $participants 
+     * @param \DocuSign\eSign\Model\Participant[] $participants
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class Recipients implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_count
      *
-     * @param ?string $recipient_count 
+     * @param ?string $recipient_count
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class Recipients implements ModelInterface, ArrayAccess
     /**
      * Sets seals
      *
-     * @param \DocuSign\eSign\Model\SealSign[] $seals 
+     * @param \DocuSign\eSign\Model\SealSign[] $seals
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class Recipients implements ModelInterface, ArrayAccess
     /**
      * Sets witnesses
      *
-     * @param \DocuSign\eSign\Model\Witness[] $witnesses 
+     * @param \DocuSign\eSign\Model\Witness[] $witnesses
      *
      * @return $this
      */

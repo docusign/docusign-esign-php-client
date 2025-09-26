@@ -160,9 +160,9 @@ class EnvelopeCustomMetadata implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class EnvelopeCustomMetadata implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['envelope_custom_metadata_details'] = isset($data['envelope_custom_metadata_details']) ? $data['envelope_custom_metadata_details'] : null;
     }
@@ -219,7 +219,7 @@ class EnvelopeCustomMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_custom_metadata_details
      *
-     * @param \DocuSign\eSign\Model\NameValue[] $envelope_custom_metadata_details 
+     * @param \DocuSign\eSign\Model\NameValue[] $envelope_custom_metadata_details
      *
      * @return $this
      */

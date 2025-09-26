@@ -170,9 +170,9 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_advanced_correct'] = isset($data['allow_advanced_correct']) ? $data['allow_advanced_correct'] : null;
         $this->container['allow_correct'] = isset($data['allow_correct']) ? $data['allow_correct'] : null;
@@ -231,7 +231,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets allow_advanced_correct
      *
-     * @param ?string $allow_advanced_correct 
+     * @param ?string $allow_advanced_correct
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets allow_correct
      *
-     * @param ?string $allow_correct 
+     * @param ?string $allow_correct
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class EnvelopeMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets enable_sign_with_notary
      *
-     * @param ?string $enable_sign_with_notary 
+     * @param ?string $enable_sign_with_notary
      *
      * @return $this
      */

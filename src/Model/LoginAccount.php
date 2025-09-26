@@ -210,9 +210,9 @@ class LoginAccount implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -227,7 +227,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
         $this->container['account_id_guid'] = isset($data['account_id_guid']) ? $data['account_id_guid'] : null;
@@ -495,7 +495,7 @@ class LoginAccount implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */

@@ -160,9 +160,9 @@ class AccountSignatureProviders implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class AccountSignatureProviders implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['signature_providers'] = isset($data['signature_providers']) ? $data['signature_providers'] : null;
     }
@@ -219,7 +219,7 @@ class AccountSignatureProviders implements ModelInterface, ArrayAccess
     /**
      * Sets signature_providers
      *
-     * @param \DocuSign\eSign\Model\AccountSignatureProvider[] $signature_providers 
+     * @param \DocuSign\eSign\Model\AccountSignatureProvider[] $signature_providers
      *
      * @return $this
      */

@@ -165,9 +165,9 @@ class PageRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class PageRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['rotate'] = isset($data['rotate']) ? $data['rotate'] : null;
@@ -225,7 +225,7 @@ class PageRequest implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param ?string $password 
+     * @param ?string $password
      *
      * @return $this
      */

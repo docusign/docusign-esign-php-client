@@ -160,9 +160,9 @@ class EnvelopeViewTemplateSettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class EnvelopeViewTemplateSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['show_matching_templates_prompt'] = isset($data['show_matching_templates_prompt']) ? $data['show_matching_templates_prompt'] : null;
     }
@@ -219,7 +219,7 @@ class EnvelopeViewTemplateSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_matching_templates_prompt
      *
-     * @param ?string $show_matching_templates_prompt 
+     * @param ?string $show_matching_templates_prompt
      *
      * @return $this
      */

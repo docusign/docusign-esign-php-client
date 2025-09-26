@@ -196,9 +196,9 @@ class EnvelopeTemplateResults implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class EnvelopeTemplateResults implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['envelope_templates'] = isset($data['envelope_templates']) ? $data['envelope_templates'] : null;
@@ -310,7 +310,7 @@ class EnvelopeTemplateResults implements ModelInterface, ArrayAccess
     /**
      * Sets folders
      *
-     * @param \DocuSign\eSign\Model\Folder[] $folders 
+     * @param \DocuSign\eSign\Model\Folder[] $folders
      *
      * @return $this
      */
