@@ -168,9 +168,9 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -185,7 +185,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['certificates'] = isset($data['certificates']) ? $data['certificates'] : null;
         $this->container['crls'] = isset($data['crls']) ? $data['crls'] : null;
@@ -229,7 +229,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Sets certificates
      *
-     * @param ?string[] $certificates 
+     * @param ?string[] $certificates
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Sets crls
      *
-     * @param ?string[] $crls 
+     * @param ?string[] $crls
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
     /**
      * Sets ocsps
      *
-     * @param ?string[] $ocsps 
+     * @param ?string[] $ocsps
      *
      * @return $this
      */

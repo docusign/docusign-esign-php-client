@@ -230,9 +230,9 @@ class Contact implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -247,7 +247,7 @@ class Contact implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cloud_provider'] = isset($data['cloud_provider']) ? $data['cloud_provider'] : null;
         $this->container['cloud_provider_container_id'] = isset($data['cloud_provider_container_id']) ? $data['cloud_provider_container_id'] : null;
@@ -303,7 +303,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets cloud_provider
      *
-     * @param ?string $cloud_provider 
+     * @param ?string $cloud_provider
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets cloud_provider_container_id
      *
-     * @param ?string $cloud_provider_container_id 
+     * @param ?string $cloud_provider_container_id
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets contact_id
      *
-     * @param ?string $contact_id 
+     * @param ?string $contact_id
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets contact_phone_numbers
      *
-     * @param \DocuSign\eSign\Model\ContactPhoneNumber[] $contact_phone_numbers 
+     * @param \DocuSign\eSign\Model\ContactPhoneNumber[] $contact_phone_numbers
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets contact_uri
      *
-     * @param ?string $contact_uri 
+     * @param ?string $contact_uri
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets emails
      *
-     * @param ?string[] $emails 
+     * @param ?string[] $emails
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets is_owner
      *
-     * @param ?bool $is_owner 
+     * @param ?bool $is_owner
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets notary_contact_details
      *
-     * @param \DocuSign\eSign\Model\NotaryContactDetails $notary_contact_details 
+     * @param \DocuSign\eSign\Model\NotaryContactDetails $notary_contact_details
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets organization
      *
-     * @param ?string $organization 
+     * @param ?string $organization
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets room_contact_type
      *
-     * @param ?string $room_contact_type 
+     * @param ?string $room_contact_type
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets signing_group
      *
-     * @param ?string $signing_group 
+     * @param ?string $signing_group
      *
      * @return $this
      */

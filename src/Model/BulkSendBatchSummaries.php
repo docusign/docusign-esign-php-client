@@ -216,9 +216,9 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -233,7 +233,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['batch_size_limit'] = isset($data['batch_size_limit']) ? $data['batch_size_limit'] : null;
         $this->container['bulk_batch_summaries'] = isset($data['bulk_batch_summaries']) ? $data['bulk_batch_summaries'] : null;
@@ -286,7 +286,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     /**
      * Sets batch_size_limit
      *
-     * @param ?string $batch_size_limit 
+     * @param ?string $batch_size_limit
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_batch_summaries
      *
-     * @param \DocuSign\eSign\Model\BulkSendBatchSummary[] $bulk_batch_summaries 
+     * @param \DocuSign\eSign\Model\BulkSendBatchSummary[] $bulk_batch_summaries
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_process_queue_limit
      *
-     * @param ?string $bulk_process_queue_limit 
+     * @param ?string $bulk_process_queue_limit
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_process_total_queued
      *
-     * @param ?string $bulk_process_total_queued 
+     * @param ?string $bulk_process_total_queued
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     /**
      * Sets queue_limit
      *
-     * @param ?string $queue_limit 
+     * @param ?string $queue_limit
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ class BulkSendBatchSummaries implements ModelInterface, ArrayAccess
     /**
      * Sets total_queued
      *
-     * @param ?string $total_queued 
+     * @param ?string $total_queued
      *
      * @return $this
      */

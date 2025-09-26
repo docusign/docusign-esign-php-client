@@ -241,9 +241,9 @@ class Brand implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -258,7 +258,7 @@ class Brand implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['brand_company'] = isset($data['brand_company']) ? $data['brand_company'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
@@ -364,7 +364,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets brand_languages
      *
-     * @param ?string[] $brand_languages 
+     * @param ?string[] $brand_languages
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets colors
      *
-     * @param \DocuSign\eSign\Model\NameValue[] $colors 
+     * @param \DocuSign\eSign\Model\NameValue[] $colors
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets default_brand_language
      *
-     * @param ?string $default_brand_language 
+     * @param ?string $default_brand_language
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets email_content
      *
-     * @param \DocuSign\eSign\Model\BrandEmailContent[] $email_content 
+     * @param \DocuSign\eSign\Model\BrandEmailContent[] $email_content
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets is_organization_brand
      *
-     * @param ?string $is_organization_brand 
+     * @param ?string $is_organization_brand
      *
      * @return $this
      */
@@ -532,7 +532,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets is_overriding_company_name
      *
-     * @param ?bool $is_overriding_company_name 
+     * @param ?bool $is_overriding_company_name
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets is_sending_default
      *
-     * @param ?bool $is_sending_default 
+     * @param ?bool $is_sending_default
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets is_signing_default
      *
-     * @param ?bool $is_signing_default 
+     * @param ?bool $is_signing_default
      *
      * @return $this
      */
@@ -604,7 +604,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets landing_pages
      *
-     * @param \DocuSign\eSign\Model\NameValue[] $landing_pages 
+     * @param \DocuSign\eSign\Model\NameValue[] $landing_pages
      *
      * @return $this
      */
@@ -628,7 +628,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \DocuSign\eSign\Model\BrandLink[] $links 
+     * @param \DocuSign\eSign\Model\BrandLink[] $links
      *
      * @return $this
      */
@@ -676,7 +676,7 @@ class Brand implements ModelInterface, ArrayAccess
     /**
      * Sets organization_brand_logo
      *
-     * @param ?string $organization_brand_logo 
+     * @param ?string $organization_brand_logo
      *
      * @return $this
      */

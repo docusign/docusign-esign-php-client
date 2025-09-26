@@ -165,9 +165,9 @@ class TemplateDocumentsResult implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class TemplateDocumentsResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['template_documents'] = isset($data['template_documents']) ? $data['template_documents'] : null;
         $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;
@@ -225,7 +225,7 @@ class TemplateDocumentsResult implements ModelInterface, ArrayAccess
     /**
      * Sets template_documents
      *
-     * @param \DocuSign\eSign\Model\EnvelopeDocument[] $template_documents 
+     * @param \DocuSign\eSign\Model\EnvelopeDocument[] $template_documents
      *
      * @return $this
      */

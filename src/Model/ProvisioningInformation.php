@@ -190,9 +190,9 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -207,7 +207,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['default_connection_id'] = isset($data['default_connection_id']) ? $data['default_connection_id'] : null;
         $this->container['default_plan_id'] = isset($data['default_plan_id']) ? $data['default_plan_id'] : null;
@@ -255,7 +255,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_connection_id
      *
-     * @param ?string $default_connection_id 
+     * @param ?string $default_connection_id
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_plan_id
      *
-     * @param ?string $default_plan_id 
+     * @param ?string $default_plan_id
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets password_rule_text
      *
-     * @param ?string $password_rule_text 
+     * @param ?string $password_rule_text
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets plan_promotion_text
      *
-     * @param ?string $plan_promotion_text 
+     * @param ?string $plan_promotion_text
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class ProvisioningInformation implements ModelInterface, ArrayAccess
     /**
      * Sets purchase_order_or_prom_allowed
      *
-     * @param ?string $purchase_order_or_prom_allowed 
+     * @param ?string $purchase_order_or_prom_allowed
      *
      * @return $this
      */

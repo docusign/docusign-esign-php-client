@@ -191,9 +191,9 @@ class PermissionProfile implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['modified_by_username'] = isset($data['modified_by_username']) ? $data['modified_by_username'] : null;
         $this->container['modified_date_time'] = isset($data['modified_date_time']) ? $data['modified_date_time'] : null;
@@ -256,7 +256,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by_username
      *
-     * @param ?string $modified_by_username 
+     * @param ?string $modified_by_username
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date_time
      *
-     * @param ?string $modified_date_time 
+     * @param ?string $modified_date_time
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_id
      *
-     * @param ?string $permission_profile_id 
+     * @param ?string $permission_profile_id
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_name
      *
-     * @param ?string $permission_profile_name 
+     * @param ?string $permission_profile_name
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets user_count
      *
-     * @param ?string $user_count 
+     * @param ?string $user_count
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class PermissionProfile implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \DocuSign\eSign\Model\UserInformation[] $users 
+     * @param \DocuSign\eSign\Model\UserInformation[] $users
      *
      * @return $this
      */

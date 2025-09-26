@@ -160,9 +160,9 @@ class AccountIdentityVerificationResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class AccountIdentityVerificationResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['identity_verification'] = isset($data['identity_verification']) ? $data['identity_verification'] : null;
     }
@@ -219,7 +219,7 @@ class AccountIdentityVerificationResponse implements ModelInterface, ArrayAccess
     /**
      * Sets identity_verification
      *
-     * @param \DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[] $identity_verification 
+     * @param \DocuSign\eSign\Model\AccountIdentityVerificationWorkflow[] $identity_verification
      *
      * @return $this
      */

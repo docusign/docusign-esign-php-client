@@ -221,9 +221,9 @@ class BillingCharge implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -238,7 +238,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allowed_quantity'] = isset($data['allowed_quantity']) ? $data['allowed_quantity'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
@@ -412,7 +412,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets discounts
      *
-     * @param \DocuSign\eSign\Model\BillingDiscount[] $discounts 
+     * @param \DocuSign\eSign\Model\BillingDiscount[] $discounts
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets first_effective_date
      *
-     * @param ?string $first_effective_date 
+     * @param ?string $first_effective_date
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets included_quantity
      *
-     * @param ?string $included_quantity 
+     * @param ?string $included_quantity
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets last_effective_date
      *
-     * @param ?string $last_effective_date 
+     * @param ?string $last_effective_date
      *
      * @return $this
      */
@@ -532,7 +532,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets prices
      *
-     * @param \DocuSign\eSign\Model\BillingPrice[] $prices 
+     * @param \DocuSign\eSign\Model\BillingPrice[] $prices
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class BillingCharge implements ModelInterface, ArrayAccess
     /**
      * Sets used_quantity
      *
-     * @param ?string $used_quantity 
+     * @param ?string $used_quantity
      *
      * @return $this
      */

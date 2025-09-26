@@ -246,9 +246,9 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -263,7 +263,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['assertion_id'] = isset($data['assertion_id']) ? $data['assertion_id'] : null;
         $this->container['authentication_instant'] = isset($data['authentication_instant']) ? $data['authentication_instant'] : null;
@@ -394,7 +394,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets client_ur_ls
      *
-     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls 
+     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets display_format
      *
-     * @param ?string $display_format 
+     * @param ?string $display_format
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets frame_ancestors
      *
-     * @param ?string[] $frame_ancestors 
+     * @param ?string[] $frame_ancestors
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message_origins
      *
-     * @param ?string[] $message_origins 
+     * @param ?string[] $message_origins
      *
      * @return $this
      */
@@ -706,7 +706,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options
      *
-     * @param ?string $x_frame_options 
+     * @param ?string $x_frame_options
      *
      * @return $this
      */
@@ -730,7 +730,7 @@ class RecipientViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options_allow_from_url
      *
-     * @param ?string $x_frame_options_allow_from_url 
+     * @param ?string $x_frame_options_allow_from_url
      *
      * @return $this
      */

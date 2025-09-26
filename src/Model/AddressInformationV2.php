@@ -131,9 +131,9 @@ class AddressInformationV2 implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -145,7 +145,7 @@ class AddressInformationV2 implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
         $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
@@ -233,7 +233,7 @@ class AddressInformationV2 implements ArrayAccess
 
     /**
      * Sets city
-     * @param string $city 
+     * @param string $city
      * @return $this
      */
     public function setCity($city)
@@ -275,7 +275,7 @@ class AddressInformationV2 implements ArrayAccess
 
     /**
      * Sets fax
-     * @param string $fax 
+     * @param string $fax
      * @return $this
      */
     public function setFax($fax)
@@ -296,7 +296,7 @@ class AddressInformationV2 implements ArrayAccess
 
     /**
      * Sets phone
-     * @param string $phone 
+     * @param string $phone
      * @return $this
      */
     public function setPhone($phone)
@@ -317,7 +317,7 @@ class AddressInformationV2 implements ArrayAccess
 
     /**
      * Sets postal_code
-     * @param string $postal_code 
+     * @param string $postal_code
      * @return $this
      */
     public function setPostalCode($postal_code)

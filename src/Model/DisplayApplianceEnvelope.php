@@ -159,9 +159,9 @@ class DisplayApplianceEnvelope implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -173,7 +173,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['add_demo_stamp'] = isset($data['add_demo_stamp']) ? $data['add_demo_stamp'] : null;
         $this->container['allow_multiple_attachments'] = isset($data['allow_multiple_attachments']) ? $data['allow_multiple_attachments'] : null;
@@ -226,7 +226,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets add_demo_stamp
-     * @param bool $add_demo_stamp 
+     * @param bool $add_demo_stamp
      * @return $this
      */
     public function setAddDemoStamp($add_demo_stamp)
@@ -247,7 +247,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets allow_multiple_attachments
-     * @param bool $allow_multiple_attachments 
+     * @param bool $allow_multiple_attachments
      * @return $this
      */
     public function setAllowMultipleAttachments($allow_multiple_attachments)
@@ -268,7 +268,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets burn_default_tab_data
-     * @param bool $burn_default_tab_data 
+     * @param bool $burn_default_tab_data
      * @return $this
      */
     public function setBurnDefaultTabData($burn_default_tab_data)
@@ -289,7 +289,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets convert_pdf_fields
-     * @param bool $convert_pdf_fields 
+     * @param bool $convert_pdf_fields
      * @return $this
      */
     public function setConvertPdfFields($convert_pdf_fields)
@@ -331,7 +331,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets envelope_type
-     * @param string $envelope_type 
+     * @param string $envelope_type
      * @return $this
      */
     public function setEnvelopeType($envelope_type)
@@ -352,7 +352,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets include_sigs_before_complete
-     * @param bool $include_sigs_before_complete 
+     * @param bool $include_sigs_before_complete
      * @return $this
      */
     public function setIncludeSigsBeforeComplete($include_sigs_before_complete)
@@ -373,7 +373,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets is_concat_mode
-     * @param bool $is_concat_mode 
+     * @param bool $is_concat_mode
      * @return $this
      */
     public function setIsConcatMode($is_concat_mode)
@@ -394,7 +394,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets is_envelope_id_stamping_enabled
-     * @param bool $is_envelope_id_stamping_enabled 
+     * @param bool $is_envelope_id_stamping_enabled
      * @return $this
      */
     public function setIsEnvelopeIdStampingEnabled($is_envelope_id_stamping_enabled)
@@ -415,7 +415,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets pdf_form_conversion_font_scale100
-     * @param bool $pdf_form_conversion_font_scale100 
+     * @param bool $pdf_form_conversion_font_scale100
      * @return $this
      */
     public function setPdfFormConversionFontScale100($pdf_form_conversion_font_scale100)
@@ -436,7 +436,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets should_flatten
-     * @param bool $should_flatten 
+     * @param bool $should_flatten
      * @return $this
      */
     public function setShouldFlatten($should_flatten)
@@ -457,7 +457,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets show_envelope_changes
-     * @param bool $show_envelope_changes 
+     * @param bool $show_envelope_changes
      * @return $this
      */
     public function setShowEnvelopeChanges($show_envelope_changes)
@@ -478,7 +478,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets sign_online
-     * @param bool $sign_online 
+     * @param bool $sign_online
      * @return $this
      */
     public function setSignOnline($sign_online)
@@ -520,7 +520,7 @@ class DisplayApplianceEnvelope implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param string $user_id 
+     * @param string $user_id
      * @return $this
      */
     public function setUserId($user_id)

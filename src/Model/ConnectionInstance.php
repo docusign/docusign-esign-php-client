@@ -165,9 +165,9 @@ class ConnectionInstance implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class ConnectionInstance implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['connection_key'] = isset($data['connection_key']) ? $data['connection_key'] : null;
         $this->container['connection_value'] = isset($data['connection_value']) ? $data['connection_value'] : null;
@@ -225,7 +225,7 @@ class ConnectionInstance implements ModelInterface, ArrayAccess
     /**
      * Sets connection_key
      *
-     * @param ?string $connection_key 
+     * @param ?string $connection_key
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class ConnectionInstance implements ModelInterface, ArrayAccess
     /**
      * Sets connection_value
      *
-     * @param ?string $connection_value 
+     * @param ?string $connection_value
      *
      * @return $this
      */

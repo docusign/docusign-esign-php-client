@@ -201,9 +201,9 @@ class WorkflowStep implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -218,7 +218,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['completed_date'] = isset($data['completed_date']) ? $data['completed_date'] : null;
@@ -268,7 +268,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets action
      *
-     * @param ?string $action 
+     * @param ?string $action
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets completed_date
      *
-     * @param ?string $completed_date 
+     * @param ?string $completed_date
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets item_id
      *
-     * @param ?string $item_id 
+     * @param ?string $item_id
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets triggered_date
      *
-     * @param ?string $triggered_date 
+     * @param ?string $triggered_date
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets trigger_on_item
      *
-     * @param ?string $trigger_on_item 
+     * @param ?string $trigger_on_item
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class WorkflowStep implements ModelInterface, ArrayAccess
     /**
      * Sets workflow_step_id
      *
-     * @param ?string $workflow_step_id 
+     * @param ?string $workflow_step_id
      *
      * @return $this
      */

@@ -163,9 +163,9 @@ class Seal implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -180,7 +180,7 @@ class Seal implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['configuration'] = isset($data['configuration']) ? $data['configuration'] : null;
         $this->container['seal_identifier'] = isset($data['seal_identifier']) ? $data['seal_identifier'] : null;
@@ -223,7 +223,7 @@ class Seal implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param map[string,?string] $configuration 
+     * @param map[string,?string] $configuration
      *
      * @return $this
      */
@@ -247,7 +247,7 @@ class Seal implements ModelInterface, ArrayAccess
     /**
      * Sets seal_identifier
      *
-     * @param ?string $seal_identifier 
+     * @param ?string $seal_identifier
      *
      * @return $this
      */

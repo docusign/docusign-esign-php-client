@@ -196,9 +196,9 @@ class BrandResources implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class BrandResources implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created_by_user_info'] = isset($data['created_by_user_info']) ? $data['created_by_user_info'] : null;
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
@@ -286,7 +286,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param ?string $created_date 
+     * @param ?string $created_date
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets data_not_saved_not_in_master
      *
-     * @param ?string[] $data_not_saved_not_in_master 
+     * @param ?string[] $data_not_saved_not_in_master
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date
      *
-     * @param ?string $modified_date 
+     * @param ?string $modified_date
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets modified_templates
      *
-     * @param ?string[] $modified_templates 
+     * @param ?string[] $modified_templates
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets resources_content_type
      *
-     * @param ?string $resources_content_type 
+     * @param ?string $resources_content_type
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class BrandResources implements ModelInterface, ArrayAccess
     /**
      * Sets resources_content_uri
      *
-     * @param ?string $resources_content_uri 
+     * @param ?string $resources_content_uri
      *
      * @return $this
      */

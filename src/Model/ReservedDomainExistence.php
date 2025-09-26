@@ -165,9 +165,9 @@ class ReservedDomainExistence implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class ReservedDomainExistence implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email_domain'] = isset($data['email_domain']) ? $data['email_domain'] : null;
         $this->container['is_reserved'] = isset($data['is_reserved']) ? $data['is_reserved'] : null;
@@ -225,7 +225,7 @@ class ReservedDomainExistence implements ModelInterface, ArrayAccess
     /**
      * Sets email_domain
      *
-     * @param ?string $email_domain 
+     * @param ?string $email_domain
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class ReservedDomainExistence implements ModelInterface, ArrayAccess
     /**
      * Sets is_reserved
      *
-     * @param ?string $is_reserved 
+     * @param ?string $is_reserved
      *
      * @return $this
      */

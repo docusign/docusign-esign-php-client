@@ -216,9 +216,9 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -233,7 +233,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['changed_signer'] = isset($data['changed_signer']) ? $data['changed_signer'] : null;
         $this->container['clickwrap_responses_limit_notification_email'] = isset($data['clickwrap_responses_limit_notification_email']) ? $data['clickwrap_responses_limit_notification_email'] : null;
@@ -310,7 +310,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets clickwrap_responses_limit_notification_email
      *
-     * @param ?string $clickwrap_responses_limit_notification_email 
+     * @param ?string $clickwrap_responses_limit_notification_email
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets comments_only_private_and_mention
      *
-     * @param ?string $comments_only_private_and_mention 
+     * @param ?string $comments_only_private_and_mention
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets comments_receive_all
      *
-     * @param ?string $comments_receive_all 
+     * @param ?string $comments_receive_all
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets powerform_responses_limit_notification_email
      *
-     * @param ?string $powerform_responses_limit_notification_email 
+     * @param ?string $powerform_responses_limit_notification_email
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets purge_documents
      *
-     * @param ?string $purge_documents 
+     * @param ?string $purge_documents
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ class SenderEmailNotifications implements ModelInterface, ArrayAccess
     /**
      * Sets sender_envelope_declined
      *
-     * @param ?string $sender_envelope_declined 
+     * @param ?string $sender_envelope_declined
      *
      * @return $this
      */

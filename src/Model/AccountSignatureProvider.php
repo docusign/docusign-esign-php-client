@@ -191,9 +191,9 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['is_required'] = isset($data['is_required']) ? $data['is_required'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
@@ -256,7 +256,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets is_required
      *
-     * @param ?string $is_required 
+     * @param ?string $is_required
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets priority
      *
-     * @param ?string $priority 
+     * @param ?string $priority
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_display_name
      *
-     * @param ?string $signature_provider_display_name 
+     * @param ?string $signature_provider_display_name
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_id
      *
-     * @param ?string $signature_provider_id 
+     * @param ?string $signature_provider_id
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_name
      *
-     * @param ?string $signature_provider_name 
+     * @param ?string $signature_provider_name
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_options_metadata
      *
-     * @param \DocuSign\eSign\Model\AccountSignatureProviderOption[] $signature_provider_options_metadata 
+     * @param \DocuSign\eSign\Model\AccountSignatureProviderOption[] $signature_provider_options_metadata
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class AccountSignatureProvider implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_required_options
      *
-     * @param \DocuSign\eSign\Model\SignatureProviderRequiredOption[] $signature_provider_required_options 
+     * @param \DocuSign\eSign\Model\SignatureProviderRequiredOption[] $signature_provider_required_options
      *
      * @return $this
      */

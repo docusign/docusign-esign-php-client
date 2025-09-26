@@ -183,9 +183,9 @@ class Revision implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -200,7 +200,7 @@ class Revision implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_data'] = isset($data['end_data']) ? $data['end_data'] : null;
         $this->container['field_name'] = isset($data['field_name']) ? $data['field_name'] : null;
@@ -247,7 +247,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets end_data
      *
-     * @param ?string $end_data 
+     * @param ?string $end_data
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets field_name
      *
-     * @param ?string $field_name 
+     * @param ?string $field_name
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets max_signature_length
      *
-     * @param ?string $max_signature_length 
+     * @param ?string $max_signature_length
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets signature_type
      *
-     * @param ?string $signature_type 
+     * @param ?string $signature_type
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ class Revision implements ModelInterface, ArrayAccess
     /**
      * Sets start_data
      *
-     * @param ?string $start_data 
+     * @param ?string $start_data
      *
      * @return $this
      */

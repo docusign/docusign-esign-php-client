@@ -181,9 +181,9 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -198,7 +198,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -316,7 +316,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param ?string $rights 
+     * @param ?string $rights
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class DocumentVisibility implements ModelInterface, ArrayAccess
     /**
      * Sets visible
      *
-     * @param ?string $visible 
+     * @param ?string $visible
      *
      * @return $this
      */

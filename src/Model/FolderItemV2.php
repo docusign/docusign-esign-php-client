@@ -261,9 +261,9 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -278,7 +278,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
@@ -460,7 +460,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets folder_id
      *
-     * @param ?string $folder_id 
+     * @param ?string $folder_id
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets folder_uri
      *
-     * @param ?string $folder_uri 
+     * @param ?string $folder_uri
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets owner_name
      *
-     * @param ?string $owner_name 
+     * @param ?string $owner_name
      *
      * @return $this
      */
@@ -628,7 +628,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets sender_company
      *
-     * @param ?string $sender_company 
+     * @param ?string $sender_company
      *
      * @return $this
      */
@@ -652,7 +652,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets sender_email
      *
-     * @param ?string $sender_email 
+     * @param ?string $sender_email
      *
      * @return $this
      */
@@ -676,7 +676,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets sender_name
      *
-     * @param ?string $sender_name 
+     * @param ?string $sender_name
      *
      * @return $this
      */
@@ -700,7 +700,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets sender_user_id
      *
-     * @param ?string $sender_user_id 
+     * @param ?string $sender_user_id
      *
      * @return $this
      */
@@ -772,7 +772,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets subject
      *
-     * @param ?string $subject 
+     * @param ?string $subject
      *
      * @return $this
      */
@@ -820,7 +820,7 @@ class FolderItemV2 implements ModelInterface, ArrayAccess
     /**
      * Sets template_uri
      *
-     * @param ?string $template_uri 
+     * @param ?string $template_uri
      *
      * @return $this
      */

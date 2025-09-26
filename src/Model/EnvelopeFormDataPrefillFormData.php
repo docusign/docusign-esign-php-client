@@ -158,9 +158,9 @@ class EnvelopeFormDataPrefillFormData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -175,7 +175,7 @@ class EnvelopeFormDataPrefillFormData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['form_data'] = isset($data['form_data']) ? $data['form_data'] : null;
     }
@@ -217,7 +217,7 @@ class EnvelopeFormDataPrefillFormData implements ModelInterface, ArrayAccess
     /**
      * Sets form_data
      *
-     * @param \DocuSign\eSign\Model\FormDataItem[] $form_data 
+     * @param \DocuSign\eSign\Model\FormDataItem[] $form_data
      *
      * @return $this
      */

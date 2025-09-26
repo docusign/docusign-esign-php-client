@@ -170,9 +170,9 @@ class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['show_contacts_list'] = isset($data['show_contacts_list']) ? $data['show_contacts_list'] : null;
         $this->container['show_edit_message'] = isset($data['show_edit_message']) ? $data['show_edit_message'] : null;
@@ -231,7 +231,7 @@ class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_contacts_list
      *
-     * @param ?string $show_contacts_list 
+     * @param ?string $show_contacts_list
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_edit_message
      *
-     * @param ?string $show_edit_message 
+     * @param ?string $show_edit_message
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
     /**
      * Sets show_edit_recipients
      *
-     * @param ?string $show_edit_recipients 
+     * @param ?string $show_edit_recipients
      *
      * @return $this
      */

@@ -160,9 +160,9 @@ class EnvelopeAuditEvent implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class EnvelopeAuditEvent implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['event_fields'] = isset($data['event_fields']) ? $data['event_fields'] : null;
     }
@@ -219,7 +219,7 @@ class EnvelopeAuditEvent implements ModelInterface, ArrayAccess
     /**
      * Sets event_fields
      *
-     * @param \DocuSign\eSign\Model\NameValue[] $event_fields 
+     * @param \DocuSign\eSign\Model\NameValue[] $event_fields
      *
      * @return $this
      */

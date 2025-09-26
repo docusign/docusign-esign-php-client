@@ -186,9 +186,9 @@ class ListItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -203,7 +203,7 @@ class ListItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
         $this->container['selected_metadata'] = isset($data['selected_metadata']) ? $data['selected_metadata'] : null;
@@ -322,7 +322,7 @@ class ListItem implements ModelInterface, ArrayAccess
     /**
      * Sets text_metadata
      *
-     * @param \DocuSign\eSign\Model\PropertyMetadata $text_metadata 
+     * @param \DocuSign\eSign\Model\PropertyMetadata $text_metadata
      *
      * @return $this
      */

@@ -175,9 +175,9 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
         $this->container['credible_witnesses'] = isset($data['credible_witnesses']) ? $data['credible_witnesses'] : null;
@@ -237,7 +237,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Sets comment
      *
-     * @param ?string $comment 
+     * @param ?string $comment
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Sets credible_witnesses
      *
-     * @param \DocuSign\eSign\Model\NotaryJournalCredibleWitness[] $credible_witnesses 
+     * @param \DocuSign\eSign\Model\NotaryJournalCredibleWitness[] $credible_witnesses
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Sets signature_image
      *
-     * @param ?string $signature_image 
+     * @param ?string $signature_image
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class NotaryJournalMetaData implements ModelInterface, ArrayAccess
     /**
      * Sets signer_id_type
      *
-     * @param ?string $signer_id_type 
+     * @param ?string $signer_id_type
      *
      * @return $this
      */

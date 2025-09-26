@@ -295,9 +295,9 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -312,7 +312,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authentication_success_filter'] = isset($data['authentication_success_filter']) ? $data['authentication_success_filter'] : null;
         $this->container['custom_field_filter'] = isset($data['custom_field_filter']) ? $data['custom_field_filter'] : null;
@@ -381,7 +381,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_success_filter
      *
-     * @param ?string $authentication_success_filter 
+     * @param ?string $authentication_success_filter
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets custom_field_filter
      *
-     * @param ?string $custom_field_filter 
+     * @param ?string $custom_field_filter
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets date_range_custom_from_date
      *
-     * @param ?string $date_range_custom_from_date 
+     * @param ?string $date_range_custom_from_date
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets date_range_custom_to_date
      *
-     * @param ?string $date_range_custom_to_date 
+     * @param ?string $date_range_custom_to_date
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets date_range_filter
      *
-     * @param ?string $date_range_filter 
+     * @param ?string $date_range_filter
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_date_type_filter
      *
-     * @param ?string $envelope_date_type_filter 
+     * @param ?string $envelope_date_type_filter
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_recipient_name_contains_filter
      *
-     * @param ?string $envelope_recipient_name_contains_filter 
+     * @param ?string $envelope_recipient_name_contains_filter
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_status_filter
      *
-     * @param ?string $envelope_status_filter 
+     * @param ?string $envelope_status_filter
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_subject_contains_filter
      *
-     * @param ?string $envelope_subject_contains_filter 
+     * @param ?string $envelope_subject_contains_filter
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets fields
      *
-     * @param \DocuSign\eSign\Model\ReportInProductField[] $fields 
+     * @param \DocuSign\eSign\Model\ReportInProductField[] $fields
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets for_download
      *
-     * @param ?string $for_download 
+     * @param ?string $for_download
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets is_dashboard
      *
-     * @param ?string $is_dashboard 
+     * @param ?string $is_dashboard
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets new_line
      *
-     * @param ?string $new_line 
+     * @param ?string $new_line
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets override_timezone_key
      *
-     * @param ?string $override_timezone_key 
+     * @param ?string $override_timezone_key
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets period_length_filter
      *
-     * @param ?string $period_length_filter 
+     * @param ?string $period_length_filter
      *
      * @return $this
      */
@@ -741,7 +741,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets quote
      *
-     * @param ?string $quote 
+     * @param ?string $quote
      *
      * @return $this
      */
@@ -765,7 +765,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_customized_id
      *
-     * @param ?string $report_customized_id 
+     * @param ?string $report_customized_id
      *
      * @return $this
      */
@@ -789,7 +789,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_description
      *
-     * @param ?string $report_description 
+     * @param ?string $report_description
      *
      * @return $this
      */
@@ -813,7 +813,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_id
      *
-     * @param ?string $report_id 
+     * @param ?string $report_id
      *
      * @return $this
      */
@@ -837,7 +837,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_invocation_type
      *
-     * @param ?string $report_invocation_type 
+     * @param ?string $report_invocation_type
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets report_name
      *
-     * @param ?string $report_name 
+     * @param ?string $report_name
      *
      * @return $this
      */
@@ -885,7 +885,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_filter
      *
-     * @param ?string $sent_by_filter 
+     * @param ?string $sent_by_filter
      *
      * @return $this
      */
@@ -909,7 +909,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sent_by_ids
      *
-     * @param ?string $sent_by_ids 
+     * @param ?string $sent_by_ids
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets separator
      *
-     * @param ?string $separator 
+     * @param ?string $separator
      *
      * @return $this
      */
@@ -957,7 +957,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sort_direction
      *
-     * @param ?string $sort_direction 
+     * @param ?string $sort_direction
      *
      * @return $this
      */
@@ -981,7 +981,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sort_field
      *
-     * @param ?string $sort_field 
+     * @param ?string $sort_field
      *
      * @return $this
      */
@@ -1029,7 +1029,7 @@ class ReportInProductCsvRunRequest implements ModelInterface, ArrayAccess
     /**
      * Sets verification_status_filter
      *
-     * @param ?string $verification_status_filter 
+     * @param ?string $verification_status_filter
      *
      * @return $this
      */

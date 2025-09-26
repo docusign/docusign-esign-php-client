@@ -216,9 +216,9 @@ class AccountAddress implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -233,7 +233,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
         $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
@@ -382,7 +382,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets fax
      *
-     * @param ?string $fax 
+     * @param ?string $fax
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param ?string $last_name 
+     * @param ?string $last_name
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param ?string $phone 
+     * @param ?string $phone
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ class AccountAddress implements ModelInterface, ArrayAccess
     /**
      * Sets postal_code
      *
-     * @param ?string $postal_code 
+     * @param ?string $postal_code
      *
      * @return $this
      */

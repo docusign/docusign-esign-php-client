@@ -206,9 +206,9 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['carbon_copy_original_owner'] = isset($data['carbon_copy_original_owner']) ? $data['carbon_copy_original_owner'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
@@ -274,7 +274,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets carbon_copy_original_owner
      *
-     * @param ?string $carbon_copy_original_owner 
+     * @param ?string $carbon_copy_original_owner
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets enabled
      *
-     * @param ?string $enabled 
+     * @param ?string $enabled
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_transfer_rule_id
      *
-     * @param ?string $envelope_transfer_rule_id 
+     * @param ?string $envelope_transfer_rule_id
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets event_type
      *
-     * @param ?string $event_type 
+     * @param ?string $event_type
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets from_groups
      *
-     * @param \DocuSign\eSign\Model\Group[] $from_groups 
+     * @param \DocuSign\eSign\Model\Group[] $from_groups
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets from_users
      *
-     * @param \DocuSign\eSign\Model\UserInformation[] $from_users 
+     * @param \DocuSign\eSign\Model\UserInformation[] $from_users
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class EnvelopeTransferRuleRequest implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date
      *
-     * @param ?string $modified_date 
+     * @param ?string $modified_date
      *
      * @return $this
      */

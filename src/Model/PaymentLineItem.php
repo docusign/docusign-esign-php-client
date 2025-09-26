@@ -176,9 +176,9 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['amount_reference'] = isset($data['amount_reference']) ? $data['amount_reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -238,7 +238,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets amount_reference
      *
-     * @param ?string $amount_reference 
+     * @param ?string $amount_reference
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param ?string $description 
+     * @param ?string $description
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets item_code
      *
-     * @param ?string $item_code 
+     * @param ?string $item_code
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class PaymentLineItem implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */

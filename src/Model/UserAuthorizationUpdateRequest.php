@@ -165,9 +165,9 @@ class UserAuthorizationUpdateRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class UserAuthorizationUpdateRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_date'] = isset($data['end_date']) ? $data['end_date'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
@@ -225,7 +225,7 @@ class UserAuthorizationUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets end_date
      *
-     * @param ?string $end_date 
+     * @param ?string $end_date
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class UserAuthorizationUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets start_date
      *
-     * @param ?string $start_date 
+     * @param ?string $start_date
      *
      * @return $this
      */

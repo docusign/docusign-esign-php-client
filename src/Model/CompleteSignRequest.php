@@ -183,9 +183,9 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -200,7 +200,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
         $this->container['correlation_id'] = isset($data['correlation_id']) ? $data['correlation_id'] : null;
@@ -247,7 +247,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets certificate
      *
-     * @param ?string $certificate 
+     * @param ?string $certificate
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets correlation_id
      *
-     * @param ?string $correlation_id 
+     * @param ?string $correlation_id
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets document_update_infos
      *
-     * @param \DocuSign\eSign\Model\DocumentUpdateInfo[] $document_update_infos 
+     * @param \DocuSign\eSign\Model\DocumentUpdateInfo[] $document_update_infos
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
     /**
      * Sets max_signature_length
      *
-     * @param ?string $max_signature_length 
+     * @param ?string $max_signature_length
      *
      * @return $this
      */

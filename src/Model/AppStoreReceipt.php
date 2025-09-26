@@ -176,9 +176,9 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['downgrade_product_id'] = isset($data['downgrade_product_id']) ? $data['downgrade_product_id'] : null;
         $this->container['is_downgrade_cancellation'] = isset($data['is_downgrade_cancellation']) ? $data['is_downgrade_cancellation'] : null;
@@ -238,7 +238,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_product_id
      *
-     * @param ?string $downgrade_product_id 
+     * @param ?string $downgrade_product_id
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
     /**
      * Sets is_downgrade_cancellation
      *
-     * @param ?string $is_downgrade_cancellation 
+     * @param ?string $is_downgrade_cancellation
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class AppStoreReceipt implements ModelInterface, ArrayAccess
     /**
      * Sets product_id
      *
-     * @param ?string $product_id 
+     * @param ?string $product_id
      *
      * @return $this
      */

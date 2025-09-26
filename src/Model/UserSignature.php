@@ -305,9 +305,9 @@ class UserSignature implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -322,7 +322,7 @@ class UserSignature implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['adopted_date_time'] = isset($data['adopted_date_time']) ? $data['adopted_date_time'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
@@ -441,7 +441,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets custom_field
      *
-     * @param ?string $custom_field 
+     * @param ?string $custom_field
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets disallow_user_resize_stamp
      *
-     * @param ?string $disallow_user_resize_stamp 
+     * @param ?string $disallow_user_resize_stamp
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets external_id
      *
-     * @param ?string $external_id 
+     * @param ?string $external_id
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets image_base64
      *
-     * @param ?string $image_base64 
+     * @param ?string $image_base64
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets image_type
      *
-     * @param ?string $image_type 
+     * @param ?string $image_type
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets initials150_image_id
      *
-     * @param ?string $initials150_image_id 
+     * @param ?string $initials150_image_id
      *
      * @return $this
      */
@@ -657,7 +657,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets is_default
      *
-     * @param ?string $is_default 
+     * @param ?string $is_default
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_id
      *
-     * @param ?string $nrds_id 
+     * @param ?string $nrds_id
      *
      * @return $this
      */
@@ -729,7 +729,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_last_name
      *
-     * @param ?string $nrds_last_name 
+     * @param ?string $nrds_last_name
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets nrds_status
      *
-     * @param ?string $nrds_status 
+     * @param ?string $nrds_status
      *
      * @return $this
      */
@@ -777,7 +777,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets phonetic_name
      *
-     * @param ?string $phonetic_name 
+     * @param ?string $phonetic_name
      *
      * @return $this
      */
@@ -801,7 +801,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature150_image_id
      *
-     * @param ?string $signature150_image_id 
+     * @param ?string $signature150_image_id
      *
      * @return $this
      */
@@ -945,7 +945,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_rights
      *
-     * @param ?string $signature_rights 
+     * @param ?string $signature_rights
      *
      * @return $this
      */
@@ -969,7 +969,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets signature_type
      *
-     * @param ?string $signature_type 
+     * @param ?string $signature_type
      *
      * @return $this
      */
@@ -993,7 +993,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_format
      *
-     * @param ?string $stamp_format 
+     * @param ?string $stamp_format
      *
      * @return $this
      */
@@ -1017,7 +1017,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_image_uri
      *
-     * @param ?string $stamp_image_uri 
+     * @param ?string $stamp_image_uri
      *
      * @return $this
      */
@@ -1041,7 +1041,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_size_mm
      *
-     * @param ?string $stamp_size_mm 
+     * @param ?string $stamp_size_mm
      *
      * @return $this
      */
@@ -1065,7 +1065,7 @@ class UserSignature implements ModelInterface, ArrayAccess
     /**
      * Sets stamp_type
      *
-     * @param ?string $stamp_type 
+     * @param ?string $stamp_type
      *
      * @return $this
      */

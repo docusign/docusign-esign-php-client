@@ -178,9 +178,9 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -195,7 +195,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['app_version'] = isset($data['app_version']) ? $data['app_version'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -241,7 +241,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets app_version
      *
-     * @param ?string $app_version 
+     * @param ?string $app_version
      *
      * @return $this
      */
@@ -265,7 +265,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param ?string $description 
+     * @param ?string $description
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets error
      *
-     * @param ?string $error 
+     * @param ?string $error
      *
      * @return $this
      */
@@ -337,7 +337,7 @@ class TspHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets status_description
      *
-     * @param \DocuSign\eSign\Model\TspHealthCheckStatusDescription[] $status_description 
+     * @param \DocuSign\eSign\Model\TspHealthCheckStatusDescription[] $status_description
      *
      * @return $this
      */

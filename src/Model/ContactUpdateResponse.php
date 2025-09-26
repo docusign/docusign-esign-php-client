@@ -161,9 +161,9 @@ class ContactUpdateResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -178,7 +178,7 @@ class ContactUpdateResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['contacts'] = isset($data['contacts']) ? $data['contacts'] : null;
     }
@@ -220,7 +220,7 @@ class ContactUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets contacts
      *
-     * @param \DocuSign\eSign\Model\Contact[] $contacts 
+     * @param \DocuSign\eSign\Model\Contact[] $contacts
      *
      * @return $this
      */

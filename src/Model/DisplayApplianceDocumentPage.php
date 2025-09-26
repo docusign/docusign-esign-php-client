@@ -139,9 +139,9 @@ class DisplayApplianceDocumentPage implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -153,7 +153,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['doc_page_count_total'] = isset($data['doc_page_count_total']) ? $data['doc_page_count_total'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
@@ -201,7 +201,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets doc_page_count_total
-     * @param int $doc_page_count_total 
+     * @param int $doc_page_count_total
      * @return $this
      */
     public function setDocPageCountTotal($doc_page_count_total)
@@ -243,7 +243,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets document_name
-     * @param string $document_name 
+     * @param string $document_name
      * @return $this
      */
     public function setDocumentName($document_name)
@@ -264,7 +264,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets extension
-     * @param string $extension 
+     * @param string $extension
      * @return $this
      */
     public function setExtension($extension)
@@ -285,7 +285,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets height72_dpi
-     * @param int $height72_dpi 
+     * @param int $height72_dpi
      * @return $this
      */
     public function setHeight72Dpi($height72_dpi)
@@ -306,7 +306,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets is_attachment_type
-     * @param bool $is_attachment_type 
+     * @param bool $is_attachment_type
      * @return $this
      */
     public function setIsAttachmentType($is_attachment_type)
@@ -327,7 +327,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets page
-     * @param int $page 
+     * @param int $page
      * @return $this
      */
     public function setPage($page)
@@ -348,7 +348,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets page_id
-     * @param string $page_id 
+     * @param string $page_id
      * @return $this
      */
     public function setPageId($page_id)
@@ -369,7 +369,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type 
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -390,7 +390,7 @@ class DisplayApplianceDocumentPage implements ArrayAccess
 
     /**
      * Sets width72_dpi
-     * @param int $width72_dpi 
+     * @param int $width72_dpi
      * @return $this
      */
     public function setWidth72Dpi($width72_dpi)

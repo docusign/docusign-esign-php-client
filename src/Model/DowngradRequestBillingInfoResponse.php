@@ -165,9 +165,9 @@ class DowngradRequestBillingInfoResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class DowngradRequestBillingInfoResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['downgrade_plan_information'] = isset($data['downgrade_plan_information']) ? $data['downgrade_plan_information'] : null;
         $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
@@ -225,7 +225,7 @@ class DowngradRequestBillingInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_information
      *
-     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information 
+     * @param \DocuSign\eSign\Model\DowngradePlanUpdateResponse $downgrade_plan_information
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class DowngradRequestBillingInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param ?string $payment_method 
+     * @param ?string $payment_method
      *
      * @return $this
      */

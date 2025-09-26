@@ -178,9 +178,9 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -195,7 +195,7 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
@@ -265,7 +265,7 @@ class UserInfoResponse implements ModelInterface, ArrayAccess
     /**
      * Sets language
      *
-     * @param ?string $language 
+     * @param ?string $language
      *
      * @return $this
      */

@@ -170,9 +170,9 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
         $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
@@ -231,7 +231,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets return_url
      *
-     * @param ?string $return_url 
+     * @param ?string $return_url
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \DocuSign\eSign\Model\TemplateViewSettings $settings 
+     * @param \DocuSign\eSign\Model\TemplateViewSettings $settings
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class TemplateViewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets view_access
      *
-     * @param ?string $view_access 
+     * @param ?string $view_access
      *
      * @return $this
      */

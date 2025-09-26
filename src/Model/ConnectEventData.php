@@ -171,9 +171,9 @@ class ConnectEventData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
         $this->container['include_data'] = isset($data['include_data']) ? $data['include_data'] : null;
@@ -232,7 +232,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Sets format
      *
-     * @param ?string $format 
+     * @param ?string $format
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Sets include_data
      *
-     * @param ?string[] $include_data 
+     * @param ?string[] $include_data
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class ConnectEventData implements ModelInterface, ArrayAccess
     /**
      * Sets version
      *
-     * @param ?string $version 
+     * @param ?string $version
      *
      * @return $this
      */

@@ -216,9 +216,9 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -233,7 +233,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['continuation_token'] = isset($data['continuation_token']) ? $data['continuation_token'] : null;
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
@@ -286,7 +286,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets continuation_token
      *
-     * @param ?string $continuation_token 
+     * @param ?string $continuation_token
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelopes
      *
-     * @param \DocuSign\eSign\Model\Envelope[] $envelopes 
+     * @param \DocuSign\eSign\Model\Envelope[] $envelopes
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_search_source
      *
-     * @param ?string $envelope_search_source 
+     * @param ?string $envelope_search_source
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_transaction_statuses
      *
-     * @param \DocuSign\eSign\Model\EnvelopeTransactionStatus[] $envelope_transaction_statuses 
+     * @param \DocuSign\eSign\Model\EnvelopeTransactionStatus[] $envelope_transaction_statuses
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets folders
      *
-     * @param \DocuSign\eSign\Model\Folder[] $folders 
+     * @param \DocuSign\eSign\Model\Folder[] $folders
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
     /**
      * Sets last_queried_date_time
      *
-     * @param ?string $last_queried_date_time 
+     * @param ?string $last_queried_date_time
      *
      * @return $this
      */

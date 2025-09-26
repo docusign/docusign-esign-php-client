@@ -251,9 +251,9 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -268,7 +268,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
@@ -376,7 +376,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets active_since
      *
-     * @param ?string $active_since 
+     * @param ?string $active_since
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets created_by_id
      *
-     * @param ?string $created_by_id 
+     * @param ?string $created_by_id
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets invitation_email_blurb
      *
-     * @param ?string $invitation_email_blurb 
+     * @param ?string $invitation_email_blurb
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets invitation_email_subject
      *
-     * @param ?string $invitation_email_subject 
+     * @param ?string $invitation_email_subject
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_by_id
      *
-     * @param ?string $last_modified_by_id 
+     * @param ?string $last_modified_by_id
      *
      * @return $this
      */
@@ -640,7 +640,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */
@@ -664,7 +664,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param ?string $user_name 
+     * @param ?string $user_name
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_id
      *
-     * @param ?string $workspace_id 
+     * @param ?string $workspace_id
      *
      * @return $this
      */
@@ -736,7 +736,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_user_id
      *
-     * @param ?string $workspace_user_id 
+     * @param ?string $workspace_user_id
      *
      * @return $this
      */
@@ -760,7 +760,7 @@ class WorkspaceUser implements ModelInterface, ArrayAccess
     /**
      * Sets workspace_user_uri
      *
-     * @param ?string $workspace_user_uri 
+     * @param ?string $workspace_user_uri
      *
      * @return $this
      */

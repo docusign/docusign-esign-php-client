@@ -173,9 +173,9 @@ class ExternalClaim implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -190,7 +190,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['acquired_time'] = isset($data['acquired_time']) ? $data['acquired_time'] : null;
         $this->container['claim_name'] = isset($data['claim_name']) ? $data['claim_name'] : null;
@@ -235,7 +235,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Sets acquired_time
      *
-     * @param ?string $acquired_time 
+     * @param ?string $acquired_time
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Sets claim_name
      *
-     * @param ?string $claim_name 
+     * @param ?string $claim_name
      *
      * @return $this
      */
@@ -283,7 +283,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
     /**
      * Sets provider
      *
-     * @param ?string $provider 
+     * @param ?string $provider
      *
      * @return $this
      */

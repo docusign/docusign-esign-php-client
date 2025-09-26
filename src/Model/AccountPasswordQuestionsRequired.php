@@ -166,9 +166,9 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -183,7 +183,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['maximum_questions'] = isset($data['maximum_questions']) ? $data['maximum_questions'] : null;
         $this->container['minimum_questions'] = isset($data['minimum_questions']) ? $data['minimum_questions'] : null;
@@ -226,7 +226,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
     /**
      * Sets maximum_questions
      *
-     * @param ?string $maximum_questions 
+     * @param ?string $maximum_questions
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class AccountPasswordQuestionsRequired implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_questions
      *
-     * @param ?string $minimum_questions 
+     * @param ?string $minimum_questions
      *
      * @return $this
      */

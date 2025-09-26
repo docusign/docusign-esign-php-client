@@ -170,9 +170,9 @@ class DowngradeRequestInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class DowngradeRequestInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['downgrade_request_creation'] = isset($data['downgrade_request_creation']) ? $data['downgrade_request_creation'] : null;
         $this->container['downgrade_request_product_id'] = isset($data['downgrade_request_product_id']) ? $data['downgrade_request_product_id'] : null;
@@ -231,7 +231,7 @@ class DowngradeRequestInformation implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_request_creation
      *
-     * @param ?string $downgrade_request_creation 
+     * @param ?string $downgrade_request_creation
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class DowngradeRequestInformation implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_request_product_id
      *
-     * @param ?string $downgrade_request_product_id 
+     * @param ?string $downgrade_request_product_id
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class DowngradeRequestInformation implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_request_status
      *
-     * @param ?string $downgrade_request_status 
+     * @param ?string $downgrade_request_status
      *
      * @return $this
      */

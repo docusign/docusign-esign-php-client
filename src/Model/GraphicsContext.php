@@ -170,9 +170,9 @@ class GraphicsContext implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['fill_color'] = isset($data['fill_color']) ? $data['fill_color'] : null;
         $this->container['line_color'] = isset($data['line_color']) ? $data['line_color'] : null;
@@ -231,7 +231,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Sets fill_color
      *
-     * @param ?string $fill_color 
+     * @param ?string $fill_color
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Sets line_color
      *
-     * @param ?string $line_color 
+     * @param ?string $line_color
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class GraphicsContext implements ModelInterface, ArrayAccess
     /**
      * Sets line_weight
      *
-     * @param ?string $line_weight 
+     * @param ?string $line_weight
      *
      * @return $this
      */

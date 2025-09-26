@@ -215,9 +215,9 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -232,7 +232,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cell_style'] = isset($data['cell_style']) ? $data['cell_style'] : null;
         $this->container['collapsible_settings'] = isset($data['collapsible_settings']) ? $data['collapsible_settings'] : null;
@@ -285,7 +285,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets cell_style
      *
-     * @param ?string $cell_style 
+     * @param ?string $cell_style
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display
      *
-     * @param ?string $display 
+     * @param ?string $display
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display_label
      *
-     * @param ?string $display_label 
+     * @param ?string $display_label
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display_order
      *
-     * @param ?int $display_order 
+     * @param ?int $display_order
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets display_page_number
      *
-     * @param ?int $display_page_number 
+     * @param ?int $display_page_number
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets hide_label_when_opened
      *
-     * @param ?bool $hide_label_when_opened 
+     * @param ?bool $hide_label_when_opened
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets inline_outer_style
      *
-     * @param ?string $inline_outer_style 
+     * @param ?string $inline_outer_style
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets label_when_opened
      *
-     * @param ?string $label_when_opened 
+     * @param ?string $label_when_opened
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets pre_label
      *
-     * @param ?string $pre_label 
+     * @param ?string $pre_label
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets scroll_to_top_when_opened
      *
-     * @param ?bool $scroll_to_top_when_opened 
+     * @param ?bool $scroll_to_top_when_opened
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class DocumentHtmlDisplaySettings implements ModelInterface, ArrayAccess
     /**
      * Sets table_style
      *
-     * @param ?string $table_style 
+     * @param ?string $table_style
      *
      * @return $this
      */

@@ -201,9 +201,9 @@ class FeatureSet implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -218,7 +218,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['currency_feature_set_prices'] = isset($data['currency_feature_set_prices']) ? $data['currency_feature_set_prices'] : null;
         $this->container['envelope_fee'] = isset($data['envelope_fee']) ? $data['envelope_fee'] : null;
@@ -292,7 +292,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets envelope_fee
      *
-     * @param ?string $envelope_fee 
+     * @param ?string $envelope_fee
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets fixed_fee
      *
-     * @param ?string $fixed_fee 
+     * @param ?string $fixed_fee
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets is_active
      *
-     * @param ?string $is_active 
+     * @param ?string $is_active
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class FeatureSet implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */

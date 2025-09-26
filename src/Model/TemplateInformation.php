@@ -160,9 +160,9 @@ class TemplateInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class TemplateInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
     }
@@ -219,7 +219,7 @@ class TemplateInformation implements ModelInterface, ArrayAccess
     /**
      * Sets templates
      *
-     * @param \DocuSign\eSign\Model\TemplateSummary[] $templates 
+     * @param \DocuSign\eSign\Model\TemplateSummary[] $templates
      *
      * @return $this
      */

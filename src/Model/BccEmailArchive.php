@@ -206,9 +206,9 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
         $this->container['bcc_email_archive_id'] = isset($data['bcc_email_archive_id']) ? $data['bcc_email_archive_id'] : null;
@@ -298,7 +298,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets bcc_email_archive_id
      *
-     * @param ?string $bcc_email_archive_id 
+     * @param ?string $bcc_email_archive_id
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param ?string $created 
+     * @param ?string $created
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification_id
      *
-     * @param ?string $email_notification_id 
+     * @param ?string $email_notification_id
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param ?string $modified 
+     * @param ?string $modified
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class BccEmailArchive implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */

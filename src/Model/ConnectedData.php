@@ -180,9 +180,9 @@ class ConnectedData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -197,7 +197,7 @@ class ConnectedData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['property_name'] = isset($data['property_name']) ? $data['property_name'] : null;
         $this->container['supported_operation'] = isset($data['supported_operation']) ? $data['supported_operation'] : null;
@@ -243,7 +243,7 @@ class ConnectedData implements ModelInterface, ArrayAccess
     /**
      * Sets property_name
      *
-     * @param ?string $property_name 
+     * @param ?string $property_name
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ConnectedData implements ModelInterface, ArrayAccess
     /**
      * Sets supported_operation
      *
-     * @param ?string $supported_operation 
+     * @param ?string $supported_operation
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class ConnectedData implements ModelInterface, ArrayAccess
     /**
      * Sets supported_uri
      *
-     * @param ?string $supported_uri 
+     * @param ?string $supported_uri
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class ConnectedData implements ModelInterface, ArrayAccess
     /**
      * Sets type_name
      *
-     * @param ?string $type_name 
+     * @param ?string $type_name
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class ConnectedData implements ModelInterface, ArrayAccess
     /**
      * Sets type_system_namespace
      *
-     * @param ?string $type_system_namespace 
+     * @param ?string $type_system_namespace
      *
      * @return $this
      */

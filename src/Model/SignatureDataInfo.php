@@ -168,9 +168,9 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -185,7 +185,7 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_security_store'] = isset($data['document_security_store']) ? $data['document_security_store'] : null;
         $this->container['signature_data'] = isset($data['signature_data']) ? $data['signature_data'] : null;
@@ -253,7 +253,7 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
     /**
      * Sets signature_data
      *
-     * @param ?string $signature_data 
+     * @param ?string $signature_data
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class SignatureDataInfo implements ModelInterface, ArrayAccess
     /**
      * Sets signature_field_name
      *
-     * @param ?string $signature_field_name 
+     * @param ?string $signature_field_name
      *
      * @return $this
      */

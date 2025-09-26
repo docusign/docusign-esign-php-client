@@ -131,9 +131,9 @@ class DisplayApplianceDocument implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -145,7 +145,7 @@ class DisplayApplianceDocument implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['attachment_description'] = isset($data['attachment_description']) ? $data['attachment_description'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
@@ -191,7 +191,7 @@ class DisplayApplianceDocument implements ArrayAccess
 
     /**
      * Sets attachment_description
-     * @param string $attachment_description 
+     * @param string $attachment_description
      * @return $this
      */
     public function setAttachmentDescription($attachment_description)
@@ -233,7 +233,7 @@ class DisplayApplianceDocument implements ArrayAccess
 
     /**
      * Sets document_type
-     * @param string $document_type 
+     * @param string $document_type
      * @return $this
      */
     public function setDocumentType($document_type)
@@ -275,7 +275,7 @@ class DisplayApplianceDocument implements ArrayAccess
 
     /**
      * Sets external_document_id
-     * @param string $external_document_id 
+     * @param string $external_document_id
      * @return $this
      */
     public function setExternalDocumentId($external_document_id)
@@ -296,7 +296,7 @@ class DisplayApplianceDocument implements ArrayAccess
 
     /**
      * Sets latest_pdf_id
-     * @param string $latest_pdf_id 
+     * @param string $latest_pdf_id
      * @return $this
      */
     public function setLatestPdfId($latest_pdf_id)
@@ -317,7 +317,7 @@ class DisplayApplianceDocument implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name 
+     * @param string $name
      * @return $this
      */
     public function setName($name)
@@ -338,7 +338,7 @@ class DisplayApplianceDocument implements ArrayAccess
 
     /**
      * Sets pages
-     * @param int $pages 
+     * @param int $pages
      * @return $this
      */
     public function setPages($pages)

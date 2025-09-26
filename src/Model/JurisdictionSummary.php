@@ -175,9 +175,9 @@ class JurisdictionSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class JurisdictionSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authorized_for_i_pen'] = isset($data['authorized_for_i_pen']) ? $data['authorized_for_i_pen'] : null;
         $this->container['authorized_for_ron'] = isset($data['authorized_for_ron']) ? $data['authorized_for_ron'] : null;
@@ -237,7 +237,7 @@ class JurisdictionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets authorized_for_i_pen
      *
-     * @param ?string $authorized_for_i_pen 
+     * @param ?string $authorized_for_i_pen
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class JurisdictionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets authorized_for_ron
      *
-     * @param ?string $authorized_for_ron 
+     * @param ?string $authorized_for_ron
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class JurisdictionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets jurisdiction_id
      *
-     * @param ?string $jurisdiction_id 
+     * @param ?string $jurisdiction_id
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class JurisdictionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets jurisdiction_name
      *
-     * @param ?string $jurisdiction_name 
+     * @param ?string $jurisdiction_name
      *
      * @return $this
      */

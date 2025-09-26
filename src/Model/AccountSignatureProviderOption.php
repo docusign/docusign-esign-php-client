@@ -171,9 +171,9 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['signature_provider_option_display_name'] = isset($data['signature_provider_option_display_name']) ? $data['signature_provider_option_display_name'] : null;
         $this->container['signature_provider_option_id'] = isset($data['signature_provider_option_id']) ? $data['signature_provider_option_id'] : null;
@@ -232,7 +232,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_option_display_name
      *
-     * @param ?string $signature_provider_option_display_name 
+     * @param ?string $signature_provider_option_display_name
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_option_id
      *
-     * @param ?string $signature_provider_option_id 
+     * @param ?string $signature_provider_option_id
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     /**
      * Sets signature_provider_option_name
      *
-     * @param ?string $signature_provider_option_name 
+     * @param ?string $signature_provider_option_name
      *
      * @return $this
      */

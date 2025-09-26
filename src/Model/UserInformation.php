@@ -396,9 +396,9 @@ class UserInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -413,7 +413,7 @@ class UserInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['activation_access_code'] = isset($data['activation_access_code']) ? $data['activation_access_code'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
@@ -526,7 +526,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets company
      *
-     * @param ?string $company 
+     * @param ?string $company
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets connect_configurations
      *
-     * @param \DocuSign\eSign\Model\ConnectUserObject[] $connect_configurations 
+     * @param \DocuSign\eSign\Model\ConnectUserObject[] $connect_configurations
      *
      * @return $this
      */
@@ -574,7 +574,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param ?string $country_code 
+     * @param ?string $country_code
      *
      * @return $this
      */
@@ -646,7 +646,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets default_account_id
      *
-     * @param ?string $default_account_id 
+     * @param ?string $default_account_id
      *
      * @return $this
      */
@@ -670,7 +670,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets has_remote_notary
      *
-     * @param ?bool $has_remote_notary 
+     * @param ?bool $has_remote_notary
      *
      * @return $this
      */
@@ -910,7 +910,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets is_alternate_admin
      *
-     * @param ?string $is_alternate_admin 
+     * @param ?string $is_alternate_admin
      *
      * @return $this
      */
@@ -934,7 +934,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets is_managed_by_scim
      *
-     * @param ?string $is_managed_by_scim 
+     * @param ?string $is_managed_by_scim
      *
      * @return $this
      */
@@ -958,7 +958,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets is_membership_managed_by_scim
      *
-     * @param ?string $is_membership_managed_by_scim 
+     * @param ?string $is_membership_managed_by_scim
      *
      * @return $this
      */
@@ -982,7 +982,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets is_nar_enabled
      *
-     * @param ?string $is_nar_enabled 
+     * @param ?string $is_nar_enabled
      *
      * @return $this
      */
@@ -1006,7 +1006,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets job_title
      *
-     * @param ?string $job_title 
+     * @param ?string $job_title
      *
      * @return $this
      */
@@ -1078,7 +1078,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets license_status
      *
-     * @param ?string $license_status 
+     * @param ?string $license_status
      *
      * @return $this
      */
@@ -1102,7 +1102,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets license_type
      *
-     * @param ?string $license_type 
+     * @param ?string $license_type
      *
      * @return $this
      */
@@ -1174,7 +1174,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param ?string $password 
+     * @param ?string $password
      *
      * @return $this
      */
@@ -1198,7 +1198,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets password_expiration
      *
-     * @param ?string $password_expiration 
+     * @param ?string $password_expiration
      *
      * @return $this
      */
@@ -1222,7 +1222,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_id
      *
-     * @param ?string $permission_profile_id 
+     * @param ?string $permission_profile_id
      *
      * @return $this
      */
@@ -1246,7 +1246,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets permission_profile_name
      *
-     * @param ?string $permission_profile_name 
+     * @param ?string $permission_profile_name
      *
      * @return $this
      */
@@ -1270,7 +1270,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets profile_image_uri
      *
-     * @param ?string $profile_image_uri 
+     * @param ?string $profile_image_uri
      *
      * @return $this
      */
@@ -1294,7 +1294,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets send_activation_email
      *
-     * @param ?string $send_activation_email 
+     * @param ?string $send_activation_email
      *
      * @return $this
      */
@@ -1366,7 +1366,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets subscribe
      *
-     * @param ?string $subscribe 
+     * @param ?string $subscribe
      *
      * @return $this
      */
@@ -1438,7 +1438,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */
@@ -1462,7 +1462,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_added_to_account_date_time
      *
-     * @param ?string $user_added_to_account_date_time 
+     * @param ?string $user_added_to_account_date_time
      *
      * @return $this
      */
@@ -1486,7 +1486,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */
@@ -1510,7 +1510,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param ?string $user_name 
+     * @param ?string $user_name
      *
      * @return $this
      */
@@ -1534,7 +1534,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_profile_last_modified_date
      *
-     * @param ?string $user_profile_last_modified_date 
+     * @param ?string $user_profile_last_modified_date
      *
      * @return $this
      */
@@ -1582,7 +1582,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_status
      *
-     * @param ?string $user_status 
+     * @param ?string $user_status
      *
      * @return $this
      */
@@ -1606,7 +1606,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param ?string $user_type 
+     * @param ?string $user_type
      *
      * @return $this
      */
@@ -1630,7 +1630,7 @@ class UserInformation implements ModelInterface, ArrayAccess
     /**
      * Sets work_address
      *
-     * @param \DocuSign\eSign\Model\AddressInformation $work_address 
+     * @param \DocuSign\eSign\Model\AddressInformation $work_address
      *
      * @return $this
      */

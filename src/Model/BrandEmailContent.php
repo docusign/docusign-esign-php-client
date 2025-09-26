@@ -176,9 +176,9 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['email_content_type'] = isset($data['email_content_type']) ? $data['email_content_type'] : null;
@@ -238,7 +238,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets content
      *
-     * @param ?string $content 
+     * @param ?string $content
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets email_content_type
      *
-     * @param ?string $email_content_type 
+     * @param ?string $email_content_type
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets email_to_link
      *
-     * @param ?string $email_to_link 
+     * @param ?string $email_to_link
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class BrandEmailContent implements ModelInterface, ArrayAccess
     /**
      * Sets link_text
      *
-     * @param ?string $link_text 
+     * @param ?string $link_text
      *
      * @return $this
      */

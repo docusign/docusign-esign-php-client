@@ -255,9 +255,9 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -272,7 +272,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['expire_password'] = isset($data['expire_password']) ? $data['expire_password'] : null;
         $this->container['expire_password_days'] = isset($data['expire_password_days']) ? $data['expire_password_days'] : null;
@@ -333,7 +333,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets expire_password
      *
-     * @param ?string $expire_password 
+     * @param ?string $expire_password
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets expire_password_days
      *
-     * @param ?string $expire_password_days 
+     * @param ?string $expire_password_days
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets lockout_duration_minutes
      *
-     * @param ?string $lockout_duration_minutes 
+     * @param ?string $lockout_duration_minutes
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets lockout_duration_type
      *
-     * @param ?string $lockout_duration_type 
+     * @param ?string $lockout_duration_type
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_password_age_days
      *
-     * @param ?string $minimum_password_age_days 
+     * @param ?string $minimum_password_age_days
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets minimum_password_length
      *
-     * @param ?string $minimum_password_length 
+     * @param ?string $minimum_password_length
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_digit
      *
-     * @param ?string $password_include_digit 
+     * @param ?string $password_include_digit
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_digit_or_special_character
      *
-     * @param ?string $password_include_digit_or_special_character 
+     * @param ?string $password_include_digit_or_special_character
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_lower_case
      *
-     * @param ?string $password_include_lower_case 
+     * @param ?string $password_include_lower_case
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_special_character
      *
-     * @param ?string $password_include_special_character 
+     * @param ?string $password_include_special_character
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_include_upper_case
      *
-     * @param ?string $password_include_upper_case 
+     * @param ?string $password_include_upper_case
      *
      * @return $this
      */
@@ -717,7 +717,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets password_strength_type
      *
-     * @param ?string $password_strength_type 
+     * @param ?string $password_strength_type
      *
      * @return $this
      */
@@ -765,7 +765,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
     /**
      * Sets questions_required
      *
-     * @param ?string $questions_required 
+     * @param ?string $questions_required
      *
      * @return $this
      */

@@ -166,9 +166,9 @@ class ConnectConfigResults implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -183,7 +183,7 @@ class ConnectConfigResults implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['configurations'] = isset($data['configurations']) ? $data['configurations'] : null;
         $this->container['total_records'] = isset($data['total_records']) ? $data['total_records'] : null;
@@ -250,7 +250,7 @@ class ConnectConfigResults implements ModelInterface, ArrayAccess
     /**
      * Sets total_records
      *
-     * @param ?string $total_records 
+     * @param ?string $total_records
      *
      * @return $this
      */

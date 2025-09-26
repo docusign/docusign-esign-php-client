@@ -185,9 +185,9 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -202,7 +202,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['attachment_id'] = isset($data['attachment_id']) ? $data['attachment_id'] : null;
         $this->container['attachment_type'] = isset($data['attachment_type']) ? $data['attachment_type'] : null;
@@ -249,7 +249,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_id
      *
-     * @param ?string $attachment_id 
+     * @param ?string $attachment_id
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_type
      *
-     * @param ?string $attachment_type 
+     * @param ?string $attachment_type
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param ?string $data 
+     * @param ?string $data
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets label
      *
-     * @param ?string $label 
+     * @param ?string $label
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class RecipientAttachment implements ModelInterface, ArrayAccess
     /**
      * Sets remote_url
      *
-     * @param ?string $remote_url 
+     * @param ?string $remote_url
      *
      * @return $this
      */

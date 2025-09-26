@@ -225,9 +225,9 @@ class UserInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -242,7 +242,7 @@ class UserInfo implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
@@ -321,7 +321,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets account_name
      *
-     * @param ?string $account_name 
+     * @param ?string $account_name
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets activation_access_code
      *
-     * @param ?string $activation_access_code 
+     * @param ?string $activation_access_code
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets ip_address
      *
-     * @param ?string $ip_address 
+     * @param ?string $ip_address
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets login_status
      *
-     * @param ?string $login_status 
+     * @param ?string $login_status
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets membership_id
      *
-     * @param ?string $membership_id 
+     * @param ?string $membership_id
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets send_activation_email
      *
-     * @param ?string $send_activation_email 
+     * @param ?string $send_activation_email
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param ?string $user_name 
+     * @param ?string $user_name
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_status
      *
-     * @param ?string $user_status 
+     * @param ?string $user_status
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param ?string $user_type 
+     * @param ?string $user_type
      *
      * @return $this
      */

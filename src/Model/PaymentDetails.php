@@ -246,9 +246,9 @@ class PaymentDetails implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -263,7 +263,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allowed_payment_methods'] = isset($data['allowed_payment_methods']) ? $data['allowed_payment_methods'] : null;
         $this->container['charge_id'] = isset($data['charge_id']) ? $data['charge_id'] : null;
@@ -322,7 +322,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_payment_methods
      *
-     * @param ?string[] $allowed_payment_methods 
+     * @param ?string[] $allowed_payment_methods
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets charge_id
      *
-     * @param ?string $charge_id 
+     * @param ?string $charge_id
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param ?string $currency_code 
+     * @param ?string $currency_code
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param ?string $customer_id 
+     * @param ?string $customer_id
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets custom_metadata
      *
-     * @param ?string $custom_metadata 
+     * @param ?string $custom_metadata
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets custom_metadata_required
      *
-     * @param ?bool $custom_metadata_required 
+     * @param ?bool $custom_metadata_required
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_account_id
      *
-     * @param ?string $gateway_account_id 
+     * @param ?string $gateway_account_id
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_display_name
      *
-     * @param ?string $gateway_display_name 
+     * @param ?string $gateway_display_name
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets gateway_name
      *
-     * @param ?string $gateway_name 
+     * @param ?string $gateway_name
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \DocuSign\eSign\Model\PaymentLineItem[] $line_items 
+     * @param \DocuSign\eSign\Model\PaymentLineItem[] $line_items
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets payment_option
      *
-     * @param ?string $payment_option 
+     * @param ?string $payment_option
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets payment_source_id
      *
-     * @param ?string $payment_source_id 
+     * @param ?string $payment_source_id
      *
      * @return $this
      */
@@ -658,7 +658,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets signer_values
      *
-     * @param \DocuSign\eSign\Model\PaymentSignerValues $signer_values 
+     * @param \DocuSign\eSign\Model\PaymentSignerValues $signer_values
      *
      * @return $this
      */
@@ -706,7 +706,7 @@ class PaymentDetails implements ModelInterface, ArrayAccess
     /**
      * Sets sub_gateway_name
      *
-     * @param ?string $sub_gateway_name 
+     * @param ?string $sub_gateway_name
      *
      * @return $this
      */

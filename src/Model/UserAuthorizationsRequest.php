@@ -160,9 +160,9 @@ class UserAuthorizationsRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class UserAuthorizationsRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authorizations'] = isset($data['authorizations']) ? $data['authorizations'] : null;
     }
@@ -219,7 +219,7 @@ class UserAuthorizationsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authorizations
      *
-     * @param \DocuSign\eSign\Model\UserAuthorizationCreateRequestWithId[] $authorizations 
+     * @param \DocuSign\eSign\Model\UserAuthorizationCreateRequestWithId[] $authorizations
      *
      * @return $this
      */

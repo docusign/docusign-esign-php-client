@@ -266,9 +266,9 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -283,7 +283,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['app_store_receipt'] = isset($data['app_store_receipt']) ? $data['app_store_receipt'] : null;
         $this->container['billing_address'] = isset($data['billing_address']) ? $data['billing_address'] : null;
@@ -346,7 +346,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets app_store_receipt
      *
-     * @param \DocuSign\eSign\Model\AppStoreReceipt $app_store_receipt 
+     * @param \DocuSign\eSign\Model\AppStoreReceipt $app_store_receipt
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_reason
      *
-     * @param ?string $downgrade_reason 
+     * @param ?string $downgrade_reason
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_pre_auth
      *
-     * @param ?string $enable_pre_auth 
+     * @param ?string $enable_pre_auth
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets enable_support
      *
-     * @param ?string $enable_support 
+     * @param ?string $enable_support
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param ?string $payment_method 
+     * @param ?string $payment_method
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets payment_processor
      *
-     * @param ?string $payment_processor 
+     * @param ?string $payment_processor
      *
      * @return $this
      */
@@ -658,7 +658,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets process_payment
      *
-     * @param ?string $process_payment 
+     * @param ?string $process_payment
      *
      * @return $this
      */
@@ -706,7 +706,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets renewal_status
      *
-     * @param ?string $renewal_status 
+     * @param ?string $renewal_status
      *
      * @return $this
      */
@@ -730,7 +730,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_amount
      *
-     * @param ?string $sale_discount_amount 
+     * @param ?string $sale_discount_amount
      *
      * @return $this
      */
@@ -754,7 +754,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_fixed_amount
      *
-     * @param ?string $sale_discount_fixed_amount 
+     * @param ?string $sale_discount_fixed_amount
      *
      * @return $this
      */
@@ -778,7 +778,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_percent
      *
-     * @param ?string $sale_discount_percent 
+     * @param ?string $sale_discount_percent
      *
      * @return $this
      */
@@ -802,7 +802,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_periods
      *
-     * @param ?string $sale_discount_periods 
+     * @param ?string $sale_discount_periods
      *
      * @return $this
      */
@@ -826,7 +826,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_seat_price_override
      *
-     * @param ?string $sale_discount_seat_price_override 
+     * @param ?string $sale_discount_seat_price_override
      *
      * @return $this
      */
@@ -850,7 +850,7 @@ class BillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets tax_exempt_id
      *
-     * @param ?string $tax_exempt_id 
+     * @param ?string $tax_exempt_id
      *
      * @return $this
      */

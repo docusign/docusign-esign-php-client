@@ -220,9 +220,9 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -237,7 +237,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_payment_method'] = isset($data['account_payment_method']) ? $data['account_payment_method'] : null;
         $this->container['discount_applied'] = isset($data['discount_applied']) ? $data['discount_applied'] : null;
@@ -291,7 +291,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets account_payment_method
      *
-     * @param ?string $account_payment_method 
+     * @param ?string $account_payment_method
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets discount_applied
      *
-     * @param ?string $discount_applied 
+     * @param ?string $discount_applied
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_effective_date
      *
-     * @param ?string $downgrade_effective_date 
+     * @param ?string $downgrade_effective_date
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_payment_cycle
      *
-     * @param ?string $downgrade_payment_cycle 
+     * @param ?string $downgrade_payment_cycle
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_id
      *
-     * @param ?string $downgrade_plan_id 
+     * @param ?string $downgrade_plan_id
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_plan_name
      *
-     * @param ?string $downgrade_plan_name 
+     * @param ?string $downgrade_plan_name
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_request_status
      *
-     * @param ?string $downgrade_request_status 
+     * @param ?string $downgrade_request_status
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param ?string $message 
+     * @param ?string $message
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets product_id
      *
-     * @param ?string $product_id 
+     * @param ?string $product_id
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets promo_code
      *
-     * @param ?string $promo_code 
+     * @param ?string $promo_code
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount
      *
-     * @param ?string $sale_discount 
+     * @param ?string $sale_discount
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_periods
      *
-     * @param ?string $sale_discount_periods 
+     * @param ?string $sale_discount_periods
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class DowngradePlanUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_type
      *
-     * @param ?string $sale_discount_type 
+     * @param ?string $sale_discount_type
      *
      * @return $this
      */

@@ -139,9 +139,9 @@ class DisplayAppliancePage implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -153,7 +153,7 @@ class DisplayAppliancePage implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
         $this->container['document_name'] = isset($data['document_name']) ? $data['document_name'] : null;
@@ -222,7 +222,7 @@ class DisplayAppliancePage implements ArrayAccess
 
     /**
      * Sets document_name
-     * @param string $document_name 
+     * @param string $document_name
      * @return $this
      */
     public function setDocumentName($document_name)
@@ -243,7 +243,7 @@ class DisplayAppliancePage implements ArrayAccess
 
     /**
      * Sets external_document_id
-     * @param string $external_document_id 
+     * @param string $external_document_id
      * @return $this
      */
     public function setExternalDocumentId($external_document_id)
@@ -285,7 +285,7 @@ class DisplayAppliancePage implements ArrayAccess
 
     /**
      * Sets is_first_page
-     * @param bool $is_first_page 
+     * @param bool $is_first_page
      * @return $this
      */
     public function setIsFirstPage($is_first_page)
@@ -306,7 +306,7 @@ class DisplayAppliancePage implements ArrayAccess
 
     /**
      * Sets page_id
-     * @param string $page_id 
+     * @param string $page_id
      * @return $this
      */
     public function setPageId($page_id)
@@ -327,7 +327,7 @@ class DisplayAppliancePage implements ArrayAccess
 
     /**
      * Sets page_no
-     * @param int $page_no 
+     * @param int $page_no
      * @return $this
      */
     public function setPageNo($page_no)
@@ -348,7 +348,7 @@ class DisplayAppliancePage implements ArrayAccess
 
     /**
      * Sets page_status
-     * @param string $page_status 
+     * @param string $page_status
      * @return $this
      */
     public function setPageStatus($page_status)
@@ -369,7 +369,7 @@ class DisplayAppliancePage implements ArrayAccess
 
     /**
      * Sets page_type
-     * @param string $page_type 
+     * @param string $page_type
      * @return $this
      */
     public function setPageType($page_type)

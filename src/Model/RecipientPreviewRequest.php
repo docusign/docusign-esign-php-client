@@ -211,9 +211,9 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -228,7 +228,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['assertion_id'] = isset($data['assertion_id']) ? $data['assertion_id'] : null;
         $this->container['authentication_instant'] = isset($data['authentication_instant']) ? $data['authentication_instant'] : null;
@@ -280,7 +280,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets assertion_id
      *
-     * @param ?string $assertion_id 
+     * @param ?string $assertion_id
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_instant
      *
-     * @param ?string $authentication_instant 
+     * @param ?string $authentication_instant
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_method
      *
-     * @param ?string $authentication_method 
+     * @param ?string $authentication_method
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets client_ur_ls
      *
-     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls 
+     * @param \DocuSign\eSign\Model\RecipientTokenClientURLs $client_ur_ls
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ping_frequency
      *
-     * @param ?string $ping_frequency 
+     * @param ?string $ping_frequency
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ping_url
      *
-     * @param ?string $ping_url 
+     * @param ?string $ping_url
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets return_url
      *
-     * @param ?string $return_url 
+     * @param ?string $return_url
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets security_domain
      *
-     * @param ?string $security_domain 
+     * @param ?string $security_domain
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options
      *
-     * @param ?string $x_frame_options 
+     * @param ?string $x_frame_options
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class RecipientPreviewRequest implements ModelInterface, ArrayAccess
     /**
      * Sets x_frame_options_allow_from_url
      *
-     * @param ?string $x_frame_options_allow_from_url 
+     * @param ?string $x_frame_options_allow_from_url
      *
      * @return $this
      */

@@ -183,9 +183,9 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -200,7 +200,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['error'] = isset($data['error']) ? $data['error'] : null;
@@ -247,7 +247,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param ?string $description 
+     * @param ?string $description
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets error
      *
-     * @param ?string $error 
+     * @param ?string $error
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets hostname
      *
-     * @param ?string $hostname 
+     * @param ?string $hostname
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets response_seconds
      *
-     * @param ?string $response_seconds 
+     * @param ?string $response_seconds
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ class TspHealthCheckStatusDescription implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param ?string $type 
+     * @param ?string $type
      *
      * @return $this
      */

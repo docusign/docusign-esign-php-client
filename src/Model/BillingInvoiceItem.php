@@ -191,9 +191,9 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['charge_amount'] = isset($data['charge_amount']) ? $data['charge_amount'] : null;
         $this->container['charge_name'] = isset($data['charge_name']) ? $data['charge_name'] : null;
@@ -328,7 +328,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets quantity
      *
-     * @param ?string $quantity 
+     * @param ?string $quantity
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_amount
      *
-     * @param ?string $tax_amount 
+     * @param ?string $tax_amount
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class BillingInvoiceItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_exempt_amount
      *
-     * @param ?string $tax_exempt_amount 
+     * @param ?string $tax_exempt_amount
      *
      * @return $this
      */

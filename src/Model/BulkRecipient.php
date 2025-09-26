@@ -205,9 +205,9 @@ class BulkRecipient implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -222,7 +222,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -441,7 +441,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_signature_provider_info
      *
-     * @param \DocuSign\eSign\Model\BulkRecipientSignatureProvider[] $recipient_signature_provider_info 
+     * @param \DocuSign\eSign\Model\BulkRecipientSignatureProvider[] $recipient_signature_provider_info
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class BulkRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets row_number
      *
-     * @param ?string $row_number 
+     * @param ?string $row_number
      *
      * @return $this
      */

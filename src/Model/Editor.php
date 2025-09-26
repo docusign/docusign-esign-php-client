@@ -536,9 +536,9 @@ class Editor implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -553,7 +553,7 @@ class Editor implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['access_code_metadata'] = isset($data['access_code_metadata']) ? $data['access_code_metadata'] : null;
@@ -742,7 +742,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets additional_notifications
      *
-     * @param \DocuSign\eSign\Model\RecipientAdditionalNotification[] $additional_notifications 
+     * @param \DocuSign\eSign\Model\RecipientAdditionalNotification[] $additional_notifications
      *
      * @return $this
      */
@@ -766,7 +766,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets allow_system_override_for_locked_recipient
      *
-     * @param ?string $allow_system_override_for_locked_recipient 
+     * @param ?string $allow_system_override_for_locked_recipient
      *
      * @return $this
      */
@@ -790,7 +790,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets auto_responded_reason
      *
-     * @param ?string $auto_responded_reason 
+     * @param ?string $auto_responded_reason
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_send_v2_recipient
      *
-     * @param ?string $bulk_send_v2_recipient 
+     * @param ?string $bulk_send_v2_recipient
      *
      * @return $this
      */
@@ -862,7 +862,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets completed_count
      *
-     * @param ?string $completed_count 
+     * @param ?string $completed_count
      *
      * @return $this
      */
@@ -886,7 +886,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets consent_details_list
      *
-     * @param \DocuSign\eSign\Model\ConsentDetails[] $consent_details_list 
+     * @param \DocuSign\eSign\Model\ConsentDetails[] $consent_details_list
      *
      * @return $this
      */
@@ -1054,7 +1054,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets designator_id
      *
-     * @param ?string $designator_id 
+     * @param ?string $designator_id
      *
      * @return $this
      */
@@ -1078,7 +1078,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets designator_id_guid
      *
-     * @param ?string $designator_id_guid 
+     * @param ?string $designator_id_guid
      *
      * @return $this
      */
@@ -1102,7 +1102,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets document_template_id
      *
-     * @param ?string $document_template_id 
+     * @param ?string $document_template_id
      *
      * @return $this
      */
@@ -1126,7 +1126,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets document_visibility
      *
-     * @param \DocuSign\eSign\Model\DocumentVisibility[] $document_visibility 
+     * @param \DocuSign\eSign\Model\DocumentVisibility[] $document_visibility
      *
      * @return $this
      */
@@ -1222,7 +1222,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets email_recipient_post_signing_url
      *
-     * @param ?string $email_recipient_post_signing_url 
+     * @param ?string $email_recipient_post_signing_url
      *
      * @return $this
      */
@@ -1390,7 +1390,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets full_name
      *
-     * @param ?string $full_name 
+     * @param ?string $full_name
      *
      * @return $this
      */
@@ -1558,7 +1558,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param ?string $last_name 
+     * @param ?string $last_name
      *
      * @return $this
      */
@@ -1606,7 +1606,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets locked_recipient_phone_auth_editable
      *
-     * @param ?string $locked_recipient_phone_auth_editable 
+     * @param ?string $locked_recipient_phone_auth_editable
      *
      * @return $this
      */
@@ -1630,7 +1630,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets locked_recipient_sms_editable
      *
-     * @param ?string $locked_recipient_sms_editable 
+     * @param ?string $locked_recipient_sms_editable
      *
      * @return $this
      */
@@ -1798,7 +1798,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets proof_file
      *
-     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file 
+     * @param \DocuSign\eSign\Model\RecipientProofFile $proof_file
      *
      * @return $this
      */
@@ -1870,7 +1870,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_feature_metadata
      *
-     * @param \DocuSign\eSign\Model\FeatureAvailableMetadata[] $recipient_feature_metadata 
+     * @param \DocuSign\eSign\Model\FeatureAvailableMetadata[] $recipient_feature_metadata
      *
      * @return $this
      */
@@ -1918,7 +1918,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param ?string $recipient_id_guid 
+     * @param ?string $recipient_id_guid
      *
      * @return $this
      */
@@ -1942,7 +1942,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type
      *
-     * @param ?string $recipient_type 
+     * @param ?string $recipient_type
      *
      * @return $this
      */
@@ -2326,7 +2326,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets status_code
      *
-     * @param ?string $status_code 
+     * @param ?string $status_code
      *
      * @return $this
      */
@@ -2350,7 +2350,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets suppress_emails
      *
-     * @param ?string $suppress_emails 
+     * @param ?string $suppress_emails
      *
      * @return $this
      */
@@ -2422,7 +2422,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets total_tab_count
      *
-     * @param ?string $total_tab_count 
+     * @param ?string $total_tab_count
      *
      * @return $this
      */
@@ -2446,7 +2446,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param ?string $user_id 
+     * @param ?string $user_id
      *
      * @return $this
      */
@@ -2470,7 +2470,7 @@ class Editor implements ModelInterface, ArrayAccess
     /**
      * Sets web_form_recipient_view_id
      *
-     * @param ?string $web_form_recipient_view_id 
+     * @param ?string $web_form_recipient_view_id
      *
      * @return $this
      */

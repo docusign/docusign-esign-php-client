@@ -196,9 +196,9 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['ds_attribute'] = isset($data['ds_attribute']) ? $data['ds_attribute'] : null;
         $this->container['ds_link'] = isset($data['ds_link']) ? $data['ds_link'] : null;
@@ -262,7 +262,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets ds_attribute
      *
-     * @param ?string $ds_attribute 
+     * @param ?string $ds_attribute
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets ds_link
      *
-     * @param ?string $ds_link 
+     * @param ?string $ds_link
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets ds_node
      *
-     * @param ?string $ds_node 
+     * @param ?string $ds_node
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param ?string $id 
+     * @param ?string $id
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_field
      *
-     * @param ?string $sf_field 
+     * @param ?string $sf_field
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_field_name
      *
-     * @param ?string $sf_field_name 
+     * @param ?string $sf_field_name
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_folder
      *
-     * @param ?string $sf_folder 
+     * @param ?string $sf_folder
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class ConnectSalesforceField implements ModelInterface, ArrayAccess
     /**
      * Sets sf_locked_value
      *
-     * @param ?string $sf_locked_value 
+     * @param ?string $sf_locked_value
      *
      * @return $this
      */

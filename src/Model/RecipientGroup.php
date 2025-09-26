@@ -171,9 +171,9 @@ class RecipientGroup implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class RecipientGroup implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['group_message'] = isset($data['group_message']) ? $data['group_message'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
@@ -232,7 +232,7 @@ class RecipientGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_message
      *
-     * @param ?string $group_message 
+     * @param ?string $group_message
      *
      * @return $this
      */

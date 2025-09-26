@@ -221,9 +221,9 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -238,7 +238,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code'] = isset($data['access_code']) ? $data['access_code'] : null;
         $this->container['access_code_locked'] = isset($data['access_code_locked']) ? $data['access_code_locked'] : null;
@@ -316,7 +316,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_locked
      *
-     * @param ?string $access_code_locked 
+     * @param ?string $access_code_locked
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets access_code_required
      *
-     * @param ?string $access_code_required 
+     * @param ?string $access_code_required
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets email_locked
      *
-     * @param ?string $email_locked 
+     * @param ?string $email_locked
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets id_check_required
      *
-     * @param ?string $id_check_required 
+     * @param ?string $id_check_required
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_type
      *
-     * @param ?string $recipient_type 
+     * @param ?string $recipient_type
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets template_requires_id_lookup
      *
-     * @param ?string $template_requires_id_lookup 
+     * @param ?string $template_requires_id_lookup
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class PowerFormRecipient implements ModelInterface, ArrayAccess
     /**
      * Sets user_name_locked
      *
-     * @param ?string $user_name_locked 
+     * @param ?string $user_name_locked
      *
      * @return $this
      */

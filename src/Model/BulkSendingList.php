@@ -171,9 +171,9 @@ class BulkSendingList implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -188,7 +188,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_copies'] = isset($data['bulk_copies']) ? $data['bulk_copies'] : null;
         $this->container['list_id'] = isset($data['list_id']) ? $data['list_id'] : null;
@@ -232,7 +232,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
     /**
      * Sets bulk_copies
      *
-     * @param \DocuSign\eSign\Model\BulkSendingCopy[] $bulk_copies 
+     * @param \DocuSign\eSign\Model\BulkSendingCopy[] $bulk_copies
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
     /**
      * Sets list_id
      *
-     * @param ?string $list_id 
+     * @param ?string $list_id
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class BulkSendingList implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */

@@ -160,9 +160,9 @@ class AccountSeals implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class AccountSeals implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['seals'] = isset($data['seals']) ? $data['seals'] : null;
     }
@@ -219,7 +219,7 @@ class AccountSeals implements ModelInterface, ArrayAccess
     /**
      * Sets seals
      *
-     * @param \DocuSign\eSign\Model\SealIdentifier[] $seals 
+     * @param \DocuSign\eSign\Model\SealIdentifier[] $seals
      *
      * @return $this
      */

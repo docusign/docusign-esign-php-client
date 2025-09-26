@@ -231,9 +231,9 @@ class BillingPlan implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -248,7 +248,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['app_store_products'] = isset($data['app_store_products']) ? $data['app_store_products'] : null;
         $this->container['currency_plan_prices'] = isset($data['currency_plan_prices']) ? $data['currency_plan_prices'] : null;
@@ -400,7 +400,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets other_discount_percent
      *
-     * @param ?string $other_discount_percent 
+     * @param ?string $other_discount_percent
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method
      *
-     * @param ?string $payment_method 
+     * @param ?string $payment_method
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_feature_sets
      *
-     * @param \DocuSign\eSign\Model\FeatureSet[] $plan_feature_sets 
+     * @param \DocuSign\eSign\Model\FeatureSet[] $plan_feature_sets
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_id
      *
-     * @param ?string $plan_id 
+     * @param ?string $plan_id
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
     /**
      * Sets seat_discounts
      *
-     * @param \DocuSign\eSign\Model\SeatDiscount[] $seat_discounts 
+     * @param \DocuSign\eSign\Model\SeatDiscount[] $seat_discounts
      *
      * @return $this
      */

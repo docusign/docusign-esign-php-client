@@ -220,9 +220,9 @@ class DocGenFormField implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -237,7 +237,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['connected_object_details'] = isset($data['connected_object_details']) ? $data['connected_object_details'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -291,7 +291,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets connected_object_details
      *
-     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details 
+     * @param \DocuSign\eSign\Model\ConnectedObjectDetails $connected_object_details
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param ?string $description 
+     * @param ?string $description
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets fully_qualified_path
      *
-     * @param ?string $fully_qualified_path 
+     * @param ?string $fully_qualified_path
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets label
      *
-     * @param ?string $label 
+     * @param ?string $label
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \DocuSign\eSign\Model\DocGenFormFieldOption[] $options 
+     * @param \DocuSign\eSign\Model\DocGenFormFieldOption[] $options
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param ?string $order 
+     * @param ?string $order
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets predefined_validation
      *
-     * @param ?string $predefined_validation 
+     * @param ?string $predefined_validation
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets row_values
      *
-     * @param \DocuSign\eSign\Model\DocGenFormFieldRowValue[] $row_values 
+     * @param \DocuSign\eSign\Model\DocGenFormFieldRowValue[] $row_values
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param ?string $type 
+     * @param ?string $type
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class DocGenFormField implements ModelInterface, ArrayAccess
     /**
      * Sets validation
      *
-     * @param \DocuSign\eSign\Model\DocGenFormFieldValidation $validation 
+     * @param \DocuSign\eSign\Model\DocGenFormFieldValidation $validation
      *
      * @return $this
      */

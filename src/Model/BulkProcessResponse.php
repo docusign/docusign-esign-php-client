@@ -190,9 +190,9 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -207,7 +207,7 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
         $this->container['batch_name'] = isset($data['batch_name']) ? $data['batch_name'] : null;
@@ -255,7 +255,7 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
     /**
      * Sets batch_id
      *
-     * @param ?string $batch_id 
+     * @param ?string $batch_id
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
     /**
      * Sets batch_name
      *
-     * @param ?string $batch_name 
+     * @param ?string $batch_name
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
     /**
      * Sets batch_size
      *
-     * @param ?string $batch_size 
+     * @param ?string $batch_size
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param ?string[] $errors 
+     * @param ?string[] $errors
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
     /**
      * Sets queue_limit
      *
-     * @param ?string $queue_limit 
+     * @param ?string $queue_limit
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class BulkProcessResponse implements ModelInterface, ArrayAccess
     /**
      * Sets total_queued
      *
-     * @param ?string $total_queued 
+     * @param ?string $total_queued
      *
      * @return $this
      */

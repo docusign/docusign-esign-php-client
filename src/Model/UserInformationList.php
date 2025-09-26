@@ -191,9 +191,9 @@ class UserInformationList implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class UserInformationList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['next_uri'] = isset($data['next_uri']) ? $data['next_uri'] : null;
@@ -400,7 +400,7 @@ class UserInformationList implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \DocuSign\eSign\Model\UserInformation[] $users 
+     * @param \DocuSign\eSign\Model\UserInformation[] $users
      *
      * @return $this
      */

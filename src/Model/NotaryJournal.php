@@ -185,9 +185,9 @@ class NotaryJournal implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -202,7 +202,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
         $this->container['document_name'] = isset($data['document_name']) ? $data['document_name'] : null;
@@ -249,7 +249,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets created_date
      *
-     * @param ?string $created_date 
+     * @param ?string $created_date
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets document_name
      *
-     * @param ?string $document_name 
+     * @param ?string $document_name
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets notary_journal_id
      *
-     * @param ?string $notary_journal_id 
+     * @param ?string $notary_journal_id
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class NotaryJournal implements ModelInterface, ArrayAccess
     /**
      * Sets signer_name
      *
-     * @param ?string $signer_name 
+     * @param ?string $signer_name
      *
      * @return $this
      */

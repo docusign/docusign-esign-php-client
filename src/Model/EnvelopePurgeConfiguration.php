@@ -176,9 +176,9 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -193,7 +193,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['purge_envelopes'] = isset($data['purge_envelopes']) ? $data['purge_envelopes'] : null;
         $this->container['redact_pii'] = isset($data['redact_pii']) ? $data['redact_pii'] : null;
@@ -238,7 +238,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets purge_envelopes
      *
-     * @param ?string $purge_envelopes 
+     * @param ?string $purge_envelopes
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets redact_pii
      *
-     * @param ?string $redact_pii 
+     * @param ?string $redact_pii
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets remove_tabs_and_envelope_attachments
      *
-     * @param ?string $remove_tabs_and_envelope_attachments 
+     * @param ?string $remove_tabs_and_envelope_attachments
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets retention_days
      *
-     * @param ?string $retention_days 
+     * @param ?string $retention_days
      *
      * @return $this
      */

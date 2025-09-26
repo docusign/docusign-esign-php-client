@@ -370,9 +370,9 @@ class LocalePolicy implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -387,7 +387,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address_format'] = isset($data['address_format']) ? $data['address_format'] : null;
         $this->container['address_format_metadata'] = isset($data['address_format_metadata']) ? $data['address_format_metadata'] : null;
@@ -471,7 +471,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets address_format
      *
-     * @param ?string $address_format 
+     * @param ?string $address_format
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets address_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $address_format_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $address_format_metadata
      *
      * @return $this
      */
@@ -519,7 +519,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets allow_region
      *
-     * @param ?string $allow_region 
+     * @param ?string $allow_region
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets calendar_type
      *
-     * @param ?string $calendar_type 
+     * @param ?string $calendar_type
      *
      * @return $this
      */
@@ -567,7 +567,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets calendar_type_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $calendar_type_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $calendar_type_metadata
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets culture_name
      *
-     * @param ?string $culture_name 
+     * @param ?string $culture_name
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets culture_name_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $culture_name_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $culture_name_metadata
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param ?string $currency_code 
+     * @param ?string $currency_code
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_negative_format
      *
-     * @param ?string $currency_negative_format 
+     * @param ?string $currency_negative_format
      *
      * @return $this
      */
@@ -711,7 +711,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_negative_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_negative_format_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_negative_format_metadata
      *
      * @return $this
      */
@@ -735,7 +735,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_positive_format
      *
-     * @param ?string $currency_positive_format 
+     * @param ?string $currency_positive_format
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets currency_positive_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_positive_format_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $currency_positive_format_metadata
      *
      * @return $this
      */
@@ -783,7 +783,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_date_format
      *
-     * @param ?string $custom_date_format 
+     * @param ?string $custom_date_format
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_sign_date_format
      *
-     * @param ?string $custom_sign_date_format 
+     * @param ?string $custom_sign_date_format
      *
      * @return $this
      */
@@ -831,7 +831,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_sign_time_format
      *
-     * @param ?string $custom_sign_time_format 
+     * @param ?string $custom_sign_time_format
      *
      * @return $this
      */
@@ -855,7 +855,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets custom_time_format
      *
-     * @param ?string $custom_time_format 
+     * @param ?string $custom_time_format
      *
      * @return $this
      */
@@ -879,7 +879,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets date_format
      *
-     * @param ?string $date_format 
+     * @param ?string $date_format
      *
      * @return $this
      */
@@ -903,7 +903,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets date_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $date_format_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $date_format_metadata
      *
      * @return $this
      */
@@ -927,7 +927,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_address_format
      *
-     * @param ?string $effective_address_format 
+     * @param ?string $effective_address_format
      *
      * @return $this
      */
@@ -951,7 +951,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_calendar_type
      *
-     * @param ?string $effective_calendar_type 
+     * @param ?string $effective_calendar_type
      *
      * @return $this
      */
@@ -975,7 +975,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_currency_code
      *
-     * @param ?string $effective_currency_code 
+     * @param ?string $effective_currency_code
      *
      * @return $this
      */
@@ -999,7 +999,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_currency_negative_format
      *
-     * @param ?string $effective_currency_negative_format 
+     * @param ?string $effective_currency_negative_format
      *
      * @return $this
      */
@@ -1023,7 +1023,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_currency_positive_format
      *
-     * @param ?string $effective_currency_positive_format 
+     * @param ?string $effective_currency_positive_format
      *
      * @return $this
      */
@@ -1047,7 +1047,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_custom_date_format
      *
-     * @param ?string $effective_custom_date_format 
+     * @param ?string $effective_custom_date_format
      *
      * @return $this
      */
@@ -1071,7 +1071,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_custom_time_format
      *
-     * @param ?string $effective_custom_time_format 
+     * @param ?string $effective_custom_time_format
      *
      * @return $this
      */
@@ -1095,7 +1095,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_date_format
      *
-     * @param ?string $effective_date_format 
+     * @param ?string $effective_date_format
      *
      * @return $this
      */
@@ -1119,7 +1119,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_initial_format
      *
-     * @param ?string $effective_initial_format 
+     * @param ?string $effective_initial_format
      *
      * @return $this
      */
@@ -1143,7 +1143,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_name_format
      *
-     * @param ?string $effective_name_format 
+     * @param ?string $effective_name_format
      *
      * @return $this
      */
@@ -1167,7 +1167,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_time_format
      *
-     * @param ?string $effective_time_format 
+     * @param ?string $effective_time_format
      *
      * @return $this
      */
@@ -1191,7 +1191,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets effective_time_zone
      *
-     * @param ?string $effective_time_zone 
+     * @param ?string $effective_time_zone
      *
      * @return $this
      */
@@ -1215,7 +1215,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets initial_format
      *
-     * @param ?string $initial_format 
+     * @param ?string $initial_format
      *
      * @return $this
      */
@@ -1239,7 +1239,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets initial_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $initial_format_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $initial_format_metadata
      *
      * @return $this
      */
@@ -1263,7 +1263,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets name_format
      *
-     * @param ?string $name_format 
+     * @param ?string $name_format
      *
      * @return $this
      */
@@ -1287,7 +1287,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets name_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $name_format_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $name_format_metadata
      *
      * @return $this
      */
@@ -1311,7 +1311,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_format
      *
-     * @param ?string $sign_date_format 
+     * @param ?string $sign_date_format
      *
      * @return $this
      */
@@ -1359,7 +1359,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets sign_time_format
      *
-     * @param ?string $sign_time_format 
+     * @param ?string $sign_time_format
      *
      * @return $this
      */
@@ -1407,7 +1407,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_format
      *
-     * @param ?string $time_format 
+     * @param ?string $time_format
      *
      * @return $this
      */
@@ -1431,7 +1431,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_format_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $time_format_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $time_format_metadata
      *
      * @return $this
      */
@@ -1455,7 +1455,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_zone
      *
-     * @param ?string $time_zone 
+     * @param ?string $time_zone
      *
      * @return $this
      */
@@ -1479,7 +1479,7 @@ class LocalePolicy implements ModelInterface, ArrayAccess
     /**
      * Sets time_zone_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $time_zone_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $time_zone_metadata
      *
      * @return $this
      */

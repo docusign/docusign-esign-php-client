@@ -181,9 +181,9 @@ class LockRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -198,7 +198,7 @@ class LockRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['lock_duration_in_seconds'] = isset($data['lock_duration_in_seconds']) ? $data['lock_duration_in_seconds'] : null;
         $this->container['locked_by_app'] = isset($data['locked_by_app']) ? $data['locked_by_app'] : null;
@@ -316,7 +316,7 @@ class LockRequest implements ModelInterface, ArrayAccess
     /**
      * Sets template_password
      *
-     * @param ?string $template_password 
+     * @param ?string $template_password
      *
      * @return $this
      */

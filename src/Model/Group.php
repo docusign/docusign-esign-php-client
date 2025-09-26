@@ -216,9 +216,9 @@ class Group implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -233,7 +233,7 @@ class Group implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_type'] = isset($data['access_type']) ? $data['access_type'] : null;
         $this->container['ds_group_id'] = isset($data['ds_group_id']) ? $data['ds_group_id'] : null;
@@ -286,7 +286,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets access_type
      *
-     * @param ?string $access_type 
+     * @param ?string $access_type
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets ds_group_id
      *
-     * @param ?string $ds_group_id 
+     * @param ?string $ds_group_id
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets is_managed_by_scim
      *
-     * @param ?bool $is_managed_by_scim 
+     * @param ?bool $is_managed_by_scim
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified_on
      *
-     * @param ?string $last_modified_on 
+     * @param ?string $last_modified_on
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets user_group_type
      *
-     * @param ?string $user_group_type 
+     * @param ?string $user_group_type
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \DocuSign\eSign\Model\UserInfo[] $users 
+     * @param \DocuSign\eSign\Model\UserInfo[] $users
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class Group implements ModelInterface, ArrayAccess
     /**
      * Sets users_count
      *
-     * @param ?string $users_count 
+     * @param ?string $users_count
      *
      * @return $this
      */

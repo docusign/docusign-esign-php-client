@@ -160,9 +160,9 @@ class DocumentTemplateList implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -177,7 +177,7 @@ class DocumentTemplateList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_templates'] = isset($data['document_templates']) ? $data['document_templates'] : null;
     }
@@ -219,7 +219,7 @@ class DocumentTemplateList implements ModelInterface, ArrayAccess
     /**
      * Sets document_templates
      *
-     * @param \DocuSign\eSign\Model\DocumentTemplate[] $document_templates 
+     * @param \DocuSign\eSign\Model\DocumentTemplate[] $document_templates
      *
      * @return $this
      */

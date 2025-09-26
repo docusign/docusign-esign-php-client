@@ -170,9 +170,9 @@ class BulkSendBatchActionRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class BulkSendBatchActionRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['notification'] = isset($data['notification']) ? $data['notification'] : null;
@@ -231,7 +231,7 @@ class BulkSendBatchActionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets action
      *
-     * @param ?string $action 
+     * @param ?string $action
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class BulkSendBatchActionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets notification
      *
-     * @param \DocuSign\eSign\Model\Notification $notification 
+     * @param \DocuSign\eSign\Model\Notification $notification
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class BulkSendBatchActionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets void_reason
      *
-     * @param ?string $void_reason 
+     * @param ?string $void_reason
      *
      * @return $this
      */

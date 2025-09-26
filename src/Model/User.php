@@ -183,9 +183,9 @@ class User implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -200,7 +200,7 @@ class User implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cell_phone_number'] = isset($data['cell_phone_number']) ? $data['cell_phone_number'] : null;
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
@@ -247,7 +247,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets cell_phone_number
      *
-     * @param ?string $cell_phone_number 
+     * @param ?string $cell_phone_number
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets country_code
      *
-     * @param ?string $country_code 
+     * @param ?string $country_code
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets credentials
      *
-     * @param \DocuSign\eSign\Model\Credential[] $credentials 
+     * @param \DocuSign\eSign\Model\Credential[] $credentials
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets display_name
      *
-     * @param ?string $display_name 
+     * @param ?string $display_name
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param ?string $email 
+     * @param ?string $email
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets external_claims
      *
-     * @param \DocuSign\eSign\Model\ExternalClaim[] $external_claims 
+     * @param \DocuSign\eSign\Model\ExternalClaim[] $external_claims
      *
      * @return $this
      */

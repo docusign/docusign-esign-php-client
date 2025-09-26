@@ -200,9 +200,9 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -217,7 +217,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bulk_envelope_status'] = isset($data['bulk_envelope_status']) ? $data['bulk_envelope_status'] : null;
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
@@ -339,7 +339,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets list_custom_field_update_results
      *
-     * @param \DocuSign\eSign\Model\ListCustomField[] $list_custom_field_update_results 
+     * @param \DocuSign\eSign\Model\ListCustomField[] $list_custom_field_update_results
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets purge_state
      *
-     * @param ?string $purge_state 
+     * @param ?string $purge_state
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_update_results
      *
-     * @param \DocuSign\eSign\Model\RecipientUpdateResponse[] $recipient_update_results 
+     * @param \DocuSign\eSign\Model\RecipientUpdateResponse[] $recipient_update_results
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets tab_update_results
      *
-     * @param \DocuSign\eSign\Model\Tabs $tab_update_results 
+     * @param \DocuSign\eSign\Model\Tabs $tab_update_results
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class EnvelopeUpdateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets text_custom_field_update_results
      *
-     * @param \DocuSign\eSign\Model\TextCustomField[] $text_custom_field_update_results 
+     * @param \DocuSign\eSign\Model\TextCustomField[] $text_custom_field_update_results
      *
      * @return $this
      */

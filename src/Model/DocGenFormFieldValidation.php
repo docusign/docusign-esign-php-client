@@ -165,9 +165,9 @@ class DocGenFormFieldValidation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class DocGenFormFieldValidation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_message'] = isset($data['error_message']) ? $data['error_message'] : null;
         $this->container['expression'] = isset($data['expression']) ? $data['expression'] : null;
@@ -225,7 +225,7 @@ class DocGenFormFieldValidation implements ModelInterface, ArrayAccess
     /**
      * Sets error_message
      *
-     * @param ?string $error_message 
+     * @param ?string $error_message
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class DocGenFormFieldValidation implements ModelInterface, ArrayAccess
     /**
      * Sets expression
      *
-     * @param ?string $expression 
+     * @param ?string $expression
      *
      * @return $this
      */

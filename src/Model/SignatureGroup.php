@@ -170,9 +170,9 @@ class SignatureGroup implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -187,7 +187,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
@@ -231,7 +231,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_id
      *
-     * @param ?string $group_id 
+     * @param ?string $group_id
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class SignatureGroup implements ModelInterface, ArrayAccess
     /**
      * Sets rights
      *
-     * @param ?string $rights 
+     * @param ?string $rights
      *
      * @return $this
      */

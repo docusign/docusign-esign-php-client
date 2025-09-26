@@ -211,9 +211,9 @@ class Filter implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -228,7 +228,7 @@ class Filter implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['action_required'] = isset($data['action_required']) ? $data['action_required'] : null;
         $this->container['expires'] = isset($data['expires']) ? $data['expires'] : null;
@@ -304,7 +304,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets expires
      *
-     * @param ?string $expires 
+     * @param ?string $expires
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets folder_ids
      *
-     * @param ?string $folder_ids 
+     * @param ?string $folder_ids
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets from_date_time
      *
-     * @param ?string $from_date_time 
+     * @param ?string $from_date_time
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets is_template
      *
-     * @param ?string $is_template 
+     * @param ?string $is_template
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param ?string $order 
+     * @param ?string $order
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets order_by
      *
-     * @param ?string $order_by 
+     * @param ?string $order_by
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets search_target
      *
-     * @param ?string $search_target 
+     * @param ?string $search_target
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class Filter implements ModelInterface, ArrayAccess
     /**
      * Sets search_text
      *
-     * @param ?string $search_text 
+     * @param ?string $search_text
      *
      * @return $this
      */

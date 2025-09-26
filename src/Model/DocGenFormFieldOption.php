@@ -175,9 +175,9 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -192,7 +192,7 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
@@ -237,7 +237,7 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param ?string $description 
+     * @param ?string $description
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
     /**
      * Sets label
      *
-     * @param ?string $label 
+     * @param ?string $label
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
     /**
      * Sets selected
      *
-     * @param ?string $selected 
+     * @param ?string $selected
      *
      * @return $this
      */

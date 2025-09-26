@@ -191,9 +191,9 @@ class NotaryJurisdictionList implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -208,7 +208,7 @@ class NotaryJurisdictionList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
         $this->container['next_uri'] = isset($data['next_uri']) ? $data['next_uri'] : null;
@@ -304,7 +304,7 @@ class NotaryJurisdictionList implements ModelInterface, ArrayAccess
     /**
      * Sets notary_jurisdictions
      *
-     * @param \DocuSign\eSign\Model\NotaryJurisdiction[] $notary_jurisdictions 
+     * @param \DocuSign\eSign\Model\NotaryJurisdiction[] $notary_jurisdictions
      *
      * @return $this
      */

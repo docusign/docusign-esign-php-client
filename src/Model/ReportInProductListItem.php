@@ -225,9 +225,9 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -242,7 +242,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['get_uri'] = isset($data['get_uri']) ? $data['get_uri'] : null;
         $this->container['last_scheduled_execution_date'] = isset($data['last_scheduled_execution_date']) ? $data['last_scheduled_execution_date'] : null;
@@ -297,7 +297,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets get_uri
      *
-     * @param ?string $get_uri 
+     * @param ?string $get_uri
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_scheduled_execution_date
      *
-     * @param ?string $last_scheduled_execution_date 
+     * @param ?string $last_scheduled_execution_date
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets last_scheduled_execution_success_date
      *
-     * @param ?string $last_scheduled_execution_success_date 
+     * @param ?string $last_scheduled_execution_success_date
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_customized_id
      *
-     * @param ?string $report_customized_id 
+     * @param ?string $report_customized_id
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_description
      *
-     * @param ?string $report_description 
+     * @param ?string $report_description
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_id
      *
-     * @param ?string $report_id 
+     * @param ?string $report_id
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_name
      *
-     * @param ?string $report_name 
+     * @param ?string $report_name
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets report_type
      *
-     * @param ?string $report_type 
+     * @param ?string $report_type
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets run_uri
      *
-     * @param ?string $run_uri 
+     * @param ?string $run_uri
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets save_uri
      *
-     * @param ?string $save_uri 
+     * @param ?string $save_uri
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_create_date
      *
-     * @param ?string $schedule_create_date 
+     * @param ?string $schedule_create_date
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_end_date
      *
-     * @param ?string $schedule_end_date 
+     * @param ?string $schedule_end_date
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_id
      *
-     * @param ?string $schedule_id 
+     * @param ?string $schedule_id
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_renew_duration_days
      *
-     * @param ?string $schedule_renew_duration_days 
+     * @param ?string $schedule_renew_duration_days
      *
      * @return $this
      */

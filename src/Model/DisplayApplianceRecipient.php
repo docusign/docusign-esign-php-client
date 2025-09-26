@@ -183,9 +183,9 @@ class DisplayApplianceRecipient implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -197,7 +197,7 @@ class DisplayApplianceRecipient implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cfr_part11'] = isset($data['cfr_part11']) ? $data['cfr_part11'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
@@ -256,7 +256,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets cfr_part11
-     * @param bool $cfr_part11 
+     * @param bool $cfr_part11
      * @return $this
      */
     public function setCfrPart11($cfr_part11)
@@ -277,7 +277,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets company
-     * @param string $company 
+     * @param string $company
      * @return $this
      */
     public function setCompany($company)
@@ -298,7 +298,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets digital_signature_base64
-     * @param string $digital_signature_base64 
+     * @param string $digital_signature_base64
      * @return $this
      */
     public function setDigitalSignatureBase64($digital_signature_base64)
@@ -319,7 +319,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets email
-     * @param string $email 
+     * @param string $email
      * @return $this
      */
     public function setEmail($email)
@@ -340,7 +340,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets full_name
-     * @param string $full_name 
+     * @param string $full_name
      * @return $this
      */
     public function setFullName($full_name)
@@ -361,7 +361,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets initials_base64
-     * @param string $initials_base64 
+     * @param string $initials_base64
      * @return $this
      */
     public function setInitialsBase64($initials_base64)
@@ -382,7 +382,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets in_person_email
-     * @param string $in_person_email 
+     * @param string $in_person_email
      * @return $this
      */
     public function setInPersonEmail($in_person_email)
@@ -403,7 +403,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets is_notary
-     * @param bool $is_notary 
+     * @param bool $is_notary
      * @return $this
      */
     public function setIsNotary($is_notary)
@@ -424,7 +424,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets notary_seal_base64
-     * @param string $notary_seal_base64 
+     * @param string $notary_seal_base64
      * @return $this
      */
     public function setNotarySealBase64($notary_seal_base64)
@@ -445,7 +445,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets phone_number
-     * @param string $phone_number 
+     * @param string $phone_number
      * @return $this
      */
     public function setPhoneNumber($phone_number)
@@ -466,7 +466,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets recipient_complete_count
-     * @param int $recipient_complete_count 
+     * @param int $recipient_complete_count
      * @return $this
      */
     public function setRecipientCompleteCount($recipient_complete_count)
@@ -487,7 +487,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets recipient_guid_id
-     * @param string $recipient_guid_id 
+     * @param string $recipient_guid_id
      * @return $this
      */
     public function setRecipientGuidId($recipient_guid_id)
@@ -529,7 +529,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets recipient_status
-     * @param string $recipient_status 
+     * @param string $recipient_status
      * @return $this
      */
     public function setRecipientStatus($recipient_status)
@@ -550,7 +550,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets recipient_type
-     * @param string $recipient_type 
+     * @param string $recipient_type
      * @return $this
      */
     public function setRecipientType($recipient_type)
@@ -571,7 +571,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets row_state
-     * @param string $row_state 
+     * @param string $row_state
      * @return $this
      */
     public function setRowState($row_state)
@@ -592,7 +592,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets signature_base64
-     * @param string $signature_base64 
+     * @param string $signature_base64
      * @return $this
      */
     public function setSignatureBase64($signature_base64)
@@ -613,7 +613,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets signed
-     * @param bool $signed 
+     * @param bool $signed
      * @return $this
      */
     public function setSigned($signed)
@@ -634,7 +634,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets signer_apply_tabs
-     * @param bool $signer_apply_tabs 
+     * @param bool $signer_apply_tabs
      * @return $this
      */
     public function setSignerApplyTabs($signer_apply_tabs)
@@ -655,7 +655,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets signer_attachment_base64
-     * @param string $signer_attachment_base64 
+     * @param string $signer_attachment_base64
      * @return $this
      */
     public function setSignerAttachmentBase64($signer_attachment_base64)
@@ -676,7 +676,7 @@ class DisplayApplianceRecipient implements ArrayAccess
 
     /**
      * Sets user_name
-     * @param string $user_name 
+     * @param string $user_name
      * @return $this
      */
     public function setUserName($user_name)

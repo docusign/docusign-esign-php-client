@@ -188,9 +188,9 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -205,7 +205,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
@@ -253,7 +253,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param ?string $data 
+     * @param ?string $data
      *
      * @return $this
      */
@@ -325,7 +325,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets return_format
      *
-     * @param ?string $return_format 
+     * @param ?string $return_format
      *
      * @return $this
      */
@@ -373,7 +373,7 @@ class DocumentUpdateInfo implements ModelInterface, ArrayAccess
     /**
      * Sets signature_data_infos
      *
-     * @param \DocuSign\eSign\Model\SignatureDataInfo[] $signature_data_infos 
+     * @param \DocuSign\eSign\Model\SignatureDataInfo[] $signature_data_infos
      *
      * @return $this
      */

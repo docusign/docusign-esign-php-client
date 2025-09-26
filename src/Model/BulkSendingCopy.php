@@ -181,9 +181,9 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -198,7 +198,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['doc_gen_form_fields'] = isset($data['doc_gen_form_fields']) ? $data['doc_gen_form_fields'] : null;
@@ -268,7 +268,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     /**
      * Sets doc_gen_form_fields
      *
-     * @param \DocuSign\eSign\Model\BulksendingCopyDocGenFormField[] $doc_gen_form_fields 
+     * @param \DocuSign\eSign\Model\BulksendingCopyDocGenFormField[] $doc_gen_form_fields
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     /**
      * Sets email_blurb
      *
-     * @param ?string $email_blurb 
+     * @param ?string $email_blurb
      *
      * @return $this
      */

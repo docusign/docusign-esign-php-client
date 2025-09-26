@@ -195,9 +195,9 @@ class IntegratedUserInfoList implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -212,7 +212,7 @@ class IntegratedUserInfoList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['all_users_selected'] = isset($data['all_users_selected']) ? $data['all_users_selected'] : null;
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
@@ -261,7 +261,7 @@ class IntegratedUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets all_users_selected
      *
-     * @param ?string $all_users_selected 
+     * @param ?string $all_users_selected
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class IntegratedUserInfoList implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \DocuSign\eSign\Model\UserInfo[] $users 
+     * @param \DocuSign\eSign\Model\UserInfo[] $users
      *
      * @return $this
      */

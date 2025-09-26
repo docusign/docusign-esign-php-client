@@ -181,9 +181,9 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -198,7 +198,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['combined'] = isset($data['combined']) ? $data['combined'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
@@ -244,7 +244,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets combined
      *
-     * @param ?string $combined 
+     * @param ?string $combined
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class RecipientUpdateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets recipient_id_guid
      *
-     * @param ?string $recipient_id_guid 
+     * @param ?string $recipient_id_guid
      *
      * @return $this
      */

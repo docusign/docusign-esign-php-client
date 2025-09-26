@@ -376,9 +376,9 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -393,7 +393,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_envelope_publish'] = isset($data['allow_envelope_publish']) ? $data['allow_envelope_publish'] : null;
         $this->container['allow_salesforce_publish'] = isset($data['allow_salesforce_publish']) ? $data['allow_salesforce_publish'] : null;
@@ -502,7 +502,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets allow_salesforce_publish
      *
-     * @param ?string $allow_salesforce_publish 
+     * @param ?string $allow_salesforce_publish
      *
      * @return $this
      */
@@ -550,7 +550,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets all_users_except
      *
-     * @param ?string $all_users_except 
+     * @param ?string $all_users_except
      *
      * @return $this
      */
@@ -622,7 +622,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_mode
      *
-     * @param ?string $delivery_mode 
+     * @param ?string $delivery_mode
      *
      * @return $this
      */
@@ -646,7 +646,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets disabled_by
      *
-     * @param ?string $disabled_by 
+     * @param ?string $disabled_by
      *
      * @return $this
      */
@@ -742,7 +742,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets events
      *
-     * @param ?string[] $events 
+     * @param ?string[] $events
      *
      * @return $this
      */
@@ -766,7 +766,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets external_folder_id
      *
-     * @param ?string $external_folder_id 
+     * @param ?string $external_folder_id
      *
      * @return $this
      */
@@ -790,7 +790,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets external_folder_label
      *
-     * @param ?string $external_folder_label 
+     * @param ?string $external_folder_label
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets group_ids
      *
-     * @param ?string[] $group_ids 
+     * @param ?string[] $group_ids
      *
      * @return $this
      */
@@ -862,7 +862,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_cert_soap_header
      *
-     * @param ?string $include_cert_soap_header 
+     * @param ?string $include_cert_soap_header
      *
      * @return $this
      */
@@ -958,7 +958,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_hmac
      *
-     * @param ?string $include_hmac 
+     * @param ?string $include_hmac
      *
      * @return $this
      */
@@ -982,7 +982,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets include_o_auth
      *
-     * @param ?string $include_o_auth 
+     * @param ?string $include_o_auth
      *
      * @return $this
      */
@@ -1054,7 +1054,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets integrator_managed
      *
-     * @param ?string $integrator_managed 
+     * @param ?string $integrator_managed
      *
      * @return $this
      */
@@ -1102,7 +1102,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param ?string $password 
+     * @param ?string $password
      *
      * @return $this
      */
@@ -1126,7 +1126,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets pause_publish
      *
-     * @param ?string $pause_publish 
+     * @param ?string $pause_publish
      *
      * @return $this
      */
@@ -1174,7 +1174,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets require_mutual_tls
      *
-     * @param ?string $require_mutual_tls 
+     * @param ?string $require_mutual_tls
      *
      * @return $this
      */
@@ -1222,7 +1222,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_api_version
      *
-     * @param ?string $salesforce_api_version 
+     * @param ?string $salesforce_api_version
      *
      * @return $this
      */
@@ -1246,7 +1246,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_authcode
      *
-     * @param ?string $salesforce_authcode 
+     * @param ?string $salesforce_authcode
      *
      * @return $this
      */
@@ -1270,7 +1270,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_call_back_url
      *
-     * @param ?string $salesforce_call_back_url 
+     * @param ?string $salesforce_call_back_url
      *
      * @return $this
      */
@@ -1294,7 +1294,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets salesforce_documents_as_content_files
      *
-     * @param ?string $salesforce_documents_as_content_files 
+     * @param ?string $salesforce_documents_as_content_files
      *
      * @return $this
      */
@@ -1318,7 +1318,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets sender_override
      *
-     * @param ?string $sender_override 
+     * @param ?string $sender_override
      *
      * @return $this
      */
@@ -1342,7 +1342,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets sender_selectable_items
      *
-     * @param ?string[] $sender_selectable_items 
+     * @param ?string[] $sender_selectable_items
      *
      * @return $this
      */
@@ -1366,7 +1366,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets sf_objects
      *
-     * @param \DocuSign\eSign\Model\ConnectSalesforceObject[] $sf_objects 
+     * @param \DocuSign\eSign\Model\ConnectSalesforceObject[] $sf_objects
      *
      * @return $this
      */
@@ -1486,7 +1486,7 @@ class ConnectCustomConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets user_name
      *
-     * @param ?string $user_name 
+     * @param ?string $user_name
      *
      * @return $this
      */

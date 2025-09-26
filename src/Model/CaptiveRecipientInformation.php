@@ -161,9 +161,9 @@ class CaptiveRecipientInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -178,7 +178,7 @@ class CaptiveRecipientInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['captive_recipients'] = isset($data['captive_recipients']) ? $data['captive_recipients'] : null;
     }

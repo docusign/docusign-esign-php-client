@@ -206,9 +206,9 @@ class SigningGroup implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -223,7 +223,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
@@ -274,7 +274,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets created
      *
-     * @param ?string $created 
+     * @param ?string $created
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets created_by
      *
-     * @param ?string $created_by 
+     * @param ?string $created_by
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_email
      *
-     * @param ?string $group_email 
+     * @param ?string $group_email
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets group_type
      *
-     * @param ?string $group_type 
+     * @param ?string $group_type
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets modified
      *
-     * @param ?string $modified 
+     * @param ?string $modified
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets modified_by
      *
-     * @param ?string $modified_by 
+     * @param ?string $modified_by
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class SigningGroup implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \DocuSign\eSign\Model\SigningGroupUser[] $users 
+     * @param \DocuSign\eSign\Model\SigningGroupUser[] $users
      *
      * @return $this
      */

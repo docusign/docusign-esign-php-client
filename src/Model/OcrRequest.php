@@ -123,9 +123,9 @@ class OcrRequest implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -137,7 +137,7 @@ class OcrRequest implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['ocr_language'] = isset($data['ocr_language']) ? $data['ocr_language'] : null;
         $this->container['page_selection'] = isset($data['page_selection']) ? $data['page_selection'] : null;
@@ -181,7 +181,7 @@ class OcrRequest implements ArrayAccess
 
     /**
      * Sets ocr_language
-     * @param string $ocr_language 
+     * @param string $ocr_language
      * @return $this
      */
     public function setOcrLanguage($ocr_language)
@@ -202,7 +202,7 @@ class OcrRequest implements ArrayAccess
 
     /**
      * Sets page_selection
-     * @param string $page_selection 
+     * @param string $page_selection
      * @return $this
      */
     public function setPageSelection($page_selection)
@@ -223,7 +223,7 @@ class OcrRequest implements ArrayAccess
 
     /**
      * Sets set_page_orientation
-     * @param string $set_page_orientation 
+     * @param string $set_page_orientation
      * @return $this
      */
     public function setSetPageOrientation($set_page_orientation)
@@ -244,7 +244,7 @@ class OcrRequest implements ArrayAccess
 
     /**
      * Sets show_frames
-     * @param string $show_frames 
+     * @param string $show_frames
      * @return $this
      */
     public function setShowFrames($show_frames)
@@ -265,7 +265,7 @@ class OcrRequest implements ArrayAccess
 
     /**
      * Sets show_text
-     * @param string $show_text 
+     * @param string $show_text
      * @return $this
      */
     public function setShowText($show_text)
@@ -286,7 +286,7 @@ class OcrRequest implements ArrayAccess
 
     /**
      * Sets skip_pages_having_existing_extractable_text
-     * @param string $skip_pages_having_existing_extractable_text 
+     * @param string $skip_pages_having_existing_extractable_text
      * @return $this
      */
     public function setSkipPagesHavingExistingExtractableText($skip_pages_having_existing_extractable_text)

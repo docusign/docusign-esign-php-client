@@ -104,9 +104,9 @@ class RecipientSAMLAuthentication implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -118,7 +118,7 @@ class RecipientSAMLAuthentication implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['saml_assertion_attributes'] = isset($data['saml_assertion_attributes']) ? $data['saml_assertion_attributes'] : null;
     }
@@ -157,7 +157,7 @@ class RecipientSAMLAuthentication implements ArrayAccess
 
     /**
      * Sets saml_assertion_attributes
-     * @param \DocuSign\eSign\Model\SamlAssertionAttribute[] $saml_assertion_attributes 
+     * @param \DocuSign\eSign\Model\SamlAssertionAttribute[] $saml_assertion_attributes
      * @return $this
      */
     public function setSamlAssertionAttributes($saml_assertion_attributes)

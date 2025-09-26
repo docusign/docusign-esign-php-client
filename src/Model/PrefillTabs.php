@@ -211,9 +211,9 @@ class PrefillTabs implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -228,7 +228,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['checkbox_tabs'] = isset($data['checkbox_tabs']) ? $data['checkbox_tabs'] : null;
         $this->container['date_tabs'] = isset($data['date_tabs']) ? $data['date_tabs'] : null;
@@ -400,7 +400,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
     /**
      * Sets sender_company_tabs
      *
-     * @param \DocuSign\eSign\Model\SenderCompany[] $sender_company_tabs 
+     * @param \DocuSign\eSign\Model\SenderCompany[] $sender_company_tabs
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
     /**
      * Sets sender_name_tabs
      *
-     * @param \DocuSign\eSign\Model\SenderName[] $sender_name_tabs 
+     * @param \DocuSign\eSign\Model\SenderName[] $sender_name_tabs
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
     /**
      * Sets tab_groups
      *
-     * @param \DocuSign\eSign\Model\TabGroup[] $tab_groups 
+     * @param \DocuSign\eSign\Model\TabGroup[] $tab_groups
      *
      * @return $this
      */

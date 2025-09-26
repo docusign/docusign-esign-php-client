@@ -185,9 +185,9 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -202,7 +202,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['downgrade_event_type'] = isset($data['downgrade_event_type']) ? $data['downgrade_event_type'] : null;
         $this->container['plan_information'] = isset($data['plan_information']) ? $data['plan_information'] : null;
@@ -249,7 +249,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets downgrade_event_type
      *
-     * @param ?string $downgrade_event_type 
+     * @param ?string $downgrade_event_type
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets promo_code
      *
-     * @param ?string $promo_code 
+     * @param ?string $promo_code
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount
      *
-     * @param ?string $sale_discount 
+     * @param ?string $sale_discount
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_periods
      *
-     * @param ?string $sale_discount_periods 
+     * @param ?string $sale_discount_periods
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class DowngradeBillingPlanInformation implements ModelInterface, ArrayAccess
     /**
      * Sets sale_discount_type
      *
-     * @param ?string $sale_discount_type 
+     * @param ?string $sale_discount_type
      *
      * @return $this
      */

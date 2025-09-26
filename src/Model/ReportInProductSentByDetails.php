@@ -165,9 +165,9 @@ class ReportInProductSentByDetails implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -182,7 +182,7 @@ class ReportInProductSentByDetails implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
@@ -249,7 +249,7 @@ class ReportInProductSentByDetails implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \DocuSign\eSign\Model\UserInfo[] $users 
+     * @param \DocuSign\eSign\Model\UserInfo[] $users
      *
      * @return $this
      */

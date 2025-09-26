@@ -220,9 +220,9 @@ class ExtensionData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -237,7 +237,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['action_contract'] = isset($data['action_contract']) ? $data['action_contract'] : null;
         $this->container['action_input_key'] = isset($data['action_input_key']) ? $data['action_input_key'] : null;
@@ -291,7 +291,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets action_contract
      *
-     * @param ?string $action_contract 
+     * @param ?string $action_contract
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets action_input_key
      *
-     * @param ?string $action_input_key 
+     * @param ?string $action_input_key
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets action_name
      *
-     * @param ?string $action_name 
+     * @param ?string $action_name
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets application_id
      *
-     * @param ?string $application_id 
+     * @param ?string $application_id
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets application_name
      *
-     * @param ?string $application_name 
+     * @param ?string $application_name
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets connected_fields_data
      *
-     * @param \DocuSign\eSign\Model\ConnectedData $connected_fields_data 
+     * @param \DocuSign\eSign\Model\ConnectedData $connected_fields_data
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets connection_instances
      *
-     * @param \DocuSign\eSign\Model\ConnectionInstance[] $connection_instances 
+     * @param \DocuSign\eSign\Model\ConnectionInstance[] $connection_instances
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets extension_contract
      *
-     * @param ?string $extension_contract 
+     * @param ?string $extension_contract
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets extension_group_id
      *
-     * @param ?string $extension_group_id 
+     * @param ?string $extension_group_id
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets extension_name
      *
-     * @param ?string $extension_name 
+     * @param ?string $extension_name
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets extension_policy
      *
-     * @param ?string $extension_policy 
+     * @param ?string $extension_policy
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets publisher_name
      *
-     * @param ?string $publisher_name 
+     * @param ?string $publisher_name
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class ExtensionData implements ModelInterface, ArrayAccess
     /**
      * Sets required_for_extension
      *
-     * @param ?string $required_for_extension 
+     * @param ?string $required_for_extension
      *
      * @return $this
      */

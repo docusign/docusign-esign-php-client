@@ -183,9 +183,9 @@ class FolderItem implements ArrayAccess
         return self::$getters;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -197,7 +197,7 @@ class FolderItem implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['completed_date_time'] = isset($data['completed_date_time']) ? $data['completed_date_time'] : null;
         $this->container['created_date_time'] = isset($data['created_date_time']) ? $data['created_date_time'] : null;
@@ -319,7 +319,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets description
-     * @param string $description 
+     * @param string $description
      * @return $this
      */
     public function setDescription($description)
@@ -403,7 +403,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets is_signature_provider_envelope
-     * @param string $is_signature_provider_envelope 
+     * @param string $is_signature_provider_envelope
      * @return $this
      */
     public function setIsSignatureProviderEnvelope($is_signature_provider_envelope)
@@ -424,7 +424,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets last_modified
-     * @param string $last_modified 
+     * @param string $last_modified
      * @return $this
      */
     public function setLastModified($last_modified)
@@ -445,7 +445,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name 
+     * @param string $name
      * @return $this
      */
     public function setName($name)
@@ -487,7 +487,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets page_count
-     * @param int $page_count 
+     * @param int $page_count
      * @return $this
      */
     public function setPageCount($page_count)
@@ -508,7 +508,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets password
-     * @param string $password 
+     * @param string $password
      * @return $this
      */
     public function setPassword($password)
@@ -529,7 +529,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets sender_email
-     * @param string $sender_email 
+     * @param string $sender_email
      * @return $this
      */
     public function setSenderEmail($sender_email)
@@ -634,7 +634,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets subject
-     * @param string $subject 
+     * @param string $subject
      * @return $this
      */
     public function setSubject($subject)
@@ -676,7 +676,7 @@ class FolderItem implements ArrayAccess
 
     /**
      * Sets uri
-     * @param string $uri 
+     * @param string $uri
      * @return $this
      */
     public function setUri($uri)

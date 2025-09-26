@@ -196,9 +196,9 @@ class TemplateSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -213,7 +213,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['applied'] = isset($data['applied']) ? $data['applied'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
@@ -310,7 +310,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets document_name
      *
-     * @param ?string $document_name 
+     * @param ?string $document_name
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param ?string $name 
+     * @param ?string $name
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets template_match
      *
-     * @param \DocuSign\eSign\Model\TemplateMatch $template_match 
+     * @param \DocuSign\eSign\Model\TemplateMatch $template_match
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ class TemplateSummary implements ModelInterface, ArrayAccess
     /**
      * Sets uri
      *
-     * @param ?string $uri 
+     * @param ?string $uri
      *
      * @return $this
      */
