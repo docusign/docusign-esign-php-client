@@ -263,7 +263,7 @@ class ReferralInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['advertisement_id'] = isset($data['advertisement_id']) ? $data['advertisement_id'] : null;
         $this->container['enable_support'] = isset($data['enable_support']) ? $data['enable_support'] : null;

@@ -193,7 +193,7 @@ class DateStampProperties implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['date_area_height'] = isset($data['date_area_height']) ? $data['date_area_height'] : null;
         $this->container['date_area_width'] = isset($data['date_area_width']) ? $data['date_area_width'] : null;

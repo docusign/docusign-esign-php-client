@@ -222,7 +222,7 @@ class RecipientTokenClientURLs implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['on_access_code_failed'] = isset($data['on_access_code_failed']) ? $data['on_access_code_failed'] : null;
         $this->container['on_cancel'] = isset($data['on_cancel']) ? $data['on_cancel'] : null;

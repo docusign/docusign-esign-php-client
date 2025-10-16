@@ -187,7 +187,7 @@ class BillingDiscount implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['begin_quantity'] = isset($data['begin_quantity']) ? $data['begin_quantity'] : null;
         $this->container['discount'] = isset($data['discount']) ? $data['discount'] : null;

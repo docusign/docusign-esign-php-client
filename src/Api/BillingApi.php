@@ -392,7 +392,7 @@ class BillingApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -905,7 +905,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountBillingPlanResponse
      */
-    public function getPlan($account_id, \DocuSign\eSign\Api\BillingApi\GetPlanOptions $options = null)
+    public function getPlan($account_id, ?\DocuSign\eSign\Api\BillingApi\GetPlanOptions $options = null)
     {
         list($response) = $this->getPlanWithHttpInfo($account_id, $options);
         return $response;
@@ -922,7 +922,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountBillingPlanResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPlanWithHttpInfo($account_id, \DocuSign\eSign\Api\BillingApi\GetPlanOptions $options = null): array
+    public function getPlanWithHttpInfo($account_id, ?\DocuSign\eSign\Api\BillingApi\GetPlanOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1090,7 +1090,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingInvoicesResponse
      */
-    public function listInvoices($account_id, \DocuSign\eSign\Api\BillingApi\ListInvoicesOptions $options = null)
+    public function listInvoices($account_id, ?\DocuSign\eSign\Api\BillingApi\ListInvoicesOptions $options = null)
     {
         list($response) = $this->listInvoicesWithHttpInfo($account_id, $options);
         return $response;
@@ -1107,7 +1107,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingInvoicesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listInvoicesWithHttpInfo($account_id, \DocuSign\eSign\Api\BillingApi\ListInvoicesOptions $options = null): array
+    public function listInvoicesWithHttpInfo($account_id, ?\DocuSign\eSign\Api\BillingApi\ListInvoicesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1276,7 +1276,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPaymentsResponse
      */
-    public function listPayments($account_id, \DocuSign\eSign\Api\BillingApi\ListPaymentsOptions $options = null)
+    public function listPayments($account_id, ?\DocuSign\eSign\Api\BillingApi\ListPaymentsOptions $options = null)
     {
         list($response) = $this->listPaymentsWithHttpInfo($account_id, $options);
         return $response;
@@ -1293,7 +1293,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPaymentsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPaymentsWithHttpInfo($account_id, \DocuSign\eSign\Api\BillingApi\ListPaymentsOptions $options = null): array
+    public function listPaymentsWithHttpInfo($account_id, ?\DocuSign\eSign\Api\BillingApi\ListPaymentsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1654,7 +1654,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingPlanUpdateResponse
      */
-    public function updatePlan($account_id, $billing_plan_information = null, \DocuSign\eSign\Api\BillingApi\UpdatePlanOptions $options = null)
+    public function updatePlan($account_id, $billing_plan_information = null, ?\DocuSign\eSign\Api\BillingApi\UpdatePlanOptions $options = null)
     {
         list($response) = $this->updatePlanWithHttpInfo($account_id, $billing_plan_information, $options);
         return $response;
@@ -1672,7 +1672,7 @@ class BillingApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingPlanUpdateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePlanWithHttpInfo($account_id, $billing_plan_information = null, \DocuSign\eSign\Api\BillingApi\UpdatePlanOptions $options = null): array
+    public function updatePlanWithHttpInfo($account_id, $billing_plan_information = null, ?\DocuSign\eSign\Api\BillingApi\UpdatePlanOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

@@ -358,7 +358,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['added_recipient_ids'] = isset($data['added_recipient_ids']) ? $data['added_recipient_ids'] : null;
         $this->container['agreement_type'] = isset($data['agreement_type']) ? $data['agreement_type'] : null;

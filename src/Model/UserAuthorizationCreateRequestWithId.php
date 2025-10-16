@@ -197,7 +197,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
         $this->container['authorization_id'] = isset($data['authorization_id']) ? $data['authorization_id'] : null;

@@ -213,7 +213,7 @@ class BrandResources implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['created_by_user_info'] = isset($data['created_by_user_info']) ? $data['created_by_user_info'] : null;
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;

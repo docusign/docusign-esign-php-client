@@ -187,7 +187,7 @@ class FavoriteTemplatesInfo implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
         $this->container['favorite_templates'] = isset($data['favorite_templates']) ? $data['favorite_templates'] : null;

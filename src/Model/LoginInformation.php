@@ -182,7 +182,7 @@ class LoginInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['api_password'] = isset($data['api_password']) ? $data['api_password'] : null;
         $this->container['login_accounts'] = isset($data['login_accounts']) ? $data['login_accounts'] : null;

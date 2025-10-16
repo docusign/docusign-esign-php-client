@@ -192,7 +192,7 @@ class BillingEntityInformationResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['billing_profile'] = isset($data['billing_profile']) ? $data['billing_profile'] : null;
         $this->container['entity_name'] = isset($data['entity_name']) ? $data['entity_name'] : null;

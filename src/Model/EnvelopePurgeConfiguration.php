@@ -193,7 +193,7 @@ class EnvelopePurgeConfiguration implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['purge_envelopes'] = isset($data['purge_envelopes']) ? $data['purge_envelopes'] : null;
         $this->container['redact_pii'] = isset($data['redact_pii']) ? $data['redact_pii'] : null;

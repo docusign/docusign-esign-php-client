@@ -183,7 +183,7 @@ class BccEmailAddress implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bcc_email_address_id'] = isset($data['bcc_email_address_id']) ? $data['bcc_email_address_id'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;

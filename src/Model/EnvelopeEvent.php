@@ -183,7 +183,7 @@ class EnvelopeEvent implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['envelope_event_status_code'] = isset($data['envelope_event_status_code']) ? $data['envelope_event_status_code'] : null;
         $this->container['include_documents'] = isset($data['include_documents']) ? $data['include_documents'] : null;

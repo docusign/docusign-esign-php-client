@@ -233,7 +233,7 @@ class EnvelopesInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['continuation_token'] = isset($data['continuation_token']) ? $data['continuation_token'] : null;
         $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;

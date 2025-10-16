@@ -308,7 +308,7 @@ class UserAccountManagementGranularInformation implements ModelInterface, ArrayA
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['can_manage_account_security_settings'] = isset($data['can_manage_account_security_settings']) ? $data['can_manage_account_security_settings'] : null;
         $this->container['can_manage_account_security_settings_metadata'] = isset($data['can_manage_account_security_settings_metadata']) ? $data['can_manage_account_security_settings_metadata'] : null;

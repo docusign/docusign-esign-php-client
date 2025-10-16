@@ -412,7 +412,7 @@ class TabAccountSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['allow_tab_order'] = isset($data['allow_tab_order']) ? $data['allow_tab_order'] : null;
         $this->container['allow_tab_order_metadata'] = isset($data['allow_tab_order_metadata']) ? $data['allow_tab_order_metadata'] : null;

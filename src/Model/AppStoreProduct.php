@@ -183,7 +183,7 @@ class AppStoreProduct implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['market_place'] = isset($data['market_place']) ? $data['market_place'] : null;
         $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;

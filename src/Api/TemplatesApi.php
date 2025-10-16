@@ -1557,7 +1557,7 @@ class TemplatesApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -2043,7 +2043,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function createRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions $options = null)
+    public function createRecipients($account_id, $template_id, $template_recipients = null, ?\DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions $options = null)
     {
         list($response) = $this->createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients, $options);
         return $response;
@@ -2062,7 +2062,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions $options = null): array
+    public function createRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, ?\DocuSign\eSign\Api\TemplatesApi\CreateRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3905,7 +3905,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeTemplate
      */
-    public function get($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetOptions $options = null)
+    public function get($account_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetOptions $options = null)
     {
         list($response) = $this->getWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -3923,7 +3923,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeTemplate, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetOptions $options = null): array
+    public function getWithHttpInfo($account_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4012,7 +4012,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getDocument($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions $options = null)
+    public function getDocument($account_id, $document_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions $options = null)
     {
         list($response) = $this->getDocumentWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -4031,7 +4031,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions $options = null): array
+    public function getDocumentWithHttpInfo($account_id, $document_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetDocumentOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4135,7 +4135,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getDocumentPageImage($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions $options = null)
+    public function getDocumentPageImage($account_id, $document_id, $page_number, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions $options = null)
     {
         list($response) = $this->getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, $options);
         return $response;
@@ -4155,7 +4155,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions $options = null): array
+    public function getDocumentPageImageWithHttpInfo($account_id, $document_id, $page_number, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetDocumentPageImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4269,7 +4269,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function getDocumentTabs($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions $options = null)
+    public function getDocumentTabs($account_id, $document_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions $options = null)
     {
         list($response) = $this->getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -4288,7 +4288,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions $options = null): array
+    public function getDocumentTabsWithHttpInfo($account_id, $document_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetDocumentTabsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4696,7 +4696,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
-    public function getPages($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetPagesOptions $options = null)
+    public function getPages($account_id, $document_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetPagesOptions $options = null)
     {
         list($response) = $this->getPagesWithHttpInfo($account_id, $document_id, $template_id, $options);
         return $response;
@@ -4715,7 +4715,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPagesWithHttpInfo($account_id, $document_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\GetPagesOptions $options = null): array
+    public function getPagesWithHttpInfo($account_id, $document_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\GetPagesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5237,7 +5237,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateDocumentsResult
      */
-    public function listDocuments($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions $options = null)
+    public function listDocuments($account_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions $options = null)
     {
         list($response) = $this->listDocumentsWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -5255,7 +5255,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateDocumentsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listDocumentsWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions $options = null): array
+    public function listDocumentsWithHttpInfo($account_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\ListDocumentsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5346,7 +5346,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Recipients
      */
-    public function listRecipients($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions $options = null)
+    public function listRecipients($account_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions $options = null)
     {
         list($response) = $this->listRecipientsWithHttpInfo($account_id, $template_id, $options);
         return $response;
@@ -5364,7 +5364,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Recipients, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRecipientsWithHttpInfo($account_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions $options = null): array
+    public function listRecipientsWithHttpInfo($account_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\ListRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5459,7 +5459,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Tabs
      */
-    public function listTabs($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListTabsOptions $options = null)
+    public function listTabs($account_id, $recipient_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\ListTabsOptions $options = null)
     {
         list($response) = $this->listTabsWithHttpInfo($account_id, $recipient_id, $template_id, $options);
         return $response;
@@ -5478,7 +5478,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Tabs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listTabsWithHttpInfo($account_id, $recipient_id, $template_id, \DocuSign\eSign\Api\TemplatesApi\ListTabsOptions $options = null): array
+    public function listTabsWithHttpInfo($account_id, $recipient_id, $template_id, ?\DocuSign\eSign\Api\TemplatesApi\ListTabsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5576,7 +5576,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeTemplateResults
      */
-    public function listTemplates($account_id, \DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions $options = null)
+    public function listTemplates($account_id, ?\DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions $options = null)
     {
         list($response) = $this->listTemplatesWithHttpInfo($account_id, $options);
         return $response;
@@ -5593,7 +5593,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeTemplateResults, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listTemplatesWithHttpInfo($account_id, \DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions $options = null): array
+    public function listTemplatesWithHttpInfo($account_id, ?\DocuSign\eSign\Api\TemplatesApi\ListTemplatesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6069,7 +6069,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopeDocument
      */
-    public function updateDocument($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions $options = null)
+    public function updateDocument($account_id, $document_id, $template_id, $envelope_definition = null, ?\DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions $options = null)
     {
         list($response) = $this->updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition, $options);
         return $response;
@@ -6089,7 +6089,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopeDocument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition = null, \DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions $options = null): array
+    public function updateDocumentWithHttpInfo($account_id, $document_id, $template_id, $envelope_definition = null, ?\DocuSign\eSign\Api\TemplatesApi\UpdateDocumentOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6731,7 +6731,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientsUpdateSummary
      */
-    public function updateRecipients($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions $options = null)
+    public function updateRecipients($account_id, $template_id, $template_recipients = null, ?\DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions $options = null)
     {
         list($response) = $this->updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients, $options);
         return $response;
@@ -6750,7 +6750,7 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientsUpdateSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, \DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions $options = null): array
+    public function updateRecipientsWithHttpInfo($account_id, $template_id, $template_recipients = null, ?\DocuSign\eSign\Api\TemplatesApi\UpdateRecipientsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

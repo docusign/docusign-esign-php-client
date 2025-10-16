@@ -178,7 +178,7 @@ class BrandRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
     }

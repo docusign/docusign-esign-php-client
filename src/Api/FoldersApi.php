@@ -729,7 +729,7 @@ class FoldersApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -787,7 +787,7 @@ class FoldersApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FoldersResponse
      */
-    public function callList($account_id, \DocuSign\eSign\Api\FoldersApi\ListOptions $options = null)
+    public function callList($account_id, ?\DocuSign\eSign\Api\FoldersApi\ListOptions $options = null)
     {
         list($response) = $this->callListWithHttpInfo($account_id, $options);
         return $response;
@@ -804,7 +804,7 @@ class FoldersApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FoldersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, \DocuSign\eSign\Api\FoldersApi\ListOptions $options = null): array
+    public function callListWithHttpInfo($account_id, ?\DocuSign\eSign\Api\FoldersApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -902,7 +902,7 @@ class FoldersApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemsResponse
      */
-    public function listItems($account_id, $folder_id, \DocuSign\eSign\Api\FoldersApi\ListItemsOptions $options = null)
+    public function listItems($account_id, $folder_id, ?\DocuSign\eSign\Api\FoldersApi\ListItemsOptions $options = null)
     {
         list($response) = $this->listItemsWithHttpInfo($account_id, $folder_id, $options);
         return $response;
@@ -920,7 +920,7 @@ class FoldersApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listItemsWithHttpInfo($account_id, $folder_id, \DocuSign\eSign\Api\FoldersApi\ListItemsOptions $options = null): array
+    public function listItemsWithHttpInfo($account_id, $folder_id, ?\DocuSign\eSign\Api\FoldersApi\ListItemsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1133,7 +1133,7 @@ class FoldersApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\FolderItemResponse
      */
-    public function search($account_id, $search_folder_id, \DocuSign\eSign\Api\FoldersApi\SearchOptions $options = null)
+    public function search($account_id, $search_folder_id, ?\DocuSign\eSign\Api\FoldersApi\SearchOptions $options = null)
     {
         list($response) = $this->searchWithHttpInfo($account_id, $search_folder_id, $options);
         return $response;
@@ -1151,7 +1151,7 @@ class FoldersApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\FolderItemResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function searchWithHttpInfo($account_id, $search_folder_id, \DocuSign\eSign\Api\FoldersApi\SearchOptions $options = null): array
+    public function searchWithHttpInfo($account_id, $search_folder_id, ?\DocuSign\eSign\Api\FoldersApi\SearchOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

@@ -188,7 +188,7 @@ class AuthenticationApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -519,7 +519,7 @@ class AuthenticationApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\LoginInformation
      */
-    public function login(\DocuSign\eSign\Api\AuthenticationApi\LoginOptions $options = null)
+    public function login(?\DocuSign\eSign\Api\AuthenticationApi\LoginOptions $options = null)
     {
         list($response) = $this->loginWithHttpInfo($options);
         return $response;
@@ -535,7 +535,7 @@ class AuthenticationApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\LoginInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function loginWithHttpInfo(\DocuSign\eSign\Api\AuthenticationApi\LoginOptions $options = null): array
+    public function loginWithHttpInfo(?\DocuSign\eSign\Api\AuthenticationApi\LoginOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/login_information";

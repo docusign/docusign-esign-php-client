@@ -228,7 +228,7 @@ class WorkspaceUserAuthorization implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['can_delete'] = isset($data['can_delete']) ? $data['can_delete'] : null;
         $this->container['can_move'] = isset($data['can_move']) ? $data['can_move'] : null;
