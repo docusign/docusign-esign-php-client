@@ -182,7 +182,7 @@ class BulkSendBatchError implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['error'] = isset($data['error']) ? $data['error'] : null;
         $this->container['error_detail'] = isset($data['error_detail']) ? $data['error_detail'] : null;

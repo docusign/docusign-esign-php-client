@@ -595,7 +595,7 @@ class ConnectApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -1482,7 +1482,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\IntegratedConnectUserInfoList
      */
-    public function getConnectAllUsers($account_id, $connect_id, \DocuSign\eSign\Api\ConnectApi\GetConnectAllUsersOptions $options = null)
+    public function getConnectAllUsers($account_id, $connect_id, ?\DocuSign\eSign\Api\ConnectApi\GetConnectAllUsersOptions $options = null)
     {
         list($response) = $this->getConnectAllUsersWithHttpInfo($account_id, $connect_id, $options);
         return $response;
@@ -1500,7 +1500,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\IntegratedConnectUserInfoList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getConnectAllUsersWithHttpInfo($account_id, $connect_id, \DocuSign\eSign\Api\ConnectApi\GetConnectAllUsersOptions $options = null): array
+    public function getConnectAllUsersWithHttpInfo($account_id, $connect_id, ?\DocuSign\eSign\Api\ConnectApi\GetConnectAllUsersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1690,7 +1690,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLog
      */
-    public function getEventLog($account_id, $log_id, \DocuSign\eSign\Api\ConnectApi\GetEventLogOptions $options = null)
+    public function getEventLog($account_id, $log_id, ?\DocuSign\eSign\Api\ConnectApi\GetEventLogOptions $options = null)
     {
         list($response) = $this->getEventLogWithHttpInfo($account_id, $log_id, $options);
         return $response;
@@ -1708,7 +1708,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLog, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEventLogWithHttpInfo($account_id, $log_id, \DocuSign\eSign\Api\ConnectApi\GetEventLogOptions $options = null): array
+    public function getEventLogWithHttpInfo($account_id, $log_id, ?\DocuSign\eSign\Api\ConnectApi\GetEventLogOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1882,7 +1882,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLogs
      */
-    public function listEventFailureLogs($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions $options = null)
+    public function listEventFailureLogs($account_id, ?\DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions $options = null)
     {
         list($response) = $this->listEventFailureLogsWithHttpInfo($account_id, $options);
         return $response;
@@ -1899,7 +1899,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLogs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listEventFailureLogsWithHttpInfo($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions $options = null): array
+    public function listEventFailureLogsWithHttpInfo($account_id, ?\DocuSign\eSign\Api\ConnectApi\ListEventFailureLogsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1981,7 +1981,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConnectLogs
      */
-    public function listEventLogs($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions $options = null)
+    public function listEventLogs($account_id, ?\DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions $options = null)
     {
         list($response) = $this->listEventLogsWithHttpInfo($account_id, $options);
         return $response;
@@ -1998,7 +1998,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConnectLogs, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listEventLogsWithHttpInfo($account_id, \DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions $options = null): array
+    public function listEventLogsWithHttpInfo($account_id, ?\DocuSign\eSign\Api\ConnectApi\ListEventLogsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2168,7 +2168,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\IntegratedUserInfoList
      */
-    public function listUsers($account_id, $connect_id, \DocuSign\eSign\Api\ConnectApi\ListUsersOptions $options = null)
+    public function listUsers($account_id, $connect_id, ?\DocuSign\eSign\Api\ConnectApi\ListUsersOptions $options = null)
     {
         list($response) = $this->listUsersWithHttpInfo($account_id, $connect_id, $options);
         return $response;
@@ -2186,7 +2186,7 @@ class ConnectApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\IntegratedUserInfoList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listUsersWithHttpInfo($account_id, $connect_id, \DocuSign\eSign\Api\ConnectApi\ListUsersOptions $options = null): array
+    public function listUsersWithHttpInfo($account_id, $connect_id, ?\DocuSign\eSign\Api\ConnectApi\ListUsersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

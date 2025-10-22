@@ -183,7 +183,7 @@ class UserPasswordRules implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['password_rules'] = isset($data['password_rules']) ? $data['password_rules'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;

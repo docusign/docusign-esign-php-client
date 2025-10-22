@@ -202,7 +202,7 @@ class EmailArchiveApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -448,7 +448,7 @@ class EmailArchiveApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchiveHistoryList
      */
-    public function getBCCEmailArchiveHistoryList($account_id, $bcc_email_archive_id, \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null)
+    public function getBCCEmailArchiveHistoryList($account_id, $bcc_email_archive_id, ?\DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null)
     {
         list($response) = $this->getBCCEmailArchiveHistoryListWithHttpInfo($account_id, $bcc_email_archive_id, $options);
         return $response;
@@ -466,7 +466,7 @@ class EmailArchiveApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchiveHistoryList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBCCEmailArchiveHistoryListWithHttpInfo($account_id, $bcc_email_archive_id, \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null): array
+    public function getBCCEmailArchiveHistoryListWithHttpInfo($account_id, $bcc_email_archive_id, ?\DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveHistoryListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -556,7 +556,7 @@ class EmailArchiveApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BccEmailArchiveList
      */
-    public function getBCCEmailArchiveList($account_id, \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions $options = null)
+    public function getBCCEmailArchiveList($account_id, ?\DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions $options = null)
     {
         list($response) = $this->getBCCEmailArchiveListWithHttpInfo($account_id, $options);
         return $response;
@@ -573,7 +573,7 @@ class EmailArchiveApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BccEmailArchiveList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBCCEmailArchiveListWithHttpInfo($account_id, \DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions $options = null): array
+    public function getBCCEmailArchiveListWithHttpInfo($account_id, ?\DocuSign\eSign\Api\EmailArchiveApi\GetBCCEmailArchiveListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

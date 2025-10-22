@@ -106,6 +106,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_agreement_ui' => '?string',
         'allow_connect_agreement_ui_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => '?string',
+        'allow_connect_envelope_reminder_sent_event_ui' => '?string',
         'allow_connect_envelope_removed_event' => '?string',
         'allow_connect_extension_ui' => '?string',
         'allow_connect_http_listener_configs' => '?string',
@@ -354,6 +355,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_auto_template_matching' => '?string',
         'disable_auto_template_matching_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'disable_legacy_kba' => '?string',
+        'disable_legacy_kba_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_legacy_shared_envelopes' => '?string',
         'disable_legacy_shared_envelopes_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_mobile_app' => '?string',
@@ -417,10 +420,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_ai_contract_review_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_ai_sender_message' => '?string',
         'enable_ai_sender_message_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_ai_suggested_fields_advanced' => '?string',
-        'enable_ai_suggested_fields_advanced_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
-        'enable_ai_suggested_fields_basic' => '?string',
-        'enable_ai_suggested_fields_basic_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_ai_suggested_fields' => '?string',
+        'enable_ai_suggested_fields_auto_place' => '?string',
+        'enable_ai_suggested_fields_auto_place_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_ai_suggested_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_auto_nav' => '?string',
         'enable_auto_nav_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_batch_update_envelope_types' => '?string',
@@ -429,6 +432,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_calculated_fields' => '?string',
         'enable_calculated_fields_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_cfr_rapid_signing_embedded_auth' => '?string',
+        'enable_cfr_rapid_signing_embedded_auth_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_click_plus' => '?string',
         'enable_click_plus_conditional_content' => '?string',
         'enable_click_plus_conditional_content_meta_data' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -517,6 +522,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_microsoft_dynamics365_extension_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_multi_user_repository_features' => '?string',
         'enable_multi_user_repository_features_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_navigator_api_data_in' => '?string',
+        'enable_navigator_api_data_in_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_navigator_api_data_out' => '?string',
+        'enable_navigator_api_data_out_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_navigator_api_utilities' => '?string',
+        'enable_navigator_api_utilities_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_navigator_for_hr' => '?string',
         'enable_navigator_for_hr_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_navigator_partial_ingestion' => '?string',
@@ -937,6 +948,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_agreement_ui' => null,
         'allow_connect_agreement_ui_metadata' => null,
         'allow_connect_authoritative_copy_ready_event_ui' => null,
+        'allow_connect_envelope_reminder_sent_event_ui' => null,
         'allow_connect_envelope_removed_event' => null,
         'allow_connect_extension_ui' => null,
         'allow_connect_http_listener_configs' => null,
@@ -1185,6 +1197,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => null,
         'disable_auto_template_matching' => null,
         'disable_auto_template_matching_metadata' => null,
+        'disable_legacy_kba' => null,
+        'disable_legacy_kba_metadata' => null,
         'disable_legacy_shared_envelopes' => null,
         'disable_legacy_shared_envelopes_metadata' => null,
         'disable_mobile_app' => null,
@@ -1248,10 +1262,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_ai_contract_review_metadata' => null,
         'enable_ai_sender_message' => null,
         'enable_ai_sender_message_metadata' => null,
-        'enable_ai_suggested_fields_advanced' => null,
-        'enable_ai_suggested_fields_advanced_metadata' => null,
-        'enable_ai_suggested_fields_basic' => null,
-        'enable_ai_suggested_fields_basic_metadata' => null,
+        'enable_ai_suggested_fields' => null,
+        'enable_ai_suggested_fields_auto_place' => null,
+        'enable_ai_suggested_fields_auto_place_metadata' => null,
+        'enable_ai_suggested_fields_metadata' => null,
         'enable_auto_nav' => null,
         'enable_auto_nav_metadata' => null,
         'enable_batch_update_envelope_types' => null,
@@ -1260,6 +1274,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => null,
         'enable_calculated_fields' => null,
         'enable_calculated_fields_metadata' => null,
+        'enable_cfr_rapid_signing_embedded_auth' => null,
+        'enable_cfr_rapid_signing_embedded_auth_metadata' => null,
         'enable_click_plus' => null,
         'enable_click_plus_conditional_content' => null,
         'enable_click_plus_conditional_content_meta_data' => null,
@@ -1348,6 +1364,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_microsoft_dynamics365_extension_metadata' => null,
         'enable_multi_user_repository_features' => null,
         'enable_multi_user_repository_features_metadata' => null,
+        'enable_navigator_api_data_in' => null,
+        'enable_navigator_api_data_in_metadata' => null,
+        'enable_navigator_api_data_out' => null,
+        'enable_navigator_api_data_out_metadata' => null,
+        'enable_navigator_api_utilities' => null,
+        'enable_navigator_api_utilities_metadata' => null,
         'enable_navigator_for_hr' => null,
         'enable_navigator_for_hr_metadata' => null,
         'enable_navigator_partial_ingestion' => null,
@@ -1789,6 +1811,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_agreement_ui' => 'allowConnectAgreementUI',
         'allow_connect_agreement_ui_metadata' => 'allowConnectAgreementUIMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => 'allowConnectAuthoritativeCopyReadyEventUI',
+        'allow_connect_envelope_reminder_sent_event_ui' => 'allowConnectEnvelopeReminderSentEventUI',
         'allow_connect_envelope_removed_event' => 'allowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui' => 'allowConnectExtensionUI',
         'allow_connect_http_listener_configs' => 'allowConnectHttpListenerConfigs',
@@ -2037,6 +2060,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'disableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'disableAutoTemplateMatchingMetadata',
+        'disable_legacy_kba' => 'disableLegacyKba',
+        'disable_legacy_kba_metadata' => 'disableLegacyKbaMetadata',
         'disable_legacy_shared_envelopes' => 'disableLegacySharedEnvelopes',
         'disable_legacy_shared_envelopes_metadata' => 'disableLegacySharedEnvelopesMetadata',
         'disable_mobile_app' => 'disableMobileApp',
@@ -2100,10 +2125,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_ai_contract_review_metadata' => 'enableAIContractReviewMetadata',
         'enable_ai_sender_message' => 'enableAISenderMessage',
         'enable_ai_sender_message_metadata' => 'enableAISenderMessageMetadata',
-        'enable_ai_suggested_fields_advanced' => 'enableAISuggestedFieldsAdvanced',
-        'enable_ai_suggested_fields_advanced_metadata' => 'enableAISuggestedFieldsAdvancedMetadata',
-        'enable_ai_suggested_fields_basic' => 'enableAISuggestedFieldsBasic',
-        'enable_ai_suggested_fields_basic_metadata' => 'enableAISuggestedFieldsBasicMetadata',
+        'enable_ai_suggested_fields' => 'enableAISuggestedFields',
+        'enable_ai_suggested_fields_auto_place' => 'enableAISuggestedFieldsAutoPlace',
+        'enable_ai_suggested_fields_auto_place_metadata' => 'enableAISuggestedFieldsAutoPlaceMetadata',
+        'enable_ai_suggested_fields_metadata' => 'enableAISuggestedFieldsMetadata',
         'enable_auto_nav' => 'enableAutoNav',
         'enable_auto_nav_metadata' => 'enableAutoNavMetadata',
         'enable_batch_update_envelope_types' => 'enableBatchUpdateEnvelopeTypes',
@@ -2112,6 +2137,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'enableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'enableCalculatedFields',
         'enable_calculated_fields_metadata' => 'enableCalculatedFieldsMetadata',
+        'enable_cfr_rapid_signing_embedded_auth' => 'enableCFRRapidSigningEmbeddedAuth',
+        'enable_cfr_rapid_signing_embedded_auth_metadata' => 'enableCFRRapidSigningEmbeddedAuthMetadata',
         'enable_click_plus' => 'enableClickPlus',
         'enable_click_plus_conditional_content' => 'enableClickPlusConditionalContent',
         'enable_click_plus_conditional_content_meta_data' => 'enableClickPlusConditionalContentMetaData',
@@ -2200,6 +2227,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_microsoft_dynamics365_extension_metadata' => 'enableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features' => 'enableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata' => 'enableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_api_data_in' => 'enableNavigatorAPIDataIn',
+        'enable_navigator_api_data_in_metadata' => 'enableNavigatorAPIDataInMetadata',
+        'enable_navigator_api_data_out' => 'enableNavigatorAPIDataOut',
+        'enable_navigator_api_data_out_metadata' => 'enableNavigatorAPIDataOutMetadata',
+        'enable_navigator_api_utilities' => 'enableNavigatorAPIUtilities',
+        'enable_navigator_api_utilities_metadata' => 'enableNavigatorAPIUtilitiesMetadata',
         'enable_navigator_for_hr' => 'enableNavigatorForHR',
         'enable_navigator_for_hr_metadata' => 'enableNavigatorForHRMetadata',
         'enable_navigator_partial_ingestion' => 'enableNavigatorPartialIngestion',
@@ -2620,6 +2653,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_agreement_ui' => 'setAllowConnectAgreementUi',
         'allow_connect_agreement_ui_metadata' => 'setAllowConnectAgreementUiMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => 'setAllowConnectAuthoritativeCopyReadyEventUi',
+        'allow_connect_envelope_reminder_sent_event_ui' => 'setAllowConnectEnvelopeReminderSentEventUi',
         'allow_connect_envelope_removed_event' => 'setAllowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui' => 'setAllowConnectExtensionUi',
         'allow_connect_http_listener_configs' => 'setAllowConnectHttpListenerConfigs',
@@ -2868,6 +2902,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => 'setDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'setDisableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'setDisableAutoTemplateMatchingMetadata',
+        'disable_legacy_kba' => 'setDisableLegacyKba',
+        'disable_legacy_kba_metadata' => 'setDisableLegacyKbaMetadata',
         'disable_legacy_shared_envelopes' => 'setDisableLegacySharedEnvelopes',
         'disable_legacy_shared_envelopes_metadata' => 'setDisableLegacySharedEnvelopesMetadata',
         'disable_mobile_app' => 'setDisableMobileApp',
@@ -2931,10 +2967,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_ai_contract_review_metadata' => 'setEnableAiContractReviewMetadata',
         'enable_ai_sender_message' => 'setEnableAiSenderMessage',
         'enable_ai_sender_message_metadata' => 'setEnableAiSenderMessageMetadata',
-        'enable_ai_suggested_fields_advanced' => 'setEnableAiSuggestedFieldsAdvanced',
-        'enable_ai_suggested_fields_advanced_metadata' => 'setEnableAiSuggestedFieldsAdvancedMetadata',
-        'enable_ai_suggested_fields_basic' => 'setEnableAiSuggestedFieldsBasic',
-        'enable_ai_suggested_fields_basic_metadata' => 'setEnableAiSuggestedFieldsBasicMetadata',
+        'enable_ai_suggested_fields' => 'setEnableAiSuggestedFields',
+        'enable_ai_suggested_fields_auto_place' => 'setEnableAiSuggestedFieldsAutoPlace',
+        'enable_ai_suggested_fields_auto_place_metadata' => 'setEnableAiSuggestedFieldsAutoPlaceMetadata',
+        'enable_ai_suggested_fields_metadata' => 'setEnableAiSuggestedFieldsMetadata',
         'enable_auto_nav' => 'setEnableAutoNav',
         'enable_auto_nav_metadata' => 'setEnableAutoNavMetadata',
         'enable_batch_update_envelope_types' => 'setEnableBatchUpdateEnvelopeTypes',
@@ -2943,6 +2979,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'setEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'setEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'setEnableCalculatedFieldsMetadata',
+        'enable_cfr_rapid_signing_embedded_auth' => 'setEnableCfrRapidSigningEmbeddedAuth',
+        'enable_cfr_rapid_signing_embedded_auth_metadata' => 'setEnableCfrRapidSigningEmbeddedAuthMetadata',
         'enable_click_plus' => 'setEnableClickPlus',
         'enable_click_plus_conditional_content' => 'setEnableClickPlusConditionalContent',
         'enable_click_plus_conditional_content_meta_data' => 'setEnableClickPlusConditionalContentMetaData',
@@ -3031,6 +3069,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_microsoft_dynamics365_extension_metadata' => 'setEnableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features' => 'setEnableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata' => 'setEnableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_api_data_in' => 'setEnableNavigatorApiDataIn',
+        'enable_navigator_api_data_in_metadata' => 'setEnableNavigatorApiDataInMetadata',
+        'enable_navigator_api_data_out' => 'setEnableNavigatorApiDataOut',
+        'enable_navigator_api_data_out_metadata' => 'setEnableNavigatorApiDataOutMetadata',
+        'enable_navigator_api_utilities' => 'setEnableNavigatorApiUtilities',
+        'enable_navigator_api_utilities_metadata' => 'setEnableNavigatorApiUtilitiesMetadata',
         'enable_navigator_for_hr' => 'setEnableNavigatorForHr',
         'enable_navigator_for_hr_metadata' => 'setEnableNavigatorForHrMetadata',
         'enable_navigator_partial_ingestion' => 'setEnableNavigatorPartialIngestion',
@@ -3451,6 +3495,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_connect_agreement_ui' => 'getAllowConnectAgreementUi',
         'allow_connect_agreement_ui_metadata' => 'getAllowConnectAgreementUiMetadata',
         'allow_connect_authoritative_copy_ready_event_ui' => 'getAllowConnectAuthoritativeCopyReadyEventUi',
+        'allow_connect_envelope_reminder_sent_event_ui' => 'getAllowConnectEnvelopeReminderSentEventUi',
         'allow_connect_envelope_removed_event' => 'getAllowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui' => 'getAllowConnectExtensionUi',
         'allow_connect_http_listener_configs' => 'getAllowConnectHttpListenerConfigs',
@@ -3699,6 +3744,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'default_to_advanced_envelopes_filter_form_metadata' => 'getDefaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching' => 'getDisableAutoTemplateMatching',
         'disable_auto_template_matching_metadata' => 'getDisableAutoTemplateMatchingMetadata',
+        'disable_legacy_kba' => 'getDisableLegacyKba',
+        'disable_legacy_kba_metadata' => 'getDisableLegacyKbaMetadata',
         'disable_legacy_shared_envelopes' => 'getDisableLegacySharedEnvelopes',
         'disable_legacy_shared_envelopes_metadata' => 'getDisableLegacySharedEnvelopesMetadata',
         'disable_mobile_app' => 'getDisableMobileApp',
@@ -3762,10 +3809,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_ai_contract_review_metadata' => 'getEnableAiContractReviewMetadata',
         'enable_ai_sender_message' => 'getEnableAiSenderMessage',
         'enable_ai_sender_message_metadata' => 'getEnableAiSenderMessageMetadata',
-        'enable_ai_suggested_fields_advanced' => 'getEnableAiSuggestedFieldsAdvanced',
-        'enable_ai_suggested_fields_advanced_metadata' => 'getEnableAiSuggestedFieldsAdvancedMetadata',
-        'enable_ai_suggested_fields_basic' => 'getEnableAiSuggestedFieldsBasic',
-        'enable_ai_suggested_fields_basic_metadata' => 'getEnableAiSuggestedFieldsBasicMetadata',
+        'enable_ai_suggested_fields' => 'getEnableAiSuggestedFields',
+        'enable_ai_suggested_fields_auto_place' => 'getEnableAiSuggestedFieldsAutoPlace',
+        'enable_ai_suggested_fields_auto_place_metadata' => 'getEnableAiSuggestedFieldsAutoPlaceMetadata',
+        'enable_ai_suggested_fields_metadata' => 'getEnableAiSuggestedFieldsMetadata',
         'enable_auto_nav' => 'getEnableAutoNav',
         'enable_auto_nav_metadata' => 'getEnableAutoNavMetadata',
         'enable_batch_update_envelope_types' => 'getEnableBatchUpdateEnvelopeTypes',
@@ -3774,6 +3821,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_bcc_dummy_link_metadata' => 'getEnableBccDummyLinkMetadata',
         'enable_calculated_fields' => 'getEnableCalculatedFields',
         'enable_calculated_fields_metadata' => 'getEnableCalculatedFieldsMetadata',
+        'enable_cfr_rapid_signing_embedded_auth' => 'getEnableCfrRapidSigningEmbeddedAuth',
+        'enable_cfr_rapid_signing_embedded_auth_metadata' => 'getEnableCfrRapidSigningEmbeddedAuthMetadata',
         'enable_click_plus' => 'getEnableClickPlus',
         'enable_click_plus_conditional_content' => 'getEnableClickPlusConditionalContent',
         'enable_click_plus_conditional_content_meta_data' => 'getEnableClickPlusConditionalContentMetaData',
@@ -3862,6 +3911,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_microsoft_dynamics365_extension_metadata' => 'getEnableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features' => 'getEnableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata' => 'getEnableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_api_data_in' => 'getEnableNavigatorApiDataIn',
+        'enable_navigator_api_data_in_metadata' => 'getEnableNavigatorApiDataInMetadata',
+        'enable_navigator_api_data_out' => 'getEnableNavigatorApiDataOut',
+        'enable_navigator_api_data_out_metadata' => 'getEnableNavigatorApiDataOutMetadata',
+        'enable_navigator_api_utilities' => 'getEnableNavigatorApiUtilities',
+        'enable_navigator_api_utilities_metadata' => 'getEnableNavigatorApiUtilitiesMetadata',
         'enable_navigator_for_hr' => 'getEnableNavigatorForHr',
         'enable_navigator_for_hr_metadata' => 'getEnableNavigatorForHrMetadata',
         'enable_navigator_partial_ingestion' => 'getEnableNavigatorPartialIngestion',
@@ -4288,7 +4343,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code_format'] = isset($data['access_code_format']) ? $data['access_code_format'] : null;
         $this->container['account_date_time_format'] = isset($data['account_date_time_format']) ? $data['account_date_time_format'] : null;
@@ -4336,6 +4391,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_connect_agreement_ui'] = isset($data['allow_connect_agreement_ui']) ? $data['allow_connect_agreement_ui'] : null;
         $this->container['allow_connect_agreement_ui_metadata'] = isset($data['allow_connect_agreement_ui_metadata']) ? $data['allow_connect_agreement_ui_metadata'] : null;
         $this->container['allow_connect_authoritative_copy_ready_event_ui'] = isset($data['allow_connect_authoritative_copy_ready_event_ui']) ? $data['allow_connect_authoritative_copy_ready_event_ui'] : null;
+        $this->container['allow_connect_envelope_reminder_sent_event_ui'] = isset($data['allow_connect_envelope_reminder_sent_event_ui']) ? $data['allow_connect_envelope_reminder_sent_event_ui'] : null;
         $this->container['allow_connect_envelope_removed_event'] = isset($data['allow_connect_envelope_removed_event']) ? $data['allow_connect_envelope_removed_event'] : null;
         $this->container['allow_connect_extension_ui'] = isset($data['allow_connect_extension_ui']) ? $data['allow_connect_extension_ui'] : null;
         $this->container['allow_connect_http_listener_configs'] = isset($data['allow_connect_http_listener_configs']) ? $data['allow_connect_http_listener_configs'] : null;
@@ -4584,6 +4640,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['default_to_advanced_envelopes_filter_form_metadata'] = isset($data['default_to_advanced_envelopes_filter_form_metadata']) ? $data['default_to_advanced_envelopes_filter_form_metadata'] : null;
         $this->container['disable_auto_template_matching'] = isset($data['disable_auto_template_matching']) ? $data['disable_auto_template_matching'] : null;
         $this->container['disable_auto_template_matching_metadata'] = isset($data['disable_auto_template_matching_metadata']) ? $data['disable_auto_template_matching_metadata'] : null;
+        $this->container['disable_legacy_kba'] = isset($data['disable_legacy_kba']) ? $data['disable_legacy_kba'] : null;
+        $this->container['disable_legacy_kba_metadata'] = isset($data['disable_legacy_kba_metadata']) ? $data['disable_legacy_kba_metadata'] : null;
         $this->container['disable_legacy_shared_envelopes'] = isset($data['disable_legacy_shared_envelopes']) ? $data['disable_legacy_shared_envelopes'] : null;
         $this->container['disable_legacy_shared_envelopes_metadata'] = isset($data['disable_legacy_shared_envelopes_metadata']) ? $data['disable_legacy_shared_envelopes_metadata'] : null;
         $this->container['disable_mobile_app'] = isset($data['disable_mobile_app']) ? $data['disable_mobile_app'] : null;
@@ -4647,10 +4705,10 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_ai_contract_review_metadata'] = isset($data['enable_ai_contract_review_metadata']) ? $data['enable_ai_contract_review_metadata'] : null;
         $this->container['enable_ai_sender_message'] = isset($data['enable_ai_sender_message']) ? $data['enable_ai_sender_message'] : null;
         $this->container['enable_ai_sender_message_metadata'] = isset($data['enable_ai_sender_message_metadata']) ? $data['enable_ai_sender_message_metadata'] : null;
-        $this->container['enable_ai_suggested_fields_advanced'] = isset($data['enable_ai_suggested_fields_advanced']) ? $data['enable_ai_suggested_fields_advanced'] : null;
-        $this->container['enable_ai_suggested_fields_advanced_metadata'] = isset($data['enable_ai_suggested_fields_advanced_metadata']) ? $data['enable_ai_suggested_fields_advanced_metadata'] : null;
-        $this->container['enable_ai_suggested_fields_basic'] = isset($data['enable_ai_suggested_fields_basic']) ? $data['enable_ai_suggested_fields_basic'] : null;
-        $this->container['enable_ai_suggested_fields_basic_metadata'] = isset($data['enable_ai_suggested_fields_basic_metadata']) ? $data['enable_ai_suggested_fields_basic_metadata'] : null;
+        $this->container['enable_ai_suggested_fields'] = isset($data['enable_ai_suggested_fields']) ? $data['enable_ai_suggested_fields'] : null;
+        $this->container['enable_ai_suggested_fields_auto_place'] = isset($data['enable_ai_suggested_fields_auto_place']) ? $data['enable_ai_suggested_fields_auto_place'] : null;
+        $this->container['enable_ai_suggested_fields_auto_place_metadata'] = isset($data['enable_ai_suggested_fields_auto_place_metadata']) ? $data['enable_ai_suggested_fields_auto_place_metadata'] : null;
+        $this->container['enable_ai_suggested_fields_metadata'] = isset($data['enable_ai_suggested_fields_metadata']) ? $data['enable_ai_suggested_fields_metadata'] : null;
         $this->container['enable_auto_nav'] = isset($data['enable_auto_nav']) ? $data['enable_auto_nav'] : null;
         $this->container['enable_auto_nav_metadata'] = isset($data['enable_auto_nav_metadata']) ? $data['enable_auto_nav_metadata'] : null;
         $this->container['enable_batch_update_envelope_types'] = isset($data['enable_batch_update_envelope_types']) ? $data['enable_batch_update_envelope_types'] : null;
@@ -4659,6 +4717,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_bcc_dummy_link_metadata'] = isset($data['enable_bcc_dummy_link_metadata']) ? $data['enable_bcc_dummy_link_metadata'] : null;
         $this->container['enable_calculated_fields'] = isset($data['enable_calculated_fields']) ? $data['enable_calculated_fields'] : null;
         $this->container['enable_calculated_fields_metadata'] = isset($data['enable_calculated_fields_metadata']) ? $data['enable_calculated_fields_metadata'] : null;
+        $this->container['enable_cfr_rapid_signing_embedded_auth'] = isset($data['enable_cfr_rapid_signing_embedded_auth']) ? $data['enable_cfr_rapid_signing_embedded_auth'] : null;
+        $this->container['enable_cfr_rapid_signing_embedded_auth_metadata'] = isset($data['enable_cfr_rapid_signing_embedded_auth_metadata']) ? $data['enable_cfr_rapid_signing_embedded_auth_metadata'] : null;
         $this->container['enable_click_plus'] = isset($data['enable_click_plus']) ? $data['enable_click_plus'] : null;
         $this->container['enable_click_plus_conditional_content'] = isset($data['enable_click_plus_conditional_content']) ? $data['enable_click_plus_conditional_content'] : null;
         $this->container['enable_click_plus_conditional_content_meta_data'] = isset($data['enable_click_plus_conditional_content_meta_data']) ? $data['enable_click_plus_conditional_content_meta_data'] : null;
@@ -4747,6 +4807,12 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_microsoft_dynamics365_extension_metadata'] = isset($data['enable_microsoft_dynamics365_extension_metadata']) ? $data['enable_microsoft_dynamics365_extension_metadata'] : null;
         $this->container['enable_multi_user_repository_features'] = isset($data['enable_multi_user_repository_features']) ? $data['enable_multi_user_repository_features'] : null;
         $this->container['enable_multi_user_repository_features_metadata'] = isset($data['enable_multi_user_repository_features_metadata']) ? $data['enable_multi_user_repository_features_metadata'] : null;
+        $this->container['enable_navigator_api_data_in'] = isset($data['enable_navigator_api_data_in']) ? $data['enable_navigator_api_data_in'] : null;
+        $this->container['enable_navigator_api_data_in_metadata'] = isset($data['enable_navigator_api_data_in_metadata']) ? $data['enable_navigator_api_data_in_metadata'] : null;
+        $this->container['enable_navigator_api_data_out'] = isset($data['enable_navigator_api_data_out']) ? $data['enable_navigator_api_data_out'] : null;
+        $this->container['enable_navigator_api_data_out_metadata'] = isset($data['enable_navigator_api_data_out_metadata']) ? $data['enable_navigator_api_data_out_metadata'] : null;
+        $this->container['enable_navigator_api_utilities'] = isset($data['enable_navigator_api_utilities']) ? $data['enable_navigator_api_utilities'] : null;
+        $this->container['enable_navigator_api_utilities_metadata'] = isset($data['enable_navigator_api_utilities_metadata']) ? $data['enable_navigator_api_utilities_metadata'] : null;
         $this->container['enable_navigator_for_hr'] = isset($data['enable_navigator_for_hr']) ? $data['enable_navigator_for_hr'] : null;
         $this->container['enable_navigator_for_hr_metadata'] = isset($data['enable_navigator_for_hr_metadata']) ? $data['enable_navigator_for_hr_metadata'] : null;
         $this->container['enable_navigator_partial_ingestion'] = isset($data['enable_navigator_partial_ingestion']) ? $data['enable_navigator_partial_ingestion'] : null;
@@ -6239,6 +6305,30 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowConnectAuthoritativeCopyReadyEventUi($allow_connect_authoritative_copy_ready_event_ui)
     {
         $this->container['allow_connect_authoritative_copy_ready_event_ui'] = $allow_connect_authoritative_copy_ready_event_ui;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_connect_envelope_reminder_sent_event_ui
+     *
+     * @return ?string
+     */
+    public function getAllowConnectEnvelopeReminderSentEventUi()
+    {
+        return $this->container['allow_connect_envelope_reminder_sent_event_ui'];
+    }
+
+    /**
+     * Sets allow_connect_envelope_reminder_sent_event_ui
+     *
+     * @param ?string $allow_connect_envelope_reminder_sent_event_ui 
+     *
+     * @return $this
+     */
+    public function setAllowConnectEnvelopeReminderSentEventUi($allow_connect_envelope_reminder_sent_event_ui)
+    {
+        $this->container['allow_connect_envelope_reminder_sent_event_ui'] = $allow_connect_envelope_reminder_sent_event_ui;
 
         return $this;
     }
@@ -12196,6 +12286,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets disable_legacy_kba
+     *
+     * @return ?string
+     */
+    public function getDisableLegacyKba()
+    {
+        return $this->container['disable_legacy_kba'];
+    }
+
+    /**
+     * Sets disable_legacy_kba
+     *
+     * @param ?string $disable_legacy_kba 
+     *
+     * @return $this
+     */
+    public function setDisableLegacyKba($disable_legacy_kba)
+    {
+        $this->container['disable_legacy_kba'] = $disable_legacy_kba;
+
+        return $this;
+    }
+
+    /**
+     * Gets disable_legacy_kba_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getDisableLegacyKbaMetadata()
+    {
+        return $this->container['disable_legacy_kba_metadata'];
+    }
+
+    /**
+     * Sets disable_legacy_kba_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $disable_legacy_kba_metadata 
+     *
+     * @return $this
+     */
+    public function setDisableLegacyKbaMetadata($disable_legacy_kba_metadata)
+    {
+        $this->container['disable_legacy_kba_metadata'] = $disable_legacy_kba_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets disable_legacy_shared_envelopes
      *
      * @return ?string
@@ -13708,97 +13846,97 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets enable_ai_suggested_fields_advanced
+     * Gets enable_ai_suggested_fields
      *
      * @return ?string
      */
-    public function getEnableAiSuggestedFieldsAdvanced()
+    public function getEnableAiSuggestedFields()
     {
-        return $this->container['enable_ai_suggested_fields_advanced'];
+        return $this->container['enable_ai_suggested_fields'];
     }
 
     /**
-     * Sets enable_ai_suggested_fields_advanced
+     * Sets enable_ai_suggested_fields
      *
-     * @param ?string $enable_ai_suggested_fields_advanced 
+     * @param ?string $enable_ai_suggested_fields 
      *
      * @return $this
      */
-    public function setEnableAiSuggestedFieldsAdvanced($enable_ai_suggested_fields_advanced)
+    public function setEnableAiSuggestedFields($enable_ai_suggested_fields)
     {
-        $this->container['enable_ai_suggested_fields_advanced'] = $enable_ai_suggested_fields_advanced;
+        $this->container['enable_ai_suggested_fields'] = $enable_ai_suggested_fields;
 
         return $this;
     }
 
     /**
-     * Gets enable_ai_suggested_fields_advanced_metadata
-     *
-     * @return \DocuSign\eSign\Model\SettingsMetadata
-     */
-    public function getEnableAiSuggestedFieldsAdvancedMetadata()
-    {
-        return $this->container['enable_ai_suggested_fields_advanced_metadata'];
-    }
-
-    /**
-     * Sets enable_ai_suggested_fields_advanced_metadata
-     *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_advanced_metadata 
-     *
-     * @return $this
-     */
-    public function setEnableAiSuggestedFieldsAdvancedMetadata($enable_ai_suggested_fields_advanced_metadata)
-    {
-        $this->container['enable_ai_suggested_fields_advanced_metadata'] = $enable_ai_suggested_fields_advanced_metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets enable_ai_suggested_fields_basic
+     * Gets enable_ai_suggested_fields_auto_place
      *
      * @return ?string
      */
-    public function getEnableAiSuggestedFieldsBasic()
+    public function getEnableAiSuggestedFieldsAutoPlace()
     {
-        return $this->container['enable_ai_suggested_fields_basic'];
+        return $this->container['enable_ai_suggested_fields_auto_place'];
     }
 
     /**
-     * Sets enable_ai_suggested_fields_basic
+     * Sets enable_ai_suggested_fields_auto_place
      *
-     * @param ?string $enable_ai_suggested_fields_basic 
+     * @param ?string $enable_ai_suggested_fields_auto_place 
      *
      * @return $this
      */
-    public function setEnableAiSuggestedFieldsBasic($enable_ai_suggested_fields_basic)
+    public function setEnableAiSuggestedFieldsAutoPlace($enable_ai_suggested_fields_auto_place)
     {
-        $this->container['enable_ai_suggested_fields_basic'] = $enable_ai_suggested_fields_basic;
+        $this->container['enable_ai_suggested_fields_auto_place'] = $enable_ai_suggested_fields_auto_place;
 
         return $this;
     }
 
     /**
-     * Gets enable_ai_suggested_fields_basic_metadata
+     * Gets enable_ai_suggested_fields_auto_place_metadata
      *
      * @return \DocuSign\eSign\Model\SettingsMetadata
      */
-    public function getEnableAiSuggestedFieldsBasicMetadata()
+    public function getEnableAiSuggestedFieldsAutoPlaceMetadata()
     {
-        return $this->container['enable_ai_suggested_fields_basic_metadata'];
+        return $this->container['enable_ai_suggested_fields_auto_place_metadata'];
     }
 
     /**
-     * Sets enable_ai_suggested_fields_basic_metadata
+     * Sets enable_ai_suggested_fields_auto_place_metadata
      *
-     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_basic_metadata 
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_auto_place_metadata 
      *
      * @return $this
      */
-    public function setEnableAiSuggestedFieldsBasicMetadata($enable_ai_suggested_fields_basic_metadata)
+    public function setEnableAiSuggestedFieldsAutoPlaceMetadata($enable_ai_suggested_fields_auto_place_metadata)
     {
-        $this->container['enable_ai_suggested_fields_basic_metadata'] = $enable_ai_suggested_fields_basic_metadata;
+        $this->container['enable_ai_suggested_fields_auto_place_metadata'] = $enable_ai_suggested_fields_auto_place_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_ai_suggested_fields_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableAiSuggestedFieldsMetadata()
+    {
+        return $this->container['enable_ai_suggested_fields_metadata'];
+    }
+
+    /**
+     * Sets enable_ai_suggested_fields_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_ai_suggested_fields_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableAiSuggestedFieldsMetadata($enable_ai_suggested_fields_metadata)
+    {
+        $this->container['enable_ai_suggested_fields_metadata'] = $enable_ai_suggested_fields_metadata;
 
         return $this;
     }
@@ -13991,6 +14129,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableCalculatedFieldsMetadata($enable_calculated_fields_metadata)
     {
         $this->container['enable_calculated_fields_metadata'] = $enable_calculated_fields_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_cfr_rapid_signing_embedded_auth
+     *
+     * @return ?string
+     */
+    public function getEnableCfrRapidSigningEmbeddedAuth()
+    {
+        return $this->container['enable_cfr_rapid_signing_embedded_auth'];
+    }
+
+    /**
+     * Sets enable_cfr_rapid_signing_embedded_auth
+     *
+     * @param ?string $enable_cfr_rapid_signing_embedded_auth 
+     *
+     * @return $this
+     */
+    public function setEnableCfrRapidSigningEmbeddedAuth($enable_cfr_rapid_signing_embedded_auth)
+    {
+        $this->container['enable_cfr_rapid_signing_embedded_auth'] = $enable_cfr_rapid_signing_embedded_auth;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_cfr_rapid_signing_embedded_auth_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableCfrRapidSigningEmbeddedAuthMetadata()
+    {
+        return $this->container['enable_cfr_rapid_signing_embedded_auth_metadata'];
+    }
+
+    /**
+     * Sets enable_cfr_rapid_signing_embedded_auth_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_cfr_rapid_signing_embedded_auth_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableCfrRapidSigningEmbeddedAuthMetadata($enable_cfr_rapid_signing_embedded_auth_metadata)
+    {
+        $this->container['enable_cfr_rapid_signing_embedded_auth_metadata'] = $enable_cfr_rapid_signing_embedded_auth_metadata;
 
         return $this;
     }
@@ -16103,6 +16289,150 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableMultiUserRepositoryFeaturesMetadata($enable_multi_user_repository_features_metadata)
     {
         $this->container['enable_multi_user_repository_features_metadata'] = $enable_multi_user_repository_features_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_api_data_in
+     *
+     * @return ?string
+     */
+    public function getEnableNavigatorApiDataIn()
+    {
+        return $this->container['enable_navigator_api_data_in'];
+    }
+
+    /**
+     * Sets enable_navigator_api_data_in
+     *
+     * @param ?string $enable_navigator_api_data_in 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorApiDataIn($enable_navigator_api_data_in)
+    {
+        $this->container['enable_navigator_api_data_in'] = $enable_navigator_api_data_in;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_api_data_in_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableNavigatorApiDataInMetadata()
+    {
+        return $this->container['enable_navigator_api_data_in_metadata'];
+    }
+
+    /**
+     * Sets enable_navigator_api_data_in_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_api_data_in_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorApiDataInMetadata($enable_navigator_api_data_in_metadata)
+    {
+        $this->container['enable_navigator_api_data_in_metadata'] = $enable_navigator_api_data_in_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_api_data_out
+     *
+     * @return ?string
+     */
+    public function getEnableNavigatorApiDataOut()
+    {
+        return $this->container['enable_navigator_api_data_out'];
+    }
+
+    /**
+     * Sets enable_navigator_api_data_out
+     *
+     * @param ?string $enable_navigator_api_data_out 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorApiDataOut($enable_navigator_api_data_out)
+    {
+        $this->container['enable_navigator_api_data_out'] = $enable_navigator_api_data_out;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_api_data_out_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableNavigatorApiDataOutMetadata()
+    {
+        return $this->container['enable_navigator_api_data_out_metadata'];
+    }
+
+    /**
+     * Sets enable_navigator_api_data_out_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_api_data_out_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorApiDataOutMetadata($enable_navigator_api_data_out_metadata)
+    {
+        $this->container['enable_navigator_api_data_out_metadata'] = $enable_navigator_api_data_out_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_api_utilities
+     *
+     * @return ?string
+     */
+    public function getEnableNavigatorApiUtilities()
+    {
+        return $this->container['enable_navigator_api_utilities'];
+    }
+
+    /**
+     * Sets enable_navigator_api_utilities
+     *
+     * @param ?string $enable_navigator_api_utilities 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorApiUtilities($enable_navigator_api_utilities)
+    {
+        $this->container['enable_navigator_api_utilities'] = $enable_navigator_api_utilities;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_navigator_api_utilities_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableNavigatorApiUtilitiesMetadata()
+    {
+        return $this->container['enable_navigator_api_utilities_metadata'];
+    }
+
+    /**
+     * Sets enable_navigator_api_utilities_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_navigator_api_utilities_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableNavigatorApiUtilitiesMetadata($enable_navigator_api_utilities_metadata)
+    {
+        $this->container['enable_navigator_api_utilities_metadata'] = $enable_navigator_api_utilities_metadata;
 
         return $this;
     }

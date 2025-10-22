@@ -197,7 +197,7 @@ class ConnectDebugLog implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['connect_config'] = isset($data['connect_config']) ? $data['connect_config'] : null;
         $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;

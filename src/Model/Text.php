@@ -803,7 +803,7 @@ class Text implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agreement_attribute'] = isset($data['agreement_attribute']) ? $data['agreement_attribute'] : null;
         $this->container['agreement_attribute_locked'] = isset($data['agreement_attribute_locked']) ? $data['agreement_attribute_locked'] : null;

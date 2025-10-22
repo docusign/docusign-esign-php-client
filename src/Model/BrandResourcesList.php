@@ -177,7 +177,7 @@ class BrandResourcesList implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['resources_content_types'] = isset($data['resources_content_types']) ? $data['resources_content_types'] : null;
     }

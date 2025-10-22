@@ -283,7 +283,7 @@ class GroupsApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -835,7 +835,7 @@ class GroupsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UsersResponse
      */
-    public function listGroupUsers($account_id, $group_id, \DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions $options = null)
+    public function listGroupUsers($account_id, $group_id, ?\DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions $options = null)
     {
         list($response) = $this->listGroupUsersWithHttpInfo($account_id, $group_id, $options);
         return $response;
@@ -853,7 +853,7 @@ class GroupsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listGroupUsersWithHttpInfo($account_id, $group_id, \DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions $options = null): array
+    public function listGroupUsersWithHttpInfo($account_id, $group_id, ?\DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -943,7 +943,7 @@ class GroupsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\GroupInformation
      */
-    public function listGroups($account_id, \DocuSign\eSign\Api\GroupsApi\ListGroupsOptions $options = null)
+    public function listGroups($account_id, ?\DocuSign\eSign\Api\GroupsApi\ListGroupsOptions $options = null)
     {
         list($response) = $this->listGroupsWithHttpInfo($account_id, $options);
         return $response;
@@ -960,7 +960,7 @@ class GroupsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\GroupInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listGroupsWithHttpInfo($account_id, \DocuSign\eSign\Api\GroupsApi\ListGroupsOptions $options = null): array
+    public function listGroupsWithHttpInfo($account_id, ?\DocuSign\eSign\Api\GroupsApi\ListGroupsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

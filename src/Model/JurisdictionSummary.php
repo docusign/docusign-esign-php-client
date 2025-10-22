@@ -192,7 +192,7 @@ class JurisdictionSummary implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authorized_for_i_pen'] = isset($data['authorized_for_i_pen']) ? $data['authorized_for_i_pen'] : null;
         $this->container['authorized_for_ron'] = isset($data['authorized_for_ron']) ? $data['authorized_for_ron'] : null;

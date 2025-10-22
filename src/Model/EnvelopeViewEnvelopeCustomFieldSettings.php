@@ -177,7 +177,7 @@ class EnvelopeViewEnvelopeCustomFieldSettings implements ModelInterface, ArrayAc
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['show_envelope_custom_fields'] = isset($data['show_envelope_custom_fields']) ? $data['show_envelope_custom_fields'] : null;
     }

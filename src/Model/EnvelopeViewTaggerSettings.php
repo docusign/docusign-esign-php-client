@@ -187,7 +187,7 @@ class EnvelopeViewTaggerSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['palette_default'] = isset($data['palette_default']) ? $data['palette_default'] : null;
         $this->container['palette_sections'] = isset($data['palette_sections']) ? $data['palette_sections'] : null;

@@ -228,7 +228,7 @@ class PrefillTabs implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['checkbox_tabs'] = isset($data['checkbox_tabs']) ? $data['checkbox_tabs'] : null;
         $this->container['date_tabs'] = isset($data['date_tabs']) ? $data['date_tabs'] : null;

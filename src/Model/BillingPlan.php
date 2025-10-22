@@ -248,7 +248,7 @@ class BillingPlan implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['app_store_products'] = isset($data['app_store_products']) ? $data['app_store_products'] : null;
         $this->container['currency_plan_prices'] = isset($data['currency_plan_prices']) ? $data['currency_plan_prices'] : null;

@@ -107,7 +107,7 @@ class DiagnosticsApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -555,7 +555,7 @@ class DiagnosticsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ApiRequestLogsResult
      */
-    public function listRequestLogs(\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null)
+    public function listRequestLogs(?\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null)
     {
         list($response) = $this->listRequestLogsWithHttpInfo($options);
         return $response;
@@ -571,7 +571,7 @@ class DiagnosticsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ApiRequestLogsResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRequestLogsWithHttpInfo(\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null): array
+    public function listRequestLogsWithHttpInfo(?\DocuSign\eSign\Api\DiagnosticsApi\ListRequestLogsOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/diagnostics/request_logs";

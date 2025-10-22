@@ -112,6 +112,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'is21_cfr_part11' => '?string',
         'is_dynamic_envelope' => '?string',
         'is_signature_provider_envelope' => '?string',
+        'is_ticket_related_envelope' => '?string',
         'last_modified_date_time' => '?string',
         'location' => '?string',
         'lock_information' => '\DocuSign\eSign\Model\LockInformation',
@@ -200,6 +201,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'is21_cfr_part11' => null,
         'is_dynamic_envelope' => null,
         'is_signature_provider_envelope' => null,
+        'is_ticket_related_envelope' => null,
         'last_modified_date_time' => null,
         'location' => null,
         'lock_information' => null,
@@ -309,6 +311,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'is21_cfr_part11' => 'is21CFRPart11',
         'is_dynamic_envelope' => 'isDynamicEnvelope',
         'is_signature_provider_envelope' => 'isSignatureProviderEnvelope',
+        'is_ticket_related_envelope' => 'isTicketRelatedEnvelope',
         'last_modified_date_time' => 'lastModifiedDateTime',
         'location' => 'location',
         'lock_information' => 'lockInformation',
@@ -397,6 +400,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'is21_cfr_part11' => 'setIs21CfrPart11',
         'is_dynamic_envelope' => 'setIsDynamicEnvelope',
         'is_signature_provider_envelope' => 'setIsSignatureProviderEnvelope',
+        'is_ticket_related_envelope' => 'setIsTicketRelatedEnvelope',
         'last_modified_date_time' => 'setLastModifiedDateTime',
         'location' => 'setLocation',
         'lock_information' => 'setLockInformation',
@@ -485,6 +489,7 @@ class Envelope implements ModelInterface, ArrayAccess
         'is21_cfr_part11' => 'getIs21CfrPart11',
         'is_dynamic_envelope' => 'getIsDynamicEnvelope',
         'is_signature_provider_envelope' => 'getIsSignatureProviderEnvelope',
+        'is_ticket_related_envelope' => 'getIsTicketRelatedEnvelope',
         'last_modified_date_time' => 'getLastModifiedDateTime',
         'location' => 'getLocation',
         'lock_information' => 'getLockInformation',
@@ -572,7 +577,7 @@ class Envelope implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_control_list_base64'] = isset($data['access_control_list_base64']) ? $data['access_control_list_base64'] : null;
         $this->container['allow_comments'] = isset($data['allow_comments']) ? $data['allow_comments'] : null;
@@ -627,6 +632,7 @@ class Envelope implements ModelInterface, ArrayAccess
         $this->container['is21_cfr_part11'] = isset($data['is21_cfr_part11']) ? $data['is21_cfr_part11'] : null;
         $this->container['is_dynamic_envelope'] = isset($data['is_dynamic_envelope']) ? $data['is_dynamic_envelope'] : null;
         $this->container['is_signature_provider_envelope'] = isset($data['is_signature_provider_envelope']) ? $data['is_signature_provider_envelope'] : null;
+        $this->container['is_ticket_related_envelope'] = isset($data['is_ticket_related_envelope']) ? $data['is_ticket_related_envelope'] : null;
         $this->container['last_modified_date_time'] = isset($data['last_modified_date_time']) ? $data['last_modified_date_time'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['lock_information'] = isset($data['lock_information']) ? $data['lock_information'] : null;
@@ -1948,6 +1954,30 @@ class Envelope implements ModelInterface, ArrayAccess
     public function setIsSignatureProviderEnvelope($is_signature_provider_envelope)
     {
         $this->container['is_signature_provider_envelope'] = $is_signature_provider_envelope;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_ticket_related_envelope
+     *
+     * @return ?string
+     */
+    public function getIsTicketRelatedEnvelope()
+    {
+        return $this->container['is_ticket_related_envelope'];
+    }
+
+    /**
+     * Sets is_ticket_related_envelope
+     *
+     * @param ?string $is_ticket_related_envelope 
+     *
+     * @return $this
+     */
+    public function setIsTicketRelatedEnvelope($is_ticket_related_envelope)
+    {
+        $this->container['is_ticket_related_envelope'] = $is_ticket_related_envelope;
 
         return $this;
     }

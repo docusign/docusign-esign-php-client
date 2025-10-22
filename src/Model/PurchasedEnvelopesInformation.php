@@ -217,7 +217,7 @@ class PurchasedEnvelopesInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['app_name'] = isset($data['app_name']) ? $data['app_name'] : null;

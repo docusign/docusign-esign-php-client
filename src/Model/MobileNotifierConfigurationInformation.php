@@ -177,7 +177,7 @@ class MobileNotifierConfigurationInformation implements ModelInterface, ArrayAcc
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['mobile_notifier_configurations'] = isset($data['mobile_notifier_configurations']) ? $data['mobile_notifier_configurations'] : null;
     }

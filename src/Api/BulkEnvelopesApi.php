@@ -499,7 +499,7 @@ class BulkEnvelopesApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -957,7 +957,7 @@ class BulkEnvelopesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\EnvelopesInformation
      */
-    public function getBulkSendBatchEnvelopes($account_id, $bulk_send_batch_id, \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchEnvelopesOptions $options = null)
+    public function getBulkSendBatchEnvelopes($account_id, $bulk_send_batch_id, ?\DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchEnvelopesOptions $options = null)
     {
         list($response) = $this->getBulkSendBatchEnvelopesWithHttpInfo($account_id, $bulk_send_batch_id, $options);
         return $response;
@@ -975,7 +975,7 @@ class BulkEnvelopesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\EnvelopesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBulkSendBatchEnvelopesWithHttpInfo($account_id, $bulk_send_batch_id, \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchEnvelopesOptions $options = null): array
+    public function getBulkSendBatchEnvelopesWithHttpInfo($account_id, $bulk_send_batch_id, ?\DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchEnvelopesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1177,7 +1177,7 @@ class BulkEnvelopesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BulkSendBatchSummaries
      */
-    public function getBulkSendBatches($account_id, \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null)
+    public function getBulkSendBatches($account_id, ?\DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null)
     {
         list($response) = $this->getBulkSendBatchesWithHttpInfo($account_id, $options);
         return $response;
@@ -1194,7 +1194,7 @@ class BulkEnvelopesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BulkSendBatchSummaries, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBulkSendBatchesWithHttpInfo($account_id, \DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): array
+    public function getBulkSendBatchesWithHttpInfo($account_id, ?\DocuSign\eSign\Api\BulkEnvelopesApi\GetBulkSendBatchesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

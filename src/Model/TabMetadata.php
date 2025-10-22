@@ -442,7 +442,7 @@ class TabMetadata implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['anchor'] = isset($data['anchor']) ? $data['anchor'] : null;
         $this->container['anchor_case_sensitive'] = isset($data['anchor_case_sensitive']) ? $data['anchor_case_sensitive'] : null;

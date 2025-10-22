@@ -177,7 +177,7 @@ class AccountIdentityVerificationResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['identity_verification'] = isset($data['identity_verification']) ? $data['identity_verification'] : null;
     }

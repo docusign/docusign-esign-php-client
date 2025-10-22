@@ -242,7 +242,7 @@ class LocalePolicyTab implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address_format'] = isset($data['address_format']) ? $data['address_format'] : null;
         $this->container['calendar_type'] = isset($data['calendar_type']) ? $data['calendar_type'] : null;

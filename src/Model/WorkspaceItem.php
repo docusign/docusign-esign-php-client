@@ -293,7 +293,7 @@ class WorkspaceItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['caller_authorization'] = isset($data['caller_authorization']) ? $data['caller_authorization'] : null;
         $this->container['content_type'] = isset($data['content_type']) ? $data['content_type'] : null;

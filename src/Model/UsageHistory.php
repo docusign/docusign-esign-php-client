@@ -193,7 +193,7 @@ class UsageHistory implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['last_sent_date_time'] = isset($data['last_sent_date_time']) ? $data['last_sent_date_time'] : null;
         $this->container['last_signed_date_time'] = isset($data['last_signed_date_time']) ? $data['last_signed_date_time'] : null;

@@ -193,7 +193,7 @@ class AddOn implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['add_on_id'] = isset($data['add_on_id']) ? $data['add_on_id'] : null;

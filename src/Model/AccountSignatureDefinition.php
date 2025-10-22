@@ -257,7 +257,7 @@ class AccountSignatureDefinition implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['date_stamp_properties'] = isset($data['date_stamp_properties']) ? $data['date_stamp_properties'] : null;
         $this->container['disallow_user_resize_stamp'] = isset($data['disallow_user_resize_stamp']) ? $data['disallow_user_resize_stamp'] : null;

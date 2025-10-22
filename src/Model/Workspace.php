@@ -238,7 +238,7 @@ class Workspace implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['billable_account_id'] = isset($data['billable_account_id']) ? $data['billable_account_id'] : null;
         $this->container['caller_information'] = isset($data['caller_information']) ? $data['caller_information'] : null;

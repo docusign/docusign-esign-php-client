@@ -413,7 +413,7 @@ class UserInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['activation_access_code'] = isset($data['activation_access_code']) ? $data['activation_access_code'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;

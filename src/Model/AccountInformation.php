@@ -373,7 +373,7 @@ class AccountInformation implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['account_id_guid'] = isset($data['account_id_guid']) ? $data['account_id_guid'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;

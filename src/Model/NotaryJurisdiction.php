@@ -208,7 +208,7 @@ class NotaryJurisdiction implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['commission_expiration'] = isset($data['commission_expiration']) ? $data['commission_expiration'] : null;
         $this->container['commission_id'] = isset($data['commission_id']) ? $data['commission_id'] : null;

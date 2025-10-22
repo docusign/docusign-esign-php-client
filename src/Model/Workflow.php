@@ -203,7 +203,7 @@ class Workflow implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['current_workflow_step_id'] = isset($data['current_workflow_step_id']) ? $data['current_workflow_step_id'] : null;
         $this->container['overwrite_update_mode'] = isset($data['overwrite_update_mode']) ? $data['overwrite_update_mode'] : null;

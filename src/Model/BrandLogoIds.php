@@ -1,6 +1,6 @@
 <?php
 /**
- * DocGenFormFieldOption
+ * BrandLogoIds
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * DocGenFormFieldOption Class Doc Comment
+ * BrandLogoIds Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DocGenFormFieldOption implements ModelInterface, ArrayAccess
+class BrandLogoIds implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'docGenFormFieldOption';
+    protected static $swaggerModelName = 'brandLogoIds';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,9 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'description' => '?string',
-        'label' => '?string',
-        'selected' => '?string',
-        'value' => '?string'
+        'email_logo_id' => '?string',
+        'primary_logo_id' => '?string',
+        'secondary_logo_id' => '?string'
     ];
 
     /**
@@ -71,10 +70,9 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'description' => null,
-        'label' => null,
-        'selected' => null,
-        'value' => null
+        'email_logo_id' => null,
+        'primary_logo_id' => null,
+        'secondary_logo_id' => null
     ];
 
     /**
@@ -104,10 +102,9 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'description' => 'description',
-        'label' => 'label',
-        'selected' => 'selected',
-        'value' => 'value'
+        'email_logo_id' => 'emailLogoId',
+        'primary_logo_id' => 'primaryLogoId',
+        'secondary_logo_id' => 'secondaryLogoId'
     ];
 
     /**
@@ -116,10 +113,9 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'description' => 'setDescription',
-        'label' => 'setLabel',
-        'selected' => 'setSelected',
-        'value' => 'setValue'
+        'email_logo_id' => 'setEmailLogoId',
+        'primary_logo_id' => 'setPrimaryLogoId',
+        'secondary_logo_id' => 'setSecondaryLogoId'
     ];
 
     /**
@@ -128,10 +124,9 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'description' => 'getDescription',
-        'label' => 'getLabel',
-        'selected' => 'getSelected',
-        'value' => 'getValue'
+        'email_logo_id' => 'getEmailLogoId',
+        'primary_logo_id' => 'getPrimaryLogoId',
+        'secondary_logo_id' => 'getSecondaryLogoId'
     ];
 
     /**
@@ -194,10 +189,9 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['email_logo_id'] = isset($data['email_logo_id']) ? $data['email_logo_id'] : null;
+        $this->container['primary_logo_id'] = isset($data['primary_logo_id']) ? $data['primary_logo_id'] : null;
+        $this->container['secondary_logo_id'] = isset($data['secondary_logo_id']) ? $data['secondary_logo_id'] : null;
     }
 
     /**
@@ -225,97 +219,73 @@ class DocGenFormFieldOption implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets description
+     * Gets email_logo_id
      *
      * @return ?string
      */
-    public function getDescription()
+    public function getEmailLogoId()
     {
-        return $this->container['description'];
+        return $this->container['email_logo_id'];
     }
 
     /**
-     * Sets description
+     * Sets email_logo_id
      *
-     * @param ?string $description 
+     * @param ?string $email_logo_id 
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setEmailLogoId($email_logo_id)
     {
-        $this->container['description'] = $description;
+        $this->container['email_logo_id'] = $email_logo_id;
 
         return $this;
     }
 
     /**
-     * Gets label
+     * Gets primary_logo_id
      *
      * @return ?string
      */
-    public function getLabel()
+    public function getPrimaryLogoId()
     {
-        return $this->container['label'];
+        return $this->container['primary_logo_id'];
     }
 
     /**
-     * Sets label
+     * Sets primary_logo_id
      *
-     * @param ?string $label 
+     * @param ?string $primary_logo_id 
      *
      * @return $this
      */
-    public function setLabel($label)
+    public function setPrimaryLogoId($primary_logo_id)
     {
-        $this->container['label'] = $label;
+        $this->container['primary_logo_id'] = $primary_logo_id;
 
         return $this;
     }
 
     /**
-     * Gets selected
+     * Gets secondary_logo_id
      *
      * @return ?string
      */
-    public function getSelected()
+    public function getSecondaryLogoId()
     {
-        return $this->container['selected'];
+        return $this->container['secondary_logo_id'];
     }
 
     /**
-     * Sets selected
+     * Sets secondary_logo_id
      *
-     * @param ?string $selected 
+     * @param ?string $secondary_logo_id 
      *
      * @return $this
      */
-    public function setSelected($selected)
+    public function setSecondaryLogoId($secondary_logo_id)
     {
-        $this->container['selected'] = $selected;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return ?string
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param ?string $value Specifies the value of the tab.
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
+        $this->container['secondary_logo_id'] = $secondary_logo_id;
 
         return $this;
     }

@@ -486,7 +486,7 @@ class WorkspacesApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -1052,7 +1052,7 @@ class WorkspacesApi
      * @throws ApiException on non-2xx response
      * @return mixed
      */
-    public function getWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions $options = null)
+    public function getWorkspaceFile($account_id, $file_id, $folder_id, $workspace_id, ?\DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions $options = null)
     {
         list($response) = $this->getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1072,7 +1072,7 @@ class WorkspacesApi
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions $options = null): array
+    public function getWorkspaceFileWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, ?\DocuSign\eSign\Api\WorkspacesApi\GetWorkspaceFileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1177,7 +1177,7 @@ class WorkspacesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PageImages
      */
-    public function listWorkspaceFilePages($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions $options = null)
+    public function listWorkspaceFilePages($account_id, $file_id, $folder_id, $workspace_id, ?\DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions $options = null)
     {
         list($response) = $this->listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1197,7 +1197,7 @@ class WorkspacesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PageImages, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions $options = null): array
+    public function listWorkspaceFilePagesWithHttpInfo($account_id, $file_id, $folder_id, $workspace_id, ?\DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFilePagesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1314,7 +1314,7 @@ class WorkspacesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\WorkspaceFolderContents
      */
-    public function listWorkspaceFolderItems($account_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null)
+    public function listWorkspaceFolderItems($account_id, $folder_id, $workspace_id, ?\DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null)
     {
         list($response) = $this->listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, $options);
         return $response;
@@ -1333,7 +1333,7 @@ class WorkspacesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\WorkspaceFolderContents, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, \DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): array
+    public function listWorkspaceFolderItemsWithHttpInfo($account_id, $folder_id, $workspace_id, ?\DocuSign\eSign\Api\WorkspacesApi\ListWorkspaceFolderItemsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

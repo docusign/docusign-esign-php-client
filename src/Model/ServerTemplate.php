@@ -182,7 +182,7 @@ class ServerTemplate implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
         $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;

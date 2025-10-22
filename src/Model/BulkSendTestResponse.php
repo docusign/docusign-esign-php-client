@@ -188,7 +188,7 @@ class BulkSendTestResponse implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['can_be_sent'] = isset($data['can_be_sent']) ? $data['can_be_sent'] : null;
         $this->container['validation_error_details'] = isset($data['validation_error_details']) ? $data['validation_error_details'] : null;

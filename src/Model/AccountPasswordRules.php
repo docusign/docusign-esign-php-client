@@ -272,7 +272,7 @@ class AccountPasswordRules implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['expire_password'] = isset($data['expire_password']) ? $data['expire_password'] : null;
         $this->container['expire_password_days'] = isset($data['expire_password_days']) ? $data['expire_password_days'] : null;

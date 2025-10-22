@@ -74,6 +74,7 @@ class Brand implements ModelInterface, ArrayAccess
         'is_signing_default' => '?bool',
         'landing_pages' => '\DocuSign\eSign\Model\NameValue[]',
         'links' => '\DocuSign\eSign\Model\BrandLink[]',
+        'logo_ids' => '\DocuSign\eSign\Model\BrandLogoIds',
         'logos' => '\DocuSign\eSign\Model\BrandLogos',
         'organization_brand_logo' => '?string',
         'resources' => '\DocuSign\eSign\Model\BrandResourceUrls'
@@ -99,6 +100,7 @@ class Brand implements ModelInterface, ArrayAccess
         'is_signing_default' => null,
         'landing_pages' => null,
         'links' => null,
+        'logo_ids' => null,
         'logos' => null,
         'organization_brand_logo' => null,
         'resources' => null
@@ -145,6 +147,7 @@ class Brand implements ModelInterface, ArrayAccess
         'is_signing_default' => 'isSigningDefault',
         'landing_pages' => 'landingPages',
         'links' => 'links',
+        'logo_ids' => 'logoIds',
         'logos' => 'logos',
         'organization_brand_logo' => 'organizationBrandLogo',
         'resources' => 'resources'
@@ -170,6 +173,7 @@ class Brand implements ModelInterface, ArrayAccess
         'is_signing_default' => 'setIsSigningDefault',
         'landing_pages' => 'setLandingPages',
         'links' => 'setLinks',
+        'logo_ids' => 'setLogoIds',
         'logos' => 'setLogos',
         'organization_brand_logo' => 'setOrganizationBrandLogo',
         'resources' => 'setResources'
@@ -195,6 +199,7 @@ class Brand implements ModelInterface, ArrayAccess
         'is_signing_default' => 'getIsSigningDefault',
         'landing_pages' => 'getLandingPages',
         'links' => 'getLinks',
+        'logo_ids' => 'getLogoIds',
         'logos' => 'getLogos',
         'organization_brand_logo' => 'getOrganizationBrandLogo',
         'resources' => 'getResources'
@@ -258,7 +263,7 @@ class Brand implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['brand_company'] = isset($data['brand_company']) ? $data['brand_company'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
@@ -274,6 +279,7 @@ class Brand implements ModelInterface, ArrayAccess
         $this->container['is_signing_default'] = isset($data['is_signing_default']) ? $data['is_signing_default'] : null;
         $this->container['landing_pages'] = isset($data['landing_pages']) ? $data['landing_pages'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['logo_ids'] = isset($data['logo_ids']) ? $data['logo_ids'] : null;
         $this->container['logos'] = isset($data['logos']) ? $data['logos'] : null;
         $this->container['organization_brand_logo'] = isset($data['organization_brand_logo']) ? $data['organization_brand_logo'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
@@ -635,6 +641,30 @@ class Brand implements ModelInterface, ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo_ids
+     *
+     * @return \DocuSign\eSign\Model\BrandLogoIds
+     */
+    public function getLogoIds()
+    {
+        return $this->container['logo_ids'];
+    }
+
+    /**
+     * Sets logo_ids
+     *
+     * @param \DocuSign\eSign\Model\BrandLogoIds $logo_ids 
+     *
+     * @return $this
+     */
+    public function setLogoIds($logo_ids)
+    {
+        $this->container['logo_ids'] = $logo_ids;
 
         return $this;
     }

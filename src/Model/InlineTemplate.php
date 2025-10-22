@@ -197,7 +197,7 @@ class InlineTemplate implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['custom_fields'] = isset($data['custom_fields']) ? $data['custom_fields'] : null;
         $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;

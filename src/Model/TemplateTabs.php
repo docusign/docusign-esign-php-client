@@ -367,7 +367,7 @@ class TemplateTabs implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['approve_tabs'] = isset($data['approve_tabs']) ? $data['approve_tabs'] : null;
         $this->container['checkbox_tabs'] = isset($data['checkbox_tabs']) ? $data['checkbox_tabs'] : null;

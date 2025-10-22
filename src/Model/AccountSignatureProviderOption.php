@@ -61,8 +61,10 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'signature_provider_option_display_name' => '?string',
+        'signature_provider_option_hint_override_value' => '?string',
         'signature_provider_option_id' => '?string',
-        'signature_provider_option_name' => '?string'
+        'signature_provider_option_name' => '?string',
+        'signature_provider_option_regex_validation_pattern' => '?string'
     ];
 
     /**
@@ -72,8 +74,10 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'signature_provider_option_display_name' => null,
+        'signature_provider_option_hint_override_value' => null,
         'signature_provider_option_id' => null,
-        'signature_provider_option_name' => null
+        'signature_provider_option_name' => null,
+        'signature_provider_option_regex_validation_pattern' => null
     ];
 
     /**
@@ -104,8 +108,10 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'signature_provider_option_display_name' => 'signatureProviderOptionDisplayName',
+        'signature_provider_option_hint_override_value' => 'signatureProviderOptionHintOverrideValue',
         'signature_provider_option_id' => 'signatureProviderOptionId',
-        'signature_provider_option_name' => 'signatureProviderOptionName'
+        'signature_provider_option_name' => 'signatureProviderOptionName',
+        'signature_provider_option_regex_validation_pattern' => 'signatureProviderOptionRegexValidationPattern'
     ];
 
     /**
@@ -115,8 +121,10 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'signature_provider_option_display_name' => 'setSignatureProviderOptionDisplayName',
+        'signature_provider_option_hint_override_value' => 'setSignatureProviderOptionHintOverrideValue',
         'signature_provider_option_id' => 'setSignatureProviderOptionId',
-        'signature_provider_option_name' => 'setSignatureProviderOptionName'
+        'signature_provider_option_name' => 'setSignatureProviderOptionName',
+        'signature_provider_option_regex_validation_pattern' => 'setSignatureProviderOptionRegexValidationPattern'
     ];
 
     /**
@@ -126,8 +134,10 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'signature_provider_option_display_name' => 'getSignatureProviderOptionDisplayName',
+        'signature_provider_option_hint_override_value' => 'getSignatureProviderOptionHintOverrideValue',
         'signature_provider_option_id' => 'getSignatureProviderOptionId',
-        'signature_provider_option_name' => 'getSignatureProviderOptionName'
+        'signature_provider_option_name' => 'getSignatureProviderOptionName',
+        'signature_provider_option_regex_validation_pattern' => 'getSignatureProviderOptionRegexValidationPattern'
     ];
 
     /**
@@ -188,11 +198,13 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['signature_provider_option_display_name'] = isset($data['signature_provider_option_display_name']) ? $data['signature_provider_option_display_name'] : null;
+        $this->container['signature_provider_option_hint_override_value'] = isset($data['signature_provider_option_hint_override_value']) ? $data['signature_provider_option_hint_override_value'] : null;
         $this->container['signature_provider_option_id'] = isset($data['signature_provider_option_id']) ? $data['signature_provider_option_id'] : null;
         $this->container['signature_provider_option_name'] = isset($data['signature_provider_option_name']) ? $data['signature_provider_option_name'] : null;
+        $this->container['signature_provider_option_regex_validation_pattern'] = isset($data['signature_provider_option_regex_validation_pattern']) ? $data['signature_provider_option_regex_validation_pattern'] : null;
     }
 
     /**
@@ -244,6 +256,30 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets signature_provider_option_hint_override_value
+     *
+     * @return ?string
+     */
+    public function getSignatureProviderOptionHintOverrideValue()
+    {
+        return $this->container['signature_provider_option_hint_override_value'];
+    }
+
+    /**
+     * Sets signature_provider_option_hint_override_value
+     *
+     * @param ?string $signature_provider_option_hint_override_value 
+     *
+     * @return $this
+     */
+    public function setSignatureProviderOptionHintOverrideValue($signature_provider_option_hint_override_value)
+    {
+        $this->container['signature_provider_option_hint_override_value'] = $signature_provider_option_hint_override_value;
+
+        return $this;
+    }
+
+    /**
      * Gets signature_provider_option_id
      *
      * @return ?string
@@ -287,6 +323,30 @@ class AccountSignatureProviderOption implements ModelInterface, ArrayAccess
     public function setSignatureProviderOptionName($signature_provider_option_name)
     {
         $this->container['signature_provider_option_name'] = $signature_provider_option_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets signature_provider_option_regex_validation_pattern
+     *
+     * @return ?string
+     */
+    public function getSignatureProviderOptionRegexValidationPattern()
+    {
+        return $this->container['signature_provider_option_regex_validation_pattern'];
+    }
+
+    /**
+     * Sets signature_provider_option_regex_validation_pattern
+     *
+     * @param ?string $signature_provider_option_regex_validation_pattern 
+     *
+     * @return $this
+     */
+    public function setSignatureProviderOptionRegexValidationPattern($signature_provider_option_regex_validation_pattern)
+    {
+        $this->container['signature_provider_option_regex_validation_pattern'] = $signature_provider_option_regex_validation_pattern;
 
         return $this;
     }

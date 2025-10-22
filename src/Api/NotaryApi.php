@@ -202,7 +202,7 @@ class NotaryApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -510,7 +510,7 @@ class NotaryApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryResult
      */
-    public function getNotary(\DocuSign\eSign\Api\NotaryApi\GetNotaryOptions $options = null)
+    public function getNotary(?\DocuSign\eSign\Api\NotaryApi\GetNotaryOptions $options = null)
     {
         list($response) = $this->getNotaryWithHttpInfo($options);
         return $response;
@@ -526,7 +526,7 @@ class NotaryApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNotaryWithHttpInfo(\DocuSign\eSign\Api\NotaryApi\GetNotaryOptions $options = null): array
+    public function getNotaryWithHttpInfo(?\DocuSign\eSign\Api\NotaryApi\GetNotaryOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary";
@@ -843,7 +843,7 @@ class NotaryApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NotaryJournalList
      */
-    public function listNotaryJournals(\DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions $options = null)
+    public function listNotaryJournals(?\DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions $options = null)
     {
         list($response) = $this->listNotaryJournalsWithHttpInfo($options);
         return $response;
@@ -859,7 +859,7 @@ class NotaryApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NotaryJournalList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listNotaryJournalsWithHttpInfo(\DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions $options = null): array
+    public function listNotaryJournalsWithHttpInfo(?\DocuSign\eSign\Api\NotaryApi\ListNotaryJournalsOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/current_user/notary/journals";
