@@ -182,7 +182,7 @@ class ReservedDomainExistence implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['email_domain'] = isset($data['email_domain']) ? $data['email_domain'] : null;
         $this->container['is_reserved'] = isset($data['is_reserved']) ? $data['is_reserved'] : null;

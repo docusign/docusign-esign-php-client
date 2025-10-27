@@ -187,7 +187,7 @@ class DelayedRoutingApiModel implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['resume_date'] = isset($data['resume_date']) ? $data['resume_date'] : null;
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;

@@ -185,7 +185,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_security_store'] = isset($data['document_security_store']) ? $data['document_security_store'] : null;
         $this->container['max_time_stamp_signature_length'] = isset($data['max_time_stamp_signature_length']) ? $data['max_time_stamp_signature_length'] : null;
@@ -294,7 +294,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -306,7 +306,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -319,7 +319,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -335,7 +335,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
