@@ -185,7 +185,7 @@ class TimeStampField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['document_security_store'] = isset($data['document_security_store']) ? $data['document_security_store'] : null;
         $this->container['max_time_stamp_signature_length'] = isset($data['max_time_stamp_signature_length']) ? $data['max_time_stamp_signature_length'] : null;

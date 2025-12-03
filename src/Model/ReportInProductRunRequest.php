@@ -292,7 +292,7 @@ class ReportInProductRunRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['authentication_success_filter'] = isset($data['authentication_success_filter']) ? $data['authentication_success_filter'] : null;
         $this->container['custom_field_filter'] = isset($data['custom_field_filter']) ? $data['custom_field_filter'] : null;

@@ -192,7 +192,7 @@ class ReportInProductField implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['field_version'] = isset($data['field_version']) ? $data['field_version'] : null;

@@ -892,7 +892,7 @@ class ReportInProductRunResponseRowFields implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['access_code_required'] = isset($data['access_code_required']) ? $data['access_code_required'] : null;
         $this->container['access_codes_attempted'] = isset($data['access_codes_attempted']) ? $data['access_codes_attempted'] : null;

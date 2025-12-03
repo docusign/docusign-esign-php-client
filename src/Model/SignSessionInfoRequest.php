@@ -190,7 +190,7 @@ class SignSessionInfoRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
         $this->container['max_signature_length'] = isset($data['max_signature_length']) ? $data['max_signature_length'] : null;

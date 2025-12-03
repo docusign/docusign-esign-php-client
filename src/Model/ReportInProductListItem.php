@@ -242,7 +242,7 @@ class ReportInProductListItem implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['get_uri'] = isset($data['get_uri']) ? $data['get_uri'] : null;
         $this->container['last_scheduled_execution_date'] = isset($data['last_scheduled_execution_date']) ? $data['last_scheduled_execution_date'] : null;

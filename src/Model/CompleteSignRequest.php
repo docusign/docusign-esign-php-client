@@ -200,7 +200,7 @@ class CompleteSignRequest implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
         $this->container['correlation_id'] = isset($data['correlation_id']) ? $data['correlation_id'] : null;

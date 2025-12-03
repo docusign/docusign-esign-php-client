@@ -190,7 +190,7 @@ class ExternalClaim implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['acquired_time'] = isset($data['acquired_time']) ? $data['acquired_time'] : null;
         $this->container['claim_name'] = isset($data['claim_name']) ? $data['claim_name'] : null;
