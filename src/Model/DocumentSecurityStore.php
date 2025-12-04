@@ -185,7 +185,7 @@ class DocumentSecurityStore implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['certificates'] = isset($data['certificates']) ? $data['certificates'] : null;
         $this->container['crls'] = isset($data['crls']) ? $data['crls'] : null;

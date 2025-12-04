@@ -87,7 +87,7 @@ class CommentsApi
      *
      * @param \DocuSign\eSign\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\DocuSign\eSign\Client\ApiClient $apiClient = null)
+    public function __construct(?\DocuSign\eSign\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -130,7 +130,7 @@ class CommentsApi
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getCommentsTranscript($account_id, $envelope_id, CommentsApi\GetCommentsTranscriptOptions $options = null)
+    public function getCommentsTranscript($account_id, $envelope_id, ?CommentsApi\GetCommentsTranscriptOptions $options = null)
     {
         list($response) = $this->getCommentsTranscriptWithHttpInfo($account_id, $envelope_id, $options);
         return $response;
@@ -147,7 +147,7 @@ class CommentsApi
      * @throws \DocuSign\eSign\Client\ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCommentsTranscriptWithHttpInfo($account_id, $envelope_id, CommentsApi\GetCommentsTranscriptOptions $options = null)
+    public function getCommentsTranscriptWithHttpInfo($account_id, $envelope_id, ?CommentsApi\GetCommentsTranscriptOptions $options = null)
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

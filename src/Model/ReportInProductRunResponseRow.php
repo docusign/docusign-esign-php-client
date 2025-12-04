@@ -182,7 +182,7 @@ class ReportInProductRunResponseRow implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;

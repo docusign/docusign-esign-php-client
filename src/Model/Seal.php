@@ -180,7 +180,7 @@ class Seal implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['configuration'] = isset($data['configuration']) ? $data['configuration'] : null;
         $this->container['seal_identifier'] = isset($data['seal_identifier']) ? $data['seal_identifier'] : null;
