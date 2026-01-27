@@ -60,6 +60,7 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'maximum_reminder_count' => '?string',
         'reminder_delay' => '?string',
         'reminder_enabled' => '?string',
         'reminder_frequency' => '?string'
@@ -71,6 +72,7 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'maximum_reminder_count' => null,
         'reminder_delay' => null,
         'reminder_enabled' => null,
         'reminder_frequency' => null
@@ -103,6 +105,7 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'maximum_reminder_count' => 'maximumReminderCount',
         'reminder_delay' => 'reminderDelay',
         'reminder_enabled' => 'reminderEnabled',
         'reminder_frequency' => 'reminderFrequency'
@@ -114,6 +117,7 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'maximum_reminder_count' => 'setMaximumReminderCount',
         'reminder_delay' => 'setReminderDelay',
         'reminder_enabled' => 'setReminderEnabled',
         'reminder_frequency' => 'setReminderFrequency'
@@ -125,6 +129,7 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'maximum_reminder_count' => 'getMaximumReminderCount',
         'reminder_delay' => 'getReminderDelay',
         'reminder_enabled' => 'getReminderEnabled',
         'reminder_frequency' => 'getReminderFrequency'
@@ -190,6 +195,7 @@ class Reminders implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
+        $this->container['maximum_reminder_count'] = isset($data['maximum_reminder_count']) ? $data['maximum_reminder_count'] : null;
         $this->container['reminder_delay'] = isset($data['reminder_delay']) ? $data['reminder_delay'] : null;
         $this->container['reminder_enabled'] = isset($data['reminder_enabled']) ? $data['reminder_enabled'] : null;
         $this->container['reminder_frequency'] = isset($data['reminder_frequency']) ? $data['reminder_frequency'] : null;
@@ -218,6 +224,30 @@ class Reminders implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets maximum_reminder_count
+     *
+     * @return ?string
+     */
+    public function getMaximumReminderCount()
+    {
+        return $this->container['maximum_reminder_count'];
+    }
+
+    /**
+     * Sets maximum_reminder_count
+     *
+     * @param ?string $maximum_reminder_count 
+     *
+     * @return $this
+     */
+    public function setMaximumReminderCount($maximum_reminder_count)
+    {
+        $this->container['maximum_reminder_count'] = $maximum_reminder_count;
+
+        return $this;
+    }
 
     /**
      * Gets reminder_delay

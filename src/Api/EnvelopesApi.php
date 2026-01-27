@@ -1049,6 +1049,33 @@ class GetEnvelopeOptions
         $this->include_anchor_tab_locations = $include_anchor_tab_locations;
         return $this;
     }
+    /**
+      * $user_id 
+      * @var ?string
+      */
+    protected ?string $user_id = null;
+
+    /**
+     * Gets user_id
+     *
+     * @return ?string
+     */
+    public function getUserId(): ?string
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * Sets user_id
+     * @param ?string $user_id 
+     *
+     * @return self
+     */
+    public function setUserId(?string $user_id): self
+    {
+        $this->user_id = $user_id;
+        return $this;
+    }
 }
 
 
@@ -10033,6 +10060,9 @@ class EnvelopesApi
             }
             if ($options->getIncludeAnchorTabLocations() != 'null') {
                 $queryParams['include_anchor_tab_locations'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAnchorTabLocations());
+            }
+            if ($options->getUserId() != 'null') {
+                $queryParams['user_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserId());
             }
         }
 

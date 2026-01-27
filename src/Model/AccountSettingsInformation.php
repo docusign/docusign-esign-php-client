@@ -169,6 +169,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_level3_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_idv_platform' => '?string',
         'allow_idv_platform_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'allow_idv_risk_assessment' => '?string',
+        'allow_idv_risk_assessment_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_in_person' => '?string',
         'allow_in_person_electronic_notary' => '?string',
         'allow_in_person_electronic_notary_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -534,6 +536,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_navigator_partial_ingestion_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_navigator_trial' => '?string',
         'enable_navigator_trial_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'enable_notary_on_demand_witness' => '?string',
+        'enable_notary_on_demand_witness_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_obligation_management' => '?string',
         'enable_obligation_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_participant_recipient_setting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
@@ -1011,6 +1015,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_level3_metadata' => null,
         'allow_idv_platform' => null,
         'allow_idv_platform_metadata' => null,
+        'allow_idv_risk_assessment' => null,
+        'allow_idv_risk_assessment_metadata' => null,
         'allow_in_person' => null,
         'allow_in_person_electronic_notary' => null,
         'allow_in_person_electronic_notary_metadata' => null,
@@ -1376,6 +1382,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_navigator_partial_ingestion_metadata' => null,
         'enable_navigator_trial' => null,
         'enable_navigator_trial_metadata' => null,
+        'enable_notary_on_demand_witness' => null,
+        'enable_notary_on_demand_witness_metadata' => null,
         'enable_obligation_management' => null,
         'enable_obligation_management_metadata' => null,
         'enable_participant_recipient_setting_metadata' => null,
@@ -1874,6 +1882,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_level3_metadata' => 'allowIDVLevel3Metadata',
         'allow_idv_platform' => 'allowIDVPlatform',
         'allow_idv_platform_metadata' => 'allowIDVPlatformMetadata',
+        'allow_idv_risk_assessment' => 'allowIdvRiskAssessment',
+        'allow_idv_risk_assessment_metadata' => 'allowIdvRiskAssessmentMetadata',
         'allow_in_person' => 'allowInPerson',
         'allow_in_person_electronic_notary' => 'allowInPersonElectronicNotary',
         'allow_in_person_electronic_notary_metadata' => 'allowInPersonElectronicNotaryMetadata',
@@ -2239,6 +2249,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_navigator_partial_ingestion_metadata' => 'enableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial' => 'enableNavigatorTrial',
         'enable_navigator_trial_metadata' => 'enableNavigatorTrialMetadata',
+        'enable_notary_on_demand_witness' => 'enableNotaryOnDemandWitness',
+        'enable_notary_on_demand_witness_metadata' => 'enableNotaryOnDemandWitnessMetadata',
         'enable_obligation_management' => 'enableObligationManagement',
         'enable_obligation_management_metadata' => 'enableObligationManagementMetadata',
         'enable_participant_recipient_setting_metadata' => 'enableParticipantRecipientSettingMetadata',
@@ -2286,7 +2298,7 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_sequential_signing_ui_metadata' => 'enableSequentialSigningUIMetadata',
         'enable_signer_attachments' => 'enableSignerAttachments',
         'enable_signer_attachments_metadata' => 'enableSignerAttachmentsMetadata',
-        'enable_signing_ai_features_plan' => 'enableSigningAIFeaturesPlan',
+        'enable_signing_ai_features_plan' => 'EnableSigningAIFeaturesPlan',
         'enable_signing_ai_features_plan_metadata' => 'enableSigningAIFeaturesPlanMetadata',
         'enable_signing_ai_features_setting' => 'enableSigningAIFeaturesSetting',
         'enable_signing_ai_features_setting_metadata' => 'enableSigningAIFeaturesSettingMetadata',
@@ -2716,6 +2728,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_level3_metadata' => 'setAllowIdvLevel3Metadata',
         'allow_idv_platform' => 'setAllowIdvPlatform',
         'allow_idv_platform_metadata' => 'setAllowIdvPlatformMetadata',
+        'allow_idv_risk_assessment' => 'setAllowIdvRiskAssessment',
+        'allow_idv_risk_assessment_metadata' => 'setAllowIdvRiskAssessmentMetadata',
         'allow_in_person' => 'setAllowInPerson',
         'allow_in_person_electronic_notary' => 'setAllowInPersonElectronicNotary',
         'allow_in_person_electronic_notary_metadata' => 'setAllowInPersonElectronicNotaryMetadata',
@@ -3081,6 +3095,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_navigator_partial_ingestion_metadata' => 'setEnableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial' => 'setEnableNavigatorTrial',
         'enable_navigator_trial_metadata' => 'setEnableNavigatorTrialMetadata',
+        'enable_notary_on_demand_witness' => 'setEnableNotaryOnDemandWitness',
+        'enable_notary_on_demand_witness_metadata' => 'setEnableNotaryOnDemandWitnessMetadata',
         'enable_obligation_management' => 'setEnableObligationManagement',
         'enable_obligation_management_metadata' => 'setEnableObligationManagementMetadata',
         'enable_participant_recipient_setting_metadata' => 'setEnableParticipantRecipientSettingMetadata',
@@ -3558,6 +3574,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'allow_idv_level3_metadata' => 'getAllowIdvLevel3Metadata',
         'allow_idv_platform' => 'getAllowIdvPlatform',
         'allow_idv_platform_metadata' => 'getAllowIdvPlatformMetadata',
+        'allow_idv_risk_assessment' => 'getAllowIdvRiskAssessment',
+        'allow_idv_risk_assessment_metadata' => 'getAllowIdvRiskAssessmentMetadata',
         'allow_in_person' => 'getAllowInPerson',
         'allow_in_person_electronic_notary' => 'getAllowInPersonElectronicNotary',
         'allow_in_person_electronic_notary_metadata' => 'getAllowInPersonElectronicNotaryMetadata',
@@ -3923,6 +3941,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         'enable_navigator_partial_ingestion_metadata' => 'getEnableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial' => 'getEnableNavigatorTrial',
         'enable_navigator_trial_metadata' => 'getEnableNavigatorTrialMetadata',
+        'enable_notary_on_demand_witness' => 'getEnableNotaryOnDemandWitness',
+        'enable_notary_on_demand_witness_metadata' => 'getEnableNotaryOnDemandWitnessMetadata',
         'enable_obligation_management' => 'getEnableObligationManagement',
         'enable_obligation_management_metadata' => 'getEnableObligationManagementMetadata',
         'enable_participant_recipient_setting_metadata' => 'getEnableParticipantRecipientSettingMetadata',
@@ -4454,6 +4474,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['allow_idv_level3_metadata'] = isset($data['allow_idv_level3_metadata']) ? $data['allow_idv_level3_metadata'] : null;
         $this->container['allow_idv_platform'] = isset($data['allow_idv_platform']) ? $data['allow_idv_platform'] : null;
         $this->container['allow_idv_platform_metadata'] = isset($data['allow_idv_platform_metadata']) ? $data['allow_idv_platform_metadata'] : null;
+        $this->container['allow_idv_risk_assessment'] = isset($data['allow_idv_risk_assessment']) ? $data['allow_idv_risk_assessment'] : null;
+        $this->container['allow_idv_risk_assessment_metadata'] = isset($data['allow_idv_risk_assessment_metadata']) ? $data['allow_idv_risk_assessment_metadata'] : null;
         $this->container['allow_in_person'] = isset($data['allow_in_person']) ? $data['allow_in_person'] : null;
         $this->container['allow_in_person_electronic_notary'] = isset($data['allow_in_person_electronic_notary']) ? $data['allow_in_person_electronic_notary'] : null;
         $this->container['allow_in_person_electronic_notary_metadata'] = isset($data['allow_in_person_electronic_notary_metadata']) ? $data['allow_in_person_electronic_notary_metadata'] : null;
@@ -4819,6 +4841,8 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
         $this->container['enable_navigator_partial_ingestion_metadata'] = isset($data['enable_navigator_partial_ingestion_metadata']) ? $data['enable_navigator_partial_ingestion_metadata'] : null;
         $this->container['enable_navigator_trial'] = isset($data['enable_navigator_trial']) ? $data['enable_navigator_trial'] : null;
         $this->container['enable_navigator_trial_metadata'] = isset($data['enable_navigator_trial_metadata']) ? $data['enable_navigator_trial_metadata'] : null;
+        $this->container['enable_notary_on_demand_witness'] = isset($data['enable_notary_on_demand_witness']) ? $data['enable_notary_on_demand_witness'] : null;
+        $this->container['enable_notary_on_demand_witness_metadata'] = isset($data['enable_notary_on_demand_witness_metadata']) ? $data['enable_notary_on_demand_witness_metadata'] : null;
         $this->container['enable_obligation_management'] = isset($data['enable_obligation_management']) ? $data['enable_obligation_management'] : null;
         $this->container['enable_obligation_management_metadata'] = isset($data['enable_obligation_management_metadata']) ? $data['enable_obligation_management_metadata'] : null;
         $this->container['enable_participant_recipient_setting_metadata'] = isset($data['enable_participant_recipient_setting_metadata']) ? $data['enable_participant_recipient_setting_metadata'] : null;
@@ -7817,6 +7841,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setAllowIdvPlatformMetadata($allow_idv_platform_metadata)
     {
         $this->container['allow_idv_platform_metadata'] = $allow_idv_platform_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_idv_risk_assessment
+     *
+     * @return ?string
+     */
+    public function getAllowIdvRiskAssessment()
+    {
+        return $this->container['allow_idv_risk_assessment'];
+    }
+
+    /**
+     * Sets allow_idv_risk_assessment
+     *
+     * @param ?string $allow_idv_risk_assessment 
+     *
+     * @return $this
+     */
+    public function setAllowIdvRiskAssessment($allow_idv_risk_assessment)
+    {
+        $this->container['allow_idv_risk_assessment'] = $allow_idv_risk_assessment;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_idv_risk_assessment_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAllowIdvRiskAssessmentMetadata()
+    {
+        return $this->container['allow_idv_risk_assessment_metadata'];
+    }
+
+    /**
+     * Sets allow_idv_risk_assessment_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $allow_idv_risk_assessment_metadata 
+     *
+     * @return $this
+     */
+    public function setAllowIdvRiskAssessmentMetadata($allow_idv_risk_assessment_metadata)
+    {
+        $this->container['allow_idv_risk_assessment_metadata'] = $allow_idv_risk_assessment_metadata;
 
         return $this;
     }
@@ -16577,6 +16649,54 @@ class AccountSettingsInformation implements ModelInterface, ArrayAccess
     public function setEnableNavigatorTrialMetadata($enable_navigator_trial_metadata)
     {
         $this->container['enable_navigator_trial_metadata'] = $enable_navigator_trial_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_notary_on_demand_witness
+     *
+     * @return ?string
+     */
+    public function getEnableNotaryOnDemandWitness()
+    {
+        return $this->container['enable_notary_on_demand_witness'];
+    }
+
+    /**
+     * Sets enable_notary_on_demand_witness
+     *
+     * @param ?string $enable_notary_on_demand_witness 
+     *
+     * @return $this
+     */
+    public function setEnableNotaryOnDemandWitness($enable_notary_on_demand_witness)
+    {
+        $this->container['enable_notary_on_demand_witness'] = $enable_notary_on_demand_witness;
+
+        return $this;
+    }
+
+    /**
+     * Gets enable_notary_on_demand_witness_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getEnableNotaryOnDemandWitnessMetadata()
+    {
+        return $this->container['enable_notary_on_demand_witness_metadata'];
+    }
+
+    /**
+     * Sets enable_notary_on_demand_witness_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $enable_notary_on_demand_witness_metadata 
+     *
+     * @return $this
+     */
+    public function setEnableNotaryOnDemandWitnessMetadata($enable_notary_on_demand_witness_metadata)
+    {
+        $this->container['enable_notary_on_demand_witness_metadata'] = $enable_notary_on_demand_witness_metadata;
 
         return $this;
     }
