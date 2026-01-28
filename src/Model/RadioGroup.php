@@ -83,6 +83,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'shared_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'share_to_recipients' => '?string',
         'share_to_recipients_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'source' => '?string',
         'tab_type' => '?string',
         'tab_type_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'template_locked' => '?string',
@@ -124,6 +125,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'shared_metadata' => null,
         'share_to_recipients' => null,
         'share_to_recipients_metadata' => null,
+        'source' => null,
         'tab_type' => null,
         'tab_type_metadata' => null,
         'template_locked' => null,
@@ -186,6 +188,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'shared_metadata' => 'sharedMetadata',
         'share_to_recipients' => 'shareToRecipients',
         'share_to_recipients_metadata' => 'shareToRecipientsMetadata',
+        'source' => 'source',
         'tab_type' => 'tabType',
         'tab_type_metadata' => 'tabTypeMetadata',
         'template_locked' => 'templateLocked',
@@ -227,6 +230,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'shared_metadata' => 'setSharedMetadata',
         'share_to_recipients' => 'setShareToRecipients',
         'share_to_recipients_metadata' => 'setShareToRecipientsMetadata',
+        'source' => 'setSource',
         'tab_type' => 'setTabType',
         'tab_type_metadata' => 'setTabTypeMetadata',
         'template_locked' => 'setTemplateLocked',
@@ -268,6 +272,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'shared_metadata' => 'getSharedMetadata',
         'share_to_recipients' => 'getShareToRecipients',
         'share_to_recipients_metadata' => 'getShareToRecipientsMetadata',
+        'source' => 'getSource',
         'tab_type' => 'getTabType',
         'tab_type_metadata' => 'getTabTypeMetadata',
         'template_locked' => 'getTemplateLocked',
@@ -363,6 +368,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
         $this->container['shared_metadata'] = isset($data['shared_metadata']) ? $data['shared_metadata'] : null;
         $this->container['share_to_recipients'] = isset($data['share_to_recipients']) ? $data['share_to_recipients'] : null;
         $this->container['share_to_recipients_metadata'] = isset($data['share_to_recipients_metadata']) ? $data['share_to_recipients_metadata'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['tab_type'] = isset($data['tab_type']) ? $data['tab_type'] : null;
         $this->container['tab_type_metadata'] = isset($data['tab_type_metadata']) ? $data['tab_type_metadata'] : null;
         $this->container['template_locked'] = isset($data['template_locked']) ? $data['template_locked'] : null;
@@ -947,6 +953,30 @@ class RadioGroup implements ModelInterface, ArrayAccess
     public function setShareToRecipientsMetadata($share_to_recipients_metadata)
     {
         $this->container['share_to_recipients_metadata'] = $share_to_recipients_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return ?string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param ?string $source 
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
 
         return $this;
     }
