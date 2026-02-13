@@ -487,7 +487,7 @@ class ApiClient
 
         $resourcePath = "/oauth/token";
         $queryParams = [];
-        $integrator_and_secret_key = "Basic " . utf8_decode(base64_encode("{$client_id}:{$client_secret}"));
+        $integrator_and_secret_key = "Basic " . mb_convert_encoding(base64_encode("{$client_id}:{$client_secret}"), 'ISO-8859-1', 'UTF-8');
         $headers = [
             "Authorization" => $integrator_and_secret_key,
             "Content-Type" => "application/x-www-form-urlencoded",
@@ -526,7 +526,7 @@ class ApiClient
         }
         $resourcePath = "/oauth/token"; 
         $queryParams = []; 
-        $integrator_and_secret_key = "Basic " . utf8_decode(base64_encode("{$client_id}:{$client_secret}")); 
+        $integrator_and_secret_key = "Basic " . mb_convert_encoding(base64_encode("{$client_id}:{$client_secret}"), 'ISO-8859-1', 'UTF-8');
         $headers = [ 
             "Authorization" => $integrator_and_secret_key, 
             "Content-Type" => "application/x-www-form-urlencoded", 
