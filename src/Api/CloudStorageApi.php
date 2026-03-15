@@ -554,7 +554,7 @@ class CloudStorageApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -615,7 +615,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ExternalFolder
      */
-    public function callList($account_id, $folder_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListOptions $options = null)
+    public function callList($account_id, $folder_id, $service_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\ListOptions $options = null)
     {
         list($response) = $this->callListWithHttpInfo($account_id, $folder_id, $service_id, $user_id, $options);
         return $response;
@@ -635,7 +635,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ExternalFolder, HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($account_id, $folder_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListOptions $options = null): array
+    public function callListWithHttpInfo($account_id, $folder_id, $service_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\ListOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1076,7 +1076,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
-    public function getProvider($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions $options = null)
+    public function getProvider($account_id, $service_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions $options = null)
     {
         list($response) = $this->getProviderWithHttpInfo($account_id, $service_id, $user_id, $options);
         return $response;
@@ -1095,7 +1095,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProviderWithHttpInfo($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions $options = null): array
+    public function getProviderWithHttpInfo($account_id, $service_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\GetProviderOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1192,7 +1192,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ExternalFolder
      */
-    public function listFolders($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions $options = null)
+    public function listFolders($account_id, $service_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions $options = null)
     {
         list($response) = $this->listFoldersWithHttpInfo($account_id, $service_id, $user_id, $options);
         return $response;
@@ -1211,7 +1211,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ExternalFolder, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listFoldersWithHttpInfo($account_id, $service_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions $options = null): array
+    public function listFoldersWithHttpInfo($account_id, $service_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\ListFoldersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1322,7 +1322,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CloudStorageProviders
      */
-    public function listProviders($account_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions $options = null)
+    public function listProviders($account_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions $options = null)
     {
         list($response) = $this->listProvidersWithHttpInfo($account_id, $user_id, $options);
         return $response;
@@ -1340,7 +1340,7 @@ class CloudStorageApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CloudStorageProviders, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listProvidersWithHttpInfo($account_id, $user_id, \DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions $options = null): array
+    public function listProvidersWithHttpInfo($account_id, $user_id, ?\DocuSign\eSign\Api\CloudStorageApi\ListProvidersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

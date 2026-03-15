@@ -432,7 +432,7 @@ class PowerFormsApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -869,7 +869,7 @@ class PowerFormsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsFormDataResponse
      */
-    public function getPowerFormData($account_id, $power_form_id, \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions $options = null)
+    public function getPowerFormData($account_id, $power_form_id, ?\DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions $options = null)
     {
         list($response) = $this->getPowerFormDataWithHttpInfo($account_id, $power_form_id, $options);
         return $response;
@@ -887,7 +887,7 @@ class PowerFormsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsFormDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPowerFormDataWithHttpInfo($account_id, $power_form_id, \DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions $options = null): array
+    public function getPowerFormDataWithHttpInfo($account_id, $power_form_id, ?\DocuSign\eSign\Api\PowerFormsApi\GetPowerFormDataOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -980,7 +980,7 @@ class PowerFormsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormSendersResponse
      */
-    public function listPowerFormSenders($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions $options = null)
+    public function listPowerFormSenders($account_id, ?\DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions $options = null)
     {
         list($response) = $this->listPowerFormSendersWithHttpInfo($account_id, $options);
         return $response;
@@ -997,7 +997,7 @@ class PowerFormsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormSendersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPowerFormSendersWithHttpInfo($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions $options = null): array
+    public function listPowerFormSendersWithHttpInfo($account_id, ?\DocuSign\eSign\Api\PowerFormsApi\ListPowerFormSendersOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -1076,7 +1076,7 @@ class PowerFormsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PowerFormsResponse
      */
-    public function listPowerForms($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions $options = null)
+    public function listPowerForms($account_id, ?\DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions $options = null)
     {
         list($response) = $this->listPowerFormsWithHttpInfo($account_id, $options);
         return $response;
@@ -1093,7 +1093,7 @@ class PowerFormsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PowerFormsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPowerFormsWithHttpInfo($account_id, \DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions $options = null): array
+    public function listPowerFormsWithHttpInfo($account_id, ?\DocuSign\eSign\Api\PowerFormsApi\ListPowerFormsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

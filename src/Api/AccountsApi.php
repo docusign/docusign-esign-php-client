@@ -1984,7 +1984,7 @@ class AccountsApi
      *
      * @return void
      */
-    public function __construct(ApiClient $apiClient = null)
+    public function __construct(?ApiClient $apiClient = null)
     {
         $this->apiClient = $apiClient ?? new ApiClient();
     }
@@ -2042,7 +2042,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\NewAccountSummary
      */
-    public function create($new_account_definition = null, \DocuSign\eSign\Api\AccountsApi\CreateOptions $options = null)
+    public function create($new_account_definition = null, ?\DocuSign\eSign\Api\AccountsApi\CreateOptions $options = null)
     {
         list($response) = $this->createWithHttpInfo($new_account_definition, $options);
         return $response;
@@ -2059,7 +2059,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\NewAccountSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWithHttpInfo($new_account_definition = null, \DocuSign\eSign\Api\AccountsApi\CreateOptions $options = null): array
+    public function createWithHttpInfo($new_account_definition = null, ?\DocuSign\eSign\Api\AccountsApi\CreateOptions $options = null): array
     {
         // parse inputs
         $resourcePath = "/v2.1/accounts";
@@ -2136,7 +2136,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignaturesInformation
      */
-    public function createAccountSignatures($account_id, $account_signatures_information = null, \DocuSign\eSign\Api\AccountsApi\CreateAccountSignaturesOptions $options = null)
+    public function createAccountSignatures($account_id, $account_signatures_information = null, ?\DocuSign\eSign\Api\AccountsApi\CreateAccountSignaturesOptions $options = null)
     {
         list($response) = $this->createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information, $options);
         return $response;
@@ -2154,7 +2154,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information = null, \DocuSign\eSign\Api\AccountsApi\CreateAccountSignaturesOptions $options = null): array
+    public function createAccountSignaturesWithHttpInfo($account_id, $account_signatures_information = null, ?\DocuSign\eSign\Api\AccountsApi\CreateAccountSignaturesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2333,7 +2333,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function createCustomField($account_id, $custom_field = null, \DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions $options = null)
+    public function createCustomField($account_id, $custom_field = null, ?\DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions $options = null)
     {
         list($response) = $this->createCustomFieldWithHttpInfo($account_id, $custom_field, $options);
         return $response;
@@ -2351,7 +2351,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCustomFieldWithHttpInfo($account_id, $custom_field = null, \DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions $options = null): array
+    public function createCustomFieldWithHttpInfo($account_id, $custom_field = null, ?\DocuSign\eSign\Api\AccountsApi\CreateCustomFieldOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2436,7 +2436,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
-    public function createPermissionProfile($account_id, $permission_profile = null, \DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions $options = null)
+    public function createPermissionProfile($account_id, $permission_profile = null, ?\DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions $options = null)
     {
         list($response) = $this->createPermissionProfileWithHttpInfo($account_id, $permission_profile, $options);
         return $response;
@@ -2454,7 +2454,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createPermissionProfileWithHttpInfo($account_id, $permission_profile = null, \DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions $options = null): array
+    public function createPermissionProfileWithHttpInfo($account_id, $permission_profile = null, ?\DocuSign\eSign\Api\AccountsApi\CreatePermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -2746,7 +2746,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return mixed
      */
-    public function delete($account_id, \DocuSign\eSign\Api\AccountsApi\DeleteOptions $options = null)
+    public function delete($account_id, ?\DocuSign\eSign\Api\AccountsApi\DeleteOptions $options = null)
     {
         list($response) = $this->deleteWithHttpInfo($account_id, $options);
         return $response;
@@ -2763,7 +2763,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\DeleteOptions $options = null): array
+    public function deleteWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\DeleteOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3433,7 +3433,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return mixed
      */
-    public function deleteCustomField($account_id, $custom_field_id, \DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions $options = null)
+    public function deleteCustomField($account_id, $custom_field_id, ?\DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions $options = null)
     {
         list($response) = $this->deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, $options);
         return $response;
@@ -3451,7 +3451,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, \DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions $options = null): array
+    public function deleteCustomFieldWithHttpInfo($account_id, $custom_field_id, ?\DocuSign\eSign\Api\AccountsApi\DeleteCustomFieldOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3618,7 +3618,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return mixed
      */
-    public function deletePermissionProfile($account_id, $permission_profile_id, \DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions $options = null)
+    public function deletePermissionProfile($account_id, $permission_profile_id, ?\DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions $options = null)
     {
         list($response) = $this->deletePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $options);
         return $response;
@@ -3636,7 +3636,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deletePermissionProfileWithHttpInfo($account_id, $permission_profile_id, \DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions $options = null): array
+    public function deletePermissionProfileWithHttpInfo($account_id, $permission_profile_id, ?\DocuSign\eSign\Api\AccountsApi\DeletePermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -3926,7 +3926,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountIdentityVerificationResponse
      */
-    public function getAccountIdentityVerification($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions $options = null)
+    public function getAccountIdentityVerification($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions $options = null)
     {
         list($response) = $this->getAccountIdentityVerificationWithHttpInfo($account_id, $options);
         return $response;
@@ -3943,7 +3943,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountIdentityVerificationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountIdentityVerificationWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions $options = null): array
+    public function getAccountIdentityVerificationWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountIdentityVerificationOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4022,7 +4022,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountInformation
      */
-    public function getAccountInformation($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions $options = null)
+    public function getAccountInformation($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions $options = null)
     {
         list($response) = $this->getAccountInformationWithHttpInfo($account_id, $options);
         return $response;
@@ -4039,7 +4039,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountInformationWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions $options = null): array
+    public function getAccountInformationWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountInformationOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4220,7 +4220,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \SplFileObject
      */
-    public function getAccountSignatureImage($account_id, $image_type, $signature_id, \DocuSign\eSign\Api\AccountsApi\GetAccountSignatureImageOptions $options = null)
+    public function getAccountSignatureImage($account_id, $image_type, $signature_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountSignatureImageOptions $options = null)
     {
         list($response) = $this->getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $options);
         return $response;
@@ -4239,7 +4239,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, \DocuSign\eSign\Api\AccountsApi\GetAccountSignatureImageOptions $options = null): array
+    public function getAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountSignatureImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4334,7 +4334,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignaturesInformation
      */
-    public function getAccountSignatures($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountSignaturesOptions $options = null)
+    public function getAccountSignatures($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountSignaturesOptions $options = null)
     {
         list($response) = $this->getAccountSignaturesWithHttpInfo($account_id, $options);
         return $response;
@@ -4351,7 +4351,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignaturesInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccountSignaturesWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetAccountSignaturesOptions $options = null): array
+    public function getAccountSignaturesWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetAccountSignaturesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4524,7 +4524,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserAuthorizations
      */
-    public function getAgentUserAuthorizations($account_id, $user_id, \DocuSign\eSign\Api\AccountsApi\GetAgentUserAuthorizationsOptions $options = null)
+    public function getAgentUserAuthorizations($account_id, $user_id, ?\DocuSign\eSign\Api\AccountsApi\GetAgentUserAuthorizationsOptions $options = null)
     {
         list($response) = $this->getAgentUserAuthorizationsWithHttpInfo($account_id, $user_id, $options);
         return $response;
@@ -4542,7 +4542,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserAuthorizations, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAgentUserAuthorizationsWithHttpInfo($account_id, $user_id, \DocuSign\eSign\Api\AccountsApi\GetAgentUserAuthorizationsOptions $options = null): array
+    public function getAgentUserAuthorizationsWithHttpInfo($account_id, $user_id, ?\DocuSign\eSign\Api\AccountsApi\GetAgentUserAuthorizationsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4734,7 +4734,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BillingChargeResponse
      */
-    public function getBillingCharges($account_id, \DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions $options = null)
+    public function getBillingCharges($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions $options = null)
     {
         list($response) = $this->getBillingChargesWithHttpInfo($account_id, $options);
         return $response;
@@ -4751,7 +4751,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BillingChargeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBillingChargesWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions $options = null): array
+    public function getBillingChargesWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetBillingChargesOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -4831,7 +4831,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
-    public function getBrand($account_id, $brand_id, \DocuSign\eSign\Api\AccountsApi\GetBrandOptions $options = null)
+    public function getBrand($account_id, $brand_id, ?\DocuSign\eSign\Api\AccountsApi\GetBrandOptions $options = null)
     {
         list($response) = $this->getBrandWithHttpInfo($account_id, $brand_id, $options);
         return $response;
@@ -4849,7 +4849,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBrandWithHttpInfo($account_id, $brand_id, \DocuSign\eSign\Api\AccountsApi\GetBrandOptions $options = null): array
+    public function getBrandWithHttpInfo($account_id, $brand_id, ?\DocuSign\eSign\Api\AccountsApi\GetBrandOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5238,7 +5238,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return mixed
      */
-    public function getBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, \DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions $options = null)
+    public function getBrandResourcesByContentType($account_id, $brand_id, $resource_content_type, ?\DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions $options = null)
     {
         list($response) = $this->getBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, $options);
         return $response;
@@ -5257,7 +5257,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, \DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions $options = null): array
+    public function getBrandResourcesByContentTypeWithHttpInfo($account_id, $brand_id, $resource_content_type, ?\DocuSign\eSign\Api\AccountsApi\GetBrandResourcesByContentTypeOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -5448,7 +5448,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
-    public function getConsumerDisclosureDefault($account_id, \DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions $options = null)
+    public function getConsumerDisclosureDefault($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions $options = null)
     {
         list($response) = $this->getConsumerDisclosureDefaultWithHttpInfo($account_id, $options);
         return $response;
@@ -5465,7 +5465,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getConsumerDisclosureDefaultWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions $options = null): array
+    public function getConsumerDisclosureDefaultWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\GetConsumerDisclosureDefaultOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6057,7 +6057,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
-    public function getPermissionProfile($account_id, $permission_profile_id, \DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions $options = null)
+    public function getPermissionProfile($account_id, $permission_profile_id, ?\DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions $options = null)
     {
         list($response) = $this->getPermissionProfileWithHttpInfo($account_id, $permission_profile_id, $options);
         return $response;
@@ -6075,7 +6075,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPermissionProfileWithHttpInfo($account_id, $permission_profile_id, \DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions $options = null): array
+    public function getPermissionProfileWithHttpInfo($account_id, $permission_profile_id, ?\DocuSign\eSign\Api\AccountsApi\GetPermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6163,7 +6163,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\UserAuthorizations
      */
-    public function getPrincipalUserAuthorizations($account_id, $user_id, \DocuSign\eSign\Api\AccountsApi\GetPrincipalUserAuthorizationsOptions $options = null)
+    public function getPrincipalUserAuthorizations($account_id, $user_id, ?\DocuSign\eSign\Api\AccountsApi\GetPrincipalUserAuthorizationsOptions $options = null)
     {
         list($response) = $this->getPrincipalUserAuthorizationsWithHttpInfo($account_id, $user_id, $options);
         return $response;
@@ -6181,7 +6181,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\UserAuthorizations, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPrincipalUserAuthorizationsWithHttpInfo($account_id, $user_id, \DocuSign\eSign\Api\AccountsApi\GetPrincipalUserAuthorizationsOptions $options = null): array
+    public function getPrincipalUserAuthorizationsWithHttpInfo($account_id, $user_id, ?\DocuSign\eSign\Api\AccountsApi\GetPrincipalUserAuthorizationsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6738,7 +6738,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\BrandsResponse
      */
-    public function listBrands($account_id, \DocuSign\eSign\Api\AccountsApi\ListBrandsOptions $options = null)
+    public function listBrands($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListBrandsOptions $options = null)
     {
         list($response) = $this->listBrandsWithHttpInfo($account_id, $options);
         return $response;
@@ -6755,7 +6755,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\BrandsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listBrandsWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\ListBrandsOptions $options = null): array
+    public function listBrandsWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListBrandsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -6924,7 +6924,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfileInformation
      */
-    public function listPermissions($account_id, \DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions $options = null)
+    public function listPermissions($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions $options = null)
     {
         list($response) = $this->listPermissionsWithHttpInfo($account_id, $options);
         return $response;
@@ -6941,7 +6941,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfileInformation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listPermissionsWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions $options = null): array
+    public function listPermissionsWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListPermissionsOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7020,7 +7020,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\RecipientNamesResponse
      */
-    public function listRecipientNamesByEmail($account_id, \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions $options = null)
+    public function listRecipientNamesByEmail($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions $options = null)
     {
         list($response) = $this->listRecipientNamesByEmailWithHttpInfo($account_id, $options);
         return $response;
@@ -7037,7 +7037,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\RecipientNamesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listRecipientNamesByEmailWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions $options = null): array
+    public function listRecipientNamesByEmailWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7203,7 +7203,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
-    public function listSharedAccess($account_id, \DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions $options = null)
+    public function listSharedAccess($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions $options = null)
     {
         list($response) = $this->listSharedAccessWithHttpInfo($account_id, $options);
         return $response;
@@ -7220,7 +7220,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listSharedAccessWithHttpInfo($account_id, \DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions $options = null): array
+    public function listSharedAccessWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListSharedAccessOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7684,7 +7684,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignature
      */
-    public function updateAccountSignatureById($account_id, $signature_id, $account_signature_definition = null, \DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureByIdOptions $options = null)
+    public function updateAccountSignatureById($account_id, $signature_id, $account_signature_definition = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureByIdOptions $options = null)
     {
         list($response) = $this->updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition, $options);
         return $response;
@@ -7703,7 +7703,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition = null, \DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureByIdOptions $options = null): array
+    public function updateAccountSignatureByIdWithHttpInfo($account_id, $signature_id, $account_signature_definition = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureByIdOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -7797,7 +7797,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSignature
      */
-    public function updateAccountSignatureImage($account_id, $image_type, $signature_id, \DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureImageOptions $options = null)
+    public function updateAccountSignatureImage($account_id, $image_type, $signature_id, ?\DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureImageOptions $options = null)
     {
         list($response) = $this->updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, $options);
         return $response;
@@ -7816,7 +7816,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSignature, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, \DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureImageOptions $options = null): array
+    public function updateAccountSignatureImageWithHttpInfo($account_id, $image_type, $signature_id, ?\DocuSign\eSign\Api\AccountsApi\UpdateAccountSignatureImageOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8007,7 +8007,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\Brand
      */
-    public function updateBrand($account_id, $brand_id, $brand = null, \DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions $options = null)
+    public function updateBrand($account_id, $brand_id, $brand = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions $options = null)
     {
         list($response) = $this->updateBrandWithHttpInfo($account_id, $brand_id, $brand, $options);
         return $response;
@@ -8026,7 +8026,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\Brand, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateBrandWithHttpInfo($account_id, $brand_id, $brand = null, \DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions $options = null): array
+    public function updateBrandWithHttpInfo($account_id, $brand_id, $brand = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateBrandOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8357,7 +8357,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\ConsumerDisclosure
      */
-    public function updateConsumerDisclosure($account_id, $lang_code, $consumer_disclosure = null, \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions $options = null)
+    public function updateConsumerDisclosure($account_id, $lang_code, $consumer_disclosure = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions $options = null)
     {
         list($response) = $this->updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure, $options);
         return $response;
@@ -8376,7 +8376,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\ConsumerDisclosure, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure = null, \DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions $options = null): array
+    public function updateConsumerDisclosureWithHttpInfo($account_id, $lang_code, $consumer_disclosure = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateConsumerDisclosureOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -8470,7 +8470,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\CustomFields
      */
-    public function updateCustomField($account_id, $custom_field_id, $custom_field = null, \DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions $options = null)
+    public function updateCustomField($account_id, $custom_field_id, $custom_field = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions $options = null)
     {
         list($response) = $this->updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field, $options);
         return $response;
@@ -8489,7 +8489,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\CustomFields, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field = null, \DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions $options = null): array
+    public function updateCustomFieldWithHttpInfo($account_id, $custom_field_id, $custom_field = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateCustomFieldOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -9053,7 +9053,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\PermissionProfile
      */
-    public function updatePermissionProfile($account_id, $permission_profile_id, $permission_profile = null, \DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions $options = null)
+    public function updatePermissionProfile($account_id, $permission_profile_id, $permission_profile = null, ?\DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions $options = null)
     {
         list($response) = $this->updatePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $permission_profile, $options);
         return $response;
@@ -9072,7 +9072,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\PermissionProfile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $permission_profile = null, \DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions $options = null): array
+    public function updatePermissionProfileWithHttpInfo($account_id, $permission_profile_id, $permission_profile = null, ?\DocuSign\eSign\Api\AccountsApi\UpdatePermissionProfileOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
@@ -9255,7 +9255,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\AccountSharedAccess
      */
-    public function updateSharedAccess($account_id, $account_shared_access = null, \DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions $options = null)
+    public function updateSharedAccess($account_id, $account_shared_access = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions $options = null)
     {
         list($response) = $this->updateSharedAccessWithHttpInfo($account_id, $account_shared_access, $options);
         return $response;
@@ -9273,7 +9273,7 @@ class AccountsApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\AccountSharedAccess, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSharedAccessWithHttpInfo($account_id, $account_shared_access = null, \DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions $options = null): array
+    public function updateSharedAccessWithHttpInfo($account_id, $account_shared_access = null, ?\DocuSign\eSign\Api\AccountsApi\UpdateSharedAccessOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {

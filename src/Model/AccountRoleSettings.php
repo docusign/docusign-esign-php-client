@@ -60,6 +60,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'account_agreements_access_type' => '?string',
+        'account_agreements_access_type_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'account_management_granular' => '\DocuSign\eSign\Model\AccountManagementGranular',
         'allow_account_management' => '?string',
         'allow_account_management_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_api_access' => '?string',
@@ -108,6 +111,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_vaulting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'allow_wet_signing_override' => '?string',
         'allow_wet_signing_override_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_bulk_upload_agreements' => '?string',
+        'can_bulk_upload_agreements_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_create_transaction' => '?string',
         'can_create_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_create_workspaces' => '?string',
@@ -116,6 +121,10 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'can_delete_documents_in_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_delete_transaction' => '?string',
         'can_delete_transaction_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_agreement_desk_request' => '?string',
+        'can_manage_agreement_desk_request_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'can_manage_agreement_desk_request_setting' => '?string',
+        'can_manage_agreement_desk_request_setting_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'can_send_envelopes_via_sms' => '?string',
         'can_send_envelopes_via_sms_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'disable_document_upload' => '?string',
@@ -132,6 +141,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'enable_sequential_signing_interface_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'enable_transaction_point_integration' => '?string',
         'enable_transaction_point_integration_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
+        'playbook_access' => '?string',
+        'playbook_access_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'power_form_role' => '?string',
         'power_form_role_metadata' => '\DocuSign\eSign\Model\SettingsMetadata',
         'receive_completed_self_signed_documents_as_email_links' => '?string',
@@ -159,6 +170,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'account_agreements_access_type' => null,
+        'account_agreements_access_type_metadata' => null,
+        'account_management_granular' => null,
         'allow_account_management' => null,
         'allow_account_management_metadata' => null,
         'allow_api_access' => null,
@@ -207,6 +221,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_vaulting_metadata' => null,
         'allow_wet_signing_override' => null,
         'allow_wet_signing_override_metadata' => null,
+        'can_bulk_upload_agreements' => null,
+        'can_bulk_upload_agreements_metadata' => null,
         'can_create_transaction' => null,
         'can_create_transaction_metadata' => null,
         'can_create_workspaces' => null,
@@ -215,6 +231,10 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'can_delete_documents_in_transaction_metadata' => null,
         'can_delete_transaction' => null,
         'can_delete_transaction_metadata' => null,
+        'can_manage_agreement_desk_request' => null,
+        'can_manage_agreement_desk_request_metadata' => null,
+        'can_manage_agreement_desk_request_setting' => null,
+        'can_manage_agreement_desk_request_setting_metadata' => null,
         'can_send_envelopes_via_sms' => null,
         'can_send_envelopes_via_sms_metadata' => null,
         'disable_document_upload' => null,
@@ -231,6 +251,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'enable_sequential_signing_interface_metadata' => null,
         'enable_transaction_point_integration' => null,
         'enable_transaction_point_integration_metadata' => null,
+        'playbook_access' => null,
+        'playbook_access_metadata' => null,
         'power_form_role' => null,
         'power_form_role_metadata' => null,
         'receive_completed_self_signed_documents_as_email_links' => null,
@@ -279,6 +301,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'account_agreements_access_type' => 'accountAgreementsAccessType',
+        'account_agreements_access_type_metadata' => 'accountAgreementsAccessTypeMetadata',
+        'account_management_granular' => 'accountManagementGranular',
         'allow_account_management' => 'allowAccountManagement',
         'allow_account_management_metadata' => 'allowAccountManagementMetadata',
         'allow_api_access' => 'allowApiAccess',
@@ -327,6 +352,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_vaulting_metadata' => 'allowVaultingMetadata',
         'allow_wet_signing_override' => 'allowWetSigningOverride',
         'allow_wet_signing_override_metadata' => 'allowWetSigningOverrideMetadata',
+        'can_bulk_upload_agreements' => 'canBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata' => 'canBulkUploadAgreementsMetadata',
         'can_create_transaction' => 'canCreateTransaction',
         'can_create_transaction_metadata' => 'canCreateTransactionMetadata',
         'can_create_workspaces' => 'canCreateWorkspaces',
@@ -335,6 +362,10 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'can_delete_documents_in_transaction_metadata' => 'canDeleteDocumentsInTransactionMetadata',
         'can_delete_transaction' => 'canDeleteTransaction',
         'can_delete_transaction_metadata' => 'canDeleteTransactionMetadata',
+        'can_manage_agreement_desk_request' => 'canManageAgreementDeskRequest',
+        'can_manage_agreement_desk_request_metadata' => 'canManageAgreementDeskRequestMetadata',
+        'can_manage_agreement_desk_request_setting' => 'canManageAgreementDeskRequestSetting',
+        'can_manage_agreement_desk_request_setting_metadata' => 'canManageAgreementDeskRequestSettingMetadata',
         'can_send_envelopes_via_sms' => 'canSendEnvelopesViaSMS',
         'can_send_envelopes_via_sms_metadata' => 'canSendEnvelopesViaSMSMetadata',
         'disable_document_upload' => 'disableDocumentUpload',
@@ -351,6 +382,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'enable_sequential_signing_interface_metadata' => 'enableSequentialSigningInterfaceMetadata',
         'enable_transaction_point_integration' => 'enableTransactionPointIntegration',
         'enable_transaction_point_integration_metadata' => 'enableTransactionPointIntegrationMetadata',
+        'playbook_access' => 'playbookAccess',
+        'playbook_access_metadata' => 'playbookAccessMetadata',
         'power_form_role' => 'powerFormRole',
         'power_form_role_metadata' => 'powerFormRoleMetadata',
         'receive_completed_self_signed_documents_as_email_links' => 'receiveCompletedSelfSignedDocumentsAsEmailLinks',
@@ -378,6 +411,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'account_agreements_access_type' => 'setAccountAgreementsAccessType',
+        'account_agreements_access_type_metadata' => 'setAccountAgreementsAccessTypeMetadata',
+        'account_management_granular' => 'setAccountManagementGranular',
         'allow_account_management' => 'setAllowAccountManagement',
         'allow_account_management_metadata' => 'setAllowAccountManagementMetadata',
         'allow_api_access' => 'setAllowApiAccess',
@@ -426,6 +462,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_vaulting_metadata' => 'setAllowVaultingMetadata',
         'allow_wet_signing_override' => 'setAllowWetSigningOverride',
         'allow_wet_signing_override_metadata' => 'setAllowWetSigningOverrideMetadata',
+        'can_bulk_upload_agreements' => 'setCanBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata' => 'setCanBulkUploadAgreementsMetadata',
         'can_create_transaction' => 'setCanCreateTransaction',
         'can_create_transaction_metadata' => 'setCanCreateTransactionMetadata',
         'can_create_workspaces' => 'setCanCreateWorkspaces',
@@ -434,6 +472,10 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'can_delete_documents_in_transaction_metadata' => 'setCanDeleteDocumentsInTransactionMetadata',
         'can_delete_transaction' => 'setCanDeleteTransaction',
         'can_delete_transaction_metadata' => 'setCanDeleteTransactionMetadata',
+        'can_manage_agreement_desk_request' => 'setCanManageAgreementDeskRequest',
+        'can_manage_agreement_desk_request_metadata' => 'setCanManageAgreementDeskRequestMetadata',
+        'can_manage_agreement_desk_request_setting' => 'setCanManageAgreementDeskRequestSetting',
+        'can_manage_agreement_desk_request_setting_metadata' => 'setCanManageAgreementDeskRequestSettingMetadata',
         'can_send_envelopes_via_sms' => 'setCanSendEnvelopesViaSms',
         'can_send_envelopes_via_sms_metadata' => 'setCanSendEnvelopesViaSmsMetadata',
         'disable_document_upload' => 'setDisableDocumentUpload',
@@ -450,6 +492,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'enable_sequential_signing_interface_metadata' => 'setEnableSequentialSigningInterfaceMetadata',
         'enable_transaction_point_integration' => 'setEnableTransactionPointIntegration',
         'enable_transaction_point_integration_metadata' => 'setEnableTransactionPointIntegrationMetadata',
+        'playbook_access' => 'setPlaybookAccess',
+        'playbook_access_metadata' => 'setPlaybookAccessMetadata',
         'power_form_role' => 'setPowerFormRole',
         'power_form_role_metadata' => 'setPowerFormRoleMetadata',
         'receive_completed_self_signed_documents_as_email_links' => 'setReceiveCompletedSelfSignedDocumentsAsEmailLinks',
@@ -477,6 +521,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'account_agreements_access_type' => 'getAccountAgreementsAccessType',
+        'account_agreements_access_type_metadata' => 'getAccountAgreementsAccessTypeMetadata',
+        'account_management_granular' => 'getAccountManagementGranular',
         'allow_account_management' => 'getAllowAccountManagement',
         'allow_account_management_metadata' => 'getAllowAccountManagementMetadata',
         'allow_api_access' => 'getAllowApiAccess',
@@ -525,6 +572,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'allow_vaulting_metadata' => 'getAllowVaultingMetadata',
         'allow_wet_signing_override' => 'getAllowWetSigningOverride',
         'allow_wet_signing_override_metadata' => 'getAllowWetSigningOverrideMetadata',
+        'can_bulk_upload_agreements' => 'getCanBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata' => 'getCanBulkUploadAgreementsMetadata',
         'can_create_transaction' => 'getCanCreateTransaction',
         'can_create_transaction_metadata' => 'getCanCreateTransactionMetadata',
         'can_create_workspaces' => 'getCanCreateWorkspaces',
@@ -533,6 +582,10 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'can_delete_documents_in_transaction_metadata' => 'getCanDeleteDocumentsInTransactionMetadata',
         'can_delete_transaction' => 'getCanDeleteTransaction',
         'can_delete_transaction_metadata' => 'getCanDeleteTransactionMetadata',
+        'can_manage_agreement_desk_request' => 'getCanManageAgreementDeskRequest',
+        'can_manage_agreement_desk_request_metadata' => 'getCanManageAgreementDeskRequestMetadata',
+        'can_manage_agreement_desk_request_setting' => 'getCanManageAgreementDeskRequestSetting',
+        'can_manage_agreement_desk_request_setting_metadata' => 'getCanManageAgreementDeskRequestSettingMetadata',
         'can_send_envelopes_via_sms' => 'getCanSendEnvelopesViaSms',
         'can_send_envelopes_via_sms_metadata' => 'getCanSendEnvelopesViaSmsMetadata',
         'disable_document_upload' => 'getDisableDocumentUpload',
@@ -549,6 +602,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         'enable_sequential_signing_interface_metadata' => 'getEnableSequentialSigningInterfaceMetadata',
         'enable_transaction_point_integration' => 'getEnableTransactionPointIntegration',
         'enable_transaction_point_integration_metadata' => 'getEnableTransactionPointIntegrationMetadata',
+        'playbook_access' => 'getPlaybookAccess',
+        'playbook_access_metadata' => 'getPlaybookAccessMetadata',
         'power_form_role' => 'getPowerFormRole',
         'power_form_role_metadata' => 'getPowerFormRoleMetadata',
         'receive_completed_self_signed_documents_as_email_links' => 'getReceiveCompletedSelfSignedDocumentsAsEmailLinks',
@@ -630,6 +685,9 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
+        $this->container['account_agreements_access_type'] = isset($data['account_agreements_access_type']) ? $data['account_agreements_access_type'] : null;
+        $this->container['account_agreements_access_type_metadata'] = isset($data['account_agreements_access_type_metadata']) ? $data['account_agreements_access_type_metadata'] : null;
+        $this->container['account_management_granular'] = isset($data['account_management_granular']) ? $data['account_management_granular'] : null;
         $this->container['allow_account_management'] = isset($data['allow_account_management']) ? $data['allow_account_management'] : null;
         $this->container['allow_account_management_metadata'] = isset($data['allow_account_management_metadata']) ? $data['allow_account_management_metadata'] : null;
         $this->container['allow_api_access'] = isset($data['allow_api_access']) ? $data['allow_api_access'] : null;
@@ -678,6 +736,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['allow_vaulting_metadata'] = isset($data['allow_vaulting_metadata']) ? $data['allow_vaulting_metadata'] : null;
         $this->container['allow_wet_signing_override'] = isset($data['allow_wet_signing_override']) ? $data['allow_wet_signing_override'] : null;
         $this->container['allow_wet_signing_override_metadata'] = isset($data['allow_wet_signing_override_metadata']) ? $data['allow_wet_signing_override_metadata'] : null;
+        $this->container['can_bulk_upload_agreements'] = isset($data['can_bulk_upload_agreements']) ? $data['can_bulk_upload_agreements'] : null;
+        $this->container['can_bulk_upload_agreements_metadata'] = isset($data['can_bulk_upload_agreements_metadata']) ? $data['can_bulk_upload_agreements_metadata'] : null;
         $this->container['can_create_transaction'] = isset($data['can_create_transaction']) ? $data['can_create_transaction'] : null;
         $this->container['can_create_transaction_metadata'] = isset($data['can_create_transaction_metadata']) ? $data['can_create_transaction_metadata'] : null;
         $this->container['can_create_workspaces'] = isset($data['can_create_workspaces']) ? $data['can_create_workspaces'] : null;
@@ -686,6 +746,10 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['can_delete_documents_in_transaction_metadata'] = isset($data['can_delete_documents_in_transaction_metadata']) ? $data['can_delete_documents_in_transaction_metadata'] : null;
         $this->container['can_delete_transaction'] = isset($data['can_delete_transaction']) ? $data['can_delete_transaction'] : null;
         $this->container['can_delete_transaction_metadata'] = isset($data['can_delete_transaction_metadata']) ? $data['can_delete_transaction_metadata'] : null;
+        $this->container['can_manage_agreement_desk_request'] = isset($data['can_manage_agreement_desk_request']) ? $data['can_manage_agreement_desk_request'] : null;
+        $this->container['can_manage_agreement_desk_request_metadata'] = isset($data['can_manage_agreement_desk_request_metadata']) ? $data['can_manage_agreement_desk_request_metadata'] : null;
+        $this->container['can_manage_agreement_desk_request_setting'] = isset($data['can_manage_agreement_desk_request_setting']) ? $data['can_manage_agreement_desk_request_setting'] : null;
+        $this->container['can_manage_agreement_desk_request_setting_metadata'] = isset($data['can_manage_agreement_desk_request_setting_metadata']) ? $data['can_manage_agreement_desk_request_setting_metadata'] : null;
         $this->container['can_send_envelopes_via_sms'] = isset($data['can_send_envelopes_via_sms']) ? $data['can_send_envelopes_via_sms'] : null;
         $this->container['can_send_envelopes_via_sms_metadata'] = isset($data['can_send_envelopes_via_sms_metadata']) ? $data['can_send_envelopes_via_sms_metadata'] : null;
         $this->container['disable_document_upload'] = isset($data['disable_document_upload']) ? $data['disable_document_upload'] : null;
@@ -702,6 +766,8 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         $this->container['enable_sequential_signing_interface_metadata'] = isset($data['enable_sequential_signing_interface_metadata']) ? $data['enable_sequential_signing_interface_metadata'] : null;
         $this->container['enable_transaction_point_integration'] = isset($data['enable_transaction_point_integration']) ? $data['enable_transaction_point_integration'] : null;
         $this->container['enable_transaction_point_integration_metadata'] = isset($data['enable_transaction_point_integration_metadata']) ? $data['enable_transaction_point_integration_metadata'] : null;
+        $this->container['playbook_access'] = isset($data['playbook_access']) ? $data['playbook_access'] : null;
+        $this->container['playbook_access_metadata'] = isset($data['playbook_access_metadata']) ? $data['playbook_access_metadata'] : null;
         $this->container['power_form_role'] = isset($data['power_form_role']) ? $data['power_form_role'] : null;
         $this->container['power_form_role_metadata'] = isset($data['power_form_role_metadata']) ? $data['power_form_role_metadata'] : null;
         $this->container['receive_completed_self_signed_documents_as_email_links'] = isset($data['receive_completed_self_signed_documents_as_email_links']) ? $data['receive_completed_self_signed_documents_as_email_links'] : null;
@@ -746,6 +812,78 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets account_agreements_access_type
+     *
+     * @return ?string
+     */
+    public function getAccountAgreementsAccessType()
+    {
+        return $this->container['account_agreements_access_type'];
+    }
+
+    /**
+     * Sets account_agreements_access_type
+     *
+     * @param ?string $account_agreements_access_type 
+     *
+     * @return $this
+     */
+    public function setAccountAgreementsAccessType($account_agreements_access_type)
+    {
+        $this->container['account_agreements_access_type'] = $account_agreements_access_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_agreements_access_type_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getAccountAgreementsAccessTypeMetadata()
+    {
+        return $this->container['account_agreements_access_type_metadata'];
+    }
+
+    /**
+     * Sets account_agreements_access_type_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $account_agreements_access_type_metadata 
+     *
+     * @return $this
+     */
+    public function setAccountAgreementsAccessTypeMetadata($account_agreements_access_type_metadata)
+    {
+        $this->container['account_agreements_access_type_metadata'] = $account_agreements_access_type_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_management_granular
+     *
+     * @return \DocuSign\eSign\Model\AccountManagementGranular
+     */
+    public function getAccountManagementGranular()
+    {
+        return $this->container['account_management_granular'];
+    }
+
+    /**
+     * Sets account_management_granular
+     *
+     * @param \DocuSign\eSign\Model\AccountManagementGranular $account_management_granular 
+     *
+     * @return $this
+     */
+    public function setAccountManagementGranular($account_management_granular)
+    {
+        $this->container['account_management_granular'] = $account_management_granular;
+
+        return $this;
+    }
 
     /**
      * Gets allow_account_management
@@ -1900,6 +2038,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets can_bulk_upload_agreements
+     *
+     * @return ?string
+     */
+    public function getCanBulkUploadAgreements()
+    {
+        return $this->container['can_bulk_upload_agreements'];
+    }
+
+    /**
+     * Sets can_bulk_upload_agreements
+     *
+     * @param ?string $can_bulk_upload_agreements 
+     *
+     * @return $this
+     */
+    public function setCanBulkUploadAgreements($can_bulk_upload_agreements)
+    {
+        $this->container['can_bulk_upload_agreements'] = $can_bulk_upload_agreements;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_bulk_upload_agreements_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanBulkUploadAgreementsMetadata()
+    {
+        return $this->container['can_bulk_upload_agreements_metadata'];
+    }
+
+    /**
+     * Sets can_bulk_upload_agreements_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_bulk_upload_agreements_metadata 
+     *
+     * @return $this
+     */
+    public function setCanBulkUploadAgreementsMetadata($can_bulk_upload_agreements_metadata)
+    {
+        $this->container['can_bulk_upload_agreements_metadata'] = $can_bulk_upload_agreements_metadata;
+
+        return $this;
+    }
+
+    /**
      * Gets can_create_transaction
      *
      * @return ?string
@@ -2087,6 +2273,102 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     public function setCanDeleteTransactionMetadata($can_delete_transaction_metadata)
     {
         $this->container['can_delete_transaction_metadata'] = $can_delete_transaction_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_agreement_desk_request
+     *
+     * @return ?string
+     */
+    public function getCanManageAgreementDeskRequest()
+    {
+        return $this->container['can_manage_agreement_desk_request'];
+    }
+
+    /**
+     * Sets can_manage_agreement_desk_request
+     *
+     * @param ?string $can_manage_agreement_desk_request 
+     *
+     * @return $this
+     */
+    public function setCanManageAgreementDeskRequest($can_manage_agreement_desk_request)
+    {
+        $this->container['can_manage_agreement_desk_request'] = $can_manage_agreement_desk_request;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_agreement_desk_request_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageAgreementDeskRequestMetadata()
+    {
+        return $this->container['can_manage_agreement_desk_request_metadata'];
+    }
+
+    /**
+     * Sets can_manage_agreement_desk_request_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_agreement_desk_request_metadata 
+     *
+     * @return $this
+     */
+    public function setCanManageAgreementDeskRequestMetadata($can_manage_agreement_desk_request_metadata)
+    {
+        $this->container['can_manage_agreement_desk_request_metadata'] = $can_manage_agreement_desk_request_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_agreement_desk_request_setting
+     *
+     * @return ?string
+     */
+    public function getCanManageAgreementDeskRequestSetting()
+    {
+        return $this->container['can_manage_agreement_desk_request_setting'];
+    }
+
+    /**
+     * Sets can_manage_agreement_desk_request_setting
+     *
+     * @param ?string $can_manage_agreement_desk_request_setting 
+     *
+     * @return $this
+     */
+    public function setCanManageAgreementDeskRequestSetting($can_manage_agreement_desk_request_setting)
+    {
+        $this->container['can_manage_agreement_desk_request_setting'] = $can_manage_agreement_desk_request_setting;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_manage_agreement_desk_request_setting_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getCanManageAgreementDeskRequestSettingMetadata()
+    {
+        return $this->container['can_manage_agreement_desk_request_setting_metadata'];
+    }
+
+    /**
+     * Sets can_manage_agreement_desk_request_setting_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $can_manage_agreement_desk_request_setting_metadata 
+     *
+     * @return $this
+     */
+    public function setCanManageAgreementDeskRequestSettingMetadata($can_manage_agreement_desk_request_setting_metadata)
+    {
+        $this->container['can_manage_agreement_desk_request_setting_metadata'] = $can_manage_agreement_desk_request_setting_metadata;
 
         return $this;
     }
@@ -2471,6 +2753,54 @@ class AccountRoleSettings implements ModelInterface, ArrayAccess
     public function setEnableTransactionPointIntegrationMetadata($enable_transaction_point_integration_metadata)
     {
         $this->container['enable_transaction_point_integration_metadata'] = $enable_transaction_point_integration_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets playbook_access
+     *
+     * @return ?string
+     */
+    public function getPlaybookAccess()
+    {
+        return $this->container['playbook_access'];
+    }
+
+    /**
+     * Sets playbook_access
+     *
+     * @param ?string $playbook_access 
+     *
+     * @return $this
+     */
+    public function setPlaybookAccess($playbook_access)
+    {
+        $this->container['playbook_access'] = $playbook_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets playbook_access_metadata
+     *
+     * @return \DocuSign\eSign\Model\SettingsMetadata
+     */
+    public function getPlaybookAccessMetadata()
+    {
+        return $this->container['playbook_access_metadata'];
+    }
+
+    /**
+     * Sets playbook_access_metadata
+     *
+     * @param \DocuSign\eSign\Model\SettingsMetadata $playbook_access_metadata 
+     *
+     * @return $this
+     */
+    public function setPlaybookAccessMetadata($playbook_access_metadata)
+    {
+        $this->container['playbook_access_metadata'] = $playbook_access_metadata;
 
         return $this;
     }

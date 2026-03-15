@@ -187,7 +187,7 @@ class TemplateViewRecipientSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['show_contacts_list'] = isset($data['show_contacts_list']) ? $data['show_contacts_list'] : null;
         $this->container['show_edit_message'] = isset($data['show_edit_message']) ? $data['show_edit_message'] : null;

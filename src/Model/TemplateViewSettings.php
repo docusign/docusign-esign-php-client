@@ -227,7 +227,7 @@ class TemplateViewSettings implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['back_button_action'] = isset($data['back_button_action']) ? $data['back_button_action'] : null;
         $this->container['document_settings'] = isset($data['document_settings']) ? $data['document_settings'] : null;
