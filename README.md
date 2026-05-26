@@ -30,7 +30,7 @@ This client SDK is provided as open source, which enables you to customize its f
 <a id="versionInformation"></a>
 ### Version Information
 - **API version**: v2.1
-- **Latest SDK version**: 8.8.0
+- **Latest SDK version**: 8.8.1
 
 <a id="requirements"></a>
 ### Requirements
@@ -70,7 +70,9 @@ This client has the following external dependencies:
 *   [PHP cURL extension](https://www.php.net/manual/en/intro.curl.php)
 *   [PHP JSON extension](https://php.net/manual/en/book.json.php)
 *   [PHP MBString extension](https://www.php.net/manual/en/intro.mbstring.php)
-*   firebase/php-jwt v6.0
+*   adhocore/jwt v1.1+
+
+> **⚠ Deprecation Notice:** Support for PHP versions below 8.0 will be phased out in the coming months. A new SDK compatible with PHP 8.1 will be released, which replaces adhocore/jwt with firebase/php-jwt v7. We strongly recommend upgrading to PHP 8.1 or later to maintain compatibility with upcoming SDK releases.
 
 <a id="apiReference"></a>
 ## API Reference
