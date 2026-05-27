@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v8.8.1] - eSignature API v2.1-26.1.00.00 - 2026-05-05
+### Changed
+- Replaced JWT dependency: Switched from firebase/php-jwt (^6.0) to adhocore/jwt (^1.1) in composer.json template.
+- Updated JWT import namespace: Changed use Firebase\JWT\JWT to use Ahc\Jwt\JWT in ApiClient.
+
 ## [v8.8.0] - eSignature API v2.1-26.1.00.00 - 2026-03-05
 ### Changed
 - Added support for version v2.1-26.1.00.00 of the DocuSign ESignature API.
