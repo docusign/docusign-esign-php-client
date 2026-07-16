@@ -74,6 +74,7 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_string_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_tab_processor_version' => '?string',
         'anchor_tab_processor_version_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
+        'anchor_tab_scope' => '?string',
         'anchor_units' => '?string',
         'anchor_units_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'anchor_x_offset' => '?string',
@@ -141,6 +142,7 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_string_metadata' => null,
         'anchor_tab_processor_version' => null,
         'anchor_tab_processor_version_metadata' => null,
+        'anchor_tab_scope' => null,
         'anchor_units' => null,
         'anchor_units_metadata' => null,
         'anchor_x_offset' => null,
@@ -229,6 +231,7 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_string_metadata' => 'anchorStringMetadata',
         'anchor_tab_processor_version' => 'anchorTabProcessorVersion',
         'anchor_tab_processor_version_metadata' => 'anchorTabProcessorVersionMetadata',
+        'anchor_tab_scope' => 'anchorTabScope',
         'anchor_units' => 'anchorUnits',
         'anchor_units_metadata' => 'anchorUnitsMetadata',
         'anchor_x_offset' => 'anchorXOffset',
@@ -296,6 +299,7 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_string_metadata' => 'setAnchorStringMetadata',
         'anchor_tab_processor_version' => 'setAnchorTabProcessorVersion',
         'anchor_tab_processor_version_metadata' => 'setAnchorTabProcessorVersionMetadata',
+        'anchor_tab_scope' => 'setAnchorTabScope',
         'anchor_units' => 'setAnchorUnits',
         'anchor_units_metadata' => 'setAnchorUnitsMetadata',
         'anchor_x_offset' => 'setAnchorXOffset',
@@ -363,6 +367,7 @@ class Radio implements ModelInterface, ArrayAccess
         'anchor_string_metadata' => 'getAnchorStringMetadata',
         'anchor_tab_processor_version' => 'getAnchorTabProcessorVersion',
         'anchor_tab_processor_version_metadata' => 'getAnchorTabProcessorVersionMetadata',
+        'anchor_tab_scope' => 'getAnchorTabScope',
         'anchor_units' => 'getAnchorUnits',
         'anchor_units_metadata' => 'getAnchorUnitsMetadata',
         'anchor_x_offset' => 'getAnchorXOffset',
@@ -484,6 +489,7 @@ class Radio implements ModelInterface, ArrayAccess
         $this->container['anchor_string_metadata'] = isset($data['anchor_string_metadata']) ? $data['anchor_string_metadata'] : null;
         $this->container['anchor_tab_processor_version'] = isset($data['anchor_tab_processor_version']) ? $data['anchor_tab_processor_version'] : null;
         $this->container['anchor_tab_processor_version_metadata'] = isset($data['anchor_tab_processor_version_metadata']) ? $data['anchor_tab_processor_version_metadata'] : null;
+        $this->container['anchor_tab_scope'] = isset($data['anchor_tab_scope']) ? $data['anchor_tab_scope'] : null;
         $this->container['anchor_units'] = isset($data['anchor_units']) ? $data['anchor_units'] : null;
         $this->container['anchor_units_metadata'] = isset($data['anchor_units_metadata']) ? $data['anchor_units_metadata'] : null;
         $this->container['anchor_x_offset'] = isset($data['anchor_x_offset']) ? $data['anchor_x_offset'] : null;
@@ -887,6 +893,30 @@ class Radio implements ModelInterface, ArrayAccess
     public function setAnchorTabProcessorVersionMetadata($anchor_tab_processor_version_metadata)
     {
         $this->container['anchor_tab_processor_version_metadata'] = $anchor_tab_processor_version_metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets anchor_tab_scope
+     *
+     * @return ?string
+     */
+    public function getAnchorTabScope()
+    {
+        return $this->container['anchor_tab_scope'];
+    }
+
+    /**
+     * Sets anchor_tab_scope
+     *
+     * @param ?string $anchor_tab_scope 
+     *
+     * @return $this
+     */
+    public function setAnchorTabScope($anchor_tab_scope)
+    {
+        $this->container['anchor_tab_scope'] = $anchor_tab_scope;
 
         return $this;
     }

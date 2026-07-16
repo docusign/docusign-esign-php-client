@@ -59,7 +59,7 @@ class EnvelopesSharesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'shares' => '\DocuSign\eSign\Model\EnvelopesSharesResponseItem[]'
+        'shares' => '\DocuSign\eSign\Model\EnvelopesShareResponse[]'
     ];
 
     /**
@@ -209,7 +209,7 @@ class EnvelopesSharesResponse implements ModelInterface, ArrayAccess
     /**
      * Gets shares
      *
-     * @return \DocuSign\eSign\Model\EnvelopesSharesResponseItem[]
+     * @return \DocuSign\eSign\Model\EnvelopesShareResponse[]
      */
     public function getShares()
     {
@@ -219,7 +219,7 @@ class EnvelopesSharesResponse implements ModelInterface, ArrayAccess
     /**
      * Sets shares
      *
-     * @param \DocuSign\eSign\Model\EnvelopesSharesResponseItem[] $shares 
+     * @param \DocuSign\eSign\Model\EnvelopesShareResponse[] $shares 
      *
      * @return $this
      */

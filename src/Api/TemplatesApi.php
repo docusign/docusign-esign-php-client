@@ -615,6 +615,33 @@ class ListDocumentsOptions
         return $this;
     }
     /**
+      * $include_is_edited 
+      * @var ?string
+      */
+    protected ?string $include_is_edited = null;
+
+    /**
+     * Gets include_is_edited
+     *
+     * @return ?string
+     */
+    public function getIncludeIsEdited(): ?string
+    {
+        return $this->include_is_edited;
+    }
+
+    /**
+     * Sets include_is_edited
+     * @param ?string $include_is_edited 
+     *
+     * @return self
+     */
+    public function setIncludeIsEdited(?string $include_is_edited): self
+    {
+        $this->include_is_edited = $include_is_edited;
+        return $this;
+    }
+    /**
       * $include_tabs 
       * @var ?string
       */
@@ -1059,6 +1086,33 @@ class ListTemplatesOptions
     public function setIsDownload(?string $is_download): self
     {
         $this->is_download = $is_download;
+        return $this;
+    }
+    /**
+      * $link_configuration_id 
+      * @var ?string
+      */
+    protected ?string $link_configuration_id = null;
+
+    /**
+     * Gets link_configuration_id
+     *
+     * @return ?string
+     */
+    public function getLinkConfigurationId(): ?string
+    {
+        return $this->link_configuration_id;
+    }
+
+    /**
+     * Sets link_configuration_id
+     * @param ?string $link_configuration_id 
+     *
+     * @return self
+     */
+    public function setLinkConfigurationId(?string $link_configuration_id): self
+    {
+        $this->link_configuration_id = $link_configuration_id;
         return $this;
     }
     /**
@@ -4000,6 +4054,190 @@ class TemplatesApi
     }
 
     /**
+     * Operation getCompletionRateForTemplate
+     *
+     * Gets completion rate for the template
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $template_id The ID of the template being accessed.
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\TemplateCompletionRateResponse
+     */
+    public function getCompletionRateForTemplate($account_id, $template_id)
+    {
+        list($response) = $this->getCompletionRateForTemplateWithHttpInfo($account_id, $template_id);
+        return $response;
+    }
+
+    /**
+     * Operation getCompletionRateForTemplateWithHttpInfo
+     *
+     * Gets completion rate for the template
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $template_id The ID of the template being accessed.
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\TemplateCompletionRateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCompletionRateForTemplateWithHttpInfo($account_id, $template_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getCompletionRateForTemplate');
+        }
+        // verify the required parameter 'template_id' is set
+        if ($template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $template_id when calling getCompletionRateForTemplate');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/templates/{templateId}/insights/completionRate";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($template_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "templateId", $template_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\TemplateCompletionRateResponse',
+                '/v2.1/accounts/{accountId}/templates/{templateId}/insights/completionRate'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\TemplateCompletionRateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\TemplateCompletionRateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getCompletionRateForTemplateOwner
+     *
+     * Gets completion rate for the user
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\UserCompletionRateResponse
+     */
+    public function getCompletionRateForTemplateOwner($account_id)
+    {
+        list($response) = $this->getCompletionRateForTemplateOwnerWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getCompletionRateForTemplateOwnerWithHttpInfo
+     *
+     * Gets completion rate for the user
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\UserCompletionRateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCompletionRateForTemplateOwnerWithHttpInfo($account_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getCompletionRateForTemplateOwner');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/templates/insights/completionRate";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\UserCompletionRateResponse',
+                '/v2.1/accounts/{accountId}/templates/insights/completionRate'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\UserCompletionRateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\UserCompletionRateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getDocument
      *
      * Gets PDF documents from a template.
@@ -5278,6 +5516,9 @@ class TemplatesApi
             if ($options->getIncludeAgreementType() != 'null') {
                 $queryParams['include_agreement_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeAgreementType());
             }
+            if ($options->getIncludeIsEdited() != 'null') {
+                $queryParams['include_is_edited'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeIsEdited());
+            }
             if ($options->getIncludeTabs() != 'null') {
                 $queryParams['include_tabs'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeTabs());
             }
@@ -5635,6 +5876,9 @@ class TemplatesApi
             }
             if ($options->getIsDownload() != 'null') {
                 $queryParams['is_download'] = $this->apiClient->getSerializer()->toQueryValue($options->getIsDownload());
+            }
+            if ($options->getLinkConfigurationId() != 'null') {
+                $queryParams['link_configuration_id'] = $this->apiClient->getSerializer()->toQueryValue($options->getLinkConfigurationId());
             }
             if ($options->getModifiedFromDate() != 'null') {
                 $queryParams['modified_from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getModifiedFromDate());
@@ -7060,7 +7304,7 @@ class TemplatesApi
     }
 
     /**
-     * Operation updateTemplates
+     * Operation updateTemplatesAutoMatch
      *
      * Update template autoMatch setting.
      *
@@ -7070,14 +7314,14 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateAutoMatchList
      */
-    public function updateTemplates($account_id, $template_auto_match_list = null)
+    public function updateTemplatesAutoMatch($account_id, $template_auto_match_list = null)
     {
-        list($response) = $this->updateTemplatesWithHttpInfo($account_id, $template_auto_match_list);
+        list($response) = $this->updateTemplatesAutoMatchWithHttpInfo($account_id, $template_auto_match_list);
         return $response;
     }
 
     /**
-     * Operation updateTemplatesWithHttpInfo
+     * Operation updateTemplatesAutoMatchWithHttpInfo
      *
      * Update template autoMatch setting.
      *
@@ -7087,11 +7331,11 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateAutoMatchList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateTemplatesWithHttpInfo($account_id, $template_auto_match_list = null): array
+    public function updateTemplatesAutoMatchWithHttpInfo($account_id, $template_auto_match_list = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateTemplates');
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateTemplatesAutoMatch');
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/templates";
@@ -7154,7 +7398,7 @@ class TemplatesApi
     }
 
     /**
-     * Operation updateTemplatesAutoMatch
+     * Operation updateTemplatesAutoMatch_0
      *
      * Update template autoMatch setting.
      *
@@ -7164,14 +7408,14 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return \DocuSign\eSign\Model\TemplateAutoMatchList
      */
-    public function updateTemplatesAutoMatch($account_id, $template_auto_match_list = null)
+    public function updateTemplatesAutoMatch_0($account_id, $template_auto_match_list = null)
     {
-        list($response) = $this->updateTemplatesAutoMatchWithHttpInfo($account_id, $template_auto_match_list);
+        list($response) = $this->updateTemplatesAutoMatch_0WithHttpInfo($account_id, $template_auto_match_list);
         return $response;
     }
 
     /**
-     * Operation updateTemplatesAutoMatchWithHttpInfo
+     * Operation updateTemplatesAutoMatch_0WithHttpInfo
      *
      * Update template autoMatch setting.
      *
@@ -7181,11 +7425,11 @@ class TemplatesApi
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\eSign\Model\TemplateAutoMatchList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateTemplatesAutoMatchWithHttpInfo($account_id, $template_auto_match_list = null): array
+    public function updateTemplatesAutoMatch_0WithHttpInfo($account_id, $template_auto_match_list = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateTemplatesAutoMatch');
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateTemplatesAutoMatch_0');
         }
         // parse inputs
         $resourcePath = "/v2.1/accounts/{accountId}/templates/auto_match";

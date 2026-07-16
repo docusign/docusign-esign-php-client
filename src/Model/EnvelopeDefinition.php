@@ -142,7 +142,6 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'signing_location' => '?string',
         'status' => '?string',
         'status_changed_date_time' => '?string',
-        'status_date_time' => '?string',
         'template_id' => '?string',
         'template_roles' => '\DocuSign\eSign\Model\TemplateRole[]',
         'templates_uri' => '?string',
@@ -242,7 +241,6 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'signing_location' => null,
         'status' => null,
         'status_changed_date_time' => null,
-        'status_date_time' => null,
         'template_id' => null,
         'template_roles' => null,
         'templates_uri' => null,
@@ -363,7 +361,6 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'signing_location' => 'signingLocation',
         'status' => 'status',
         'status_changed_date_time' => 'statusChangedDateTime',
-        'status_date_time' => 'statusDateTime',
         'template_id' => 'templateId',
         'template_roles' => 'templateRoles',
         'templates_uri' => 'templatesUri',
@@ -463,7 +460,6 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'signing_location' => 'setSigningLocation',
         'status' => 'setStatus',
         'status_changed_date_time' => 'setStatusChangedDateTime',
-        'status_date_time' => 'setStatusDateTime',
         'template_id' => 'setTemplateId',
         'template_roles' => 'setTemplateRoles',
         'templates_uri' => 'setTemplatesUri',
@@ -563,7 +559,6 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         'signing_location' => 'getSigningLocation',
         'status' => 'getStatus',
         'status_changed_date_time' => 'getStatusChangedDateTime',
-        'status_date_time' => 'getStatusDateTime',
         'template_id' => 'getTemplateId',
         'template_roles' => 'getTemplateRoles',
         'templates_uri' => 'getTemplatesUri',
@@ -717,7 +712,6 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
         $this->container['signing_location'] = isset($data['signing_location']) ? $data['signing_location'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_changed_date_time'] = isset($data['status_changed_date_time']) ? $data['status_changed_date_time'] : null;
-        $this->container['status_date_time'] = isset($data['status_date_time']) ? $data['status_date_time'] : null;
         $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;
         $this->container['template_roles'] = isset($data['template_roles']) ? $data['template_roles'] : null;
         $this->container['templates_uri'] = isset($data['templates_uri']) ? $data['templates_uri'] : null;
@@ -2717,30 +2711,6 @@ class EnvelopeDefinition implements ModelInterface, ArrayAccess
     public function setStatusChangedDateTime($status_changed_date_time)
     {
         $this->container['status_changed_date_time'] = $status_changed_date_time;
-
-        return $this;
-    }
-
-    /**
-     * Gets status_date_time
-     *
-     * @return ?string
-     */
-    public function getStatusDateTime()
-    {
-        return $this->container['status_date_time'];
-    }
-
-    /**
-     * Sets status_date_time
-     *
-     * @param ?string $status_date_time 
-     *
-     * @return $this
-     */
-    public function setStatusDateTime($status_date_time)
-    {
-        $this->container['status_date_time'] = $status_date_time;
 
         return $this;
     }

@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v9.0.0] - eSignature API v2.1-26.2.01.01 - 2026-07-01
+### Added
+- **Envelopes API**: `getEnvelopesShares` and `getEnvelopesShare` methods for retrieving envelope share information.
+- **Recipients**: New `authorized_signatories` recipient type on `Recipients` and `TemplateRecipients`.
+- **Models**: `AuthorizedSignatory` model for authorized signatory recipients.
+- **Account Settings**: `enable_ai_agents`, `enable_ai_agents_metadata`, and `allow_connect_workspace_upload_request_u_i` properties.
+- **DocGen**: `filter` property on `DocGenFormField`.
+- **Template Roles**: Signing group properties (`signing_group_name`, `signing_group_type`, `signing_group_users`) on `TemplateRole`.
+- **User Authorizations**: `task_source` and `task_type` properties and query parameters for authorization listing endpoints.
+
+### Changed
+- Added support for version v2.1-26.2.01.01 of the DocuSign ESignature API.
+- Updated the SDK release version.
 ## [v8.8.1] - eSignature API v2.1-26.1.00.00 - 2026-05-05
 ### Changed
 - Replaced JWT dependency: Switched from firebase/php-jwt (^6.0) to adhocore/jwt (^1.1) in composer.json template.

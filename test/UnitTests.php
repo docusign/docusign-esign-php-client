@@ -1267,7 +1267,7 @@ class UnitTests extends TestCase
             $this->assertNotEmpty("The document specified was not found.",$responseBody->message); 
 
             $responseHeaders = $e->getResponseHeaders();
-            $this->assertArrayHasKey('X-DocuSign-TraceToken',$responseHeaders);            
+            $this->assertArrayHasKey('x-docusign-tracetoken',$responseHeaders);            
         }
     }
 
@@ -1670,7 +1670,7 @@ class UnitTests extends TestCase
             $this->assertNotEmpty($responseObject->getMessage()); 
 
             $responseHeaders = $e->getResponseHeaders();
-            $this->assertArrayHasKey('X-DocuSign-TraceToken',$responseHeaders);            
+            $this->assertArrayHasKey('x-docusign-tracetoken',$responseHeaders);            
         }
         return $testConfig;
     }

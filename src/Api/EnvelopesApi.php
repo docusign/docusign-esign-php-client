@@ -1433,6 +1433,263 @@ class GetRecipientSignatureImageOptions
 
 
 /**
+ * GetSharedEnvelopesOptions Class Doc Comment
+ *
+ * @category Class
+ * @package  DocuSign\eSign
+ * @author   Swagger Codegen team <apihelp@docusign.com>
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
+ * @link     https://github.com/swagger-api/swagger-codegen
+ */
+class GetSharedEnvelopesOptions
+{
+    /**
+      * $count 
+      * @var ?string
+      */
+    protected ?string $count = null;
+
+    /**
+     * Gets count
+     *
+     * @return ?string
+     */
+    public function getCount(): ?string
+    {
+        return $this->count;
+    }
+
+    /**
+     * Sets count
+     * @param ?string $count 
+     *
+     * @return self
+     */
+    public function setCount(?string $count): self
+    {
+        $this->count = $count;
+        return $this;
+    }
+    /**
+      * $from_date 
+      * @var ?string
+      */
+    protected ?string $from_date = null;
+
+    /**
+     * Gets from_date
+     *
+     * @return ?string
+     */
+    public function getFromDate(): ?string
+    {
+        return $this->from_date;
+    }
+
+    /**
+     * Sets from_date
+     * @param ?string $from_date 
+     *
+     * @return self
+     */
+    public function setFromDate(?string $from_date): self
+    {
+        $this->from_date = $from_date;
+        return $this;
+    }
+    /**
+      * $include 
+      * @var ?string
+      */
+    protected ?string $include = null;
+
+    /**
+     * Gets include
+     *
+     * @return ?string
+     */
+    public function getInclude(): ?string
+    {
+        return $this->include;
+    }
+
+    /**
+     * Sets include
+     * @param ?string $include 
+     *
+     * @return self
+     */
+    public function setInclude(?string $include): self
+    {
+        $this->include = $include;
+        return $this;
+    }
+    /**
+      * $order 
+      * @var ?string
+      */
+    protected ?string $order = null;
+
+    /**
+     * Gets order
+     *
+     * @return ?string
+     */
+    public function getOrder(): ?string
+    {
+        return $this->order;
+    }
+
+    /**
+     * Sets order
+     * @param ?string $order 
+     *
+     * @return self
+     */
+    public function setOrder(?string $order): self
+    {
+        $this->order = $order;
+        return $this;
+    }
+    /**
+      * $order_by 
+      * @var ?string
+      */
+    protected ?string $order_by = null;
+
+    /**
+     * Gets order_by
+     *
+     * @return ?string
+     */
+    public function getOrderBy(): ?string
+    {
+        return $this->order_by;
+    }
+
+    /**
+     * Sets order_by
+     * @param ?string $order_by 
+     *
+     * @return self
+     */
+    public function setOrderBy(?string $order_by): self
+    {
+        $this->order_by = $order_by;
+        return $this;
+    }
+    /**
+      * $search_text 
+      * @var ?string
+      */
+    protected ?string $search_text = null;
+
+    /**
+     * Gets search_text
+     *
+     * @return ?string
+     */
+    public function getSearchText(): ?string
+    {
+        return $this->search_text;
+    }
+
+    /**
+     * Sets search_text
+     * @param ?string $search_text 
+     *
+     * @return self
+     */
+    public function setSearchText(?string $search_text): self
+    {
+        $this->search_text = $search_text;
+        return $this;
+    }
+    /**
+      * $start_position 
+      * @var ?string
+      */
+    protected ?string $start_position = null;
+
+    /**
+     * Gets start_position
+     *
+     * @return ?string
+     */
+    public function getStartPosition(): ?string
+    {
+        return $this->start_position;
+    }
+
+    /**
+     * Sets start_position
+     * @param ?string $start_position 
+     *
+     * @return self
+     */
+    public function setStartPosition(?string $start_position): self
+    {
+        $this->start_position = $start_position;
+        return $this;
+    }
+    /**
+      * $status 
+      * @var ?string
+      */
+    protected ?string $status = null;
+
+    /**
+     * Gets status
+     *
+     * @return ?string
+     */
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    /**
+     * Sets status
+     * @param ?string $status 
+     *
+     * @return self
+     */
+    public function setStatus(?string $status): self
+    {
+        $this->status = $status;
+        return $this;
+    }
+    /**
+      * $to_date 
+      * @var ?string
+      */
+    protected ?string $to_date = null;
+
+    /**
+     * Gets to_date
+     *
+     * @return ?string
+     */
+    public function getToDate(): ?string
+    {
+        return $this->to_date;
+    }
+
+    /**
+     * Sets to_date
+     * @param ?string $to_date 
+     *
+     * @return self
+     */
+    public function setToDate(?string $to_date): self
+    {
+        $this->to_date = $to_date;
+        return $this;
+    }
+}
+
+
+/**
  * ListAuditEventsOptions Class Doc Comment
  *
  * @category Class
@@ -1590,6 +1847,33 @@ class ListDocumentsOptions
     public function setIncludeDocumentSize(?string $include_document_size): self
     {
         $this->include_document_size = $include_document_size;
+        return $this;
+    }
+    /**
+      * $include_is_edited 
+      * @var ?string
+      */
+    protected ?string $include_is_edited = null;
+
+    /**
+     * Gets include_is_edited
+     *
+     * @return ?string
+     */
+    public function getIncludeIsEdited(): ?string
+    {
+        return $this->include_is_edited;
+    }
+
+    /**
+     * Sets include_is_edited
+     * @param ?string $include_is_edited 
+     *
+     * @return self
+     */
+    public function setIncludeIsEdited(?string $include_is_edited): self
+    {
+        $this->include_is_edited = $include_is_edited;
         return $this;
     }
     /**
@@ -8031,6 +8315,209 @@ class EnvelopesApi
     }
 
     /**
+     * Operation deleteEnvelopesShare
+     *
+     * Deletes a single envelope share
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $share_id 
+     *
+     * @throws ApiException on non-2xx response
+     * @return mixed
+     */
+    public function deleteEnvelopesShare($account_id, $envelope_id, $share_id)
+    {
+        list($response) = $this->deleteEnvelopesShareWithHttpInfo($account_id, $envelope_id, $share_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteEnvelopesShareWithHttpInfo
+     *
+     * Deletes a single envelope share
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $share_id 
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteEnvelopesShareWithHttpInfo($account_id, $envelope_id, $share_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteEnvelopesShare');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling deleteEnvelopesShare');
+        }
+        // verify the required parameter 'share_id' is set
+        if ($share_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $share_id when calling deleteEnvelopesShare');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
+        }
+        // path params
+        if ($share_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "shareId", $share_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteEnvelopesShares
+     *
+     * Deletes existing envelopes shares
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\EnvelopesSharesRequest $envelopes_shares_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return mixed
+     */
+    public function deleteEnvelopesShares($account_id, $envelope_id, $envelopes_shares_request = null)
+    {
+        list($response) = $this->deleteEnvelopesSharesWithHttpInfo($account_id, $envelope_id, $envelopes_shares_request);
+        return $response;
+    }
+
+    /**
+     * Operation deleteEnvelopesSharesWithHttpInfo
+     *
+     * Deletes existing envelopes shares
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\EnvelopesSharesRequest $envelopes_shares_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteEnvelopesSharesWithHttpInfo($account_id, $envelope_id, $envelopes_shares_request = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteEnvelopesShares');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling deleteEnvelopesShares');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($envelopes_shares_request)) {
+            $_tempBody = $envelopes_shares_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteLock
      *
      * Deletes an envelope lock.
@@ -11030,6 +11517,210 @@ class EnvelopesApi
     }
 
     /**
+     * Operation getEnvelopesShare
+     *
+     * Gets a single envelope share by shareId
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $share_id 
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\EnvelopesShareResponse
+     */
+    public function getEnvelopesShare($account_id, $envelope_id, $share_id)
+    {
+        list($response) = $this->getEnvelopesShareWithHttpInfo($account_id, $envelope_id, $share_id);
+        return $response;
+    }
+
+    /**
+     * Operation getEnvelopesShareWithHttpInfo
+     *
+     * Gets a single envelope share by shareId
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $share_id 
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\EnvelopesShareResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getEnvelopesShareWithHttpInfo($account_id, $envelope_id, $share_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getEnvelopesShare');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getEnvelopesShare');
+        }
+        // verify the required parameter 'share_id' is set
+        if ($share_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $share_id when calling getEnvelopesShare');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
+        }
+        // path params
+        if ($share_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "shareId", $share_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\EnvelopesShareResponse',
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\EnvelopesShareResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\EnvelopesShareResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getEnvelopesShares
+     *
+     * Gets all shares for an envelope
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\EnvelopesSharesResponse
+     */
+    public function getEnvelopesShares($account_id, $envelope_id)
+    {
+        list($response) = $this->getEnvelopesSharesWithHttpInfo($account_id, $envelope_id);
+        return $response;
+    }
+
+    /**
+     * Operation getEnvelopesSharesWithHttpInfo
+     *
+     * Gets all shares for an envelope
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\EnvelopesSharesResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getEnvelopesSharesWithHttpInfo($account_id, $envelope_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getEnvelopesShares');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling getEnvelopesShares');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\EnvelopesSharesResponse',
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\EnvelopesSharesResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\EnvelopesSharesResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getFormData
      *
      * Returns envelope form data for an existing envelope.
@@ -12005,6 +12696,126 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getSharedEnvelopes
+     *
+     * Returns a filtered list of shared envelopes.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetSharedEnvelopesOptions  $options for modifying the behavior of the function. (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\EnvelopesInformation
+     */
+    public function getSharedEnvelopes($account_id, ?\DocuSign\eSign\Api\EnvelopesApi\GetSharedEnvelopesOptions $options = null)
+    {
+        list($response) = $this->getSharedEnvelopesWithHttpInfo($account_id, $options);
+        return $response;
+    }
+
+    /**
+     * Operation getSharedEnvelopesWithHttpInfo
+     *
+     * Returns a filtered list of shared envelopes.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param  \DocuSign\eSign\Api\EnvelopesApi\GetSharedEnvelopesOptions  $options for modifying the behavior of the function. (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\EnvelopesInformation, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getSharedEnvelopesWithHttpInfo($account_id, ?\DocuSign\eSign\Api\EnvelopesApi\GetSharedEnvelopesOptions $options = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getSharedEnvelopes');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/shared";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        if ($options != null)
+        {
+            // query params
+            if ($options->getCount() != 'null') {
+                $queryParams['count'] = $this->apiClient->getSerializer()->toQueryValue($options->getCount());
+            }
+            if ($options->getFromDate() != 'null') {
+                $queryParams['from_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getFromDate());
+            }
+            if ($options->getInclude() != 'null') {
+                $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($options->getInclude());
+            }
+            if ($options->getOrder() != 'null') {
+                $queryParams['order'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrder());
+            }
+            if ($options->getOrderBy() != 'null') {
+                $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($options->getOrderBy());
+            }
+            if ($options->getSearchText() != 'null') {
+                $queryParams['search_text'] = $this->apiClient->getSerializer()->toQueryValue($options->getSearchText());
+            }
+            if ($options->getStartPosition() != 'null') {
+                $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
+            }
+            if ($options->getStatus() != 'null') {
+                $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($options->getStatus());
+            }
+            if ($options->getToDate() != 'null') {
+                $queryParams['to_date'] = $this->apiClient->getSerializer()->toQueryValue($options->getToDate());
+            }
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\EnvelopesInformation',
+                '/v2.1/accounts/{accountId}/envelopes/shared'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\EnvelopesInformation', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\EnvelopesInformation', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -12996,6 +13807,9 @@ class EnvelopesApi
             }
             if ($options->getIncludeDocumentSize() != 'null') {
                 $queryParams['include_document_size'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeDocumentSize());
+            }
+            if ($options->getIncludeIsEdited() != 'null') {
+                $queryParams['include_is_edited'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeIsEdited());
             }
             if ($options->getIncludeMetadata() != 'null') {
                 $queryParams['include_metadata'] = $this->apiClient->getSerializer()->toQueryValue($options->getIncludeMetadata());
@@ -15910,6 +16724,224 @@ class EnvelopesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\WorkflowStep', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateEnvelopesShare
+     *
+     * Updates a single envelope share
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $share_id 
+     * @param \DocuSign\eSign\Model\EnvelopesSharePermissionRequest $envelopes_share_permission_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\EnvelopesShareResponse
+     */
+    public function updateEnvelopesShare($account_id, $envelope_id, $share_id, $envelopes_share_permission_request = null)
+    {
+        list($response) = $this->updateEnvelopesShareWithHttpInfo($account_id, $envelope_id, $share_id, $envelopes_share_permission_request);
+        return $response;
+    }
+
+    /**
+     * Operation updateEnvelopesShareWithHttpInfo
+     *
+     * Updates a single envelope share
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param ?string $share_id 
+     * @param \DocuSign\eSign\Model\EnvelopesSharePermissionRequest $envelopes_share_permission_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\EnvelopesShareResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateEnvelopesShareWithHttpInfo($account_id, $envelope_id, $share_id, $envelopes_share_permission_request = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateEnvelopesShare');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling updateEnvelopesShare');
+        }
+        // verify the required parameter 'share_id' is set
+        if ($share_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $share_id when calling updateEnvelopesShare');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
+        }
+        // path params
+        if ($share_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "shareId", $share_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($envelopes_share_permission_request)) {
+            $_tempBody = $envelopes_share_permission_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\EnvelopesShareResponse',
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\EnvelopesShareResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\EnvelopesShareResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateEnvelopesShares
+     *
+     * Updates existing envelopes shares
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\EnvelopesSharesRequest $envelopes_shares_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return \DocuSign\eSign\Model\EnvelopesSharesResponse
+     */
+    public function updateEnvelopesShares($account_id, $envelope_id, $envelopes_shares_request = null)
+    {
+        list($response) = $this->updateEnvelopesSharesWithHttpInfo($account_id, $envelope_id, $envelopes_shares_request);
+        return $response;
+    }
+
+    /**
+     * Operation updateEnvelopesSharesWithHttpInfo
+     *
+     * Updates existing envelopes shares
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $envelope_id The envelopeId Guid of the envelope being accessed.
+     * @param \DocuSign\eSign\Model\EnvelopesSharesRequest $envelopes_shares_request  (optional)
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of \DocuSign\eSign\Model\EnvelopesSharesResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateEnvelopesSharesWithHttpInfo($account_id, $envelope_id, $envelopes_shares_request = null): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling updateEnvelopesShares');
+        }
+        // verify the required parameter 'envelope_id' is set
+        if ($envelope_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $envelope_id when calling updateEnvelopesShares');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($envelope_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "envelopeId", $envelope_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        // body params
+        $_tempBody = null;
+        if (isset($envelopes_shares_request)) {
+            $_tempBody = $envelopes_shares_request;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\DocuSign\eSign\Model\EnvelopesSharesResponse',
+                '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\EnvelopesSharesResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\EnvelopesSharesResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

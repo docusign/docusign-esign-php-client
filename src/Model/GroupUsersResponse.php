@@ -1,6 +1,6 @@
 <?php
 /**
- * Reminders
+ * GroupUsersResponse
  *
  * PHP version 7.4
  *
@@ -34,16 +34,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * Reminders Class Doc Comment
+ * GroupUsersResponse Class Doc Comment
  *
  * @category    Class
- * @description A complex element that specifies reminder settings for the envelope
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Reminders implements ModelInterface, ArrayAccess
+class GroupUsersResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -52,7 +51,7 @@ class Reminders implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'reminders';
+    protected static $swaggerModelName = 'groupUsersResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,11 +59,13 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_reminder_count' => '?string',
-        'reminder_delay' => '?string',
-        'reminder_enabled' => '?string',
-        'reminder_frequency' => '?string',
-        'smart_reminder_enabled' => '?string'
+        'end_position' => '?string',
+        'next_uri' => '?string',
+        'previous_uri' => '?string',
+        'result_set_size' => '?string',
+        'start_position' => '?string',
+        'total_set_size' => '?string',
+        'users' => '\DocuSign\eSign\Model\GroupUserInfo[]'
     ];
 
     /**
@@ -73,11 +74,13 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'maximum_reminder_count' => null,
-        'reminder_delay' => null,
-        'reminder_enabled' => null,
-        'reminder_frequency' => null,
-        'smart_reminder_enabled' => null
+        'end_position' => null,
+        'next_uri' => null,
+        'previous_uri' => null,
+        'result_set_size' => null,
+        'start_position' => null,
+        'total_set_size' => null,
+        'users' => null
     ];
 
     /**
@@ -107,11 +110,13 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'maximum_reminder_count' => 'maximumReminderCount',
-        'reminder_delay' => 'reminderDelay',
-        'reminder_enabled' => 'reminderEnabled',
-        'reminder_frequency' => 'reminderFrequency',
-        'smart_reminder_enabled' => 'smartReminderEnabled'
+        'end_position' => 'endPosition',
+        'next_uri' => 'nextUri',
+        'previous_uri' => 'previousUri',
+        'result_set_size' => 'resultSetSize',
+        'start_position' => 'startPosition',
+        'total_set_size' => 'totalSetSize',
+        'users' => 'users'
     ];
 
     /**
@@ -120,11 +125,13 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'maximum_reminder_count' => 'setMaximumReminderCount',
-        'reminder_delay' => 'setReminderDelay',
-        'reminder_enabled' => 'setReminderEnabled',
-        'reminder_frequency' => 'setReminderFrequency',
-        'smart_reminder_enabled' => 'setSmartReminderEnabled'
+        'end_position' => 'setEndPosition',
+        'next_uri' => 'setNextUri',
+        'previous_uri' => 'setPreviousUri',
+        'result_set_size' => 'setResultSetSize',
+        'start_position' => 'setStartPosition',
+        'total_set_size' => 'setTotalSetSize',
+        'users' => 'setUsers'
     ];
 
     /**
@@ -133,11 +140,13 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'maximum_reminder_count' => 'getMaximumReminderCount',
-        'reminder_delay' => 'getReminderDelay',
-        'reminder_enabled' => 'getReminderEnabled',
-        'reminder_frequency' => 'getReminderFrequency',
-        'smart_reminder_enabled' => 'getSmartReminderEnabled'
+        'end_position' => 'getEndPosition',
+        'next_uri' => 'getNextUri',
+        'previous_uri' => 'getPreviousUri',
+        'result_set_size' => 'getResultSetSize',
+        'start_position' => 'getStartPosition',
+        'total_set_size' => 'getTotalSetSize',
+        'users' => 'getUsers'
     ];
 
     /**
@@ -200,11 +209,13 @@ class Reminders implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['maximum_reminder_count'] = isset($data['maximum_reminder_count']) ? $data['maximum_reminder_count'] : null;
-        $this->container['reminder_delay'] = isset($data['reminder_delay']) ? $data['reminder_delay'] : null;
-        $this->container['reminder_enabled'] = isset($data['reminder_enabled']) ? $data['reminder_enabled'] : null;
-        $this->container['reminder_frequency'] = isset($data['reminder_frequency']) ? $data['reminder_frequency'] : null;
-        $this->container['smart_reminder_enabled'] = isset($data['smart_reminder_enabled']) ? $data['smart_reminder_enabled'] : null;
+        $this->container['end_position'] = isset($data['end_position']) ? $data['end_position'] : null;
+        $this->container['next_uri'] = isset($data['next_uri']) ? $data['next_uri'] : null;
+        $this->container['previous_uri'] = isset($data['previous_uri']) ? $data['previous_uri'] : null;
+        $this->container['result_set_size'] = isset($data['result_set_size']) ? $data['result_set_size'] : null;
+        $this->container['start_position'] = isset($data['start_position']) ? $data['start_position'] : null;
+        $this->container['total_set_size'] = isset($data['total_set_size']) ? $data['total_set_size'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
     }
 
     /**
@@ -232,121 +243,169 @@ class Reminders implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets maximum_reminder_count
+     * Gets end_position
      *
      * @return ?string
      */
-    public function getMaximumReminderCount()
+    public function getEndPosition()
     {
-        return $this->container['maximum_reminder_count'];
+        return $this->container['end_position'];
     }
 
     /**
-     * Sets maximum_reminder_count
+     * Sets end_position
      *
-     * @param ?string $maximum_reminder_count 
+     * @param ?string $end_position The last position in the result set.
      *
      * @return $this
      */
-    public function setMaximumReminderCount($maximum_reminder_count)
+    public function setEndPosition($end_position)
     {
-        $this->container['maximum_reminder_count'] = $maximum_reminder_count;
+        $this->container['end_position'] = $end_position;
 
         return $this;
     }
 
     /**
-     * Gets reminder_delay
+     * Gets next_uri
      *
      * @return ?string
      */
-    public function getReminderDelay()
+    public function getNextUri()
     {
-        return $this->container['reminder_delay'];
+        return $this->container['next_uri'];
     }
 
     /**
-     * Sets reminder_delay
+     * Sets next_uri
      *
-     * @param ?string $reminder_delay An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
+     * @param ?string $next_uri The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
      *
      * @return $this
      */
-    public function setReminderDelay($reminder_delay)
+    public function setNextUri($next_uri)
     {
-        $this->container['reminder_delay'] = $reminder_delay;
+        $this->container['next_uri'] = $next_uri;
 
         return $this;
     }
 
     /**
-     * Gets reminder_enabled
+     * Gets previous_uri
      *
      * @return ?string
      */
-    public function getReminderEnabled()
+    public function getPreviousUri()
     {
-        return $this->container['reminder_enabled'];
+        return $this->container['previous_uri'];
     }
 
     /**
-     * Sets reminder_enabled
+     * Sets previous_uri
      *
-     * @param ?string $reminder_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
+     * @param ?string $previous_uri The postal code for the billing address.
      *
      * @return $this
      */
-    public function setReminderEnabled($reminder_enabled)
+    public function setPreviousUri($previous_uri)
     {
-        $this->container['reminder_enabled'] = $reminder_enabled;
+        $this->container['previous_uri'] = $previous_uri;
 
         return $this;
     }
 
     /**
-     * Gets reminder_frequency
+     * Gets result_set_size
      *
      * @return ?string
      */
-    public function getReminderFrequency()
+    public function getResultSetSize()
     {
-        return $this->container['reminder_frequency'];
+        return $this->container['result_set_size'];
     }
 
     /**
-     * Sets reminder_frequency
+     * Sets result_set_size
      *
-     * @param ?string $reminder_frequency An interger that sets the interval, in days, between reminder emails.
+     * @param ?string $result_set_size The number of results returned in this response.
      *
      * @return $this
      */
-    public function setReminderFrequency($reminder_frequency)
+    public function setResultSetSize($result_set_size)
     {
-        $this->container['reminder_frequency'] = $reminder_frequency;
+        $this->container['result_set_size'] = $result_set_size;
 
         return $this;
     }
 
     /**
-     * Gets smart_reminder_enabled
+     * Gets start_position
      *
      * @return ?string
      */
-    public function getSmartReminderEnabled()
+    public function getStartPosition()
     {
-        return $this->container['smart_reminder_enabled'];
+        return $this->container['start_position'];
     }
 
     /**
-     * Sets smart_reminder_enabled
+     * Sets start_position
      *
-     * @param ?string $smart_reminder_enabled 
+     * @param ?string $start_position Starting position of the current result set.
      *
      * @return $this
      */
-    public function setSmartReminderEnabled($smart_reminder_enabled)
+    public function setStartPosition($start_position)
     {
-        $this->container['smart_reminder_enabled'] = $smart_reminder_enabled;
+        $this->container['start_position'] = $start_position;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_set_size
+     *
+     * @return ?string
+     */
+    public function getTotalSetSize()
+    {
+        return $this->container['total_set_size'];
+    }
+
+    /**
+     * Sets total_set_size
+     *
+     * @param ?string $total_set_size The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+     *
+     * @return $this
+     */
+    public function setTotalSetSize($total_set_size)
+    {
+        $this->container['total_set_size'] = $total_set_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return \DocuSign\eSign\Model\GroupUserInfo[]
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param \DocuSign\eSign\Model\GroupUserInfo[] $users 
+     *
+     * @return $this
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
 
         return $this;
     }

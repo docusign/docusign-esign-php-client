@@ -1,6 +1,6 @@
 <?php
 /**
- * Reminders
+ * TemplateCompletionInfo
  *
  * PHP version 7.4
  *
@@ -34,16 +34,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * Reminders Class Doc Comment
+ * TemplateCompletionInfo Class Doc Comment
  *
  * @category    Class
- * @description A complex element that specifies reminder settings for the envelope
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Reminders implements ModelInterface, ArrayAccess
+class TemplateCompletionInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -52,7 +51,7 @@ class Reminders implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'reminders';
+    protected static $swaggerModelName = 'templateCompletionInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,11 +59,15 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_reminder_count' => '?string',
-        'reminder_delay' => '?string',
-        'reminder_enabled' => '?string',
-        'reminder_frequency' => '?string',
-        'smart_reminder_enabled' => '?string'
+        'completed' => '?string',
+        'completion_rate' => '?string',
+        'expired' => '?string',
+        'expired_rate' => '?string',
+        'name' => '?string',
+        'sent' => '?string',
+        'template_id' => '?string',
+        'voided' => '?string',
+        'voided_rate' => '?string'
     ];
 
     /**
@@ -73,11 +76,15 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'maximum_reminder_count' => null,
-        'reminder_delay' => null,
-        'reminder_enabled' => null,
-        'reminder_frequency' => null,
-        'smart_reminder_enabled' => null
+        'completed' => 'int32',
+        'completion_rate' => 'double',
+        'expired' => 'int32',
+        'expired_rate' => 'double',
+        'name' => null,
+        'sent' => 'int32',
+        'template_id' => null,
+        'voided' => 'int32',
+        'voided_rate' => 'double'
     ];
 
     /**
@@ -107,11 +114,15 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'maximum_reminder_count' => 'maximumReminderCount',
-        'reminder_delay' => 'reminderDelay',
-        'reminder_enabled' => 'reminderEnabled',
-        'reminder_frequency' => 'reminderFrequency',
-        'smart_reminder_enabled' => 'smartReminderEnabled'
+        'completed' => 'completed',
+        'completion_rate' => 'completionRate',
+        'expired' => 'expired',
+        'expired_rate' => 'expiredRate',
+        'name' => 'name',
+        'sent' => 'sent',
+        'template_id' => 'templateId',
+        'voided' => 'voided',
+        'voided_rate' => 'voidedRate'
     ];
 
     /**
@@ -120,11 +131,15 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'maximum_reminder_count' => 'setMaximumReminderCount',
-        'reminder_delay' => 'setReminderDelay',
-        'reminder_enabled' => 'setReminderEnabled',
-        'reminder_frequency' => 'setReminderFrequency',
-        'smart_reminder_enabled' => 'setSmartReminderEnabled'
+        'completed' => 'setCompleted',
+        'completion_rate' => 'setCompletionRate',
+        'expired' => 'setExpired',
+        'expired_rate' => 'setExpiredRate',
+        'name' => 'setName',
+        'sent' => 'setSent',
+        'template_id' => 'setTemplateId',
+        'voided' => 'setVoided',
+        'voided_rate' => 'setVoidedRate'
     ];
 
     /**
@@ -133,11 +148,15 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'maximum_reminder_count' => 'getMaximumReminderCount',
-        'reminder_delay' => 'getReminderDelay',
-        'reminder_enabled' => 'getReminderEnabled',
-        'reminder_frequency' => 'getReminderFrequency',
-        'smart_reminder_enabled' => 'getSmartReminderEnabled'
+        'completed' => 'getCompleted',
+        'completion_rate' => 'getCompletionRate',
+        'expired' => 'getExpired',
+        'expired_rate' => 'getExpiredRate',
+        'name' => 'getName',
+        'sent' => 'getSent',
+        'template_id' => 'getTemplateId',
+        'voided' => 'getVoided',
+        'voided_rate' => 'getVoidedRate'
     ];
 
     /**
@@ -200,11 +219,15 @@ class Reminders implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['maximum_reminder_count'] = isset($data['maximum_reminder_count']) ? $data['maximum_reminder_count'] : null;
-        $this->container['reminder_delay'] = isset($data['reminder_delay']) ? $data['reminder_delay'] : null;
-        $this->container['reminder_enabled'] = isset($data['reminder_enabled']) ? $data['reminder_enabled'] : null;
-        $this->container['reminder_frequency'] = isset($data['reminder_frequency']) ? $data['reminder_frequency'] : null;
-        $this->container['smart_reminder_enabled'] = isset($data['smart_reminder_enabled']) ? $data['smart_reminder_enabled'] : null;
+        $this->container['completed'] = isset($data['completed']) ? $data['completed'] : null;
+        $this->container['completion_rate'] = isset($data['completion_rate']) ? $data['completion_rate'] : null;
+        $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
+        $this->container['expired_rate'] = isset($data['expired_rate']) ? $data['expired_rate'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['sent'] = isset($data['sent']) ? $data['sent'] : null;
+        $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;
+        $this->container['voided'] = isset($data['voided']) ? $data['voided'] : null;
+        $this->container['voided_rate'] = isset($data['voided_rate']) ? $data['voided_rate'] : null;
     }
 
     /**
@@ -232,121 +255,217 @@ class Reminders implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets maximum_reminder_count
+     * Gets completed
      *
      * @return ?string
      */
-    public function getMaximumReminderCount()
+    public function getCompleted()
     {
-        return $this->container['maximum_reminder_count'];
+        return $this->container['completed'];
     }
 
     /**
-     * Sets maximum_reminder_count
+     * Sets completed
      *
-     * @param ?string $maximum_reminder_count 
+     * @param ?string $completed 
      *
      * @return $this
      */
-    public function setMaximumReminderCount($maximum_reminder_count)
+    public function setCompleted($completed)
     {
-        $this->container['maximum_reminder_count'] = $maximum_reminder_count;
+        $this->container['completed'] = $completed;
 
         return $this;
     }
 
     /**
-     * Gets reminder_delay
+     * Gets completion_rate
      *
      * @return ?string
      */
-    public function getReminderDelay()
+    public function getCompletionRate()
     {
-        return $this->container['reminder_delay'];
+        return $this->container['completion_rate'];
     }
 
     /**
-     * Sets reminder_delay
+     * Sets completion_rate
      *
-     * @param ?string $reminder_delay An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
+     * @param ?string $completion_rate 
      *
      * @return $this
      */
-    public function setReminderDelay($reminder_delay)
+    public function setCompletionRate($completion_rate)
     {
-        $this->container['reminder_delay'] = $reminder_delay;
+        $this->container['completion_rate'] = $completion_rate;
 
         return $this;
     }
 
     /**
-     * Gets reminder_enabled
+     * Gets expired
      *
      * @return ?string
      */
-    public function getReminderEnabled()
+    public function getExpired()
     {
-        return $this->container['reminder_enabled'];
+        return $this->container['expired'];
     }
 
     /**
-     * Sets reminder_enabled
+     * Sets expired
      *
-     * @param ?string $reminder_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
+     * @param ?string $expired 
      *
      * @return $this
      */
-    public function setReminderEnabled($reminder_enabled)
+    public function setExpired($expired)
     {
-        $this->container['reminder_enabled'] = $reminder_enabled;
+        $this->container['expired'] = $expired;
 
         return $this;
     }
 
     /**
-     * Gets reminder_frequency
+     * Gets expired_rate
      *
      * @return ?string
      */
-    public function getReminderFrequency()
+    public function getExpiredRate()
     {
-        return $this->container['reminder_frequency'];
+        return $this->container['expired_rate'];
     }
 
     /**
-     * Sets reminder_frequency
+     * Sets expired_rate
      *
-     * @param ?string $reminder_frequency An interger that sets the interval, in days, between reminder emails.
+     * @param ?string $expired_rate 
      *
      * @return $this
      */
-    public function setReminderFrequency($reminder_frequency)
+    public function setExpiredRate($expired_rate)
     {
-        $this->container['reminder_frequency'] = $reminder_frequency;
+        $this->container['expired_rate'] = $expired_rate;
 
         return $this;
     }
 
     /**
-     * Gets smart_reminder_enabled
+     * Gets name
      *
      * @return ?string
      */
-    public function getSmartReminderEnabled()
+    public function getName()
     {
-        return $this->container['smart_reminder_enabled'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets smart_reminder_enabled
+     * Sets name
      *
-     * @param ?string $smart_reminder_enabled 
+     * @param ?string $name 
      *
      * @return $this
      */
-    public function setSmartReminderEnabled($smart_reminder_enabled)
+    public function setName($name)
     {
-        $this->container['smart_reminder_enabled'] = $smart_reminder_enabled;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets sent
+     *
+     * @return ?string
+     */
+    public function getSent()
+    {
+        return $this->container['sent'];
+    }
+
+    /**
+     * Sets sent
+     *
+     * @param ?string $sent 
+     *
+     * @return $this
+     */
+    public function setSent($sent)
+    {
+        $this->container['sent'] = $sent;
+
+        return $this;
+    }
+
+    /**
+     * Gets template_id
+     *
+     * @return ?string
+     */
+    public function getTemplateId()
+    {
+        return $this->container['template_id'];
+    }
+
+    /**
+     * Sets template_id
+     *
+     * @param ?string $template_id The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+     *
+     * @return $this
+     */
+    public function setTemplateId($template_id)
+    {
+        $this->container['template_id'] = $template_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets voided
+     *
+     * @return ?string
+     */
+    public function getVoided()
+    {
+        return $this->container['voided'];
+    }
+
+    /**
+     * Sets voided
+     *
+     * @param ?string $voided 
+     *
+     * @return $this
+     */
+    public function setVoided($voided)
+    {
+        $this->container['voided'] = $voided;
+
+        return $this;
+    }
+
+    /**
+     * Gets voided_rate
+     *
+     * @return ?string
+     */
+    public function getVoidedRate()
+    {
+        return $this->container['voided_rate'];
+    }
+
+    /**
+     * Sets voided_rate
+     *
+     * @param ?string $voided_rate 
+     *
+     * @return $this
+     */
+    public function setVoidedRate($voided_rate)
+    {
+        $this->container['voided_rate'] = $voided_rate;
 
         return $this;
     }

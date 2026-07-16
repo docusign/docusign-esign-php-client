@@ -154,7 +154,6 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'signing_location' => '?string',
         'status' => '?string',
         'status_changed_date_time' => '?string',
-        'status_date_time' => '?string',
         'template_id' => '?string',
         'templates_uri' => '?string',
         'transaction_id' => '?string',
@@ -267,7 +266,6 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'signing_location' => null,
         'status' => null,
         'status_changed_date_time' => null,
-        'status_date_time' => null,
         'template_id' => null,
         'templates_uri' => null,
         'transaction_id' => null,
@@ -401,7 +399,6 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'signing_location' => 'signingLocation',
         'status' => 'status',
         'status_changed_date_time' => 'statusChangedDateTime',
-        'status_date_time' => 'statusDateTime',
         'template_id' => 'templateId',
         'templates_uri' => 'templatesUri',
         'transaction_id' => 'transactionId',
@@ -514,7 +511,6 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'signing_location' => 'setSigningLocation',
         'status' => 'setStatus',
         'status_changed_date_time' => 'setStatusChangedDateTime',
-        'status_date_time' => 'setStatusDateTime',
         'template_id' => 'setTemplateId',
         'templates_uri' => 'setTemplatesUri',
         'transaction_id' => 'setTransactionId',
@@ -627,7 +623,6 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         'signing_location' => 'getSigningLocation',
         'status' => 'getStatus',
         'status_changed_date_time' => 'getStatusChangedDateTime',
-        'status_date_time' => 'getStatusDateTime',
         'template_id' => 'getTemplateId',
         'templates_uri' => 'getTemplatesUri',
         'transaction_id' => 'getTransactionId',
@@ -794,7 +789,6 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
         $this->container['signing_location'] = isset($data['signing_location']) ? $data['signing_location'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_changed_date_time'] = isset($data['status_changed_date_time']) ? $data['status_changed_date_time'] : null;
-        $this->container['status_date_time'] = isset($data['status_date_time']) ? $data['status_date_time'] : null;
         $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;
         $this->container['templates_uri'] = isset($data['templates_uri']) ? $data['templates_uri'] : null;
         $this->container['transaction_id'] = isset($data['transaction_id']) ? $data['transaction_id'] : null;
@@ -3106,30 +3100,6 @@ class EnvelopeTemplate implements ModelInterface, ArrayAccess
     public function setStatusChangedDateTime($status_changed_date_time)
     {
         $this->container['status_changed_date_time'] = $status_changed_date_time;
-
-        return $this;
-    }
-
-    /**
-     * Gets status_date_time
-     *
-     * @return ?string
-     */
-    public function getStatusDateTime()
-    {
-        return $this->container['status_date_time'];
-    }
-
-    /**
-     * Sets status_date_time
-     *
-     * @param ?string $status_date_time 
-     *
-     * @return $this
-     */
-    public function setStatusDateTime($status_date_time)
-    {
-        $this->container['status_date_time'] = $status_date_time;
 
         return $this;
     }

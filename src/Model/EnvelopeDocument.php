@@ -84,6 +84,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'include_in_download_metadata' => '\DocuSign\eSign\Model\PropertyMetadata',
         'is_ace_gen_document' => '?string',
         'is_doc_gen_document' => '?string',
+        'is_edited' => '?string',
         'is_externally_available' => '?string',
         'is_flattened' => '?string',
         'name' => '?string',
@@ -129,6 +130,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'include_in_download_metadata' => null,
         'is_ace_gen_document' => null,
         'is_doc_gen_document' => null,
+        'is_edited' => null,
         'is_externally_available' => null,
         'is_flattened' => null,
         'name' => null,
@@ -195,6 +197,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'include_in_download_metadata' => 'includeInDownloadMetadata',
         'is_ace_gen_document' => 'isAceGenDocument',
         'is_doc_gen_document' => 'isDocGenDocument',
+        'is_edited' => 'isEdited',
         'is_externally_available' => 'isExternallyAvailable',
         'is_flattened' => 'isFlattened',
         'name' => 'name',
@@ -240,6 +243,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'include_in_download_metadata' => 'setIncludeInDownloadMetadata',
         'is_ace_gen_document' => 'setIsAceGenDocument',
         'is_doc_gen_document' => 'setIsDocGenDocument',
+        'is_edited' => 'setIsEdited',
         'is_externally_available' => 'setIsExternallyAvailable',
         'is_flattened' => 'setIsFlattened',
         'name' => 'setName',
@@ -285,6 +289,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         'include_in_download_metadata' => 'getIncludeInDownloadMetadata',
         'is_ace_gen_document' => 'getIsAceGenDocument',
         'is_doc_gen_document' => 'getIsDocGenDocument',
+        'is_edited' => 'getIsEdited',
         'is_externally_available' => 'getIsExternallyAvailable',
         'is_flattened' => 'getIsFlattened',
         'name' => 'getName',
@@ -384,6 +389,7 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
         $this->container['include_in_download_metadata'] = isset($data['include_in_download_metadata']) ? $data['include_in_download_metadata'] : null;
         $this->container['is_ace_gen_document'] = isset($data['is_ace_gen_document']) ? $data['is_ace_gen_document'] : null;
         $this->container['is_doc_gen_document'] = isset($data['is_doc_gen_document']) ? $data['is_doc_gen_document'] : null;
+        $this->container['is_edited'] = isset($data['is_edited']) ? $data['is_edited'] : null;
         $this->container['is_externally_available'] = isset($data['is_externally_available']) ? $data['is_externally_available'] : null;
         $this->container['is_flattened'] = isset($data['is_flattened']) ? $data['is_flattened'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -995,6 +1001,30 @@ class EnvelopeDocument implements ModelInterface, ArrayAccess
     public function setIsDocGenDocument($is_doc_gen_document)
     {
         $this->container['is_doc_gen_document'] = $is_doc_gen_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_edited
+     *
+     * @return ?string
+     */
+    public function getIsEdited()
+    {
+        return $this->container['is_edited'];
+    }
+
+    /**
+     * Sets is_edited
+     *
+     * @param ?string $is_edited 
+     *
+     * @return $this
+     */
+    public function setIsEdited($is_edited)
+    {
+        $this->container['is_edited'] = $is_edited;
 
         return $this;
     }

@@ -68,7 +68,9 @@ class UserAuthorization implements ModelInterface, ArrayAccess
         'modified_by' => '?string',
         'permission' => '?string',
         'principal_user' => '\DocuSign\eSign\Model\AuthorizationUser',
-        'start_date' => '?string'
+        'start_date' => '?string',
+        'task_source' => '?string',
+        'task_type' => '?string'
     ];
 
     /**
@@ -86,7 +88,9 @@ class UserAuthorization implements ModelInterface, ArrayAccess
         'modified_by' => null,
         'permission' => null,
         'principal_user' => null,
-        'start_date' => null
+        'start_date' => null,
+        'task_source' => null,
+        'task_type' => null
     ];
 
     /**
@@ -125,7 +129,9 @@ class UserAuthorization implements ModelInterface, ArrayAccess
         'modified_by' => 'modifiedBy',
         'permission' => 'permission',
         'principal_user' => 'principalUser',
-        'start_date' => 'startDate'
+        'start_date' => 'startDate',
+        'task_source' => 'taskSource',
+        'task_type' => 'taskType'
     ];
 
     /**
@@ -143,7 +149,9 @@ class UserAuthorization implements ModelInterface, ArrayAccess
         'modified_by' => 'setModifiedBy',
         'permission' => 'setPermission',
         'principal_user' => 'setPrincipalUser',
-        'start_date' => 'setStartDate'
+        'start_date' => 'setStartDate',
+        'task_source' => 'setTaskSource',
+        'task_type' => 'setTaskType'
     ];
 
     /**
@@ -161,7 +169,9 @@ class UserAuthorization implements ModelInterface, ArrayAccess
         'modified_by' => 'getModifiedBy',
         'permission' => 'getPermission',
         'principal_user' => 'getPrincipalUser',
-        'start_date' => 'getStartDate'
+        'start_date' => 'getStartDate',
+        'task_source' => 'getTaskSource',
+        'task_type' => 'getTaskType'
     ];
 
     /**
@@ -234,6 +244,8 @@ class UserAuthorization implements ModelInterface, ArrayAccess
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['principal_user'] = isset($data['principal_user']) ? $data['principal_user'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
+        $this->container['task_source'] = isset($data['task_source']) ? $data['task_source'] : null;
+        $this->container['task_type'] = isset($data['task_type']) ? $data['task_type'] : null;
     }
 
     /**
@@ -496,6 +508,54 @@ class UserAuthorization implements ModelInterface, ArrayAccess
     public function setStartDate($start_date)
     {
         $this->container['start_date'] = $start_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets task_source
+     *
+     * @return ?string
+     */
+    public function getTaskSource()
+    {
+        return $this->container['task_source'];
+    }
+
+    /**
+     * Sets task_source
+     *
+     * @param ?string $task_source 
+     *
+     * @return $this
+     */
+    public function setTaskSource($task_source)
+    {
+        $this->container['task_source'] = $task_source;
+
+        return $this;
+    }
+
+    /**
+     * Gets task_type
+     *
+     * @return ?string
+     */
+    public function getTaskType()
+    {
+        return $this->container['task_type'];
+    }
+
+    /**
+     * Sets task_type
+     *
+     * @param ?string $task_type 
+     *
+     * @return $this
+     */
+    public function setTaskType($task_type)
+    {
+        $this->container['task_type'] = $task_type;
 
         return $this;
     }

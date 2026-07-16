@@ -739,6 +739,60 @@ class GetAgentUserAuthorizationsOptions
         return $this;
     }
     /**
+      * $task_source 
+      * @var ?string
+      */
+    protected ?string $task_source = null;
+
+    /**
+     * Gets task_source
+     *
+     * @return ?string
+     */
+    public function getTaskSource(): ?string
+    {
+        return $this->task_source;
+    }
+
+    /**
+     * Sets task_source
+     * @param ?string $task_source 
+     *
+     * @return self
+     */
+    public function setTaskSource(?string $task_source): self
+    {
+        $this->task_source = $task_source;
+        return $this;
+    }
+    /**
+      * $task_type 
+      * @var ?string
+      */
+    protected ?string $task_type = null;
+
+    /**
+     * Gets task_type
+     *
+     * @return ?string
+     */
+    public function getTaskType(): ?string
+    {
+        return $this->task_type;
+    }
+
+    /**
+     * Sets task_type
+     * @param ?string $task_type 
+     *
+     * @return self
+     */
+    public function setTaskType(?string $task_type): self
+    {
+        $this->task_type = $task_type;
+        return $this;
+    }
+    /**
       * $user_name_substring 
       * @var ?string
       */
@@ -1201,6 +1255,60 @@ class GetPrincipalUserAuthorizationsOptions
         return $this;
     }
     /**
+      * $task_source 
+      * @var ?string
+      */
+    protected ?string $task_source = null;
+
+    /**
+     * Gets task_source
+     *
+     * @return ?string
+     */
+    public function getTaskSource(): ?string
+    {
+        return $this->task_source;
+    }
+
+    /**
+     * Sets task_source
+     * @param ?string $task_source 
+     *
+     * @return self
+     */
+    public function setTaskSource(?string $task_source): self
+    {
+        $this->task_source = $task_source;
+        return $this;
+    }
+    /**
+      * $task_type 
+      * @var ?string
+      */
+    protected ?string $task_type = null;
+
+    /**
+     * Gets task_type
+     *
+     * @return ?string
+     */
+    public function getTaskType(): ?string
+    {
+        return $this->task_type;
+    }
+
+    /**
+     * Sets task_type
+     * @param ?string $task_type 
+     *
+     * @return self
+     */
+    public function setTaskType(?string $task_type): self
+    {
+        $this->task_type = $task_type;
+        return $this;
+    }
+    /**
       * $user_name_substring 
       * @var ?string
       */
@@ -1334,47 +1442,6 @@ class ListPermissionsOptions
     public function setInclude(?string $include): self
     {
         $this->include = $include;
-        return $this;
-    }
-}
-
-
-/**
- * ListRecipientNamesByEmailOptions Class Doc Comment
- *
- * @category Class
- * @package  DocuSign\eSign
- * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The Docusign PHP Client SDK is licensed under the MIT License.
- * @link     https://github.com/swagger-api/swagger-codegen
- */
-class ListRecipientNamesByEmailOptions
-{
-    /**
-      * $email The email address for the user
-      * @var ?string
-      */
-    protected ?string $email = null;
-
-    /**
-     * Gets email
-     *
-     * @return ?string
-     */
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    /**
-     * Sets email
-     * @param ?string $email The email address for the user
-     *
-     * @return self
-     */
-    public function setEmail(?string $email): self
-    {
-        $this->email = $email;
         return $this;
     }
 }
@@ -4580,6 +4647,12 @@ class AccountsApi
             if ($options->getStartPosition() != 'null') {
                 $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
             }
+            if ($options->getTaskSource() != 'null') {
+                $queryParams['task_source'] = $this->apiClient->getSerializer()->toQueryValue($options->getTaskSource());
+            }
+            if ($options->getTaskType() != 'null') {
+                $queryParams['task_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getTaskType());
+            }
             if ($options->getUserNameSubstring() != 'null') {
                 $queryParams['user_name_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserNameSubstring());
             }
@@ -6219,6 +6292,12 @@ class AccountsApi
             if ($options->getStartPosition() != 'null') {
                 $queryParams['start_position'] = $this->apiClient->getSerializer()->toQueryValue($options->getStartPosition());
             }
+            if ($options->getTaskSource() != 'null') {
+                $queryParams['task_source'] = $this->apiClient->getSerializer()->toQueryValue($options->getTaskSource());
+            }
+            if ($options->getTaskType() != 'null') {
+                $queryParams['task_type'] = $this->apiClient->getSerializer()->toQueryValue($options->getTaskType());
+            }
             if ($options->getUserNameSubstring() != 'null') {
                 $queryParams['user_name_substring'] = $this->apiClient->getSerializer()->toQueryValue($options->getUserNameSubstring());
             }
@@ -6997,102 +7076,6 @@ class AccountsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\PermissionProfileInformation', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation listRecipientNamesByEmail
-     *
-     * Gets recipient names associated with an email address.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\RecipientNamesResponse
-     */
-    public function listRecipientNamesByEmail($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions $options = null)
-    {
-        list($response) = $this->listRecipientNamesByEmailWithHttpInfo($account_id, $options);
-        return $response;
-    }
-
-    /**
-     * Operation listRecipientNamesByEmailWithHttpInfo
-     *
-     * Gets recipient names associated with an email address.
-     *
-     * @param ?string $account_id The external account number (int) or account ID Guid.
-     * @param  \DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions  $options for modifying the behavior of the function. (optional)
-     *
-     * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\RecipientNamesResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function listRecipientNamesByEmailWithHttpInfo($account_id, ?\DocuSign\eSign\Api\AccountsApi\ListRecipientNamesByEmailOptions $options = null): array
-    {
-        // verify the required parameter 'account_id' is set
-        if ($account_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling listRecipientNamesByEmail');
-        }
-        // parse inputs
-        $resourcePath = "/v2.1/accounts/{accountId}/recipient_names";
-        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
-        $queryParams = $headerParams = $formParams = [];
-        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        if ($options != null)
-        {
-            // query params
-            if ($options->getEmail() != 'null') {
-                $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($options->getEmail());
-            }
-        }
-
-        // path params
-        if ($account_id !== null) {
-            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
-        }
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\DocuSign\eSign\Model\RecipientNamesResponse',
-                '/v2.1/accounts/{accountId}/recipient_names'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\RecipientNamesResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\RecipientNamesResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

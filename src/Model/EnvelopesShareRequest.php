@@ -1,6 +1,6 @@
 <?php
 /**
- * Reminders
+ * EnvelopesShareRequest
  *
  * PHP version 7.4
  *
@@ -34,16 +34,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * Reminders Class Doc Comment
+ * EnvelopesShareRequest Class Doc Comment
  *
  * @category    Class
- * @description A complex element that specifies reminder settings for the envelope
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Reminders implements ModelInterface, ArrayAccess
+class EnvelopesShareRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -52,7 +51,7 @@ class Reminders implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'reminders';
+    protected static $swaggerModelName = 'envelopesShareRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,11 +59,9 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_reminder_count' => '?string',
-        'reminder_delay' => '?string',
-        'reminder_enabled' => '?string',
-        'reminder_frequency' => '?string',
-        'smart_reminder_enabled' => '?string'
+        'agent_user' => '\DocuSign\eSign\Model\AuthorizationUser',
+        'custom_message' => '?string',
+        'permission' => '?string'
     ];
 
     /**
@@ -73,11 +70,9 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'maximum_reminder_count' => null,
-        'reminder_delay' => null,
-        'reminder_enabled' => null,
-        'reminder_frequency' => null,
-        'smart_reminder_enabled' => null
+        'agent_user' => null,
+        'custom_message' => null,
+        'permission' => null
     ];
 
     /**
@@ -107,11 +102,9 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'maximum_reminder_count' => 'maximumReminderCount',
-        'reminder_delay' => 'reminderDelay',
-        'reminder_enabled' => 'reminderEnabled',
-        'reminder_frequency' => 'reminderFrequency',
-        'smart_reminder_enabled' => 'smartReminderEnabled'
+        'agent_user' => 'agentUser',
+        'custom_message' => 'customMessage',
+        'permission' => 'permission'
     ];
 
     /**
@@ -120,11 +113,9 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'maximum_reminder_count' => 'setMaximumReminderCount',
-        'reminder_delay' => 'setReminderDelay',
-        'reminder_enabled' => 'setReminderEnabled',
-        'reminder_frequency' => 'setReminderFrequency',
-        'smart_reminder_enabled' => 'setSmartReminderEnabled'
+        'agent_user' => 'setAgentUser',
+        'custom_message' => 'setCustomMessage',
+        'permission' => 'setPermission'
     ];
 
     /**
@@ -133,11 +124,9 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'maximum_reminder_count' => 'getMaximumReminderCount',
-        'reminder_delay' => 'getReminderDelay',
-        'reminder_enabled' => 'getReminderEnabled',
-        'reminder_frequency' => 'getReminderFrequency',
-        'smart_reminder_enabled' => 'getSmartReminderEnabled'
+        'agent_user' => 'getAgentUser',
+        'custom_message' => 'getCustomMessage',
+        'permission' => 'getPermission'
     ];
 
     /**
@@ -200,11 +189,9 @@ class Reminders implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['maximum_reminder_count'] = isset($data['maximum_reminder_count']) ? $data['maximum_reminder_count'] : null;
-        $this->container['reminder_delay'] = isset($data['reminder_delay']) ? $data['reminder_delay'] : null;
-        $this->container['reminder_enabled'] = isset($data['reminder_enabled']) ? $data['reminder_enabled'] : null;
-        $this->container['reminder_frequency'] = isset($data['reminder_frequency']) ? $data['reminder_frequency'] : null;
-        $this->container['smart_reminder_enabled'] = isset($data['smart_reminder_enabled']) ? $data['smart_reminder_enabled'] : null;
+        $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
+        $this->container['custom_message'] = isset($data['custom_message']) ? $data['custom_message'] : null;
+        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
     }
 
     /**
@@ -232,121 +219,73 @@ class Reminders implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets maximum_reminder_count
+     * Gets agent_user
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\AuthorizationUser
      */
-    public function getMaximumReminderCount()
+    public function getAgentUser()
     {
-        return $this->container['maximum_reminder_count'];
+        return $this->container['agent_user'];
     }
 
     /**
-     * Sets maximum_reminder_count
+     * Sets agent_user
      *
-     * @param ?string $maximum_reminder_count 
+     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user 
      *
      * @return $this
      */
-    public function setMaximumReminderCount($maximum_reminder_count)
+    public function setAgentUser($agent_user)
     {
-        $this->container['maximum_reminder_count'] = $maximum_reminder_count;
+        $this->container['agent_user'] = $agent_user;
 
         return $this;
     }
 
     /**
-     * Gets reminder_delay
+     * Gets custom_message
      *
      * @return ?string
      */
-    public function getReminderDelay()
+    public function getCustomMessage()
     {
-        return $this->container['reminder_delay'];
+        return $this->container['custom_message'];
     }
 
     /**
-     * Sets reminder_delay
+     * Sets custom_message
      *
-     * @param ?string $reminder_delay An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
+     * @param ?string $custom_message 
      *
      * @return $this
      */
-    public function setReminderDelay($reminder_delay)
+    public function setCustomMessage($custom_message)
     {
-        $this->container['reminder_delay'] = $reminder_delay;
+        $this->container['custom_message'] = $custom_message;
 
         return $this;
     }
 
     /**
-     * Gets reminder_enabled
+     * Gets permission
      *
      * @return ?string
      */
-    public function getReminderEnabled()
+    public function getPermission()
     {
-        return $this->container['reminder_enabled'];
+        return $this->container['permission'];
     }
 
     /**
-     * Sets reminder_enabled
+     * Sets permission
      *
-     * @param ?string $reminder_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
+     * @param ?string $permission 
      *
      * @return $this
      */
-    public function setReminderEnabled($reminder_enabled)
+    public function setPermission($permission)
     {
-        $this->container['reminder_enabled'] = $reminder_enabled;
-
-        return $this;
-    }
-
-    /**
-     * Gets reminder_frequency
-     *
-     * @return ?string
-     */
-    public function getReminderFrequency()
-    {
-        return $this->container['reminder_frequency'];
-    }
-
-    /**
-     * Sets reminder_frequency
-     *
-     * @param ?string $reminder_frequency An interger that sets the interval, in days, between reminder emails.
-     *
-     * @return $this
-     */
-    public function setReminderFrequency($reminder_frequency)
-    {
-        $this->container['reminder_frequency'] = $reminder_frequency;
-
-        return $this;
-    }
-
-    /**
-     * Gets smart_reminder_enabled
-     *
-     * @return ?string
-     */
-    public function getSmartReminderEnabled()
-    {
-        return $this->container['smart_reminder_enabled'];
-    }
-
-    /**
-     * Sets smart_reminder_enabled
-     *
-     * @param ?string $smart_reminder_enabled 
-     *
-     * @return $this
-     */
-    public function setSmartReminderEnabled($smart_reminder_enabled)
-    {
-        $this->container['smart_reminder_enabled'] = $smart_reminder_enabled;
+        $this->container['permission'] = $permission;
 
         return $this;
     }
