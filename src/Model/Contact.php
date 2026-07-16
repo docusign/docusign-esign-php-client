@@ -59,6 +59,7 @@ class Contact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'can_manage' => '?string',
         'cloud_provider' => '?string',
         'cloud_provider_container_id' => '?string',
         'contact_id' => '?string',
@@ -82,6 +83,7 @@ class Contact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'can_manage' => null,
         'cloud_provider' => null,
         'cloud_provider_container_id' => null,
         'contact_id' => null,
@@ -126,6 +128,7 @@ class Contact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'can_manage' => 'canManage',
         'cloud_provider' => 'cloudProvider',
         'cloud_provider_container_id' => 'cloudProviderContainerId',
         'contact_id' => 'contactId',
@@ -149,6 +152,7 @@ class Contact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'can_manage' => 'setCanManage',
         'cloud_provider' => 'setCloudProvider',
         'cloud_provider_container_id' => 'setCloudProviderContainerId',
         'contact_id' => 'setContactId',
@@ -172,6 +176,7 @@ class Contact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'can_manage' => 'getCanManage',
         'cloud_provider' => 'getCloudProvider',
         'cloud_provider_container_id' => 'getCloudProviderContainerId',
         'contact_id' => 'getContactId',
@@ -249,6 +254,7 @@ class Contact implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
+        $this->container['can_manage'] = isset($data['can_manage']) ? $data['can_manage'] : null;
         $this->container['cloud_provider'] = isset($data['cloud_provider']) ? $data['cloud_provider'] : null;
         $this->container['cloud_provider_container_id'] = isset($data['cloud_provider_container_id']) ? $data['cloud_provider_container_id'] : null;
         $this->container['contact_id'] = isset($data['contact_id']) ? $data['contact_id'] : null;
@@ -289,6 +295,30 @@ class Contact implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets can_manage
+     *
+     * @return ?string
+     */
+    public function getCanManage()
+    {
+        return $this->container['can_manage'];
+    }
+
+    /**
+     * Sets can_manage
+     *
+     * @param ?string $can_manage 
+     *
+     * @return $this
+     */
+    public function setCanManage($can_manage)
+    {
+        $this->container['can_manage'] = $can_manage;
+
+        return $this;
+    }
 
     /**
      * Gets cloud_provider

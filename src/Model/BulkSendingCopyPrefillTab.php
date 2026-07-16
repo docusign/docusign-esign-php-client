@@ -1,6 +1,6 @@
 <?php
 /**
- * Reminders
+ * BulkSendingCopyPrefillTab
  *
  * PHP version 7.4
  *
@@ -34,16 +34,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * Reminders Class Doc Comment
+ * BulkSendingCopyPrefillTab Class Doc Comment
  *
  * @category    Class
- * @description A complex element that specifies reminder settings for the envelope
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Reminders implements ModelInterface, ArrayAccess
+class BulkSendingCopyPrefillTab implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -52,7 +51,7 @@ class Reminders implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'reminders';
+    protected static $swaggerModelName = 'bulkSendingCopyPrefillTab';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,11 +59,8 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_reminder_count' => '?string',
-        'reminder_delay' => '?string',
-        'reminder_enabled' => '?string',
-        'reminder_frequency' => '?string',
-        'smart_reminder_enabled' => '?string'
+        'initial_value' => '?string',
+        'tab_label' => '?string'
     ];
 
     /**
@@ -73,11 +69,8 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'maximum_reminder_count' => null,
-        'reminder_delay' => null,
-        'reminder_enabled' => null,
-        'reminder_frequency' => null,
-        'smart_reminder_enabled' => null
+        'initial_value' => null,
+        'tab_label' => null
     ];
 
     /**
@@ -107,11 +100,8 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'maximum_reminder_count' => 'maximumReminderCount',
-        'reminder_delay' => 'reminderDelay',
-        'reminder_enabled' => 'reminderEnabled',
-        'reminder_frequency' => 'reminderFrequency',
-        'smart_reminder_enabled' => 'smartReminderEnabled'
+        'initial_value' => 'initialValue',
+        'tab_label' => 'tabLabel'
     ];
 
     /**
@@ -120,11 +110,8 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'maximum_reminder_count' => 'setMaximumReminderCount',
-        'reminder_delay' => 'setReminderDelay',
-        'reminder_enabled' => 'setReminderEnabled',
-        'reminder_frequency' => 'setReminderFrequency',
-        'smart_reminder_enabled' => 'setSmartReminderEnabled'
+        'initial_value' => 'setInitialValue',
+        'tab_label' => 'setTabLabel'
     ];
 
     /**
@@ -133,11 +120,8 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'maximum_reminder_count' => 'getMaximumReminderCount',
-        'reminder_delay' => 'getReminderDelay',
-        'reminder_enabled' => 'getReminderEnabled',
-        'reminder_frequency' => 'getReminderFrequency',
-        'smart_reminder_enabled' => 'getSmartReminderEnabled'
+        'initial_value' => 'getInitialValue',
+        'tab_label' => 'getTabLabel'
     ];
 
     /**
@@ -200,11 +184,8 @@ class Reminders implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['maximum_reminder_count'] = isset($data['maximum_reminder_count']) ? $data['maximum_reminder_count'] : null;
-        $this->container['reminder_delay'] = isset($data['reminder_delay']) ? $data['reminder_delay'] : null;
-        $this->container['reminder_enabled'] = isset($data['reminder_enabled']) ? $data['reminder_enabled'] : null;
-        $this->container['reminder_frequency'] = isset($data['reminder_frequency']) ? $data['reminder_frequency'] : null;
-        $this->container['smart_reminder_enabled'] = isset($data['smart_reminder_enabled']) ? $data['smart_reminder_enabled'] : null;
+        $this->container['initial_value'] = isset($data['initial_value']) ? $data['initial_value'] : null;
+        $this->container['tab_label'] = isset($data['tab_label']) ? $data['tab_label'] : null;
     }
 
     /**
@@ -232,121 +213,49 @@ class Reminders implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets maximum_reminder_count
+     * Gets initial_value
      *
      * @return ?string
      */
-    public function getMaximumReminderCount()
+    public function getInitialValue()
     {
-        return $this->container['maximum_reminder_count'];
+        return $this->container['initial_value'];
     }
 
     /**
-     * Sets maximum_reminder_count
+     * Sets initial_value
      *
-     * @param ?string $maximum_reminder_count 
+     * @param ?string $initial_value The original value of the tab.
      *
      * @return $this
      */
-    public function setMaximumReminderCount($maximum_reminder_count)
+    public function setInitialValue($initial_value)
     {
-        $this->container['maximum_reminder_count'] = $maximum_reminder_count;
+        $this->container['initial_value'] = $initial_value;
 
         return $this;
     }
 
     /**
-     * Gets reminder_delay
+     * Gets tab_label
      *
      * @return ?string
      */
-    public function getReminderDelay()
+    public function getTabLabel()
     {
-        return $this->container['reminder_delay'];
+        return $this->container['tab_label'];
     }
 
     /**
-     * Sets reminder_delay
+     * Sets tab_label
      *
-     * @param ?string $reminder_delay An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
+     * @param ?string $tab_label The label string associated with the tab.
      *
      * @return $this
      */
-    public function setReminderDelay($reminder_delay)
+    public function setTabLabel($tab_label)
     {
-        $this->container['reminder_delay'] = $reminder_delay;
-
-        return $this;
-    }
-
-    /**
-     * Gets reminder_enabled
-     *
-     * @return ?string
-     */
-    public function getReminderEnabled()
-    {
-        return $this->container['reminder_enabled'];
-    }
-
-    /**
-     * Sets reminder_enabled
-     *
-     * @param ?string $reminder_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
-     *
-     * @return $this
-     */
-    public function setReminderEnabled($reminder_enabled)
-    {
-        $this->container['reminder_enabled'] = $reminder_enabled;
-
-        return $this;
-    }
-
-    /**
-     * Gets reminder_frequency
-     *
-     * @return ?string
-     */
-    public function getReminderFrequency()
-    {
-        return $this->container['reminder_frequency'];
-    }
-
-    /**
-     * Sets reminder_frequency
-     *
-     * @param ?string $reminder_frequency An interger that sets the interval, in days, between reminder emails.
-     *
-     * @return $this
-     */
-    public function setReminderFrequency($reminder_frequency)
-    {
-        $this->container['reminder_frequency'] = $reminder_frequency;
-
-        return $this;
-    }
-
-    /**
-     * Gets smart_reminder_enabled
-     *
-     * @return ?string
-     */
-    public function getSmartReminderEnabled()
-    {
-        return $this->container['smart_reminder_enabled'];
-    }
-
-    /**
-     * Sets smart_reminder_enabled
-     *
-     * @param ?string $smart_reminder_enabled 
-     *
-     * @return $this
-     */
-    public function setSmartReminderEnabled($smart_reminder_enabled)
-    {
-        $this->container['smart_reminder_enabled'] = $smart_reminder_enabled;
+        $this->container['tab_label'] = $tab_label;
 
         return $this;
     }

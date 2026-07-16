@@ -1,6 +1,6 @@
 <?php
 /**
- * Reminders
+ * EnvelopesShareResponse
  *
  * PHP version 7.4
  *
@@ -34,16 +34,15 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * Reminders Class Doc Comment
+ * EnvelopesShareResponse Class Doc Comment
  *
  * @category    Class
- * @description A complex element that specifies reminder settings for the envelope
  * @package     DocuSign\eSign
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Reminders implements ModelInterface, ArrayAccess
+class EnvelopesShareResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -52,7 +51,7 @@ class Reminders implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'reminders';
+    protected static $swaggerModelName = 'envelopesShareResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,11 +59,15 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'maximum_reminder_count' => '?string',
-        'reminder_delay' => '?string',
-        'reminder_enabled' => '?string',
-        'reminder_frequency' => '?string',
-        'smart_reminder_enabled' => '?string'
+        'agent_user' => '\DocuSign\eSign\Model\AuthorizationUser',
+        'created_timestamp' => '?string',
+        'envelope_id' => '?string',
+        'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'modified_timestamp' => '?string',
+        'permission' => '?string',
+        'sender_info' => '\DocuSign\eSign\Model\AuthorizationUser',
+        'share_id' => '?string',
+        'subject' => '?string'
     ];
 
     /**
@@ -73,11 +76,15 @@ class Reminders implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'maximum_reminder_count' => null,
-        'reminder_delay' => null,
-        'reminder_enabled' => null,
-        'reminder_frequency' => null,
-        'smart_reminder_enabled' => null
+        'agent_user' => null,
+        'created_timestamp' => null,
+        'envelope_id' => null,
+        'error_details' => null,
+        'modified_timestamp' => null,
+        'permission' => null,
+        'sender_info' => null,
+        'share_id' => null,
+        'subject' => null
     ];
 
     /**
@@ -107,11 +114,15 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'maximum_reminder_count' => 'maximumReminderCount',
-        'reminder_delay' => 'reminderDelay',
-        'reminder_enabled' => 'reminderEnabled',
-        'reminder_frequency' => 'reminderFrequency',
-        'smart_reminder_enabled' => 'smartReminderEnabled'
+        'agent_user' => 'agentUser',
+        'created_timestamp' => 'createdTimestamp',
+        'envelope_id' => 'envelopeId',
+        'error_details' => 'errorDetails',
+        'modified_timestamp' => 'modifiedTimestamp',
+        'permission' => 'permission',
+        'sender_info' => 'senderInfo',
+        'share_id' => 'shareId',
+        'subject' => 'subject'
     ];
 
     /**
@@ -120,11 +131,15 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'maximum_reminder_count' => 'setMaximumReminderCount',
-        'reminder_delay' => 'setReminderDelay',
-        'reminder_enabled' => 'setReminderEnabled',
-        'reminder_frequency' => 'setReminderFrequency',
-        'smart_reminder_enabled' => 'setSmartReminderEnabled'
+        'agent_user' => 'setAgentUser',
+        'created_timestamp' => 'setCreatedTimestamp',
+        'envelope_id' => 'setEnvelopeId',
+        'error_details' => 'setErrorDetails',
+        'modified_timestamp' => 'setModifiedTimestamp',
+        'permission' => 'setPermission',
+        'sender_info' => 'setSenderInfo',
+        'share_id' => 'setShareId',
+        'subject' => 'setSubject'
     ];
 
     /**
@@ -133,11 +148,15 @@ class Reminders implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'maximum_reminder_count' => 'getMaximumReminderCount',
-        'reminder_delay' => 'getReminderDelay',
-        'reminder_enabled' => 'getReminderEnabled',
-        'reminder_frequency' => 'getReminderFrequency',
-        'smart_reminder_enabled' => 'getSmartReminderEnabled'
+        'agent_user' => 'getAgentUser',
+        'created_timestamp' => 'getCreatedTimestamp',
+        'envelope_id' => 'getEnvelopeId',
+        'error_details' => 'getErrorDetails',
+        'modified_timestamp' => 'getModifiedTimestamp',
+        'permission' => 'getPermission',
+        'sender_info' => 'getSenderInfo',
+        'share_id' => 'getShareId',
+        'subject' => 'getSubject'
     ];
 
     /**
@@ -200,11 +219,15 @@ class Reminders implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['maximum_reminder_count'] = isset($data['maximum_reminder_count']) ? $data['maximum_reminder_count'] : null;
-        $this->container['reminder_delay'] = isset($data['reminder_delay']) ? $data['reminder_delay'] : null;
-        $this->container['reminder_enabled'] = isset($data['reminder_enabled']) ? $data['reminder_enabled'] : null;
-        $this->container['reminder_frequency'] = isset($data['reminder_frequency']) ? $data['reminder_frequency'] : null;
-        $this->container['smart_reminder_enabled'] = isset($data['smart_reminder_enabled']) ? $data['smart_reminder_enabled'] : null;
+        $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
+        $this->container['created_timestamp'] = isset($data['created_timestamp']) ? $data['created_timestamp'] : null;
+        $this->container['envelope_id'] = isset($data['envelope_id']) ? $data['envelope_id'] : null;
+        $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['modified_timestamp'] = isset($data['modified_timestamp']) ? $data['modified_timestamp'] : null;
+        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
+        $this->container['sender_info'] = isset($data['sender_info']) ? $data['sender_info'] : null;
+        $this->container['share_id'] = isset($data['share_id']) ? $data['share_id'] : null;
+        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
     }
 
     /**
@@ -232,121 +255,217 @@ class Reminders implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets maximum_reminder_count
+     * Gets agent_user
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\AuthorizationUser
      */
-    public function getMaximumReminderCount()
+    public function getAgentUser()
     {
-        return $this->container['maximum_reminder_count'];
+        return $this->container['agent_user'];
     }
 
     /**
-     * Sets maximum_reminder_count
+     * Sets agent_user
      *
-     * @param ?string $maximum_reminder_count 
+     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user 
      *
      * @return $this
      */
-    public function setMaximumReminderCount($maximum_reminder_count)
+    public function setAgentUser($agent_user)
     {
-        $this->container['maximum_reminder_count'] = $maximum_reminder_count;
+        $this->container['agent_user'] = $agent_user;
 
         return $this;
     }
 
     /**
-     * Gets reminder_delay
+     * Gets created_timestamp
      *
      * @return ?string
      */
-    public function getReminderDelay()
+    public function getCreatedTimestamp()
     {
-        return $this->container['reminder_delay'];
+        return $this->container['created_timestamp'];
     }
 
     /**
-     * Sets reminder_delay
+     * Sets created_timestamp
      *
-     * @param ?string $reminder_delay An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
+     * @param ?string $created_timestamp 
      *
      * @return $this
      */
-    public function setReminderDelay($reminder_delay)
+    public function setCreatedTimestamp($created_timestamp)
     {
-        $this->container['reminder_delay'] = $reminder_delay;
+        $this->container['created_timestamp'] = $created_timestamp;
 
         return $this;
     }
 
     /**
-     * Gets reminder_enabled
+     * Gets envelope_id
      *
      * @return ?string
      */
-    public function getReminderEnabled()
+    public function getEnvelopeId()
     {
-        return $this->container['reminder_enabled'];
+        return $this->container['envelope_id'];
     }
 
     /**
-     * Sets reminder_enabled
+     * Sets envelope_id
      *
-     * @param ?string $reminder_enabled When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
+     * @param ?string $envelope_id The envelope ID of the envelope status that failed to post.
      *
      * @return $this
      */
-    public function setReminderEnabled($reminder_enabled)
+    public function setEnvelopeId($envelope_id)
     {
-        $this->container['reminder_enabled'] = $reminder_enabled;
+        $this->container['envelope_id'] = $envelope_id;
 
         return $this;
     }
 
     /**
-     * Gets reminder_frequency
+     * Gets error_details
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\ErrorDetails
      */
-    public function getReminderFrequency()
+    public function getErrorDetails()
     {
-        return $this->container['reminder_frequency'];
+        return $this->container['error_details'];
     }
 
     /**
-     * Sets reminder_frequency
+     * Sets error_details
      *
-     * @param ?string $reminder_frequency An interger that sets the interval, in days, between reminder emails.
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
-    public function setReminderFrequency($reminder_frequency)
+    public function setErrorDetails($error_details)
     {
-        $this->container['reminder_frequency'] = $reminder_frequency;
+        $this->container['error_details'] = $error_details;
 
         return $this;
     }
 
     /**
-     * Gets smart_reminder_enabled
+     * Gets modified_timestamp
      *
      * @return ?string
      */
-    public function getSmartReminderEnabled()
+    public function getModifiedTimestamp()
     {
-        return $this->container['smart_reminder_enabled'];
+        return $this->container['modified_timestamp'];
     }
 
     /**
-     * Sets smart_reminder_enabled
+     * Sets modified_timestamp
      *
-     * @param ?string $smart_reminder_enabled 
+     * @param ?string $modified_timestamp 
      *
      * @return $this
      */
-    public function setSmartReminderEnabled($smart_reminder_enabled)
+    public function setModifiedTimestamp($modified_timestamp)
     {
-        $this->container['smart_reminder_enabled'] = $smart_reminder_enabled;
+        $this->container['modified_timestamp'] = $modified_timestamp;
+
+        return $this;
+    }
+
+    /**
+     * Gets permission
+     *
+     * @return ?string
+     */
+    public function getPermission()
+    {
+        return $this->container['permission'];
+    }
+
+    /**
+     * Sets permission
+     *
+     * @param ?string $permission 
+     *
+     * @return $this
+     */
+    public function setPermission($permission)
+    {
+        $this->container['permission'] = $permission;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_info
+     *
+     * @return \DocuSign\eSign\Model\AuthorizationUser
+     */
+    public function getSenderInfo()
+    {
+        return $this->container['sender_info'];
+    }
+
+    /**
+     * Sets sender_info
+     *
+     * @param \DocuSign\eSign\Model\AuthorizationUser $sender_info 
+     *
+     * @return $this
+     */
+    public function setSenderInfo($sender_info)
+    {
+        $this->container['sender_info'] = $sender_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets share_id
+     *
+     * @return ?string
+     */
+    public function getShareId()
+    {
+        return $this->container['share_id'];
+    }
+
+    /**
+     * Sets share_id
+     *
+     * @param ?string $share_id 
+     *
+     * @return $this
+     */
+    public function setShareId($share_id)
+    {
+        $this->container['share_id'] = $share_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets subject
+     *
+     * @return ?string
+     */
+    public function getSubject()
+    {
+        return $this->container['subject'];
+    }
+
+    /**
+     * Sets subject
+     *
+     * @param ?string $subject 
+     *
+     * @return $this
+     */
+    public function setSubject($subject)
+    {
+        $this->container['subject'] = $subject;
 
         return $this;
     }

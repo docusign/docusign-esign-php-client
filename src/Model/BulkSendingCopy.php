@@ -64,6 +64,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
         'doc_gen_form_fields' => '\DocuSign\eSign\Model\BulksendingCopyDocGenFormField[]',
         'email_blurb' => '?string',
         'email_subject' => '?string',
+        'prefill_tabs' => '\DocuSign\eSign\Model\BulkSendingCopyPrefillTab[]',
         'recipients' => '\DocuSign\eSign\Model\BulkSendingCopyRecipient[]'
     ];
 
@@ -77,6 +78,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
         'doc_gen_form_fields' => null,
         'email_blurb' => null,
         'email_subject' => null,
+        'prefill_tabs' => null,
         'recipients' => null
     ];
 
@@ -111,6 +113,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
         'doc_gen_form_fields' => 'docGenFormFields',
         'email_blurb' => 'emailBlurb',
         'email_subject' => 'emailSubject',
+        'prefill_tabs' => 'prefillTabs',
         'recipients' => 'recipients'
     ];
 
@@ -124,6 +127,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
         'doc_gen_form_fields' => 'setDocGenFormFields',
         'email_blurb' => 'setEmailBlurb',
         'email_subject' => 'setEmailSubject',
+        'prefill_tabs' => 'setPrefillTabs',
         'recipients' => 'setRecipients'
     ];
 
@@ -137,6 +141,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
         'doc_gen_form_fields' => 'getDocGenFormFields',
         'email_blurb' => 'getEmailBlurb',
         'email_subject' => 'getEmailSubject',
+        'prefill_tabs' => 'getPrefillTabs',
         'recipients' => 'getRecipients'
     ];
 
@@ -204,6 +209,7 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
         $this->container['doc_gen_form_fields'] = isset($data['doc_gen_form_fields']) ? $data['doc_gen_form_fields'] : null;
         $this->container['email_blurb'] = isset($data['email_blurb']) ? $data['email_blurb'] : null;
         $this->container['email_subject'] = isset($data['email_subject']) ? $data['email_subject'] : null;
+        $this->container['prefill_tabs'] = isset($data['prefill_tabs']) ? $data['prefill_tabs'] : null;
         $this->container['recipients'] = isset($data['recipients']) ? $data['recipients'] : null;
     }
 
@@ -323,6 +329,30 @@ class BulkSendingCopy implements ModelInterface, ArrayAccess
     public function setEmailSubject($email_subject)
     {
         $this->container['email_subject'] = $email_subject;
+
+        return $this;
+    }
+
+    /**
+     * Gets prefill_tabs
+     *
+     * @return \DocuSign\eSign\Model\BulkSendingCopyPrefillTab[]
+     */
+    public function getPrefillTabs()
+    {
+        return $this->container['prefill_tabs'];
+    }
+
+    /**
+     * Sets prefill_tabs
+     *
+     * @param \DocuSign\eSign\Model\BulkSendingCopyPrefillTab[] $prefill_tabs 
+     *
+     * @return $this
+     */
+    public function setPrefillTabs($prefill_tabs)
+    {
+        $this->container['prefill_tabs'] = $prefill_tabs;
 
         return $this;
     }

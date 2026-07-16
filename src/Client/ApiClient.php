@@ -406,6 +406,7 @@ class ApiClient
             $h = explode(':', $h, 2);
 
             if (isset($h[1])) {
+                $h[0] = strtolower(trim($h[0]));
                 if (!isset($headers[$h[0]])) {
                     $headers[$h[0]] = trim($h[1]);
                 } elseif (is_array($headers[$h[0]])) {

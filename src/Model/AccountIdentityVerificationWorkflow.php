@@ -62,6 +62,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'default_description' => '?string',
         'default_name' => '?string',
+        'display_order' => '?string',
         'input_options' => '\DocuSign\eSign\Model\AccountIdentityInputOption[]',
         'is_disabled' => '?string',
         'owner_type' => '?string',
@@ -80,6 +81,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'default_description' => null,
         'default_name' => null,
+        'display_order' => 'int32',
         'input_options' => null,
         'is_disabled' => null,
         'owner_type' => null,
@@ -119,6 +121,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'default_description' => 'defaultDescription',
         'default_name' => 'defaultName',
+        'display_order' => 'displayOrder',
         'input_options' => 'inputOptions',
         'is_disabled' => 'isDisabled',
         'owner_type' => 'ownerType',
@@ -137,6 +140,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     protected static $setters = [
         'default_description' => 'setDefaultDescription',
         'default_name' => 'setDefaultName',
+        'display_order' => 'setDisplayOrder',
         'input_options' => 'setInputOptions',
         'is_disabled' => 'setIsDisabled',
         'owner_type' => 'setOwnerType',
@@ -155,6 +159,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     protected static $getters = [
         'default_description' => 'getDefaultDescription',
         'default_name' => 'getDefaultName',
+        'display_order' => 'getDisplayOrder',
         'input_options' => 'getInputOptions',
         'is_disabled' => 'getIsDisabled',
         'owner_type' => 'getOwnerType',
@@ -227,6 +232,7 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     {
         $this->container['default_description'] = isset($data['default_description']) ? $data['default_description'] : null;
         $this->container['default_name'] = isset($data['default_name']) ? $data['default_name'] : null;
+        $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['input_options'] = isset($data['input_options']) ? $data['input_options'] : null;
         $this->container['is_disabled'] = isset($data['is_disabled']) ? $data['is_disabled'] : null;
         $this->container['owner_type'] = isset($data['owner_type']) ? $data['owner_type'] : null;
@@ -305,6 +311,30 @@ class AccountIdentityVerificationWorkflow implements ModelInterface, ArrayAccess
     public function setDefaultName($default_name)
     {
         $this->container['default_name'] = $default_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_order
+     *
+     * @return ?string
+     */
+    public function getDisplayOrder()
+    {
+        return $this->container['display_order'];
+    }
+
+    /**
+     * Sets display_order
+     *
+     * @param ?string $display_order 
+     *
+     * @return $this
+     */
+    public function setDisplayOrder($display_order)
+    {
+        $this->container['display_order'] = $display_order;
 
         return $this;
     }

@@ -833,7 +833,7 @@ class GroupsApi
      * @param  \DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
-     * @return \DocuSign\eSign\Model\UsersResponse
+     * @return \DocuSign\eSign\Model\GroupUsersResponse
      */
     public function listGroupUsers($account_id, $group_id, ?\DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions $options = null)
     {
@@ -851,7 +851,7 @@ class GroupsApi
      * @param  \DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
-     * @return array of \DocuSign\eSign\Model\UsersResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocuSign\eSign\Model\GroupUsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listGroupUsersWithHttpInfo($account_id, $group_id, ?\DocuSign\eSign\Api\GroupsApi\ListGroupUsersOptions $options = null): array
     {
@@ -911,15 +911,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\DocuSign\eSign\Model\UsersResponse',
+                '\DocuSign\eSign\Model\GroupUsersResponse',
                 '/v2.1/accounts/{accountId}/groups/{groupId}/users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\UsersResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\eSign\Model\GroupUsersResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\UsersResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\GroupUsersResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

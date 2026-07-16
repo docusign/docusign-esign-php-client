@@ -60,6 +60,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'agents' => '\DocuSign\eSign\Model\Agent[]',
+        'authorized_signatories' => '\DocuSign\eSign\Model\AuthorizedSignatory[]',
         'carbon_copies' => '\DocuSign\eSign\Model\CarbonCopy[]',
         'certified_deliveries' => '\DocuSign\eSign\Model\CertifiedDelivery[]',
         'current_routing_order' => '?string',
@@ -83,6 +84,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'agents' => null,
+        'authorized_signatories' => null,
         'carbon_copies' => null,
         'certified_deliveries' => null,
         'current_routing_order' => null,
@@ -127,6 +129,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'agents' => 'agents',
+        'authorized_signatories' => 'authorizedSignatories',
         'carbon_copies' => 'carbonCopies',
         'certified_deliveries' => 'certifiedDeliveries',
         'current_routing_order' => 'currentRoutingOrder',
@@ -150,6 +153,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'agents' => 'setAgents',
+        'authorized_signatories' => 'setAuthorizedSignatories',
         'carbon_copies' => 'setCarbonCopies',
         'certified_deliveries' => 'setCertifiedDeliveries',
         'current_routing_order' => 'setCurrentRoutingOrder',
@@ -173,6 +177,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'agents' => 'getAgents',
+        'authorized_signatories' => 'getAuthorizedSignatories',
         'carbon_copies' => 'getCarbonCopies',
         'certified_deliveries' => 'getCertifiedDeliveries',
         'current_routing_order' => 'getCurrentRoutingOrder',
@@ -250,6 +255,7 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
     public function __construct(?array $data = null)
     {
         $this->container['agents'] = isset($data['agents']) ? $data['agents'] : null;
+        $this->container['authorized_signatories'] = isset($data['authorized_signatories']) ? $data['authorized_signatories'] : null;
         $this->container['carbon_copies'] = isset($data['carbon_copies']) ? $data['carbon_copies'] : null;
         $this->container['certified_deliveries'] = isset($data['certified_deliveries']) ? $data['certified_deliveries'] : null;
         $this->container['current_routing_order'] = isset($data['current_routing_order']) ? $data['current_routing_order'] : null;
@@ -310,6 +316,30 @@ class TemplateRecipients implements ModelInterface, ArrayAccess
     public function setAgents($agents)
     {
         $this->container['agents'] = $agents;
+
+        return $this;
+    }
+
+    /**
+     * Gets authorized_signatories
+     *
+     * @return \DocuSign\eSign\Model\AuthorizedSignatory[]
+     */
+    public function getAuthorizedSignatories()
+    {
+        return $this->container['authorized_signatories'];
+    }
+
+    /**
+     * Sets authorized_signatories
+     *
+     * @param \DocuSign\eSign\Model\AuthorizedSignatory[] $authorized_signatories 
+     *
+     * @return $this
+     */
+    public function setAuthorizedSignatories($authorized_signatories)
+    {
+        $this->container['authorized_signatories'] = $authorized_signatories;
 
         return $this;
     }

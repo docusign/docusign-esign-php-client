@@ -1,6 +1,6 @@
 <?php
 /**
- * UserAuthorizationCreateRequestWithId
+ * GroupUserInfo
  *
  * PHP version 7.4
  *
@@ -34,7 +34,7 @@ use \ArrayAccess;
 use DocuSign\eSign\ObjectSerializer;
 
 /**
- * UserAuthorizationCreateRequestWithId Class Doc Comment
+ * GroupUserInfo Class Doc Comment
  *
  * @category    Class
  * @package     DocuSign\eSign
@@ -42,7 +42,7 @@ use DocuSign\eSign\ObjectSerializer;
  * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAccess
+class GroupUserInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $swaggerModelName = 'userAuthorizationCreateRequestWithId';
+    protected static $swaggerModelName = 'groupUserInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,13 +59,16 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'agent_user' => '\DocuSign\eSign\Model\AuthorizationUser',
-        'authorization_id' => '?string',
-        'end_date' => '?string',
-        'permission' => '?string',
-        'start_date' => '?string',
-        'task_source' => '?string',
-        'task_type' => '?string'
+        'activation_access_code' => '?string',
+        'email' => '?string',
+        'error_details' => '\DocuSign\eSign\Model\ErrorDetails',
+        'login_status' => '?string',
+        'send_activation_email' => '?string',
+        'uri' => '?string',
+        'user_id' => '?string',
+        'user_name' => '?string',
+        'user_status' => '?string',
+        'user_type' => '?string'
     ];
 
     /**
@@ -74,13 +77,16 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'agent_user' => null,
-        'authorization_id' => null,
-        'end_date' => null,
-        'permission' => null,
-        'start_date' => null,
-        'task_source' => null,
-        'task_type' => null
+        'activation_access_code' => null,
+        'email' => null,
+        'error_details' => null,
+        'login_status' => null,
+        'send_activation_email' => null,
+        'uri' => null,
+        'user_id' => null,
+        'user_name' => null,
+        'user_status' => null,
+        'user_type' => null
     ];
 
     /**
@@ -110,13 +116,16 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'agent_user' => 'agentUser',
-        'authorization_id' => 'authorizationId',
-        'end_date' => 'endDate',
-        'permission' => 'permission',
-        'start_date' => 'startDate',
-        'task_source' => 'taskSource',
-        'task_type' => 'taskType'
+        'activation_access_code' => 'activationAccessCode',
+        'email' => 'email',
+        'error_details' => 'errorDetails',
+        'login_status' => 'loginStatus',
+        'send_activation_email' => 'sendActivationEmail',
+        'uri' => 'uri',
+        'user_id' => 'userId',
+        'user_name' => 'userName',
+        'user_status' => 'userStatus',
+        'user_type' => 'userType'
     ];
 
     /**
@@ -125,13 +134,16 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'agent_user' => 'setAgentUser',
-        'authorization_id' => 'setAuthorizationId',
-        'end_date' => 'setEndDate',
-        'permission' => 'setPermission',
-        'start_date' => 'setStartDate',
-        'task_source' => 'setTaskSource',
-        'task_type' => 'setTaskType'
+        'activation_access_code' => 'setActivationAccessCode',
+        'email' => 'setEmail',
+        'error_details' => 'setErrorDetails',
+        'login_status' => 'setLoginStatus',
+        'send_activation_email' => 'setSendActivationEmail',
+        'uri' => 'setUri',
+        'user_id' => 'setUserId',
+        'user_name' => 'setUserName',
+        'user_status' => 'setUserStatus',
+        'user_type' => 'setUserType'
     ];
 
     /**
@@ -140,13 +152,16 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'agent_user' => 'getAgentUser',
-        'authorization_id' => 'getAuthorizationId',
-        'end_date' => 'getEndDate',
-        'permission' => 'getPermission',
-        'start_date' => 'getStartDate',
-        'task_source' => 'getTaskSource',
-        'task_type' => 'getTaskType'
+        'activation_access_code' => 'getActivationAccessCode',
+        'email' => 'getEmail',
+        'error_details' => 'getErrorDetails',
+        'login_status' => 'getLoginStatus',
+        'send_activation_email' => 'getSendActivationEmail',
+        'uri' => 'getUri',
+        'user_id' => 'getUserId',
+        'user_name' => 'getUserName',
+        'user_status' => 'getUserStatus',
+        'user_type' => 'getUserType'
     ];
 
     /**
@@ -209,13 +224,16 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
      */
     public function __construct(?array $data = null)
     {
-        $this->container['agent_user'] = isset($data['agent_user']) ? $data['agent_user'] : null;
-        $this->container['authorization_id'] = isset($data['authorization_id']) ? $data['authorization_id'] : null;
-        $this->container['end_date'] = isset($data['end_date']) ? $data['end_date'] : null;
-        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
-        $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
-        $this->container['task_source'] = isset($data['task_source']) ? $data['task_source'] : null;
-        $this->container['task_type'] = isset($data['task_type']) ? $data['task_type'] : null;
+        $this->container['activation_access_code'] = isset($data['activation_access_code']) ? $data['activation_access_code'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['error_details'] = isset($data['error_details']) ? $data['error_details'] : null;
+        $this->container['login_status'] = isset($data['login_status']) ? $data['login_status'] : null;
+        $this->container['send_activation_email'] = isset($data['send_activation_email']) ? $data['send_activation_email'] : null;
+        $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
+        $this->container['user_status'] = isset($data['user_status']) ? $data['user_status'] : null;
+        $this->container['user_type'] = isset($data['user_type']) ? $data['user_type'] : null;
     }
 
     /**
@@ -243,169 +261,241 @@ class UserAuthorizationCreateRequestWithId implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets agent_user
+     * Gets activation_access_code
      *
-     * @return \DocuSign\eSign\Model\AuthorizationUser
+     * @return ?string
      */
-    public function getAgentUser()
+    public function getActivationAccessCode()
     {
-        return $this->container['agent_user'];
+        return $this->container['activation_access_code'];
     }
 
     /**
-     * Sets agent_user
+     * Sets activation_access_code
      *
-     * @param \DocuSign\eSign\Model\AuthorizationUser $agent_user 
+     * @param ?string $activation_access_code 
      *
      * @return $this
      */
-    public function setAgentUser($agent_user)
+    public function setActivationAccessCode($activation_access_code)
     {
-        $this->container['agent_user'] = $agent_user;
+        $this->container['activation_access_code'] = $activation_access_code;
 
         return $this;
     }
 
     /**
-     * Gets authorization_id
+     * Gets email
      *
      * @return ?string
      */
-    public function getAuthorizationId()
+    public function getEmail()
     {
-        return $this->container['authorization_id'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets authorization_id
+     * Sets email
      *
-     * @param ?string $authorization_id 
+     * @param ?string $email 
      *
      * @return $this
      */
-    public function setAuthorizationId($authorization_id)
+    public function setEmail($email)
     {
-        $this->container['authorization_id'] = $authorization_id;
+        $this->container['email'] = $email;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets error_details
      *
-     * @return ?string
+     * @return \DocuSign\eSign\Model\ErrorDetails
      */
-    public function getEndDate()
+    public function getErrorDetails()
     {
-        return $this->container['end_date'];
+        return $this->container['error_details'];
     }
 
     /**
-     * Sets end_date
+     * Sets error_details
      *
-     * @param ?string $end_date 
+     * @param \DocuSign\eSign\Model\ErrorDetails $error_details Array or errors.
      *
      * @return $this
      */
-    public function setEndDate($end_date)
+    public function setErrorDetails($error_details)
     {
-        $this->container['end_date'] = $end_date;
+        $this->container['error_details'] = $error_details;
 
         return $this;
     }
 
     /**
-     * Gets permission
+     * Gets login_status
      *
      * @return ?string
      */
-    public function getPermission()
+    public function getLoginStatus()
     {
-        return $this->container['permission'];
+        return $this->container['login_status'];
     }
 
     /**
-     * Sets permission
+     * Sets login_status
      *
-     * @param ?string $permission 
+     * @param ?string $login_status 
      *
      * @return $this
      */
-    public function setPermission($permission)
+    public function setLoginStatus($login_status)
     {
-        $this->container['permission'] = $permission;
+        $this->container['login_status'] = $login_status;
 
         return $this;
     }
 
     /**
-     * Gets start_date
+     * Gets send_activation_email
      *
      * @return ?string
      */
-    public function getStartDate()
+    public function getSendActivationEmail()
     {
-        return $this->container['start_date'];
+        return $this->container['send_activation_email'];
     }
 
     /**
-     * Sets start_date
+     * Sets send_activation_email
      *
-     * @param ?string $start_date 
+     * @param ?string $send_activation_email 
      *
      * @return $this
      */
-    public function setStartDate($start_date)
+    public function setSendActivationEmail($send_activation_email)
     {
-        $this->container['start_date'] = $start_date;
+        $this->container['send_activation_email'] = $send_activation_email;
 
         return $this;
     }
 
     /**
-     * Gets task_source
+     * Gets uri
      *
      * @return ?string
      */
-    public function getTaskSource()
+    public function getUri()
     {
-        return $this->container['task_source'];
+        return $this->container['uri'];
     }
 
     /**
-     * Sets task_source
+     * Sets uri
      *
-     * @param ?string $task_source 
+     * @param ?string $uri 
      *
      * @return $this
      */
-    public function setTaskSource($task_source)
+    public function setUri($uri)
     {
-        $this->container['task_source'] = $task_source;
+        $this->container['uri'] = $uri;
 
         return $this;
     }
 
     /**
-     * Gets task_type
+     * Gets user_id
      *
      * @return ?string
      */
-    public function getTaskType()
+    public function getUserId()
     {
-        return $this->container['task_type'];
+        return $this->container['user_id'];
     }
 
     /**
-     * Sets task_type
+     * Sets user_id
      *
-     * @param ?string $task_type 
+     * @param ?string $user_id 
      *
      * @return $this
      */
-    public function setTaskType($task_type)
+    public function setUserId($user_id)
     {
-        $this->container['task_type'] = $task_type;
+        $this->container['user_id'] = $user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_name
+     *
+     * @return ?string
+     */
+    public function getUserName()
+    {
+        return $this->container['user_name'];
+    }
+
+    /**
+     * Sets user_name
+     *
+     * @param ?string $user_name 
+     *
+     * @return $this
+     */
+    public function setUserName($user_name)
+    {
+        $this->container['user_name'] = $user_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_status
+     *
+     * @return ?string
+     */
+    public function getUserStatus()
+    {
+        return $this->container['user_status'];
+    }
+
+    /**
+     * Sets user_status
+     *
+     * @param ?string $user_status 
+     *
+     * @return $this
+     */
+    public function setUserStatus($user_status)
+    {
+        $this->container['user_status'] = $user_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_type
+     *
+     * @return ?string
+     */
+    public function getUserType()
+    {
+        return $this->container['user_type'];
+    }
+
+    /**
+     * Sets user_type
+     *
+     * @param ?string $user_type 
+     *
+     * @return $this
+     */
+    public function setUserType($user_type)
+    {
+        $this->container['user_type'] = $user_type;
 
         return $this;
     }

@@ -831,6 +831,89 @@ class ConnectApi
     }
 
     /**
+     * Operation createConnectSecret
+     *
+     * Generates a new connect HMAC Secret.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
+     * @throws ApiException on non-2xx response
+     * @return mixed
+     */
+    public function createConnectSecret($account_id)
+    {
+        list($response) = $this->createConnectSecretWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation createConnectSecretWithHttpInfo
+     *
+     * Generates a new connect HMAC Secret.
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createConnectSecretWithHttpInfo($account_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling createConnectSecret');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/connect/secret";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/connect/secret'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteConfiguration
      *
      * Deletes the specified connect configuration.
@@ -991,6 +1074,99 @@ class ConnectApi
                 $headerParams,
                 null,
                 '/v2.1/accounts/{accountId}/connect/oauth'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteConnectSecret
+     *
+     * Delete the connect HMAC Secret for AccountID
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $key_id 
+     *
+     * @throws ApiException on non-2xx response
+     * @return mixed
+     */
+    public function deleteConnectSecret($account_id, $key_id)
+    {
+        list($response) = $this->deleteConnectSecretWithHttpInfo($account_id, $key_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteConnectSecretWithHttpInfo
+     *
+     * Delete the connect HMAC Secret for AccountID
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     * @param ?string $key_id 
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteConnectSecretWithHttpInfo($account_id, $key_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling deleteConnectSecret');
+        }
+        // verify the required parameter 'key_id' is set
+        if ($key_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $key_id when calling deleteConnectSecret');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/connect/secret/{keyId}";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($key_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "keyId", $key_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/connect/secret/{keyId}'
             );
 
             return [null, $statusCode, $httpHeader];
@@ -1668,6 +1844,89 @@ class ConnectApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ConnectOAuthConfig', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getConnectSecret
+     *
+     * Get the connect HMAC Secrets for AccountID
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
+     * @throws ApiException on non-2xx response
+     * @return mixed
+     */
+    public function getConnectSecret($account_id)
+    {
+        list($response) = $this->getConnectSecretWithHttpInfo($account_id);
+        return $response;
+    }
+
+    /**
+     * Operation getConnectSecretWithHttpInfo
+     *
+     * Get the connect HMAC Secrets for AccountID
+     *
+     * @param ?string $account_id The external account number (int) or account ID Guid.
+     *
+     * @throws ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getConnectSecretWithHttpInfo($account_id): array
+    {
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getConnectSecret');
+        }
+        // parse inputs
+        $resourcePath = "/v2.1/accounts/{accountId}/connect/secret";
+        $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
+        $queryParams = $headerParams = $formParams = [];
+        $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.1/accounts/{accountId}/connect/secret'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
                 case 400:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\DocuSign\eSign\Model\ErrorDetails', $e->getResponseHeaders());
                     $e->setResponseObject($data);

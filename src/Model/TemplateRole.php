@@ -75,6 +75,9 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'role_name' => '?string',
         'routing_order' => '?string',
         'signing_group_id' => '?string',
+        'signing_group_name' => '?string',
+        'signing_group_type' => '?string',
+        'signing_group_users' => '\DocuSign\eSign\Model\UserInfo[]',
         'tabs' => '\DocuSign\eSign\Model\Tabs'
     ];
 
@@ -99,6 +102,9 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'role_name' => null,
         'routing_order' => null,
         'signing_group_id' => null,
+        'signing_group_name' => null,
+        'signing_group_type' => null,
+        'signing_group_users' => null,
         'tabs' => null
     ];
 
@@ -144,6 +150,9 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'role_name' => 'roleName',
         'routing_order' => 'routingOrder',
         'signing_group_id' => 'signingGroupId',
+        'signing_group_name' => 'signingGroupName',
+        'signing_group_type' => 'signingGroupType',
+        'signing_group_users' => 'signingGroupUsers',
         'tabs' => 'tabs'
     ];
 
@@ -168,6 +177,9 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'role_name' => 'setRoleName',
         'routing_order' => 'setRoutingOrder',
         'signing_group_id' => 'setSigningGroupId',
+        'signing_group_name' => 'setSigningGroupName',
+        'signing_group_type' => 'setSigningGroupType',
+        'signing_group_users' => 'setSigningGroupUsers',
         'tabs' => 'setTabs'
     ];
 
@@ -192,6 +204,9 @@ class TemplateRole implements ModelInterface, ArrayAccess
         'role_name' => 'getRoleName',
         'routing_order' => 'getRoutingOrder',
         'signing_group_id' => 'getSigningGroupId',
+        'signing_group_name' => 'getSigningGroupName',
+        'signing_group_type' => 'getSigningGroupType',
+        'signing_group_users' => 'getSigningGroupUsers',
         'tabs' => 'getTabs'
     ];
 
@@ -270,6 +285,9 @@ class TemplateRole implements ModelInterface, ArrayAccess
         $this->container['role_name'] = isset($data['role_name']) ? $data['role_name'] : null;
         $this->container['routing_order'] = isset($data['routing_order']) ? $data['routing_order'] : null;
         $this->container['signing_group_id'] = isset($data['signing_group_id']) ? $data['signing_group_id'] : null;
+        $this->container['signing_group_name'] = isset($data['signing_group_name']) ? $data['signing_group_name'] : null;
+        $this->container['signing_group_type'] = isset($data['signing_group_type']) ? $data['signing_group_type'] : null;
+        $this->container['signing_group_users'] = isset($data['signing_group_users']) ? $data['signing_group_users'] : null;
         $this->container['tabs'] = isset($data['tabs']) ? $data['tabs'] : null;
     }
 
@@ -653,6 +671,78 @@ class TemplateRole implements ModelInterface, ArrayAccess
     public function setSigningGroupId($signing_group_id)
     {
         $this->container['signing_group_id'] = $signing_group_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets signing_group_name
+     *
+     * @return ?string
+     */
+    public function getSigningGroupName()
+    {
+        return $this->container['signing_group_name'];
+    }
+
+    /**
+     * Sets signing_group_name
+     *
+     * @param ?string $signing_group_name The display name for the signing group.   Maximum Length: 100 characters.
+     *
+     * @return $this
+     */
+    public function setSigningGroupName($signing_group_name)
+    {
+        $this->container['signing_group_name'] = $signing_group_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets signing_group_type
+     *
+     * @return ?string
+     */
+    public function getSigningGroupType()
+    {
+        return $this->container['signing_group_type'];
+    }
+
+    /**
+     * Sets signing_group_type
+     *
+     * @param ?string $signing_group_type 
+     *
+     * @return $this
+     */
+    public function setSigningGroupType($signing_group_type)
+    {
+        $this->container['signing_group_type'] = $signing_group_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets signing_group_users
+     *
+     * @return \DocuSign\eSign\Model\UserInfo[]
+     */
+    public function getSigningGroupUsers()
+    {
+        return $this->container['signing_group_users'];
+    }
+
+    /**
+     * Sets signing_group_users
+     *
+     * @param \DocuSign\eSign\Model\UserInfo[] $signing_group_users A complex type that contains information about users in the signing group.
+     *
+     * @return $this
+     */
+    public function setSigningGroupUsers($signing_group_users)
+    {
+        $this->container['signing_group_users'] = $signing_group_users;
 
         return $this;
     }
