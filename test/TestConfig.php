@@ -1,4 +1,5 @@
 <?php
+namespace DocuSign\eSign\Test;
 
 use DocuSign\eSign\Model\Envelope;
 use DocuSign\eSign\Model\EnvelopeTemplate;
@@ -19,7 +20,7 @@ class TestConfig
     
     /**
       * $apiClient
-      * @var DocuSign\eSign\Client\ApiClient
+      * @var \DocuSign\eSign\Client\ApiClient
       */
     protected $apiClient;
 
@@ -186,7 +187,7 @@ class TestConfig
 
     /**
      * Gets apiClient
-     * @return DocuSign\eSign\Client\ApiClient
+     * @return \DocuSign\eSign\Client\ApiClient
      */
     public function getApiClient()
     {
@@ -195,7 +196,7 @@ class TestConfig
   
     /**
      * Sets apiClient
-     * @param DocuSign\eSign\Client\ApiClient $apiClient
+     * @param \DocuSign\eSign\Client\ApiClient $apiClient
      * @return $this
      */
     public function setApiClient($apiClient)
@@ -482,7 +483,7 @@ class TestConfig
     /**
      * @return Envelope
      */
-    public function getEnvelope(): Model\Envelope
+    public function getEnvelope(): Envelope
     {
         return $this->envelope;
     }
@@ -497,7 +498,7 @@ class TestConfig
     }
 
     /**
-     * @param Model\EnvelopeTemplate $template
+     * @param EnvelopeTemplate $template
      */
     public function setTemplate(EnvelopeTemplate $template)
     {
@@ -506,7 +507,7 @@ class TestConfig
     }
 
     /**
-     * @return Model\EnvelopeTemplate
+     * @return EnvelopeTemplate
      */
     public function getTemplate()
     {
