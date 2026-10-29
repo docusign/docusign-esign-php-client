@@ -30,16 +30,16 @@ This client SDK is provided as open source, which enables you to customize its f
 <a id="versionInformation"></a>
 ### Version Information
 - **API version**: v2.1
-- **Latest SDK version**: 9.0.0
+- **Latest SDK version**: 10.0.0
 
 <a id="requirements"></a>
 ### Requirements
-*   PHP 7.4+
+*   PHP 8.2.35+, 8.3.36+, 8.4.27+ or 8.5.12+ (releases patched for PHP2Shell, CVE-2026-109618 / CVE-2026-109619)
 *   Free [developer account](https://go.docusign.com/o/sandbox/?postActivateUrl=https://developers.docusign.com/)
 
 <a id="compatibility"></a>
 ### Compatibility
-*   PHP 7.4+
+*   PHP 8.2.35+, 8.3.36+, 8.4.27+ or 8.5.12+ (releases patched for PHP2Shell, CVE-2026-109618 / CVE-2026-109619)
 
 <a id="composer"></a>
 ### Composer:
@@ -70,9 +70,11 @@ This client has the following external dependencies:
 *   [PHP cURL extension](https://www.php.net/manual/en/intro.curl.php)
 *   [PHP JSON extension](https://php.net/manual/en/book.json.php)
 *   [PHP MBString extension](https://www.php.net/manual/en/intro.mbstring.php)
-*   adhocore/jwt v1.1+
+*   firebase/php-jwt v7.0+
 
-> **⚠ Deprecation Notice:** Support for PHP versions below 8.0 will be phased out in the coming months. A new SDK compatible with PHP 8.1 will be released, which replaces adhocore/jwt with firebase/php-jwt v7. We strongly recommend upgrading to PHP 8.1 or later to maintain compatibility with upcoming SDK releases.
+> **⚠ Breaking changes:** This version requires a PHP release patched for PHP2Shell: 8.2.35 or any later 8.2 release, 8.3.36 or any later 8.3 release, 8.4.27 or any later 8.4 release, or 8.5.12 or later. See the [PHP security advisory](https://www.php.net/archive/2026.php#2026-10-21-5). It also uses firebase/php-jwt v7, which rejects RSA private keys shorter than 2048 bits for JWT Grant.
+>
+> If your Linux distribution has backported the PHP2Shell fix but reports an older PHP version, you can install with `composer install --ignore-platform-req=php`. Only do this if you have confirmed that your PHP build includes the fix.
 
 <a id="apiReference"></a>
 ## API Reference

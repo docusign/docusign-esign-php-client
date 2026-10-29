@@ -3,6 +3,28 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v10.0.0] - eSignature API v2.1-26.2.01.01 - 2026-10-29
+### Breaking
+- **A PHP release patched for PHP2Shell is required.** The minimum PHP version is raised from 7.4 to `"php": "~8.2.35 || ~8.3.36 || ~8.4.27 || >=8.5.12"`:
+  - 8.2.35 or any later 8.2 release
+  - 8.3.36 or any later 8.3 release
+  - 8.4.27 or any later 8.4 release
+  - 8.5.12 or later
+
+  Composer refuses to install the SDK on PHP 7.4, 8.0 and 8.1 (end-of-life), and on releases affected by CVE-2026-109618 / CVE-2026-109619. See the [PHP security advisory](https://www.php.net/archive/2026.php#2026-10-21-5). If your Linux distribution has backported the fix but reports an older version number, install with `composer install --ignore-platform-req=php`, and only after confirming that your PHP build includes the fix.
+- **JWT library changed to `firebase/php-jwt` (^7.0)**, replacing `adhocore/jwt` (^1.1). The signatures of `requestJWTUserToken()` and `requestJWTApplicationToken()` are unchanged.
+- **JWT Grant now requires an RSA private key of at least 2048 bits.** A shorter key throws `DomainException: Provided key is too short` before any request is sent. To check your key size, run `openssl rsa -in private.key -noout -text | head -1`.
+
+### Fixed
+- Removed the deprecated `utf8_decode()` call from the Basic authorization header in `generateAccessToken()` and `refreshAccessToken()`. On PHP 8.2 and later it raised a deprecation warning on every call. The header value is unchanged.
+
+### Changed
+- Updated the README requirements and dependency list.
+- Updated the SDK release version.
+
+### Known issues
+- 32 legacy model classes (for example `User`, `Sender`, `CompleteSignHashResponse`) raise a PHP 8.1+ deprecation warning when loaded. Functionality is not affected. This will be fixed in a future release.
+
 ## [v9.0.0] - eSignature API v2.1-26.2.01.01 - 2026-07-01
 ### Added
 - **Envelopes API**: `getEnvelopesShares` and `getEnvelopesShare` methods for retrieving envelope share information.
